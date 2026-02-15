@@ -31,6 +31,7 @@ public final class SemanticDocTreeVisitor {
 
         // Parse block tags
         List<SemanticDocumentation.ParamDoc> params = new ArrayList<>();
+        List<SemanticDocumentation.ParamDoc> typeParams = new ArrayList<>();
         SemanticDocumentation.ReturnDoc returnDoc = null;
         List<SemanticDocumentation.ThrowsDoc> throwsList = new ArrayList<>();
         List<String> authors = new ArrayList<>();
@@ -45,7 +46,13 @@ public final class SemanticDocTreeVisitor {
                     ParamTree paramTree = (ParamTree) tag;
                     String paramName = paramTree.getName().getName().toString();
                     String paramDesc = extractText(paramTree.getDescription());
-                    params.add(new SemanticDocumentation.ParamDoc(paramName, paramDesc));
+
+                    // Distinguish between type parameters (@param <T>) and regular parameters (@param name)
+                    if (paramTree.isTypeParameter()) {
+                        typeParams.add(new SemanticDocumentation.ParamDoc(paramName, paramDesc));
+                    } else {
+                        params.add(new SemanticDocumentation.ParamDoc(paramName, paramDesc));
+                    }
                 }
                 case RETURN -> {
                     ReturnTree returnTree = (ReturnTree) tag;
@@ -90,6 +97,7 @@ public final class SemanticDocTreeVisitor {
         return new SemanticDocumentation(
                 bodyText.toString().trim(),
                 params,
+                typeParams,
                 returnDoc,
                 throwsList,
                 authors,

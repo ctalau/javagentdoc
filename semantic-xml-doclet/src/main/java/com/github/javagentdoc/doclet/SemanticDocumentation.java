@@ -12,6 +12,7 @@ public final class SemanticDocumentation {
 
     private final String bodyText;
     private final List<ParamDoc> params;
+    private final List<ParamDoc> typeParams;
     private final ReturnDoc returnDoc;
     private final List<ThrowsDoc> throwsList;
     private final List<String> authors;
@@ -23,6 +24,7 @@ public final class SemanticDocumentation {
     public SemanticDocumentation(
             String bodyText,
             List<ParamDoc> params,
+            List<ParamDoc> typeParams,
             ReturnDoc returnDoc,
             List<ThrowsDoc> throwsList,
             List<String> authors,
@@ -32,6 +34,7 @@ public final class SemanticDocumentation {
             List<SeeDoc> sees) {
         this.bodyText = bodyText != null ? bodyText : "";
         this.params = params != null ? List.copyOf(params) : List.of();
+        this.typeParams = typeParams != null ? List.copyOf(typeParams) : List.of();
         this.returnDoc = returnDoc;
         this.throwsList = throwsList != null ? List.copyOf(throwsList) : List.of();
         this.authors = authors != null ? List.copyOf(authors) : List.of();
@@ -43,6 +46,7 @@ public final class SemanticDocumentation {
 
     public String getBodyText() { return bodyText; }
     public List<ParamDoc> getParams() { return params; }
+    public List<ParamDoc> getTypeParams() { return typeParams; }
     public ReturnDoc getReturnDoc() { return returnDoc; }
     public List<ThrowsDoc> getThrowsList() { return throwsList; }
     public List<String> getAuthors() { return authors; }

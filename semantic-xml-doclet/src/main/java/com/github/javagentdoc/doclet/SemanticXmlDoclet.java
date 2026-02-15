@@ -226,6 +226,27 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeAttribute("name", t.getQualifiedName().toString());
         x.writeAttribute("kind", t.getKind().name().toLowerCase(Locale.ROOT));
 
+        // Write type parameters
+        if (!t.getTypeParameters().isEmpty()) {
+            x.writeStartElement("typeParameters");
+            for (TypeParameterElement tp : t.getTypeParameters()) {
+                x.writeStartElement("typeParameter");
+                x.writeAttribute("name", tp.getSimpleName().toString());
+
+                // Write bounds if any
+                if (!tp.getBounds().isEmpty()) {
+                    x.writeStartElement("bounds");
+                    for (int i = 0; i < tp.getBounds().size(); i++) {
+                        if (i > 0) x.writeCharacters(", ");
+                        x.writeCharacters(tp.getBounds().get(i).toString());
+                    }
+                    x.writeEndElement();
+                }
+                x.writeEndElement();
+            }
+            x.writeEndElement();
+        }
+
         writeDoc(x, docTrees, t);
 
         x.writeStartElement("members");
@@ -312,6 +333,28 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeStartElement("method");
         x.writeAttribute("name", m.getSimpleName().toString());
         x.writeAttribute("returns", m.getReturnType().toString());
+
+        // Write type parameters for generic methods
+        if (!m.getTypeParameters().isEmpty()) {
+            x.writeStartElement("typeParameters");
+            for (TypeParameterElement tp : m.getTypeParameters()) {
+                x.writeStartElement("typeParameter");
+                x.writeAttribute("name", tp.getSimpleName().toString());
+
+                // Write bounds if any
+                if (!tp.getBounds().isEmpty()) {
+                    x.writeStartElement("bounds");
+                    for (int i = 0; i < tp.getBounds().size(); i++) {
+                        if (i > 0) x.writeCharacters(", ");
+                        x.writeCharacters(tp.getBounds().get(i).toString());
+                    }
+                    x.writeEndElement();
+                }
+                x.writeEndElement();
+            }
+            x.writeEndElement();
+        }
+
         writeExecutableSignature(x, m);
         writeDoc(x, docTrees, m);
         x.writeEndElement();
@@ -364,6 +407,16 @@ public final class SemanticXmlDoclet implements Doclet {
         if (!semanticDoc.getBodyText().isEmpty()) {
             x.writeStartElement("description");
             x.writeCharacters(semanticDoc.getBodyText());
+            x.writeEndElement();
+        }
+
+        // Write type parameter documentation (@param <T>)
+        for (SemanticDocumentation.ParamDoc typeParam : semanticDoc.getTypeParams()) {
+            x.writeStartElement("typeParam");
+            x.writeAttribute("name", typeParam.getName());
+            x.writeStartElement("description");
+            x.writeCharacters(typeParam.getDescription());
+            x.writeEndElement();
             x.writeEndElement();
         }
 
