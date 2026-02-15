@@ -2,6 +2,11 @@ package com.github.javagentdoc.doclet;
 
 import com.sun.source.doctree.*;
 import com.sun.source.util.SimpleDocTreeVisitor;
+import com.sun.source.util.DocTrees;
+import com.sun.source.util.DocTreePath;
+
+import javax.lang.model.element.*;
+import javax.lang.model.type.*;
 
 import java.util.*;
 
@@ -17,16 +22,35 @@ public final class SemanticDocTreeVisitor {
 
     /**
      * Parses a DocCommentTree into structured semantic documentation.
+     *
+     * @param docTree the documentation comment tree
+     * @param docTrees the DocTrees utility for reference resolution
+     * @param element the element being documented (for context in resolution)
+     * @return parsed semantic documentation
      */
-    public static SemanticDocumentation parse(DocCommentTree docTree) {
+    public static SemanticDocumentation parse(DocCommentTree docTree, DocTrees docTrees, Element element) {
         if (docTree == null) {
             return null;
         }
 
-        // Extract body text
+        // Get the TreePath for this element (needed for reference resolution)
+        DocTreePath docTreePath = null;
+        if (docTrees != null && element != null) {
+            try {
+                var treePath = docTrees.getPath(element);
+                if (treePath != null) {
+                    docTreePath = new DocTreePath(treePath, docTree);
+                }
+            } catch (Exception ignored) {
+                // Couldn't get path - references won't be resolved
+            }
+        }
+
+        // Extract body text and collect inline links
+        List<SemanticDocumentation.LinkDoc> links = new ArrayList<>();
         StringBuilder bodyText = new StringBuilder();
         for (DocTree tree : docTree.getBody()) {
-            bodyText.append(extractText(tree));
+            bodyText.append(extractText(tree, links, docTrees, docTreePath));
         }
 
         // Parse block tags
@@ -45,7 +69,7 @@ public final class SemanticDocTreeVisitor {
                 case PARAM -> {
                     ParamTree paramTree = (ParamTree) tag;
                     String paramName = paramTree.getName().getName().toString();
-                    String paramDesc = extractText(paramTree.getDescription());
+                    String paramDesc = extractText(paramTree.getDescription(), null, null, docTreePath);
 
                     // Distinguish between type parameters (@param <T>) and regular parameters (@param name)
                     if (paramTree.isTypeParameter()) {
@@ -56,37 +80,63 @@ public final class SemanticDocTreeVisitor {
                 }
                 case RETURN -> {
                     ReturnTree returnTree = (ReturnTree) tag;
-                    String returnDesc = extractText(returnTree.getDescription());
+                    String returnDesc = extractText(returnTree.getDescription(), null, null, docTreePath);
                     returnDoc = new SemanticDocumentation.ReturnDoc(returnDesc);
                 }
                 case THROWS -> {
                     ThrowsTree throwsTree = (ThrowsTree) tag;
                     String exceptionName = throwsTree.getExceptionName().toString();
-                    String throwsDesc = extractText(throwsTree.getDescription());
+                    String throwsDesc = extractText(throwsTree.getDescription(), null, null, docTreePath);
                     throwsList.add(new SemanticDocumentation.ThrowsDoc(exceptionName, throwsDesc));
                 }
                 case AUTHOR -> {
                     AuthorTree authorTree = (AuthorTree) tag;
-                    String authorName = extractText(authorTree.getName());
+                    String authorName = extractText(authorTree.getName(), null, null, docTreePath);
                     authors.add(authorName);
                 }
                 case VERSION -> {
                     VersionTree versionTree = (VersionTree) tag;
-                    version = extractText(versionTree.getBody());
+                    version = extractText(versionTree.getBody(), null, null, docTreePath);
                 }
                 case SINCE -> {
                     SinceTree sinceTree = (SinceTree) tag;
-                    since = extractText(sinceTree.getBody());
+                    since = extractText(sinceTree.getBody(), null, null, docTreePath);
                 }
                 case DEPRECATED -> {
                     DeprecatedTree deprecatedTree = (DeprecatedTree) tag;
-                    String reason = extractText(deprecatedTree.getBody());
+                    String reason = extractText(deprecatedTree.getBody(), null, null, docTreePath);
                     deprecated = new SemanticDocumentation.DeprecatedDoc(reason);
                 }
                 case SEE -> {
                     SeeTree seeTree = (SeeTree) tag;
-                    String reference = extractText(seeTree.getReference());
-                    sees.add(new SemanticDocumentation.SeeDoc(reference));
+                    List<? extends DocTree> refList = seeTree.getReference();
+                    if (!refList.isEmpty() && refList.get(0) instanceof ReferenceTree) {
+                        ReferenceTree refTree = (ReferenceTree) refList.get(0);
+                        String reference = refTree.getSignature();
+
+                        // Try to resolve the reference
+                        Element refElement = null;
+                        if (docTrees != null && docTreePath != null) {
+                            try {
+                                DocTreePath refPath = new DocTreePath(docTreePath, refTree);
+                                refElement = docTrees.getElement(refPath);
+                            } catch (Exception ignored) {
+                                // Reference couldn't be resolved
+                            }
+                        }
+
+                        if (refElement != null) {
+                            String qualifiedName = getQualifiedName(refElement);
+                            String elementKind = refElement.getKind().name().toLowerCase();
+                            String signature = getSignature(refElement);
+                            sees.add(new SemanticDocumentation.SeeDoc(reference, qualifiedName, elementKind, signature));
+                        } else {
+                            sees.add(new SemanticDocumentation.SeeDoc(reference));
+                        }
+                    } else {
+                        String reference = extractText(refList, null, null, docTreePath);
+                        sees.add(new SemanticDocumentation.SeeDoc(reference));
+                    }
                 }
                 default -> {
                     // Ignore unknown tags for now
@@ -104,15 +154,22 @@ public final class SemanticDocTreeVisitor {
                 version,
                 since,
                 deprecated,
-                sees
+                sees,
+                links
         );
     }
 
     /**
      * Extracts text content from a DocTree node or list of nodes.
      * Handles inline tags like {@code}, {@link}, {@literal}.
+     *
+     * @param tree the DocTree or List of DocTrees
+     * @param links list to collect link information (null if not collecting)
+     * @param docTrees DocTrees for reference resolution (null if not resolving)
+     * @param docTreePath DocTreePath for reference resolution context (null if not resolving)
      */
-    private static String extractText(Object tree) {
+    private static String extractText(Object tree, List<SemanticDocumentation.LinkDoc> links,
+                                      DocTrees docTrees, DocTreePath docTreePath) {
         if (tree == null) {
             return "";
         }
@@ -121,17 +178,55 @@ public final class SemanticDocTreeVisitor {
             StringBuilder sb = new StringBuilder();
             for (Object item : (List<?>) tree) {
                 if (item instanceof DocTree) {
-                    sb.append(extractText((DocTree) item));
+                    sb.append(extractText((DocTree) item, links, docTrees, docTreePath));
                 }
             }
             return sb.toString();
         }
 
         if (tree instanceof DocTree docTree) {
-            return docTree.accept(new TextExtractor(), null);
+            return docTree.accept(new TextExtractor(links, docTrees, docTreePath), null);
         }
 
         return tree.toString();
+    }
+
+    /**
+     * Gets the qualified name of an element.
+     */
+    private static String getQualifiedName(Element element) {
+        if (element instanceof TypeElement) {
+            return ((TypeElement) element).getQualifiedName().toString();
+        } else if (element instanceof ExecutableElement) {
+            Element enclosing = element.getEnclosingElement();
+            if (enclosing instanceof TypeElement) {
+                return ((TypeElement) enclosing).getQualifiedName().toString() + "." + element.getSimpleName();
+            }
+        } else if (element instanceof VariableElement) {
+            Element enclosing = element.getEnclosingElement();
+            if (enclosing instanceof TypeElement) {
+                return ((TypeElement) enclosing).getQualifiedName().toString() + "." + element.getSimpleName();
+            }
+        }
+        return element.toString();
+    }
+
+    /**
+     * Gets the signature for methods/constructors.
+     */
+    private static String getSignature(Element element) {
+        if (element instanceof ExecutableElement) {
+            ExecutableElement exec = (ExecutableElement) element;
+            StringBuilder sig = new StringBuilder("(");
+            List<? extends VariableElement> params = exec.getParameters();
+            for (int i = 0; i < params.size(); i++) {
+                if (i > 0) sig.append(", ");
+                sig.append(params.get(i).asType().toString());
+            }
+            sig.append(")");
+            return sig.toString();
+        }
+        return null;
     }
 
     /**
@@ -140,6 +235,16 @@ public final class SemanticDocTreeVisitor {
      */
     private static class TextExtractor extends SimpleDocTreeVisitor<String, Void> {
 
+        private final List<SemanticDocumentation.LinkDoc> links;
+        private final DocTrees docTrees;
+        private final DocTreePath docTreePath;
+
+        public TextExtractor(List<SemanticDocumentation.LinkDoc> links, DocTrees docTrees, DocTreePath docTreePath) {
+            this.links = links;
+            this.docTrees = docTrees;
+            this.docTreePath = docTreePath;
+        }
+
         @Override
         public String visitText(TextTree node, Void unused) {
             return node.getBody();
@@ -147,13 +252,36 @@ public final class SemanticDocTreeVisitor {
 
         @Override
         public String visitLink(LinkTree node, Void unused) {
-            // Extract link reference for semantic representation
-            String reference = node.getReference().toString();
+            // Extract link reference
+            ReferenceTree refTree = node.getReference();
+            String reference = refTree.getSignature();
             List<? extends DocTree> label = node.getLabel();
-            if (!label.isEmpty()) {
-                return extractText(label);
+            String labelText = !label.isEmpty() ? extractText(label, null, null, docTreePath) : reference;
+
+            // Try to resolve the reference
+            Element refElement = null;
+            if (docTrees != null && docTreePath != null) {
+                try {
+                    DocTreePath refPath = new DocTreePath(docTreePath, refTree);
+                    refElement = docTrees.getElement(refPath);
+                } catch (Exception ignored) {
+                    // Reference couldn't be resolved
+                }
             }
-            return reference;
+
+            // Store link information
+            if (links != null) {
+                if (refElement != null) {
+                    String qualifiedName = getQualifiedName(refElement);
+                    String elementKind = refElement.getKind().name().toLowerCase();
+                    String signature = getSignature(refElement);
+                    links.add(new SemanticDocumentation.LinkDoc(reference, labelText, qualifiedName, elementKind, signature));
+                } else {
+                    links.add(new SemanticDocumentation.LinkDoc(reference, labelText));
+                }
+            }
+
+            return labelText;
         }
 
         @Override

@@ -398,7 +398,7 @@ public final class SemanticXmlDoclet implements Doclet {
         if (doc == null) return;
 
         // Parse documentation into semantic structure
-        SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc);
+        SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc, docTrees, el);
         if (semanticDoc == null) return;
 
         x.writeStartElement("doc");
@@ -473,10 +473,42 @@ public final class SemanticXmlDoclet implements Doclet {
             x.writeEndElement();
         }
 
-        // Write @see tags semantically
+        // Write @see tags semantically with resolution info
         for (SemanticDocumentation.SeeDoc see : semanticDoc.getSees()) {
             x.writeStartElement("see");
+            x.writeAttribute("ref", see.getReference());
+
+            if (see.isResolved()) {
+                x.writeAttribute("target", see.getQualifiedName());
+                x.writeAttribute("kind", see.getElementKind());
+                if (see.getSignature() != null) {
+                    x.writeAttribute("signature", see.getSignature());
+                }
+            }
+
             x.writeCharacters(see.getReference());
+            x.writeEndElement();
+        }
+
+        // Write inline {@link} tags semantically
+        for (SemanticDocumentation.LinkDoc link : semanticDoc.getLinks()) {
+            x.writeStartElement("link");
+            x.writeAttribute("ref", link.getReference());
+
+            if (link.isResolved()) {
+                x.writeAttribute("target", link.getQualifiedName());
+                x.writeAttribute("kind", link.getElementKind());
+                if (link.getSignature() != null) {
+                    x.writeAttribute("signature", link.getSignature());
+                }
+            }
+
+            if (link.getLabel() != null && !link.getLabel().equals(link.getReference())) {
+                x.writeCharacters(link.getLabel());
+            } else {
+                x.writeCharacters(link.getReference());
+            }
+
             x.writeEndElement();
         }
 
