@@ -226,6 +226,9 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeAttribute("name", t.getQualifiedName().toString());
         x.writeAttribute("kind", t.getKind().name().toLowerCase(Locale.ROOT));
 
+        // Write annotations
+        writeAnnotations(x, t);
+
         // Write type parameters
         if (!t.getTypeParameters().isEmpty()) {
             x.writeStartElement("typeParameters");
@@ -414,6 +417,7 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeStartElement("field");
         x.writeAttribute("name", f.getSimpleName().toString());
         x.writeAttribute("type", f.asType().toString());
+        writeAnnotations(x, f);
         writeDoc(x, docTrees, f);
         x.writeEndElement();
     }
@@ -452,6 +456,9 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeStartElement("method");
         x.writeAttribute("name", m.getSimpleName().toString());
         x.writeAttribute("returns", m.getReturnType().toString());
+
+        // Write annotations
+        writeAnnotations(x, m);
 
         // Write type parameters for generic methods
         if (!m.getTypeParameters().isEmpty()) {
@@ -509,9 +516,11 @@ public final class SemanticXmlDoclet implements Doclet {
     private void writeExecutableSignature(XMLStreamWriter x, ExecutableElement e) throws Exception {
         x.writeStartElement("params");
         for (VariableElement p : e.getParameters()) {
-            x.writeEmptyElement("param");
+            x.writeStartElement("param");
             x.writeAttribute("name", p.getSimpleName().toString());
             x.writeAttribute("type", p.asType().toString());
+            writeAnnotations(x, p);
+            x.writeEndElement();
         }
         x.writeEndElement();
     }
@@ -636,5 +645,52 @@ public final class SemanticXmlDoclet implements Doclet {
         }
 
         x.writeEndElement();
+    }
+
+    /**
+     * Writes annotations for an element to XML.
+     *
+     * Captures annotations on classes, methods, fields, and parameters
+     * including annotation values and parameters.
+     */
+    private void writeAnnotations(XMLStreamWriter x, Element element) throws Exception {
+        List<? extends AnnotationMirror> annotations = element.getAnnotationMirrors();
+
+        if (annotations.isEmpty()) {
+            return;
+        }
+
+        for (AnnotationMirror annotation : annotations) {
+            x.writeStartElement("annotation");
+
+            // Get annotation type name
+            Element annotationElement = annotation.getAnnotationType().asElement();
+            String annotationName = annotationElement.getSimpleName().toString();
+            String qualifiedName = "";
+            if (annotationElement instanceof TypeElement) {
+                qualifiedName = ((TypeElement) annotationElement).getQualifiedName().toString();
+            }
+
+            x.writeAttribute("type", qualifiedName);
+
+            // Write annotation values/parameters
+            Map<? extends ExecutableElement, ? extends AnnotationValue> elementValues =
+                annotation.getElementValues();
+
+            if (!elementValues.isEmpty()) {
+                x.writeStartElement("values");
+                for (Map.Entry<? extends ExecutableElement, ? extends AnnotationValue> entry :
+                     elementValues.entrySet()) {
+                    x.writeStartElement("value");
+                    x.writeAttribute("name", entry.getKey().getSimpleName().toString());
+                    x.writeCharacters(entry.getValue().toString());
+                    x.writeEndElement();
+                }
+                x.writeEndElement();
+            }
+
+            x.writeCharacters(annotationName);
+            x.writeEndElement();
+        }
     }
 }
