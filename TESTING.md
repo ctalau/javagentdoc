@@ -1,102 +1,50 @@
 # Testing JavaAgentDoc
 
-This document describes how to test the JavaAgentDoc doclet processor.
+This document describes how to test the JavaAgentDoc doclet processor against Google Guava.
 
-## Quick Test (Demo Project)
+## Prerequisites
 
-A small demo project with 2 classes is suitable for quick testing:
+- Java 17+
+- Maven 3.6+
+- Git
 
-### Build the Doclet
+## Quick Start
+
+### 1. Build JavaAgentDoc
 
 ```bash
+cd /path/to/javagentdoc
 mvn clean install -DskipTests
 ```
 
-### Run on Demo Project
-
-Create test sources at `/tmp/test-project/src/com/example/demo/`:
+### 2. Clone Google Guava
 
 ```bash
-# Generate Markdown
-javadoc \
-  -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
-  -docletpath semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar \
-  --semanticOut /tmp/output.md \
-  --semanticFormat markdown \
-  -sourcepath /tmp/test-project/src \
-  -subpackages com.example.demo
-
-# Generate XML
-javadoc \
-  -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
-  -docletpath semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar \
-  --semanticOut /tmp/output.xml \
-  --semanticFormat xml \
-  -sourcepath /tmp/test-project/src \
-  -subpackages com.example.demo
+cd /tmp
+git clone --depth 1 https://github.com/google/guava.git
+cd guava
 ```
 
-## Output Examples
+### 3. Run JavaAgentDoc Doclet on Guava
 
-### Markdown Output
-
-```markdown
-# API Documentation
-
-## Package: com.example.demo
-
-### Class: `Calculator`
-
-**Description:** A simple calculator for basic arithmetic operations.
-@author Demo Author
-@version 1.0.0
-
-#### Members
-
-- **Method:** `int add(int a, int b)`
-  - Adds two numbers together.
-@param a the first number
-@param b the second number
-@return the sum of a and b
+```bash
+mvn javadoc:javadoc -pl :guava
 ```
 
-### XML Output
+**Note: This takes approximately 15 minutes to complete**
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<api version="1.0">
-  <package name="com.example.demo">
-    <type name="com.example.demo.Calculator" kind="class">
-      <doc>
-        <body></body>
-        <blockTags>
-          <tag kind="AUTHOR">@author Demo Author</tag>
-          <tag kind="VERSION">@version 1.0.0</tag>
-        </blockTags>
-      </doc>
-      <members>
-        <method name="add" returns="int">
-          <params>
-            <param name="a" type="int"/>
-            <param name="b" type="int"/>
-          </params>
-          <doc>
-            <body></body>
-            <blockTags>
-              <tag kind="PARAM">@param a the first number</tag>
-              <tag kind="RETURN">@return the sum of a and b</tag>
-            </blockTags>
-          </doc>
-        </method>
-      </members>
-    </type>
-  </package>
-</api>
-```
+The standard Maven javadoc generation will process all ~1500+ classes in Guava and generate complete documentation including all packages, classes, methods, fields, and their documentation comments.
 
 ## Testing with Your Own Project
 
-To test with your own Java project:
+To test with your own Java project using Maven:
+
+```bash
+# In your project directory
+mvn javadoc:javadoc
+```
+
+Or using javadoc command directly:
 
 ```bash
 javadoc \
