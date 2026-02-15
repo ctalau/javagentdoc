@@ -7,6 +7,7 @@ import jdk.javadoc.doclet.Reporter;
 import javax.lang.model.element.*;
 import javax.lang.model.util.Elements;
 import javax.lang.model.util.Types;
+import javax.lang.model.SourceVersion;
 import javax.tools.Diagnostic;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -49,6 +50,11 @@ public final class SemanticXmlDoclet implements Doclet {
     @Override
     public String getName() {
         return "semantic-xml-doclet";
+    }
+
+    @Override
+    public SourceVersion getSupportedSourceVersion() {
+        return SourceVersion.RELEASE_17;
     }
 
     @Override
