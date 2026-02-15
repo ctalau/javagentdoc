@@ -6,37 +6,42 @@ These are the gaps between the current MVP implementation and the full specifica
 
 ### WHAT DOESN'T WORK (SHORTCOMINGS):
 
-✗ Block tags (@param, @return, @throws, @author, @version, @since, @deprecated)
-  are included as RAW TEXT within documentation blocks,
-  NOT as separate semantic elements
+✓ ~~Block tags (@param, @return, @throws, @author, @version, @since, @deprecated)~~
+  ~~are included as RAW TEXT within documentation blocks~~
+  **FIXED**: Now parsed into semantic XML elements
 
-✗ No parsing of tag structure - tags appear literally as "@param name description"
+✓ ~~No parsing of tag structure - tags appear literally as "@param name description"~~
+  **FIXED**: Tags are now parsed with separate name/description fields
 
-✗ No semantic separation between description and tags
+✓ ~~No semantic separation between description and tags~~
+  **FIXED**: Description and tags are now separate semantic elements
 
-✗ Inline tags {@link}, {@code}, {@literal} appear as plain text
+✓ ~~Inline tags {@link}, {@code}, {@literal} appear as plain text~~
+  **FIXED**: Basic inline tag handling implemented
 
-✗ No cross-reference resolution
+✓ ~~No @throws exceptions extracted~~
+  **FIXED**: @throws parsed with exception type and description
 
-✗ No inheritance hierarchy
+✗ No cross-reference resolution (coming in Phase 3)
 
-✗ No generic type parameters preserved properly
+✗ No inheritance hierarchy (coming in Phase 3)
 
-✗ No @throws exceptions extracted
+✗ No generic type parameters preserved properly (Phase 2 - in progress)
 
-✗ NO API is truly "AI-friendly" for semantic understanding -
-  while structure is present, semantic meaning is lost
+✓ ~~NO API is truly "AI-friendly" for semantic understanding~~
+  **IMPROVED**: Semantic structure now enables AI understanding
 
 ## Implementation Roadmap
 
 ### Phase 2: Semantic Enrichment (CRITICAL)
 
-- [ ] Implement DocTreeVisitor for proper DocTree traversal
-- [ ] Add block tag parsers (@param, @return, @throws, @deprecated, @since, @author, @see)
-- [ ] Add inline tag handlers ({@link}, {@code}, {@literal}, {@value})
-- [ ] Parse @throws exceptions into structured format
+- [x] Implement DocTreeVisitor for proper DocTree traversal
+- [x] Add block tag parsers (@param, @return, @throws, @deprecated, @since, @author, @see)
+- [x] Add inline tag handlers ({@link}, {@code}, {@literal}, {@value})
+- [x] Parse @throws exceptions into structured format
+- [x] Create semantic element mapping
 - [ ] Extract generic type parameters
-- [ ] Create semantic element mapping
+- [ ] Enhanced inline tag rendering with semantic context
 
 ### Phase 3: Advanced Features
 
