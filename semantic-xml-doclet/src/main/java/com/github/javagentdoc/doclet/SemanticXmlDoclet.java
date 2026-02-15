@@ -354,25 +354,78 @@ public final class SemanticXmlDoclet implements Doclet {
         DocCommentTree doc = docTrees.getDocCommentTree(el);
         if (doc == null) return;
 
+        // Parse documentation into semantic structure
+        SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc);
+        if (semanticDoc == null) return;
+
         x.writeStartElement("doc");
 
-        x.writeStartElement("body");
-        for (DocTree dt : doc.getBody()) {
-            x.writeStartElement("node");
-            x.writeAttribute("kind", dt.getKind().name());
-            x.writeCharacters(dt.toString());
+        // Write description/body
+        if (!semanticDoc.getBodyText().isEmpty()) {
+            x.writeStartElement("description");
+            x.writeCharacters(semanticDoc.getBodyText());
             x.writeEndElement();
         }
-        x.writeEndElement();
 
-        x.writeStartElement("blockTags");
-        for (DocTree tag : doc.getBlockTags()) {
-            x.writeStartElement("tag");
-            x.writeAttribute("kind", tag.getKind().name());
-            x.writeCharacters(tag.toString());
+        // Write @param tags semantically
+        for (SemanticDocumentation.ParamDoc param : semanticDoc.getParams()) {
+            x.writeStartElement("param");
+            x.writeAttribute("name", param.getName());
+            x.writeStartElement("description");
+            x.writeCharacters(param.getDescription());
+            x.writeEndElement();
             x.writeEndElement();
         }
-        x.writeEndElement();
+
+        // Write @return tag semantically
+        if (semanticDoc.getReturnDoc() != null) {
+            x.writeStartElement("return");
+            x.writeCharacters(semanticDoc.getReturnDoc().getDescription());
+            x.writeEndElement();
+        }
+
+        // Write @throws tags semantically
+        for (SemanticDocumentation.ThrowsDoc throwsDoc : semanticDoc.getThrowsList()) {
+            x.writeStartElement("throws");
+            x.writeAttribute("exception", throwsDoc.getExceptionType());
+            x.writeCharacters(throwsDoc.getDescription());
+            x.writeEndElement();
+        }
+
+        // Write @author tags semantically
+        for (String author : semanticDoc.getAuthors()) {
+            x.writeStartElement("author");
+            x.writeCharacters(author);
+            x.writeEndElement();
+        }
+
+        // Write @version tag semantically
+        if (semanticDoc.getVersion() != null) {
+            x.writeStartElement("version");
+            x.writeCharacters(semanticDoc.getVersion());
+            x.writeEndElement();
+        }
+
+        // Write @since tag semantically
+        if (semanticDoc.getSince() != null) {
+            x.writeStartElement("since");
+            x.writeCharacters(semanticDoc.getSince());
+            x.writeEndElement();
+        }
+
+        // Write @deprecated tag semantically
+        if (semanticDoc.getDeprecated() != null) {
+            x.writeStartElement("deprecated");
+            x.writeCharacters(semanticDoc.getDeprecated().getReason());
+            x.writeEndElement();
+        }
+
+        // Write @see tags semantically
+        for (SemanticDocumentation.SeeDoc see : semanticDoc.getSees()) {
+            x.writeStartElement("see");
+            x.writeCharacters(see.getReference());
+            x.writeEndElement();
+        }
 
         x.writeEndElement();
     }
