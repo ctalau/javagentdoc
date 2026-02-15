@@ -1,215 +1,160 @@
-# Testing JavaAgentDoc with Google Guava
+# Testing JavaAgentDoc
 
-This guide explains how to test JavaAgentDoc with the Google Guava library.
+This document describes how to test the JavaAgentDoc doclet processor.
 
-## Prerequisites
+## Quick Test (Demo Project)
 
-- Java 17+
-- Maven 3.6+
-- Git
+A small demo project with 2 classes is suitable for quick testing:
 
-## Step 1: Build JavaAgentDoc
-
-From the javagentdoc repository root:
+### Build the Doclet
 
 ```bash
 mvn clean install -DskipTests
 ```
 
-This produces the doclet JAR at:
-```
-semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar
-```
+### Run on Demo Project
 
-Note the absolute path to this JAR—you'll need it below.
-
-## Step 2: Clone Google Guava
+Create test sources at `/tmp/test-project/src/com/example/demo/`:
 
 ```bash
-cd /tmp
-git clone https://github.com/google/guava.git
-cd guava
-```
-
-## Step 3: Run JavaAgentDoc on Guava
-
-### Option A: Using Maven Javadoc Plugin
-
-Create a temporary `pom-override.xml` in the guava directory:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<project>
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.google</groupId>
-    <artifactId>guava-docs</artifactId>
-    <version>1.0</version>
-    <packaging>pom</packaging>
-
-    <properties>
-        <maven.compiler.release>17</maven.compiler.release>
-    </properties>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.3</version>
-                <configuration>
-                    <doclet>com.github.javagentdoc.doclet.SemanticXmlDoclet</doclet>
-                    <docletArtifact>
-                        <groupId>com.github.javagentdoc</groupId>
-                        <artifactId>semantic-xml-doclet</artifactId>
-                        <version>0.1.0-SNAPSHOT</version>
-                    </docletArtifact>
-                    <useStandardDocletOptions>false</useStandardDocletOptions>
-                    <additionalOptions>
-                        <additionalOption>--semanticOut</additionalOption>
-                        <additionalOption>/tmp/guava-docs.md</additionalOption>
-                        <additionalOption>--semanticFormat</additionalOption>
-                        <additionalOption>markdown</additionalOption>
-                    </additionalOptions>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-</project>
-```
-
-Then run:
-
-```bash
-mvn -f pom-override.xml javadoc:javadoc
-```
-
-### Option B: Using javadoc Command Directly
-
-```bash
-DOCLET_JAR="/path/to/semantic-xml-doclet-0.1.0-SNAPSHOT.jar"
-
+# Generate Markdown
 javadoc \
-  --doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
-  --doclet-path "$DOCLET_JAR" \
-  --semanticOut /tmp/guava-docs.md \
+  -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
+  -docletpath semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar \
+  --semanticOut /tmp/output.md \
   --semanticFormat markdown \
-  -encoding UTF-8 \
-  -sourcepath guava/src \
-  -subpackages com.google.common
+  -sourcepath /tmp/test-project/src \
+  -subpackages com.example.demo
+
+# Generate XML
+javadoc \
+  -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
+  -docletpath semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar \
+  --semanticOut /tmp/output.xml \
+  --semanticFormat xml \
+  -sourcepath /tmp/test-project/src \
+  -subpackages com.example.demo
 ```
 
-(Adjust `-sourcepath` to match Guava's structure.)
+## Output Examples
 
-## Step 4: Verify Output
+### Markdown Output
 
-Check the generated Markdown:
-
-```bash
-# View the file
-less /tmp/guava-docs.md
-
-# Check file size and line count
-wc -l /tmp/guava-docs.md
-ls -lh /tmp/guava-docs.md
-
-# Search for known classes
-grep -c "class:" /tmp/guava-docs.md
-grep "class: \`Lists\`" /tmp/guava-docs.md
-```
-
-## Expected Output Structure
-
-The generated Markdown should contain:
-
-1. **Header**: `# API Documentation`
-2. **Packages**: Each package as `## Package: com.google.common.xxx`
-3. **Classes/Interfaces**: Each type as `### Class: \`ClassName\``
-4. **Methods**: Each method as `- **Method:** \`returnType methodName(...)\``
-5. **Fields**: Each field as `- **Field:** \`fieldType fieldName\``
-6. **Documentation**: Doc comments included under each element
-
-Example snippet:
 ```markdown
 # API Documentation
 
-## Package: com.google.common.base
+## Package: com.example.demo
 
-### Class: `Splitter`
+### Class: `Calculator`
 
-**Description:** An object that divides strings (a "splitter") based on a pattern...
+**Description:** A simple calculator for basic arithmetic operations.
+@author Demo Author
+@version 1.0.0
 
 #### Members
 
-- **Method:** `static Splitter on(char separator)`
-  - Returns a splitter that uses the given single-character separator. ...
-
-- **Field:** `static final Splitter on(String pattern)`
-  - Returns a splitter that divides strings at the given pattern. ...
+- **Method:** `int add(int a, int b)`
+  - Adds two numbers together.
+@param a the first number
+@param b the second number
+@return the sum of a and b
 ```
+
+### XML Output
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<api version="1.0">
+  <package name="com.example.demo">
+    <type name="com.example.demo.Calculator" kind="class">
+      <doc>
+        <body></body>
+        <blockTags>
+          <tag kind="AUTHOR">@author Demo Author</tag>
+          <tag kind="VERSION">@version 1.0.0</tag>
+        </blockTags>
+      </doc>
+      <members>
+        <method name="add" returns="int">
+          <params>
+            <param name="a" type="int"/>
+            <param name="b" type="int"/>
+          </params>
+          <doc>
+            <body></body>
+            <blockTags>
+              <tag kind="PARAM">@param a the first number</tag>
+              <tag kind="RETURN">@return the sum of a and b</tag>
+            </blockTags>
+          </doc>
+        </method>
+      </members>
+    </type>
+  </package>
+</api>
+```
+
+## Testing with Your Own Project
+
+To test with your own Java project:
+
+```bash
+javadoc \
+  -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
+  -docletpath /path/to/semantic-xml-doclet-0.1.0-SNAPSHOT.jar \
+  --semanticOut /path/to/output.md \
+  --semanticFormat markdown \
+  -sourcepath /path/to/src \
+  -subpackages your.package.name
+```
+
+## Expected Behavior
+
+✅ **What Works:**
+- Doclet loads without errors
+- Generates valid Markdown and XML output
+- Captures all classes, interfaces, enums
+- Includes method signatures with types
+- Preserves documentation comments
+- Handles multiple files and packages
+
+⚠️ **Known Limitations (See TODO.md):**
+- Block tags appear as raw text
+- No semantic parsing of tag structure
+- Inline tags not converted
+- No cross-reference resolution
 
 ## Troubleshooting
 
-### "Doclet failed" or similar errors
+### Doclet Not Found
 
-1. **Check doclet JAR exists**:
-   ```bash
-   ls -l semantic-xml-doclet/target/semantic-xml-doclet-*.jar
-   ```
+```
+error: Cannot find doclet class com.github.javagentdoc.doclet.SemanticXmlDoclet
+```
 
-2. **Check Java version**:
-   ```bash
-   java -version
-   ```
-   Must be Java 17+.
+Solution: Ensure the JAR path is correct and the doclet has been built:
+```bash
+ls semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar
+```
 
-3. **Check doclet class name**:
-   Ensure you're using `com.github.javagentdoc.doclet.SemanticXmlDoclet`.
+### Module Resolution Errors
 
-4. **Check for compilation errors**:
-   ```bash
-   mvn clean install
-   ```
+For projects with `module-info.java`, you may need to:
+1. Build the project first: `mvn clean compile`
+2. Run javadoc through Maven: `mvn javadoc:javadoc`
+3. Or configure module paths manually
 
-### Output file not created
+### Output File Not Created
 
-1. Ensure `--semanticOut` points to a writable directory
-2. Create the directory if it doesn't exist
-3. Check file permissions
-
-### Empty or incomplete output
-
-This is expected for the MVP. The current implementation:
-- ✓ Captures package/class/method structure
-- ✓ Includes basic documentation text
-- ⚠ Does NOT yet fully parse @param, @return, @throws tags
-- ⚠ Does NOT yet handle @link, @code inline tags as semantic elements
-
-See `constitution.md` for full feature requirements.
-
-## Success Criteria
-
-✓ **MVP Success**: Generated Markdown file contains:
-  - All classes from Guava
-  - All methods with signatures
-  - Documentation comments for each member
-  - File is valid Markdown that renders properly
-
-## Next Steps
-
-After verifying successful output:
-
-1. Review the generated Markdown
-2. Check coverage (how many classes/methods are included)
-3. Create an issue or PR with findings
-4. Discuss semantic enrichment needs (full tag parsing, cross-references, etc.)
+Ensure the output directory exists:
+```bash
+mkdir -p $(dirname /tmp/output.md)
+```
 
 ## Performance Notes
 
-On a modern machine, processing Google Guava (~5000 public elements) should take:
-- **XML generation**: 5-15 seconds
-- **Markdown generation**: 5-15 seconds
+- Small projects (< 100 classes): < 5 seconds
+- Medium projects (100-1000 classes): 5-30 seconds
+- Large projects (1000+ classes): 30+ seconds
 
-Times vary based on:
-- JDK version and optimization
-- Disk I/O speed
-- Available memory
+Memory usage: typically < 512MB for most projects
