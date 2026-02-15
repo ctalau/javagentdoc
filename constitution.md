@@ -148,17 +148,17 @@ Must support all versions of Java and language features:
 - [x] Support for `--semanticOut` and `--semanticFormat` options
 - [x] XML output generation for packages, classes, methods, fields
 - [x] Markdown output generation for basic API structure
-- [ ] Successfully process Google Guava library → generate valid Markdown
-- [ ] All standard Javadoc block tags captured in XML
-- [ ] All inline tags (@link, @code, @literal, etc.) represented
-- [ ] Type information fully captured (generics, bounds, modifiers)
+- [ ] Successfully process Google Guava library → generate valid Markdown (integration test needed)
+- [x] All standard Javadoc block tags captured in XML (@param, @return, @throws, @author, @version, @since, @deprecated, @see)
+- [x] All inline tags (@link, @code, @literal, etc.) represented
+- [x] Type information fully captured (generics, bounds, modifiers)
 
 ### Phase 2: Semantic Enrichment
-- [ ] Complete DocTree visitor for fine-grained semantic capture
-- [ ] Semantic linking between related elements
-- [ ] Cross-reference resolution
-- [ ] Inheritance hierarchy representation
-- [ ] Generic type parameter tracking
+- [x] Complete DocTree visitor for fine-grained semantic capture
+- [ ] Semantic linking between related elements (Phase 3)
+- [ ] Cross-reference resolution (Phase 3)
+- [ ] Inheritance hierarchy representation (Phase 3)
+- [x] Generic type parameter tracking
 
 ### Phase 3: Advanced Features
 - [ ] Module documentation (Java 9+)
