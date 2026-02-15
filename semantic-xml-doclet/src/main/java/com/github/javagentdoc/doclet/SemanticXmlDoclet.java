@@ -247,6 +247,9 @@ public final class SemanticXmlDoclet implements Doclet {
             x.writeEndElement();
         }
 
+        // Write inheritance hierarchy
+        writeInheritance(x, t);
+
         writeDoc(x, docTrees, t);
 
         x.writeStartElement("members");
@@ -261,6 +264,40 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeEndElement();
 
         x.writeEndElement();
+    }
+
+    private void writeInheritance(XMLStreamWriter x, TypeElement t) throws Exception {
+        // Write superclass (extends) for classes
+        if (t.getKind() == ElementKind.CLASS) {
+            javax.lang.model.type.TypeMirror superclass = t.getSuperclass();
+            // Only write if it's not Object (or NoType for Object itself)
+            if (superclass.getKind() == javax.lang.model.type.TypeKind.DECLARED) {
+                String superclassName = superclass.toString();
+                // Skip java.lang.Object as it's implicit
+                if (!"java.lang.Object".equals(superclassName)) {
+                    x.writeStartElement("extends");
+                    x.writeAttribute("type", superclassName);
+                    x.writeCharacters(superclassName);
+                    x.writeEndElement();
+                }
+            }
+        }
+
+        // Write interfaces
+        // For classes: these are implemented interfaces (implements)
+        // For interfaces: these are extended interfaces (extends)
+        List<? extends javax.lang.model.type.TypeMirror> interfaces = t.getInterfaces();
+        if (!interfaces.isEmpty()) {
+            boolean isInterface = t.getKind() == ElementKind.INTERFACE;
+            String elementName = isInterface ? "extends" : "implements";
+
+            for (javax.lang.model.type.TypeMirror iface : interfaces) {
+                x.writeStartElement(elementName);
+                x.writeAttribute("type", iface.toString());
+                x.writeCharacters(iface.toString());
+                x.writeEndElement();
+            }
+        }
     }
 
     private void appendTypeMarkdown(StringBuilder md, TypeElement t, DocTrees docTrees) {
