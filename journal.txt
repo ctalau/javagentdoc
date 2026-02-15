@@ -1,0 +1,143 @@
+===============================================================================
+JAVAGENTDOC TESTING JOURNAL - Fresh Test Against Google Guava
+===============================================================================
+Started: 2025-02-15 (Fresh Attempt)
+
+Goal: Build javagentdoc and test doclet against Google Guava library
+
+===============================================================================
+STEP 1: CHECK FOR JAVA AND MAVEN
+===============================================================================
+
+Checking java...
+Command: java -version
+Result: ✓ SUCCESS
+Version: OpenJDK 21.0.7
+
+Checking maven...
+Command: mvn -version
+Result: ✓ SUCCESS
+Version: Apache Maven 3.6.3
+
+Both tools available! Proceeding with test.
+
+===============================================================================
+STEP 2: BUILD JAVAGENTDOC PROJECT
+===============================================================================
+
+Building the semantic-xml-doclet...
+Command: mvn clean install -DskipTests
+
+Result: ✗ COMPILATION FAILURE
+
+Error: Missing abstract method implementation
+File: SemanticXmlDoclet.java:31
+Problem: Does not implement getSupportedSourceVersion() from Doclet interface
+
+This is a real compilation error - the Doclet interface requires implementation of:
+- getSupportedSourceVersion()
+
+The implementation only had:
+- init()
+- getName()
+- getSupportedOptions()
+- run()
+
+Fixing this now...
+
+===============================================================================
+STEP 3: FIX COMPILATION ERROR
+===============================================================================
+
+Fix 1: Added missing abstract method getSupportedSourceVersion()
+Fix 2: Added import for javax.lang.model.SourceVersion
+Fix 3: Used SourceVersion.RELEASE_17 (matches pom.xml target)
+
+Result: ✓ BUILD SUCCESS
+Files created:
+  - semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar (52 KB)
+  - semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT-shaded.jar (with maven-shade)
+
+Build time: ~49 seconds (including plugin downloads)
+
+===============================================================================
+STEP 4: CLONE GOOGLE GUAVA
+===============================================================================
+
+Command: git clone --depth 1 https://github.com/google/guava.git
+Result: ✓ SUCCESS
+Cloned to: /tmp/guava
+Source structure: /tmp/guava/guava/src/com/google/common/
+
+Packages found:
+  - annotations, base, cache, collect, escape, eventbus, graph, hash, html, io,
+    math, net, primitives, reflect, testing, util, xml
+
+Total size: ~1500+ classes
+
+===============================================================================
+STEP 5: RUN JAVADOC WITH DOCLET ON GUAVA
+===============================================================================
+
+ATTEMPT 1: Direct javadoc with -doclet flag
+Result: FAILED
+Error: Cannot find doclet class com.github.javagentdoc.doclet.SemanticXmlDoclet
+Reason: javadoc cannot locate doclet in JAR or classpath
+
+Debugging: Verified class exists in JAR and can be loaded by Java directly
+
+ATTEMPT 2: Maven javadoc:javadoc from Guava directory
+Result: FAILED
+Error: Unknown lifecycle phase ""
+Reason: Maven goal syntax error in command
+
+ATTEMPT 3: Test with simple package first
+Result: ✓ SUCCESS!
+Doclet loaded and executed
+Generated /tmp/test-output.md with test class documentation
+
+Output sample:
+--------
+# API Documentation
+
+## Package: test
+
+### Class: `TestClass`
+
+**Description:** A test class for the SemanticXmlDoclet.
+@author Test Author
+@version 1.0
+
+#### Members
+
+- **Constructor:** `<init>()`
+
+- **Method:** `java.lang.String greet(java.lang.String name)`
+  - A simple test method.
+@param name the person's name
+@return a greeting
+--------
+
+Key observations:
+✓ Doclet loads and runs successfully
+✓ Generates valid Markdown output
+✓ Captures classes, methods, constructors
+✓ Includes documentation comments
+✗ Tags (@param, @return, @author, @version) appear as raw text in output
+✗ No semantic parsing of tag structure
+
+ATTEMPT 4: Run on Google Guava
+Result: PARTIAL
+Issue 1: When processing full com.google.common, doclet cannot be found
+Issue 2: When trying smaller package (com.google.common.base), module resolution fails
+- Guava uses module-info.java with transitive dependencies
+- Missing modules: com.google.common.util.concurrent.internal, com.google.errorprone.annotations, etc.
+- javadoc cannot resolve module dependencies without full build
+
+Current Status: Doclet works on simple cases but Guava requires either:
+1. Full Maven build with all dependencies
+2. Manual module path configuration
+3. Running from Guava's own Maven build process
+
+Proceeding with Maven build attempt...
+
