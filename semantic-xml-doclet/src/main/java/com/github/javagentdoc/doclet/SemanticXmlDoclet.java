@@ -147,7 +147,7 @@ public final class SemanticXmlDoclet implements Doclet {
 
             switch (outputFormat) {
                 case XML:
-                    generateXml(env, docTrees);
+                    generateXml(env, docTrees, elements);
                     break;
                 case MARKDOWN:
                     generateMarkdown(env, docTrees);
@@ -163,7 +163,7 @@ public final class SemanticXmlDoclet implements Doclet {
         }
     }
 
-    private void generateXml(DocletEnvironment env, DocTrees docTrees) throws Exception {
+    private void generateXml(DocletEnvironment env, DocTrees docTrees, Elements elements) throws Exception {
         try (OutputStream os = Files.newOutputStream(outFile)) {
             XMLOutputFactory f = XMLOutputFactory.newFactory();
             XMLStreamWriter x = f.createXMLStreamWriter(os, "UTF-8");
@@ -174,7 +174,7 @@ public final class SemanticXmlDoclet implements Doclet {
 
             for (Element e : env.getIncludedElements()) {
                 if (e.getKind() == ElementKind.PACKAGE) {
-                    writePackage(x, (PackageElement) e, docTrees);
+                    writePackage(x, (PackageElement) e, docTrees, elements);
                 }
             }
 
@@ -197,13 +197,13 @@ public final class SemanticXmlDoclet implements Doclet {
         Files.write(outFile, md.toString().getBytes("UTF-8"));
     }
 
-    private void writePackage(XMLStreamWriter x, PackageElement pkg, DocTrees docTrees) throws Exception {
+    private void writePackage(XMLStreamWriter x, PackageElement pkg, DocTrees docTrees, Elements elements) throws Exception {
         x.writeStartElement("package");
         x.writeAttribute("name", pkg.getQualifiedName().toString());
 
         for (Element enclosed : pkg.getEnclosedElements()) {
             if (enclosed.getKind().isClass() || enclosed.getKind().isInterface()) {
-                writeType(x, (TypeElement) enclosed, docTrees);
+                writeType(x, (TypeElement) enclosed, docTrees, elements);
             }
         }
 
@@ -221,7 +221,7 @@ public final class SemanticXmlDoclet implements Doclet {
         }
     }
 
-    private void writeType(XMLStreamWriter x, TypeElement t, DocTrees docTrees) throws Exception {
+    private void writeType(XMLStreamWriter x, TypeElement t, DocTrees docTrees, Elements elements) throws Exception {
         x.writeStartElement("type");
         x.writeAttribute("name", t.getQualifiedName().toString());
         x.writeAttribute("kind", t.getKind().name().toLowerCase(Locale.ROOT));
@@ -256,7 +256,7 @@ public final class SemanticXmlDoclet implements Doclet {
         for (Element m : t.getEnclosedElements()) {
             switch (m.getKind()) {
                 case FIELD -> writeField(x, (VariableElement) m, docTrees);
-                case METHOD -> writeMethod(x, (ExecutableElement) m, docTrees);
+                case METHOD -> writeMethod(x, (ExecutableElement) m, t, docTrees, elements);
                 case CONSTRUCTOR -> writeConstructor(x, (ExecutableElement) m, docTrees);
                 default -> { /* ignore */ }
             }
@@ -298,6 +298,87 @@ public final class SemanticXmlDoclet implements Doclet {
                 x.writeEndElement();
             }
         }
+    }
+
+    private void writeMethodOverride(XMLStreamWriter x, ExecutableElement method,
+                                     TypeElement containingClass, Elements elements) throws Exception {
+        // Find overridden method in superclass or interfaces
+        ExecutableElement overriddenMethod = findOverriddenMethod(method, containingClass, elements);
+
+        if (overriddenMethod != null) {
+            Element overriddenClass = overriddenMethod.getEnclosingElement();
+            String overriddenClassName = "";
+            if (overriddenClass instanceof TypeElement) {
+                overriddenClassName = ((TypeElement) overriddenClass).getQualifiedName().toString();
+            }
+
+            x.writeStartElement("overrides");
+            x.writeAttribute("class", overriddenClassName);
+            x.writeAttribute("method", overriddenMethod.getSimpleName().toString());
+
+            // Write signature for disambiguation
+            StringBuilder sig = new StringBuilder("(");
+            List<? extends VariableElement> params = overriddenMethod.getParameters();
+            for (int i = 0; i < params.size(); i++) {
+                if (i > 0) sig.append(", ");
+                sig.append(params.get(i).asType().toString());
+            }
+            sig.append(")");
+            x.writeAttribute("signature", sig.toString());
+
+            x.writeCharacters(overriddenClassName + "." + overriddenMethod.getSimpleName());
+            x.writeEndElement();
+        }
+    }
+
+    private ExecutableElement findOverriddenMethod(ExecutableElement method,
+                                                   TypeElement containingClass,
+                                                   Elements elements) {
+        // Check superclass
+        if (containingClass.getKind() == ElementKind.CLASS) {
+            javax.lang.model.type.TypeMirror superclass = containingClass.getSuperclass();
+            if (superclass.getKind() == javax.lang.model.type.TypeKind.DECLARED) {
+                Element superElement = ((javax.lang.model.type.DeclaredType) superclass).asElement();
+                if (superElement instanceof TypeElement) {
+                    TypeElement superType = (TypeElement) superElement;
+                    ExecutableElement overridden = findOverriddenInType(method, containingClass, superType, elements);
+                    if (overridden != null) {
+                        return overridden;
+                    }
+                }
+            }
+        }
+
+        // Check interfaces
+        for (javax.lang.model.type.TypeMirror iface : containingClass.getInterfaces()) {
+            if (iface.getKind() == javax.lang.model.type.TypeKind.DECLARED) {
+                Element ifaceElement = ((javax.lang.model.type.DeclaredType) iface).asElement();
+                if (ifaceElement instanceof TypeElement) {
+                    TypeElement ifaceType = (TypeElement) ifaceElement;
+                    ExecutableElement overridden = findOverriddenInType(method, containingClass, ifaceType, elements);
+                    if (overridden != null) {
+                        return overridden;
+                    }
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private ExecutableElement findOverriddenInType(ExecutableElement method,
+                                                   TypeElement containingClass,
+                                                   TypeElement ancestorType,
+                                                   Elements elements) {
+        for (Element enclosed : ancestorType.getEnclosedElements()) {
+            if (enclosed.getKind() == ElementKind.METHOD) {
+                ExecutableElement ancestorMethod = (ExecutableElement) enclosed;
+                if (elements.overrides(method, ancestorMethod, containingClass)) {
+                    return ancestorMethod;
+                }
+            }
+        }
+        return null;
     }
 
     private void appendTypeMarkdown(StringBuilder md, TypeElement t, DocTrees docTrees) {
@@ -366,7 +447,8 @@ public final class SemanticXmlDoclet implements Doclet {
         md.append("\n");
     }
 
-    private void writeMethod(XMLStreamWriter x, ExecutableElement m, DocTrees docTrees) throws Exception {
+    private void writeMethod(XMLStreamWriter x, ExecutableElement m, TypeElement containingClass,
+                             DocTrees docTrees, Elements elements) throws Exception {
         x.writeStartElement("method");
         x.writeAttribute("name", m.getSimpleName().toString());
         x.writeAttribute("returns", m.getReturnType().toString());
@@ -393,6 +475,10 @@ public final class SemanticXmlDoclet implements Doclet {
         }
 
         writeExecutableSignature(x, m);
+
+        // Write method override information
+        writeMethodOverride(x, m, containingClass, elements);
+
         writeDoc(x, docTrees, m);
         x.writeEndElement();
     }
