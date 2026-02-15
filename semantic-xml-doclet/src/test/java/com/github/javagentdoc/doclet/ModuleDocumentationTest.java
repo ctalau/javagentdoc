@@ -101,7 +101,6 @@ public class ModuleDocumentationTest {
              */
             module com.example.mymodule {
                 exports com.example.api;
-                exports com.example.util to com.example.client;
             }
             """);
 

@@ -173,7 +173,9 @@ public final class SemanticXmlDoclet implements Doclet {
             x.writeAttribute("version", "1.0");
 
             for (Element e : env.getIncludedElements()) {
-                if (e.getKind() == ElementKind.PACKAGE) {
+                if (e.getKind() == ElementKind.MODULE) {
+                    writeModule(x, (ModuleElement) e, docTrees);
+                } else if (e.getKind() == ElementKind.PACKAGE) {
                     writePackage(x, (PackageElement) e, docTrees, elements);
                 }
             }
@@ -195,6 +197,99 @@ public final class SemanticXmlDoclet implements Doclet {
         }
 
         Files.write(outFile, md.toString().getBytes("UTF-8"));
+    }
+
+    private void writeModule(XMLStreamWriter x, ModuleElement module, DocTrees docTrees) throws Exception {
+        x.writeStartElement("module");
+        x.writeAttribute("name", module.getQualifiedName().toString());
+
+        // Write module documentation
+        writeDoc(x, docTrees, module);
+
+        // Write module directives
+        for (ModuleElement.Directive directive : module.getDirectives()) {
+            switch (directive.getKind()) {
+                case EXPORTS -> {
+                    ModuleElement.ExportsDirective exports = (ModuleElement.ExportsDirective) directive;
+                    x.writeStartElement("exports");
+                    x.writeAttribute("package", exports.getPackage().getQualifiedName().toString());
+
+                    // If qualified export (exports to specific modules)
+                    if (exports.getTargetModules() != null && !exports.getTargetModules().isEmpty()) {
+                        StringBuilder targets = new StringBuilder();
+                        for (ModuleElement targetModule : exports.getTargetModules()) {
+                            if (!targets.isEmpty()) targets.append(", ");
+                            targets.append(targetModule.getQualifiedName().toString());
+                        }
+                        x.writeAttribute("to", targets.toString());
+                    }
+
+                    x.writeCharacters(exports.getPackage().getQualifiedName().toString());
+                    x.writeEndElement();
+                }
+                case OPENS -> {
+                    ModuleElement.OpensDirective opens = (ModuleElement.OpensDirective) directive;
+                    x.writeStartElement("opens");
+                    x.writeAttribute("package", opens.getPackage().getQualifiedName().toString());
+
+                    // If qualified opens (opens to specific modules)
+                    if (opens.getTargetModules() != null && !opens.getTargetModules().isEmpty()) {
+                        StringBuilder targets = new StringBuilder();
+                        for (ModuleElement targetModule : opens.getTargetModules()) {
+                            if (!targets.isEmpty()) targets.append(", ");
+                            targets.append(targetModule.getQualifiedName().toString());
+                        }
+                        x.writeAttribute("to", targets.toString());
+                    }
+
+                    x.writeCharacters(opens.getPackage().getQualifiedName().toString());
+                    x.writeEndElement();
+                }
+                case REQUIRES -> {
+                    ModuleElement.RequiresDirective requires = (ModuleElement.RequiresDirective) directive;
+                    x.writeStartElement("requires");
+                    x.writeAttribute("module", requires.getDependency().getQualifiedName().toString());
+
+                    // Write modifiers (transitive, static)
+                    if (requires.isTransitive()) {
+                        x.writeAttribute("transitive", "true");
+                    }
+                    if (requires.isStatic()) {
+                        x.writeAttribute("static", "true");
+                    }
+
+                    x.writeCharacters(requires.getDependency().getQualifiedName().toString());
+                    x.writeEndElement();
+                }
+                case PROVIDES -> {
+                    ModuleElement.ProvidesDirective provides = (ModuleElement.ProvidesDirective) directive;
+                    x.writeStartElement("provides");
+                    x.writeAttribute("service", provides.getService().getQualifiedName().toString());
+
+                    // Write implementations
+                    if (!provides.getImplementations().isEmpty()) {
+                        StringBuilder impls = new StringBuilder();
+                        for (TypeElement impl : provides.getImplementations()) {
+                            if (!impls.isEmpty()) impls.append(", ");
+                            impls.append(impl.getQualifiedName().toString());
+                        }
+                        x.writeAttribute("with", impls.toString());
+                    }
+
+                    x.writeCharacters(provides.getService().getQualifiedName().toString());
+                    x.writeEndElement();
+                }
+                case USES -> {
+                    ModuleElement.UsesDirective uses = (ModuleElement.UsesDirective) directive;
+                    x.writeStartElement("uses");
+                    x.writeAttribute("service", uses.getService().getQualifiedName().toString());
+                    x.writeCharacters(uses.getService().getQualifiedName().toString());
+                    x.writeEndElement();
+                }
+            }
+        }
+
+        x.writeEndElement();
     }
 
     private void writePackage(XMLStreamWriter x, PackageElement pkg, DocTrees docTrees, Elements elements) throws Exception {
