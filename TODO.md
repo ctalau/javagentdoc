@@ -53,8 +53,8 @@ All core semantic enrichment features are now implemented and tested.
 - [x] Cross-reference resolution between types/methods
 - [x] Inheritance hierarchy tracking
 - [x] Method override tracking
-- [ ] Annotation processing
-- [ ] Module documentation support
+- [x] Annotation processing
+- [x] Module documentation support
 
 ### Phase 4: Additional Formats
 

@@ -1,12 +1,12 @@
 # Phase 3 Progress: Advanced Features
 
 **Date:** 2026-02-16
-**Status:** 🟡 In Progress (3/5 items complete)
-**Test Coverage:** 16/16 tests passing
+**Status:** ✅ Complete (5/5 items complete)
+**Test Coverage:** 25/25 tests passing
 
 ## Summary
 
-Phase 3 adds advanced semantic features for cross-references, inheritance, and method overrides. Three major features are complete with full test coverage.
+Phase 3 adds advanced semantic features for cross-references, inheritance, method overrides, annotations, and modules. All five major features are complete with full test coverage.
 
 ## Completed Features
 
@@ -94,6 +94,70 @@ Detects and tracks method overrides from superclasses and interfaces:
 - Traverses superclass and interface hierarchy
 - Passes `Elements` utility through call chain
 
+### 4. Annotation Processing (5 tests)
+**Completed in commit:** `05110f9`
+
+Captures annotations on classes, methods, fields, and parameters:
+- Class-level annotations (@Deprecated, custom annotations)
+- Method-level annotations (@Override, @Deprecated)
+- Field-level annotations (custom @Inject, etc.)
+- Parameter annotations (@NotNull, etc.)
+- Annotation values and parameters extracted
+
+**XML Output:**
+```xml
+<annotation type="java.lang.Deprecated">Deprecated</annotation>
+<annotation type="com.example.Configure">
+  <values>
+    <value name="name">"MainComponent"</value>
+    <value name="priority">10</value>
+  </values>
+  Configure
+</annotation>
+```
+
+**Implementation:**
+- Added `writeAnnotations()` method to extract annotations from elements
+- Extracts annotation type (qualified name)
+- Captures annotation values/parameters in `<values>` subelements
+- Called from `writeType()`, `writeMethod()`, `writeField()`, `writeExecutableSignature()`
+- Modified `writeExecutableSignature()` to use non-empty `<param>` elements
+
+### 5. Module Documentation Support (4 tests)
+**Completed in commit:** `a0c0762`
+
+Captures Java 9+ module-info.java directives:
+- Module name and documentation
+- exports directives (with qualified exports to specific modules)
+- opens directives (with qualified opens)
+- requires directives (with transitive and static modifiers)
+- provides directives (service and implementations)
+- uses directives (service consumption)
+
+**XML Output:**
+```xml
+<module name="com.example.mymodule">
+  <doc>
+    <description>Module documentation</description>
+    <since>1.0</since>
+  </doc>
+  <exports package="com.example.api">com.example.api</exports>
+  <requires module="java.base">java.base</requires>
+  <requires module="java.sql" transitive="true">java.sql</requires>
+  <opens package="com.example.internal">com.example.internal</opens>
+  <provides service="com.example.Service" with="com.example.ServiceImpl">
+    com.example.Service
+  </provides>
+</module>
+```
+
+**Implementation:**
+- Added `writeModule()` method to document modules
+- Detects MODULE elements in `generateXml()`
+- Extracts all module directive kinds using switch expression
+- Handles qualified exports/opens (to specific modules)
+- Captures requires modifiers (transitive, static)
+
 ## Test Coverage
 
 | Test Suite                         | Tests | Status |
@@ -103,9 +167,11 @@ Detects and tracks method overrides from superclasses and interfaces:
 | CrossReferenceResolutionTest       | 3     | ✅     |
 | InheritanceHierarchyTest           | 4     | ✅     |
 | MethodOverrideTrackingTest         | 4     | ✅     |
-| **Total**                          | **16**| **✅** |
+| AnnotationProcessingTest           | 5     | ✅     |
+| ModuleDocumentationTest            | 4     | ✅     |
+| **Total**                          | **25**| **✅** |
 
-All 16 tests passing consistently.
+All 25 tests passing consistently.
 
 ## What Changed From Phase 2
 
@@ -184,11 +250,7 @@ The Phase 3 features enable AI agents to:
    - Create proper method overrides
    - Follow established class hierarchies
 
-## Remaining Work
-
-### Phase 3 Items Not Yet Started
-- [ ] **Annotation processing** - Capture `@annotations` on classes/methods/fields
-- [ ] **Module documentation support** - Java 9+ module-info processing
+## Future Work
 
 ### Future Phases
 - **Phase 4:** Additional Formats (JSON, JSONLD, HTML5)
@@ -227,25 +289,27 @@ The Phase 3 features enable AI agents to:
 4. `5a5d6c7` - Implement inheritance hierarchy tracking
 5. `6784430` - Add failing tests for method override tracking
 6. `2b3b707` - Implement method override tracking
-7. `3f95e48` - Update TODO.md: Mark Phase 3 items complete
+7. `3f95e48` - Update TODO.md: Mark Phase 3 items complete (3/5)
+8. `25eab60` - Create PHASE3-PROGRESS.md documentation
+9. `c896128` - Add failing tests for annotation processing
+10. `05110f9` - Implement annotation processing
+11. `c37ec2d` - Add failing tests for module documentation support
+12. `a0c0762` - Implement module documentation support
 
 ## Next Steps
 
-1. **Annotation Processing**
-   - Capture `@annotations` on elements
-   - Include annotation values/parameters
-   - Support custom annotations
-
-2. **Module Documentation**
-   - Parse `module-info.java`
-   - Track module dependencies
-   - Capture exports/requires
-
-3. **Phase 4 Planning**
+### Phase 4: Additional Formats
    - JSON output format
    - JSONLD for semantic web
    - Enhanced HTML5 output
+   - Custom format support via plugins
+
+### Phase 5: Performance & Scale
+   - Parallel processing for large projects
+   - Incremental processing support
+   - Caching mechanism
+   - Memory optimization
 
 ---
 
-**Phase 3 is 60% complete with 3/5 features production-ready.**
+**Phase 3 is 100% complete with all 5 features production-ready.**
