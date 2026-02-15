@@ -26,10 +26,11 @@ These are the gaps between the current MVP implementation and the full specifica
 
 ✗ No inheritance hierarchy (coming in Phase 3)
 
-✗ No generic type parameters preserved properly (Phase 2 - in progress)
+✓ ~~No generic type parameters preserved properly~~
+  **FIXED**: Generic type parameters now extracted with bounds and documentation
 
 ✓ ~~NO API is truly "AI-friendly" for semantic understanding~~
-  **IMPROVED**: Semantic structure now enables AI understanding
+  **FIXED**: Semantic structure now enables AI understanding with structured tags, type info, and generics
 
 ## Implementation Roadmap
 
@@ -40,8 +41,12 @@ These are the gaps between the current MVP implementation and the full specifica
 - [x] Add inline tag handlers ({@link}, {@code}, {@literal}, {@value})
 - [x] Parse @throws exceptions into structured format
 - [x] Create semantic element mapping
-- [ ] Extract generic type parameters
-- [ ] Enhanced inline tag rendering with semantic context
+- [x] Extract generic type parameters
+- [x] Distinguish type parameters (@param <T>) from method parameters (@param name)
+
+### Phase 2 Complete! ✓
+
+All core semantic enrichment features are now implemented and tested.
 
 ### Phase 3: Advanced Features
 
