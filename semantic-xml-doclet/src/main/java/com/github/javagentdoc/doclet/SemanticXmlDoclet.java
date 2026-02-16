@@ -36,6 +36,7 @@ public final class SemanticXmlDoclet implements Doclet {
 
     private Path outFile = Paths.get("target/semantic-javadoc.xml");
     private OutputFormat outputFormat = OutputFormat.XML;
+    private Path outputDir = null; // For directory-based output
 
     private enum OutputFormat {
         XML, MARKDOWN
@@ -187,16 +188,308 @@ public final class SemanticXmlDoclet implements Doclet {
     }
 
     private void generateMarkdown(DocletEnvironment env, DocTrees docTrees) throws Exception {
-        StringBuilder md = new StringBuilder();
-        md.append("# API Documentation\n\n");
+        // Determine output directory (parent of outFile)
+        outputDir = outFile.getParent();
+        if (outputDir == null) {
+            outputDir = Paths.get(".");
+        }
 
+        // Clean and create output directory
+        if (Files.exists(outputDir)) {
+            // Delete existing markdown files and directories
+            Files.walk(outputDir)
+                .filter(p -> p.toString().endsWith(".md") || Files.isDirectory(p))
+                .sorted(java.util.Comparator.reverseOrder())
+                .forEach(p -> {
+                    try {
+                        if (!p.equals(outputDir)) {
+                            Files.deleteIfExists(p);
+                        }
+                    } catch (IOException e) {
+                        // Ignore
+                    }
+                });
+        }
+        Files.createDirectories(outputDir);
+
+        // Generate README.md as index
+        StringBuilder indexMd = new StringBuilder();
+        indexMd.append("# API Documentation\n\n");
+        indexMd.append("## Packages\n\n");
+
+        // Process each package
         for (Element e : env.getIncludedElements()) {
             if (e.getKind() == ElementKind.PACKAGE) {
-                appendPackageMarkdown(md, (PackageElement) e, docTrees);
+                PackageElement pkg = (PackageElement) e;
+                String pkgName = pkg.getQualifiedName().toString();
+
+                // Add to index
+                String pkgPath = pkgName.replace('.', '/');
+                indexMd.append("- [").append(pkgName).append("](").append(pkgPath).append("/README.md)\n");
+
+                // Generate package directory and files
+                generatePackageMarkdown(pkg, docTrees);
             }
         }
 
-        Files.write(outFile, md.toString().getBytes("UTF-8"));
+        // Write index
+        Files.write(outputDir.resolve("README.md"), indexMd.toString().getBytes("UTF-8"));
+    }
+
+    private void generatePackageMarkdown(PackageElement pkg, DocTrees docTrees) throws Exception {
+        String pkgName = pkg.getQualifiedName().toString();
+        Path pkgDir = outputDir.resolve(pkgName.replace('.', '/'));
+        Files.createDirectories(pkgDir);
+
+        // Create package README.md
+        StringBuilder pkgIndex = new StringBuilder();
+        pkgIndex.append("# Package: `").append(pkgName).append("`\n\n");
+        pkgIndex.append("## Classes and Interfaces\n\n");
+
+        // Process each type in the package
+        for (Element enclosed : pkg.getEnclosedElements()) {
+            if (enclosed.getKind().isClass() || enclosed.getKind().isInterface()) {
+                TypeElement type = (TypeElement) enclosed;
+                String typeName = type.getSimpleName().toString();
+
+                // Add to package index
+                pkgIndex.append("- [").append(typeName).append("](").append(typeName).append(".md)\n");
+
+                // Generate class file
+                generateClassMarkdown(type, pkgDir, pkgName, docTrees);
+            }
+        }
+
+        // Write package README
+        Files.write(pkgDir.resolve("README.md"), pkgIndex.toString().getBytes("UTF-8"));
+    }
+
+    private void generateClassMarkdown(TypeElement type, Path pkgDir, String pkgName, DocTrees docTrees) throws Exception {
+        StringBuilder md = new StringBuilder();
+        String typeName = type.getSimpleName().toString();
+        String qualifiedName = type.getQualifiedName().toString();
+        String kind = type.getKind().name().toLowerCase(Locale.ROOT);
+
+        // Header
+        md.append("# ").append(kind.substring(0, 1).toUpperCase()).append(kind.substring(1))
+                .append(": `").append(typeName).append("`\n\n");
+
+        md.append("**Package:** [`").append(pkgName).append("`](README.md)\n\n");
+        md.append("**Fully Qualified Name:** `").append(qualifiedName).append("`\n\n");
+
+        // Inheritance hierarchy
+        appendInheritanceMarkdown(md, type, pkgName);
+
+        // Type parameters
+        if (!type.getTypeParameters().isEmpty()) {
+            md.append("## Type Parameters\n\n");
+            for (TypeParameterElement tp : type.getTypeParameters()) {
+                md.append("- `").append(tp.getSimpleName()).append("`");
+                if (!tp.getBounds().isEmpty()) {
+                    md.append(" extends ");
+                    for (int i = 0; i < tp.getBounds().size(); i++) {
+                        if (i > 0) md.append(", ");
+                        md.append("`").append(tp.getBounds().get(i).toString()).append("`");
+                    }
+                }
+                md.append("\n");
+            }
+            md.append("\n");
+        }
+
+        // Description
+        DocCommentTree doc = docTrees.getDocCommentTree(type);
+        if (doc != null) {
+            md.append("## Description\n\n");
+            String description = doc.toString();
+            md.append(convertLinksInText(description, pkgName)).append("\n\n");
+        }
+
+        // Fields
+        List<VariableElement> fields = new ArrayList<>();
+        for (Element m : type.getEnclosedElements()) {
+            if (m.getKind() == ElementKind.FIELD) {
+                fields.add((VariableElement) m);
+            }
+        }
+        if (!fields.isEmpty()) {
+            md.append("## Fields\n\n");
+            for (VariableElement f : fields) {
+                appendFieldMarkdownDetailed(md, f, pkgName, docTrees);
+            }
+        }
+
+        // Constructors
+        List<ExecutableElement> constructors = new ArrayList<>();
+        for (Element m : type.getEnclosedElements()) {
+            if (m.getKind() == ElementKind.CONSTRUCTOR) {
+                constructors.add((ExecutableElement) m);
+            }
+        }
+        if (!constructors.isEmpty()) {
+            md.append("## Constructors\n\n");
+            for (ExecutableElement c : constructors) {
+                appendConstructorMarkdownDetailed(md, c, pkgName, docTrees);
+            }
+        }
+
+        // Methods
+        List<ExecutableElement> methods = new ArrayList<>();
+        for (Element m : type.getEnclosedElements()) {
+            if (m.getKind() == ElementKind.METHOD) {
+                methods.add((ExecutableElement) m);
+            }
+        }
+        if (!methods.isEmpty()) {
+            md.append("## Methods\n\n");
+            for (ExecutableElement method : methods) {
+                appendMethodMarkdownDetailed(md, method, pkgName, docTrees);
+            }
+        }
+
+        // Write class file
+        Files.write(pkgDir.resolve(typeName + ".md"), md.toString().getBytes("UTF-8"));
+    }
+
+    private void appendInheritanceMarkdown(StringBuilder md, TypeElement type, String currentPkg) {
+        // Superclass
+        if (type.getKind() == ElementKind.CLASS) {
+            javax.lang.model.type.TypeMirror superclass = type.getSuperclass();
+            if (superclass.getKind() == javax.lang.model.type.TypeKind.DECLARED) {
+                String superclassName = superclass.toString();
+                if (!"java.lang.Object".equals(superclassName)) {
+                    md.append("**Extends:** ").append(formatTypeLink(superclassName, currentPkg)).append("\n\n");
+                }
+            }
+        }
+
+        // Interfaces
+        List<? extends javax.lang.model.type.TypeMirror> interfaces = type.getInterfaces();
+        if (!interfaces.isEmpty()) {
+            boolean isInterface = type.getKind() == ElementKind.INTERFACE;
+            md.append("**").append(isInterface ? "Extends" : "Implements").append(":** ");
+            for (int i = 0; i < interfaces.size(); i++) {
+                if (i > 0) md.append(", ");
+                md.append(formatTypeLink(interfaces.get(i).toString(), currentPkg));
+            }
+            md.append("\n\n");
+        }
+    }
+
+    private void appendFieldMarkdownDetailed(StringBuilder md, VariableElement f, String currentPkg, DocTrees docTrees) {
+        md.append("### `").append(f.getSimpleName()).append("`\n\n");
+        md.append("**Type:** ").append(formatTypeLink(f.asType().toString(), currentPkg)).append("\n\n");
+
+        DocCommentTree doc = docTrees.getDocCommentTree(f);
+        if (doc != null) {
+            String description = doc.toString();
+            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+        }
+    }
+
+    private void appendConstructorMarkdownDetailed(StringBuilder md, ExecutableElement c, String currentPkg, DocTrees docTrees) {
+        md.append("### `").append(c.getSimpleName()).append("(");
+        appendParametersWithTypes(md, c, currentPkg);
+        md.append(")`\n\n");
+
+        DocCommentTree doc = docTrees.getDocCommentTree(c);
+        if (doc != null) {
+            String description = doc.toString();
+            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+        }
+    }
+
+    private void appendMethodMarkdownDetailed(StringBuilder md, ExecutableElement m, String currentPkg, DocTrees docTrees) {
+        md.append("### `").append(m.getSimpleName()).append("(");
+        appendParametersWithTypes(md, m, currentPkg);
+        md.append(")`\n\n");
+
+        md.append("**Returns:** ").append(formatTypeLink(m.getReturnType().toString(), currentPkg)).append("\n\n");
+
+        DocCommentTree doc = docTrees.getDocCommentTree(m);
+        if (doc != null) {
+            String description = doc.toString();
+            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+        }
+    }
+
+    private void appendParametersWithTypes(StringBuilder md, ExecutableElement e, String currentPkg) {
+        List<? extends VariableElement> params = e.getParameters();
+        for (int i = 0; i < params.size(); i++) {
+            VariableElement p = params.get(i);
+            md.append(formatTypeLink(p.asType().toString(), currentPkg)).append(" ").append(p.getSimpleName());
+            if (i < params.size() - 1) {
+                md.append(", ");
+            }
+        }
+    }
+
+    private String formatTypeLink(String typeName, String currentPkg) {
+        // Extract the base type (remove generics for link purposes)
+        String baseType = typeName.replaceAll("<.*?>", "").trim();
+
+        // Handle arrays
+        baseType = baseType.replace("[]", "");
+
+        // Skip primitive types and common java.lang types
+        if (isPrimitive(baseType) || baseType.startsWith("java.lang.")) {
+            return "`" + typeName + "`";
+        }
+
+        // If it's a fully qualified name, create a link
+        if (baseType.contains(".")) {
+            String pkgName = baseType.substring(0, baseType.lastIndexOf('.'));
+            String className = baseType.substring(baseType.lastIndexOf('.') + 1);
+            String relativePath = getRelativePath(currentPkg, pkgName);
+            return "[`" + typeName + "`](" + relativePath + "/" + className + ".md)";
+        }
+
+        // Otherwise, it's likely in the same package
+        String className = baseType;
+        return "[`" + typeName + "`](" + className + ".md)";
+    }
+
+    private String convertLinksInText(String text, String currentPkg) {
+        // Convert {@link ClassName} or {@link package.ClassName} references
+        // This is a simple implementation; a full implementation would use the DocTree API
+        return text;
+    }
+
+    private String getRelativePath(String fromPkg, String toPkg) {
+        String[] fromParts = fromPkg.split("\\.");
+        String[] toParts = toPkg.split("\\.");
+
+        // Find common prefix
+        int commonPrefix = 0;
+        while (commonPrefix < fromParts.length && commonPrefix < toParts.length &&
+               fromParts[commonPrefix].equals(toParts[commonPrefix])) {
+            commonPrefix++;
+        }
+
+        // Build relative path
+        StringBuilder path = new StringBuilder();
+
+        // Go up from current package
+        for (int i = commonPrefix; i < fromParts.length; i++) {
+            if (path.length() > 0) path.append("/");
+            path.append("..");
+        }
+
+        // Go down to target package
+        for (int i = commonPrefix; i < toParts.length; i++) {
+            if (path.length() > 0) path.append("/");
+            path.append(toParts[i]);
+        }
+
+        return path.length() > 0 ? path.toString() : ".";
+    }
+
+    private boolean isPrimitive(String typeName) {
+        return typeName.equals("boolean") || typeName.equals("byte") ||
+               typeName.equals("char") || typeName.equals("short") ||
+               typeName.equals("int") || typeName.equals("long") ||
+               typeName.equals("float") || typeName.equals("double") ||
+               typeName.equals("void");
     }
 
     private void writeModule(XMLStreamWriter x, ModuleElement module, DocTrees docTrees) throws Exception {
@@ -305,16 +598,6 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeEndElement();
     }
 
-    private void appendPackageMarkdown(StringBuilder md, PackageElement pkg, DocTrees docTrees) {
-        String pkgName = pkg.getQualifiedName().toString();
-        md.append("## Package: ").append(pkgName).append("\n\n");
-
-        for (Element enclosed : pkg.getEnclosedElements()) {
-            if (enclosed.getKind().isClass() || enclosed.getKind().isInterface()) {
-                appendTypeMarkdown(md, (TypeElement) enclosed, docTrees);
-            }
-        }
-    }
 
     private void writeType(XMLStreamWriter x, TypeElement t, DocTrees docTrees, Elements elements) throws Exception {
         x.writeStartElement("type");
@@ -479,34 +762,6 @@ public final class SemanticXmlDoclet implements Doclet {
         return null;
     }
 
-    private void appendTypeMarkdown(StringBuilder md, TypeElement t, DocTrees docTrees) {
-        String kind = t.getKind().name().toLowerCase(Locale.ROOT);
-        md.append("### ").append(kind.substring(0, 1).toUpperCase()).append(kind.substring(1))
-                .append(": `").append(t.getSimpleName()).append("`\n\n");
-
-        DocCommentTree doc = docTrees.getDocCommentTree(t);
-        if (doc != null) {
-            md.append("**Description:** ").append(doc.toString()).append("\n\n");
-        }
-
-        md.append("#### Members\n\n");
-        for (Element m : t.getEnclosedElements()) {
-            switch (m.getKind()) {
-                case FIELD:
-                    appendFieldMarkdown(md, (VariableElement) m, docTrees);
-                    break;
-                case METHOD:
-                    appendMethodMarkdown(md, (ExecutableElement) m, docTrees);
-                    break;
-                case CONSTRUCTOR:
-                    appendConstructorMarkdown(md, (ExecutableElement) m, docTrees);
-                    break;
-                default:
-                    break;
-            }
-        }
-        md.append("\n");
-    }
 
     private void writeField(XMLStreamWriter x, VariableElement f, DocTrees docTrees) throws Exception {
         x.writeStartElement("field");
@@ -517,15 +772,6 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeEndElement();
     }
 
-    private void appendFieldMarkdown(StringBuilder md, VariableElement f, DocTrees docTrees) {
-        md.append("- **Field:** `").append(f.asType()).append(" ")
-                .append(f.getSimpleName()).append("`\n");
-        DocCommentTree doc = docTrees.getDocCommentTree(f);
-        if (doc != null) {
-            md.append("  - ").append(doc.toString()).append("\n");
-        }
-        md.append("\n");
-    }
 
     private void writeConstructor(XMLStreamWriter x, ExecutableElement c, DocTrees docTrees) throws Exception {
         x.writeStartElement("constructor");
@@ -535,16 +781,6 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeEndElement();
     }
 
-    private void appendConstructorMarkdown(StringBuilder md, ExecutableElement c, DocTrees docTrees) {
-        md.append("- **Constructor:** `").append(c.getSimpleName()).append("(");
-        appendParameters(md, c);
-        md.append(")`\n");
-        DocCommentTree doc = docTrees.getDocCommentTree(c);
-        if (doc != null) {
-            md.append("  - ").append(doc.toString()).append("\n");
-        }
-        md.append("\n");
-    }
 
     private void writeMethod(XMLStreamWriter x, ExecutableElement m, TypeElement containingClass,
                              DocTrees docTrees, Elements elements) throws Exception {
@@ -585,28 +821,6 @@ public final class SemanticXmlDoclet implements Doclet {
         x.writeEndElement();
     }
 
-    private void appendMethodMarkdown(StringBuilder md, ExecutableElement m, DocTrees docTrees) {
-        md.append("- **Method:** `").append(m.getReturnType()).append(" ")
-                .append(m.getSimpleName()).append("(");
-        appendParameters(md, m);
-        md.append(")`\n");
-        DocCommentTree doc = docTrees.getDocCommentTree(m);
-        if (doc != null) {
-            md.append("  - ").append(doc.toString()).append("\n");
-        }
-        md.append("\n");
-    }
-
-    private void appendParameters(StringBuilder md, ExecutableElement e) {
-        List<? extends VariableElement> params = e.getParameters();
-        for (int i = 0; i < params.size(); i++) {
-            VariableElement p = params.get(i);
-            md.append(p.asType()).append(" ").append(p.getSimpleName());
-            if (i < params.size() - 1) {
-                md.append(", ");
-            }
-        }
-    }
 
     private void writeExecutableSignature(XMLStreamWriter x, ExecutableElement e) throws Exception {
         x.writeStartElement("params");

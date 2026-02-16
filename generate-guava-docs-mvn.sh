@@ -9,7 +9,7 @@ echo "This will take approximately 15 minutes..."
 GUAVA_VERSION="33.0.0-jre"
 WORK_DIR="/tmp/guava-doc-maven"
 DOCLET_JAR="/home/miciiortodocsi/javagentdoc/semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar"
-OUTPUT_FILE="/home/miciiortodocsi/javagentdoc/samples/guava/guava.md"
+OUTPUT_DIR="/home/miciiortodocsi/javagentdoc/samples/guava"
 
 # Clean and create work directory
 rm -rf "$WORK_DIR"
@@ -84,27 +84,31 @@ FILE_COUNT=$(wc -l < source-files.txt)
 echo "Found ${FILE_COUNT} Java source files"
 
 echo "Generating Markdown documentation..."
-echo "Output will be saved to: ${OUTPUT_FILE}"
+echo "Output will be saved to: ${OUTPUT_DIR}"
+
+# Create output directory
+mkdir -p "${OUTPUT_DIR}"
 
 # Run javadoc with our custom doclet and proper classpath
 javadoc \
   -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
   -docletpath "${DOCLET_JAR}" \
-  --semanticOut "${OUTPUT_FILE}" \
+  --semanticOut "${OUTPUT_DIR}/README.md" \
   --semanticFormat markdown \
   -classpath "${CLASSPATH}" \
   -encoding UTF-8 \
   -quiet \
   @source-files.txt 2>&1 | grep -v "^warning:" || true
 
-if [ -f "${OUTPUT_FILE}" ]; then
+if [ -f "${OUTPUT_DIR}/README.md" ]; then
     echo ""
     echo "✅ Documentation generation complete!"
-    echo "Output file: ${OUTPUT_FILE}"
-    echo "File size: $(du -h "${OUTPUT_FILE}" | cut -f1)"
-    echo "Line count: $(wc -l < "${OUTPUT_FILE}") lines"
+    echo "Output directory: ${OUTPUT_DIR}"
+    echo "Directory size: $(du -sh "${OUTPUT_DIR}" | cut -f1)"
+    echo "Number of markdown files: $(find "${OUTPUT_DIR}" -name "*.md" | wc -l)"
+    echo "Number of packages: $(find "${OUTPUT_DIR}" -type d -name "*.google.*" 2>/dev/null | wc -l)"
 else
-    echo "❌ Error: Output file was not generated"
+    echo "❌ Error: Output was not generated"
     exit 1
 fi
 

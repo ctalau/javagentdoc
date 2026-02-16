@@ -1,0 +1,46 @@
+# Class: `IndexedImmutableSet`
+
+**Package:** [`com.google.common.collect`](README.md)
+
+**Fully Qualified Name:** `com.google.common.collect.IndexedImmutableSet`
+
+**Extends:** [`com.google.common.collect.ImmutableSet.CachingAsList<E>`](ImmutableSet/CachingAsList.md)
+
+## Type Parameters
+
+- `E` extends `java.lang.Object`
+
+## Constructors
+
+### `<init>()`
+
+## Methods
+
+### `get(`int` index)`
+
+**Returns:** [`E`](E.md)
+
+### `iterator()`
+
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
+
+### `spliterator()`
+
+**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+
+### `forEach([`java.util.function.Consumer<? super E>`](../../../../java/util/function/Consumer.md) consumer)`
+
+**Returns:** `void`
+
+### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
+
+**Returns:** `int`
+
+### `createAsList()`
+
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `writeReplace()`
+
+**Returns:** `java.lang.Object`
+

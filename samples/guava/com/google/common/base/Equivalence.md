@@ -1,0 +1,180 @@
+# Class: `Equivalence`
+
+**Package:** [`com.google.common.base`](README.md)
+
+**Fully Qualified Name:** `com.google.common.base.Equivalence`
+
+**Implements:** [`java.util.function.BiPredicate<@org.checkerframework.checker.nullness.qual.Nullable T,@org.checkerframework.checker.nullness.qual.Nullable T>`](../../../../java/util/function/BiPredicate.md)
+
+## Type Parameters
+
+- `T` extends `java.lang.Object`
+
+## Description
+
+A strategy for determining whether two instances are considered equivalent, and for computing
+ hash codes in a manner consistent with that equivalence. Two examples of equivalences are the
+ {@linkplain #identity() identity equivalence} and the {@linkplain #equals "equals" equivalence}.
+@author Bob Lee
+@author Ben Yu
+@author Gregory Kick
+@since 10.0 (<a href="https://github.com/google/guava/wiki/Compatibility">mostly
+     source-compatible</a> since 4.0)
+
+## Constructors
+
+### `<init>()`
+
+Constructor for use by subclasses.
+
+## Methods
+
+### `equivalent([`T`](T.md) a, [`T`](T.md) b)`
+
+**Returns:** `boolean`
+
+Returns {@code true} if the given objects are considered equivalent.
+
+ <p>This method describes an <i>equivalence relation</i> on object references, meaning that for
+ all references {@code x}, {@code y}, and {@code z} (any of which may be null):
+
+ <ul>
+   <li>{@code equivalent(x, x)} is true (<i>reflexive</i> property)
+   <li>{@code equivalent(x, y)} and {@code equivalent(y, x)} each return the same result
+       (<i>symmetric</i> property)
+   <li>If {@code equivalent(x, y)} and {@code equivalent(y, z)} are both true, then {@code
+       equivalent(x, z)} is also true (<i>transitive</i> property)
+ </ul>
+
+ <p>Note that all calls to {@code equivalent(x, y)} are expected to return the same result as
+ long as neither {@code x} nor {@code y} is modified.
+
+### `test([`T`](T.md) t, [`T`](T.md) u)`
+
+**Returns:** `boolean`
+
+@deprecated Provided only to satisfy the {@link BiPredicate} interface; use {@link #equivalent}
+     instead.
+@since 21.0
+
+### `doEquivalent([`T`](T.md) a, [`T`](T.md) b)`
+
+**Returns:** `boolean`
+
+Implemented by the user to determine whether {@code a} and {@code b} are considered equivalent,
+ subject to the requirements specified in {@link #equivalent}.
+
+ <p>This method should not be called except by {@link #equivalent}. When {@link #equivalent}
+ calls this method, {@code a} and {@code b} are guaranteed to be distinct, non-null instances.
+@since 10.0 (previously, subclasses would override equivalent())
+
+### `hash([`T`](T.md) t)`
+
+**Returns:** `int`
+
+Returns a hash code for {@code t}.
+
+ <p>The {@code hash} has the following properties:
+
+ <ul>
+   <li>It is <i>consistent</i>: for any reference {@code x}, multiple invocations of {@code
+       hash(x}} consistently return the same value provided {@code x} remains unchanged
+       according to the definition of the equivalence. The hash need not remain consistent from
+       one execution of an application to another execution of the same application.
+   <li>It is <i>distributable across equivalence</i>: for any references {@code x} and {@code
+       y}, if {@code equivalent(x, y)}, then {@code hash(x) == hash(y)}. It is <i>not</i>
+       necessary that the hash be distributable across <i>inequivalence</i>. If {@code
+       equivalence(x, y)} is false, {@code hash(x) == hash(y)} may still be true.
+   <li>{@code hash(null)} is {@code 0}.
+ </ul>
+
+### `doHash([`T`](T.md) t)`
+
+**Returns:** `int`
+
+Implemented by the user to return a hash code for {@code t}, subject to the requirements
+ specified in {@link #hash}.
+
+ <p>This method should not be called except by {@link #hash}. When {@link #hash} calls this
+ method, {@code t} is guaranteed to be non-null.
+@since 10.0 (previously, subclasses would override hash())
+
+### `onResultOf([`com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T>`](./Function.md) function)`
+
+**Returns:** [`com.google.common.base.Equivalence<F>`](./Equivalence.md)
+
+Returns a new equivalence relation for {@code F} which evaluates equivalence by first applying
+ {@code function} to the argument, then evaluating using {@code this}. That is, for any pair of
+ non-null objects {@code x} and {@code y}, {@code equivalence.onResultOf(function).equivalent(a,
+ b)} is true if and only if {@code equivalence.equivalent(function.apply(a), function.apply(b))}
+ is true.
+
+ <p>For example:
+
+ <pre>{@code
+ Equivalence<Person> SAME_AGE = Equivalence.equals().onResultOf(GET_PERSON_AGE);
+ }</pre>
+
+ <p>{@code function} will never be invoked with a null value.
+
+ <p>Note that {@code function} must be consistent according to {@code this} equivalence
+ relation. That is, invoking {@link Function#apply} multiple times for a given value must return
+ equivalent results. For example, {@code
+ Equivalence.identity().onResultOf(Functions.toStringFunction())} is broken because it's not
+ guaranteed that {@link Object#toString}) always returns the same string instance.
+@since 10.0
+
+### `wrap([`S`](S.md) reference)`
+
+**Returns:** [`com.google.common.base.Equivalence.Wrapper<S>`](Equivalence/Wrapper.md)
+
+Returns a wrapper of {@code reference} that implements {@link Wrapper#equals(Object) Object.equals()} such that {@code wrap(a).equals(wrap(b))} if and only if {@code equivalent(a,
+ b)}.
+
+ <p>The returned object is serializable if both this {@code Equivalence} and {@code reference}
+ are serializable (including when {@code reference} is null).
+@since 10.0
+
+### `pairwise()`
+
+**Returns:** [`com.google.common.base.Equivalence<java.lang.Iterable<S>>`](./Equivalence>.md)
+
+Returns an equivalence over iterables based on the equivalence of their elements. More
+ specifically, two iterables are considered equivalent if they both contain the same number of
+ elements, and each pair of corresponding elements is equivalent according to {@code this}. Null
+ iterables are equivalent to one another.
+
+ <p>Note that this method performs a similar function for equivalences as {@link com.google.common.collect.Ordering#lexicographical} does for orderings.
+
+ <p>The returned object is serializable if this object is serializable.
+@since 10.0
+
+### `equivalentTo([`T`](T.md) target)`
+
+**Returns:** [`com.google.common.base.Predicate<@org.checkerframework.checker.nullness.qual.Nullable T>`](./Predicate.md)
+
+Returns a predicate that evaluates to true if and only if the input is equivalent to {@code
+ target} according to this equivalence relation.
+@since 10.0
+
+### `equals()`
+
+**Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](./Equivalence.md)
+
+Returns an equivalence that delegates to {@link Object#equals} and {@link Object#hashCode}.
+ {@link Equivalence#equivalent} returns {@code true} if both values are null, or if neither
+ value is null and {@link Object#equals} returns {@code true}. {@link Equivalence#hash} returns
+ {@code 0} if passed a null value.
+@since 13.0
+@since 8.0 (in Equivalences with null-friendly behavior)
+@since 4.0 (in Equivalences)
+
+### `identity()`
+
+**Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](./Equivalence.md)
+
+Returns an equivalence that uses {@code ==} to compare values and {@link System#identityHashCode(Object)} to compute the hash code. {@link Equivalence#equivalent}
+ returns {@code true} if {@code a == b}, including in the case that a and b are both null.
+@since 13.0
+@since 4.0 (in Equivalences)
+
