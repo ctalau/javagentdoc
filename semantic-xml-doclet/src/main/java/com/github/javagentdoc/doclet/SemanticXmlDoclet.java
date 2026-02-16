@@ -301,8 +301,11 @@ public final class SemanticXmlDoclet implements Doclet {
         DocCommentTree doc = docTrees.getDocCommentTree(type);
         if (doc != null) {
             md.append("## Description\n\n");
-            String description = doc.toString();
-            md.append(convertLinksInText(description, pkgName)).append("\n\n");
+            SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc, docTrees, type);
+            if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
+                String description = semanticDoc.getBodyText();
+                md.append(convertLinksInText(description, pkgName)).append("\n\n");
+            }
         }
 
         // Fields
@@ -382,8 +385,11 @@ public final class SemanticXmlDoclet implements Doclet {
 
         DocCommentTree doc = docTrees.getDocCommentTree(f);
         if (doc != null) {
-            String description = doc.toString();
-            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+            SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc, docTrees, f);
+            if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
+                String description = semanticDoc.getBodyText();
+                md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+            }
         }
     }
 
@@ -394,8 +400,11 @@ public final class SemanticXmlDoclet implements Doclet {
 
         DocCommentTree doc = docTrees.getDocCommentTree(c);
         if (doc != null) {
-            String description = doc.toString();
-            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+            SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc, docTrees, c);
+            if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
+                String description = semanticDoc.getBodyText();
+                md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+            }
         }
     }
 
@@ -408,8 +417,11 @@ public final class SemanticXmlDoclet implements Doclet {
 
         DocCommentTree doc = docTrees.getDocCommentTree(m);
         if (doc != null) {
-            String description = doc.toString();
-            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+            SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc, docTrees, m);
+            if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
+                String description = semanticDoc.getBodyText();
+                md.append(convertLinksInText(description, currentPkg)).append("\n\n");
+            }
         }
     }
 

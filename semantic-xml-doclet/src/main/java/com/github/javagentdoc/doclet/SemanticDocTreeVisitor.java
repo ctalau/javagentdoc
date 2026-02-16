@@ -48,9 +48,10 @@ public final class SemanticDocTreeVisitor {
 
         // Extract body text and collect inline links
         List<SemanticDocumentation.LinkDoc> links = new ArrayList<>();
+        TextExtractor textExtractor = new TextExtractor(links, docTrees, docTreePath);
         StringBuilder bodyText = new StringBuilder();
         for (DocTree tree : docTree.getBody()) {
-            bodyText.append(extractText(tree, links, docTrees, docTreePath));
+            bodyText.append(extractText(tree, links, docTrees, docTreePath, textExtractor));
         }
 
         // Parse block tags
@@ -170,6 +171,21 @@ public final class SemanticDocTreeVisitor {
      */
     private static String extractText(Object tree, List<SemanticDocumentation.LinkDoc> links,
                                       DocTrees docTrees, DocTreePath docTreePath) {
+        return extractText(tree, links, docTrees, docTreePath, null);
+    }
+
+    /**
+     * Extracts text content from a DocTree node or list of nodes.
+     * Handles inline tags like {@code}, {@link}, {@literal}.
+     *
+     * @param tree the DocTree or List of DocTrees
+     * @param links list to collect link information (null if not collecting)
+     * @param docTrees DocTrees for reference resolution (null if not resolving)
+     * @param docTreePath DocTreePath for reference resolution context (null if not resolving)
+     * @param extractor optional TextExtractor to reuse (null to create new)
+     */
+    private static String extractText(Object tree, List<SemanticDocumentation.LinkDoc> links,
+                                      DocTrees docTrees, DocTreePath docTreePath, TextExtractor extractor) {
         if (tree == null) {
             return "";
         }
@@ -178,14 +194,17 @@ public final class SemanticDocTreeVisitor {
             StringBuilder sb = new StringBuilder();
             for (Object item : (List<?>) tree) {
                 if (item instanceof DocTree) {
-                    sb.append(extractText((DocTree) item, links, docTrees, docTreePath));
+                    sb.append(extractText((DocTree) item, links, docTrees, docTreePath, extractor));
                 }
             }
             return sb.toString();
         }
 
         if (tree instanceof DocTree docTree) {
-            return docTree.accept(new TextExtractor(links, docTrees, docTreePath), null);
+            if (extractor == null) {
+                extractor = new TextExtractor(links, docTrees, docTreePath);
+            }
+            return docTree.accept(extractor, null);
         }
 
         return tree.toString();
@@ -238,6 +257,8 @@ public final class SemanticDocTreeVisitor {
         private final List<SemanticDocumentation.LinkDoc> links;
         private final DocTrees docTrees;
         private final DocTreePath docTreePath;
+        private final Deque<String> htmlTagStack = new ArrayDeque<>();
+        private final Deque<Map<String, String>> attributeStack = new ArrayDeque<>();
 
         public TextExtractor(List<SemanticDocumentation.LinkDoc> links, DocTrees docTrees, DocTreePath docTreePath) {
             this.links = links;
@@ -256,7 +277,7 @@ public final class SemanticDocTreeVisitor {
             ReferenceTree refTree = node.getReference();
             String reference = refTree.getSignature();
             List<? extends DocTree> label = node.getLabel();
-            String labelText = !label.isEmpty() ? extractText(label, null, null, docTreePath) : reference;
+            String labelText = !label.isEmpty() ? extractText(label, null, null, docTreePath, this) : reference;
 
             // Try to resolve the reference
             Element refElement = null;
@@ -302,6 +323,83 @@ public final class SemanticDocTreeVisitor {
         @Override
         public String visitReference(ReferenceTree node, Void unused) {
             return node.getSignature();
+        }
+
+        @Override
+        public String visitStartElement(StartElementTree node, Void unused) {
+            String tagName = node.getName().toString().toLowerCase();
+            htmlTagStack.push(tagName);
+
+            // Extract attributes for this tag
+            Map<String, String> attributes = new HashMap<>();
+            for (DocTree attr : node.getAttributes()) {
+                if (attr instanceof AttributeTree attrTree) {
+                    String attrName = attrTree.getName().toString().toLowerCase();
+                    List<? extends DocTree> valueList = attrTree.getValue();
+                    StringBuilder attrValue = new StringBuilder();
+                    for (DocTree val : valueList) {
+                        attrValue.append(extractText(val, null, null, docTreePath, this));
+                    }
+                    // Remove surrounding quotes
+                    String value = attrValue.toString().replaceAll("^\"|\"$", "").replaceAll("^'|'$", "");
+                    attributes.put(attrName, value);
+                }
+            }
+            attributeStack.push(attributes);
+
+            return switch (tagName) {
+                case "p" -> "\n";
+                case "br" -> "\n";
+                case "code" -> "`";
+                case "b", "strong" -> "**";
+                case "i", "em" -> "*";
+                case "pre" -> "\n\n```\n";
+                case "ul", "ol" -> "\n";
+                case "li" -> "- ";
+                case "a" -> "[";
+                // Strip out other HTML tags but preserve their content
+                default -> "";
+            };
+        }
+
+        @Override
+        public String visitEndElement(EndElementTree node, Void unused) {
+            String tagName = node.getName().toString().toLowerCase();
+            Map<String, String> attributes = attributeStack.isEmpty() ? new HashMap<>() : attributeStack.pop();
+
+            if (!htmlTagStack.isEmpty() && htmlTagStack.peek().equals(tagName)) {
+                htmlTagStack.pop();
+            }
+
+            return switch (tagName) {
+                case "p" -> "";
+                case "br" -> "";
+                case "code" -> "`";
+                case "b", "strong" -> "**";
+                case "i", "em" -> "*";
+                case "pre" -> "\n```\n";
+                case "ul", "ol" -> "\n";
+                case "li" -> "\n";
+                case "a" -> {
+                    String href = attributes.get("href");
+                    yield href != null ? "](" + href + ")" : "]";
+                }
+                default -> "";
+            };
+        }
+
+        @Override
+        public String visitEntity(EntityTree node, Void unused) {
+            String entityName = node.getName().toString().toLowerCase();
+            return switch (entityName) {
+                case "nbsp" -> " ";
+                case "lt" -> "<";
+                case "gt" -> ">";
+                case "amp" -> "&";
+                case "quot" -> "\"";
+                case "apos" -> "'";
+                default -> "&" + entityName + ";";
+            };
         }
 
         @Override
