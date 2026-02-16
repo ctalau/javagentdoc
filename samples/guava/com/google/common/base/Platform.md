@@ -7,13 +7,13 @@
 ## Description
 
 Methods factored out so that they can be emulated differently in GWT.
-@author Jesse Wilson
+**Author:** Jesse Wilson
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`java.util.logging.Logger`](../../../../java/util/logging/Logger.md)
+**Type:** `java.util.logging.Logger`
 
 ### `patternCompiler`
 
@@ -47,7 +47,7 @@ Methods factored out so that they can be emulated differently in GWT.
 
 Returns the string if it is not null, or an empty string otherwise.
 @param string the string to test and possibly return
-@return {@code string} if it is not null; {@code ""} otherwise
+@return `string` if it is not null; `""` otherwise
 
 ### `emptyToNull(`java.lang.String` string)`
 
@@ -55,7 +55,7 @@ Returns the string if it is not null, or an empty string otherwise.
 
 Returns the string if it is not empty, or a null string otherwise.
 @param string the string to test and possibly return
-@return {@code string} if it is not empty; {@code null} otherwise
+@return `string` if it is not empty; `null` otherwise
 
 ### `compilePattern(`java.lang.String` pattern)`
 
@@ -69,7 +69,7 @@ Returns the string if it is not empty, or a null string otherwise.
 
 **Returns:** [`com.google.common.base.PatternCompiler`](./PatternCompiler.md)
 
-### `logPatternCompilerError([`java.util.ServiceConfigurationError`](../../../../java/util/ServiceConfigurationError.md) e)`
+### `logPatternCompilerError(`java.util.ServiceConfigurationError` e)`
 
 **Returns:** `void`
 

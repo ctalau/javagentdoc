@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -32,7 +32,7 @@ An ordering that uses the reverse of a given order.
 
 ## Methods
 
-### `compare([`T`](T.md) a, [`T`](T.md) b)`
+### `compare(`T` a, `T` b)`
 
 **Returns:** `int`
 
@@ -40,37 +40,37 @@ An ordering that uses the reverse of a given order.
 
 **Returns:** [`com.google.common.collect.Ordering<S>`](./Ordering.md)
 
-### `min([`E`](E.md) a, [`E`](E.md) b)`
+### `min(`E` a, `E` b)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `min([`E`](E.md) a, [`E`](E.md) b, [`E`](E.md) c, [`E[]`](E.md) rest)`
+### `min(`E` a, `E` b, `E` c, `E[]` rest)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `min([`java.util.Iterator<E>`](../../../../java/util/Iterator.md) iterator)`
+### `min(`java.util.Iterator<E>` iterator)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `min(`java.lang.Iterable<E>` iterable)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `max([`E`](E.md) a, [`E`](E.md) b)`
+### `max(`E` a, `E` b)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `max([`E`](E.md) a, [`E`](E.md) b, [`E`](E.md) c, [`E[]`](E.md) rest)`
+### `max(`E` a, `E` b, `E` c, `E[]` rest)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `max([`java.util.Iterator<E>`](../../../../java/util/Iterator.md) iterator)`
+### `max(`java.util.Iterator<E>` iterator)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `max(`java.lang.Iterable<E>` iterable)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `hashCode()`
 

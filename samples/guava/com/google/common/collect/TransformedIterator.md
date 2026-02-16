@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.TransformedIterator`
 
-**Implements:** [`java.util.Iterator<T>`](../../../../java/util/Iterator.md)
+**Implements:** `java.util.Iterator<T>`
 
 ## Type Parameters
 
@@ -14,24 +14,24 @@
 ## Description
 
 An iterator that transforms a backing iterator; for internal use. This avoids the object overhead
- of constructing a {@link com.google.common.base.Function Function} for internal methods.
-@author Louis Wasserman
+ of constructing a `com.google.common.base.Function` for internal methods.
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `backingIterator`
 
-**Type:** [`java.util.Iterator<? extends F>`](../../../../java/util/Iterator.md)
+**Type:** `java.util.Iterator<? extends F>`
 
 ## Constructors
 
-### `<init>([`java.util.Iterator<? extends F>`](../../../../java/util/Iterator.md) backingIterator)`
+### `<init>(`java.util.Iterator<? extends F>` backingIterator)`
 
 ## Methods
 
-### `transform([`F`](F.md) from)`
+### `transform(`F` from)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `hasNext()`
 
@@ -39,7 +39,7 @@ An iterator that transforms a backing iterator; for internal use. This avoids th
 
 ### `next()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `remove()`
 

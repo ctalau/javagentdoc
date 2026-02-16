@@ -8,8 +8,8 @@
 
 A mutable object which accumulates paired double values (e.g. points on a plane) and tracks some
  basic statistics over all the values added so far. This class is not thread safe.
-@author Pete Gillin
-@since 20.0
+**Author:** Pete Gillin
+**Since:** 20.0
 
 ## Fields
 
@@ -60,13 +60,13 @@ Returns the number of pairs in the dataset.
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
-Returns an immutable snapshot of the statistics on the {@code x} values alone.
+Returns an immutable snapshot of the statistics on the `x` values alone.
 
 ### `yStats()`
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
-Returns an immutable snapshot of the statistics on the {@code y} values alone.
+Returns an immutable snapshot of the statistics on the `y` values alone.
 
 ### `populationCovariance()`
 
@@ -80,7 +80,7 @@ Returns the population covariance of the values. The count must be non-zero.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty
 
 ### `sampleCovariance()`
@@ -94,7 +94,7 @@ Returns the sample covariance of the values. The count must be greater than one.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty or contains a single pair of values
 
 ### `pearsonsCorrelationCoefficient()`
@@ -103,46 +103,44 @@ Returns the sample covariance of the values. The count must be greater than one.
 
 Returns the <a href="http://mathworld.wolfram.com/CorrelationCoefficient.html">Pearson's or
  product-moment correlation coefficient</a> of the values. The count must greater than one, and
- the {@code x} and {@code y} values must both have non-zero population variance (i.e. {@code
- xStats().populationVariance() > 0.0 && yStats().populationVariance() > 0.0}). The result is not
+ the `x` and `y` values must both have non-zero population variance (i.e. `xStats().populationVariance() > 0.0 && yStats().populationVariance() > 0.0`). The result is not
  guaranteed to be exactly +/-1 even when the data are perfectly (anti-)correlated, due to
  numerical errors. However, it is guaranteed to be in the inclusive range [-1, +1].
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty or contains a single pair of values, or
-     either the {@code x} and {@code y} dataset has zero population variance
+     either the `x` and `y` dataset has zero population variance
 
 ### `leastSquaresFit()`
 
 **Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
 Returns a linear transformation giving the best fit to the data according to <a href="http://mathworld.wolfram.com/LeastSquaresFitting.html">Ordinary Least Squares linear
- regression</a> of {@code y} as a function of {@code x}. The count must be greater than one, and
- either the {@code x} or {@code y} data must have a non-zero population variance (i.e. {@code
- xStats().populationVariance() > 0.0 || yStats().populationVariance() > 0.0}). The result is
- guaranteed to be horizontal if there is variance in the {@code x} data but not the {@code y}
- data, and vertical if there is variance in the {@code y} data but not the {@code x} data.
+ regression</a> of `y` as a function of `x`. The count must be greater than one, and
+ either the `x` or `y` data must have a non-zero population variance (i.e. `xStats().populationVariance() > 0.0 || yStats().populationVariance() > 0.0`). The result is
+ guaranteed to be horizontal if there is variance in the `x` data but not the `y`
+ data, and vertical if there is variance in the `y` data but not the `x` data.
 
- <p>This fit minimizes the root-mean-square error in {@code y} as a function of {@code x}. This
+ <p>This fit minimizes the root-mean-square error in `y` as a function of `x`. This
  error is defined as the square root of the mean of the squares of the differences between the
- actual {@code y} values of the data and the values predicted by the fit for the {@code x}
+ actual `y` values of the data and the values predicted by the fit for the `x`
  values (i.e. it is the square root of the mean of the squares of the vertical distances between
- the data points and the best fit line). For this fit, this error is a fraction {@code sqrt(1 -
- R*R)} of the population standard deviation of {@code y}, where {@code R} is the Pearson's
- correlation coefficient (as given by {@link #pearsonsCorrelationCoefficient()}).
+ the data points and the best fit line). For this fit, this error is a fraction `sqrt(1 -
+ R*R)` of the population standard deviation of `y`, where `R` is the Pearson's
+ correlation coefficient (as given by `pearsonsCorrelationCoefficient()`).
 
- <p>The corresponding root-mean-square error in {@code x} as a function of {@code y} is a
- fraction {@code sqrt(1/(R*R) - 1)} of the population standard deviation of {@code x}. This fit
- does not normally minimize that error: to do that, you should swap the roles of {@code x} and
- {@code y}.
+ <p>The corresponding root-mean-square error in `x` as a function of `y` is a
+ fraction `sqrt(1/(R*R) - 1)` of the population standard deviation of `x`. This fit
+ does not normally minimize that error: to do that, you should swap the roles of `x` and
+ `y`.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link LinearTransformation#forNaN()}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `LinearTransformation.forNaN()`.
 @throws IllegalStateException if the dataset is empty or contains a single pair of values, or
-     both the {@code x} and {@code y} dataset have zero population variance
+     both the `x` and `y` dataset have zero population variance
 
 ### `ensurePositive(`double` value)`
 

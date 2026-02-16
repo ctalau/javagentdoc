@@ -18,13 +18,13 @@ An interface for <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathemat
  <p>A graph is composed of a set of nodes and a set of edges connecting pairs of nodes.
 
  <p>There are three primary interfaces provided to represent graphs. In order of increasing
- complexity they are: {@link Graph}, {@link ValueGraph}, and {@link Network}. You should generally
+ complexity they are: `Graph`, `ValueGraph`, and `Network`. You should generally
  prefer the simplest interface that satisfies your use case. See the <a href="https://github.com/google/guava/wiki/GraphsExplained#choosing-the-right-graph-type">
  "Choosing the right graph type"</a> section of the Guava User Guide for more details.
 
  <h3>Capabilities</h3>
 
- <p>{@code Graph} supports the following use cases (<a href="https://github.com/google/guava/wiki/GraphsExplained#definitions">definitions of
+ <p>`Graph` supports the following use cases (<a href="https://github.com/google/guava/wiki/GraphsExplained#definitions">definitions of
  terms</a>):
 
  <ul>
@@ -34,30 +34,28 @@ An interface for <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathemat
    <li>graphs whose nodes/edges are insertion-ordered, sorted, or unordered
  </ul>
 
- <p>{@code Graph} explicitly does not support parallel edges, and forbids implementations or
- extensions with parallel edges. If you need parallel edges, use {@link Network}.
+ <p>`Graph` explicitly does not support parallel edges, and forbids implementations or
+ extensions with parallel edges. If you need parallel edges, use `Network`.
 
- <h3>Building a {@code Graph}</h3>
+ <h3>Building a `Graph`</h3>
 
- <p>The implementation classes that {@code common.graph} provides are not public, by design. To
- create an instance of one of the built-in implementations of {@code Graph}, use the {@link GraphBuilder} class:
+ <p>The implementation classes that `common.graph` provides are not public, by design. To
+ create an instance of one of the built-in implementations of `Graph`, use the `GraphBuilder` class:
 
- <pre>{@code
- MutableGraph<Integer> graph = GraphBuilder.undirected().build();
- }</pre>
+ <pre>`MutableGraph<Integer> graph = GraphBuilder.undirected().build();
+ `</pre>
 
- <p>{@link GraphBuilder#build()} returns an instance of {@link MutableGraph}, which is a subtype
- of {@code Graph} that provides methods for adding and removing nodes and edges. If you do not
+ <p>`GraphBuilder.build()` returns an instance of `MutableGraph`, which is a subtype
+ of `Graph` that provides methods for adding and removing nodes and edges. If you do not
  need to mutate a graph (e.g. if you write a method than runs a read-only algorithm on the graph),
- you should use the non-mutating {@link Graph} interface, or an {@link ImmutableGraph}.
+ you should use the non-mutating `Graph` interface, or an `ImmutableGraph`.
 
- <p>You can create an immutable copy of an existing {@code Graph} using {@link ImmutableGraph#copyOf(Graph)}:
+ <p>You can create an immutable copy of an existing `Graph` using `ImmutableGraph.copyOf(Graph)`:
 
- <pre>{@code
- ImmutableGraph<Integer> immutableGraph = ImmutableGraph.copyOf(graph);
- }</pre>
+ <pre>`ImmutableGraph<Integer> immutableGraph = ImmutableGraph.copyOf(graph);
+ `</pre>
 
- <p>Instances of {@link ImmutableGraph} do not implement {@link MutableGraph} (obviously!) and are
+ <p>Instances of `ImmutableGraph` do not implement `MutableGraph` (obviously!) and are
  contractually guaranteed to be unmodifiable and thread-safe.
 
  <p>The Guava User Guide has <a href="https://github.com/google/guava/wiki/GraphsExplained#building-graph-instances">more
@@ -65,33 +63,33 @@ An interface for <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathemat
 
  <h3>Additional documentation</h3>
 
- <p>See the Guava User Guide for the {@code common.graph} package (<a href="https://github.com/google/guava/wiki/GraphsExplained">"Graphs Explained"</a>) for
+ <p>See the Guava User Guide for the `common.graph` package (<a href="https://github.com/google/guava/wiki/GraphsExplained">"Graphs Explained"</a>) for
  additional documentation, including:
 
  <ul>
    <li><a href="https://github.com/google/guava/wiki/GraphsExplained#equals-hashcode-and-graph-equivalence">
-       {@code equals()}, {@code hashCode()}, and graph equivalence</a>
+       `equals()`, `hashCode()`, and graph equivalence</a>
    <li><a href="https://github.com/google/guava/wiki/GraphsExplained#synchronization">
        Synchronization policy</a>
    <li><a href="https://github.com/google/guava/wiki/GraphsExplained#notes-for-implementors">Notes
        for implementors</a>
  </ul>
-@author James Sexton
-@author Joshua O'Madadhain
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
 @param <N> Node parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Methods
 
 ### `nodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns all nodes in this graph, in the order specified by {@link #nodeOrder()}.
+Returns all nodes in this graph, in the order specified by `nodeOrder()`.
 
 ### `edges()`
 
-**Returns:** [`java.util.Set<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
 Returns all edges in this graph.
 
@@ -99,7 +97,7 @@ Returns all edges in this graph.
 
 **Returns:** `boolean`
 
-Returns true if the edges in this graph are directed. Directed edges connect a {@link EndpointPair#source() source node} to a {@link EndpointPair#target() target node}, while
+Returns true if the edges in this graph are directed. Directed edges connect a `EndpointPair.source() source node` to a `EndpointPair.target() target node`, while
  undirected edges connect a pair of nodes to each other.
 
 ### `allowsSelfLoops()`
@@ -107,152 +105,151 @@ Returns true if the edges in this graph are directed. Directed edges connect a {
 **Returns:** `boolean`
 
 Returns true if this graph allows self-loops (edges that connect a node to itself). Attempting
- to add a self-loop to a graph that does not allow them will throw an {@link IllegalArgumentException}.
+ to add a self-loop to a graph that does not allow them will throw an `IllegalArgumentException`.
 
 ### `nodeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-Returns the order of iteration for the elements of {@link #nodes()}.
+Returns the order of iteration for the elements of `nodes()`.
 
 ### `incidentEdgeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-Returns an {@link ElementOrder} that specifies the order of iteration for the elements of
- {@link #edges()}, {@link #adjacentNodes(Object)}, {@link #predecessors(Object)}, {@link #successors(Object)} and {@link #incidentEdges(Object)}.
-@since 29.0
+Returns an `ElementOrder` that specifies the order of iteration for the elements of
+ `edges()`, `adjacentNodes(Object)`, `predecessors(Object)`, `successors(Object)` and `incidentEdges(Object)`.
+**Since:** 29.0
 
-### `adjacentNodes([`N`](N.md) node)`
+### `adjacentNodes(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns the nodes which have an incident edge in common with {@code node} in this graph.
+Returns the nodes which have an incident edge in common with `node` in this graph.
 
- <p>This is equal to the union of {@link #predecessors(Object)} and {@link #successors(Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this graph
+ <p>This is equal to the union of `predecessors(Object)` and `successors(Object)`.
+@throws IllegalArgumentException if `node` is not an element of this graph
 
-### `predecessors([`N`](N.md) node)`
+### `predecessors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns all nodes in this graph adjacent to {@code node} which can be reached by traversing
- {@code node}'s incoming edges <i>against</i> the direction (if any) of the edge.
+Returns all nodes in this graph adjacent to `node` which can be reached by traversing
+ `node`'s incoming edges <i>against</i> the direction (if any) of the edge.
 
- <p>In an undirected graph, this is equivalent to {@link #adjacentNodes(Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this graph
+ <p>In an undirected graph, this is equivalent to `adjacentNodes(Object)`.
+@throws IllegalArgumentException if `node` is not an element of this graph
 
-### `successors([`N`](N.md) node)`
+### `successors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns all nodes in this graph adjacent to {@code node} which can be reached by traversing
- {@code node}'s outgoing edges in the direction (if any) of the edge.
+Returns all nodes in this graph adjacent to `node` which can be reached by traversing
+ `node`'s outgoing edges in the direction (if any) of the edge.
 
- <p>In an undirected graph, this is equivalent to {@link #adjacentNodes(Object)}.
+ <p>In an undirected graph, this is equivalent to `adjacentNodes(Object)`.
 
- <p>This is <i>not</i> the same as "all nodes reachable from {@code node} by following outgoing
- edges". For that functionality, see {@link Graphs#reachableNodes(Graph, Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this graph
+ <p>This is <i>not</i> the same as "all nodes reachable from `node` by following outgoing
+ edges". For that functionality, see `Graphs.reachableNodes(Graph, Object)`.
+@throws IllegalArgumentException if `node` is not an element of this graph
 
-### `incidentEdges([`N`](N.md) node)`
+### `incidentEdges(`N` node)`
 
-**Returns:** [`java.util.Set<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-Returns the edges in this graph whose endpoints include {@code node}.
+Returns the edges in this graph whose endpoints include `node`.
 
  <p>This is equal to the union of incoming and outgoing edges.
-@throws IllegalArgumentException if {@code node} is not an element of this graph
-@since 24.0
+@throws IllegalArgumentException if `node` is not an element of this graph
+**Since:** 24.0
 
-### `degree([`N`](N.md) node)`
-
-**Returns:** `int`
-
-Returns the count of {@code node}'s incident edges, counting self-loops twice (equivalently,
- the number of times an edge touches {@code node}).
-
- <p>For directed graphs, this is equal to {@code inDegree(node) + outDegree(node)}.
-
- <p>For undirected graphs, this is equal to {@code incidentEdges(node).size()} + (number of
- self-loops incident to {@code node}).
-
- <p>If the count is greater than {@code Integer.MAX_VALUE}, returns {@code Integer.MAX_VALUE}.
-@throws IllegalArgumentException if {@code node} is not an element of this graph
-
-### `inDegree([`N`](N.md) node)`
+### `degree(`N` node)`
 
 **Returns:** `int`
 
-Returns the count of {@code node}'s incoming edges (equal to {@code predecessors(node).size()})
- in a directed graph. In an undirected graph, returns the {@link #degree(Object)}.
+Returns the count of `node`'s incident edges, counting self-loops twice (equivalently,
+ the number of times an edge touches `node`).
 
- <p>If the count is greater than {@code Integer.MAX_VALUE}, returns {@code Integer.MAX_VALUE}.
-@throws IllegalArgumentException if {@code node} is not an element of this graph
+ <p>For directed graphs, this is equal to `inDegree(node) + outDegree(node)`.
 
-### `outDegree([`N`](N.md) node)`
+ <p>For undirected graphs, this is equal to `incidentEdges(node).size()` + (number of
+ self-loops incident to `node`).
+
+ <p>If the count is greater than `Integer.MAX_VALUE`, returns `Integer.MAX_VALUE`.
+@throws IllegalArgumentException if `node` is not an element of this graph
+
+### `inDegree(`N` node)`
 
 **Returns:** `int`
 
-Returns the count of {@code node}'s outgoing edges (equal to {@code successors(node).size()})
- in a directed graph. In an undirected graph, returns the {@link #degree(Object)}.
+Returns the count of `node`'s incoming edges (equal to `predecessors(node).size()`)
+ in a directed graph. In an undirected graph, returns the `degree(Object)`.
 
- <p>If the count is greater than {@code Integer.MAX_VALUE}, returns {@code Integer.MAX_VALUE}.
-@throws IllegalArgumentException if {@code node} is not an element of this graph
+ <p>If the count is greater than `Integer.MAX_VALUE`, returns `Integer.MAX_VALUE`.
+@throws IllegalArgumentException if `node` is not an element of this graph
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `outDegree(`N` node)`
+
+**Returns:** `int`
+
+Returns the count of `node`'s outgoing edges (equal to `successors(node).size()`)
+ in a directed graph. In an undirected graph, returns the `degree(Object)`.
+
+ <p>If the count is greater than `Integer.MAX_VALUE`, returns `Integer.MAX_VALUE`.
+@throws IllegalArgumentException if `node` is not an element of this graph
+
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 
-Returns true if there is an edge that directly connects {@code nodeU} to {@code nodeV}. This is
- equivalent to {@code nodes().contains(nodeU) && successors(nodeU).contains(nodeV)}.
+Returns true if there is an edge that directly connects `nodeU` to `nodeV`. This is
+ equivalent to `nodes().contains(nodeU) && successors(nodeU).contains(nodeV)`.
 
- <p>In an undirected graph, this is equal to {@code hasEdgeConnecting(nodeV, nodeU)}.
-@since 23.0
+ <p>In an undirected graph, this is equal to `hasEdgeConnecting(nodeV, nodeU)`.
+**Since:** 23.0
 
 ### `hasEdgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
 **Returns:** `boolean`
 
-Returns true if there is an edge that directly connects {@code endpoints} (in the order, if
- any, specified by {@code endpoints}). This is equivalent to {@code
- edges().contains(endpoints)}.
+Returns true if there is an edge that directly connects `endpoints` (in the order, if
+ any, specified by `endpoints`). This is equivalent to `edges().contains(endpoints)`.
 
- <p>Unlike the other {@code EndpointPair}-accepting methods, this method does not throw if the
- endpoints are unordered and the graph is directed; it simply returns {@code false}. This is for
- consistency with the behavior of {@link Collection#contains(Object)} (which does not generally
+ <p>Unlike the other `EndpointPair`-accepting methods, this method does not throw if the
+ endpoints are unordered and the graph is directed; it simply returns `false`. This is for
+ consistency with the behavior of `Collection.contains(Object)` (which does not generally
  throw if the object cannot be present in the collection), and the desire to have this method's
- behavior be compatible with {@code edges().contains(endpoints)}.
-@since 27.1
+ behavior be compatible with `edges().contains(endpoints)`.
+**Since:** 27.1
 
 ### `equals(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-Returns {@code true} iff {@code object} is a {@link Graph} that has the same elements and the
+Returns `true` iff `object` is a `Graph` that has the same elements and the
  same structural relationships as those in this graph.
 
  <p>Thus, two graphs A and B are equal if <b>all</b> of the following are true:
 
  <ul>
-   <li>A and B have equal {@link #isDirected() directedness}.
-   <li>A and B have equal {@link #nodes() node sets}.
-   <li>A and B have equal {@link #edges() edge sets}.
+   <li>A and B have equal `isDirected() directedness`.
+   <li>A and B have equal `nodes() node sets`.
+   <li>A and B have equal `edges() edge sets`.
  </ul>
 
- <p>Graph properties besides {@link #isDirected() directedness} do <b>not</b> affect equality.
+ <p>Graph properties besides `isDirected() directedness` do <b>not</b> affect equality.
  For example, two graphs may be considered equal even if one allows self-loops and the other
  doesn't. Additionally, the order in which nodes or edges are added to the graph, and the order
  in which they are iterated over, are irrelevant.
 
- <p>A reference implementation of this is provided by {@link AbstractGraph#equals(Object)}.
+ <p>A reference implementation of this is provided by `AbstractGraph.equals(Object)`.
 
 ### `hashCode()`
 
 **Returns:** `int`
 
 Returns the hash code for this graph. The hash code of a graph is defined as the hash code of
- the set returned by {@link #edges()}.
+ the set returned by `edges()`.
 
- <p>A reference implementation of this is provided by {@link AbstractGraph#hashCode()}.
+ <p>A reference implementation of this is provided by `AbstractGraph.hashCode()`.
 

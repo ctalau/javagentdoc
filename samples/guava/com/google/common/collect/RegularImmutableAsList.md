@@ -12,9 +12,9 @@
 
 ## Description
 
-An {@link ImmutableAsList} implementation specialized for when the delegate collection is already
- backed by an {@code ImmutableList} or array.
-@author Louis Wasserman
+An `ImmutableAsList` implementation specialized for when the delegate collection is already
+ backed by an `ImmutableList` or array.
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -46,7 +46,7 @@ An {@link ImmutableAsList} implementation specialized for when the delegate coll
 
 **Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
 
-### `forEach([`java.util.function.Consumer<? super E>`](../../../../java/util/function/Consumer.md) action)`
+### `forEach(`java.util.function.Consumer<? super E>` action)`
 
 **Returns:** `void`
 
@@ -68,7 +68,7 @@ An {@link ImmutableAsList} implementation specialized for when the delegate coll
 
 ### `get(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `writeReplace()`
 

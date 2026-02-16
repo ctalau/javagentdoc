@@ -12,24 +12,24 @@
 
 ## Description
 
-Implementation of {@link ImmutableList} with exactly one element.
-@author Hayward Chan
+Implementation of `ImmutableList` with exactly one element.
+**Author:** Hayward Chan
 
 ## Fields
 
 ### `element`
 
-**Type:** [`E`](E.md)
+**Type:** `E`
 
 ## Constructors
 
-### `<init>([`E`](E.md) element)`
+### `<init>(`E` element)`
 
 ## Methods
 
 ### `get(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `iterator()`
 
@@ -37,7 +37,7 @@ Implementation of {@link ImmutableList} with exactly one element.
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
 ### `size()`
 

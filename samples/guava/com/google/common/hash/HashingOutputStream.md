@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `com.google.common.hash.HashingOutputStream`
 
-**Extends:** [`java.io.FilterOutputStream`](../../../../java/io/FilterOutputStream.md)
+**Extends:** `java.io.FilterOutputStream`
 
 ## Description
 
-An {@link OutputStream} that maintains a hash of the data written to it.
-@author Nick Piepmeier
-@since 16.0
+An `OutputStream` that maintains a hash of the data written to it.
+**Author:** Nick Piepmeier
+**Since:** 16.0
 
 ## Fields
 
@@ -20,12 +20,12 @@ An {@link OutputStream} that maintains a hash of the data written to it.
 
 ## Constructors
 
-### `<init>([`com.google.common.hash.HashFunction`](./HashFunction.md) hashFunction, [`java.io.OutputStream`](../../../../java/io/OutputStream.md) out)`
+### `<init>([`com.google.common.hash.HashFunction`](./HashFunction.md) hashFunction, `java.io.OutputStream` out)`
 
-Creates an output stream that hashes using the given {@link HashFunction}, and forwards all
- data written to it to the underlying {@link OutputStream}.
+Creates an output stream that hashes using the given `HashFunction`, and forwards all
+ data written to it to the underlying `OutputStream`.
 
- <p>The {@link OutputStream} should not be written to before or after the hand-off.
+ <p>The `OutputStream` should not be written to before or after the hand-off.
 
 ## Methods
 
@@ -41,7 +41,7 @@ Creates an output stream that hashes using the given {@link HashFunction}, and f
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Returns the {@link HashCode} based on the data written to this stream. The result is
+Returns the `HashCode` based on the data written to this stream. The result is
  unspecified if this method is called more than once on the same instance.
 
 ### `close()`

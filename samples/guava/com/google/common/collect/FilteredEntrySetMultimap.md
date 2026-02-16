@@ -15,8 +15,8 @@
 
 ## Description
 
-Implementation of {@link Multimaps#filterEntries(SetMultimap, Predicate)}.
-@author Louis Wasserman
+Implementation of `Multimaps.filterEntries(SetMultimap, Predicate)`.
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -28,23 +28,23 @@ Implementation of {@link Multimaps#filterEntries(SetMultimap, Predicate)}.
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 ### `createEntries()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
 ### `entries()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 

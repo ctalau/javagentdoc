@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `com.google.common.io.CountingInputStream`
 
-**Extends:** [`java.io.FilterInputStream`](../../../../java/io/FilterInputStream.md)
+**Extends:** `java.io.FilterInputStream`
 
 ## Description
 
-An {@link InputStream} that counts the number of bytes read.
-@author Chris Nokleberg
-@since 1.0
+An `InputStream` that counts the number of bytes read.
+**Author:** Chris Nokleberg
+**Since:** 1.0
 
 ## Fields
 
@@ -24,7 +24,7 @@ An {@link InputStream} that counts the number of bytes read.
 
 ## Constructors
 
-### `<init>([`java.io.InputStream`](../../../../java/io/InputStream.md) in)`
+### `<init>(`java.io.InputStream` in)`
 
 Wraps another input stream, counting the number of bytes read.
 @param in the input stream to be wrapped

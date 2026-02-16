@@ -9,13 +9,12 @@
 ## Description
 
 Wraps an exception that occurred during a computation.
-@author Bob Lee
-@since 2.0
-@deprecated This exception is no longer thrown by {@code com.google.common}. Previously, it was
-     thrown by {@link MapMaker} computing maps. When support for computing maps was removed from
-     {@code MapMaker}, it was added to {@code CacheBuilder}, which throws {@code
-     ExecutionException}, {@code UncheckedExecutionException}, and {@code ExecutionError}. Any
-     code that is still catching {@code ComputationException} may need to be updated to catch some
+**Author:** Bob Lee
+**Since:** 2.0
+**Deprecated:** This exception is no longer thrown by `com.google.common`. Previously, it was
+     thrown by `MapMaker` computing maps. When support for computing maps was removed from
+     `MapMaker`, it was added to `CacheBuilder`, which throws `ExecutionException`, `UncheckedExecutionException`, and `ExecutionError`. Any
+     code that is still catching `ComputationException` may need to be updated to catch some
      of those types instead. (Note that this type, though deprecated, is not planned to be removed
      from Guava.)
 

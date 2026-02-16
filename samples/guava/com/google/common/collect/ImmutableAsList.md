@@ -12,10 +12,10 @@
 
 ## Description
 
-List returned by {@link ImmutableCollection#asList} that delegates {@code contains} checks to the
+List returned by `ImmutableCollection.asList` that delegates `contains` checks to the
  backing collection.
-@author Jared Levy
-@author Louis Wasserman
+**Author:** Jared Levy
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -43,7 +43,7 @@ List returned by {@link ImmutableCollection#asList} that delegates {@code contai
 
 **Returns:** `boolean`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

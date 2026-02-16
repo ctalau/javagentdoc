@@ -6,7 +6,7 @@
 
 ## Description
 
-Static methods used to implement {@link Futures#getChecked(Future, Class)}.
+Static methods used to implement `Futures.getChecked(Future, Class)`.
 
 ## Fields
 
@@ -24,21 +24,21 @@ Static methods used to implement {@link Futures#getChecked(Future, Class)}.
 
 ## Methods
 
-### `getChecked([`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future, `java.lang.Class<X>` exceptionClass)`
+### `getChecked(`java.util.concurrent.Future<V>` future, `java.lang.Class<X>` exceptionClass)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `getChecked([`com.google.common.util.concurrent.FuturesGetChecked.GetCheckedTypeValidator`](FuturesGetChecked/GetCheckedTypeValidator.md) validator, [`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future, `java.lang.Class<X>` exceptionClass)`
+### `getChecked([`com.google.common.util.concurrent.FuturesGetChecked.GetCheckedTypeValidator`](FuturesGetChecked/GetCheckedTypeValidator.md) validator, `java.util.concurrent.Future<V>` future, `java.lang.Class<X>` exceptionClass)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Implementation of {@link Futures#getChecked(Future, Class)}.
+Implementation of `Futures.getChecked(Future, Class)`.
 
-### `getChecked([`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future, `java.lang.Class<X>` exceptionClass, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `getChecked(`java.util.concurrent.Future<V>` future, `java.lang.Class<X>` exceptionClass, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Implementation of {@link Futures#getChecked(Future, Class, long, TimeUnit)}.
+Implementation of `Futures.getChecked(Future, Class, long, TimeUnit)`.
 
 ### `bestGetCheckedTypeValidator()`
 
@@ -62,15 +62,15 @@ Implementation of {@link Futures#getChecked(Future, Class, long, TimeUnit)}.
 
 ### `newWithCause(`java.lang.Class<X>` exceptionClass, `java.lang.Throwable` cause)`
 
-**Returns:** [`X`](X.md)
+**Returns:** `X`
 
-### `preferringStringsThenThrowables([`java.util.List<java.lang.reflect.Constructor<X>>`](../../../../../java/util/List>.md) constructors)`
+### `preferringStringsThenThrowables(`java.util.List<java.lang.reflect.Constructor<X>>` constructors)`
 
-**Returns:** [`java.util.List<java.lang.reflect.Constructor<X>>`](../../../../../java/util/List>.md)
+**Returns:** `java.util.List<java.lang.reflect.Constructor<X>>`
 
 ### `newFromConstructor(`java.lang.reflect.Constructor<X>` constructor, `java.lang.Throwable` cause)`
 
-**Returns:** [`X`](X.md)
+**Returns:** `X`
 
 ### `isCheckedException(`java.lang.Class<? extends java.lang.Exception>` type)`
 

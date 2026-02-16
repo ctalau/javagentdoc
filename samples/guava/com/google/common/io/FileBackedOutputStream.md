@@ -4,11 +4,11 @@
 
 **Fully Qualified Name:** `com.google.common.io.FileBackedOutputStream`
 
-**Extends:** [`java.io.OutputStream`](../../../../java/io/OutputStream.md)
+**Extends:** `java.io.OutputStream`
 
 ## Description
 
-An {@link OutputStream} that starts buffering to a byte array, but switches to file buffering
+An `OutputStream` that starts buffering to a byte array, but switches to file buffering
  once the data reaches a configurable size.
 
  <p>When this stream creates a temporary file, it restricts the file's permissions to the current
@@ -21,15 +21,15 @@ An {@link OutputStream} that starts buffering to a byte array, but switches to f
  <p>Temporary files created by this stream may live in the local filesystem until either:
 
  <ul>
-   <li>{@link #reset} is called (removing the data in this stream and deleting the file), or...
-   <li>this stream (or, more precisely, its {@link #asByteSource} view) is finalized during
-       garbage collection, <strong>AND</strong> this stream was not constructed with {@linkplain #FileBackedOutputStream(int) the 1-arg constructor} or the {@linkplain #FileBackedOutputStream(int, boolean) 2-arg constructor} passing {@code false} in the
+   <li>`reset` is called (removing the data in this stream and deleting the file), or...
+   <li>this stream (or, more precisely, its `asByteSource` view) is finalized during
+       garbage collection, <strong>AND</strong> this stream was not constructed with the 1-arg constructor or the boolean) 2-arg constructor passing `false` in the
        second parameter.
  </ul>
 
  <p>This class is thread-safe.
-@author Chris Nokleberg
-@since 1.0
+**Author:** Chris Nokleberg
+**Since:** 1.0
 
 ## Fields
 
@@ -47,7 +47,7 @@ An {@link OutputStream} that starts buffering to a byte array, but switches to f
 
 ### `out`
 
-**Type:** [`java.io.OutputStream`](../../../../java/io/OutputStream.md)
+**Type:** `java.io.OutputStream`
 
 ### `memory`
 
@@ -55,30 +55,30 @@ An {@link OutputStream} that starts buffering to a byte array, but switches to f
 
 ### `file`
 
-**Type:** [`java.io.File`](../../../../java/io/File.md)
+**Type:** `java.io.File`
 
 ## Constructors
 
 ### `<init>(`int` fileThreshold)`
 
 Creates a new instance that uses the given file threshold, and does not reset the data when the
- {@link ByteSource} returned by {@link #asByteSource} is finalized.
+ `ByteSource` returned by `asByteSource` is finalized.
 @param fileThreshold the number of bytes before the stream should switch to buffering to a file
-@throws IllegalArgumentException if {@code fileThreshold} is negative
+@throws IllegalArgumentException if `fileThreshold` is negative
 
 ### `<init>(`int` fileThreshold, `boolean` resetOnFinalize)`
 
 Creates a new instance that uses the given file threshold, and optionally resets the data when
- the {@link ByteSource} returned by {@link #asByteSource} is finalized.
+ the `ByteSource` returned by `asByteSource` is finalized.
 @param fileThreshold the number of bytes before the stream should switch to buffering to a file
-@param resetOnFinalize if true, the {@link #reset} method will be called when the {@link ByteSource} returned by {@link #asByteSource} is finalized.
-@throws IllegalArgumentException if {@code fileThreshold} is negative
+@param resetOnFinalize if true, the `reset` method will be called when the `ByteSource` returned by `asByteSource` is finalized.
+@throws IllegalArgumentException if `fileThreshold` is negative
 
 ## Methods
 
 ### `getFile()`
 
-**Returns:** [`java.io.File`](../../../../java/io/File.md)
+**Returns:** `java.io.File`
 
 Returns the file holding the data (possibly null).
 
@@ -86,18 +86,18 @@ Returns the file holding the data (possibly null).
 
 **Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
-Returns a readable {@link ByteSource} view of the data that has been written to this stream.
-@since 15.0
+Returns a readable `ByteSource` view of the data that has been written to this stream.
+**Since:** 15.0
 
 ### `openInputStream()`
 
-**Returns:** [`java.io.InputStream`](../../../../java/io/InputStream.md)
+**Returns:** `java.io.InputStream`
 
 ### `reset()`
 
 **Returns:** `void`
 
-Calls {@link #close} if not already closed, and then resets this object back to its initial
+Calls `close` if not already closed, and then resets this object back to its initial
  state, for reuse. If data was buffered to a file, it will be deleted.
 @throws IOException if an I/O error occurred while deleting the file buffer
 
@@ -125,6 +125,6 @@ Calls {@link #close} if not already closed, and then resets this object back to 
 
 **Returns:** `void`
 
-Checks if writing {@code len} bytes would go over threshold, and switches to file buffering if
+Checks if writing `len` bytes would go over threshold, and switches to file buffering if
  so.
 

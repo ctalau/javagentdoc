@@ -14,39 +14,38 @@
 
 ## Description
 
-Implementation of {@code Table} whose row keys and column keys are ordered by their natural
- ordering or by supplied comparators. When constructing a {@code TreeBasedTable}, you may provide
+Implementation of `Table` whose row keys and column keys are ordered by their natural
+ ordering or by supplied comparators. When constructing a `TreeBasedTable`, you may provide
  comparators for the row keys and the column keys, or you may use natural ordering for both.
 
- <p>The {@link #rowKeySet} method returns a {@link SortedSet} and the {@link #rowMap} method
- returns a {@link SortedMap}, instead of the {@link Set} and {@link Map} specified by the {@link Table} interface.
+ <p>The `rowKeySet` method returns a `SortedSet` and the `rowMap` method
+ returns a `SortedMap`, instead of the `Set` and `Map` specified by the `Table` interface.
 
- <p>The views returned by {@link #column}, {@link #columnKeySet()}, and {@link #columnMap()} have
- iterators that don't support {@code remove()}. Otherwise, all optional operations are supported.
+ <p>The views returned by `column`, `columnKeySet()`, and `columnMap()` have
+ iterators that don't support `remove()`. Otherwise, all optional operations are supported.
  Null row keys, columns keys, and values are not supported.
 
  <p>Lookups by row key are often faster than lookups by column key, because the data is stored in
- a {@code Map<R, Map<C, V>>}. A method call like {@code column(columnKey).get(rowKey)} still runs
- quickly, since the row key is provided. However, {@code column(columnKey).size()} takes longer,
+ a `Map<R, Map<C, V>>`. A method call like `column(columnKey).get(rowKey)` still runs
+ quickly, since the row key is provided. However, `column(columnKey).size()` takes longer,
  since an iteration across all row keys occurs.
 
- <p>Because a {@code TreeBasedTable} has unique sorted values for a given row, both {@code
- row(rowKey)} and {@code rowMap().get(rowKey)} are {@link SortedMap} instances, instead of the
- {@link Map} specified in the {@link Table} interface.
+ <p>Because a `TreeBasedTable` has unique sorted values for a given row, both `row(rowKey)` and `rowMap().get(rowKey)` are `SortedMap` instances, instead of the
+ `Map` specified in the `Table` interface.
 
  <p>Note that this implementation is not synchronized. If multiple threads access this table
  concurrently and one of the threads modifies the table, it must be synchronized externally.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#table">{@code Table}</a>.
-@author Jared Levy
-@author Louis Wasserman
-@since 7.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#table">`Table`</a>.
+**Author:** Jared Levy
+**Author:** Louis Wasserman
+**Since:** 7.0
 
 ## Fields
 
 ### `columnComparator`
 
-**Type:** [`java.util.Comparator<? super C>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super C>`
 
 ### `serialVersionUID`
 
@@ -54,7 +53,7 @@ Implementation of {@code Table} whose row keys and column keys are ordered by th
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<? super R>`](../../../../java/util/Comparator.md) rowComparator, [`java.util.Comparator<? super C>`](../../../../java/util/Comparator.md) columnComparator)`
+### `<init>(`java.util.Comparator<? super R>` rowComparator, `java.util.Comparator<? super C>` columnComparator)`
 
 ## Methods
 
@@ -62,18 +61,18 @@ Implementation of {@code Table} whose row keys and column keys are ordered by th
 
 **Returns:** [`com.google.common.collect.TreeBasedTable<R,C,V>`](./TreeBasedTable.md)
 
-Creates an empty {@code TreeBasedTable} that uses the natural orderings of both row and column
+Creates an empty `TreeBasedTable` that uses the natural orderings of both row and column
  keys.
 
- <p>The method signature specifies {@code R extends Comparable} with a raw {@link Comparable},
- instead of {@code R extends Comparable<? super R>}, and the same for {@code C}. That's
+ <p>The method signature specifies `R extends Comparable` with a raw `Comparable`,
+ instead of `R extends Comparable<? super R>`, and the same for `C`. That's
  necessary to support classes defined without generics.
 
-### `create([`java.util.Comparator<? super R>`](../../../../java/util/Comparator.md) rowComparator, [`java.util.Comparator<? super C>`](../../../../java/util/Comparator.md) columnComparator)`
+### `create(`java.util.Comparator<? super R>` rowComparator, `java.util.Comparator<? super C>` columnComparator)`
 
 **Returns:** [`com.google.common.collect.TreeBasedTable<R,C,V>`](./TreeBasedTable.md)
 
-Creates an empty {@code TreeBasedTable} that is ordered by the specified comparators.
+Creates an empty `TreeBasedTable` that is ordered by the specified comparators.
 @param rowComparator the comparator that orders the row keys
 @param columnComparator the comparator that orders the column keys
 
@@ -81,49 +80,48 @@ Creates an empty {@code TreeBasedTable} that is ordered by the specified compara
 
 **Returns:** [`com.google.common.collect.TreeBasedTable<R,C,V>`](./TreeBasedTable.md)
 
-Creates a {@code TreeBasedTable} with the same mappings and sort order as the specified {@code
- TreeBasedTable}.
+Creates a `TreeBasedTable` with the same mappings and sort order as the specified `TreeBasedTable`.
 
 ### `rowComparator()`
 
-**Returns:** [`java.util.Comparator<? super R>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super R>`
 
-Returns the comparator that orders the rows. With natural ordering, {@link Ordering#natural()}
+Returns the comparator that orders the rows. With natural ordering, `Ordering.natural()`
  is returned.
-@deprecated Use {@code table.rowKeySet().comparator()} instead.
+**Deprecated:** Use `table.rowKeySet().comparator()` instead.
 
 ### `columnComparator()`
 
-**Returns:** [`java.util.Comparator<? super C>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super C>`
 
-Returns the comparator that orders the columns. With natural ordering, {@link Ordering#natural()} is returned.
-@deprecated Store the {@link Comparator} alongside the {@link Table}. Or, if you know that the
-     {@link Table} contains at least one value, you can retrieve the {@link Comparator} with:
-     {@code ((SortedMap<C, V>) table.rowMap().values().iterator().next()).comparator();}.
+Returns the comparator that orders the columns. With natural ordering, `Ordering.natural()` is returned.
+**Deprecated:** Store the `Comparator` alongside the `Table`. Or, if you know that the
+     `Table` contains at least one value, you can retrieve the `Comparator` with:
+     `((SortedMap<C, V>) table.rowMap().values().iterator().next()).comparator();`.
 
-### `row([`R`](R.md) rowKey)`
+### `row(`R` rowKey)`
 
-**Returns:** [`java.util.SortedMap<C,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<C,V>`
 
 {@inheritDoc}
 
- <p>Because a {@code TreeBasedTable} has unique sorted values for a given row, this method
- returns a {@link SortedMap}, instead of the {@link Map} specified in the {@link Table}
+ <p>Because a `TreeBasedTable` has unique sorted values for a given row, this method
+ returns a `SortedMap`, instead of the `Map` specified in the `Table`
  interface.
-@since 10.0 (<a href="https://github.com/google/guava/wiki/Compatibility">mostly
+**Since:** 10.0 (<a href="https://github.com/google/guava/wiki/Compatibility">mostly
      source-compatible</a> since 7.0)
 
 ### `rowKeySet()`
 
-**Returns:** [`java.util.SortedSet<R>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<R>`
 
 ### `rowMap()`
 
-**Returns:** [`java.util.SortedMap<R,java.util.Map<C,V>>`](../../../../java/util/SortedMap>.md)
+**Returns:** `java.util.SortedMap<R,java.util.Map<C,V>>`
 
 ### `createColumnKeyIterator()`
 
-**Returns:** [`java.util.Iterator<C>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<C>`
 
 Overridden column iterator to return columns values in globally sorted order.
 

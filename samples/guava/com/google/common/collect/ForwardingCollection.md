@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingObject`](./ForwardingObject.md)
 
-**Implements:** [`java.util.Collection<E>`](../../../../java/util/Collection.md)
+**Implements:** `java.util.Collection<E>`
 
 ## Type Parameters
 
@@ -18,21 +18,20 @@ A collection which forwards all its method calls to another collection. Subclass
  override one or more methods to modify the behavior of the backing collection as desired per the
  <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>Warning:</b> The methods of {@code ForwardingCollection} forward <b>indiscriminately</b> to
- the methods of the delegate. For example, overriding {@link #add} alone <b>will not</b> change
- the behavior of {@link #addAll}, which can lead to unexpected behavior. In this case, you should
- override {@code addAll} as well, either providing your own implementation, or delegating to the
- provided {@code standardAddAll} method.
+ <p><b>Warning:</b> The methods of `ForwardingCollection` forward <b>indiscriminately</b> to
+ the methods of the delegate. For example, overriding `add` alone <b>will not</b> change
+ the behavior of `addAll`, which can lead to unexpected behavior. In this case, you should
+ override `addAll` as well, either providing your own implementation, or delegating to the
+ provided `standardAddAll` method.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingCollection}.
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingCollection`.
 
- <p>The {@code standard} methods are not guaranteed to be thread-safe, even when all of the
+ <p>The `standard` methods are not guaranteed to be thread-safe, even when all of the
  methods that they depend on are thread-safe.
-@author Kevin Bourrillion
-@author Louis Wasserman
-@since 2.0
+**Author:** Kevin Bourrillion
+**Author:** Louis Wasserman
+**Since:** 2.0
 
 ## Constructors
 
@@ -44,17 +43,17 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.Collection<E>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<E>`
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `size()`
 
 **Returns:** `int`
 
-### `removeAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
+### `removeAll(`java.util.Collection<?>` collection)`
 
 **Returns:** `boolean`
 
@@ -66,7 +65,7 @@ Constructor for use by subclasses.
 
 **Returns:** `boolean`
 
-### `add([`E`](E.md) element)`
+### `add(`E` element)`
 
 **Returns:** `boolean`
 
@@ -74,15 +73,15 @@ Constructor for use by subclasses.
 
 **Returns:** `boolean`
 
-### `containsAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
+### `containsAll(`java.util.Collection<?>` collection)`
 
 **Returns:** `boolean`
 
-### `addAll([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) collection)`
+### `addAll(`java.util.Collection<? extends E>` collection)`
 
 **Returns:** `boolean`
 
-### `retainAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
+### `retainAll(`java.util.Collection<?>` collection)`
 
 **Returns:** `boolean`
 
@@ -94,99 +93,99 @@ Constructor for use by subclasses.
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-### `toArray([`T[]`](T.md) array)`
+### `toArray(`T[]` array)`
 
-**Returns:** [`T[]`](T.md)
+**Returns:** `T[]`
 
 ### `standardContains(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #contains} in terms of {@link #iterator}. If you override
- {@link #iterator}, you may wish to override {@link #contains} to forward to this
+A sensible definition of `contains` in terms of `iterator`. If you override
+ `iterator`, you may wish to override `contains` to forward to this
  implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardContainsAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
+### `standardContainsAll(`java.util.Collection<?>` collection)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #containsAll} in terms of {@link #contains} . If you override
- {@link #contains}, you may wish to override {@link #containsAll} to forward to this
+A sensible definition of `containsAll` in terms of `contains` . If you override
+ `contains`, you may wish to override `containsAll` to forward to this
  implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardAddAll([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) collection)`
+### `standardAddAll(`java.util.Collection<? extends E>` collection)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #addAll} in terms of {@link #add}. If you override {@link #add}, you may wish to override {@link #addAll} to forward to this implementation.
-@since 7.0
+A sensible definition of `addAll` in terms of `add`. If you override `add`, you may wish to override `addAll` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardRemove(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #remove} in terms of {@link #iterator}, using the iterator's
- {@code remove} method. If you override {@link #iterator}, you may wish to override {@link #remove} to forward to this implementation.
-@since 7.0
+A sensible definition of `remove` in terms of `iterator`, using the iterator's
+ `remove` method. If you override `iterator`, you may wish to override `remove` to forward to this implementation.
+**Since:** 7.0
 
-### `standardRemoveAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
-
-**Returns:** `boolean`
-
-A sensible definition of {@link #removeAll} in terms of {@link #iterator}, using the iterator's
- {@code remove} method. If you override {@link #iterator}, you may wish to override {@link #removeAll} to forward to this implementation.
-@since 7.0
-
-### `standardRetainAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
+### `standardRemoveAll(`java.util.Collection<?>` collection)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #retainAll} in terms of {@link #iterator}, using the iterator's
- {@code remove} method. If you override {@link #iterator}, you may wish to override {@link #retainAll} to forward to this implementation.
-@since 7.0
+A sensible definition of `removeAll` in terms of `iterator`, using the iterator's
+ `remove` method. If you override `iterator`, you may wish to override `removeAll` to forward to this implementation.
+**Since:** 7.0
+
+### `standardRetainAll(`java.util.Collection<?>` collection)`
+
+**Returns:** `boolean`
+
+A sensible definition of `retainAll` in terms of `iterator`, using the iterator's
+ `remove` method. If you override `iterator`, you may wish to override `retainAll` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardClear()`
 
 **Returns:** `void`
 
-A sensible definition of {@link #clear} in terms of {@link #iterator}, using the iterator's
- {@code remove} method. If you override {@link #iterator}, you may wish to override {@link #clear} to forward to this implementation.
-@since 7.0
+A sensible definition of `clear` in terms of `iterator`, using the iterator's
+ `remove` method. If you override `iterator`, you may wish to override `clear` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardIsEmpty()`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #isEmpty} as {@code !iterator().hasNext}. If you override
- {@link #isEmpty}, you may wish to override {@link #isEmpty} to forward to this implementation.
- Alternately, it may be more efficient to implement {@code isEmpty} as {@code size() == 0}.
-@since 7.0
+A sensible definition of `isEmpty` as `!iterator().hasNext`. If you override
+ `isEmpty`, you may wish to override `isEmpty` to forward to this implementation.
+ Alternately, it may be more efficient to implement `isEmpty` as `size() == 0`.
+**Since:** 7.0
 
 ### `standardToString()`
 
 **Returns:** `java.lang.String`
 
-A sensible definition of {@link #toString} in terms of {@link #iterator}. If you override
- {@link #iterator}, you may wish to override {@link #toString} to forward to this
+A sensible definition of `toString` in terms of `iterator`. If you override
+ `iterator`, you may wish to override `toString` to forward to this
  implementation.
-@since 7.0
+**Since:** 7.0
 
 ### `standardToArray()`
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-A sensible definition of {@link #toArray()} in terms of {@link #toArray(Object[])}. If you
- override {@link #toArray(Object[])}, you may wish to override {@link #toArray} to forward to
+A sensible definition of `toArray()` in terms of `toArray(Object[])`. If you
+ override `toArray(Object[])`, you may wish to override `toArray` to forward to
  this implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardToArray([`T[]`](T.md) array)`
+### `standardToArray(`T[]` array)`
 
-**Returns:** [`T[]`](T.md)
+**Returns:** `T[]`
 
-A sensible definition of {@link #toArray(Object[])} in terms of {@link #size} and {@link #iterator}. If you override either of these methods, you may wish to override {@link #toArray}
+A sensible definition of `toArray(Object[])` in terms of `size` and `iterator`. If you override either of these methods, you may wish to override `toArray`
  to forward to this implementation.
-@since 7.0
+**Since:** 7.0
 

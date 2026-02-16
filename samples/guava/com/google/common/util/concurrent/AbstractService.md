@@ -8,12 +8,12 @@
 
 ## Description
 
-Base class for implementing services that can handle {@link #doStart} and {@link #doStop}
- requests, responding to them with {@link #notifyStarted()} and {@link #notifyStopped()}
- callbacks. Its subclasses must manage threads manually; consider {@link AbstractExecutionThreadService} if you need only a single execution thread.
-@author Jesse Wilson
-@author Luke Sandberg
-@since 1.0
+Base class for implementing services that can handle `doStart` and `doStop`
+ requests, responding to them with `notifyStarted()` and `notifyStopped()`
+ callbacks. Its subclasses must manage threads manually; consider `AbstractExecutionThreadService` if you need only a single execution thread.
+**Author:** Jesse Wilson
+**Author:** Luke Sandberg
+**Since:** 1.0
 
 ## Fields
 
@@ -81,7 +81,7 @@ The listeners to notify during a state transition.
 
 The current state of the service. This should be written with the lock held but can be read
  without it because it is an immutable object in a volatile field. This is desirable so that
- methods like {@link #state}, {@link #failureCause} and notably {@link #toString} can be run
+ methods like `state`, `failureCause` and notably `toString` can be run
  without grabbing the lock.
 
  <p>To update this field correctly the lock must be held to guarantee that the state is
@@ -107,12 +107,12 @@ Constructor for use by subclasses.
 
 **Returns:** `void`
 
-This method is called by {@link #startAsync} to initiate service startup. The invocation of
- this method should cause a call to {@link #notifyStarted()}, either during this method's run,
- or after it has returned. If startup fails, the invocation should cause a call to {@link #notifyFailed(Throwable)} instead.
+This method is called by `startAsync` to initiate service startup. The invocation of
+ this method should cause a call to `notifyStarted()`, either during this method's run,
+ or after it has returned. If startup fails, the invocation should cause a call to `notifyFailed(Throwable)` instead.
 
  <p>This method should return promptly; prefer to do work on a different thread where it is
- convenient. It is invoked exactly once on service startup, even when {@link #startAsync} is
+ convenient. It is invoked exactly once on service startup, even when `startAsync` is
  called multiple times.
 
 ### `doStop()`
@@ -120,30 +120,30 @@ This method is called by {@link #startAsync} to initiate service startup. The in
 **Returns:** `void`
 
 This method should be used to initiate service shutdown. The invocation of this method should
- cause a call to {@link #notifyStopped()}, either during this method's run, or after it has
- returned. If shutdown fails, the invocation should cause a call to {@link #notifyFailed(Throwable)} instead.
+ cause a call to `notifyStopped()`, either during this method's run, or after it has
+ returned. If shutdown fails, the invocation should cause a call to `notifyFailed(Throwable)` instead.
 
  <p>This method should return promptly; prefer to do work on a different thread where it is
- convenient. It is invoked exactly once on service shutdown, even when {@link #stopAsync} is
+ convenient. It is invoked exactly once on service shutdown, even when `stopAsync` is
  called multiple times.
 
- <p>If {@link #stopAsync} is called on a {@link State#STARTING} service, this method is not
- invoked immediately. Instead, it will be deferred until after the service is {@link State#RUNNING}. Services that need to cancel startup work can override {@link #doCancelStart}.
+ <p>If `stopAsync` is called on a `State.STARTING` service, this method is not
+ invoked immediately. Instead, it will be deferred until after the service is `State.RUNNING`. Services that need to cancel startup work can override `doCancelStart`.
 
 ### `doCancelStart()`
 
 **Returns:** `void`
 
-This method is called by {@link #stopAsync} when the service is still starting (i.e. {@link #startAsync} has been called but {@link #notifyStarted} has not). Subclasses can override the
- method to cancel pending work and then call {@link #notifyStopped} to stop the service.
+This method is called by `stopAsync` when the service is still starting (i.e. `startAsync` has been called but `notifyStarted` has not). Subclasses can override the
+ method to cancel pending work and then call `notifyStopped` to stop the service.
 
  <p>This method should return promptly; prefer to do work on a different thread where it is
- convenient. It is invoked exactly once on service shutdown, even when {@link #stopAsync} is
+ convenient. It is invoked exactly once on service shutdown, even when `stopAsync` is
  called multiple times.
 
- <p>When this method is called {@link #state()} will return {@link State#STOPPING}, which is the
- external state observable by the caller of {@link #stopAsync}.
-@since 27.0
+ <p>When this method is called `state()` will return `State.STOPPING`, which is the
+ external state observable by the caller of `stopAsync`.
+**Since:** 27.0
 
 ### `startAsync()`
 
@@ -157,13 +157,13 @@ This method is called by {@link #stopAsync} when the service is still starting (
 
 **Returns:** `void`
 
-### `awaitRunning([`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
+### `awaitRunning(`java.time.Duration` timeout)`
 
 **Returns:** `void`
 
-@since 28.0
+**Since:** 28.0
 
-### `awaitRunning(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitRunning(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `void`
 
@@ -171,13 +171,13 @@ This method is called by {@link #stopAsync} when the service is still starting (
 
 **Returns:** `void`
 
-### `awaitTerminated([`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
+### `awaitTerminated(`java.time.Duration` timeout)`
 
 **Returns:** `void`
 
-@since 28.0
+**Since:** 28.0
 
-### `awaitTerminated(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitTerminated(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `void`
 
@@ -192,22 +192,22 @@ Checks that the current state is equal to the expected state.
 **Returns:** `void`
 
 Implementing classes should invoke this method once their service has started. It will cause
- the service to transition from {@link State#STARTING} to {@link State#RUNNING}.
-@throws IllegalStateException if the service is not {@link State#STARTING}.
+ the service to transition from `State.STARTING` to `State.RUNNING`.
+@throws IllegalStateException if the service is not `State.STARTING`.
 
 ### `notifyStopped()`
 
 **Returns:** `void`
 
 Implementing classes should invoke this method once their service has stopped. It will cause
- the service to transition from {@link State#STARTING} or {@link State#STOPPING} to {@link State#TERMINATED}.
-@throws IllegalStateException if the service is not one of {@link State#STOPPING}, {@link State#STARTING}, or {@link State#RUNNING}.
+ the service to transition from `State.STARTING` or `State.STOPPING` to `State.TERMINATED`.
+@throws IllegalStateException if the service is not one of `State.STOPPING`, `State.STARTING`, or `State.RUNNING`.
 
 ### `notifyFailed(`java.lang.Throwable` cause)`
 
 **Returns:** `void`
 
-Invoke this method to transition the service to the {@link State#FAILED}. The service will
+Invoke this method to transition the service to the `State.FAILED`. The service will
  <b>not be stopped</b> if it is running. Invoke this method when a service has failed critically
  or otherwise cannot be started nor stopped.
 
@@ -223,13 +223,13 @@ Invoke this method to transition the service to the {@link State#FAILED}. The se
 
 **Returns:** `java.lang.Throwable`
 
-@since 14.0
+**Since:** 14.0
 
-### `addListener([`com.google.common.util.concurrent.Service.Listener`](Service/Listener.md) listener, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `addListener([`com.google.common.util.concurrent.Service.Listener`](Service/Listener.md) listener, `java.util.concurrent.Executor` executor)`
 
 **Returns:** `void`
 
-@since 13.0
+**Since:** 13.0
 
 ### `toString()`
 
@@ -239,7 +239,7 @@ Invoke this method to transition the service to the {@link State#FAILED}. The se
 
 **Returns:** `void`
 
-Attempts to execute all the listeners in {@link #listeners} while not holding the {@link #monitor}.
+Attempts to execute all the listeners in `listeners` while not holding the `monitor`.
 
 ### `enqueueStartingEvent()`
 

@@ -10,5 +10,5 @@
 
 Disables Animal Sniffer's checking of compatibility with older versions of Java/Android.
 
- <p>Each package's copy of this annotation needs to be listed in our {@code pom.xml}.
+ <p>Each package's copy of this annotation needs to be listed in our `pom.xml`.
 

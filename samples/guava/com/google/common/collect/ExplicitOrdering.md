@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -28,17 +28,17 @@ An ordering that compares objects according to a given order.
 
 ## Constructors
 
-### `<init>([`java.util.List<T>`](../../../../java/util/List.md) valuesInOrder)`
+### `<init>(`java.util.List<T>` valuesInOrder)`
 
 ### `<init>([`com.google.common.collect.ImmutableMap<T,java.lang.Integer>`](./ImmutableMap.md) rankMap)`
 
 ## Methods
 
-### `compare([`T`](T.md) left, [`T`](T.md) right)`
+### `compare(`T` left, `T` right)`
 
 **Returns:** `int`
 
-### `rank([`T`](T.md) value)`
+### `rank(`T` value)`
 
 **Returns:** `int`
 

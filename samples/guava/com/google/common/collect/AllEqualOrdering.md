@@ -6,12 +6,12 @@
 
 **Extends:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
 An ordering that treats all references as equals, even nulls.
-@author Emily Soldal
+**Author:** Emily Soldal
 
 ## Fields
 
@@ -35,7 +35,7 @@ An ordering that treats all references as equals, even nulls.
 
 ### `sortedCopy(`java.lang.Iterable<E>` iterable)`
 
-**Returns:** [`java.util.List<E>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<E>`
 
 ### `immutableSortedCopy(`java.lang.Iterable<E>` iterable)`
 

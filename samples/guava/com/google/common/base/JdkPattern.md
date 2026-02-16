@@ -6,17 +6,17 @@
 
 **Extends:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
-A regex pattern implementation which is backed by the {@link Pattern}.
+A regex pattern implementation which is backed by the `Pattern`.
 
 ## Fields
 
 ### `pattern`
 
-**Type:** [`java.util.regex.Pattern`](../../../../java/util/regex/Pattern.md)
+**Type:** `java.util.regex.Pattern`
 
 ### `serialVersionUID`
 
@@ -24,7 +24,7 @@ A regex pattern implementation which is backed by the {@link Pattern}.
 
 ## Constructors
 
-### `<init>([`java.util.regex.Pattern`](../../../../java/util/regex/Pattern.md) pattern)`
+### `<init>(`java.util.regex.Pattern` pattern)`
 
 ## Methods
 

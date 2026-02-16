@@ -15,15 +15,15 @@
 
 ## Description
 
-This class provides a skeletal implementation of {@link ValueGraph}. It is recommended to extend
- this class rather than implement {@link ValueGraph} directly.
+This class provides a skeletal implementation of `ValueGraph`. It is recommended to extend
+ this class rather than implement `ValueGraph` directly.
 
  <p>The methods implemented in this class should not be overridden unless the subclass admits a
  more efficient implementation.
-@author James Sexton
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <V> Value parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Constructors
 
@@ -35,13 +35,13 @@ This class provides a skeletal implementation of {@link ValueGraph}. It is recom
 
 **Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
 
-### `edgeValue([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeValue(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Optional<V>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<V>`
 
 ### `edgeValue([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Optional<V>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<V>`
 
 ### `equals(`java.lang.Object` obj)`
 
@@ -59,5 +59,5 @@ Returns a string representation of this graph.
 
 ### `edgeValueMap([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph)`
 
-**Returns:** [`java.util.Map<com.google.common.graph.EndpointPair<N>,V>`](../../../../java/util/Map,V>.md)
+**Returns:** `java.util.Map<com.google.common.graph.EndpointPair<N>,V>`
 

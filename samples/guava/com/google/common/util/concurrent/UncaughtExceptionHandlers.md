@@ -6,9 +6,9 @@
 
 ## Description
 
-Factories for {@link UncaughtExceptionHandler} instances.
-@author Gregory Kick
-@since 8.0
+Factories for `UncaughtExceptionHandler` instances.
+**Author:** Gregory Kick
+**Since:** 8.0
 
 ## Constructors
 
@@ -32,6 +32,6 @@ Returns an exception handler that exits the system. This is particularly useful 
    ...
  </pre>
 
- <p>The returned handler logs any exception at severity {@code SEVERE} and then shuts down the
+ <p>The returned handler logs any exception at severity `SEVERE` and then shuts down the
  process with an exit status of 1, indicating abnormal termination.
 

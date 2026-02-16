@@ -12,8 +12,8 @@
 
 ## Description
 
-A skeletal implementation of {@code RangeSet}.
-@author Louis Wasserman
+A skeletal implementation of `RangeSet`.
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -21,11 +21,11 @@ A skeletal implementation of {@code RangeSet}.
 
 ## Methods
 
-### `contains([`C`](C.md) value)`
+### `contains(`C` value)`
 
 **Returns:** `boolean`
 
-### `rangeContaining([`C`](C.md) value)`
+### `rangeContaining(`C` value)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 

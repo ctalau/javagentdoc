@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ An ordering for a pre-existing comparator.
 
 ### `comparator`
 
-**Type:** [`java.util.Comparator<T>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<T>`
 
 ### `serialVersionUID`
 
@@ -28,11 +28,11 @@ An ordering for a pre-existing comparator.
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<T>`](../../../../java/util/Comparator.md) comparator)`
+### `<init>(`java.util.Comparator<T>` comparator)`
 
 ## Methods
 
-### `compare([`T`](T.md) a, [`T`](T.md) b)`
+### `compare(`T` a, `T` b)`
 
 **Returns:** `int`
 

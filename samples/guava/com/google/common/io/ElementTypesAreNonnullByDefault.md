@@ -9,6 +9,6 @@
 ## Description
 
 Marks all "top-level" types as non-null in a way that is recognized by Kotlin. Note that this
- unfortunately includes type-variable usages, so we also provide {@link ParametricNullness} to
+ unfortunately includes type-variable usages, so we also provide `ParametricNullness` to
  "undo" it as best we can.
 

@@ -12,8 +12,8 @@
 
 ## Description
 
-Implementation of {@link ImmutableList} backed by a simple array.
-@author Kevin Bourrillion
+Implementation of `ImmutableList` backed by a simple array.
+**Author:** Kevin Bourrillion
 
 ## Fields
 
@@ -57,7 +57,7 @@ Implementation of {@link ImmutableList} backed by a simple array.
 
 ### `get(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `listIterator(`int` index)`
 
@@ -65,7 +65,7 @@ Implementation of {@link ImmutableList} backed by a simple array.
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
 ### `writeReplace()`
 

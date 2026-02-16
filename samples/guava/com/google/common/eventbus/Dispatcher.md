@@ -9,10 +9,10 @@
 Handler for dispatching events to subscribers, providing different event ordering guarantees that
  make sense for different situations.
 
- <p><b>Note:</b> The dispatcher is orthogonal to the subscriber's {@code Executor}. The dispatcher
+ <p><b>Note:</b> The dispatcher is orthogonal to the subscriber's `Executor`. The dispatcher
  controls the order in which events are dispatched, while the executor controls how (i.e. on which
  thread) the subscriber is actually called when an event is dispatched to it.
-@author Colin Decker
+**Author:** Colin Decker
 
 ## Constructors
 
@@ -39,7 +39,7 @@ Returns a dispatcher that queues events that are posted reentrantly on a thread 
 
 Returns a dispatcher that queues events that are posted in a single global queue. This behavior
  matches the original behavior of AsyncEventBus exactly, but is otherwise not especially useful.
- For async dispatch, an {@linkplain #immediate() immediate} dispatcher should generally be
+ For async dispatch, an immediate dispatcher should generally be
  preferable.
 
 ### `immediate()`
@@ -50,9 +50,9 @@ Returns a dispatcher that dispatches events to subscribers immediately as they'r
  without using an intermediate queue to change the dispatch order. This is effectively a
  depth-first dispatch order, vs. breadth-first when using a queue.
 
-### `dispatch(`java.lang.Object` event, [`java.util.Iterator<com.google.common.eventbus.Subscriber>`](../../../../java/util/Iterator.md) subscribers)`
+### `dispatch(`java.lang.Object` event, `java.util.Iterator<com.google.common.eventbus.Subscriber>` subscribers)`
 
 **Returns:** `void`
 
-Dispatches the given {@code event} to the given {@code subscribers}.
+Dispatches the given `event` to the given `subscribers`.
 

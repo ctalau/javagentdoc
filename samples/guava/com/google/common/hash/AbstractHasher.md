@@ -8,8 +8,8 @@
 
 ## Description
 
-An abstract implementation of {@link Hasher}, which only requires subtypes to implement {@link #putByte}. Subtypes may provide more efficient implementations, however.
-@author Dimitris Andreou
+An abstract implementation of `Hasher`, which only requires subtypes to implement `putByte`. Subtypes may provide more efficient implementations, however.
+**Author:** Dimitris Andreou
 
 ## Constructors
 
@@ -33,7 +33,7 @@ An abstract implementation of {@link Hasher}, which only requires subtypes to im
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putString(`java.lang.CharSequence` charSequence, [`java.nio.charset.Charset`](../../../../java/nio/charset/Charset.md) charset)`
+### `putString(`java.lang.CharSequence` charSequence, `java.nio.charset.Charset` charset)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
@@ -45,7 +45,7 @@ An abstract implementation of {@link Hasher}, which only requires subtypes to im
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytes([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) b)`
+### `putBytes(`java.nio.ByteBuffer` b)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
@@ -65,7 +65,7 @@ An abstract implementation of {@link Hasher}, which only requires subtypes to im
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putObject([`T`](T.md) instance, [`com.google.common.hash.Funnel<? super T>`](./Funnel.md) funnel)`
+### `putObject(`T` instance, [`com.google.common.hash.Funnel<? super T>`](./Funnel.md) funnel)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 

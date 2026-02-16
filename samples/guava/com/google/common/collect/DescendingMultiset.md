@@ -14,23 +14,23 @@
 
 ## Description
 
-A skeleton implementation of a descending multiset. Only needs {@code forwardMultiset()} and
- {@code entryIterator()}.
-@author Louis Wasserman
+A skeleton implementation of a descending multiset. Only needs `forwardMultiset()` and
+ `entryIterator()`.
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `comparator`
 
-**Type:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super E>`
 
 ### `elementSet`
 
-**Type:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Type:** `java.util.NavigableSet<E>`
 
 ### `entrySet`
 
-**Type:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ## Constructors
 
@@ -44,11 +44,11 @@ A skeleton implementation of a descending multiset. Only needs {@code forwardMul
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `elementSet()`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
 ### `pollFirstEntry()`
 
@@ -58,15 +58,15 @@ A skeleton implementation of a descending multiset. Only needs {@code forwardMul
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-### `headMultiset([`E`](E.md) toElement, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(`E` toElement, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `subMultiset([`E`](E.md) fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) fromBoundType, [`E`](E.md) toElement, [`com.google.common.collect.BoundType`](./BoundType.md) toBoundType)`
+### `subMultiset(`E` fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) fromBoundType, `E` toElement, [`com.google.common.collect.BoundType`](./BoundType.md) toBoundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `tailMultiset([`E`](E.md) fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `tailMultiset(`E` fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
@@ -88,27 +88,27 @@ A skeleton implementation of a descending multiset. Only needs {@code forwardMul
 
 ### `entryIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `createEntrySet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `toArray()`
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-### `toArray([`T[]`](T.md) array)`
+### `toArray(`T[]` array)`
 
-**Returns:** [`T[]`](T.md)
+**Returns:** `T[]`
 
 ### `toString()`
 

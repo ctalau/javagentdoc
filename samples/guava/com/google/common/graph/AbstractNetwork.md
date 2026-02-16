@@ -13,15 +13,15 @@
 
 ## Description
 
-This class provides a skeletal implementation of {@link Network}. It is recommended to extend
- this class rather than implement {@link Network} directly.
+This class provides a skeletal implementation of `Network`. It is recommended to extend
+ this class rather than implement `Network` directly.
 
  <p>The methods implemented in this class should not be overridden unless the subclass admits a
  more efficient implementation.
-@author James Sexton
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <E> Edge parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Constructors
 
@@ -33,51 +33,51 @@ This class provides a skeletal implementation of {@link Network}. It is recommen
 
 **Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
 
-### `degree([`N`](N.md) node)`
+### `degree(`N` node)`
 
 **Returns:** `int`
 
-### `inDegree([`N`](N.md) node)`
+### `inDegree(`N` node)`
 
 **Returns:** `int`
 
-### `outDegree([`N`](N.md) node)`
+### `outDegree(`N` node)`
 
 **Returns:** `int`
 
-### `adjacentEdges([`E`](E.md) edge)`
+### `adjacentEdges(`E` edge)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `edgesConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgesConnecting(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `edgesConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `connectedPredicate([`N`](N.md) nodePresent, [`N`](N.md) nodeToCheck)`
+### `connectedPredicate(`N` nodePresent, `N` nodeToCheck)`
 
 **Returns:** [`com.google.common.base.Predicate<E>`](../base/Predicate.md)
 
-### `edgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeConnecting(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Optional<E>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<E>`
 
 ### `edgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Optional<E>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<E>`
 
-### `edgeConnectingOrNull([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeConnectingOrNull(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `edgeConnectingOrNull([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 
@@ -89,7 +89,7 @@ This class provides a skeletal implementation of {@link Network}. It is recommen
 
 **Returns:** `void`
 
-Throws an IllegalArgumentException if the ordering of {@code endpoints} is not compatible with
+Throws an IllegalArgumentException if the ordering of `endpoints` is not compatible with
  the directionality of this graph.
 
 ### `isOrderingCompatible([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md) endpoints)`
@@ -112,5 +112,5 @@ Returns a string representation of this network.
 
 ### `edgeIncidentNodesMap([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
 
-**Returns:** [`java.util.Map<E,com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<E,com.google.common.graph.EndpointPair<N>>`
 

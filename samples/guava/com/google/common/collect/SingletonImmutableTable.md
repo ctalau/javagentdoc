@@ -14,32 +14,32 @@
 
 ## Description
 
-An implementation of {@link ImmutableTable} that holds a single cell.
-@author Gregory Kick
+An implementation of `ImmutableTable` that holds a single cell.
+**Author:** Gregory Kick
 
 ## Fields
 
 ### `singleRowKey`
 
-**Type:** [`R`](R.md)
+**Type:** `R`
 
 ### `singleColumnKey`
 
-**Type:** [`C`](C.md)
+**Type:** `C`
 
 ### `singleValue`
 
-**Type:** [`V`](V.md)
+**Type:** `V`
 
 ## Constructors
 
-### `<init>([`R`](R.md) rowKey, [`C`](C.md) columnKey, [`V`](V.md) value)`
+### `<init>(`R` rowKey, `C` columnKey, `V` value)`
 
 ### `<init>([`com.google.common.collect.Table.Cell<R,C,V>`](Table/Cell.md) cell)`
 
 ## Methods
 
-### `column([`C`](C.md) columnKey)`
+### `column(`C` columnKey)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<R,V>`](./ImmutableMap.md)
 

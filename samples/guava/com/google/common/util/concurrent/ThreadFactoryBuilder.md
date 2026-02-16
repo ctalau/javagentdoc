@@ -9,17 +9,17 @@
 A ThreadFactory builder, providing any combination of these features:
 
  <ul>
-   <li>whether threads should be marked as {@linkplain Thread#setDaemon daemon} threads
-   <li>a {@linkplain ThreadFactoryBuilder#setNameFormat naming format}
-   <li>a {@linkplain Thread#setPriority thread priority}
-   <li>an {@linkplain Thread#setUncaughtExceptionHandler uncaught exception handler}
-   <li>a {@linkplain ThreadFactory#newThread backing thread factory}
+   <li>whether threads should be marked as daemon threads
+   <li>a naming format
+   <li>a thread priority
+   <li>an uncaught exception handler
+   <li>a backing thread factory
  </ul>
 
  <p>If no backing thread factory is provided, a default backing thread factory is used as if by
- calling {@code setThreadFactory(}{@link Executors#defaultThreadFactory()}{@code )}.
-@author Kurt Alfred Kluever
-@since 4.0
+ calling `setThreadFactory(``Executors.defaultThreadFactory()``)`.
+**Author:** Kurt Alfred Kluever
+**Since:** 4.0
 
 ## Fields
 
@@ -41,13 +41,13 @@ A ThreadFactory builder, providing any combination of these features:
 
 ### `backingThreadFactory`
 
-**Type:** [`java.util.concurrent.ThreadFactory`](../../../../../java/util/concurrent/ThreadFactory.md)
+**Type:** `java.util.concurrent.ThreadFactory`
 
 ## Constructors
 
 ### `<init>()`
 
-Creates a new {@link ThreadFactory} builder.
+Creates a new `ThreadFactory` builder.
 
 ## Methods
 
@@ -55,13 +55,12 @@ Creates a new {@link ThreadFactory} builder.
 
 **Returns:** [`com.google.common.util.concurrent.ThreadFactoryBuilder`](./ThreadFactoryBuilder.md)
 
-Sets the naming format to use when naming threads ({@link Thread#setName}) which are created
+Sets the naming format to use when naming threads (`Thread.setName`) which are created
  with this ThreadFactory.
-@param nameFormat a {@link String#format(String, Object...)}-compatible format String, to which
+@param nameFormat a `String.format(String, Object...)`-compatible format String, to which
      a unique integer (0, 1, etc.) will be supplied as the single parameter. This integer will
      be unique to the built instance of the ThreadFactory and will be assigned sequentially. For
-     example, {@code "rpc-pool-%d"} will generate thread names like {@code "rpc-pool-0"}, {@code
-     "rpc-pool-1"}, {@code "rpc-pool-2"}, etc.
+     example, `"rpc-pool-%d"` will generate thread names like `"rpc-pool-0"`, `"rpc-pool-1"`, `"rpc-pool-2"`, etc.
 @return this for the builder pattern
 
 ### `setDaemon(`boolean` daemon)`
@@ -86,34 +85,34 @@ Sets the priority for new threads created with this ThreadFactory.
 
 **Returns:** [`com.google.common.util.concurrent.ThreadFactoryBuilder`](./ThreadFactoryBuilder.md)
 
-Sets the {@link UncaughtExceptionHandler} for new threads created with this ThreadFactory.
+Sets the `UncaughtExceptionHandler` for new threads created with this ThreadFactory.
 @param uncaughtExceptionHandler the uncaught exception handler for new Threads created with
      this ThreadFactory
 @return this for the builder pattern
 
-### `setThreadFactory([`java.util.concurrent.ThreadFactory`](../../../../../java/util/concurrent/ThreadFactory.md) backingThreadFactory)`
+### `setThreadFactory(`java.util.concurrent.ThreadFactory` backingThreadFactory)`
 
 **Returns:** [`com.google.common.util.concurrent.ThreadFactoryBuilder`](./ThreadFactoryBuilder.md)
 
-Sets the backing {@link ThreadFactory} for new threads created with this ThreadFactory. Threads
- will be created by invoking #newThread(Runnable) on this backing {@link ThreadFactory}.
-@param backingThreadFactory the backing {@link ThreadFactory} which will be delegated to during
+Sets the backing `ThreadFactory` for new threads created with this ThreadFactory. Threads
+ will be created by invoking #newThread(Runnable) on this backing `ThreadFactory`.
+@param backingThreadFactory the backing `ThreadFactory` which will be delegated to during
      thread creation.
 @return this for the builder pattern
-@see MoreExecutors
+**See:** MoreExecutors
 
 ### `build()`
 
-**Returns:** [`java.util.concurrent.ThreadFactory`](../../../../../java/util/concurrent/ThreadFactory.md)
+**Returns:** `java.util.concurrent.ThreadFactory`
 
 Returns a new thread factory using the options supplied during the building process. After
  building, it is still possible to change the options used to build the ThreadFactory and/or
  build again. State is not shared amongst built instances.
-@return the fully constructed {@link ThreadFactory}
+@return the fully constructed `ThreadFactory`
 
 ### `doBuild([`com.google.common.util.concurrent.ThreadFactoryBuilder`](./ThreadFactoryBuilder.md) builder)`
 
-**Returns:** [`java.util.concurrent.ThreadFactory`](../../../../../java/util/concurrent/ThreadFactory.md)
+**Returns:** `java.util.concurrent.ThreadFactory`
 
 ### `format(`java.lang.String` format, `java.lang.Object[]` args)`
 

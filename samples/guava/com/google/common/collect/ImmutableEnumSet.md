@@ -12,14 +12,14 @@
 
 ## Description
 
-Implementation of {@link ImmutableSet} backed by a non-empty {@link java.util.EnumSet}.
-@author Jared Levy
+Implementation of `ImmutableSet` backed by a non-empty `java.util.EnumSet`.
+**Author:** Jared Levy
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`java.util.EnumSet<E>`](../../../../java/util/EnumSet.md)
+**Type:** `java.util.EnumSet<E>`
 
 ### `hashCode`
 
@@ -27,11 +27,11 @@ Implementation of {@link ImmutableSet} backed by a non-empty {@link java.util.En
 
 ## Constructors
 
-### `<init>([`java.util.EnumSet<E>`](../../../../java/util/EnumSet.md) delegate)`
+### `<init>(`java.util.EnumSet<E>` delegate)`
 
 ## Methods
 
-### `asImmutable([`java.util.EnumSet<E>`](../../../../java/util/EnumSet.md) set)`
+### `asImmutable(`java.util.EnumSet<E>` set)`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
 
@@ -45,9 +45,9 @@ Implementation of {@link ImmutableSet} backed by a non-empty {@link java.util.En
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
-### `forEach([`java.util.function.Consumer<? super E>`](../../../../java/util/function/Consumer.md) action)`
+### `forEach(`java.util.function.Consumer<? super E>` action)`
 
 **Returns:** `void`
 
@@ -59,7 +59,7 @@ Implementation of {@link ImmutableSet} backed by a non-empty {@link java.util.En
 
 **Returns:** `boolean`
 
-### `containsAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
+### `containsAll(`java.util.Collection<?>` collection)`
 
 **Returns:** `boolean`
 
@@ -87,7 +87,7 @@ Implementation of {@link ImmutableSet} backed by a non-empty {@link java.util.En
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

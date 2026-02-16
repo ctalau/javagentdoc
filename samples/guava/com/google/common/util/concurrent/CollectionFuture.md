@@ -19,7 +19,7 @@ Aggregate future that collects (stores) results of each future.
 
 ### `values`
 
-**Type:** [`java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>>`](../../../../../java/util/List>.md)
+**Type:** `java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>>`
 
 ## Constructors
 
@@ -27,7 +27,7 @@ Aggregate future that collects (stores) results of each future.
 
 ## Methods
 
-### `collectOneValue(`int` index, [`V`](V.md) returnValue)`
+### `collectOneValue(`int` index, `V` returnValue)`
 
 **Returns:** `void`
 
@@ -39,7 +39,7 @@ Aggregate future that collects (stores) results of each future.
 
 **Returns:** `void`
 
-### `combine([`java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>>`](../../../../../java/util/List>.md) values)`
+### `combine(`java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>>` values)`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 

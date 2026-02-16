@@ -13,19 +13,19 @@
 
 ## Description
 
-Implementation of {@link ImmutableMap} with exactly one entry.
-@author Jesse Wilson
-@author Kevin Bourrillion
+Implementation of `ImmutableMap` with exactly one entry.
+**Author:** Jesse Wilson
+**Author:** Kevin Bourrillion
 
 ## Fields
 
 ### `singleKey`
 
-**Type:** [`K`](K.md)
+**Type:** `K`
 
 ### `singleValue`
 
-**Type:** [`V`](V.md)
+**Type:** `V`
 
 ### `inverse`
 
@@ -37,21 +37,21 @@ Implementation of {@link ImmutableMap} with exactly one entry.
 
 ## Constructors
 
-### `<init>([`K`](K.md) singleKey, [`V`](V.md) singleValue)`
+### `<init>(`K` singleKey, `V` singleValue)`
 
-### `<init>([`K`](K.md) singleKey, [`V`](V.md) singleValue, [`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md) inverse)`
+### `<init>(`K` singleKey, `V` singleValue, [`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md) inverse)`
 
 ## Methods
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `size()`
 
 **Returns:** `int`
 
-### `forEach([`java.util.function.BiConsumer<? super K,? super V>`](../../../../java/util/function/BiConsumer.md) action)`
+### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
 
 **Returns:** `void`
 

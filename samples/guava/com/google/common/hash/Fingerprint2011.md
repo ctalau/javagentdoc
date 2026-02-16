@@ -8,7 +8,7 @@
 
 ## Description
 
-Implementation of Geoff Pike's fingerprint2011 hash function. See {@link Hashing#fingerprint2011}
+Implementation of Geoff Pike's fingerprint2011 hash function. See `Hashing.fingerprint2011`
  for information on the behaviour of the algorithm.
 
  <p>On Intel Core2 2.66, on 1000 bytes, fingerprint2011 takes 0.9 microseconds compared to
@@ -22,8 +22,8 @@ Implementation of Geoff Pike's fingerprint2011 hash function. See {@link Hashing
    <li>division (avoided here)
    <li>shifting (right shift must be unsigned)
  </ul>
-@author kylemaddison@google.com (Kyle Maddison)
-@author gpike@google.com (Geoff Pike)
+**Author:** kylemaddison@google.com (Kyle Maddison)
+**Author:** gpike@google.com (Geoff Pike)
 
 ## Fields
 

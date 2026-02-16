@@ -12,12 +12,12 @@
 ## Description
 
 Calculates the weights of cache entries.
-@author Charles Fry
-@since 11.0
+**Author:** Charles Fry
+**Since:** 11.0
 
 ## Methods
 
-### `weigh([`K`](K.md) key, [`V`](V.md) value)`
+### `weigh(`K` key, `V` value)`
 
 **Returns:** `int`
 

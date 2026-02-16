@@ -10,27 +10,27 @@
 
 ## Description
 
-A callback for accepting the results of a {@link java.util.concurrent.Future} computation
+A callback for accepting the results of a `java.util.concurrent.Future` computation
  asynchronously.
 
- <p>To attach to a {@link ListenableFuture} use {@link Futures#addCallback}.
-@author Anthony Zana
-@since 10.0
+ <p>To attach to a `ListenableFuture` use `Futures.addCallback`.
+**Author:** Anthony Zana
+**Since:** 10.0
 
 ## Methods
 
-### `onSuccess([`V`](V.md) result)`
+### `onSuccess(`V` result)`
 
 **Returns:** `void`
 
-Invoked with the result of the {@code Future} computation when it is successful.
+Invoked with the result of the `Future` computation when it is successful.
 
 ### `onFailure(`java.lang.Throwable` t)`
 
 **Returns:** `void`
 
-Invoked when a {@code Future} computation fails or is canceled.
+Invoked when a `Future` computation fails or is canceled.
 
- <p>If the future's {@link Future#get() get} method throws an {@link ExecutionException}, then
+ <p>If the future's `Future.get() get` method throws an `ExecutionException`, then
  the cause is passed to this method. Any other thrown object is passed unaltered.
 

@@ -20,7 +20,7 @@ Implementation of ImmutableMap backed by a JDK HashMap, which has smartness prot
 
 ### `delegateMap`
 
-**Type:** [`java.util.Map<K,V>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<K,V>`
 
 ### `entries`
 
@@ -28,15 +28,15 @@ Implementation of ImmutableMap backed by a JDK HashMap, which has smartness prot
 
 ## Constructors
 
-### `<init>([`java.util.Map<K,V>`](../../../../java/util/Map.md) delegateMap, [`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList>.md) entries)`
+### `<init>(`java.util.Map<K,V>` delegateMap, [`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList>.md) entries)`
 
 ## Methods
 
-### `create(`int` n, [`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`](../../../../java/util/Map/@org/checkerframework/checker/nullness/qual/Nullable Entry.md) entryArray, `boolean` throwIfDuplicateKeys)`
+### `create(`int` n, `java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]` entryArray, `boolean` throwIfDuplicateKeys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-Creates an {@code ImmutableMap} backed by a JDK HashMap. Used when probable hash flooding is
+Creates an `ImmutableMap` backed by a JDK HashMap. Used when probable hash flooding is
  detected. This implementation may replace the entries in entryArray with its own entry objects
  (though they will have the same key/value contents), and will take ownership of entryArray.
 
@@ -46,13 +46,13 @@ Creates an {@code ImmutableMap} backed by a JDK HashMap. Used when probable hash
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `createEntrySet()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet>.md)
 
-### `forEach([`java.util.function.BiConsumer<? super K,? super V>`](../../../../java/util/function/BiConsumer.md) action)`
+### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
 
 **Returns:** `void`
 

@@ -13,8 +13,8 @@
 
 ## Description
 
-An implementation of {@link NetworkConnections} for directed networks with parallel edges.
-@author James Sexton
+An implementation of `NetworkConnections` for directed networks with parallel edges.
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <E> Edge parameter type
 
@@ -30,7 +30,7 @@ An implementation of {@link NetworkConnections} for directed networks with paral
 
 ## Constructors
 
-### `<init>([`java.util.Map<E,N>`](../../../../java/util/Map.md) inEdges, [`java.util.Map<E,N>`](../../../../java/util/Map.md) outEdges, `int` selfLoopCount)`
+### `<init>(`java.util.Map<E,N>` inEdges, `java.util.Map<E,N>` outEdges, `int` selfLoopCount)`
 
 ## Methods
 
@@ -38,13 +38,13 @@ An implementation of {@link NetworkConnections} for directed networks with paral
 
 **Returns:** [`com.google.common.graph.DirectedMultiNetworkConnections<N,E>`](./DirectedMultiNetworkConnections.md)
 
-### `ofImmutable([`java.util.Map<E,N>`](../../../../java/util/Map.md) inEdges, [`java.util.Map<E,N>`](../../../../java/util/Map.md) outEdges, `int` selfLoopCount)`
+### `ofImmutable(`java.util.Map<E,N>` inEdges, `java.util.Map<E,N>` outEdges, `int` selfLoopCount)`
 
 **Returns:** [`com.google.common.graph.DirectedMultiNetworkConnections<N,E>`](./DirectedMultiNetworkConnections.md)
 
 ### `predecessors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `predecessorsMultiset()`
 
@@ -52,33 +52,33 @@ An implementation of {@link NetworkConnections} for directed networks with paral
 
 ### `successors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `successorsMultiset()`
 
 **Returns:** [`com.google.common.collect.Multiset<N>`](../collect/Multiset.md)
 
-### `edgesConnecting([`N`](N.md) node)`
+### `edgesConnecting(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `removeInEdge([`E`](E.md) edge, `boolean` isSelfLoop)`
+### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `removeOutEdge([`E`](E.md) edge)`
+### `removeOutEdge(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `addInEdge([`E`](E.md) edge, [`N`](N.md) node, `boolean` isSelfLoop)`
+### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
 
 **Returns:** `void`
 
-### `addOutEdge([`E`](E.md) edge, [`N`](N.md) node)`
+### `addOutEdge(`E` edge, `N` node)`
 
 **Returns:** `void`
 
 ### `getReference(`java.lang.ref.Reference<T>` reference)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.ImmutableRangeMap`
 
-**Implements:** [`com.google.common.collect.RangeMap<K,V>`](./RangeMap.md), [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** [`com.google.common.collect.RangeMap<K,V>`](./RangeMap.md), `java.io.Serializable`
 
 ## Type Parameters
 
@@ -13,10 +13,10 @@
 
 ## Description
 
-A {@link RangeMap} whose contents will never change, with many other important properties
- detailed at {@link ImmutableCollection}.
-@author Louis Wasserman
-@since 14.0
+A `RangeMap` whose contents will never change, with many other important properties
+ detailed at `ImmutableCollection`.
+**Author:** Louis Wasserman
+**Since:** 14.0
 
 ## Fields
 
@@ -42,13 +42,12 @@ A {@link RangeMap} whose contents will never change, with many other important p
 
 ## Methods
 
-### `toImmutableRangeMap([`java.util.function.Function<? super T,com.google.common.collect.Range<K>>`](../../../../java/util/function/Function>.md) keyFunction, [`java.util.function.Function<? super T,? extends V>`](../../../../java/util/function/Function.md) valueFunction)`
+### `toImmutableRangeMap(`java.util.function.Function<? super T,com.google.common.collect.Range<K>>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction)`
 
-**Returns:** [`java.util.stream.Collector<T,?,com.google.common.collect.ImmutableRangeMap<K,V>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableRangeMap<K,V>>`
 
-Returns a {@code Collector} that accumulates the input elements into a new {@code
- ImmutableRangeMap}. As in {@link Builder}, overlapping ranges are not permitted.
-@since 23.1
+Returns a `Collector` that accumulates the input elements into a new `ImmutableRangeMap`. As in `Builder`, overlapping ranges are not permitted.
+**Since:** 23.1
 
 ### `of()`
 
@@ -58,7 +57,7 @@ Returns an empty immutable range map.
 
  <p><b>Performance note:</b> the instance returned is a singleton.
 
-### `of([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value)`
+### `of([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeMap<K,V>`](./ImmutableRangeMap.md)
 
@@ -74,65 +73,65 @@ Returns an immutable range map mapping a single range to a single value.
 
 Returns a new builder for an immutable range map.
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `getEntry([`K`](K.md) key)`
+### `getEntry(`K` key)`
 
-**Returns:** [`java.util.Map.Entry<com.google.common.collect.Range<K>,V>`](../../../../java/util/Map/Entry,V>.md)
+**Returns:** `java.util.Map.Entry<com.google.common.collect.Range<K>,V>`
 
 ### `span()`
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
-### `put([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value)`
+### `put([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeMap} unmodified.
+Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `putCoalescing([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value)`
+### `putCoalescing([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeMap} unmodified.
+Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `putAll([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md) rangeMap)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeMap} unmodified.
+Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `clear()`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeMap} unmodified.
+Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `remove([`com.google.common.collect.Range<K>`](./Range.md) range)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeMap} unmodified.
+Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `merge([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value, [`java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) remappingFunction)`
+### `merge([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value, `java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeMap} unmodified.
+Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `asMapOfRanges()`
 
@@ -162,7 +161,7 @@ Guaranteed to throw an exception and leave the {@code RangeMap} unmodified.
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

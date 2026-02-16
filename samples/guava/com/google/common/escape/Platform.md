@@ -7,7 +7,7 @@
 ## Description
 
 Methods factored out so that they can be emulated differently in GWT.
-@author Jesse Wilson
+**Author:** Jesse Wilson
 
 ## Fields
 

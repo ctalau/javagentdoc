@@ -12,8 +12,8 @@
 
 ## Description
 
-A class to facilitate the set returned by {@link Graph#edges()}.
-@author James Sexton
+A class to facilitate the set returned by `Graph.edges()`.
+**Author:** James Sexton
 
 ## Fields
 
@@ -23,15 +23,15 @@ A class to facilitate the set returned by {@link Graph#edges()}.
 
 ### `nodeIterator`
 
-**Type:** [`java.util.Iterator<N>`](../../../../java/util/Iterator.md)
+**Type:** `java.util.Iterator<N>`
 
 ### `node`
 
-**Type:** [`N`](N.md)
+**Type:** `N`
 
 ### `successorIterator`
 
-**Type:** [`java.util.Iterator<N>`](../../../../java/util/Iterator.md)
+**Type:** `java.util.Iterator<N>`
 
 ## Constructors
 
@@ -47,6 +47,6 @@ A class to facilitate the set returned by {@link Graph#edges()}.
 
 **Returns:** `boolean`
 
-Called after {@link #successorIterator} is exhausted. Advances {@link #node} to the next node
- and updates {@link #successorIterator} to iterate through the successors of {@link #node}.
+Called after `successorIterator` is exhausted. Advances `node` to the next node
+ and updates `successorIterator` to iterate through the successors of `node`.
 

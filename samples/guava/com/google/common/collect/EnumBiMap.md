@@ -13,12 +13,12 @@
 
 ## Description
 
-A {@code BiMap} backed by two {@code EnumMap} instances. Null keys and values are not permitted.
- An {@code EnumBiMap} and its inverse are both serializable.
+A `BiMap` backed by two `EnumMap` instances. Null keys and values are not permitted.
+ An `EnumBiMap` and its inverse are both serializable.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">{@code BiMap}</a>.
-@author Mike Bostock
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">`BiMap`</a>.
+**Author:** Mike Bostock
+**Since:** 2.0
 
 ## Fields
 
@@ -44,26 +44,26 @@ A {@code BiMap} backed by two {@code EnumMap} instances. Null keys and values ar
 
 **Returns:** [`com.google.common.collect.EnumBiMap<K,V>`](./EnumBiMap.md)
 
-Returns a new, empty {@code EnumBiMap} using the specified key and value types.
+Returns a new, empty `EnumBiMap` using the specified key and value types.
 @param keyType the key type
 @param valueType the value type
 
-### `create([`java.util.Map<K,V>`](../../../../java/util/Map.md) map)`
+### `create(`java.util.Map<K,V>` map)`
 
 **Returns:** [`com.google.common.collect.EnumBiMap<K,V>`](./EnumBiMap.md)
 
 Returns a new bimap with the same mappings as the specified map. If the specified map is an
- {@code EnumBiMap}, the new bimap has the same types as the provided map. Otherwise, the
+ `EnumBiMap`, the new bimap has the same types as the provided map. Otherwise, the
  specified map must contain at least one mapping, in order to determine the key and value types.
 @param map the map whose mappings are to be placed in this map
-@throws IllegalArgumentException if map is not an {@code EnumBiMap} instance and contains no
+@throws IllegalArgumentException if map is not an `EnumBiMap` instance and contains no
      mappings
 
-### `inferKeyTypeOrObjectUnderJ2cl([`java.util.Map<K,?>`](../../../../java/util/Map.md) map)`
+### `inferKeyTypeOrObjectUnderJ2cl(`java.util.Map<K,?>` map)`
 
 **Returns:** `java.lang.Class<K>`
 
-### `inferValueTypeOrObjectUnderJ2cl([`java.util.Map<?,V>`](../../../../java/util/Map.md) map)`
+### `inferValueTypeOrObjectUnderJ2cl(`java.util.Map<?,V>` map)`
 
 **Returns:** `java.lang.Class<V>`
 
@@ -79,22 +79,22 @@ Returns the associated key type.
 
 Returns the associated value type.
 
-### `checkKey([`K`](K.md) key)`
+### `checkKey(`K` key)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
-### `checkValue([`V`](V.md) value)`
+### `checkValue(`V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `writeObject([`java.io.ObjectOutputStream`](../../../../java/io/ObjectOutputStream.md) stream)`
+### `writeObject(`java.io.ObjectOutputStream` stream)`
 
 **Returns:** `void`
 
 @serialData the key class, value class, number of entries, first key, first value, second key,
      second value, and so on.
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

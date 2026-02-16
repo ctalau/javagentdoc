@@ -19,15 +19,15 @@ An Iterator implementation which draws elements from a queue, removing them from
 
 ### `queue`
 
-**Type:** [`java.util.Queue<T>`](../../../../java/util/Queue.md)
+**Type:** `java.util.Queue<T>`
 
 ## Constructors
 
-### `<init>([`java.util.Queue<T>`](../../../../java/util/Queue.md) queue)`
+### `<init>(`java.util.Queue<T>` queue)`
 
 ## Methods
 
 ### `computeNext()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 

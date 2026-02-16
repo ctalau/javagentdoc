@@ -10,15 +10,15 @@
 
 ## Description
 
-A wrapper class for unsigned {@code int} values, supporting arithmetic operations.
+A wrapper class for unsigned `int` values, supporting arithmetic operations.
 
  <p>In some cases, when speed is more important than code readability, it may be faster simply to
- treat primitive {@code int} values as unsigned, using the methods from {@link UnsignedInts}.
+ treat primitive `int` values as unsigned, using the methods from `UnsignedInts`.
 
  <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/PrimitivesExplained#unsigned-support">unsigned
  primitive utilities</a>.
-@author Louis Wasserman
-@since 11.0
+**Author:** Louis Wasserman
+**Since:** 11.0
 
 ## Fields
 
@@ -48,131 +48,131 @@ A wrapper class for unsigned {@code int} values, supporting arithmetic operation
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns an {@code UnsignedInteger} corresponding to a given bit representation. The argument is
- interpreted as an unsigned 32-bit value. Specifically, the sign bit of {@code bits} is
+Returns an `UnsignedInteger` corresponding to a given bit representation. The argument is
+ interpreted as an unsigned 32-bit value. Specifically, the sign bit of `bits` is
  interpreted as a normal bit, and all other bits are treated as usual.
 
- <p>If the argument is nonnegative, the returned result will be equal to {@code bits},
- otherwise, the result will be equal to {@code 2^32 + bits}.
+ <p>If the argument is nonnegative, the returned result will be equal to `bits`,
+ otherwise, the result will be equal to `2^32 + bits`.
 
- <p>To represent unsigned decimal constants, consider {@link #valueOf(long)} instead.
-@since 14.0
+ <p>To represent unsigned decimal constants, consider `valueOf(long)` instead.
+**Since:** 14.0
 
 ### `valueOf(`long` value)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns an {@code UnsignedInteger} that is equal to {@code value}, if possible. The inverse
- operation of {@link #longValue()}.
+Returns an `UnsignedInteger` that is equal to `value`, if possible. The inverse
+ operation of `longValue()`.
 
-### `valueOf([`java.math.BigInteger`](../../../../java/math/BigInteger.md) value)`
+### `valueOf(`java.math.BigInteger` value)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns a {@code UnsignedInteger} representing the same value as the specified {@link BigInteger}. This is the inverse operation of {@link #bigIntegerValue()}.
-@throws IllegalArgumentException if {@code value} is negative or {@code value >= 2^32}
+Returns a `UnsignedInteger` representing the same value as the specified `BigInteger`. This is the inverse operation of `bigIntegerValue()`.
+@throws IllegalArgumentException if `value` is negative or `value >= 2^32`
 
 ### `valueOf(`java.lang.String` string)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns an {@code UnsignedInteger} holding the value of the specified {@code String}, parsed as
- an unsigned {@code int} value.
-@throws NumberFormatException if the string does not contain a parsable unsigned {@code int}
+Returns an `UnsignedInteger` holding the value of the specified `String`, parsed as
+ an unsigned `int` value.
+@throws NumberFormatException if the string does not contain a parsable unsigned `int`
      value
 
 ### `valueOf(`java.lang.String` string, `int` radix)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns an {@code UnsignedInteger} holding the value of the specified {@code String}, parsed as
- an unsigned {@code int} value in the specified radix.
-@throws NumberFormatException if the string does not contain a parsable unsigned {@code int}
+Returns an `UnsignedInteger` holding the value of the specified `String`, parsed as
+ an unsigned `int` value in the specified radix.
+@throws NumberFormatException if the string does not contain a parsable unsigned `int`
      value
 
 ### `plus([`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md) val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns the result of adding this and {@code val}. If the result would have more than 32 bits,
+Returns the result of adding this and `val`. If the result would have more than 32 bits,
  returns the low 32 bits of the result.
-@since 14.0
+**Since:** 14.0
 
 ### `minus([`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md) val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns the result of subtracting this and {@code val}. If the result would be negative,
+Returns the result of subtracting this and `val`. If the result would be negative,
  returns the low 32 bits of the result.
-@since 14.0
+**Since:** 14.0
 
 ### `times([`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md) val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns the result of multiplying this and {@code val}. If the result would have more than 32
+Returns the result of multiplying this and `val`. If the result would have more than 32
  bits, returns the low 32 bits of the result.
-@since 14.0
+**Since:** 14.0
 
 ### `dividedBy([`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md) val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns the result of dividing this by {@code val}.
-@throws ArithmeticException if {@code val} is zero
-@since 14.0
+Returns the result of dividing this by `val`.
+@throws ArithmeticException if `val` is zero
+**Since:** 14.0
 
 ### `mod([`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md) val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md)
 
-Returns this mod {@code val}.
-@throws ArithmeticException if {@code val} is zero
-@since 14.0
+Returns this mod `val`.
+@throws ArithmeticException if `val` is zero
+**Since:** 14.0
 
 ### `intValue()`
 
 **Returns:** `int`
 
-Returns the value of this {@code UnsignedInteger} as an {@code int}. This is an inverse
- operation to {@link #fromIntBits}.
+Returns the value of this `UnsignedInteger` as an `int`. This is an inverse
+ operation to `fromIntBits`.
 
- <p>Note that if this {@code UnsignedInteger} holds a value {@code >= 2^31}, the returned value
- will be equal to {@code this - 2^32}.
+ <p>Note that if this `UnsignedInteger` holds a value `>= 2^31`, the returned value
+ will be equal to `this - 2^32`.
 
 ### `longValue()`
 
 **Returns:** `long`
 
-Returns the value of this {@code UnsignedInteger} as a {@code long}.
+Returns the value of this `UnsignedInteger` as a `long`.
 
 ### `floatValue()`
 
 **Returns:** `float`
 
-Returns the value of this {@code UnsignedInteger} as a {@code float}, analogous to a widening
- primitive conversion from {@code int} to {@code float}, and correctly rounded.
+Returns the value of this `UnsignedInteger` as a `float`, analogous to a widening
+ primitive conversion from `int` to `float`, and correctly rounded.
 
 ### `doubleValue()`
 
 **Returns:** `double`
 
-Returns the value of this {@code UnsignedInteger} as a {@code float}, analogous to a widening
- primitive conversion from {@code int} to {@code double}, and correctly rounded.
+Returns the value of this `UnsignedInteger` as a `float`, analogous to a widening
+ primitive conversion from `int` to `double`, and correctly rounded.
 
 ### `bigIntegerValue()`
 
-**Returns:** [`java.math.BigInteger`](../../../../java/math/BigInteger.md)
+**Returns:** `java.math.BigInteger`
 
-Returns the value of this {@code UnsignedInteger} as a {@link BigInteger}.
+Returns the value of this `UnsignedInteger` as a `BigInteger`.
 
 ### `compareTo([`com.google.common.primitives.UnsignedInteger`](./UnsignedInteger.md) other)`
 
 **Returns:** `int`
 
-Compares this unsigned integer to another unsigned integer. Returns {@code 0} if they are
- equal, a negative number if {@code this < other}, and a positive number if {@code this >
- other}.
+Compares this unsigned integer to another unsigned integer. Returns `0` if they are
+ equal, a negative number if `this < other`, and a positive number if `this >
+ other`.
 
 ### `hashCode()`
 
@@ -186,13 +186,12 @@ Compares this unsigned integer to another unsigned integer. Returns {@code 0} if
 
 **Returns:** `java.lang.String`
 
-Returns a string representation of the {@code UnsignedInteger} value, in base 10.
+Returns a string representation of the `UnsignedInteger` value, in base 10.
 
 ### `toString(`int` radix)`
 
 **Returns:** `java.lang.String`
 
-Returns a string representation of the {@code UnsignedInteger} value, in base {@code radix}. If
- {@code radix < Character.MIN_RADIX} or {@code radix > Character.MAX_RADIX}, the radix {@code
- 10} is used.
+Returns a string representation of the `UnsignedInteger` value, in base `radix`. If
+ `radix < Character.MIN_RADIX` or `radix > Character.MAX_RADIX`, the radix `10` is used.
 

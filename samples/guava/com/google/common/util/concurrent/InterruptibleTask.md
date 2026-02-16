@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.InterruptibleTask`
 
-**Extends:** [`java.util.concurrent.atomic.AtomicReference<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Runnable>`](../../../../../java/util/concurrent/atomic/AtomicReference.md)
+**Extends:** `java.util.concurrent.atomic.AtomicReference<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Runnable>`
 
 **Implements:** `java.lang.Runnable`
 
@@ -49,12 +49,12 @@ Called before runInterruptibly - if true, runInterruptibly and afterRanInterrupt
 
 ### `runInterruptibly()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Do interruptible work here - do not complete Futures here, as their listeners could be
  interrupted.
 
-### `afterRanInterruptiblySuccess([`T`](T.md) result)`
+### `afterRanInterruptiblySuccess(`T` result)`
 
 **Returns:** `void`
 
@@ -72,7 +72,7 @@ Any interruption that happens as a result of calling interruptTask will arrive b
 
 **Returns:** `void`
 
-Interrupts the running task. Because this internally calls {@link Thread#interrupt()} which can
+Interrupts the running task. Because this internally calls `Thread.interrupt()` which can
  in turn invoke arbitrary code it is not safe to call while holding a lock.
 
 ### `toString()`

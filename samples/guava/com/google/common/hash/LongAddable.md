@@ -7,7 +7,7 @@
 ## Description
 
 Abstract interface for objects that can concurrently add longs.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Methods
 

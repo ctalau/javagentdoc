@@ -6,10 +6,10 @@
 
 ## Description
 
-A class for reading lines of text. Provides the same functionality as {@link java.io.BufferedReader#readLine()} but for all {@link Readable} objects, not just instances of
- {@link Reader}.
-@author Chris Nokleberg
-@since 1.0
+A class for reading lines of text. Provides the same functionality as `java.io.BufferedReader.readLine()` but for all `Readable` objects, not just instances of
+ `Reader`.
+**Author:** Chris Nokleberg
+**Since:** 1.0
 
 ## Fields
 
@@ -19,11 +19,11 @@ A class for reading lines of text. Provides the same functionality as {@link jav
 
 ### `reader`
 
-**Type:** [`java.io.Reader`](../../../../java/io/Reader.md)
+**Type:** `java.io.Reader`
 
 ### `cbuf`
 
-**Type:** [`java.nio.CharBuffer`](../../../../java/nio/CharBuffer.md)
+**Type:** `java.nio.CharBuffer`
 
 ### `buf`
 
@@ -31,7 +31,7 @@ A class for reading lines of text. Provides the same functionality as {@link jav
 
 ### `lines`
 
-**Type:** [`java.util.Queue<java.lang.String>`](../../../../java/util/Queue.md)
+**Type:** `java.util.Queue<java.lang.String>`
 
 ### `lineBuf`
 
@@ -41,7 +41,7 @@ A class for reading lines of text. Provides the same functionality as {@link jav
 
 ### `<init>(`java.lang.Readable` readable)`
 
-Creates a new instance that will read lines from the given {@code Readable} object.
+Creates a new instance that will read lines from the given `Readable` object.
 
 ## Methods
 
@@ -49,10 +49,9 @@ Creates a new instance that will read lines from the given {@code Readable} obje
 
 **Returns:** `java.lang.String`
 
-Reads a line of text. A line is considered to be terminated by any one of a line feed ({@code
- '\n'}), a carriage return ({@code '\r'}), or a carriage return followed immediately by a
- linefeed ({@code "\r\n"}).
-@return a {@code String} containing the contents of the line, not including any
-     line-termination characters, or {@code null} if the end of the stream has been reached.
+Reads a line of text. A line is considered to be terminated by any one of a line feed (`'\n'`), a carriage return (`'\r'`), or a carriage return followed immediately by a
+ linefeed (`"\r\n"`).
+@return a `String` containing the contents of the line, not including any
+     line-termination characters, or `null` if the end of the stream has been reached.
 @throws IOException if an I/O error occurs
 

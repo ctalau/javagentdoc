@@ -12,5 +12,5 @@
 
 ## Description
 
-Explicitly named subinterface of {@link Supplier} that can be marked {@literal @}{@link Immutable}.
+Explicitly named subinterface of `Supplier` that can be marked @`Immutable`.
 

@@ -17,7 +17,7 @@
 
 ## Description
 
-Implementations of {@code Futures.transform*}.
+Implementations of `Futures.transform*`.
 
 ## Fields
 
@@ -27,19 +27,19 @@ Implementations of {@code Futures.transform*}.
 
 ### `function`
 
-**Type:** [`F`](F.md)
+**Type:** `F`
 
 ## Constructors
 
-### `<init>([`com.google.common.util.concurrent.ListenableFuture<? extends I>`](./ListenableFuture.md) inputFuture, [`F`](F.md) function)`
+### `<init>([`com.google.common.util.concurrent.ListenableFuture<? extends I>`](./ListenableFuture.md) inputFuture, `F` function)`
 
 ## Methods
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md) input, [`com.google.common.util.concurrent.AsyncFunction<? super I,? extends O>`](./AsyncFunction.md) function, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `create([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md) input, [`com.google.common.util.concurrent.AsyncFunction<? super I,? extends O>`](./AsyncFunction.md) function, `java.util.concurrent.Executor` executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md) input, [`com.google.common.base.Function<? super I,? extends O>`](../../base/Function.md) function, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `create([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md) input, [`com.google.common.base.Function<? super I,? extends O>`](../../base/Function.md) function, `java.util.concurrent.Executor` executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
@@ -47,13 +47,13 @@ Implementations of {@code Futures.transform*}.
 
 **Returns:** `void`
 
-### `doTransform([`F`](F.md) function, [`I`](I.md) result)`
+### `doTransform(`F` function, `I` result)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Template method for subtypes to actually run the transform.
 
-### `setResult([`T`](T.md) result)`
+### `setResult(`T` result)`
 
 **Returns:** `void`
 

@@ -7,7 +7,7 @@
 ## Description
 
 Context for an exception thrown by a subscriber.
-@since 16.0
+**Since:** 16.0
 
 ## Fields
 
@@ -31,7 +31,7 @@ Context for an exception thrown by a subscriber.
 
 ### `<init>([`com.google.common.eventbus.EventBus`](./EventBus.md) eventBus, `java.lang.Object` event, `java.lang.Object` subscriber, `java.lang.reflect.Method` subscriberMethod)`
 
-@param eventBus The {@link EventBus} that handled the event and the subscriber. Useful for
+@param eventBus The `EventBus` that handled the event and the subscriber. Useful for
      broadcasting a new event based on the error.
 @param event The event object that caused the subscriber to throw.
 @param subscriber The source subscriber context.
@@ -43,7 +43,7 @@ Context for an exception thrown by a subscriber.
 
 **Returns:** [`com.google.common.eventbus.EventBus`](./EventBus.md)
 
-@return The {@link EventBus} that handled the event and the subscriber. Useful for broadcasting
+@return The `EventBus` that handled the event and the subscriber. Useful for broadcasting
      a new event based on the error.
 
 ### `getEvent()`

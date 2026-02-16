@@ -14,11 +14,11 @@
 
 ## Description
 
-This class provides a skeletal implementation of {@link Graph}. It is recommended to extend this
- class rather than implement {@link Graph} directly.
-@author James Sexton
+This class provides a skeletal implementation of `Graph`. It is recommended to extend this
+ class rather than implement `Graph` directly.
+**Author:** James Sexton
 @param <N> Node parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Constructors
 

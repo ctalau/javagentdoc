@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `com.google.common.io.CharSequenceReader`
 
-**Extends:** [`java.io.Reader`](../../../../java/io/Reader.md)
+**Extends:** `java.io.Reader`
 
 ## Description
 
-A {@link Reader} that reads the characters in a {@link CharSequence}. Like {@code StringReader},
- but works with any {@link CharSequence}.
-@author Colin Decker
+A `Reader` that reads the characters in a `CharSequence`. Like `StringReader`,
+ but works with any `CharSequence`.
+**Author:** Colin Decker
 
 ## Fields
 
@@ -46,7 +46,7 @@ Creates a new reader wrapping the given character sequence.
 
 **Returns:** `int`
 
-### `read([`java.nio.CharBuffer`](../../../../java/nio/CharBuffer.md) target)`
+### `read(`java.nio.CharBuffer` target)`
 
 **Returns:** `int`
 

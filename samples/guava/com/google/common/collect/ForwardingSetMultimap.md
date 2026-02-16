@@ -18,11 +18,10 @@
 A set multimap which forwards all its method calls to another set multimap. Subclasses should
  override one or more methods to modify the behavior of the backing multimap as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingSetMultimap}.
-@author Kurt Alfred Kluever
-@since 3.0
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingSetMultimap`.
+**Author:** Kurt Alfred Kluever
+**Since:** 3.0
 
 ## Constructors
 
@@ -36,17 +35,17 @@ A set multimap which forwards all its method calls to another set multimap. Subc
 
 ### `entries()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 

@@ -15,9 +15,9 @@
 
 ## Description
 
-Basic implementation of the {@link ListMultimap} interface. It's a wrapper around {@link AbstractMapBasedMultimap} that converts the returned collections into {@code Lists}. The {@link #createCollection} method must return a {@code List}.
-@author Jared Levy
-@since 2.0
+Basic implementation of the `ListMultimap` interface. It's a wrapper around `AbstractMapBasedMultimap` that converts the returned collections into `Lists`. The `createCollection` method must return a `List`.
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Fields
 
@@ -27,7 +27,7 @@ Basic implementation of the {@link ListMultimap} interface. It's a wrapper aroun
 
 ## Constructors
 
-### `<init>([`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md) map)`
+### `<init>(`java.util.Map<K,java.util.Collection<V>>` map)`
 
 Creates a new multimap that uses the provided map.
 @param map place to store the mapping from each key to its corresponding values
@@ -36,63 +36,63 @@ Creates a new multimap that uses the provided map.
 
 ### `createCollection()`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 ### `createUnmodifiableEmptyCollection()`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
-### `unmodifiableCollectionSubclass([`java.util.Collection<E>`](../../../../java/util/Collection.md) collection)`
+### `unmodifiableCollectionSubclass(`java.util.Collection<E>` collection)`
 
-**Returns:** [`java.util.Collection<E>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<E>`
 
-### `wrapCollection([`K`](K.md) key, [`java.util.Collection<V>`](../../../../java/util/Collection.md) collection)`
+### `wrapCollection(`K` key, `java.util.Collection<V>` collection)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 {@inheritDoc}
 
  <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a {@link List}, instead of the {@link Collection} specified in the {@link Multimap} interface.
+ this method returns a `List`, instead of the `Collection` specified in the `Multimap` interface.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 {@inheritDoc}
 
  <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a {@link List}, instead of the {@link Collection} specified in the {@link Multimap} interface.
+ this method returns a `List`, instead of the `Collection` specified in the `Multimap` interface.
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 {@inheritDoc}
 
  <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a {@link List}, instead of the {@link Collection} specified in the {@link Multimap} interface.
+ this method returns a `List`, instead of the `Collection` specified in the `Multimap` interface.
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
 **Returns:** `boolean`
 
 Stores a key-value pair in the multimap.
 @param key key to store in the multimap
 @param value value to store in the multimap
-@return {@code true} always
+@return `true` always
 
 ### `asMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 {@inheritDoc}
 
- <p>Though the method signature doesn't say so explicitly, the returned map has {@link List}
+ <p>Though the method signature doesn't say so explicitly, the returned map has `List`
  values.
 
 ### `equals(`java.lang.Object` object)`
@@ -101,6 +101,6 @@ Stores a key-value pair in the multimap.
 
 Compares the specified object to this multimap for equality.
 
- <p>Two {@code ListMultimap} instances are equal if, for each key, they contain the same values
+ <p>Two `ListMultimap` instances are equal if, for each key, they contain the same values
  in the same order. If the value orderings disagree, the multimaps will not be considered equal.
 

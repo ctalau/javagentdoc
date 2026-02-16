@@ -13,8 +13,8 @@
 
 ## Description
 
-A base implementation of {@link NetworkConnections} for directed networks.
-@author James Sexton
+A base implementation of `NetworkConnections` for directed networks.
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <E> Edge parameter type
 
@@ -22,13 +22,13 @@ A base implementation of {@link NetworkConnections} for directed networks.
 
 ### `inEdgeMap`
 
-**Type:** [`java.util.Map<E,N>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<E,N>`
 
 Keys are edges incoming to the origin node, values are the source node.
 
 ### `outEdgeMap`
 
-**Type:** [`java.util.Map<E,N>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<E,N>`
 
 Keys are edges outgoing from the origin node, values are the target node.
 
@@ -38,43 +38,43 @@ Keys are edges outgoing from the origin node, values are the target node.
 
 ## Constructors
 
-### `<init>([`java.util.Map<E,N>`](../../../../java/util/Map.md) inEdgeMap, [`java.util.Map<E,N>`](../../../../java/util/Map.md) outEdgeMap, `int` selfLoopCount)`
+### `<init>(`java.util.Map<E,N>` inEdgeMap, `java.util.Map<E,N>` outEdgeMap, `int` selfLoopCount)`
 
 ## Methods
 
 ### `adjacentNodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `incidentEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `inEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `outEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `adjacentNode([`E`](E.md) edge)`
+### `adjacentNode(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `removeInEdge([`E`](E.md) edge, `boolean` isSelfLoop)`
+### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `removeOutEdge([`E`](E.md) edge)`
+### `removeOutEdge(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `addInEdge([`E`](E.md) edge, [`N`](N.md) node, `boolean` isSelfLoop)`
+### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
 
 **Returns:** `void`
 
-### `addOutEdge([`E`](E.md) edge, [`N`](N.md) node)`
+### `addOutEdge(`E` edge, `N` node)`
 
 **Returns:** `void`
 

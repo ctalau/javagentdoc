@@ -12,8 +12,8 @@
 ## Description
 
 An interface for representing and manipulating an origin node's adjacent nodes and edge values in
- a {@link Graph}.
-@author James Sexton
+ a `Graph`.
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <V> Value parameter type
 
@@ -21,55 +21,55 @@ An interface for representing and manipulating an origin node's adjacent nodes a
 
 ### `adjacentNodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `predecessors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `successors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `incidentEdgeIterator([`N`](N.md) thisNode)`
+### `incidentEdgeIterator(`N` thisNode)`
 
-**Returns:** [`java.util.Iterator<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
 
 Returns an iterator over the incident edges.
 @param thisNode The node that this all of the connections in this class are connected to.
 
-### `value([`N`](N.md) node)`
+### `value(`N` node)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Returns the value associated with the edge connecting the origin node to {@code node}, or null
+Returns the value associated with the edge connecting the origin node to `node`, or null
  if there is no such edge.
 
-### `removePredecessor([`N`](N.md) node)`
+### `removePredecessor(`N` node)`
 
 **Returns:** `void`
 
-Remove {@code node} from the set of predecessors.
+Remove `node` from the set of predecessors.
 
-### `removeSuccessor([`N`](N.md) node)`
+### `removeSuccessor(`N` node)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Remove {@code node} from the set of successors. Returns the value previously associated with
+Remove `node` from the set of successors. Returns the value previously associated with
  the edge connecting the two nodes.
 
-### `addPredecessor([`N`](N.md) node, [`V`](V.md) value)`
+### `addPredecessor(`N` node, `V` value)`
 
 **Returns:** `void`
 
-Add {@code node} as a predecessor to the origin node. In the case of an undirected graph, it
- also becomes a successor. Associates {@code value} with the edge connecting the two nodes.
+Add `node` as a predecessor to the origin node. In the case of an undirected graph, it
+ also becomes a successor. Associates `value` with the edge connecting the two nodes.
 
-### `addSuccessor([`N`](N.md) node, [`V`](V.md) value)`
+### `addSuccessor(`N` node, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Add {@code node} as a successor to the origin node. In the case of an undirected graph, it also
- becomes a predecessor. Associates {@code value} with the edge connecting the two nodes. Returns
+Add `node` as a successor to the origin node. In the case of an undirected graph, it also
+ becomes a predecessor. Associates `value` with the edge connecting the two nodes. Returns
  the value previously associated with the edge connecting the two nodes.
 

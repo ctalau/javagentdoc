@@ -15,8 +15,8 @@ Collections of strategies of generating the k * log(M) bits required for an elem
 
  <p>Important: the order of the constants cannot change, and they cannot be deleted - we depend on
  their ordinal for BloomFilter serialization.
-@author Dimitris Andreou
-@author Kurt Alfred Kluever
+**Author:** Dimitris Andreou
+**Author:** Kurt Alfred Kluever
 
 ## Constructors
 

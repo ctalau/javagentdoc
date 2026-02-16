@@ -12,13 +12,13 @@
 
 ## Description
 
-Implementation of an {@link Optional} containing a reference.
+Implementation of an `Optional` containing a reference.
 
 ## Fields
 
 ### `reference`
 
-**Type:** [`T`](T.md)
+**Type:** `T`
 
 ### `serialVersionUID`
 
@@ -26,7 +26,7 @@ Implementation of an {@link Optional} containing a reference.
 
 ## Constructors
 
-### `<init>([`T`](T.md) reference)`
+### `<init>(`T` reference)`
 
 ## Methods
 
@@ -36,11 +36,11 @@ Implementation of an {@link Optional} containing a reference.
 
 ### `get()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `or([`T`](T.md) defaultValue)`
+### `or(`T` defaultValue)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `or([`com.google.common.base.Optional<? extends T>`](./Optional.md) secondChoice)`
 
@@ -48,15 +48,15 @@ Implementation of an {@link Optional} containing a reference.
 
 ### `or([`com.google.common.base.Supplier<? extends T>`](./Supplier.md) supplier)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `orNull()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `asSet()`
 
-**Returns:** [`java.util.Set<T>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<T>`
 
 ### `transform([`com.google.common.base.Function<? super T,V>`](./Function.md) function)`
 

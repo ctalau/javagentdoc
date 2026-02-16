@@ -15,8 +15,8 @@
 
 ## Description
 
-Implementation of {@link Multimaps#filterKeys(ListMultimap, Predicate)}.
-@author Louis Wasserman
+Implementation of `Multimaps.filterKeys(ListMultimap, Predicate)`.
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -28,15 +28,15 @@ Implementation of {@link Multimaps#filterKeys(ListMultimap, Predicate)}.
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 

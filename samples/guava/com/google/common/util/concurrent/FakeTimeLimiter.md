@@ -12,9 +12,9 @@ A TimeLimiter implementation which actually does not attempt to limit time at al
  desirable to use in some unit tests. More importantly, attempting to debug a call which is
  time-limited would be extremely annoying, so this gives you a time-limiter you can easily swap in
  for your real time-limiter while you're debugging.
-@author Kevin Bourrillion
-@author Jens Nyman
-@since 1.0
+**Author:** Kevin Bourrillion
+**Author:** Jens Nyman
+**Since:** 1.0
 
 ## Constructors
 
@@ -22,23 +22,23 @@ A TimeLimiter implementation which actually does not attempt to limit time at al
 
 ## Methods
 
-### `newProxy([`T`](T.md) target, `java.lang.Class<T>` interfaceType, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `newProxy(`T` target, `java.lang.Class<T>` interfaceType, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `callWithTimeout([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) callable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `callWithTimeout(`java.util.concurrent.Callable<T>` callable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `callUninterruptiblyWithTimeout([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) callable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `callUninterruptiblyWithTimeout(`java.util.concurrent.Callable<T>` callable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `runWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `runWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
 **Returns:** `void`
 
-### `runUninterruptiblyWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `runUninterruptiblyWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
 **Returns:** `void`
 

@@ -14,7 +14,7 @@
 
 ## Description
 
-A {@code RegularImmutableTable} optimized for sparse data.
+A `RegularImmutableTable` optimized for sparse data.
 
 ## Fields
 
@@ -62,7 +62,7 @@ A {@code RegularImmutableTable} optimized for sparse data.
 
 ### `getValue(`int` index)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `writeReplace()`
 

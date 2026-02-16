@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.cache.RemovalNotification`
 
-**Extends:** [`java.util.AbstractMap.SimpleImmutableEntry<@org.checkerframework.checker.nullness.qual.Nullable K,@org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/AbstractMap/SimpleImmutableEntry.md)
+**Extends:** `java.util.AbstractMap.SimpleImmutableEntry<@org.checkerframework.checker.nullness.qual.Nullable K,@org.checkerframework.checker.nullness.qual.Nullable V>`
 
 ## Type Parameters
 
@@ -16,11 +16,11 @@
 A notification of the removal of a single entry. The key and/or value may be null if they were
  already garbage collected.
 
- <p>Like other {@code Entry} instances associated with {@code CacheBuilder}, this class holds
+ <p>Like other `Entry` instances associated with `CacheBuilder`, this class holds
  strong references to the key and value, regardless of the type of references the cache may be
  using.
-@author Charles Fry
-@since 10.0
+**Author:** Charles Fry
+**Since:** 10.0
 
 ## Fields
 
@@ -34,18 +34,17 @@ A notification of the removal of a single entry. The key and/or value may be nul
 
 ## Constructors
 
-### `<init>([`K`](K.md) key, [`V`](V.md) value, [`com.google.common.cache.RemovalCause`](./RemovalCause.md) cause)`
+### `<init>(`K` key, `V` value, [`com.google.common.cache.RemovalCause`](./RemovalCause.md) cause)`
 
 ## Methods
 
-### `create([`K`](K.md) key, [`V`](V.md) value, [`com.google.common.cache.RemovalCause`](./RemovalCause.md) cause)`
+### `create(`K` key, `V` value, [`com.google.common.cache.RemovalCause`](./RemovalCause.md) cause)`
 
 **Returns:** [`com.google.common.cache.RemovalNotification<K,V>`](./RemovalNotification.md)
 
-Creates a new {@code RemovalNotification} for the given {@code key}/{@code value} pair, with
- the given {@code cause} for the removal. The {@code key} and/or {@code value} may be {@code
- null} if they were already garbage collected.
-@since 19.0
+Creates a new `RemovalNotification` for the given `key`/`value` pair, with
+ the given `cause` for the removal. The `key` and/or `value` may be `null` if they were already garbage collected.
+**Since:** 19.0
 
 ### `getCause()`
 
@@ -57,6 +56,6 @@ Returns the cause for which the entry was removed.
 
 **Returns:** `boolean`
 
-Returns {@code true} if there was an automatic removal due to eviction (the cause is neither
- {@link RemovalCause#EXPLICIT} nor {@link RemovalCause#REPLACED}).
+Returns `true` if there was an automatic removal due to eviction (the cause is neither
+ `RemovalCause.EXPLICIT` nor `RemovalCause.REPLACED`).
 

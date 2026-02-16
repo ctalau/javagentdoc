@@ -14,10 +14,10 @@
 
 ## Description
 
-Implementation of {@link Multisets#unmodifiableSortedMultiset(SortedMultiset)}, split out into
+Implementation of `Multisets.unmodifiableSortedMultiset(SortedMultiset)`, split out into
  its own file so it can be GWT emulated (to deal with the differing elementSet() types in GWT and
  non-GWT).
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -41,15 +41,15 @@ Implementation of {@link Multisets#unmodifiableSortedMultiset(SortedMultiset)}, 
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `createElementSet()`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
 ### `elementSet()`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
 ### `descendingMultiset()`
 
@@ -71,15 +71,15 @@ Implementation of {@link Multisets#unmodifiableSortedMultiset(SortedMultiset)}, 
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-### `headMultiset([`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `subMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, [`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+### `subMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, `E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `tailMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 

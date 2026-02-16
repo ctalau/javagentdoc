@@ -7,8 +7,8 @@
 ## Description
 
 Utility functions for loading and storing values from a byte array.
-@author Kevin Damm
-@author Kyle Maddison
+**Author:** Kevin Damm
+**Author:** Kyle Maddison
 
 ## Fields
 

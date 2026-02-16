@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingObject`](../../collect/ForwardingObject.md)
 
-**Implements:** [`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md)
+**Implements:** `java.util.concurrent.Future<V>`
 
 ## Type Parameters
 
@@ -14,12 +14,12 @@
 
 ## Description
 
-A {@link Future} which forwards all its method calls to another future. Subclasses should
+A `Future` which forwards all its method calls to another future. Subclasses should
  override one or more methods to modify the behavior of the backing future as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p>Most subclasses can just use {@link SimpleForwardingFuture}.
-@author Sven Mawson
-@since 1.0
+ <p>Most subclasses can just use `SimpleForwardingFuture`.
+**Author:** Sven Mawson
+**Since:** 1.0
 
 ## Constructors
 
@@ -31,7 +31,7 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.concurrent.Future<? extends V>`](../../../../../java/util/concurrent/Future.md)
+**Returns:** `java.util.concurrent.Future<? extends V>`
 
 ### `cancel(`boolean` mayInterruptIfRunning)`
 
@@ -47,9 +47,9 @@ Constructor for use by subclasses.
 
 ### `get()`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `get(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `get(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 

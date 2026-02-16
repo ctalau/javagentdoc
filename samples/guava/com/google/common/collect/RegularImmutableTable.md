@@ -14,8 +14,8 @@
 
 ## Description
 
-An implementation of {@link ImmutableTable} holding an arbitrary number of cells.
-@author Gregory Kick
+An implementation of `ImmutableTable` holding an arbitrary number of cells.
+**Author:** Gregory Kick
 
 ## Constructors
 
@@ -33,13 +33,13 @@ An implementation of {@link ImmutableTable} holding an arbitrary number of cells
 
 ### `getValue(`int` iterationIndex)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `createValues()`
 
 **Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
-### `forCells([`java.util.List<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/List>.md) cells, [`java.util.Comparator<? super R>`](../../../../java/util/Comparator.md) rowComparator, [`java.util.Comparator<? super C>`](../../../../java/util/Comparator.md) columnComparator)`
+### `forCells(`java.util.List<com.google.common.collect.Table.Cell<R,C,V>>` cells, `java.util.Comparator<? super R>` rowComparator, `java.util.Comparator<? super C>` columnComparator)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
@@ -47,7 +47,7 @@ An implementation of {@link ImmutableTable} holding an arbitrary number of cells
 
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
-### `forCellsInternal(`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>` cells, [`java.util.Comparator<? super R>`](../../../../java/util/Comparator.md) rowComparator, [`java.util.Comparator<? super C>`](../../../../java/util/Comparator.md) columnComparator)`
+### `forCellsInternal(`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>` cells, `java.util.Comparator<? super R>` rowComparator, `java.util.Comparator<? super C>` columnComparator)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
@@ -57,11 +57,11 @@ An implementation of {@link ImmutableTable} holding an arbitrary number of cells
 
 A factory that chooses the most space-efficient representation of the table.
 
-### `checkNoDuplicate([`R`](R.md) rowKey, [`C`](C.md) columnKey, [`V`](V.md) existingValue, [`V`](V.md) newValue)`
+### `checkNoDuplicate(`R` rowKey, `C` columnKey, `V` existingValue, `V` newValue)`
 
 **Returns:** `void`
 
-@throws IllegalArgumentException if {@code existingValue} is not null.
+@throws IllegalArgumentException if `existingValue` is not null.
 
 ### `writeReplace()`
 

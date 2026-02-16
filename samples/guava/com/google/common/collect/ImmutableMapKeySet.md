@@ -13,9 +13,9 @@
 
 ## Description
 
-{@code keySet()} implementation for {@link ImmutableMap}.
-@author Jesse Wilson
-@author Kevin Bourrillion
+`keySet()` implementation for `ImmutableMap`.
+**Author:** Jesse Wilson
+**Author:** Kevin Bourrillion
 
 ## Fields
 
@@ -39,7 +39,7 @@
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<K>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<K>`
 
 ### `contains(`java.lang.Object` object)`
 
@@ -47,9 +47,9 @@
 
 ### `get(`int` index)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
-### `forEach([`java.util.function.Consumer<? super K>`](../../../../java/util/function/Consumer.md) action)`
+### `forEach(`java.util.function.Consumer<? super K>` action)`
 
 **Returns:** `void`
 

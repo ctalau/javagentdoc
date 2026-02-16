@@ -8,13 +8,13 @@
 
 A synchronization abstraction supporting waiting on arbitrary boolean conditions.
 
- <p>This class is intended as a replacement for {@link ReentrantLock}. Code using {@code Monitor}
- is less error-prone and more readable than code using {@code ReentrantLock}, without significant
- performance loss. {@code Monitor} even has the potential for performance gain by optimizing the
+ <p>This class is intended as a replacement for `ReentrantLock`. Code using `Monitor`
+ is less error-prone and more readable than code using `ReentrantLock`, without significant
+ performance loss. `Monitor` even has the potential for performance gain by optimizing the
  evaluation and signaling of conditions. Signaling is entirely <a href="http://en.wikipedia.org/wiki/Monitor_(synchronization)#Implicit_signaling">implicit</a>. By
  eliminating explicit signaling, this class can guarantee that only one thread is awakened when a
- condition becomes true (no "signaling storms" due to use of {@link java.util.concurrent.locks.Condition#signalAll Condition.signalAll}) and that no signals are lost
- (no "hangs" due to incorrect use of {@link java.util.concurrent.locks.Condition#signal Condition.signal}).
+ condition becomes true (no "signaling storms" due to use of `java.util.concurrent.locks.Condition.signalAll Condition.signalAll`) and that no signals are lost
+ (no "hangs" due to incorrect use of `java.util.concurrent.locks.Condition.signal Condition.signal`).
 
  <p>A thread is said to <i>occupy</i> a monitor if it has <i>entered</i> the monitor but not yet
  <i>left</i>. Only one thread may occupy a given monitor at any moment. A monitor is also
@@ -26,11 +26,10 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
  followed immediately by a <i>try/finally</i> block to ensure that the current thread leaves the
  monitor cleanly:
 
- <pre>{@code
- monitor.enter();
+ <pre>`monitor.enter();
  try {
    // do things while occupying the monitor
- } finally {
+ ` finally {
    monitor.leave();
  }
  }</pre>
@@ -39,11 +38,10 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
  as the condition of an <i>if</i> statement containing a <i>try/finally</i> block to ensure that
  the current thread leaves the monitor cleanly:
 
- <pre>{@code
- if (monitor.tryEnter()) {
+ <pre>`if (monitor.tryEnter()) {
    try {
      // do things while occupying the monitor
-   } finally {
+   ` finally {
      monitor.leave();
    }
  } else {
@@ -51,27 +49,26 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
  }
  }</pre>
 
- <h2>Comparison with {@code synchronized} and {@code ReentrantLock}</h2>
+ <h2>Comparison with `synchronized` and `ReentrantLock`</h2>
 
- <p>The following examples show a simple threadsafe holder expressed using {@code synchronized},
- {@link ReentrantLock}, and {@code Monitor}.
+ <p>The following examples show a simple threadsafe holder expressed using `synchronized`,
+ `ReentrantLock`, and `Monitor`.
 
- <h3>{@code synchronized}</h3>
+ <h3>`synchronized`</h3>
 
  <p>This version is the fewest lines of code, largely because the synchronization mechanism used
  is built into the language and runtime. But the programmer has to remember to avoid a couple of
- common bugs: The {@code wait()} must be inside a {@code while} instead of an {@code if}, and
- {@code notifyAll()} must be used instead of {@code notify()} because there are two different
+ common bugs: The `wait()` must be inside a `while` instead of an `if`, and
+ `notifyAll()` must be used instead of `notify()` because there are two different
  logical conditions being awaited.
 
- <pre>{@code
- public class SafeBox<V> {
+ <pre>`public class SafeBox<V> {
    private V value;
 
    public synchronized V get() throws InterruptedException {
      while (value == null) {
        wait();
-     }
+     `
      V result = value;
      value = null;
      notifyAll();
@@ -88,15 +85,14 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
  }
  }</pre>
 
- <h3>{@code ReentrantLock}</h3>
+ <h3>`ReentrantLock`</h3>
 
- <p>This version is much more verbose than the {@code synchronized} version, and still suffers
- from the need for the programmer to remember to use {@code while} instead of {@code if}. However,
- one advantage is that we can introduce two separate {@code Condition} objects, which allows us to
- use {@code signal()} instead of {@code signalAll()}, which may be a performance benefit.
+ <p>This version is much more verbose than the `synchronized` version, and still suffers
+ from the need for the programmer to remember to use `while` instead of `if`. However,
+ one advantage is that we can introduce two separate `Condition` objects, which allows us to
+ use `signal()` instead of `signalAll()`, which may be a performance benefit.
 
- <pre>{@code
- public class SafeBox<V> {
+ <pre>`public class SafeBox<V> {
    private V value;
    private final ReentrantLock lock = new ReentrantLock();
    private final Condition valuePresent = lock.newCondition();
@@ -107,7 +103,7 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
      try {
        while (value == null) {
          valuePresent.await();
-       }
+       `
        V result = value;
        value = null;
        valueAbsent.signal();
@@ -132,16 +128,15 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
  }
  }</pre>
 
- <h3>{@code Monitor}</h3>
+ <h3>`Monitor`</h3>
 
- <p>This version adds some verbosity around the {@code Guard} objects, but removes that same
- verbosity, and more, from the {@code get} and {@code set} methods. {@code Monitor} implements the
- same efficient signaling as we had to hand-code in the {@code ReentrantLock} version above.
+ <p>This version adds some verbosity around the `Guard` objects, but removes that same
+ verbosity, and more, from the `get` and `set` methods. `Monitor` implements the
+ same efficient signaling as we had to hand-code in the `ReentrantLock` version above.
  Finally, the programmer no longer has to hand-code the wait loop, and therefore doesn't have to
- remember to use {@code while} instead of {@code if}.
+ remember to use `while` instead of `if`.
 
- <pre>{@code
- public class SafeBox<V> {
+ <pre>`public class SafeBox<V> {
    private V value;
    private final Monitor monitor = new Monitor();
    private final Monitor.Guard valuePresent = monitor.newGuard(() -> value != null);
@@ -153,7 +148,7 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
        V result = value;
        value = null;
        return result;
-     } finally {
+     ` finally {
        monitor.leave();
      }
    }
@@ -168,9 +163,9 @@ A synchronization abstraction supporting waiting on arbitrary boolean conditions
    }
  }
  }</pre>
-@author Justin T. Sampson
-@author Martin Buchholz
-@since 10.0
+**Author:** Justin T. Sampson
+**Author:** Martin Buchholz
+**Since:** 10.0
 
 ## Fields
 
@@ -182,7 +177,7 @@ Whether this monitor is fair.
 
 ### `lock`
 
-**Type:** [`java.util.concurrent.locks.ReentrantLock`](../../../../../java/util/concurrent/locks/ReentrantLock.md)
+**Type:** `java.util.concurrent.locks.ReentrantLock`
 
 The lock underlying this monitor.
 
@@ -190,15 +185,14 @@ The lock underlying this monitor.
 
 **Type:** [`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md)
 
-The guards associated with this monitor that currently have waiters ({@code waiterCount > 0}).
+The guards associated with this monitor that currently have waiters (`waiterCount > 0`).
  A linked list threaded through the Guard.next field.
 
 ## Constructors
 
 ### `<init>()`
 
-Creates a monitor with a non-fair (but fast) ordering policy. Equivalent to {@code
- Monitor(false)}.
+Creates a monitor with a non-fair (but fast) ordering policy. Equivalent to `Monitor(false)`.
 
 ### `<init>(`boolean` fair)`
 
@@ -208,13 +202,13 @@ Creates a monitor with the given ordering policy.
 
 ## Methods
 
-### `newGuard([`java.util.function.BooleanSupplier`](../../../../../java/util/function/BooleanSupplier.md) isSatisfied)`
+### `newGuard(`java.util.function.BooleanSupplier` isSatisfied)`
 
 **Returns:** [`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md)
 
-Creates a new {@linkplain Guard guard} for this monitor.
-@param isSatisfied the new guard's boolean condition (see {@link Guard#isSatisfied isSatisfied()})
-@since 21.0
+Creates a new guard for this monitor.
+@param isSatisfied the new guard's boolean condition (see `Guard.isSatisfied isSatisfied()`)
+**Since:** 21.0
 
 ### `enter()`
 
@@ -222,15 +216,15 @@ Creates a new {@linkplain Guard guard} for this monitor.
 
 Enters this monitor. Blocks indefinitely.
 
-### `enter([`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `enter(`java.time.Duration` time)`
 
 **Returns:** `boolean`
 
 Enters this monitor. Blocks at most the given time.
 @return whether the monitor was entered
-@since 28.0
+**Since:** 28.0
 
-### `enter(`long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `enter(`long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -244,16 +238,16 @@ Enters this monitor. Blocks at most the given time.
 Enters this monitor. Blocks indefinitely, but may be interrupted.
 @throws InterruptedException if interrupted while waiting
 
-### `enterInterruptibly([`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `enterInterruptibly(`java.time.Duration` time)`
 
 **Returns:** `boolean`
 
 Enters this monitor. Blocks at most the given time, and may be interrupted.
 @return whether the monitor was entered
 @throws InterruptedException if interrupted while waiting
-@since 28.0
+**Since:** 28.0
 
-### `enterInterruptibly(`long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `enterInterruptibly(`long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -277,7 +271,7 @@ Enters this monitor if it is possible to do so immediately. Does not block.
 Enters this monitor when the guard is satisfied. Blocks indefinitely, but may be interrupted.
 @throws InterruptedException if interrupted while waiting
 
-### `enterWhen([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, [`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `enterWhen([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `java.time.Duration` time)`
 
 **Returns:** `boolean`
 
@@ -286,9 +280,9 @@ Enters this monitor when the guard is satisfied. Blocks at most the given time, 
  interrupted.
 @return whether the monitor was entered, which guarantees that the guard is now satisfied
 @throws InterruptedException if interrupted while waiting
-@since 28.0
+**Since:** 28.0
 
-### `enterWhen([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `enterWhen([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -304,16 +298,16 @@ Enters this monitor when the guard is satisfied. Blocks at most the given time, 
 
 Enters this monitor when the guard is satisfied. Blocks indefinitely.
 
-### `enterWhenUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, [`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `enterWhenUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `java.time.Duration` time)`
 
 **Returns:** `boolean`
 
 Enters this monitor when the guard is satisfied. Blocks at most the given time, including both
  the time to acquire the lock and the time to wait for the guard to be satisfied.
 @return whether the monitor was entered, which guarantees that the guard is now satisfied
-@since 28.0
+**Since:** 28.0
 
-### `enterWhenUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `enterWhenUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -329,16 +323,16 @@ Enters this monitor if the guard is satisfied. Blocks indefinitely acquiring the
  not wait for the guard to be satisfied.
 @return whether the monitor was entered, which guarantees that the guard is now satisfied
 
-### `enterIf([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, [`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `enterIf([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `java.time.Duration` time)`
 
 **Returns:** `boolean`
 
 Enters this monitor if the guard is satisfied. Blocks at most the given time acquiring the
  lock, but does not wait for the guard to be satisfied.
 @return whether the monitor was entered, which guarantees that the guard is now satisfied
-@since 28.0
+**Since:** 28.0
 
-### `enterIf([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `enterIf([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -355,16 +349,16 @@ Enters this monitor if the guard is satisfied. Blocks indefinitely acquiring the
 @return whether the monitor was entered, which guarantees that the guard is now satisfied
 @throws InterruptedException if interrupted while waiting
 
-### `enterIfInterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, [`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `enterIfInterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `java.time.Duration` time)`
 
 **Returns:** `boolean`
 
 Enters this monitor if the guard is satisfied. Blocks at most the given time acquiring the
  lock, but does not wait for the guard to be satisfied, and may be interrupted.
 @return whether the monitor was entered, which guarantees that the guard is now satisfied
-@since 28.0
+**Since:** 28.0
 
-### `enterIfInterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `enterIfInterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -390,7 +384,7 @@ Waits for the guard to be satisfied. Waits indefinitely, but may be interrupted.
  only by a thread currently occupying this monitor.
 @throws InterruptedException if interrupted while waiting
 
-### `waitFor([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, [`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `waitFor([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `java.time.Duration` time)`
 
 **Returns:** `boolean`
 
@@ -398,9 +392,9 @@ Waits for the guard to be satisfied. Waits at most the given time, and may be in
  be called only by a thread currently occupying this monitor.
 @return whether the guard is now satisfied
 @throws InterruptedException if interrupted while waiting
-@since 28.0
+**Since:** 28.0
 
-### `waitFor([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `waitFor([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -416,16 +410,16 @@ Waits for the guard to be satisfied. Waits at most the given time, and may be in
 Waits for the guard to be satisfied. Waits indefinitely. May be called only by a thread
  currently occupying this monitor.
 
-### `waitForUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, [`java.time.Duration`](../../../../../java/time/Duration.md) time)`
+### `waitForUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `java.time.Duration` time)`
 
 **Returns:** `boolean`
 
 Waits for the guard to be satisfied. Waits at most the given time. May be called only by a
  thread currently occupying this monitor.
 @return whether the guard is now satisfied
-@since 28.0
+**Since:** 28.0
 
-### `waitForUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `waitForUninterruptibly([`com.google.common.util.concurrent.Monitor.Guard`](Monitor/Guard.md) guard, `long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -480,7 +474,7 @@ Returns an estimate of the number of threads waiting to enter this monitor. The 
 **Returns:** `boolean`
 
 Returns whether any threads are waiting to enter this monitor. Note that because cancellations
- may occur at any time, a {@code true} return does not guarantee that any other thread will ever
+ may occur at any time, a `true` return does not guarantee that any other thread will ever
  enter this monitor. This method is designed primarily for use in monitoring of the system
  state.
 
@@ -489,7 +483,7 @@ Returns whether any threads are waiting to enter this monitor. Note that because
 **Returns:** `boolean`
 
 Queries whether the given thread is waiting to enter this monitor. Note that because
- cancellations may occur at any time, a {@code true} return does not guarantee that this thread
+ cancellations may occur at any time, a `true` return does not guarantee that this thread
  will ever enter this monitor. This method is designed primarily for use in monitoring of the
  system state.
 
@@ -498,7 +492,7 @@ Queries whether the given thread is waiting to enter this monitor. Note that bec
 **Returns:** `boolean`
 
 Queries whether any threads are waiting for the given guard to become satisfied. Note that
- because timeouts and interrupts may occur at any time, a {@code true} return does not guarantee
+ because timeouts and interrupts may occur at any time, a `true` return does not guarantee
  that the guard becoming satisfied in the future will awaken any threads. This method is
  designed primarily for use in monitoring of the system state.
 
@@ -511,7 +505,7 @@ Returns an estimate of the number of threads waiting for the given guard to beco
  upper bound on the actual number of waiters. This method is designed for use in monitoring of
  the system state, not for synchronization control.
 
-### `toSafeNanos(`long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `toSafeNanos(`long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `long`
 

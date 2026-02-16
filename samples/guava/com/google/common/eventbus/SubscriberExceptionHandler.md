@@ -7,7 +7,7 @@
 ## Description
 
 Handler for exceptions thrown by event subscribers.
-@since 16.0
+**Since:** 16.0
 
 ## Methods
 

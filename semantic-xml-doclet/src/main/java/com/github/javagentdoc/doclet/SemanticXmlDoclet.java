@@ -431,12 +431,22 @@ public final class SemanticXmlDoclet implements Doclet {
         // Handle arrays
         baseType = baseType.replace("[]", "");
 
-        // Skip primitive types and common java.lang types
-        if (isPrimitive(baseType) || baseType.startsWith("java.lang.")) {
+        // Skip primitive types
+        if (isPrimitive(baseType)) {
             return "`" + typeName + "`";
         }
 
-        // If it's a fully qualified name, create a link
+        // Skip single letter type parameters (generic type variables)
+        if (baseType.length() == 1 && Character.isUpperCase(baseType.charAt(0))) {
+            return "`" + typeName + "`";
+        }
+
+        // Skip all JRE types (java.*, javax.*, jdk.*)
+        if (baseType.startsWith("java.") || baseType.startsWith("javax.") || baseType.startsWith("jdk.")) {
+            return "`" + typeName + "`";
+        }
+
+        // If it's a fully qualified name, create a link (only for project types)
         if (baseType.contains(".")) {
             String pkgName = baseType.substring(0, baseType.lastIndexOf('.'));
             String className = baseType.substring(baseType.lastIndexOf('.') + 1);
@@ -446,13 +456,45 @@ public final class SemanticXmlDoclet implements Doclet {
 
         // Otherwise, it's likely in the same package
         String className = baseType;
-        return "[`" + typeName + "`](" + className + ".md)";
+        return "[`" + typeName + "`](./" + className + ".md)";
     }
 
     private String convertLinksInText(String text, String currentPkg) {
-        // Convert {@link ClassName} or {@link package.ClassName} references
-        // This is a simple implementation; a full implementation would use the DocTree API
-        return text;
+        if (text == null) {
+            return "";
+        }
+
+        String result = text;
+
+        // Convert {@code ...} to `...`
+        result = result.replaceAll("\\{@code\\s+([^}]+)\\}", "`$1`");
+
+        // Convert {@literal ...} to plain text (remove the tag)
+        result = result.replaceAll("\\{@literal\\s+([^}]+)\\}", "$1");
+
+        // Convert {@value} or {@value CONSTANT} to `CONSTANT` or empty
+        result = result.replaceAll("\\{@value\\s+([^}]+)\\}", "`$1`");
+        result = result.replaceAll("\\{@value\\}", "");
+
+        // Convert {@link ClassName} or {@link package.ClassName} to `ClassName`
+        // Also handles {@link #method()} and {@link Class#method()}
+        result = result.replaceAll("\\{@link\\s+#([^}]+)\\}", "`$1`");  // {@link #method()}
+        result = result.replaceAll("\\{@link\\s+([^}\\s]+)#([^}]+)\\}", "`$1.$2`");  // {@link Class#method()}
+        result = result.replaceAll("\\{@link\\s+([^}\\s]+)\\s+([^}]+)\\}", "`$1`");  // {@link Class description} - use just class
+        result = result.replaceAll("\\{@link\\s+([^}]+)\\}", "`$1`");  // {@link Class}
+
+        // Convert {@linkplain ...} similar to {@link} but extract description if present
+        result = result.replaceAll("\\{@linkplain\\s+#([^}\\s]+)\\s+([^}]+)\\}", "$2");  // Use description
+        result = result.replaceAll("\\{@linkplain\\s+([^}\\s]+)\\s+([^}]+)\\}", "$2");  // Use description
+        result = result.replaceAll("\\{@linkplain\\s+([^}]+)\\}", "$1");  // Plain reference
+
+        // Convert standalone @tags at line start to markdown
+        result = result.replaceAll("(?m)^@since\\s+(.*)$", "**Since:** $1");
+        result = result.replaceAll("(?m)^@author\\s+(.*)$", "**Author:** $1");
+        result = result.replaceAll("(?m)^@deprecated\\s+(.*)$", "**Deprecated:** $1");
+        result = result.replaceAll("(?m)^@see\\s+(.*)$", "**See:** $1");
+
+        return result;
     }
 
     private String getRelativePath(String fromPkg, String toPkg) {

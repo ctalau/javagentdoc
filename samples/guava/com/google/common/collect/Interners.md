@@ -6,9 +6,9 @@
 
 ## Description
 
-Contains static methods pertaining to instances of {@link Interner}.
-@author Kevin Bourrillion
-@since 3.0
+Contains static methods pertaining to instances of `Interner`.
+**Author:** Kevin Bourrillion
+**Since:** 3.0
 
 ## Constructors
 
@@ -20,7 +20,7 @@ Contains static methods pertaining to instances of {@link Interner}.
 
 **Returns:** [`com.google.common.collect.Interners.InternerBuilder`](Interners/InternerBuilder.md)
 
-Returns a fresh {@link InternerBuilder} instance.
+Returns a fresh `InternerBuilder` instance.
 
 ### `newStrongInterner()`
 
@@ -28,7 +28,7 @@ Returns a fresh {@link InternerBuilder} instance.
 
 Returns a new thread-safe interner which retains a strong reference to each instance it has
  interned, thus preventing these instances from being garbage-collected. If this retention is
- acceptable, this implementation may perform better than {@link #newWeakInterner}.
+ acceptable, this implementation may perform better than `newWeakInterner`.
 
 ### `newWeakInterner()`
 
@@ -36,13 +36,13 @@ Returns a new thread-safe interner which retains a strong reference to each inst
 
 Returns a new thread-safe interner which retains a weak reference to each instance it has
  interned, and so does not prevent these instances from being garbage-collected. This most
- likely does not perform as well as {@link #newStrongInterner}, but is the best alternative when
+ likely does not perform as well as `newStrongInterner`, but is the best alternative when
  the memory usage of that implementation is unacceptable.
 
 ### `asFunction([`com.google.common.collect.Interner<E>`](./Interner.md) interner)`
 
 **Returns:** [`com.google.common.base.Function<E,E>`](../base/Function.md)
 
-Returns a function that delegates to the {@link Interner#intern} method of the given interner.
-@since 8.0
+Returns a function that delegates to the `Interner.intern` method of the given interner.
+**Since:** 8.0
 

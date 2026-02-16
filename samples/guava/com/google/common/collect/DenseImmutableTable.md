@@ -14,7 +14,7 @@
 
 ## Description
 
-A {@code RegularImmutableTable} optimized for dense data.
+A `RegularImmutableTable` optimized for dense data.
 
 ## Fields
 
@@ -70,7 +70,7 @@ A {@code RegularImmutableTable} optimized for dense data.
 
 ### `get(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `size()`
 
@@ -82,7 +82,7 @@ A {@code RegularImmutableTable} optimized for dense data.
 
 ### `getValue(`int` index)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `writeReplace()`
 

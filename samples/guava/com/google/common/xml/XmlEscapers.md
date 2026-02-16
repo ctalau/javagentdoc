@@ -6,7 +6,7 @@
 
 ## Description
 
-{@code Escaper} instances suitable for strings to be included in XML attribute values and
+`Escaper` instances suitable for strings to be included in XML attribute values and
  elements' text contents. When possible, avoid manual escaping by using templating systems and
  high-level APIs that provide autoescaping. For example, consider <a href="http://www.xom.nu/">XOM</a> or <a href="http://www.jdom.org/">JDOM</a>.
 
@@ -16,9 +16,9 @@
  level of escaping to ensure that the output can be safely included in a Unicode XML document.
 
  <p>For details on the behavior of the escapers in this class, see sections <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#charsets">2.2</a> and <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#syntax">2.4</a> of the XML specification.
-@author Alex Matevossian
-@author David Beaumont
-@since 15.0
+**Author:** Alex Matevossian
+**Author:** David Beaumont
+**Since:** 15.0
 
 ## Fields
 
@@ -52,15 +52,15 @@
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an {@link Escaper} instance that escapes special characters in a string so it can
+Returns an `Escaper` instance that escapes special characters in a string so it can
  safely be included in an XML document as element content. See section <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#syntax">2.4</a> of the XML specification.
 
  <p><b>Note:</b> Double and single quotes are not escaped, so it is <b>not safe</b> to use this
- escaper to escape attribute values. Use {@link #xmlContentEscaper} if the output can appear in
- element content or {@link #xmlAttributeEscaper} in attribute values.
+ escaper to escape attribute values. Use `xmlContentEscaper` if the output can appear in
+ element content or `xmlAttributeEscaper` in attribute values.
 
- <p>This escaper substitutes {@code 0xFFFD} for non-whitespace control characters and the
- character values {@code 0xFFFE} and {@code 0xFFFF} which are not permitted in XML. For more
+ <p>This escaper substitutes `0xFFFD` for non-whitespace control characters and the
+ character values `0xFFFE` and `0xFFFF` which are not permitted in XML. For more
  detail see section <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#charsets">2.2</a> of
  the XML specification.
 
@@ -76,18 +76,17 @@ Returns an {@link Escaper} instance that escapes special characters in a string 
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an {@link Escaper} instance that escapes special characters in a string so it can
+Returns an `Escaper` instance that escapes special characters in a string so it can
  safely be included in XML document as an attribute value. See section <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#AVNormalize">3.3.3</a> of the XML
  specification.
 
- <p>This escaper substitutes {@code 0xFFFD} for non-whitespace control characters and the
- character values {@code 0xFFFE} and {@code 0xFFFF} which are not permitted in XML. For more
+ <p>This escaper substitutes `0xFFFD` for non-whitespace control characters and the
+ character values `0xFFFE` and `0xFFFF` which are not permitted in XML. For more
  detail see section <a href="http://www.w3.org/TR/2008/REC-xml-20081126/#charsets">2.2</a> of
  the XML specification.
 
  <p>This escaper does not escape non-ASCII characters to their numeric character references
- (NCR). However, horizontal tab {@code '\t'}, line feed {@code '\n'} and carriage return {@code
- '\r'} are escaped to a corresponding NCR {@code "&#x9;"}, {@code "&#xA;"}, and {@code "&#xD;"}
+ (NCR). However, horizontal tab `'\t'`, line feed `'\n'` and carriage return `'\r'` are escaped to a corresponding NCR `"&#x9;"`, `"&#xA;"`, and `"&#xD;"`
  respectively. Any other non-ASCII characters appearing in the input will be preserved in the
  output.
 

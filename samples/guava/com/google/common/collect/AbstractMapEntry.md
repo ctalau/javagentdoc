@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.AbstractMapEntry`
 
-**Implements:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Implements:** `java.util.Map.Entry<K,V>`
 
 ## Type Parameters
 
@@ -13,9 +13,8 @@
 
 ## Description
 
-Implementation of the {@code equals}, {@code hashCode}, and {@code toString} methods of {@code
- Entry}.
-@author Jared Levy
+Implementation of the `equals`, `hashCode`, and `toString` methods of `Entry`.
+**Author:** Jared Levy
 
 ## Constructors
 
@@ -25,15 +24,15 @@ Implementation of the {@code equals}, {@code hashCode}, and {@code toString} met
 
 ### `getKey()`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
 ### `getValue()`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `setValue([`V`](V.md) value)`
+### `setValue(`V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `equals(`java.lang.Object` object)`
 
@@ -47,5 +46,5 @@ Implementation of the {@code equals}, {@code hashCode}, and {@code toString} met
 
 **Returns:** `java.lang.String`
 
-Returns a string representation of the form {@code {key}={value}}.
+Returns a string representation of the form `{key`={value}}.
 

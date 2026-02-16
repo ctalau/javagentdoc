@@ -12,42 +12,38 @@ Provides a fluent API for calculating <a href="http://en.wikipedia.org/wiki/Quan
 
  <p>To compute the median:
 
- <pre>{@code
- double myMedian = median().compute(myDataset);
- }</pre>
+ <pre>`double myMedian = median().compute(myDataset);
+ `</pre>
 
- where {@link #median()} has been statically imported.
+ where `median()` has been statically imported.
 
  <p>To compute the 99th percentile:
 
- <pre>{@code
- double myPercentile99 = percentiles().index(99).compute(myDataset);
- }</pre>
+ <pre>`double myPercentile99 = percentiles().index(99).compute(myDataset);
+ `</pre>
 
- where {@link #percentiles()} has been statically imported.
+ where `percentiles()` has been statically imported.
 
  <p>To compute median and the 90th and 99th percentiles:
 
- <pre>{@code
- Map<Integer, Double> myPercentiles =
+ <pre>`Map<Integer, Double> myPercentiles =
      percentiles().indexes(50, 90, 99).compute(myDataset);
- }</pre>
+ `</pre>
 
- where {@link #percentiles()} has been statically imported: {@code myPercentiles} maps the keys
+ where `percentiles()` has been statically imported: `myPercentiles` maps the keys
  50, 90, and 99, to their corresponding quantile values.
 
- <p>To compute quartiles, use {@link #quartiles()} instead of {@link #percentiles()}. To compute
- arbitrary q-quantiles, use {@link #scale scale(q)}.
+ <p>To compute quartiles, use `quartiles()` instead of `percentiles()`. To compute
+ arbitrary q-quantiles, use `scale scale(q)`.
 
  <p>These examples all take a copy of your dataset. If you have a double array, you are okay with
- it being arbitrarily reordered, and you want to avoid that copy, you can use {@code
- computeInPlace} instead of {@code compute}.
+ it being arbitrarily reordered, and you want to avoid that copy, you can use `computeInPlace` instead of `compute`.
 
  <h3>Definition and notes on interpolation</h3>
 
  <p>The definition of the kth q-quantile of N values is as follows: define x = k * (N - 1) / q; if
  x is an integer, the result is the value which would appear at index x in the sorted dataset
- (unless there are {@link Double#NaN NaN} values, see below); otherwise, the result is the average
+ (unless there are `Double.NaN NaN` values, see below); otherwise, the result is the average
  of the values which would appear at the indexes floor(x) and ceil(x) weighted by (1-frac(x)) and
  frac(x) respectively. This is the same definition as used by Excel and by S, it is the Type 7
  definition in <a href="http://stat.ethz.ch/R-manual/R-devel/library/stats/html/quantile.html">R</a>, and it is
@@ -57,17 +53,17 @@ Provides a fluent API for calculating <a href="http://en.wikipedia.org/wiki/Quan
 
  <h3>Handling of non-finite values</h3>
 
- <p>If any values in the input are {@link Double#NaN NaN} then all values returned are {@link Double#NaN NaN}. (This is the one occasion when the behaviour is not the same as you'd get from
- sorting with {@link java.util.Arrays#sort(double[]) Arrays.sort(double[])} or {@link java.util.Collections#sort(java.util.List) Collections.sort(List&lt;Double&gt;)} and selecting
- the required value(s). Those methods would sort {@link Double#NaN NaN} as if it is greater than
- any other value and place them at the end of the dataset, even after {@link Double#POSITIVE_INFINITY POSITIVE_INFINITY}.)
+ <p>If any values in the input are `Double.NaN NaN` then all values returned are `Double.NaN NaN`. (This is the one occasion when the behaviour is not the same as you'd get from
+ sorting with `java.util.Arrays.sort(double[]) Arrays.sort(double[])` or `java.util.Collections.sort(java.util.List) Collections.sort(List&lt;Double&gt;)` and selecting
+ the required value(s). Those methods would sort `Double.NaN NaN` as if it is greater than
+ any other value and place them at the end of the dataset, even after `Double.POSITIVE_INFINITY POSITIVE_INFINITY`.)
 
- <p>Otherwise, {@link Double#NEGATIVE_INFINITY NEGATIVE_INFINITY} and {@link Double#POSITIVE_INFINITY POSITIVE_INFINITY} sort to the beginning and the end of the dataset, as
+ <p>Otherwise, `Double.NEGATIVE_INFINITY NEGATIVE_INFINITY` and `Double.POSITIVE_INFINITY POSITIVE_INFINITY` sort to the beginning and the end of the dataset, as
  you would expect.
 
  <p>If required to do a weighted average between an infinity and a finite value, or between an
  infinite value and itself, the infinite value is returned. If required to do a weighted average
- between {@link Double#NEGATIVE_INFINITY NEGATIVE_INFINITY} and {@link Double#POSITIVE_INFINITY POSITIVE_INFINITY}, {@link Double#NaN NaN} is returned (note that this will only happen if the
+ between `Double.NEGATIVE_INFINITY NEGATIVE_INFINITY` and `Double.POSITIVE_INFINITY POSITIVE_INFINITY`, `Double.NaN NaN` is returned (note that this will only happen if the
  dataset contains no finite values).
 
  <h3>Performance</h3>
@@ -78,16 +74,16 @@ Provides a fluent API for calculating <a href="http://en.wikipedia.org/wiki/Quan
  passing in unsanitized user data then a malicious user could force it. A light shuffle of the
  data using an unpredictable seed should normally be enough to thwart this attack.
 
- <p>The time taken to compute multiple quantiles on the same dataset using {@link Scale#indexes indexes} is generally less than the total time taken to compute each of them separately, and
+ <p>The time taken to compute multiple quantiles on the same dataset using `Scale.indexes indexes` is generally less than the total time taken to compute each of them separately, and
  sometimes much less. For example, on a large enough dataset, computing the 90th and 99th
  percentiles together takes about 55% as long as computing them separately.
 
- <p>When calling {@link ScaleAndIndex#compute} (in {@linkplain ScaleAndIndexes#compute either
- form}), the memory requirement is 8*N bytes for the copy of the dataset plus an overhead which is
- independent of N (but depends on the quantiles being computed). When calling {@link ScaleAndIndex#computeInPlace computeInPlace} (in {@linkplain ScaleAndIndexes#computeInPlace either form}), only the overhead is required. The number of object allocations is independent of
+ <p>When calling `ScaleAndIndex.compute` (in either
+ form), the memory requirement is 8*N bytes for the copy of the dataset plus an overhead which is
+ independent of N (but depends on the quantiles being computed). When calling `ScaleAndIndex.computeInPlace computeInPlace` (in either form), only the overhead is required. The number of object allocations is independent of
  N in both cases.
-@author Pete Gillin
-@since 20.0
+**Author:** Pete Gillin
+**Since:** 20.0
 
 ## Constructors
 
@@ -125,15 +121,15 @@ Specifies the computation of q-quantiles.
 
 **Returns:** `boolean`
 
-Returns whether any of the values in {@code dataset} are {@code NaN}.
+Returns whether any of the values in `dataset` are `NaN`.
 
 ### `interpolate(`double` lower, `double` upper, `double` remainder, `double` scale)`
 
 **Returns:** `double`
 
-Returns a value a fraction {@code (remainder / scale)} of the way between {@code lower} and
- {@code upper}. Assumes that {@code lower <= upper}. Correctly handles infinities (but not
- {@code NaN}).
+Returns a value a fraction `(remainder / scale)` of the way between `lower` and
+ `upper`. Assumes that `lower <= upper`. Correctly handles infinities (but not
+ `NaN`).
 
 ### `checkIndex(`int` index, `int` scale)`
 
@@ -155,58 +151,54 @@ Performs an in-place selection to find the element which would appear at a given
  dataset if it were sorted. The following preconditions should hold:
 
  <ul>
-   <li>{@code required}, {@code from}, and {@code to} should all be indexes into {@code array};
-   <li>{@code required} should be in the range [{@code from}, {@code to}];
-   <li>all the values with indexes in the range [0, {@code from}) should be less than or equal
-       to all the values with indexes in the range [{@code from}, {@code to}];
-   <li>all the values with indexes in the range ({@code to}, {@code array.length - 1}] should be
-       greater than or equal to all the values with indexes in the range [{@code from}, {@code
-       to}].
+   <li>`required`, `from`, and `to` should all be indexes into `array`;
+   <li>`required` should be in the range [`from`, `to`];
+   <li>all the values with indexes in the range [0, `from`) should be less than or equal
+       to all the values with indexes in the range [`from`, `to`];
+   <li>all the values with indexes in the range (`to`, `array.length - 1`] should be
+       greater than or equal to all the values with indexes in the range [`from`, `to`].
  </ul>
 
- This method will reorder the values with indexes in the range [{@code from}, {@code to}] such
- that all the values with indexes in the range [{@code from}, {@code required}) are less than or
- equal to the value with index {@code required}, and all the values with indexes in the range
- ({@code required}, {@code to}] are greater than or equal to that value. Therefore, the value at
- {@code required} is the value which would appear at that index in the sorted dataset.
+ This method will reorder the values with indexes in the range [`from`, `to`] such
+ that all the values with indexes in the range [`from`, `required`) are less than or
+ equal to the value with index `required`, and all the values with indexes in the range
+ (`required`, `to`] are greater than or equal to that value. Therefore, the value at
+ `required` is the value which would appear at that index in the sorted dataset.
 
 ### `partition(`double[]` array, `int` from, `int` to)`
 
 **Returns:** `int`
 
-Performs a partition operation on the slice of {@code array} with elements in the range [{@code
- from}, {@code to}]. Uses the median of {@code from}, {@code to}, and the midpoint between them
- as a pivot. Returns the index which the slice is partitioned around, i.e. if it returns {@code
- ret} then we know that the values with indexes in [{@code from}, {@code ret}) are less than or
- equal to the value at {@code ret} and the values with indexes in ({@code ret}, {@code to}] are
+Performs a partition operation on the slice of `array` with elements in the range [`from`, `to`]. Uses the median of `from`, `to`, and the midpoint between them
+ as a pivot. Returns the index which the slice is partitioned around, i.e. if it returns `ret` then we know that the values with indexes in [`from`, `ret`) are less than or
+ equal to the value at `ret` and the values with indexes in (`ret`, `to`] are
  greater than or equal to that.
 
 ### `movePivotToStartOfSlice(`double[]` array, `int` from, `int` to)`
 
 **Returns:** `void`
 
-Selects the pivot to use, namely the median of the values at {@code from}, {@code to}, and
- halfway between the two (rounded down), from {@code array}, and ensure (by swapping elements if
- necessary) that that pivot value appears at the start of the slice i.e. at {@code from}.
- Expects that {@code from} is strictly less than {@code to}.
+Selects the pivot to use, namely the median of the values at `from`, `to`, and
+ halfway between the two (rounded down), from `array`, and ensure (by swapping elements if
+ necessary) that that pivot value appears at the start of the slice i.e. at `from`.
+ Expects that `from` is strictly less than `to`.
 
 ### `selectAllInPlace(`int[]` allRequired, `int` requiredFrom, `int` requiredTo, `double[]` array, `int` from, `int` to)`
 
 **Returns:** `void`
 
-Performs an in-place selection, like {@link #selectInPlace}, to select all the indexes {@code
- allRequired[i]} for {@code i} in the range [{@code requiredFrom}, {@code requiredTo}]. These
- indexes must be sorted in the array and must all be in the range [{@code from}, {@code to}].
+Performs an in-place selection, like `selectInPlace`, to select all the indexes `allRequired[i]` for `i` in the range [`requiredFrom`, `requiredTo`]. These
+ indexes must be sorted in the array and must all be in the range [`from`, `to`].
 
 ### `chooseNextSelection(`int[]` allRequired, `int` requiredFrom, `int` requiredTo, `int` from, `int` to)`
 
 **Returns:** `int`
 
 Chooses the next selection to do from the required selections. It is required that the array
- {@code allRequired} is sorted and that {@code allRequired[i]} are in the range [{@code from},
- {@code to}] for all {@code i} in the range [{@code requiredFrom}, {@code requiredTo}]. The
- value returned by this method is the {@code i} in that range such that {@code allRequired[i]}
- is as close as possible to the center of the range [{@code from}, {@code to}]. Choosing the
+ `allRequired` is sorted and that `allRequired[i]` are in the range [`from`,
+ `to`] for all `i` in the range [`requiredFrom`, `requiredTo`]. The
+ value returned by this method is the `i` in that range such that `allRequired[i]`
+ is as close as possible to the center of the range [`from`, `to`]. Choosing the
  value closest to the center of the range first is the most efficient strategy because it
  minimizes the size of the subranges from which the remaining selections must be done.
 
@@ -214,5 +206,5 @@ Chooses the next selection to do from the required selections. It is required th
 
 **Returns:** `void`
 
-Swaps the values at {@code i} and {@code j} in {@code array}.
+Swaps the values at `i` and `j` in `array`.
 

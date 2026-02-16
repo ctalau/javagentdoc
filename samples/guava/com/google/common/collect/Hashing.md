@@ -7,9 +7,9 @@
 ## Description
 
 Static methods for implementing hash-based collections.
-@author Kevin Bourrillion
-@author Jesse Wilson
-@author Austin Appleby
+**Author:** Kevin Bourrillion
+**Author:** Jesse Wilson
+**Author:** Austin Appleby
 
 ## Fields
 

@@ -9,37 +9,34 @@
 Static convenience methods that help a method or constructor check whether it was invoked
  correctly (that is, whether its <i>preconditions</i> were met).
 
- <p>If the precondition is not met, the {@code Preconditions} method throws an unchecked exception
+ <p>If the precondition is not met, the `Preconditions` method throws an unchecked exception
  of a specified type, which helps the method in which the exception was thrown communicate that
  its caller has made a mistake. This allows constructs such as
 
- <pre>{@code
- public static double sqrt(double value) {
+ <pre>`public static double sqrt(double value) {
    if (value < 0) {
      throw new IllegalArgumentException("input is negative: " + value);
-   }
+   `
    // calculate square root
  }
  }</pre>
 
  <p>to be replaced with the more compact
 
- <pre>{@code
- public static double sqrt(double value) {
+ <pre>`public static double sqrt(double value) {
    checkArgument(value >= 0, "input is negative: %s", value);
    // calculate square root
- }
+ `
  }</pre>
 
  <p>so that a hypothetical bad caller of this method, such as:
 
- <pre>{@code
- void exampleBadCaller() {
+ <pre>`void exampleBadCaller() {
    double d = sqrt(-1.0);
- }
+ `
  }</pre>
 
- <p>would be flagged as having called {@code sqrt()} with an illegal argument.
+ <p>would be flagged as having called `sqrt()` with an illegal argument.
 
  <h3>Performance</h3>
 
@@ -60,35 +57,34 @@ Static convenience methods that help a method or constructor check whether it wa
  <h3>Other types of preconditions</h3>
 
  <p>Not every type of precondition failure is supported by these methods. Continue to throw
- standard JDK exceptions such as {@link java.util.NoSuchElementException} or {@link UnsupportedOperationException} in the situations they are intended for.
+ standard JDK exceptions such as `java.util.NoSuchElementException` or `UnsupportedOperationException` in the situations they are intended for.
 
  <h3>Non-preconditions</h3>
 
  <p>It is of course possible to use the methods of this class to check for invalid conditions
  which are <i>not the caller's fault</i>. Doing so is <b>not recommended</b> because it is
  misleading to future readers of the code and of stack traces. See <a href="https://github.com/google/guava/wiki/ConditionalFailuresExplained">Conditional failures
- explained</a> in the Guava User Guide for more advice. Notably, {@link Verify} offers assertions
+ explained</a> in the Guava User Guide for more advice. Notably, `Verify` offers assertions
  similar to those in this class for non-precondition checks.
 
- <h3>{@code java.util.Objects.requireNonNull()}</h3>
+ <h3>`java.util.Objects.requireNonNull()`</h3>
 
- <p>Projects which use {@code com.google.common} should generally avoid the use of {@link java.util.Objects#requireNonNull(Object)}. Instead, use whichever of {@link #checkNotNull(Object)} or {@link Verify#verifyNotNull(Object)} is appropriate to the situation.
+ <p>Projects which use `com.google.common` should generally avoid the use of `java.util.Objects.requireNonNull(Object)`. Instead, use whichever of `checkNotNull(Object)` or `Verify.verifyNotNull(Object)` is appropriate to the situation.
  (The same goes for the message-accepting overloads.)
 
- <h3>Only {@code %s} is supported</h3>
+ <h3>Only `%s` is supported</h3>
 
- <p>{@code Preconditions} uses {@link Strings#lenientFormat} to format error message template
- strings. This only supports the {@code "%s"} specifier, not the full range of {@link java.util.Formatter} specifiers. However, note that if the number of arguments does not match the
- number of occurrences of {@code "%s"} in the format string, {@code Preconditions} will still
+ <p>`Preconditions` uses `Strings.lenientFormat` to format error message template
+ strings. This only supports the `"%s"` specifier, not the full range of `java.util.Formatter` specifiers. However, note that if the number of arguments does not match the
+ number of occurrences of `"%s"` in the format string, `Preconditions` will still
  behave as expected, and will still include all argument values in the error message; the message
  will simply not be formatted exactly as intended.
 
  <h3>More information</h3>
 
- <p>See the Guava User Guide on <a href="https://github.com/google/guava/wiki/PreconditionsExplained">using {@code
- Preconditions}</a>.
-@author Kevin Bourrillion
-@since 2.0
+ <p>See the Guava User Guide on <a href="https://github.com/google/guava/wiki/PreconditionsExplained">using `Preconditions`</a>.
+**Author:** Kevin Bourrillion
+**Since:** 2.0
 
 ## Constructors
 
@@ -102,7 +98,7 @@ Static convenience methods that help a method or constructor check whether it wa
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 @param expression a boolean expression
-@throws IllegalArgumentException if {@code expression} is false
+@throws IllegalArgumentException if `expression` is false
 
 ### `checkArgument(`boolean` expression, `java.lang.Object` errorMessage)`
 
@@ -111,8 +107,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 Ensures the truth of an expression involving one or more parameters to the calling method.
 @param expression a boolean expression
 @param errorMessage the exception message to use if the check fails; will be converted to a
-     string using {@link String#valueOf(Object)}
-@throws IllegalArgumentException if {@code expression} is false
+     string using `String.valueOf(Object)`
+@throws IllegalArgumentException if `expression` is false
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` errorMessageArgs)`
 
@@ -121,13 +117,12 @@ Ensures the truth of an expression involving one or more parameters to the calli
 Ensures the truth of an expression involving one or more parameters to the calling method.
 @param expression a boolean expression
 @param errorMessageTemplate a template for the exception message should the check fail. The
-     message is formed by replacing each {@code %s} placeholder in the template with an
-     argument. These are matched by position - the first {@code %s} gets {@code
-     errorMessageArgs[0]}, etc. Unmatched arguments will be appended to the formatted message in
+     message is formed by replacing each `%s` placeholder in the template with an
+     argument. These are matched by position - the first `%s` gets `errorMessageArgs[0]`, etc. Unmatched arguments will be appended to the formatted message in
      square braces. Unmatched placeholders will be left as-is.
 @param errorMessageArgs the arguments to be substituted into the message template. Arguments
-     are converted to strings using {@link String#valueOf(Object)}.
-@throws IllegalArgumentException if {@code expression} is false
+     are converted to strings using `String.valueOf(Object)`.
+@throws IllegalArgumentException if `expression` is false
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1)`
 
@@ -135,8 +130,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1)`
 
@@ -144,8 +139,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1)`
 
@@ -153,8 +148,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1)`
 
@@ -162,8 +157,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `char` p2)`
 
@@ -171,8 +166,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `int` p2)`
 
@@ -180,8 +175,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `long` p2)`
 
@@ -189,8 +184,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `java.lang.Object` p2)`
 
@@ -198,8 +193,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `char` p2)`
 
@@ -207,8 +202,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `int` p2)`
 
@@ -216,8 +211,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `long` p2)`
 
@@ -225,8 +220,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `java.lang.Object` p2)`
 
@@ -234,8 +229,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `char` p2)`
 
@@ -243,8 +238,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `int` p2)`
 
@@ -252,8 +247,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `long` p2)`
 
@@ -261,8 +256,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `java.lang.Object` p2)`
 
@@ -270,8 +265,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `char` p2)`
 
@@ -279,8 +274,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `int` p2)`
 
@@ -288,8 +283,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `long` p2)`
 
@@ -297,8 +292,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2)`
 
@@ -306,8 +301,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3)`
 
@@ -315,8 +310,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkArgument(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3, `java.lang.Object` p4)`
 
@@ -324,8 +319,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 
 Ensures the truth of an expression involving one or more parameters to the calling method.
 
- <p>See {@link #checkArgument(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkArgument(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression)`
 
@@ -334,8 +329,8 @@ Ensures the truth of an expression involving one or more parameters to the calli
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 @param expression a boolean expression
-@throws IllegalStateException if {@code expression} is false
-@see Verify#verify Verify.verify()
+@throws IllegalStateException if `expression` is false
+**See:** Verify#verify Verify.verify()
 
 ### `checkState(`boolean` expression, `java.lang.Object` errorMessage)`
 
@@ -345,9 +340,9 @@ Ensures the truth of an expression involving the state of the calling instance, 
  involving any parameters to the calling method.
 @param expression a boolean expression
 @param errorMessage the exception message to use if the check fails; will be converted to a
-     string using {@link String#valueOf(Object)}
-@throws IllegalStateException if {@code expression} is false
-@see Verify#verify Verify.verify()
+     string using `String.valueOf(Object)`
+@throws IllegalStateException if `expression` is false
+**See:** Verify#verify Verify.verify()
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` errorMessageArgs)`
 
@@ -357,14 +352,13 @@ Ensures the truth of an expression involving the state of the calling instance, 
  involving any parameters to the calling method.
 @param expression a boolean expression
 @param errorMessageTemplate a template for the exception message should the check fail. The
-     message is formed by replacing each {@code %s} placeholder in the template with an
-     argument. These are matched by position - the first {@code %s} gets {@code
-     errorMessageArgs[0]}, etc. Unmatched arguments will be appended to the formatted message in
+     message is formed by replacing each `%s` placeholder in the template with an
+     argument. These are matched by position - the first `%s` gets `errorMessageArgs[0]`, etc. Unmatched arguments will be appended to the formatted message in
      square braces. Unmatched placeholders will be left as-is.
 @param errorMessageArgs the arguments to be substituted into the message template. Arguments
-     are converted to strings using {@link String#valueOf(Object)}.
-@throws IllegalStateException if {@code expression} is false
-@see Verify#verify Verify.verify()
+     are converted to strings using `String.valueOf(Object)`.
+@throws IllegalStateException if `expression` is false
+**See:** Verify#verify Verify.verify()
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1)`
 
@@ -373,8 +367,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1)`
 
@@ -383,8 +377,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1)`
 
@@ -393,8 +387,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1)`
 
@@ -403,8 +397,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `char` p2)`
 
@@ -413,8 +407,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `int` p2)`
 
@@ -423,8 +417,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `long` p2)`
 
@@ -433,8 +427,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `char` p1, `java.lang.Object` p2)`
 
@@ -443,8 +437,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `char` p2)`
 
@@ -453,8 +447,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `int` p2)`
 
@@ -463,8 +457,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `long` p2)`
 
@@ -473,8 +467,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `int` p1, `java.lang.Object` p2)`
 
@@ -483,8 +477,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `char` p2)`
 
@@ -493,8 +487,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `int` p2)`
 
@@ -503,8 +497,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `long` p2)`
 
@@ -513,8 +507,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `long` p1, `java.lang.Object` p2)`
 
@@ -523,8 +517,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `char` p2)`
 
@@ -533,8 +527,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `int` p2)`
 
@@ -543,8 +537,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `long` p2)`
 
@@ -553,8 +547,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2)`
 
@@ -563,8 +557,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3)`
 
@@ -573,8 +567,8 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkState(`boolean` expression, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3, `java.lang.Object` p4)`
 
@@ -583,270 +577,269 @@ Ensures the truth of an expression involving the state of the calling instance, 
 Ensures the truth of an expression involving the state of the calling instance, but not
  involving any parameters to the calling method.
 
- <p>See {@link #checkState(boolean, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkState(boolean, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference)`
+### `checkNotNull(`T` reference)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 @param reference an object reference
 @return the non-null reference that was validated
-@throws NullPointerException if {@code reference} is null
-@see Verify#verifyNotNull Verify.verifyNotNull()
+@throws NullPointerException if `reference` is null
+**See:** Verify#verifyNotNull Verify.verifyNotNull()
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.Object` errorMessage)`
+### `checkNotNull(`T` reference, `java.lang.Object` errorMessage)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 @param reference an object reference
 @param errorMessage the exception message to use if the check fails; will be converted to a
-     string using {@link String#valueOf(Object)}
+     string using `String.valueOf(Object)`
 @return the non-null reference that was validated
-@throws NullPointerException if {@code reference} is null
-@see Verify#verifyNotNull Verify.verifyNotNull()
+@throws NullPointerException if `reference` is null
+**See:** Verify#verifyNotNull Verify.verifyNotNull()
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` errorMessageArgs)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` errorMessageArgs)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 @param reference an object reference
 @param errorMessageTemplate a template for the exception message should the check fail. The
-     message is formed by replacing each {@code %s} placeholder in the template with an
-     argument. These are matched by position - the first {@code %s} gets {@code
-     errorMessageArgs[0]}, etc. Unmatched arguments will be appended to the formatted message in
+     message is formed by replacing each `%s` placeholder in the template with an
+     argument. These are matched by position - the first `%s` gets `errorMessageArgs[0]`, etc. Unmatched arguments will be appended to the formatted message in
      square braces. Unmatched placeholders will be left as-is.
 @param errorMessageArgs the arguments to be substituted into the message template. Arguments
-     are converted to strings using {@link String#valueOf(Object)}.
+     are converted to strings using `String.valueOf(Object)`.
 @return the non-null reference that was validated
-@throws NullPointerException if {@code reference} is null
-@see Verify#verifyNotNull Verify.verifyNotNull()
+@throws NullPointerException if `reference` is null
+**See:** Verify#verifyNotNull Verify.verifyNotNull()
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `char` p1)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `char` p1)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `int` p1)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `long` p1)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `int` p1)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `char` p1, `char` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `long` p1)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `char` p1, `int` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `char` p1, `long` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `char` p1, `java.lang.Object` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `int` p1, `char` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `char` p1, `char` p2)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `int` p1, `int` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `int` p1, `long` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `char` p1, `int` p2)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `int` p1, `java.lang.Object` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `long` p1, `char` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `char` p1, `long` p2)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `long` p1, `int` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `long` p1, `long` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `char` p1, `java.lang.Object` p2)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `long` p1, `java.lang.Object` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `char` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `int` p1, `char` p2)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `int` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `long` p2)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `int` p1, `int` p2)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3)`
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `int` p1, `long` p2)`
 
-**Returns:** [`T`](T.md)
-
-Ensures that an object reference passed as a parameter to the calling method is not null.
-
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
-
-### `checkNotNull([`T`](T.md) reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3, `java.lang.Object` p4)`
-
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Ensures that an object reference passed as a parameter to the calling method is not null.
 
- <p>See {@link #checkNotNull(Object, String, Object...)} for details.
-@since 20.0 (varargs overload since 2.0)
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `int` p1, `java.lang.Object` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `long` p1, `char` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `long` p1, `int` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `long` p1, `long` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `long` p1, `java.lang.Object` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `char` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `int` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `long` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
+
+### `checkNotNull(`T` reference, `java.lang.String` errorMessageTemplate, `java.lang.Object` p1, `java.lang.Object` p2, `java.lang.Object` p3, `java.lang.Object` p4)`
+
+**Returns:** `T`
+
+Ensures that an object reference passed as a parameter to the calling method is not null.
+
+ <p>See `checkNotNull(Object, String, Object...)` for details.
+**Since:** 20.0 (varargs overload since 2.0)
 
 ### `checkElementIndex(`int` index, `int` size)`
 
 **Returns:** `int`
 
-Ensures that {@code index} specifies a valid <i>element</i> in an array, list or string of size
- {@code size}. An element index may range from zero, inclusive, to {@code size}, exclusive.
+Ensures that `index` specifies a valid <i>element</i> in an array, list or string of size
+ `size`. An element index may range from zero, inclusive, to `size`, exclusive.
 @param index a user-supplied index identifying an element of an array, list or string
 @param size the size of that array, list or string
-@return the value of {@code index}
-@throws IndexOutOfBoundsException if {@code index} is negative or is not less than {@code size}
-@throws IllegalArgumentException if {@code size} is negative
+@return the value of `index`
+@throws IndexOutOfBoundsException if `index` is negative or is not less than `size`
+@throws IllegalArgumentException if `size` is negative
 
 ### `checkElementIndex(`int` index, `int` size, `java.lang.String` desc)`
 
 **Returns:** `int`
 
-Ensures that {@code index} specifies a valid <i>element</i> in an array, list or string of size
- {@code size}. An element index may range from zero, inclusive, to {@code size}, exclusive.
+Ensures that `index` specifies a valid <i>element</i> in an array, list or string of size
+ `size`. An element index may range from zero, inclusive, to `size`, exclusive.
 @param index a user-supplied index identifying an element of an array, list or string
 @param size the size of that array, list or string
 @param desc the text to use to describe this index in an error message
-@return the value of {@code index}
-@throws IndexOutOfBoundsException if {@code index} is negative or is not less than {@code size}
-@throws IllegalArgumentException if {@code size} is negative
+@return the value of `index`
+@throws IndexOutOfBoundsException if `index` is negative or is not less than `size`
+@throws IllegalArgumentException if `size` is negative
 
 ### `badElementIndex(`int` index, `int` size, `java.lang.String` desc)`
 
@@ -856,26 +849,26 @@ Ensures that {@code index} specifies a valid <i>element</i> in an array, list or
 
 **Returns:** `int`
 
-Ensures that {@code index} specifies a valid <i>position</i> in an array, list or string of
- size {@code size}. A position index may range from zero to {@code size}, inclusive.
+Ensures that `index` specifies a valid <i>position</i> in an array, list or string of
+ size `size`. A position index may range from zero to `size`, inclusive.
 @param index a user-supplied index identifying a position in an array, list or string
 @param size the size of that array, list or string
-@return the value of {@code index}
-@throws IndexOutOfBoundsException if {@code index} is negative or is greater than {@code size}
-@throws IllegalArgumentException if {@code size} is negative
+@return the value of `index`
+@throws IndexOutOfBoundsException if `index` is negative or is greater than `size`
+@throws IllegalArgumentException if `size` is negative
 
 ### `checkPositionIndex(`int` index, `int` size, `java.lang.String` desc)`
 
 **Returns:** `int`
 
-Ensures that {@code index} specifies a valid <i>position</i> in an array, list or string of
- size {@code size}. A position index may range from zero to {@code size}, inclusive.
+Ensures that `index` specifies a valid <i>position</i> in an array, list or string of
+ size `size`. A position index may range from zero to `size`, inclusive.
 @param index a user-supplied index identifying a position in an array, list or string
 @param size the size of that array, list or string
 @param desc the text to use to describe this index in an error message
-@return the value of {@code index}
-@throws IndexOutOfBoundsException if {@code index} is negative or is greater than {@code size}
-@throws IllegalArgumentException if {@code size} is negative
+@return the value of `index`
+@throws IndexOutOfBoundsException if `index` is negative or is greater than `size`
+@throws IllegalArgumentException if `size` is negative
 
 ### `badPositionIndex(`int` index, `int` size, `java.lang.String` desc)`
 
@@ -885,15 +878,14 @@ Ensures that {@code index} specifies a valid <i>position</i> in an array, list o
 
 **Returns:** `void`
 
-Ensures that {@code start} and {@code end} specify valid <i>positions</i> in an array, list or
- string of size {@code size}, and are in order. A position index may range from zero to {@code
- size}, inclusive.
+Ensures that `start` and `end` specify valid <i>positions</i> in an array, list or
+ string of size `size`, and are in order. A position index may range from zero to `size`, inclusive.
 @param start a user-supplied index identifying a starting position in an array, list or string
 @param end a user-supplied index identifying an ending position in an array, list or string
 @param size the size of that array, list or string
-@throws IndexOutOfBoundsException if either index is negative or is greater than {@code size},
-     or if {@code end} is less than {@code start}
-@throws IllegalArgumentException if {@code size} is negative
+@throws IndexOutOfBoundsException if either index is negative or is greater than `size`,
+     or if `end` is less than `start`
+@throws IllegalArgumentException if `size` is negative
 
 ### `badPositionIndexes(`int` start, `int` end, `int` size)`
 

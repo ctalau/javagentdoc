@@ -18,7 +18,7 @@
 
 ### `get(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `iterator()`
 
@@ -26,9 +26,9 @@
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
-### `forEach([`java.util.function.Consumer<? super E>`](../../../../java/util/function/Consumer.md) consumer)`
+### `forEach(`java.util.function.Consumer<? super E>` consumer)`
 
 **Returns:** `void`
 

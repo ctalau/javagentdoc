@@ -6,14 +6,13 @@
 
 ## Description
 
-Utilities necessary for working with libraries that supply plain {@link Future} instances. Note
- that, whenever possible, it is strongly preferred to modify those libraries to return {@code
- ListenableFuture} directly.
+Utilities necessary for working with libraries that supply plain `Future` instances. Note
+ that, whenever possible, it is strongly preferred to modify those libraries to return `ListenableFuture` directly.
 
- <p>For interoperability between {@code ListenableFuture} and <b>{@code CompletableFuture}</b>,
+ <p>For interoperability between `ListenableFuture` and <b>`CompletableFuture`</b>,
  consider <a href="https://github.com/lukas-krecan/future-converter">Future Converter</a>.
-@author Sven Mawson
-@since 10.0 (replacing {@code Futures.makeListenable}, which existed in 1.0)
+**Author:** Sven Mawson
+**Since:** 10.0 (replacing `Futures.makeListenable`, which existed in 1.0)
 
 ## Constructors
 
@@ -21,37 +20,35 @@ Utilities necessary for working with libraries that supply plain {@link Future} 
 
 ## Methods
 
-### `listenInPoolThread([`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future)`
+### `listenInPoolThread(`java.util.concurrent.Future<V>` future)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-Assigns a thread to the given {@link Future} to provide {@link ListenableFuture} functionality.
+Assigns a thread to the given `Future` to provide `ListenableFuture` functionality.
 
- <p><b>Warning:</b> If the input future does not already implement {@code ListenableFuture}, the
- returned future will emulate {@link ListenableFuture#addListener} by taking a thread from an
- internal, unbounded pool at the first call to {@code addListener} and holding it until the
- future is {@linkplain Future#isDone() done}.
+ <p><b>Warning:</b> If the input future does not already implement `ListenableFuture`, the
+ returned future will emulate `ListenableFuture.addListener` by taking a thread from an
+ internal, unbounded pool at the first call to `addListener` and holding it until the
+ future is done.
 
- <p>Prefer to create {@code ListenableFuture} instances with {@link SettableFuture}, {@link MoreExecutors#listeningDecorator( java.util.concurrent.ExecutorService)}, {@link ListenableFutureTask}, {@link AbstractFuture}, and other utilities over creating plain {@code
- Future} instances to be upgraded to {@code ListenableFuture} after the fact.
+ <p>Prefer to create `ListenableFuture` instances with `SettableFuture`, `MoreExecutors.listeningDecorator( java.util.concurrent.ExecutorService)`, `ListenableFutureTask`, `AbstractFuture`, and other utilities over creating plain `Future` instances to be upgraded to `ListenableFuture` after the fact.
 
-### `listenInPoolThread([`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `listenInPoolThread(`java.util.concurrent.Future<V>` future, `java.util.concurrent.Executor` executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-Submits a blocking task for the given {@link Future} to provide {@link ListenableFuture}
+Submits a blocking task for the given `Future` to provide `ListenableFuture`
  functionality.
 
- <p><b>Warning:</b> If the input future does not already implement {@code ListenableFuture}, the
- returned future will emulate {@link ListenableFuture#addListener} by submitting a task to the
- given executor at the first call to {@code addListener}. The task must be started by the
- executor promptly, or else the returned {@code ListenableFuture} may fail to work. The task's
- execution consists of blocking until the input future is {@linkplain Future#isDone() done}, so
+ <p><b>Warning:</b> If the input future does not already implement `ListenableFuture`, the
+ returned future will emulate `ListenableFuture.addListener` by submitting a task to the
+ given executor at the first call to `addListener`. The task must be started by the
+ executor promptly, or else the returned `ListenableFuture` may fail to work. The task's
+ execution consists of blocking until the input future is done, so
  each call to this method may claim and hold a thread for an arbitrary length of time. Use of
  bounded executors or other executors that may fail to execute a task promptly may result in
  deadlocks.
 
- <p>Prefer to create {@code ListenableFuture} instances with {@link SettableFuture}, {@link MoreExecutors#listeningDecorator( java.util.concurrent.ExecutorService)}, {@link ListenableFutureTask}, {@link AbstractFuture}, and other utilities over creating plain {@code
- Future} instances to be upgraded to {@code ListenableFuture} after the fact.
-@since 12.0
+ <p>Prefer to create `ListenableFuture` instances with `SettableFuture`, `MoreExecutors.listeningDecorator( java.util.concurrent.ExecutorService)`, `ListenableFutureTask`, `AbstractFuture`, and other utilities over creating plain `Future` instances to be upgraded to `ListenableFuture` after the fact.
+**Since:** 12.0
 

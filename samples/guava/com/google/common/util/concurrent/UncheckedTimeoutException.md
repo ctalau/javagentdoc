@@ -8,9 +8,9 @@
 
 ## Description
 
-Unchecked version of {@link java.util.concurrent.TimeoutException}.
-@author Kevin Bourrillion
-@since 1.0
+Unchecked version of `java.util.concurrent.TimeoutException`.
+**Author:** Kevin Bourrillion
+**Since:** 1.0
 
 ## Fields
 

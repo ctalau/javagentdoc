@@ -13,22 +13,22 @@
 
 ## Description
 
-Implementation of {@link ImmutableMap} backed by a non-empty {@link java.util.EnumMap}.
-@author Louis Wasserman
+Implementation of `ImmutableMap` backed by a non-empty `java.util.EnumMap`.
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`java.util.EnumMap<K,V>`](../../../../java/util/EnumMap.md)
+**Type:** `java.util.EnumMap<K,V>`
 
 ## Constructors
 
-### `<init>([`java.util.EnumMap<K,V>`](../../../../java/util/EnumMap.md) delegate)`
+### `<init>(`java.util.EnumMap<K,V>` delegate)`
 
 ## Methods
 
-### `asImmutable([`java.util.EnumMap<K,V>`](../../../../java/util/EnumMap.md) map)`
+### `asImmutable(`java.util.EnumMap<K,V>` map)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
@@ -38,7 +38,7 @@ Implementation of {@link ImmutableMap} backed by a non-empty {@link java.util.En
 
 ### `keySpliterator()`
 
-**Returns:** [`java.util.Spliterator<K>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<K>`
 
 ### `size()`
 
@@ -50,7 +50,7 @@ Implementation of {@link ImmutableMap} backed by a non-empty {@link java.util.En
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `equals(`java.lang.Object` object)`
 
@@ -62,9 +62,9 @@ Implementation of {@link ImmutableMap} backed by a non-empty {@link java.util.En
 
 ### `entrySpliterator()`
 
-**Returns:** [`java.util.Spliterator<java.util.Map.Entry<K,V>>`](../../../../java/util/Spliterator>.md)
+**Returns:** `java.util.Spliterator<java.util.Map.Entry<K,V>>`
 
-### `forEach([`java.util.function.BiConsumer<? super K,? super V>`](../../../../java/util/function/BiConsumer.md) action)`
+### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
 
 **Returns:** `void`
 
@@ -76,7 +76,7 @@ Implementation of {@link ImmutableMap} backed by a non-empty {@link java.util.En
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

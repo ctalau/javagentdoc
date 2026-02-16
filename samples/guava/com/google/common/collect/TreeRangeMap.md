@@ -13,18 +13,18 @@
 
 ## Description
 
-An implementation of {@code RangeMap} based on a {@code TreeMap}, supporting all optional
+An implementation of `RangeMap` based on a `TreeMap`, supporting all optional
  operations.
 
- <p>Like all {@code RangeMap} implementations, this supports neither null keys nor null values.
-@author Louis Wasserman
-@since 14.0
+ <p>Like all `RangeMap` implementations, this supports neither null keys nor null values.
+**Author:** Louis Wasserman
+**Since:** 14.0
 
 ## Fields
 
 ### `entriesByLowerBound`
 
-**Type:** [`java.util.NavigableMap<com.google.common.collect.Cut<K>,com.google.common.collect.TreeRangeMap.RangeMapEntry<K,V>>`](../../../../java/util/NavigableMap,com/google/common/collect/TreeRangeMap/RangeMapEntry>.md)
+**Type:** `java.util.NavigableMap<com.google.common.collect.Cut<K>,com.google.common.collect.TreeRangeMap.RangeMapEntry<K,V>>`
 
 ### `EMPTY_SUB_RANGE_MAP`
 
@@ -40,29 +40,29 @@ An implementation of {@code RangeMap} based on a {@code TreeMap}, supporting all
 
 **Returns:** [`com.google.common.collect.TreeRangeMap<K,V>`](./TreeRangeMap.md)
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `getEntry([`K`](K.md) key)`
+### `getEntry(`K` key)`
 
-**Returns:** [`java.util.Map.Entry<com.google.common.collect.Range<K>,V>`](../../../../java/util/Map/Entry,V>.md)
+**Returns:** `java.util.Map.Entry<com.google.common.collect.Range<K>,V>`
 
-### `put([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value)`
-
-**Returns:** `void`
-
-### `putCoalescing([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value)`
+### `put([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
 
 **Returns:** `void`
 
-### `coalescedRange([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value)`
+### `putCoalescing([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
+
+**Returns:** `void`
+
+### `coalescedRange([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
 Computes the coalesced range for the given range+value - does not mutate the map.
 
-### `coalesce([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value, [`java.util.Map.Entry<com.google.common.collect.Cut<K>,com.google.common.collect.TreeRangeMap.RangeMapEntry<K,V>>`](../../../../java/util/Map/Entry,com/google/common/collect/TreeRangeMap/RangeMapEntry>.md) entry)`
+### `coalesce([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value, `java.util.Map.Entry<com.google.common.collect.Cut<K>,com.google.common.collect.TreeRangeMap.RangeMapEntry<K,V>>` entry)`
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
@@ -80,7 +80,7 @@ Returns the range that spans the given range and entry, if the entry can be coal
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
-### `putRangeMapEntry([`com.google.common.collect.Cut<K>`](./Cut.md) lowerBound, [`com.google.common.collect.Cut<K>`](./Cut.md) upperBound, [`V`](V.md) value)`
+### `putRangeMapEntry([`com.google.common.collect.Cut<K>`](./Cut.md) lowerBound, [`com.google.common.collect.Cut<K>`](./Cut.md) upperBound, `V` value)`
 
 **Returns:** `void`
 
@@ -92,17 +92,17 @@ Returns the range that spans the given range and entry, if the entry can be coal
 
 **Returns:** `void`
 
-### `merge([`com.google.common.collect.Range<K>`](./Range.md) range, [`V`](V.md) value, [`java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) remappingFunction)`
+### `merge([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value, `java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
 
 **Returns:** `void`
 
 ### `asMapOfRanges()`
 
-**Returns:** [`java.util.Map<com.google.common.collect.Range<K>,V>`](../../../../java/util/Map,V>.md)
+**Returns:** `java.util.Map<com.google.common.collect.Range<K>,V>`
 
 ### `asDescendingMapOfRanges()`
 
-**Returns:** [`java.util.Map<com.google.common.collect.Range<K>,V>`](../../../../java/util/Map,V>.md)
+**Returns:** `java.util.Map<com.google.common.collect.Range<K>,V>`
 
 ### `subRangeMap([`com.google.common.collect.Range<K>`](./Range.md) subRange)`
 

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.AtomicLongMap`
 
-**Implements:** [`java.io.Serializable`](../../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -12,13 +12,13 @@
 
 ## Description
 
-A map containing {@code long} values that can be atomically updated. While writes to a
- traditional {@code Map} rely on {@code put(K, V)}, the typical mechanism for writing to this map
- is {@code addAndGet(K, long)}, which adds a {@code long} to the value currently associated with
- {@code K}. If a key has not yet been associated with a value, its implicit value is zero.
+A map containing `long` values that can be atomically updated. While writes to a
+ traditional `Map` rely on `put(K, V)`, the typical mechanism for writing to this map
+ is `addAndGet(K, long)`, which adds a `long` to the value currently associated with
+ `K`. If a key has not yet been associated with a value, its implicit value is zero.
 
  <p>Most methods in this class treat absent values and zero values identically, as individually
- documented. Exceptions to this are {@link #containsKey}, {@link #size}, {@link #isEmpty}, {@link #asMap}, and {@link #toString}.
+ documented. Exceptions to this are `containsKey`, `size`, `isEmpty`, `asMap`, and `toString`.
 
  <p>Instances of this class may be used by multiple threads concurrently. All operations are
  atomic unless otherwise noted.
@@ -26,26 +26,26 @@ A map containing {@code long} values that can be atomically updated. While write
  <p>Instances of this class are serializable if the keys are serializable.
 
  <p><b>Note:</b> If your values are always positive and less than 2^31, you may wish to use a
- {@link com.google.common.collect.Multiset} such as {@link com.google.common.collect.ConcurrentHashMultiset} instead.
+ `com.google.common.collect.Multiset` such as `com.google.common.collect.ConcurrentHashMultiset` instead.
 
- <p><b>Warning:</b> Unlike {@code Multiset}, entries whose values are zero are not automatically
- removed from the map. Instead they must be removed manually with {@link #removeAllZeros}.
-@author Charles Fry
-@since 11.0
+ <p><b>Warning:</b> Unlike `Multiset`, entries whose values are zero are not automatically
+ removed from the map. Instead they must be removed manually with `removeAllZeros`.
+**Author:** Charles Fry
+**Since:** 11.0
 
 ## Fields
 
 ### `map`
 
-**Type:** [`java.util.concurrent.ConcurrentHashMap<K,java.lang.Long>`](../../../../../java/util/concurrent/ConcurrentHashMap.md)
+**Type:** `java.util.concurrent.ConcurrentHashMap<K,java.lang.Long>`
 
 ### `asMap`
 
-**Type:** [`java.util.Map<K,java.lang.Long>`](../../../../../java/util/Map.md)
+**Type:** `java.util.Map<K,java.lang.Long>`
 
 ## Constructors
 
-### `<init>([`java.util.concurrent.ConcurrentHashMap<K,java.lang.Long>`](../../../../../java/util/concurrent/ConcurrentHashMap.md) map)`
+### `<init>(`java.util.concurrent.ConcurrentHashMap<K,java.lang.Long>` map)`
 
 ## Methods
 
@@ -53,133 +53,131 @@ A map containing {@code long} values that can be atomically updated. While write
 
 **Returns:** [`com.google.common.util.concurrent.AtomicLongMap<K>`](./AtomicLongMap.md)
 
-Creates an {@code AtomicLongMap}.
+Creates an `AtomicLongMap`.
 
-### `create([`java.util.Map<? extends K,? extends java.lang.Long>`](../../../../../java/util/Map.md) m)`
+### `create(`java.util.Map<? extends K,? extends java.lang.Long>` m)`
 
 **Returns:** [`com.google.common.util.concurrent.AtomicLongMap<K>`](./AtomicLongMap.md)
 
-Creates an {@code AtomicLongMap} with the same mappings as the specified {@code Map}.
+Creates an `AtomicLongMap` with the same mappings as the specified `Map`.
 
-### `get([`K`](K.md) key)`
-
-**Returns:** `long`
-
-Returns the value associated with {@code key}, or zero if there is no value associated with
- {@code key}.
-
-### `incrementAndGet([`K`](K.md) key)`
+### `get(`K` key)`
 
 **Returns:** `long`
 
-Increments by one the value currently associated with {@code key}, and returns the new value.
+Returns the value associated with `key`, or zero if there is no value associated with
+ `key`.
 
-### `decrementAndGet([`K`](K.md) key)`
-
-**Returns:** `long`
-
-Decrements by one the value currently associated with {@code key}, and returns the new value.
-
-### `addAndGet([`K`](K.md) key, `long` delta)`
+### `incrementAndGet(`K` key)`
 
 **Returns:** `long`
 
-Adds {@code delta} to the value currently associated with {@code key}, and returns the new
+Increments by one the value currently associated with `key`, and returns the new value.
+
+### `decrementAndGet(`K` key)`
+
+**Returns:** `long`
+
+Decrements by one the value currently associated with `key`, and returns the new value.
+
+### `addAndGet(`K` key, `long` delta)`
+
+**Returns:** `long`
+
+Adds `delta` to the value currently associated with `key`, and returns the new
  value.
 
-### `getAndIncrement([`K`](K.md) key)`
+### `getAndIncrement(`K` key)`
 
 **Returns:** `long`
 
-Increments by one the value currently associated with {@code key}, and returns the old value.
+Increments by one the value currently associated with `key`, and returns the old value.
 
-### `getAndDecrement([`K`](K.md) key)`
-
-**Returns:** `long`
-
-Decrements by one the value currently associated with {@code key}, and returns the old value.
-
-### `getAndAdd([`K`](K.md) key, `long` delta)`
+### `getAndDecrement(`K` key)`
 
 **Returns:** `long`
 
-Adds {@code delta} to the value currently associated with {@code key}, and returns the old
+Decrements by one the value currently associated with `key`, and returns the old value.
+
+### `getAndAdd(`K` key, `long` delta)`
+
+**Returns:** `long`
+
+Adds `delta` to the value currently associated with `key`, and returns the old
  value.
 
-### `updateAndGet([`K`](K.md) key, [`java.util.function.LongUnaryOperator`](../../../../../java/util/function/LongUnaryOperator.md) updaterFunction)`
+### `updateAndGet(`K` key, `java.util.function.LongUnaryOperator` updaterFunction)`
 
 **Returns:** `long`
 
-Updates the value currently associated with {@code key} with the specified function, and
- returns the new value. If there is not currently a value associated with {@code key}, the
- function is applied to {@code 0L}.
-@since 21.0
+Updates the value currently associated with `key` with the specified function, and
+ returns the new value. If there is not currently a value associated with `key`, the
+ function is applied to `0L`.
+**Since:** 21.0
 
-### `getAndUpdate([`K`](K.md) key, [`java.util.function.LongUnaryOperator`](../../../../../java/util/function/LongUnaryOperator.md) updaterFunction)`
-
-**Returns:** `long`
-
-Updates the value currently associated with {@code key} with the specified function, and
- returns the old value. If there is not currently a value associated with {@code key}, the
- function is applied to {@code 0L}.
-@since 21.0
-
-### `accumulateAndGet([`K`](K.md) key, `long` x, [`java.util.function.LongBinaryOperator`](../../../../../java/util/function/LongBinaryOperator.md) accumulatorFunction)`
+### `getAndUpdate(`K` key, `java.util.function.LongUnaryOperator` updaterFunction)`
 
 **Returns:** `long`
 
-Updates the value currently associated with {@code key} by combining it with {@code x} via the
+Updates the value currently associated with `key` with the specified function, and
+ returns the old value. If there is not currently a value associated with `key`, the
+ function is applied to `0L`.
+**Since:** 21.0
+
+### `accumulateAndGet(`K` key, `long` x, `java.util.function.LongBinaryOperator` accumulatorFunction)`
+
+**Returns:** `long`
+
+Updates the value currently associated with `key` by combining it with `x` via the
  specified accumulator function, returning the new value. The previous value associated with
- {@code key} (or zero, if there is none) is passed as the first argument to {@code
- accumulatorFunction}, and {@code x} is passed as the second argument.
-@since 21.0
+ `key` (or zero, if there is none) is passed as the first argument to `accumulatorFunction`, and `x` is passed as the second argument.
+**Since:** 21.0
 
-### `getAndAccumulate([`K`](K.md) key, `long` x, [`java.util.function.LongBinaryOperator`](../../../../../java/util/function/LongBinaryOperator.md) accumulatorFunction)`
+### `getAndAccumulate(`K` key, `long` x, `java.util.function.LongBinaryOperator` accumulatorFunction)`
 
 **Returns:** `long`
 
-Updates the value currently associated with {@code key} by combining it with {@code x} via the
+Updates the value currently associated with `key` by combining it with `x` via the
  specified accumulator function, returning the old value. The previous value associated with
- {@code key} (or zero, if there is none) is passed as the first argument to {@code
- accumulatorFunction}, and {@code x} is passed as the second argument.
-@since 21.0
+ `key` (or zero, if there is none) is passed as the first argument to `accumulatorFunction`, and `x` is passed as the second argument.
+**Since:** 21.0
 
-### `put([`K`](K.md) key, `long` newValue)`
+### `put(`K` key, `long` newValue)`
 
 **Returns:** `long`
 
-Associates {@code newValue} with {@code key} in this map, and returns the value previously
- associated with {@code key}, or zero if there was no such value.
+Associates `newValue` with `key` in this map, and returns the value previously
+ associated with `key`, or zero if there was no such value.
 
-### `putAll([`java.util.Map<? extends K,? extends java.lang.Long>`](../../../../../java/util/Map.md) m)`
+### `putAll(`java.util.Map<? extends K,? extends java.lang.Long>` m)`
 
 **Returns:** `void`
 
 Copies all of the mappings from the specified map to this map. The effect of this call is
- equivalent to that of calling {@code put(k, v)} on this map once for each mapping from key
- {@code k} to value {@code v} in the specified map. The behavior of this operation is undefined
+ equivalent to that of calling `put(k, v)` on this map once for each mapping from key
+ `k` to value `v` in the specified map. The behavior of this operation is undefined
  if the specified map is modified while the operation is in progress.
 
-### `remove([`K`](K.md) key)`
+### `remove(`K` key)`
 
 **Returns:** `long`
 
-Removes and returns the value associated with {@code key}. If {@code key} is not in the map,
+Removes and returns the value associated with `key`. If `key` is not in the map,
  this method has no effect and returns zero.
 
-### `remove([`K`](K.md) key, `long` value)`
+### `remove(`K` key, `long` value)`
 
 **Returns:** `boolean`
 
-If {@code (key, value)} is currently in the map, this method removes it and returns true;
+If `(key, value)` is currently in the map, this method removes it and returns true;
  otherwise, this method returns false.
 
-### `removeIfZero([`K`](K.md) key)`
+### `removeIfZero(`K` key)`
 
 **Returns:** `boolean`
 
-Atomically remove {@code key} from the map iff its associated value is 0.
-@since 20.0
+Atomically remove `key` from the map iff its associated value is 0.
+**Since:** 20.0
 
 ### `removeAllZeros()`
 
@@ -200,13 +198,13 @@ Returns the sum of all values in this map.
 
 ### `asMap()`
 
-**Returns:** [`java.util.Map<K,java.lang.Long>`](../../../../../java/util/Map.md)
+**Returns:** `java.util.Map<K,java.lang.Long>`
 
-Returns a live, read-only view of the map backing this {@code AtomicLongMap}.
+Returns a live, read-only view of the map backing this `AtomicLongMap`.
 
 ### `createAsMap()`
 
-**Returns:** [`java.util.Map<K,java.lang.Long>`](../../../../../java/util/Map.md)
+**Returns:** `java.util.Map<K,java.lang.Long>`
 
 ### `containsKey(`java.lang.Object` key)`
 
@@ -218,14 +216,13 @@ Returns true if this map contains a mapping for the specified key.
 
 **Returns:** `int`
 
-Returns the number of key-value mappings in this map. If the map contains more than {@code
- Integer.MAX_VALUE} elements, returns {@code Integer.MAX_VALUE}.
+Returns the number of key-value mappings in this map. If the map contains more than `Integer.MAX_VALUE` elements, returns `Integer.MAX_VALUE`.
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-Returns {@code true} if this map contains no key-value mappings.
+Returns `true` if this map contains no key-value mappings.
 
 ### `clear()`
 
@@ -240,21 +237,19 @@ Removes all of the mappings from this map. The map will be empty after this call
 
 **Returns:** `java.lang.String`
 
-### `putIfAbsent([`K`](K.md) key, `long` newValue)`
+### `putIfAbsent(`K` key, `long` newValue)`
 
 **Returns:** `long`
 
-If {@code key} is not already associated with a value or if {@code key} is associated with
- zero, associate it with {@code newValue}. Returns the previous value associated with {@code
- key}, or zero if there was no mapping for {@code key}.
+If `key` is not already associated with a value or if `key` is associated with
+ zero, associate it with `newValue`. Returns the previous value associated with `key`, or zero if there was no mapping for `key`.
 
-### `replace([`K`](K.md) key, `long` expectedOldValue, `long` newValue)`
+### `replace(`K` key, `long` expectedOldValue, `long` newValue)`
 
 **Returns:** `boolean`
 
-If {@code (key, expectedOldValue)} is currently in the map, this method replaces {@code
- expectedOldValue} with {@code newValue} and returns true; otherwise, this method returns false.
+If `(key, expectedOldValue)` is currently in the map, this method replaces `expectedOldValue` with `newValue` and returns true; otherwise, this method returns false.
 
- <p>If {@code expectedOldValue} is zero, this method will succeed if {@code (key, zero)} is
- currently in the map, or if {@code key} is not in the map at all.
+ <p>If `expectedOldValue` is zero, this method will succeed if `(key, zero)` is
+ currently in the map, or if `key` is not in the map at all.
 

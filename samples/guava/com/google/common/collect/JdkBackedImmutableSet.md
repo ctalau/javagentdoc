@@ -15,13 +15,13 @@
 ImmutableSet implementation backed by a JDK HashSet, used to defend against apparent hash
  flooding. This implementation is never used on the GWT client side, but it must be present there
  for serialization to work.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`java.util.Set<?>`](../../../../java/util/Set.md)
+**Type:** `java.util.Set<?>`
 
 ### `delegateList`
 
@@ -29,13 +29,13 @@ ImmutableSet implementation backed by a JDK HashSet, used to defend against appa
 
 ## Constructors
 
-### `<init>([`java.util.Set<?>`](../../../../java/util/Set.md) delegate, [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md) delegateList)`
+### `<init>(`java.util.Set<?>` delegate, [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md) delegateList)`
 
 ## Methods
 
 ### `get(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `contains(`java.lang.Object` object)`
 

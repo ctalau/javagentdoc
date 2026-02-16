@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Maps.IteratorBasedAbstractMap<K,V>`](Maps/IteratorBasedAbstractMap.md)
 
-**Implements:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md), [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md), `java.io.Serializable`
 
 ## Type Parameters
 
@@ -15,15 +15,15 @@
 
 ## Description
 
-A {@link BiMap} backed by two hash tables. This implementation allows null keys and values. A
- {@code HashBiMap} and its inverse are both serializable.
+A `BiMap` backed by two hash tables. This implementation allows null keys and values. A
+ `HashBiMap` and its inverse are both serializable.
 
  <p>This implementation guarantees insertion-based iteration order of its keys.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">{@code BiMap} </a>.
-@author Louis Wasserman
-@author Mike Bostock
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">`BiMap` </a>.
+**Author:** Louis Wasserman
+**Author:** Mike Bostock
+**Since:** 2.0
 
 ## Fields
 
@@ -77,7 +77,7 @@ A {@link BiMap} backed by two hash tables. This implementation allows null keys 
 
 **Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
 
-Returns a new, empty {@code HashBiMap} with the default initial capacity (16).
+Returns a new, empty `HashBiMap` with the default initial capacity (16).
 
 ### `create(`int` expectedSize)`
 
@@ -87,11 +87,11 @@ Constructs a new, empty bimap with the specified expected size.
 @param expectedSize the expected number of entries
 @throws IllegalArgumentException if the specified expected size is negative
 
-### `create([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) map)`
+### `create(`java.util.Map<? extends K,? extends V>` map)`
 
 **Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
 
-Constructs a new bimap containing initial values from {@code map}. The bimap is created with an
+Constructs a new bimap containing initial values from `map`. The bimap is created with an
  initial capacity sufficient to hold the mappings in the specified map.
 
 ### `init(`int` expectedSize)`
@@ -102,7 +102,7 @@ Constructs a new bimap containing initial values from {@code map}. The bimap is 
 
 **Returns:** `void`
 
-Finds and removes {@code entry} from the bucket linked lists in both the key-to-value direction
+Finds and removes `entry` from the bucket linked lists in both the key-to-value direction
  and the value-to-key direction.
 
 ### `insert([`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md) entry, [`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md) oldEntryForKey)`
@@ -125,8 +125,8 @@ Finds and removes {@code entry} from the bucket linked lists in both the key-to-
 
 **Returns:** `boolean`
 
-Returns {@code true} if this BiMap contains an entry whose value is equal to {@code value} (or,
- equivalently, if this inverse view contains a key that is equal to {@code value}).
+Returns `true` if this BiMap contains an entry whose value is equal to `value` (or,
+ equivalently, if this inverse view contains a key that is equal to `value`).
 
  <p>Due to the property that values in a BiMap are unique, this will tend to execute in
  faster-than-linear time.
@@ -135,23 +135,23 @@ Returns {@code true} if this BiMap contains an entry whose value is equal to {@c
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `put([`K`](K.md) key, [`V`](V.md) value, `boolean` force)`
+### `put(`K` key, `V` value, `boolean` force)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `forcePut([`K`](K.md) key, [`V`](V.md) value)`
+### `forcePut(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `putInverse([`V`](V.md) value, [`K`](K.md) key, `boolean` force)`
+### `putInverse(`V` value, `K` key, `boolean` force)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
 ### `rehashIfNecessary()`
 
@@ -163,7 +163,7 @@ Returns {@code true} if this BiMap contains an entry whose value is equal to {@c
 
 ### `remove(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `clear()`
 
@@ -175,21 +175,21 @@ Returns {@code true} if this BiMap contains an entry whose value is equal to {@c
 
 ### `keySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 ### `values()`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 ### `entryIterator()`
 
-**Returns:** [`java.util.Iterator<java.util.Map.Entry<K,V>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
-### `forEach([`java.util.function.BiConsumer<? super K,? super V>`](../../../../java/util/function/BiConsumer.md) action)`
+### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
 
 **Returns:** `void`
 
-### `replaceAll([`java.util.function.BiFunction<? super K,? super V,? extends V>`](../../../../java/util/function/BiFunction.md) function)`
+### `replaceAll(`java.util.function.BiFunction<? super K,? super V,? extends V>` function)`
 
 **Returns:** `void`
 
@@ -197,13 +197,13 @@ Returns {@code true} if this BiMap contains an entry whose value is equal to {@c
 
 **Returns:** [`com.google.common.collect.BiMap<V,K>`](./BiMap.md)
 
-### `writeObject([`java.io.ObjectOutputStream`](../../../../java/io/ObjectOutputStream.md) stream)`
+### `writeObject(`java.io.ObjectOutputStream` stream)`
 
 **Returns:** `void`
 
 @serialData the number of entries, first key, first value, second key, second value, and so on.
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

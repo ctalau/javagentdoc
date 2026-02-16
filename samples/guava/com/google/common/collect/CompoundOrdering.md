@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ An ordering that tries several comparators in order.
 
 ### `comparators`
 
-**Type:** [`java.util.Comparator<? super T>[]`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super T>[]`
 
 ### `serialVersionUID`
 
@@ -28,13 +28,13 @@ An ordering that tries several comparators in order.
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) primary, [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) secondary)`
+### `<init>(`java.util.Comparator<? super T>` primary, `java.util.Comparator<? super T>` secondary)`
 
 ### `<init>(`java.lang.Iterable<? extends java.util.Comparator<? super T>>` comparators)`
 
 ## Methods
 
-### `compare([`T`](T.md) left, [`T`](T.md) right)`
+### `compare(`T` left, `T` right)`
 
 **Returns:** `int`
 

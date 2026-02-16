@@ -6,14 +6,14 @@
 
 **Extends:** [`com.google.common.hash.AbstractHashFunction`](./AbstractHashFunction.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
 See MurmurHash3_x64_128 in <a href="http://smhasher.googlecode.com/svn/trunk/MurmurHash3.cpp">the
  C++ implementation</a>.
-@author Austin Appleby
-@author Dimitris Andreou
+**Author:** Austin Appleby
+**Author:** Dimitris Andreou
 
 ## Fields
 

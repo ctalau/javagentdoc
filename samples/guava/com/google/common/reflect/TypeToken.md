@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.reflect.TypeCapture<T>`](./TypeCapture.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -14,28 +14,25 @@
 
 ## Description
 
-A {@link Type} with generics.
+A `Type` with generics.
 
- <p>Operations that are otherwise only available in {@link Class} are implemented to support
- {@code Type}, for example {@link #isSubtypeOf}, {@link #isArray} and {@link #getComponentType}.
- It also provides additional utilities such as {@link #getTypes}, {@link #resolveType}, etc.
+ <p>Operations that are otherwise only available in `Class` are implemented to support
+ `Type`, for example `isSubtypeOf`, `isArray` and `getComponentType`.
+ It also provides additional utilities such as `getTypes`, `resolveType`, etc.
 
- <p>There are three ways to get a {@code TypeToken} instance:
+ <p>There are three ways to get a `TypeToken` instance:
 
  <ul>
-   <li>Wrap a {@code Type} obtained via reflection. For example: {@code
-       TypeToken.of(method.getGenericReturnType())}.
+   <li>Wrap a `Type` obtained via reflection. For example: `TypeToken.of(method.getGenericReturnType())`.
    <li>Capture a generic type with a (usually anonymous) subclass. For example:
-       <pre>{@code
- new TypeToken<List<String>>() {}
+       <pre>`new TypeToken<List<String>>() {`
  }</pre>
        <p>Note that it's critical that the actual type argument is carried by a subclass. The
-       following code is wrong because it only captures the {@code <T>} type variable of the
-       {@code listType()} method signature; while {@code <String>} is lost in erasure:
-       <pre>{@code
- class Util {
+       following code is wrong because it only captures the `<T>` type variable of the
+       `listType()` method signature; while `<String>` is lost in erasure:
+       <pre>`class Util {
    static <T> TypeToken<List<T>> listType() {
-     return new TypeToken<List<T>>() {};
+     return new TypeToken<List<T>>() {`;
    }
  }
 
@@ -43,22 +40,21 @@ A {@link Type} with generics.
  }</pre>
    <li>Capture a generic type with a (usually anonymous) subclass and resolve it against a context
        class that knows what the type parameters are. For example:
-       <pre>{@code
- abstract class IKnowMyType<T> {
-   TypeToken<T> type = new TypeToken<T>(getClass()) {};
+       <pre>`abstract class IKnowMyType<T> {
+   TypeToken<T> type = new TypeToken<T>(getClass()) {`;
  }
  new IKnowMyType<String>() {}.type => String
  }</pre>
  </ul>
 
- <p>{@code TypeToken} is serializable when no type variable is contained in the type.
+ <p>`TypeToken` is serializable when no type variable is contained in the type.
 
- <p>Note to Guice users: {@code TypeToken} is similar to Guice's {@code TypeLiteral} class except
+ <p>Note to Guice users: `TypeToken` is similar to Guice's `TypeLiteral` class except
  that it is serializable and offers numerous additional utility methods.
-@author Bob Lee
-@author Sven Mawson
-@author Ben Yu
-@since 12.0
+**Author:** Bob Lee
+**Author:** Sven Mawson
+**Author:** Ben Yu
+**Since:** 12.0
 
 ## Fields
 
@@ -70,13 +66,13 @@ A {@link Type} with generics.
 
 **Type:** [`com.google.common.reflect.TypeResolver`](./TypeResolver.md)
 
-Resolver for resolving parameter and field types with {@link #runtimeType} as context.
+Resolver for resolving parameter and field types with `runtimeType` as context.
 
 ### `covariantTypeResolver`
 
 **Type:** [`com.google.common.reflect.TypeResolver`](./TypeResolver.md)
 
-Resolver for resolving covariant types with {@link #runtimeType} as context.
+Resolver for resolving covariant types with `runtimeType` as context.
 
 ### `serialVersionUID`
 
@@ -86,31 +82,29 @@ Resolver for resolving covariant types with {@link #runtimeType} as context.
 
 ### `<init>()`
 
-Constructs a new type token of {@code T}.
+Constructs a new type token of `T`.
 
  <p>Clients create an empty anonymous subclass. Doing so embeds the type parameter in the
  anonymous class's type hierarchy so we can reconstitute it at runtime despite erasure.
 
  <p>For example:
 
- <pre>{@code
- TypeToken<List<String>> t = new TypeToken<List<String>>() {};
+ <pre>`TypeToken<List<String>> t = new TypeToken<List<String>>() {`;
  }</pre>
 
 ### `<init>(`java.lang.Class<?>` declaringClass)`
 
-Constructs a new type token of {@code T} while resolving free type variables in the context of
- {@code declaringClass}.
+Constructs a new type token of `T` while resolving free type variables in the context of
+ `declaringClass`.
 
  <p>Clients create an empty anonymous subclass. Doing so embeds the type parameter in the
  anonymous class's type hierarchy so we can reconstitute it at runtime despite erasure.
 
  <p>For example:
 
- <pre>{@code
- abstract class IKnowMyType<T> {
+ <pre>`abstract class IKnowMyType<T> {
    TypeToken<T> getMyType() {
-     return new TypeToken<T>(getClass()) {};
+     return new TypeToken<T>(getClass()) {`;
    }
  }
 
@@ -125,28 +119,28 @@ Constructs a new type token of {@code T} while resolving free type variables in 
 
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
-Returns an instance of type token that wraps {@code type}.
+Returns an instance of type token that wraps `type`.
 
 ### `of(`java.lang.reflect.Type` type)`
 
 **Returns:** [`com.google.common.reflect.TypeToken<?>`](./TypeToken.md)
 
-Returns an instance of type token that wraps {@code type}.
+Returns an instance of type token that wraps `type`.
 
 ### `getRawType()`
 
 **Returns:** `java.lang.Class<? super T>`
 
-Returns the raw type of {@code T}. Formally speaking, if {@code T} is returned by {@link java.lang.reflect.Method#getGenericReturnType}, the raw type is what's returned by {@link java.lang.reflect.Method#getReturnType} of the same method object. Specifically:
+Returns the raw type of `T`. Formally speaking, if `T` is returned by `java.lang.reflect.Method.getGenericReturnType`, the raw type is what's returned by `java.lang.reflect.Method.getReturnType` of the same method object. Specifically:
 
  <ul>
-   <li>If {@code T} is a {@code Class} itself, {@code T} itself is returned.
-   <li>If {@code T} is a {@link ParameterizedType}, the raw type of the parameterized type is
+   <li>If `T` is a `Class` itself, `T` itself is returned.
+   <li>If `T` is a `ParameterizedType`, the raw type of the parameterized type is
        returned.
-   <li>If {@code T} is a {@link GenericArrayType}, the returned type is the corresponding array
-       class. For example: {@code List<Integer>[] => List[]}.
-   <li>If {@code T} is a type variable or a wildcard type, the raw type of the first upper bound
-       is returned. For example: {@code <X extends Foo> => Foo}.
+   <li>If `T` is a `GenericArrayType`, the returned type is the corresponding array
+       class. For example: `List<Integer>[] => List[]`.
+   <li>If `T` is a type variable or a wildcard type, the raw type of the first upper bound
+       is returned. For example: `<X extends Foo> => Foo`.
  </ul>
 
 ### `getType()`
@@ -159,14 +153,13 @@ Returns the represented type.
 
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
-Returns a new {@code TypeToken} where type variables represented by {@code typeParam} are
- substituted by {@code typeArg}. For example, it can be used to construct {@code Map<K, V>} for
- any {@code K} and {@code V} type:
+Returns a new `TypeToken` where type variables represented by `typeParam` are
+ substituted by `typeArg`. For example, it can be used to construct `Map<K, V>` for
+ any `K` and `V` type:
 
- <pre>{@code
- static <K, V> TypeToken<Map<K, V>> mapOf(
+ <pre>`static <K, V> TypeToken<Map<K, V>> mapOf(
      TypeToken<K> keyType, TypeToken<V> valueType) {
-   return new TypeToken<Map<K, V>>() {}
+   return new TypeToken<Map<K, V>>() {`
        .where(new TypeParameter<K>() {}, keyType)
        .where(new TypeParameter<V>() {}, valueType);
  }
@@ -179,14 +172,13 @@ Returns a new {@code TypeToken} where type variables represented by {@code typeP
 
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
-Returns a new {@code TypeToken} where type variables represented by {@code typeParam} are
- substituted by {@code typeArg}. For example, it can be used to construct {@code Map<K, V>} for
- any {@code K} and {@code V} type:
+Returns a new `TypeToken` where type variables represented by `typeParam` are
+ substituted by `typeArg`. For example, it can be used to construct `Map<K, V>` for
+ any `K` and `V` type:
 
- <pre>{@code
- static <K, V> TypeToken<Map<K, V>> mapOf(
+ <pre>`static <K, V> TypeToken<Map<K, V>> mapOf(
      Class<K> keyType, Class<V> valueType) {
-   return new TypeToken<Map<K, V>>() {}
+   return new TypeToken<Map<K, V>>() {`
        .where(new TypeParameter<K>() {}, keyType)
        .where(new TypeParameter<V>() {}, valueType);
  }
@@ -199,10 +191,9 @@ Returns a new {@code TypeToken} where type variables represented by {@code typeP
 
 **Returns:** [`com.google.common.reflect.TypeToken<?>`](./TypeToken.md)
 
-Resolves the given {@code type} against the type context represented by this type. For example:
+Resolves the given `type` against the type context represented by this type. For example:
 
- <pre>{@code
- new TypeToken<List<String>>() {}.resolveType(
+ <pre>`new TypeToken<List<String>>() {`.resolveType(
      List.class.getMethod("get", int.class).getGenericReturnType())
  => String.class
  }</pre>
@@ -215,10 +206,10 @@ Resolves the given {@code type} against the type context represented by this typ
 
 **Returns:** [`com.google.common.reflect.TypeToken<? super T>`](./TypeToken.md)
 
-Returns the generic superclass of this type or {@code null} if the type represents {@link Object} or an interface. This method is similar but different from {@link Class#getGenericSuperclass}. For example, {@code new TypeToken<StringArrayList>()
- {}.getGenericSuperclass()} will return {@code new TypeToken<ArrayList<String>>() {}}; while
- {@code StringArrayList.class.getGenericSuperclass()} will return {@code ArrayList<E>}, where
- {@code E} is the type variable declared by class {@code ArrayList}.
+Returns the generic superclass of this type or `null` if the type represents `Object` or an interface. This method is similar but different from `Class.getGenericSuperclass`. For example, `new TypeToken<StringArrayList>()
+ {`.getGenericSuperclass()} will return `new TypeToken<ArrayList<String>>() {`}; while
+ `StringArrayList.class.getGenericSuperclass()` will return `ArrayList<E>`, where
+ `E` is the type variable declared by class `ArrayList`.
 
  <p>If this type is a type variable or wildcard, its first upper bound is examined and returned
  if the bound is a class or extends from a class. This means that the returned type could be a
@@ -232,12 +223,11 @@ Returns the generic superclass of this type or {@code null} if the type represen
 
 **Returns:** [`com.google.common.collect.ImmutableList<com.google.common.reflect.TypeToken<? super T>>`](../collect/ImmutableList>.md)
 
-Returns the generic interfaces that this type directly {@code implements}. This method is
- similar but different from {@link Class#getGenericInterfaces()}. For example, {@code new
- TypeToken<List<String>>() {}.getGenericInterfaces()} will return a list that contains {@code
- new TypeToken<Iterable<String>>() {}}; while {@code List.class.getGenericInterfaces()} will
- return an array that contains {@code Iterable<T>}, where the {@code T} is the type variable
- declared by interface {@code Iterable}.
+Returns the generic interfaces that this type directly `implements`. This method is
+ similar but different from `Class.getGenericInterfaces()`. For example, `new
+ TypeToken<List<String>>() {`.getGenericInterfaces()} will return a list that contains `new TypeToken<Iterable<String>>() {`}; while `List.class.getGenericInterfaces()` will
+ return an array that contains `Iterable<T>`, where the `T` is the type variable
+ declared by interface `Iterable`.
 
  <p>If this type is a type variable or wildcard, its upper bounds are examined and those that
  are either an interface or upper-bounded only by interfaces are returned. This means that the
@@ -265,75 +255,72 @@ Returns the set of interfaces and classes that this type is or is a subtype of. 
 
 **Returns:** [`com.google.common.reflect.TypeToken<? super T>`](./TypeToken.md)
 
-Returns the generic form of {@code superclass}. For example, if this is {@code
- ArrayList<String>}, {@code Iterable<String>} is returned given the input {@code
- Iterable.class}.
+Returns the generic form of `superclass`. For example, if this is `ArrayList<String>`, `Iterable<String>` is returned given the input `Iterable.class`.
 
 ### `getSubtype(`java.lang.Class<?>` subclass)`
 
 **Returns:** [`com.google.common.reflect.TypeToken<? extends T>`](./TypeToken.md)
 
-Returns subtype of {@code this} with {@code subclass} as the raw class. For example, if this is
- {@code Iterable<String>} and {@code subclass} is {@code List}, {@code List<String>} is
+Returns subtype of `this` with `subclass` as the raw class. For example, if this is
+ `Iterable<String>` and `subclass` is `List`, `List<String>` is
  returned.
 
 ### `isSupertypeOf([`com.google.common.reflect.TypeToken<?>`](./TypeToken.md) type)`
 
 **Returns:** `boolean`
 
-Returns true if this type is a supertype of the given {@code type}. "Supertype" is defined
+Returns true if this type is a supertype of the given `type`. "Supertype" is defined
  according to <a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.5.1">the rules for type
  arguments</a> introduced with Java generics.
-@since 19.0
+**Since:** 19.0
 
 ### `isSupertypeOf(`java.lang.reflect.Type` type)`
 
 **Returns:** `boolean`
 
-Returns true if this type is a supertype of the given {@code type}. "Supertype" is defined
+Returns true if this type is a supertype of the given `type`. "Supertype" is defined
  according to <a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.5.1">the rules for type
  arguments</a> introduced with Java generics.
-@since 19.0
+**Since:** 19.0
 
 ### `isSubtypeOf([`com.google.common.reflect.TypeToken<?>`](./TypeToken.md) type)`
 
 **Returns:** `boolean`
 
-Returns true if this type is a subtype of the given {@code type}. "Subtype" is defined
+Returns true if this type is a subtype of the given `type`. "Subtype" is defined
  according to <a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.5.1">the rules for type
  arguments</a> introduced with Java generics.
-@since 19.0
+**Since:** 19.0
 
 ### `isSubtypeOf(`java.lang.reflect.Type` supertype)`
 
 **Returns:** `boolean`
 
-Returns true if this type is a subtype of the given {@code type}. "Subtype" is defined
+Returns true if this type is a subtype of the given `type`. "Subtype" is defined
  according to <a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-4.html#jls-4.5.1">the rules for type
  arguments</a> introduced with Java generics.
-@since 19.0
+**Since:** 19.0
 
 ### `isArray()`
 
 **Returns:** `boolean`
 
-Returns true if this type is known to be an array type, such as {@code int[]}, {@code T[]},
- {@code <? extends Map<String, Integer>[]>} etc.
+Returns true if this type is known to be an array type, such as `int[]`, `T[]`,
+ `<? extends Map<String, Integer>[]>` etc.
 
 ### `isPrimitive()`
 
 **Returns:** `boolean`
 
-Returns true if this type is one of the nine primitive types (including {@code void}).
-@since 15.0
+Returns true if this type is one of the nine primitive types (including `void`).
+**Since:** 15.0
 
 ### `wrap()`
 
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
-Returns the corresponding wrapper type if this is a primitive type; otherwise returns {@code
- this} itself. Idempotent.
-@since 15.0
+Returns the corresponding wrapper type if this is a primitive type; otherwise returns `this` itself. Idempotent.
+**Since:** 15.0
 
 ### `isWrapper()`
 
@@ -343,36 +330,35 @@ Returns the corresponding wrapper type if this is a primitive type; otherwise re
 
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
-Returns the corresponding primitive type if this is a wrapper type; otherwise returns {@code
- this} itself. Idempotent.
-@since 15.0
+Returns the corresponding primitive type if this is a wrapper type; otherwise returns `this` itself. Idempotent.
+**Since:** 15.0
 
 ### `getComponentType()`
 
 **Returns:** [`com.google.common.reflect.TypeToken<?>`](./TypeToken.md)
 
-Returns the array component type if this type represents an array ({@code int[]}, {@code T[]},
- {@code <? extends Map<String, Integer>[]>} etc.), or else {@code null} is returned.
+Returns the array component type if this type represents an array (`int[]`, `T[]`,
+ `<? extends Map<String, Integer>[]>` etc.), or else `null` is returned.
 
 ### `method(`java.lang.reflect.Method` method)`
 
 **Returns:** [`com.google.common.reflect.Invokable<T,java.lang.Object>`](./Invokable.md)
 
-Returns the {@link Invokable} for {@code method}, which must be a member of {@code T}.
-@since 14.0
+Returns the `Invokable` for `method`, which must be a member of `T`.
+**Since:** 14.0
 
 ### `constructor(`java.lang.reflect.Constructor<?>` constructor)`
 
 **Returns:** [`com.google.common.reflect.Invokable<T,T>`](./Invokable.md)
 
-Returns the {@link Invokable} for {@code constructor}, which must be a member of {@code T}.
-@since 14.0
+Returns the `Invokable` for `constructor`, which must be a member of `T`.
+**Since:** 14.0
 
 ### `equals(`java.lang.Object` o)`
 
 **Returns:** `boolean`
 
-Returns true if {@code o} is another {@code TypeToken} that represents the same {@link Type}.
+Returns true if `o` is another `TypeToken` that represents the same `Type`.
 
 ### `hashCode()`
 
@@ -393,7 +379,7 @@ Implemented to support serialization of subclasses.
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
 Ensures that this type token doesn't contain type variables, which can cause unchecked type
- errors for callers like {@link TypeToInstanceMap}.
+ errors for callers like `TypeToInstanceMap`.
 
 ### `someRawTypeIsSubclassOf(`java.lang.Class<?>` superclass)`
 
@@ -415,49 +401,47 @@ Ensures that this type token doesn't contain type variables, which can cause unc
 
 **Returns:** `boolean`
 
-{@code A.is(B)} is defined as {@code Foo<A>.isSubtypeOf(Foo<B>)}.
+`A.is(B)` is defined as `Foo<A>.isSubtypeOf(Foo<B>)`.
 
  <p>Specifically, returns true if any of the following conditions is met:
 
  <ol>
-   <li>'this' and {@code formalType} are equal.
-   <li>'this' and {@code formalType} have equal canonical form.
-   <li>{@code formalType} is {@code <? extends Foo>} and 'this' is a subtype of {@code Foo}.
-   <li>{@code formalType} is {@code <? super Foo>} and 'this' is a supertype of {@code Foo}.
+   <li>'this' and `formalType` are equal.
+   <li>'this' and `formalType` have equal canonical form.
+   <li>`formalType` is `<? extends Foo>` and 'this' is a subtype of `Foo`.
+   <li>`formalType` is `<? super Foo>` and 'this' is a supertype of `Foo`.
  </ol>
 
  Note that condition 2 isn't technically accurate under the context of a recursively bounded
- type variables. For example, {@code Enum<? extends Enum<E>>} canonicalizes to {@code Enum<?>}
- where {@code E} is the type variable declared on the {@code Enum} class declaration. It's
- technically <em>not</em> true that {@code Foo<Enum<? extends Enum<E>>>} is a subtype of {@code
- Foo<Enum<?>>} according to JLS. See testRecursiveWildcardSubtypeBug() for a real example.
+ type variables. For example, `Enum<? extends Enum<E>>` canonicalizes to `Enum<?>`
+ where `E` is the type variable declared on the `Enum` class declaration. It's
+ technically <em>not</em> true that `Foo<Enum<? extends Enum<E>>>` is a subtype of `Foo<Enum<?>>` according to JLS. See testRecursiveWildcardSubtypeBug() for a real example.
 
  <p>It appears that properly handling recursive type bounds in the presence of implicit type
  bounds is not easy. For now we punt, hoping that this defect should rarely cause issues in real
  code.
-@param formalType is {@code Foo<formalType>} a supertype of {@code Foo<T>}?
+@param formalType is `Foo<formalType>` a supertype of `Foo<T>`?
 @param declaration The type variable in the context of a parameterized type. Used to infer type
-     bound when {@code formalType} is a wildcard with implicit upper bound.
+     bound when `formalType` is a wildcard with implicit upper bound.
 
 ### `canonicalizeTypeArg(`java.lang.reflect.TypeVariable<?>` declaration, `java.lang.reflect.Type` typeArg)`
 
 **Returns:** `java.lang.reflect.Type`
 
-In reflection, {@code Foo<?>.getUpperBounds()[0]} is always {@code Object.class}, even when Foo
- is defined as {@code Foo<T extends String>}. Thus directly calling {@code <?>.is(String.class)}
+In reflection, `Foo<?>.getUpperBounds()[0]` is always `Object.class`, even when Foo
+ is defined as `Foo<T extends String>`. Thus directly calling `<?>.is(String.class)`
  will return false. To mitigate, we canonicalize wildcards by enforcing the following
  invariants:
 
  <ol>
-   <li>{@code canonicalize(t)} always produces the equal result for equivalent types. For
-       example both {@code Enum<?>} and {@code Enum<? extends Enum<?>>} canonicalize to {@code
-       Enum<? extends Enum<E>}.
-   <li>{@code canonicalize(t)} produces a "literal" supertype of t. For example: {@code Enum<?
-       extends Enum<?>>} canonicalizes to {@code Enum<?>}, which is a supertype (if we disregard
+   <li>`canonicalize(t)` always produces the equal result for equivalent types. For
+       example both `Enum<?>` and `Enum<? extends Enum<?>>` canonicalize to `Enum<? extends Enum<E>`.
+   <li>`canonicalize(t)` produces a "literal" supertype of t. For example: `Enum<?
+       extends Enum<?>>` canonicalizes to `Enum<?>`, which is a supertype (if we disregard
        the upper bound is implicitly an Enum too).
-   <li>If {@code canonicalize(A) == canonicalize(B)}, then {@code Foo<A>.isSubtypeOf(Foo<B>)}
-       and vice versa. i.e. {@code A.is(B)} and {@code B.is(A)}.
-   <li>{@code canonicalize(canonicalize(A)) == canonicalize(A)}.
+   <li>If `canonicalize(A) == canonicalize(B)`, then `Foo<A>.isSubtypeOf(Foo<B>)`
+       and vice versa. i.e. `A.is(B)` and `B.is(A)`.
+   <li>`canonicalize(canonicalize(A)) == canonicalize(A)`.
  </ol>
 
 ### `canonicalizeWildcardsInType(`java.lang.reflect.Type` type)`
@@ -492,17 +476,17 @@ In reflection, {@code Foo<?>.getUpperBounds()[0]} is always {@code Object.class}
 
 **Returns:** `java.lang.reflect.Type`
 
-Returns the owner type of a {@link ParameterizedType} or enclosing class of a {@link Class}, or
+Returns the owner type of a `ParameterizedType` or enclosing class of a `Class`, or
  null otherwise.
 
 ### `toGenericType(`java.lang.Class<T>` cls)`
 
 **Returns:** [`com.google.common.reflect.TypeToken<? extends T>`](./TypeToken.md)
 
-Returns the type token representing the generic type declaration of {@code cls}. For example:
- {@code TypeToken.getGenericType(Iterable.class)} returns {@code Iterable<T>}.
+Returns the type token representing the generic type declaration of `cls`. For example:
+ `TypeToken.getGenericType(Iterable.class)` returns `Iterable<T>`.
 
- <p>If {@code cls} isn't parameterized and isn't a generic array, the type token of the class is
+ <p>If `cls` isn't parameterized and isn't a generic array, the type token of the class is
  returned.
 
 ### `getCovariantTypeResolver()`
@@ -537,5 +521,5 @@ Returns the type token representing the generic type declaration of {@code cls}.
 
 **Returns:** `java.lang.reflect.Type`
 
-Creates an array class if {@code componentType} is a class, or else, a {@link GenericArrayType}. This is what Java7 does for generic array type parameters.
+Creates an array class if `componentType` is a class, or else, a `GenericArrayType`. This is what Java7 does for generic array type parameters.
 

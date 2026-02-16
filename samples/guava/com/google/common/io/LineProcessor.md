@@ -10,12 +10,11 @@
 
 ## Description
 
-A callback to be used with the streaming {@code readLines} methods.
+A callback to be used with the streaming `readLines` methods.
 
- <p>{@link #processLine} will be called for each line that is read, and should return {@code
- false} when you want to stop processing.
-@author Miles Barr
-@since 1.0
+ <p>`processLine` will be called for each line that is read, and should return `false` when you want to stop processing.
+**Author:** Miles Barr
+**Since:** 1.0
 
 ## Methods
 
@@ -29,7 +28,7 @@ This method will be called once for each line.
 
 ### `getResult()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Return the result of processing all the lines.
 

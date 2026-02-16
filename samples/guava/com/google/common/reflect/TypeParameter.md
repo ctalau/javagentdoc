@@ -12,16 +12,15 @@
 
 ## Description
 
-Captures a free type variable that can be used in {@link TypeToken#where}. For example:
+Captures a free type variable that can be used in `TypeToken.where`. For example:
 
- <pre>{@code
- static <T> TypeToken<List<T>> listOf(Class<T> elementType) {
-   return new TypeToken<List<T>>() {}
+ <pre>`static <T> TypeToken<List<T>> listOf(Class<T> elementType) {
+   return new TypeToken<List<T>>() {`
        .where(new TypeParameter<T>() {}, elementType);
  }
  }</pre>
-@author Ben Yu
-@since 12.0
+**Author:** Ben Yu
+**Since:** 12.0
 
 ## Fields
 

@@ -9,8 +9,8 @@
 ## Description
 
 Represents a method or constructor parameter.
-@author Ben Yu
-@since 14.0
+**Author:** Ben Yu
+**Since:** 14.0
 
 ## Fields
 
@@ -34,8 +34,8 @@ Represents a method or constructor parameter.
 
 **Type:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`
 
-An {@code AnnotatedType} instance, or {@code null} under Android VMs (possible only when using
- the Android flavor of Guava). The field is declared with a type of {@code Object} to avoid
+An `AnnotatedType` instance, or `null` under Android VMs (possible only when using
+ the Android flavor of Guava). The field is declared with a type of `Object` to avoid
  compatibility problems on Android VMs. The corresponding accessor method, however, can have the
  more specific return type as long as users are careful to guard calls to it with version checks
  or reflection: Android VMs ignore the types of elements that aren't used.
@@ -56,7 +56,7 @@ Returns the type of the parameter.
 
 **Returns:** [`com.google.common.reflect.Invokable<?,?>`](./Invokable.md)
 
-Returns the {@link Invokable} that declares this parameter.
+Returns the `Invokable` that declares this parameter.
 
 ### `isAnnotationPresent(`java.lang.Class<? extends java.lang.annotation.Annotation>` annotationType)`
 
@@ -64,7 +64,7 @@ Returns the {@link Invokable} that declares this parameter.
 
 ### `getAnnotation(`java.lang.Class<A>` annotationType)`
 
-**Returns:** [`A`](A.md)
+**Returns:** `A`
 
 ### `getAnnotations()`
 
@@ -72,34 +72,34 @@ Returns the {@link Invokable} that declares this parameter.
 
 ### `getAnnotationsByType(`java.lang.Class<A>` annotationType)`
 
-**Returns:** [`A[]`](A.md)
+**Returns:** `A[]`
 
-@since 18.0
+**Since:** 18.0
 
 ### `getDeclaredAnnotations()`
 
 **Returns:** `java.lang.annotation.Annotation[]`
 
-@since 18.0
+**Since:** 18.0
 
 ### `getDeclaredAnnotation(`java.lang.Class<A>` annotationType)`
 
-**Returns:** [`A`](A.md)
+**Returns:** `A`
 
-@since 18.0
+**Since:** 18.0
 
 ### `getDeclaredAnnotationsByType(`java.lang.Class<A>` annotationType)`
 
-**Returns:** [`A[]`](A.md)
+**Returns:** `A[]`
 
-@since 18.0
+**Since:** 18.0
 
 ### `getAnnotatedType()`
 
 **Returns:** `java.lang.reflect.AnnotatedType`
 
-Returns the {@link AnnotatedType} of the parameter.
-@since 25.1 for guava-jre
+Returns the `AnnotatedType` of the parameter.
+**Since:** 25.1 for guava-jre
 
 ### `equals(`java.lang.Object` obj)`
 

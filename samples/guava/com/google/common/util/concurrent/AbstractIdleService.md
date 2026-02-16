@@ -9,10 +9,10 @@
 ## Description
 
 Base class for services that do not need a thread while "running" but may need one during startup
- and shutdown. Subclasses can implement {@link #startUp} and {@link #shutDown} methods, each which
+ and shutdown. Subclasses can implement `startUp` and `shutDown` methods, each which
  run in an executor which by default uses a separate thread for each method.
-@author Chris Nokleberg
-@since 1.0
+**Author:** Chris Nokleberg
+**Since:** 1.0
 
 ## Fields
 
@@ -46,11 +46,11 @@ Stop the service.
 
 ### `executor()`
 
-**Returns:** [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md)
+**Returns:** `java.util.concurrent.Executor`
 
-Returns the {@link Executor} that will be used to run this service. Subclasses may override
- this method to use a custom {@link Executor}, which may configure its worker thread with a
- specific name, thread group or priority. The returned executor's {@link Executor#execute(Runnable) execute()} method is called when this service is started and
+Returns the `Executor` that will be used to run this service. Subclasses may override
+ this method to use a custom `Executor`, which may configure its worker thread with a
+ specific name, thread group or priority. The returned executor's `Executor.execute(Runnable) execute()` method is called when this service is started and
  stopped, and should return promptly.
 
 ### `toString()`
@@ -65,71 +65,71 @@ Returns the {@link Executor} that will be used to run this service. Subclasses m
 
 **Returns:** [`com.google.common.util.concurrent.Service.State`](Service/State.md)
 
-### `addListener([`com.google.common.util.concurrent.Service.Listener`](Service/Listener.md) listener, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `addListener([`com.google.common.util.concurrent.Service.Listener`](Service/Listener.md) listener, `java.util.concurrent.Executor` executor)`
 
 **Returns:** `void`
 
-@since 13.0
+**Since:** 13.0
 
 ### `failureCause()`
 
 **Returns:** `java.lang.Throwable`
 
-@since 14.0
+**Since:** 14.0
 
 ### `startAsync()`
 
 **Returns:** [`com.google.common.util.concurrent.Service`](./Service.md)
 
-@since 15.0
+**Since:** 15.0
 
 ### `stopAsync()`
 
 **Returns:** [`com.google.common.util.concurrent.Service`](./Service.md)
 
-@since 15.0
+**Since:** 15.0
 
 ### `awaitRunning()`
 
 **Returns:** `void`
 
-@since 15.0
+**Since:** 15.0
 
-### `awaitRunning([`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
-
-**Returns:** `void`
-
-@since 28.0
-
-### `awaitRunning(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitRunning(`java.time.Duration` timeout)`
 
 **Returns:** `void`
 
-@since 15.0
+**Since:** 28.0
+
+### `awaitRunning(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
+
+**Returns:** `void`
+
+**Since:** 15.0
 
 ### `awaitTerminated()`
 
 **Returns:** `void`
 
-@since 15.0
+**Since:** 15.0
 
-### `awaitTerminated([`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
-
-**Returns:** `void`
-
-@since 28.0
-
-### `awaitTerminated(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitTerminated(`java.time.Duration` timeout)`
 
 **Returns:** `void`
 
-@since 15.0
+**Since:** 28.0
+
+### `awaitTerminated(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
+
+**Returns:** `void`
+
+**Since:** 15.0
 
 ### `serviceName()`
 
 **Returns:** `java.lang.String`
 
-Returns the name of this service. {@link AbstractIdleService} may include the name in debugging
+Returns the name of this service. `AbstractIdleService` may include the name in debugging
  output.
-@since 14.0
+**Since:** 14.0
 

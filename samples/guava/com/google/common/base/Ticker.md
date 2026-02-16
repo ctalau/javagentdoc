@@ -7,12 +7,12 @@
 ## Description
 
 A time source; returns a time value representing the number of nanoseconds elapsed since some
- fixed but arbitrary point in time. Note that most users should use {@link Stopwatch} instead of
+ fixed but arbitrary point in time. Note that most users should use `Stopwatch` instead of
  interacting with this class directly.
 
  <p><b>Warning:</b> this interface can only be used to measure elapsed time, not wall time.
-@author Kevin Bourrillion
-@since 10.0 (<a href="https://github.com/google/guava/wiki/Compatibility">mostly
+**Author:** Kevin Bourrillion
+**Since:** 10.0 (<a href="https://github.com/google/guava/wiki/Compatibility">mostly
      source-compatible</a> since 9.0)
 
 ## Fields
@@ -39,6 +39,6 @@ Returns the number of nanoseconds elapsed since this ticker's fixed point of ref
 
 **Returns:** [`com.google.common.base.Ticker`](./Ticker.md)
 
-A ticker that reads the current time using {@link System#nanoTime}.
-@since 10.0
+A ticker that reads the current time using `System.nanoTime`.
+**Since:** 10.0
 

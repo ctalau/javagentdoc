@@ -6,15 +6,14 @@
 
 ## Description
 
-Provides static methods acting on or generating a {@code Multimap}.
+Provides static methods acting on or generating a `Multimap`.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/CollectionUtilitiesExplained#multimaps">{@code
- Multimaps}</a>.
-@author Jared Levy
-@author Robert Konigsberg
-@author Mike Bostock
-@author Louis Wasserman
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/CollectionUtilitiesExplained#multimaps">`Multimaps`</a>.
+**Author:** Jared Levy
+**Author:** Robert Konigsberg
+**Author:** Mike Bostock
+**Author:** Louis Wasserman
+**Since:** 2.0
 
 ## Constructors
 
@@ -22,18 +21,17 @@ Provides static methods acting on or generating a {@code Multimap}.
 
 ## Methods
 
-### `toMultimap([`java.util.function.Function<? super T,? extends K>`](../../../../java/util/function/Function.md) keyFunction, [`java.util.function.Function<? super T,? extends V>`](../../../../java/util/function/Function.md) valueFunction, [`java.util.function.Supplier<M>`](../../../../java/util/function/Supplier.md) multimapSupplier)`
+### `toMultimap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction, `java.util.function.Supplier<M>` multimapSupplier)`
 
-**Returns:** [`java.util.stream.Collector<T,?,M>`](../../../../java/util/stream/Collector.md)
+**Returns:** `java.util.stream.Collector<T,?,M>`
 
-Returns a {@code Collector} accumulating entries into a {@code Multimap} generated from the
+Returns a `Collector` accumulating entries into a `Multimap` generated from the
  specified supplier. The keys and values of the entries are the result of applying the provided
  mapping functions to the input elements, accumulated in the encounter order of the stream.
 
  <p>Example:
 
- <pre>{@code
- static final ListMultimap<Character, String> FIRST_LETTER_MULTIMAP =
+ <pre>`static final ListMultimap<Character, String> FIRST_LETTER_MULTIMAP =
      Stream.of("banana", "apple", "carrot", "asparagus", "cherry")
          .collect(
              toMultimap(
@@ -52,25 +50,24 @@ Returns a {@code Collector} accumulating entries into a {@code Multimap} generat
      FIRST_LETTER_MULTIMAP.put('a', "sparagus");
      FIRST_LETTER_MULTIMAP.put('c', "arrot");
      FIRST_LETTER_MULTIMAP.put('c', "herry");
- }
+ `
  }</pre>
 
- <p>To collect to an {@link ImmutableMultimap}, use either {@link ImmutableSetMultimap#toImmutableSetMultimap} or {@link ImmutableListMultimap#toImmutableListMultimap}.
-@since 21.0
+ <p>To collect to an `ImmutableMultimap`, use either `ImmutableSetMultimap.toImmutableSetMultimap` or `ImmutableListMultimap.toImmutableListMultimap`.
+**Since:** 21.0
 
-### `flatteningToMultimap([`java.util.function.Function<? super T,? extends K>`](../../../../java/util/function/Function.md) keyFunction, [`java.util.function.Function<? super T,? extends java.util.stream.Stream<? extends V>>`](../../../../java/util/function/Function>.md) valueFunction, [`java.util.function.Supplier<M>`](../../../../java/util/function/Supplier.md) multimapSupplier)`
+### `flatteningToMultimap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends java.util.stream.Stream<? extends V>>` valueFunction, `java.util.function.Supplier<M>` multimapSupplier)`
 
-**Returns:** [`java.util.stream.Collector<T,?,M>`](../../../../java/util/stream/Collector.md)
+**Returns:** `java.util.stream.Collector<T,?,M>`
 
-Returns a {@code Collector} accumulating entries into a {@code Multimap} generated from the
+Returns a `Collector` accumulating entries into a `Multimap` generated from the
  specified supplier. Each input element is mapped to a key and a stream of values, each of which
- are put into the resulting {@code Multimap}, in the encounter order of the stream and the
+ are put into the resulting `Multimap`, in the encounter order of the stream and the
  encounter order of the streams of values.
 
  <p>Example:
 
- <pre>{@code
- static final ListMultimap<Character, Character> FIRST_LETTER_MULTIMAP =
+ <pre>`static final ListMultimap<Character, Character> FIRST_LETTER_MULTIMAP =
      Stream.of("banana", "apple", "carrot", "asparagus", "cherry")
          .collect(
              flatteningToMultimap(
@@ -89,141 +86,133 @@ Returns a {@code Collector} accumulating entries into a {@code Multimap} generat
      FIRST_LETTER_MULTIMAP.putAll('c', Arrays.asList('a', 'r', 'r', 'o', 't'));
      FIRST_LETTER_MULTIMAP.putAll('a', Arrays.asList('s', 'p', 'a', 'r', 'a', 'g', 'u', 's'));
      FIRST_LETTER_MULTIMAP.putAll('c', Arrays.asList('h', 'e', 'r', 'r', 'y'));
- }
+ `
  }</pre>
-@since 21.0
+**Since:** 21.0
 
-### `newMultimap([`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md) map, [`com.google.common.base.Supplier<? extends java.util.Collection<V>>`](../base/Supplier>.md) factory)`
+### `newMultimap(`java.util.Map<K,java.util.Collection<V>>` map, [`com.google.common.base.Supplier<? extends java.util.Collection<V>>`](../base/Supplier>.md) factory)`
 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-Creates a new {@code Multimap} backed by {@code map}, whose internal value collections are
- generated by {@code factory}.
+Creates a new `Multimap` backed by `map`, whose internal value collections are
+ generated by `factory`.
 
- <p><b>Warning: do not use</b> this method when the collections returned by {@code factory}
- implement either {@link List} or {@code Set}! Use the more specific method {@link #newListMultimap}, {@link #newSetMultimap} or {@link #newSortedSetMultimap} instead, to avoid
- very surprising behavior from {@link Multimap#equals}.
+ <p><b>Warning: do not use</b> this method when the collections returned by `factory`
+ implement either `List` or `Set`! Use the more specific method `newListMultimap`, `newSetMultimap` or `newSortedSetMultimap` instead, to avoid
+ very surprising behavior from `Multimap.equals`.
 
- <p>The {@code factory}-generated and {@code map} classes determine the multimap iteration
- order. They also specify the behavior of the {@code equals}, {@code hashCode}, and {@code
- toString} methods for the multimap and its returned views. However, the multimap's {@code get}
- method returns instances of a different class than {@code factory.get()} does.
+ <p>The `factory`-generated and `map` classes determine the multimap iteration
+ order. They also specify the behavior of the `equals`, `hashCode`, and `toString` methods for the multimap and its returned views. However, the multimap's `get`
+ method returns instances of a different class than `factory.get()` does.
 
- <p>The multimap is serializable if {@code map}, {@code factory}, the collections generated by
- {@code factory}, and the multimap contents are all serializable.
+ <p>The multimap is serializable if `map`, `factory`, the collections generated by
+ `factory`, and the multimap contents are all serializable.
 
  <p>The multimap is not threadsafe when any concurrent operations update the multimap, even if
- {@code map} and the instances generated by {@code factory} are. Concurrent read operations will
- work correctly. To allow concurrent update operations, wrap the multimap with a call to {@link #synchronizedMultimap}.
+ `map` and the instances generated by `factory` are. Concurrent read operations will
+ work correctly. To allow concurrent update operations, wrap the multimap with a call to `synchronizedMultimap`.
 
- <p>Call this method only when the simpler methods {@link ArrayListMultimap#create()}, {@link HashMultimap#create()}, {@link LinkedHashMultimap#create()}, {@link LinkedListMultimap#create()}, {@link TreeMultimap#create()}, and {@link TreeMultimap#create(Comparator, Comparator)} won't suffice.
+ <p>Call this method only when the simpler methods `ArrayListMultimap.create()`, `HashMultimap.create()`, `LinkedHashMultimap.create()`, `LinkedListMultimap.create()`, `TreeMultimap.create()`, and `TreeMultimap.create(Comparator, Comparator)` won't suffice.
 
- <p>Note: the multimap assumes complete ownership over of {@code map} and the collections
- returned by {@code factory}. Those objects should not be manually updated and they should not
+ <p>Note: the multimap assumes complete ownership over of `map` and the collections
+ returned by `factory`. Those objects should not be manually updated and they should not
  use soft, weak, or phantom references.
 @param map place to store the mapping from each key to its corresponding values
 @param factory supplier of new, empty collections that will each hold all values for a given
      key
-@throws IllegalArgumentException if {@code map} is not empty
+@throws IllegalArgumentException if `map` is not empty
 
-### `newListMultimap([`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md) map, [`com.google.common.base.Supplier<? extends java.util.List<V>>`](../base/Supplier>.md) factory)`
+### `newListMultimap(`java.util.Map<K,java.util.Collection<V>>` map, [`com.google.common.base.Supplier<? extends java.util.List<V>>`](../base/Supplier>.md) factory)`
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-Creates a new {@code ListMultimap} that uses the provided map and factory. It can generate a
- multimap based on arbitrary {@link Map} and {@link List} classes.
+Creates a new `ListMultimap` that uses the provided map and factory. It can generate a
+ multimap based on arbitrary `Map` and `List` classes.
 
- <p>The {@code factory}-generated and {@code map} classes determine the multimap iteration
- order. They also specify the behavior of the {@code equals}, {@code hashCode}, and {@code
- toString} methods for the multimap and its returned views. The multimap's {@code get}, {@code
- removeAll}, and {@code replaceValues} methods return {@code RandomAccess} lists if the factory
- does. However, the multimap's {@code get} method returns instances of a different class than
- does {@code factory.get()}.
+ <p>The `factory`-generated and `map` classes determine the multimap iteration
+ order. They also specify the behavior of the `equals`, `hashCode`, and `toString` methods for the multimap and its returned views. The multimap's `get`, `removeAll`, and `replaceValues` methods return `RandomAccess` lists if the factory
+ does. However, the multimap's `get` method returns instances of a different class than
+ does `factory.get()`.
 
- <p>The multimap is serializable if {@code map}, {@code factory}, the lists generated by {@code
- factory}, and the multimap contents are all serializable.
+ <p>The multimap is serializable if `map`, `factory`, the lists generated by `factory`, and the multimap contents are all serializable.
 
  <p>The multimap is not threadsafe when any concurrent operations update the multimap, even if
- {@code map} and the instances generated by {@code factory} are. Concurrent read operations will
- work correctly. To allow concurrent update operations, wrap the multimap with a call to {@link #synchronizedListMultimap}.
+ `map` and the instances generated by `factory` are. Concurrent read operations will
+ work correctly. To allow concurrent update operations, wrap the multimap with a call to `synchronizedListMultimap`.
 
- <p>Call this method only when the simpler methods {@link ArrayListMultimap#create()} and {@link LinkedListMultimap#create()} won't suffice.
+ <p>Call this method only when the simpler methods `ArrayListMultimap.create()` and `LinkedListMultimap.create()` won't suffice.
 
- <p>Note: the multimap assumes complete ownership over of {@code map} and the lists returned by
- {@code factory}. Those objects should not be manually updated, they should be empty when
+ <p>Note: the multimap assumes complete ownership over of `map` and the lists returned by
+ `factory`. Those objects should not be manually updated, they should be empty when
  provided, and they should not use soft, weak, or phantom references.
 @param map place to store the mapping from each key to its corresponding values
 @param factory supplier of new, empty lists that will each hold all values for a given key
-@throws IllegalArgumentException if {@code map} is not empty
+@throws IllegalArgumentException if `map` is not empty
 
-### `newSetMultimap([`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md) map, [`com.google.common.base.Supplier<? extends java.util.Set<V>>`](../base/Supplier>.md) factory)`
+### `newSetMultimap(`java.util.Map<K,java.util.Collection<V>>` map, [`com.google.common.base.Supplier<? extends java.util.Set<V>>`](../base/Supplier>.md) factory)`
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-Creates a new {@code SetMultimap} that uses the provided map and factory. It can generate a
- multimap based on arbitrary {@link Map} and {@link Set} classes.
+Creates a new `SetMultimap` that uses the provided map and factory. It can generate a
+ multimap based on arbitrary `Map` and `Set` classes.
 
- <p>The {@code factory}-generated and {@code map} classes determine the multimap iteration
- order. They also specify the behavior of the {@code equals}, {@code hashCode}, and {@code
- toString} methods for the multimap and its returned views. However, the multimap's {@code get}
- method returns instances of a different class than {@code factory.get()} does.
+ <p>The `factory`-generated and `map` classes determine the multimap iteration
+ order. They also specify the behavior of the `equals`, `hashCode`, and `toString` methods for the multimap and its returned views. However, the multimap's `get`
+ method returns instances of a different class than `factory.get()` does.
 
- <p>The multimap is serializable if {@code map}, {@code factory}, the sets generated by {@code
- factory}, and the multimap contents are all serializable.
+ <p>The multimap is serializable if `map`, `factory`, the sets generated by `factory`, and the multimap contents are all serializable.
 
  <p>The multimap is not threadsafe when any concurrent operations update the multimap, even if
- {@code map} and the instances generated by {@code factory} are. Concurrent read operations will
- work correctly. To allow concurrent update operations, wrap the multimap with a call to {@link #synchronizedSetMultimap}.
+ `map` and the instances generated by `factory` are. Concurrent read operations will
+ work correctly. To allow concurrent update operations, wrap the multimap with a call to `synchronizedSetMultimap`.
 
- <p>Call this method only when the simpler methods {@link HashMultimap#create()}, {@link LinkedHashMultimap#create()}, {@link TreeMultimap#create()}, and {@link TreeMultimap#create(Comparator, Comparator)} won't suffice.
+ <p>Call this method only when the simpler methods `HashMultimap.create()`, `LinkedHashMultimap.create()`, `TreeMultimap.create()`, and `TreeMultimap.create(Comparator, Comparator)` won't suffice.
 
- <p>Note: the multimap assumes complete ownership over of {@code map} and the sets returned by
- {@code factory}. Those objects should not be manually updated and they should not use soft,
+ <p>Note: the multimap assumes complete ownership over of `map` and the sets returned by
+ `factory`. Those objects should not be manually updated and they should not use soft,
  weak, or phantom references.
 @param map place to store the mapping from each key to its corresponding values
 @param factory supplier of new, empty sets that will each hold all values for a given key
-@throws IllegalArgumentException if {@code map} is not empty
+@throws IllegalArgumentException if `map` is not empty
 
-### `newSortedSetMultimap([`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md) map, [`com.google.common.base.Supplier<? extends java.util.SortedSet<V>>`](../base/Supplier>.md) factory)`
+### `newSortedSetMultimap(`java.util.Map<K,java.util.Collection<V>>` map, [`com.google.common.base.Supplier<? extends java.util.SortedSet<V>>`](../base/Supplier>.md) factory)`
 
 **Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-Creates a new {@code SortedSetMultimap} that uses the provided map and factory. It can generate
- a multimap based on arbitrary {@link Map} and {@link SortedSet} classes.
+Creates a new `SortedSetMultimap` that uses the provided map and factory. It can generate
+ a multimap based on arbitrary `Map` and `SortedSet` classes.
 
- <p>The {@code factory}-generated and {@code map} classes determine the multimap iteration
- order. They also specify the behavior of the {@code equals}, {@code hashCode}, and {@code
- toString} methods for the multimap and its returned views. However, the multimap's {@code get}
- method returns instances of a different class than {@code factory.get()} does.
+ <p>The `factory`-generated and `map` classes determine the multimap iteration
+ order. They also specify the behavior of the `equals`, `hashCode`, and `toString` methods for the multimap and its returned views. However, the multimap's `get`
+ method returns instances of a different class than `factory.get()` does.
 
- <p>The multimap is serializable if {@code map}, {@code factory}, the sets generated by {@code
- factory}, and the multimap contents are all serializable.
+ <p>The multimap is serializable if `map`, `factory`, the sets generated by `factory`, and the multimap contents are all serializable.
 
  <p>The multimap is not threadsafe when any concurrent operations update the multimap, even if
- {@code map} and the instances generated by {@code factory} are. Concurrent read operations will
- work correctly. To allow concurrent update operations, wrap the multimap with a call to {@link #synchronizedSortedSetMultimap}.
+ `map` and the instances generated by `factory` are. Concurrent read operations will
+ work correctly. To allow concurrent update operations, wrap the multimap with a call to `synchronizedSortedSetMultimap`.
 
- <p>Call this method only when the simpler methods {@link TreeMultimap#create()} and {@link TreeMultimap#create(Comparator, Comparator)} won't suffice.
+ <p>Call this method only when the simpler methods `TreeMultimap.create()` and `TreeMultimap.create(Comparator, Comparator)` won't suffice.
 
- <p>Note: the multimap assumes complete ownership over of {@code map} and the sets returned by
- {@code factory}. Those objects should not be manually updated and they should not use soft,
+ <p>Note: the multimap assumes complete ownership over of `map` and the sets returned by
+ `factory`. Those objects should not be manually updated and they should not use soft,
  weak, or phantom references.
 @param map place to store the mapping from each key to its corresponding values
 @param factory supplier of new, empty sorted sets that will each hold all values for a given
      key
-@throws IllegalArgumentException if {@code map} is not empty
+@throws IllegalArgumentException if `map` is not empty
 
-### `invertFrom([`com.google.common.collect.Multimap<? extends V,? extends K>`](./Multimap.md) source, [`M`](M.md) dest)`
+### `invertFrom([`com.google.common.collect.Multimap<? extends V,? extends K>`](./Multimap.md) source, `M` dest)`
 
-**Returns:** [`M`](M.md)
+**Returns:** `M`
 
-Copies each key-value mapping in {@code source} into {@code dest}, with its key and value
+Copies each key-value mapping in `source` into `dest`, with its key and value
  reversed.
 
- <p>If {@code source} is an {@link ImmutableMultimap}, consider using {@link ImmutableMultimap#inverse} instead.
+ <p>If `source` is an `ImmutableMultimap`, consider using `ImmutableMultimap.inverse` instead.
 @param source any multimap
 @param dest the multimap to copy into; usually empty
-@return {@code dest}
+@return `dest`
 
 ### `synchronizedMultimap([`com.google.common.collect.Multimap<K,V>`](./Multimap.md) multimap)`
 
@@ -236,8 +225,7 @@ Returns a synchronized (thread-safe) multimap backed by the specified multimap. 
  <p>It is imperative that the user manually synchronize on the returned multimap when accessing
  any of its collection views:
 
- <pre>{@code
- Multimap<K, V> multimap = Multimaps.synchronizedMultimap(
+ <pre>`Multimap<K, V> multimap = Multimaps.synchronizedMultimap(
      HashMultimap.<K, V>create());
  ...
  Collection<V> values = multimap.get(key);  // Needn't be in synchronized block
@@ -246,13 +234,13 @@ Returns a synchronized (thread-safe) multimap backed by the specified multimap. 
    Iterator<V> i = values.iterator(); // Must be in synchronized block
    while (i.hasNext()) {
      foo(i.next());
-   }
+   `
  }
  }</pre>
 
  <p>Failure to follow this advice may result in non-deterministic behavior.
 
- <p>Note that the generated multimap's {@link Multimap#removeAll} and {@link Multimap#replaceValues} methods return collections that aren't synchronized.
+ <p>Note that the generated multimap's `Multimap.removeAll` and `Multimap.replaceValues` methods return collections that aren't synchronized.
 
  <p>The returned multimap will be serializable if the specified multimap is serializable.
 @param multimap the multimap to be wrapped in a synchronized view
@@ -264,8 +252,7 @@ Returns a synchronized (thread-safe) multimap backed by the specified multimap. 
 
 Returns an unmodifiable view of the specified multimap. Query operations on the returned
  multimap "read through" to the specified multimap, and attempts to modify the returned
- multimap, either directly or through the multimap's views, result in an {@code
- UnsupportedOperationException}.
+ multimap, either directly or through the multimap's views, result in an `UnsupportedOperationException`.
 
  <p>The returned multimap will be serializable if the specified multimap is serializable.
 @param delegate the multimap for which an unmodifiable view is to be returned
@@ -276,16 +263,16 @@ Returns an unmodifiable view of the specified multimap. Query operations on the 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
 Simply returns its argument.
-@deprecated no need to use this
-@since 10.0
+**Deprecated:** no need to use this
+**Since:** 10.0
 
 ### `synchronizedSetMultimap([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md) multimap)`
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-Returns a synchronized (thread-safe) {@code SetMultimap} backed by the specified multimap.
+Returns a synchronized (thread-safe) `SetMultimap` backed by the specified multimap.
 
- <p>You must follow the warnings described in {@link #synchronizedMultimap}.
+ <p>You must follow the warnings described in `synchronizedMultimap`.
 
  <p>The returned multimap will be serializable if the specified multimap is serializable.
 @param multimap the multimap to be wrapped
@@ -295,10 +282,9 @@ Returns a synchronized (thread-safe) {@code SetMultimap} backed by the specified
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-Returns an unmodifiable view of the specified {@code SetMultimap}. Query operations on the
+Returns an unmodifiable view of the specified `SetMultimap`. Query operations on the
  returned multimap "read through" to the specified multimap, and attempts to modify the returned
- multimap, either directly or through the multimap's views, result in an {@code
- UnsupportedOperationException}.
+ multimap, either directly or through the multimap's views, result in an `UnsupportedOperationException`.
 
  <p>The returned multimap will be serializable if the specified multimap is serializable.
 @param delegate the multimap for which an unmodifiable view is to be returned
@@ -309,17 +295,17 @@ Returns an unmodifiable view of the specified {@code SetMultimap}. Query operati
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
 Simply returns its argument.
-@deprecated no need to use this
-@since 10.0
+**Deprecated:** no need to use this
+**Since:** 10.0
 
 ### `synchronizedSortedSetMultimap([`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md) multimap)`
 
 **Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-Returns a synchronized (thread-safe) {@code SortedSetMultimap} backed by the specified
+Returns a synchronized (thread-safe) `SortedSetMultimap` backed by the specified
  multimap.
 
- <p>You must follow the warnings described in {@link #synchronizedMultimap}.
+ <p>You must follow the warnings described in `synchronizedMultimap`.
 
  <p>The returned multimap will be serializable if the specified multimap is serializable.
 @param multimap the multimap to be wrapped
@@ -329,10 +315,9 @@ Returns a synchronized (thread-safe) {@code SortedSetMultimap} backed by the spe
 
 **Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-Returns an unmodifiable view of the specified {@code SortedSetMultimap}. Query operations on
+Returns an unmodifiable view of the specified `SortedSetMultimap`. Query operations on
  the returned multimap "read through" to the specified multimap, and attempts to modify the
- returned multimap, either directly or through the multimap's views, result in an {@code
- UnsupportedOperationException}.
+ returned multimap, either directly or through the multimap's views, result in an `UnsupportedOperationException`.
 
  <p>The returned multimap will be serializable if the specified multimap is serializable.
 @param delegate the multimap for which an unmodifiable view is to be returned
@@ -342,9 +327,9 @@ Returns an unmodifiable view of the specified {@code SortedSetMultimap}. Query o
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-Returns a synchronized (thread-safe) {@code ListMultimap} backed by the specified multimap.
+Returns a synchronized (thread-safe) `ListMultimap` backed by the specified multimap.
 
- <p>You must follow the warnings described in {@link #synchronizedMultimap}.
+ <p>You must follow the warnings described in `synchronizedMultimap`.
 @param multimap the multimap to be wrapped
 @return a synchronized view of the specified multimap
 
@@ -352,10 +337,9 @@ Returns a synchronized (thread-safe) {@code ListMultimap} backed by the specifie
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-Returns an unmodifiable view of the specified {@code ListMultimap}. Query operations on the
+Returns an unmodifiable view of the specified `ListMultimap`. Query operations on the
  returned multimap "read through" to the specified multimap, and attempts to modify the returned
- multimap, either directly or through the multimap's views, result in an {@code
- UnsupportedOperationException}.
+ multimap, either directly or through the multimap's views, result in an `UnsupportedOperationException`.
 
  <p>The returned multimap will be serializable if the specified multimap is serializable.
 @param delegate the multimap for which an unmodifiable view is to be returned
@@ -366,74 +350,72 @@ Returns an unmodifiable view of the specified {@code ListMultimap}. Query operat
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
 Simply returns its argument.
-@deprecated no need to use this
-@since 10.0
+**Deprecated:** no need to use this
+**Since:** 10.0
 
-### `unmodifiableValueCollection([`java.util.Collection<V>`](../../../../java/util/Collection.md) collection)`
+### `unmodifiableValueCollection(`java.util.Collection<V>` collection)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 Returns an unmodifiable view of the specified collection, preserving the interface for
- instances of {@code SortedSet}, {@code Set}, {@code List} and {@code Collection}, in that order
+ instances of `SortedSet`, `Set`, `List` and `Collection`, in that order
  of preference.
 @param collection the collection for which to return an unmodifiable view
 @return an unmodifiable view of the collection
 
-### `unmodifiableEntries([`java.util.Collection<java.util.Map.Entry<K,V>>`](../../../../java/util/Collection>.md) entries)`
+### `unmodifiableEntries(`java.util.Collection<java.util.Map.Entry<K,V>>` entries)`
 
-**Returns:** [`java.util.Collection<java.util.Map.Entry<K,V>>`](../../../../java/util/Collection>.md)
+**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
-Returns an unmodifiable view of the specified collection of entries. The {@link Entry#setValue}
- operation throws an {@link UnsupportedOperationException}. If the specified collection is a
- {@code Set}, the returned collection is also a {@code Set}.
+Returns an unmodifiable view of the specified collection of entries. The `Entry.setValue`
+ operation throws an `UnsupportedOperationException`. If the specified collection is a
+ `Set`, the returned collection is also a `Set`.
 @param entries the entries for which to return an unmodifiable view
 @return an unmodifiable view of the entries
 
 ### `asMap([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md) multimap)`
 
-**Returns:** [`java.util.Map<K,java.util.List<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.List<V>>`
 
-Returns {@link ListMultimap#asMap multimap.asMap()}, with its type corrected from {@code Map<K,
- Collection<V>>} to {@code Map<K, List<V>>}.
-@since 15.0
+Returns `ListMultimap.asMap multimap.asMap()`, with its type corrected from `Map<K,
+ Collection<V>>` to `Map<K, List<V>>`.
+**Since:** 15.0
 
 ### `asMap([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md) multimap)`
 
-**Returns:** [`java.util.Map<K,java.util.Set<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Set<V>>`
 
-Returns {@link SetMultimap#asMap multimap.asMap()}, with its type corrected from {@code Map<K,
- Collection<V>>} to {@code Map<K, Set<V>>}.
-@since 15.0
+Returns `SetMultimap.asMap multimap.asMap()`, with its type corrected from `Map<K,
+ Collection<V>>` to `Map<K, Set<V>>`.
+**Since:** 15.0
 
 ### `asMap([`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md) multimap)`
 
-**Returns:** [`java.util.Map<K,java.util.SortedSet<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.SortedSet<V>>`
 
-Returns {@link SortedSetMultimap#asMap multimap.asMap()}, with its type corrected from {@code
- Map<K, Collection<V>>} to {@code Map<K, SortedSet<V>>}.
-@since 15.0
+Returns `SortedSetMultimap.asMap multimap.asMap()`, with its type corrected from `Map<K, Collection<V>>` to `Map<K, SortedSet<V>>`.
+**Since:** 15.0
 
 ### `asMap([`com.google.common.collect.Multimap<K,V>`](./Multimap.md) multimap)`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-Returns {@link Multimap#asMap multimap.asMap()}. This is provided for parity with the other
- more strongly-typed {@code asMap()} implementations.
-@since 15.0
+Returns `Multimap.asMap multimap.asMap()`. This is provided for parity with the other
+ more strongly-typed `asMap()` implementations.
+**Since:** 15.0
 
-### `forMap([`java.util.Map<K,V>`](../../../../java/util/Map.md) map)`
+### `forMap(`java.util.Map<K,V>` map)`
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
 Returns a multimap view of the specified map. The multimap is backed by the map, so changes to
  the map are reflected in the multimap, and vice versa. If the map is modified while an
  iteration over one of the multimap's collection views is in progress (except through the
- iterator's own {@code remove} operation, or through the {@code setValue} operation on a map
+ iterator's own `remove` operation, or through the `setValue` operation on a map
  entry returned by the iterator), the results of the iteration are undefined.
 
  <p>The multimap supports mapping removal, which removes the corresponding mapping from the map.
- It does not support any operations which might add mappings, such as {@code put}, {@code
- putAll} or {@code replaceValues}.
+ It does not support any operations which might add mappings, such as `put`, `putAll` or `replaceValues`.
 
  <p>The returned multimap will be serializable if the specified map is serializable.
 @param map the backing map for the returned multimap view
@@ -445,20 +427,19 @@ Returns a multimap view of the specified map. The multimap is backed by the map,
 Returns a view of a multimap where each value is transformed by a function. All other
  properties of the multimap, such as iteration order, are left intact. For example, the code:
 
- <pre>{@code
- Multimap<String, Integer> multimap =
+ <pre>`Multimap<String, Integer> multimap =
      ImmutableSetMultimap.of("a", 2, "b", -3, "b", -3, "a", 4, "c", 6);
  Function<Integer, String> square = new Function<Integer, String>() {
      public String apply(Integer in) {
        return Integer.toString(in * in);
-     }
+     `
  };
  Multimap<String, String> transformed =
      Multimaps.transformValues(multimap, square);
    System.out.println(transformed);
  }</pre>
 
- ... prints {@code {a=[4, 16], b=[9, 9], c=[36]}}.
+ ... prints `{a=[4, 16], b=[9, 9], c=[36]`}.
 
  <p>Changes in the underlying multimap are reflected in this view. Conversely, this view
  supports removal operations, and these are reflected in the underlying multimap.
@@ -468,42 +449,41 @@ Returns a view of a multimap where each value is transformed by a function. All 
  contain null values, if the function sometimes gives a null result.
 
  <p>The returned multimap is not thread-safe or serializable, even if the underlying multimap
- is. The {@code equals} and {@code hashCode} methods of the returned multimap are meaningless,
- since there is not a definition of {@code equals} or {@code hashCode} for general collections,
- and {@code get()} will return a general {@code Collection} as opposed to a {@code List} or a
- {@code Set}.
+ is. The `equals` and `hashCode` methods of the returned multimap are meaningless,
+ since there is not a definition of `equals` or `hashCode` for general collections,
+ and `get()` will return a general `Collection` as opposed to a `List` or a
+ `Set`.
 
  <p>The function is applied lazily, invoked when needed. This is necessary for the returned
  multimap to be a view, but it means that the function will be applied many times for bulk
- operations like {@link Multimap#containsValue} and {@code Multimap.toString()}. For this to
- perform well, {@code function} should be fast. To avoid lazy evaluation when the returned
+ operations like `Multimap.containsValue` and `Multimap.toString()`. For this to
+ perform well, `function` should be fast. To avoid lazy evaluation when the returned
  multimap doesn't need to be a view, copy the returned multimap into a new multimap of your
  choosing.
-@since 7.0
+**Since:** 7.0
 
 ### `transformValues([`com.google.common.collect.ListMultimap<K,V1>`](./ListMultimap.md) fromMultimap, [`com.google.common.base.Function<? super V1,V2>`](../base/Function.md) function)`
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V2>`](./ListMultimap.md)
 
-Returns a view of a {@code ListMultimap} where each value is transformed by a function. All
+Returns a view of a `ListMultimap` where each value is transformed by a function. All
  other properties of the multimap, such as iteration order, are left intact. For example, the
  code:
 
- <pre>{@code
- ListMultimap<String, Integer> multimap
+ <pre>`ListMultimap<String, Integer> multimap
       = ImmutableListMultimap.of("a", 4, "a", 16, "b", 9);
  Function<Integer, Double> sqrt =
      new Function<Integer, Double>() {
        public Double apply(Integer in) {
          return Math.sqrt((int) in);
-       }
+       `
      };
  ListMultimap<String, Double> transformed = Multimaps.transformValues(map,
      sqrt);
  System.out.println(transformed);
  }</pre>
 
- ... prints {@code {a=[2.0, 4.0], b=[3.0]}}.
+ ... prints `{a=[2.0, 4.0], b=[3.0]`}.
 
  <p>Changes in the underlying multimap are reflected in this view. Conversely, this view
  supports removal operations, and these are reflected in the underlying multimap.
@@ -517,38 +497,37 @@ Returns a view of a {@code ListMultimap} where each value is transformed by a fu
 
  <p>The function is applied lazily, invoked when needed. This is necessary for the returned
  multimap to be a view, but it means that the function will be applied many times for bulk
- operations like {@link Multimap#containsValue} and {@code Multimap.toString()}. For this to
- perform well, {@code function} should be fast. To avoid lazy evaluation when the returned
+ operations like `Multimap.containsValue` and `Multimap.toString()`. For this to
+ perform well, `function` should be fast. To avoid lazy evaluation when the returned
  multimap doesn't need to be a view, copy the returned multimap into a new multimap of your
  choosing.
-@since 7.0
+**Since:** 7.0
 
 ### `transformEntries([`com.google.common.collect.Multimap<K,V1>`](./Multimap.md) fromMap, [`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`](Maps/EntryTransformer.md) transformer)`
 
 **Returns:** [`com.google.common.collect.Multimap<K,V2>`](./Multimap.md)
 
 Returns a view of a multimap whose values are derived from the original multimap's entries. In
- contrast to {@link #transformValues}, this method's entry-transformation logic may depend on
+ contrast to `transformValues`, this method's entry-transformation logic may depend on
  the key as well as the value.
 
  <p>All other properties of the transformed multimap, such as iteration order, are left intact.
  For example, the code:
 
- <pre>{@code
- SetMultimap<String, Integer> multimap =
+ <pre>`SetMultimap<String, Integer> multimap =
      ImmutableSetMultimap.of("a", 1, "a", 4, "b", -6);
  EntryTransformer<String, Integer, String> transformer =
      new EntryTransformer<String, Integer, String>() {
        public String transformEntry(String key, Integer value) {
           return (value >= 0) ? key : "no" + key;
-       }
+       `
      };
  Multimap<String, String> transformed =
      Multimaps.transformEntries(multimap, transformer);
  System.out.println(transformed);
  }</pre>
 
- ... prints {@code {a=[a, a], b=[nob]}}.
+ ... prints `{a=[a, a], b=[nob]`}.
 
  <p>Changes in the underlying multimap are reflected in this view. Conversely, this view
  supports removal operations, and these are reflected in the underlying multimap.
@@ -558,50 +537,48 @@ Returns a view of a multimap whose values are derived from the original multimap
  contain null values if the transformer sometimes gives a null result.
 
  <p>The returned multimap is not thread-safe or serializable, even if the underlying multimap
- is. The {@code equals} and {@code hashCode} methods of the returned multimap are meaningless,
- since there is not a definition of {@code equals} or {@code hashCode} for general collections,
- and {@code get()} will return a general {@code Collection} as opposed to a {@code List} or a
- {@code Set}.
+ is. The `equals` and `hashCode` methods of the returned multimap are meaningless,
+ since there is not a definition of `equals` or `hashCode` for general collections,
+ and `get()` will return a general `Collection` as opposed to a `List` or a
+ `Set`.
 
  <p>The transformer is applied lazily, invoked when needed. This is necessary for the returned
  multimap to be a view, but it means that the transformer will be applied many times for bulk
- operations like {@link Multimap#containsValue} and {@link Object#toString}. For this to perform
- well, {@code transformer} should be fast. To avoid lazy evaluation when the returned multimap
+ operations like `Multimap.containsValue` and `Object.toString`. For this to perform
+ well, `transformer` should be fast. To avoid lazy evaluation when the returned multimap
  doesn't need to be a view, copy the returned multimap into a new multimap of your choosing.
 
- <p><b>Warning:</b> This method assumes that for any instance {@code k} of {@code
- EntryTransformer} key type {@code K}, {@code k.equals(k2)} implies that {@code k2} is also of
- type {@code K}. Using an {@code EntryTransformer} key type for which this may not hold, such as
- {@code ArrayList}, may risk a {@code ClassCastException} when calling methods on the
+ <p><b>Warning:</b> This method assumes that for any instance `k` of `EntryTransformer` key type `K`, `k.equals(k2)` implies that `k2` is also of
+ type `K`. Using an `EntryTransformer` key type for which this may not hold, such as
+ `ArrayList`, may risk a `ClassCastException` when calling methods on the
  transformed multimap.
-@since 7.0
+**Since:** 7.0
 
 ### `transformEntries([`com.google.common.collect.ListMultimap<K,V1>`](./ListMultimap.md) fromMap, [`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`](Maps/EntryTransformer.md) transformer)`
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V2>`](./ListMultimap.md)
 
-Returns a view of a {@code ListMultimap} whose values are derived from the original multimap's
- entries. In contrast to {@link #transformValues(ListMultimap, Function)}, this method's
+Returns a view of a `ListMultimap` whose values are derived from the original multimap's
+ entries. In contrast to `transformValues(ListMultimap, Function)`, this method's
  entry-transformation logic may depend on the key as well as the value.
 
  <p>All other properties of the transformed multimap, such as iteration order, are left intact.
  For example, the code:
 
- <pre>{@code
- Multimap<String, Integer> multimap =
+ <pre>`Multimap<String, Integer> multimap =
      ImmutableMultimap.of("a", 1, "a", 4, "b", 6);
  EntryTransformer<String, Integer, String> transformer =
      new EntryTransformer<String, Integer, String>() {
        public String transformEntry(String key, Integer value) {
          return key + value;
-       }
+       `
      };
  Multimap<String, String> transformed =
      Multimaps.transformEntries(multimap, transformer);
  System.out.println(transformed);
  }</pre>
 
- ... prints {@code {"a"=["a1", "a4"], "b"=["b6"]}}.
+ ... prints `{"a"=["a1", "a4"], "b"=["b6"]`}.
 
  <p>Changes in the underlying multimap are reflected in this view. Conversely, this view
  supports removal operations, and these are reflected in the underlying multimap.
@@ -615,23 +592,22 @@ Returns a view of a {@code ListMultimap} whose values are derived from the origi
 
  <p>The transformer is applied lazily, invoked when needed. This is necessary for the returned
  multimap to be a view, but it means that the transformer will be applied many times for bulk
- operations like {@link Multimap#containsValue} and {@link Object#toString}. For this to perform
- well, {@code transformer} should be fast. To avoid lazy evaluation when the returned multimap
+ operations like `Multimap.containsValue` and `Object.toString`. For this to perform
+ well, `transformer` should be fast. To avoid lazy evaluation when the returned multimap
  doesn't need to be a view, copy the returned multimap into a new multimap of your choosing.
 
- <p><b>Warning:</b> This method assumes that for any instance {@code k} of {@code
- EntryTransformer} key type {@code K}, {@code k.equals(k2)} implies that {@code k2} is also of
- type {@code K}. Using an {@code EntryTransformer} key type for which this may not hold, such as
- {@code ArrayList}, may risk a {@code ClassCastException} when calling methods on the
+ <p><b>Warning:</b> This method assumes that for any instance `k` of `EntryTransformer` key type `K`, `k.equals(k2)` implies that `k2` is also of
+ type `K`. Using an `EntryTransformer` key type for which this may not hold, such as
+ `ArrayList`, may risk a `ClassCastException` when calling methods on the
  transformed multimap.
-@since 7.0
+**Since:** 7.0
 
 ### `index(`java.lang.Iterable<V>` values, [`com.google.common.base.Function<? super V,K>`](../base/Function.md) keyFunction)`
 
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
 
-Creates an index {@code ImmutableListMultimap} that contains the results of applying a
- specified function to each item in an {@code Iterable} of values. Each value will be stored as
+Creates an index `ImmutableListMultimap` that contains the results of applying a
+ specified function to each item in an `Iterable` of values. Each value will be stored as
  a value in the resulting multimap, yielding a multimap with the same size as the input
  iterable. The key used to store that value in the multimap will be the result of calling the
  function on that value. The resulting multimap is created as an immutable snapshot. In the
@@ -640,35 +616,31 @@ Creates an index {@code ImmutableListMultimap} that contains the results of appl
 
  <p>For example,
 
- <pre>{@code
- List<String> badGuys =
+ <pre>`List<String> badGuys =
      Arrays.asList("Inky", "Blinky", "Pinky", "Pinky", "Clyde");
  Function<String, Integer> stringLengthFunction = ...;
  Multimap<Integer, String> index =
      Multimaps.index(badGuys, stringLengthFunction);
  System.out.println(index);
- }</pre>
+ `</pre>
 
  <p>prints
 
- <pre>{@code
- {4=[Inky], 6=[Blinky], 5=[Pinky, Pinky, Clyde]}
+ <pre>`{4=[Inky], 6=[Blinky], 5=[Pinky, Pinky, Clyde]`
  }</pre>
 
  <p>The returned multimap is serializable if its keys and values are all serializable.
-@param values the values to use when constructing the {@code ImmutableListMultimap}
+@param values the values to use when constructing the `ImmutableListMultimap`
 @param keyFunction the function used to produce the key for each value
-@return {@code ImmutableListMultimap} mapping the result of evaluating the function {@code
-     keyFunction} on each value in the input collection to that value
-@throws NullPointerException if any element of {@code values} is {@code null}, or if {@code
-     keyFunction} produces {@code null} for any key
+@return `ImmutableListMultimap` mapping the result of evaluating the function `keyFunction` on each value in the input collection to that value
+@throws NullPointerException if any element of `values` is `null`, or if `keyFunction` produces `null` for any key
 
-### `index([`java.util.Iterator<V>`](../../../../java/util/Iterator.md) values, [`com.google.common.base.Function<? super V,K>`](../base/Function.md) keyFunction)`
+### `index(`java.util.Iterator<V>` values, [`com.google.common.base.Function<? super V,K>`](../base/Function.md) keyFunction)`
 
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
 
-Creates an index {@code ImmutableListMultimap} that contains the results of applying a
- specified function to each item in an {@code Iterator} of values. Each value will be stored as
+Creates an index `ImmutableListMultimap` that contains the results of applying a
+ specified function to each item in an `Iterator` of values. Each value will be stored as
  a value in the resulting multimap, yielding a multimap with the same size as the input
  iterator. The key used to store that value in the multimap will be the result of calling the
  function on that value. The resulting multimap is created as an immutable snapshot. In the
@@ -677,228 +649,212 @@ Creates an index {@code ImmutableListMultimap} that contains the results of appl
 
  <p>For example,
 
- <pre>{@code
- List<String> badGuys =
+ <pre>`List<String> badGuys =
      Arrays.asList("Inky", "Blinky", "Pinky", "Pinky", "Clyde");
  Function<String, Integer> stringLengthFunction = ...;
  Multimap<Integer, String> index =
      Multimaps.index(badGuys.iterator(), stringLengthFunction);
  System.out.println(index);
- }</pre>
+ `</pre>
 
  <p>prints
 
- <pre>{@code
- {4=[Inky], 6=[Blinky], 5=[Pinky, Pinky, Clyde]}
+ <pre>`{4=[Inky], 6=[Blinky], 5=[Pinky, Pinky, Clyde]`
  }</pre>
 
  <p>The returned multimap is serializable if its keys and values are all serializable.
-@param values the values to use when constructing the {@code ImmutableListMultimap}
+@param values the values to use when constructing the `ImmutableListMultimap`
 @param keyFunction the function used to produce the key for each value
-@return {@code ImmutableListMultimap} mapping the result of evaluating the function {@code
-     keyFunction} on each value in the input collection to that value
-@throws NullPointerException if any element of {@code values} is {@code null}, or if {@code
-     keyFunction} produces {@code null} for any key
-@since 10.0
+@return `ImmutableListMultimap` mapping the result of evaluating the function `keyFunction` on each value in the input collection to that value
+@throws NullPointerException if any element of `values` is `null`, or if `keyFunction` produces `null` for any key
+**Since:** 10.0
 
 ### `filterKeys([`com.google.common.collect.Multimap<K,V>`](./Multimap.md) unfiltered, [`com.google.common.base.Predicate<? super K>`](../base/Predicate.md) keyPredicate)`
 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-Returns a multimap containing the mappings in {@code unfiltered} whose keys satisfy a
- predicate. The returned multimap is a live view of {@code unfiltered}; changes to one affect
+Returns a multimap containing the mappings in `unfiltered` whose keys satisfy a
+ predicate. The returned multimap is a live view of `unfiltered`; changes to one affect
  the other.
 
- <p>The resulting multimap's views have iterators that don't support {@code remove()}, but all
+ <p>The resulting multimap's views have iterators that don't support `remove()`, but all
  other methods are supported by the multimap and its views. When adding a key that doesn't
- satisfy the predicate, the multimap's {@code put()}, {@code putAll()}, and {@code
- replaceValues()} methods throw an {@link IllegalArgumentException}.
+ satisfy the predicate, the multimap's `put()`, `putAll()`, and `replaceValues()` methods throw an `IllegalArgumentException`.
 
- <p>When methods such as {@code removeAll()} and {@code clear()} are called on the filtered
+ <p>When methods such as `removeAll()` and `clear()` are called on the filtered
  multimap or its views, only mappings whose keys satisfy the filter will be removed from the
  underlying multimap.
 
- <p>The returned multimap isn't threadsafe or serializable, even if {@code unfiltered} is.
+ <p>The returned multimap isn't threadsafe or serializable, even if `unfiltered` is.
 
- <p>Many of the filtered multimap's methods, such as {@code size()}, iterate across every
+ <p>Many of the filtered multimap's methods, such as `size()`, iterate across every
  key/value mapping in the underlying multimap and determine which satisfy the filter. When a
  live view is <i>not</i> needed, it may be faster to copy the filtered multimap and use the
  copy.
 
- <p><b>Warning:</b> {@code keyPredicate} must be <i>consistent with equals</i>, as documented at
- {@link Predicate#apply}. Do not provide a predicate such as {@code
- Predicates.instanceOf(ArrayList.class)}, which is inconsistent with equals.
-@since 11.0
+ <p><b>Warning:</b> `keyPredicate` must be <i>consistent with equals</i>, as documented at
+ `Predicate.apply`. Do not provide a predicate such as `Predicates.instanceOf(ArrayList.class)`, which is inconsistent with equals.
+**Since:** 11.0
 
 ### `filterKeys([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md) unfiltered, [`com.google.common.base.Predicate<? super K>`](../base/Predicate.md) keyPredicate)`
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-Returns a multimap containing the mappings in {@code unfiltered} whose keys satisfy a
- predicate. The returned multimap is a live view of {@code unfiltered}; changes to one affect
+Returns a multimap containing the mappings in `unfiltered` whose keys satisfy a
+ predicate. The returned multimap is a live view of `unfiltered`; changes to one affect
  the other.
 
- <p>The resulting multimap's views have iterators that don't support {@code remove()}, but all
+ <p>The resulting multimap's views have iterators that don't support `remove()`, but all
  other methods are supported by the multimap and its views. When adding a key that doesn't
- satisfy the predicate, the multimap's {@code put()}, {@code putAll()}, and {@code
- replaceValues()} methods throw an {@link IllegalArgumentException}.
+ satisfy the predicate, the multimap's `put()`, `putAll()`, and `replaceValues()` methods throw an `IllegalArgumentException`.
 
- <p>When methods such as {@code removeAll()} and {@code clear()} are called on the filtered
+ <p>When methods such as `removeAll()` and `clear()` are called on the filtered
  multimap or its views, only mappings whose keys satisfy the filter will be removed from the
  underlying multimap.
 
- <p>The returned multimap isn't threadsafe or serializable, even if {@code unfiltered} is.
+ <p>The returned multimap isn't threadsafe or serializable, even if `unfiltered` is.
 
- <p>Many of the filtered multimap's methods, such as {@code size()}, iterate across every
+ <p>Many of the filtered multimap's methods, such as `size()`, iterate across every
  key/value mapping in the underlying multimap and determine which satisfy the filter. When a
  live view is <i>not</i> needed, it may be faster to copy the filtered multimap and use the
  copy.
 
- <p><b>Warning:</b> {@code keyPredicate} must be <i>consistent with equals</i>, as documented at
- {@link Predicate#apply}. Do not provide a predicate such as {@code
- Predicates.instanceOf(ArrayList.class)}, which is inconsistent with equals.
-@since 14.0
+ <p><b>Warning:</b> `keyPredicate` must be <i>consistent with equals</i>, as documented at
+ `Predicate.apply`. Do not provide a predicate such as `Predicates.instanceOf(ArrayList.class)`, which is inconsistent with equals.
+**Since:** 14.0
 
 ### `filterKeys([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md) unfiltered, [`com.google.common.base.Predicate<? super K>`](../base/Predicate.md) keyPredicate)`
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-Returns a multimap containing the mappings in {@code unfiltered} whose keys satisfy a
- predicate. The returned multimap is a live view of {@code unfiltered}; changes to one affect
+Returns a multimap containing the mappings in `unfiltered` whose keys satisfy a
+ predicate. The returned multimap is a live view of `unfiltered`; changes to one affect
  the other.
 
- <p>The resulting multimap's views have iterators that don't support {@code remove()}, but all
+ <p>The resulting multimap's views have iterators that don't support `remove()`, but all
  other methods are supported by the multimap and its views. When adding a key that doesn't
- satisfy the predicate, the multimap's {@code put()}, {@code putAll()}, and {@code
- replaceValues()} methods throw an {@link IllegalArgumentException}.
+ satisfy the predicate, the multimap's `put()`, `putAll()`, and `replaceValues()` methods throw an `IllegalArgumentException`.
 
- <p>When methods such as {@code removeAll()} and {@code clear()} are called on the filtered
+ <p>When methods such as `removeAll()` and `clear()` are called on the filtered
  multimap or its views, only mappings whose keys satisfy the filter will be removed from the
  underlying multimap.
 
- <p>The returned multimap isn't threadsafe or serializable, even if {@code unfiltered} is.
+ <p>The returned multimap isn't threadsafe or serializable, even if `unfiltered` is.
 
- <p>Many of the filtered multimap's methods, such as {@code size()}, iterate across every
+ <p>Many of the filtered multimap's methods, such as `size()`, iterate across every
  key/value mapping in the underlying multimap and determine which satisfy the filter. When a
  live view is <i>not</i> needed, it may be faster to copy the filtered multimap and use the
  copy.
 
- <p><b>Warning:</b> {@code keyPredicate} must be <i>consistent with equals</i>, as documented at
- {@link Predicate#apply}. Do not provide a predicate such as {@code
- Predicates.instanceOf(ArrayList.class)}, which is inconsistent with equals.
-@since 14.0
+ <p><b>Warning:</b> `keyPredicate` must be <i>consistent with equals</i>, as documented at
+ `Predicate.apply`. Do not provide a predicate such as `Predicates.instanceOf(ArrayList.class)`, which is inconsistent with equals.
+**Since:** 14.0
 
 ### `filterValues([`com.google.common.collect.Multimap<K,V>`](./Multimap.md) unfiltered, [`com.google.common.base.Predicate<? super V>`](../base/Predicate.md) valuePredicate)`
 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-Returns a multimap containing the mappings in {@code unfiltered} whose values satisfy a
- predicate. The returned multimap is a live view of {@code unfiltered}; changes to one affect
+Returns a multimap containing the mappings in `unfiltered` whose values satisfy a
+ predicate. The returned multimap is a live view of `unfiltered`; changes to one affect
  the other.
 
- <p>The resulting multimap's views have iterators that don't support {@code remove()}, but all
+ <p>The resulting multimap's views have iterators that don't support `remove()`, but all
  other methods are supported by the multimap and its views. When adding a value that doesn't
- satisfy the predicate, the multimap's {@code put()}, {@code putAll()}, and {@code
- replaceValues()} methods throw an {@link IllegalArgumentException}.
+ satisfy the predicate, the multimap's `put()`, `putAll()`, and `replaceValues()` methods throw an `IllegalArgumentException`.
 
- <p>When methods such as {@code removeAll()} and {@code clear()} are called on the filtered
+ <p>When methods such as `removeAll()` and `clear()` are called on the filtered
  multimap or its views, only mappings whose value satisfy the filter will be removed from the
  underlying multimap.
 
- <p>The returned multimap isn't threadsafe or serializable, even if {@code unfiltered} is.
+ <p>The returned multimap isn't threadsafe or serializable, even if `unfiltered` is.
 
- <p>Many of the filtered multimap's methods, such as {@code size()}, iterate across every
+ <p>Many of the filtered multimap's methods, such as `size()`, iterate across every
  key/value mapping in the underlying multimap and determine which satisfy the filter. When a
  live view is <i>not</i> needed, it may be faster to copy the filtered multimap and use the
  copy.
 
- <p><b>Warning:</b> {@code valuePredicate} must be <i>consistent with equals</i>, as documented
- at {@link Predicate#apply}. Do not provide a predicate such as {@code
- Predicates.instanceOf(ArrayList.class)}, which is inconsistent with equals.
-@since 11.0
+ <p><b>Warning:</b> `valuePredicate` must be <i>consistent with equals</i>, as documented
+ at `Predicate.apply`. Do not provide a predicate such as `Predicates.instanceOf(ArrayList.class)`, which is inconsistent with equals.
+**Since:** 11.0
 
 ### `filterValues([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md) unfiltered, [`com.google.common.base.Predicate<? super V>`](../base/Predicate.md) valuePredicate)`
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-Returns a multimap containing the mappings in {@code unfiltered} whose values satisfy a
- predicate. The returned multimap is a live view of {@code unfiltered}; changes to one affect
+Returns a multimap containing the mappings in `unfiltered` whose values satisfy a
+ predicate. The returned multimap is a live view of `unfiltered`; changes to one affect
  the other.
 
- <p>The resulting multimap's views have iterators that don't support {@code remove()}, but all
+ <p>The resulting multimap's views have iterators that don't support `remove()`, but all
  other methods are supported by the multimap and its views. When adding a value that doesn't
- satisfy the predicate, the multimap's {@code put()}, {@code putAll()}, and {@code
- replaceValues()} methods throw an {@link IllegalArgumentException}.
+ satisfy the predicate, the multimap's `put()`, `putAll()`, and `replaceValues()` methods throw an `IllegalArgumentException`.
 
- <p>When methods such as {@code removeAll()} and {@code clear()} are called on the filtered
+ <p>When methods such as `removeAll()` and `clear()` are called on the filtered
  multimap or its views, only mappings whose value satisfy the filter will be removed from the
  underlying multimap.
 
- <p>The returned multimap isn't threadsafe or serializable, even if {@code unfiltered} is.
+ <p>The returned multimap isn't threadsafe or serializable, even if `unfiltered` is.
 
- <p>Many of the filtered multimap's methods, such as {@code size()}, iterate across every
+ <p>Many of the filtered multimap's methods, such as `size()`, iterate across every
  key/value mapping in the underlying multimap and determine which satisfy the filter. When a
  live view is <i>not</i> needed, it may be faster to copy the filtered multimap and use the
  copy.
 
- <p><b>Warning:</b> {@code valuePredicate} must be <i>consistent with equals</i>, as documented
- at {@link Predicate#apply}. Do not provide a predicate such as {@code
- Predicates.instanceOf(ArrayList.class)}, which is inconsistent with equals.
-@since 14.0
+ <p><b>Warning:</b> `valuePredicate` must be <i>consistent with equals</i>, as documented
+ at `Predicate.apply`. Do not provide a predicate such as `Predicates.instanceOf(ArrayList.class)`, which is inconsistent with equals.
+**Since:** 14.0
 
 ### `filterEntries([`com.google.common.collect.Multimap<K,V>`](./Multimap.md) unfiltered, [`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate>.md) entryPredicate)`
 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-Returns a multimap containing the mappings in {@code unfiltered} that satisfy a predicate. The
- returned multimap is a live view of {@code unfiltered}; changes to one affect the other.
+Returns a multimap containing the mappings in `unfiltered` that satisfy a predicate. The
+ returned multimap is a live view of `unfiltered`; changes to one affect the other.
 
- <p>The resulting multimap's views have iterators that don't support {@code remove()}, but all
+ <p>The resulting multimap's views have iterators that don't support `remove()`, but all
  other methods are supported by the multimap and its views. When adding a key/value pair that
- doesn't satisfy the predicate, multimap's {@code put()}, {@code putAll()}, and {@code
- replaceValues()} methods throw an {@link IllegalArgumentException}.
+ doesn't satisfy the predicate, multimap's `put()`, `putAll()`, and `replaceValues()` methods throw an `IllegalArgumentException`.
 
- <p>When methods such as {@code removeAll()} and {@code clear()} are called on the filtered
+ <p>When methods such as `removeAll()` and `clear()` are called on the filtered
  multimap or its views, only mappings whose keys satisfy the filter will be removed from the
  underlying multimap.
 
- <p>The returned multimap isn't threadsafe or serializable, even if {@code unfiltered} is.
+ <p>The returned multimap isn't threadsafe or serializable, even if `unfiltered` is.
 
- <p>Many of the filtered multimap's methods, such as {@code size()}, iterate across every
+ <p>Many of the filtered multimap's methods, such as `size()`, iterate across every
  key/value mapping in the underlying multimap and determine which satisfy the filter. When a
  live view is <i>not</i> needed, it may be faster to copy the filtered multimap and use the
  copy.
 
- <p><b>Warning:</b> {@code entryPredicate} must be <i>consistent with equals</i>, as documented
- at {@link Predicate#apply}.
-@since 11.0
+ <p><b>Warning:</b> `entryPredicate` must be <i>consistent with equals</i>, as documented
+ at `Predicate.apply`.
+**Since:** 11.0
 
 ### `filterEntries([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md) unfiltered, [`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate>.md) entryPredicate)`
 
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-Returns a multimap containing the mappings in {@code unfiltered} that satisfy a predicate. The
- returned multimap is a live view of {@code unfiltered}; changes to one affect the other.
+Returns a multimap containing the mappings in `unfiltered` that satisfy a predicate. The
+ returned multimap is a live view of `unfiltered`; changes to one affect the other.
 
- <p>The resulting multimap's views have iterators that don't support {@code remove()}, but all
+ <p>The resulting multimap's views have iterators that don't support `remove()`, but all
  other methods are supported by the multimap and its views. When adding a key/value pair that
- doesn't satisfy the predicate, multimap's {@code put()}, {@code putAll()}, and {@code
- replaceValues()} methods throw an {@link IllegalArgumentException}.
+ doesn't satisfy the predicate, multimap's `put()`, `putAll()`, and `replaceValues()` methods throw an `IllegalArgumentException`.
 
- <p>When methods such as {@code removeAll()} and {@code clear()} are called on the filtered
+ <p>When methods such as `removeAll()` and `clear()` are called on the filtered
  multimap or its views, only mappings whose keys satisfy the filter will be removed from the
  underlying multimap.
 
- <p>The returned multimap isn't threadsafe or serializable, even if {@code unfiltered} is.
+ <p>The returned multimap isn't threadsafe or serializable, even if `unfiltered` is.
 
- <p>Many of the filtered multimap's methods, such as {@code size()}, iterate across every
+ <p>Many of the filtered multimap's methods, such as `size()`, iterate across every
  key/value mapping in the underlying multimap and determine which satisfy the filter. When a
  live view is <i>not</i> needed, it may be faster to copy the filtered multimap and use the
  copy.
 
- <p><b>Warning:</b> {@code entryPredicate} must be <i>consistent with equals</i>, as documented
- at {@link Predicate#apply}.
-@since 14.0
+ <p><b>Warning:</b> `entryPredicate` must be <i>consistent with equals</i>, as documented
+ at `Predicate.apply`.
+**Since:** 14.0
 
 ### `filterFiltered([`com.google.common.collect.FilteredMultimap<K,V>`](./FilteredMultimap.md) multimap, [`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate>.md) entryPredicate)`
 

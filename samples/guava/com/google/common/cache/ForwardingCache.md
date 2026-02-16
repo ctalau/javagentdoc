@@ -17,8 +17,8 @@
 
 A cache which forwards all its method calls to another cache. Subclasses should override one or
  more methods to modify the behavior of the backing cache as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
-@author Charles Fry
-@since 10.0
+**Author:** Charles Fry
+**Since:** 10.0
 
 ## Constructors
 
@@ -34,33 +34,33 @@ Constructor for use by subclasses.
 
 ### `getIfPresent(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-@since 11.0
+**Since:** 11.0
 
-### `get([`K`](K.md) key, [`java.util.concurrent.Callable<? extends V>`](../../../../java/util/concurrent/Callable.md) valueLoader)`
+### `get(`K` key, `java.util.concurrent.Callable<? extends V>` valueLoader)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-@since 11.0
+**Since:** 11.0
 
 ### `getAllPresent(`java.lang.Iterable<? extends java.lang.Object>` keys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-@since 11.0
+**Since:** 11.0
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
-
-**Returns:** `void`
-
-@since 11.0
-
-### `putAll([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) m)`
+### `put(`K` key, `V` value)`
 
 **Returns:** `void`
 
-@since 12.0
+**Since:** 11.0
+
+### `putAll(`java.util.Map<? extends K,? extends V>` m)`
+
+**Returns:** `void`
+
+**Since:** 12.0
 
 ### `invalidate(`java.lang.Object` key)`
 
@@ -70,7 +70,7 @@ Constructor for use by subclasses.
 
 **Returns:** `void`
 
-@since 11.0
+**Since:** 11.0
 
 ### `invalidateAll()`
 
@@ -86,7 +86,7 @@ Constructor for use by subclasses.
 
 ### `asMap()`
 
-**Returns:** [`java.util.concurrent.ConcurrentMap<K,V>`](../../../../java/util/concurrent/ConcurrentMap.md)
+**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
 ### `cleanUp()`
 

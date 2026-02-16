@@ -6,13 +6,13 @@
 
 ## Description
 
-{@code Escaper} instances suitable for strings to be included in particular sections of URLs.
+`Escaper` instances suitable for strings to be included in particular sections of URLs.
 
  <p>If the resulting URLs are inserted into an HTML or XML document, they will require additional
- escaping with {@link com.google.common.html.HtmlEscapers} or {@link com.google.common.xml.XmlEscapers}.
-@author David Beaumont
-@author Chris Povirk
-@since 15.0
+ escaping with `com.google.common.html.HtmlEscapers` or `com.google.common.xml.XmlEscapers`.
+**Author:** David Beaumont
+**Author:** Chris Povirk
+**Since:** 15.0
 
 ## Fields
 
@@ -46,7 +46,7 @@
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an {@link Escaper} instance that escapes strings so they can be safely included in <a href="https://goo.gl/MplK6I">URL form parameter names and values</a>. Escaping is performed
+Returns an `Escaper` instance that escapes strings so they can be safely included in <a href="https://goo.gl/MplK6I">URL form parameter names and values</a>. Escaping is performed
  with the UTF-8 character encoding. The caller is responsible for <a href="https://goo.gl/9EfkM1">replacing any unpaired carriage return or line feed characters
  with a CR+LF pair</a> on any non-file inputs before escaping them with this escaper.
 
@@ -72,7 +72,7 @@ Returns an {@link Escaper} instance that escapes strings so they can be safely i
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an {@link Escaper} instance that escapes strings so they can be safely included in <a href="https://goo.gl/m2MIf0">URL path segments</a>. The returned escaper escapes all non-ASCII
+Returns an `Escaper` instance that escapes strings so they can be safely included in <a href="https://goo.gl/m2MIf0">URL path segments</a>. The returned escaper escapes all non-ASCII
  characters, even though <a href="https://goo.gl/e7E0In">many of these are accepted in modern
  URLs</a>. (<a href="https://goo.gl/jfVxXW">If the escaper were to leave these characters
  unescaped, they would be escaped by the consumer at parse time, anyway.</a>) Additionally, the
@@ -102,7 +102,7 @@ Returns an {@link Escaper} instance that escapes strings so they can be safely i
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an {@link Escaper} instance that escapes strings so they can be safely included in a <a href="https://goo.gl/xXEq4p">URL fragment</a>. The returned escaper escapes all non-ASCII
+Returns an `Escaper` instance that escapes strings so they can be safely included in a <a href="https://goo.gl/xXEq4p">URL fragment</a>. The returned escaper escapes all non-ASCII
  characters, even though <a href="https://goo.gl/e7E0In">many of these are accepted in modern
  URLs</a>.
 

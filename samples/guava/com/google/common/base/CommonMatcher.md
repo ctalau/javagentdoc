@@ -6,8 +6,8 @@
 
 ## Description
 
-The subset of the {@link java.util.regex.Matcher} API which is used by this package, and also
- shared with the {@code re2j} library. For internal use only. Please refer to the {@code Matcher}
+The subset of the `java.util.regex.Matcher` API which is used by this package, and also
+ shared with the `re2j` library. For internal use only. Please refer to the `Matcher`
  javadoc for details.
 
 ## Constructors

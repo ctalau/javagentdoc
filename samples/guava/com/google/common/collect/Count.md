@@ -4,12 +4,12 @@
 
 **Fully Qualified Name:** `com.google.common.collect.Count`
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
-A mutable value of type {@code int}, for multisets to use in tracking counts of values.
-@author Louis Wasserman
+A mutable value of type `int`, for multisets to use in tracking counts of values.
+**Author:** Louis Wasserman
 
 ## Fields
 

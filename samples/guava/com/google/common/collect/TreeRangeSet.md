@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.AbstractRangeSet<C>`](./AbstractRangeSet.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -14,23 +14,23 @@
 
 ## Description
 
-An implementation of {@link RangeSet} backed by a {@link TreeMap}.
-@author Louis Wasserman
-@since 14.0
+An implementation of `RangeSet` backed by a `TreeMap`.
+**Author:** Louis Wasserman
+**Since:** 14.0
 
 ## Fields
 
 ### `rangesByLowerBound`
 
-**Type:** [`java.util.NavigableMap<com.google.common.collect.Cut<C>,com.google.common.collect.Range<C>>`](../../../../java/util/NavigableMap,com/google/common/collect/Range>.md)
+**Type:** `java.util.NavigableMap<com.google.common.collect.Cut<C>,com.google.common.collect.Range<C>>`
 
 ### `asRanges`
 
-**Type:** [`java.util.Set<com.google.common.collect.Range<C>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<com.google.common.collect.Range<C>>`
 
 ### `asDescendingSetOfRanges`
 
-**Type:** [`java.util.Set<com.google.common.collect.Range<C>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<com.google.common.collect.Range<C>>`
 
 ### `complement`
 
@@ -38,7 +38,7 @@ An implementation of {@link RangeSet} backed by a {@link TreeMap}.
 
 ## Constructors
 
-### `<init>([`java.util.NavigableMap<com.google.common.collect.Cut<C>,com.google.common.collect.Range<C>>`](../../../../java/util/NavigableMap,com/google/common/collect/Range>.md) rangesByLowerCut)`
+### `<init>(`java.util.NavigableMap<com.google.common.collect.Cut<C>,com.google.common.collect.Range<C>>` rangesByLowerCut)`
 
 ## Methods
 
@@ -46,34 +46,34 @@ An implementation of {@link RangeSet} backed by a {@link TreeMap}.
 
 **Returns:** [`com.google.common.collect.TreeRangeSet<C>`](./TreeRangeSet.md)
 
-Creates an empty {@code TreeRangeSet} instance.
+Creates an empty `TreeRangeSet` instance.
 
 ### `create([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) rangeSet)`
 
 **Returns:** [`com.google.common.collect.TreeRangeSet<C>`](./TreeRangeSet.md)
 
-Returns a {@code TreeRangeSet} initialized with the ranges in the specified range set.
+Returns a `TreeRangeSet` initialized with the ranges in the specified range set.
 
 ### `create(`java.lang.Iterable<com.google.common.collect.Range<C>>` ranges)`
 
 **Returns:** [`com.google.common.collect.TreeRangeSet<C>`](./TreeRangeSet.md)
 
-Returns a {@code TreeRangeSet} representing the union of the specified ranges.
+Returns a `TreeRangeSet` representing the union of the specified ranges.
 
- <p>This is the smallest {@code RangeSet} which encloses each of the specified ranges. An
- element will be contained in this {@code RangeSet} if and only if it is contained in at least
- one {@code Range} in {@code ranges}.
-@since 21.0
+ <p>This is the smallest `RangeSet` which encloses each of the specified ranges. An
+ element will be contained in this `RangeSet` if and only if it is contained in at least
+ one `Range` in `ranges`.
+**Since:** 21.0
 
 ### `asRanges()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Range<C>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Range<C>>`
 
 ### `asDescendingSetOfRanges()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Range<C>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Range<C>>`
 
-### `rangeContaining([`C`](C.md) value)`
+### `rangeContaining(`C` value)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 

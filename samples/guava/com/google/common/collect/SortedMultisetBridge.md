@@ -12,14 +12,14 @@
 
 ## Description
 
-Superinterface of {@link SortedMultiset} to introduce a bridge method for {@code elementSet()},
- to ensure binary compatibility with older Guava versions that specified {@code elementSet()} to
- return {@code SortedSet}.
-@author Louis Wasserman
+Superinterface of `SortedMultiset` to introduce a bridge method for `elementSet()`,
+ to ensure binary compatibility with older Guava versions that specified `elementSet()` to
+ return `SortedSet`.
+**Author:** Louis Wasserman
 
 ## Methods
 
 ### `elementSet()`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 

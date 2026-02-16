@@ -13,19 +13,19 @@
 
 ## Description
 
-A {@link Network} whose elements and structural relationships will never change. Instances of
- this class may be obtained with {@link #copyOf(Network)}.
+A `Network` whose elements and structural relationships will never change. Instances of
+ this class may be obtained with `copyOf(Network)`.
 
  <p>See the Guava User's Guide's <a href="https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations">discussion
- of the {@code Immutable*} types</a> for more information on the properties and guarantees
+ of the `Immutable*` types</a> for more information on the properties and guarantees
  provided by this class.
-@author James Sexton
-@author Joshua O'Madadhain
-@author Omar Darwish
-@author Jens Nyman
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
+**Author:** Omar Darwish
+**Author:** Jens Nyman
 @param <N> Node parameter type
 @param <E> Edge parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Constructors
 
@@ -37,14 +37,14 @@ A {@link Network} whose elements and structural relationships will never change.
 
 **Returns:** [`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md)
 
-Returns an immutable copy of {@code network}.
+Returns an immutable copy of `network`.
 
 ### `copyOf([`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md) network)`
 
 **Returns:** [`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md)
 
 Simply returns its argument.
-@deprecated no need to use this
+**Deprecated:** no need to use this
 
 ### `asGraph()`
 
@@ -52,13 +52,13 @@ Simply returns its argument.
 
 ### `getNodeConnections([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
 
-**Returns:** [`java.util.Map<N,com.google.common.graph.NetworkConnections<N,E>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<N,com.google.common.graph.NetworkConnections<N,E>>`
 
 ### `getEdgeToReferenceNode([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
 
-**Returns:** [`java.util.Map<E,N>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<E,N>`
 
-### `connectionsOf([`com.google.common.graph.Network<N,E>`](./Network.md) network, [`N`](N.md) node)`
+### `connectionsOf([`com.google.common.graph.Network<N,E>`](./Network.md) network, `N` node)`
 
 **Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
 
@@ -70,7 +70,7 @@ Simply returns its argument.
 
 **Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
 
-### `adjacentNodeFn([`com.google.common.graph.Network<N,E>`](./Network.md) network, [`N`](N.md) node)`
+### `adjacentNodeFn([`com.google.common.graph.Network<N,E>`](./Network.md) network, `N` node)`
 
 **Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
 

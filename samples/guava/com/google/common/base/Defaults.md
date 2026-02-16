@@ -7,8 +7,8 @@
 ## Description
 
 This class provides default values for all Java types, as defined by the JLS.
-@author Ben Yu
-@since 1.0
+**Author:** Ben Yu
+**Since:** 1.0
 
 ## Fields
 
@@ -28,9 +28,8 @@ This class provides default values for all Java types, as defined by the JLS.
 
 ### `defaultValue(`java.lang.Class<T>` type)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-Returns the default value of {@code type} as defined by JLS --- {@code 0} for numbers, {@code
- false} for {@code boolean} and {@code '\0'} for {@code char}. For non-primitive types and
- {@code void}, {@code null} is returned.
+Returns the default value of `type` as defined by JLS --- `0` for numbers, `false` for `boolean` and `'\0'` for `char`. For non-primitive types and
+ `void`, `null` is returned.
 

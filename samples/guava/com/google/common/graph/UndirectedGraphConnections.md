@@ -13,8 +13,8 @@
 
 ## Description
 
-An implementation of {@link GraphConnections} for undirected graphs.
-@author James Sexton
+An implementation of `GraphConnections` for undirected graphs.
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <V> Value parameter type
 
@@ -22,11 +22,11 @@ An implementation of {@link GraphConnections} for undirected graphs.
 
 ### `adjacentNodeValues`
 
-**Type:** [`java.util.Map<N,V>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<N,V>`
 
 ## Constructors
 
-### `<init>([`java.util.Map<N,V>`](../../../../java/util/Map.md) adjacentNodeValues)`
+### `<init>(`java.util.Map<N,V>` adjacentNodeValues)`
 
 ## Methods
 
@@ -34,43 +34,43 @@ An implementation of {@link GraphConnections} for undirected graphs.
 
 **Returns:** [`com.google.common.graph.UndirectedGraphConnections<N,V>`](./UndirectedGraphConnections.md)
 
-### `ofImmutable([`java.util.Map<N,V>`](../../../../java/util/Map.md) adjacentNodeValues)`
+### `ofImmutable(`java.util.Map<N,V>` adjacentNodeValues)`
 
 **Returns:** [`com.google.common.graph.UndirectedGraphConnections<N,V>`](./UndirectedGraphConnections.md)
 
 ### `adjacentNodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `predecessors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `successors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `incidentEdgeIterator([`N`](N.md) thisNode)`
+### `incidentEdgeIterator(`N` thisNode)`
 
-**Returns:** [`java.util.Iterator<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
 
-### `value([`N`](N.md) node)`
+### `value(`N` node)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `removePredecessor([`N`](N.md) node)`
-
-**Returns:** `void`
-
-### `removeSuccessor([`N`](N.md) node)`
-
-**Returns:** [`V`](V.md)
-
-### `addPredecessor([`N`](N.md) node, [`V`](V.md) value)`
+### `removePredecessor(`N` node)`
 
 **Returns:** `void`
 
-### `addSuccessor([`N`](N.md) node, [`V`](V.md) value)`
+### `removeSuccessor(`N` node)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
+
+### `addPredecessor(`N` node, `V` value)`
+
+**Returns:** `void`
+
+### `addSuccessor(`N` node, `V` value)`
+
+**Returns:** `V`
 

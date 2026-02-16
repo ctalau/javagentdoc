@@ -22,9 +22,9 @@ Aggregate future that computes its value by calling a callable.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>>`](../../collect/ImmutableCollection>.md) futures, `boolean` allMustSucceed, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) listenerExecutor, [`com.google.common.util.concurrent.AsyncCallable<V>`](./AsyncCallable.md) callable)`
+### `<init>([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>>`](../../collect/ImmutableCollection>.md) futures, `boolean` allMustSucceed, `java.util.concurrent.Executor` listenerExecutor, [`com.google.common.util.concurrent.AsyncCallable<V>`](./AsyncCallable.md) callable)`
 
-### `<init>([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>>`](../../collect/ImmutableCollection>.md) futures, `boolean` allMustSucceed, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) listenerExecutor, [`java.util.concurrent.Callable<V>`](../../../../../java/util/concurrent/Callable.md) callable)`
+### `<init>([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>>`](../../collect/ImmutableCollection>.md) futures, `boolean` allMustSucceed, `java.util.concurrent.Executor` listenerExecutor, `java.util.concurrent.Callable<V>` callable)`
 
 ## Methods
 

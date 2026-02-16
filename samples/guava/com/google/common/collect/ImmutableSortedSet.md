@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ImmutableSet.CachingAsList<E>`](ImmutableSet/CachingAsList.md)
 
-**Implements:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md), [`com.google.common.collect.SortedIterable<E>`](./SortedIterable.md)
+**Implements:** `java.util.NavigableSet<E>`, [`com.google.common.collect.SortedIterable<E>`](./SortedIterable.md)
 
 ## Type Parameters
 
@@ -14,18 +14,18 @@
 
 ## Description
 
-A {@link NavigableSet} whose contents will never change, with many other important properties
- detailed at {@link ImmutableCollection}.
+A `NavigableSet` whose contents will never change, with many other important properties
+ detailed at `ImmutableCollection`.
 
- <p><b>Warning:</b> as with any sorted collection, you are strongly advised not to use a {@link Comparator} or {@link Comparable} type whose comparison behavior is <i>inconsistent with
- equals</i>. That is, {@code a.compareTo(b)} or {@code comparator.compare(a, b)} should equal zero
- <i>if and only if</i> {@code a.equals(b)}. If this advice is not followed, the resulting
+ <p><b>Warning:</b> as with any sorted collection, you are strongly advised not to use a `Comparator` or `Comparable` type whose comparison behavior is <i>inconsistent with
+ equals</i>. That is, `a.compareTo(b)` or `comparator.compare(a, b)` should equal zero
+ <i>if and only if</i> `a.equals(b)`. If this advice is not followed, the resulting
  collection will not correctly obey its specification.
 
  <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">immutable collections</a>.
-@author Jared Levy
-@author Louis Wasserman
-@since 2.0 (implements {@code NavigableSet} since 12.0)
+**Author:** Jared Levy
+**Author:** Louis Wasserman
+**Since:** 2.0 (implements `NavigableSet` since 12.0)
 
 ## Fields
 
@@ -35,7 +35,7 @@ A {@link NavigableSet} whose contents will never change, with many other importa
 
 ### `comparator`
 
-**Type:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super E>`
 
 ### `descendingSet`
 
@@ -47,22 +47,21 @@ A {@link NavigableSet} whose contents will never change, with many other importa
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `<init>(`java.util.Comparator<? super E>` comparator)`
 
 ## Methods
 
-### `toImmutableSortedSet([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `toImmutableSortedSet(`java.util.Comparator<? super E>` comparator)`
 
-**Returns:** [`java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSortedSet<E>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSortedSet<E>>`
 
-Returns a {@code Collector} that accumulates the input elements into a new {@code
- ImmutableSortedSet}, ordered by the specified comparator.
+Returns a `Collector` that accumulates the input elements into a new `ImmutableSortedSet`, ordered by the specified comparator.
 
  <p>If the elements contain duplicates (according to the comparator), only the first duplicate
  in encounter order will appear in the result.
-@since 21.0
+**Since:** 21.0
 
-### `emptySet([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `emptySet(`java.util.Comparator<? super E>` comparator)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md)
 
@@ -74,80 +73,80 @@ Returns the empty immutable sorted set.
 
  <p><b>Performance note:</b> the instance returned is a singleton.
 
-### `of([`E`](E.md) element)`
+### `of(`E` element)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing a single element.
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2)`
+### `of(`E` e1, `E` e2)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@link Comparable#compareTo}, only the first
+ When multiple elements are equivalent according to `Comparable.compareTo`, only the first
  one specified is included.
 @throws NullPointerException if any element is null
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3)`
+### `of(`E` e1, `E` e2, `E` e3)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@link Comparable#compareTo}, only the first
+ When multiple elements are equivalent according to `Comparable.compareTo`, only the first
  one specified is included.
 @throws NullPointerException if any element is null
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3, [`E`](E.md) e4)`
+### `of(`E` e1, `E` e2, `E` e3, `E` e4)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@link Comparable#compareTo}, only the first
+ When multiple elements are equivalent according to `Comparable.compareTo`, only the first
  one specified is included.
 @throws NullPointerException if any element is null
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3, [`E`](E.md) e4, [`E`](E.md) e5)`
+### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@link Comparable#compareTo}, only the first
+ When multiple elements are equivalent according to `Comparable.compareTo`, only the first
  one specified is included.
 @throws NullPointerException if any element is null
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3, [`E`](E.md) e4, [`E`](E.md) e5, [`E`](E.md) e6, [`E[]`](E.md) remaining)`
+### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5, `E` e6, `E[]` remaining)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@link Comparable#compareTo}, only the first
+ When multiple elements are equivalent according to `Comparable.compareTo`, only the first
  one specified is included.
 @throws NullPointerException if any element is null
-@since 3.0 (source-compatible since 2.0)
+**Since:** 3.0 (source-compatible since 2.0)
 
-### `copyOf([`E[]`](E.md) elements)`
+### `copyOf(`E[]` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@link Comparable#compareTo}, only the first
+ When multiple elements are equivalent according to `Comparable.compareTo`, only the first
  one specified is included.
-@throws NullPointerException if any of {@code elements} is null
-@since 3.0
+@throws NullPointerException if any of `elements` is null
+**Since:** 3.0
 
 ### `copyOf(`java.lang.Iterable<? extends E>` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@code compareTo()}, only the first one
- specified is included. To create a copy of a {@code SortedSet} that preserves the comparator,
- call {@link #copyOfSorted} instead. This method iterates over {@code elements} at most once.
+ When multiple elements are equivalent according to `compareTo()`, only the first one
+ specified is included. To create a copy of a `SortedSet` that preserves the comparator,
+ call `copyOfSorted` instead. This method iterates over `elements` at most once.
 
- <p>Note that if {@code s} is a {@code Set<String>}, then {@code ImmutableSortedSet.copyOf(s)}
- returns an {@code ImmutableSortedSet<String>} containing each of the strings in {@code s},
- while {@code ImmutableSortedSet.of(s)} returns an {@code ImmutableSortedSet<Set<String>>}
+ <p>Note that if `s` is a `Set<String>`, then `ImmutableSortedSet.copyOf(s)`
+ returns an `ImmutableSortedSet<String>` containing each of the strings in `s`,
+ while `ImmutableSortedSet.of(s)` returns an `ImmutableSortedSet<Set<String>>`
  containing one element (the given set itself).
 
  <p>Despite the method name, this method attempts to avoid actually copying the data when it is
@@ -157,124 +156,119 @@ Returns an immutable sorted set containing the given elements sorted by their na
  <p>This method is not type-safe, as it may be called on elements that are not mutually
  comparable.
 @throws ClassCastException if the elements are not mutually comparable
-@throws NullPointerException if any of {@code elements} is null
+@throws NullPointerException if any of `elements` is null
 
-### `copyOf([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) elements)`
+### `copyOf(`java.util.Collection<? extends E>` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@code compareTo()}, only the first one
- specified is included. To create a copy of a {@code SortedSet} that preserves the comparator,
- call {@link #copyOfSorted} instead. This method iterates over {@code elements} at most once.
+ When multiple elements are equivalent according to `compareTo()`, only the first one
+ specified is included. To create a copy of a `SortedSet` that preserves the comparator,
+ call `copyOfSorted` instead. This method iterates over `elements` at most once.
 
- <p>Note that if {@code s} is a {@code Set<String>}, then {@code ImmutableSortedSet.copyOf(s)}
- returns an {@code ImmutableSortedSet<String>} containing each of the strings in {@code s},
- while {@code ImmutableSortedSet.of(s)} returns an {@code ImmutableSortedSet<Set<String>>}
+ <p>Note that if `s` is a `Set<String>`, then `ImmutableSortedSet.copyOf(s)`
+ returns an `ImmutableSortedSet<String>` containing each of the strings in `s`,
+ while `ImmutableSortedSet.of(s)` returns an `ImmutableSortedSet<Set<String>>`
  containing one element (the given set itself).
 
- <p><b>Note:</b> Despite what the method name suggests, if {@code elements} is an {@code
- ImmutableSortedSet}, it may be returned instead of a copy.
+ <p><b>Note:</b> Despite what the method name suggests, if `elements` is an `ImmutableSortedSet`, it may be returned instead of a copy.
 
  <p>This method is not type-safe, as it may be called on elements that are not mutually
  comparable.
 
- <p>This method is safe to use even when {@code elements} is a synchronized or concurrent
+ <p>This method is safe to use even when `elements` is a synchronized or concurrent
  collection that is currently being modified by another thread.
 @throws ClassCastException if the elements are not mutually comparable
-@throws NullPointerException if any of {@code elements} is null
-@since 7.0 (source-compatible since 2.0)
+@throws NullPointerException if any of `elements` is null
+**Since:** 7.0 (source-compatible since 2.0)
 
-### `copyOf([`java.util.Iterator<? extends E>`](../../../../java/util/Iterator.md) elements)`
+### `copyOf(`java.util.Iterator<? extends E>` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the given elements sorted by their natural ordering.
- When multiple elements are equivalent according to {@code compareTo()}, only the first one
+ When multiple elements are equivalent according to `compareTo()`, only the first one
  specified is included.
 
  <p>This method is not type-safe, as it may be called on elements that are not mutually
  comparable.
 @throws ClassCastException if the elements are not mutually comparable
-@throws NullPointerException if any of {@code elements} is null
+@throws NullPointerException if any of `elements` is null
 
-### `copyOf([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator, [`java.util.Iterator<? extends E>`](../../../../java/util/Iterator.md) elements)`
+### `copyOf(`java.util.Comparator<? super E>` comparator, `java.util.Iterator<? extends E>` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Returns an immutable sorted set containing the given elements sorted by the given {@code
- Comparator}. When multiple elements are equivalent according to {@code compareTo()}, only the
+Returns an immutable sorted set containing the given elements sorted by the given `Comparator`. When multiple elements are equivalent according to `compareTo()`, only the
  first one specified is included.
-@throws NullPointerException if {@code comparator} or any of {@code elements} is null
+@throws NullPointerException if `comparator` or any of `elements` is null
 
-### `copyOf([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator, `java.lang.Iterable<? extends E>` elements)`
+### `copyOf(`java.util.Comparator<? super E>` comparator, `java.lang.Iterable<? extends E>` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Returns an immutable sorted set containing the given elements sorted by the given {@code
- Comparator}. When multiple elements are equivalent according to {@code compare()}, only the
- first one specified is included. This method iterates over {@code elements} at most once.
+Returns an immutable sorted set containing the given elements sorted by the given `Comparator`. When multiple elements are equivalent according to `compare()`, only the
+ first one specified is included. This method iterates over `elements` at most once.
 
  <p>Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
  undocumented and subject to change.
-@throws NullPointerException if {@code comparator} or any of {@code elements} is null
+@throws NullPointerException if `comparator` or any of `elements` is null
 
-### `copyOf([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator, [`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) elements)`
+### `copyOf(`java.util.Comparator<? super E>` comparator, `java.util.Collection<? extends E>` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Returns an immutable sorted set containing the given elements sorted by the given {@code
- Comparator}. When multiple elements are equivalent according to {@code compareTo()}, only the
+Returns an immutable sorted set containing the given elements sorted by the given `Comparator`. When multiple elements are equivalent according to `compareTo()`, only the
  first one specified is included.
 
  <p>Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
  undocumented and subject to change.
 
- <p>This method is safe to use even when {@code elements} is a synchronized or concurrent
+ <p>This method is safe to use even when `elements` is a synchronized or concurrent
  collection that is currently being modified by another thread.
-@throws NullPointerException if {@code comparator} or any of {@code elements} is null
-@since 7.0 (source-compatible since 2.0)
+@throws NullPointerException if `comparator` or any of `elements` is null
+**Since:** 7.0 (source-compatible since 2.0)
 
-### `copyOfSorted([`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md) sortedSet)`
+### `copyOfSorted(`java.util.SortedSet<E>` sortedSet)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 Returns an immutable sorted set containing the elements of a sorted set, sorted by the same
- {@code Comparator}. That behavior differs from {@link #copyOf(Iterable)}, which always uses the
+ `Comparator`. That behavior differs from `copyOf(Iterable)`, which always uses the
  natural ordering of the elements.
 
  <p>Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
  undocumented and subject to change.
 
- <p>This method is safe to use even when {@code sortedSet} is a synchronized or concurrent
+ <p>This method is safe to use even when `sortedSet` is a synchronized or concurrent
  collection that is currently being modified by another thread.
-@throws NullPointerException if {@code sortedSet} or any of its elements is null
+@throws NullPointerException if `sortedSet` or any of its elements is null
 
-### `construct([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator, `int` n, [`E[]`](E.md) contents)`
+### `construct(`java.util.Comparator<? super E>` comparator, `int` n, `E[]` contents)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Constructs an {@code ImmutableSortedSet} from the first {@code n} elements of {@code contents}.
- If {@code k} is the size of the returned {@code ImmutableSortedSet}, then the sorted unique
- elements are in the first {@code k} positions of {@code contents}, and {@code contents[i] ==
- null} for {@code k <= i < n}.
+Constructs an `ImmutableSortedSet` from the first `n` elements of `contents`.
+ If `k` is the size of the returned `ImmutableSortedSet`, then the sorted unique
+ elements are in the first `k` positions of `contents`, and `contents[i] ==
+ null` for `k <= i < n`.
 
- <p>This method takes ownership of {@code contents}; do not modify {@code contents} after this
+ <p>This method takes ownership of `contents`; do not modify `contents` after this
  returns.
-@throws NullPointerException if any of the first {@code n} elements of {@code contents} is null
+@throws NullPointerException if any of the first `n` elements of `contents` is null
 
-### `orderedBy([`java.util.Comparator<E>`](../../../../java/util/Comparator.md) comparator)`
+### `orderedBy(`java.util.Comparator<E>` comparator)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet.Builder<E>`](ImmutableSortedSet/Builder.md)
 
 Returns a builder that creates immutable sorted sets with an explicit comparator. If the
- comparator has a more general type than the set being generated, such as creating a {@code
- SortedSet<Integer>} with a {@code Comparator<Number>}, use the {@link Builder} constructor
+ comparator has a more general type than the set being generated, such as creating a `SortedSet<Integer>` with a `Comparator<Number>`, use the `Builder` constructor
  instead.
-@throws NullPointerException if {@code comparator} is null
+@throws NullPointerException if `comparator` is null
 
 ### `reverseOrder()`
 
@@ -288,154 +282,150 @@ Returns a builder that creates immutable sorted sets whose elements are ordered 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet.Builder<E>`](ImmutableSortedSet/Builder.md)
 
 Returns a builder that creates immutable sorted sets whose elements are ordered by their
- natural ordering. The sorted sets use {@link Ordering#natural()} as the comparator. This method
- provides more type-safety than {@link #builder}, as it can be called only for classes that
- implement {@link Comparable}.
+ natural ordering. The sorted sets use `Ordering.natural()` as the comparator. This method
+ provides more type-safety than `builder`, as it can be called only for classes that
+ implement `Comparable`.
 
 ### `unsafeCompare(`java.lang.Object` a, `java.lang.Object` b)`
 
 **Returns:** `int`
 
-### `unsafeCompare([`java.util.Comparator<?>`](../../../../java/util/Comparator.md) comparator, `java.lang.Object` a, `java.lang.Object` b)`
+### `unsafeCompare(`java.util.Comparator<?>` comparator, `java.lang.Object` a, `java.lang.Object` b)`
 
 **Returns:** `int`
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
-Returns the comparator that orders the elements, which is {@link Ordering#natural()} when the
- natural ordering of the elements is used. Note that its behavior is not consistent with {@link SortedSet#comparator()}, which returns {@code null} to indicate natural ordering.
+Returns the comparator that orders the elements, which is `Ordering.natural()` when the
+ natural ordering of the elements is used. Note that its behavior is not consistent with `SortedSet.comparator()`, which returns `null` to indicate natural ordering.
 
 ### `iterator()`
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
 
-### `headSet([`E`](E.md) toElement)`
+### `headSet(`E` toElement)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 {@inheritDoc}
 
- <p>This method returns a serializable {@code ImmutableSortedSet}.
+ <p>This method returns a serializable `ImmutableSortedSet`.
 
- <p>The {@link SortedSet#headSet} documentation states that a subset of a subset throws an
- {@link IllegalArgumentException} if passed a {@code toElement} greater than an earlier {@code
- toElement}. However, this method doesn't throw an exception in that situation, but instead
- keeps the original {@code toElement}.
+ <p>The `SortedSet.headSet` documentation states that a subset of a subset throws an
+ `IllegalArgumentException` if passed a `toElement` greater than an earlier `toElement`. However, this method doesn't throw an exception in that situation, but instead
+ keeps the original `toElement`.
 
-### `headSet([`E`](E.md) toElement, `boolean` inclusive)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
-
-@since 12.0
-
-### `subSet([`E`](E.md) fromElement, [`E`](E.md) toElement)`
+### `headSet(`E` toElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-{@inheritDoc}
+**Since:** 12.0
 
- <p>This method returns a serializable {@code ImmutableSortedSet}.
-
- <p>The {@link SortedSet#subSet} documentation states that a subset of a subset throws an {@link IllegalArgumentException} if passed a {@code fromElement} smaller than an earlier {@code
- fromElement}. However, this method doesn't throw an exception in that situation, but instead
- keeps the original {@code fromElement}. Similarly, this method keeps the original {@code
- toElement}, instead of throwing an exception, if passed a {@code toElement} greater than an
- earlier {@code toElement}.
-
-### `subSet([`E`](E.md) fromElement, `boolean` fromInclusive, [`E`](E.md) toElement, `boolean` toInclusive)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
-
-@since 12.0
-
-### `tailSet([`E`](E.md) fromElement)`
+### `subSet(`E` fromElement, `E` toElement)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 {@inheritDoc}
 
- <p>This method returns a serializable {@code ImmutableSortedSet}.
+ <p>This method returns a serializable `ImmutableSortedSet`.
 
- <p>The {@link SortedSet#tailSet} documentation states that a subset of a subset throws an
- {@link IllegalArgumentException} if passed a {@code fromElement} smaller than an earlier {@code
- fromElement}. However, this method doesn't throw an exception in that situation, but instead
- keeps the original {@code fromElement}.
+ <p>The `SortedSet.subSet` documentation states that a subset of a subset throws an `IllegalArgumentException` if passed a `fromElement` smaller than an earlier `fromElement`. However, this method doesn't throw an exception in that situation, but instead
+ keeps the original `fromElement`. Similarly, this method keeps the original `toElement`, instead of throwing an exception, if passed a `toElement` greater than an
+ earlier `toElement`.
 
-### `tailSet([`E`](E.md) fromElement, `boolean` inclusive)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
-
-@since 12.0
-
-### `headSetImpl([`E`](E.md) toElement, `boolean` inclusive)`
+### `subSet(`E` fromElement, `boolean` fromInclusive, `E` toElement, `boolean` toInclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `subSetImpl([`E`](E.md) fromElement, `boolean` fromInclusive, [`E`](E.md) toElement, `boolean` toInclusive)`
+**Since:** 12.0
+
+### `tailSet(`E` fromElement)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `tailSetImpl([`E`](E.md) fromElement, `boolean` inclusive)`
+{@inheritDoc}
+
+ <p>This method returns a serializable `ImmutableSortedSet`.
+
+ <p>The `SortedSet.tailSet` documentation states that a subset of a subset throws an
+ `IllegalArgumentException` if passed a `fromElement` smaller than an earlier `fromElement`. However, this method doesn't throw an exception in that situation, but instead
+ keeps the original `fromElement`.
+
+### `tailSet(`E` fromElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `lower([`E`](E.md) e)`
+**Since:** 12.0
 
-**Returns:** [`E`](E.md)
+### `headSetImpl(`E` toElement, `boolean` inclusive)`
 
-@since 12.0
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `floor([`E`](E.md) e)`
+### `subSetImpl(`E` fromElement, `boolean` fromInclusive, `E` toElement, `boolean` toInclusive)`
 
-**Returns:** [`E`](E.md)
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-@since 12.0
+### `tailSetImpl(`E` fromElement, `boolean` inclusive)`
 
-### `ceiling([`E`](E.md) e)`
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-**Returns:** [`E`](E.md)
+### `lower(`E` e)`
 
-@since 12.0
+**Returns:** `E`
 
-### `higher([`E`](E.md) e)`
+**Since:** 12.0
 
-**Returns:** [`E`](E.md)
+### `floor(`E` e)`
 
-@since 12.0
+**Returns:** `E`
+
+**Since:** 12.0
+
+### `ceiling(`E` e)`
+
+**Returns:** `E`
+
+**Since:** 12.0
+
+### `higher(`E` e)`
+
+**Returns:** `E`
+
+**Since:** 12.0
 
 ### `first()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `last()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `pollFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 Guaranteed to throw an exception and leave the set unmodified.
-@since 12.0
+**Since:** 12.0
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `pollLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 Guaranteed to throw an exception and leave the set unmodified.
-@since 12.0
+**Since:** 12.0
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `descendingSet()`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-@since 12.0
+**Since:** 12.0
 
 ### `createDescendingSet()`
 
@@ -443,13 +433,13 @@ Guaranteed to throw an exception and leave the set unmodified.
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
 ### `descendingIterator()`
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
 
-@since 12.0
+**Since:** 12.0
 
 ### `indexOf(`java.lang.Object` target)`
 
@@ -457,7 +447,7 @@ Guaranteed to throw an exception and leave the set unmodified.
 
 Returns the position of an element within the set, or -1 if not present.
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) unused)`
+### `readObject(`java.io.ObjectInputStream` unused)`
 
 **Returns:** `void`
 
@@ -467,100 +457,100 @@ Returns the position of an element within the set, or -1 if not present.
 
 ### `toImmutableSet()`
 
-**Returns:** [`java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`
 
-Not supported. Use {@link #toImmutableSortedSet} instead. This method exists only to hide
- {@link ImmutableSet#toImmutableSet} from consumers of {@code ImmutableSortedSet}.
+Not supported. Use `toImmutableSortedSet` instead. This method exists only to hide
+ `ImmutableSet.toImmutableSet` from consumers of `ImmutableSortedSet`.
 @throws UnsupportedOperationException always
-@deprecated Use {@link ImmutableSortedSet#toImmutableSortedSet}.
-@since 21.0
+**Deprecated:** Use `ImmutableSortedSet.toImmutableSortedSet`.
+**Since:** 21.0
 
 ### `builder()`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet.Builder<E>`](ImmutableSortedSet/Builder.md)
 
-Not supported. Use {@link #naturalOrder}, which offers better type-safety, instead. This method
- exists only to hide {@link ImmutableSet#builder} from consumers of {@code ImmutableSortedSet}.
+Not supported. Use `naturalOrder`, which offers better type-safety, instead. This method
+ exists only to hide `ImmutableSet.builder` from consumers of `ImmutableSortedSet`.
 @throws UnsupportedOperationException always
-@deprecated Use {@link ImmutableSortedSet#naturalOrder}, which offers better type-safety.
+**Deprecated:** Use `ImmutableSortedSet.naturalOrder`, which offers better type-safety.
 
 ### `builderWithExpectedSize(`int` expectedSize)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet.Builder<E>`](ImmutableSortedSet/Builder.md)
 
-Not supported. This method exists only to hide {@link ImmutableSet#builderWithExpectedSize}
- from consumers of {@code ImmutableSortedSet}.
+Not supported. This method exists only to hide `ImmutableSet.builderWithExpectedSize`
+ from consumers of `ImmutableSortedSet`.
 @throws UnsupportedOperationException always
-@deprecated Not supported by ImmutableSortedSet.
+**Deprecated:** Not supported by ImmutableSortedSet.
 
-### `of([`E`](E.md) element)`
+### `of(`E` element)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Not supported. <b>You are attempting to create a set that may contain a non-{@code Comparable}
- element.</b> Proper calls will resolve to the version in {@code ImmutableSortedSet}, not this
+Not supported. <b>You are attempting to create a set that may contain a non-`Comparable`
+ element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-@deprecated <b>Pass a parameter of type {@code Comparable} to use {@link ImmutableSortedSet#of(Comparable)}.</b>
+**Deprecated:** <b>Pass a parameter of type `Comparable` to use `ImmutableSortedSet.of(Comparable)`.</b>
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2)`
+### `of(`E` e1, `E` e2)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Not supported. <b>You are attempting to create a set that may contain a non-{@code Comparable}
- element.</b> Proper calls will resolve to the version in {@code ImmutableSortedSet}, not this
+Not supported. <b>You are attempting to create a set that may contain a non-`Comparable`
+ element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-@deprecated <b>Pass the parameters of type {@code Comparable} to use {@link ImmutableSortedSet#of(Comparable, Comparable)}.</b>
+**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable)`.</b>
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3)`
+### `of(`E` e1, `E` e2, `E` e3)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Not supported. <b>You are attempting to create a set that may contain a non-{@code Comparable}
- element.</b> Proper calls will resolve to the version in {@code ImmutableSortedSet}, not this
+Not supported. <b>You are attempting to create a set that may contain a non-`Comparable`
+ element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-@deprecated <b>Pass the parameters of type {@code Comparable} to use {@link ImmutableSortedSet#of(Comparable, Comparable, Comparable)}.</b>
+**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable)`.</b>
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3, [`E`](E.md) e4)`
+### `of(`E` e1, `E` e2, `E` e3, `E` e4)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Not supported. <b>You are attempting to create a set that may contain a non-{@code Comparable}
- element.</b> Proper calls will resolve to the version in {@code ImmutableSortedSet}, not this
+Not supported. <b>You are attempting to create a set that may contain a non-`Comparable`
+ element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-@deprecated <b>Pass the parameters of type {@code Comparable} to use {@link ImmutableSortedSet#of(Comparable, Comparable, Comparable, Comparable)}. </b>
+**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable, Comparable)`. </b>
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3, [`E`](E.md) e4, [`E`](E.md) e5)`
+### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Not supported. <b>You are attempting to create a set that may contain a non-{@code Comparable}
- element.</b> Proper calls will resolve to the version in {@code ImmutableSortedSet}, not this
+Not supported. <b>You are attempting to create a set that may contain a non-`Comparable`
+ element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-@deprecated <b>Pass the parameters of type {@code Comparable} to use {@link ImmutableSortedSet#of( Comparable, Comparable, Comparable, Comparable, Comparable)}. </b>
+**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of( Comparable, Comparable, Comparable, Comparable, Comparable)`. </b>
 
-### `of([`E`](E.md) e1, [`E`](E.md) e2, [`E`](E.md) e3, [`E`](E.md) e4, [`E`](E.md) e5, [`E`](E.md) e6, [`E[]`](E.md) remaining)`
+### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5, `E` e6, `E[]` remaining)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-Not supported. <b>You are attempting to create a set that may contain a non-{@code Comparable}
- element.</b> Proper calls will resolve to the version in {@code ImmutableSortedSet}, not this
+Not supported. <b>You are attempting to create a set that may contain a non-`Comparable`
+ element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-@deprecated <b>Pass the parameters of type {@code Comparable} to use {@link ImmutableSortedSet#of(Comparable, Comparable, Comparable, Comparable, Comparable,
-     Comparable, Comparable...)}. </b>
+**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable, Comparable, Comparable,
+     Comparable, Comparable...)`. </b>
 
-### `copyOf([`Z[]`](Z.md) elements)`
+### `copyOf(`Z[]` elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<Z>`](./ImmutableSortedSet.md)
 
-Not supported. <b>You are attempting to create a set that may contain non-{@code Comparable}
- elements.</b> Proper calls will resolve to the version in {@code ImmutableSortedSet}, not this
+Not supported. <b>You are attempting to create a set that may contain non-`Comparable`
+ elements.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-@deprecated <b>Pass parameters of type {@code Comparable} to use {@link ImmutableSortedSet#copyOf(Comparable[])}.</b>
+**Deprecated:** <b>Pass parameters of type `Comparable` to use `ImmutableSortedSet.copyOf(Comparable[])`.</b>
 

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.base.AbstractIterator`
 
-**Implements:** [`java.util.Iterator<T>`](../../../../java/util/Iterator.md)
+**Implements:** `java.util.Iterator<T>`
 
 ## Type Parameters
 
@@ -12,7 +12,7 @@
 
 ## Description
 
-Note this class is a copy of {@link com.google.common.collect.AbstractIterator} (for dependency
+Note this class is a copy of `com.google.common.collect.AbstractIterator` (for dependency
  reasons).
 
 ## Fields
@@ -23,7 +23,7 @@ Note this class is a copy of {@link com.google.common.collect.AbstractIterator} 
 
 ### `next`
 
-**Type:** [`T`](T.md)
+**Type:** `T`
 
 ## Constructors
 
@@ -33,11 +33,11 @@ Note this class is a copy of {@link com.google.common.collect.AbstractIterator} 
 
 ### `computeNext()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `endOfData()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `hasNext()`
 
@@ -49,7 +49,7 @@ Note this class is a copy of {@link com.google.common.collect.AbstractIterator} 
 
 ### `next()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `remove()`
 

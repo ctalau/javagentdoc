@@ -8,8 +8,7 @@
 
 ## Description
 
-Thread that finalizes referents. All references should implement {@code
- com.google.common.base.FinalizableReference}.
+Thread that finalizes referents. All references should implement `com.google.common.base.FinalizableReference`.
 
  <p>While this class is public, we consider it to be *internal* and not part of our published API.
  It is public so we can access it reflectively across class loaders in secure environments.
@@ -20,7 +19,7 @@ Thread that finalizes referents. All references should implement {@code
  you want to throw away the class loader. For example, dynamically reloading a web application or
  unloading an OSGi bundle.
 
- <p>{@code com.google.common.base.FinalizableReferenceQueue} loads this class in its own class
+ <p>`com.google.common.base.FinalizableReferenceQueue` loads this class in its own class
  loader. That way, this class doesn't prevent the main class loader from getting garbage
  collected, and this class can detect when the main class loader has been garbage collected and
  stop itself.
@@ -29,7 +28,7 @@ Thread that finalizes referents. All references should implement {@code
 
 ### `logger`
 
-**Type:** [`java.util.logging.Logger`](../../../../../java/util/logging/Logger.md)
+**Type:** `java.util.logging.Logger`
 
 ### `FINALIZABLE_REFERENCE`
 

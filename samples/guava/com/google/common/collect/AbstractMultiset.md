@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.AbstractMultiset`
 
-**Extends:** [`java.util.AbstractCollection<E>`](../../../../java/util/AbstractCollection.md)
+**Extends:** `java.util.AbstractCollection<E>`
 
 **Implements:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
 
@@ -14,23 +14,23 @@
 
 ## Description
 
-This class provides a skeletal implementation of the {@link Multiset} interface. A new multiset
- implementation can be created easily by extending this class and implementing the {@link Multiset#entrySet()} method, plus optionally overriding {@link #add(Object, int)} and {@link #remove(Object, int)} to enable modifications to the multiset.
+This class provides a skeletal implementation of the `Multiset` interface. A new multiset
+ implementation can be created easily by extending this class and implementing the `Multiset.entrySet()` method, plus optionally overriding `add(Object, int)` and `remove(Object, int)` to enable modifications to the multiset.
 
- <p>The {@link #count} and {@link #size} implementations all iterate across the set returned by
- {@link Multiset#entrySet()}, as do many methods acting on the set returned by {@link #elementSet()}. Override those methods for better performance.
-@author Kevin Bourrillion
-@author Louis Wasserman
+ <p>The `count` and `size` implementations all iterate across the set returned by
+ `Multiset.entrySet()`, as do many methods acting on the set returned by `elementSet()`. Override those methods for better performance.
+**Author:** Kevin Bourrillion
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `elementSet`
 
-**Type:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Type:** `java.util.Set<E>`
 
 ### `entrySet`
 
-**Type:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ## Constructors
 
@@ -46,11 +46,11 @@ This class provides a skeletal implementation of the {@link Multiset} interface.
 
 **Returns:** `boolean`
 
-### `add([`E`](E.md) element)`
+### `add(`E` element)`
 
 **Returns:** `boolean`
 
-### `add([`E`](E.md) element, `int` occurrences)`
+### `add(`E` element, `int` occurrences)`
 
 **Returns:** `int`
 
@@ -62,27 +62,27 @@ This class provides a skeletal implementation of the {@link Multiset} interface.
 
 **Returns:** `int`
 
-### `setCount([`E`](E.md) element, `int` count)`
+### `setCount(`E` element, `int` count)`
 
 **Returns:** `int`
 
-### `setCount([`E`](E.md) element, `int` oldCount, `int` newCount)`
+### `setCount(`E` element, `int` oldCount, `int` newCount)`
 
 **Returns:** `boolean`
 
-### `addAll([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) elementsToAdd)`
+### `addAll(`java.util.Collection<? extends E>` elementsToAdd)`
 
 **Returns:** `boolean`
 
 {@inheritDoc}
 
- <p>This implementation is highly efficient when {@code elementsToAdd} is itself a {@link Multiset}.
+ <p>This implementation is highly efficient when `elementsToAdd` is itself a `Multiset`.
 
-### `removeAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) elementsToRemove)`
+### `removeAll(`java.util.Collection<?>` elementsToRemove)`
 
 **Returns:** `boolean`
 
-### `retainAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) elementsToRetain)`
+### `retainAll(`java.util.Collection<?>` elementsToRetain)`
 
 **Returns:** `boolean`
 
@@ -92,29 +92,29 @@ This class provides a skeletal implementation of the {@link Multiset} interface.
 
 ### `elementSet()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `createElementSet()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-Creates a new instance of this multiset's element set, which will be returned by {@link #elementSet()}.
+Creates a new instance of this multiset's element set, which will be returned by `elementSet()`.
 
 ### `elementIterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `createEntrySet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `entryIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `distinctElements()`
 
@@ -126,7 +126,7 @@ Creates a new instance of this multiset's element set, which will be returned by
 
 {@inheritDoc}
 
- <p>This implementation returns {@code true} if {@code object} is a multiset of the same size
+ <p>This implementation returns `true` if `object` is a multiset of the same size
  and if, for each element, the two multisets have the same count.
 
 ### `hashCode()`
@@ -135,7 +135,7 @@ Creates a new instance of this multiset's element set, which will be returned by
 
 {@inheritDoc}
 
- <p>This implementation returns the hash code of {@link Multiset#entrySet()}.
+ <p>This implementation returns the hash code of `Multiset.entrySet()`.
 
 ### `toString()`
 
@@ -143,5 +143,5 @@ Creates a new instance of this multiset's element set, which will be returned by
 
 {@inheritDoc}
 
- <p>This implementation returns the result of invoking {@code toString} on {@link Multiset#entrySet()}.
+ <p>This implementation returns the result of invoking `toString` on `Multiset.entrySet()`.
 

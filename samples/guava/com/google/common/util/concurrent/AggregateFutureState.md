@@ -24,7 +24,7 @@ A helper which does some thread-safe operations for aggregate futures, which mus
 
 ### `seenExceptions`
 
-**Type:** [`java.util.Set<java.lang.Throwable>`](../../../../../java/util/Set.md)
+**Type:** `java.util.Set<java.lang.Throwable>`
 
 ### `remaining`
 
@@ -46,13 +46,13 @@ A helper which does some thread-safe operations for aggregate futures, which mus
 
 ### `getOrInitSeenExceptions()`
 
-**Returns:** [`java.util.Set<java.lang.Throwable>`](../../../../../java/util/Set.md)
+**Returns:** `java.util.Set<java.lang.Throwable>`
 
-### `addInitialException([`java.util.Set<java.lang.Throwable>`](../../../../../java/util/Set.md) seen)`
+### `addInitialException(`java.util.Set<java.lang.Throwable>` seen)`
 
 **Returns:** `void`
 
-Populates {@code seen} with the exception that was passed to {@code setException}.
+Populates `seen` with the exception that was passed to `setException`.
 
 ### `decrementRemainingAndGet()`
 

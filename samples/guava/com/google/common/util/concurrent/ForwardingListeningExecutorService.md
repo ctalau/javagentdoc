@@ -14,11 +14,10 @@ A listening executor service which forwards all its method calls to another list
  service. Subclasses should override one or more methods to modify the behavior of the backing
  executor service as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingListeningExecutorService}.
-@author Isaac Shum
-@since 10.0
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingListeningExecutorService`.
+**Author:** Isaac Shum
+**Since:** 10.0
 
 ## Constructors
 
@@ -32,7 +31,7 @@ Constructor for use by subclasses.
 
 **Returns:** [`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md)
 
-### `submit([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) task)`
+### `submit(`java.util.concurrent.Callable<T>` task)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 
@@ -40,7 +39,7 @@ Constructor for use by subclasses.
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
 
-### `submit(`java.lang.Runnable` task, [`T`](T.md) result)`
+### `submit(`java.lang.Runnable` task, `T` result)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 

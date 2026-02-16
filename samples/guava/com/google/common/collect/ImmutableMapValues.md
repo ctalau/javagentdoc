@@ -13,9 +13,9 @@
 
 ## Description
 
-{@code values()} implementation for {@link ImmutableMap}.
-@author Jesse Wilson
-@author Kevin Bourrillion
+`values()` implementation for `ImmutableMap`.
+**Author:** Jesse Wilson
+**Author:** Kevin Bourrillion
 
 ## Fields
 
@@ -39,7 +39,7 @@
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<V>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<V>`
 
 ### `contains(`java.lang.Object` object)`
 
@@ -53,7 +53,7 @@
 
 **Returns:** [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md)
 
-### `forEach([`java.util.function.Consumer<? super V>`](../../../../java/util/function/Consumer.md) action)`
+### `forEach(`java.util.function.Consumer<? super V>` action)`
 
 **Returns:** `void`
 

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.graph.MultiEdgesConnecting`
 
-**Extends:** [`java.util.AbstractSet<E>`](../../../../java/util/AbstractSet.md)
+**Extends:** `java.util.AbstractSet<E>`
 
 ## Type Parameters
 
@@ -14,16 +14,16 @@
 
 A class to represent the set of edges connecting an (implicit) origin node to a target node.
 
- <p>The {@link #outEdgeToNode} map allows this class to work on networks with parallel edges. See
- {@link EdgesConnecting} for a class that is more efficient but forbids parallel edges.
-@author James Sexton
+ <p>The `outEdgeToNode` map allows this class to work on networks with parallel edges. See
+ `EdgesConnecting` for a class that is more efficient but forbids parallel edges.
+**Author:** James Sexton
 @param <E> Edge parameter type
 
 ## Fields
 
 ### `outEdgeToNode`
 
-**Type:** [`java.util.Map<E,?>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<E,?>`
 
 ### `targetNode`
 
@@ -31,7 +31,7 @@ A class to represent the set of edges connecting an (implicit) origin node to a 
 
 ## Constructors
 
-### `<init>([`java.util.Map<E,?>`](../../../../java/util/Map.md) outEdgeToNode, `java.lang.Object` targetNode)`
+### `<init>(`java.util.Map<E,?>` outEdgeToNode, `java.lang.Object` targetNode)`
 
 ## Methods
 

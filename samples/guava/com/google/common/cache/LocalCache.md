@@ -4,9 +4,9 @@
 
 **Fully Qualified Name:** `com.google.common.cache.LocalCache`
 
-**Extends:** [`java.util.AbstractMap<K,V>`](../../../../java/util/AbstractMap.md)
+**Extends:** `java.util.AbstractMap<K,V>`
 
-**Implements:** [`java.util.concurrent.ConcurrentMap<K,V>`](../../../../java/util/concurrent/ConcurrentMap.md)
+**Implements:** `java.util.concurrent.ConcurrentMap<K,V>`
 
 ## Type Parameters
 
@@ -15,12 +15,12 @@
 
 ## Description
 
-The concurrent hash map implementation built by {@link CacheBuilder}.
+The concurrent hash map implementation built by `CacheBuilder`.
 
  <p>This implementation is heavily derived from revision 1.96 of <a href="http://tinyurl.com/ConcurrentHashMap">ConcurrentHashMap.java</a>.
-@author Charles Fry
-@author Bob Lee ({@code com.google.common.collect.MapMaker})
-@author Doug Lea ({@code ConcurrentHashMap})
+**Author:** Charles Fry
+**Author:** Bob Lee (`com.google.common.collect.MapMaker`)
+**Author:** Doug Lea (`ConcurrentHashMap`)
 
 ## Fields
 
@@ -29,7 +29,7 @@ The concurrent hash map implementation built by {@link CacheBuilder}.
 **Type:** `int`
 
 The maximum capacity, used if a higher value is implicitly specified by either of the
- constructors with arguments. MUST be a power of two {@code <= 1<<30} to ensure that entries are
+ constructors with arguments. MUST be a power of two `<= 1<<30` to ensure that entries are
  indexable using ints.
 
 ### `MAX_SEGMENTS`
@@ -63,7 +63,7 @@ Maximum number of entries to be drained in a single cleanup run. This applies in
 
 ### `logger`
 
-**Type:** [`java.util.logging.Logger`](../../../../java/util/logging/Logger.md)
+**Type:** `java.util.logging.Logger`
 
 ### `segmentMask`
 
@@ -147,7 +147,7 @@ How long after the last write an entry becomes a candidate for refresh.
 
 ### `removalNotificationQueue`
 
-**Type:** [`java.util.Queue<com.google.common.cache.RemovalNotification<K,V>>`](../../../../java/util/Queue>.md)
+**Type:** `java.util.Queue<com.google.common.cache.RemovalNotification<K,V>>`
 
 Entries waiting to be consumed by the removal listener.
 
@@ -191,19 +191,19 @@ Placeholder. Indicates that the value hasn't been set yet.
 
 ### `DISCARDING_QUEUE`
 
-**Type:** [`java.util.Queue<?>`](../../../../java/util/Queue.md)
+**Type:** `java.util.Queue<?>`
 
 ### `keySet`
 
-**Type:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Type:** `java.util.Set<K>`
 
 ### `values`
 
-**Type:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Type:** `java.util.Collection<V>`
 
 ### `entrySet`
 
-**Type:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
 ## Constructors
 
@@ -285,7 +285,7 @@ Singleton placeholder that indicates a value is being loaded.
 
 ### `discardingQueue()`
 
-**Returns:** [`java.util.Queue<E>`](../../../../java/util/Queue.md)
+**Returns:** `java.util.Queue<E>`
 
 Queue that discards all elements.
 
@@ -299,23 +299,23 @@ Applies a supplemental hash function to a given hash code, which defends against
  bits.
 @param h hash code
 
-### `newEntry([`K`](K.md) key, `int` hash, [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md) next)`
+### `newEntry(`K` key, `int` hash, [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md) next)`
 
 **Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-This method is a convenience for testing. Code should call {@link Segment#newEntry} directly.
+This method is a convenience for testing. Code should call `Segment.newEntry` directly.
 
 ### `copyEntry([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md) original, [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md) newNext)`
 
 **Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-This method is a convenience for testing. Code should call {@link Segment#copyEntry} directly.
+This method is a convenience for testing. Code should call `Segment.copyEntry` directly.
 
-### `newValueReference([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md) entry, [`V`](V.md) value, `int` weight)`
+### `newValueReference([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md) entry, `V` value, `int` weight)`
 
 **Returns:** [`com.google.common.cache.LocalCache.ValueReference<K,V>`](LocalCache/ValueReference.md)
 
-This method is a convenience for testing. Code should call {@link Segment#setValue} instead.
+This method is a convenience for testing. Code should call `Segment.setValue` instead.
 
 ### `hash(`java.lang.Object` key)`
 
@@ -333,7 +333,7 @@ This method is a convenience for testing. Code should call {@link Segment#setVal
 
 **Returns:** `boolean`
 
-This method is a convenience for testing. Code should call {@link Segment#getLiveValue}
+This method is a convenience for testing. Code should call `Segment.getLiveValue`
  instead.
 
 ### `segmentFor(`int` hash)`
@@ -350,10 +350,10 @@ Returns the segment that should be used for a key with the given hash.
 
 ### `getLiveValue([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md) entry, `long` now)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Gets the value from an entry. Returns null if the entry is invalid, partially-collected,
- loading, or expired. Unlike {@link Segment#getLiveValue} this method does not attempt to clean
+ loading, or expired. Unlike `Segment.getLiveValue` this method does not attempt to clean
  up stale entries. As such it should only be called outside a segment context, such as during
  iteration.
 
@@ -409,23 +409,23 @@ Notifies listeners that an entry has been automatically removed due to expiratio
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `get([`K`](K.md) key, [`com.google.common.cache.CacheLoader<? super K,V>`](./CacheLoader.md) loader)`
+### `get(`K` key, [`com.google.common.cache.CacheLoader<? super K,V>`](./CacheLoader.md) loader)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `getIfPresent(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `getOrDefault(`java.lang.Object` key, [`V`](V.md) defaultValue)`
+### `getOrDefault(`java.lang.Object` key, `V` defaultValue)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `getOrLoad([`K`](K.md) key)`
+### `getOrLoad(`K` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `getAllPresent(`java.lang.Iterable<?>` keys)`
 
@@ -435,12 +435,12 @@ Notifies listeners that an entry has been automatically removed due to expiratio
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-### `loadAll([`java.util.Set<? extends K>`](../../../../java/util/Set.md) keys, [`com.google.common.cache.CacheLoader<? super K,V>`](./CacheLoader.md) loader)`
+### `loadAll(`java.util.Set<? extends K>` keys, [`com.google.common.cache.CacheLoader<? super K,V>`](./CacheLoader.md) loader)`
 
-**Returns:** [`java.util.Map<K,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<K,V>`
 
-Returns the result of calling {@link CacheLoader#loadAll}, or null if {@code loader} doesn't
- implement {@code loadAll}.
+Returns the result of calling `CacheLoader.loadAll`, or null if `loader` doesn't
+ implement `loadAll`.
 
 ### `getEntry(`java.lang.Object` key)`
 
@@ -449,7 +449,7 @@ Returns the result of calling {@link CacheLoader#loadAll}, or null if {@code loa
 Returns the internal entry for the specified key. The entry may be loading, expired, or
  partially collected.
 
-### `refresh([`K`](K.md) key)`
+### `refresh(`K` key)`
 
 **Returns:** `void`
 
@@ -461,49 +461,49 @@ Returns the internal entry for the specified key. The entry may be loading, expi
 
 **Returns:** `boolean`
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `putIfAbsent([`K`](K.md) key, [`V`](V.md) value)`
+### `putIfAbsent(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `compute([`K`](K.md) key, [`java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) function)`
+### `compute(`K` key, `java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` function)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `computeIfAbsent([`K`](K.md) key, [`java.util.function.Function<? super K,? extends V>`](../../../../java/util/function/Function.md) function)`
+### `computeIfAbsent(`K` key, `java.util.function.Function<? super K,? extends V>` function)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `computeIfPresent([`K`](K.md) key, [`java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) function)`
+### `computeIfPresent(`K` key, `java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` function)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `merge([`K`](K.md) key, [`V`](V.md) newValue, [`java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) function)`
+### `merge(`K` key, `V` newValue, `java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` function)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `putAll([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) m)`
+### `putAll(`java.util.Map<? extends K,? extends V>` m)`
 
 **Returns:** `void`
 
 ### `remove(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `remove(`java.lang.Object` key, `java.lang.Object` value)`
 
 **Returns:** `boolean`
 
-### `replace([`K`](K.md) key, [`V`](V.md) oldValue, [`V`](V.md) newValue)`
+### `replace(`K` key, `V` oldValue, `V` newValue)`
 
 **Returns:** `boolean`
 
-### `replace([`K`](K.md) key, [`V`](V.md) value)`
+### `replace(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `clear()`
 
@@ -515,21 +515,21 @@ Returns the internal entry for the specified key. The entry may be loading, expi
 
 ### `keySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-### `toArrayList([`java.util.Collection<E>`](../../../../java/util/Collection.md) c)`
+### `toArrayList(`java.util.Collection<E>` c)`
 
-**Returns:** [`java.util.ArrayList<E>`](../../../../java/util/ArrayList.md)
+**Returns:** `java.util.ArrayList<E>`
 
-### `removeIf([`java.util.function.BiPredicate<? super K,? super V>`](../../../../java/util/function/BiPredicate.md) filter)`
+### `removeIf(`java.util.function.BiPredicate<? super K,? super V>` filter)`
 
 **Returns:** `boolean`
 

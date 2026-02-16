@@ -12,7 +12,7 @@
 ## Description
 
 Unused stub class, unreferenced under Java and manually emulated under GWT.
-@author Chris Povirk
+**Author:** Chris Povirk
 
 ## Constructors
 

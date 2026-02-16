@@ -6,15 +6,15 @@
 
 ## Description
 
-Utility methods for working with {@link Flushable} objects.
-@author Michael Lancaster
-@since 1.0
+Utility methods for working with `Flushable` objects.
+**Author:** Michael Lancaster
+**Since:** 1.0
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`java.util.logging.Logger`](../../../../java/util/logging/Logger.md)
+**Type:** `java.util.logging.Logger`
 
 ## Constructors
 
@@ -22,26 +22,26 @@ Utility methods for working with {@link Flushable} objects.
 
 ## Methods
 
-### `flush([`java.io.Flushable`](../../../../java/io/Flushable.md) flushable, `boolean` swallowIOException)`
+### `flush(`java.io.Flushable` flushable, `boolean` swallowIOException)`
 
 **Returns:** `void`
 
-Flush a {@link Flushable}, with control over whether an {@code IOException} may be thrown.
+Flush a `Flushable`, with control over whether an `IOException` may be thrown.
 
- <p>If {@code swallowIOException} is true, then we don't rethrow {@code IOException}, but merely
+ <p>If `swallowIOException` is true, then we don't rethrow `IOException`, but merely
  log it.
-@param flushable the {@code Flushable} object to be flushed.
-@param swallowIOException if true, don't propagate IO exceptions thrown by the {@code flush}
+@param flushable the `Flushable` object to be flushed.
+@param swallowIOException if true, don't propagate IO exceptions thrown by the `flush`
      method
-@throws IOException if {@code swallowIOException} is false and {@link Flushable#flush} throws
-     an {@code IOException}.
-@see Closeables#close
+@throws IOException if `swallowIOException` is false and `Flushable.flush` throws
+     an `IOException`.
+**See:** Closeables#close
 
-### `flushQuietly([`java.io.Flushable`](../../../../java/io/Flushable.md) flushable)`
+### `flushQuietly(`java.io.Flushable` flushable)`
 
 **Returns:** `void`
 
-Equivalent to calling {@code flush(flushable, true)}, but with no {@code IOException} in the
+Equivalent to calling `flush(flushable, true)`, but with no `IOException` in the
  signature.
-@param flushable the {@code Flushable} object to be flushed.
+@param flushable the `Flushable` object to be flushed.
 

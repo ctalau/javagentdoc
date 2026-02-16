@@ -18,11 +18,10 @@
 A multimap which forwards all its method calls to another multimap. Subclasses should override
  one or more methods to modify the behavior of the backing multimap as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingMultimap}.
-@author Robert Konigsberg
-@since 2.0
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingMultimap`.
+**Author:** Robert Konigsberg
+**Since:** 2.0
 
 ## Constructors
 
@@ -38,7 +37,7 @@ Constructor for use by subclasses.
 
 ### `asMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 ### `clear()`
 
@@ -58,11 +57,11 @@ Constructor for use by subclasses.
 
 ### `entries()`
 
-**Returns:** [`java.util.Collection<java.util.Map.Entry<K,V>>`](../../../../java/util/Collection>.md)
+**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `isEmpty()`
 
@@ -74,13 +73,13 @@ Constructor for use by subclasses.
 
 ### `keySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
 **Returns:** `boolean`
 
-### `putAll([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `putAll(`K` key, `java.lang.Iterable<? extends V>` values)`
 
 **Returns:** `boolean`
 
@@ -94,11 +93,11 @@ Constructor for use by subclasses.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `size()`
 
@@ -106,7 +105,7 @@ Constructor for use by subclasses.
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `equals(`java.lang.Object` object)`
 

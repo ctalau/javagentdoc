@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingQueue<E>`](../../collect/ForwardingQueue.md)
 
-**Implements:** [`java.util.concurrent.BlockingQueue<E>`](../../../../../java/util/concurrent/BlockingQueue.md)
+**Implements:** `java.util.concurrent.BlockingQueue<E>`
 
 ## Type Parameters
 
@@ -14,17 +14,16 @@
 
 ## Description
 
-A {@link BlockingQueue} which forwards all its method calls to another {@link BlockingQueue}.
+A `BlockingQueue` which forwards all its method calls to another `BlockingQueue`.
  Subclasses should override one or more methods to modify the behavior of the backing collection
  as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator
  pattern</a>.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingBlockingQueue}.
-@author Raimundo Mirisola
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingBlockingQueue`.
+**Author:** Raimundo Mirisola
 @param <E> the type of elements held in this collection
-@since 4.0
+**Since:** 4.0
 
 ## Constructors
 
@@ -36,25 +35,25 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.concurrent.BlockingQueue<E>`](../../../../../java/util/concurrent/BlockingQueue.md)
+**Returns:** `java.util.concurrent.BlockingQueue<E>`
 
-### `drainTo([`java.util.Collection<? super E>`](../../../../../java/util/Collection.md) c, `int` maxElements)`
-
-**Returns:** `int`
-
-### `drainTo([`java.util.Collection<? super E>`](../../../../../java/util/Collection.md) c)`
+### `drainTo(`java.util.Collection<? super E>` c, `int` maxElements)`
 
 **Returns:** `int`
 
-### `offer([`E`](E.md) e, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `drainTo(`java.util.Collection<? super E>` c)`
+
+**Returns:** `int`
+
+### `offer(`E` e, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
-### `poll(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `poll(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `put([`E`](E.md) e)`
+### `put(`E` e)`
 
 **Returns:** `void`
 
@@ -64,5 +63,5 @@ Constructor for use by subclasses.
 
 ### `take()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 

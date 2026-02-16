@@ -15,16 +15,16 @@
 
 ## Description
 
-This class provides a skeletal implementation of the {@code Cache} interface to minimize the
+This class provides a skeletal implementation of the `Cache` interface to minimize the
  effort required to implement this interface.
 
  <p>To implement a cache, the programmer needs only to extend this class and provide an
- implementation for the {@link #get(Object)} and {@link #getIfPresent} methods. {@link #getUnchecked}, {@link #get(Object, Callable)}, and {@link #getAll} are implemented in terms of
- {@code get}; {@link #getAllPresent} is implemented in terms of {@code getIfPresent}; {@link #putAll} is implemented in terms of {@link #put}, {@link #invalidateAll(Iterable)} is implemented
- in terms of {@link #invalidate}. The method {@link #cleanUp} is a no-op. All other methods throw
- an {@link UnsupportedOperationException}.
-@author Charles Fry
-@since 11.0
+ implementation for the `get(Object)` and `getIfPresent` methods. `getUnchecked`, `get(Object, Callable)`, and `getAll` are implemented in terms of
+ `get`; `getAllPresent` is implemented in terms of `getIfPresent`; `putAll` is implemented in terms of `put`, `invalidateAll(Iterable)` is implemented
+ in terms of `invalidate`. The method `cleanUp` is a no-op. All other methods throw
+ an `UnsupportedOperationException`.
+**Author:** Charles Fry
+**Since:** 11.0
 
 ## Constructors
 
@@ -34,19 +34,19 @@ Constructor for use by subclasses.
 
 ## Methods
 
-### `getUnchecked([`K`](K.md) key)`
+### `getUnchecked(`K` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `getAll(`java.lang.Iterable<? extends K>` keys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-### `apply([`K`](K.md) key)`
+### `apply(`K` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `refresh([`K`](K.md) key)`
+### `refresh(`K` key)`
 
 **Returns:** `void`
 

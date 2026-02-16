@@ -4,26 +4,24 @@
 
 **Fully Qualified Name:** `com.google.common.io.LittleEndianDataInputStream`
 
-**Extends:** [`java.io.FilterInputStream`](../../../../java/io/FilterInputStream.md)
+**Extends:** `java.io.FilterInputStream`
 
-**Implements:** [`java.io.DataInput`](../../../../java/io/DataInput.md)
+**Implements:** `java.io.DataInput`
 
 ## Description
 
-An implementation of {@link DataInput} that uses little-endian byte ordering for reading {@code
- short}, {@code int}, {@code float}, {@code double}, and {@code long} values.
+An implementation of `DataInput` that uses little-endian byte ordering for reading `short`, `int`, `float`, `double`, and `long` values.
 
- <p><b>Note:</b> This class intentionally violates the specification of its supertype {@code
- DataInput}, which explicitly requires big-endian byte order.
-@author Chris Nokleberg
-@author Keith Bottner
-@since 8.0
+ <p><b>Note:</b> This class intentionally violates the specification of its supertype `DataInput`, which explicitly requires big-endian byte order.
+**Author:** Chris Nokleberg
+**Author:** Keith Bottner
+**Since:** 8.0
 
 ## Constructors
 
-### `<init>([`java.io.InputStream`](../../../../java/io/InputStream.md) in)`
+### `<init>(`java.io.InputStream` in)`
 
-Creates a {@code LittleEndianDataInputStream} that wraps the given stream.
+Creates a `LittleEndianDataInputStream` that wraps the given stream.
 @param in the stream to delegate to
 
 ## Methods
@@ -32,7 +30,7 @@ Creates a {@code LittleEndianDataInputStream} that wraps the given stream.
 
 **Returns:** `java.lang.String`
 
-This method will throw an {@link UnsupportedOperationException}.
+This method will throw an `UnsupportedOperationException`.
 
 ### `readFully(`byte[]` b)`
 
@@ -54,7 +52,7 @@ This method will throw an {@link UnsupportedOperationException}.
 
 **Returns:** `int`
 
-Reads an unsigned {@code short} as specified by {@link DataInputStream#readUnsignedShort()},
+Reads an unsigned `short` as specified by `DataInputStream.readUnsignedShort()`,
  except using little-endian byte order.
 @return the next two bytes of the input stream, interpreted as an unsigned 16-bit integer in
      little-endian byte order
@@ -64,9 +62,9 @@ Reads an unsigned {@code short} as specified by {@link DataInputStream#readUnsig
 
 **Returns:** `int`
 
-Reads an integer as specified by {@link DataInputStream#readInt()}, except using little-endian
+Reads an integer as specified by `DataInputStream.readInt()`, except using little-endian
  byte order.
-@return the next four bytes of the input stream, interpreted as an {@code int} in little-endian
+@return the next four bytes of the input stream, interpreted as an `int` in little-endian
      byte order
 @throws IOException if an I/O error occurs
 
@@ -74,9 +72,9 @@ Reads an integer as specified by {@link DataInputStream#readInt()}, except using
 
 **Returns:** `long`
 
-Reads a {@code long} as specified by {@link DataInputStream#readLong()}, except using
+Reads a `long` as specified by `DataInputStream.readLong()`, except using
  little-endian byte order.
-@return the next eight bytes of the input stream, interpreted as a {@code long} in
+@return the next eight bytes of the input stream, interpreted as a `long` in
      little-endian byte order
 @throws IOException if an I/O error occurs
 
@@ -84,9 +82,9 @@ Reads a {@code long} as specified by {@link DataInputStream#readLong()}, except 
 
 **Returns:** `float`
 
-Reads a {@code float} as specified by {@link DataInputStream#readFloat()}, except using
+Reads a `float` as specified by `DataInputStream.readFloat()`, except using
  little-endian byte order.
-@return the next four bytes of the input stream, interpreted as a {@code float} in
+@return the next four bytes of the input stream, interpreted as a `float` in
      little-endian byte order
 @throws IOException if an I/O error occurs
 
@@ -94,9 +92,9 @@ Reads a {@code float} as specified by {@link DataInputStream#readFloat()}, excep
 
 **Returns:** `double`
 
-Reads a {@code double} as specified by {@link DataInputStream#readDouble()}, except using
+Reads a `double` as specified by `DataInputStream.readDouble()`, except using
  little-endian byte order.
-@return the next eight bytes of the input stream, interpreted as a {@code double} in
+@return the next eight bytes of the input stream, interpreted as a `double` in
      little-endian byte order
 @throws IOException if an I/O error occurs
 
@@ -108,9 +106,9 @@ Reads a {@code double} as specified by {@link DataInputStream#readDouble()}, exc
 
 **Returns:** `short`
 
-Reads a {@code short} as specified by {@link DataInputStream#readShort()}, except using
+Reads a `short` as specified by `DataInputStream.readShort()`, except using
  little-endian byte order.
-@return the next two bytes of the input stream, interpreted as a {@code short} in little-endian
+@return the next two bytes of the input stream, interpreted as a `short` in little-endian
      byte order.
 @throws IOException if an I/O error occurs.
 
@@ -118,9 +116,9 @@ Reads a {@code short} as specified by {@link DataInputStream#readShort()}, excep
 
 **Returns:** `char`
 
-Reads a char as specified by {@link DataInputStream#readChar()}, except using little-endian
+Reads a char as specified by `DataInputStream.readChar()`, except using little-endian
  byte order.
-@return the next two bytes of the input stream, interpreted as a {@code char} in little-endian
+@return the next two bytes of the input stream, interpreted as a `char` in little-endian
      byte order
 @throws IOException if an I/O error occurs
 

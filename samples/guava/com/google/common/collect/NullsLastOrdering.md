@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<@org.checkerframework.checker.nullness.qual.Nullable T>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -14,7 +14,7 @@
 
 ## Description
 
-An ordering that treats {@code null} as greater than all other values.
+An ordering that treats `null` as greater than all other values.
 
 ## Fields
 
@@ -32,7 +32,7 @@ An ordering that treats {@code null} as greater than all other values.
 
 ## Methods
 
-### `compare([`T`](T.md) left, [`T`](T.md) right)`
+### `compare(`T` left, `T` right)`
 
 **Returns:** `int`
 

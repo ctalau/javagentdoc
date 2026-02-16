@@ -13,9 +13,9 @@
 
 ## Description
 
-A {@link MapIteratorCache} that adds additional caching. In addition to the caching provided by
- {@link MapIteratorCache}, this structure caches values for the two most recently retrieved keys.
-@author James Sexton
+A `MapIteratorCache` that adds additional caching. In addition to the caching provided by
+ `MapIteratorCache`, this structure caches values for the two most recently retrieved keys.
+**Author:** James Sexton
 
 ## Fields
 
@@ -29,23 +29,23 @@ A {@link MapIteratorCache} that adds additional caching. In addition to the cach
 
 ## Constructors
 
-### `<init>([`java.util.Map<K,V>`](../../../../java/util/Map.md) backingMap)`
+### `<init>(`java.util.Map<K,V>` backingMap)`
 
 ## Methods
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `getIfCached(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `clearCache()`
 
 **Returns:** `void`
 
-### `addToCache([`K`](K.md) key, [`V`](V.md) value)`
+### `addToCache(`K` key, `V` value)`
 
 **Returns:** `void`
 

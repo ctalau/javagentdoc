@@ -4,11 +4,11 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.DirectExecutor`
 
-**Implements:** [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md)
+**Implements:** `java.util.concurrent.Executor`
 
 ## Description
 
-An {@link Executor} that runs each task in the thread that invokes {@link Executor#execute execute}.
+An `Executor` that runs each task in the thread that invokes `Executor.execute execute`.
 
 ## Constructors
 

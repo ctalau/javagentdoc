@@ -18,8 +18,8 @@
 
 A table which forwards all its method calls to another table. Subclasses should override one or
  more methods to modify the behavior of the backing map as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
-@author Gregory Kick
-@since 7.0
+**Author:** Gregory Kick
+**Since:** 7.0
 
 ## Constructors
 
@@ -35,23 +35,23 @@ Constructor for use by subclasses.
 
 ### `cellSet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `column([`C`](C.md) columnKey)`
+### `column(`C` columnKey)`
 
-**Returns:** [`java.util.Map<R,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<R,V>`
 
 ### `columnKeySet()`
 
-**Returns:** [`java.util.Set<C>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<C>`
 
 ### `columnMap()`
 
-**Returns:** [`java.util.Map<C,java.util.Map<R,V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<C,java.util.Map<R,V>>`
 
 ### `contains(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
@@ -71,15 +71,15 @@ Constructor for use by subclasses.
 
 ### `get(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `put([`R`](R.md) rowKey, [`C`](C.md) columnKey, [`V`](V.md) value)`
+### `put(`R` rowKey, `C` columnKey, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `putAll([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md) table)`
 
@@ -87,19 +87,19 @@ Constructor for use by subclasses.
 
 ### `remove(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `row([`R`](R.md) rowKey)`
+### `row(`R` rowKey)`
 
-**Returns:** [`java.util.Map<C,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<C,V>`
 
 ### `rowKeySet()`
 
-**Returns:** [`java.util.Set<R>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<R>`
 
 ### `rowMap()`
 
-**Returns:** [`java.util.Map<R,java.util.Map<C,V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<R,java.util.Map<C,V>>`
 
 ### `size()`
 
@@ -107,7 +107,7 @@ Constructor for use by subclasses.
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `equals(`java.lang.Object` obj)`
 

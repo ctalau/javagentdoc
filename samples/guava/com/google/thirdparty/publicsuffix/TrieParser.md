@@ -32,7 +32,7 @@ Parses a serialized trie representation of a map of reversed public suffixes int
 
 **Returns:** [`com.google.common.collect.ImmutableMap<java.lang.String,com.google.thirdparty.publicsuffix.PublicSuffixType>`](../../common/collect/ImmutableMap.md)
 
-### `doParseTrieToBuilder([`java.util.Deque<java.lang.CharSequence>`](../../../../java/util/Deque.md) stack, `java.lang.CharSequence` encoded, `int` start, [`com.google.common.collect.ImmutableMap.Builder<java.lang.String,com.google.thirdparty.publicsuffix.PublicSuffixType>`](../../common/collect/ImmutableMap/Builder.md) builder)`
+### `doParseTrieToBuilder(`java.util.Deque<java.lang.CharSequence>` stack, `java.lang.CharSequence` encoded, `int` start, [`com.google.common.collect.ImmutableMap.Builder<java.lang.String,com.google.thirdparty.publicsuffix.PublicSuffixType>`](../../common/collect/ImmutableMap/Builder.md) builder)`
 
 **Returns:** `int`
 
@@ -42,7 +42,7 @@ Parses a trie node and returns the number of characters consumed.
 @param encoded The serialized trie.
 @param start An index in the encoded serialized trie to begin reading characters from.
 @param builder A map builder to which all entries will be added.
-@return The number of characters consumed from {@code encoded}.
+@return The number of characters consumed from `encoded`.
 
 ### `reverse(`java.lang.CharSequence` s)`
 

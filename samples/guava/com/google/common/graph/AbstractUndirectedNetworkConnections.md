@@ -13,8 +13,8 @@
 
 ## Description
 
-A base implementation of {@link NetworkConnections} for undirected networks.
-@author James Sexton
+A base implementation of `NetworkConnections` for undirected networks.
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <E> Edge parameter type
 
@@ -22,53 +22,53 @@ A base implementation of {@link NetworkConnections} for undirected networks.
 
 ### `incidentEdgeMap`
 
-**Type:** [`java.util.Map<E,N>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<E,N>`
 
 Keys are edges incident to the origin node, values are the node at the other end.
 
 ## Constructors
 
-### `<init>([`java.util.Map<E,N>`](../../../../java/util/Map.md) incidentEdgeMap)`
+### `<init>(`java.util.Map<E,N>` incidentEdgeMap)`
 
 ## Methods
 
 ### `predecessors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `successors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `incidentEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `inEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `outEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `adjacentNode([`E`](E.md) edge)`
+### `adjacentNode(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `removeInEdge([`E`](E.md) edge, `boolean` isSelfLoop)`
+### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `removeOutEdge([`E`](E.md) edge)`
+### `removeOutEdge(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `addInEdge([`E`](E.md) edge, [`N`](N.md) node, `boolean` isSelfLoop)`
+### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
 
 **Returns:** `void`
 
-### `addOutEdge([`E`](E.md) edge, [`N`](N.md) node)`
+### `addOutEdge(`E` edge, `N` node)`
 
 **Returns:** `void`
 

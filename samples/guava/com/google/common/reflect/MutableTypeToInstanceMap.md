@@ -14,15 +14,15 @@
 
 ## Description
 
-A mutable type-to-instance map. See also {@link ImmutableTypeToInstanceMap}.
-@author Ben Yu
-@since 13.0
+A mutable type-to-instance map. See also `ImmutableTypeToInstanceMap`.
+**Author:** Ben Yu
+**Since:** 13.0
 
 ## Fields
 
 ### `backingMap`
 
-**Type:** [`java.util.Map<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`](../../../../java/util/Map,B>.md)
+**Type:** `java.util.Map<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`
 
 ## Constructors
 
@@ -32,49 +32,49 @@ A mutable type-to-instance map. See also {@link ImmutableTypeToInstanceMap}.
 
 ### `getInstance(`java.lang.Class<T>` type)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `getInstance([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md) type)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `putInstance(`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>` type, [`T`](T.md) value)`
+### `putInstance(`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>` type, `T` value)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `putInstance([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md) type, [`T`](T.md) value)`
+### `putInstance([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md) type, `T` value)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `put([`com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>`](./TypeToken.md) key, [`B`](B.md) value)`
+### `put([`com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>`](./TypeToken.md) key, `B` value)`
 
-**Returns:** [`B`](B.md)
+**Returns:** `B`
 
-Not supported. Use {@link #putInstance} instead.
-@deprecated unsupported operation
+Not supported. Use `putInstance` instead.
+**Deprecated:** unsupported operation
 @throws UnsupportedOperationException always
 
-### `putAll([`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B>`](../../../../java/util/Map,? extends B>.md) map)`
+### `putAll(`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B>` map)`
 
 **Returns:** `void`
 
-Not supported. Use {@link #putInstance} instead.
-@deprecated unsupported operation
+Not supported. Use `putInstance` instead.
+**Deprecated:** unsupported operation
 @throws UnsupportedOperationException always
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>>`](../../../../java/util/Set,B>>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>>`
 
 ### `delegate()`
 
-**Returns:** [`java.util.Map<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`](../../../../java/util/Map,B>.md)
+**Returns:** `java.util.Map<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`
 
-### `trustedPut([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md) type, [`T`](T.md) value)`
+### `trustedPut([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md) type, `T` value)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `trustedGet([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md) type)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 

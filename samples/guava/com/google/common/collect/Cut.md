@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.Cut`
 
-**Implements:** `java.lang.Comparable<com.google.common.collect.Cut<C>>`, [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.lang.Comparable<com.google.common.collect.Cut<C>>`, `java.io.Serializable`
 
 ## Type Parameters
 
@@ -12,18 +12,18 @@
 
 ## Description
 
-Implementation detail for the internal structure of {@link Range} instances. Represents a unique
- way of "cutting" a "number line" (actually of instances of type {@code C}, not necessarily
+Implementation detail for the internal structure of `Range` instances. Represents a unique
+ way of "cutting" a "number line" (actually of instances of type `C`, not necessarily
  "numbers") into two sections; this can be done below a certain value, above a certain value,
  below all values or above all values. With this object defined in this way, an interval can
- always be represented by a pair of {@code Cut} instances.
-@author Kevin Bourrillion
+ always be represented by a pair of `Cut` instances.
+**Author:** Kevin Bourrillion
 
 ## Fields
 
 ### `endpoint`
 
-**Type:** [`C`](C.md)
+**Type:** `C`
 
 ### `serialVersionUID`
 
@@ -31,11 +31,11 @@ Implementation detail for the internal structure of {@link Range} instances. Rep
 
 ## Constructors
 
-### `<init>([`C`](C.md) endpoint)`
+### `<init>(`C` endpoint)`
 
 ## Methods
 
-### `isLessThan([`C`](C.md) value)`
+### `isLessThan(`C` value)`
 
 **Returns:** `boolean`
 
@@ -65,11 +65,11 @@ Implementation detail for the internal structure of {@link Range} instances. Rep
 
 ### `leastValueAbove([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
 ### `greatestValueBelow([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
 ### `canonical([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
 
@@ -81,7 +81,7 @@ Implementation detail for the internal structure of {@link Range} instances. Rep
 
 ### `endpoint()`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
 ### `equals(`java.lang.Object` obj)`
 
@@ -99,11 +99,11 @@ Implementation detail for the internal structure of {@link Range} instances. Rep
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-### `belowValue([`C`](C.md) endpoint)`
+### `belowValue(`C` endpoint)`
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-### `aboveValue([`C`](C.md) endpoint)`
+### `aboveValue(`C` endpoint)`
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 

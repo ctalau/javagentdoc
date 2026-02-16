@@ -12,10 +12,10 @@
 
 ## Description
 
-Implementation of {@code Futures#withTimeout}.
+Implementation of `Futures#withTimeout`.
 
- <p>Future that delegates to another but will finish early (via a {@link TimeoutException} wrapped
- in an {@link ExecutionException}) if the specified duration expires. The delegate future is
+ <p>Future that delegates to another but will finish early (via a `TimeoutException` wrapped
+ in an `ExecutionException`) if the specified duration expires. The delegate future is
  interrupted and cancelled if it times out.
 
 ## Fields
@@ -26,7 +26,7 @@ Implementation of {@code Futures#withTimeout}.
 
 ### `timer`
 
-**Type:** [`java.util.concurrent.ScheduledFuture<?>`](../../../../../java/util/concurrent/ScheduledFuture.md)
+**Type:** `java.util.concurrent.ScheduledFuture<?>`
 
 ## Constructors
 
@@ -34,7 +34,7 @@ Implementation of {@code Futures#withTimeout}.
 
 ## Methods
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md) delegate, `long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit, [`java.util.concurrent.ScheduledExecutorService`](../../../../../java/util/concurrent/ScheduledExecutorService.md) scheduledExecutor)`
+### `create([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md) delegate, `long` time, `java.util.concurrent.TimeUnit` unit, `java.util.concurrent.ScheduledExecutorService` scheduledExecutor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 

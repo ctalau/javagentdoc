@@ -6,29 +6,29 @@
 
 ## Description
 
-A specification of a {@link CacheBuilder} configuration.
+A specification of a `CacheBuilder` configuration.
 
- <p>{@code CacheBuilderSpec} supports parsing configuration off of a string, which makes it
- especially useful for command-line configuration of a {@code CacheBuilder}.
+ <p>`CacheBuilderSpec` supports parsing configuration off of a string, which makes it
+ especially useful for command-line configuration of a `CacheBuilder`.
 
  <p>The string syntax is a series of comma-separated keys or key-value pairs, each corresponding
- to a {@code CacheBuilder} method.
+ to a `CacheBuilder` method.
 
  <ul>
-   <li>{@code concurrencyLevel=[integer]}: sets {@link CacheBuilder#concurrencyLevel}.
-   <li>{@code initialCapacity=[integer]}: sets {@link CacheBuilder#initialCapacity}.
-   <li>{@code maximumSize=[long]}: sets {@link CacheBuilder#maximumSize}.
-   <li>{@code maximumWeight=[long]}: sets {@link CacheBuilder#maximumWeight}.
-   <li>{@code expireAfterAccess=[duration]}: sets {@link CacheBuilder#expireAfterAccess}.
-   <li>{@code expireAfterWrite=[duration]}: sets {@link CacheBuilder#expireAfterWrite}.
-   <li>{@code refreshAfterWrite=[duration]}: sets {@link CacheBuilder#refreshAfterWrite}.
-   <li>{@code weakKeys}: sets {@link CacheBuilder#weakKeys}.
-   <li>{@code softValues}: sets {@link CacheBuilder#softValues}.
-   <li>{@code weakValues}: sets {@link CacheBuilder#weakValues}.
-   <li>{@code recordStats}: sets {@link CacheBuilder#recordStats}.
+   <li>`concurrencyLevel=[integer]`: sets `CacheBuilder.concurrencyLevel`.
+   <li>`initialCapacity=[integer]`: sets `CacheBuilder.initialCapacity`.
+   <li>`maximumSize=[long]`: sets `CacheBuilder.maximumSize`.
+   <li>`maximumWeight=[long]`: sets `CacheBuilder.maximumWeight`.
+   <li>`expireAfterAccess=[duration]`: sets `CacheBuilder.expireAfterAccess`.
+   <li>`expireAfterWrite=[duration]`: sets `CacheBuilder.expireAfterWrite`.
+   <li>`refreshAfterWrite=[duration]`: sets `CacheBuilder.refreshAfterWrite`.
+   <li>`weakKeys`: sets `CacheBuilder.weakKeys`.
+   <li>`softValues`: sets `CacheBuilder.softValues`.
+   <li>`weakValues`: sets `CacheBuilder.weakValues`.
+   <li>`recordStats`: sets `CacheBuilder.recordStats`.
  </ul>
 
- <p>The set of supported keys will grow as {@code CacheBuilder} evolves, but existing keys will
+ <p>The set of supported keys will grow as `CacheBuilder` evolves, but existing keys will
  never be removed.
 
  <p>Durations are represented by an integer, followed by one of "d", "h", "m", or "s",
@@ -39,16 +39,16 @@ A specification of a {@link CacheBuilder} configuration.
  also illegal to use the following pairs of keys in a single value:
 
  <ul>
-   <li>{@code maximumSize} and {@code maximumWeight}
-   <li>{@code softValues} and {@code weakValues}
+   <li>`maximumSize` and `maximumWeight`
+   <li>`softValues` and `weakValues`
  </ul>
 
- <p>{@code CacheBuilderSpec} does not support configuring {@code CacheBuilder} methods with
+ <p>`CacheBuilderSpec` does not support configuring `CacheBuilder` methods with
  non-value parameters. These must be configured in code.
 
- <p>A new {@code CacheBuilder} can be instantiated from a {@code CacheBuilderSpec} using {@link CacheBuilder#from(CacheBuilderSpec)} or {@link CacheBuilder#from(String)}.
-@author Adam Winer
-@since 12.0
+ <p>A new `CacheBuilder` can be instantiated from a `CacheBuilderSpec` using `CacheBuilder.from(CacheBuilderSpec)` or `CacheBuilder.from(String)`.
+**Author:** Adam Winer
+**Since:** 12.0
 
 ## Fields
 
@@ -104,7 +104,7 @@ Map of names to ValueParser.
 
 ### `writeExpirationTimeUnit`
 
-**Type:** [`java.util.concurrent.TimeUnit`](../../../../java/util/concurrent/TimeUnit.md)
+**Type:** `java.util.concurrent.TimeUnit`
 
 ### `accessExpirationDuration`
 
@@ -112,7 +112,7 @@ Map of names to ValueParser.
 
 ### `accessExpirationTimeUnit`
 
-**Type:** [`java.util.concurrent.TimeUnit`](../../../../java/util/concurrent/TimeUnit.md)
+**Type:** `java.util.concurrent.TimeUnit`
 
 ### `refreshDuration`
 
@@ -120,7 +120,7 @@ Map of names to ValueParser.
 
 ### `refreshTimeUnit`
 
-**Type:** [`java.util.concurrent.TimeUnit`](../../../../java/util/concurrent/TimeUnit.md)
+**Type:** `java.util.concurrent.TimeUnit`
 
 ### `specification`
 
@@ -157,9 +157,9 @@ Returns a CacheBuilder configured according to this instance's specification.
 
 **Returns:** `java.lang.String`
 
-Returns a string that can be used to parse an equivalent {@code CacheBuilderSpec}. The order
+Returns a string that can be used to parse an equivalent `CacheBuilderSpec`. The order
  and form of this representation is not guaranteed, except that reparsing its output will
- produce a {@code CacheBuilderSpec} equal to this instance.
+ produce a `CacheBuilderSpec` equal to this instance.
 
 ### `toString()`
 
@@ -176,7 +176,7 @@ Returns a string representation for this CacheBuilderSpec instance. The form of 
 
 **Returns:** `boolean`
 
-### `durationInNanos(`long` duration, [`java.util.concurrent.TimeUnit`](../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `durationInNanos(`long` duration, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `java.lang.Long`
 

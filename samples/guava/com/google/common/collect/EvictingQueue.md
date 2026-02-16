@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingQueue<E>`](./ForwardingQueue.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -24,14 +24,14 @@ A non-blocking queue which automatically evicts elements from the head of the qu
  bounded queues, which either block or reject new elements when full.
 
  <p>This class is not thread-safe, and does not accept null elements.
-@author Kurt Alfred Kluever
-@since 15.0
+**Author:** Kurt Alfred Kluever
+**Since:** 15.0
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`java.util.Queue<E>`](../../../../java/util/Queue.md)
+**Type:** `java.util.Queue<E>`
 
 ### `maxSize`
 
@@ -51,9 +51,9 @@ A non-blocking queue which automatically evicts elements from the head of the qu
 
 **Returns:** [`com.google.common.collect.EvictingQueue<E>`](./EvictingQueue.md)
 
-Creates and returns a new evicting queue that will hold up to {@code maxSize} elements.
+Creates and returns a new evicting queue that will hold up to `maxSize` elements.
 
- <p>When {@code maxSize} is zero, elements will be evicted immediately after being added to the
+ <p>When `maxSize` is zero, elements will be evicted immediately after being added to the
  queue.
 
 ### `remainingCapacity()`
@@ -62,29 +62,29 @@ Creates and returns a new evicting queue that will hold up to {@code maxSize} el
 
 Returns the number of additional elements that this queue can accept without evicting; zero if
  the queue is currently full.
-@since 16.0
+**Since:** 16.0
 
 ### `delegate()`
 
-**Returns:** [`java.util.Queue<E>`](../../../../java/util/Queue.md)
+**Returns:** `java.util.Queue<E>`
 
-### `offer([`E`](E.md) e)`
-
-**Returns:** `boolean`
-
-Adds the given element to this queue. If the queue is currently full, the element at the head
- of the queue is evicted to make room.
-@return {@code true} always
-
-### `add([`E`](E.md) e)`
+### `offer(`E` e)`
 
 **Returns:** `boolean`
 
 Adds the given element to this queue. If the queue is currently full, the element at the head
  of the queue is evicted to make room.
-@return {@code true} always
+@return `true` always
 
-### `addAll([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) collection)`
+### `add(`E` e)`
+
+**Returns:** `boolean`
+
+Adds the given element to this queue. If the queue is currently full, the element at the head
+ of the queue is evicted to make room.
+@return `true` always
+
+### `addAll(`java.util.Collection<? extends E>` collection)`
 
 **Returns:** `boolean`
 

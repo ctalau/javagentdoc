@@ -13,9 +13,9 @@
 
 ## Description
 
-{@code entrySet()} implementation for {@link ImmutableMap}.
-@author Jesse Wilson
-@author Kevin Bourrillion
+`entrySet()` implementation for `ImmutableMap`.
+**Author:** Jesse Wilson
+**Author:** Kevin Bourrillion
 
 ## Constructors
 
@@ -51,7 +51,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

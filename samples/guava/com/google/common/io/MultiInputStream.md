@@ -4,28 +4,28 @@
 
 **Fully Qualified Name:** `com.google.common.io.MultiInputStream`
 
-**Extends:** [`java.io.InputStream`](../../../../java/io/InputStream.md)
+**Extends:** `java.io.InputStream`
 
 ## Description
 
-An {@link InputStream} that concatenates multiple substreams. At most one stream will be open at
+An `InputStream` that concatenates multiple substreams. At most one stream will be open at
  a time.
-@author Chris Nokleberg
-@since 1.0
+**Author:** Chris Nokleberg
+**Since:** 1.0
 
 ## Fields
 
 ### `it`
 
-**Type:** [`java.util.Iterator<? extends com.google.common.io.ByteSource>`](../../../../java/util/Iterator.md)
+**Type:** `java.util.Iterator<? extends com.google.common.io.ByteSource>`
 
 ### `in`
 
-**Type:** [`java.io.InputStream`](../../../../java/io/InputStream.md)
+**Type:** `java.io.InputStream`
 
 ## Constructors
 
-### `<init>([`java.util.Iterator<? extends com.google.common.io.ByteSource>`](../../../../java/util/Iterator.md) it)`
+### `<init>(`java.util.Iterator<? extends com.google.common.io.ByteSource>` it)`
 
 Creates a new instance.
 @param it an iterator of I/O suppliers that will provide each substream

@@ -12,8 +12,8 @@
 ## Description
 
 An interface for representing and manipulating an origin node's adjacent nodes and incident edges
- in a {@link Network}.
-@author James Sexton
+ in a `Network`.
+**Author:** James Sexton
 @param <N> Node parameter type
 @param <E> Edge parameter type
 
@@ -21,66 +21,66 @@ An interface for representing and manipulating an origin node's adjacent nodes a
 
 ### `adjacentNodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `predecessors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `successors()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `incidentEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `inEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `outEdges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `edgesConnecting([`N`](N.md) node)`
+### `edgesConnecting(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-Returns the set of edges connecting the origin node to {@code node}. For networks without
+Returns the set of edges connecting the origin node to `node`. For networks without
  parallel edges, this set cannot be of size greater than one.
 
-### `adjacentNode([`E`](E.md) edge)`
+### `adjacentNode(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-Returns the node that is adjacent to the origin node along {@code edge}.
+Returns the node that is adjacent to the origin node along `edge`.
 
- <p>In the directed case, {@code edge} is assumed to be an outgoing edge.
+ <p>In the directed case, `edge` is assumed to be an outgoing edge.
 
-### `removeInEdge([`E`](E.md) edge, `boolean` isSelfLoop)`
+### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-Remove {@code edge} from the set of incoming edges. Returns the former predecessor node.
+Remove `edge` from the set of incoming edges. Returns the former predecessor node.
 
- <p>In the undirected case, returns {@code null} if {@code isSelfLoop} is true.
+ <p>In the undirected case, returns `null` if `isSelfLoop` is true.
 
-### `removeOutEdge([`E`](E.md) edge)`
+### `removeOutEdge(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-Remove {@code edge} from the set of outgoing edges. Returns the former successor node.
+Remove `edge` from the set of outgoing edges. Returns the former successor node.
 
-### `addInEdge([`E`](E.md) edge, [`N`](N.md) node, `boolean` isSelfLoop)`
-
-**Returns:** `void`
-
-Add {@code edge} to the set of incoming edges. Implicitly adds {@code node} as a predecessor.
-
-### `addOutEdge([`E`](E.md) edge, [`N`](N.md) node)`
+### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
 
 **Returns:** `void`
 
-Add {@code edge} to the set of outgoing edges. Implicitly adds {@code node} as a successor.
+Add `edge` to the set of incoming edges. Implicitly adds `node` as a predecessor.
+
+### `addOutEdge(`E` edge, `N` node)`
+
+**Returns:** `void`
+
+Add `edge` to the set of outgoing edges. Implicitly adds `node` as a successor.
 

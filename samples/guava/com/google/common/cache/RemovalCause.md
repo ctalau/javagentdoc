@@ -7,8 +7,8 @@
 ## Description
 
 The reason why a cached entry was removed.
-@author Charles Fry
-@since 10.0
+**Author:** Charles Fry
+**Since:** 10.0
 
 ## Constructors
 
@@ -28,6 +28,6 @@ The reason why a cached entry was removed.
 
 **Returns:** `boolean`
 
-Returns {@code true} if there was an automatic removal due to eviction (the cause is neither
- {@link #EXPLICIT} nor {@link #REPLACED}).
+Returns `true` if there was an automatic removal due to eviction (the cause is neither
+ `EXPLICIT` nor `REPLACED`).
 

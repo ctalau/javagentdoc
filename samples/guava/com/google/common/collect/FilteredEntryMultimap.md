@@ -15,9 +15,9 @@
 
 ## Description
 
-Implementation of {@link Multimaps#filterEntries(Multimap, Predicate)}.
-@author Jared Levy
-@author Louis Wasserman
+Implementation of `Multimaps.filterEntries(Multimap, Predicate)`.
+**Author:** Jared Levy
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -47,13 +47,13 @@ Implementation of {@link Multimaps#filterEntries(Multimap, Predicate)}.
 
 **Returns:** `int`
 
-### `satisfies([`K`](K.md) key, [`V`](V.md) value)`
+### `satisfies(`K` key, `V` value)`
 
 **Returns:** `boolean`
 
-### `filterCollection([`java.util.Collection<E>`](../../../../java/util/Collection.md) collection, [`com.google.common.base.Predicate<? super E>`](../base/Predicate.md) predicate)`
+### `filterCollection(`java.util.Collection<E>` collection, [`com.google.common.base.Predicate<? super E>`](../base/Predicate.md) predicate)`
 
-**Returns:** [`java.util.Collection<E>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<E>`
 
 ### `containsKey(`java.lang.Object` key)`
 
@@ -61,39 +61,39 @@ Implementation of {@link Multimaps#filterEntries(Multimap, Predicate)}.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `unmodifiableEmptyCollection()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `createEntries()`
 
-**Returns:** [`java.util.Collection<java.util.Map.Entry<K,V>>`](../../../../java/util/Collection>.md)
+**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
 ### `createValues()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `entryIterator()`
 
-**Returns:** [`java.util.Iterator<java.util.Map.Entry<K,V>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
 ### `createAsMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 ### `createKeySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 ### `removeEntriesIf([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,java.util.Collection<V>>>`](../base/Predicate>>.md) predicate)`
 

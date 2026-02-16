@@ -6,14 +6,14 @@
 
 ## Description
 
-The representation of a linear transformation between real numbers {@code x} and {@code y}.
+The representation of a linear transformation between real numbers `x` and `y`.
  Graphically, this is the specification of a straight line on a plane. The transformation can be
- expressed as {@code y = m * x + c} for finite {@code m} and {@code c}, unless it is a vertical
- transformation in which case {@code x} has a constant value for all {@code y}. In the
- non-vertical case, {@code m} is the slope of the transformation (and a horizontal transformation
+ expressed as `y = m * x + c` for finite `m` and `c`, unless it is a vertical
+ transformation in which case `x` has a constant value for all `y`. In the
+ non-vertical case, `m` is the slope of the transformation (and a horizontal transformation
  has zero slope).
-@author Pete Gillin
-@since 20.0
+**Author:** Pete Gillin
+**Since:** 20.0
 
 ## Constructors
 
@@ -25,29 +25,29 @@ The representation of a linear transformation between real numbers {@code x} and
 
 **Returns:** [`com.google.common.math.LinearTransformation.LinearTransformationBuilder`](LinearTransformation/LinearTransformationBuilder.md)
 
-Start building an instance which maps {@code x = x1} to {@code y = y1}. Both arguments must be
- finite. Call either {@link LinearTransformationBuilder#and} or {@link LinearTransformationBuilder#withSlope} on the returned object to finish building the instance.
+Start building an instance which maps `x = x1` to `y = y1`. Both arguments must be
+ finite. Call either `LinearTransformationBuilder.and` or `LinearTransformationBuilder.withSlope` on the returned object to finish building the instance.
 
 ### `vertical(`double` x)`
 
 **Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
-Builds an instance representing a vertical transformation with a constant value of {@code x}.
+Builds an instance representing a vertical transformation with a constant value of `x`.
  (The inverse of this will be a horizontal transformation.)
 
 ### `horizontal(`double` y)`
 
 **Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
-Builds an instance representing a horizontal transformation with a constant value of {@code y}.
+Builds an instance representing a horizontal transformation with a constant value of `y`.
  (The inverse of this will be a vertical transformation.)
 
 ### `forNaN()`
 
 **Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
-Builds an instance for datasets which contains {@link Double#NaN}. The {@link #isHorizontal}
- and {@link #isVertical} methods return {@code false} and the {@link #slope}, and {@link #transform} methods all return {@link Double#NaN}. The {@link #inverse} method returns the same
+Builds an instance for datasets which contains `Double.NaN`. The `isHorizontal`
+ and `isVertical` methods return `false` and the `slope`, and `transform` methods all return `Double.NaN`. The `inverse` method returns the same
  instance.
 
 ### `isVertical()`
@@ -66,22 +66,22 @@ Returns whether this is a horizontal transformation.
 
 **Returns:** `double`
 
-Returns the slope of the transformation, i.e. the rate of change of {@code y} with respect to
- {@code x}. This must not be called on a vertical transformation (i.e. when {@link #isVertical()} is true).
+Returns the slope of the transformation, i.e. the rate of change of `y` with respect to
+ `x`. This must not be called on a vertical transformation (i.e. when `isVertical()` is true).
 
 ### `transform(`double` x)`
 
 **Returns:** `double`
 
-Returns the {@code y} corresponding to the given {@code x}. This must not be called on a
- vertical transformation (i.e. when {@link #isVertical()} is true).
+Returns the `y` corresponding to the given `x`. This must not be called on a
+ vertical transformation (i.e. when `isVertical()` is true).
 
 ### `inverse()`
 
 **Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
 Returns the inverse linear transformation. The inverse of a horizontal transformation is a
- vertical transformation, and vice versa. The inverse of the {@link #forNaN} transformation is
+ vertical transformation, and vice versa. The inverse of the `forNaN` transformation is
  itself. In all other cases, the inverse is a transformation such that applying both the
  original transformation and its inverse to a value gives you the original value give-or-take
  numerical errors. Calling this method multiple times on the same instance will always return

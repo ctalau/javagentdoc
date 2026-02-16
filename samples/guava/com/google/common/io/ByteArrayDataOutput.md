@@ -4,14 +4,14 @@
 
 **Fully Qualified Name:** `com.google.common.io.ByteArrayDataOutput`
 
-**Extends:** [`java.io.DataOutput`](../../../../java/io/DataOutput.md)
+**Extends:** `java.io.DataOutput`
 
 ## Description
 
-An extension of {@code DataOutput} for writing to in-memory byte arrays; its methods offer
- identical functionality but do not throw {@link IOException}.
-@author Jayaprabhakar Kadarkarai
-@since 1.0
+An extension of `DataOutput` for writing to in-memory byte arrays; its methods offer
+ identical functionality but do not throw `IOException`.
+**Author:** Jayaprabhakar Kadarkarai
+**Since:** 1.0
 
 ## Methods
 
@@ -71,8 +71,8 @@ An extension of {@code DataOutput} for writing to in-memory byte arrays; its met
 
 **Returns:** `void`
 
-@deprecated This method is dangerous as it discards the high byte of every character. For
-     UTF-8, use {@code write(s.getBytes(StandardCharsets.UTF_8))}.
+**Deprecated:** This method is dangerous as it discards the high byte of every character. For
+     UTF-8, use `write(s.getBytes(StandardCharsets.UTF_8))`.
 
 ### `toByteArray()`
 

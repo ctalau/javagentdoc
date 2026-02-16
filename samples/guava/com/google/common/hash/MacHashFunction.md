@@ -8,18 +8,18 @@
 
 ## Description
 
-{@link HashFunction} adapter for {@link Mac} instances.
-@author Kurt Alfred Kluever
+`HashFunction` adapter for `Mac` instances.
+**Author:** Kurt Alfred Kluever
 
 ## Fields
 
 ### `prototype`
 
-**Type:** [`javax.crypto.Mac`](../../../../javax/crypto/Mac.md)
+**Type:** `javax.crypto.Mac`
 
 ### `key`
 
-**Type:** [`java.security.Key`](../../../../java/security/Key.md)
+**Type:** `java.security.Key`
 
 ### `toString`
 
@@ -35,7 +35,7 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` algorithmName, [`java.security.Key`](../../../../java/security/Key.md) key, `java.lang.String` toString)`
+### `<init>(`java.lang.String` algorithmName, `java.security.Key` key, `java.lang.String` toString)`
 
 ## Methods
 
@@ -43,13 +43,13 @@
 
 **Returns:** `int`
 
-### `supportsClone([`javax.crypto.Mac`](../../../../javax/crypto/Mac.md) mac)`
+### `supportsClone(`javax.crypto.Mac` mac)`
 
 **Returns:** `boolean`
 
-### `getMac(`java.lang.String` algorithmName, [`java.security.Key`](../../../../java/security/Key.md) key)`
+### `getMac(`java.lang.String` algorithmName, `java.security.Key` key)`
 
-**Returns:** [`javax.crypto.Mac`](../../../../javax/crypto/Mac.md)
+**Returns:** `javax.crypto.Mac`
 
 ### `newHasher()`
 

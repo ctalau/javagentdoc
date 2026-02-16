@@ -58,7 +58,7 @@ Returns the entry's hash.
 
 ### `getKey()`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
 Returns the key for this entry.
 

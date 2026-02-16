@@ -7,9 +7,9 @@
 ## Description
 
 Implemented by references that have code to run after garbage collection of their referents.
-@see FinalizableReferenceQueue
-@author Bob Lee
-@since 2.0
+**See:** FinalizableReferenceQueue
+**Author:** Bob Lee
+**Since:** 2.0
 
 ## Methods
 

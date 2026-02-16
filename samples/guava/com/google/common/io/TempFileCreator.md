@@ -25,15 +25,15 @@ Creates temporary files and directories whose permissions are restricted to the 
 
 ### `createTempDir()`
 
-**Returns:** [`java.io.File`](../../../../java/io/File.md)
+**Returns:** `java.io.File`
 
 @throws IllegalStateException if the directory could not be created (to implement the contract
-     of {@link Files#createTempDir()}, such as if the system does not support creating temporary
+     of `Files.createTempDir()`, such as if the system does not support creating temporary
      directories securely
 
 ### `createTempFile(`java.lang.String` prefix)`
 
-**Returns:** [`java.io.File`](../../../../java/io/File.md)
+**Returns:** `java.io.File`
 
 ### `pickSecureCreator()`
 
@@ -44,8 +44,8 @@ Creates temporary files and directories whose permissions are restricted to the 
 **Returns:** `void`
 
 Creates the permissions normally used for Windows filesystems, looking up the user afresh, even
- if previous calls have initialized the {@code PermissionSupplier} fields.
+ if previous calls have initialized the `PermissionSupplier` fields.
 
- <p>This lets us test the effects of different values of the {@code user.name} system property
+ <p>This lets us test the effects of different values of the `user.name` system property
  without needing a separate VM or classloader.
 

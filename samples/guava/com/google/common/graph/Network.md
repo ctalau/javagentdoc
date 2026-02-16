@@ -19,13 +19,13 @@ An interface for <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathemat
  <p>A graph is composed of a set of nodes and a set of edges connecting pairs of nodes.
 
  <p>There are three primary interfaces provided to represent graphs. In order of increasing
- complexity they are: {@link Graph}, {@link ValueGraph}, and {@link Network}. You should generally
+ complexity they are: `Graph`, `ValueGraph`, and `Network`. You should generally
  prefer the simplest interface that satisfies your use case. See the <a href="https://github.com/google/guava/wiki/GraphsExplained#choosing-the-right-graph-type">
  "Choosing the right graph type"</a> section of the Guava User Guide for more details.
 
  <h3>Capabilities</h3>
 
- <p>{@code Network} supports the following use cases (<a href="https://github.com/google/guava/wiki/GraphsExplained#definitions">definitions of
+ <p>`Network` supports the following use cases (<a href="https://github.com/google/guava/wiki/GraphsExplained#definitions">definitions of
  terms</a>):
 
  <ul>
@@ -37,27 +37,25 @@ An interface for <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathemat
    <li>graphs whose edges are unique objects
  </ul>
 
- <h3>Building a {@code Network}</h3>
+ <h3>Building a `Network`</h3>
 
- <p>The implementation classes that {@code common.graph} provides are not public, by design. To
- create an instance of one of the built-in implementations of {@code Network}, use the {@link NetworkBuilder} class:
+ <p>The implementation classes that `common.graph` provides are not public, by design. To
+ create an instance of one of the built-in implementations of `Network`, use the `NetworkBuilder` class:
 
- <pre>{@code
- MutableNetwork<Integer, MyEdge> graph = NetworkBuilder.directed().build();
- }</pre>
+ <pre>`MutableNetwork<Integer, MyEdge> graph = NetworkBuilder.directed().build();
+ `</pre>
 
- <p>{@link NetworkBuilder#build()} returns an instance of {@link MutableNetwork}, which is a
- subtype of {@code Network} that provides methods for adding and removing nodes and edges. If you
+ <p>`NetworkBuilder.build()` returns an instance of `MutableNetwork`, which is a
+ subtype of `Network` that provides methods for adding and removing nodes and edges. If you
  do not need to mutate a graph (e.g. if you write a method than runs a read-only algorithm on the
- graph), you should use the non-mutating {@link Network} interface, or an {@link ImmutableNetwork}.
+ graph), you should use the non-mutating `Network` interface, or an `ImmutableNetwork`.
 
- <p>You can create an immutable copy of an existing {@code Network} using {@link ImmutableNetwork#copyOf(Network)}:
+ <p>You can create an immutable copy of an existing `Network` using `ImmutableNetwork.copyOf(Network)`:
 
- <pre>{@code
- ImmutableNetwork<Integer, MyEdge> immutableGraph = ImmutableNetwork.copyOf(graph);
- }</pre>
+ <pre>`ImmutableNetwork<Integer, MyEdge> immutableGraph = ImmutableNetwork.copyOf(graph);
+ `</pre>
 
- <p>Instances of {@link ImmutableNetwork} do not implement {@link MutableNetwork} (obviously!) and
+ <p>Instances of `ImmutableNetwork` do not implement `MutableNetwork` (obviously!) and
  are contractually guaranteed to be unmodifiable and thread-safe.
 
  <p>The Guava User Guide has <a href="https://github.com/google/guava/wiki/GraphsExplained#building-graph-instances">more
@@ -65,53 +63,53 @@ An interface for <a href="https://en.wikipedia.org/wiki/Graph_(discrete_mathemat
 
  <h3>Additional documentation</h3>
 
- <p>See the Guava User Guide for the {@code common.graph} package (<a href="https://github.com/google/guava/wiki/GraphsExplained">"Graphs Explained"</a>) for
+ <p>See the Guava User Guide for the `common.graph` package (<a href="https://github.com/google/guava/wiki/GraphsExplained">"Graphs Explained"</a>) for
  additional documentation, including:
 
  <ul>
    <li><a href="https://github.com/google/guava/wiki/GraphsExplained#equals-hashcode-and-graph-equivalence">
-       {@code equals()}, {@code hashCode()}, and graph equivalence</a>
+       `equals()`, `hashCode()`, and graph equivalence</a>
    <li><a href="https://github.com/google/guava/wiki/GraphsExplained#synchronization">
        Synchronization policy</a>
    <li><a href="https://github.com/google/guava/wiki/GraphsExplained#notes-for-implementors">Notes
        for implementors</a>
  </ul>
-@author James Sexton
-@author Joshua O'Madadhain
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
 @param <N> Node parameter type
 @param <E> Edge parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Methods
 
 ### `nodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns all nodes in this network, in the order specified by {@link #nodeOrder()}.
+Returns all nodes in this network, in the order specified by `nodeOrder()`.
 
 ### `edges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-Returns all edges in this network, in the order specified by {@link #edgeOrder()}.
+Returns all edges in this network, in the order specified by `edgeOrder()`.
 
 ### `asGraph()`
 
 **Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
 
-Returns a live view of this network as a {@link Graph}. The resulting {@link Graph} will have
- an edge connecting node A to node B if this {@link Network} has an edge connecting A to B.
+Returns a live view of this network as a `Graph`. The resulting `Graph` will have
+ an edge connecting node A to node B if this `Network` has an edge connecting A to B.
 
- <p>If this network {@link #allowsParallelEdges() allows parallel edges}, parallel edges will be
- treated as if collapsed into a single edge. For example, the {@link #degree(Object)} of a node
- in the {@link Graph} view may be less than the degree of the same node in this {@link Network}.
+ <p>If this network `allowsParallelEdges() allows parallel edges`, parallel edges will be
+ treated as if collapsed into a single edge. For example, the `degree(Object)` of a node
+ in the `Graph` view may be less than the degree of the same node in this `Network`.
 
 ### `isDirected()`
 
 **Returns:** `boolean`
 
-Returns true if the edges in this network are directed. Directed edges connect a {@link EndpointPair#source() source node} to a {@link EndpointPair#target() target node}, while
+Returns true if the edges in this network are directed. Directed edges connect a `EndpointPair.source() source node` to a `EndpointPair.target() target node`, while
  undirected edges connect a pair of nodes to each other.
 
 ### `allowsParallelEdges()`
@@ -119,282 +117,280 @@ Returns true if the edges in this network are directed. Directed edges connect a
 **Returns:** `boolean`
 
 Returns true if this network allows parallel edges. Attempting to add a parallel edge to a
- network that does not allow them will throw an {@link IllegalArgumentException}.
+ network that does not allow them will throw an `IllegalArgumentException`.
 
 ### `allowsSelfLoops()`
 
 **Returns:** `boolean`
 
 Returns true if this network allows self-loops (edges that connect a node to itself).
- Attempting to add a self-loop to a network that does not allow them will throw an {@link IllegalArgumentException}.
+ Attempting to add a self-loop to a network that does not allow them will throw an `IllegalArgumentException`.
 
 ### `nodeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-Returns the order of iteration for the elements of {@link #nodes()}.
+Returns the order of iteration for the elements of `nodes()`.
 
 ### `edgeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<E>`](./ElementOrder.md)
 
-Returns the order of iteration for the elements of {@link #edges()}.
+Returns the order of iteration for the elements of `edges()`.
 
-### `adjacentNodes([`N`](N.md) node)`
+### `adjacentNodes(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns the nodes which have an incident edge in common with {@code node} in this network.
+Returns the nodes which have an incident edge in common with `node` in this network.
 
- <p>This is equal to the union of {@link #predecessors(Object)} and {@link #successors(Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
+ <p>This is equal to the union of `predecessors(Object)` and `successors(Object)`.
+@throws IllegalArgumentException if `node` is not an element of this network
 
-### `predecessors([`N`](N.md) node)`
+### `predecessors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns all nodes in this network adjacent to {@code node} which can be reached by traversing
- {@code node}'s incoming edges <i>against</i> the direction (if any) of the edge.
+Returns all nodes in this network adjacent to `node` which can be reached by traversing
+ `node`'s incoming edges <i>against</i> the direction (if any) of the edge.
 
- <p>In an undirected network, this is equivalent to {@link #adjacentNodes(Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
+ <p>In an undirected network, this is equivalent to `adjacentNodes(Object)`.
+@throws IllegalArgumentException if `node` is not an element of this network
 
-### `successors([`N`](N.md) node)`
+### `successors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-Returns all nodes in this network adjacent to {@code node} which can be reached by traversing
- {@code node}'s outgoing edges in the direction (if any) of the edge.
+Returns all nodes in this network adjacent to `node` which can be reached by traversing
+ `node`'s outgoing edges in the direction (if any) of the edge.
 
- <p>In an undirected network, this is equivalent to {@link #adjacentNodes(Object)}.
+ <p>In an undirected network, this is equivalent to `adjacentNodes(Object)`.
 
- <p>This is <i>not</i> the same as "all nodes reachable from {@code node} by following outgoing
- edges". For that functionality, see {@link Graphs#reachableNodes(Graph, Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
+ <p>This is <i>not</i> the same as "all nodes reachable from `node` by following outgoing
+ edges". For that functionality, see `Graphs.reachableNodes(Graph, Object)`.
+@throws IllegalArgumentException if `node` is not an element of this network
 
-### `incidentEdges([`N`](N.md) node)`
+### `incidentEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-Returns the edges whose {@link #incidentNodes(Object) incident nodes} in this network include
- {@code node}.
+Returns the edges whose `incidentNodes(Object) incident nodes` in this network include
+ `node`.
 
- <p>This is equal to the union of {@link #inEdges(Object)} and {@link #outEdges(Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
+ <p>This is equal to the union of `inEdges(Object)` and `outEdges(Object)`.
+@throws IllegalArgumentException if `node` is not an element of this network
 
-### `inEdges([`N`](N.md) node)`
+### `inEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
-
-Returns all edges in this network which can be traversed in the direction (if any) of the edge
- to end at {@code node}.
-
- <p>In a directed network, an incoming edge's {@link EndpointPair#target()} equals {@code node}.
-
- <p>In an undirected network, this is equivalent to {@link #incidentEdges(Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
-
-### `outEdges([`N`](N.md) node)`
-
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 Returns all edges in this network which can be traversed in the direction (if any) of the edge
- starting from {@code node}.
+ to end at `node`.
 
- <p>In a directed network, an outgoing edge's {@link EndpointPair#source()} equals {@code node}.
+ <p>In a directed network, an incoming edge's `EndpointPair.target()` equals `node`.
 
- <p>In an undirected network, this is equivalent to {@link #incidentEdges(Object)}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
+ <p>In an undirected network, this is equivalent to `incidentEdges(Object)`.
+@throws IllegalArgumentException if `node` is not an element of this network
 
-### `degree([`N`](N.md) node)`
+### `outEdges(`N` node)`
 
-**Returns:** `int`
+**Returns:** `java.util.Set<E>`
 
-Returns the count of {@code node}'s {@link #incidentEdges(Object) incident edges}, counting
- self-loops twice (equivalently, the number of times an edge touches {@code node}).
+Returns all edges in this network which can be traversed in the direction (if any) of the edge
+ starting from `node`.
 
- <p>For directed networks, this is equal to {@code inDegree(node) + outDegree(node)}.
+ <p>In a directed network, an outgoing edge's `EndpointPair.source()` equals `node`.
 
- <p>For undirected networks, this is equal to {@code incidentEdges(node).size()} + (number of
- self-loops incident to {@code node}).
+ <p>In an undirected network, this is equivalent to `incidentEdges(Object)`.
+@throws IllegalArgumentException if `node` is not an element of this network
 
- <p>If the count is greater than {@code Integer.MAX_VALUE}, returns {@code Integer.MAX_VALUE}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
-
-### `inDegree([`N`](N.md) node)`
+### `degree(`N` node)`
 
 **Returns:** `int`
 
-Returns the count of {@code node}'s {@link #inEdges(Object) incoming edges} in a directed
- network. In an undirected network, returns the {@link #degree(Object)}.
+Returns the count of `node`'s `incidentEdges(Object) incident edges`, counting
+ self-loops twice (equivalently, the number of times an edge touches `node`).
 
- <p>If the count is greater than {@code Integer.MAX_VALUE}, returns {@code Integer.MAX_VALUE}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
+ <p>For directed networks, this is equal to `inDegree(node) + outDegree(node)`.
 
-### `outDegree([`N`](N.md) node)`
+ <p>For undirected networks, this is equal to `incidentEdges(node).size()` + (number of
+ self-loops incident to `node`).
+
+ <p>If the count is greater than `Integer.MAX_VALUE`, returns `Integer.MAX_VALUE`.
+@throws IllegalArgumentException if `node` is not an element of this network
+
+### `inDegree(`N` node)`
 
 **Returns:** `int`
 
-Returns the count of {@code node}'s {@link #outEdges(Object) outgoing edges} in a directed
- network. In an undirected network, returns the {@link #degree(Object)}.
+Returns the count of `node`'s `inEdges(Object) incoming edges` in a directed
+ network. In an undirected network, returns the `degree(Object)`.
 
- <p>If the count is greater than {@code Integer.MAX_VALUE}, returns {@code Integer.MAX_VALUE}.
-@throws IllegalArgumentException if {@code node} is not an element of this network
+ <p>If the count is greater than `Integer.MAX_VALUE`, returns `Integer.MAX_VALUE`.
+@throws IllegalArgumentException if `node` is not an element of this network
 
-### `incidentNodes([`E`](E.md) edge)`
+### `outDegree(`N` node)`
+
+**Returns:** `int`
+
+Returns the count of `node`'s `outEdges(Object) outgoing edges` in a directed
+ network. In an undirected network, returns the `degree(Object)`.
+
+ <p>If the count is greater than `Integer.MAX_VALUE`, returns `Integer.MAX_VALUE`.
+@throws IllegalArgumentException if `node` is not an element of this network
+
+### `incidentNodes(`E` edge)`
 
 **Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
-Returns the nodes which are the endpoints of {@code edge} in this network.
-@throws IllegalArgumentException if {@code edge} is not an element of this network
+Returns the nodes which are the endpoints of `edge` in this network.
+@throws IllegalArgumentException if `edge` is not an element of this network
 
-### `adjacentEdges([`E`](E.md) edge)`
+### `adjacentEdges(`E` edge)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-Returns the edges which have an {@link #incidentNodes(Object) incident node} in common with
- {@code edge}. An edge is not considered adjacent to itself.
-@throws IllegalArgumentException if {@code edge} is not an element of this network
+Returns the edges which have an `incidentNodes(Object) incident node` in common with
+ `edge`. An edge is not considered adjacent to itself.
+@throws IllegalArgumentException if `edge` is not an element of this network
 
-### `edgesConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgesConnecting(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-Returns the set of edges that each directly connect {@code nodeU} to {@code nodeV}.
+Returns the set of edges that each directly connect `nodeU` to `nodeV`.
 
- <p>In an undirected network, this is equal to {@code edgesConnecting(nodeV, nodeU)}.
+ <p>In an undirected network, this is equal to `edgesConnecting(nodeV, nodeU)`.
 
- <p>The resulting set of edges will be parallel (i.e. have equal {@link #incidentNodes(Object)}). If this network does not {@link #allowsParallelEdges() allow parallel
- edges}, the resulting set will contain at most one edge (equivalent to {@code
- edgeConnecting(nodeU, nodeV).asSet()}).
-@throws IllegalArgumentException if {@code nodeU} or {@code nodeV} is not an element of this
+ <p>The resulting set of edges will be parallel (i.e. have equal `incidentNodes(Object)`). If this network does not `allowsParallelEdges() allow parallel
+ edges`, the resulting set will contain at most one edge (equivalent to `edgeConnecting(nodeU, nodeV).asSet()`).
+@throws IllegalArgumentException if `nodeU` or `nodeV` is not an element of this
      network
 
 ### `edgesConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-Returns the set of edges that each directly connect {@code endpoints} (in the order, if any,
- specified by {@code endpoints}).
+Returns the set of edges that each directly connect `endpoints` (in the order, if any,
+ specified by `endpoints`).
 
- <p>The resulting set of edges will be parallel (i.e. have equal {@link #incidentNodes(Object)}). If this network does not {@link #allowsParallelEdges() allow parallel
- edges}, the resulting set will contain at most one edge (equivalent to {@code
- edgeConnecting(endpoints).asSet()}).
+ <p>The resulting set of edges will be parallel (i.e. have equal `incidentNodes(Object)`). If this network does not `allowsParallelEdges() allow parallel
+ edges`, the resulting set will contain at most one edge (equivalent to `edgeConnecting(endpoints).asSet()`).
 
- <p>If this network is directed, {@code endpoints} must be ordered.
+ <p>If this network is directed, `endpoints` must be ordered.
 @throws IllegalArgumentException if either endpoint is not an element of this network
 @throws IllegalArgumentException if the endpoints are unordered and the graph is directed
-@since 27.1
+**Since:** 27.1
 
-### `edgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeConnecting(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Optional<E>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<E>`
 
-Returns the single edge that directly connects {@code nodeU} to {@code nodeV}, if one is
- present, or {@code Optional.empty()} if no such edge exists.
+Returns the single edge that directly connects `nodeU` to `nodeV`, if one is
+ present, or `Optional.empty()` if no such edge exists.
 
- <p>In an undirected network, this is equal to {@code edgeConnecting(nodeV, nodeU)}.
-@throws IllegalArgumentException if there are multiple parallel edges connecting {@code nodeU}
-     to {@code nodeV}
-@throws IllegalArgumentException if {@code nodeU} or {@code nodeV} is not an element of this
+ <p>In an undirected network, this is equal to `edgeConnecting(nodeV, nodeU)`.
+@throws IllegalArgumentException if there are multiple parallel edges connecting `nodeU`
+     to `nodeV`
+@throws IllegalArgumentException if `nodeU` or `nodeV` is not an element of this
      network
-@since 23.0
+**Since:** 23.0
 
 ### `edgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Optional<E>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<E>`
 
-Returns the single edge that directly connects {@code endpoints} (in the order, if any,
- specified by {@code endpoints}), if one is present, or {@code Optional.empty()} if no such edge
+Returns the single edge that directly connects `endpoints` (in the order, if any,
+ specified by `endpoints`), if one is present, or `Optional.empty()` if no such edge
  exists.
 
  <p>If this graph is directed, the endpoints must be ordered.
-@throws IllegalArgumentException if there are multiple parallel edges connecting {@code nodeU}
-     to {@code nodeV}
+@throws IllegalArgumentException if there are multiple parallel edges connecting `nodeU`
+     to `nodeV`
 @throws IllegalArgumentException if either endpoint is not an element of this network
 @throws IllegalArgumentException if the endpoints are unordered and the graph is directed
-@since 27.1
+**Since:** 27.1
 
-### `edgeConnectingOrNull([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeConnectingOrNull(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Returns the single edge that directly connects {@code nodeU} to {@code nodeV}, if one is
- present, or {@code null} if no such edge exists.
+Returns the single edge that directly connects `nodeU` to `nodeV`, if one is
+ present, or `null` if no such edge exists.
 
- <p>In an undirected network, this is equal to {@code edgeConnectingOrNull(nodeV, nodeU)}.
-@throws IllegalArgumentException if there are multiple parallel edges connecting {@code nodeU}
-     to {@code nodeV}
-@throws IllegalArgumentException if {@code nodeU} or {@code nodeV} is not an element of this
+ <p>In an undirected network, this is equal to `edgeConnectingOrNull(nodeV, nodeU)`.
+@throws IllegalArgumentException if there are multiple parallel edges connecting `nodeU`
+     to `nodeV`
+@throws IllegalArgumentException if `nodeU` or `nodeV` is not an element of this
      network
-@since 23.0
+**Since:** 23.0
 
 ### `edgeConnectingOrNull([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Returns the single edge that directly connects {@code endpoints} (in the order, if any,
- specified by {@code endpoints}), if one is present, or {@code null} if no such edge exists.
+Returns the single edge that directly connects `endpoints` (in the order, if any,
+ specified by `endpoints`), if one is present, or `null` if no such edge exists.
 
  <p>If this graph is directed, the endpoints must be ordered.
-@throws IllegalArgumentException if there are multiple parallel edges connecting {@code nodeU}
-     to {@code nodeV}
+@throws IllegalArgumentException if there are multiple parallel edges connecting `nodeU`
+     to `nodeV`
 @throws IllegalArgumentException if either endpoint is not an element of this network
 @throws IllegalArgumentException if the endpoints are unordered and the graph is directed
-@since 27.1
+**Since:** 27.1
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 
-Returns true if there is an edge that directly connects {@code nodeU} to {@code nodeV}. This is
- equivalent to {@code nodes().contains(nodeU) && successors(nodeU).contains(nodeV)}, and to
- {@code edgeConnectingOrNull(nodeU, nodeV) != null}.
+Returns true if there is an edge that directly connects `nodeU` to `nodeV`. This is
+ equivalent to `nodes().contains(nodeU) && successors(nodeU).contains(nodeV)`, and to
+ `edgeConnectingOrNull(nodeU, nodeV) != null`.
 
- <p>In an undirected graph, this is equal to {@code hasEdgeConnecting(nodeV, nodeU)}.
-@since 23.0
+ <p>In an undirected graph, this is equal to `hasEdgeConnecting(nodeV, nodeU)`.
+**Since:** 23.0
 
 ### `hasEdgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
 **Returns:** `boolean`
 
-Returns true if there is an edge that directly connects {@code endpoints} (in the order, if
- any, specified by {@code endpoints}).
+Returns true if there is an edge that directly connects `endpoints` (in the order, if
+ any, specified by `endpoints`).
 
- <p>Unlike the other {@code EndpointPair}-accepting methods, this method does not throw if the
- endpoints are unordered and the graph is directed; it simply returns {@code false}. This is for
- consistency with {@link Graph#hasEdgeConnecting(EndpointPair)} and {@link ValueGraph#hasEdgeConnecting(EndpointPair)}.
-@since 27.1
+ <p>Unlike the other `EndpointPair`-accepting methods, this method does not throw if the
+ endpoints are unordered and the graph is directed; it simply returns `false`. This is for
+ consistency with `Graph.hasEdgeConnecting(EndpointPair)` and `ValueGraph.hasEdgeConnecting(EndpointPair)`.
+**Since:** 27.1
 
 ### `equals(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-Returns {@code true} iff {@code object} is a {@link Network} that has the same elements and the
+Returns `true` iff `object` is a `Network` that has the same elements and the
  same structural relationships as those in this network.
 
  <p>Thus, two networks A and B are equal if <b>all</b> of the following are true:
 
  <ul>
-   <li>A and B have equal {@link #isDirected() directedness}.
-   <li>A and B have equal {@link #nodes() node sets}.
-   <li>A and B have equal {@link #edges() edge sets}.
+   <li>A and B have equal `isDirected() directedness`.
+   <li>A and B have equal `nodes() node sets`.
+   <li>A and B have equal `edges() edge sets`.
    <li>Every edge in A and B connects the same nodes in the same direction (if any).
  </ul>
 
- <p>Network properties besides {@link #isDirected() directedness} do <b>not</b> affect equality.
+ <p>Network properties besides `isDirected() directedness` do <b>not</b> affect equality.
  For example, two networks may be considered equal even if one allows parallel edges and the
  other doesn't. Additionally, the order in which nodes or edges are added to the network, and
  the order in which they are iterated over, are irrelevant.
 
- <p>A reference implementation of this is provided by {@link AbstractNetwork#equals(Object)}.
+ <p>A reference implementation of this is provided by `AbstractNetwork.equals(Object)`.
 
 ### `hashCode()`
 
 **Returns:** `int`
 
 Returns the hash code for this network. The hash code of a network is defined as the hash code
- of a map from each of its {@link #edges() edges} to their {@link #incidentNodes(Object) incident nodes}.
+ of a map from each of its `edges() edges` to their `incidentNodes(Object) incident nodes`.
 
- <p>A reference implementation of this is provided by {@link AbstractNetwork#hashCode()}.
+ <p>A reference implementation of this is provided by `AbstractNetwork.hashCode()`.
 

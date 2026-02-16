@@ -6,14 +6,14 @@
 
 ## Description
 
-<b>Do not use this class directly. For access to public-suffix information, use {@link com.google.common.net.InternetDomainName}.</b>
+<b>Do not use this class directly. For access to public-suffix information, use `com.google.common.net.InternetDomainName`.</b>
 
  <p>A generated static class containing public members which provide domain name patterns used in
  determining whether a given domain name is an effective top-level domain (public suffix).
 
  <p>Because this class is used in GWT, the data members are stored in a space-efficient manner.
- See {@link TrieParser}.
-@since 16.0
+ See `TrieParser`.
+**Since:** 16.0
 
 ## Fields
 

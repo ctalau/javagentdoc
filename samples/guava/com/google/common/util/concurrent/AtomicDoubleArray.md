@@ -4,27 +4,26 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.AtomicDoubleArray`
 
-**Implements:** [`java.io.Serializable`](../../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
-A {@code double} array in which elements may be updated atomically. See the {@link java.util.concurrent.atomic} package specification for description of the properties of atomic
+A `double` array in which elements may be updated atomically. See the `java.util.concurrent.atomic` package specification for description of the properties of atomic
  variables.
 
- <p><a id="bitEquals"></a>This class compares primitive {@code double} values in methods such as
- {@link #compareAndSet} by comparing their bitwise representation using {@link Double#doubleToRawLongBits}, which differs from both the primitive double {@code ==} operator and
- from {@link Double#equals}, as if implemented by:
+ <p><a id="bitEquals"></a>This class compares primitive `double` values in methods such as
+ `compareAndSet` by comparing their bitwise representation using `Double.doubleToRawLongBits`, which differs from both the primitive double `==` operator and
+ from `Double.equals`, as if implemented by:
 
- <pre>{@code
- static boolean bitEquals(double x, double y) {
+ <pre>`static boolean bitEquals(double x, double y) {
    long xBits = Double.doubleToRawLongBits(x);
    long yBits = Double.doubleToRawLongBits(y);
    return xBits == yBits;
- }
+ `
  }</pre>
-@author Doug Lea
-@author Martin Buchholz
-@since 11.0
+**Author:** Doug Lea
+**Author:** Martin Buchholz
+**Since:** 11.0
 
 ## Fields
 
@@ -34,18 +33,18 @@ A {@code double} array in which elements may be updated atomically. See the {@li
 
 ### `longs`
 
-**Type:** [`java.util.concurrent.atomic.AtomicLongArray`](../../../../../java/util/concurrent/atomic/AtomicLongArray.md)
+**Type:** `java.util.concurrent.atomic.AtomicLongArray`
 
 ## Constructors
 
 ### `<init>(`int` length)`
 
-Creates a new {@code AtomicDoubleArray} of the given length, with all elements initially zero.
+Creates a new `AtomicDoubleArray` of the given length, with all elements initially zero.
 @param length the length of the array
 
 ### `<init>(`double[]` array)`
 
-Creates a new {@code AtomicDoubleArray} with the same length as, and all elements copied from,
+Creates a new `AtomicDoubleArray` with the same length as, and all elements copied from,
  the given array.
 @param array the array to copy elements from
 @throws NullPointerException if array is null
@@ -63,7 +62,7 @@ Returns the length of the array.
 
 **Returns:** `double`
 
-Gets the current value at position {@code i}.
+Gets the current value at position `i`.
 @param i the index
 @return the current value
 
@@ -71,7 +70,7 @@ Gets the current value at position {@code i}.
 
 **Returns:** `void`
 
-Atomically sets the element at position {@code i} to the given value.
+Atomically sets the element at position `i` to the given value.
 @param i the index
 @param newValue the new value
 
@@ -79,7 +78,7 @@ Atomically sets the element at position {@code i} to the given value.
 
 **Returns:** `void`
 
-Eventually sets the element at position {@code i} to the given value.
+Eventually sets the element at position `i` to the given value.
 @param i the index
 @param newValue the new value
 
@@ -87,7 +86,7 @@ Eventually sets the element at position {@code i} to the given value.
 
 **Returns:** `double`
 
-Atomically sets the element at position {@code i} to the given value and returns the old value.
+Atomically sets the element at position `i` to the given value and returns the old value.
 @param i the index
 @param newValue the new value
 @return the previous value
@@ -96,7 +95,7 @@ Atomically sets the element at position {@code i} to the given value and returns
 
 **Returns:** `boolean`
 
-Atomically sets the element at position {@code i} to the given updated value if the current
+Atomically sets the element at position `i` to the given updated value if the current
  value is <a href="#bitEquals">bitwise equal</a> to the expected value.
 @param i the index
 @param expect the expected value
@@ -108,12 +107,12 @@ Atomically sets the element at position {@code i} to the given updated value if 
 
 **Returns:** `boolean`
 
-Atomically sets the element at position {@code i} to the given updated value if the current
+Atomically sets the element at position `i` to the given updated value if the current
  value is <a href="#bitEquals">bitwise equal</a> to the expected value.
 
  <p>May <a href="http://download.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/package-summary.html#Spurious">
  fail spuriously</a> and does not provide ordering guarantees, so is only rarely an appropriate
- alternative to {@code compareAndSet}.
+ alternative to `compareAndSet`.
 @param i the index
 @param expect the expected value
 @param update the new value
@@ -123,7 +122,7 @@ Atomically sets the element at position {@code i} to the given updated value if 
 
 **Returns:** `double`
 
-Atomically adds the given value to the element at index {@code i}.
+Atomically adds the given value to the element at index `i`.
 @param i the index
 @param delta the value to add
 @return the previous value
@@ -132,56 +131,56 @@ Atomically adds the given value to the element at index {@code i}.
 
 **Returns:** `double`
 
-Atomically adds the given value to the element at index {@code i}.
+Atomically adds the given value to the element at index `i`.
 @param i the index
 @param delta the value to add
 @return the updated value
 
-### `getAndAccumulate(`int` i, `double` x, [`java.util.function.DoubleBinaryOperator`](../../../../../java/util/function/DoubleBinaryOperator.md) accumulatorFunction)`
+### `getAndAccumulate(`int` i, `double` x, `java.util.function.DoubleBinaryOperator` accumulatorFunction)`
 
 **Returns:** `double`
 
-Atomically updates the element at index {@code i} with the results of applying the given
+Atomically updates the element at index `i` with the results of applying the given
  function to the current and given values.
 @param i the index to update
 @param x the update value
 @param accumulatorFunction the accumulator function
 @return the previous value
-@since 31.1
+**Since:** 31.1
 
-### `accumulateAndGet(`int` i, `double` x, [`java.util.function.DoubleBinaryOperator`](../../../../../java/util/function/DoubleBinaryOperator.md) accumulatorFunction)`
+### `accumulateAndGet(`int` i, `double` x, `java.util.function.DoubleBinaryOperator` accumulatorFunction)`
 
 **Returns:** `double`
 
-Atomically updates the element at index {@code i} with the results of applying the given
+Atomically updates the element at index `i` with the results of applying the given
  function to the current and given values.
 @param i the index to update
 @param x the update value
 @param accumulatorFunction the accumulator function
 @return the updated value
-@since 31.1
+**Since:** 31.1
 
-### `getAndUpdate(`int` i, [`java.util.function.DoubleUnaryOperator`](../../../../../java/util/function/DoubleUnaryOperator.md) updaterFunction)`
+### `getAndUpdate(`int` i, `java.util.function.DoubleUnaryOperator` updaterFunction)`
 
 **Returns:** `double`
 
-Atomically updates the element at index {@code i} with the results of applying the given
+Atomically updates the element at index `i` with the results of applying the given
  function to the current value.
 @param i the index to update
 @param updaterFunction the update function
 @return the previous value
-@since 31.1
+**Since:** 31.1
 
-### `updateAndGet(`int` i, [`java.util.function.DoubleUnaryOperator`](../../../../../java/util/function/DoubleUnaryOperator.md) updaterFunction)`
+### `updateAndGet(`int` i, `java.util.function.DoubleUnaryOperator` updaterFunction)`
 
 **Returns:** `double`
 
-Atomically updates the element at index {@code i} with the results of applying the given
+Atomically updates the element at index `i` with the results of applying the given
  function to the current value.
 @param i the index to update
 @param updaterFunction the update function
 @return the updated value
-@since 31.1
+**Since:** 31.1
 
 ### `toString()`
 
@@ -190,15 +189,15 @@ Atomically updates the element at index {@code i} with the results of applying t
 Returns the String representation of the current values of array.
 @return the String representation of the current values of array
 
-### `writeObject([`java.io.ObjectOutputStream`](../../../../../java/io/ObjectOutputStream.md) s)`
+### `writeObject(`java.io.ObjectOutputStream` s)`
 
 **Returns:** `void`
 
 Saves the state to a stream (that is, serializes it).
 @serialData The length of the array is emitted (int), followed by all of its elements (each a
-     {@code double}) in the proper order.
+     `double`) in the proper order.
 
-### `readObject([`java.io.ObjectInputStream`](../../../../../java/io/ObjectInputStream.md) s)`
+### `readObject(`java.io.ObjectInputStream` s)`
 
 **Returns:** `void`
 

@@ -14,18 +14,18 @@
 
 ## Description
 
-Skeletal, implementation-agnostic implementation of the {@link Table} interface.
-@author Louis Wasserman
+Skeletal, implementation-agnostic implementation of the `Table` interface.
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `cellSet`
 
-**Type:** [`java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `values`
 
-**Type:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Type:** `java.util.Collection<V>`
 
 ## Constructors
 
@@ -43,11 +43,11 @@ Skeletal, implementation-agnostic implementation of the {@link Table} interface.
 
 ### `rowKeySet()`
 
-**Returns:** [`java.util.Set<R>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<R>`
 
 ### `columnKeySet()`
 
-**Returns:** [`java.util.Set<C>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<C>`
 
 ### `containsValue(`java.lang.Object` value)`
 
@@ -59,7 +59,7 @@ Skeletal, implementation-agnostic implementation of the {@link Table} interface.
 
 ### `get(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `isEmpty()`
 
@@ -71,11 +71,11 @@ Skeletal, implementation-agnostic implementation of the {@link Table} interface.
 
 ### `remove(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `put([`R`](R.md) rowKey, [`C`](C.md) columnKey, [`V`](V.md) value)`
+### `put(`R` rowKey, `C` columnKey, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `putAll([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md) table)`
 
@@ -83,35 +83,35 @@ Skeletal, implementation-agnostic implementation of the {@link Table} interface.
 
 ### `cellSet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `createCellSet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `cellIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `cellSpliterator()`
 
-**Returns:** [`java.util.Spliterator<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Spliterator>.md)
+**Returns:** `java.util.Spliterator<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `createValues()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `valuesIterator()`
 
-**Returns:** [`java.util.Iterator<V>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<V>`
 
 ### `valuesSpliterator()`
 
-**Returns:** [`java.util.Spliterator<V>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<V>`
 
 ### `equals(`java.lang.Object` obj)`
 
@@ -125,5 +125,5 @@ Skeletal, implementation-agnostic implementation of the {@link Table} interface.
 
 **Returns:** `java.lang.String`
 
-Returns the string representation {@code rowMap().toString()}.
+Returns the string representation `rowMap().toString()`.
 

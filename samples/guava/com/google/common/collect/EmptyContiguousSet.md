@@ -13,7 +13,7 @@
 ## Description
 
 An empty contiguous set.
-@author Gregory Kick
+**Author:** Gregory Kick
 
 ## Constructors
 
@@ -23,11 +23,11 @@ An empty contiguous set.
 
 ### `first()`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
 ### `last()`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
 ### `size()`
 
@@ -45,15 +45,15 @@ An empty contiguous set.
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `headSetImpl([`C`](C.md) toElement, `boolean` inclusive)`
+### `headSetImpl(`C` toElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `subSetImpl([`C`](C.md) fromElement, `boolean` fromInclusive, [`C`](C.md) toElement, `boolean` toInclusive)`
+### `subSetImpl(`C` fromElement, `boolean` fromInclusive, `C` toElement, `boolean` toInclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `tailSetImpl([`C`](C.md) fromElement, `boolean` fromInclusive)`
+### `tailSetImpl(`C` fromElement, `boolean` fromInclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
@@ -105,7 +105,7 @@ An empty contiguous set.
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

@@ -13,17 +13,17 @@
 
 ## Description
 
-A {@link ValueGraph} whose elements and structural relationships will never change. Instances of
- this class may be obtained with {@link #copyOf(ValueGraph)}.
+A `ValueGraph` whose elements and structural relationships will never change. Instances of
+ this class may be obtained with `copyOf(ValueGraph)`.
 
  <p>See the Guava User's Guide's <a href="https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations">discussion
- of the {@code Immutable*} types</a> for more information on the properties and guarantees
+ of the `Immutable*` types</a> for more information on the properties and guarantees
  provided by this class.
-@author James Sexton
-@author Jens Nyman
+**Author:** James Sexton
+**Author:** Jens Nyman
 @param <N> Node parameter type
 @param <V> Value parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Constructors
 
@@ -35,14 +35,14 @@ A {@link ValueGraph} whose elements and structural relationships will never chan
 
 **Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
 
-Returns an immutable copy of {@code graph}.
+Returns an immutable copy of `graph`.
 
 ### `copyOf([`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md) graph)`
 
 **Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
 
 Simply returns its argument.
-@deprecated no need to use this
+**Deprecated:** no need to use this
 
 ### `incidentEdgeOrder()`
 
@@ -56,7 +56,7 @@ Simply returns its argument.
 
 **Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,V>>`](../collect/ImmutableMap>.md)
 
-### `connectionsOf([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph, [`N`](N.md) node)`
+### `connectionsOf([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph, `N` node)`
 
 **Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
 

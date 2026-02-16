@@ -17,7 +17,7 @@
 
 ## Description
 
-Implementations of {@code Futures.catching*}.
+Implementations of `Futures.catching*`.
 
 ## Fields
 
@@ -31,19 +31,19 @@ Implementations of {@code Futures.catching*}.
 
 ### `fallback`
 
-**Type:** [`F`](F.md)
+**Type:** `F`
 
 ## Constructors
 
-### `<init>([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) inputFuture, `java.lang.Class<X>` exceptionType, [`F`](F.md) fallback)`
+### `<init>([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) inputFuture, `java.lang.Class<X>` exceptionType, `F` fallback)`
 
 ## Methods
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) input, `java.lang.Class<X>` exceptionType, [`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md) fallback, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `create([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) input, `java.lang.Class<X>` exceptionType, [`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md) fallback, `java.util.concurrent.Executor` executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) input, `java.lang.Class<X>` exceptionType, [`com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>`](./AsyncFunction.md) fallback, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `create([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) input, `java.lang.Class<X>` exceptionType, [`com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>`](./AsyncFunction.md) fallback, `java.util.concurrent.Executor` executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
@@ -55,13 +55,13 @@ Implementations of {@code Futures.catching*}.
 
 **Returns:** `java.lang.String`
 
-### `doFallback([`F`](F.md) fallback, [`X`](X.md) throwable)`
+### `doFallback(`F` fallback, `X` throwable)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 Template method for subtypes to actually run the fallback.
 
-### `setResult([`T`](T.md) result)`
+### `setResult(`T` result)`
 
 **Returns:** `void`
 

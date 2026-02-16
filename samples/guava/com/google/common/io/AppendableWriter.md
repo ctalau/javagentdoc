@@ -4,15 +4,15 @@
 
 **Fully Qualified Name:** `com.google.common.io.AppendableWriter`
 
-**Extends:** [`java.io.Writer`](../../../../java/io/Writer.md)
+**Extends:** `java.io.Writer`
 
 ## Description
 
-Writer that places all output on an {@link Appendable} target. If the target is {@link Flushable}
- or {@link Closeable}, flush()es and close()s will also be delegated to the target.
-@author Alan Green
-@author Sebastian Kanthak
-@since 1.0
+Writer that places all output on an `Appendable` target. If the target is `Flushable`
+ or `Closeable`, flush()es and close()s will also be delegated to the target.
+**Author:** Alan Green
+**Author:** Sebastian Kanthak
+**Since:** 1.0
 
 ## Fields
 
@@ -28,7 +28,7 @@ Writer that places all output on an {@link Appendable} target. If the target is 
 
 ### `<init>(`java.lang.Appendable` target)`
 
-Creates a new writer that appends everything it writes to {@code target}.
+Creates a new writer that appends everything it writes to `target`.
 @param target target to which to append output
 
 ## Methods
@@ -59,15 +59,15 @@ Creates a new writer that appends everything it writes to {@code target}.
 
 ### `append(`char` c)`
 
-**Returns:** [`java.io.Writer`](../../../../java/io/Writer.md)
+**Returns:** `java.io.Writer`
 
 ### `append(`java.lang.CharSequence` charSeq)`
 
-**Returns:** [`java.io.Writer`](../../../../java/io/Writer.md)
+**Returns:** `java.io.Writer`
 
 ### `append(`java.lang.CharSequence` charSeq, `int` start, `int` end)`
 
-**Returns:** [`java.io.Writer`](../../../../java/io/Writer.md)
+**Returns:** `java.io.Writer`
 
 ### `checkNotClosed()`
 

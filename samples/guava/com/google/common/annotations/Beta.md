@@ -17,5 +17,5 @@ Signifies that a public API (public class, method or field) is subject to incomp
  <p>It is generally safe for <i>applications</i> to depend on beta APIs, at the cost of some extra
  work during upgrades. However it is generally inadvisable for <i>libraries</i> (which get
  included on users' CLASSPATHs, outside the library developers' control) to do so.
-@author Kevin Bourrillion
+**Author:** Kevin Bourrillion
 

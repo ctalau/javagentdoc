@@ -8,18 +8,16 @@
 
 ## Description
 
-Unchecked variant of {@link java.util.concurrent.ExecutionException}. As with {@code
- ExecutionException}, the exception's {@linkplain #getCause() cause} comes from a failed task,
+Unchecked variant of `java.util.concurrent.ExecutionException`. As with `ExecutionException`, the exception's cause comes from a failed task,
  possibly run in another thread.
 
- <p>{@code UncheckedExecutionException} is intended as an alternative to {@code
- ExecutionException} when the exception thrown by a task is an unchecked exception. However, it
+ <p>`UncheckedExecutionException` is intended as an alternative to `ExecutionException` when the exception thrown by a task is an unchecked exception. However, it
  may also wrap a checked exception in some cases.
 
- <p>When wrapping an {@code Error} from another thread, prefer {@link ExecutionError}. When
- wrapping a checked exception, prefer {@code ExecutionException}.
-@author Charles Fry
-@since 10.0
+ <p>When wrapping an `Error` from another thread, prefer `ExecutionError`. When
+ wrapping a checked exception, prefer `ExecutionException`.
+**Author:** Charles Fry
+**Since:** 10.0
 
 ## Fields
 
@@ -31,7 +29,7 @@ Unchecked variant of {@link java.util.concurrent.ExecutionException}. As with {@
 
 ### `<init>()`
 
-Creates a new instance with {@code null} as its detail message.
+Creates a new instance with `null` as its detail message.
 
 ### `<init>(`java.lang.String` message)`
 

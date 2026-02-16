@@ -4,11 +4,11 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.ForwardingLock`
 
-**Implements:** [`java.util.concurrent.locks.Lock`](../../../../../java/util/concurrent/locks/Lock.md)
+**Implements:** `java.util.concurrent.locks.Lock`
 
 ## Description
 
-Forwarding wrapper around a {@code Lock}.
+Forwarding wrapper around a `Lock`.
 
 ## Constructors
 
@@ -18,7 +18,7 @@ Forwarding wrapper around a {@code Lock}.
 
 ### `delegate()`
 
-**Returns:** [`java.util.concurrent.locks.Lock`](../../../../../java/util/concurrent/locks/Lock.md)
+**Returns:** `java.util.concurrent.locks.Lock`
 
 ### `lock()`
 
@@ -32,7 +32,7 @@ Forwarding wrapper around a {@code Lock}.
 
 **Returns:** `boolean`
 
-### `tryLock(`long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `tryLock(`long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -42,5 +42,5 @@ Forwarding wrapper around a {@code Lock}.
 
 ### `newCondition()`
 
-**Returns:** [`java.util.concurrent.locks.Condition`](../../../../../java/util/concurrent/locks/Condition.md)
+**Returns:** `java.util.concurrent.locks.Condition`
 

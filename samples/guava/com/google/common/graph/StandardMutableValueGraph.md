@@ -15,14 +15,14 @@
 
 ## Description
 
-Standard implementation of {@link MutableValueGraph} that supports both directed and undirected
- graphs. Instances of this class should be constructed with {@link ValueGraphBuilder}.
+Standard implementation of `MutableValueGraph` that supports both directed and undirected
+ graphs. Instances of this class should be constructed with `ValueGraphBuilder`.
 
- <p>Time complexities for mutation methods are all O(1) except for {@code removeNode(N node)},
- which is in O(d_node) where d_node is the degree of {@code node}.
-@author James Sexton
-@author Joshua O'Madadhain
-@author Omar Darwish
+ <p>Time complexities for mutation methods are all O(1) except for `removeNode(N node)`,
+ which is in O(d_node) where d_node is the degree of `node`.
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
+**Author:** Omar Darwish
 @param <N> Node parameter type
 @param <V> Value parameter type
 
@@ -36,7 +36,7 @@ Standard implementation of {@link MutableValueGraph} that supports both directed
 
 ### `<init>([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md) builder)`
 
-Constructs a mutable graph with the properties specified in {@code builder}.
+Constructs a mutable graph with the properties specified in `builder`.
 
 ## Methods
 
@@ -44,36 +44,36 @@ Constructs a mutable graph with the properties specified in {@code builder}.
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `addNode([`N`](N.md) node)`
+### `addNode(`N` node)`
 
 **Returns:** `boolean`
 
-### `addNodeInternal([`N`](N.md) node)`
+### `addNodeInternal(`N` node)`
 
 **Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
 
-Adds {@code node} to the graph and returns the associated {@link GraphConnections}.
-@throws IllegalStateException if {@code node} is already present
+Adds `node` to the graph and returns the associated `GraphConnections`.
+@throws IllegalStateException if `node` is already present
 
-### `putEdgeValue([`N`](N.md) nodeU, [`N`](N.md) nodeV, [`V`](V.md) value)`
+### `putEdgeValue(`N` nodeU, `N` nodeV, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `putEdgeValue([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, [`V`](V.md) value)`
+### `putEdgeValue([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `removeNode([`N`](N.md) node)`
+### `removeNode(`N` node)`
 
 **Returns:** `boolean`
 
-### `removeEdge([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `removeEdge(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `removeEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `newConnections()`
 

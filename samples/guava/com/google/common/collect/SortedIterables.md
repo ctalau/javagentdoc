@@ -7,7 +7,7 @@
 ## Description
 
 Utilities for dealing with sorted collections of all types.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -15,14 +15,14 @@ Utilities for dealing with sorted collections of all types.
 
 ## Methods
 
-### `hasSameComparator([`java.util.Comparator<?>`](../../../../java/util/Comparator.md) comparator, `java.lang.Iterable<?>` elements)`
+### `hasSameComparator(`java.util.Comparator<?>` comparator, `java.lang.Iterable<?>` elements)`
 
 **Returns:** `boolean`
 
-Returns {@code true} if {@code elements} is a sorted collection using an ordering equivalent to
- {@code comparator}.
+Returns `true` if `elements` is a sorted collection using an ordering equivalent to
+ `comparator`.
 
-### `comparator([`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md) sortedSet)`
+### `comparator(`java.util.SortedSet<E>` sortedSet)`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 

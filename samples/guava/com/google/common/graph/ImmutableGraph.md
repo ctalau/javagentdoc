@@ -12,18 +12,18 @@
 
 ## Description
 
-A {@link Graph} whose elements and structural relationships will never change. Instances of this
- class may be obtained with {@link #copyOf(Graph)}.
+A `Graph` whose elements and structural relationships will never change. Instances of this
+ class may be obtained with `copyOf(Graph)`.
 
  <p>See the Guava User's Guide's <a href="https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations">discussion
- of the {@code Immutable*} types</a> for more information on the properties and guarantees
+ of the `Immutable*` types</a> for more information on the properties and guarantees
  provided by this class.
-@author James Sexton
-@author Joshua O'Madadhain
-@author Omar Darwish
-@author Jens Nyman
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
+**Author:** Omar Darwish
+**Author:** Jens Nyman
 @param <N> Node parameter type
-@since 20.0
+**Since:** 20.0
 
 ## Fields
 
@@ -41,14 +41,14 @@ A {@link Graph} whose elements and structural relationships will never change. I
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
-Returns an immutable copy of {@code graph}.
+Returns an immutable copy of `graph`.
 
 ### `copyOf([`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md) graph)`
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
 Simply returns its argument.
-@deprecated no need to use this
+**Deprecated:** no need to use this
 
 ### `incidentEdgeOrder()`
 
@@ -58,7 +58,7 @@ Simply returns its argument.
 
 **Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>>`](../collect/ImmutableMap>.md)
 
-### `connectionsOf([`com.google.common.graph.Graph<N>`](./Graph.md) graph, [`N`](N.md) node)`
+### `connectionsOf([`com.google.common.graph.Graph<N>`](./Graph.md) graph, `N` node)`
 
 **Returns:** [`com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>`](./GraphConnections.md)
 

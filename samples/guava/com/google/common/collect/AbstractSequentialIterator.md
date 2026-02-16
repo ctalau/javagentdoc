@@ -12,45 +12,44 @@
 
 ## Description
 
-This class provides a skeletal implementation of the {@code Iterator} interface for sequences
+This class provides a skeletal implementation of the `Iterator` interface for sequences
  whose next element can always be derived from the previous element. Null elements are not
- supported, nor is the {@link #remove()} method.
+ supported, nor is the `remove()` method.
 
  <p>Example:
 
- <pre>{@code
- Iterator<Integer> powersOfTwo =
+ <pre>`Iterator<Integer> powersOfTwo =
      new AbstractSequentialIterator<Integer>(1) {
        protected Integer computeNext(Integer previous) {
          return (previous == 1 << 30) ? null : previous * 2;
-       }
+       `
      };
  }</pre>
-@author Chris Povirk
-@since 12.0 (in Guava as {@code AbstractLinkedIterator} since 8.0)
+**Author:** Chris Povirk
+**Since:** 12.0 (in Guava as `AbstractLinkedIterator` since 8.0)
 
 ## Fields
 
 ### `nextOrNull`
 
-**Type:** [`T`](T.md)
+**Type:** `T`
 
 ## Constructors
 
-### `<init>([`T`](T.md) firstOrNull)`
+### `<init>(`T` firstOrNull)`
 
-Creates a new iterator with the given first element, or, if {@code firstOrNull} is null,
+Creates a new iterator with the given first element, or, if `firstOrNull` is null,
  creates a new empty iterator.
 
 ## Methods
 
-### `computeNext([`T`](T.md) previous)`
+### `computeNext(`T` previous)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-Returns the element that follows {@code previous}, or returns {@code null} if no elements
- remain. This method is invoked during each call to {@link #next()} in order to compute the
- result of a <i>future</i> call to {@code next()}.
+Returns the element that follows `previous`, or returns `null` if no elements
+ remain. This method is invoked during each call to `next()` in order to compute the
+ result of a <i>future</i> call to `next()`.
 
 ### `hasNext()`
 
@@ -58,5 +57,5 @@ Returns the element that follows {@code previous}, or returns {@code null} if no
 
 ### `next()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 

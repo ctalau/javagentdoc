@@ -8,8 +8,8 @@
 
 Utility class for converting between various ASCII case formats. Behavior is undefined for
  non-ASCII input.
-@author Mike Bostock
-@since 1.0
+**Author:** Mike Bostock
+**Since:** 1.0
 
 ## Fields
 
@@ -39,8 +39,8 @@ Utility class for converting between various ASCII case formats. Behavior is und
 
 **Returns:** `java.lang.String`
 
-Converts the specified {@code String str} from this format to the specified {@code format}. A
- "best effort" approach is taken; if {@code str} does not conform to the assumed format, then
+Converts the specified `String str` from this format to the specified `format`. A
+ "best effort" approach is taken; if `str` does not conform to the assumed format, then
  the behavior of this method is undefined but we make a reasonable effort at converting anyway.
 
 ### `convert([`com.google.common.base.CaseFormat`](./CaseFormat.md) format, `java.lang.String` s)`
@@ -53,9 +53,8 @@ Enum values can override for performance reasons.
 
 **Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.String>`](./Converter.md)
 
-Returns a serializable {@code Converter} that converts strings from this format to {@code
- targetFormat}.
-@since 16.0
+Returns a serializable `Converter` that converts strings from this format to `targetFormat`.
+**Since:** 16.0
 
 ### `normalizeWord(`java.lang.String` word)`
 

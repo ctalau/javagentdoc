@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingQueue<E>`](./ForwardingQueue.md)
 
-**Implements:** [`java.util.Deque<E>`](../../../../java/util/Deque.md)
+**Implements:** `java.util.Deque<E>`
 
 ## Type Parameters
 
@@ -17,16 +17,15 @@
 A deque which forwards all its method calls to another deque. Subclasses should override one or
  more methods to modify the behavior of the backing deque as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>Warning:</b> The methods of {@code ForwardingDeque} forward <b>indiscriminately</b> to the
- methods of the delegate. For example, overriding {@link #add} alone <b>will not</b> change the
- behavior of {@link #offer} which can lead to unexpected behavior. In this case, you should
- override {@code offer} as well.
+ <p><b>Warning:</b> The methods of `ForwardingDeque` forward <b>indiscriminately</b> to the
+ methods of the delegate. For example, overriding `add` alone <b>will not</b> change the
+ behavior of `offer` which can lead to unexpected behavior. In this case, you should
+ override `offer` as well.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingDeque}.
-@author Kurt Alfred Kluever
-@since 12.0
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingDeque`.
+**Author:** Kurt Alfred Kluever
+**Since:** 12.0
 
 ## Constructors
 
@@ -38,67 +37,67 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.Deque<E>`](../../../../java/util/Deque.md)
+**Returns:** `java.util.Deque<E>`
 
-### `addFirst([`E`](E.md) e)`
+### `addFirst(`E` e)`
 
 **Returns:** `void`
 
-### `addLast([`E`](E.md) e)`
+### `addLast(`E` e)`
 
 **Returns:** `void`
 
 ### `descendingIterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `getFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `getLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `offerFirst([`E`](E.md) e)`
+### `offerFirst(`E` e)`
 
 **Returns:** `boolean`
 
-### `offerLast([`E`](E.md) e)`
+### `offerLast(`E` e)`
 
 **Returns:** `boolean`
 
 ### `peekFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `peekLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `pollFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `pollLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `pop()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `push([`E`](E.md) e)`
+### `push(`E` e)`
 
 **Returns:** `void`
 
 ### `removeFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `removeLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `removeFirstOccurrence(`java.lang.Object` o)`
 

@@ -6,12 +6,12 @@
 
 ## Description
 
-Outer class that exists solely to let us write {@code Partially.GwtIncompatible} instead of plain
- {@code GwtIncompatible}. This is more accurate for {@link Futures#catching}, which is available
+Outer class that exists solely to let us write `Partially.GwtIncompatible` instead of plain
+ `GwtIncompatible`. This is more accurate for `Futures.catching`, which is available
  under GWT but with a slightly different signature.
 
- <p>We can't use {@code PartiallyGwtIncompatible} because then the GWT compiler wouldn't recognize
- it as a {@code GwtIncompatible} annotation. And for {@code Futures.catching}, we need the GWT
+ <p>We can't use `PartiallyGwtIncompatible` because then the GWT compiler wouldn't recognize
+ it as a `GwtIncompatible` annotation. And for `Futures.catching`, we need the GWT
  compiler to autostrip the normal server method in order to expose the special, inherited GWT
  version.
 

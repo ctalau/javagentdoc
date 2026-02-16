@@ -13,28 +13,27 @@
 
 ## Description
 
-Wrapper around either a {@link Method} or a {@link Constructor}. Convenience API is provided to
- make common reflective operation easier to deal with, such as {@link #isPublic}, {@link #getParameters} etc.
+Wrapper around either a `Method` or a `Constructor`. Convenience API is provided to
+ make common reflective operation easier to deal with, such as `isPublic`, `getParameters` etc.
 
- <p>In addition to convenience methods, {@link TypeToken#method} and {@link TypeToken#constructor}
+ <p>In addition to convenience methods, `TypeToken.method` and `TypeToken.constructor`
  will resolve the type parameters of the method or constructor in the context of the owner type,
  which may be a subtype of the declaring class. For example:
 
- <pre>{@code
- Method getMethod = List.class.getMethod("get", int.class);
- Invokable<List<String>, ?> invokable = new TypeToken<List<String>>() {}.method(getMethod);
+ <pre>`Method getMethod = List.class.getMethod("get", int.class);
+ Invokable<List<String>, ?> invokable = new TypeToken<List<String>>() {`.method(getMethod);
  assertEquals(TypeToken.of(String.class), invokable.getReturnType()); // Not Object.class!
  assertEquals(new TypeToken<List<String>>() {}, invokable.getOwnerType());
  }</pre>
 
- <p><b>Note:</b> earlier versions of this class inherited from {@link java.lang.reflect.AccessibleObject AccessibleObject} and {@link java.lang.reflect.GenericDeclaration GenericDeclaration}. Since version 31.0 that is no longer
+ <p><b>Note:</b> earlier versions of this class inherited from `java.lang.reflect.AccessibleObject` and `java.lang.reflect.GenericDeclaration`. Since version 31.0 that is no longer
  the case. However, most methods from those types are present with the same signature in this
  class.
 @param <T> the type that owns this method or constructor.
 @param <R> the return type of (or supertype thereof) the method or the declaring type of the
      constructor.
-@author Ben Yu
-@since 14.0 (no longer implements {@link AccessibleObject} or {@code GenericDeclaration} since
+**Author:** Ben Yu
+**Since:** 14.0 (no longer implements `AccessibleObject` or `GenericDeclaration` since
      31.0)
 
 ## Fields
@@ -53,7 +52,7 @@ Wrapper around either a {@link Method} or a {@link Constructor}. Convenience API
 
 ## Constructors
 
-### `<init>([`M`](M.md) member)`
+### `<init>(`M` member)`
 
 ## Methods
 
@@ -61,13 +60,13 @@ Wrapper around either a {@link Method} or a {@link Constructor}. Convenience API
 
 **Returns:** [`com.google.common.reflect.Invokable<?,java.lang.Object>`](./Invokable.md)
 
-Returns {@link Invokable} of {@code method}.
+Returns `Invokable` of `method`.
 
 ### `from(`java.lang.reflect.Constructor<T>` constructor)`
 
 **Returns:** [`com.google.common.reflect.Invokable<T,T>`](./Invokable.md)
 
-Returns {@link Invokable} of {@code constructor}.
+Returns `Invokable` of `constructor`.
 
 ### `isAnnotationPresent(`java.lang.Class<? extends java.lang.annotation.Annotation>` annotationClass)`
 
@@ -75,7 +74,7 @@ Returns {@link Invokable} of {@code constructor}.
 
 ### `getAnnotation(`java.lang.Class<A>` annotationClass)`
 
-**Returns:** [`A`](A.md)
+**Returns:** `A`
 
 ### `getAnnotations()`
 
@@ -89,25 +88,25 @@ Returns {@link Invokable} of {@code constructor}.
 
 **Returns:** `java.lang.reflect.TypeVariable<?>[]`
 
-See {@link java.lang.reflect.GenericDeclaration#getTypeParameters()}.
+See `java.lang.reflect.GenericDeclaration.getTypeParameters()`.
 
 ### `setAccessible(`boolean` flag)`
 
 **Returns:** `void`
 
-See {@link java.lang.reflect.AccessibleObject#setAccessible(boolean)}.
+See `java.lang.reflect.AccessibleObject.setAccessible(boolean)`.
 
 ### `trySetAccessible()`
 
 **Returns:** `boolean`
 
-See {@link java.lang.reflect.AccessibleObject#trySetAccessible()}.
+See `java.lang.reflect.AccessibleObject.trySetAccessible()`.
 
 ### `isAccessible()`
 
 **Returns:** `boolean`
 
-See {@link java.lang.reflect.AccessibleObject#isAccessible()}.
+See `java.lang.reflect.AccessibleObject.isAccessible()`.
 
 ### `getName()`
 
@@ -155,11 +154,11 @@ Returns true if the element is static.
 
 **Returns:** `boolean`
 
-Returns {@code true} if this method is final, per {@code Modifier.isFinal(getModifiers())}.
+Returns `true` if this method is final, per `Modifier.isFinal(getModifiers())`.
 
  <p>Note that a method may still be effectively "final", or non-overridable when it has no
- {@code final} keyword. For example, it could be private, or it could be declared by a final
- class. To tell whether a method is overridable, use {@link Invokable#isOverridable}.
+ `final` keyword. For example, it could be private, or it could be declared by a final
+ class. To tell whether a method is overridable, use `Invokable.isOverridable`.
 
 ### `isAbstract()`
 
@@ -207,23 +206,23 @@ Returns true if the field is transient.
 
 **Returns:** `boolean`
 
-Returns {@code true} if this is an overridable method. Constructors, private, static or final
+Returns `true` if this is an overridable method. Constructors, private, static or final
  methods, or methods declared by final classes are not overridable.
 
 ### `isVarArgs()`
 
 **Returns:** `boolean`
 
-Returns {@code true} if this was declared to take a variable number of arguments.
+Returns `true` if this was declared to take a variable number of arguments.
 
-### `invoke([`T`](T.md) receiver, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` args)`
+### `invoke(`T` receiver, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` args)`
 
-**Returns:** [`R`](R.md)
+**Returns:** `R`
 
-Invokes with {@code receiver} as 'this' and {@code args} passed to the underlying method and
- returns the return value; or calls the underlying constructor with {@code args} and returns the
+Invokes with `receiver` as 'this' and `args` passed to the underlying method and
+ returns the return value; or calls the underlying constructor with `args` and returns the
  constructed instance.
-@throws IllegalAccessException if this {@code Constructor} object enforces Java language access
+@throws IllegalAccessException if this `Constructor` object enforces Java language access
      control and the underlying method or constructor is inaccessible.
 @throws IllegalArgumentException if the number of actual and formal parameters differ; if an
      unwrapping conversion for primitive arguments fails; or if, after possible unwrapping, a
@@ -235,38 +234,36 @@ Invokes with {@code receiver} as 'this' and {@code args} passed to the underlyin
 
 **Returns:** [`com.google.common.reflect.TypeToken<? extends R>`](./TypeToken.md)
 
-Returns the return type of this {@code Invokable}.
+Returns the return type of this `Invokable`.
 
 ### `getParameters()`
 
 **Returns:** [`com.google.common.collect.ImmutableList<com.google.common.reflect.Parameter>`](../collect/ImmutableList.md)
 
-Returns all declared parameters of this {@code Invokable}. Note that if this is a constructor
- of a non-static inner class, unlike {@link Constructor#getParameterTypes}, the hidden {@code
- this} parameter of the enclosing class is excluded from the returned parameters.
+Returns all declared parameters of this `Invokable`. Note that if this is a constructor
+ of a non-static inner class, unlike `Constructor.getParameterTypes`, the hidden `this` parameter of the enclosing class is excluded from the returned parameters.
 
 ### `getExceptionTypes()`
 
 **Returns:** [`com.google.common.collect.ImmutableList<com.google.common.reflect.TypeToken<? extends java.lang.Throwable>>`](../collect/ImmutableList>.md)
 
-Returns all declared exception types of this {@code Invokable}.
+Returns all declared exception types of this `Invokable`.
 
 ### `returning(`java.lang.Class<R1>` returnType)`
 
 **Returns:** [`com.google.common.reflect.Invokable<T,R1>`](./Invokable.md)
 
-Explicitly specifies the return type of this {@code Invokable}. For example:
+Explicitly specifies the return type of this `Invokable`. For example:
 
- <pre>{@code
- Method factoryMethod = Person.class.getMethod("create");
+ <pre>`Method factoryMethod = Person.class.getMethod("create");
  Invokable<?, Person> factory = Invokable.of(getNameMethod).returning(Person.class);
- }</pre>
+ `</pre>
 
 ### `returning([`com.google.common.reflect.TypeToken<R1>`](./TypeToken.md) returnType)`
 
 **Returns:** [`com.google.common.reflect.Invokable<T,R1>`](./Invokable.md)
 
-Explicitly specifies the return type of this {@code Invokable}.
+Explicitly specifies the return type of this `Invokable`.
 
 ### `getDeclaringClass()`
 
@@ -276,7 +273,7 @@ Explicitly specifies the return type of this {@code Invokable}.
 
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
-Returns the type of {@code T}.
+Returns the type of `T`.
 
 ### `invokeInternal(`java.lang.Object` receiver, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` args)`
 
@@ -308,8 +305,8 @@ This should never return a type that's not a subtype of Throwable.
 
 **Returns:** `java.lang.reflect.AnnotatedType`
 
-Returns the {@link AnnotatedType} for the return type.
-@since 14.0
+Returns the `AnnotatedType` for the return type.
+**Since:** 14.0
 
 ### `initAnnotatedTypeExists()`
 

@@ -4,26 +4,24 @@
 
 **Fully Qualified Name:** `com.google.common.io.LittleEndianDataOutputStream`
 
-**Extends:** [`java.io.FilterOutputStream`](../../../../java/io/FilterOutputStream.md)
+**Extends:** `java.io.FilterOutputStream`
 
-**Implements:** [`java.io.DataOutput`](../../../../java/io/DataOutput.md)
+**Implements:** `java.io.DataOutput`
 
 ## Description
 
-An implementation of {@link DataOutput} that uses little-endian byte ordering for writing {@code
- char}, {@code short}, {@code int}, {@code float}, {@code double}, and {@code long} values.
+An implementation of `DataOutput` that uses little-endian byte ordering for writing `char`, `short`, `int`, `float`, `double`, and `long` values.
 
- <p><b>Note:</b> This class intentionally violates the specification of its supertype {@code
- DataOutput}, which explicitly requires big-endian byte order.
-@author Chris Nokleberg
-@author Keith Bottner
-@since 8.0
+ <p><b>Note:</b> This class intentionally violates the specification of its supertype `DataOutput`, which explicitly requires big-endian byte order.
+**Author:** Chris Nokleberg
+**Author:** Keith Bottner
+**Since:** 8.0
 
 ## Constructors
 
-### `<init>([`java.io.OutputStream`](../../../../java/io/OutputStream.md) out)`
+### `<init>(`java.io.OutputStream` out)`
 
-Creates a {@code LittleEndianDataOutputStream} that wraps the given stream.
+Creates a `LittleEndianDataOutputStream` that wraps the given stream.
 @param out the stream to delegate to
 
 ## Methods
@@ -44,14 +42,14 @@ Creates a {@code LittleEndianDataOutputStream} that wraps the given stream.
 
 **Returns:** `void`
 
-@deprecated The semantics of {@code writeBytes(String s)} are considered dangerous. Please use
-     {@link #writeUTF(String s)}, {@link #writeChars(String s)} or another write method instead.
+**Deprecated:** The semantics of `writeBytes(String s)` are considered dangerous. Please use
+     `writeUTF(String s)`, `writeChars(String s)` or another write method instead.
 
 ### `writeChar(`int` v)`
 
 **Returns:** `void`
 
-Writes a char as specified by {@link DataOutputStream#writeChar(int)}, except using
+Writes a char as specified by `DataOutputStream.writeChar(int)`, except using
  little-endian byte order.
 @throws IOException if an I/O error occurs
 
@@ -59,7 +57,7 @@ Writes a char as specified by {@link DataOutputStream#writeChar(int)}, except us
 
 **Returns:** `void`
 
-Writes a {@code String} as specified by {@link DataOutputStream#writeChars(String)}, except
+Writes a `String` as specified by `DataOutputStream.writeChars(String)`, except
  each character is written using little-endian byte order.
 @throws IOException if an I/O error occurs
 
@@ -67,7 +65,7 @@ Writes a {@code String} as specified by {@link DataOutputStream#writeChars(Strin
 
 **Returns:** `void`
 
-Writes a {@code double} as specified by {@link DataOutputStream#writeDouble(double)}, except
+Writes a `double` as specified by `DataOutputStream.writeDouble(double)`, except
  using little-endian byte order.
 @throws IOException if an I/O error occurs
 
@@ -75,7 +73,7 @@ Writes a {@code double} as specified by {@link DataOutputStream#writeDouble(doub
 
 **Returns:** `void`
 
-Writes a {@code float} as specified by {@link DataOutputStream#writeFloat(float)}, except using
+Writes a `float` as specified by `DataOutputStream.writeFloat(float)`, except using
  little-endian byte order.
 @throws IOException if an I/O error occurs
 
@@ -83,7 +81,7 @@ Writes a {@code float} as specified by {@link DataOutputStream#writeFloat(float)
 
 **Returns:** `void`
 
-Writes an {@code int} as specified by {@link DataOutputStream#writeInt(int)}, except using
+Writes an `int` as specified by `DataOutputStream.writeInt(int)`, except using
  little-endian byte order.
 @throws IOException if an I/O error occurs
 
@@ -91,7 +89,7 @@ Writes an {@code int} as specified by {@link DataOutputStream#writeInt(int)}, ex
 
 **Returns:** `void`
 
-Writes a {@code long} as specified by {@link DataOutputStream#writeLong(long)}, except using
+Writes a `long` as specified by `DataOutputStream.writeLong(long)`, except using
  little-endian byte order.
 @throws IOException if an I/O error occurs
 
@@ -99,7 +97,7 @@ Writes a {@code long} as specified by {@link DataOutputStream#writeLong(long)}, 
 
 **Returns:** `void`
 
-Writes a {@code short} as specified by {@link DataOutputStream#writeShort(int)}, except using
+Writes a `short` as specified by `DataOutputStream.writeShort(int)`, except using
  little-endian byte order.
 @throws IOException if an I/O error occurs
 

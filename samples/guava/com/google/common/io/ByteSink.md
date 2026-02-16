@@ -6,11 +6,11 @@
 
 ## Description
 
-A destination to which bytes can be written, such as a file. Unlike an {@link OutputStream}, a
- {@code ByteSink} is not an open, stateful stream that can be written to and closed. Instead, it
- is an immutable <i>supplier</i> of {@code OutputStream} instances.
+A destination to which bytes can be written, such as a file. Unlike an `OutputStream`, a
+ `ByteSink` is not an open, stateful stream that can be written to and closed. Instead, it
+ is an immutable <i>supplier</i> of `OutputStream` instances.
 
- <p>{@code ByteSink} provides two kinds of methods:
+ <p>`ByteSink` provides two kinds of methods:
 
  <ul>
    <li><b>Methods that return a stream:</b> These methods should return a <i>new</i>, independent
@@ -20,8 +20,8 @@ A destination to which bytes can be written, such as a file. Unlike an {@link Ou
        typically implemented by opening a stream using one of the methods in the first category,
        doing something and finally closing the stream or channel that was opened.
  </ul>
-@since 14.0
-@author Colin Decker
+**Since:** 14.0
+**Author:** Colin Decker
 
 ## Constructors
 
@@ -31,18 +31,18 @@ Constructor for use by subclasses.
 
 ## Methods
 
-### `asCharSink([`java.nio.charset.Charset`](../../../../java/nio/charset/Charset.md) charset)`
+### `asCharSink(`java.nio.charset.Charset` charset)`
 
 **Returns:** [`com.google.common.io.CharSink`](./CharSink.md)
 
-Returns a {@link CharSink} view of this {@code ByteSink} that writes characters to this sink as
- bytes encoded with the given {@link Charset charset}.
+Returns a `CharSink` view of this `ByteSink` that writes characters to this sink as
+ bytes encoded with the given `Charset`.
 
 ### `openStream()`
 
-**Returns:** [`java.io.OutputStream`](../../../../java/io/OutputStream.md)
+**Returns:** `java.io.OutputStream`
 
-Opens a new {@link OutputStream} for writing to this sink. This method returns a new,
+Opens a new `OutputStream` for writing to this sink. This method returns a new,
  independent stream each time it is called.
 
  <p>The caller is responsible for ensuring that the returned stream is closed.
@@ -50,17 +50,17 @@ Opens a new {@link OutputStream} for writing to this sink. This method returns a
 
 ### `openBufferedStream()`
 
-**Returns:** [`java.io.OutputStream`](../../../../java/io/OutputStream.md)
+**Returns:** `java.io.OutputStream`
 
-Opens a new buffered {@link OutputStream} for writing to this sink. The returned stream is not
- required to be a {@link BufferedOutputStream} in order to allow implementations to simply
- delegate to {@link #openStream()} when the stream returned by that method does not benefit from
- additional buffering (for example, a {@code ByteArrayOutputStream}). This method returns a new,
+Opens a new buffered `OutputStream` for writing to this sink. The returned stream is not
+ required to be a `BufferedOutputStream` in order to allow implementations to simply
+ delegate to `openStream()` when the stream returned by that method does not benefit from
+ additional buffering (for example, a `ByteArrayOutputStream`). This method returns a new,
  independent stream each time it is called.
 
  <p>The caller is responsible for ensuring that the returned stream is closed.
 @throws IOException if an I/O error occurs while opening the stream
-@since 15.0 (in 14.0 with return type {@link BufferedOutputStream})
+**Since:** 15.0 (in 14.0 with return type `BufferedOutputStream`)
 
 ### `write(`byte[]` bytes)`
 
@@ -69,12 +69,11 @@ Opens a new buffered {@link OutputStream} for writing to this sink. The returned
 Writes all the given bytes to this sink.
 @throws IOException if an I/O occurs while writing to this sink
 
-### `writeFrom([`java.io.InputStream`](../../../../java/io/InputStream.md) input)`
+### `writeFrom(`java.io.InputStream` input)`
 
 **Returns:** `long`
 
-Writes all the bytes from the given {@code InputStream} to this sink. Does not close {@code
- input}.
+Writes all the bytes from the given `InputStream` to this sink. Does not close `input`.
 @return the number of bytes written
-@throws IOException if an I/O occurs while reading from {@code input} or writing to this sink
+@throws IOException if an I/O occurs while reading from `input` or writing to this sink
 

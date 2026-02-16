@@ -6,8 +6,8 @@
 
 ## Description
 
-Source of {@link LongAddable} objects that deals with GWT, Unsafe, and all that.
-@author Louis Wasserman
+Source of `LongAddable` objects that deals with GWT, Unsafe, and all that.
+**Author:** Louis Wasserman
 
 ## Fields
 

@@ -10,7 +10,7 @@
 
 An immutable version of CharMatcher for smallish sets of characters that uses a hash table with
  linear probing to check for matches.
-@author Christopher Swenson
+**Author:** Christopher Swenson
 
 ## Fields
 
@@ -64,7 +64,7 @@ Returns an array size suitable for the backing array of a hash table that uses o
  with linear probing in its implementation. The returned size is the smallest power of two that
  can hold setSize elements with the desired load factor.
 
-### `from([`java.util.BitSet`](../../../../java/util/BitSet.md) chars, `java.lang.String` description)`
+### `from(`java.util.BitSet` chars, `java.lang.String` description)`
 
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
@@ -72,7 +72,7 @@ Returns an array size suitable for the backing array of a hash table that uses o
 
 **Returns:** `boolean`
 
-### `setBits([`java.util.BitSet`](../../../../java/util/BitSet.md) table)`
+### `setBits(`java.util.BitSet` table)`
 
 **Returns:** `void`
 

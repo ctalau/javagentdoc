@@ -6,9 +6,8 @@
 
 ## Description
 
-Superinterface of {@link ServiceManager} to introduce a bridge method for {@code
- servicesByState()}, to ensure binary compatibility with older Guava versions that specified
- {@code servicesByState()} to return {@code ImmutableMultimap}.
+Superinterface of `ServiceManager` to introduce a bridge method for `servicesByState()`, to ensure binary compatibility with older Guava versions that specified
+ `servicesByState()` to return `ImmutableMultimap`.
 
 ## Methods
 

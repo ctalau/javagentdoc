@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.base.Equivalence<F>`](./Equivalence.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -16,8 +16,8 @@
 ## Description
 
 Equivalence applied on functional result.
-@author Bob Lee
-@since 10.0
+**Author:** Bob Lee
+**Since:** 10.0
 
 ## Fields
 
@@ -39,11 +39,11 @@ Equivalence applied on functional result.
 
 ## Methods
 
-### `doEquivalent([`F`](F.md) a, [`F`](F.md) b)`
+### `doEquivalent(`F` a, `F` b)`
 
 **Returns:** `boolean`
 
-### `doHash([`F`](F.md) a)`
+### `doHash(`F` a)`
 
 **Returns:** `int`
 

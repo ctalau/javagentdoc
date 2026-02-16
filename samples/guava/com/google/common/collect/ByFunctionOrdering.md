@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<F>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -38,7 +38,7 @@ An ordering that orders elements by applying an order to the result of a functio
 
 ## Methods
 
-### `compare([`F`](F.md) left, [`F`](F.md) right)`
+### `compare(`F` left, `F` right)`
 
 **Returns:** `int`
 

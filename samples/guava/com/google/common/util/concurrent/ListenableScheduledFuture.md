@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.ListenableScheduledFuture`
 
-**Extends:** [`java.util.concurrent.ScheduledFuture<V>`](../../../../../java/util/concurrent/ScheduledFuture.md), [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+**Extends:** `java.util.concurrent.ScheduledFuture<V>`, [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
 ## Type Parameters
 
@@ -12,7 +12,7 @@
 
 ## Description
 
-Helper interface to implement both {@link ListenableFuture} and {@link ScheduledFuture}.
-@author Anthony Zana
-@since 15.0
+Helper interface to implement both `ListenableFuture` and `ScheduledFuture`.
+**Author:** Anthony Zana
+**Since:** 15.0
 

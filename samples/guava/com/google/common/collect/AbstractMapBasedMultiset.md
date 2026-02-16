@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.AbstractMultiset<E>`](./AbstractMultiset.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -14,17 +14,16 @@
 
 ## Description
 
-Basic implementation of {@code Multiset<E>} backed by an instance of {@code Map<E, Count>}.
+Basic implementation of `Multiset<E>` backed by an instance of `Map<E, Count>`.
 
- <p>For serialization to work, the subclass must specify explicit {@code readObject} and {@code
- writeObject} methods.
-@author Kevin Bourrillion
+ <p>For serialization to work, the subclass must specify explicit `readObject` and `writeObject` methods.
+**Author:** Kevin Bourrillion
 
 ## Fields
 
 ### `backingMap`
 
-**Type:** [`java.util.Map<E,com.google.common.collect.Count>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<E,com.google.common.collect.Count>`
 
 ### `size`
 
@@ -36,13 +35,13 @@ Basic implementation of {@code Multiset<E>} backed by an instance of {@code Map<
 
 ## Constructors
 
-### `<init>([`java.util.Map<E,com.google.common.collect.Count>`](../../../../java/util/Map.md) backingMap)`
+### `<init>(`java.util.Map<E,com.google.common.collect.Count>` backingMap)`
 
 Standard constructor.
 
 ## Methods
 
-### `setBackingMap([`java.util.Map<E,com.google.common.collect.Count>`](../../../../java/util/Map.md) backingMap)`
+### `setBackingMap(`java.util.Map<E,com.google.common.collect.Count>` backingMap)`
 
 **Returns:** `void`
 
@@ -50,23 +49,23 @@ Used during deserialization only. The backing map must be empty.
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 {@inheritDoc}
 
- <p>Invoking {@link Multiset.Entry#getCount} on an entry in the returned set always returns the
+ <p>Invoking `Multiset.Entry.getCount` on an entry in the returned set always returns the
  current count of that element in the multiset, as opposed to the count at the time the entry
  was retrieved.
 
 ### `elementIterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `entryIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
-### `forEachEntry([`java.util.function.ObjIntConsumer<? super E>`](../../../../java/util/function/ObjIntConsumer.md) action)`
+### `forEachEntry(`java.util.function.ObjIntConsumer<? super E>` action)`
 
 **Returns:** `void`
 
@@ -84,24 +83,24 @@ Used during deserialization only. The backing map must be empty.
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `count(`java.lang.Object` element)`
 
 **Returns:** `int`
 
-### `add([`E`](E.md) element, `int` occurrences)`
+### `add(`E` element, `int` occurrences)`
 
 **Returns:** `int`
 
 {@inheritDoc}
-@throws IllegalArgumentException if the call would result in more than {@link Integer#MAX_VALUE} occurrences of {@code element} in this multiset.
+@throws IllegalArgumentException if the call would result in more than `Integer.MAX_VALUE` occurrences of `element` in this multiset.
 
 ### `remove(`java.lang.Object` element, `int` occurrences)`
 
 **Returns:** `int`
 
-### `setCount([`E`](E.md) element, `int` count)`
+### `setCount(`E` element, `int` count)`
 
 **Returns:** `int`
 

@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<java.lang.Iterable<T>>`](./Ordering>.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ An ordering which sorts iterables by comparing corresponding elements pairwise.
 
 ### `elementOrder`
 
-**Type:** [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super T>`
 
 ### `serialVersionUID`
 
@@ -28,7 +28,7 @@ An ordering which sorts iterables by comparing corresponding elements pairwise.
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) elementOrder)`
+### `<init>(`java.util.Comparator<? super T>` elementOrder)`
 
 ## Methods
 

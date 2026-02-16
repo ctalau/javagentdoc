@@ -13,7 +13,7 @@
 ## Description
 
 An immutable sorted multiset with one or more distinct elements.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -43,7 +43,7 @@ An immutable sorted multiset with one or more distinct elements.
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `<init>(`java.util.Comparator<? super E>` comparator)`
 
 ### `<init>([`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md) elementSet, `long[]` cumulativeCounts, `int` offset, `int` length)`
 
@@ -57,7 +57,7 @@ An immutable sorted multiset with one or more distinct elements.
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-### `forEachEntry([`java.util.function.ObjIntConsumer<? super E>`](../../../../java/util/function/ObjIntConsumer.md) action)`
+### `forEachEntry(`java.util.function.ObjIntConsumer<? super E>` action)`
 
 **Returns:** `void`
 
@@ -81,11 +81,11 @@ An immutable sorted multiset with one or more distinct elements.
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `headMultiset([`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `tailMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 

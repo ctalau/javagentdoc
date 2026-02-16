@@ -17,21 +17,20 @@
 A multiset which forwards all its method calls to another multiset. Subclasses should override
  one or more methods to modify the behavior of the backing multiset as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>Warning:</b> The methods of {@code ForwardingMultiset} forward <b>indiscriminately</b> to
- the methods of the delegate. For example, overriding {@link #add(Object, int)} alone <b>will
- not</b> change the behavior of {@link #add(Object)}, which can lead to unexpected behavior. In
- this case, you should override {@code add(Object)} as well, either providing your own
- implementation, or delegating to the provided {@code standardAdd} method.
+ <p><b>Warning:</b> The methods of `ForwardingMultiset` forward <b>indiscriminately</b> to
+ the methods of the delegate. For example, overriding `add(Object, int)` alone <b>will
+ not</b> change the behavior of `add(Object)`, which can lead to unexpected behavior. In
+ this case, you should override `add(Object)` as well, either providing your own
+ implementation, or delegating to the provided `standardAdd` method.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingMultiset}.
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingMultiset`.
 
- <p>The {@code standard} methods and any collection views they return are not guaranteed to be
+ <p>The `standard` methods and any collection views they return are not guaranteed to be
  thread-safe, even when all of the methods that they depend on are thread-safe.
-@author Kevin Bourrillion
-@author Louis Wasserman
-@since 2.0
+**Author:** Kevin Bourrillion
+**Author:** Louis Wasserman
+**Since:** 2.0
 
 ## Constructors
 
@@ -49,7 +48,7 @@ Constructor for use by subclasses.
 
 **Returns:** `int`
 
-### `add([`E`](E.md) element, `int` occurrences)`
+### `add(`E` element, `int` occurrences)`
 
 **Returns:** `int`
 
@@ -59,11 +58,11 @@ Constructor for use by subclasses.
 
 ### `elementSet()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `equals(`java.lang.Object` object)`
 
@@ -73,11 +72,11 @@ Constructor for use by subclasses.
 
 **Returns:** `int`
 
-### `setCount([`E`](E.md) element, `int` count)`
+### `setCount(`E` element, `int` count)`
 
 **Returns:** `int`
 
-### `setCount([`E`](E.md) element, `int` oldCount, `int` newCount)`
+### `setCount(`E` element, `int` oldCount, `int` newCount)`
 
 **Returns:** `boolean`
 
@@ -85,128 +84,127 @@ Constructor for use by subclasses.
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #contains} in terms of {@link #count}. If you override {@link #count}, you may wish to override {@link #contains} to forward to this implementation.
-@since 7.0
+A sensible definition of `contains` in terms of `count`. If you override `count`, you may wish to override `contains` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardClear()`
 
 **Returns:** `void`
 
-A sensible definition of {@link #clear} in terms of the {@code iterator} method of {@link #entrySet}. If you override {@link #entrySet}, you may wish to override {@link #clear} to
+A sensible definition of `clear` in terms of the `iterator` method of `entrySet`. If you override `entrySet`, you may wish to override `clear` to
  forward to this implementation.
-@since 7.0
+**Since:** 7.0
 
 ### `standardCount(`java.lang.Object` object)`
 
 **Returns:** `int`
 
-A sensible, albeit inefficient, definition of {@link #count} in terms of {@link #entrySet}. If
- you override {@link #entrySet}, you may wish to override {@link #count} to forward to this
+A sensible, albeit inefficient, definition of `count` in terms of `entrySet`. If
+ you override `entrySet`, you may wish to override `count` to forward to this
  implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardAdd([`E`](E.md) element)`
+### `standardAdd(`E` element)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #add(Object)} in terms of {@link #add(Object, int)}. If you
- override {@link #add(Object, int)}, you may wish to override {@link #add(Object)} to forward to
+A sensible definition of `add(Object)` in terms of `add(Object, int)`. If you
+ override `add(Object, int)`, you may wish to override `add(Object)` to forward to
  this implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardAddAll([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) elementsToAdd)`
+### `standardAddAll(`java.util.Collection<? extends E>` elementsToAdd)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #addAll(Collection)} in terms of {@link #add(Object)} and
- {@link #add(Object, int)}. If you override either of these methods, you may wish to override
- {@link #addAll(Collection)} to forward to this implementation.
-@since 7.0
+A sensible definition of `addAll(Collection)` in terms of `add(Object)` and
+ `add(Object, int)`. If you override either of these methods, you may wish to override
+ `addAll(Collection)` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardRemove(`java.lang.Object` element)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #remove(Object)} in terms of {@link #remove(Object, int)}. If
- you override {@link #remove(Object, int)}, you may wish to override {@link #remove(Object)} to
+A sensible definition of `remove(Object)` in terms of `remove(Object, int)`. If
+ you override `remove(Object, int)`, you may wish to override `remove(Object)` to
  forward to this implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardRemoveAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) elementsToRemove)`
-
-**Returns:** `boolean`
-
-A sensible definition of {@link #removeAll} in terms of the {@code removeAll} method of {@link #elementSet}. If you override {@link #elementSet}, you may wish to override {@link #removeAll}
- to forward to this implementation.
-@since 7.0
-
-### `standardRetainAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) elementsToRetain)`
+### `standardRemoveAll(`java.util.Collection<?>` elementsToRemove)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #retainAll} in terms of the {@code retainAll} method of {@link #elementSet}. If you override {@link #elementSet}, you may wish to override {@link #retainAll}
+A sensible definition of `removeAll` in terms of the `removeAll` method of `elementSet`. If you override `elementSet`, you may wish to override `removeAll`
  to forward to this implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardSetCount([`E`](E.md) element, `int` count)`
+### `standardRetainAll(`java.util.Collection<?>` elementsToRetain)`
+
+**Returns:** `boolean`
+
+A sensible definition of `retainAll` in terms of the `retainAll` method of `elementSet`. If you override `elementSet`, you may wish to override `retainAll`
+ to forward to this implementation.
+**Since:** 7.0
+
+### `standardSetCount(`E` element, `int` count)`
 
 **Returns:** `int`
 
-A sensible definition of {@link #setCount(Object, int)} in terms of {@link #count(Object)},
- {@link #add(Object, int)}, and {@link #remove(Object, int)}. {@link #entrySet()}. If you
- override any of these methods, you may wish to override {@link #setCount(Object, int)} to
+A sensible definition of `setCount(Object, int)` in terms of `count(Object)`,
+ `add(Object, int)`, and `remove(Object, int)`. `entrySet()`. If you
+ override any of these methods, you may wish to override `setCount(Object, int)` to
  forward to this implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardSetCount([`E`](E.md) element, `int` oldCount, `int` newCount)`
+### `standardSetCount(`E` element, `int` oldCount, `int` newCount)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #setCount(Object, int, int)} in terms of {@link #count(Object)}
- and {@link #setCount(Object, int)}. If you override either of these methods, you may wish to
- override {@link #setCount(Object, int, int)} to forward to this implementation.
-@since 7.0
+A sensible definition of `setCount(Object, int, int)` in terms of `count(Object)`
+ and `setCount(Object, int)`. If you override either of these methods, you may wish to
+ override `setCount(Object, int, int)` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardIterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
-A sensible definition of {@link #iterator} in terms of {@link #entrySet} and {@link #remove(Object)}. If you override either of these methods, you may wish to override {@link #iterator} to forward to this implementation.
-@since 7.0
+A sensible definition of `iterator` in terms of `entrySet` and `remove(Object)`. If you override either of these methods, you may wish to override `iterator` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardSize()`
 
 **Returns:** `int`
 
-A sensible, albeit inefficient, definition of {@link #size} in terms of {@link #entrySet}. If
- you override {@link #entrySet}, you may wish to override {@link #size} to forward to this
+A sensible, albeit inefficient, definition of `size` in terms of `entrySet`. If
+ you override `entrySet`, you may wish to override `size` to forward to this
  implementation.
-@since 7.0
+**Since:** 7.0
 
 ### `standardEquals(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-A sensible, albeit inefficient, definition of {@link #equals} in terms of {@code
- entrySet().size()} and {@link #count}. If you override either of these methods, you may wish to
- override {@link #equals} to forward to this implementation.
-@since 7.0
+A sensible, albeit inefficient, definition of `equals` in terms of `entrySet().size()` and `count`. If you override either of these methods, you may wish to
+ override `equals` to forward to this implementation.
+**Since:** 7.0
 
 ### `standardHashCode()`
 
 **Returns:** `int`
 
-A sensible definition of {@link #hashCode} as {@code entrySet().hashCode()} . If you override
- {@link #entrySet}, you may wish to override {@link #hashCode} to forward to this
+A sensible definition of `hashCode` as `entrySet().hashCode()` . If you override
+ `entrySet`, you may wish to override `hashCode` to forward to this
  implementation.
-@since 7.0
+**Since:** 7.0
 
 ### `standardToString()`
 
 **Returns:** `java.lang.String`
 
-A sensible definition of {@link #toString} as {@code entrySet().toString()} . If you override
- {@link #entrySet}, you may wish to override {@link #toString} to forward to this
+A sensible definition of `toString` as `entrySet().toString()` . If you override
+ `entrySet`, you may wish to override `toString` to forward to this
  implementation.
-@since 7.0
+**Since:** 7.0
 

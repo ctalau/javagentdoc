@@ -11,7 +11,7 @@
 ## Description
 
 A base class for builders that construct graphs with user-defined properties.
-@author James Sexton
+**Author:** James Sexton
 
 ## Fields
 

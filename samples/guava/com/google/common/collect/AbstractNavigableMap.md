@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Maps.IteratorBasedAbstractMap<K,V>`](Maps/IteratorBasedAbstractMap.md)
 
-**Implements:** [`java.util.NavigableMap<K,V>`](../../../../java/util/NavigableMap.md)
+**Implements:** `java.util.NavigableMap<K,V>`
 
 ## Type Parameters
 
@@ -15,8 +15,8 @@
 
 ## Description
 
-Skeletal implementation of {@link NavigableMap}.
-@author Louis Wasserman
+Skeletal implementation of `NavigableMap`.
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -26,93 +26,93 @@ Skeletal implementation of {@link NavigableMap}.
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `firstEntry()`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `lastEntry()`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `pollFirstEntry()`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `pollLastEntry()`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `firstKey()`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
 ### `lastKey()`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
-### `lowerEntry([`K`](K.md) key)`
+### `lowerEntry(`K` key)`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
-### `floorEntry([`K`](K.md) key)`
+### `floorEntry(`K` key)`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
-### `ceilingEntry([`K`](K.md) key)`
+### `ceilingEntry(`K` key)`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
-### `higherEntry([`K`](K.md) key)`
+### `higherEntry(`K` key)`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
-### `lowerKey([`K`](K.md) key)`
+### `lowerKey(`K` key)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
-### `floorKey([`K`](K.md) key)`
+### `floorKey(`K` key)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
-### `ceilingKey([`K`](K.md) key)`
+### `ceilingKey(`K` key)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
-### `higherKey([`K`](K.md) key)`
+### `higherKey(`K` key)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
 ### `descendingEntryIterator()`
 
-**Returns:** [`java.util.Iterator<java.util.Map.Entry<K,V>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
-### `subMap([`K`](K.md) fromKey, [`K`](K.md) toKey)`
+### `subMap(`K` fromKey, `K` toKey)`
 
-**Returns:** [`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<K,V>`
 
-### `headMap([`K`](K.md) toKey)`
+### `headMap(`K` toKey)`
 
-**Returns:** [`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<K,V>`
 
-### `tailMap([`K`](K.md) fromKey)`
+### `tailMap(`K` fromKey)`
 
-**Returns:** [`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `navigableKeySet()`
 
-**Returns:** [`java.util.NavigableSet<K>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<K>`
 
 ### `keySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 ### `descendingKeySet()`
 
-**Returns:** [`java.util.NavigableSet<K>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<K>`
 
 ### `descendingMap()`
 
-**Returns:** [`java.util.NavigableMap<K,V>`](../../../../java/util/NavigableMap.md)
+**Returns:** `java.util.NavigableMap<K,V>`
 

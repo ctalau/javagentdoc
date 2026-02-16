@@ -13,10 +13,10 @@
 
 ## Description
 
-A class to allow {@link ValueGraph} implementations to be backed by a provided delegate. This is
+A class to allow `ValueGraph` implementations to be backed by a provided delegate. This is
  not currently planned to be released as a general-purpose forwarding class.
-@author James Sexton
-@author Joshua O'Madadhain
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
 
 ## Constructors
 
@@ -30,13 +30,13 @@ A class to allow {@link ValueGraph} implementations to be backed by a provided d
 
 ### `nodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `edgeCount()`
 
 **Returns:** `long`
 
-Defer to {@link AbstractValueGraph#edges()} (based on {@link #successors(Object)}) for full
+Defer to `AbstractValueGraph.edges()` (based on `successors(Object)`) for full
  edges() implementation.
 
 ### `isDirected()`
@@ -55,31 +55,31 @@ Defer to {@link AbstractValueGraph#edges()} (based on {@link #successors(Object)
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `adjacentNodes([`N`](N.md) node)`
+### `adjacentNodes(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `predecessors([`N`](N.md) node)`
+### `predecessors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `successors([`N`](N.md) node)`
+### `successors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `degree([`N`](N.md) node)`
-
-**Returns:** `int`
-
-### `inDegree([`N`](N.md) node)`
+### `degree(`N` node)`
 
 **Returns:** `int`
 
-### `outDegree([`N`](N.md) node)`
+### `inDegree(`N` node)`
 
 **Returns:** `int`
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `outDegree(`N` node)`
+
+**Returns:** `int`
+
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 
@@ -87,19 +87,19 @@ Defer to {@link AbstractValueGraph#edges()} (based on {@link #successors(Object)
 
 **Returns:** `boolean`
 
-### `edgeValue([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeValue(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Optional<V>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<V>`
 
 ### `edgeValue([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Optional<V>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<V>`
 
-### `edgeValueOrDefault([`N`](N.md) nodeU, [`N`](N.md) nodeV, [`V`](V.md) defaultValue)`
+### `edgeValueOrDefault(`N` nodeU, `N` nodeV, `V` defaultValue)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `edgeValueOrDefault([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, [`V`](V.md) defaultValue)`
+### `edgeValueOrDefault([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, `V` defaultValue)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 

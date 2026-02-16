@@ -6,12 +6,12 @@
 
 **Extends:** [`com.google.common.hash.AbstractHashFunction`](./AbstractHashFunction.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
-{@link HashFunction} adapter for {@link Checksum} instances.
-@author Colin Decker
+`HashFunction` adapter for `Checksum` instances.
+**Author:** Colin Decker
 
 ## Fields
 

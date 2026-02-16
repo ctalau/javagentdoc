@@ -13,10 +13,10 @@
 
 ## Description
 
-Implementation of {@link ImmutableMap} with two or more entries.
-@author Jesse Wilson
-@author Kevin Bourrillion
-@author Gregory Kick
+Implementation of `ImmutableMap` with two or more entries.
+**Author:** Jesse Wilson
+**Author:** Kevin Bourrillion
+**Author:** Gregory Kick
 
 ## Fields
 
@@ -48,7 +48,7 @@ Maximum allowed length of a hash table bucket before falling back to a j.u.HashM
 
 ### `entries`
 
-**Type:** [`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md)
+**Type:** `java.util.Map.Entry<K,V>[]`
 
 ### `table`
 
@@ -64,15 +64,15 @@ Maximum allowed length of a hash table bucket before falling back to a j.u.HashM
 
 ## Constructors
 
-### `<init>([`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md) entries, [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) table, `int` mask)`
+### `<init>(`java.util.Map.Entry<K,V>[]` entries, [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) table, `int` mask)`
 
 ## Methods
 
-### `fromEntries([`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md) entries)`
+### `fromEntries(`java.util.Map.Entry<K,V>[]` entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-### `fromEntryArray(`int` n, [`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`](../../../../java/util/Map/@org/checkerframework/checker/nullness/qual/Nullable Entry.md) entryArray, `boolean` throwIfDuplicateKeys)`
+### `fromEntryArray(`int` n, `java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]` entryArray, `boolean` throwIfDuplicateKeys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
@@ -80,31 +80,31 @@ Creates an ImmutableMap from the first n entries in entryArray. This implementat
  the entries in entryArray with its own entry objects (though they will have the same key/value
  contents), and may take ownership of entryArray.
 
-### `fromEntryArrayCheckingBucketOverflow(`int` n, [`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`](../../../../java/util/Map/@org/checkerframework/checker/nullness/qual/Nullable Entry.md) entryArray, `boolean` throwIfDuplicateKeys)`
+### `fromEntryArrayCheckingBucketOverflow(`int` n, `java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]` entryArray, `boolean` throwIfDuplicateKeys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-### `removeDuplicates([`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md) entries, `int` n, `int` newN, [`java.util.IdentityHashMap<java.util.Map.Entry<K,V>,java.lang.Boolean>`](../../../../java/util/IdentityHashMap,java/lang/Boolean>.md) duplicates)`
+### `removeDuplicates(`java.util.Map.Entry<K,V>[]` entries, `int` n, `int` newN, `java.util.IdentityHashMap<java.util.Map.Entry<K,V>,java.lang.Boolean>` duplicates)`
 
-**Returns:** [`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>[]`
 
 Constructs a new entry array where each duplicated key from the original appears only once, at
- its first position but with its final value. The {@code duplicates} map is modified.
+ its first position but with its final value. The `duplicates` map is modified.
 @param entries the original array of entries including duplicates
-@param n the number of valid entries in {@code entries}
+@param n the number of valid entries in `entries`
 @param newN the expected number of entries once duplicates are removed
-@param duplicates a map of canonical {@link Entry} objects for each duplicate key. This map
-     will be updated by the method, setting each value to false as soon as the {@link Entry} has
+@param duplicates a map of canonical `Entry` objects for each duplicate key. This map
+     will be updated by the method, setting each value to false as soon as the `Entry` has
      been included in the new entry array.
-@return an array of {@code newN} entries where no key appears more than once.
+@return an array of `newN` entries where no key appears more than once.
 
-### `makeImmutable([`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md) entry, [`K`](K.md) key, [`V`](V.md) value)`
+### `makeImmutable(`java.util.Map.Entry<K,V>` entry, `K` key, `V` value)`
 
 **Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md)
 
 Makes an entry usable internally by a new ImmutableMap without rereading its contents.
 
-### `makeImmutable([`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md) entry)`
+### `makeImmutable(`java.util.Map.Entry<K,V>` entry)`
 
 **Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md)
 
@@ -114,24 +114,23 @@ Makes an entry usable internally by a new ImmutableMap.
 
 **Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md)
 
-Checks if the given key already appears in the hash chain starting at {@code keyBucketHead}. If
- it does not, then null is returned. If it does, then if {@code throwIfDuplicateKeys} is true an
- {@code IllegalArgumentException} is thrown, and otherwise the existing {@link Entry} is
+Checks if the given key already appears in the hash chain starting at `keyBucketHead`. If
+ it does not, then null is returned. If it does, then if `throwIfDuplicateKeys` is true an
+ `IllegalArgumentException` is thrown, and otherwise the existing `Entry` is
  returned.
-@throws IllegalArgumentException if another entry in the bucket has the same key and {@code
-     throwIfDuplicateKeys} is true
+@throws IllegalArgumentException if another entry in the bucket has the same key and `throwIfDuplicateKeys` is true
 @throws BucketOverflowException if this bucket has too many entries, which may indicate a hash
      flooding attack
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `get(`java.lang.Object` key, [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<?,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) keyTable, `int` mask)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `forEach([`java.util.function.BiConsumer<? super K,? super V>`](../../../../java/util/function/BiConsumer.md) action)`
+### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
 
 **Returns:** `void`
 

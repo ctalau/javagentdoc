@@ -6,16 +6,16 @@
 
 ## Description
 
-Low-level, high-performance utility methods related to the {@linkplain Charsets#UTF_8 UTF-8}
+Low-level, high-performance utility methods related to the UTF-8
  character encoding. UTF-8 is defined in section D92 of <a href="http://www.unicode.org/versions/Unicode6.2.0/ch03.pdf">The Unicode Standard Core
  Specification, Chapter 3</a>.
 
  <p>The variant of UTF-8 implemented by this class is the restricted definition of UTF-8
  introduced in Unicode 3.1. One implication of this is that it rejects <a href="http://www.unicode.org/versions/corrigendum1.html">"non-shortest form"</a> byte sequences,
  even though the JDK decoder may accept them.
-@author Martin Buchholz
-@author Clément Roux
-@since 16.0
+**Author:** Martin Buchholz
+**Author:** Clément Roux
+**Since:** 16.0
 
 ## Constructors
 
@@ -27,10 +27,10 @@ Low-level, high-performance utility methods related to the {@linkplain Charsets#
 
 **Returns:** `int`
 
-Returns the number of bytes in the UTF-8-encoded form of {@code sequence}. For a string, this
- method is equivalent to {@code string.getBytes(UTF_8).length}, but is more efficient in both
+Returns the number of bytes in the UTF-8-encoded form of `sequence`. For a string, this
+ method is equivalent to `string.getBytes(UTF_8).length`, but is more efficient in both
  time and space.
-@throws IllegalArgumentException if {@code sequence} contains ill-formed UTF-16 (unpaired
+@throws IllegalArgumentException if `sequence` contains ill-formed UTF-16 (unpaired
      surrogates)
 
 ### `encodedLengthGeneral(`java.lang.CharSequence` sequence, `int` start)`
@@ -41,22 +41,21 @@ Returns the number of bytes in the UTF-8-encoded form of {@code sequence}. For a
 
 **Returns:** `boolean`
 
-Returns {@code true} if {@code bytes} is a <i>well-formed</i> UTF-8 byte sequence according to
+Returns `true` if `bytes` is a <i>well-formed</i> UTF-8 byte sequence according to
  Unicode 6.0. Note that this is a stronger criterion than simply whether the bytes can be
  decoded. For example, some versions of the JDK decoder will accept "non-shortest form" byte
  sequences, but encoding never reproduces these. Such byte sequences are <i>not</i> considered
  well-formed.
 
- <p>This method returns {@code true} if and only if {@code Arrays.equals(bytes, new
- String(bytes, UTF_8).getBytes(UTF_8))} does, but is more efficient in both time and space.
+ <p>This method returns `true` if and only if `Arrays.equals(bytes, new
+ String(bytes, UTF_8).getBytes(UTF_8))` does, but is more efficient in both time and space.
 
 ### `isWellFormed(`byte[]` bytes, `int` off, `int` len)`
 
 **Returns:** `boolean`
 
 Returns whether the given byte array slice is a well-formed UTF-8 byte sequence, as defined by
- {@link #isWellFormed(byte[])}. Note that this can be false even when {@code
- isWellFormed(bytes)} is true.
+ `isWellFormed(byte[])`. Note that this can be false even when `isWellFormed(bytes)` is true.
 @param bytes the input buffer
 @param off the offset in the buffer of the first byte to read
 @param len the number of bytes to read from the buffer

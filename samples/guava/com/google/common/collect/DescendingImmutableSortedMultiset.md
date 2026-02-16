@@ -12,8 +12,8 @@
 
 ## Description
 
-A descending wrapper around an {@code ImmutableSortedMultiset}
-@author Louis Wasserman
+A descending wrapper around an `ImmutableSortedMultiset`
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -55,11 +55,11 @@ A descending wrapper around an {@code ImmutableSortedMultiset}
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `headMultiset([`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `tailMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 

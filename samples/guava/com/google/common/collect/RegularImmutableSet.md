@@ -12,8 +12,8 @@
 
 ## Description
 
-Implementation of {@link ImmutableSet} with two or more elements.
-@author Kevin Bourrillion
+Implementation of `ImmutableSet` with two or more elements.
+**Author:** Kevin Bourrillion
 
 ## Fields
 
@@ -61,7 +61,7 @@ Implementation of {@link ImmutableSet} with two or more elements.
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
 ### `internalArray()`
 

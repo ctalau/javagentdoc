@@ -13,15 +13,15 @@
 
 ## Description
 
-This class provides a skeletal implementation of the {@code Cache} interface to minimize the
+This class provides a skeletal implementation of the `Cache` interface to minimize the
  effort required to implement this interface.
 
  <p>To implement a cache, the programmer needs only to extend this class and provide an
- implementation for the {@link #put} and {@link #getIfPresent} methods. {@link #getAllPresent} is
- implemented in terms of {@link #getIfPresent}; {@link #putAll} is implemented in terms of {@link #put}, {@link #invalidateAll(Iterable)} is implemented in terms of {@link #invalidate}. The
- method {@link #cleanUp} is a no-op. All other methods throw an {@link UnsupportedOperationException}.
-@author Charles Fry
-@since 10.0
+ implementation for the `put` and `getIfPresent` methods. `getAllPresent` is
+ implemented in terms of `getIfPresent`; `putAll` is implemented in terms of `put`, `invalidateAll(Iterable)` is implemented in terms of `invalidate`. The
+ method `cleanUp` is a no-op. All other methods throw an `UnsupportedOperationException`.
+**Author:** Charles Fry
+**Since:** 10.0
 
 ## Constructors
 
@@ -31,11 +31,11 @@ Constructor for use by subclasses.
 
 ## Methods
 
-### `get([`K`](K.md) key, [`java.util.concurrent.Callable<? extends V>`](../../../../java/util/concurrent/Callable.md) valueLoader)`
+### `get(`K` key, `java.util.concurrent.Callable<? extends V>` valueLoader)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-@since 11.0
+**Since:** 11.0
 
 ### `getAllPresent(`java.lang.Iterable<? extends java.lang.Object>` keys)`
 
@@ -43,22 +43,22 @@ Constructor for use by subclasses.
 
 {@inheritDoc}
 
- <p>This implementation of {@code getAllPresent} lacks any insight into the internal cache data
+ <p>This implementation of `getAllPresent` lacks any insight into the internal cache data
  structure, and is thus forced to return the query keys instead of the cached keys. This is only
- possible with an unsafe cast which requires {@code keys} to actually be of type {@code K}.
-@since 11.0
+ possible with an unsafe cast which requires `keys` to actually be of type `K`.
+**Since:** 11.0
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
-
-**Returns:** `void`
-
-@since 11.0
-
-### `putAll([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) m)`
+### `put(`K` key, `V` value)`
 
 **Returns:** `void`
 
-@since 12.0
+**Since:** 11.0
+
+### `putAll(`java.util.Map<? extends K,? extends V>` m)`
+
+**Returns:** `void`
+
+**Since:** 12.0
 
 ### `cleanUp()`
 
@@ -76,7 +76,7 @@ Constructor for use by subclasses.
 
 **Returns:** `void`
 
-@since 11.0
+**Since:** 11.0
 
 ### `invalidateAll()`
 
@@ -88,5 +88,5 @@ Constructor for use by subclasses.
 
 ### `asMap()`
 
-**Returns:** [`java.util.concurrent.ConcurrentMap<K,V>`](../../../../java/util/concurrent/ConcurrentMap.md)
+**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 

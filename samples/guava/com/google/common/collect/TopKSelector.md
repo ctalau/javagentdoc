@@ -10,22 +10,22 @@
 
 ## Description
 
-An accumulator that selects the "top" {@code k} elements added to it, relative to a provided
+An accumulator that selects the "top" `k` elements added to it, relative to a provided
  comparator. "Top" can mean the greatest or the lowest elements, specified in the factory used to
- create the {@code TopKSelector} instance.
+ create the `TopKSelector` instance.
 
- <p>If your input data is available as a {@link Stream}, prefer passing {@link Comparators#least(int)} to {@link Stream#collect(java.util.stream.Collector)}. If it is available
- as an {@link Iterable} or {@link Iterator}, prefer {@link Ordering#leastOf(Iterable, int)}.
+ <p>If your input data is available as a `Stream`, prefer passing `Comparators.least(int)` to `Stream.collect(java.util.stream.Collector)`. If it is available
+ as an `Iterable` or `Iterator`, prefer `Ordering.leastOf(Iterable, int)`.
 
- <p>This uses the same efficient implementation as {@link Ordering#leastOf(Iterable, int)},
- offering expected O(n + k log k) performance (worst case O(n log k)) for n calls to {@link #offer} and a call to {@link #topK}, with O(k) memory. In comparison, quickselect has the same
- asymptotics but requires O(n) memory, and a {@code PriorityQueue} implementation takes O(n log
+ <p>This uses the same efficient implementation as `Ordering.leastOf(Iterable, int)`,
+ offering expected O(n + k log k) performance (worst case O(n log k)) for n calls to `offer` and a call to `topK`, with O(k) memory. In comparison, quickselect has the same
+ asymptotics but requires O(n) memory, and a `PriorityQueue` implementation takes O(n log
  k). In benchmarks, this implementation performs at least as well as either implementation, and
  degrades more gracefully for worst-case input.
 
  <p>The implementation does not necessarily use a <i>stable</i> sorting algorithm; when multiple
  equivalent elements are added to it, it is undefined which will come first in the output.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -35,7 +35,7 @@ An accumulator that selects the "top" {@code k} elements added to it, relative t
 
 ### `comparator`
 
-**Type:** [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super T>`
 
 ### `buffer`
 
@@ -47,14 +47,14 @@ An accumulator that selects the "top" {@code k} elements added to it, relative t
 
 ### `threshold`
 
-**Type:** [`T`](T.md)
+**Type:** `T`
 
 The largest of the lowest k elements we've seen so far relative to this comparator. If
  bufferSize \u2265 k, then we can ignore any elements greater than this value.
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator, `int` k)`
+### `<init>(`java.util.Comparator<? super T>` comparator, `int` k)`
 
 ## Methods
 
@@ -62,41 +62,41 @@ The largest of the lowest k elements we've seen so far relative to this comparat
 
 **Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
 
-Returns a {@code TopKSelector} that collects the lowest {@code k} elements added to it,
- relative to the natural ordering of the elements, and returns them via {@link #topK} in
+Returns a `TopKSelector` that collects the lowest `k` elements added to it,
+ relative to the natural ordering of the elements, and returns them via `topK` in
  ascending order.
-@throws IllegalArgumentException if {@code k < 0} or {@code k > Integer.MAX_VALUE / 2}
+@throws IllegalArgumentException if `k < 0` or `k > Integer.MAX_VALUE / 2`
 
-### `least(`int` k, [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator)`
+### `least(`int` k, `java.util.Comparator<? super T>` comparator)`
 
 **Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
 
-Returns a {@code TopKSelector} that collects the lowest {@code k} elements added to it,
- relative to the specified comparator, and returns them via {@link #topK} in ascending order.
-@throws IllegalArgumentException if {@code k < 0} or {@code k > Integer.MAX_VALUE / 2}
+Returns a `TopKSelector` that collects the lowest `k` elements added to it,
+ relative to the specified comparator, and returns them via `topK` in ascending order.
+@throws IllegalArgumentException if `k < 0` or `k > Integer.MAX_VALUE / 2`
 
 ### `greatest(`int` k)`
 
 **Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
 
-Returns a {@code TopKSelector} that collects the greatest {@code k} elements added to it,
- relative to the natural ordering of the elements, and returns them via {@link #topK} in
+Returns a `TopKSelector` that collects the greatest `k` elements added to it,
+ relative to the natural ordering of the elements, and returns them via `topK` in
  descending order.
-@throws IllegalArgumentException if {@code k < 0} or {@code k > Integer.MAX_VALUE / 2}
+@throws IllegalArgumentException if `k < 0` or `k > Integer.MAX_VALUE / 2`
 
-### `greatest(`int` k, [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator)`
+### `greatest(`int` k, `java.util.Comparator<? super T>` comparator)`
 
 **Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
 
-Returns a {@code TopKSelector} that collects the greatest {@code k} elements added to it,
- relative to the specified comparator, and returns them via {@link #topK} in descending order.
-@throws IllegalArgumentException if {@code k < 0} or {@code k > Integer.MAX_VALUE / 2}
+Returns a `TopKSelector` that collects the greatest `k` elements added to it,
+ relative to the specified comparator, and returns them via `topK` in descending order.
+@throws IllegalArgumentException if `k < 0` or `k > Integer.MAX_VALUE / 2`
 
-### `offer([`T`](T.md) elem)`
+### `offer(`T` elem)`
 
 **Returns:** `void`
 
-Adds {@code elem} as a candidate for the top {@code k} elements. This operation takes amortized
+Adds `elem` as a candidate for the top `k` elements. This operation takes amortized
  O(1) time.
 
 ### `trim()`
@@ -127,31 +127,31 @@ Partitions the contents of buffer in the range [left, right] around the pivot el
 
 **Returns:** `void`
 
-Adds each member of {@code elements} as a candidate for the top {@code k} elements. This
- operation takes amortized linear time in the length of {@code elements}.
+Adds each member of `elements` as a candidate for the top `k` elements. This
+ operation takes amortized linear time in the length of `elements`.
 
- <p>If all input data to this {@code TopKSelector} is in a single {@code Iterable}, prefer
- {@link Ordering#leastOf(Iterable, int)}, which provides a simpler API for that use case.
+ <p>If all input data to this `TopKSelector` is in a single `Iterable`, prefer
+ `Ordering.leastOf(Iterable, int)`, which provides a simpler API for that use case.
 
-### `offerAll([`java.util.Iterator<? extends T>`](../../../../java/util/Iterator.md) elements)`
+### `offerAll(`java.util.Iterator<? extends T>` elements)`
 
 **Returns:** `void`
 
-Adds each member of {@code elements} as a candidate for the top {@code k} elements. This
- operation takes amortized linear time in the length of {@code elements}. The iterator is
+Adds each member of `elements` as a candidate for the top `k` elements. This
+ operation takes amortized linear time in the length of `elements`. The iterator is
  consumed after this operation completes.
 
- <p>If all input data to this {@code TopKSelector} is in a single {@code Iterator}, prefer
- {@link Ordering#leastOf(Iterator, int)}, which provides a simpler API for that use case.
+ <p>If all input data to this `TopKSelector` is in a single `Iterator`, prefer
+ `Ordering.leastOf(Iterator, int)`, which provides a simpler API for that use case.
 
 ### `topK()`
 
-**Returns:** [`java.util.List<T>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<T>`
 
-Returns the top {@code k} elements offered to this {@code TopKSelector}, or all elements if
- fewer than {@code k} have been offered, in the order specified by the factory used to create
- this {@code TopKSelector}.
+Returns the top `k` elements offered to this `TopKSelector`, or all elements if
+ fewer than `k` have been offered, in the order specified by the factory used to create
+ this `TopKSelector`.
 
  <p>The returned list is an unmodifiable copy and will not be affected by further changes to
- this {@code TopKSelector}. This method returns in O(k log k) time.
+ this `TopKSelector`. This method returns in O(k log k) time.
 

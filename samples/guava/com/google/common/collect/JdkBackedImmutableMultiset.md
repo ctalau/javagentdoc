@@ -14,13 +14,13 @@
 
 An implementation of ImmutableMultiset backed by a JDK Map and a list of entries. Used to protect
  against hash flooding attacks.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `delegateMap`
 
-**Type:** [`java.util.Map<E,java.lang.Integer>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<E,java.lang.Integer>`
 
 ### `entries`
 
@@ -36,11 +36,11 @@ An implementation of ImmutableMultiset backed by a JDK Map and a list of entries
 
 ## Constructors
 
-### `<init>([`java.util.Map<E,java.lang.Integer>`](../../../../java/util/Map.md) delegateMap, [`com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableList>.md) entries, `long` size)`
+### `<init>(`java.util.Map<E,java.lang.Integer>` delegateMap, [`com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableList>.md) entries, `long` size)`
 
 ## Methods
 
-### `create([`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`](../../../../java/util/Collection>.md) entries)`
+### `create(`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>` entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 

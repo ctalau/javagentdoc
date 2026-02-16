@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.ImmutableMap`
 
-**Implements:** [`java.util.Map<K,V>`](../../../../java/util/Map.md), [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.util.Map<K,V>`, `java.io.Serializable`
 
 ## Type Parameters
 
@@ -13,19 +13,19 @@
 
 ## Description
 
-A {@link Map} whose contents will never change, with many other important properties detailed at
- {@link ImmutableCollection}.
+A `Map` whose contents will never change, with many other important properties detailed at
+ `ImmutableCollection`.
 
  <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">immutable collections</a>.
-@author Jesse Wilson
-@author Kevin Bourrillion
-@since 2.0
+**Author:** Jesse Wilson
+**Author:** Kevin Bourrillion
+**Since:** 2.0
 
 ## Fields
 
 ### `EMPTY_ENTRY_ARRAY`
 
-**Type:** [`java.util.Map.Entry<?,?>[]`](../../../../java/util/Map/Entry.md)
+**Type:** `java.util.Map.Entry<?,?>[]`
 
 ### `entrySet`
 
@@ -53,142 +53,140 @@ A {@link Map} whose contents will never change, with many other important proper
 
 ## Methods
 
-### `toImmutableMap([`java.util.function.Function<? super T,? extends K>`](../../../../java/util/function/Function.md) keyFunction, [`java.util.function.Function<? super T,? extends V>`](../../../../java/util/function/Function.md) valueFunction)`
+### `toImmutableMap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction)`
 
-**Returns:** [`java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 
-Returns a {@link Collector} that accumulates elements into an {@code ImmutableMap} whose keys
+Returns a `Collector` that accumulates elements into an `ImmutableMap` whose keys
  and values are the result of applying the provided mapping functions to the input elements.
- Entries appear in the result {@code ImmutableMap} in encounter order.
+ Entries appear in the result `ImmutableMap` in encounter order.
 
- <p>If the mapped keys contain duplicates (according to {@link Object#equals(Object)}, an {@code
- IllegalArgumentException} is thrown when the collection operation is performed. (This differs
- from the {@code Collector} returned by {@link Collectors#toMap(Function, Function)}, which
- throws an {@code IllegalStateException}.)
-@since 21.0
+ <p>If the mapped keys contain duplicates (according to `Object.equals(Object)`, an `IllegalArgumentException` is thrown when the collection operation is performed. (This differs
+ from the `Collector` returned by `Collectors.toMap(Function, Function)`, which
+ throws an `IllegalStateException`.)
+**Since:** 21.0
 
-### `toImmutableMap([`java.util.function.Function<? super T,? extends K>`](../../../../java/util/function/Function.md) keyFunction, [`java.util.function.Function<? super T,? extends V>`](../../../../java/util/function/Function.md) valueFunction, [`java.util.function.BinaryOperator<V>`](../../../../java/util/function/BinaryOperator.md) mergeFunction)`
+### `toImmutableMap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction, `java.util.function.BinaryOperator<V>` mergeFunction)`
 
-**Returns:** [`java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 
-Returns a {@link Collector} that accumulates elements into an {@code ImmutableMap} whose keys
+Returns a `Collector` that accumulates elements into an `ImmutableMap` whose keys
  and values are the result of applying the provided mapping functions to the input elements.
 
- <p>If the mapped keys contain duplicates (according to {@link Object#equals(Object)}), the
- values are merged using the specified merging function. If the merging function returns {@code
- null}, then the collector removes the value that has been computed for the key thus far (though
+ <p>If the mapped keys contain duplicates (according to `Object.equals(Object)`), the
+ values are merged using the specified merging function. If the merging function returns `null`, then the collector removes the value that has been computed for the key thus far (though
  future occurrences of the key would reinsert it).
 
  <p>Entries will appear in the encounter order of the first occurrence of the key.
-@since 21.0
+**Since:** 21.0
 
 ### `of()`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-Returns the empty map. This map behaves and performs comparably to {@link Collections#emptyMap}, and is preferable mainly for consistency and maintainability of your
+Returns the empty map. This map behaves and performs comparably to `Collections.emptyMap`, and is preferable mainly for consistency and maintainability of your
  code.
 
  <p><b>Performance note:</b> the instance returned is a singleton.
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1)`
+### `of(`K` k1, `V` v1)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing a single entry. This map behaves and performs comparably to
- {@link Collections#singletonMap} but will not accept a null key or value. It is preferable
+ `Collections.singletonMap` but will not accept a null key or value. It is preferable
  mainly for consistency and maintainability of your code.
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
-@since 31.0
+**Since:** 31.0
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
-
-Returns an immutable map containing the given entries, in order.
-@throws IllegalArgumentException if duplicate keys are provided
-@since 31.0
-
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7, [`K`](K.md) k8, [`V`](V.md) v8)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
-@since 31.0
+**Since:** 31.0
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7, [`K`](K.md) k8, [`V`](V.md) v8, [`K`](K.md) k9, [`V`](V.md) v9)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
-
-Returns an immutable map containing the given entries, in order.
-@throws IllegalArgumentException if duplicate keys are provided
-@since 31.0
-
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7, [`K`](K.md) k8, [`V`](V.md) v8, [`K`](K.md) k9, [`V`](V.md) v9, [`K`](K.md) k10, [`V`](V.md) v10)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
-@since 31.0
+**Since:** 31.0
 
-### `ofEntries([`java.util.Map.Entry<? extends K,? extends V>[]`](../../../../java/util/Map/Entry.md) entries)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8, `K` k9, `V` v9)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys are provided
-@since 31.0
+**Since:** 31.0
 
-### `entryOf([`K`](K.md) key, [`V`](V.md) value)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8, `K` k9, `V` v9, `K` k10, `V` v10)`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-Verifies that {@code key} and {@code value} are non-null, and returns a new immutable entry
+Returns an immutable map containing the given entries, in order.
+@throws IllegalArgumentException if duplicate keys are provided
+**Since:** 31.0
+
+### `ofEntries(`java.util.Map.Entry<? extends K,? extends V>[]` entries)`
+
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+Returns an immutable map containing the given entries, in order.
+@throws IllegalArgumentException if duplicate keys are provided
+**Since:** 31.0
+
+### `entryOf(`K` key, `V` value)`
+
+**Returns:** `java.util.Map.Entry<K,V>`
+
+Verifies that `key` and `value` are non-null, and returns a new immutable entry
  with those values.
 
- <p>A call to {@link Entry#setValue} on the returned entry will always throw {@link UnsupportedOperationException}.
+ <p>A call to `Entry.setValue` on the returned entry will always throw `UnsupportedOperationException`.
 
 ### `builder()`
 
 **Returns:** [`com.google.common.collect.ImmutableMap.Builder<K,V>`](ImmutableMap/Builder.md)
 
-Returns a new builder. The generated builder is equivalent to the builder created by the {@link Builder} constructor.
+Returns a new builder. The generated builder is equivalent to the builder created by the `Builder` constructor.
 
 ### `builderWithExpectedSize(`int` expectedSize)`
 
@@ -196,11 +194,11 @@ Returns a new builder. The generated builder is equivalent to the builder create
 
 Returns a new builder, expecting the specified number of entries to be added.
 
- <p>If {@code expectedSize} is exactly the number of entries added to the builder before {@link Builder#build} is called, the builder is likely to perform better than an unsized {@link #builder()} would have.
+ <p>If `expectedSize` is exactly the number of entries added to the builder before `Builder.build` is called, the builder is likely to perform better than an unsized `builder()` would have.
 
- <p>It is not specified if any performance benefits apply if {@code expectedSize} is close to,
+ <p>It is not specified if any performance benefits apply if `expectedSize` is close to,
  but not exactly, the number of entries added to the builder.
-@since 23.1
+**Since:** 23.1
 
 ### `checkNoConflict(`boolean` safe, `java.lang.String` conflictDescription, `java.lang.Object` entry1, `java.lang.Object` entry2)`
 
@@ -210,19 +208,19 @@ Returns a new builder, expecting the specified number of entries to be added.
 
 **Returns:** `java.lang.IllegalArgumentException`
 
-### `copyOf([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) map)`
+### `copyOf(`java.util.Map<? extends K,? extends V>` map)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-Returns an immutable map containing the same entries as {@code map}. The returned map iterates
- over entries in the same order as the {@code entrySet} of the original map. If {@code map}
- somehow contains entries with duplicate keys (for example, if it is a {@code SortedMap} whose
+Returns an immutable map containing the same entries as `map`. The returned map iterates
+ over entries in the same order as the `entrySet` of the original map. If `map`
+ somehow contains entries with duplicate keys (for example, if it is a `SortedMap` whose
  comparator is not <i>consistent with equals</i>), the results of this method are undefined.
 
  <p>Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
  undocumented and subject to change.
-@throws NullPointerException if any key or value in {@code map} is null
+@throws NullPointerException if any key or value in `map` is null
 
 ### `copyOf(`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>` entries)`
 
@@ -232,99 +230,99 @@ Returns an immutable map containing the specified entries. The returned map iter
  entries in the same order as the original iterable.
 @throws NullPointerException if any key, value, or entry is null
 @throws IllegalArgumentException if two entries have the same key
-@since 19.0
+**Since:** 19.0
 
-### `copyOfEnumMap([`java.util.EnumMap<?,? extends V>`](../../../../java/util/EnumMap.md) original)`
+### `copyOfEnumMap(`java.util.EnumMap<?,? extends V>` original)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,? extends V>`](./ImmutableMap.md)
 
-### `put([`K`](K.md) k, [`V`](V.md) v)`
+### `put(`K` k, `V` v)`
 
-**Returns:** [`V`](V.md)
-
-Guaranteed to throw an exception and leave the map unmodified.
-@throws UnsupportedOperationException always
-@deprecated Unsupported operation.
-
-### `putIfAbsent([`K`](K.md) key, [`V`](V.md) value)`
-
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `replace([`K`](K.md) key, [`V`](V.md) oldValue, [`V`](V.md) newValue)`
+### `putIfAbsent(`K` key, `V` value)`
+
+**Returns:** `V`
+
+Guaranteed to throw an exception and leave the map unmodified.
+@throws UnsupportedOperationException always
+**Deprecated:** Unsupported operation.
+
+### `replace(`K` key, `V` oldValue, `V` newValue)`
 
 **Returns:** `boolean`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `replace([`K`](K.md) key, [`V`](V.md) value)`
+### `replace(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
-
-Guaranteed to throw an exception and leave the map unmodified.
-@throws UnsupportedOperationException always
-@deprecated Unsupported operation.
-
-### `computeIfAbsent([`K`](K.md) key, [`java.util.function.Function<? super K,? extends V>`](../../../../java/util/function/Function.md) mappingFunction)`
-
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `computeIfPresent([`K`](K.md) key, [`java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) remappingFunction)`
+### `computeIfAbsent(`K` key, `java.util.function.Function<? super K,? extends V>` mappingFunction)`
 
-**Returns:** [`V`](V.md)
-
-Guaranteed to throw an exception and leave the map unmodified.
-@throws UnsupportedOperationException always
-@deprecated Unsupported operation.
-
-### `compute([`K`](K.md) key, [`java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) remappingFunction)`
-
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `merge([`K`](K.md) key, [`V`](V.md) value, [`java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../java/util/function/BiFunction.md) function)`
+### `computeIfPresent(`K` key, `java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `putAll([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) map)`
+### `compute(`K` key, `java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
+
+**Returns:** `V`
+
+Guaranteed to throw an exception and leave the map unmodified.
+@throws UnsupportedOperationException always
+**Deprecated:** Unsupported operation.
+
+### `merge(`K` key, `V` value, `java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` function)`
+
+**Returns:** `V`
+
+Guaranteed to throw an exception and leave the map unmodified.
+@throws UnsupportedOperationException always
+**Deprecated:** Unsupported operation.
+
+### `putAll(`java.util.Map<? extends K,? extends V>` map)`
 
 **Returns:** `void`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `replaceAll([`java.util.function.BiFunction<? super K,? super V,? extends V>`](../../../../java/util/function/BiFunction.md) function)`
+### `replaceAll(`java.util.function.BiFunction<? super K,? super V,? extends V>` function)`
 
 **Returns:** `void`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `remove(`java.lang.Object` o)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `remove(`java.lang.Object` key, `java.lang.Object` value)`
 
@@ -332,7 +330,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `clear()`
 
@@ -340,7 +338,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `isEmpty()`
 
@@ -356,13 +354,13 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `getOrDefault(`java.lang.Object` key, [`V`](V.md) defaultValue)`
+### `getOrDefault(`java.lang.Object` key, `V` defaultValue)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-@since 21.0 (but only since 23.5 in the Android <a href="https://github.com/google/guava#guava-google-core-libraries-for-java">flavor</a>).
+**Since:** 21.0 (but only since 23.5 in the Android <a href="https://github.com/google/guava#guava-google-core-libraries-for-java">flavor</a>).
      Note, however, that Java 8 users can call this method with any version and flavor of Guava.
 
 ### `entrySet()`
@@ -380,7 +378,7 @@ Returns an immutable set of the mappings in this map. The iteration order is spe
 
 **Returns:** [`com.google.common.collect.ImmutableSet<K>`](./ImmutableSet.md)
 
-Returns an immutable set of the keys in this map, in the same order that they appear in {@link #entrySet}.
+Returns an immutable set of the keys in this map, in the same order that they appear in `entrySet`.
 
 ### `createKeySet()`
 
@@ -392,14 +390,14 @@ Returns an immutable set of the keys in this map, in the same order that they ap
 
 ### `keySpliterator()`
 
-**Returns:** [`java.util.Spliterator<K>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<K>`
 
 ### `values()`
 
 **Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
 Returns an immutable collection of the values in this map, in the same order that they appear
- in {@link #entrySet}.
+ in `entrySet`.
 
 ### `createValues()`
 
@@ -410,7 +408,7 @@ Returns an immutable collection of the values in this map, in the same order tha
 **Returns:** [`com.google.common.collect.ImmutableSetMultimap<K,V>`](./ImmutableSetMultimap.md)
 
 Returns a multimap view of the map.
-@since 14.0
+**Since:** 14.0
 
 ### `equals(`java.lang.Object` object)`
 
@@ -440,7 +438,7 @@ Returns a serializable form of this object. Non-public subclasses should not ove
  method. Publicly-accessible subclasses must override this method and should return a subclass
  of SerializedForm whose readResolve() method returns objects of the subclass type.
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

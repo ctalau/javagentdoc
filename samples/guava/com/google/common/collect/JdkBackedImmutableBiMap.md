@@ -24,11 +24,11 @@ Implementation of ImmutableBiMap backed by a pair of JDK HashMaps, which have sm
 
 ### `forwardDelegate`
 
-**Type:** [`java.util.Map<K,V>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<K,V>`
 
 ### `backwardDelegate`
 
-**Type:** [`java.util.Map<V,K>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<V,K>`
 
 ### `inverse`
 
@@ -36,11 +36,11 @@ Implementation of ImmutableBiMap backed by a pair of JDK HashMaps, which have sm
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList>.md) entries, [`java.util.Map<K,V>`](../../../../java/util/Map.md) forwardDelegate, [`java.util.Map<V,K>`](../../../../java/util/Map.md) backwardDelegate)`
+### `<init>([`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList>.md) entries, `java.util.Map<K,V>` forwardDelegate, `java.util.Map<V,K>` backwardDelegate)`
 
 ## Methods
 
-### `create(`int` n, [`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`](../../../../java/util/Map/@org/checkerframework/checker/nullness/qual/Nullable Entry.md) entryArray)`
+### `create(`int` n, `java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]` entryArray)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
@@ -54,7 +54,7 @@ Implementation of ImmutableBiMap backed by a pair of JDK HashMaps, which have sm
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `createEntrySet()`
 

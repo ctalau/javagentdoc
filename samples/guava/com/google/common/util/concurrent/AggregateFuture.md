@@ -27,10 +27,9 @@ A future whose value is derived from a collection of input futures.
 
 **Type:** [`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends InputT>>`](../../collect/ImmutableCollection>.md)
 
-The input futures. After {@link #init}, this field is read only by {@link #afterDone()} (to
- propagate cancellation) and {@link #toString()}. To access the futures' <i>values</i>, {@code
- AggregateFuture} attaches listeners that hold references to one or more inputs. And in the case
- of {@link CombinedFuture}, the user-supplied callback usually has its own references to inputs.
+The input futures. After `init`, this field is read only by `afterDone()` (to
+ propagate cancellation) and `toString()`. To access the futures' <i>values</i>, `AggregateFuture` attaches listeners that hold references to one or more inputs. And in the case
+ of `CombinedFuture`, the user-supplied callback usually has its own references to inputs.
 
 ### `allMustSucceed`
 
@@ -60,15 +59,15 @@ The input futures. After {@link #init}, this field is read only by {@link #after
 
 Must be called at the end of each subclass's constructor. This method performs the "real"
  initialization; we can't put this in the constructor because, in the case where futures are
- already complete, we would not initialize the subclass before calling {@link #collectValueFromNonCancelledFuture}. As this is called after the subclass is constructed,
+ already complete, we would not initialize the subclass before calling `collectValueFromNonCancelledFuture`. As this is called after the subclass is constructed,
  we're guaranteed to have properly initialized the subclass.
 
 ### `handleException(`java.lang.Throwable` throwable)`
 
 **Returns:** `void`
 
-Fails this future with the given Throwable if {@link #allMustSucceed} is true. Also, logs the
- throwable if it is an {@link Error} or if {@link #allMustSucceed} is {@code true}, the
+Fails this future with the given Throwable if `allMustSucceed` is true. Also, logs the
+ throwable if it is an `Error` or if `allMustSucceed` is `true`, the
  throwable did not cause this future to fail, and it is the first time we've seen that
  particular Throwable.
 
@@ -76,16 +75,16 @@ Fails this future with the given Throwable if {@link #allMustSucceed} is true. A
 
 **Returns:** `void`
 
-### `addInitialException([`java.util.Set<java.lang.Throwable>`](../../../../../java/util/Set.md) seen)`
+### `addInitialException(`java.util.Set<java.lang.Throwable>` seen)`
 
 **Returns:** `void`
 
-### `collectValueFromNonCancelledFuture(`int` index, [`java.util.concurrent.Future<? extends InputT>`](../../../../../java/util/concurrent/Future.md) future)`
+### `collectValueFromNonCancelledFuture(`int` index, `java.util.concurrent.Future<? extends InputT>` future)`
 
 **Returns:** `void`
 
 Collects the result (success or failure) of one input future. The input must not have been
- cancelled. For details on when this is called, see {@link #collectOneValue}.
+ cancelled. For details on when this is called, see `collectOneValue`.
 
 ### `decrementCountAndMaybeComplete([`com.google.common.collect.ImmutableCollection<? extends java.util.concurrent.Future<? extends InputT>>`](../../collect/ImmutableCollection>.md) futuresIfNeedToCollectAtCompletion)`
 
@@ -100,25 +99,24 @@ Collects the result (success or failure) of one input future. The input must not
 **Returns:** `void`
 
 Clears fields that are no longer needed after this future has completed -- or at least all its
- inputs have completed (more precisely, after {@link #handleAllCompleted()} has been called).
+ inputs have completed (more precisely, after `handleAllCompleted()` has been called).
  Often called multiple times (that is, both when the inputs complete and when the output
  completes).
 
- <p>This is similar to our proposed {@code afterCommit} method but not quite the same. See the
+ <p>This is similar to our proposed `afterCommit` method but not quite the same. See the
  description of CL 265462958.
 
-### `collectOneValue(`int` index, [`InputT`](InputT.md) returnValue)`
+### `collectOneValue(`int` index, [`InputT`](./InputT.md) returnValue)`
 
 **Returns:** `void`
 
-If {@code allMustSucceed} is true, called as each future completes; otherwise, if {@code
- collectsValues} is true, called for each future when all futures complete.
+If `allMustSucceed` is true, called as each future completes; otherwise, if `collectsValues` is true, called for each future when all futures complete.
 
 ### `handleAllCompleted()`
 
 **Returns:** `void`
 
-### `addCausalChain([`java.util.Set<java.lang.Throwable>`](../../../../../java/util/Set.md) seen, `java.lang.Throwable` param)`
+### `addCausalChain(`java.util.Set<java.lang.Throwable>` seen, `java.lang.Throwable` param)`
 
 **Returns:** `boolean`
 

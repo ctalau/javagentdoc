@@ -6,7 +6,7 @@
 
 ## Description
 
-Holder for web specializations of methods of {@code Doubles}. Intended to be empty for regular
+Holder for web specializations of methods of `Doubles`. Intended to be empty for regular
  version.
 
 ## Constructors

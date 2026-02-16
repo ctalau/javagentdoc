@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingMap<K,V>`](./ForwardingMap.md)
 
-**Implements:** [`java.util.concurrent.ConcurrentMap<K,V>`](../../../../java/util/concurrent/ConcurrentMap.md)
+**Implements:** `java.util.concurrent.ConcurrentMap<K,V>`
 
 ## Type Parameters
 
@@ -18,13 +18,12 @@
 A concurrent map which forwards all its method calls to another concurrent map. Subclasses should
  override one or more methods to modify the behavior of the backing map as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>{@code default} method warning:</b> This class forwards calls to <i>only some</i> {@code
- default} methods. Specifically, it forwards calls only for methods that existed <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html">before
- {@code default} methods were introduced</a>. For newer methods, like {@code forEach}, it inherits
+ <p><b>`default` method warning:</b> This class forwards calls to <i>only some</i> `default` methods. Specifically, it forwards calls only for methods that existed <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html">before
+ `default` methods were introduced</a>. For newer methods, like `forEach`, it inherits
  their default implementations. When those implementations invoke methods, they invoke methods on
- the {@code ForwardingConcurrentMap}.
-@author Charles Fry
-@since 2.0
+ the `ForwardingConcurrentMap`.
+**Author:** Charles Fry
+**Since:** 2.0
 
 ## Constructors
 
@@ -36,21 +35,21 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.concurrent.ConcurrentMap<K,V>`](../../../../java/util/concurrent/ConcurrentMap.md)
+**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
-### `putIfAbsent([`K`](K.md) key, [`V`](V.md) value)`
+### `putIfAbsent(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `remove(`java.lang.Object` key, `java.lang.Object` value)`
 
 **Returns:** `boolean`
 
-### `replace([`K`](K.md) key, [`V`](V.md) value)`
+### `replace(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `replace([`K`](K.md) key, [`V`](V.md) oldValue, [`V`](V.md) newValue)`
+### `replace(`K` key, `V` oldValue, `V` newValue)`
 
 **Returns:** `boolean`
 

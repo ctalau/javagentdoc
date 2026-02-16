@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
 
-**Implements:** [`java.util.ListIterator<E>`](../../../../java/util/ListIterator.md)
+**Implements:** `java.util.ListIterator<E>`
 
 ## Type Parameters
 
@@ -14,9 +14,9 @@
 
 ## Description
 
-A list iterator that does not support {@link #remove}, {@link #add}, or {@link #set}.
-@since 7.0
-@author Louis Wasserman
+A list iterator that does not support `remove`, `add`, or `set`.
+**Since:** 7.0
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -26,19 +26,19 @@ Constructor for use by subclasses.
 
 ## Methods
 
-### `add([`E`](E.md) e)`
+### `add(`E` e)`
 
 **Returns:** `void`
 
 Guaranteed to throw an exception and leave the underlying data unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
-### `set([`E`](E.md) e)`
+### `set(`E` e)`
 
 **Returns:** `void`
 
 Guaranteed to throw an exception and leave the underlying data unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 

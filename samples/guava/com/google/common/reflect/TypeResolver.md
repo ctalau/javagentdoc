@@ -7,16 +7,16 @@
 ## Description
 
 An object of this class encapsulates type mappings from type variables. Mappings are established
- with {@link #where} and types are resolved using {@link #resolveType}.
+ with `where` and types are resolved using `resolveType`.
 
  <p>Note that usually type mappings are already implied by the static type hierarchy (for example,
- the {@code E} type variable declared by class {@code List} naturally maps to {@code String} in
- the context of {@code class MyStringList implements List<String>}). In such case, prefer to use
- {@link TypeToken#resolveType} since it's simpler and more type safe. This class should only be
+ the `E` type variable declared by class `List` naturally maps to `String` in
+ the context of `class MyStringList implements List<String>`). In such case, prefer to use
+ `TypeToken.resolveType` since it's simpler and more type safe. This class should only be
  used when the type mapping isn't implied by the static type hierarchy, but provided through other
  means such as an annotation or external configuration file.
-@author Ben Yu
-@since 15.0
+**Author:** Ben Yu
+**Since:** 15.0
 
 ## Fields
 
@@ -38,9 +38,8 @@ An object of this class encapsulates type mappings from type variables. Mappings
 
 Returns a resolver that resolves types "covariantly".
 
- <p>For example, when resolving {@code List<T>} in the context of {@code ArrayList<?>}, {@code
- <T>} is covariantly resolved to {@code <?>} such that return type of {@code List::get} is
- {@code <?>}.
+ <p>For example, when resolving `List<T>` in the context of `ArrayList<?>`, `<T>` is covariantly resolved to `<?>` such that return type of `List::get` is
+ `<?>`.
 
 ### `invariantly(`java.lang.reflect.Type` contextType)`
 
@@ -48,41 +47,38 @@ Returns a resolver that resolves types "covariantly".
 
 Returns a resolver that resolves types "invariantly".
 
- <p>For example, when resolving {@code List<T>} in the context of {@code ArrayList<?>}, {@code
- <T>} cannot be invariantly resolved to {@code <?>} because otherwise the parameter type of
- {@code List::set} will be {@code <?>} and it'll falsely say any object can be passed into
- {@code ArrayList<?>::set}.
+ <p>For example, when resolving `List<T>` in the context of `ArrayList<?>`, `<T>` cannot be invariantly resolved to `<?>` because otherwise the parameter type of
+ `List::set` will be `<?>` and it'll falsely say any object can be passed into
+ `ArrayList<?>::set`.
 
- <p>Instead, {@code <?>} will be resolved to a capture in the form of a type variable {@code
- <capture-of-? extends Object>}, effectively preventing {@code set} from accepting any type.
+ <p>Instead, `<?>` will be resolved to a capture in the form of a type variable `<capture-of-? extends Object>`, effectively preventing `set` from accepting any type.
 
 ### `where(`java.lang.reflect.Type` formal, `java.lang.reflect.Type` actual)`
 
 **Returns:** [`com.google.common.reflect.TypeResolver`](./TypeResolver.md)
 
-Returns a new {@code TypeResolver} with type variables in {@code formal} mapping to types in
- {@code actual}.
+Returns a new `TypeResolver` with type variables in `formal` mapping to types in
+ `actual`.
 
- <p>For example, if {@code formal} is a {@code TypeVariable T}, and {@code actual} is {@code
- String.class}, then {@code new TypeResolver().where(formal, actual)} will {@linkplain #resolveType resolve} {@code ParameterizedType List<T>} to {@code List<String>}, and resolve
- {@code Map<T, Something>} to {@code Map<String, Something>} etc. Similarly, {@code formal} and
- {@code actual} can be {@code Map<K, V>} and {@code Map<String, Integer>} respectively, or they
- can be {@code E[]} and {@code String[]} respectively, or even any arbitrary combination
+ <p>For example, if `formal` is a `TypeVariable T`, and `actual` is `String.class`, then `new TypeResolver().where(formal, actual)` will resolve `ParameterizedType List<T>` to `List<String>`, and resolve
+ `Map<T, Something>` to `Map<String, Something>` etc. Similarly, `formal` and
+ `actual` can be `Map<K, V>` and `Map<String, Integer>` respectively, or they
+ can be `E[]` and `String[]` respectively, or even any arbitrary combination
  thereof.
 @param formal The type whose type variables or itself is mapped to other type(s). It's almost
-     always a bug if {@code formal} isn't a type variable and contains no type variable. Make
+     always a bug if `formal` isn't a type variable and contains no type variable. Make
      sure you are passing the two parameters in the right order.
 @param actual The type that the formal type variable(s) are mapped to. It can be or contain yet
      other type variables, in which case these type variables will be further resolved if
-     corresponding mappings exist in the current {@code TypeResolver} instance.
+     corresponding mappings exist in the current `TypeResolver` instance.
 
-### `where([`java.util.Map<com.google.common.reflect.TypeResolver.TypeVariableKey,? extends java.lang.reflect.Type>`](../../../../java/util/Map.md) mappings)`
+### `where(`java.util.Map<com.google.common.reflect.TypeResolver.TypeVariableKey,? extends java.lang.reflect.Type>` mappings)`
 
 **Returns:** [`com.google.common.reflect.TypeResolver`](./TypeResolver.md)
 
-Returns a new {@code TypeResolver} with {@code variable} mapping to {@code type}.
+Returns a new `TypeResolver` with `variable` mapping to `type`.
 
-### `populateTypeMappings([`java.util.Map<com.google.common.reflect.TypeResolver.TypeVariableKey,java.lang.reflect.Type>`](../../../../java/util/Map.md) mappings, `java.lang.reflect.Type` from, `java.lang.reflect.Type` to)`
+### `populateTypeMappings(`java.util.Map<com.google.common.reflect.TypeResolver.TypeVariableKey,java.lang.reflect.Type>` mappings, `java.lang.reflect.Type` from, `java.lang.reflect.Type` to)`
 
 **Returns:** `void`
 
@@ -90,7 +86,7 @@ Returns a new {@code TypeResolver} with {@code variable} mapping to {@code type}
 
 **Returns:** `java.lang.reflect.Type`
 
-Resolves all type variables in {@code type} and all downstream types and returns a
+Resolves all type variables in `type` and all downstream types and returns a
  corresponding type with type variables resolved.
 
 ### `resolveTypesInPlace(`java.lang.reflect.Type[]` types)`
@@ -115,5 +111,5 @@ Resolves all type variables in {@code type} and all downstream types and returns
 
 ### `expectArgument(`java.lang.Class<T>` type, `java.lang.Object` arg)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 

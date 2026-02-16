@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.UnmodifiableIterator`
 
-**Implements:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Implements:** `java.util.Iterator<E>`
 
 ## Type Parameters
 
@@ -12,12 +12,12 @@
 
 ## Description
 
-An iterator that does not support {@link #remove}.
+An iterator that does not support `remove`.
 
- <p>{@code UnmodifiableIterator} is used primarily in conjunction with implementations of {@link ImmutableCollection}, such as {@link ImmutableList}. You can, however, convert an existing
- iterator to an {@code UnmodifiableIterator} using {@link Iterators#unmodifiableIterator}.
-@author Jared Levy
-@since 2.0
+ <p>`UnmodifiableIterator` is used primarily in conjunction with implementations of `ImmutableCollection`, such as `ImmutableList`. You can, however, convert an existing
+ iterator to an `UnmodifiableIterator` using `Iterators.unmodifiableIterator`.
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Constructors
 
@@ -33,5 +33,5 @@ Constructor for use by subclasses.
 
 Guaranteed to throw an exception and leave the underlying data unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 

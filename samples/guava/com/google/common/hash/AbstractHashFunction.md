@@ -8,7 +8,7 @@
 
 ## Description
 
-Skeleton implementation of {@link HashFunction} in terms of {@link #newHasher()}.
+Skeleton implementation of `HashFunction` in terms of `newHasher()`.
 
  <p>TODO(lowasser): make public
 
@@ -18,7 +18,7 @@ Skeleton implementation of {@link HashFunction} in terms of {@link #newHasher()}
 
 ## Methods
 
-### `hashObject([`T`](T.md) instance, [`com.google.common.hash.Funnel<? super T>`](./Funnel.md) funnel)`
+### `hashObject(`T` instance, [`com.google.common.hash.Funnel<? super T>`](./Funnel.md) funnel)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
@@ -26,7 +26,7 @@ Skeleton implementation of {@link HashFunction} in terms of {@link #newHasher()}
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashString(`java.lang.CharSequence` input, [`java.nio.charset.Charset`](../../../../java/nio/charset/Charset.md) charset)`
+### `hashString(`java.lang.CharSequence` input, `java.nio.charset.Charset` charset)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
@@ -46,7 +46,7 @@ Skeleton implementation of {@link HashFunction} in terms of {@link #newHasher()}
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashBytes([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) input)`
+### `hashBytes(`java.nio.ByteBuffer` input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 

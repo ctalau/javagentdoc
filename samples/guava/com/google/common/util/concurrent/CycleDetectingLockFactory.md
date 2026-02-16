@@ -6,11 +6,11 @@
 
 ## Description
 
-The {@code CycleDetectingLockFactory} creates {@link ReentrantLock} instances and {@link ReentrantReadWriteLock} instances that detect potential deadlock by checking for cycles in lock
+The `CycleDetectingLockFactory` creates `ReentrantLock` instances and `ReentrantReadWriteLock` instances that detect potential deadlock by checking for cycles in lock
  acquisition order.
 
- <p>Potential deadlocks detected when calling the {@code lock()}, {@code lockInterruptibly()}, or
- {@code tryLock()} methods will result in the execution of the {@link Policy} specified when
+ <p>Potential deadlocks detected when calling the `lock()`, `lockInterruptibly()`, or
+ `tryLock()` methods will result in the execution of the `Policy` specified when
  creating the factory. The currently available policies are:
 
  <ul>
@@ -20,12 +20,12 @@ The {@code CycleDetectingLockFactory} creates {@link ReentrantLock} instances an
  </ul>
 
  <p>The locks created by a factory instance will detect lock acquisition cycles with locks created
- by other {@code CycleDetectingLockFactory} instances (except those with {@code Policy.DISABLED}).
- A lock's behavior when a cycle is detected, however, is defined by the {@code Policy} of the
+ by other `CycleDetectingLockFactory` instances (except those with `Policy.DISABLED`).
+ A lock's behavior when a cycle is detected, however, is defined by the `Policy` of the
  factory that created it. This allows detection of cycles across components while delegating
  control over lock behavior to individual components.
 
- <p>Applications are encouraged to use a {@code CycleDetectingLockFactory} to create any locks for
+ <p>Applications are encouraged to use a `CycleDetectingLockFactory` to create any locks for
  which external/unmanaged code is executed while the lock is held. (See caveats under
  <strong>Performance</strong>).
 
@@ -77,8 +77,8 @@ The {@code CycleDetectingLockFactory} creates {@link ReentrantLock} instances an
 
  <p><strong>ReadWriteLocks</strong>
 
- <p>While {@code ReadWriteLock} instances have different properties and can form cycles without
- potential deadlock, this class treats {@code ReadWriteLock} instances as equivalent to
+ <p>While `ReadWriteLock` instances have different properties and can form cycles without
+ potential deadlock, this class treats `ReadWriteLock` instances as equivalent to
  traditional exclusive locks. Although this increases the false positives that the locks detect
  (i.e. cycles that will not actually result in deadlock), it simplifies the algorithm and
  implementation considerably. The assumption is that a user of this factory wishes to eliminate
@@ -86,7 +86,7 @@ The {@code CycleDetectingLockFactory} creates {@link ReentrantLock} instances an
 
  <p><strong>Explicit Lock Acquisition Ordering</strong>
 
- <p>The {@link CycleDetectingLockFactory.WithExplicitOrdering} class can be used to enforce an
+ <p>The `CycleDetectingLockFactory.WithExplicitOrdering` class can be used to enforce an
  application-specific ordering in addition to performing general cycle detection.
 
  <p><strong>Garbage Collection</strong>
@@ -100,7 +100,7 @@ The {@code CycleDetectingLockFactory} creates {@link ReentrantLock} instances an
  Benchmarks (as of December 2011) show that:
 
  <ul>
-   <li>for an unnested {@code lock()} and {@code unlock()}, a cycle detecting lock takes 38ns as
+   <li>for an unnested `lock()` and `unlock()`, a cycle detecting lock takes 38ns as
        opposed to the 24ns taken by a plain lock.
    <li>for nested locking, the cost increases with the depth of the nesting:
        <ul>
@@ -115,14 +115,14 @@ The {@code CycleDetectingLockFactory} creates {@link ReentrantLock} instances an
 
  <p>As such, the CycleDetectingLockFactory may not be suitable for performance-critical
  applications which involve tightly-looped or deeply-nested locking algorithms.
-@author Darick Tong
-@since 13.0
+**Author:** Darick Tong
+**Since:** 13.0
 
 ## Fields
 
 ### `lockGraphNodesPerType`
 
-**Type:** [`java.util.concurrent.ConcurrentMap<java.lang.Class<? extends java.lang.Enum<?>>,java.util.Map<? extends java.lang.Enum<?>,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>>`](../../../../../java/util/concurrent/ConcurrentMap>,java/util/Map,com/google/common/util/concurrent/CycleDetectingLockFactory/LockGraphNode>>.md)
+**Type:** `java.util.concurrent.ConcurrentMap<java.lang.Class<? extends java.lang.Enum<?>>,java.util.Map<? extends java.lang.Enum<?>,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>>`
 
 ### `logger`
 
@@ -136,7 +136,7 @@ The {@code CycleDetectingLockFactory} creates {@link ReentrantLock} instances an
 
 **Type:** `java.lang.ThreadLocal<java.util.ArrayList<com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>>`
 
-Tracks the currently acquired locks for each Thread, kept up to date by calls to {@link #aboutToAcquire(CycleDetectingLock)} and {@link #lockStateChanged(CycleDetectingLock)}.
+Tracks the currently acquired locks for each Thread, kept up to date by calls to `aboutToAcquire(CycleDetectingLock)` and `lockStateChanged(CycleDetectingLock)`.
 
 ## Constructors
 
@@ -152,28 +152,28 @@ Creates a new factory with the specified policy.
 
 ### `newReentrantLock(`java.lang.String` lockName)`
 
-**Returns:** [`java.util.concurrent.locks.ReentrantLock`](../../../../../java/util/concurrent/locks/ReentrantLock.md)
+**Returns:** `java.util.concurrent.locks.ReentrantLock`
 
-Equivalent to {@code newReentrantLock(lockName, false)}.
+Equivalent to `newReentrantLock(lockName, false)`.
 
 ### `newReentrantLock(`java.lang.String` lockName, `boolean` fair)`
 
-**Returns:** [`java.util.concurrent.locks.ReentrantLock`](../../../../../java/util/concurrent/locks/ReentrantLock.md)
+**Returns:** `java.util.concurrent.locks.ReentrantLock`
 
-Creates a {@link ReentrantLock} with the given fairness policy. The {@code lockName} is used in
+Creates a `ReentrantLock` with the given fairness policy. The `lockName` is used in
  the warning or exception output to help identify the locks involved in the detected deadlock.
 
 ### `newReentrantReadWriteLock(`java.lang.String` lockName)`
 
-**Returns:** [`java.util.concurrent.locks.ReentrantReadWriteLock`](../../../../../java/util/concurrent/locks/ReentrantReadWriteLock.md)
+**Returns:** `java.util.concurrent.locks.ReentrantReadWriteLock`
 
-Equivalent to {@code newReentrantReadWriteLock(lockName, false)}.
+Equivalent to `newReentrantReadWriteLock(lockName, false)`.
 
 ### `newReentrantReadWriteLock(`java.lang.String` lockName, `boolean` fair)`
 
-**Returns:** [`java.util.concurrent.locks.ReentrantReadWriteLock`](../../../../../java/util/concurrent/locks/ReentrantReadWriteLock.md)
+**Returns:** `java.util.concurrent.locks.ReentrantReadWriteLock`
 
-Creates a {@link ReentrantReadWriteLock} with the given fairness policy. The {@code lockName}
+Creates a `ReentrantReadWriteLock` with the given fairness policy. The `lockName`
  is used in the warning or exception output to help identify the locks involved in the detected
  deadlock.
 
@@ -181,26 +181,25 @@ Creates a {@link ReentrantReadWriteLock} with the given fairness policy. The {@c
 
 **Returns:** [`com.google.common.util.concurrent.CycleDetectingLockFactory.WithExplicitOrdering<E>`](CycleDetectingLockFactory/WithExplicitOrdering.md)
 
-Creates a {@code CycleDetectingLockFactory.WithExplicitOrdering<E>}.
+Creates a `CycleDetectingLockFactory.WithExplicitOrdering<E>`.
 
 ### `getOrCreateNodes(`java.lang.Class<E>` clazz)`
 
-**Returns:** [`java.util.Map<? extends E,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>`](../../../../../java/util/Map.md)
+**Returns:** `java.util.Map<? extends E,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>`
 
 ### `createNodes(`java.lang.Class<E>` clazz)`
 
-**Returns:** [`java.util.Map<E,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>`](../../../../../java/util/Map.md)
+**Returns:** `java.util.Map<E,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>`
 
 For a given Enum type, creates an immutable map from each of the Enum's values to a
- corresponding LockGraphNode, with the {@code allowedPriorLocks} and {@code
- disallowedPriorLocks} prepopulated with nodes according to the natural ordering of the
+ corresponding LockGraphNode, with the `allowedPriorLocks` and `disallowedPriorLocks` prepopulated with nodes according to the natural ordering of the
  associated Enum values.
 
 ### `getLockName(`java.lang.Enum<?>` rank)`
 
 **Returns:** `java.lang.String`
 
-For the given Enum value {@code rank}, returns the value's {@code "EnumClass.name"}, which is
+For the given Enum value `rank`, returns the value's `"EnumClass.name"`, which is
  used in exception and warning output.
 
 ### `aboutToAcquire([`com.google.common.util.concurrent.CycleDetectingLockFactory.CycleDetectingLock`](CycleDetectingLockFactory/CycleDetectingLock.md) lock)`
@@ -213,7 +212,7 @@ CycleDetectingLock implementations must call this method before attempting to ac
 
 **Returns:** `void`
 
-CycleDetectingLock implementations must call this method in a {@code finally} clause after any
+CycleDetectingLock implementations must call this method in a `finally` clause after any
  attempt to change the lock state, including both lock and unlock attempts. Failure to do so can
  result in corrupting the acquireLocks set.
 

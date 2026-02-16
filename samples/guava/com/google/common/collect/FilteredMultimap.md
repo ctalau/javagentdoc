@@ -14,7 +14,7 @@
 ## Description
 
 An interface for all filtered multimap types.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Methods
 

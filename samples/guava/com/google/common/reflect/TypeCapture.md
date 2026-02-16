@@ -10,8 +10,8 @@
 
 ## Description
 
-Captures the actual type of {@code T}.
-@author Ben Yu
+Captures the actual type of `T`.
+**Author:** Ben Yu
 
 ## Constructors
 

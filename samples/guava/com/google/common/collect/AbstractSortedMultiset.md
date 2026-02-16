@@ -14,17 +14,17 @@
 
 ## Description
 
-This class provides a skeletal implementation of the {@link SortedMultiset} interface.
+This class provides a skeletal implementation of the `SortedMultiset` interface.
 
- <p>The {@link #count} and {@link #size} implementations all iterate across the set returned by
- {@link Multiset#entrySet()}, as do many methods acting on the set returned by {@link #elementSet()}. Override those methods for better performance.
-@author Louis Wasserman
+ <p>The `count` and `size` implementations all iterate across the set returned by
+ `Multiset.entrySet()`, as do many methods acting on the set returned by `elementSet()`. Override those methods for better performance.
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `comparator`
 
-**Type:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super E>`
 
 ### `descendingMultiset`
 
@@ -34,21 +34,21 @@ This class provides a skeletal implementation of the {@link SortedMultiset} inte
 
 ### `<init>()`
 
-### `<init>([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `<init>(`java.util.Comparator<? super E>` comparator)`
 
 ## Methods
 
 ### `elementSet()`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
 ### `createElementSet()`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `firstEntry()`
 
@@ -66,17 +66,17 @@ This class provides a skeletal implementation of the {@link SortedMultiset} inte
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-### `subMultiset([`E`](E.md) fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) fromBoundType, [`E`](E.md) toElement, [`com.google.common.collect.BoundType`](./BoundType.md) toBoundType)`
+### `subMultiset(`E` fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) fromBoundType, `E` toElement, [`com.google.common.collect.BoundType`](./BoundType.md) toBoundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
 ### `descendingEntryIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `descendingIterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `descendingMultiset()`
 

@@ -18,20 +18,19 @@ A sorted multiset which forwards all its method calls to another sorted multiset
  should override one or more methods to modify the behavior of the backing multiset as desired per
  the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>Warning:</b> The methods of {@code ForwardingSortedMultiset} forward
- <b>indiscriminately</b> to the methods of the delegate. For example, overriding {@link #add(Object, int)} alone <b>will not</b> change the behavior of {@link #add(Object)}, which can
- lead to unexpected behavior. In this case, you should override {@code add(Object)} as well,
- either providing your own implementation, or delegating to the provided {@code standardAdd}
+ <p><b>Warning:</b> The methods of `ForwardingSortedMultiset` forward
+ <b>indiscriminately</b> to the methods of the delegate. For example, overriding `add(Object, int)` alone <b>will not</b> change the behavior of `add(Object)`, which can
+ lead to unexpected behavior. In this case, you should override `add(Object)` as well,
+ either providing your own implementation, or delegating to the provided `standardAdd`
  method.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingSortedMultiset}.
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingSortedMultiset`.
 
- <p>The {@code standard} methods and any collection views they return are not guaranteed to be
+ <p>The `standard` methods and any collection views they return are not guaranteed to be
  thread-safe, even when all of the methods that they depend on are thread-safe.
-@author Louis Wasserman
-@since 15.0
+**Author:** Louis Wasserman
+**Since:** 15.0
 
 ## Constructors
 
@@ -47,11 +46,11 @@ Constructor for use by subclasses.
 
 ### `elementSet()`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `descendingMultiset()`
 
@@ -65,9 +64,9 @@ Constructor for use by subclasses.
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-A sensible definition of {@link #firstEntry()} in terms of {@code entrySet().iterator()}.
+A sensible definition of `firstEntry()` in terms of `entrySet().iterator()`.
 
- <p>If you override {@link #entrySet()}, you may wish to override {@link #firstEntry()} to
+ <p>If you override `entrySet()`, you may wish to override `firstEntry()` to
  forward to this implementation.
 
 ### `lastEntry()`
@@ -78,11 +77,10 @@ A sensible definition of {@link #firstEntry()} in terms of {@code entrySet().ite
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-A sensible definition of {@link #lastEntry()} in terms of {@code
- descendingMultiset().entrySet().iterator()}.
+A sensible definition of `lastEntry()` in terms of `descendingMultiset().entrySet().iterator()`.
 
- <p>If you override {@link #descendingMultiset} or {@link #entrySet()}, you may wish to override
- {@link #firstEntry()} to forward to this implementation.
+ <p>If you override `descendingMultiset` or `entrySet()`, you may wish to override
+ `firstEntry()` to forward to this implementation.
 
 ### `pollFirstEntry()`
 
@@ -92,9 +90,9 @@ A sensible definition of {@link #lastEntry()} in terms of {@code
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-A sensible definition of {@link #pollFirstEntry()} in terms of {@code entrySet().iterator()}.
+A sensible definition of `pollFirstEntry()` in terms of `entrySet().iterator()`.
 
- <p>If you override {@link #entrySet()}, you may wish to override {@link #pollFirstEntry()} to
+ <p>If you override `entrySet()`, you may wish to override `pollFirstEntry()` to
  forward to this implementation.
 
 ### `pollLastEntry()`
@@ -105,31 +103,30 @@ A sensible definition of {@link #pollFirstEntry()} in terms of {@code entrySet()
 
 **Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
 
-A sensible definition of {@link #pollLastEntry()} in terms of {@code
- descendingMultiset().entrySet().iterator()}.
+A sensible definition of `pollLastEntry()` in terms of `descendingMultiset().entrySet().iterator()`.
 
- <p>If you override {@link #descendingMultiset()} or {@link #entrySet()}, you may wish to
- override {@link #pollLastEntry()} to forward to this implementation.
+ <p>If you override `descendingMultiset()` or `entrySet()`, you may wish to
+ override `pollLastEntry()` to forward to this implementation.
 
-### `headMultiset([`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
-
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
-
-### `subMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, [`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `standardSubMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, [`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+### `subMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, `E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-A sensible definition of {@link #subMultiset(Object, BoundType, Object, BoundType)} in terms of
- {@link #headMultiset(Object, BoundType) headMultiset} and {@link #tailMultiset(Object,
- BoundType) tailMultiset}.
+### `standardSubMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, `E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
 
- <p>If you override either of these methods, you may wish to override {@link #subMultiset(Object, BoundType, Object, BoundType)} to forward to this implementation.
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `tailMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+A sensible definition of `subMultiset(Object, BoundType, Object, BoundType)` in terms of
+ `headMultiset(Object, BoundType) headMultiset` and `tailMultiset(Object,
+ BoundType) tailMultiset`.
+
+ <p>If you override either of these methods, you may wish to override `subMultiset(Object, BoundType, Object, BoundType)` to forward to this implementation.
+
+### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 

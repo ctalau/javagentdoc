@@ -6,9 +6,9 @@
 
 ## Description
 
-Options for use with recursive delete methods ({@link MoreFiles#deleteRecursively} and {@link MoreFiles#deleteDirectoryContents}).
-@since 21.0
-@author Colin Decker
+Options for use with recursive delete methods (`MoreFiles.deleteRecursively` and `MoreFiles.deleteDirectoryContents`).
+**Since:** 21.0
+**Author:** Colin Decker
 
 ## Constructors
 

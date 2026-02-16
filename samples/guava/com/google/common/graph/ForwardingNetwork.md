@@ -13,10 +13,10 @@
 
 ## Description
 
-A class to allow {@link Network} implementations to be backed by a provided delegate. This is not
+A class to allow `Network` implementations to be backed by a provided delegate. This is not
  currently planned to be released as a general-purpose forwarding class.
-@author James Sexton
-@author Joshua O'Madadhain
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
 
 ## Constructors
 
@@ -30,11 +30,11 @@ A class to allow {@link Network} implementations to be backed by a provided dele
 
 ### `nodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `edges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `isDirected()`
 
@@ -56,75 +56,75 @@ A class to allow {@link Network} implementations to be backed by a provided dele
 
 **Returns:** [`com.google.common.graph.ElementOrder<E>`](./ElementOrder.md)
 
-### `adjacentNodes([`N`](N.md) node)`
+### `adjacentNodes(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `predecessors([`N`](N.md) node)`
+### `predecessors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `successors([`N`](N.md) node)`
+### `successors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `incidentEdges([`N`](N.md) node)`
+### `incidentEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `inEdges([`N`](N.md) node)`
+### `inEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `outEdges([`N`](N.md) node)`
+### `outEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `incidentNodes([`E`](E.md) edge)`
+### `incidentNodes(`E` edge)`
 
 **Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
-### `adjacentEdges([`E`](E.md) edge)`
+### `adjacentEdges(`E` edge)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `degree([`N`](N.md) node)`
-
-**Returns:** `int`
-
-### `inDegree([`N`](N.md) node)`
+### `degree(`N` node)`
 
 **Returns:** `int`
 
-### `outDegree([`N`](N.md) node)`
+### `inDegree(`N` node)`
 
 **Returns:** `int`
 
-### `edgesConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `outDegree(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `int`
+
+### `edgesConnecting(`N` nodeU, `N` nodeV)`
+
+**Returns:** `java.util.Set<E>`
 
 ### `edgesConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `edgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeConnecting(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Optional<E>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<E>`
 
 ### `edgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`java.util.Optional<E>`](../../../../java/util/Optional.md)
+**Returns:** `java.util.Optional<E>`
 
-### `edgeConnectingOrNull([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgeConnectingOrNull(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `edgeConnectingOrNull([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 

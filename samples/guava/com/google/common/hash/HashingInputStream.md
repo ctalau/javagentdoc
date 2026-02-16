@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `com.google.common.hash.HashingInputStream`
 
-**Extends:** [`java.io.FilterInputStream`](../../../../java/io/FilterInputStream.md)
+**Extends:** `java.io.FilterInputStream`
 
 ## Description
 
-An {@link InputStream} that maintains a hash of the data read from it.
-@author Qian Huang
-@since 16.0
+An `InputStream` that maintains a hash of the data read from it.
+**Author:** Qian Huang
+**Since:** 16.0
 
 ## Fields
 
@@ -20,12 +20,12 @@ An {@link InputStream} that maintains a hash of the data read from it.
 
 ## Constructors
 
-### `<init>([`com.google.common.hash.HashFunction`](./HashFunction.md) hashFunction, [`java.io.InputStream`](../../../../java/io/InputStream.md) in)`
+### `<init>([`com.google.common.hash.HashFunction`](./HashFunction.md) hashFunction, `java.io.InputStream` in)`
 
-Creates an input stream that hashes using the given {@link HashFunction} and delegates all data
- read from it to the underlying {@link InputStream}.
+Creates an input stream that hashes using the given `HashFunction` and delegates all data
+ read from it to the underlying `InputStream`.
 
- <p>The {@link InputStream} should not be read from before or after the hand-off.
+ <p>The `InputStream` should not be read from before or after the hand-off.
 
 ## Methods
 
@@ -48,7 +48,7 @@ Reads the specified bytes of data from the underlying input stream and updates t
 **Returns:** `boolean`
 
 mark() is not supported for HashingInputStream
-@return {@code false} always
+@return `false` always
 
 ### `mark(`int` readlimit)`
 
@@ -67,6 +67,6 @@ reset() is not supported for HashingInputStream.
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Returns the {@link HashCode} based on the data read from this stream. The result is unspecified
+Returns the `HashCode` based on the data read from this stream. The result is unspecified
  if this method is called more than once on the same instance.
 

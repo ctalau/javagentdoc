@@ -8,16 +8,16 @@
 
 ## Description
 
-A convenience base class for implementors of {@code Hasher}; handles accumulating data until an
+A convenience base class for implementors of `Hasher`; handles accumulating data until an
  entire "chunk" (of implementation-dependent length) is ready to be hashed.
-@author Kevin Bourrillion
-@author Dimitris Andreou
+**Author:** Kevin Bourrillion
+**Author:** Dimitris Andreou
 
 ## Fields
 
 ### `buffer`
 
-**Type:** [`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md)
+**Type:** `java.nio.ByteBuffer`
 
 Buffer via which we pass data to the hash algorithm (the implementor)
 
@@ -39,44 +39,43 @@ Number of bytes processed per process() invocation.
 
 Constructor for use by subclasses. This hasher instance will process chunks of the specified
  size.
-@param chunkSize the number of bytes available per {@link #process(ByteBuffer)} invocation;
+@param chunkSize the number of bytes available per `process(ByteBuffer)` invocation;
      must be at least 4
 
 ### `<init>(`int` chunkSize, `int` bufferSize)`
 
 Constructor for use by subclasses. This hasher instance will process chunks of the specified
- size, using an internal buffer of {@code bufferSize} size, which must be a multiple of {@code
- chunkSize}.
-@param chunkSize the number of bytes available per {@link #process(ByteBuffer)} invocation;
+ size, using an internal buffer of `bufferSize` size, which must be a multiple of `chunkSize`.
+@param chunkSize the number of bytes available per `process(ByteBuffer)` invocation;
      must be at least 4
 @param bufferSize the size of the internal buffer. Must be a multiple of chunkSize
 
 ## Methods
 
-### `process([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) bb)`
+### `process(`java.nio.ByteBuffer` bb)`
 
 **Returns:** `void`
 
-Processes the available bytes of the buffer (at most {@code chunk} bytes).
+Processes the available bytes of the buffer (at most `chunk` bytes).
 
-### `processRemaining([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) bb)`
+### `processRemaining(`java.nio.ByteBuffer` bb)`
 
 **Returns:** `void`
 
 This is invoked for the last bytes of the input, which are not enough to fill a whole chunk.
- The passed {@code ByteBuffer} is guaranteed to be non-empty.
+ The passed `ByteBuffer` is guaranteed to be non-empty.
 
- <p>This implementation simply pads with zeros and delegates to {@link #process(ByteBuffer)}.
+ <p>This implementation simply pads with zeros and delegates to `process(ByteBuffer)`.
 
 ### `putBytes(`byte[]` bytes, `int` off, `int` len)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytes([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) readBuffer)`
+### `putBytes(`java.nio.ByteBuffer` readBuffer)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytesInternal([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) readBuffer)`
+### `putBytesInternal(`java.nio.ByteBuffer` readBuffer)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
@@ -109,8 +108,8 @@ This is invoked for the last bytes of the input, which are not enough to fill a 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
 Computes a hash code based on the data that have been provided to this hasher. This is called
- after all chunks are handled with {@link #process} and any leftover bytes that did not make a
- complete chunk are handled with {@link #processRemaining}.
+ after all chunks are handled with `process` and any leftover bytes that did not make a
+ complete chunk are handled with `processRemaining`.
 
 ### `munchIfFull()`
 

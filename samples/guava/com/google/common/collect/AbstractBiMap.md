@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingMap<K,V>`](./ForwardingMap.md)
 
-**Implements:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md), [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md), `java.io.Serializable`
 
 ## Type Parameters
 
@@ -15,18 +15,17 @@
 
 ## Description
 
-A general-purpose bimap implementation using any two backing {@code Map} instances.
+A general-purpose bimap implementation using any two backing `Map` instances.
 
- <p>Note that this class contains {@code equals()} calls that keep it from supporting {@code
- IdentityHashMap} backing maps.
-@author Kevin Bourrillion
-@author Mike Bostock
+ <p>Note that this class contains `equals()` calls that keep it from supporting `IdentityHashMap` backing maps.
+**Author:** Kevin Bourrillion
+**Author:** Mike Bostock
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`java.util.Map<K,V>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<K,V>`
 
 ### `inverse`
 
@@ -34,15 +33,15 @@ A general-purpose bimap implementation using any two backing {@code Map} instanc
 
 ### `keySet`
 
-**Type:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Type:** `java.util.Set<K>`
 
 ### `valueSet`
 
-**Type:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Type:** `java.util.Set<V>`
 
 ### `entrySet`
 
-**Type:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
 ### `serialVersionUID`
 
@@ -50,11 +49,11 @@ A general-purpose bimap implementation using any two backing {@code Map} instanc
 
 ## Constructors
 
-### `<init>([`java.util.Map<K,V>`](../../../../java/util/Map.md) forward, [`java.util.Map<V,K>`](../../../../java/util/Map.md) backward)`
+### `<init>(`java.util.Map<K,V>` forward, `java.util.Map<V,K>` backward)`
 
 Package-private constructor for creating a map-backed bimap.
 
-### `<init>([`java.util.Map<K,V>`](../../../../java/util/Map.md) backward, [`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md) forward)`
+### `<init>(`java.util.Map<K,V>` backward, [`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md) forward)`
 
 Private constructor for inverse bimap.
 
@@ -62,28 +61,28 @@ Private constructor for inverse bimap.
 
 ### `delegate()`
 
-**Returns:** [`java.util.Map<K,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<K,V>`
 
-### `checkKey([`K`](K.md) key)`
+### `checkKey(`K` key)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
 Returns its input, or throws an exception if this is not a valid key.
 
-### `checkValue([`V`](V.md) value)`
+### `checkValue(`V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Returns its input, or throws an exception if this is not a valid value.
 
-### `setDelegates([`java.util.Map<K,V>`](../../../../java/util/Map.md) forward, [`java.util.Map<V,K>`](../../../../java/util/Map.md) backward)`
+### `setDelegates(`java.util.Map<K,V>` forward, `java.util.Map<V,K>` backward)`
 
 **Returns:** `void`
 
 Specifies the delegate maps going in each direction. Called by the constructor and by
  subclasses during deserialization.
 
-### `makeInverse([`java.util.Map<V,K>`](../../../../java/util/Map.md) backward)`
+### `makeInverse(`java.util.Map<V,K>` backward)`
 
 **Returns:** [`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md)
 
@@ -95,39 +94,39 @@ Specifies the delegate maps going in each direction. Called by the constructor a
 
 **Returns:** `boolean`
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `forcePut([`K`](K.md) key, [`V`](V.md) value)`
+### `forcePut(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `putInBothMaps([`K`](K.md) key, [`V`](V.md) value, `boolean` force)`
+### `putInBothMaps(`K` key, `V` value, `boolean` force)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `updateInverseMap([`K`](K.md) key, `boolean` containedKey, [`V`](V.md) oldValue, [`V`](V.md) newValue)`
+### `updateInverseMap(`K` key, `boolean` containedKey, `V` oldValue, `V` newValue)`
 
 **Returns:** `void`
 
 ### `remove(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `removeFromBothMaps(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `removeFromInverseMap([`V`](V.md) oldValue)`
-
-**Returns:** `void`
-
-### `putAll([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) map)`
+### `removeFromInverseMap(`V` oldValue)`
 
 **Returns:** `void`
 
-### `replaceAll([`java.util.function.BiFunction<? super K,? super V,? extends V>`](../../../../java/util/function/BiFunction.md) function)`
+### `putAll(`java.util.Map<? extends K,? extends V>` map)`
+
+**Returns:** `void`
+
+### `replaceAll(`java.util.function.BiFunction<? super K,? super V,? extends V>` function)`
 
 **Returns:** `void`
 
@@ -141,17 +140,17 @@ Specifies the delegate maps going in each direction. Called by the constructor a
 
 ### `keySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 ### `values()`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
 ### `entrySetIterator()`
 
-**Returns:** [`java.util.Iterator<java.util.Map.Entry<K,V>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 

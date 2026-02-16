@@ -6,15 +6,15 @@
 
 **Extends:** [`com.google.common.hash.AbstractHashFunction`](./AbstractHashFunction.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
 See MurmurHash3_x86_32 in <a href="https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp">the C++
  implementation</a>.
-@author Austin Appleby
-@author Dimitris Andreou
-@author Kurt Alfred Kluever
+**Author:** Austin Appleby
+**Author:** Dimitris Andreou
+**Author:** Kurt Alfred Kluever
 
 ## Fields
 
@@ -92,7 +92,7 @@ See MurmurHash3_x86_32 in <a href="https://github.com/aappleby/smhasher/blob/mas
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashString(`java.lang.CharSequence` input, [`java.nio.charset.Charset`](../../../../java/nio/charset/Charset.md) charset)`
+### `hashString(`java.lang.CharSequence` input, `java.nio.charset.Charset` charset)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 

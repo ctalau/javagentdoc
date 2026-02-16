@@ -15,8 +15,8 @@
 
 ## Description
 
-Implementation of {@link Multimaps#filterKeys(Multimap, Predicate)}.
-@author Louis Wasserman
+Implementation of `Multimaps.filterKeys(Multimap, Predicate)`.
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -52,11 +52,11 @@ Implementation of {@link Multimaps#filterKeys(Multimap, Predicate)}.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `unmodifiableEmptyCollection()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `clear()`
 
@@ -64,27 +64,27 @@ Implementation of {@link Multimaps#filterKeys(Multimap, Predicate)}.
 
 ### `createKeySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `entryIterator()`
 
-**Returns:** [`java.util.Iterator<java.util.Map.Entry<K,V>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
 ### `createEntries()`
 
-**Returns:** [`java.util.Collection<java.util.Map.Entry<K,V>>`](../../../../java/util/Collection>.md)
+**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
 ### `createValues()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `createAsMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 ### `createKeys()`
 

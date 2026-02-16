@@ -20,8 +20,8 @@ Implementation of FarmHash Fingerprint64, an open-source fingerprinting algorith
    <li>division (avoided here)
    <li>shifting (right shift must be unsigned)
  </ul>
-@author Kyle Maddison
-@author Geoff Pike
+**Author:** Kyle Maddison
+**Author:** Geoff Pike
 
 ## Fields
 

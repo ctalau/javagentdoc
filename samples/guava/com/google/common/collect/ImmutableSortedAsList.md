@@ -14,9 +14,9 @@
 
 ## Description
 
-List returned by {@code ImmutableSortedSet.asList()} when the set isn't empty.
-@author Jared Levy
-@author Louis Wasserman
+List returned by `ImmutableSortedSet.asList()` when the set isn't empty.
+**Author:** Jared Levy
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -30,7 +30,7 @@ List returned by {@code ImmutableSortedSet.asList()} when the set isn't empty.
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `indexOf(`java.lang.Object` target)`
 
@@ -50,7 +50,7 @@ List returned by {@code ImmutableSortedSet.asList()} when the set isn't empty.
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
 ### `writeReplace()`
 

@@ -4,81 +4,81 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.WrappingExecutorService`
 
-**Implements:** [`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md)
+**Implements:** `java.util.concurrent.ExecutorService`
 
 ## Description
 
-An abstract {@code ExecutorService} that allows subclasses to {@linkplain #wrapTask(Callable) wrap} tasks before they are submitted to the underlying executor.
+An abstract `ExecutorService` that allows subclasses to wrap tasks before they are submitted to the underlying executor.
 
  <p>Note that task wrapping may occur even if the task is never executed.
 
- <p>For delegation without task-wrapping, see {@link ForwardingExecutorService}.
-@author Chris Nokleberg
+ <p>For delegation without task-wrapping, see `ForwardingExecutorService`.
+**Author:** Chris Nokleberg
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md)
+**Type:** `java.util.concurrent.ExecutorService`
 
 ## Constructors
 
-### `<init>([`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md) delegate)`
+### `<init>(`java.util.concurrent.ExecutorService` delegate)`
 
 ## Methods
 
-### `wrapTask([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) callable)`
+### `wrapTask(`java.util.concurrent.Callable<T>` callable)`
 
-**Returns:** [`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md)
+**Returns:** `java.util.concurrent.Callable<T>`
 
-Wraps a {@code Callable} for submission to the underlying executor. This method is also applied
- to any {@code Runnable} passed to the default implementation of {@link #wrapTask(Runnable)}.
+Wraps a `Callable` for submission to the underlying executor. This method is also applied
+ to any `Runnable` passed to the default implementation of `wrapTask(Runnable)`.
 
 ### `wrapTask(`java.lang.Runnable` command)`
 
 **Returns:** `java.lang.Runnable`
 
-Wraps a {@code Runnable} for submission to the underlying executor. The default implementation
- delegates to {@link #wrapTask(Callable)}.
+Wraps a `Runnable` for submission to the underlying executor. The default implementation
+ delegates to `wrapTask(Callable)`.
 
-### `wrapTasks([`java.util.Collection<? extends java.util.concurrent.Callable<T>>`](../../../../../java/util/Collection>.md) tasks)`
+### `wrapTasks(`java.util.Collection<? extends java.util.concurrent.Callable<T>>` tasks)`
 
 **Returns:** [`com.google.common.collect.ImmutableList<java.util.concurrent.Callable<T>>`](../../collect/ImmutableList>.md)
 
 Wraps a collection of tasks.
-@throws NullPointerException if any element of {@code tasks} is null
+@throws NullPointerException if any element of `tasks` is null
 
 ### `execute(`java.lang.Runnable` command)`
 
 **Returns:** `void`
 
-### `submit([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) task)`
+### `submit(`java.util.concurrent.Callable<T>` task)`
 
-**Returns:** [`java.util.concurrent.Future<T>`](../../../../../java/util/concurrent/Future.md)
+**Returns:** `java.util.concurrent.Future<T>`
 
 ### `submit(`java.lang.Runnable` task)`
 
-**Returns:** [`java.util.concurrent.Future<?>`](../../../../../java/util/concurrent/Future.md)
+**Returns:** `java.util.concurrent.Future<?>`
 
-### `submit(`java.lang.Runnable` task, [`T`](T.md) result)`
+### `submit(`java.lang.Runnable` task, `T` result)`
 
-**Returns:** [`java.util.concurrent.Future<T>`](../../../../../java/util/concurrent/Future.md)
+**Returns:** `java.util.concurrent.Future<T>`
 
-### `invokeAll([`java.util.Collection<? extends java.util.concurrent.Callable<T>>`](../../../../../java/util/Collection>.md) tasks)`
+### `invokeAll(`java.util.Collection<? extends java.util.concurrent.Callable<T>>` tasks)`
 
-**Returns:** [`java.util.List<java.util.concurrent.Future<T>>`](../../../../../java/util/List>.md)
+**Returns:** `java.util.List<java.util.concurrent.Future<T>>`
 
-### `invokeAll([`java.util.Collection<? extends java.util.concurrent.Callable<T>>`](../../../../../java/util/Collection>.md) tasks, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `invokeAll(`java.util.Collection<? extends java.util.concurrent.Callable<T>>` tasks, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`java.util.List<java.util.concurrent.Future<T>>`](../../../../../java/util/List>.md)
+**Returns:** `java.util.List<java.util.concurrent.Future<T>>`
 
-### `invokeAny([`java.util.Collection<? extends java.util.concurrent.Callable<T>>`](../../../../../java/util/Collection>.md) tasks)`
+### `invokeAny(`java.util.Collection<? extends java.util.concurrent.Callable<T>>` tasks)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `invokeAny([`java.util.Collection<? extends java.util.concurrent.Callable<T>>`](../../../../../java/util/Collection>.md) tasks, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `invokeAny(`java.util.Collection<? extends java.util.concurrent.Callable<T>>` tasks, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `shutdown()`
 
@@ -86,7 +86,7 @@ Wraps a collection of tasks.
 
 ### `shutdownNow()`
 
-**Returns:** [`java.util.List<java.lang.Runnable>`](../../../../../java/util/List.md)
+**Returns:** `java.util.List<java.lang.Runnable>`
 
 ### `isShutdown()`
 
@@ -96,7 +96,7 @@ Wraps a collection of tasks.
 
 **Returns:** `boolean`
 
-### `awaitTermination(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitTermination(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 

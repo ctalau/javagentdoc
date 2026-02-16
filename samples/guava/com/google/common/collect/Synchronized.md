@@ -9,12 +9,12 @@
 Synchronized collection views. The returned synchronized collection views are serializable if the
  backing collection and the mutex are serializable.
 
- <p>If {@code null} is passed as the {@code mutex} parameter to any of this class's top-level
+ <p>If `null` is passed as the `mutex` parameter to any of this class's top-level
  methods or inner class constructors, the created object uses itself as the synchronization mutex.
 
  <p>This class should be used by other collection classes only.
-@author Mike Bostock
-@author Jared Levy
+**Author:** Mike Bostock
+**Author:** Jared Levy
 
 ## Constructors
 
@@ -22,21 +22,21 @@ Synchronized collection views. The returned synchronized collection views are se
 
 ## Methods
 
-### `collection([`java.util.Collection<E>`](../../../../java/util/Collection.md) collection, `java.lang.Object` mutex)`
+### `collection(`java.util.Collection<E>` collection, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Collection<E>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<E>`
 
-### `set([`java.util.Set<E>`](../../../../java/util/Set.md) set, `java.lang.Object` mutex)`
+### `set(`java.util.Set<E>` set, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `sortedSet([`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md) set, `java.lang.Object` mutex)`
+### `sortedSet(`java.util.SortedSet<E>` set, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 
-### `list([`java.util.List<E>`](../../../../java/util/List.md) list, `java.lang.Object` mutex)`
+### `list(`java.util.List<E>` list, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.List<E>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<E>`
 
 ### `multiset([`com.google.common.collect.Multiset<E>`](./Multiset.md) multiset, `java.lang.Object` mutex)`
 
@@ -58,53 +58,53 @@ Synchronized collection views. The returned synchronized collection views are se
 
 **Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-### `typePreservingCollection([`java.util.Collection<E>`](../../../../java/util/Collection.md) collection, `java.lang.Object` mutex)`
+### `typePreservingCollection(`java.util.Collection<E>` collection, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Collection<E>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<E>`
 
-### `typePreservingSet([`java.util.Set<E>`](../../../../java/util/Set.md) set, `java.lang.Object` mutex)`
+### `typePreservingSet(`java.util.Set<E>` set, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `map([`java.util.Map<K,V>`](../../../../java/util/Map.md) map, `java.lang.Object` mutex)`
+### `map(`java.util.Map<K,V>` map, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Map<K,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<K,V>`
 
-### `sortedMap([`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md) sortedMap, `java.lang.Object` mutex)`
+### `sortedMap(`java.util.SortedMap<K,V>` sortedMap, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `biMap([`com.google.common.collect.BiMap<K,V>`](./BiMap.md) bimap, `java.lang.Object` mutex)`
 
 **Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
 
-### `navigableSet([`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md) navigableSet, `java.lang.Object` mutex)`
+### `navigableSet(`java.util.NavigableSet<E>` navigableSet, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
-### `navigableSet([`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md) navigableSet)`
+### `navigableSet(`java.util.NavigableSet<E>` navigableSet)`
 
-**Returns:** [`java.util.NavigableSet<E>`](../../../../java/util/NavigableSet.md)
+**Returns:** `java.util.NavigableSet<E>`
 
-### `navigableMap([`java.util.NavigableMap<K,V>`](../../../../java/util/NavigableMap.md) navigableMap)`
+### `navigableMap(`java.util.NavigableMap<K,V>` navigableMap)`
 
-**Returns:** [`java.util.NavigableMap<K,V>`](../../../../java/util/NavigableMap.md)
+**Returns:** `java.util.NavigableMap<K,V>`
 
-### `navigableMap([`java.util.NavigableMap<K,V>`](../../../../java/util/NavigableMap.md) navigableMap, `java.lang.Object` mutex)`
+### `navigableMap(`java.util.NavigableMap<K,V>` navigableMap, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.NavigableMap<K,V>`](../../../../java/util/NavigableMap.md)
+**Returns:** `java.util.NavigableMap<K,V>`
 
-### `nullableSynchronizedEntry([`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md) entry, `java.lang.Object` mutex)`
+### `nullableSynchronizedEntry(`java.util.Map.Entry<K,V>` entry, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Returns:** `java.util.Map.Entry<K,V>`
 
-### `queue([`java.util.Queue<E>`](../../../../java/util/Queue.md) queue, `java.lang.Object` mutex)`
+### `queue(`java.util.Queue<E>` queue, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Queue<E>`](../../../../java/util/Queue.md)
+**Returns:** `java.util.Queue<E>`
 
-### `deque([`java.util.Deque<E>`](../../../../java/util/Deque.md) deque, `java.lang.Object` mutex)`
+### `deque(`java.util.Deque<E>` deque, `java.lang.Object` mutex)`
 
-**Returns:** [`java.util.Deque<E>`](../../../../java/util/Deque.md)
+**Returns:** `java.util.Deque<E>`
 
 ### `table([`com.google.common.collect.Table<R,C,V>`](./Table.md) table, `java.lang.Object` mutex)`
 

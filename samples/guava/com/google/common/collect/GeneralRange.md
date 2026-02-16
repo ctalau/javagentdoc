@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.GeneralRange`
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -12,17 +12,17 @@
 
 ## Description
 
-A generalized interval on any ordering, for internal use. Supports {@code null}. Unlike {@link Range}, this allows the use of an arbitrary comparator. This is designed for use in the
+A generalized interval on any ordering, for internal use. Supports `null`. Unlike `Range`, this allows the use of an arbitrary comparator. This is designed for use in the
  implementation of subcollections of sorted collection types.
 
- <p>Whenever possible, use {@code Range} instead, which is better supported.
-@author Louis Wasserman
+ <p>Whenever possible, use `Range` instead, which is better supported.
+**Author:** Louis Wasserman
 
 ## Fields
 
 ### `comparator`
 
-**Type:** [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md)
+**Type:** `java.util.Comparator<? super T>`
 
 ### `hasLowerBound`
 
@@ -30,7 +30,7 @@ A generalized interval on any ordering, for internal use. Supports {@code null}.
 
 ### `lowerEndpoint`
 
-**Type:** [`T`](T.md)
+**Type:** `T`
 
 ### `lowerBoundType`
 
@@ -42,7 +42,7 @@ A generalized interval on any ordering, for internal use. Supports {@code null}.
 
 ### `upperEndpoint`
 
-**Type:** [`T`](T.md)
+**Type:** `T`
 
 ### `upperBoundType`
 
@@ -54,7 +54,7 @@ A generalized interval on any ordering, for internal use. Supports {@code null}.
 
 ## Constructors
 
-### `<init>([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator, `boolean` hasLowerBound, [`T`](T.md) lowerEndpoint, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, `boolean` hasUpperBound, [`T`](T.md) upperEndpoint, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+### `<init>(`java.util.Comparator<? super T>` comparator, `boolean` hasLowerBound, `T` lowerEndpoint, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, `boolean` hasUpperBound, `T` upperEndpoint, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
 
 ## Methods
 
@@ -64,27 +64,27 @@ A generalized interval on any ordering, for internal use. Supports {@code null}.
 
 Converts a Range to a GeneralRange.
 
-### `all([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator)`
+### `all(`java.util.Comparator<? super T>` comparator)`
 
 **Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
 
 Returns the whole range relative to the specified comparator.
 
-### `downTo([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator, [`T`](T.md) endpoint, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `downTo(`java.util.Comparator<? super T>` comparator, `T` endpoint, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
 
 Returns everything above the endpoint relative to the specified comparator, with the specified
  endpoint behavior.
 
-### `upTo([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator, [`T`](T.md) endpoint, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `upTo(`java.util.Comparator<? super T>` comparator, `T` endpoint, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
 
 Returns everything below the endpoint relative to the specified comparator, with the specified
  endpoint behavior.
 
-### `range([`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md) comparator, [`T`](T.md) lower, [`com.google.common.collect.BoundType`](./BoundType.md) lowerType, [`T`](T.md) upper, [`com.google.common.collect.BoundType`](./BoundType.md) upperType)`
+### `range(`java.util.Comparator<? super T>` comparator, `T` lower, [`com.google.common.collect.BoundType`](./BoundType.md) lowerType, `T` upper, [`com.google.common.collect.BoundType`](./BoundType.md) upperType)`
 
 **Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
 
@@ -93,7 +93,7 @@ Returns everything between the endpoints relative to the specified comparator, w
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super T>`
 
 ### `hasLowerBound()`
 
@@ -107,15 +107,15 @@ Returns everything between the endpoints relative to the specified comparator, w
 
 **Returns:** `boolean`
 
-### `tooLow([`T`](T.md) t)`
+### `tooLow(`T` t)`
 
 **Returns:** `boolean`
 
-### `tooHigh([`T`](T.md) t)`
+### `tooHigh(`T` t)`
 
 **Returns:** `boolean`
 
-### `contains([`T`](T.md) t)`
+### `contains(`T` t)`
 
 **Returns:** `boolean`
 
@@ -145,7 +145,7 @@ Returns the same range relative to the reversed comparator.
 
 ### `getLowerEndpoint()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `getLowerBoundType()`
 
@@ -153,7 +153,7 @@ Returns the same range relative to the reversed comparator.
 
 ### `getUpperEndpoint()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `getUpperBoundType()`
 

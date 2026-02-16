@@ -8,11 +8,11 @@
 
 ## Description
 
-A {@code UnicodeEscaper} that escapes some set of Java characters using a UTF-8 based percent
+A `UnicodeEscaper` that escapes some set of Java characters using a UTF-8 based percent
  encoding scheme. The set of safe characters (those which remain unescaped) can be specified on
  construction.
 
- <p>This class is primarily used for creating URI escapers in {@link UrlEscapers} but can be used
+ <p>This class is primarily used for creating URI escapers in `UrlEscapers` but can be used
  directly if required. While URI escapers impose specific semantics on which characters are
  considered 'safe', this class has a minimal set of restrictions.
 
@@ -20,8 +20,8 @@ A {@code UnicodeEscaper} that escapes some set of Java characters using a UTF-8 
 
  <ul>
    <li>All specified safe characters remain unchanged.
-   <li>If {@code plusForSpace} was specified, the space character " " is converted into a plus
-       sign {@code "+"}.
+   <li>If `plusForSpace` was specified, the space character " " is converted into a plus
+       sign `"+"`.
    <li>All other characters are converted into one or more bytes using UTF-8 encoding and each
        byte is then represented by the 3-character string "%XX", where "XX" is the two-digit,
        uppercase, hexadecimal representation of the byte value.
@@ -31,8 +31,8 @@ A {@code UnicodeEscaper} that escapes some set of Java characters using a UTF-8 
  UTF-8.
 
  <p><b>Note:</b> This escaper produces <a href="https://url.spec.whatwg.org/#percent-encode">uppercase</a> hexadecimal sequences.
-@author David Beaumont
-@since 15.0
+**Author:** David Beaumont
+**Since:** 15.0
 
 ## Fields
 
@@ -48,14 +48,14 @@ A {@code UnicodeEscaper} that escapes some set of Java characters using a UTF-8 
 
 **Type:** `boolean`
 
-If true we should convert space to the {@code +} character.
+If true we should convert space to the `+` character.
 
 ### `safeOctets`
 
 **Type:** `boolean[]`
 
-An array of flags where for any {@code char c} if {@code safeOctets[c]} is true then {@code c}
- should remain unmodified in the output. If {@code c >= safeOctets.length} then it should be
+An array of flags where for any `char c` if `safeOctets[c]` is true then `c`
+ should remain unmodified in the output. If `c >= safeOctets.length` then it should be
  escaped.
 
 ## Constructors
@@ -65,12 +65,12 @@ An array of flags where for any {@code char c} if {@code safeOctets[c]} is true 
 Constructs a percent escaper with the specified safe characters and optional handling of the
  space character.
 
- <p>Not that it is allowed, but not necessarily desirable to specify {@code %} as a safe
+ <p>Not that it is allowed, but not necessarily desirable to specify `%` as a safe
  character. This has the effect of creating an escaper which has no well-defined inverse but it
  can be useful when escaping additional characters.
 @param safeChars a non-null string specifying additional safe characters for this escaper (the
      ranges 0..9, a..z and A..Z are always safe and should not be specified here)
-@param plusForSpace true if ASCII space should be escaped to {@code +} rather than {@code %20}
+@param plusForSpace true if ASCII space should be escaped to `+` rather than `%20`
 @throws IllegalArgumentException if any of the parameters were invalid
 
 ## Methods

@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingSet<E>`](./ForwardingSet.md)
 
-**Implements:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Implements:** `java.util.SortedSet<E>`
 
 ## Type Parameters
 
@@ -18,26 +18,25 @@ A sorted set which forwards all its method calls to another sorted set. Subclass
  override one or more methods to modify the behavior of the backing sorted set as desired per the
  <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>Warning:</b> The methods of {@code ForwardingSortedSet} forward <i>indiscriminately</i> to
- the methods of the delegate. For example, overriding {@link #add} alone <i>will not</i> change
- the behavior of {@link #addAll}, which can lead to unexpected behavior. In this case, you should
- override {@code addAll} as well, either providing your own implementation, or delegating to the
- provided {@code standardAddAll} method.
+ <p><b>Warning:</b> The methods of `ForwardingSortedSet` forward <i>indiscriminately</i> to
+ the methods of the delegate. For example, overriding `add` alone <i>will not</i> change
+ the behavior of `addAll`, which can lead to unexpected behavior. In this case, you should
+ override `addAll` as well, either providing your own implementation, or delegating to the
+ provided `standardAddAll` method.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingSortedSet}.
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingSortedSet`.
 
- <p>Each of the {@code standard} methods, where appropriate, uses the set's comparator (or the
+ <p>Each of the `standard` methods, where appropriate, uses the set's comparator (or the
  natural ordering of the elements, if there is no comparator) to test element equality. As a
  result, if the comparator is not consistent with equals, some of the standard implementations may
- violate the {@code Set} contract.
+ violate the `Set` contract.
 
- <p>The {@code standard} methods and the collection views they return are not guaranteed to be
+ <p>The `standard` methods and the collection views they return are not guaranteed to be
  thread-safe, even when all of the methods that they depend on are thread-safe.
-@author Mike Bostock
-@author Louis Wasserman
-@since 2.0
+**Author:** Mike Bostock
+**Author:** Louis Wasserman
+**Since:** 2.0
 
 ## Constructors
 
@@ -49,53 +48,53 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `first()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `headSet([`E`](E.md) toElement)`
+### `headSet(`E` toElement)`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 
 ### `last()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `subSet([`E`](E.md) fromElement, [`E`](E.md) toElement)`
+### `subSet(`E` fromElement, `E` toElement)`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 
-### `tailSet([`E`](E.md) fromElement)`
+### `tailSet(`E` fromElement)`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 
 ### `standardContains(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #contains} in terms of the {@code first()} method of {@link #tailSet}. If you override {@link #tailSet}, you may wish to override {@link #contains} to
+A sensible definition of `contains` in terms of the `first()` method of `tailSet`. If you override `tailSet`, you may wish to override `contains` to
  forward to this implementation.
-@since 7.0
+**Since:** 7.0
 
 ### `standardRemove(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #remove} in terms of the {@code iterator()} method of {@link #tailSet}. If you override {@link #tailSet}, you may wish to override {@link #remove} to
+A sensible definition of `remove` in terms of the `iterator()` method of `tailSet`. If you override `tailSet`, you may wish to override `remove` to
  forward to this implementation.
-@since 7.0
+**Since:** 7.0
 
-### `standardSubSet([`E`](E.md) fromElement, [`E`](E.md) toElement)`
+### `standardSubSet(`E` fromElement, `E` toElement)`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 
-A sensible default implementation of {@link #subSet(Object, Object)} in terms of {@link #headSet(Object)} and {@link #tailSet(Object)}. In some situations, you may wish to override
- {@link #subSet(Object, Object)} to forward to this implementation.
-@since 7.0
+A sensible default implementation of `subSet(Object, Object)` in terms of `headSet(Object)` and `tailSet(Object)`. In some situations, you may wish to override
+ `subSet(Object, Object)` to forward to this implementation.
+**Since:** 7.0
 

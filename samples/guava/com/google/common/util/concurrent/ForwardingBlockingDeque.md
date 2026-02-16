@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingDeque<E>`](../../collect/ForwardingDeque.md)
 
-**Implements:** [`java.util.concurrent.BlockingDeque<E>`](../../../../../java/util/concurrent/BlockingDeque.md)
+**Implements:** `java.util.concurrent.BlockingDeque<E>`
 
 ## Type Parameters
 
@@ -14,24 +14,23 @@
 
 ## Description
 
-A {@link BlockingDeque} which forwards all its method calls to another {@code BlockingDeque}.
+A `BlockingDeque` which forwards all its method calls to another `BlockingDeque`.
  Subclasses should override one or more methods to modify the behavior of the backing deque as
  desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>Warning:</b> The methods of {@code ForwardingBlockingDeque} forward <b>indiscriminately</b>
- to the methods of the delegate. For example, overriding {@link #add} alone <b>will not</b> change
- the behaviour of {@link #offer} which can lead to unexpected behaviour. In this case, you should
- override {@code offer} as well, either providing your own implementation, or delegating to the
- provided {@code standardOffer} method.
+ <p><b>Warning:</b> The methods of `ForwardingBlockingDeque` forward <b>indiscriminately</b>
+ to the methods of the delegate. For example, overriding `add` alone <b>will not</b> change
+ the behaviour of `offer` which can lead to unexpected behaviour. In this case, you should
+ override `offer` as well, either providing your own implementation, or delegating to the
+ provided `standardOffer` method.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingBlockingDeque}.
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingBlockingDeque`.
 
- <p>The {@code standard} methods are not guaranteed to be thread-safe, even when all of the
+ <p>The `standard` methods are not guaranteed to be thread-safe, even when all of the
  methods that they depend on are thread-safe.
-@author Emily Soldal
-@since 21.0 (since 14.0 as {@link com.google.common.collect.ForwardingBlockingDeque})
+**Author:** Emily Soldal
+**Since:** 21.0 (since 14.0 as `com.google.common.collect.ForwardingBlockingDeque`)
 
 ## Constructors
 
@@ -43,65 +42,65 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.concurrent.BlockingDeque<E>`](../../../../../java/util/concurrent/BlockingDeque.md)
+**Returns:** `java.util.concurrent.BlockingDeque<E>`
 
 ### `remainingCapacity()`
 
 **Returns:** `int`
 
-### `putFirst([`E`](E.md) e)`
+### `putFirst(`E` e)`
 
 **Returns:** `void`
 
-### `putLast([`E`](E.md) e)`
+### `putLast(`E` e)`
 
 **Returns:** `void`
 
-### `offerFirst([`E`](E.md) e, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `offerFirst(`E` e, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
-### `offerLast([`E`](E.md) e, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `offerLast(`E` e, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
 ### `takeFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `takeLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `pollFirst(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `pollFirst(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `pollLast(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `pollLast(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `put([`E`](E.md) e)`
+### `put(`E` e)`
 
 **Returns:** `void`
 
-### `offer([`E`](E.md) e, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `offer(`E` e, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
 ### `take()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `poll(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `poll(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `drainTo([`java.util.Collection<? super E>`](../../../../../java/util/Collection.md) c)`
+### `drainTo(`java.util.Collection<? super E>` c)`
 
 **Returns:** `int`
 
-### `drainTo([`java.util.Collection<? super E>`](../../../../../java/util/Collection.md) c, `int` maxElements)`
+### `drainTo(`java.util.Collection<? super E>` c, `int` maxElements)`
 
 **Returns:** `int`
 

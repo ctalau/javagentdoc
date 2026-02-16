@@ -4,28 +4,28 @@
 
 **Fully Qualified Name:** `com.google.common.io.ReaderInputStream`
 
-**Extends:** [`java.io.InputStream`](../../../../java/io/InputStream.md)
+**Extends:** `java.io.InputStream`
 
 ## Description
 
-An {@link InputStream} that converts characters from a {@link Reader} into bytes using an
+An `InputStream` that converts characters from a `Reader` into bytes using an
  arbitrary Charset.
 
- <p>This is an alternative to copying the data to an {@code OutputStream} via a {@code Writer},
- which is necessarily blocking. By implementing an {@code InputStream} it allows consumers to
+ <p>This is an alternative to copying the data to an `OutputStream` via a `Writer`,
+ which is necessarily blocking. By implementing an `InputStream` it allows consumers to
  "pull" as much data as they can handle, which is more convenient when dealing with flow
  controlled, async APIs.
-@author Chris Nokleberg
+**Author:** Chris Nokleberg
 
 ## Fields
 
 ### `reader`
 
-**Type:** [`java.io.Reader`](../../../../java/io/Reader.md)
+**Type:** `java.io.Reader`
 
 ### `encoder`
 
-**Type:** [`java.nio.charset.CharsetEncoder`](../../../../java/nio/charset/CharsetEncoder.md)
+**Type:** `java.nio.charset.CharsetEncoder`
 
 ### `singleByte`
 
@@ -33,14 +33,14 @@ An {@link InputStream} that converts characters from a {@link Reader} into bytes
 
 ### `charBuffer`
 
-**Type:** [`java.nio.CharBuffer`](../../../../java/nio/CharBuffer.md)
+**Type:** `java.nio.CharBuffer`
 
 charBuffer holds characters that have been read from the Reader but not encoded yet. The buffer
  is perpetually "flipped" (unencoded characters between position and limit).
 
 ### `byteBuffer`
 
-**Type:** [`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md)
+**Type:** `java.nio.ByteBuffer`
 
 byteBuffer holds encoded characters that have not yet been sent to the caller of the input
  stream. When encoding it is "unflipped" (encoded bytes between 0 and position) and when
@@ -66,18 +66,18 @@ Whether we've successfully flushed the encoder.
 
 ## Constructors
 
-### `<init>([`java.io.Reader`](../../../../java/io/Reader.md) reader, [`java.nio.charset.Charset`](../../../../java/nio/charset/Charset.md) charset, `int` bufferSize)`
+### `<init>(`java.io.Reader` reader, `java.nio.charset.Charset` charset, `int` bufferSize)`
 
-Creates a new input stream that will encode the characters from {@code reader} into bytes using
+Creates a new input stream that will encode the characters from `reader` into bytes using
  the given character set. Malformed input and unmappable characters will be replaced.
 @param reader input source
 @param charset character set used for encoding chars to bytes
 @param bufferSize size of internal input and output buffers
 @throws IllegalArgumentException if bufferSize is non-positive
 
-### `<init>([`java.io.Reader`](../../../../java/io/Reader.md) reader, [`java.nio.charset.CharsetEncoder`](../../../../java/nio/charset/CharsetEncoder.md) encoder, `int` bufferSize)`
+### `<init>(`java.io.Reader` reader, `java.nio.charset.CharsetEncoder` encoder, `int` bufferSize)`
 
-Creates a new input stream that will encode the characters from {@code reader} into bytes using
+Creates a new input stream that will encode the characters from `reader` into bytes using
  the given character set encoder.
 @param reader input source
 @param encoder character set encoder used for encoding chars to bytes
@@ -98,9 +98,9 @@ Creates a new input stream that will encode the characters from {@code reader} i
 
 **Returns:** `int`
 
-### `grow([`java.nio.CharBuffer`](../../../../java/nio/CharBuffer.md) buf)`
+### `grow(`java.nio.CharBuffer` buf)`
 
-**Returns:** [`java.nio.CharBuffer`](../../../../java/nio/CharBuffer.md)
+**Returns:** `java.nio.CharBuffer`
 
 Returns a new CharBuffer identical to buf, except twice the capacity.
 
@@ -110,7 +110,7 @@ Returns a new CharBuffer identical to buf, except twice the capacity.
 
 Handle the case of underflow caused by needing more input characters.
 
-### `availableCapacity([`java.nio.Buffer`](../../../../java/nio/Buffer.md) buffer)`
+### `availableCapacity(`java.nio.Buffer` buffer)`
 
 **Returns:** `int`
 

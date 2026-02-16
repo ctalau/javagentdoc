@@ -12,19 +12,19 @@
 
 ## Description
 
-Implementation of {@link ImmutableSet} with exactly one element.
-@author Kevin Bourrillion
-@author Nick Kralevich
+Implementation of `ImmutableSet` with exactly one element.
+**Author:** Kevin Bourrillion
+**Author:** Nick Kralevich
 
 ## Fields
 
 ### `element`
 
-**Type:** [`E`](E.md)
+**Type:** `E`
 
 ## Constructors
 
-### `<init>([`E`](E.md) element)`
+### `<init>(`E` element)`
 
 ## Methods
 

@@ -8,9 +8,9 @@
 
 A mutable object which accumulates double values and tracks some basic statistics over all the
  values added so far. The values may be added singly or in groups. This class is not thread safe.
-@author Pete Gillin
-@author Kevin Bourrillion
-@since 20.0
+**Author:** Pete Gillin
+**Author:** Kevin Bourrillion
+**Since:** 20.0
 
 ## Fields
 
@@ -51,15 +51,15 @@ Adds the given value to the dataset.
 **Returns:** `void`
 
 Adds the given values to the dataset.
-@param values a series of values, which will be converted to {@code double} values (this may
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision)
 
-### `addAll([`java.util.Iterator<? extends java.lang.Number>`](../../../../java/util/Iterator.md) values)`
+### `addAll(`java.util.Iterator<? extends java.lang.Number>` values)`
 
 **Returns:** `void`
 
 Adds the given values to the dataset.
-@param values a series of values, which will be converted to {@code double} values (this may
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision)
 
 ### `addAll(`double[]` values)`
@@ -81,33 +81,33 @@ Adds the given values to the dataset.
 **Returns:** `void`
 
 Adds the given values to the dataset.
-@param values a series of values, which will be converted to {@code double} values (this may
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 
-### `addAll([`java.util.stream.DoubleStream`](../../../../java/util/stream/DoubleStream.md) values)`
+### `addAll(`java.util.stream.DoubleStream` values)`
 
 **Returns:** `void`
 
 Adds the given values to the dataset. The stream will be completely consumed by this method.
 @param values a series of values
-@since 28.2
+**Since:** 28.2
 
-### `addAll([`java.util.stream.IntStream`](../../../../java/util/stream/IntStream.md) values)`
+### `addAll(`java.util.stream.IntStream` values)`
 
 **Returns:** `void`
 
 Adds the given values to the dataset. The stream will be completely consumed by this method.
 @param values a series of values
-@since 28.2
+**Since:** 28.2
 
-### `addAll([`java.util.stream.LongStream`](../../../../java/util/stream/LongStream.md) values)`
+### `addAll(`java.util.stream.LongStream` values)`
 
 **Returns:** `void`
 
 Adds the given values to the dataset. The stream will be completely consumed by this method.
-@param values a series of values, which will be converted to {@code double} values (this may
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
-@since 28.2
+**Since:** 28.2
 
 ### `addAll([`com.google.common.math.Stats`](./Stats.md) values)`
 
@@ -122,7 +122,7 @@ Adds the given statistics to the dataset, as if the individual values used to co
 
 Adds the given statistics to the dataset, as if the individual values used to compute the
  statistics had been added directly.
-@since 28.2
+**Since:** 28.2
 
 ### `merge(`long` otherCount, `double` otherMean, `double` otherSumOfSquaresOfDeltas, `double` otherMin, `double` otherMax)`
 
@@ -152,11 +152,11 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains both {@link Double#POSITIVE_INFINITY} and {@link Double#NEGATIVE_INFINITY} then the
- result is {@link Double#NaN}. If it contains {@link Double#POSITIVE_INFINITY} and finite values
- only or {@link Double#POSITIVE_INFINITY} only, the result is {@link Double#POSITIVE_INFINITY}.
- If it contains {@link Double#NEGATIVE_INFINITY} and finite values only or {@link Double#NEGATIVE_INFINITY} only, the result is {@link Double#NEGATIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains both `Double.POSITIVE_INFINITY` and `Double.NEGATIVE_INFINITY` then the
+ result is `Double.NaN`. If it contains `Double.POSITIVE_INFINITY` and finite values
+ only or `Double.POSITIVE_INFINITY` only, the result is `Double.POSITIVE_INFINITY`.
+ If it contains `Double.NEGATIVE_INFINITY` and finite values only or `Double.NEGATIVE_INFINITY` only, the result is `Double.NEGATIVE_INFINITY`.
 @throws IllegalStateException if the dataset is empty
 
 ### `sum()`
@@ -167,11 +167,11 @@ Returns the sum of the values.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains both {@link Double#POSITIVE_INFINITY} and {@link Double#NEGATIVE_INFINITY} then the
- result is {@link Double#NaN}. If it contains {@link Double#POSITIVE_INFINITY} and finite values
- only or {@link Double#POSITIVE_INFINITY} only, the result is {@link Double#POSITIVE_INFINITY}.
- If it contains {@link Double#NEGATIVE_INFINITY} and finite values only or {@link Double#NEGATIVE_INFINITY} only, the result is {@link Double#NEGATIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains both `Double.POSITIVE_INFINITY` and `Double.NEGATIVE_INFINITY` then the
+ result is `Double.NaN`. If it contains `Double.POSITIVE_INFINITY` and finite values
+ only or `Double.POSITIVE_INFINITY` only, the result is `Double.POSITIVE_INFINITY`.
+ If it contains `Double.NEGATIVE_INFINITY` and finite values only or `Double.NEGATIVE_INFINITY` only, the result is `Double.NEGATIVE_INFINITY`.
 
 ### `populationVariance()`
 
@@ -186,7 +186,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Variance#Population_variance">
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty
 
 ### `populationStandardDeviation()`
@@ -202,7 +202,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Standard_deviation#Definition_
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty
 
 ### `sampleVariance()`
@@ -219,7 +219,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Variance#Sample_variance">unbi
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty or contains a single value
 
 ### `sampleStandardDeviation()`
@@ -229,7 +229,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Variance#Sample_variance">unbi
 Returns the <a href="http://en.wikipedia.org/wiki/Standard_deviation#Corrected_sample_standard_deviation">
  corrected sample standard deviation</a> of the values. If this dataset is a sample drawn from a
  population, this is an estimator of the population standard deviation of the population which
- is less biased than {@link #populationStandardDeviation()} (the unbiased estimator depends on
+ is less biased than `populationStandardDeviation()` (the unbiased estimator depends on
  the distribution). The count must be greater than one.
 
  <p>This is not guaranteed to return zero when the dataset consists of the same value multiple
@@ -237,7 +237,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Standard_deviation#Corrected_s
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty or contains a single value
 
 ### `min()`
@@ -248,9 +248,9 @@ Returns the lowest value in the dataset. The count must be non-zero.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains {@link Double#NEGATIVE_INFINITY} and not {@link Double#NaN} then the result is {@link Double#NEGATIVE_INFINITY}. If it contains {@link Double#POSITIVE_INFINITY} and finite values
- only then the result is the lowest finite value. If it contains {@link Double#POSITIVE_INFINITY} only then the result is {@link Double#POSITIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains `Double.NEGATIVE_INFINITY` and not `Double.NaN` then the result is `Double.NEGATIVE_INFINITY`. If it contains `Double.POSITIVE_INFINITY` and finite values
+ only then the result is the lowest finite value. If it contains `Double.POSITIVE_INFINITY` only then the result is `Double.POSITIVE_INFINITY`.
 @throws IllegalStateException if the dataset is empty
 
 ### `max()`
@@ -261,9 +261,9 @@ Returns the highest value in the dataset. The count must be non-zero.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains {@link Double#POSITIVE_INFINITY} and not {@link Double#NaN} then the result is {@link Double#POSITIVE_INFINITY}. If it contains {@link Double#NEGATIVE_INFINITY} and finite values
- only then the result is the highest finite value. If it contains {@link Double#NEGATIVE_INFINITY} only then the result is {@link Double#NEGATIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains `Double.POSITIVE_INFINITY` and not `Double.NaN` then the result is `Double.POSITIVE_INFINITY`. If it contains `Double.NEGATIVE_INFINITY` and finite values
+ only then the result is the highest finite value. If it contains `Double.NEGATIVE_INFINITY` only then the result is `Double.NEGATIVE_INFINITY`.
 @throws IllegalStateException if the dataset is empty
 
 ### `sumOfSquaresOfDeltas()`

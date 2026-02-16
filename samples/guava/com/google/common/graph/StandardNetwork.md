@@ -13,9 +13,9 @@
 
 ## Description
 
-Standard implementation of {@link Network} that supports the options supplied by {@link NetworkBuilder}.
+Standard implementation of `Network` that supports the options supplied by `NetworkBuilder`.
 
- <p>This class maintains a map of nodes to {@link NetworkConnections}. This class also maintains a
+ <p>This class maintains a map of nodes to `NetworkConnections`. This class also maintains a
  map of edges to reference nodes. The reference node is defined to be the edge's source node on
  directed graphs, and an arbitrary endpoint of the edge on undirected graphs.
 
@@ -23,9 +23,9 @@ Standard implementation of {@link Network} that supports the options supplied by
  changes to the graph (if the graph is mutable) but may not be modified by the user.
 
  <p>The time complexity of all collection-returning accessors is O(1), since views are returned.
-@author James Sexton
-@author Joshua O'Madadhain
-@author Omar Darwish
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
+**Author:** Omar Darwish
 @param <N> Node parameter type
 @param <E> Edge parameter type
 
@@ -63,22 +63,22 @@ Standard implementation of {@link Network} that supports the options supplied by
 
 ### `<init>([`com.google.common.graph.NetworkBuilder<? super N,? super E>`](./NetworkBuilder.md) builder)`
 
-Constructs a graph with the properties specified in {@code builder}.
+Constructs a graph with the properties specified in `builder`.
 
-### `<init>([`com.google.common.graph.NetworkBuilder<? super N,? super E>`](./NetworkBuilder.md) builder, [`java.util.Map<N,com.google.common.graph.NetworkConnections<N,E>>`](../../../../java/util/Map>.md) nodeConnections, [`java.util.Map<E,N>`](../../../../java/util/Map.md) edgeToReferenceNode)`
+### `<init>([`com.google.common.graph.NetworkBuilder<? super N,? super E>`](./NetworkBuilder.md) builder, `java.util.Map<N,com.google.common.graph.NetworkConnections<N,E>>` nodeConnections, `java.util.Map<E,N>` edgeToReferenceNode)`
 
-Constructs a graph with the properties specified in {@code builder}, initialized with the given
+Constructs a graph with the properties specified in `builder`, initialized with the given
  node and edge maps.
 
 ## Methods
 
 ### `nodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `edges()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `isDirected()`
 
@@ -100,51 +100,51 @@ Constructs a graph with the properties specified in {@code builder}, initialized
 
 **Returns:** [`com.google.common.graph.ElementOrder<E>`](./ElementOrder.md)
 
-### `incidentEdges([`N`](N.md) node)`
+### `incidentEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `incidentNodes([`E`](E.md) edge)`
+### `incidentNodes(`E` edge)`
 
 **Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
-### `adjacentNodes([`N`](N.md) node)`
+### `adjacentNodes(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `edgesConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `edgesConnecting(`N` nodeU, `N` nodeV)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `inEdges([`N`](N.md) node)`
+### `inEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `outEdges([`N`](N.md) node)`
+### `outEdges(`N` node)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
-### `predecessors([`N`](N.md) node)`
+### `predecessors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `successors([`N`](N.md) node)`
+### `successors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `checkedConnections([`N`](N.md) node)`
+### `checkedConnections(`N` node)`
 
 **Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
 
-### `checkedReferenceNode([`E`](E.md) edge)`
+### `checkedReferenceNode(`E` edge)`
 
-**Returns:** [`N`](N.md)
+**Returns:** `N`
 
-### `containsNode([`N`](N.md) node)`
+### `containsNode(`N` node)`
 
 **Returns:** `boolean`
 
-### `containsEdge([`E`](E.md) edge)`
+### `containsEdge(`E` edge)`
 
 **Returns:** `boolean`
 

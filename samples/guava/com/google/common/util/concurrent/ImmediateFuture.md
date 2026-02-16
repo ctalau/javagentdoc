@@ -12,7 +12,7 @@
 
 ## Description
 
-Implementation of {@link Futures#immediateFuture}.
+Implementation of `Futures.immediateFuture`.
 
 ## Fields
 
@@ -26,15 +26,15 @@ Implementation of {@link Futures#immediateFuture}.
 
 ### `value`
 
-**Type:** [`V`](V.md)
+**Type:** `V`
 
 ## Constructors
 
-### `<init>([`V`](V.md) value)`
+### `<init>(`V` value)`
 
 ## Methods
 
-### `addListener(`java.lang.Runnable` listener, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `addListener(`java.lang.Runnable` listener, `java.util.concurrent.Executor` executor)`
 
 **Returns:** `void`
 
@@ -44,11 +44,11 @@ Implementation of {@link Futures#immediateFuture}.
 
 ### `get()`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `get(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `get(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `isCancelled()`
 

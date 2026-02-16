@@ -6,8 +6,7 @@
 
 ## Description
 
-Pluggable interface for compiling a regex pattern. By default this package uses the {@code
- java.util.regex} library, but an alternate implementation can be supplied using the {@link java.util.ServiceLoader} mechanism.
+Pluggable interface for compiling a regex pattern. By default this package uses the `java.util.regex` library, but an alternate implementation can be supplied using the `java.util.ServiceLoader` mechanism.
 
 ## Methods
 
@@ -22,6 +21,6 @@ Compiles the given pattern.
 
 **Returns:** `boolean`
 
-Returns {@code true} if the regex implementation behaves like Perl -- notably, by supporting
+Returns `true` if the regex implementation behaves like Perl -- notably, by supporting
  possessive quantifiers but also being susceptible to catastrophic backtracking.
 

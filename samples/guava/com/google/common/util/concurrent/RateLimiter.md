@@ -7,36 +7,35 @@
 ## Description
 
 A rate limiter. Conceptually, a rate limiter distributes permits at a configurable rate. Each
- {@link #acquire()} blocks if necessary until a permit is available, and then takes it. Once
+ `acquire()` blocks if necessary until a permit is available, and then takes it. Once
  acquired, permits need not be released.
 
- <p>{@code RateLimiter} is safe for concurrent use: It will restrict the total rate of calls from
+ <p>`RateLimiter` is safe for concurrent use: It will restrict the total rate of calls from
  all threads. Note, however, that it does not guarantee fairness.
 
  <p>Rate limiters are often used to restrict the rate at which some physical or logical resource
- is accessed. This is in contrast to {@link java.util.concurrent.Semaphore} which restricts the
+ is accessed. This is in contrast to `java.util.concurrent.Semaphore` which restricts the
  number of concurrent accesses instead of the rate (note though that concurrency and rate are
  closely related, e.g. see <a href="http://en.wikipedia.org/wiki/Little%27s_law">Little's
  Law</a>).
 
- <p>A {@code RateLimiter} is defined primarily by the rate at which permits are issued. Absent
+ <p>A `RateLimiter` is defined primarily by the rate at which permits are issued. Absent
  additional configuration, permits will be distributed at a fixed rate, defined in terms of
  permits per second. Permits will be distributed smoothly, with the delay between individual
  permits being adjusted to ensure that the configured rate is maintained.
 
- <p>It is possible to configure a {@code RateLimiter} to have a warmup period during which time
+ <p>It is possible to configure a `RateLimiter` to have a warmup period during which time
  the permits issued each second steadily increases until it hits the stable rate.
 
  <p>As an example, imagine that we have a list of tasks to execute, but we don't want to submit
  more than 2 per second:
 
- <pre>{@code
- final RateLimiter rateLimiter = RateLimiter.create(2.0); // rate is "2 permits per second"
+ <pre>`final RateLimiter rateLimiter = RateLimiter.create(2.0); // rate is "2 permits per second"
  void submitTasks(List<Runnable> tasks, Executor executor) {
    for (Runnable task : tasks) {
      rateLimiter.acquire(); // may wait
      executor.execute(task);
-   }
+   `
  }
  }</pre>
 
@@ -44,22 +43,20 @@ A rate limiter. Conceptually, a rate limiter distributes permits at a configurab
  second. This could be accomplished by requiring a permit per byte, and specifying a rate of 5000
  permits per second:
 
- <pre>{@code
- final RateLimiter rateLimiter = RateLimiter.create(5000.0); // rate = 5000 permits per second
+ <pre>`final RateLimiter rateLimiter = RateLimiter.create(5000.0); // rate = 5000 permits per second
  void submitPacket(byte[] packet) {
    rateLimiter.acquire(packet.length);
    networkService.send(packet);
- }
+ `
  }</pre>
 
  <p>It is important to note that the number of permits requested <i>never</i> affects the
- throttling of the request itself (an invocation to {@code acquire(1)} and an invocation to {@code
- acquire(1000)} will result in exactly the same throttling, if any), but it affects the throttling
+ throttling of the request itself (an invocation to `acquire(1)` and an invocation to `acquire(1000)` will result in exactly the same throttling, if any), but it affects the throttling
  of the <i>next</i> request. I.e., if an expensive task arrives at an idle RateLimiter, it will be
  granted immediately, but it is the <i>next</i> request that will experience extra throttling,
  thus paying for the cost of the expensive task.
-@author Dimitris Andreou
-@since 13.0
+**Author:** Dimitris Andreou
+**Since:** 13.0
 
 ## Fields
 
@@ -84,76 +81,73 @@ The underlying timer; used both to measure elapsed time and sleep as necessary. 
 
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
 
-Creates a {@code RateLimiter} with the specified stable throughput, given as "permits per
+Creates a `RateLimiter` with the specified stable throughput, given as "permits per
  second" (commonly referred to as <i>QPS</i>, queries per second).
 
- <p>The returned {@code RateLimiter} ensures that on average no more than {@code
- permitsPerSecond} are issued during any given second, with sustained requests being smoothly
- spread over each second. When the incoming request rate exceeds {@code permitsPerSecond} the
- rate limiter will release one permit every {@code (1.0 / permitsPerSecond)} seconds. When the
- rate limiter is unused, bursts of up to {@code permitsPerSecond} permits will be allowed, with
- subsequent requests being smoothly limited at the stable rate of {@code permitsPerSecond}.
-@param permitsPerSecond the rate of the returned {@code RateLimiter}, measured in how many
+ <p>The returned `RateLimiter` ensures that on average no more than `permitsPerSecond` are issued during any given second, with sustained requests being smoothly
+ spread over each second. When the incoming request rate exceeds `permitsPerSecond` the
+ rate limiter will release one permit every `(1.0 / permitsPerSecond)` seconds. When the
+ rate limiter is unused, bursts of up to `permitsPerSecond` permits will be allowed, with
+ subsequent requests being smoothly limited at the stable rate of `permitsPerSecond`.
+@param permitsPerSecond the rate of the returned `RateLimiter`, measured in how many
      permits become available per second
-@throws IllegalArgumentException if {@code permitsPerSecond} is negative or zero
+@throws IllegalArgumentException if `permitsPerSecond` is negative or zero
 
 ### `create(`double` permitsPerSecond, [`com.google.common.util.concurrent.RateLimiter.SleepingStopwatch`](RateLimiter/SleepingStopwatch.md) stopwatch)`
 
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
 
-### `create(`double` permitsPerSecond, [`java.time.Duration`](../../../../../java/time/Duration.md) warmupPeriod)`
+### `create(`double` permitsPerSecond, `java.time.Duration` warmupPeriod)`
 
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
 
-Creates a {@code RateLimiter} with the specified stable throughput, given as "permits per
+Creates a `RateLimiter` with the specified stable throughput, given as "permits per
  second" (commonly referred to as <i>QPS</i>, queries per second), and a <i>warmup period</i>,
- during which the {@code RateLimiter} smoothly ramps up its rate, until it reaches its maximum
+ during which the `RateLimiter` smoothly ramps up its rate, until it reaches its maximum
  rate at the end of the period (as long as there are enough requests to saturate it). Similarly,
- if the {@code RateLimiter} is left <i>unused</i> for a duration of {@code warmupPeriod}, it
+ if the `RateLimiter` is left <i>unused</i> for a duration of `warmupPeriod`, it
  will gradually return to its "cold" state, i.e. it will go through the same warming up process
  as when it was first created.
 
- <p>The returned {@code RateLimiter} is intended for cases where the resource that actually
+ <p>The returned `RateLimiter` is intended for cases where the resource that actually
  fulfills the requests (e.g., a remote server) needs "warmup" time, rather than being
  immediately accessed at the stable (maximum) rate.
 
- <p>The returned {@code RateLimiter} starts in a "cold" state (i.e. the warmup period will
+ <p>The returned `RateLimiter` starts in a "cold" state (i.e. the warmup period will
  follow), and if it is left unused for long enough, it will return to that state.
-@param permitsPerSecond the rate of the returned {@code RateLimiter}, measured in how many
+@param permitsPerSecond the rate of the returned `RateLimiter`, measured in how many
      permits become available per second
-@param warmupPeriod the duration of the period where the {@code RateLimiter} ramps up its rate,
+@param warmupPeriod the duration of the period where the `RateLimiter` ramps up its rate,
      before reaching its stable (maximum) rate
-@throws IllegalArgumentException if {@code permitsPerSecond} is negative or zero or {@code
-     warmupPeriod} is negative
-@since 28.0
+@throws IllegalArgumentException if `permitsPerSecond` is negative or zero or `warmupPeriod` is negative
+**Since:** 28.0
 
-### `create(`double` permitsPerSecond, `long` warmupPeriod, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `create(`double` permitsPerSecond, `long` warmupPeriod, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
 
-Creates a {@code RateLimiter} with the specified stable throughput, given as "permits per
+Creates a `RateLimiter` with the specified stable throughput, given as "permits per
  second" (commonly referred to as <i>QPS</i>, queries per second), and a <i>warmup period</i>,
- during which the {@code RateLimiter} smoothly ramps up its rate, until it reaches its maximum
+ during which the `RateLimiter` smoothly ramps up its rate, until it reaches its maximum
  rate at the end of the period (as long as there are enough requests to saturate it). Similarly,
- if the {@code RateLimiter} is left <i>unused</i> for a duration of {@code warmupPeriod}, it
+ if the `RateLimiter` is left <i>unused</i> for a duration of `warmupPeriod`, it
  will gradually return to its "cold" state, i.e. it will go through the same warming up process
  as when it was first created.
 
- <p>The returned {@code RateLimiter} is intended for cases where the resource that actually
+ <p>The returned `RateLimiter` is intended for cases where the resource that actually
  fulfills the requests (e.g., a remote server) needs "warmup" time, rather than being
  immediately accessed at the stable (maximum) rate.
 
- <p>The returned {@code RateLimiter} starts in a "cold" state (i.e. the warmup period will
+ <p>The returned `RateLimiter` starts in a "cold" state (i.e. the warmup period will
  follow), and if it is left unused for long enough, it will return to that state.
-@param permitsPerSecond the rate of the returned {@code RateLimiter}, measured in how many
+@param permitsPerSecond the rate of the returned `RateLimiter`, measured in how many
      permits become available per second
-@param warmupPeriod the duration of the period where the {@code RateLimiter} ramps up its rate,
+@param warmupPeriod the duration of the period where the `RateLimiter` ramps up its rate,
      before reaching its stable (maximum) rate
 @param unit the time unit of the warmupPeriod argument
-@throws IllegalArgumentException if {@code permitsPerSecond} is negative or zero or {@code
-     warmupPeriod} is negative
+@throws IllegalArgumentException if `permitsPerSecond` is negative or zero or `warmupPeriod` is negative
 
-### `create(`double` permitsPerSecond, `long` warmupPeriod, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit, `double` coldFactor, [`com.google.common.util.concurrent.RateLimiter.SleepingStopwatch`](RateLimiter/SleepingStopwatch.md) stopwatch)`
+### `create(`double` permitsPerSecond, `long` warmupPeriod, `java.util.concurrent.TimeUnit` unit, `double` coldFactor, [`com.google.common.util.concurrent.RateLimiter.SleepingStopwatch`](RateLimiter/SleepingStopwatch.md) stopwatch)`
 
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
 
@@ -165,21 +159,19 @@ Creates a {@code RateLimiter} with the specified stable throughput, given as "pe
 
 **Returns:** `void`
 
-Updates the stable rate of this {@code RateLimiter}, that is, the {@code permitsPerSecond}
- argument provided in the factory method that constructed the {@code RateLimiter}. Currently
+Updates the stable rate of this `RateLimiter`, that is, the `permitsPerSecond`
+ argument provided in the factory method that constructed the `RateLimiter`. Currently
  throttled threads will <b>not</b> be awakened as a result of this invocation, thus they do not
  observe the new rate; only subsequent requests will.
 
  <p>Note though that, since each request repays (by waiting, if necessary) the cost of the
- <i>previous</i> request, this means that the very next request after an invocation to {@code
- setRate} will not be affected by the new rate; it will pay the cost of the previous request,
+ <i>previous</i> request, this means that the very next request after an invocation to `setRate` will not be affected by the new rate; it will pay the cost of the previous request,
  which is in terms of the previous rate.
 
- <p>The behavior of the {@code RateLimiter} is not modified in any other way, e.g. if the {@code
- RateLimiter} was configured with a warmup period of 20 seconds, it still has a warmup period of
+ <p>The behavior of the `RateLimiter` is not modified in any other way, e.g. if the `RateLimiter` was configured with a warmup period of 20 seconds, it still has a warmup period of
  20 seconds after this method invocation.
-@param permitsPerSecond the new stable rate of this {@code RateLimiter}
-@throws IllegalArgumentException if {@code permitsPerSecond} is negative or zero
+@param permitsPerSecond the new stable rate of this `RateLimiter`
+@throws IllegalArgumentException if `permitsPerSecond` is negative or zero
 
 ### `doSetRate(`double` permitsPerSecond, `long` nowMicros)`
 
@@ -189,10 +181,10 @@ Updates the stable rate of this {@code RateLimiter}, that is, the {@code permits
 
 **Returns:** `double`
 
-Returns the stable rate (as {@code permits per seconds}) with which this {@code RateLimiter} is
- configured with. The initial value of this is the same as the {@code permitsPerSecond} argument
- passed in the factory method that produced this {@code RateLimiter}, and it is only updated
- after invocations to {@linkplain #setRate}.
+Returns the stable rate (as `permits per seconds`) with which this `RateLimiter` is
+ configured with. The initial value of this is the same as the `permitsPerSecond` argument
+ passed in the factory method that produced this `RateLimiter`, and it is only updated
+ after invocations to #setRate.
 
 ### `doGetRate()`
 
@@ -202,107 +194,107 @@ Returns the stable rate (as {@code permits per seconds}) with which this {@code 
 
 **Returns:** `double`
 
-Acquires a single permit from this {@code RateLimiter}, blocking until the request can be
+Acquires a single permit from this `RateLimiter`, blocking until the request can be
  granted. Tells the amount of time slept, if any.
 
- <p>This method is equivalent to {@code acquire(1)}.
+ <p>This method is equivalent to `acquire(1)`.
 @return time spent sleeping to enforce rate, in seconds; 0.0 if not rate-limited
-@since 16.0 (present in 13.0 with {@code void} return type})
+**Since:** 16.0 (present in 13.0 with `void` return type})
 
 ### `acquire(`int` permits)`
 
 **Returns:** `double`
 
-Acquires the given number of permits from this {@code RateLimiter}, blocking until the request
+Acquires the given number of permits from this `RateLimiter`, blocking until the request
  can be granted. Tells the amount of time slept, if any.
 @param permits the number of permits to acquire
 @return time spent sleeping to enforce rate, in seconds; 0.0 if not rate-limited
 @throws IllegalArgumentException if the requested number of permits is negative or zero
-@since 16.0 (present in 13.0 with {@code void} return type})
+**Since:** 16.0 (present in 13.0 with `void` return type})
 
 ### `reserve(`int` permits)`
 
 **Returns:** `long`
 
-Reserves the given number of permits from this {@code RateLimiter} for future use, returning
+Reserves the given number of permits from this `RateLimiter` for future use, returning
  the number of microseconds until the reservation can be consumed.
 @return time in microseconds to wait until the resource can be acquired, never negative
 
-### `tryAcquire([`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
+### `tryAcquire(`java.time.Duration` timeout)`
 
 **Returns:** `boolean`
 
-Acquires a permit from this {@code RateLimiter} if it can be obtained without exceeding the
- specified {@code timeout}, or returns {@code false} immediately (without waiting) if the permit
+Acquires a permit from this `RateLimiter` if it can be obtained without exceeding the
+ specified `timeout`, or returns `false` immediately (without waiting) if the permit
  would not have been granted before the timeout expired.
 
- <p>This method is equivalent to {@code tryAcquire(1, timeout)}.
+ <p>This method is equivalent to `tryAcquire(1, timeout)`.
 @param timeout the maximum time to wait for the permit. Negative values are treated as zero.
-@return {@code true} if the permit was acquired, {@code false} otherwise
+@return `true` if the permit was acquired, `false` otherwise
 @throws IllegalArgumentException if the requested number of permits is negative or zero
-@since 28.0
+**Since:** 28.0
 
-### `tryAcquire(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `tryAcquire(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
-Acquires a permit from this {@code RateLimiter} if it can be obtained without exceeding the
- specified {@code timeout}, or returns {@code false} immediately (without waiting) if the permit
+Acquires a permit from this `RateLimiter` if it can be obtained without exceeding the
+ specified `timeout`, or returns `false` immediately (without waiting) if the permit
  would not have been granted before the timeout expired.
 
- <p>This method is equivalent to {@code tryAcquire(1, timeout, unit)}.
+ <p>This method is equivalent to `tryAcquire(1, timeout, unit)`.
 @param timeout the maximum time to wait for the permit. Negative values are treated as zero.
 @param unit the time unit of the timeout argument
-@return {@code true} if the permit was acquired, {@code false} otherwise
+@return `true` if the permit was acquired, `false` otherwise
 @throws IllegalArgumentException if the requested number of permits is negative or zero
 
 ### `tryAcquire(`int` permits)`
 
 **Returns:** `boolean`
 
-Acquires permits from this {@link RateLimiter} if it can be acquired immediately without delay.
+Acquires permits from this `RateLimiter` if it can be acquired immediately without delay.
 
- <p>This method is equivalent to {@code tryAcquire(permits, 0, anyUnit)}.
+ <p>This method is equivalent to `tryAcquire(permits, 0, anyUnit)`.
 @param permits the number of permits to acquire
-@return {@code true} if the permits were acquired, {@code false} otherwise
+@return `true` if the permits were acquired, `false` otherwise
 @throws IllegalArgumentException if the requested number of permits is negative or zero
-@since 14.0
+**Since:** 14.0
 
 ### `tryAcquire()`
 
 **Returns:** `boolean`
 
-Acquires a permit from this {@link RateLimiter} if it can be acquired immediately without
+Acquires a permit from this `RateLimiter` if it can be acquired immediately without
  delay.
 
- <p>This method is equivalent to {@code tryAcquire(1)}.
-@return {@code true} if the permit was acquired, {@code false} otherwise
-@since 14.0
+ <p>This method is equivalent to `tryAcquire(1)`.
+@return `true` if the permit was acquired, `false` otherwise
+**Since:** 14.0
 
-### `tryAcquire(`int` permits, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
+### `tryAcquire(`int` permits, `java.time.Duration` timeout)`
 
 **Returns:** `boolean`
 
-Acquires the given number of permits from this {@code RateLimiter} if it can be obtained
- without exceeding the specified {@code timeout}, or returns {@code false} immediately (without
+Acquires the given number of permits from this `RateLimiter` if it can be obtained
+ without exceeding the specified `timeout`, or returns `false` immediately (without
  waiting) if the permits would not have been granted before the timeout expired.
 @param permits the number of permits to acquire
 @param timeout the maximum time to wait for the permits. Negative values are treated as zero.
-@return {@code true} if the permits were acquired, {@code false} otherwise
+@return `true` if the permits were acquired, `false` otherwise
 @throws IllegalArgumentException if the requested number of permits is negative or zero
-@since 28.0
+**Since:** 28.0
 
-### `tryAcquire(`int` permits, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `tryAcquire(`int` permits, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
-Acquires the given number of permits from this {@code RateLimiter} if it can be obtained
- without exceeding the specified {@code timeout}, or returns {@code false} immediately (without
+Acquires the given number of permits from this `RateLimiter` if it can be obtained
+ without exceeding the specified `timeout`, or returns `false` immediately (without
  waiting) if the permits would not have been granted before the timeout expired.
 @param permits the number of permits to acquire
 @param timeout the maximum time to wait for the permits. Negative values are treated as zero.
 @param unit the time unit of the timeout argument
-@return {@code true} if the permits were acquired, {@code false} otherwise
+@return `true` if the permits were acquired, `false` otherwise
 @throws IllegalArgumentException if the requested number of permits is negative or zero
 
 ### `canAcquire(`long` nowMicros, `long` timeoutMicros)`

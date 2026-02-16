@@ -12,10 +12,10 @@
 
 ## Description
 
-This class provides a skeletal implementation of the {@link ListIterator} interface across a
- fixed number of elements that may be retrieved by position. It does not support {@link #remove},
- {@link #set}, or {@link #add}.
-@author Jared Levy
+This class provides a skeletal implementation of the `ListIterator` interface across a
+ fixed number of elements that may be retrieved by position. It does not support `remove`,
+ `set`, or `add`.
+**Author:** Jared Levy
 
 ## Fields
 
@@ -32,25 +32,24 @@ This class provides a skeletal implementation of the {@link ListIterator} interf
 ### `<init>(`int` size)`
 
 Constructs an iterator across a sequence of the given size whose initial position is 0. That
- is, the first call to {@link #next()} will return the first element (or throw {@link NoSuchElementException} if {@code size} is zero).
-@throws IllegalArgumentException if {@code size} is negative
+ is, the first call to `next()` will return the first element (or throw `NoSuchElementException` if `size` is zero).
+@throws IllegalArgumentException if `size` is negative
 
 ### `<init>(`int` size, `int` position)`
 
 Constructs an iterator across a sequence of the given size with the given initial position.
- That is, the first call to {@link #nextIndex()} will return {@code position}, and the first
- call to {@link #next()} will return the element at that index, if available. Calls to {@link #previous()} can retrieve the preceding {@code position} elements.
-@throws IndexOutOfBoundsException if {@code position} is negative or is greater than {@code
-     size}
-@throws IllegalArgumentException if {@code size} is negative
+ That is, the first call to `nextIndex()` will return `position`, and the first
+ call to `next()` will return the element at that index, if available. Calls to `previous()` can retrieve the preceding `position` elements.
+@throws IndexOutOfBoundsException if `position` is negative or is greater than `size`
+@throws IllegalArgumentException if `size` is negative
 
 ## Methods
 
 ### `get(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Returns the element with the specified index. This method is called by {@link #next()}.
+Returns the element with the specified index. This method is called by `next()`.
 
 ### `hasNext()`
 
@@ -58,7 +57,7 @@ Returns the element with the specified index. This method is called by {@link #n
 
 ### `next()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `nextIndex()`
 
@@ -70,7 +69,7 @@ Returns the element with the specified index. This method is called by {@link #n
 
 ### `previous()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `previousIndex()`
 

@@ -12,10 +12,10 @@
 
 ## Description
 
-Multiset implementation backed by a {@link HashMap}.
-@author Kevin Bourrillion
-@author Jared Levy
-@since 2.0
+Multiset implementation backed by a `HashMap`.
+**Author:** Kevin Bourrillion
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Fields
 
@@ -35,34 +35,34 @@ Multiset implementation backed by a {@link HashMap}.
 
 **Returns:** [`com.google.common.collect.HashMultiset<E>`](./HashMultiset.md)
 
-Creates a new, empty {@code HashMultiset} using the default initial capacity.
+Creates a new, empty `HashMultiset` using the default initial capacity.
 
 ### `create(`int` distinctElements)`
 
 **Returns:** [`com.google.common.collect.HashMultiset<E>`](./HashMultiset.md)
 
-Creates a new, empty {@code HashMultiset} with the specified expected number of distinct
+Creates a new, empty `HashMultiset` with the specified expected number of distinct
  elements.
 @param distinctElements the expected number of distinct elements
-@throws IllegalArgumentException if {@code distinctElements} is negative
+@throws IllegalArgumentException if `distinctElements` is negative
 
 ### `create(`java.lang.Iterable<? extends E>` elements)`
 
 **Returns:** [`com.google.common.collect.HashMultiset<E>`](./HashMultiset.md)
 
-Creates a new {@code HashMultiset} containing the specified elements.
+Creates a new `HashMultiset` containing the specified elements.
 
- <p>This implementation is highly efficient when {@code elements} is itself a {@link Multiset}.
+ <p>This implementation is highly efficient when `elements` is itself a `Multiset`.
 @param elements the elements that the multiset should contain
 
-### `writeObject([`java.io.ObjectOutputStream`](../../../../java/io/ObjectOutputStream.md) stream)`
+### `writeObject(`java.io.ObjectOutputStream` stream)`
 
 **Returns:** `void`
 
 @serialData the number of distinct elements, the first element, its count, the second element,
      its count, and so on
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

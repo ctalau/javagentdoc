@@ -8,15 +8,14 @@
 
 ## Description
 
-Abstract {@link Hasher} that handles converting primitives to bytes using a scratch {@code
- ByteBuffer} and streams all bytes to a sink to compute the hash.
-@author Colin Decker
+Abstract `Hasher` that handles converting primitives to bytes using a scratch `ByteBuffer` and streams all bytes to a sink to compute the hash.
+**Author:** Colin Decker
 
 ## Fields
 
 ### `scratch`
 
-**Type:** [`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md)
+**Type:** `java.nio.ByteBuffer`
 
 ## Constructors
 
@@ -40,9 +39,9 @@ Updates this hasher with the given bytes.
 
 **Returns:** `void`
 
-Updates this hasher with {@code len} bytes starting at {@code off} in the given buffer.
+Updates this hasher with `len` bytes starting at `off` in the given buffer.
 
-### `update([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) b)`
+### `update(`java.nio.ByteBuffer` b)`
 
 **Returns:** `void`
 
@@ -66,7 +65,7 @@ Updates the sink with the given number of bytes from the buffer.
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytes([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) bytes)`
+### `putBytes(`java.nio.ByteBuffer` bytes)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 

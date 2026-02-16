@@ -7,17 +7,17 @@
 ## Description
 
 Registry of subscribers to a single event bus.
-@author Colin Decker
+**Author:** Colin Decker
 
 ## Fields
 
 ### `subscribers`
 
-**Type:** [`java.util.concurrent.ConcurrentMap<java.lang.Class<?>,java.util.concurrent.CopyOnWriteArraySet<com.google.common.eventbus.Subscriber>>`](../../../../java/util/concurrent/ConcurrentMap,java/util/concurrent/CopyOnWriteArraySet>.md)
+**Type:** `java.util.concurrent.ConcurrentMap<java.lang.Class<?>,java.util.concurrent.CopyOnWriteArraySet<com.google.common.eventbus.Subscriber>>`
 
 All registered subscribers, indexed by event type.
 
- <p>The {@link CopyOnWriteArraySet} values make it easy and relatively lightweight to get an
+ <p>The `CopyOnWriteArraySet` values make it easy and relatively lightweight to get an
  immutable snapshot of all current subscribers to an event without any locking.
 
 ### `bus`
@@ -31,7 +31,7 @@ The event bus this registry belongs to.
 **Type:** [`com.google.common.cache.LoadingCache<java.lang.Class<?>,com.google.common.collect.ImmutableList<java.lang.reflect.Method>>`](../cache/LoadingCache,com/google/common/collect/ImmutableList>.md)
 
 A thread-safe cache that contains the mapping from each class to all methods in that class and
- all super-classes, that are annotated with {@code @Subscribe}. The cache is shared across all
+ all super-classes, that are annotated with `@Subscribe`. The cache is shared across all
  instances of this class; this greatly improves performance if multiple EventBus instances are
  created and objects of the same class are registered on all of them.
 
@@ -61,11 +61,11 @@ Unregisters all subscribers on the given listener object.
 
 ### `getSubscribersForTesting(`java.lang.Class<?>` eventType)`
 
-**Returns:** [`java.util.Set<com.google.common.eventbus.Subscriber>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<com.google.common.eventbus.Subscriber>`
 
 ### `getSubscribers(`java.lang.Object` event)`
 
-**Returns:** [`java.util.Iterator<com.google.common.eventbus.Subscriber>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<com.google.common.eventbus.Subscriber>`
 
 Gets an iterator representing an immutable snapshot of all subscribers to the given event at
  the time this method is called.
@@ -88,6 +88,6 @@ Returns all subscribers for the given listener grouped by the type of event they
 
 **Returns:** [`com.google.common.collect.ImmutableSet<java.lang.Class<?>>`](../collect/ImmutableSet>.md)
 
-Flattens a class's type hierarchy into a set of {@code Class} objects including all
+Flattens a class's type hierarchy into a set of `Class` objects including all
  superclasses (transitively) and all interfaces implemented by these superclasses.
 

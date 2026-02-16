@@ -6,7 +6,7 @@
 
 ## Description
 
-A holder for a {@link Logger} that is initialized only when requested.
+A holder for a `Logger` that is initialized only when requested.
 
 ## Fields
 
@@ -16,7 +16,7 @@ A holder for a {@link Logger} that is initialized only when requested.
 
 ### `logger`
 
-**Type:** [`java.util.logging.@org.checkerframework.checker.nullness.qual.Nullable Logger`](../../../../../java/util/logging/@org/checkerframework/checker/nullness/qual/Nullable Logger.md)
+**Type:** `java.util.logging.@org.checkerframework.checker.nullness.qual.Nullable Logger`
 
 ## Constructors
 
@@ -26,5 +26,5 @@ A holder for a {@link Logger} that is initialized only when requested.
 
 ### `get()`
 
-**Returns:** [`java.util.logging.Logger`](../../../../../java/util/logging/Logger.md)
+**Returns:** `java.util.logging.Logger`
 

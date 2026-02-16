@@ -18,12 +18,11 @@ An object that can receive a notification when an entry is removed from a cache.
  <p>An instance may be called concurrently by multiple threads to process different entries.
  Implementations of this interface should avoid performing blocking calls or synchronizing on
  shared resources.
-@param <K> the most general type of keys this listener can listen for; for example {@code Object}
+@param <K> the most general type of keys this listener can listen for; for example `Object`
      if any key is acceptable
-@param <V> the most general type of values this listener can listen for; for example {@code
-     Object} if any key is acceptable
-@author Charles Fry
-@since 10.0
+@param <V> the most general type of values this listener can listen for; for example `Object` if any key is acceptable
+**Author:** Charles Fry
+**Since:** 10.0
 
 ## Methods
 

@@ -14,24 +14,24 @@
 ## Description
 
 An object representing the differences between two sorted maps.
-@author Louis Wasserman
-@since 8.0
+**Author:** Louis Wasserman
+**Since:** 8.0
 
 ## Methods
 
 ### `entriesOnlyOnLeft()`
 
-**Returns:** [`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `entriesOnlyOnRight()`
 
-**Returns:** [`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `entriesInCommon()`
 
-**Returns:** [`java.util.SortedMap<K,V>`](../../../../java/util/SortedMap.md)
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `entriesDiffering()`
 
-**Returns:** [`java.util.SortedMap<K,com.google.common.collect.MapDifference.ValueDifference<V>>`](../../../../java/util/SortedMap>.md)
+**Returns:** `java.util.SortedMap<K,com.google.common.collect.MapDifference.ValueDifference<V>>`
 

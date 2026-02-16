@@ -12,8 +12,8 @@
 
 ## Description
 
-An implementation of {@link ContiguousSet} that contains one or more elements.
-@author Gregory Kick
+An implementation of `ContiguousSet` that contains one or more elements.
+**Author:** Gregory Kick
 
 ## Fields
 
@@ -35,15 +35,15 @@ An implementation of {@link ContiguousSet} that contains one or more elements.
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `headSetImpl([`C`](C.md) toElement, `boolean` inclusive)`
+### `headSetImpl(`C` toElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `subSetImpl([`C`](C.md) fromElement, `boolean` fromInclusive, [`C`](C.md) toElement, `boolean` toInclusive)`
+### `subSetImpl(`C` fromElement, `boolean` fromInclusive, `C` toElement, `boolean` toInclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `tailSetImpl([`C`](C.md) fromElement, `boolean` inclusive)`
+### `tailSetImpl(`C` fromElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
@@ -69,11 +69,11 @@ An implementation of {@link ContiguousSet} that contains one or more elements.
 
 ### `first()`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
 ### `last()`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
 ### `createAsList()`
 
@@ -87,7 +87,7 @@ An implementation of {@link ContiguousSet} that contains one or more elements.
 
 **Returns:** `boolean`
 
-### `containsAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) targets)`
+### `containsAll(`java.util.Collection<?>` targets)`
 
 **Returns:** `boolean`
 
@@ -119,7 +119,7 @@ An implementation of {@link ContiguousSet} that contains one or more elements.
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

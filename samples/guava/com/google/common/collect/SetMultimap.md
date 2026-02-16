@@ -13,79 +13,78 @@
 
 ## Description
 
-A {@code Multimap} that cannot hold duplicate key-value pairs. Adding a key-value pair that's
- already in the multimap has no effect. See the {@link Multimap} documentation for information
+A `Multimap` that cannot hold duplicate key-value pairs. Adding a key-value pair that's
+ already in the multimap has no effect. See the `Multimap` documentation for information
  common to all multimaps.
 
- <p>The {@link #get}, {@link #removeAll}, and {@link #replaceValues} methods each return a {@link Set} of values, while {@link #entries} returns a {@code Set} of map entries. Though the method
- signature doesn't say so explicitly, the map returned by {@link #asMap} has {@code Set} values.
+ <p>The `get`, `removeAll`, and `replaceValues` methods each return a `Set` of values, while `entries` returns a `Set` of map entries. Though the method
+ signature doesn't say so explicitly, the map returned by `asMap` has `Set` values.
 
- <p>If the values corresponding to a single key should be ordered according to a {@link java.util.Comparator} (or the natural order), see the {@link SortedSetMultimap} subinterface.
+ <p>If the values corresponding to a single key should be ordered according to a `java.util.Comparator` (or the natural order), see the `SortedSetMultimap` subinterface.
 
- <p>Since the value collections are sets, the behavior of a {@code SetMultimap} is not specified
+ <p>Since the value collections are sets, the behavior of a `SetMultimap` is not specified
  if key <em>or value</em> objects already present in the multimap change in a manner that affects
- {@code equals} comparisons. Use caution if mutable objects are used as keys or values in a {@code
- SetMultimap}.
+ `equals` comparisons. Use caution if mutable objects are used as keys or values in a `SetMultimap`.
 
- <p><b>Warning:</b> Do not modify either a key <i>or a value</i> of a {@code SetMultimap} in a way
- that affects its {@link Object#equals} behavior. Undefined behavior and bugs will result.
+ <p><b>Warning:</b> Do not modify either a key <i>or a value</i> of a `SetMultimap` in a way
+ that affects its `Object.equals` behavior. Undefined behavior and bugs will result.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap">{@code Multimap}</a>.
-@author Jared Levy
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap">`Multimap`</a>.
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Methods
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 {@inheritDoc}
 
- <p>Because a {@code SetMultimap} has unique values for a given key, this method returns a
- {@link Set}, instead of the {@link java.util.Collection} specified in the {@link Multimap}
+ <p>Because a `SetMultimap` has unique values for a given key, this method returns a
+ `Set`, instead of the `java.util.Collection` specified in the `Multimap`
  interface.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 {@inheritDoc}
 
- <p>Because a {@code SetMultimap} has unique values for a given key, this method returns a
- {@link Set}, instead of the {@link java.util.Collection} specified in the {@link Multimap}
+ <p>Because a `SetMultimap` has unique values for a given key, this method returns a
+ `Set`, instead of the `java.util.Collection` specified in the `Multimap`
  interface.
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.Set<V>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<V>`
 
 {@inheritDoc}
 
- <p>Because a {@code SetMultimap} has unique values for a given key, this method returns a
- {@link Set}, instead of the {@link java.util.Collection} specified in the {@link Multimap}
+ <p>Because a `SetMultimap` has unique values for a given key, this method returns a
+ `Set`, instead of the `java.util.Collection` specified in the `Multimap`
  interface.
 
- <p>Any duplicates in {@code values} will be stored in the multimap once.
+ <p>Any duplicates in `values` will be stored in the multimap once.
 
 ### `entries()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
 {@inheritDoc}
 
- <p>Because a {@code SetMultimap} has unique values for a given key, this method returns a
- {@link Set}, instead of the {@link java.util.Collection} specified in the {@link Multimap}
+ <p>Because a `SetMultimap` has unique values for a given key, this method returns a
+ `Set`, instead of the `java.util.Collection` specified in the `Multimap`
  interface.
 
 ### `asMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 {@inheritDoc}
 
- <p><b>Note:</b> The returned map's values are guaranteed to be of type {@link Set}. To obtain
- this map with the more specific generic type {@code Map<K, Set<V>>}, call {@link Multimaps#asMap(SetMultimap)} instead.
+ <p><b>Note:</b> The returned map's values are guaranteed to be of type `Set`. To obtain
+ this map with the more specific generic type `Map<K, Set<V>>`, call `Multimaps.asMap(SetMultimap)` instead.
 
 ### `equals(`java.lang.Object` obj)`
 
@@ -93,9 +92,9 @@ A {@code Multimap} that cannot hold duplicate key-value pairs. Adding a key-valu
 
 Compares the specified object to this multimap for equality.
 
- <p>Two {@code SetMultimap} instances are equal if, for each key, they contain the same values.
+ <p>Two `SetMultimap` instances are equal if, for each key, they contain the same values.
  Equality does not depend on the ordering of keys or values.
 
- <p>An empty {@code SetMultimap} is equal to any other empty {@code Multimap}, including an
- empty {@code ListMultimap}.
+ <p>An empty `SetMultimap` is equal to any other empty `Multimap`, including an
+ empty `ListMultimap`.
 

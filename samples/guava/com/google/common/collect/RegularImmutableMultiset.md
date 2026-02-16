@@ -12,9 +12,9 @@
 
 ## Description
 
-Implementation of {@link ImmutableMultiset} with zero or more elements.
-@author Jared Levy
-@author Louis Wasserman
+Implementation of `ImmutableMultiset` with zero or more elements.
+**Author:** Jared Levy
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -74,7 +74,7 @@ Maximum allowed length of a hash table bucket before falling back to a j.u.HashM
 
 ## Methods
 
-### `create([`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`](../../../../java/util/Collection>.md) entries)`
+### `create(`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>` entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 

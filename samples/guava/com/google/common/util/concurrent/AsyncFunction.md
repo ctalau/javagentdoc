@@ -12,19 +12,18 @@
 ## Description
 
 Transforms a value, possibly asynchronously. For an example usage and more information, see
- {@link Futures#transformAsync(ListenableFuture, AsyncFunction, Executor)}.
-@author Chris Povirk
-@since 11.0
+ `Futures.transformAsync(ListenableFuture, AsyncFunction, Executor)`.
+**Author:** Chris Povirk
+**Since:** 11.0
 
 ## Methods
 
-### `apply([`I`](I.md) input)`
+### `apply(`I` input)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
-Returns an output {@code Future} to use in place of the given {@code input}. The output {@code
- Future} need not be {@linkplain Future#isDone done}, making {@code AsyncFunction} suitable for
+Returns an output `Future` to use in place of the given `input`. The output `Future` need not be done, making `AsyncFunction` suitable for
  asynchronous derivations.
 
- <p>Throwing an exception from this method is equivalent to returning a failing {@code Future}.
+ <p>Throwing an exception from this method is equivalent to returning a failing `Future`.
 

@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.base.Equivalence<java.lang.Iterable<T>>`](./Equivalence>.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 

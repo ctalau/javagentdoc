@@ -15,8 +15,8 @@
 
 ## Description
 
-Basic implementation of the {@link SortedSetMultimap} interface. It's a wrapper around {@link AbstractMapBasedMultimap} that converts the returned collections into sorted sets. The {@link #createCollection} method must return a {@code SortedSet}.
-@author Jared Levy
+Basic implementation of the `SortedSetMultimap` interface. It's a wrapper around `AbstractMapBasedMultimap` that converts the returned collections into sorted sets. The `createCollection` method must return a `SortedSet`.
+**Author:** Jared Levy
 
 ## Fields
 
@@ -26,7 +26,7 @@ Basic implementation of the {@link SortedSetMultimap} interface. It's a wrapper 
 
 ## Constructors
 
-### `<init>([`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md) map)`
+### `<init>(`java.util.Map<K,java.util.Collection<V>>` map)`
 
 Creates a new multimap that uses the provided map.
 @param map place to store the mapping from each key to its corresponding values
@@ -35,70 +35,70 @@ Creates a new multimap that uses the provided map.
 
 ### `createCollection()`
 
-**Returns:** [`java.util.SortedSet<V>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<V>`
 
 ### `createUnmodifiableEmptyCollection()`
 
-**Returns:** [`java.util.SortedSet<V>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<V>`
 
-### `unmodifiableCollectionSubclass([`java.util.Collection<E>`](../../../../java/util/Collection.md) collection)`
+### `unmodifiableCollectionSubclass(`java.util.Collection<E>` collection)`
 
-**Returns:** [`java.util.SortedSet<E>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<E>`
 
-### `wrapCollection([`K`](K.md) key, [`java.util.Collection<V>`](../../../../java/util/Collection.md) collection)`
+### `wrapCollection(`K` key, `java.util.Collection<V>` collection)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.SortedSet<V>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<V>`
 
 Returns a collection view of all values associated with a key. If no mappings in the multimap
  have the provided key, an empty collection is returned.
 
  <p>Changes to the returned collection will update the underlying multimap, and vice versa.
 
- <p>Because a {@code SortedSetMultimap} has unique sorted values for a given key, this method
- returns a {@link SortedSet}, instead of the {@link Collection} specified in the {@link Multimap} interface.
+ <p>Because a `SortedSetMultimap` has unique sorted values for a given key, this method
+ returns a `SortedSet`, instead of the `Collection` specified in the `Multimap` interface.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.SortedSet<V>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<V>`
 
 Removes all values associated with a given key. The returned collection is immutable.
 
- <p>Because a {@code SortedSetMultimap} has unique sorted values for a given key, this method
- returns a {@link SortedSet}, instead of the {@link Collection} specified in the {@link Multimap} interface.
+ <p>Because a `SortedSetMultimap` has unique sorted values for a given key, this method
+ returns a `SortedSet`, instead of the `Collection` specified in the `Multimap` interface.
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.SortedSet<V>`](../../../../java/util/SortedSet.md)
+**Returns:** `java.util.SortedSet<V>`
 
 Stores a collection of values with the same key, replacing any existing values for that key.
  The returned collection is immutable.
 
- <p>Because a {@code SortedSetMultimap} has unique sorted values for a given key, this method
- returns a {@link SortedSet}, instead of the {@link Collection} specified in the {@link Multimap} interface.
+ <p>Because a `SortedSetMultimap` has unique sorted values for a given key, this method
+ returns a `SortedSet`, instead of the `Collection` specified in the `Multimap` interface.
 
- <p>Any duplicates in {@code values} will be stored in the multimap once.
+ <p>Any duplicates in `values` will be stored in the multimap once.
 
 ### `asMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 Returns a map view that associates each key with the corresponding values in the multimap.
  Changes to the returned map, such as element removal, will update the underlying multimap. The
- map does not support {@code setValue} on its entries, {@code put}, or {@code putAll}.
+ map does not support `setValue` on its entries, `put`, or `putAll`.
 
- <p>When passed a key that is present in the map, {@code asMap().get(Object)} has the same
- behavior as {@link #get}, returning a live collection. When passed a key that is not present,
- however, {@code asMap().get(Object)} returns {@code null} instead of an empty collection.
+ <p>When passed a key that is present in the map, `asMap().get(Object)` has the same
+ behavior as `get`, returning a live collection. When passed a key that is not present,
+ however, `asMap().get(Object)` returns `null` instead of an empty collection.
 
- <p>Though the method signature doesn't say so explicitly, the returned map has {@link SortedSet} values.
+ <p>Though the method signature doesn't say so explicitly, the returned map has `SortedSet` values.
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 {@inheritDoc}
 

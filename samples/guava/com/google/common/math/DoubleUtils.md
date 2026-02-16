@@ -6,8 +6,8 @@
 
 ## Description
 
-Utilities for {@code double} primitives.
-@author Louis Wasserman
+Utilities for `double` primitives.
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -67,7 +67,7 @@ The implicit 1 bit that is omitted in significands of normal doubles.
 
 **Returns:** `double`
 
-### `bigToDouble([`java.math.BigInteger`](../../../../java/math/BigInteger.md) x)`
+### `bigToDouble(`java.math.BigInteger` x)`
 
 **Returns:** `double`
 

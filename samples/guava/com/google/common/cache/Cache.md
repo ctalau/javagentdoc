@@ -11,113 +11,112 @@
 
 ## Description
 
-A semi-persistent mapping from keys to values. Cache entries are manually added using {@link #get(Object, Callable)} or {@link #put(Object, Object)}, and are stored in the cache until either
- evicted or manually invalidated. The common way to build instances is using {@link CacheBuilder}.
+A semi-persistent mapping from keys to values. Cache entries are manually added using `get(Object, Callable)` or `put(Object, Object)`, and are stored in the cache until either
+ evicted or manually invalidated. The common way to build instances is using `CacheBuilder`.
 
  <p>Implementations of this interface are expected to be thread-safe, and can be safely accessed
  by multiple concurrent threads.
 @param <K> the type of the cache's keys, which are not permitted to be null
 @param <V> the type of the cache's values, which are not permitted to be null
-@author Charles Fry
-@since 10.0
+**Author:** Charles Fry
+**Since:** 10.0
 
 ## Methods
 
 ### `getIfPresent(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Returns the value associated with {@code key} in this cache, or {@code null} if there is no
- cached value for {@code key}.
-@since 11.0
+Returns the value associated with `key` in this cache, or `null` if there is no
+ cached value for `key`.
+**Since:** 11.0
 
-### `get([`K`](K.md) key, [`java.util.concurrent.Callable<? extends V>`](../../../../java/util/concurrent/Callable.md) loader)`
+### `get(`K` key, `java.util.concurrent.Callable<? extends V>` loader)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Returns the value associated with {@code key} in this cache, obtaining that value from {@code
- loader} if necessary. The method improves upon the conventional "if cached, return; otherwise
- create, cache and return" pattern. For further improvements, use {@link LoadingCache} and its
- {@link LoadingCache#get(Object) get(K)} method instead of this one.
+Returns the value associated with `key` in this cache, obtaining that value from `loader` if necessary. The method improves upon the conventional "if cached, return; otherwise
+ create, cache and return" pattern. For further improvements, use `LoadingCache` and its
+ `LoadingCache.get(Object) get(K)` method instead of this one.
 
- <p>Among the improvements that this method and {@code LoadingCache.get(K)} both provide are:
+ <p>Among the improvements that this method and `LoadingCache.get(K)` both provide are:
 
  <ul>
-   <li>{@linkplain LoadingCache#get(Object) awaiting the result of a pending load} rather than
+   <li>awaiting the result of a pending load rather than
        starting a redundant one
    <li>eliminating the error-prone caching boilerplate
-   <li>tracking load {@linkplain #stats statistics}
+   <li>tracking load statistics
  </ul>
 
- <p>Among the further improvements that {@code LoadingCache} can provide but this method cannot:
+ <p>Among the further improvements that `LoadingCache` can provide but this method cannot:
 
  <ul>
-   <li>consolidation of the loader logic to {@linkplain CacheBuilder#build(CacheLoader) a single
-       authoritative location}
-   <li>{@linkplain LoadingCache#refresh refreshing of entries}, including {@linkplain CacheBuilder#refreshAfterWrite automated refreshing}
-   <li>{@linkplain LoadingCache#getAll bulk loading requests}, including {@linkplain CacheLoader#loadAll bulk loading implementations}
+   <li>consolidation of the loader logic to a single
+       authoritative location
+   <li>refreshing of entries, including automated refreshing
+   <li>bulk loading requests, including bulk loading implementations
  </ul>
 
- <p><b>Warning:</b> For any given key, every {@code loader} used with it should compute the same
- value. Otherwise, a call that passes one {@code loader} may return the result of another call
- with a differently behaving {@code loader}. For example, a call that requests a short timeout
+ <p><b>Warning:</b> For any given key, every `loader` used with it should compute the same
+ value. Otherwise, a call that passes one `loader` may return the result of another call
+ with a differently behaving `loader`. For example, a call that requests a short timeout
  for an RPC may wait for a similar call that requests a long timeout, or a call by an
  unprivileged user may return a resource accessible only to a privileged user making a similar
  call. To prevent this problem, create a key object that includes all values that affect the
- result of the query. Or use {@code LoadingCache.get(K)}, which lacks the ability to refer to
+ result of the query. Or use `LoadingCache.get(K)`, which lacks the ability to refer to
  state other than that in the key.
 
- <p><b>Warning:</b> as with {@link CacheLoader#load}, {@code loader} <b>must not</b> return
- {@code null}; it may either return a non-null value or throw an exception.
+ <p><b>Warning:</b> as with `CacheLoader.load`, `loader` <b>must not</b> return
+ `null`; it may either return a non-null value or throw an exception.
 
  <p>No observable state associated with this cache is modified until loading completes.
 @throws ExecutionException if a checked exception was thrown while loading the value
 @throws UncheckedExecutionException if an unchecked exception was thrown while loading the
      value
 @throws ExecutionError if an error was thrown while loading the value
-@since 11.0
+**Since:** 11.0
 
 ### `getAllPresent(`java.lang.Iterable<? extends java.lang.Object>` keys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-Returns a map of the values associated with {@code keys} in this cache. The returned map will
+Returns a map of the values associated with `keys` in this cache. The returned map will
  only contain entries which are already present in the cache.
-@since 11.0
+**Since:** 11.0
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
 **Returns:** `void`
 
-Associates {@code value} with {@code key} in this cache. If the cache previously contained a
- value associated with {@code key}, the old value is replaced by {@code value}.
+Associates `value` with `key` in this cache. If the cache previously contained a
+ value associated with `key`, the old value is replaced by `value`.
 
- <p>Prefer {@link #get(Object, Callable)} when using the conventional "if cached, return;
+ <p>Prefer `get(Object, Callable)` when using the conventional "if cached, return;
  otherwise create, cache and return" pattern.
-@since 11.0
+**Since:** 11.0
 
-### `putAll([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) m)`
+### `putAll(`java.util.Map<? extends K,? extends V>` m)`
 
 **Returns:** `void`
 
 Copies all of the mappings from the specified map to the cache. The effect of this call is
- equivalent to that of calling {@code put(k, v)} on this map once for each mapping from key
- {@code k} to value {@code v} in the specified map. The behavior of this operation is undefined
+ equivalent to that of calling `put(k, v)` on this map once for each mapping from key
+ `k` to value `v` in the specified map. The behavior of this operation is undefined
  if the specified map is modified while the operation is in progress.
-@since 12.0
+**Since:** 12.0
 
 ### `invalidate(`java.lang.Object` key)`
 
 **Returns:** `void`
 
-Discards any cached value for key {@code key}.
+Discards any cached value for key `key`.
 
 ### `invalidateAll(`java.lang.Iterable<? extends java.lang.Object>` keys)`
 
 **Returns:** `void`
 
-Discards any cached values for keys {@code keys}.
-@since 11.0
+Discards any cached values for keys `keys`.
+**Since:** 11.0
 
 ### `invalidateAll()`
 
@@ -140,13 +139,13 @@ Returns a current snapshot of this cache's cumulative statistics, or a set of de
  lifetime of the cache.
 
  <p><b>Warning:</b> this cache may not be recording statistical data. For example, a cache
- created using {@link CacheBuilder} only does so if the {@link CacheBuilder#recordStats} method
- was called. If statistics are not being recorded, a {@code CacheStats} instance with zero for
+ created using `CacheBuilder` only does so if the `CacheBuilder.recordStats` method
+ was called. If statistics are not being recorded, a `CacheStats` instance with zero for
  all values is returned.
 
 ### `asMap()`
 
-**Returns:** [`java.util.concurrent.ConcurrentMap<K,V>`](../../../../java/util/concurrent/ConcurrentMap.md)
+**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
 Returns a view of the entries stored in this cache as a thread-safe map. Modifications made to
  the map directly affect the cache.

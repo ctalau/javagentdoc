@@ -8,7 +8,7 @@
 
 Modes for opening a file for writing. The default when mode when none is specified is to truncate
  the file before writing.
-@author Colin Decker
+**Author:** Colin Decker
 
 ## Constructors
 

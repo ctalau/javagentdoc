@@ -6,9 +6,9 @@
 
 ## Description
 
-Static utility methods pertaining to classes in the {@code java.util.concurrent.atomic} package.
-@author Kurt Alfred Kluever
-@since 10.0
+Static utility methods pertaining to classes in the `java.util.concurrent.atomic` package.
+**Author:** Kurt Alfred Kluever
+**Since:** 10.0
 
 ## Constructors
 
@@ -18,33 +18,33 @@ Static utility methods pertaining to classes in the {@code java.util.concurrent.
 
 ### `newReference()`
 
-**Returns:** [`java.util.concurrent.atomic.AtomicReference<@org.checkerframework.checker.nullness.qual.Nullable V>`](../../../../../java/util/concurrent/atomic/AtomicReference.md)
+**Returns:** `java.util.concurrent.atomic.AtomicReference<@org.checkerframework.checker.nullness.qual.Nullable V>`
 
-Creates an {@code AtomicReference} instance with no initial value.
-@return a new {@code AtomicReference} with no initial value
+Creates an `AtomicReference` instance with no initial value.
+@return a new `AtomicReference` with no initial value
 
-### `newReference([`V`](V.md) initialValue)`
+### `newReference(`V` initialValue)`
 
-**Returns:** [`java.util.concurrent.atomic.AtomicReference<V>`](../../../../../java/util/concurrent/atomic/AtomicReference.md)
+**Returns:** `java.util.concurrent.atomic.AtomicReference<V>`
 
-Creates an {@code AtomicReference} instance with the given initial value.
+Creates an `AtomicReference` instance with the given initial value.
 @param initialValue the initial value
-@return a new {@code AtomicReference} with the given initial value
+@return a new `AtomicReference` with the given initial value
 
 ### `newReferenceArray(`int` length)`
 
-**Returns:** [`java.util.concurrent.atomic.AtomicReferenceArray<@org.checkerframework.checker.nullness.qual.Nullable E>`](../../../../../java/util/concurrent/atomic/AtomicReferenceArray.md)
+**Returns:** `java.util.concurrent.atomic.AtomicReferenceArray<@org.checkerframework.checker.nullness.qual.Nullable E>`
 
-Creates an {@code AtomicReferenceArray} instance of given length.
+Creates an `AtomicReferenceArray` instance of given length.
 @param length the length of the array
-@return a new {@code AtomicReferenceArray} with the given length
+@return a new `AtomicReferenceArray` with the given length
 
-### `newReferenceArray([`E[]`](E.md) array)`
+### `newReferenceArray(`E[]` array)`
 
-**Returns:** [`java.util.concurrent.atomic.AtomicReferenceArray<E>`](../../../../../java/util/concurrent/atomic/AtomicReferenceArray.md)
+**Returns:** `java.util.concurrent.atomic.AtomicReferenceArray<E>`
 
-Creates an {@code AtomicReferenceArray} instance with the same length as, and all elements
+Creates an `AtomicReferenceArray` instance with the same length as, and all elements
  copied from, the given array.
 @param array the array to copy elements from
-@return a new {@code AtomicReferenceArray} copied from the given array
+@return a new `AtomicReferenceArray` copied from the given array
 

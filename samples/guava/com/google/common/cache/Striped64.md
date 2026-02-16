@@ -24,7 +24,7 @@ ThreadLocal holding a single-slot int array holding hash code. Unlike the JDK8 v
 
 ### `rng`
 
-**Type:** [`java.util.Random`](../../../../java/util/Random.md)
+**Type:** `java.util.Random`
 
 Generator of new random hash codes
 

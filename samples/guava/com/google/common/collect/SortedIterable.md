@@ -12,23 +12,22 @@
 
 ## Description
 
-An {@code Iterable} whose elements are sorted relative to a {@code Comparator}, typically
+An `Iterable` whose elements are sorted relative to a `Comparator`, typically
  provided at creation time.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Methods
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super T>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super T>`
 
-Returns the {@code Comparator} by which the elements of this iterable are ordered, or {@code
- Ordering.natural()} if the elements are ordered by their natural ordering.
+Returns the `Comparator` by which the elements of this iterable are ordered, or `Ordering.natural()` if the elements are ordered by their natural ordering.
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<T>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<T>`
 
-Returns an iterator over elements of type {@code T}. The elements are returned in nondecreasing
- order according to the associated {@link #comparator}.
+Returns an iterator over elements of type `T`. The elements are returned in nondecreasing
+ order according to the associated `comparator`.
 

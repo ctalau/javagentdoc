@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.MinMaxPriorityQueue`
 
-**Extends:** [`java.util.AbstractQueue<E>`](../../../../java/util/AbstractQueue.md)
+**Extends:** `java.util.AbstractQueue<E>`
 
 ## Type Parameters
 
@@ -19,16 +19,15 @@ A double-ended priority queue, which provides constant-time access to both its l
 
  <p>Usage example:
 
- <pre>{@code
- MinMaxPriorityQueue<User> users = MinMaxPriorityQueue.orderedBy(userComparator)
+ <pre>`MinMaxPriorityQueue<User> users = MinMaxPriorityQueue.orderedBy(userComparator)
      .maximumSize(1000)
      .create();
- }</pre>
+ `</pre>
 
- <p>As a {@link Queue} it functions exactly as a {@link PriorityQueue}: its head element -- the
- implicit target of the methods {@link #peek()}, {@link #poll()} and {@link #remove()} -- is
+ <p>As a `Queue` it functions exactly as a `PriorityQueue`: its head element -- the
+ implicit target of the methods `peek()`, `poll()` and `remove()` -- is
  defined as the <i>least</i> element in the queue according to the queue's comparator. But unlike
- a regular priority queue, the methods {@link #peekLast}, {@link #pollLast} and {@link #removeLast} are also provided, to act on the <i>greatest</i> element in the queue instead.
+ a regular priority queue, the methods `peekLast`, `pollLast` and `removeLast` are also provided, to act on the <i>greatest</i> element in the queue instead.
 
  <p>A min-max priority queue can be configured with a maximum size. If so, each time the size of
  the queue exceeds that value, the queue automatically removes its greatest element according to
@@ -37,7 +36,7 @@ A double-ended priority queue, which provides constant-time access to both its l
 
  <p>This implementation is based on the <a href="http://portal.acm.org/citation.cfm?id=6621">min-max heap</a> developed by Atkinson, et al.
  Unlike many other double-ended priority queues, it stores elements in a single array, as compact
- as the traditional heap data structure used in {@link PriorityQueue}.
+ as the traditional heap data structure used in `PriorityQueue`.
 
  <p>This class is not thread-safe, and does not accept null elements.
 
@@ -45,20 +44,20 @@ A double-ended priority queue, which provides constant-time access to both its l
 
  <ul>
    <li>If you only access one end of the queue, and do use a maximum size, this class will perform
-       significantly worse than a {@code PriorityQueue} with manual eviction above the maximum
-       size. In many cases {@link Ordering#leastOf} may work for your use case with significantly
+       significantly worse than a `PriorityQueue` with manual eviction above the maximum
+       size. In many cases `Ordering.leastOf` may work for your use case with significantly
        improved (and asymptotically superior) performance.
-   <li>The retrieval operations {@link #peek}, {@link #peekFirst}, {@link #peekLast}, {@link #element}, and {@link #size} are constant-time.
-   <li>The enqueuing and dequeuing operations ({@link #offer}, {@link #add}, and all the forms of
-       {@link #poll} and {@link #remove()}) run in {@code O(log n) time}.
-   <li>The {@link #remove(Object)} and {@link #contains} operations require linear ({@code O(n)})
+   <li>The retrieval operations `peek`, `peekFirst`, `peekLast`, `element`, and `size` are constant-time.
+   <li>The enqueuing and dequeuing operations (`offer`, `add`, and all the forms of
+       `poll` and `remove()`) run in `O(log n) time`.
+   <li>The `remove(Object)` and `contains` operations require linear (`O(n)`)
        time.
    <li>If you only access one end of the queue, and don't use a maximum size, this class is
-       functionally equivalent to {@link PriorityQueue}, but significantly slower.
+       functionally equivalent to `PriorityQueue`, but significantly slower.
  </ul>
-@author Sverre Sundsdal
-@author Torbjorn Gannholm
-@since 8.0
+**Author:** Sverre Sundsdal
+**Author:** Torbjorn Gannholm
+**Since:** 8.0
 
 ## Fields
 
@@ -118,26 +117,26 @@ Creates a new min-max priority queue with default settings: natural order, no ma
 Creates a new min-max priority queue using natural order, no maximum size, and initially
  containing the given elements.
 
-### `orderedBy([`java.util.Comparator<B>`](../../../../java/util/Comparator.md) comparator)`
+### `orderedBy(`java.util.Comparator<B>` comparator)`
 
 **Returns:** [`com.google.common.collect.MinMaxPriorityQueue.Builder<B>`](MinMaxPriorityQueue/Builder.md)
 
-Creates and returns a new builder, configured to build {@code MinMaxPriorityQueue} instances
- that use {@code comparator} to determine the least and greatest elements.
+Creates and returns a new builder, configured to build `MinMaxPriorityQueue` instances
+ that use `comparator` to determine the least and greatest elements.
 
 ### `expectedSize(`int` expectedSize)`
 
 **Returns:** [`com.google.common.collect.MinMaxPriorityQueue.Builder<java.lang.Comparable>`](MinMaxPriorityQueue/Builder.md)
 
-Creates and returns a new builder, configured to build {@code MinMaxPriorityQueue} instances
- sized appropriately to hold {@code expectedSize} elements.
+Creates and returns a new builder, configured to build `MinMaxPriorityQueue` instances
+ sized appropriately to hold `expectedSize` elements.
 
 ### `maximumSize(`int` maximumSize)`
 
 **Returns:** [`com.google.common.collect.MinMaxPriorityQueue.Builder<java.lang.Comparable>`](MinMaxPriorityQueue/Builder.md)
 
-Creates and returns a new builder, configured to build {@code MinMaxPriorityQueue} instances
- that are limited to {@code maximumSize} elements. Each time a queue grows beyond this bound, it
+Creates and returns a new builder, configured to build `MinMaxPriorityQueue` instances
+ that are limited to `maximumSize` elements. Each time a queue grows beyond this bound, it
  immediately removes its greatest element (according to its comparator), which might be the
  element that was just added.
 
@@ -145,38 +144,36 @@ Creates and returns a new builder, configured to build {@code MinMaxPriorityQueu
 
 **Returns:** `int`
 
-### `add([`E`](E.md) element)`
+### `add(`E` element)`
 
 **Returns:** `boolean`
 
-Adds the given element to this queue. If this queue has a maximum size, after adding {@code
- element} the queue will automatically evict its greatest element (according to its comparator),
- which may be {@code element} itself.
-@return {@code true} always
+Adds the given element to this queue. If this queue has a maximum size, after adding `element` the queue will automatically evict its greatest element (according to its comparator),
+ which may be `element` itself.
+@return `true` always
 
-### `addAll([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) newElements)`
-
-**Returns:** `boolean`
-
-### `offer([`E`](E.md) element)`
+### `addAll(`java.util.Collection<? extends E>` newElements)`
 
 **Returns:** `boolean`
 
-Adds the given element to this queue. If this queue has a maximum size, after adding {@code
- element} the queue will automatically evict its greatest element (according to its comparator),
- which may be {@code element} itself.
+### `offer(`E` element)`
+
+**Returns:** `boolean`
+
+Adds the given element to this queue. If this queue has a maximum size, after adding `element` the queue will automatically evict its greatest element (according to its comparator),
+ which may be `element` itself.
 
 ### `poll()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `elementData(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `peek()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `getMaxElementIndex()`
 
@@ -186,71 +183,71 @@ Returns the index of the max element.
 
 ### `pollFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Removes and returns the least element of this queue, or returns {@code null} if the queue is
+Removes and returns the least element of this queue, or returns `null` if the queue is
  empty.
 
 ### `removeFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 Removes and returns the least element of this queue.
 @throws NoSuchElementException if the queue is empty
 
 ### `peekFirst()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Retrieves, but does not remove, the least element of this queue, or returns {@code null} if the
+Retrieves, but does not remove, the least element of this queue, or returns `null` if the
  queue is empty.
 
 ### `pollLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Removes and returns the greatest element of this queue, or returns {@code null} if the queue is
+Removes and returns the greatest element of this queue, or returns `null` if the queue is
  empty.
 
 ### `removeLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 Removes and returns the greatest element of this queue.
 @throws NoSuchElementException if the queue is empty
 
 ### `peekLast()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Retrieves, but does not remove, the greatest element of this queue, or returns {@code null} if
+Retrieves, but does not remove, the greatest element of this queue, or returns `null` if
  the queue is empty.
 
 ### `removeAt(`int` index)`
 
 **Returns:** [`com.google.common.collect.MinMaxPriorityQueue.MoveDesc<E>`](MinMaxPriorityQueue/MoveDesc.md)
 
-Removes the element at position {@code index}.
+Removes the element at position `index`.
 
- <p>Normally this method leaves the elements at up to {@code index - 1}, inclusive, untouched.
- Under these circumstances, it returns {@code null}.
+ <p>Normally this method leaves the elements at up to `index - 1`, inclusive, untouched.
+ Under these circumstances, it returns `null`.
 
  <p>Occasionally, in order to maintain the heap invariant, it must swap a later element of the
- list with one before {@code index}. Under these circumstances it returns a pair of elements as
- a {@link MoveDesc}. The first one is the element that was previously at the end of the heap and
- is now at some position before {@code index}. The second element is the one that was swapped
- down to replace the element at {@code index}. This fact is used by iterator.remove so as to
+ list with one before `index`. Under these circumstances it returns a pair of elements as
+ a `MoveDesc`. The first one is the element that was previously at the end of the heap and
+ is now at some position before `index`. The second element is the one that was swapped
+ down to replace the element at `index`. This fact is used by iterator.remove so as to
  visit elements during a traversal once and only once.
 
-### `fillHole(`int` index, [`E`](E.md) toTrickle)`
+### `fillHole(`int` index, `E` toTrickle)`
 
 **Returns:** [`com.google.common.collect.MinMaxPriorityQueue.MoveDesc<E>`](MinMaxPriorityQueue/MoveDesc.md)
 
 ### `removeAndGet(`int` index)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Removes and returns the value at {@code index}.
+Removes and returns the value at `index`.
 
 ### `heapForIndex(`int` i)`
 
@@ -264,26 +261,26 @@ Removes and returns the value at {@code index}.
 
 **Returns:** `boolean`
 
-Returns {@code true} if the MinMax heap structure holds. This is only used in testing.
+Returns `true` if the MinMax heap structure holds. This is only used in testing.
 
  <p>TODO(kevinb): move to the test class?
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 Returns an iterator over the elements contained in this collection, <i>in no particular
  order</i>.
 
  <p>The iterator is <i>fail-fast</i>: If the MinMaxPriorityQueue is modified at any time after
  the iterator is created, in any way except through the iterator's own remove method, the
- iterator will generally throw a {@link ConcurrentModificationException}. Thus, in the face of
+ iterator will generally throw a `ConcurrentModificationException`. Thus, in the face of
  concurrent modification, the iterator fails quickly and cleanly, rather than risking arbitrary,
  non-deterministic behavior at an undetermined time in the future.
 
  <p>Note that the fail-fast behavior of an iterator cannot be guaranteed as it is, generally
  speaking, impossible to make any hard guarantees in the presence of unsynchronized concurrent
- modification. Fail-fast iterators throw {@code ConcurrentModificationException} on a
+ modification. Fail-fast iterators throw `ConcurrentModificationException` on a
  best-effort basis. Therefore, it would be wrong to write a program that depended on this
  exception for its correctness: <i>the fail-fast behavior of iterators should be used only to
  detect bugs.</i>
@@ -299,10 +296,10 @@ Returns an iterator over the elements contained in this collection, <i>in no par
 
 ### `comparator()`
 
-**Returns:** [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<? super E>`
 
 Returns the comparator used to order the elements in this queue. Obeys the general contract of
- {@link PriorityQueue#comparator}, but returns {@link Ordering#natural} instead of {@code null}
+ `PriorityQueue.comparator`, but returns `Ordering.natural` instead of `null`
  to indicate natural ordering.
 
 ### `capacity()`

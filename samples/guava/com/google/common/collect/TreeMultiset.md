@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.AbstractSortedMultiset<E>`](./AbstractSortedMultiset.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -15,16 +15,16 @@
 ## Description
 
 A multiset which maintains the ordering of its elements, according to either their natural order
- or an explicit {@link Comparator}. In all cases, this implementation uses {@link Comparable#compareTo} or {@link Comparator#compare} instead of {@link Object#equals} to determine
+ or an explicit `Comparator`. In all cases, this implementation uses `Comparable.compareTo` or `Comparator.compare` instead of `Object.equals` to determine
  equivalence of instances.
 
  <p><b>Warning:</b> The comparison must be <i>consistent with equals</i> as explained by the
- {@link Comparable} class specification. Otherwise, the resulting multiset will violate the {@link java.util.Collection} contract, which is specified in terms of {@link Object#equals}.
+ `Comparable` class specification. Otherwise, the resulting multiset will violate the `java.util.Collection` contract, which is specified in terms of `Object.equals`.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset">{@code Multiset}</a>.
-@author Louis Wasserman
-@author Jared Levy
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset">`Multiset`</a>.
+**Author:** Louis Wasserman
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Fields
 
@@ -48,7 +48,7 @@ A multiset which maintains the ordering of its elements, according to either the
 
 ### `<init>([`com.google.common.collect.TreeMultiset.Reference<com.google.common.collect.TreeMultiset.AvlNode<E>>`](TreeMultiset/Reference>.md) rootReference, [`com.google.common.collect.GeneralRange<E>`](./GeneralRange.md) range, [`com.google.common.collect.TreeMultiset.AvlNode<E>`](TreeMultiset/AvlNode.md) endLink)`
 
-### `<init>([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `<init>(`java.util.Comparator<? super E>` comparator)`
 
 ## Methods
 
@@ -57,26 +57,24 @@ A multiset which maintains the ordering of its elements, according to either the
 **Returns:** [`com.google.common.collect.TreeMultiset<E>`](./TreeMultiset.md)
 
 Creates a new, empty multiset, sorted according to the elements' natural order. All elements
- inserted into the multiset must implement the {@code Comparable} interface. Furthermore, all
- such elements must be <i>mutually comparable</i>: {@code e1.compareTo(e2)} must not throw a
- {@code ClassCastException} for any elements {@code e1} and {@code e2} in the multiset. If the
+ inserted into the multiset must implement the `Comparable` interface. Furthermore, all
+ such elements must be <i>mutually comparable</i>: `e1.compareTo(e2)` must not throw a
+ `ClassCastException` for any elements `e1` and `e2` in the multiset. If the
  user attempts to add an element to the multiset that violates this constraint (for example, the
- user attempts to add a string element to a set whose elements are integers), the {@code
- add(Object)} call will throw a {@code ClassCastException}.
+ user attempts to add a string element to a set whose elements are integers), the `add(Object)` call will throw a `ClassCastException`.
 
- <p>The type specification is {@code <E extends Comparable>}, instead of the more specific
- {@code <E extends Comparable<? super E>>}, to support classes defined without generics.
+ <p>The type specification is `<E extends Comparable>`, instead of the more specific
+ `<E extends Comparable<? super E>>`, to support classes defined without generics.
 
-### `create([`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `create(`java.util.Comparator<? super E>` comparator)`
 
 **Returns:** [`com.google.common.collect.TreeMultiset<E>`](./TreeMultiset.md)
 
 Creates a new, empty multiset, sorted according to the specified comparator. All elements
  inserted into the multiset must be <i>mutually comparable</i> by the specified comparator:
- {@code comparator.compare(e1, e2)} must not throw a {@code ClassCastException} for any elements
- {@code e1} and {@code e2} in the multiset. If the user attempts to add an element to the
- multiset that violates this constraint, the {@code add(Object)} call will throw a {@code
- ClassCastException}.
+ `comparator.compare(e1, e2)` must not throw a `ClassCastException` for any elements
+ `e1` and `e2` in the multiset. If the user attempts to add an element to the
+ multiset that violates this constraint, the `add(Object)` call will throw a `ClassCastException`.
 @param comparator the comparator that will be used to sort this multiset. A null value
      indicates that the elements' <i>natural ordering</i> should be used.
 
@@ -87,10 +85,10 @@ Creates a new, empty multiset, sorted according to the specified comparator. All
 Creates an empty multiset containing the given initial elements, sorted according to the
  elements' natural order.
 
- <p>This implementation is highly efficient when {@code elements} is itself a {@link Multiset}.
+ <p>This implementation is highly efficient when `elements` is itself a `Multiset`.
 
- <p>The type specification is {@code <E extends Comparable>}, instead of the more specific
- {@code <E extends Comparable<? super E>>}, to support classes defined without generics.
+ <p>The type specification is `<E extends Comparable>`, instead of the more specific
+ `<E extends Comparable<? super E>>`, to support classes defined without generics.
 
 ### `aggregateForEntries([`com.google.common.collect.TreeMultiset.Aggregate`](TreeMultiset/Aggregate.md) aggr)`
 
@@ -120,7 +118,7 @@ Creates an empty multiset containing the given initial elements, sorted accordin
 
 **Returns:** `int`
 
-### `add([`E`](E.md) element, `int` occurrences)`
+### `add(`E` element, `int` occurrences)`
 
 **Returns:** `int`
 
@@ -128,11 +126,11 @@ Creates an empty multiset containing the given initial elements, sorted accordin
 
 **Returns:** `int`
 
-### `setCount([`E`](E.md) element, `int` count)`
+### `setCount(`E` element, `int` count)`
 
 **Returns:** `int`
 
-### `setCount([`E`](E.md) element, `int` oldCount, `int` newCount)`
+### `setCount(`E` element, `int` oldCount, `int` newCount)`
 
 **Returns:** `boolean`
 
@@ -156,29 +154,29 @@ Returns the first node in the tree that is in range.
 
 ### `elementIterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `entryIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `descendingEntryIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
-### `forEachEntry([`java.util.function.ObjIntConsumer<? super E>`](../../../../java/util/function/ObjIntConsumer.md) action)`
+### `forEachEntry(`java.util.function.ObjIntConsumer<? super E>` action)`
 
 **Returns:** `void`
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
-### `headMultiset([`E`](E.md) upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `tailMultiset([`E`](E.md) lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
@@ -190,14 +188,14 @@ Returns the first node in the tree that is in range.
 
 **Returns:** `void`
 
-### `writeObject([`java.io.ObjectOutputStream`](../../../../java/io/ObjectOutputStream.md) stream)`
+### `writeObject(`java.io.ObjectOutputStream` stream)`
 
 **Returns:** `void`
 
 @serialData the comparator, the number of distinct elements, the first element, its count, the
      second element, its count, and so on
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

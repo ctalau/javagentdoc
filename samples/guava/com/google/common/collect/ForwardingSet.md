@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.ForwardingCollection<E>`](./ForwardingCollection.md)
 
-**Implements:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Implements:** `java.util.Set<E>`
 
 ## Type Parameters
 
@@ -17,21 +17,20 @@
 A set which forwards all its method calls to another set. Subclasses should override one or more
  methods to modify the behavior of the backing set as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
 
- <p><b>Warning:</b> The methods of {@code ForwardingSet} forward <b>indiscriminately</b> to the
- methods of the delegate. For example, overriding {@link #add} alone <b>will not</b> change the
- behavior of {@link #addAll}, which can lead to unexpected behavior. In this case, you should
- override {@code addAll} as well, either providing your own implementation, or delegating to the
- provided {@code standardAddAll} method.
+ <p><b>Warning:</b> The methods of `ForwardingSet` forward <b>indiscriminately</b> to the
+ methods of the delegate. For example, overriding `add` alone <b>will not</b> change the
+ behavior of `addAll`, which can lead to unexpected behavior. In this case, you should
+ override `addAll` as well, either providing your own implementation, or delegating to the
+ provided `standardAddAll` method.
 
- <p><b>{@code default} method warning:</b> This class does <i>not</i> forward calls to {@code
- default} methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the {@code ForwardingSet}.
+ <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the `ForwardingSet`.
 
- <p>The {@code standard} methods are not guaranteed to be thread-safe, even when all of the
+ <p>The `standard` methods are not guaranteed to be thread-safe, even when all of the
  methods that they depend on are thread-safe.
-@author Kevin Bourrillion
-@author Louis Wasserman
-@since 2.0
+**Author:** Kevin Bourrillion
+**Author:** Louis Wasserman
+**Since:** 2.0
 
 ## Constructors
 
@@ -43,7 +42,7 @@ Constructor for use by subclasses.
 
 ### `delegate()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `equals(`java.lang.Object` object)`
 
@@ -53,29 +52,29 @@ Constructor for use by subclasses.
 
 **Returns:** `int`
 
-### `standardRemoveAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) collection)`
+### `standardRemoveAll(`java.util.Collection<?>` collection)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #removeAll} in terms of {@link #iterator} and {@link #remove}.
- If you override {@code iterator} or {@code remove}, you may wish to override {@link #removeAll}
+A sensible definition of `removeAll` in terms of `iterator` and `remove`.
+ If you override `iterator` or `remove`, you may wish to override `removeAll`
  to forward to this implementation.
-@since 7.0 (this version overrides the {@code ForwardingCollection} version as of 12.0)
+**Since:** 7.0 (this version overrides the `ForwardingCollection` version as of 12.0)
 
 ### `standardEquals(`java.lang.Object` object)`
 
 **Returns:** `boolean`
 
-A sensible definition of {@link #equals} in terms of {@link #size} and {@link #containsAll}. If
- you override either of those methods, you may wish to override {@link #equals} to forward to
+A sensible definition of `equals` in terms of `size` and `containsAll`. If
+ you override either of those methods, you may wish to override `equals` to forward to
  this implementation.
-@since 7.0
+**Since:** 7.0
 
 ### `standardHashCode()`
 
 **Returns:** `int`
 
-A sensible definition of {@link #hashCode} in terms of {@link #iterator}. If you override
- {@link #iterator}, you may wish to override {@link #equals} to forward to this implementation.
-@since 7.0
+A sensible definition of `hashCode` in terms of `iterator`. If you override
+ `iterator`, you may wish to override `equals` to forward to this implementation.
+**Since:** 7.0
 

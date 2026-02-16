@@ -4,9 +4,9 @@
 
 **Fully Qualified Name:** `com.google.common.collect.CartesianList`
 
-**Extends:** [`java.util.AbstractList<java.util.List<E>>`](../../../../java/util/AbstractList>.md)
+**Extends:** `java.util.AbstractList<java.util.List<E>>`
 
-**Implements:** [`java.util.RandomAccess`](../../../../java/util/RandomAccess.md)
+**Implements:** `java.util.RandomAccess`
 
 ## Type Parameters
 
@@ -14,8 +14,8 @@
 
 ## Description
 
-Implementation of {@link Lists#cartesianProduct(List)}.
-@author Louis Wasserman
+Implementation of `Lists.cartesianProduct(List)`.
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -33,9 +33,9 @@ Implementation of {@link Lists#cartesianProduct(List)}.
 
 ## Methods
 
-### `create([`java.util.List<? extends java.util.List<? extends E>>`](../../../../java/util/List>.md) lists)`
+### `create(`java.util.List<? extends java.util.List<? extends E>>` lists)`
 
-**Returns:** [`java.util.List<java.util.List<E>>`](../../../../java/util/List>.md)
+**Returns:** `java.util.List<java.util.List<E>>`
 
 ### `getAxisIndexForProductIndex(`int` index, `int` axis)`
 

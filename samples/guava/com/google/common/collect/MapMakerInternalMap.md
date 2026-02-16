@@ -4,9 +4,9 @@
 
 **Fully Qualified Name:** `com.google.common.collect.MapMakerInternalMap`
 
-**Extends:** [`java.util.AbstractMap<K,V>`](../../../../java/util/AbstractMap.md)
+**Extends:** `java.util.AbstractMap<K,V>`
 
-**Implements:** [`java.util.concurrent.ConcurrentMap<K,V>`](../../../../java/util/concurrent/ConcurrentMap.md), [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.util.concurrent.ConcurrentMap<K,V>`, `java.io.Serializable`
 
 ## Type Parameters
 
@@ -17,16 +17,16 @@
 
 ## Description
 
-The concurrent hash map implementation built by {@link MapMaker}.
+The concurrent hash map implementation built by `MapMaker`.
 
  <p>This implementation is heavily derived from revision 1.96 of <a href="http://tinyurl.com/ConcurrentHashMap">ConcurrentHashMap.java</a>.
 @param <K> the type of the keys in the map
 @param <V> the type of the values in the map
-@param <E> the type of the {@link InternalEntry} entry implementation used internally
-@param <S> the type of the {@link Segment} entry implementation used internally
-@author Bob Lee
-@author Charles Fry
-@author Doug Lea ({@code ConcurrentHashMap})
+@param <E> the type of the `InternalEntry` entry implementation used internally
+@param <S> the type of the `Segment` entry implementation used internally
+**Author:** Bob Lee
+**Author:** Charles Fry
+**Author:** Doug Lea (`ConcurrentHashMap`)
 
 ## Fields
 
@@ -35,7 +35,7 @@ The concurrent hash map implementation built by {@link MapMaker}.
 **Type:** `int`
 
 The maximum capacity, used if a higher value is implicitly specified by either of the
- constructors with arguments. MUST be a power of two no greater than {@code 1<<30} to ensure
+ constructors with arguments. MUST be a power of two no greater than `1<<30` to ensure
  that entries are indexable using ints.
 
 ### `MAX_SEGMENTS`
@@ -109,20 +109,20 @@ Strategy for handling entries and segments in a type-safe and efficient manner.
 
 **Type:** [`com.google.common.collect.MapMakerInternalMap.WeakValueReference<java.lang.Object,java.lang.Object,com.google.common.collect.MapMakerInternalMap.DummyInternalEntry>`](MapMakerInternalMap/WeakValueReference.md)
 
-A singleton {@link WeakValueReference} used to denote an unset value in an entry with weak
+A singleton `WeakValueReference` used to denote an unset value in an entry with weak
  values.
 
 ### `keySet`
 
-**Type:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Type:** `java.util.Set<K>`
 
 ### `values`
 
-**Type:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Type:** `java.util.Collection<V>`
 
 ### `entrySet`
 
-**Type:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Type:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
 ### `serialVersionUID`
 
@@ -140,19 +140,19 @@ Creates a new, empty map with the specified strategy, initial capacity and concu
 
 **Returns:** [`com.google.common.collect.MapMakerInternalMap<K,V,? extends com.google.common.collect.MapMakerInternalMap.InternalEntry<K,V,?>,?>`](./MapMakerInternalMap,?>.md)
 
-Returns a fresh {@link MapMakerInternalMap} as specified by the given {@code builder}.
+Returns a fresh `MapMakerInternalMap` as specified by the given `builder`.
 
 ### `createWithDummyValues([`com.google.common.collect.MapMaker`](./MapMaker.md) builder)`
 
 **Returns:** [`com.google.common.collect.MapMakerInternalMap<K,com.google.common.collect.MapMaker.Dummy,? extends com.google.common.collect.MapMakerInternalMap.InternalEntry<K,com.google.common.collect.MapMaker.Dummy,?>,?>`](./MapMakerInternalMap,?>.md)
 
-Returns a fresh {@link MapMakerInternalMap} with {@link MapMaker.Dummy} values but otherwise as
- specified by the given {@code builder}. The returned {@link MapMakerInternalMap} will be
- optimized to saved memory. Since {@link MapMaker.Dummy} is a singleton, we don't need to store
- any values at all. Because of this optimization, {@code build.getValueStrength()} must be
- {@link Strength#STRONG}.
+Returns a fresh `MapMakerInternalMap` with `MapMaker.Dummy` values but otherwise as
+ specified by the given `builder`. The returned `MapMakerInternalMap` will be
+ optimized to saved memory. Since `MapMaker.Dummy` is a singleton, we don't need to store
+ any values at all. Because of this optimization, `build.getValueStrength()` must be
+ `Strength.STRONG`.
 
- <p>This method is intended to only be used by the internal implementation of {@link Interners},
+ <p>This method is intended to only be used by the internal implementation of `Interners`,
  since a map of dummy values is the exact use case there.
 
 ### `unsetWeakValueReference()`
@@ -169,11 +169,11 @@ Applies a supplemental hash function to a given hash code, which defends against
  bits.
 @param h hash code
 
-### `copyEntry([`E`](E.md) original, [`E`](E.md) newNext)`
+### `copyEntry(`E` original, `E` newNext)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-This method is a convenience for testing. Code should call {@link Segment#copyEntry} directly.
+This method is a convenience for testing. Code should call `Segment.copyEntry` directly.
 
 ### `hash(`java.lang.Object` key)`
 
@@ -183,7 +183,7 @@ This method is a convenience for testing. Code should call {@link Segment#copyEn
 
 **Returns:** `void`
 
-### `reclaimKey([`E`](E.md) entry)`
+### `reclaimKey(`E` entry)`
 
 **Returns:** `void`
 
@@ -191,7 +191,7 @@ This method is a convenience for testing. Code should call {@link Segment#copyEn
 
 **Returns:** `boolean`
 
-This method is a convenience for testing. Code should call {@link Segment#getLiveValue}
+This method is a convenience for testing. Code should call `Segment.getLiveValue`
  instead.
 
 ### `segmentFor(`int` hash)`
@@ -206,11 +206,11 @@ Returns the segment that should be used for a key with the given hash.
 
 **Returns:** [`com.google.common.collect.MapMakerInternalMap.Segment<K,V,E,S>`](MapMakerInternalMap/Segment.md)
 
-### `getLiveValue([`E`](E.md) entry)`
+### `getLiveValue(`E` entry)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Gets the value from an entry. Returns {@code null} if the entry is invalid, partially-collected
+Gets the value from an entry. Returns `null` if the entry is invalid, partially-collected
  or computing.
 
 ### `newSegmentArray(`int` ssize)`
@@ -239,11 +239,11 @@ Gets the value from an entry. Returns {@code null} if the entry is invalid, part
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `getEntry(`java.lang.Object` key)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 Returns the internal entry for the specified key. The entry may be computing or partially
  collected. Does not impact recency ordering.
@@ -256,33 +256,33 @@ Returns the internal entry for the specified key. The entry may be computing or 
 
 **Returns:** `boolean`
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `putIfAbsent([`K`](K.md) key, [`V`](V.md) value)`
+### `putIfAbsent(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `putAll([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) m)`
+### `putAll(`java.util.Map<? extends K,? extends V>` m)`
 
 **Returns:** `void`
 
 ### `remove(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `remove(`java.lang.Object` key, `java.lang.Object` value)`
 
 **Returns:** `boolean`
 
-### `replace([`K`](K.md) key, [`V`](V.md) oldValue, [`V`](V.md) newValue)`
+### `replace(`K` key, `V` oldValue, `V` newValue)`
 
 **Returns:** `boolean`
 
-### `replace([`K`](K.md) key, [`V`](V.md) value)`
+### `replace(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `clear()`
 
@@ -290,25 +290,25 @@ Returns the internal entry for the specified key. The entry may be computing or 
 
 ### `keySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 ### `entrySet()`
 
-**Returns:** [`java.util.Set<java.util.Map.Entry<K,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-### `toArrayList([`java.util.Collection<E>`](../../../../java/util/Collection.md) c)`
+### `toArrayList(`java.util.Collection<E>` c)`
 
-**Returns:** [`java.util.ArrayList<E>`](../../../../java/util/ArrayList.md)
+**Returns:** `java.util.ArrayList<E>`
 
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) in)`
+### `readObject(`java.io.ObjectInputStream` in)`
 
 **Returns:** `void`
 

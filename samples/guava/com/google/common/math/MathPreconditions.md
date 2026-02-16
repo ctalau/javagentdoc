@@ -7,7 +7,7 @@
 ## Description
 
 A collection of preconditions for math functions.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -23,9 +23,9 @@ A collection of preconditions for math functions.
 
 **Returns:** `long`
 
-### `checkPositive(`java.lang.String` role, [`java.math.BigInteger`](../../../../java/math/BigInteger.md) x)`
+### `checkPositive(`java.lang.String` role, `java.math.BigInteger` x)`
 
-**Returns:** [`java.math.BigInteger`](../../../../java/math/BigInteger.md)
+**Returns:** `java.math.BigInteger`
 
 ### `checkNonNegative(`java.lang.String` role, `int` x)`
 
@@ -35,9 +35,9 @@ A collection of preconditions for math functions.
 
 **Returns:** `long`
 
-### `checkNonNegative(`java.lang.String` role, [`java.math.BigInteger`](../../../../java/math/BigInteger.md) x)`
+### `checkNonNegative(`java.lang.String` role, `java.math.BigInteger` x)`
 
-**Returns:** [`java.math.BigInteger`](../../../../java/math/BigInteger.md)
+**Returns:** `java.math.BigInteger`
 
 ### `checkNonNegative(`java.lang.String` role, `double` x)`
 
@@ -47,7 +47,7 @@ A collection of preconditions for math functions.
 
 **Returns:** `void`
 
-### `checkInRangeForRoundingInputs(`boolean` condition, `double` input, [`java.math.RoundingMode`](../../../../java/math/RoundingMode.md) mode)`
+### `checkInRangeForRoundingInputs(`boolean` condition, `double` input, `java.math.RoundingMode` mode)`
 
 **Returns:** `void`
 

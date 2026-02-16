@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.FilteredMultimapValues`
 
-**Extends:** [`java.util.AbstractCollection<V>`](../../../../java/util/AbstractCollection.md)
+**Extends:** `java.util.AbstractCollection<V>`
 
 ## Type Parameters
 
@@ -13,8 +13,8 @@
 
 ## Description
 
-Implementation for {@link FilteredMultimap#values()}.
-@author Louis Wasserman
+Implementation for `FilteredMultimap.values()`.
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -30,7 +30,7 @@ Implementation for {@link FilteredMultimap#values()}.
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<V>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<V>`
 
 ### `contains(`java.lang.Object` o)`
 
@@ -44,11 +44,11 @@ Implementation for {@link FilteredMultimap#values()}.
 
 **Returns:** `boolean`
 
-### `removeAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) c)`
+### `removeAll(`java.util.Collection<?>` c)`
 
 **Returns:** `boolean`
 
-### `retainAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) c)`
+### `retainAll(`java.util.Collection<?>` c)`
 
 **Returns:** `boolean`
 

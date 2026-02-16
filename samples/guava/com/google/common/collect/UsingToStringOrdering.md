@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.Ordering<java.lang.Object>`](./Ordering.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 

@@ -10,17 +10,16 @@
 
 ## Description
 
-A descriptor for a <i>discrete</i> {@code Comparable} domain such as all {@link Integer}
- instances. A discrete domain is one that supports the three basic operations: {@link #next},
- {@link #previous} and {@link #distance}, according to their specifications. The methods {@link #minValue} and {@link #maxValue} should also be overridden for bounded types.
+A descriptor for a <i>discrete</i> `Comparable` domain such as all `Integer`
+ instances. A discrete domain is one that supports the three basic operations: `next`,
+ `previous` and `distance`, according to their specifications. The methods `minValue` and `maxValue` should also be overridden for bounded types.
 
  <p>A discrete domain always represents the <i>entire</i> set of values of its type; it cannot
  represent partial domains such as "prime integers" or "strings of length 5."
 
- <p>See the Guava User Guide section on <a href="https://github.com/google/guava/wiki/RangesExplained#discrete-domains">{@code
- DiscreteDomain}</a>.
-@author Kevin Bourrillion
-@since 10.0
+ <p>See the Guava User Guide section on <a href="https://github.com/google/guava/wiki/RangesExplained#discrete-domains">`DiscreteDomain`</a>.
+**Author:** Kevin Bourrillion
+**Since:** 10.0
 
 ## Fields
 
@@ -44,94 +43,90 @@ Private constructor for built-in DiscreteDomains supporting fast offset.
 
 **Returns:** [`com.google.common.collect.DiscreteDomain<java.lang.Integer>`](./DiscreteDomain.md)
 
-Returns the discrete domain for values of type {@code Integer}.
+Returns the discrete domain for values of type `Integer`.
 
  <p>This method always returns the same object. That object is serializable; deserializing it
  results in the same object too.
-@since 14.0 (since 10.0 as {@code DiscreteDomains.integers()})
+**Since:** 14.0 (since 10.0 as `DiscreteDomains.integers()`)
 
 ### `longs()`
 
 **Returns:** [`com.google.common.collect.DiscreteDomain<java.lang.Long>`](./DiscreteDomain.md)
 
-Returns the discrete domain for values of type {@code Long}.
+Returns the discrete domain for values of type `Long`.
 
  <p>This method always returns the same object. That object is serializable; deserializing it
  results in the same object too.
-@since 14.0 (since 10.0 as {@code DiscreteDomains.longs()})
+**Since:** 14.0 (since 10.0 as `DiscreteDomains.longs()`)
 
 ### `bigIntegers()`
 
 **Returns:** [`com.google.common.collect.DiscreteDomain<java.math.BigInteger>`](./DiscreteDomain.md)
 
-Returns the discrete domain for values of type {@code BigInteger}.
+Returns the discrete domain for values of type `BigInteger`.
 
  <p>This method always returns the same object. That object is serializable; deserializing it
  results in the same object too.
-@since 15.0
+**Since:** 15.0
 
-### `offset([`C`](C.md) origin, `long` distance)`
+### `offset(`C` origin, `long` distance)`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
-Returns, conceptually, "origin + distance", or equivalently, the result of calling {@link #next} on {@code origin} {@code distance} times.
+Returns, conceptually, "origin + distance", or equivalently, the result of calling `next` on `origin` `distance` times.
 
-### `next([`C`](C.md) value)`
+### `next(`C` value)`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
-Returns the unique least value of type {@code C} that is greater than {@code value}, or {@code
- null} if none exists. Inverse operation to {@link #previous}.
-@param value any value of type {@code C}
-@return the least value greater than {@code value}, or {@code null} if {@code value} is {@code
-     maxValue()}
+Returns the unique least value of type `C` that is greater than `value`, or `null` if none exists. Inverse operation to `previous`.
+@param value any value of type `C`
+@return the least value greater than `value`, or `null` if `value` is `maxValue()`
 
-### `previous([`C`](C.md) value)`
+### `previous(`C` value)`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
-Returns the unique greatest value of type {@code C} that is less than {@code value}, or {@code
- null} if none exists. Inverse operation to {@link #next}.
-@param value any value of type {@code C}
-@return the greatest value less than {@code value}, or {@code null} if {@code value} is {@code
-     minValue()}
+Returns the unique greatest value of type `C` that is less than `value`, or `null` if none exists. Inverse operation to `next`.
+@param value any value of type `C`
+@return the greatest value less than `value`, or `null` if `value` is `minValue()`
 
-### `distance([`C`](C.md) start, [`C`](C.md) end)`
+### `distance(`C` start, `C` end)`
 
 **Returns:** `long`
 
-Returns a signed value indicating how many nested invocations of {@link #next} (if positive) or
- {@link #previous} (if negative) are needed to reach {@code end} starting from {@code start}.
- For example, if {@code end = next(next(next(start)))}, then {@code distance(start, end) == 3}
- and {@code distance(end, start) == -3}. As well, {@code distance(a, a)} is always zero.
+Returns a signed value indicating how many nested invocations of `next` (if positive) or
+ `previous` (if negative) are needed to reach `end` starting from `start`.
+ For example, if `end = next(next(next(start)))`, then `distance(start, end) == 3`
+ and `distance(end, start) == -3`. As well, `distance(a, a)` is always zero.
 
  <p>Note that this function is necessarily well-defined for any discrete type.
-@return the distance as described above, or {@link Long#MIN_VALUE} or {@link Long#MAX_VALUE} if
+@return the distance as described above, or `Long.MIN_VALUE` or `Long.MAX_VALUE` if
      the distance is too small or too large, respectively.
 
 ### `minValue()`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
-Returns the minimum value of type {@code C}, if it has one. The minimum value is the unique
- value for which {@link Comparable#compareTo(Object)} never returns a positive value for any
- input of type {@code C}.
+Returns the minimum value of type `C`, if it has one. The minimum value is the unique
+ value for which `Comparable.compareTo(Object)` never returns a positive value for any
+ input of type `C`.
 
- <p>The default implementation throws {@code NoSuchElementException}.
-@return the minimum value of type {@code C}; never null
+ <p>The default implementation throws `NoSuchElementException`.
+@return the minimum value of type `C`; never null
 @throws NoSuchElementException if the type has no (practical) minimum value; for example,
-     {@link java.math.BigInteger}
+     `java.math.BigInteger`
 
 ### `maxValue()`
 
-**Returns:** [`C`](C.md)
+**Returns:** `C`
 
-Returns the maximum value of type {@code C}, if it has one. The maximum value is the unique
- value for which {@link Comparable#compareTo(Object)} never returns a negative value for any
- input of type {@code C}.
+Returns the maximum value of type `C`, if it has one. The maximum value is the unique
+ value for which `Comparable.compareTo(Object)` never returns a negative value for any
+ input of type `C`.
 
- <p>The default implementation throws {@code NoSuchElementException}.
-@return the maximum value of type {@code C}; never null
+ <p>The default implementation throws `NoSuchElementException`.
+@return the maximum value of type `C`; never null
 @throws NoSuchElementException if the type has no (practical) maximum value; for example,
-     {@link java.math.BigInteger}
+     `java.math.BigInteger`
 

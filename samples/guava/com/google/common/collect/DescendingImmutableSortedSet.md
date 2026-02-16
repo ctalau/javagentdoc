@@ -12,8 +12,8 @@
 
 ## Description
 
-Skeletal implementation of {@link ImmutableSortedSet#descendingSet()}.
-@author Louis Wasserman
+Skeletal implementation of `ImmutableSortedSet.descendingSet()`.
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -39,15 +39,15 @@ Skeletal implementation of {@link ImmutableSortedSet#descendingSet()}.
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
 
-### `headSetImpl([`E`](E.md) toElement, `boolean` inclusive)`
+### `headSetImpl(`E` toElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `subSetImpl([`E`](E.md) fromElement, `boolean` fromInclusive, [`E`](E.md) toElement, `boolean` toInclusive)`
+### `subSetImpl(`E` fromElement, `boolean` fromInclusive, `E` toElement, `boolean` toInclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `tailSetImpl([`E`](E.md) fromElement, `boolean` inclusive)`
+### `tailSetImpl(`E` fromElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
@@ -63,21 +63,21 @@ Skeletal implementation of {@link ImmutableSortedSet#descendingSet()}.
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `lower([`E`](E.md) element)`
+### `lower(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `floor([`E`](E.md) element)`
+### `floor(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `ceiling([`E`](E.md) element)`
+### `ceiling(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `higher([`E`](E.md) element)`
+### `higher(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `indexOf(`java.lang.Object` target)`
 

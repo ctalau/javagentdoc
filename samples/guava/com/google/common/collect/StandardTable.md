@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.AbstractTable<R,C,V>`](./AbstractTable.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -16,28 +16,28 @@
 
 ## Description
 
-{@link Table} implementation backed by a map that associates row keys with column key / value
+`Table` implementation backed by a map that associates row keys with column key / value
  secondary maps. This class provides rapid access to records by the row key alone or by both keys,
  but not by just the column key.
 
- <p>The views returned by {@link #column}, {@link #columnKeySet()}, and {@link #columnMap()} have
- iterators that don't support {@code remove()}. Otherwise, all optional operations are supported.
+ <p>The views returned by `column`, `columnKeySet()`, and `columnMap()` have
+ iterators that don't support `remove()`. Otherwise, all optional operations are supported.
  Null row keys, columns keys, and values are not supported.
 
  <p>Lookups by row key are often faster than lookups by column key, because the data is stored in
- a {@code Map<R, Map<C, V>>}. A method call like {@code column(columnKey).get(rowKey)} still runs
- quickly, since the row key is provided. However, {@code column(columnKey).size()} takes longer,
+ a `Map<R, Map<C, V>>`. A method call like `column(columnKey).get(rowKey)` still runs
+ quickly, since the row key is provided. However, `column(columnKey).size()` takes longer,
  since an iteration across all row keys occurs.
 
  <p>Note that this implementation is not synchronized. If multiple threads access this table
  concurrently and one of the threads modifies the table, it must be synchronized externally.
-@author Jared Levy
+**Author:** Jared Levy
 
 ## Fields
 
 ### `backingMap`
 
-**Type:** [`java.util.Map<R,java.util.Map<C,V>>`](../../../../java/util/Map>.md)
+**Type:** `java.util.Map<R,java.util.Map<C,V>>`
 
 ### `factory`
 
@@ -45,11 +45,11 @@
 
 ### `columnKeySet`
 
-**Type:** [`java.util.Set<C>`](../../../../java/util/Set.md)
+**Type:** `java.util.Set<C>`
 
 ### `rowMap`
 
-**Type:** [`java.util.Map<R,java.util.Map<C,V>>`](../../../../java/util/Map>.md)
+**Type:** `java.util.Map<R,java.util.Map<C,V>>`
 
 ### `columnMap`
 
@@ -61,7 +61,7 @@
 
 ## Constructors
 
-### `<init>([`java.util.Map<R,java.util.Map<C,V>>`](../../../../java/util/Map>.md) backingMap, [`com.google.common.base.Supplier<? extends java.util.Map<C,V>>`](../base/Supplier>.md) factory)`
+### `<init>(`java.util.Map<R,java.util.Map<C,V>>` backingMap, [`com.google.common.base.Supplier<? extends java.util.Map<C,V>>`](../base/Supplier>.md) factory)`
 
 ## Methods
 
@@ -83,7 +83,7 @@
 
 ### `get(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `isEmpty()`
 
@@ -97,21 +97,21 @@
 
 **Returns:** `void`
 
-### `getOrCreate([`R`](R.md) rowKey)`
+### `getOrCreate(`R` rowKey)`
 
-**Returns:** [`java.util.Map<C,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<C,V>`
 
-### `put([`R`](R.md) rowKey, [`C`](C.md) columnKey, [`V`](V.md) value)`
+### `put(`R` rowKey, `C` columnKey, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `remove(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `removeColumn(`java.lang.Object` column)`
 
-**Returns:** [`java.util.Map<R,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<R,V>`
 
 ### `containsMapping(`java.lang.Object` rowKey, `java.lang.Object` columnKey, `java.lang.Object` value)`
 
@@ -125,7 +125,7 @@ Remove a row key / column key / value mapping, if present.
 
 ### `cellSet()`
 
-**Returns:** [`java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
 
 {@inheritDoc}
 
@@ -137,48 +137,48 @@ Remove a row key / column key / value mapping, if present.
 
 ### `cellIterator()`
 
-**Returns:** [`java.util.Iterator<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Iterator>.md)
+**Returns:** `java.util.Iterator<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `cellSpliterator()`
 
-**Returns:** [`java.util.Spliterator<com.google.common.collect.Table.Cell<R,C,V>>`](../../../../java/util/Spliterator>.md)
+**Returns:** `java.util.Spliterator<com.google.common.collect.Table.Cell<R,C,V>>`
 
-### `row([`R`](R.md) rowKey)`
+### `row(`R` rowKey)`
 
-**Returns:** [`java.util.Map<C,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<C,V>`
 
-### `column([`C`](C.md) columnKey)`
+### `column(`C` columnKey)`
 
-**Returns:** [`java.util.Map<R,V>`](../../../../java/util/Map.md)
+**Returns:** `java.util.Map<R,V>`
 
 {@inheritDoc}
 
- <p>The returned map's views have iterators that don't support {@code remove()}.
+ <p>The returned map's views have iterators that don't support `remove()`.
 
 ### `rowKeySet()`
 
-**Returns:** [`java.util.Set<R>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<R>`
 
 ### `columnKeySet()`
 
-**Returns:** [`java.util.Set<C>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<C>`
 
 {@inheritDoc}
 
- <p>The returned set has an iterator that does not support {@code remove()}.
+ <p>The returned set has an iterator that does not support `remove()`.
 
  <p>The set's iterator traverses the columns of the first row, the columns of the second row,
  etc., skipping any columns that have appeared previously.
 
 ### `createColumnKeyIterator()`
 
-**Returns:** [`java.util.Iterator<C>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<C>`
 
 Creates an iterator that returns each column value with duplicates omitted.
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 {@inheritDoc}
 
@@ -187,13 +187,13 @@ Creates an iterator that returns each column value with duplicates omitted.
 
 ### `rowMap()`
 
-**Returns:** [`java.util.Map<R,java.util.Map<C,V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<R,java.util.Map<C,V>>`
 
 ### `createRowMap()`
 
-**Returns:** [`java.util.Map<R,java.util.Map<C,V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<R,java.util.Map<C,V>>`
 
 ### `columnMap()`
 
-**Returns:** [`java.util.Map<C,java.util.Map<R,V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<C,java.util.Map<R,V>>`
 

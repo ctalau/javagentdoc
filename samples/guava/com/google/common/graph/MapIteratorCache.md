@@ -12,40 +12,40 @@
 ## Description
 
 A map-like data structure that wraps a backing map and caches values while iterating through
- {@link #unmodifiableKeySet()}. By design, the cache is cleared when this structure is mutated. If
+ `unmodifiableKeySet()`. By design, the cache is cleared when this structure is mutated. If
  this structure is never mutated, it provides a thread-safe view of the backing map.
 
- <p>The {@link MapIteratorCache} assumes ownership of the backing map, and cannot guarantee
+ <p>The `MapIteratorCache` assumes ownership of the backing map, and cannot guarantee
  correctness in the face of external mutations to the backing map. As such, it is <b>strongly</b>
  recommended that the caller does not persist a reference to the backing map (unless the backing
  map is immutable).
 
  <p>This class is tailored toward use cases in common.graph. It is *NOT* a general purpose map.
-@author James Sexton
+**Author:** James Sexton
 
 ## Fields
 
 ### `backingMap`
 
-**Type:** [`java.util.Map<K,V>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<K,V>`
 
 ### `cacheEntry`
 
-**Type:** [`java.util.Map.Entry<K,V>`](../../../../java/util/Map/Entry.md)
+**Type:** `java.util.Map.Entry<K,V>`
 
 ## Constructors
 
-### `<init>([`java.util.Map<K,V>`](../../../../java/util/Map.md) backingMap)`
+### `<init>(`java.util.Map<K,V>` backingMap)`
 
 ## Methods
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `remove(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `clear()`
 
@@ -53,11 +53,11 @@ A map-like data structure that wraps a backing map and caches values while itera
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `getWithoutCaching(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `containsKey(`java.lang.Object` key)`
 
@@ -65,11 +65,11 @@ A map-like data structure that wraps a backing map and caches values while itera
 
 ### `unmodifiableKeySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 ### `getIfCached(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `clearCache()`
 

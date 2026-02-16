@@ -6,8 +6,8 @@
 
 ## Description
 
-Provides static utility methods for creating and working with {@link SortedMultiset} instances.
-@author Louis Wasserman
+Provides static utility methods for creating and working with `SortedMultiset` instances.
+**Author:** Louis Wasserman
 
 ## Constructors
 
@@ -17,9 +17,9 @@ Provides static utility methods for creating and working with {@link SortedMulti
 
 ### `getElementOrThrow([`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md) entry)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `getElementOrNull([`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md) entry)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 

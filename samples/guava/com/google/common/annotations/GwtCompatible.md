@@ -13,34 +13,34 @@ The presence of this annotation on a type indicates that the type may be used wi
  by factory methods has a GWT serializable type. In the following example,
 
  <pre>
- {@literal @}GwtCompatible
+ @GwtCompatible
  class Lists {
    ...
-   {@literal @}GwtCompatible(serializable = true)
-   {@literal static <E> List<E>} newArrayList(E... elements) {
+   @GwtCompatible(serializable = true)
+   static <E> List<E> newArrayList(E... elements) {
      ...
    }
  }
  </pre>
 
- <p>The return value of {@code Lists.newArrayList(E[])} has GWT serializable type. It is also
+ <p>The return value of `Lists.newArrayList(E[])` has GWT serializable type. It is also
  useful in specifying contracts of interface methods. In the following example,
 
  <pre>
- {@literal @}GwtCompatible
+ @GwtCompatible
  interface ListFactory {
    ...
-   {@literal @}GwtCompatible(serializable = true)
-   {@literal <E> List<E>} newArrayList(E... elements);
+   @GwtCompatible(serializable = true)
+   <E> List<E> newArrayList(E... elements);
  }
  </pre>
 
- <p>The {@code newArrayList(E[])} method of all implementations of {@code ListFactory} is expected
+ <p>The `newArrayList(E[])` method of all implementations of `ListFactory` is expected
  to return a value with a GWT serializable type.
 
- <p>Note that a {@code GwtCompatible} type may have some {@link GwtIncompatible} methods.
-@author Charles Fry
-@author Hayward Chan
+ <p>Note that a `GwtCompatible` type may have some `GwtIncompatible` methods.
+**Author:** Charles Fry
+**Author:** Hayward Chan
 
 ## Methods
 
@@ -48,17 +48,17 @@ The presence of this annotation on a type indicates that the type may be used wi
 
 **Returns:** `boolean`
 
-When {@code true}, the annotated type or the type of the method return value is GWT
+When `true`, the annotated type or the type of the method return value is GWT
  serializable.
-@see <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideServerCommunication.html#DevGuideSerializableTypes">
+**See:** <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideServerCommunication.html#DevGuideSerializableTypes">
      Documentation about GWT serialization</a>
 
 ### `emulated()`
 
 **Returns:** `boolean`
 
-When {@code true}, the annotated type is emulated in GWT. The emulated source (also known as
+When `true`, the annotated type is emulated in GWT. The emulated source (also known as
  super-source) is different from the implementation used by the JVM.
-@see <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideOrganizingProjects.html#DevGuideModules">
+**See:** <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideOrganizingProjects.html#DevGuideModules">
      Documentation about GWT emulated source</a>
 

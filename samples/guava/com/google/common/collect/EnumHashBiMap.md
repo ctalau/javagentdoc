@@ -13,13 +13,12 @@
 
 ## Description
 
-A {@code BiMap} backed by an {@code EnumMap} instance for keys-to-values, and a {@code HashMap}
- instance for values-to-keys. Null keys are not permitted, but null values are. An {@code
- EnumHashBiMap} and its inverse are both serializable.
+A `BiMap` backed by an `EnumMap` instance for keys-to-values, and a `HashMap`
+ instance for values-to-keys. Null keys are not permitted, but null values are. An `EnumHashBiMap` and its inverse are both serializable.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">{@code BiMap}</a>.
-@author Mike Bostock
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">`BiMap`</a>.
+**Author:** Mike Bostock
+**Since:** 2.0
 
 ## Fields
 
@@ -41,32 +40,32 @@ A {@code BiMap} backed by an {@code EnumMap} instance for keys-to-values, and a 
 
 **Returns:** [`com.google.common.collect.EnumHashBiMap<K,V>`](./EnumHashBiMap.md)
 
-Returns a new, empty {@code EnumHashBiMap} using the specified key type.
+Returns a new, empty `EnumHashBiMap` using the specified key type.
 @param keyType the key type
 
-### `create([`java.util.Map<K,? extends V>`](../../../../java/util/Map.md) map)`
+### `create(`java.util.Map<K,? extends V>` map)`
 
 **Returns:** [`com.google.common.collect.EnumHashBiMap<K,V>`](./EnumHashBiMap.md)
 
 Constructs a new bimap with the same mappings as the specified map. If the specified map is an
- {@code EnumHashBiMap} or an {@link EnumBiMap}, the new bimap has the same key type as the input
+ `EnumHashBiMap` or an `EnumBiMap`, the new bimap has the same key type as the input
  bimap. Otherwise, the specified map must contain at least one mapping, in order to determine
  the key type.
 @param map the map whose mappings are to be placed in this map
-@throws IllegalArgumentException if map is not an {@code EnumBiMap} or an {@code EnumHashBiMap}
+@throws IllegalArgumentException if map is not an `EnumBiMap` or an `EnumHashBiMap`
      instance and contains no mappings
 
-### `checkKey([`K`](K.md) key)`
+### `checkKey(`K` key)`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `forcePut([`K`](K.md) key, [`V`](V.md) value)`
+### `forcePut(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `keyType()`
 
@@ -74,14 +73,14 @@ Constructs a new bimap with the same mappings as the specified map. If the speci
 
 Returns the associated key type.
 
-### `writeObject([`java.io.ObjectOutputStream`](../../../../java/io/ObjectOutputStream.md) stream)`
+### `writeObject(`java.io.ObjectOutputStream` stream)`
 
 **Returns:** `void`
 
 @serialData the key class, number of entries, first key, first value, second key, second value,
      and so on.
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

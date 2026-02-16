@@ -8,8 +8,8 @@
 
 ## Description
 
-Implementation of {@link ImmutableListMultimap} with no entries.
-@author Mike Ward
+Implementation of `ImmutableListMultimap` with no entries.
+**Author:** Mike Ward
 
 ## Fields
 

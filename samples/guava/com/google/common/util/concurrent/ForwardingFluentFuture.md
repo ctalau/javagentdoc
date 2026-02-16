@@ -12,13 +12,13 @@
 
 ## Description
 
-{@link FluentFuture} that forwards all calls to a delegate.
+`FluentFuture` that forwards all calls to a delegate.
 
  <h3>Extension</h3>
 
- If you want a class like {@code FluentFuture} but with extra methods, we recommend declaring your
- own subclass of {@link ListenableFuture}, complete with a method like {@link #from} to adapt an
- existing {@code ListenableFuture}, implemented atop a {@link ForwardingListenableFuture} that
+ If you want a class like `FluentFuture` but with extra methods, we recommend declaring your
+ own subclass of `ListenableFuture`, complete with a method like `from` to adapt an
+ existing `ListenableFuture`, implemented atop a `ForwardingListenableFuture` that
  forwards to that future and adds the desired methods.
 
 ## Fields
@@ -33,7 +33,7 @@
 
 ## Methods
 
-### `addListener(`java.lang.Runnable` listener, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) executor)`
+### `addListener(`java.lang.Runnable` listener, `java.util.concurrent.Executor` executor)`
 
 **Returns:** `void`
 
@@ -51,11 +51,11 @@
 
 ### `get()`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `get(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `get(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `toString()`
 

@@ -4,9 +4,9 @@
 
 **Fully Qualified Name:** `com.google.common.collect.CompactHashSet`
 
-**Extends:** [`java.util.AbstractSet<E>`](../../../../java/util/AbstractSet.md)
+**Extends:** `java.util.AbstractSet<E>`
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -17,27 +17,26 @@
 CompactHashSet is an implementation of a Set. All optional operations (adding and removing) are
  supported. The elements can be any objects.
 
- <p>{@code contains(x)}, {@code add(x)} and {@code remove(x)}, are all (expected and amortized)
+ <p>`contains(x)`, `add(x)` and `remove(x)`, are all (expected and amortized)
  constant time operations. Expected in the hashtable sense (depends on the hash function doing a
  good job of distributing the elements to the buckets to a distribution not far from uniform), and
  amortized since some operations can trigger a hash table resize.
 
- <p>Unlike {@code java.util.HashSet}, iteration is only proportional to the actual {@code size()},
+ <p>Unlike `java.util.HashSet`, iteration is only proportional to the actual `size()`,
  which is optimal, and <i>not</i> the size of the internal hashtable, which could be much larger
- than {@code size()}. Furthermore, this structure only depends on a fixed number of arrays; {@code
- add(x)} operations <i>do not</i> create objects for the garbage collector to deal with, and for
- every element added, the garbage collector will have to traverse {@code 1.5} references on
- average, in the marking phase, not {@code 5.0} as in {@code java.util.HashSet}.
+ than `size()`. Furthermore, this structure only depends on a fixed number of arrays; `add(x)` operations <i>do not</i> create objects for the garbage collector to deal with, and for
+ every element added, the garbage collector will have to traverse `1.5` references on
+ average, in the marking phase, not `5.0` as in `java.util.HashSet`.
 
- <p>If there are no removals, then {@link #iterator iteration} order is the same as insertion
+ <p>If there are no removals, then `iterator iteration` order is the same as insertion
  order. Any removal invalidates any ordering guarantees.
 
- <p>This class should not be assumed to be universally superior to {@code java.util.HashSet}.
+ <p>This class should not be assumed to be universally superior to `java.util.HashSet`.
  Generally speaking, this class reduces object allocation and memory consumption at the price of
  moderately increased constant factors of CPU. Only use this class when there is a specific reason
  to prioritize memory over CPU.
-@author Dimitris Andreou
-@author Jon Noack
+**Author:** Dimitris Andreou
+**Author:** Jon Noack
 
 ## Fields
 
@@ -100,7 +99,7 @@ Contains the logical entries, in the range of [0, size()). The high bits of each
 **Type:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
 The elements contained in the set, in the range of [0, size()). The elements in [size(),
- elements.length) are all {@code null}.
+ elements.length) are all `null`.
 
 ### `metadata`
 
@@ -121,12 +120,12 @@ The number of elements contained in the set.
 
 ### `<init>()`
 
-Constructs a new empty instance of {@code CompactHashSet}.
+Constructs a new empty instance of `CompactHashSet`.
 
 ### `<init>(`int` expectedSize)`
 
-Constructs a new instance of {@code CompactHashSet} with the specified capacity.
-@param expectedSize the initial capacity of this {@code CompactHashSet}.
+Constructs a new instance of `CompactHashSet` with the specified capacity.
+@param expectedSize the initial capacity of this `CompactHashSet`.
 
 ## Methods
 
@@ -134,36 +133,36 @@ Constructs a new instance of {@code CompactHashSet} with the specified capacity.
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates an empty {@code CompactHashSet} instance.
+Creates an empty `CompactHashSet` instance.
 
-### `create([`java.util.Collection<? extends E>`](../../../../java/util/Collection.md) collection)`
+### `create(`java.util.Collection<? extends E>` collection)`
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates a <i>mutable</i> {@code CompactHashSet} instance containing the elements of the given
+Creates a <i>mutable</i> `CompactHashSet` instance containing the elements of the given
  collection in unspecified order.
 @param collection the elements that the set should contain
-@return a new {@code CompactHashSet} containing those elements (minus duplicates)
+@return a new `CompactHashSet` containing those elements (minus duplicates)
 
-### `create([`E[]`](E.md) elements)`
+### `create(`E[]` elements)`
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates a <i>mutable</i> {@code CompactHashSet} instance containing the given elements in
+Creates a <i>mutable</i> `CompactHashSet` instance containing the given elements in
  unspecified order.
 @param elements the elements that the set should contain
-@return a new {@code CompactHashSet} containing those elements (minus duplicates)
+@return a new `CompactHashSet` containing those elements (minus duplicates)
 
 ### `createWithExpectedSize(`int` expectedSize)`
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates a {@code CompactHashSet} instance, with a high enough "initial capacity" that it
- <i>should</i> hold {@code expectedSize} elements without growth.
+Creates a `CompactHashSet` instance, with a high enough "initial capacity" that it
+ <i>should</i> hold `expectedSize` elements without growth.
 @param expectedSize the number of elements you expect to add to the returned set
-@return a new, empty {@code CompactHashSet} with enough capacity to hold {@code expectedSize}
+@return a new, empty `CompactHashSet` with enough capacity to hold `expectedSize`
      elements without resizing
-@throws IllegalArgumentException if {@code expectedSize} is negative
+@throws IllegalArgumentException if `expectedSize` is negative
 
 ### `init(`int` expectedSize)`
 
@@ -185,15 +184,15 @@ Handle lazy allocation of arrays.
 
 ### `delegateOrNull()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `createHashFloodingResistantDelegate(`int` tableSize)`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `convertToHashFloodingResistantImplementation()`
 
-**Returns:** [`java.util.Set<E>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<E>`
 
 ### `isUsingHashFloodingResistance()`
 
@@ -215,11 +214,11 @@ Gets the hash table mask using the stored number of hash table bits.
 
 **Returns:** `void`
 
-### `add([`E`](E.md) object)`
+### `add(`E` object)`
 
 **Returns:** `boolean`
 
-### `insertEntry(`int` entryIndex, [`E`](E.md) object, `int` hash, `int` mask)`
+### `insertEntry(`int` entryIndex, `E` object, `int` hash, `int` mask)`
 
 **Returns:** `void`
 
@@ -254,7 +253,7 @@ Resizes the internal entries array to the specified capacity, which may be great
 
 **Returns:** `void`
 
-Moves the last entry in the entry array into {@code dstIndex}, and nulls out its old position.
+Moves the last entry in the entry array into `dstIndex`, and nulls out its old position.
 
 ### `firstEntryIndex()`
 
@@ -274,13 +273,13 @@ Updates the index an iterator is pointing to after a call to remove: returns the
 
 ### `iterator()`
 
-**Returns:** [`java.util.Iterator<E>`](../../../../java/util/Iterator.md)
+**Returns:** `java.util.Iterator<E>`
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
-### `forEach([`java.util.function.Consumer<? super E>`](../../../../java/util/function/Consumer.md) action)`
+### `forEach(`java.util.function.Consumer<? super E>` action)`
 
 **Returns:** `void`
 
@@ -296,26 +295,26 @@ Updates the index an iterator is pointing to after a call to remove: returns the
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-### `toArray([`T[]`](T.md) a)`
+### `toArray(`T[]` a)`
 
-**Returns:** [`T[]`](T.md)
+**Returns:** `T[]`
 
 ### `trimToSize()`
 
 **Returns:** `void`
 
-Ensures that this {@code CompactHashSet} has the smallest representation in memory, given its
+Ensures that this `CompactHashSet` has the smallest representation in memory, given its
  current size.
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `writeObject([`java.io.ObjectOutputStream`](../../../../java/io/ObjectOutputStream.md) stream)`
+### `writeObject(`java.io.ObjectOutputStream` stream)`
 
 **Returns:** `void`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 
@@ -333,13 +332,13 @@ Ensures that this {@code CompactHashSet} has the smallest representation in memo
 
 ### `element(`int` i)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `entry(`int` i)`
 
 **Returns:** `int`
 
-### `setElement(`int` i, [`E`](E.md) value)`
+### `setElement(`int` i, `E` value)`
 
 **Returns:** `void`
 

@@ -6,14 +6,14 @@
 
 **Extends:** [`com.google.common.hash.AbstractHashFunction`](./AbstractHashFunction.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
-{@link HashFunction} implementation of SipHash-c-d.
-@author Kurt Alfred Kluever
-@author Jean-Philippe Aumasson
-@author Daniel J. Bernstein
+`HashFunction` implementation of SipHash-c-d.
+**Author:** Kurt Alfred Kluever
+**Author:** Jean-Philippe Aumasson
+**Author:** Daniel J. Bernstein
 
 ## Fields
 

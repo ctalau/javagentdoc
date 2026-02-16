@@ -14,8 +14,8 @@
 
 An immutable sorted set with one or more elements. TODO(jlevy): Consider separate class for a
  single-element sorted set.
-@author Jared Levy
-@author Louis Wasserman
+**Author:** Jared Levy
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -29,7 +29,7 @@ An immutable sorted set with one or more elements. TODO(jlevy): Consider separat
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md) elements, [`java.util.Comparator<? super E>`](../../../../java/util/Comparator.md) comparator)`
+### `<init>([`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md) elements, `java.util.Comparator<? super E>` comparator)`
 
 ## Methods
 
@@ -55,9 +55,9 @@ An immutable sorted set with one or more elements. TODO(jlevy): Consider separat
 
 ### `spliterator()`
 
-**Returns:** [`java.util.Spliterator<E>`](../../../../java/util/Spliterator.md)
+**Returns:** `java.util.Spliterator<E>`
 
-### `forEach([`java.util.function.Consumer<? super E>`](../../../../java/util/function/Consumer.md) action)`
+### `forEach(`java.util.function.Consumer<? super E>` action)`
 
 **Returns:** `void`
 
@@ -69,7 +69,7 @@ An immutable sorted set with one or more elements. TODO(jlevy): Consider separat
 
 **Returns:** `boolean`
 
-### `containsAll([`java.util.Collection<?>`](../../../../java/util/Collection.md) targets)`
+### `containsAll(`java.util.Collection<?>` targets)`
 
 **Returns:** `boolean`
 
@@ -91,51 +91,51 @@ An immutable sorted set with one or more elements. TODO(jlevy): Consider separat
 
 ### `first()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
 ### `last()`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `lower([`E`](E.md) element)`
+### `lower(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `floor([`E`](E.md) element)`
+### `floor(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `ceiling([`E`](E.md) element)`
+### `ceiling(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `higher([`E`](E.md) element)`
+### `higher(`E` element)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-### `headSetImpl([`E`](E.md) toElement, `boolean` inclusive)`
+### `headSetImpl(`E` toElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `headIndex([`E`](E.md) toElement, `boolean` inclusive)`
+### `headIndex(`E` toElement, `boolean` inclusive)`
 
 **Returns:** `int`
 
-### `subSetImpl([`E`](E.md) fromElement, `boolean` fromInclusive, [`E`](E.md) toElement, `boolean` toInclusive)`
+### `subSetImpl(`E` fromElement, `boolean` fromInclusive, `E` toElement, `boolean` toInclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `tailSetImpl([`E`](E.md) fromElement, `boolean` inclusive)`
+### `tailSetImpl(`E` fromElement, `boolean` inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `tailIndex([`E`](E.md) fromElement, `boolean` inclusive)`
+### `tailIndex(`E` fromElement, `boolean` inclusive)`
 
 **Returns:** `int`
 
 ### `unsafeComparator()`
 
-**Returns:** [`java.util.Comparator<java.lang.Object>`](../../../../java/util/Comparator.md)
+**Returns:** `java.util.Comparator<java.lang.Object>`
 
 ### `getSubSet(`int` newFromIndex, `int` newToIndex)`
 

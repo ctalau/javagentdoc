@@ -8,10 +8,10 @@
 
 ## Description
 
-An abstract composition of multiple hash functions. {@linkplain #newHasher()} delegates to the
- {@code Hasher} objects of the delegate hash functions, and in the end, they are used by
- {@linkplain #makeHash(Hasher[])} that constructs the final {@code HashCode}.
-@author Dimitris Andreou
+An abstract composition of multiple hash functions. #newHasher() delegates to the
+ `Hasher` objects of the delegate hash functions, and in the end, they are used by
+ #makeHash(Hasher[]) that constructs the final `HashCode`.
+**Author:** Dimitris Andreou
 
 ## Fields
 
@@ -33,8 +33,8 @@ An abstract composition of multiple hash functions. {@linkplain #newHasher()} de
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Constructs a {@code HashCode} from the {@code Hasher} objects of the functions. Each of them
- has consumed the entire input and they are ready to output a {@code HashCode}. The order of the
+Constructs a `HashCode` from the `Hasher` objects of the functions. Each of them
+ has consumed the entire input and they are ready to output a `HashCode`. The order of the
  hashers are the same order as the functions given to the constructor.
 
 ### `newHasher()`

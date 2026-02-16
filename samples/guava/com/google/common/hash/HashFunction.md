@@ -16,15 +16,15 @@ A hash function is a collision-averse pure function that maps an arbitrary block
  <ul>
    <li><b>block of data:</b> the input for a hash function is always, in concept, an ordered byte
        array. This hashing API accepts an arbitrary sequence of byte and multibyte values (via
-       {@link Hasher}), but this is merely a convenience; these are always translated into raw
+       `Hasher`), but this is merely a convenience; these are always translated into raw
        byte sequences under the covers.
    <li><b>hash code:</b> each hash function always yields hash codes of the same fixed bit length
-       (given by {@link #bits}). For example, {@link Hashing#sha1} produces a 160-bit number,
-       while {@link Hashing#murmur3_32()} yields only 32 bits. Because a {@code long} value is
+       (given by `bits`). For example, `Hashing.sha1` produces a 160-bit number,
+       while `Hashing.murmur3_32()` yields only 32 bits. Because a `long` value is
        clearly insufficient to hold all hash code values, this API represents a hash code as an
-       instance of {@link HashCode}.
+       instance of `HashCode`.
    <li><b>pure function:</b> the value produced must depend only on the input bytes, in the order
-       they appear. Input data is never modified. {@link HashFunction} instances should always be
+       they appear. Input data is never modified. `HashFunction` instances should always be
        stateless, and therefore thread-safe.
    <li><b>collision-averse:</b> while it can't be helped that a hash function will sometimes
        produce the same hash code for distinct inputs (a "collision"), every hash function strives
@@ -52,7 +52,7 @@ A hash function is a collision-averse pure function that maps an arbitrary block
        in the hash code should be as evenly "spread out" through the hash code's bits as possible.
        The result is that, for example, when choosing a bucket in a hash table of size 2^8,
        <i>any</i> eight bits could be consistently used.
-   <li><b>cryptographic:</b> certain hash functions such as {@link Hashing#sha512} are designed to
+   <li><b>cryptographic:</b> certain hash functions such as `Hashing.sha512` are designed to
        make it as infeasible as possible to reverse-engineer the input that produced a given hash
        code, or even to discover <i>any</i> two distinct inputs that yield the same result. These
        are called <i>cryptographic hash functions</i>. But, whenever it is learned that either of
@@ -64,39 +64,38 @@ A hash function is a collision-averse pure function that maps an arbitrary block
 
  <h3>Providing input to a hash function</h3>
 
- <p>The primary way to provide the data that your hash function should act on is via a {@link Hasher}. Obtain a new hasher from the hash function using {@link #newHasher}, "push" the relevant
- data into it using methods like {@link Hasher#putBytes(byte[])}, and finally ask for the {@code
- HashCode} when finished using {@link Hasher#hash}. (See an {@linkplain #newHasher example} of
+ <p>The primary way to provide the data that your hash function should act on is via a `Hasher`. Obtain a new hasher from the hash function using `newHasher`, "push" the relevant
+ data into it using methods like `Hasher.putBytes(byte[])`, and finally ask for the `HashCode` when finished using `Hasher.hash`. (See an example of
  this.)
 
- <p>If all you want to hash is a single byte array, string or {@code long} value, there are
- convenient shortcut methods defined directly on {@link HashFunction} to make this easier.
+ <p>If all you want to hash is a single byte array, string or `long` value, there are
+ convenient shortcut methods defined directly on `HashFunction` to make this easier.
 
- <p>Hasher accepts primitive data types, but can also accept any Object of type {@code T} provided
- that you implement a {@link Funnel}{@code <T>} to specify how to "feed" data from that object
- into the function. (See {@linkplain Hasher#putObject an example} of this.)
+ <p>Hasher accepts primitive data types, but can also accept any Object of type `T` provided
+ that you implement a `Funnel``<T>` to specify how to "feed" data from that object
+ into the function. (See an example of this.)
 
  <p><b>Compatibility note:</b> Throughout this API, multibyte values are always interpreted in
- <i>little-endian</i> order. That is, hashing the byte array {@code {0x01, 0x02, 0x03, 0x04}} is
- equivalent to hashing the {@code int} value {@code 0x04030201}. If this isn't what you need,
- methods such as {@link Integer#reverseBytes} and {@link Ints#toByteArray} will help.
+ <i>little-endian</i> order. That is, hashing the byte array `{0x01, 0x02, 0x03, 0x04`} is
+ equivalent to hashing the `int` value `0x04030201`. If this isn't what you need,
+ methods such as `Integer.reverseBytes` and `Ints.toByteArray` will help.
 
- <h3>Relationship to {@link Object#hashCode}</h3>
+ <h3>Relationship to `Object.hashCode`</h3>
 
  <p>Java's baked-in concept of hash codes is constrained to 32 bits, and provides no separation
  between hash algorithms and the data they act on, so alternate hash algorithms can't be easily
- substituted. Also, implementations of {@code hashCode} tend to be poor-quality, in part because
- they end up depending on <i>other</i> existing poor-quality {@code hashCode} implementations,
+ substituted. Also, implementations of `hashCode` tend to be poor-quality, in part because
+ they end up depending on <i>other</i> existing poor-quality `hashCode` implementations,
  including those in many JDK classes.
 
- <p>{@code Object.hashCode} implementations tend to be very fast, but have weak collision
+ <p>`Object.hashCode` implementations tend to be very fast, but have weak collision
  prevention and <i>no</i> expectation of bit dispersion. This leaves them perfectly suitable for
  use in hash tables, because extra collisions cause only a slight performance hit, while poor bit
  dispersion is easily corrected using a secondary hash function (which all reasonable hash table
  implementations in Java use). For the many uses of hash functions beyond data structures,
- however, {@code Object.hashCode} almost always falls short -- hence this library.
-@author Kevin Bourrillion
-@since 11.0
+ however, `Object.hashCode` almost always falls short -- hence this library.
+**Author:** Kevin Bourrillion
+**Since:** 11.0
 
 ## Methods
 
@@ -104,22 +103,21 @@ A hash function is a collision-averse pure function that maps an arbitrary block
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-Begins a new hash code computation by returning an initialized, stateful {@code Hasher}
+Begins a new hash code computation by returning an initialized, stateful `Hasher`
  instance that is ready to receive data. Example:
 
- <pre>{@code
- HashFunction hf = Hashing.md5();
+ <pre>`HashFunction hf = Hashing.md5();
  HashCode hc = hf.newHasher()
      .putLong(id)
      .putBoolean(isActive)
      .hash();
- }</pre>
+ `</pre>
 
 ### `newHasher(`int` expectedInputSize)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-Begins a new hash code computation as {@link #newHasher()}, but provides a hint of the expected
+Begins a new hash code computation as `newHasher()`, but provides a hint of the expected
  size of the input (in bytes). This is only important for non-streaming hash functions (hash
  functions that need to buffer their whole input before processing any of it).
 
@@ -127,78 +125,77 @@ Begins a new hash code computation as {@link #newHasher()}, but provides a hint 
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putInt(input).hash()}; returns the hash code for the given
- {@code int} value, interpreted in little-endian byte order. The implementation <i>might</i>
+Shortcut for `newHasher().putInt(input).hash()`; returns the hash code for the given
+ `int` value, interpreted in little-endian byte order. The implementation <i>might</i>
  perform better than its longhand equivalent, but should not perform worse.
-@since 12.0
+**Since:** 12.0
 
 ### `hashLong(`long` input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putLong(input).hash()}; returns the hash code for the given
- {@code long} value, interpreted in little-endian byte order. The implementation <i>might</i>
+Shortcut for `newHasher().putLong(input).hash()`; returns the hash code for the given
+ `long` value, interpreted in little-endian byte order. The implementation <i>might</i>
  perform better than its longhand equivalent, but should not perform worse.
 
 ### `hashBytes(`byte[]` input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putBytes(input).hash()}. The implementation <i>might</i>
+Shortcut for `newHasher().putBytes(input).hash()`. The implementation <i>might</i>
  perform better than its longhand equivalent, but should not perform worse.
 
 ### `hashBytes(`byte[]` input, `int` off, `int` len)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putBytes(input, off, len).hash()}. The implementation
+Shortcut for `newHasher().putBytes(input, off, len).hash()`. The implementation
  <i>might</i> perform better than its longhand equivalent, but should not perform worse.
-@throws IndexOutOfBoundsException if {@code off < 0} or {@code off + len > bytes.length} or
-     {@code len < 0}
+@throws IndexOutOfBoundsException if `off < 0` or `off + len > bytes.length` or
+     `len < 0`
 
-### `hashBytes([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) input)`
+### `hashBytes(`java.nio.ByteBuffer` input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putBytes(input).hash()}. The implementation <i>might</i>
+Shortcut for `newHasher().putBytes(input).hash()`. The implementation <i>might</i>
  perform better than its longhand equivalent, but should not perform worse.
-@since 23.0
+**Since:** 23.0
 
 ### `hashUnencodedChars(`java.lang.CharSequence` input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putUnencodedChars(input).hash()}. The implementation
+Shortcut for `newHasher().putUnencodedChars(input).hash()`. The implementation
  <i>might</i> perform better than its longhand equivalent, but should not perform worse. Note
- that no character encoding is performed; the low byte and high byte of each {@code char} are
+ that no character encoding is performed; the low byte and high byte of each `char` are
  hashed directly (in that order).
 
  <p><b>Warning:</b> This method will produce different output than most other languages do when
  running the same hash function on the equivalent input. For cross-language compatibility, use
- {@link #hashString}, usually with a charset of UTF-8. For other use cases, use {@code
- hashUnencodedChars}.
-@since 15.0 (since 11.0 as hashString(CharSequence)).
+ `hashString`, usually with a charset of UTF-8. For other use cases, use `hashUnencodedChars`.
+**Since:** 15.0 (since 11.0 as hashString(CharSequence)).
 
-### `hashString(`java.lang.CharSequence` input, [`java.nio.charset.Charset`](../../../../java/nio/charset/Charset.md) charset)`
+### `hashString(`java.lang.CharSequence` input, `java.nio.charset.Charset` charset)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putString(input, charset).hash()}. Characters are encoded using
- the given {@link Charset}. The implementation <i>might</i> perform better than its longhand
+Shortcut for `newHasher().putString(input, charset).hash()`. Characters are encoded using
+ the given `Charset`. The implementation <i>might</i> perform better than its longhand
  equivalent, but should not perform worse.
 
  <p><b>Warning:</b> This method, which reencodes the input before hashing it, is useful only for
- cross-language compatibility. For other use cases, prefer {@link #hashUnencodedChars}, which is
- faster, produces the same output across Java releases, and hashes every {@code char} in the
+ cross-language compatibility. For other use cases, prefer `hashUnencodedChars`, which is
+ faster, produces the same output across Java releases, and hashes every `char` in the
  input, even if some are invalid.
 
-### `hashObject([`T`](T.md) instance, [`com.google.common.hash.Funnel<? super T>`](./Funnel.md) funnel)`
+### `hashObject(`T` instance, [`com.google.common.hash.Funnel<? super T>`](./Funnel.md) funnel)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Shortcut for {@code newHasher().putObject(instance, funnel).hash()}. The implementation
+Shortcut for `newHasher().putObject(instance, funnel).hash()`. The implementation
  <i>might</i> perform better than its longhand equivalent, but should not perform worse.
-@since 14.0
+**Since:** 14.0
 
 ### `bits()`
 

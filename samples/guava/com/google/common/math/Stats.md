@@ -4,31 +4,30 @@
 
 **Fully Qualified Name:** `com.google.common.math.Stats`
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
 A bundle of statistical summary values -- sum, count, mean/average, min and max, and several
  forms of variance -- that were computed from a single set of zero or more floating-point values.
 
- <p>There are two ways to obtain a {@code Stats} instance:
+ <p>There are two ways to obtain a `Stats` instance:
 
  <ul>
-   <li>If all the values you want to summarize are already known, use the appropriate {@code
-       Stats.of} factory method below. Primitive arrays, iterables and iterators of any kind of
-       {@code Number}, and primitive varargs are supported.
-   <li>Or, to avoid storing up all the data first, create a {@link StatsAccumulator} instance,
-       feed values to it as you get them, then call {@link StatsAccumulator#snapshot}.
+   <li>If all the values you want to summarize are already known, use the appropriate `Stats.of` factory method below. Primitive arrays, iterables and iterators of any kind of
+       `Number`, and primitive varargs are supported.
+   <li>Or, to avoid storing up all the data first, create a `StatsAccumulator` instance,
+       feed values to it as you get them, then call `StatsAccumulator.snapshot`.
  </ul>
 
- <p>Static convenience methods called {@code meanOf} are also provided for users who wish to
+ <p>Static convenience methods called `meanOf` are also provided for users who wish to
  calculate <i>only</i> the mean.
 
  <p><b>Java 8 users:</b> If you are not using any of the variance statistics, you may wish to use
  built-in JDK libraries instead of this class.
-@author Pete Gillin
-@author Kevin Bourrillion
-@since 20.0
+**Author:** Pete Gillin
+**Author:** Kevin Bourrillion
+**Since:** 20.0
 
 ## Fields
 
@@ -66,16 +65,16 @@ The size of byte array representation in bytes.
 
 ### `<init>(`long` count, `double` mean, `double` sumOfSquaresOfDeltas, `double` min, `double` max)`
 
-Internal constructor. Users should use {@link #of} or {@link StatsAccumulator#snapshot}.
+Internal constructor. Users should use `of` or `StatsAccumulator.snapshot`.
 
  <p>To ensure that the created instance obeys its contract, the parameters should satisfy the
  following constraints. This is the callers responsibility and is not enforced here.
 
  <ul>
-   <li>If {@code count} is 0, {@code mean} may have any finite value (its only usage will be to
+   <li>If `count` is 0, `mean` may have any finite value (its only usage will be to
        get multiplied by 0 to calculate the sum), and the other parameters may have any values
        (they will not be used).
-   <li>If {@code count} is 1, {@code sumOfSquaresOfDeltas} must be exactly 0.0 or {@link Double#NaN}.
+   <li>If `count` is 1, `sumOfSquaresOfDeltas` must be exactly 0.0 or `Double.NaN`.
  </ul>
 
 ## Methods
@@ -85,16 +84,16 @@ Internal constructor. Users should use {@link #of} or {@link StatsAccumulator#sn
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 Returns statistics over a dataset containing the given values.
-@param values a series of values, which will be converted to {@code double} values (this may
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision)
 
-### `of([`java.util.Iterator<? extends java.lang.Number>`](../../../../java/util/Iterator.md) values)`
+### `of(`java.util.Iterator<? extends java.lang.Number>` values)`
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 Returns statistics over a dataset containing the given values. The iterator will be completely
  consumed by this method.
-@param values a series of values, which will be converted to {@code double} values (this may
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision)
 
 ### `of(`double[]` values)`
@@ -116,58 +115,56 @@ Returns statistics over a dataset containing the given values.
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 Returns statistics over a dataset containing the given values.
-@param values a series of values, which will be converted to {@code double} values (this may
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 
-### `of([`java.util.stream.DoubleStream`](../../../../java/util/stream/DoubleStream.md) values)`
+### `of(`java.util.stream.DoubleStream` values)`
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 Returns statistics over a dataset containing the given values. The stream will be completely
  consumed by this method.
 
- <p>If you have a {@code Stream<Double>} rather than a {@code DoubleStream}, you should collect
- the values using {@link #toStats()} instead.
+ <p>If you have a `Stream<Double>` rather than a `DoubleStream`, you should collect
+ the values using `toStats()` instead.
 @param values a series of values
-@since 28.2
+**Since:** 28.2
 
-### `of([`java.util.stream.IntStream`](../../../../java/util/stream/IntStream.md) values)`
+### `of(`java.util.stream.IntStream` values)`
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 Returns statistics over a dataset containing the given values. The stream will be completely
  consumed by this method.
 
- <p>If you have a {@code Stream<Integer>} rather than an {@code IntStream}, you should collect
- the values using {@link #toStats()} instead.
+ <p>If you have a `Stream<Integer>` rather than an `IntStream`, you should collect
+ the values using `toStats()` instead.
 @param values a series of values
-@since 28.2
+**Since:** 28.2
 
-### `of([`java.util.stream.LongStream`](../../../../java/util/stream/LongStream.md) values)`
+### `of(`java.util.stream.LongStream` values)`
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 Returns statistics over a dataset containing the given values. The stream will be completely
  consumed by this method.
 
- <p>If you have a {@code Stream<Long>} rather than a {@code LongStream}, you should collect the
- values using {@link #toStats()} instead.
-@param values a series of values, which will be converted to {@code double} values (this may
+ <p>If you have a `Stream<Long>` rather than a `LongStream`, you should collect the
+ values using `toStats()` instead.
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
-@since 28.2
+**Since:** 28.2
 
 ### `toStats()`
 
-**Returns:** [`java.util.stream.Collector<java.lang.Number,com.google.common.math.StatsAccumulator,com.google.common.math.Stats>`](../../../../java/util/stream/Collector.md)
+**Returns:** `java.util.stream.Collector<java.lang.Number,com.google.common.math.StatsAccumulator,com.google.common.math.Stats>`
 
-Returns a {@link Collector} which accumulates statistics from a {@link java.util.stream.Stream}
- of any type of boxed {@link Number} into a {@link Stats}. Use by calling {@code
- boxedNumericStream.collect(toStats())}. The numbers will be converted to {@code double} values
+Returns a `Collector` which accumulates statistics from a `java.util.stream.Stream`
+ of any type of boxed `Number` into a `Stats`. Use by calling `boxedNumericStream.collect(toStats())`. The numbers will be converted to `double` values
  (which may cause loss of precision).
 
- <p>If you have any of the primitive streams {@code DoubleStream}, {@code IntStream}, or {@code
- LongStream}, you should use the factory method {@link #of} instead.
-@since 28.2
+ <p>If you have any of the primitive streams `DoubleStream`, `IntStream`, or `LongStream`, you should use the factory method `of` instead.
+**Since:** 28.2
 
 ### `count()`
 
@@ -187,13 +184,13 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains both {@link Double#POSITIVE_INFINITY} and {@link Double#NEGATIVE_INFINITY} then the
- result is {@link Double#NaN}. If it contains {@link Double#POSITIVE_INFINITY} and finite values
- only or {@link Double#POSITIVE_INFINITY} only, the result is {@link Double#POSITIVE_INFINITY}.
- If it contains {@link Double#NEGATIVE_INFINITY} and finite values only or {@link Double#NEGATIVE_INFINITY} only, the result is {@link Double#NEGATIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains both `Double.POSITIVE_INFINITY` and `Double.NEGATIVE_INFINITY` then the
+ result is `Double.NaN`. If it contains `Double.POSITIVE_INFINITY` and finite values
+ only or `Double.POSITIVE_INFINITY` only, the result is `Double.POSITIVE_INFINITY`.
+ If it contains `Double.NEGATIVE_INFINITY` and finite values only or `Double.NEGATIVE_INFINITY` only, the result is `Double.NEGATIVE_INFINITY`.
 
- <p>If you only want to calculate the mean, use {@link #meanOf} instead of creating a {@link Stats} instance.
+ <p>If you only want to calculate the mean, use `meanOf` instead of creating a `Stats` instance.
 @throws IllegalStateException if the dataset is empty
 
 ### `sum()`
@@ -204,11 +201,11 @@ Returns the sum of the values.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains both {@link Double#POSITIVE_INFINITY} and {@link Double#NEGATIVE_INFINITY} then the
- result is {@link Double#NaN}. If it contains {@link Double#POSITIVE_INFINITY} and finite values
- only or {@link Double#POSITIVE_INFINITY} only, the result is {@link Double#POSITIVE_INFINITY}.
- If it contains {@link Double#NEGATIVE_INFINITY} and finite values only or {@link Double#NEGATIVE_INFINITY} only, the result is {@link Double#NEGATIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains both `Double.POSITIVE_INFINITY` and `Double.NEGATIVE_INFINITY` then the
+ result is `Double.NaN`. If it contains `Double.POSITIVE_INFINITY` and finite values
+ only or `Double.POSITIVE_INFINITY` only, the result is `Double.POSITIVE_INFINITY`.
+ If it contains `Double.NEGATIVE_INFINITY` and finite values only or `Double.NEGATIVE_INFINITY` only, the result is `Double.NEGATIVE_INFINITY`.
 
 ### `populationVariance()`
 
@@ -223,7 +220,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Variance#Population_variance">
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty
 
 ### `populationStandardDeviation()`
@@ -239,7 +236,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Standard_deviation#Definition_
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty
 
 ### `sampleVariance()`
@@ -256,7 +253,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Variance#Sample_variance">unbi
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty or contains a single value
 
 ### `sampleStandardDeviation()`
@@ -266,7 +263,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Variance#Sample_variance">unbi
 Returns the <a href="http://en.wikipedia.org/wiki/Standard_deviation#Corrected_sample_standard_deviation">
  corrected sample standard deviation</a> of the values. If this dataset is a sample drawn from a
  population, this is an estimator of the population standard deviation of the population which
- is less biased than {@link #populationStandardDeviation()} (the unbiased estimator depends on
+ is less biased than `populationStandardDeviation()` (the unbiased estimator depends on
  the distribution). The count must be greater than one.
 
  <p>This is not guaranteed to return zero when the dataset consists of the same value multiple
@@ -274,7 +271,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Standard_deviation#Corrected_s
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains any non-finite values ({@link Double#POSITIVE_INFINITY}, {@link Double#NEGATIVE_INFINITY}, or {@link Double#NaN}) then the result is {@link Double#NaN}.
+ <p>If the dataset contains any non-finite values (`Double.POSITIVE_INFINITY`, `Double.NEGATIVE_INFINITY`, or `Double.NaN`) then the result is `Double.NaN`.
 @throws IllegalStateException if the dataset is empty or contains a single value
 
 ### `min()`
@@ -285,9 +282,9 @@ Returns the lowest value in the dataset. The count must be non-zero.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains {@link Double#NEGATIVE_INFINITY} and not {@link Double#NaN} then the result is {@link Double#NEGATIVE_INFINITY}. If it contains {@link Double#POSITIVE_INFINITY} and finite values
- only then the result is the lowest finite value. If it contains {@link Double#POSITIVE_INFINITY} only then the result is {@link Double#POSITIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains `Double.NEGATIVE_INFINITY` and not `Double.NaN` then the result is `Double.NEGATIVE_INFINITY`. If it contains `Double.POSITIVE_INFINITY` and finite values
+ only then the result is the lowest finite value. If it contains `Double.POSITIVE_INFINITY` only then the result is `Double.POSITIVE_INFINITY`.
 @throws IllegalStateException if the dataset is empty
 
 ### `max()`
@@ -298,9 +295,9 @@ Returns the highest value in the dataset. The count must be non-zero.
 
  <h3>Non-finite values</h3>
 
- <p>If the dataset contains {@link Double#NaN} then the result is {@link Double#NaN}. If it
- contains {@link Double#POSITIVE_INFINITY} and not {@link Double#NaN} then the result is {@link Double#POSITIVE_INFINITY}. If it contains {@link Double#NEGATIVE_INFINITY} and finite values
- only then the result is the highest finite value. If it contains {@link Double#NEGATIVE_INFINITY} only then the result is {@link Double#NEGATIVE_INFINITY}.
+ <p>If the dataset contains `Double.NaN` then the result is `Double.NaN`. If it
+ contains `Double.POSITIVE_INFINITY` and not `Double.NaN` then the result is `Double.POSITIVE_INFINITY`. If it contains `Double.NEGATIVE_INFINITY` and finite values
+ only then the result is the highest finite value. If it contains `Double.NEGATIVE_INFINITY` only then the result is `Double.NEGATIVE_INFINITY`.
 @throws IllegalStateException if the dataset is empty
 
 ### `equals(`java.lang.Object` obj)`
@@ -311,15 +308,15 @@ Returns the highest value in the dataset. The count must be non-zero.
 
  <p><b>Note:</b> This tests exact equality of the calculated statistics, including the floating
  point values. Two instances are guaranteed to be considered equal if one is copied from the
- other using {@code second = new StatsAccumulator().addAll(first).snapshot()}, if both were
- obtained by calling {@code snapshot()} on the same {@link StatsAccumulator} without adding any
+ other using `second = new StatsAccumulator().addAll(first).snapshot()`, if both were
+ obtained by calling `snapshot()` on the same `StatsAccumulator` without adding any
  values in between the two calls, or if one is obtained from the other after round-tripping
  through java serialization. However, floating point rounding errors mean that it may be false
  for some instances where the statistics are mathematically equal, including instances
  constructed from the same values in a different order... or (in the general case) even in the
  same order. (It is guaranteed to return true for instances constructed from the same values in
- the same order if {@code strictfp} is in effect, or if the system architecture guarantees
- {@code strictfp}-like semantics.)
+ the same order if `strictfp` is in effect, or if the system architecture guarantees
+ `strictfp`-like semantics.)
 
 ### `hashCode()`
 
@@ -328,7 +325,7 @@ Returns the highest value in the dataset. The count must be non-zero.
 {@inheritDoc}
 
  <p><b>Note:</b> This hash code is consistent with exact equality of the calculated statistics,
- including the floating point values. See the note on {@link #equals} for details.
+ including the floating point values. See the note on `equals` for details.
 
 ### `toString()`
 
@@ -345,20 +342,20 @@ Returns the highest value in the dataset. The count must be non-zero.
 Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic mean</a> of the
  values. The count must be non-zero.
 
- <p>The definition of the mean is the same as {@link Stats#mean}.
-@param values a series of values, which will be converted to {@code double} values (this may
+ <p>The definition of the mean is the same as `Stats.mean`.
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision)
 @throws IllegalArgumentException if the dataset is empty
 
-### `meanOf([`java.util.Iterator<? extends java.lang.Number>`](../../../../java/util/Iterator.md) values)`
+### `meanOf(`java.util.Iterator<? extends java.lang.Number>` values)`
 
 **Returns:** `double`
 
 Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic mean</a> of the
  values. The count must be non-zero.
 
- <p>The definition of the mean is the same as {@link Stats#mean}.
-@param values a series of values, which will be converted to {@code double} values (this may
+ <p>The definition of the mean is the same as `Stats.mean`.
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision)
 @throws IllegalArgumentException if the dataset is empty
 
@@ -369,7 +366,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic mean</a> of the
  values. The count must be non-zero.
 
- <p>The definition of the mean is the same as {@link Stats#mean}.
+ <p>The definition of the mean is the same as `Stats.mean`.
 @param values a series of values
 @throws IllegalArgumentException if the dataset is empty
 
@@ -380,7 +377,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic mean</a> of the
  values. The count must be non-zero.
 
- <p>The definition of the mean is the same as {@link Stats#mean}.
+ <p>The definition of the mean is the same as `Stats.mean`.
 @param values a series of values
 @throws IllegalArgumentException if the dataset is empty
 
@@ -391,8 +388,8 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic mean</a> of the
  values. The count must be non-zero.
 
- <p>The definition of the mean is the same as {@link Stats#mean}.
-@param values a series of values, which will be converted to {@code double} values (this may
+ <p>The definition of the mean is the same as `Stats.mean`.
+@param values a series of values, which will be converted to `double` values (this may
      cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 @throws IllegalArgumentException if the dataset is empty
 
@@ -405,36 +402,36 @@ Gets a byte array representation of this instance.
  <p><b>Note:</b> No guarantees are made regarding stability of the representation between
  versions.
 
-### `writeTo([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) buffer)`
+### `writeTo(`java.nio.ByteBuffer` buffer)`
 
 **Returns:** `void`
 
-Writes to the given {@link ByteBuffer} a byte representation of this instance.
+Writes to the given `ByteBuffer` a byte representation of this instance.
 
  <p><b>Note:</b> No guarantees are made regarding stability of the representation between
  versions.
-@param buffer A {@link ByteBuffer} with at least BYTES {@link ByteBuffer#remaining}, ordered as
-     {@link ByteOrder#LITTLE_ENDIAN}, to which a BYTES-long byte representation of this instance
-     is written. In the process increases the position of {@link ByteBuffer} by BYTES.
+@param buffer A `ByteBuffer` with at least BYTES `ByteBuffer.remaining`, ordered as
+     `ByteOrder.LITTLE_ENDIAN`, to which a BYTES-long byte representation of this instance
+     is written. In the process increases the position of `ByteBuffer` by BYTES.
 
 ### `fromByteArray(`byte[]` byteArray)`
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
-Creates a Stats instance from the given byte representation which was obtained by {@link #toByteArray}.
+Creates a Stats instance from the given byte representation which was obtained by `toByteArray`.
 
  <p><b>Note:</b> No guarantees are made regarding stability of the representation between
  versions.
 
-### `readFrom([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) buffer)`
+### `readFrom(`java.nio.ByteBuffer` buffer)`
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
-Creates a Stats instance from the byte representation read from the given {@link ByteBuffer}.
+Creates a Stats instance from the byte representation read from the given `ByteBuffer`.
 
  <p><b>Note:</b> No guarantees are made regarding stability of the representation between
  versions.
-@param buffer A {@link ByteBuffer} with at least BYTES {@link ByteBuffer#remaining}, ordered as
-     {@link ByteOrder#LITTLE_ENDIAN}, from which a BYTES-long byte representation of this
-     instance is read. In the process increases the position of {@link ByteBuffer} by BYTES.
+@param buffer A `ByteBuffer` with at least BYTES `ByteBuffer.remaining`, ordered as
+     `ByteOrder.LITTLE_ENDIAN`, from which a BYTES-long byte representation of this
+     instance is read. In the process increases the position of `ByteBuffer` by BYTES.
 

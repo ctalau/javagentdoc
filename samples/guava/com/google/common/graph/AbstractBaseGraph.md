@@ -12,11 +12,11 @@
 
 ## Description
 
-This class provides a skeletal implementation of {@link BaseGraph}.
+This class provides a skeletal implementation of `BaseGraph`.
 
  <p>The methods implemented in this class should not be overridden unless the subclass admits a
  more efficient implementation.
-@author James Sexton
+**Author:** James Sexton
 @param <N> Node parameter type
 
 ## Constructors
@@ -29,38 +29,38 @@ This class provides a skeletal implementation of {@link BaseGraph}.
 
 **Returns:** `long`
 
-Returns the number of edges in this graph; used to calculate the size of {@link Graph#edges()}.
+Returns the number of edges in this graph; used to calculate the size of `Graph.edges()`.
  This implementation requires O(|N|) time. Classes extending this one may manually keep track of
  the number of edges as the graph is updated, and override this method for better performance.
 
 ### `edges()`
 
-**Returns:** [`java.util.Set<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-An implementation of {@link BaseGraph#edges()} defined in terms of {@link Graph#nodes()} and
- {@link #successors(Object)}.
+An implementation of `BaseGraph.edges()` defined in terms of `Graph.nodes()` and
+ `successors(Object)`.
 
 ### `incidentEdgeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `incidentEdges([`N`](N.md) node)`
+### `incidentEdges(`N` node)`
 
-**Returns:** [`java.util.Set<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-### `degree([`N`](N.md) node)`
-
-**Returns:** `int`
-
-### `inDegree([`N`](N.md) node)`
+### `degree(`N` node)`
 
 **Returns:** `int`
 
-### `outDegree([`N`](N.md) node)`
+### `inDegree(`N` node)`
 
 **Returns:** `int`
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `outDegree(`N` node)`
+
+**Returns:** `int`
+
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 
@@ -72,13 +72,13 @@ An implementation of {@link BaseGraph#edges()} defined in terms of {@link Graph#
 
 **Returns:** `void`
 
-Throws {@code IllegalArgumentException} if the ordering of {@code endpoints} is not compatible
+Throws `IllegalArgumentException` if the ordering of `endpoints` is not compatible
  with the directionality of this graph.
 
 ### `isOrderingCompatible([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md) endpoints)`
 
 **Returns:** `boolean`
 
-Returns {@code true} iff {@code endpoints}' ordering is compatible with the directionality of
+Returns `true` iff `endpoints`' ordering is compatible with the directionality of
  this graph.
 

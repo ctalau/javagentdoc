@@ -12,9 +12,9 @@
 
 ## Description
 
-A class to allow {@link Graph} implementations to be backed by a {@link BaseGraph}. This is not
+A class to allow `Graph` implementations to be backed by a `BaseGraph`. This is not
  currently planned to be released as a general-purpose forwarding class.
-@author James Sexton
+**Author:** James Sexton
 
 ## Constructors
 
@@ -28,13 +28,13 @@ A class to allow {@link Graph} implementations to be backed by a {@link BaseGrap
 
 ### `nodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `edgeCount()`
 
 **Returns:** `long`
 
-Defer to {@link AbstractGraph#edges()} (based on {@link #successors(Object)}) for full edges()
+Defer to `AbstractGraph.edges()` (based on `successors(Object)`) for full edges()
  implementation.
 
 ### `isDirected()`
@@ -53,35 +53,35 @@ Defer to {@link AbstractGraph#edges()} (based on {@link #successors(Object)}) fo
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `adjacentNodes([`N`](N.md) node)`
+### `adjacentNodes(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `predecessors([`N`](N.md) node)`
+### `predecessors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `successors([`N`](N.md) node)`
+### `successors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `incidentEdges([`N`](N.md) node)`
+### `incidentEdges(`N` node)`
 
-**Returns:** [`java.util.Set<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-### `degree([`N`](N.md) node)`
-
-**Returns:** `int`
-
-### `inDegree([`N`](N.md) node)`
+### `degree(`N` node)`
 
 **Returns:** `int`
 
-### `outDegree([`N`](N.md) node)`
+### `inDegree(`N` node)`
 
 **Returns:** `int`
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `outDegree(`N` node)`
+
+**Returns:** `int`
+
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 

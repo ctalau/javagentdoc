@@ -11,7 +11,7 @@
 
 ## Description
 
-A collection that maps keys to values, similar to {@link Map}, but in which each key may be
+A collection that maps keys to values, similar to `Map`, but in which each key may be
  associated with <i>multiple</i> values. You can visualize the contents of a multimap either as a
  map from keys to <i>nonempty</i> collections of values:
 
@@ -29,21 +29,20 @@ A collection that maps keys to values, similar to {@link Map}, but in which each
  </ul>
 
  <p><b>Important:</b> although the first interpretation resembles how most multimaps are
- <i>implemented</i>, the design of the {@code Multimap} API is based on the <i>second</i> form.
- So, using the multimap shown above as an example, the {@link #size} is {@code 3}, not {@code 2},
- and the {@link #values} collection is {@code [1, 2, 3]}, not {@code [[1, 2], [3]]}. For those
- times when the first style is more useful, use the multimap's {@link #asMap} view (or create a
- {@code Map<K, Collection<V>>} in the first place).
+ <i>implemented</i>, the design of the `Multimap` API is based on the <i>second</i> form.
+ So, using the multimap shown above as an example, the `size` is `3`, not `2`,
+ and the `values` collection is `[1, 2, 3]`, not `[[1, 2], [3]]`. For those
+ times when the first style is more useful, use the multimap's `asMap` view (or create a
+ `Map<K, Collection<V>>` in the first place).
 
  <h3>Example</h3>
 
  <p>The following code:
 
- <pre>{@code
- ListMultimap<String, String> multimap = ArrayListMultimap.create();
+ <pre>`ListMultimap<String, String> multimap = ArrayListMultimap.create();
  for (President pres : US_PRESIDENTS_IN_ORDER) {
    multimap.put(pres.firstName(), pres.lastName());
- }
+ `
  for (String firstName : multimap.keySet()) {
    List<String> lastNames = multimap.get(firstName);
    out.println(firstName + ": " + lastNames);
@@ -52,13 +51,12 @@ A collection that maps keys to values, similar to {@link Map}, but in which each
 
  ... produces output such as:
 
- <pre>{@code
- Zachary: [Taylor]
+ <pre>`Zachary: [Taylor]
  John: [Adams, Adams, Tyler, Kennedy]  // Remember, Quincy!
  George: [Washington, Bush, Bush]
  Grover: [Cleveland, Cleveland]        // Two, non-consecutive terms, rep'ing NJ!
  ...
- }</pre>
+ `</pre>
 
  <h3>Views</h3>
 
@@ -68,72 +66,71 @@ A collection that maps keys to values, similar to {@link Map}, but in which each
  collections are:
 
  <ul>
-   <li>{@link #asMap}, mentioned above
-   <li>{@link #keys}, {@link #keySet}, {@link #values}, {@link #entries}, which are similar to the
-       corresponding view collections of {@link Map}
-   <li>and, notably, even the collection returned by {@link #get get(key)} is an active view of
-       the values corresponding to {@code key}
+   <li>`asMap`, mentioned above
+   <li>`keys`, `keySet`, `values`, `entries`, which are similar to the
+       corresponding view collections of `Map`
+   <li>and, notably, even the collection returned by `get get(key)` is an active view of
+       the values corresponding to `key`
  </ul>
 
- <p>The collections returned by the {@link #replaceValues replaceValues} and {@link #removeAll removeAll} methods, which contain values that have just been removed from the multimap, are
+ <p>The collections returned by the `replaceValues replaceValues` and `removeAll removeAll` methods, which contain values that have just been removed from the multimap, are
  naturally <i>not</i> views.
 
  <h3>Subinterfaces</h3>
 
- <p>Instead of using the {@code Multimap} interface directly, prefer the subinterfaces {@link ListMultimap} and {@link SetMultimap}. These take their names from the fact that the collections
- they return from {@code get} behave like (and, of course, implement) {@link List} and {@link Set}, respectively.
+ <p>Instead of using the `Multimap` interface directly, prefer the subinterfaces `ListMultimap` and `SetMultimap`. These take their names from the fact that the collections
+ they return from `get` behave like (and, of course, implement) `List` and `Set`, respectively.
 
- <p>For example, the "presidents" code snippet above used a {@code ListMultimap}; if it had used a
- {@code SetMultimap} instead, two presidents would have vanished, and last names might or might
+ <p>For example, the "presidents" code snippet above used a `ListMultimap`; if it had used a
+ `SetMultimap` instead, two presidents would have vanished, and last names might or might
  not appear in chronological order.
 
- <p><b>Warning:</b> instances of type {@code Multimap} may not implement {@link Object#equals} in
+ <p><b>Warning:</b> instances of type `Multimap` may not implement `Object.equals` in
  the way you expect. Multimaps containing the same key-value pairs, even in the same order, may or
- may not be equal and may or may not have the same {@code hashCode}. The recommended subinterfaces
+ may not be equal and may or may not have the same `hashCode`. The recommended subinterfaces
  provide much stronger guarantees.
 
  <h3>Comparison to a map of collections</h3>
 
- <p>Multimaps are commonly used in places where a {@code Map<K, Collection<V>>} would otherwise
+ <p>Multimaps are commonly used in places where a `Map<K, Collection<V>>` would otherwise
  have appeared. The differences include:
 
  <ul>
-   <li>There is no need to populate an empty collection before adding an entry with {@link #put put}.
-   <li>{@code get} never returns {@code null}, only an empty collection.
+   <li>There is no need to populate an empty collection before adding an entry with `put put`.
+   <li>`get` never returns `null`, only an empty collection.
    <li>A key is contained in the multimap if and only if it maps to at least one value. Any
        operation that causes a key to have zero associated values has the effect of
        <i>removing</i> that key from the multimap.
-   <li>The total entry count is available as {@link #size}.
-   <li>Many complex operations become easier; for example, {@code
-       Collections.min(multimap.values())} finds the smallest value across all keys.
+   <li>The total entry count is available as `size`.
+   <li>Many complex operations become easier; for example, `Collections.min(multimap.values())` finds the smallest value across all keys.
  </ul>
 
  <h3>Implementations</h3>
 
  <ul>
-   <li>{@link ImmutableListMultimap}
-   <li>{@link ImmutableSetMultimap}
-   <li>Configure your own mutable multimap with {@link MultimapBuilder}
-   <li>{@link LinkedListMultimap} (for one unusual kind of mutable {@code Multimap})
+   <li>`ImmutableListMultimap`
+   <li>`ImmutableSetMultimap`
+   <li>Configure your own mutable multimap with `MultimapBuilder`
+   <li>`LinkedListMultimap` (for one unusual kind of mutable `Multimap`)
  </ul>
 
- Guava contains a number of other multimap implementations, such as {@link ArrayListMultimap}. In
- new code, we recommend using {@link MultimapBuilder} instead: It provides better control of how
+ Guava contains a number of other multimap implementations, such as `ArrayListMultimap`. In
+ new code, we recommend using `MultimapBuilder` instead: It provides better control of how
  keys and values are stored.
 
  <h3>Other Notes</h3>
 
- <p>As with {@code Map}, the behavior of a {@code Multimap} is not specified if key objects
- already present in the multimap change in a manner that affects {@code equals} comparisons. Use
- caution if mutable objects are used as keys in a {@code Multimap}.
+ <p>As with `Map`, the behavior of a `Multimap` is not specified if key objects
+ already present in the multimap change in a manner that affects `equals` comparisons. Use
+ caution if mutable objects are used as keys in a `Multimap`.
 
  <p>All methods that modify the multimap are optional. The view collections returned by the
  multimap may or may not be modifiable. Any modification method that is not supported will throw
- {@link UnsupportedOperationException}.
+ `UnsupportedOperationException`.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap">{@code Multimap}</a>.
-@author Jared Levy
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap">`Multimap`</a>.
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Methods
 
@@ -144,101 +141,98 @@ A collection that maps keys to values, similar to {@link Map}, but in which each
 Returns the number of key-value pairs in this multimap.
 
  <p><b>Note:</b> this method does not return the number of <i>distinct keys</i> in the multimap,
- which is given by {@code keySet().size()} or {@code asMap().size()}. See the opening section of
- the {@link Multimap} class documentation for clarification.
+ which is given by `keySet().size()` or `asMap().size()`. See the opening section of
+ the `Multimap` class documentation for clarification.
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-Returns {@code true} if this multimap contains no key-value pairs. Equivalent to {@code size()
- == 0}, but can in some cases be more efficient.
+Returns `true` if this multimap contains no key-value pairs. Equivalent to `size()
+ == 0`, but can in some cases be more efficient.
 
 ### `containsKey(`java.lang.Object` key)`
 
 **Returns:** `boolean`
 
-Returns {@code true} if this multimap contains at least one key-value pair with the key {@code
- key}.
+Returns `true` if this multimap contains at least one key-value pair with the key `key`.
 
 ### `containsValue(`java.lang.Object` value)`
 
 **Returns:** `boolean`
 
-Returns {@code true} if this multimap contains at least one key-value pair with the value
- {@code value}.
+Returns `true` if this multimap contains at least one key-value pair with the value
+ `value`.
 
 ### `containsEntry(`java.lang.Object` key, `java.lang.Object` value)`
 
 **Returns:** `boolean`
 
-Returns {@code true} if this multimap contains at least one key-value pair with the key {@code
- key} and the value {@code value}.
+Returns `true` if this multimap contains at least one key-value pair with the key `key` and the value `value`.
 
-### `put([`K`](K.md) key, [`V`](V.md) value)`
+### `put(`K` key, `V` value)`
 
 **Returns:** `boolean`
 
 Stores a key-value pair in this multimap.
 
- <p>Some multimap implementations allow duplicate key-value pairs, in which case {@code put}
+ <p>Some multimap implementations allow duplicate key-value pairs, in which case `put`
  always adds a new key-value pair and increases the multimap size by 1. Other implementations
  prohibit duplicates, and storing a key-value pair that's already in the multimap has no effect.
-@return {@code true} if the method increased the size of the multimap, or {@code false} if the
+@return `true` if the method increased the size of the multimap, or `false` if the
      multimap already contained the key-value pair and doesn't allow duplicates
 
 ### `remove(`java.lang.Object` key, `java.lang.Object` value)`
 
 **Returns:** `boolean`
 
-Removes a single key-value pair with the key {@code key} and the value {@code value} from this
+Removes a single key-value pair with the key `key` and the value `value` from this
  multimap, if such exists. If multiple key-value pairs in the multimap fit this description,
  which one is removed is unspecified.
-@return {@code true} if the multimap changed
+@return `true` if the multimap changed
 
-### `putAll([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `putAll(`K` key, `java.lang.Iterable<? extends V>` values)`
 
 **Returns:** `boolean`
 
-Stores a key-value pair in this multimap for each of {@code values}, all using the same key,
- {@code key}. Equivalent to (but expected to be more efficient than):
+Stores a key-value pair in this multimap for each of `values`, all using the same key,
+ `key`. Equivalent to (but expected to be more efficient than):
 
- <pre>{@code
- for (V value : values) {
+ <pre>`for (V value : values) {
    put(key, value);
- }
+ `
  }</pre>
 
- <p>In particular, this is a no-op if {@code values} is empty.
-@return {@code true} if the multimap changed
+ <p>In particular, this is a no-op if `values` is empty.
+@return `true` if the multimap changed
 
 ### `putAll([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md) multimap)`
 
 **Returns:** `boolean`
 
-Stores all key-value pairs of {@code multimap} in this multimap, in the order returned by
- {@code multimap.entries()}.
-@return {@code true} if the multimap changed
+Stores all key-value pairs of `multimap` in this multimap, in the order returned by
+ `multimap.entries()`.
+@return `true` if the multimap changed
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 Stores a collection of values with the same key, replacing any existing values for that key.
 
- <p>If {@code values} is empty, this is equivalent to {@link #removeAll(Object) removeAll(key)}.
+ <p>If `values` is empty, this is equivalent to `removeAll(Object) removeAll(key)`.
 @return the collection of replaced values, or an empty collection if no values were previously
      associated with the key. The collection <i>may</i> be modifiable, but updating it will have
      no effect on the multimap.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
-Removes all values associated with the key {@code key}.
+Removes all values associated with the key `key`.
 
- <p>Once this method returns, {@code key} will not be mapped to any values, so it will not
- appear in {@link #keySet()}, {@link #asMap()}, or any other views.
+ <p>Once this method returns, `key` will not be mapped to any values, so it will not
+ appear in `keySet()`, `asMap()`, or any other views.
 @return the values that were removed (possibly empty). The returned collection <i>may</i> be
      modifiable, but updating it will have no effect on the multimap.
 
@@ -246,21 +240,20 @@ Removes all values associated with the key {@code key}.
 
 **Returns:** `void`
 
-Removes all key-value pairs from the multimap, leaving it {@linkplain #isEmpty empty}.
+Removes all key-value pairs from the multimap, leaving it empty.
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
-Returns a view collection of the values associated with {@code key} in this multimap, if any.
- Note that when {@code containsKey(key)} is false, this returns an empty collection, not {@code
- null}.
+Returns a view collection of the values associated with `key` in this multimap, if any.
+ Note that when `containsKey(key)` is false, this returns an empty collection, not `null`.
 
  <p>Changes to the returned collection will update the underlying multimap, and vice versa.
 
 ### `keySet()`
 
-**Returns:** [`java.util.Set<K>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<K>`
 
 Returns a view collection of all <i>distinct</i> keys contained in this multimap. Note that the
  key set contains a key if and only if this multimap maps that key to at least one value.
@@ -274,71 +267,70 @@ Returns a view collection of all <i>distinct</i> keys contained in this multimap
 
 Returns a view collection containing the key from each key-value pair in this multimap,
  <i>without</i> collapsing duplicates. This collection has the same size as this multimap, and
- {@code keys().count(k) == get(k).size()} for all {@code k}.
+ `keys().count(k) == get(k).size()` for all `k`.
 
  <p>Changes to the returned multiset will update the underlying multimap, and vice versa.
  However, <i>adding</i> to the returned collection is not possible.
 
 ### `values()`
 
-**Returns:** [`java.util.Collection<V>`](../../../../java/util/Collection.md)
+**Returns:** `java.util.Collection<V>`
 
 Returns a view collection containing the <i>value</i> from each key-value pair contained in
- this multimap, without collapsing duplicates (so {@code values().size() == size()}).
+ this multimap, without collapsing duplicates (so `values().size() == size()`).
 
  <p>Changes to the returned collection will update the underlying multimap, and vice versa.
  However, <i>adding</i> to the returned collection is not possible.
 
 ### `entries()`
 
-**Returns:** [`java.util.Collection<java.util.Map.Entry<K,V>>`](../../../../java/util/Collection>.md)
+**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
-Returns a view collection of all key-value pairs contained in this multimap, as {@link Entry}
+Returns a view collection of all key-value pairs contained in this multimap, as `Entry`
  instances.
 
  <p>Changes to the returned collection or the entries it contains will update the underlying
  multimap, and vice versa. However, <i>adding</i> to the returned collection is not possible.
 
-### `forEach([`java.util.function.BiConsumer<? super K,? super V>`](../../../../java/util/function/BiConsumer.md) action)`
+### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
 
 **Returns:** `void`
 
 Performs the given action for all key-value pairs contained in this multimap. If an ordering is
- specified by the {@code Multimap} implementation, actions will be performed in the order of
- iteration of {@link #entries()}. Exceptions thrown by the action are relayed to the caller.
+ specified by the `Multimap` implementation, actions will be performed in the order of
+ iteration of `entries()`. Exceptions thrown by the action are relayed to the caller.
 
- <p>To loop over all keys and their associated value collections, write {@code
- Multimaps.asMap(multimap).forEach((key, valueCollection) -> action())}.
-@since 21.0
+ <p>To loop over all keys and their associated value collections, write `Multimaps.asMap(multimap).forEach((key, valueCollection) -> action())`.
+**Since:** 21.0
 
 ### `asMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-Returns a view of this multimap as a {@code Map} from each distinct key to the nonempty
- collection of that key's associated values. Note that {@code this.asMap().get(k)} is equivalent
- to {@code this.get(k)} only when {@code k} is a key contained in the multimap; otherwise it
- returns {@code null} as opposed to an empty collection.
+Returns a view of this multimap as a `Map` from each distinct key to the nonempty
+ collection of that key's associated values. Note that `this.asMap().get(k)` is equivalent
+ to `this.get(k)` only when `k` is a key contained in the multimap; otherwise it
+ returns `null` as opposed to an empty collection.
 
  <p>Changes to the returned map or the collections that serve as its values will update the
- underlying multimap, and vice versa. The map does not support {@code put} or {@code putAll},
- nor do its entries support {@link Entry#setValue setValue}.
+ underlying multimap, and vice versa. The map does not support `put` or `putAll`,
+ nor do its entries support `Entry.setValue setValue`.
 
 ### `equals(`java.lang.Object` obj)`
 
 **Returns:** `boolean`
 
 Compares the specified object with this multimap for equality. Two multimaps are equal when
- their map views, as returned by {@link #asMap}, are also equal.
+ their map views, as returned by `asMap`, are also equal.
 
  <p>In general, two multimaps with identical key-value mappings may or may not be equal,
- depending on the implementation. For example, two {@link SetMultimap} instances with the same
- key-value mappings are equal, but equality of two {@link ListMultimap} instances depends on the
+ depending on the implementation. For example, two `SetMultimap` instances with the same
+ key-value mappings are equal, but equality of two `ListMultimap` instances depends on the
  ordering of the values for each key.
 
- <p>A non-empty {@link SetMultimap} cannot be equal to a non-empty {@link ListMultimap}, since
- their {@link #asMap} views contain unequal collections as values. However, any two empty
- multimaps are equal, because they both have empty {@link #asMap} views.
+ <p>A non-empty `SetMultimap` cannot be equal to a non-empty `ListMultimap`, since
+ their `asMap` views contain unequal collections as values. However, any two empty
+ multimaps are equal, because they both have empty `asMap` views.
 
 ### `hashCode()`
 
@@ -347,10 +339,10 @@ Compares the specified object with this multimap for equality. Two multimaps are
 Returns the hash code for this multimap.
 
  <p>The hash code of a multimap is defined as the hash code of the map view, as returned by
- {@link Multimap#asMap}.
+ `Multimap.asMap`.
 
  <p>In general, two multimaps with identical key-value mappings may or may not have the same
- hash codes, depending on the implementation. For example, two {@link SetMultimap} instances
- with the same key-value mappings will have the same {@code hashCode}, but the {@code hashCode}
- of {@link ListMultimap} instances depends on the ordering of the values for each key.
+ hash codes, depending on the implementation. For example, two `SetMultimap` instances
+ with the same key-value mappings will have the same `hashCode`, but the `hashCode`
+ of `ListMultimap` instances depends on the ordering of the values for each key.
 

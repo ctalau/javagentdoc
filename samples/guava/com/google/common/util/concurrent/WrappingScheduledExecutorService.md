@@ -6,40 +6,40 @@
 
 **Extends:** [`com.google.common.util.concurrent.WrappingExecutorService`](./WrappingExecutorService.md)
 
-**Implements:** [`java.util.concurrent.ScheduledExecutorService`](../../../../../java/util/concurrent/ScheduledExecutorService.md)
+**Implements:** `java.util.concurrent.ScheduledExecutorService`
 
 ## Description
 
-An abstract {@code ScheduledExecutorService} that allows subclasses to {@linkplain #wrapTask(Callable) wrap} tasks before they are submitted to the underlying executor.
+An abstract `ScheduledExecutorService` that allows subclasses to wrap tasks before they are submitted to the underlying executor.
 
  <p>Note that task wrapping may occur even if the task is never executed.
-@author Luke Sandberg
+**Author:** Luke Sandberg
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`java.util.concurrent.ScheduledExecutorService`](../../../../../java/util/concurrent/ScheduledExecutorService.md)
+**Type:** `java.util.concurrent.ScheduledExecutorService`
 
 ## Constructors
 
-### `<init>([`java.util.concurrent.ScheduledExecutorService`](../../../../../java/util/concurrent/ScheduledExecutorService.md) delegate)`
+### `<init>(`java.util.concurrent.ScheduledExecutorService` delegate)`
 
 ## Methods
 
-### `schedule(`java.lang.Runnable` command, `long` delay, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `schedule(`java.lang.Runnable` command, `long` delay, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`java.util.concurrent.ScheduledFuture<?>`](../../../../../java/util/concurrent/ScheduledFuture.md)
+**Returns:** `java.util.concurrent.ScheduledFuture<?>`
 
-### `schedule([`java.util.concurrent.Callable<V>`](../../../../../java/util/concurrent/Callable.md) task, `long` delay, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `schedule(`java.util.concurrent.Callable<V>` task, `long` delay, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`java.util.concurrent.ScheduledFuture<V>`](../../../../../java/util/concurrent/ScheduledFuture.md)
+**Returns:** `java.util.concurrent.ScheduledFuture<V>`
 
-### `scheduleAtFixedRate(`java.lang.Runnable` command, `long` initialDelay, `long` period, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `scheduleAtFixedRate(`java.lang.Runnable` command, `long` initialDelay, `long` period, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`java.util.concurrent.ScheduledFuture<?>`](../../../../../java/util/concurrent/ScheduledFuture.md)
+**Returns:** `java.util.concurrent.ScheduledFuture<?>`
 
-### `scheduleWithFixedDelay(`java.lang.Runnable` command, `long` initialDelay, `long` delay, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `scheduleWithFixedDelay(`java.lang.Runnable` command, `long` initialDelay, `long` delay, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`java.util.concurrent.ScheduledFuture<?>`](../../../../../java/util/concurrent/ScheduledFuture.md)
+**Returns:** `java.util.concurrent.ScheduledFuture<?>`
 

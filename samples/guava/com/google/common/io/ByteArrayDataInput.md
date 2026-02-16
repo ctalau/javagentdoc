@@ -4,18 +4,18 @@
 
 **Fully Qualified Name:** `com.google.common.io.ByteArrayDataInput`
 
-**Extends:** [`java.io.DataInput`](../../../../java/io/DataInput.md)
+**Extends:** `java.io.DataInput`
 
 ## Description
 
-An extension of {@code DataInput} for reading from in-memory byte arrays; its methods offer
- identical functionality but do not throw {@link IOException}.
+An extension of `DataInput` for reading from in-memory byte arrays; its methods offer
+ identical functionality but do not throw `IOException`.
 
  <p><b>Warning:</b> The caller is responsible for not attempting to read past the end of the
- array. If any method encounters the end of the array prematurely, it throws {@link IllegalStateException} to signify <i>programmer error</i>. This behavior is a technical violation
+ array. If any method encounters the end of the array prematurely, it throws `IllegalStateException` to signify <i>programmer error</i>. This behavior is a technical violation
  of the supertype's contract, which specifies a checked exception.
-@author Kevin Bourrillion
-@since 1.0
+**Author:** Kevin Bourrillion
+**Since:** 1.0
 
 ## Methods
 

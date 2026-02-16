@@ -6,20 +6,19 @@
 
 ## Description
 
-Scans the source of a {@link ClassLoader} and finds all loadable classes and resources.
+Scans the source of a `ClassLoader` and finds all loadable classes and resources.
 
- <h2>Prefer <a href="https://github.com/classgraph/classgraph/wiki">ClassGraph</a> over {@code
- ClassPath}</h2>
+ <h2>Prefer <a href="https://github.com/classgraph/classgraph/wiki">ClassGraph</a> over `ClassPath`</h2>
 
  <p>We recommend using <a href="https://github.com/classgraph/classgraph/wiki">ClassGraph</a>
- instead of {@code ClassPath}. ClassGraph improves upon {@code ClassPath} in several ways,
- including addressing many of its limitations. Limitations of {@code ClassPath} include:
+ instead of `ClassPath`. ClassGraph improves upon `ClassPath` in several ways,
+ including addressing many of its limitations. Limitations of `ClassPath` include:
 
  <ul>
-   <li>It looks only for files and JARs in URLs available from {@link URLClassLoader} instances or
-       the {@linkplain ClassLoader#getSystemClassLoader() system class loader}. This means it does
+   <li>It looks only for files and JARs in URLs available from `URLClassLoader` instances or
+       the system class loader. This means it does
        not look for classes in the <i>module path</i>.
-   <li>It understands only {@code file:} URLs. This means that it does not understand <a href="https://openjdk.java.net/jeps/220">{@code jrt:/} URLs</a>, among <a href="https://github.com/classgraph/classgraph/wiki/Classpath-specification-mechanisms">others</a>.
+   <li>It understands only `file:` URLs. This means that it does not understand <a href="https://openjdk.java.net/jeps/220">`jrt:/` URLs</a>, among <a href="https://github.com/classgraph/classgraph/wiki/Classpath-specification-mechanisms">others</a>.
    <li>It does not know how to look for classes when running under an Android VM. (ClassGraph does
        not support this directly, either, but ClassGraph documents how to <a href="https://github.com/classgraph/classgraph/wiki/Build-Time-Scanning">perform build-time
        classpath scanning and make the results available to an Android app</a>.)
@@ -28,22 +27,22 @@ Scans the source of a {@link ClassLoader} and finds all loadable classes and res
    <li>It <a href="https://github.com/google/guava/issues/2712">returns only one resource for a
        given path</a>, even if resources with that path appear in multiple jars or directories.
    <li>It assumes that <a href="https://github.com/google/guava/issues/3349">any class with a
-       {@code $} in its name is a nested class</a>.
+       `$` in its name is a nested class</a>.
  </ul>
 
- <h2>{@code ClassPath} and symlinks</h2>
+ <h2>`ClassPath` and symlinks</h2>
 
  <p>In the case of directory classloaders, symlinks are supported but cycles are not traversed.
  This guarantees discovery of each <em>unique</em> loadable resource. However, not all possible
  aliases for resources on cyclic paths will be listed.
-@author Ben Yu
-@since 14.0
+**Author:** Ben Yu
+**Since:** 14.0
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`java.util.logging.Logger`](../../../../java/util/logging/Logger.md)
+**Type:** `java.util.logging.Logger`
 
 ### `CLASS_PATH_ATTRIBUTE_SEPARATOR`
 
@@ -69,16 +68,14 @@ Separator for the Class-Path manifest attribute value in jar files.
 
 **Returns:** [`com.google.common.reflect.ClassPath`](./ClassPath.md)
 
-Returns a {@code ClassPath} representing all classes and resources loadable from {@code
- classloader} and its ancestor class loaders.
+Returns a `ClassPath` representing all classes and resources loadable from `classloader` and its ancestor class loaders.
 
- <p><b>Warning:</b> {@code ClassPath} can find classes and resources only from:
+ <p><b>Warning:</b> `ClassPath` can find classes and resources only from:
 
  <ul>
-   <li>{@link URLClassLoader} instances' {@code file:} URLs
-   <li>the {@linkplain ClassLoader#getSystemClassLoader() system class loader}. To search the
-       system class loader even when it is not a {@link URLClassLoader} (as in Java 9), {@code
-       ClassPath} searches the files from the {@code java.class.path} system property.
+   <li>`URLClassLoader` instances' `file:` URLs
+   <li>the system class loader. To search the
+       system class loader even when it is not a `URLClassLoader` (as in Java 9), `ClassPath` searches the files from the `java.class.path` system property.
  </ul>
 @throws IOException if the attempt to read class path resources (jar files or directories)
      failed.
@@ -95,43 +92,42 @@ Returns all resources loadable from the current class path, including the class 
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
 
 Returns all classes loadable from the current class path.
-@since 16.0
+**Since:** 16.0
 
 ### `getTopLevelClasses()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
 
 Returns all top level classes loadable from the current class path. Note that "top-level-ness"
- is determined heuristically by class name (see {@link ClassInfo#isTopLevel}).
+ is determined heuristically by class name (see `ClassInfo.isTopLevel`).
 
 ### `getTopLevelClasses(`java.lang.String` packageName)`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
 
-Returns all top level classes whose package name is {@code packageName}.
+Returns all top level classes whose package name is `packageName`.
 
 ### `getTopLevelClassesRecursive(`java.lang.String` packageName)`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
 
-Returns all top level classes whose package name is {@code packageName} or starts with {@code
- packageName} followed by a '.'.
+Returns all top level classes whose package name is `packageName` or starts with `packageName` followed by a '.'.
 
 ### `locationsFrom(`java.lang.ClassLoader` classloader)`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.LocationInfo>`](../collect/ImmutableSet.md)
 
-Returns all locations that {@code classloader} and parent loaders load classes and resources
- from. Callers can {@linkplain LocationInfo#scanResources scan} individual locations selectively
+Returns all locations that `classloader` and parent loaders load classes and resources
+ from. Callers can scan individual locations selectively
  or even in parallel.
 
-### `getClassPathFromManifest([`java.io.File`](../../../../java/io/File.md) jarFile, [`java.util.jar.Manifest`](../../../../java/util/jar/Manifest.md) manifest)`
+### `getClassPathFromManifest(`java.io.File` jarFile, `java.util.jar.Manifest` manifest)`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<java.io.File>`](../collect/ImmutableSet.md)
 
-Returns the class path URIs specified by the {@code Class-Path} manifest attribute, according
+Returns the class path URIs specified by the `Class-Path` manifest attribute, according
  to <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html#Main_Attributes">JAR
- File Specification</a>. If {@code manifest} is null, it means the jar file has no manifest, and
+ File Specification</a>. If `manifest` is null, it means the jar file has no manifest, and
  an empty set will be returned.
 
 ### `getClassPathEntries(`java.lang.ClassLoader` classloader)`
@@ -146,11 +142,11 @@ Returns the class path URIs specified by the {@code Class-Path} manifest attribu
 
 **Returns:** [`com.google.common.collect.ImmutableList<java.net.URL>`](../collect/ImmutableList.md)
 
-Returns the URLs in the class path specified by the {@code java.class.path} {@linkplain System#getProperty system property}.
+Returns the URLs in the class path specified by the `java.class.path` system property.
 
-### `getClassPathEntry([`java.io.File`](../../../../java/io/File.md) jarFile, `java.lang.String` path)`
+### `getClassPathEntry(`java.io.File` jarFile, `java.lang.String` path)`
 
-**Returns:** [`java.net.URL`](../../../../java/net/URL.md)
+**Returns:** `java.net.URL`
 
 Returns the absolute uri of the Class-Path entry value as specified in <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html#Main_Attributes">JAR
  File Specification</a>. Even though the specification only talks about relative urls, absolute
@@ -160,7 +156,7 @@ Returns the absolute uri of the Class-Path entry value as specified in <a href="
 
 **Returns:** `java.lang.String`
 
-### `toFile([`java.net.URL`](../../../../java/net/URL.md) url)`
+### `toFile(`java.net.URL` url)`
 
-**Returns:** [`java.io.File`](../../../../java/io/File.md)
+**Returns:** `java.io.File`
 

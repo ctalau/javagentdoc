@@ -10,14 +10,14 @@ Simple helper class to build a "sparse" array of objects based on the indexes th
  it. The array will be from 0 to the maximum index given. All non-set indexes will contain null
  (so it's not really a sparse array, just a pseudo sparse array). The builder can also return a
  CharEscaper based on the generated array.
-@author Sven Mawson
-@since 15.0
+**Author:** Sven Mawson
+**Since:** 15.0
 
 ## Fields
 
 ### `map`
 
-**Type:** [`java.util.Map<java.lang.Character,java.lang.String>`](../../../../java/util/Map.md)
+**Type:** `java.util.Map<java.lang.Character,java.lang.String>`
 
 ### `max`
 

@@ -6,8 +6,8 @@
 
 ## Description
 
-Static utility methods pertaining to the {@link Runnable} interface.
-@since 16.0
+Static utility methods pertaining to the `Runnable` interface.
+**Since:** 16.0
 
 ## Fields
 
@@ -25,5 +25,5 @@ Static utility methods pertaining to the {@link Runnable} interface.
 
 **Returns:** `java.lang.Runnable`
 
-Returns a {@link Runnable} instance that does nothing when run.
+Returns a `Runnable` instance that does nothing when run.
 

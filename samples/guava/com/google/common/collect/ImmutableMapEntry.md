@@ -13,17 +13,17 @@
 
 ## Description
 
-Implementation of {@code Entry} for {@link ImmutableMap} that adds extra methods to traverse hash
- buckets for the key and the value. This allows reuse in {@link RegularImmutableMap} and {@link RegularImmutableBiMap}, which don't have to recopy the entries created by their {@code Builder}
+Implementation of `Entry` for `ImmutableMap` that adds extra methods to traverse hash
+ buckets for the key and the value. This allows reuse in `RegularImmutableMap` and `RegularImmutableBiMap`, which don't have to recopy the entries created by their `Builder`
  implementations.
 
  <p>This base implementation has no key or value pointers, so instances of ImmutableMapEntry (but
  not its subclasses) can be reused when copied from one ImmutableMap to another.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Constructors
 
-### `<init>([`K`](K.md) key, [`V`](V.md) value)`
+### `<init>(`K` key, `V` value)`
 
 ### `<init>([`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md) contents)`
 
@@ -33,13 +33,13 @@ Implementation of {@code Entry} for {@link ImmutableMap} that adds extra methods
 
 **Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>[]`](./ImmutableMapEntry.md)
 
-Creates an {@code ImmutableMapEntry} array to hold parameterized entries. The result must never
+Creates an `ImmutableMapEntry` array to hold parameterized entries. The result must never
  be upcast back to ImmutableMapEntry[] (or Object[], etc.), or allowed to escape the class.
 
  <p>The returned array has all its elements set to their initial null values. However, we don't
- declare it as {@code @Nullable ImmutableMapEntry[]} because our checker doesn't require newly
- created arrays to have a {@code @Nullable} element type even when they're created directly with
- {@code new ImmutableMapEntry[...]}, so it seems silly to insist on that only here.
+ declare it as `@Nullable ImmutableMapEntry[]` because our checker doesn't require newly
+ created arrays to have a `@Nullable` element type even when they're created directly with
+ `new ImmutableMapEntry[...]`, so it seems silly to insist on that only here.
 
 ### `getNextInKeyBucket()`
 

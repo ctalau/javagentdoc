@@ -8,7 +8,6 @@
 
 ## Description
 
-Private replacement for {@link com.google.gwt.user.client.rpc.GwtTransient} to work around
- build-system quirks. This annotation should be used <b>only</b> in {@code
- com.google.common.collect}.
+Private replacement for `com.google.gwt.user.client.rpc.GwtTransient` to work around
+ build-system quirks. This annotation should be used <b>only</b> in `com.google.common.collect`.
 

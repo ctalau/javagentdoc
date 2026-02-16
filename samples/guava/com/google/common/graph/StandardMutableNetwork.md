@@ -15,14 +15,14 @@
 
 ## Description
 
-Standard implementation of {@link MutableNetwork} that supports both directed and undirected
- graphs. Instances of this class should be constructed with {@link NetworkBuilder}.
+Standard implementation of `MutableNetwork` that supports both directed and undirected
+ graphs. Instances of this class should be constructed with `NetworkBuilder`.
 
- <p>Time complexities for mutation methods are all O(1) except for {@code removeNode(N node)},
- which is in O(d_node) where d_node is the degree of {@code node}.
-@author James Sexton
-@author Joshua O'Madadhain
-@author Omar Darwish
+ <p>Time complexities for mutation methods are all O(1) except for `removeNode(N node)`,
+ which is in O(d_node) where d_node is the degree of `node`.
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
+**Author:** Omar Darwish
 @param <N> Node parameter type
 @param <E> Edge parameter type
 
@@ -30,34 +30,34 @@ Standard implementation of {@link MutableNetwork} that supports both directed an
 
 ### `<init>([`com.google.common.graph.NetworkBuilder<? super N,? super E>`](./NetworkBuilder.md) builder)`
 
-Constructs a mutable graph with the properties specified in {@code builder}.
+Constructs a mutable graph with the properties specified in `builder`.
 
 ## Methods
 
-### `addNode([`N`](N.md) node)`
+### `addNode(`N` node)`
 
 **Returns:** `boolean`
 
-### `addNodeInternal([`N`](N.md) node)`
+### `addNodeInternal(`N` node)`
 
 **Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
 
-Adds {@code node} to the graph and returns the associated {@link NetworkConnections}.
-@throws IllegalStateException if {@code node} is already present
+Adds `node` to the graph and returns the associated `NetworkConnections`.
+@throws IllegalStateException if `node` is already present
 
-### `addEdge([`N`](N.md) nodeU, [`N`](N.md) nodeV, [`E`](E.md) edge)`
-
-**Returns:** `boolean`
-
-### `addEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, [`E`](E.md) edge)`
+### `addEdge(`N` nodeU, `N` nodeV, `E` edge)`
 
 **Returns:** `boolean`
 
-### `removeNode([`N`](N.md) node)`
+### `addEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, `E` edge)`
 
 **Returns:** `boolean`
 
-### `removeEdge([`E`](E.md) edge)`
+### `removeNode(`N` node)`
+
+**Returns:** `boolean`
+
+### `removeEdge(`E` edge)`
 
 **Returns:** `boolean`
 

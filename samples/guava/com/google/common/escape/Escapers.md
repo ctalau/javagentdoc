@@ -6,10 +6,10 @@
 
 ## Description
 
-Static utility methods pertaining to {@link Escaper} instances.
-@author Sven Mawson
-@author David Beaumont
-@since 15.0
+Static utility methods pertaining to `Escaper` instances.
+**Author:** Sven Mawson
+**Author:** David Beaumont
+**Since:** 15.0
 
 ## Fields
 
@@ -27,7 +27,7 @@ Static utility methods pertaining to {@link Escaper} instances.
 
 **Returns:** [`com.google.common.escape.Escaper`](./Escaper.md)
 
-Returns an {@link Escaper} that does no escaping, passing all character data through unchanged.
+Returns an `Escaper` that does no escaping, passing all character data through unchanged.
 
 ### `builder()`
 
@@ -41,9 +41,9 @@ Returns a builder for creating simple, fast escapers. A builder instance can be 
 
  <ul>
    <li>There are no replacement mappings
-   <li>{@code safeMin == Character.MIN_VALUE}
-   <li>{@code safeMax == Character.MAX_VALUE}
-   <li>{@code unsafeReplacement == null}
+   <li>`safeMin == Character.MIN_VALUE`
+   <li>`safeMax == Character.MAX_VALUE`
+   <li>`unsafeReplacement == null`
  </ul>
 
  <p>For performance reasons escapers created by this builder are not Unicode aware and will not
@@ -53,12 +53,12 @@ Returns a builder for creating simple, fast escapers. A builder instance can be 
 
 **Returns:** [`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md)
 
-Returns a {@link UnicodeEscaper} equivalent to the given escaper instance. If the escaper is
+Returns a `UnicodeEscaper` equivalent to the given escaper instance. If the escaper is
  already a UnicodeEscaper then it is simply returned, otherwise it is wrapped in a
  UnicodeEscaper.
 
- <p>When a {@link CharEscaper} escaper is wrapped by this method it acquires extra behavior with
- respect to the well-formedness of Unicode character sequences and will throw {@link IllegalArgumentException} when given bad input.
+ <p>When a `CharEscaper` escaper is wrapped by this method it acquires extra behavior with
+ respect to the well-formedness of Unicode character sequences and will throw `IllegalArgumentException` when given bad input.
 @param escaper the instance to be wrapped
 @return a UnicodeEscaper with the same behavior as the given instance
 @throws NullPointerException if escaper is null
@@ -68,23 +68,21 @@ Returns a {@link UnicodeEscaper} equivalent to the given escaper instance. If th
 
 **Returns:** `java.lang.String`
 
-Returns a string that would replace the given character in the specified escaper, or {@code
- null} if no replacement should be made. This method is intended for use in tests through the
- {@code EscaperAsserts} class; production users of {@link CharEscaper} should limit themselves
+Returns a string that would replace the given character in the specified escaper, or `null` if no replacement should be made. This method is intended for use in tests through the
+ `EscaperAsserts` class; production users of `CharEscaper` should limit themselves
  to its public interface.
 @param c the character to escape if necessary
-@return the replacement string, or {@code null} if no escaping was needed
+@return the replacement string, or `null` if no escaping was needed
 
 ### `computeReplacement([`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md) escaper, `int` cp)`
 
 **Returns:** `java.lang.String`
 
-Returns a string that would replace the given character in the specified escaper, or {@code
- null} if no replacement should be made. This method is intended for use in tests through the
- {@code EscaperAsserts} class; production users of {@link UnicodeEscaper} should limit
+Returns a string that would replace the given character in the specified escaper, or `null` if no replacement should be made. This method is intended for use in tests through the
+ `EscaperAsserts` class; production users of `UnicodeEscaper` should limit
  themselves to its public interface.
 @param cp the Unicode code point to escape if necessary
-@return the replacement string, or {@code null} if no escaping was needed
+@return the replacement string, or `null` if no escaping was needed
 
 ### `stringOrNull(`char[]` in)`
 

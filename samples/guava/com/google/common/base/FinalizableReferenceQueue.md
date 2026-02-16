@@ -4,25 +4,22 @@
 
 **Fully Qualified Name:** `com.google.common.base.FinalizableReferenceQueue`
 
-**Implements:** [`java.io.Closeable`](../../../../java/io/Closeable.md)
+**Implements:** `java.io.Closeable`
 
 ## Description
 
 A reference queue with an associated background thread that dequeues references and invokes
- {@link FinalizableReference#finalizeReferent()} on them.
+ `FinalizableReference.finalizeReferent()` on them.
 
  <p>Keep a strong reference to this object until all of the associated referents have been
- finalized. If this object is garbage collected earlier, the backing thread will not invoke {@code
- finalizeReferent()} on the remaining references.
+ finalized. If this object is garbage collected earlier, the backing thread will not invoke `finalizeReferent()` on the remaining references.
 
- <p>As an example of how this is used, imagine you have a class {@code MyServer} that creates a
- {@link java.net.ServerSocket ServerSocket}, and you would like to ensure that the {@code
- ServerSocket} is closed even if the {@code MyServer} object is garbage-collected without calling
- its {@code close} method. You <em>could</em> use a finalizer to accomplish this, but that has a
+ <p>As an example of how this is used, imagine you have a class `MyServer` that creates a
+ `java.net.ServerSocket`, and you would like to ensure that the `ServerSocket` is closed even if the `MyServer` object is garbage-collected without calling
+ its `close` method. You <em>could</em> use a finalizer to accomplish this, but that has a
  number of well-known problems. Here is how you might use this class instead:
 
- <pre>{@code
- public class MyServer implements Closeable {
+ <pre>`public class MyServer implements Closeable {
    private static final FinalizableReferenceQueue frq = new FinalizableReferenceQueue();
    // You might also share this between several objects.
 
@@ -35,7 +32,7 @@ A reference queue with an associated background thread that dequeues references 
      ...
      this.serverSocket = new ServerSocket(...);
      ...
-   }
+   `
 
    public static MyServer create(...) {
      MyServer myServer = new MyServer(...);
@@ -62,14 +59,14 @@ A reference queue with an associated background thread that dequeues references 
    }
  }
  }</pre>
-@author Bob Lee
-@since 2.0
+**Author:** Bob Lee
+**Since:** 2.0
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`java.util.logging.Logger`](../../../../java/util/logging/Logger.md)
+**Type:** `java.util.logging.Logger`
 
 ### `FINALIZER_CLASS_NAME`
 
@@ -113,7 +110,7 @@ Constructs a new queue.
 
 **Returns:** `void`
 
-Repeatedly dequeues references from the queue and invokes {@link FinalizableReference#finalizeReferent()} on them until the queue is empty. This method is a
+Repeatedly dequeues references from the queue and invokes `FinalizableReference.finalizeReferent()` on them until the queue is empty. This method is a
  no-op if the background thread was created successfully.
 
 ### `loadFinalizer([`com.google.common.base.FinalizableReferenceQueue.FinalizerLoader[]`](FinalizableReferenceQueue/FinalizerLoader.md) loaders)`

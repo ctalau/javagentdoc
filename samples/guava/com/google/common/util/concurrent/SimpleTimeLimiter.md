@@ -8,25 +8,25 @@
 
 ## Description
 
-A TimeLimiter that runs method calls in the background using an {@link ExecutorService}. If the
+A TimeLimiter that runs method calls in the background using an `ExecutorService`. If the
  time limit expires for a given method call, the thread running the call will be interrupted.
-@author Kevin Bourrillion
-@author Jens Nyman
-@since 1.0
+**Author:** Kevin Bourrillion
+**Author:** Jens Nyman
+**Since:** 1.0
 
 ## Fields
 
 ### `executor`
 
-**Type:** [`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md)
+**Type:** `java.util.concurrent.ExecutorService`
 
 ## Constructors
 
-### `<init>([`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md) executor)`
+### `<init>(`java.util.concurrent.ExecutorService` executor)`
 
 ## Methods
 
-### `create([`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md) executor)`
+### `create(`java.util.concurrent.ExecutorService` executor)`
 
 **Returns:** [`com.google.common.util.concurrent.SimpleTimeLimiter`](./SimpleTimeLimiter.md)
 
@@ -36,34 +36,34 @@ Creates a TimeLimiter instance using the given executor service to execute metho
  up, any time callers spend waiting for a thread may count toward their time limit, and in this
  case the call may even time out before the target method is ever invoked.
 @param executor the ExecutorService that will execute the method calls on the target objects;
-     for example, a {@link Executors#newCachedThreadPool()}.
-@since 22.0
+     for example, a `Executors.newCachedThreadPool()`.
+**Since:** 22.0
 
-### `newProxy([`T`](T.md) target, `java.lang.Class<T>` interfaceType, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `newProxy(`T` target, `java.lang.Class<T>` interfaceType, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `newProxy(`java.lang.Class<T>` interfaceType, `java.lang.reflect.InvocationHandler` handler)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `callWithTimeout([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) callable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit, `boolean` amInterruptible)`
+### `callWithTimeout(`java.util.concurrent.Callable<T>` callable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit, `boolean` amInterruptible)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `callWithTimeout([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) callable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `callWithTimeout(`java.util.concurrent.Callable<T>` callable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `callUninterruptiblyWithTimeout([`java.util.concurrent.Callable<T>`](../../../../../java/util/concurrent/Callable.md) callable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `callUninterruptiblyWithTimeout(`java.util.concurrent.Callable<T>` callable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-### `runWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `runWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
 **Returns:** `void`
 
-### `runUninterruptiblyWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) timeoutUnit)`
+### `runUninterruptiblyWithTimeout(`java.lang.Runnable` runnable, `long` timeoutDuration, `java.util.concurrent.TimeUnit` timeoutUnit)`
 
 **Returns:** `void`
 
@@ -73,7 +73,7 @@ Creates a TimeLimiter instance using the given executor service to execute metho
 
 ### `findInterruptibleMethods(`java.lang.Class<?>` interfaceType)`
 
-**Returns:** [`java.util.Set<java.lang.reflect.Method>`](../../../../../java/util/Set.md)
+**Returns:** `java.util.Set<java.lang.reflect.Method>`
 
 ### `declaresInterruptedEx(`java.lang.reflect.Method` method)`
 

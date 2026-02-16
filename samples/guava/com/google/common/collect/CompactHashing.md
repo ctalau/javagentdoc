@@ -7,7 +7,7 @@
 ## Description
 
 Helper classes and static methods for implementing compact hash-based collections.
-@author Jon Noack
+**Author:** Jon Noack
 
 ## Fields
 
@@ -97,19 +97,18 @@ Creates and returns a properly-sized array with the given number of buckets.
 
 **Returns:** `int`
 
-Returns {@code table[index]}, where {@code table} is actually a {@code byte[]}, {@code
- short[]}, or {@code int[]}. When it is a {@code byte[]} or {@code short[]}, the returned value
+Returns `table[index]`, where `table` is actually a `byte[]`, `short[]`, or `int[]`. When it is a `byte[]` or `short[]`, the returned value
  is unsigned, so the range of possible returned values is 0\u2013255 or 0\u201365535, respectively.
 
 ### `tableSet(`java.lang.Object` table, `int` index, `int` entry)`
 
 **Returns:** `void`
 
-Sets {@code table[index]} to {@code entry}, where {@code table} is actually a {@code byte[]},
- {@code short[]}, or {@code int[]}. The value of {@code entry} should fit in the size of the
- assigned array element, when seen as an unsigned value. So if {@code table} is a {@code byte[]}
- then we should have {@code 0 \u2264 entry \u2264 255}, and if {@code table} is a {@code short[]} then we
- should have {@code 0 \u2264 entry \u2264 65535}. It is the caller's responsibility to ensure this.
+Sets `table[index]` to `entry`, where `table` is actually a `byte[]`,
+ `short[]`, or `int[]`. The value of `entry` should fit in the size of the
+ assigned array element, when seen as an unsigned value. So if `table` is a `byte[]`
+ then we should have `0 \u2264 entry \u2264 255`, and if `table` is a `short[]` then we
+ should have `0 \u2264 entry \u2264 65535`. It is the caller's responsibility to ensure this.
 
 ### `newCapacity(`int` mask)`
 

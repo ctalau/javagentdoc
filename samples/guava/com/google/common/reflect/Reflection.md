@@ -7,7 +7,7 @@
 ## Description
 
 Static utilities relating to Java reflection.
-@since 12.0
+**Since:** 12.0
 
 ## Constructors
 
@@ -19,17 +19,17 @@ Static utilities relating to Java reflection.
 
 **Returns:** `java.lang.String`
 
-Returns the package name of {@code clazz} according to the Java Language Specification (section
- 6.7). Unlike {@link Class#getPackage}, this method only parses the class name, without
- attempting to define the {@link Package} and hence load files.
+Returns the package name of `clazz` according to the Java Language Specification (section
+ 6.7). Unlike `Class.getPackage`, this method only parses the class name, without
+ attempting to define the `Package` and hence load files.
 
 ### `getPackageName(`java.lang.String` classFullName)`
 
 **Returns:** `java.lang.String`
 
-Returns the package name of {@code classFullName} according to the Java Language Specification
- (section 6.7). Unlike {@link Class#getPackage}, this method only parses the class name, without
- attempting to define the {@link Package} and hence load files.
+Returns the package name of `classFullName` according to the Java Language Specification
+ (section 6.7). Unlike `Class.getPackage`, this method only parses the class name, without
+ attempting to define the `Package` and hence load files.
 
 ### `initialize(`java.lang.Class<?>[]` classes)`
 
@@ -45,11 +45,11 @@ Ensures that the given classes are initialized, as described in <a href="http://
 
 ### `newProxy(`java.lang.Class<T>` interfaceType, `java.lang.reflect.InvocationHandler` handler)`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
-Returns a proxy instance that implements {@code interfaceType} by dispatching method
- invocations to {@code handler}. The class loader of {@code interfaceType} will be used to
- define the proxy class. To implement multiple interfaces or specify a class loader, use {@link Proxy#newProxyInstance}.
-@throws IllegalArgumentException if {@code interfaceType} does not specify the type of a Java
+Returns a proxy instance that implements `interfaceType` by dispatching method
+ invocations to `handler`. The class loader of `interfaceType` will be used to
+ define the proxy class. To implement multiple interfaces or specify a class loader, use `Proxy.newProxyInstance`.
+@throws IllegalArgumentException if `interfaceType` does not specify the type of a Java
      interface
 

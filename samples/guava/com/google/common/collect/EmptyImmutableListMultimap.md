@@ -8,8 +8,8 @@
 
 ## Description
 
-Implementation of {@link ImmutableListMultimap} with no entries.
-@author Jared Levy
+Implementation of `ImmutableListMultimap` with no entries.
+**Author:** Jared Levy
 
 ## Fields
 

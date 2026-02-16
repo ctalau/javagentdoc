@@ -9,8 +9,8 @@
 Utilities for treating interruptible operations as uninterruptible. In all cases, if a thread is
  interrupted during such a call, the call continues to block until the result is available or the
  timeout elapses, and only then re-interrupts the thread.
-@author Anthony Zana
-@since 10.0
+**Author:** Anthony Zana
+**Since:** 10.0
 
 ## Constructors
 
@@ -18,210 +18,210 @@ Utilities for treating interruptible operations as uninterruptible. In all cases
 
 ## Methods
 
-### `awaitUninterruptibly([`java.util.concurrent.CountDownLatch`](../../../../../java/util/concurrent/CountDownLatch.md) latch)`
+### `awaitUninterruptibly(`java.util.concurrent.CountDownLatch` latch)`
 
 **Returns:** `void`
 
-Invokes {@code latch.}{@link CountDownLatch#await() await()} uninterruptibly.
+Invokes `latch.``CountDownLatch.await() await()` uninterruptibly.
 
-### `awaitUninterruptibly([`java.util.concurrent.CountDownLatch`](../../../../../java/util/concurrent/CountDownLatch.md) latch, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
-
-**Returns:** `boolean`
-
-Invokes {@code latch.}{@link CountDownLatch#await(long, TimeUnit) await(timeout, unit)}
- uninterruptibly.
-@since 28.0
-
-### `awaitUninterruptibly([`java.util.concurrent.CountDownLatch`](../../../../../java/util/concurrent/CountDownLatch.md) latch, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitUninterruptibly(`java.util.concurrent.CountDownLatch` latch, `java.time.Duration` timeout)`
 
 **Returns:** `boolean`
 
-Invokes {@code latch.}{@link CountDownLatch#await(long, TimeUnit) await(timeout, unit)}
+Invokes `latch.``CountDownLatch.await(long, TimeUnit) await(timeout, unit)`
  uninterruptibly.
+**Since:** 28.0
 
-### `awaitUninterruptibly([`java.util.concurrent.locks.Condition`](../../../../../java/util/concurrent/locks/Condition.md) condition, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
+### `awaitUninterruptibly(`java.util.concurrent.CountDownLatch` latch, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
-Invokes {@code condition.}{@link Condition#await(long, TimeUnit) await(timeout, unit)}
+Invokes `latch.``CountDownLatch.await(long, TimeUnit) await(timeout, unit)`
  uninterruptibly.
-@since 28.0
 
-### `awaitUninterruptibly([`java.util.concurrent.locks.Condition`](../../../../../java/util/concurrent/locks/Condition.md) condition, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitUninterruptibly(`java.util.concurrent.locks.Condition` condition, `java.time.Duration` timeout)`
 
 **Returns:** `boolean`
 
-Invokes {@code condition.}{@link Condition#await(long, TimeUnit) await(timeout, unit)}
+Invokes `condition.``Condition.await(long, TimeUnit) await(timeout, unit)`
  uninterruptibly.
-@since 23.6
+**Since:** 28.0
+
+### `awaitUninterruptibly(`java.util.concurrent.locks.Condition` condition, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+
+**Returns:** `boolean`
+
+Invokes `condition.``Condition.await(long, TimeUnit) await(timeout, unit)`
+ uninterruptibly.
+**Since:** 23.6
 
 ### `joinUninterruptibly(`java.lang.Thread` toJoin)`
 
 **Returns:** `void`
 
-Invokes {@code toJoin.}{@link Thread#join() join()} uninterruptibly.
+Invokes `toJoin.``Thread.join() join()` uninterruptibly.
 
-### `joinUninterruptibly(`java.lang.Thread` toJoin, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
-
-**Returns:** `void`
-
-Invokes {@code unit.}{@link TimeUnit#timedJoin(Thread, long) timedJoin(toJoin, timeout)}
- uninterruptibly.
-@since 28.0
-
-### `joinUninterruptibly(`java.lang.Thread` toJoin, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `joinUninterruptibly(`java.lang.Thread` toJoin, `java.time.Duration` timeout)`
 
 **Returns:** `void`
 
-Invokes {@code unit.}{@link TimeUnit#timedJoin(Thread, long) timedJoin(toJoin, timeout)}
+Invokes `unit.``TimeUnit.timedJoin(Thread, long) timedJoin(toJoin, timeout)`
+ uninterruptibly.
+**Since:** 28.0
+
+### `joinUninterruptibly(`java.lang.Thread` toJoin, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+
+**Returns:** `void`
+
+Invokes `unit.``TimeUnit.timedJoin(Thread, long) timedJoin(toJoin, timeout)`
  uninterruptibly.
 
-### `getUninterruptibly([`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future)`
+### `getUninterruptibly(`java.util.concurrent.Future<V>` future)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Invokes {@code future.}{@link Future#get() get()} uninterruptibly.
+Invokes `future.``Future.get() get()` uninterruptibly.
 
  <p>Similar methods:
 
  <ul>
-   <li>To retrieve a result from a {@code Future} that is already done, use {@link Futures#getDone Futures.getDone}.
-   <li>To treat {@link InterruptedException} uniformly with other exceptions, use {@link Futures#getChecked(Future, Class) Futures.getChecked}.
-   <li>To get uninterruptibility and remove checked exceptions, use {@link Futures#getUnchecked}.
+   <li>To retrieve a result from a `Future` that is already done, use `Futures.getDone Futures.getDone`.
+   <li>To treat `InterruptedException` uniformly with other exceptions, use `Futures.getChecked(Future, Class) Futures.getChecked`.
+   <li>To get uninterruptibility and remove checked exceptions, use `Futures.getUnchecked`.
  </ul>
 @throws ExecutionException if the computation threw an exception
 @throws CancellationException if the computation was cancelled
 
-### `getUninterruptibly([`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
+### `getUninterruptibly(`java.util.concurrent.Future<V>` future, `java.time.Duration` timeout)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Invokes {@code future.}{@link Future#get(long, TimeUnit) get(timeout, unit)} uninterruptibly.
+Invokes `future.``Future.get(long, TimeUnit) get(timeout, unit)` uninterruptibly.
 
  <p>Similar methods:
 
  <ul>
-   <li>To retrieve a result from a {@code Future} that is already done, use {@link Futures#getDone Futures.getDone}.
-   <li>To treat {@link InterruptedException} uniformly with other exceptions, use {@link Futures#getChecked(Future, Class, long, TimeUnit) Futures.getChecked}.
-   <li>To get uninterruptibility and remove checked exceptions, use {@link Futures#getUnchecked}.
+   <li>To retrieve a result from a `Future` that is already done, use `Futures.getDone Futures.getDone`.
+   <li>To treat `InterruptedException` uniformly with other exceptions, use `Futures.getChecked(Future, Class, long, TimeUnit) Futures.getChecked`.
+   <li>To get uninterruptibility and remove checked exceptions, use `Futures.getUnchecked`.
  </ul>
 @throws ExecutionException if the computation threw an exception
 @throws CancellationException if the computation was cancelled
 @throws TimeoutException if the wait timed out
-@since 28.0
+**Since:** 28.0
 
-### `getUninterruptibly([`java.util.concurrent.Future<V>`](../../../../../java/util/concurrent/Future.md) future, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `getUninterruptibly(`java.util.concurrent.Future<V>` future, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-Invokes {@code future.}{@link Future#get(long, TimeUnit) get(timeout, unit)} uninterruptibly.
+Invokes `future.``Future.get(long, TimeUnit) get(timeout, unit)` uninterruptibly.
 
  <p>Similar methods:
 
  <ul>
-   <li>To retrieve a result from a {@code Future} that is already done, use {@link Futures#getDone Futures.getDone}.
-   <li>To treat {@link InterruptedException} uniformly with other exceptions, use {@link Futures#getChecked(Future, Class, long, TimeUnit) Futures.getChecked}.
-   <li>To get uninterruptibility and remove checked exceptions, use {@link Futures#getUnchecked}.
+   <li>To retrieve a result from a `Future` that is already done, use `Futures.getDone Futures.getDone`.
+   <li>To treat `InterruptedException` uniformly with other exceptions, use `Futures.getChecked(Future, Class, long, TimeUnit) Futures.getChecked`.
+   <li>To get uninterruptibility and remove checked exceptions, use `Futures.getUnchecked`.
  </ul>
 @throws ExecutionException if the computation threw an exception
 @throws CancellationException if the computation was cancelled
 @throws TimeoutException if the wait timed out
 
-### `takeUninterruptibly([`java.util.concurrent.BlockingQueue<E>`](../../../../../java/util/concurrent/BlockingQueue.md) queue)`
+### `takeUninterruptibly(`java.util.concurrent.BlockingQueue<E>` queue)`
 
-**Returns:** [`E`](E.md)
+**Returns:** `E`
 
-Invokes {@code queue.}{@link BlockingQueue#take() take()} uninterruptibly.
+Invokes `queue.``BlockingQueue.take() take()` uninterruptibly.
 
-### `putUninterruptibly([`java.util.concurrent.BlockingQueue<E>`](../../../../../java/util/concurrent/BlockingQueue.md) queue, [`E`](E.md) element)`
+### `putUninterruptibly(`java.util.concurrent.BlockingQueue<E>` queue, `E` element)`
 
 **Returns:** `void`
 
-Invokes {@code queue.}{@link BlockingQueue#put(Object) put(element)} uninterruptibly.
+Invokes `queue.``BlockingQueue.put(Object) put(element)` uninterruptibly.
 @throws ClassCastException if the class of the specified element prevents it from being added
      to the given queue
 @throws IllegalArgumentException if some property of the specified element prevents it from
      being added to the given queue
 
-### `sleepUninterruptibly([`java.time.Duration`](../../../../../java/time/Duration.md) sleepFor)`
+### `sleepUninterruptibly(`java.time.Duration` sleepFor)`
 
 **Returns:** `void`
 
-Invokes {@code unit.}{@link TimeUnit#sleep(long) sleep(sleepFor)} uninterruptibly.
-@since 28.0
+Invokes `unit.``TimeUnit.sleep(long) sleep(sleepFor)` uninterruptibly.
+**Since:** 28.0
 
-### `sleepUninterruptibly(`long` sleepFor, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `sleepUninterruptibly(`long` sleepFor, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `void`
 
-Invokes {@code unit.}{@link TimeUnit#sleep(long) sleep(sleepFor)} uninterruptibly.
+Invokes `unit.``TimeUnit.sleep(long) sleep(sleepFor)` uninterruptibly.
 
-### `tryAcquireUninterruptibly([`java.util.concurrent.Semaphore`](../../../../../java/util/concurrent/Semaphore.md) semaphore, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
-
-**Returns:** `boolean`
-
-Invokes {@code semaphore.}{@link Semaphore#tryAcquire(int, long, TimeUnit) tryAcquire(1,
- timeout, unit)} uninterruptibly.
-@since 28.0
-
-### `tryAcquireUninterruptibly([`java.util.concurrent.Semaphore`](../../../../../java/util/concurrent/Semaphore.md) semaphore, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `java.time.Duration` timeout)`
 
 **Returns:** `boolean`
 
-Invokes {@code semaphore.}{@link Semaphore#tryAcquire(int, long, TimeUnit) tryAcquire(1,
- timeout, unit)} uninterruptibly.
-@since 18.0
+Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(1,
+ timeout, unit)` uninterruptibly.
+**Since:** 28.0
 
-### `tryAcquireUninterruptibly([`java.util.concurrent.Semaphore`](../../../../../java/util/concurrent/Semaphore.md) semaphore, `int` permits, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
-
-**Returns:** `boolean`
-
-Invokes {@code semaphore.}{@link Semaphore#tryAcquire(int, long, TimeUnit) tryAcquire(permits,
- timeout, unit)} uninterruptibly.
-@since 28.0
-
-### `tryAcquireUninterruptibly([`java.util.concurrent.Semaphore`](../../../../../java/util/concurrent/Semaphore.md) semaphore, `int` permits, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
-Invokes {@code semaphore.}{@link Semaphore#tryAcquire(int, long, TimeUnit) tryAcquire(permits,
- timeout, unit)} uninterruptibly.
-@since 18.0
+Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(1,
+ timeout, unit)` uninterruptibly.
+**Since:** 18.0
 
-### `tryLockUninterruptibly([`java.util.concurrent.locks.Lock`](../../../../../java/util/concurrent/locks/Lock.md) lock, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
+### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `int` permits, `java.time.Duration` timeout)`
 
 **Returns:** `boolean`
 
-Invokes {@code lock.}{@link Lock#tryLock(long, TimeUnit) tryLock(timeout, unit)}
+Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(permits,
+ timeout, unit)` uninterruptibly.
+**Since:** 28.0
+
+### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `int` permits, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+
+**Returns:** `boolean`
+
+Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(permits,
+ timeout, unit)` uninterruptibly.
+**Since:** 18.0
+
+### `tryLockUninterruptibly(`java.util.concurrent.locks.Lock` lock, `java.time.Duration` timeout)`
+
+**Returns:** `boolean`
+
+Invokes `lock.``Lock.tryLock(long, TimeUnit) tryLock(timeout, unit)`
  uninterruptibly.
-@since 30.0
+**Since:** 30.0
 
-### `tryLockUninterruptibly([`java.util.concurrent.locks.Lock`](../../../../../java/util/concurrent/locks/Lock.md) lock, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `tryLockUninterruptibly(`java.util.concurrent.locks.Lock` lock, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
-Invokes {@code lock.}{@link Lock#tryLock(long, TimeUnit) tryLock(timeout, unit)}
+Invokes `lock.``Lock.tryLock(long, TimeUnit) tryLock(timeout, unit)`
  uninterruptibly.
-@since 30.0
+**Since:** 30.0
 
-### `awaitTerminationUninterruptibly([`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md) executor)`
+### `awaitTerminationUninterruptibly(`java.util.concurrent.ExecutorService` executor)`
 
 **Returns:** `void`
 
-Invokes {@code executor.}{@link ExecutorService#awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)} uninterruptibly with no timeout.
-@since 30.0
+Invokes `executor.``ExecutorService.awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)` uninterruptibly with no timeout.
+**Since:** 30.0
 
-### `awaitTerminationUninterruptibly([`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md) executor, [`java.time.Duration`](../../../../../java/time/Duration.md) timeout)`
-
-**Returns:** `boolean`
-
-Invokes {@code executor.}{@link ExecutorService#awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)} uninterruptibly.
-@since 30.0
-
-### `awaitTerminationUninterruptibly([`java.util.concurrent.ExecutorService`](../../../../../java/util/concurrent/ExecutorService.md) executor, `long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `awaitTerminationUninterruptibly(`java.util.concurrent.ExecutorService` executor, `java.time.Duration` timeout)`
 
 **Returns:** `boolean`
 
-Invokes {@code executor.}{@link ExecutorService#awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)} uninterruptibly.
-@since 30.0
+Invokes `executor.``ExecutorService.awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)` uninterruptibly.
+**Since:** 30.0
+
+### `awaitTerminationUninterruptibly(`java.util.concurrent.ExecutorService` executor, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+
+**Returns:** `boolean`
+
+Invokes `executor.``ExecutorService.awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)` uninterruptibly.
+**Since:** 30.0
 

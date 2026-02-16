@@ -34,6 +34,6 @@ Precondition checks useful in collection implementations.
 
 **Returns:** `void`
 
-Precondition tester for {@code Iterator.remove()} that throws an exception with a consistent
+Precondition tester for `Iterator.remove()` that throws an exception with a consistent
  error message.
 

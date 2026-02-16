@@ -13,25 +13,24 @@
 
 ## Description
 
-A builder for constructing instances of {@link MutableValueGraph} or {@link ImmutableValueGraph}
+A builder for constructing instances of `MutableValueGraph` or `ImmutableValueGraph`
  with user-defined properties.
 
- <p>A {@code ValueGraph} built by this class has the following default properties:
+ <p>A `ValueGraph` built by this class has the following default properties:
 
  <ul>
    <li>does not allow self-loops
-   <li>orders {@link ValueGraph#nodes()} in the order in which the elements were added (insertion
+   <li>orders `ValueGraph.nodes()` in the order in which the elements were added (insertion
        order)
  </ul>
 
- <p>{@code ValueGraph}s built by this class also guarantee that each collection-returning accessor
+ <p>`ValueGraph`s built by this class also guarantee that each collection-returning accessor
  returns a <b>(live) unmodifiable view</b>; see <a href="https://github.com/google/guava/wiki/GraphsExplained#accessor-behavior">the external
  documentation</a> for details.
 
  <p>Examples of use:
 
- <pre>{@code
- // Building a mutable value graph
+ <pre>`// Building a mutable value graph
  MutableValueGraph<String, Double> graph =
      ValueGraphBuilder.undirected().allowsSelfLoops(true).build();
  graph.putEdgeValue("San Francisco", "San Francisco", 0.0);
@@ -47,15 +46,15 @@ A builder for constructing instances of {@link MutableValueGraph} or {@link Immu
          .putEdgeValue("San Jose", "San Jose", 0.0)
          .putEdgeValue("San Francisco", "San Jose", 48.4)
          .build();
- }</pre>
-@author James Sexton
-@author Joshua O'Madadhain
-@param <N> The most general node type this builder will support. This is normally {@code Object}
-     unless it is constrained by using a method like {@link #nodeOrder}, or the builder is
-     constructed based on an existing {@code ValueGraph} using {@link #from(ValueGraph)}.
-@param <V> The most general value type this builder will support. This is normally {@code Object}
-     unless the builder is constructed based on an existing {@code Graph} using {@link #from(ValueGraph)}.
-@since 20.0
+ `</pre>
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
+@param <N> The most general node type this builder will support. This is normally `Object`
+     unless it is constrained by using a method like `nodeOrder`, or the builder is
+     constructed based on an existing `ValueGraph` using `from(ValueGraph)`.
+@param <V> The most general value type this builder will support. This is normally `Object`
+     unless the builder is constructed based on an existing `Graph` using `from(ValueGraph)`.
+**Since:** 20.0
 
 ## Constructors
 
@@ -69,76 +68,74 @@ Creates a new instance with the specified edge directionality.
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<java.lang.Object,java.lang.Object>`](./ValueGraphBuilder.md)
 
-Returns a {@link ValueGraphBuilder} for building directed graphs.
+Returns a `ValueGraphBuilder` for building directed graphs.
 
 ### `undirected()`
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<java.lang.Object,java.lang.Object>`](./ValueGraphBuilder.md)
 
-Returns a {@link ValueGraphBuilder} for building undirected graphs.
+Returns a `ValueGraphBuilder` for building undirected graphs.
 
 ### `from([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph)`
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
 
-Returns a {@link ValueGraphBuilder} initialized with all properties queryable from {@code
- graph}.
+Returns a `ValueGraphBuilder` initialized with all properties queryable from `graph`.
 
- <p>The "queryable" properties are those that are exposed through the {@link ValueGraph}
- interface, such as {@link ValueGraph#isDirected()}. Other properties, such as {@link #expectedNodeCount(int)}, are not set in the new builder.
+ <p>The "queryable" properties are those that are exposed through the `ValueGraph`
+ interface, such as `ValueGraph.isDirected()`. Other properties, such as `expectedNodeCount(int)`, are not set in the new builder.
 
 ### `immutable()`
 
 **Returns:** [`com.google.common.graph.ImmutableValueGraph.Builder<N1,V1>`](ImmutableValueGraph/Builder.md)
 
-Returns an {@link ImmutableValueGraph.Builder} with the properties of this {@link ValueGraphBuilder}.
+Returns an `ImmutableValueGraph.Builder` with the properties of this `ValueGraphBuilder`.
 
- <p>The returned builder can be used for populating an {@link ImmutableValueGraph}.
+ <p>The returned builder can be used for populating an `ImmutableValueGraph`.
 
- <p>Note that the returned builder will always have {@link #incidentEdgeOrder} set to {@link ElementOrder#stable()}, regardless of the value that was set in this builder.
-@since 28.0
+ <p>Note that the returned builder will always have `incidentEdgeOrder` set to `ElementOrder.stable()`, regardless of the value that was set in this builder.
+**Since:** 28.0
 
 ### `allowsSelfLoops(`boolean` allowsSelfLoops)`
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
 
 Specifies whether the graph will allow self-loops (edges that connect a node to itself).
- Attempting to add a self-loop to a graph that does not allow them will throw an {@link UnsupportedOperationException}.
+ Attempting to add a self-loop to a graph that does not allow them will throw an `UnsupportedOperationException`.
 
- <p>The default value is {@code false}.
+ <p>The default value is `false`.
 
 ### `expectedNodeCount(`int` expectedNodeCount)`
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
 
 Specifies the expected number of nodes in the graph.
-@throws IllegalArgumentException if {@code expectedNodeCount} is negative
+@throws IllegalArgumentException if `expectedNodeCount` is negative
 
 ### `nodeOrder([`com.google.common.graph.ElementOrder<N1>`](./ElementOrder.md) nodeOrder)`
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<N1,V>`](./ValueGraphBuilder.md)
 
-Specifies the order of iteration for the elements of {@link Graph#nodes()}.
+Specifies the order of iteration for the elements of `Graph.nodes()`.
 
- <p>The default value is {@link ElementOrder#insertion() insertion order}.
+ <p>The default value is `ElementOrder.insertion() insertion order`.
 
 ### `incidentEdgeOrder([`com.google.common.graph.ElementOrder<N1>`](./ElementOrder.md) incidentEdgeOrder)`
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<N1,V>`](./ValueGraphBuilder.md)
 
-Specifies the order of iteration for the elements of {@link ValueGraph#edges()}, {@link ValueGraph#adjacentNodes(Object)}, {@link ValueGraph#predecessors(Object)}, {@link ValueGraph#successors(Object)} and {@link ValueGraph#incidentEdges(Object)}.
+Specifies the order of iteration for the elements of `ValueGraph.edges()`, `ValueGraph.adjacentNodes(Object)`, `ValueGraph.predecessors(Object)`, `ValueGraph.successors(Object)` and `ValueGraph.incidentEdges(Object)`.
 
- <p>The default value is {@link ElementOrder#unordered() unordered} for mutable graphs. For
- immutable graphs, this value is ignored; they always have a {@link ElementOrder#stable() stable} order.
-@throws IllegalArgumentException if {@code incidentEdgeOrder} is not either {@code
-     ElementOrder.unordered()} or {@code ElementOrder.stable()}.
-@since 29.0
+ <p>The default value is `ElementOrder.unordered() unordered` for mutable graphs. For
+ immutable graphs, this value is ignored; they always have a `ElementOrder.stable() stable` order.
+@throws IllegalArgumentException if `incidentEdgeOrder` is not either `ElementOrder.unordered()` or `ElementOrder.stable()`.
+**Since:** 29.0
 
 ### `build()`
 
 **Returns:** [`com.google.common.graph.MutableValueGraph<N1,V1>`](./MutableValueGraph.md)
 
-Returns an empty {@link MutableValueGraph} with the properties of this {@link ValueGraphBuilder}.
+Returns an empty `MutableValueGraph` with the properties of this `ValueGraphBuilder`.
 
 ### `copy()`
 

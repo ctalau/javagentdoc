@@ -11,7 +11,7 @@ A subscriber method on a specific object, plus the executor that should be used 
 
  <p>Two subscribers are equivalent when they refer to the same method on the same object (not
  class). This property is used to ensure that no subscriber method is registered more than once.
-@author Colin Decker
+**Author:** Colin Decker
 
 ## Fields
 
@@ -35,7 +35,7 @@ Subscriber method.
 
 ### `executor`
 
-**Type:** [`java.util.concurrent.Executor`](../../../../java/util/concurrent/Executor.md)
+**Type:** `java.util.concurrent.Executor`
 
 Executor to use for dispatching events to this subscriber.
 
@@ -49,13 +49,13 @@ Executor to use for dispatching events to this subscriber.
 
 **Returns:** [`com.google.common.eventbus.Subscriber`](./Subscriber.md)
 
-Creates a {@code Subscriber} for {@code method} on {@code listener}.
+Creates a `Subscriber` for `method` on `listener`.
 
 ### `dispatchEvent(`java.lang.Object` event)`
 
 **Returns:** `void`
 
-Dispatches {@code event} to this subscriber using the proper executor.
+Dispatches `event` to this subscriber using the proper executor.
 
 ### `invokeSubscriberMethod(`java.lang.Object` event)`
 
@@ -82,5 +82,5 @@ Gets the context for the given event.
 
 **Returns:** `boolean`
 
-Checks whether {@code method} is thread-safe, as indicated by the presence of the {@link AllowConcurrentEvents} annotation.
+Checks whether `method` is thread-safe, as indicated by the presence of the `AllowConcurrentEvents` annotation.
 

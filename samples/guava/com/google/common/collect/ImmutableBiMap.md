@@ -15,10 +15,10 @@
 
 ## Description
 
-A {@link BiMap} whose contents will never change, with many other important properties detailed
- at {@link ImmutableCollection}.
-@author Jared Levy
-@since 2.0
+A `BiMap` whose contents will never change, with many other important properties detailed
+ at `ImmutableCollection`.
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Fields
 
@@ -32,17 +32,17 @@ A {@link BiMap} whose contents will never change, with many other important prop
 
 ## Methods
 
-### `toImmutableBiMap([`java.util.function.Function<? super T,? extends K>`](../../../../java/util/function/Function.md) keyFunction, [`java.util.function.Function<? super T,? extends V>`](../../../../java/util/function/Function.md) valueFunction)`
+### `toImmutableBiMap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction)`
 
-**Returns:** [`java.util.stream.Collector<T,?,com.google.common.collect.ImmutableBiMap<K,V>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableBiMap<K,V>>`
 
-Returns a {@link Collector} that accumulates elements into an {@code ImmutableBiMap} whose keys
+Returns a `Collector` that accumulates elements into an `ImmutableBiMap` whose keys
  and values are the result of applying the provided mapping functions to the input elements.
- Entries appear in the result {@code ImmutableBiMap} in encounter order.
+ Entries appear in the result `ImmutableBiMap` in encounter order.
 
- <p>If the mapped keys or values contain duplicates (according to {@link Object#equals(Object)}), an {@code IllegalArgumentException} is thrown when the collection
- operation is performed. (This differs from the {@code Collector} returned by {@link Collectors#toMap(Function, Function)}, which throws an {@code IllegalStateException}.)
-@since 21.0
+ <p>If the mapped keys or values contain duplicates (according to `Object.equals(Object)`), an `IllegalArgumentException` is thrown when the collection
+ operation is performed. (This differs from the `Collector` returned by `Collectors.toMap(Function, Function)`, which throws an `IllegalStateException`.)
+**Since:** 21.0
 
 ### `of()`
 
@@ -52,93 +52,93 @@ Returns the empty bimap.
 
  <p><b>Performance note:</b> the instance returned is a singleton.
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1)`
+### `of(`K` k1, `V` v1)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable bimap containing a single entry.
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are added
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are added
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are added
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are added
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are added
-@since 31.0
+**Since:** 31.0
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7)`
-
-**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
-
-Returns an immutable map containing the given entries, in order.
-@throws IllegalArgumentException if duplicate keys or values are added
-@since 31.0
-
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7, [`K`](K.md) k8, [`V`](V.md) v8)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are added
-@since 31.0
+**Since:** 31.0
 
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7, [`K`](K.md) k8, [`V`](V.md) v8, [`K`](K.md) k9, [`V`](V.md) v9)`
-
-**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
-
-Returns an immutable map containing the given entries, in order.
-@throws IllegalArgumentException if duplicate keys or values are added
-@since 31.0
-
-### `of([`K`](K.md) k1, [`V`](V.md) v1, [`K`](K.md) k2, [`V`](V.md) v2, [`K`](K.md) k3, [`V`](V.md) v3, [`K`](K.md) k4, [`V`](V.md) v4, [`K`](K.md) k5, [`V`](V.md) v5, [`K`](K.md) k6, [`V`](V.md) v6, [`K`](K.md) k7, [`V`](V.md) v7, [`K`](K.md) k8, [`V`](V.md) v8, [`K`](K.md) k9, [`V`](V.md) v9, [`K`](K.md) k10, [`V`](V.md) v10)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are added
-@since 31.0
+**Since:** 31.0
 
-### `ofEntries([`java.util.Map.Entry<? extends K,? extends V>[]`](../../../../java/util/Map/Entry.md) entries)`
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8, `K` k9, `V` v9)`
+
+**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+Returns an immutable map containing the given entries, in order.
+@throws IllegalArgumentException if duplicate keys or values are added
+**Since:** 31.0
+
+### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8, `K` k9, `V` v9, `K` k10, `V` v10)`
+
+**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+Returns an immutable map containing the given entries, in order.
+@throws IllegalArgumentException if duplicate keys or values are added
+**Since:** 31.0
+
+### `ofEntries(`java.util.Map.Entry<? extends K,? extends V>[]` entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 Returns an immutable map containing the given entries, in order.
 @throws IllegalArgumentException if duplicate keys or values are provided
-@since 31.0
+**Since:** 31.0
 
 ### `builder()`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap.Builder<K,V>`](ImmutableBiMap/Builder.md)
 
-Returns a new builder. The generated builder is equivalent to the builder created by the {@link Builder} constructor.
+Returns a new builder. The generated builder is equivalent to the builder created by the `Builder` constructor.
 
 ### `builderWithExpectedSize(`int` expectedSize)`
 
@@ -146,21 +146,21 @@ Returns a new builder. The generated builder is equivalent to the builder create
 
 Returns a new builder, expecting the specified number of entries to be added.
 
- <p>If {@code expectedSize} is exactly the number of entries added to the builder before {@link Builder#build} is called, the builder is likely to perform better than an unsized {@link #builder()} would have.
+ <p>If `expectedSize` is exactly the number of entries added to the builder before `Builder.build` is called, the builder is likely to perform better than an unsized `builder()` would have.
 
- <p>It is not specified if any performance benefits apply if {@code expectedSize} is close to,
+ <p>It is not specified if any performance benefits apply if `expectedSize` is close to,
  but not exactly, the number of entries added to the builder.
-@since 23.1
+**Since:** 23.1
 
-### `copyOf([`java.util.Map<? extends K,? extends V>`](../../../../java/util/Map.md) map)`
+### `copyOf(`java.util.Map<? extends K,? extends V>` map)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
-Returns an immutable bimap containing the same entries as {@code map}. If {@code map} somehow
- contains entries with duplicate keys (for example, if it is a {@code SortedMap} whose
+Returns an immutable bimap containing the same entries as `map`. If `map` somehow
+ contains entries with duplicate keys (for example, if it is a `SortedMap` whose
  comparator is not <i>consistent with equals</i>), the results of this method are undefined.
 
- <p>The returned {@code BiMap} iterates over entries in the same order as the {@code entrySet}
+ <p>The returned `BiMap` iterates over entries in the same order as the `entrySet`
  of the original map.
 
  <p>Despite the method name, this method attempts to avoid actually copying the data when it is
@@ -168,7 +168,7 @@ Returns an immutable bimap containing the same entries as {@code map}. If {@code
  undocumented and subject to change.
 @throws IllegalArgumentException if two keys have the same value or two values have the same
      key
-@throws NullPointerException if any key or value in {@code map} is null
+@throws NullPointerException if any key or value in `map` is null
 
 ### `copyOf(`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>` entries)`
 
@@ -179,7 +179,7 @@ Returns an immutable bimap containing the given entries. The returned bimap iter
 @throws IllegalArgumentException if two keys have the same value or two values have the same
      key
 @throws NullPointerException if any key, value, or entry is null
-@since 19.0
+**Since:** 19.0
 
 ### `inverse()`
 
@@ -187,49 +187,49 @@ Returns an immutable bimap containing the given entries. The returned bimap iter
 
 {@inheritDoc}
 
- <p>The inverse of an {@code ImmutableBiMap} is another {@code ImmutableBiMap}.
+ <p>The inverse of an `ImmutableBiMap` is another `ImmutableBiMap`.
 
 ### `values()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<V>`](./ImmutableSet.md)
 
-Returns an immutable set of the values in this map, in the same order they appear in {@link #entrySet}.
+Returns an immutable set of the values in this map, in the same order they appear in `entrySet`.
 
 ### `createValues()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<V>`](./ImmutableSet.md)
 
-### `forcePut([`K`](K.md) key, [`V`](V.md) value)`
+### `forcePut(`K` key, `V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 Guaranteed to throw an exception and leave the bimap unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 
-### `toImmutableMap([`java.util.function.Function<? super T,? extends K>`](../../../../java/util/function/Function.md) keyFunction, [`java.util.function.Function<? super T,? extends V>`](../../../../java/util/function/Function.md) valueFunction)`
+### `toImmutableMap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction)`
 
-**Returns:** [`java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 
-Not supported. Use {@link #toImmutableBiMap} instead. This method exists only to hide {@link ImmutableMap#toImmutableMap(Function, Function)} from consumers of {@code ImmutableBiMap}.
+Not supported. Use `toImmutableBiMap` instead. This method exists only to hide `ImmutableMap.toImmutableMap(Function, Function)` from consumers of `ImmutableBiMap`.
 @throws UnsupportedOperationException always
-@deprecated Use {@link ImmutableBiMap#toImmutableBiMap}.
+**Deprecated:** Use `ImmutableBiMap.toImmutableBiMap`.
 
-### `toImmutableMap([`java.util.function.Function<? super T,? extends K>`](../../../../java/util/function/Function.md) keyFunction, [`java.util.function.Function<? super T,? extends V>`](../../../../java/util/function/Function.md) valueFunction, [`java.util.function.BinaryOperator<V>`](../../../../java/util/function/BinaryOperator.md) mergeFunction)`
+### `toImmutableMap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction, `java.util.function.BinaryOperator<V>` mergeFunction)`
 
-**Returns:** [`java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`](../../../../java/util/stream/Collector>.md)
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 
-Not supported. This method does not make sense for {@code BiMap}. This method exists only to
- hide {@link ImmutableMap#toImmutableMap(Function, Function, BinaryOperator)} from consumers of
- {@code ImmutableBiMap}.
+Not supported. This method does not make sense for `BiMap`. This method exists only to
+ hide `ImmutableMap.toImmutableMap(Function, Function, BinaryOperator)` from consumers of
+ `ImmutableBiMap`.
 @throws UnsupportedOperationException always
 @deprecated
 

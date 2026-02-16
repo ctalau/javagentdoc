@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.TransformedIterator<F,T>`](./TransformedIterator.md)
 
-**Implements:** [`java.util.ListIterator<T>`](../../../../java/util/ListIterator.md)
+**Implements:** `java.util.ListIterator<T>`
 
 ## Type Parameters
 
@@ -16,18 +16,18 @@
 ## Description
 
 An iterator that transforms a backing list iterator; for internal use. This avoids the object
- overhead of constructing a {@link Function} for internal methods.
-@author Louis Wasserman
+ overhead of constructing a `Function` for internal methods.
+**Author:** Louis Wasserman
 
 ## Constructors
 
-### `<init>([`java.util.ListIterator<? extends F>`](../../../../java/util/ListIterator.md) backingIterator)`
+### `<init>(`java.util.ListIterator<? extends F>` backingIterator)`
 
 ## Methods
 
 ### `backingIterator()`
 
-**Returns:** [`java.util.ListIterator<? extends F>`](../../../../java/util/ListIterator.md)
+**Returns:** `java.util.ListIterator<? extends F>`
 
 ### `hasPrevious()`
 
@@ -35,7 +35,7 @@ An iterator that transforms a backing list iterator; for internal use. This avoi
 
 ### `previous()`
 
-**Returns:** [`T`](T.md)
+**Returns:** `T`
 
 ### `nextIndex()`
 
@@ -45,11 +45,11 @@ An iterator that transforms a backing list iterator; for internal use. This avoi
 
 **Returns:** `int`
 
-### `set([`T`](T.md) element)`
+### `set(`T` element)`
 
 **Returns:** `void`
 
-### `add([`T`](T.md) element)`
+### `add(`T` element)`
 
 **Returns:** `void`
 

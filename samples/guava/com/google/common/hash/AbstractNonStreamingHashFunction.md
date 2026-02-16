@@ -8,9 +8,9 @@
 
 ## Description
 
-Skeleton implementation of {@link HashFunction}, appropriate for non-streaming algorithms. All
- the hash computation done using {@linkplain #newHasher()} are delegated to the {@linkplain #hashBytes(byte[], int, int)} method.
-@author Dimitris Andreou
+Skeleton implementation of `HashFunction`, appropriate for non-streaming algorithms. All
+ the hash computation done using #newHasher() are delegated to the int, int) method.
+**Author:** Dimitris Andreou
 
 ## Constructors
 
@@ -38,7 +38,7 @@ Skeleton implementation of {@link HashFunction}, appropriate for non-streaming a
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashString(`java.lang.CharSequence` input, [`java.nio.charset.Charset`](../../../../java/nio/charset/Charset.md) charset)`
+### `hashString(`java.lang.CharSequence` input, `java.nio.charset.Charset` charset)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
@@ -46,7 +46,7 @@ Skeleton implementation of {@link HashFunction}, appropriate for non-streaming a
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashBytes([`java.nio.ByteBuffer`](../../../../java/nio/ByteBuffer.md) input)`
+### `hashBytes(`java.nio.ByteBuffer` input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 

@@ -14,7 +14,7 @@
 ## Description
 
 Bimap with zero or more mappings.
-@author Louis Wasserman
+**Author:** Louis Wasserman
 
 ## Fields
 
@@ -36,7 +36,7 @@ Bimap with zero or more mappings.
 
 ### `entries`
 
-**Type:** [`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md)
+**Type:** `java.util.Map.Entry<K,V>[]`
 
 ### `mask`
 
@@ -52,19 +52,19 @@ Bimap with zero or more mappings.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) keyTable, [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) valueTable, [`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md) entries, `int` mask, `int` hashCode)`
+### `<init>([`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) keyTable, [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) valueTable, `java.util.Map.Entry<K,V>[]` entries, `int` mask, `int` hashCode)`
 
 ## Methods
 
-### `fromEntries([`java.util.Map.Entry<K,V>[]`](../../../../java/util/Map/Entry.md) entries)`
+### `fromEntries(`java.util.Map.Entry<K,V>[]` entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
-### `fromEntryArray(`int` n, [`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`](../../../../java/util/Map/@org/checkerframework/checker/nullness/qual/Nullable Entry.md) entryArray)`
+### `fromEntryArray(`int` n, `java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]` entryArray)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
-### `checkNoConflictInValueBucket(`java.lang.Object` value, [`java.util.Map.Entry<?,?>`](../../../../java/util/Map/Entry.md) entry, [`com.google.common.collect.ImmutableMapEntry<?,?>`](./ImmutableMapEntry.md) valueBucketHead)`
+### `checkNoConflictInValueBucket(`java.lang.Object` value, `java.util.Map.Entry<?,?>` entry, [`com.google.common.collect.ImmutableMapEntry<?,?>`](./ImmutableMapEntry.md) valueBucketHead)`
 
 **Returns:** `void`
 
@@ -74,7 +74,7 @@ Bimap with zero or more mappings.
 
 ### `get(`java.lang.Object` key)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `createEntrySet()`
 
@@ -84,7 +84,7 @@ Bimap with zero or more mappings.
 
 **Returns:** [`com.google.common.collect.ImmutableSet<K>`](./ImmutableSet.md)
 
-### `forEach([`java.util.function.BiConsumer<? super K,? super V>`](../../../../java/util/function/BiConsumer.md) action)`
+### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
 
 **Returns:** `void`
 

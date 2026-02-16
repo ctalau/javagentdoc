@@ -13,8 +13,8 @@
 
 ## Description
 
-A supertype for filtered {@link SetMultimap} implementations.
-@author Louis Wasserman
+A supertype for filtered `SetMultimap` implementations.
+**Author:** Louis Wasserman
 
 ## Methods
 

@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.AbstractMapEntry<K,V>`](./AbstractMapEntry.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -15,18 +15,17 @@
 
 ## Description
 
-An immutable {@code Map.Entry}, used both by {@link com.google.common.collect.Maps#immutableEntry(Object, Object)} and by other parts of {@code
- common.collect} as a superclass.
+An immutable `Map.Entry`, used both by `com.google.common.collect.Maps.immutableEntry(Object, Object)` and by other parts of `common.collect` as a superclass.
 
 ## Fields
 
 ### `key`
 
-**Type:** [`K`](K.md)
+**Type:** `K`
 
 ### `value`
 
-**Type:** [`V`](V.md)
+**Type:** `V`
 
 ### `serialVersionUID`
 
@@ -34,19 +33,19 @@ An immutable {@code Map.Entry}, used both by {@link com.google.common.collect.Ma
 
 ## Constructors
 
-### `<init>([`K`](K.md) key, [`V`](V.md) value)`
+### `<init>(`K` key, `V` value)`
 
 ## Methods
 
 ### `getKey()`
 
-**Returns:** [`K`](K.md)
+**Returns:** `K`
 
 ### `getValue()`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `setValue([`V`](V.md) value)`
+### `setValue(`V` value)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 

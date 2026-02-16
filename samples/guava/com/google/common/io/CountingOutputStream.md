@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `com.google.common.io.CountingOutputStream`
 
-**Extends:** [`java.io.FilterOutputStream`](../../../../java/io/FilterOutputStream.md)
+**Extends:** `java.io.FilterOutputStream`
 
 ## Description
 
 An OutputStream that counts the number of bytes written.
-@author Chris Nokleberg
-@since 1.0
+**Author:** Chris Nokleberg
+**Since:** 1.0
 
 ## Fields
 
@@ -20,7 +20,7 @@ An OutputStream that counts the number of bytes written.
 
 ## Constructors
 
-### `<init>([`java.io.OutputStream`](../../../../java/io/OutputStream.md) out)`
+### `<init>(`java.io.OutputStream` out)`
 
 Wraps another output stream, counting the number of bytes written.
 @param out the output stream to be wrapped

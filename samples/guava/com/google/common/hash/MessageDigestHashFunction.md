@@ -6,19 +6,19 @@
 
 **Extends:** [`com.google.common.hash.AbstractHashFunction`](./AbstractHashFunction.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Description
 
-{@link HashFunction} adapter for {@link MessageDigest} instances.
-@author Kevin Bourrillion
-@author Dimitris Andreou
+`HashFunction` adapter for `MessageDigest` instances.
+**Author:** Kevin Bourrillion
+**Author:** Dimitris Andreou
 
 ## Fields
 
 ### `prototype`
 
-**Type:** [`java.security.MessageDigest`](../../../../java/security/MessageDigest.md)
+**Type:** `java.security.MessageDigest`
 
 ### `bytes`
 
@@ -40,7 +40,7 @@
 
 ## Methods
 
-### `supportsClone([`java.security.MessageDigest`](../../../../java/security/MessageDigest.md) digest)`
+### `supportsClone(`java.security.MessageDigest` digest)`
 
 **Returns:** `boolean`
 
@@ -54,7 +54,7 @@
 
 ### `getMessageDigest(`java.lang.String` algorithmName)`
 
-**Returns:** [`java.security.MessageDigest`](../../../../java/security/MessageDigest.md)
+**Returns:** `java.security.MessageDigest`
 
 ### `newHasher()`
 
@@ -64,7 +64,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

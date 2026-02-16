@@ -13,17 +13,17 @@
 
 ## Description
 
-Standard implementation of {@link ValueGraph} that supports the options supplied by {@link AbstractGraphBuilder}.
+Standard implementation of `ValueGraph` that supports the options supplied by `AbstractGraphBuilder`.
 
- <p>This class maintains a map of nodes to {@link GraphConnections}.
+ <p>This class maintains a map of nodes to `GraphConnections`.
 
  <p>Collection-returning accessors return unmodifiable views: the view returned will reflect
  changes to the graph (if the graph is mutable) but may not be modified by the user.
 
  <p>The time complexity of all collection-returning accessors is O(1), since views are returned.
-@author James Sexton
-@author Joshua O'Madadhain
-@author Omar Darwish
+**Author:** James Sexton
+**Author:** Joshua O'Madadhain
+**Author:** Omar Darwish
 @param <N> Node parameter type
 @param <V> Value parameter type
 
@@ -53,18 +53,18 @@ Standard implementation of {@link ValueGraph} that supports the options supplied
 
 ### `<init>([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md) builder)`
 
-Constructs a graph with the properties specified in {@code builder}.
+Constructs a graph with the properties specified in `builder`.
 
-### `<init>([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md) builder, [`java.util.Map<N,com.google.common.graph.GraphConnections<N,V>>`](../../../../java/util/Map>.md) nodeConnections, `long` edgeCount)`
+### `<init>([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md) builder, `java.util.Map<N,com.google.common.graph.GraphConnections<N,V>>` nodeConnections, `long` edgeCount)`
 
-Constructs a graph with the properties specified in {@code builder}, initialized with the given
+Constructs a graph with the properties specified in `builder`, initialized with the given
  node map.
 
 ## Methods
 
 ### `nodes()`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
 ### `isDirected()`
 
@@ -78,23 +78,23 @@ Constructs a graph with the properties specified in {@code builder}, initialized
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `adjacentNodes([`N`](N.md) node)`
+### `adjacentNodes(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `predecessors([`N`](N.md) node)`
+### `predecessors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `successors([`N`](N.md) node)`
+### `successors(`N` node)`
 
-**Returns:** [`java.util.Set<N>`](../../../../java/util/Set.md)
+**Returns:** `java.util.Set<N>`
 
-### `incidentEdges([`N`](N.md) node)`
+### `incidentEdges(`N` node)`
 
-**Returns:** [`java.util.Set<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/Set>.md)
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-### `hasEdgeConnecting([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 
@@ -102,31 +102,31 @@ Constructs a graph with the properties specified in {@code builder}, initialized
 
 **Returns:** `boolean`
 
-### `edgeValueOrDefault([`N`](N.md) nodeU, [`N`](N.md) nodeV, [`V`](V.md) defaultValue)`
+### `edgeValueOrDefault(`N` nodeU, `N` nodeV, `V` defaultValue)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
-### `edgeValueOrDefault([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, [`V`](V.md) defaultValue)`
+### `edgeValueOrDefault([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, `V` defaultValue)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `edgeCount()`
 
 **Returns:** `long`
 
-### `checkedConnections([`N`](N.md) node)`
+### `checkedConnections(`N` node)`
 
 **Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
 
-### `containsNode([`N`](N.md) node)`
+### `containsNode(`N` node)`
 
 **Returns:** `boolean`
 
-### `hasEdgeConnectingInternal([`N`](N.md) nodeU, [`N`](N.md) nodeV)`
+### `hasEdgeConnectingInternal(`N` nodeU, `N` nodeV)`
 
 **Returns:** `boolean`
 
-### `edgeValueOrDefaultInternal([`N`](N.md) nodeU, [`N`](N.md) nodeV, [`V`](V.md) defaultValue)`
+### `edgeValueOrDefaultInternal(`N` nodeU, `N` nodeV, `V` defaultValue)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 

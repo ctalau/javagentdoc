@@ -13,57 +13,57 @@
 
 ## Description
 
-A {@code Multimap} that can hold duplicate key-value pairs and that maintains the insertion
- ordering of values for a given key. See the {@link Multimap} documentation for information common
+A `Multimap` that can hold duplicate key-value pairs and that maintains the insertion
+ ordering of values for a given key. See the `Multimap` documentation for information common
  to all multimaps.
 
- <p>The {@link #get}, {@link #removeAll}, and {@link #replaceValues} methods each return a {@link List} of values. Though the method signature doesn't say so explicitly, the map returned by
- {@link #asMap} has {@code List} values.
+ <p>The `get`, `removeAll`, and `replaceValues` methods each return a `List` of values. Though the method signature doesn't say so explicitly, the map returned by
+ `asMap` has `List` values.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap">{@code Multimap}</a>.
-@author Jared Levy
-@since 2.0
+ <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap">`Multimap`</a>.
+**Author:** Jared Levy
+**Since:** 2.0
 
 ## Methods
 
-### `get([`K`](K.md) key)`
+### `get(`K` key)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 {@inheritDoc}
 
  <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a {@link List}, instead of the {@link java.util.Collection} specified in
- the {@link Multimap} interface.
+ this method returns a `List`, instead of the `java.util.Collection` specified in
+ the `Multimap` interface.
 
 ### `removeAll(`java.lang.Object` key)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 {@inheritDoc}
 
  <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a {@link List}, instead of the {@link java.util.Collection} specified in
- the {@link Multimap} interface.
+ this method returns a `List`, instead of the `java.util.Collection` specified in
+ the `Multimap` interface.
 
-### `replaceValues([`K`](K.md) key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
-**Returns:** [`java.util.List<V>`](../../../../java/util/List.md)
+**Returns:** `java.util.List<V>`
 
 {@inheritDoc}
 
  <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a {@link List}, instead of the {@link java.util.Collection} specified in
- the {@link Multimap} interface.
+ this method returns a `List`, instead of the `java.util.Collection` specified in
+ the `Multimap` interface.
 
 ### `asMap()`
 
-**Returns:** [`java.util.Map<K,java.util.Collection<V>>`](../../../../java/util/Map>.md)
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 {@inheritDoc}
 
- <p><b>Note:</b> The returned map's values are guaranteed to be of type {@link List}. To obtain
- this map with the more specific generic type {@code Map<K, List<V>>}, call {@link Multimaps#asMap(ListMultimap)} instead.
+ <p><b>Note:</b> The returned map's values are guaranteed to be of type `List`. To obtain
+ this map with the more specific generic type `Map<K, List<V>>`, call `Multimaps.asMap(ListMultimap)` instead.
 
 ### `equals(`java.lang.Object` obj)`
 
@@ -71,9 +71,9 @@ A {@code Multimap} that can hold duplicate key-value pairs and that maintains th
 
 Compares the specified object to this multimap for equality.
 
- <p>Two {@code ListMultimap} instances are equal if, for each key, they contain the same values
+ <p>Two `ListMultimap` instances are equal if, for each key, they contain the same values
  in the same order. If the value orderings disagree, the multimaps will not be considered equal.
 
- <p>An empty {@code ListMultimap} is equal to any other empty {@code Multimap}, including an
- empty {@code SetMultimap}.
+ <p>An empty `ListMultimap` is equal to any other empty `Multimap`, including an
+ empty `SetMultimap`.
 

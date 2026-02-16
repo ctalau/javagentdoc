@@ -4,27 +4,27 @@
 
 **Fully Qualified Name:** `com.google.common.io.MultiReader`
 
-**Extends:** [`java.io.Reader`](../../../../java/io/Reader.md)
+**Extends:** `java.io.Reader`
 
 ## Description
 
-A {@link Reader} that concatenates multiple readers.
-@author Bin Zhu
-@since 1.0
+A `Reader` that concatenates multiple readers.
+**Author:** Bin Zhu
+**Since:** 1.0
 
 ## Fields
 
 ### `it`
 
-**Type:** [`java.util.Iterator<? extends com.google.common.io.CharSource>`](../../../../java/util/Iterator.md)
+**Type:** `java.util.Iterator<? extends com.google.common.io.CharSource>`
 
 ### `current`
 
-**Type:** [`java.io.Reader`](../../../../java/io/Reader.md)
+**Type:** `java.io.Reader`
 
 ## Constructors
 
-### `<init>([`java.util.Iterator<? extends com.google.common.io.CharSource>`](../../../../java/util/Iterator.md) readers)`
+### `<init>(`java.util.Iterator<? extends com.google.common.io.CharSource>` readers)`
 
 ## Methods
 

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.ListenableFutureTask`
 
-**Extends:** [`java.util.concurrent.FutureTask<V>`](../../../../../java/util/concurrent/FutureTask.md)
+**Extends:** `java.util.concurrent.FutureTask<V>`
 
 **Implements:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
@@ -14,13 +14,12 @@
 
 ## Description
 
-A {@link FutureTask} that also implements the {@link ListenableFuture} interface. Unlike {@code
- FutureTask}, {@code ListenableFutureTask} does not provide an overrideable {@link FutureTask#done() done()} method. For similar functionality, call {@link #addListener}.
+A `FutureTask` that also implements the `ListenableFuture` interface. Unlike `FutureTask`, `ListenableFutureTask` does not provide an overrideable `FutureTask.done() done()` method. For similar functionality, call `addListener`.
 
  <p>Few users should use this class. It is intended primarily for those who are implementing an
- {@code ExecutorService}. Most users should call {@link ListeningExecutorService#submit(Callable) ListeningExecutorService.submit} on a service obtained from {@link MoreExecutors#listeningDecorator}.
-@author Sven Mawson
-@since 1.0
+ `ExecutorService`. Most users should call `ListeningExecutorService.submit(Callable) ListeningExecutorService.submit` on a service obtained from `MoreExecutors.listeningDecorator`.
+**Author:** Sven Mawson
+**Since:** 1.0
 
 ## Fields
 
@@ -30,40 +29,38 @@ A {@link FutureTask} that also implements the {@link ListenableFuture} interface
 
 ## Constructors
 
-### `<init>([`java.util.concurrent.Callable<V>`](../../../../../java/util/concurrent/Callable.md) callable)`
+### `<init>(`java.util.concurrent.Callable<V>` callable)`
 
-### `<init>(`java.lang.Runnable` runnable, [`V`](V.md) result)`
+### `<init>(`java.lang.Runnable` runnable, `V` result)`
 
 ## Methods
 
-### `create([`java.util.concurrent.Callable<V>`](../../../../../java/util/concurrent/Callable.md) callable)`
+### `create(`java.util.concurrent.Callable<V>` callable)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFutureTask<V>`](./ListenableFutureTask.md)
 
-Creates a {@code ListenableFutureTask} that will upon running, execute the given {@code
- Callable}.
+Creates a `ListenableFutureTask` that will upon running, execute the given `Callable`.
 @param callable the callable task
-@since 10.0
+**Since:** 10.0
 
-### `create(`java.lang.Runnable` runnable, [`V`](V.md) result)`
+### `create(`java.lang.Runnable` runnable, `V` result)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFutureTask<V>`](./ListenableFutureTask.md)
 
-Creates a {@code ListenableFutureTask} that will upon running, execute the given {@code
- Runnable}, and arrange that {@code get} will return the given result on successful completion.
+Creates a `ListenableFutureTask` that will upon running, execute the given `Runnable`, and arrange that `get` will return the given result on successful completion.
 @param runnable the runnable task
 @param result the result to return on successful completion. If you don't need a particular
-     result, consider using constructions of the form: {@code ListenableFuture<?> f =
-     ListenableFutureTask.create(runnable, null)}
-@since 10.0
+     result, consider using constructions of the form: `ListenableFuture<?> f =
+     ListenableFutureTask.create(runnable, null)`
+**Since:** 10.0
 
-### `addListener(`java.lang.Runnable` listener, [`java.util.concurrent.Executor`](../../../../../java/util/concurrent/Executor.md) exec)`
+### `addListener(`java.lang.Runnable` listener, `java.util.concurrent.Executor` exec)`
 
 **Returns:** `void`
 
-### `get(`long` timeout, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `get(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
 
-**Returns:** [`V`](V.md)
+**Returns:** `V`
 
 ### `done()`
 

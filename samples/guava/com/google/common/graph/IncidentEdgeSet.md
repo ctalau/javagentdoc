@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.graph.IncidentEdgeSet`
 
-**Extends:** [`java.util.AbstractSet<com.google.common.graph.EndpointPair<N>>`](../../../../java/util/AbstractSet>.md)
+**Extends:** `java.util.AbstractSet<com.google.common.graph.EndpointPair<N>>`
 
 ## Type Parameters
 
@@ -12,13 +12,13 @@
 
 ## Description
 
-Abstract base class for an incident edges set that allows different implementations of {@link AbstractSet#iterator()}.
+Abstract base class for an incident edges set that allows different implementations of `AbstractSet.iterator()`.
 
 ## Fields
 
 ### `node`
 
-**Type:** [`N`](N.md)
+**Type:** `N`
 
 ### `graph`
 
@@ -26,7 +26,7 @@ Abstract base class for an incident edges set that allows different implementati
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md) graph, [`N`](N.md) node)`
+### `<init>([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md) graph, `N` node)`
 
 ## Methods
 

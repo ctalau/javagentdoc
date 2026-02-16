@@ -6,7 +6,7 @@
 
 **Extends:** [`com.google.common.collect.AbstractRangeSet<C>`](./AbstractRangeSet.md)
 
-**Implements:** [`java.io.Serializable`](../../../../java/io/Serializable.md)
+**Implements:** `java.io.Serializable`
 
 ## Type Parameters
 
@@ -14,10 +14,10 @@
 
 ## Description
 
-A {@link RangeSet} whose contents will never change, with many other important properties
- detailed at {@link ImmutableCollection}.
-@author Louis Wasserman
-@since 14.0
+A `RangeSet` whose contents will never change, with many other important properties
+ detailed at `ImmutableCollection`.
+**Author:** Louis Wasserman
+**Since:** 14.0
 
 ## Fields
 
@@ -47,12 +47,11 @@ A {@link RangeSet} whose contents will never change, with many other important p
 
 ### `toImmutableRangeSet()`
 
-**Returns:** [`java.util.stream.Collector<com.google.common.collect.Range<E>,?,com.google.common.collect.ImmutableRangeSet<E>>`](../../../../java/util/stream/Collector,?,com/google/common/collect/ImmutableRangeSet>.md)
+**Returns:** `java.util.stream.Collector<com.google.common.collect.Range<E>,?,com.google.common.collect.ImmutableRangeSet<E>>`
 
-Returns a {@code Collector} that accumulates the input elements into a new {@code
- ImmutableRangeSet}. As in {@link Builder}, overlapping ranges are not permitted and adjacent
+Returns a `Collector` that accumulates the input elements into a new `ImmutableRangeSet`. As in `Builder`, overlapping ranges are not permitted and adjacent
  ranges will be merged.
-@since 23.1
+**Since:** 23.1
 
 ### `of()`
 
@@ -66,39 +65,39 @@ Returns an empty immutable range set.
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns an immutable range set containing the specified single range. If {@link Range#isEmpty() range.isEmpty()}, this is equivalent to {@link ImmutableRangeSet#of()}.
+Returns an immutable range set containing the specified single range. If `Range.isEmpty() range.isEmpty()`, this is equivalent to `ImmutableRangeSet.of()`.
 
 ### `all()`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns an immutable range set containing the single range {@link Range#all()}.
+Returns an immutable range set containing the single range `Range.all()`.
 
 ### `copyOf([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) rangeSet)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns an immutable copy of the specified {@code RangeSet}.
+Returns an immutable copy of the specified `RangeSet`.
 
 ### `copyOf(`java.lang.Iterable<com.google.common.collect.Range<C>>` ranges)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns an {@code ImmutableRangeSet} containing each of the specified disjoint ranges.
+Returns an `ImmutableRangeSet` containing each of the specified disjoint ranges.
  Overlapping ranges and empty ranges are forbidden, though adjacent ranges are permitted and
  will be merged.
 @throws IllegalArgumentException if any ranges overlap or are empty
-@since 21.0
+**Since:** 21.0
 
 ### `unionOf(`java.lang.Iterable<com.google.common.collect.Range<C>>` ranges)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns an {@code ImmutableRangeSet} representing the union of the specified ranges.
+Returns an `ImmutableRangeSet` representing the union of the specified ranges.
 
- <p>This is the smallest {@code RangeSet} which encloses each of the specified ranges. Duplicate
+ <p>This is the smallest `RangeSet` which encloses each of the specified ranges. Duplicate
  or connected ranges are permitted, and will be coalesced in the result.
-@since 21.0
+**Since:** 21.0
 
 ### `intersects([`com.google.common.collect.Range<C>`](./Range.md) otherRange)`
 
@@ -108,7 +107,7 @@ Returns an {@code ImmutableRangeSet} representing the union of the specified ran
 
 **Returns:** `boolean`
 
-### `rangeContaining([`C`](C.md) value)`
+### `rangeContaining(`C` value)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
@@ -124,49 +123,49 @@ Returns an {@code ImmutableRangeSet} representing the union of the specified ran
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeSet} unmodified.
+Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `addAll([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeSet} unmodified.
+Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `addAll(`java.lang.Iterable<com.google.common.collect.Range<C>>` other)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeSet} unmodified.
+Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `remove([`com.google.common.collect.Range<C>`](./Range.md) range)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeSet} unmodified.
+Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `removeAll([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeSet} unmodified.
+Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `removeAll(`java.lang.Iterable<com.google.common.collect.Range<C>>` other)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the {@code RangeSet} unmodified.
+Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-@deprecated Unsupported operation.
+**Deprecated:** Unsupported operation.
 
 ### `asRanges()`
 
@@ -184,38 +183,36 @@ Guaranteed to throw an exception and leave the {@code RangeSet} unmodified.
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns a new range set consisting of the union of this range set and {@code other}.
+Returns a new range set consisting of the union of this range set and `other`.
 
- <p>This is essentially the same as {@code TreeRangeSet.create(this).addAll(other)} except it
- returns an {@code ImmutableRangeSet}.
-@since 21.0
+ <p>This is essentially the same as `TreeRangeSet.create(this).addAll(other)` except it
+ returns an `ImmutableRangeSet`.
+**Since:** 21.0
 
 ### `intersection([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns a new range set consisting of the intersection of this range set and {@code other}.
+Returns a new range set consisting of the intersection of this range set and `other`.
 
- <p>This is essentially the same as {@code
- TreeRangeSet.create(this).removeAll(other.complement())} except it returns an {@code
- ImmutableRangeSet}.
-@since 21.0
+ <p>This is essentially the same as `TreeRangeSet.create(this).removeAll(other.complement())` except it returns an `ImmutableRangeSet`.
+**Since:** 21.0
 
 ### `difference([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-Returns a new range set consisting of the difference of this range set and {@code other}.
+Returns a new range set consisting of the difference of this range set and `other`.
 
- <p>This is essentially the same as {@code TreeRangeSet.create(this).removeAll(other)} except it
- returns an {@code ImmutableRangeSet}.
-@since 21.0
+ <p>This is essentially the same as `TreeRangeSet.create(this).removeAll(other)` except it
+ returns an `ImmutableRangeSet`.
+**Since:** 21.0
 
 ### `intersectRanges([`com.google.common.collect.Range<C>`](./Range.md) range)`
 
 **Returns:** [`com.google.common.collect.ImmutableList<com.google.common.collect.Range<C>>`](./ImmutableList>.md)
 
-Returns a list containing the nonempty intersections of {@code range} with the ranges in this
+Returns a list containing the nonempty intersections of `range` with the ranges in this
  range set.
 
 ### `subRangeSet([`com.google.common.collect.Range<C>`](./Range.md) range)`
@@ -228,19 +225,19 @@ Returns a view of the intersection of this range set with the given range.
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<C>`](./ImmutableSortedSet.md)
 
-Returns an {@link ImmutableSortedSet} containing the same values in the given domain
- {@linkplain RangeSet#contains contained} by this range set.
+Returns an `ImmutableSortedSet` containing the same values in the given domain
+ contained by this range set.
 
- <p><b>Note:</b> {@code a.asSet(d).equals(b.asSet(d))} does not imply {@code a.equals(b)}! For
- example, {@code a} and {@code b} could be {@code [2..4]} and {@code (1..5)}, or the empty
- ranges {@code [3..3)} and {@code [4..4)}.
+ <p><b>Note:</b> `a.asSet(d).equals(b.asSet(d))` does not imply `a.equals(b)`! For
+ example, `a` and `b` could be `[2..4]` and `(1..5)`, or the empty
+ ranges `[3..3)` and `[4..4)`.
 
- <p><b>Warning:</b> Be extremely careful what you do with the {@code asSet} view of a large
- range set (such as {@code ImmutableRangeSet.of(Range.greaterThan(0))}). Certain operations on
- such a set can be performed efficiently, but others (such as {@link Set#hashCode} or {@link Collections#frequency}) can cause major performance problems.
+ <p><b>Warning:</b> Be extremely careful what you do with the `asSet` view of a large
+ range set (such as `ImmutableRangeSet.of(Range.greaterThan(0))`). Certain operations on
+ such a set can be performed efficiently, but others (such as `Set.hashCode` or `Collections.frequency`) can cause major performance problems.
 
- <p>The returned set's {@link Object#toString} method returns a shorthand form of the set's
- contents, such as {@code "[1..100]}"}.
+ <p>The returned set's `Object.toString` method returns a shorthand form of the set's
+ contents, such as `"[1..100]`"}.
 @throws IllegalArgumentException if neither this range nor the domain has a lower bound, or if
      neither has an upper bound
 
@@ -248,9 +245,9 @@ Returns an {@link ImmutableSortedSet} containing the same values in the given do
 
 **Returns:** `boolean`
 
-Returns {@code true} if this immutable range set's implementation contains references to
+Returns `true` if this immutable range set's implementation contains references to
  user-created objects that aren't accessible via this range set's methods. This is generally
- used to determine whether {@code copyOf} implementations should make an explicit copy to avoid
+ used to determine whether `copyOf` implementations should make an explicit copy to avoid
  memory leaks.
 
 ### `builder()`
@@ -263,7 +260,7 @@ Returns a new builder for an immutable range set.
 
 **Returns:** `java.lang.Object`
 
-### `readObject([`java.io.ObjectInputStream`](../../../../java/io/ObjectInputStream.md) stream)`
+### `readObject(`java.io.ObjectInputStream` stream)`
 
 **Returns:** `void`
 

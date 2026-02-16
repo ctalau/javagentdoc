@@ -4,11 +4,11 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.ForwardingCondition`
 
-**Implements:** [`java.util.concurrent.locks.Condition`](../../../../../java/util/concurrent/locks/Condition.md)
+**Implements:** `java.util.concurrent.locks.Condition`
 
 ## Description
 
-Forwarding wrapper around a {@code Condition}.
+Forwarding wrapper around a `Condition`.
 
 ## Constructors
 
@@ -18,13 +18,13 @@ Forwarding wrapper around a {@code Condition}.
 
 ### `delegate()`
 
-**Returns:** [`java.util.concurrent.locks.Condition`](../../../../../java/util/concurrent/locks/Condition.md)
+**Returns:** `java.util.concurrent.locks.Condition`
 
 ### `await()`
 
 **Returns:** `void`
 
-### `await(`long` time, [`java.util.concurrent.TimeUnit`](../../../../../java/util/concurrent/TimeUnit.md) unit)`
+### `await(`long` time, `java.util.concurrent.TimeUnit` unit)`
 
 **Returns:** `boolean`
 
@@ -36,7 +36,7 @@ Forwarding wrapper around a {@code Condition}.
 
 **Returns:** `long`
 
-### `awaitUntil([`java.util.Date`](../../../../../java/util/Date.md) deadline)`
+### `awaitUntil(`java.util.Date` deadline)`
 
 **Returns:** `boolean`
 
