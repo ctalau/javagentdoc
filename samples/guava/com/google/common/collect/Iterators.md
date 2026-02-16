@@ -57,7 +57,7 @@ Returns an unmodifiable view of `iterator`.
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 10.0
 
 ### `size(`java.util.Iterator<?>` iterator)`
@@ -587,7 +587,7 @@ Returns a `PeekingIterator` backed by the given iterator.
 **Returns:** [`com.google.common.collect.PeekingIterator<T>`](./PeekingIterator.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 10.0
 
 ### `mergeSorted(`java.lang.Iterable<? extends java.util.Iterator<? extends T>>` iterators, `java.util.Comparator<? super T>` comparator)`

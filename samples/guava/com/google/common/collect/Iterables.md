@@ -41,7 +41,7 @@ Returns an unmodifiable view of `iterable`.
 **Returns:** `java.lang.Iterable<E>`
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 10.0
 
 ### `size(`java.lang.Iterable<?>` iterable)`

@@ -88,14 +88,14 @@ Creates a `TreeBasedTable` with the same mappings and sort order as the specifie
 
 Returns the comparator that orders the rows. With natural ordering, `Ordering.natural()`
  is returned.
-**Deprecated:** Use `table.rowKeySet().comparator()` instead.
+**Deprecated:**Use `table.rowKeySet().comparator()` instead.
 
 ### `columnComparator()`
 
 **Returns:** `java.util.Comparator<? super C>`
 
 Returns the comparator that orders the columns. With natural ordering, `Ordering.natural()` is returned.
-**Deprecated:** Store the `Comparator` alongside the `Table`. Or, if you know that the
+**Deprecated:**Store the `Comparator` alongside the `Table`. Or, if you know that the
      `Table` contains at least one value, you can retrieve the `Comparator` with:
      `((SortedMap<C, V>) table.rowMap().values().iterator().next()).comparator();`.
 

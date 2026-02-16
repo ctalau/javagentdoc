@@ -71,7 +71,7 @@ An extension of `DataOutput` for writing to in-memory byte arrays; its methods o
 
 **Returns:** `void`
 
-**Deprecated:** This method is dangerous as it discards the high byte of every character. For
+**Deprecated:**This method is dangerous as it discards the high byte of every character. For
      UTF-8, use `write(s.getBytes(StandardCharsets.UTF_8))`.
 
 ### `toByteArray()`

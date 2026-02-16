@@ -103,7 +103,7 @@ Determines whether a character is ASCII, meaning that its code point is less tha
 
 Determines whether a character is a BMP digit according to <a href="http://unicode.org/cldr/utility/list-unicodeset.jsp?a=%5Cp%7Bdigit%7D">Unicode</a>. If
  you only care to match ASCII digits, you can use `inRange('0', '9')`.
-**Deprecated:** Many digits are supplementary characters; see the class documentation.
+**Deprecated:**Many digits are supplementary characters; see the class documentation.
 **Since:** 19.0 (since 1.0 as constant `DIGIT`)
 
 ### `javaDigit()`
@@ -112,7 +112,7 @@ Determines whether a character is a BMP digit according to <a href="http://unico
 
 Determines whether a character is a BMP digit according to Java's definition. If you only care to match ASCII digits, you can use `inRange('0',
  '9')`.
-**Deprecated:** Many digits are supplementary characters; see the class documentation.
+**Deprecated:**Many digits are supplementary characters; see the class documentation.
 **Since:** 19.0 (since 1.0 as constant `JAVA_DIGIT`)
 
 ### `javaLetter()`
@@ -121,7 +121,7 @@ Determines whether a character is a BMP digit according to Java's definition. If
 
 Determines whether a character is a BMP letter according to Java's definition. If you only care to match letters of the Latin
  alphabet, you can use `inRange('a', 'z').or(inRange('A', 'Z'))`.
-**Deprecated:** Most letters are supplementary characters; see the class documentation.
+**Deprecated:**Most letters are supplementary characters; see the class documentation.
 **Since:** 19.0 (since 1.0 as constant `JAVA_LETTER`)
 
 ### `javaLetterOrDigit()`
@@ -129,7 +129,7 @@ Determines whether a character is a BMP letter according to Java's definition. I
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 Determines whether a character is a BMP letter or digit according to Java's definition.
-**Deprecated:** Most letters and digits are supplementary characters; see the class documentation.
+**Deprecated:**Most letters and digits are supplementary characters; see the class documentation.
 **Since:** 19.0 (since 1.0 as constant `JAVA_LETTER_OR_DIGIT`).
 
 ### `javaUpperCase()`
@@ -137,7 +137,7 @@ Determines whether a character is a BMP letter or digit according to Java's defi
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 Determines whether a BMP character is upper case according to Java's definition.
-**Deprecated:** Some uppercase characters are supplementary characters; see the class
+**Deprecated:**Some uppercase characters are supplementary characters; see the class
      documentation.
 **Since:** 19.0 (since 1.0 as constant `JAVA_UPPER_CASE`)
 
@@ -146,7 +146,7 @@ Determines whether a BMP character is upper case according to Java's definition.
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 Determines whether a BMP character is lower case according to Java's definition.
-**Deprecated:** Some lowercase characters are supplementary characters; see the class
+**Deprecated:**Some lowercase characters are supplementary characters; see the class
      documentation.
 **Since:** 19.0 (since 1.0 as constant `JAVA_LOWER_CASE`)
 
@@ -168,7 +168,7 @@ Determines whether a character is invisible; that is, if its Unicode category is
  PRIVATE_USE according to ICU4J.
 
  <p>See also the Unicode Default_Ignorable_Code_Point property (available via ICU).
-**Deprecated:** Most invisible characters are supplementary characters; see the class
+**Deprecated:**Most invisible characters are supplementary characters; see the class
      documentation.
 **Since:** 19.0 (since 1.0 as constant `INVISIBLE`)
 
@@ -184,7 +184,7 @@ Determines whether a character is single-width (not double-width). When in doubt
  date.
 
  <p>See also <a href="http://www.unicode.org/reports/tr11/">UAX #11 East Asian Width</a>.
-**Deprecated:** Many such characters are supplementary characters; see the class documentation.
+**Deprecated:**Many such characters are supplementary characters; see the class documentation.
 **Since:** 19.0 (since 1.0 as constant `SINGLE_WIDTH`)
 
 ### `is(`char` match)`
@@ -519,7 +519,7 @@ Collapses groups of matching characters exactly as `collapseFrom` does, except t
 
 **Returns:** `boolean`
 
-**Deprecated:** Provided only to satisfy the `Predicate` interface; use `matches`
+**Deprecated:**Provided only to satisfy the `Predicate` interface; use `matches`
      instead.
 
 ### `toString()`

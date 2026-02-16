@@ -108,7 +108,7 @@ Reads all characters from a file into a `String`, using the given character set.
      helpful predefined constants
 @return a string containing all the characters from the file
 @throws IOException if an I/O error occurs
-**Deprecated:** Prefer `asCharSource(file, charset).read()`.
+**Deprecated:**Prefer `asCharSource(file, charset).read()`.
 
 ### `write(`byte[]` from, `java.io.File` to)`
 
@@ -131,7 +131,7 @@ Writes a character sequence (such as a string) to a file using the given charact
 @param charset the charset used to encode the output stream; see `StandardCharsets` for
      helpful predefined constants
 @throws IOException if an I/O error occurs
-**Deprecated:** Prefer `asCharSink(to, charset).write(from)`.
+**Deprecated:**Prefer `asCharSink(to, charset).write(from)`.
 
 ### `copy(`java.io.File` from, `java.io.OutputStream` to)`
 
@@ -174,7 +174,7 @@ Copies all characters from a file to an appendable object, using the given chara
      helpful predefined constants
 @param to the appendable object
 @throws IOException if an I/O error occurs
-**Deprecated:** Prefer `asCharSource(from, charset).copyTo(to)`.
+**Deprecated:**Prefer `asCharSource(from, charset).copyTo(to)`.
 
 ### `append(`java.lang.CharSequence` from, `java.io.File` to, `java.nio.charset.Charset` charset)`
 
@@ -186,7 +186,7 @@ Appends a character sequence (such as a string) to a file using the given charac
 @param charset the charset used to encode the output stream; see `StandardCharsets` for
      helpful predefined constants
 @throws IOException if an I/O error occurs
-**Deprecated:** Prefer `asCharSink(to, charset, FileWriteMode.APPEND).write(from)`. This
+**Deprecated:**Prefer `asCharSink(to, charset, FileWriteMode.APPEND).write(from)`. This
      method is scheduled to be removed in October 2019.
 
 ### `equal(`java.io.File` file1, `java.io.File` file2)`
@@ -222,7 +222,7 @@ Atomically creates a new directory somewhere beneath the system's temporary dire
 @return the newly-created directory
 @throws IllegalStateException if the directory could not be created, such as if the system does
      not support creating temporary directories securely
-**Deprecated:** For Android users, see the <a href="https://developer.android.com/training/data-storage" target="_blank">Data and File
+**Deprecated:**For Android users, see the <a href="https://developer.android.com/training/data-storage" target="_blank">Data and File
      Storage overview</a> to select an appropriate temporary directory (perhaps `context.getCacheDir()`), and create your own directory under that. (For example, you might
      use `new File(context.getCacheDir(), "directoryname").mkdir()`, or, if you need an
      arbitrary number of temporary directories, you might have to generate multiple directory
@@ -276,7 +276,7 @@ Reads the first line from a file. The line does not include line-termination cha
      helpful predefined constants
 @return the first line, or null if the file is empty
 @throws IOException if an I/O error occurs
-**Deprecated:** Prefer `asCharSource(file, charset).readFirstLine()`.
+**Deprecated:**Prefer `asCharSource(file, charset).readFirstLine()`.
 
 ### `readLines(`java.io.File` file, `java.nio.charset.Charset` charset)`
 
@@ -306,7 +306,7 @@ Streams lines from a `File`, stopping when our callback returns false, or we hav
 @param callback the `LineProcessor` to use to handle the lines
 @return the output of processing the lines
 @throws IOException if an I/O error occurs
-**Deprecated:** Prefer `asCharSource(file, charset).readLines(callback)`.
+**Deprecated:**Prefer `asCharSource(file, charset).readLines(callback)`.
 
 ### `readBytes(`java.io.File` file, [`com.google.common.io.ByteProcessor<T>`](./ByteProcessor.md) processor)`
 
@@ -319,7 +319,7 @@ Process the bytes of a file.
 @param processor the object to which the bytes of the file are passed.
 @return the result of the byte processor
 @throws IOException if an I/O error occurs
-**Deprecated:** Prefer `asByteSource(file).read(processor)`.
+**Deprecated:**Prefer `asByteSource(file).read(processor)`.
 
 ### `hash(`java.io.File` file, [`com.google.common.hash.HashFunction`](../hash/HashFunction.md) hashFunction)`
 
@@ -331,7 +331,7 @@ Computes the hash code of the `file` using `hashFunction`.
 @return the `HashCode` of all of the bytes in the file
 @throws IOException if an I/O error occurs
 **Since:** 12.0
-**Deprecated:** Prefer `asByteSource(file).hash(hashFunction)`.
+**Deprecated:**Prefer `asByteSource(file).hash(hashFunction)`.
 
 ### `map(`java.io.File` file)`
 

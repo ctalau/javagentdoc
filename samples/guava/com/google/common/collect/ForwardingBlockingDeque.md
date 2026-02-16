@@ -31,7 +31,7 @@ A `BlockingDeque` which forwards all its method calls to another `BlockingDeque`
  methods that they depend on are thread-safe.
 **Author:** Emily Soldal
 **Since:** 14.0
-**Deprecated:** This class has moved to `com.google.common.util.concurrent`. Please use `com.google.common.util.concurrent.ForwardingBlockingDeque` instead.
+**Deprecated:**This class has moved to `com.google.common.util.concurrent`. Please use `com.google.common.util.concurrent.ForwardingBlockingDeque` instead.
 
 ## Constructors
 

@@ -223,7 +223,7 @@ Returns an immutable sorted multiset containing the elements of a sorted multise
 
  <p>This implementation is guaranteed to throw an `UnsupportedOperationException`.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `pollLastEntry()`
 
@@ -233,7 +233,7 @@ Returns an immutable sorted multiset containing the elements of a sorted multise
 
  <p>This implementation is guaranteed to throw an `UnsupportedOperationException`.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
 
@@ -291,7 +291,7 @@ Returns a builder that creates immutable sorted multisets whose elements are ord
 Not supported. Use `toImmutableSortedMultiset` instead. This method exists only to hide
  `ImmutableMultiset.toImmutableMultiset` from consumers of `ImmutableSortedMultiset`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedMultiset.toImmutableSortedMultiset`.
+**Deprecated:**Use `ImmutableSortedMultiset.toImmutableSortedMultiset`.
 **Since:** 21.0
 
 ### `toImmutableMultiset(`java.util.function.Function<? super T,? extends E>` elementFunction, `java.util.function.ToIntFunction<? super T>` countFunction)`
@@ -301,7 +301,7 @@ Not supported. Use `toImmutableSortedMultiset` instead. This method exists only 
 Not supported. Use `toImmutableSortedMultiset` instead. This method exists only to hide
  `ImmutableMultiset.toImmutableMultiset` from consumers of `ImmutableSortedMultiset`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedMultiset.toImmutableSortedMultiset`.
+**Deprecated:**Use `ImmutableSortedMultiset.toImmutableSortedMultiset`.
 **Since:** 22.0
 
 ### `builder()`
@@ -311,7 +311,7 @@ Not supported. Use `toImmutableSortedMultiset` instead. This method exists only 
 Not supported. Use `naturalOrder`, which offers better type-safety, instead. This method
  exists only to hide `ImmutableMultiset.builder` from consumers of `ImmutableSortedMultiset`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedMultiset.naturalOrder`, which offers better type-safety.
+**Deprecated:**Use `ImmutableSortedMultiset.naturalOrder`, which offers better type-safety.
 
 ### `of(`E` element)`
 
@@ -319,7 +319,7 @@ Not supported. Use `naturalOrder`, which offers better type-safety, instead. Thi
 
 Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass a parameter of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable)`.</b>
+**Deprecated:**<b>Pass a parameter of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable)`.</b>
 
 ### `of(`E` e1, `E` e2)`
 
@@ -327,7 +327,7 @@ Not supported. <b>You are attempting to create a multiset that may contain a non
 
 Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable)`.</b>
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable)`.</b>
 
 ### `of(`E` e1, `E` e2, `E` e3)`
 
@@ -335,7 +335,7 @@ Not supported. <b>You are attempting to create a multiset that may contain a non
 
 Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable)`.</b>
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable)`.</b>
 
 ### `of(`E` e1, `E` e2, `E` e3, `E` e4)`
 
@@ -343,7 +343,7 @@ Not supported. <b>You are attempting to create a multiset that may contain a non
 
 Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable)`. </b>
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable)`. </b>
 
 ### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5)`
 
@@ -351,7 +351,7 @@ Not supported. <b>You are attempting to create a multiset that may contain a non
 
 Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable, Comparable)` .
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable, Comparable)` .
      </b>
 
 ### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5, `E` e6, `E[]` remaining)`
@@ -360,7 +360,7 @@ Not supported. <b>You are attempting to create a multiset that may contain a non
 
 Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable, Comparable,
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable, Comparable,
      Comparable, Comparable...)` . </b>
 
 ### `copyOf(`Z[]` elements)`
@@ -369,5 +369,5 @@ Not supported. <b>You are attempting to create a multiset that may contain a non
 
 Not supported. <b>You are attempting to create a multiset that may contain non-`Comparable` elements.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass parameters of type `Comparable` to use `ImmutableSortedMultiset.copyOf(Comparable[])`.</b>
+**Deprecated:**<b>Pass parameters of type `Comparable` to use `ImmutableSortedMultiset.copyOf(Comparable[])`.</b>
 

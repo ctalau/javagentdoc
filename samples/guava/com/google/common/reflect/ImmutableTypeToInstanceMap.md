@@ -55,7 +55,7 @@ Returns a new builder.
 **Returns:** `T`
 
 Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:** unsupported operation
+**Deprecated:**unsupported operation
 @throws UnsupportedOperationException always
 
 ### `putInstance(`java.lang.Class<T>` type, `T` value)`
@@ -63,7 +63,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 **Returns:** `T`
 
 Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:** unsupported operation
+**Deprecated:**unsupported operation
 @throws UnsupportedOperationException always
 
 ### `put([`com.google.common.reflect.TypeToken<? extends B>`](./TypeToken.md) key, `B` value)`
@@ -71,7 +71,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 **Returns:** `B`
 
 Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:** unsupported operation
+**Deprecated:**unsupported operation
 @throws UnsupportedOperationException always
 
 ### `putAll(`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends B>,? extends B>` map)`
@@ -79,7 +79,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 **Returns:** `void`
 
 Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:** unsupported operation
+**Deprecated:**unsupported operation
 @throws UnsupportedOperationException always
 
 ### `delegate()`

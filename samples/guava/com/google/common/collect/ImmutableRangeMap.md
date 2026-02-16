@@ -91,7 +91,7 @@ Returns a new builder for an immutable range map.
 
 Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `putCoalescing([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
 
@@ -99,7 +99,7 @@ Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `putAll([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md) rangeMap)`
 
@@ -107,7 +107,7 @@ Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `clear()`
 
@@ -115,7 +115,7 @@ Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove([`com.google.common.collect.Range<K>`](./Range.md) range)`
 
@@ -123,7 +123,7 @@ Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `merge([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value, `java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
 
@@ -131,7 +131,7 @@ Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `asMapOfRanges()`
 

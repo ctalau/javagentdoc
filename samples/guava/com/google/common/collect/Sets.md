@@ -339,7 +339,7 @@ Returns a set backed by the specified map. The resulting set displays the same o
 @param map the backing map
 @return the set backed by the map
 @throws IllegalArgumentException if `map` is not empty
-**Deprecated:** Use `Collections.newSetFromMap` instead.
+**Deprecated:**Use `Collections.newSetFromMap` instead.
 
 ### `union(`java.util.Set<? extends E>` set1, `java.util.Set<? extends E>` set2)`
 

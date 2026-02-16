@@ -33,5 +33,5 @@ Constructor for use by subclasses.
 
 Guaranteed to throw an exception and leave the underlying data unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 

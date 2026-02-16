@@ -52,7 +52,7 @@ Returns `true` if the given objects are considered equivalent.
 
 **Returns:** `boolean`
 
-**Deprecated:** Provided only to satisfy the `BiPredicate` interface; use `equivalent`
+**Deprecated:**Provided only to satisfy the `BiPredicate` interface; use `equivalent`
      instead.
 **Since:** 21.0
 

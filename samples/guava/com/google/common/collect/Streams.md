@@ -26,7 +26,7 @@ Returns a sequential `Stream` of the contents of `iterable`, delegating to `Coll
 **Returns:** `java.util.stream.Stream<T>`
 
 Returns `Collection.stream`.
-**Deprecated:** There is no reason to use this; just invoke `collection.stream()` directly.
+**Deprecated:**There is no reason to use this; just invoke `collection.stream()` directly.
 
 ### `stream(`java.util.Iterator<T>` iterator)`
 

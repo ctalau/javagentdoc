@@ -51,7 +51,7 @@ A mutable type-to-instance map. See also `ImmutableTypeToInstanceMap`.
 **Returns:** `B`
 
 Not supported. Use `putInstance` instead.
-**Deprecated:** unsupported operation
+**Deprecated:**unsupported operation
 @throws UnsupportedOperationException always
 
 ### `putAll(`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B>` map)`
@@ -59,7 +59,7 @@ Not supported. Use `putInstance` instead.
 **Returns:** `void`
 
 Not supported. Use `putInstance` instead.
-**Deprecated:** unsupported operation
+**Deprecated:**unsupported operation
 @throws UnsupportedOperationException always
 
 ### `entrySet()`

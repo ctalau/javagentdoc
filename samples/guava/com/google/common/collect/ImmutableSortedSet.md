@@ -410,7 +410,7 @@ Returns the comparator that orders the elements, which is `Ordering.natural()` w
 Guaranteed to throw an exception and leave the set unmodified.
 **Since:** 12.0
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `pollLast()`
 
@@ -419,7 +419,7 @@ Guaranteed to throw an exception and leave the set unmodified.
 Guaranteed to throw an exception and leave the set unmodified.
 **Since:** 12.0
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `descendingSet()`
 
@@ -462,7 +462,7 @@ Returns the position of an element within the set, or -1 if not present.
 Not supported. Use `toImmutableSortedSet` instead. This method exists only to hide
  `ImmutableSet.toImmutableSet` from consumers of `ImmutableSortedSet`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedSet.toImmutableSortedSet`.
+**Deprecated:**Use `ImmutableSortedSet.toImmutableSortedSet`.
 **Since:** 21.0
 
 ### `builder()`
@@ -472,7 +472,7 @@ Not supported. Use `toImmutableSortedSet` instead. This method exists only to hi
 Not supported. Use `naturalOrder`, which offers better type-safety, instead. This method
  exists only to hide `ImmutableSet.builder` from consumers of `ImmutableSortedSet`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedSet.naturalOrder`, which offers better type-safety.
+**Deprecated:**Use `ImmutableSortedSet.naturalOrder`, which offers better type-safety.
 
 ### `builderWithExpectedSize(`int` expectedSize)`
 
@@ -481,7 +481,7 @@ Not supported. Use `naturalOrder`, which offers better type-safety, instead. Thi
 Not supported. This method exists only to hide `ImmutableSet.builderWithExpectedSize`
  from consumers of `ImmutableSortedSet`.
 @throws UnsupportedOperationException always
-**Deprecated:** Not supported by ImmutableSortedSet.
+**Deprecated:**Not supported by ImmutableSortedSet.
 
 ### `of(`E` element)`
 
@@ -491,7 +491,7 @@ Not supported. <b>You are attempting to create a set that may contain a non-`Com
  element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass a parameter of type `Comparable` to use `ImmutableSortedSet.of(Comparable)`.</b>
+**Deprecated:**<b>Pass a parameter of type `Comparable` to use `ImmutableSortedSet.of(Comparable)`.</b>
 
 ### `of(`E` e1, `E` e2)`
 
@@ -501,7 +501,7 @@ Not supported. <b>You are attempting to create a set that may contain a non-`Com
  element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable)`.</b>
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable)`.</b>
 
 ### `of(`E` e1, `E` e2, `E` e3)`
 
@@ -511,7 +511,7 @@ Not supported. <b>You are attempting to create a set that may contain a non-`Com
  element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable)`.</b>
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable)`.</b>
 
 ### `of(`E` e1, `E` e2, `E` e3, `E` e4)`
 
@@ -521,7 +521,7 @@ Not supported. <b>You are attempting to create a set that may contain a non-`Com
  element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable, Comparable)`. </b>
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable, Comparable)`. </b>
 
 ### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5)`
 
@@ -531,7 +531,7 @@ Not supported. <b>You are attempting to create a set that may contain a non-`Com
  element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of( Comparable, Comparable, Comparable, Comparable, Comparable)`. </b>
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of( Comparable, Comparable, Comparable, Comparable, Comparable)`. </b>
 
 ### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5, `E` e6, `E[]` remaining)`
 
@@ -541,7 +541,7 @@ Not supported. <b>You are attempting to create a set that may contain a non-`Com
  element.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable, Comparable, Comparable,
+**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedSet.of(Comparable, Comparable, Comparable, Comparable, Comparable,
      Comparable, Comparable...)`. </b>
 
 ### `copyOf(`Z[]` elements)`
@@ -552,5 +552,5 @@ Not supported. <b>You are attempting to create a set that may contain non-`Compa
  elements.</b> Proper calls will resolve to the version in `ImmutableSortedSet`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass parameters of type `Comparable` to use `ImmutableSortedSet.copyOf(Comparable[])`.</b>
+**Deprecated:**<b>Pass parameters of type `Comparable` to use `ImmutableSortedSet.copyOf(Comparable[])`.</b>
 

@@ -199,7 +199,7 @@ Package-private non-final implementation of andThen() so only we can override it
 
 **Returns:** `B`
 
-**Deprecated:** Provided to satisfy the `Function` interface; use `convert` instead.
+**Deprecated:**Provided to satisfy the `Function` interface; use `convert` instead.
 
 ### `equals(`java.lang.Object` object)`
 

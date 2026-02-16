@@ -197,7 +197,7 @@ Returns an immutable list of the values for the given key. If no mappings in the
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
@@ -205,7 +205,7 @@ Guaranteed to throw an exception and leave the multimap unmodified.
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `writeObject(`java.io.ObjectOutputStream` stream)`
 

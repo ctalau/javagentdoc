@@ -55,7 +55,7 @@ Returns an unmodifiable view of the specified multiset. Query operations on the 
 **Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 10.0
 
 ### `unmodifiableSortedMultiset([`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md) sortedMultiset)`

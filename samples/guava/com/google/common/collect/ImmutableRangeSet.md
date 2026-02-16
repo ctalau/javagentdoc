@@ -125,7 +125,7 @@ Returns an `ImmutableRangeSet` representing the union of the specified ranges.
 
 Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `addAll([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
 
@@ -133,7 +133,7 @@ Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `addAll(`java.lang.Iterable<com.google.common.collect.Range<C>>` other)`
 
@@ -141,7 +141,7 @@ Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove([`com.google.common.collect.Range<C>`](./Range.md) range)`
 
@@ -149,7 +149,7 @@ Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `removeAll([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
 
@@ -157,7 +157,7 @@ Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `removeAll(`java.lang.Iterable<com.google.common.collect.Range<C>>` other)`
 
@@ -165,7 +165,7 @@ Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 
 Guaranteed to throw an exception and leave the `RangeSet` unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `asRanges()`
 

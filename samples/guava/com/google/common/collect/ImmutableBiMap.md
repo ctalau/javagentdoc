@@ -205,7 +205,7 @@ Returns an immutable set of the values in this map, in the same order they appea
 
 Guaranteed to throw an exception and leave the bimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `writeReplace()`
 
@@ -221,7 +221,7 @@ Guaranteed to throw an exception and leave the bimap unmodified.
 
 Not supported. Use `toImmutableBiMap` instead. This method exists only to hide `ImmutableMap.toImmutableMap(Function, Function)` from consumers of `ImmutableBiMap`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableBiMap.toImmutableBiMap`.
+**Deprecated:**Use `ImmutableBiMap.toImmutableBiMap`.
 
 ### `toImmutableMap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction, `java.util.function.BinaryOperator<V>` mergeFunction)`
 
@@ -231,5 +231,5 @@ Not supported. This method does not make sense for `BiMap`. This method exists o
  hide `ImmutableMap.toImmutableMap(Function, Function, BinaryOperator)` from consumers of
  `ImmutableBiMap`.
 @throws UnsupportedOperationException always
-@deprecated
+**Deprecated:**
 

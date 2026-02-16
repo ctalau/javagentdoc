@@ -11,7 +11,7 @@
 Wraps an exception that occurred during a computation.
 **Author:** Bob Lee
 **Since:** 2.0
-**Deprecated:** This exception is no longer thrown by `com.google.common`. Previously, it was
+**Deprecated:**This exception is no longer thrown by `com.google.common`. Previously, it was
      thrown by `MapMaker` computing maps. When support for computing maps was removed from
      `MapMaker`, it was added to `CacheBuilder`, which throws `ExecutionException`, `UncheckedExecutionException`, and `ExecutionError`. Any
      code that is still catching `ComputationException` may need to be updated to catch some

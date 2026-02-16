@@ -197,7 +197,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
  the arithmetic mean of the population.
 @param values a nonempty series of values
 @throws IllegalArgumentException if `values` is empty or contains any non-finite value
-**Deprecated:** Use `Stats.meanOf` instead, noting the less strict handling of non-finite
+**Deprecated:**Use `Stats.meanOf` instead, noting the less strict handling of non-finite
      values.
 
 ### `mean(`int[]` values)`
@@ -211,7 +211,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
  the arithmetic mean of the population.
 @param values a nonempty series of values
 @throws IllegalArgumentException if `values` is empty
-**Deprecated:** Use `Stats.meanOf` instead, noting the less strict handling of non-finite
+**Deprecated:**Use `Stats.meanOf` instead, noting the less strict handling of non-finite
      values.
 
 ### `mean(`long[]` values)`
@@ -226,7 +226,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 @param values a nonempty series of values, which will be converted to `double` values
      (this may cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 @throws IllegalArgumentException if `values` is empty
-**Deprecated:** Use `Stats.meanOf` instead, noting the less strict handling of non-finite
+**Deprecated:**Use `Stats.meanOf` instead, noting the less strict handling of non-finite
      values.
 
 ### `mean(`java.lang.Iterable<? extends java.lang.Number>` values)`
@@ -241,7 +241,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 @param values a nonempty series of values, which will be converted to `double` values
      (this may cause loss of precision)
 @throws IllegalArgumentException if `values` is empty or contains any non-finite value
-**Deprecated:** Use `Stats.meanOf` instead, noting the less strict handling of non-finite
+**Deprecated:**Use `Stats.meanOf` instead, noting the less strict handling of non-finite
      values.
 
 ### `mean(`java.util.Iterator<? extends java.lang.Number>` values)`
@@ -256,7 +256,7 @@ Returns the <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic me
 @param values a nonempty series of values, which will be converted to `double` values
      (this may cause loss of precision)
 @throws IllegalArgumentException if `values` is empty or contains any non-finite value
-**Deprecated:** Use `Stats.meanOf` instead, noting the less strict handling of non-finite
+**Deprecated:**Use `Stats.meanOf` instead, noting the less strict handling of non-finite
      values.
 
 ### `checkFinite(`double` argument)`

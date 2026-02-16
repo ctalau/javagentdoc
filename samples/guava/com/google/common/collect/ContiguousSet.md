@@ -175,7 +175,7 @@ Returns a shorthand representation of the contents such as `"[1..100]"`.
 Not supported. `ContiguousSet` instances are constructed with `create`. This
  method exists only to hide `ImmutableSet.builder` from consumers of `ContiguousSet`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `create`.
+**Deprecated:**Use `create`.
 
 ### `writeReplace()`
 

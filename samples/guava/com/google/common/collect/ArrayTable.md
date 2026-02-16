@@ -193,7 +193,7 @@ Returns a two-dimensional array with the table contents. The row and column indi
 
 Not supported. Use `eraseAll` instead.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `eraseAll`
+**Deprecated:**Use `eraseAll`
 
 ### `eraseAll()`
 
@@ -261,7 +261,7 @@ Returns `true` if `rowKeyList().size == 0` or `columnKeyList().size() == 0`.
 
 Not supported. Use `erase` instead.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `erase`
+**Deprecated:**Use `erase`
 
 ### `erase(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 

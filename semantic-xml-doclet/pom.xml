@@ -107,7 +107,7 @@
                             <arguments>
                                 <argument>-c</argument>
                                 <argument>
-                                    ./generate-guava-docs.sh &amp;&amp;
+                                    ./generate-guava-docs-mvn.sh &amp;&amp;
                                     mkdir -p ${project.build.directory}/test-docs &amp;&amp;
                                     cp -r samples/guava/* ${project.build.directory}/test-docs/
                                 </argument>

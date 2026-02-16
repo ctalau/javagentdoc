@@ -42,7 +42,7 @@ Returns an immutable copy of `graph`.
 **Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 
 ### `incidentEdgeOrder()`
 

@@ -92,7 +92,7 @@ Returns `true` if the element <i>might</i> have been put in this Bloom filter, `
 
 **Returns:** `boolean`
 
-**Deprecated:** Provided only to satisfy the `Predicate` interface; use `mightContain`
+**Deprecated:**Provided only to satisfy the `Predicate` interface; use `mightContain`
      instead.
 
 ### `put(`T` object)`

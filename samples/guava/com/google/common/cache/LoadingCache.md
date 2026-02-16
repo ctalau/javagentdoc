@@ -104,7 +104,7 @@ Returns a map of the values associated with `keys`, creating or retrieving those
 
 **Returns:** `V`
 
-**Deprecated:** Provided to satisfy the `Function` interface; use `get` or `getUnchecked` instead.
+**Deprecated:**Provided to satisfy the `Function` interface; use `get` or `getUnchecked` instead.
 @throws UncheckedExecutionException if an exception was thrown while loading the value. (As
      described in the documentation for `getUnchecked`, `LoadingCache` should be
      used as a `Function` only with cache loaders that throw only unchecked exceptions.)

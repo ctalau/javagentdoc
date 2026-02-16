@@ -197,7 +197,7 @@ If this collection is backed by an array of its elements in insertion order, ret
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove(`java.lang.Object` object)`
 
@@ -205,7 +205,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `addAll(`java.util.Collection<? extends E>` newElements)`
 
@@ -213,7 +213,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `removeAll(`java.util.Collection<?>` oldElements)`
 
@@ -221,7 +221,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `removeIf(`java.util.function.Predicate<? super E>` filter)`
 
@@ -229,7 +229,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `retainAll(`java.util.Collection<?>` elementsToKeep)`
 
@@ -237,7 +237,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `clear()`
 
@@ -245,7 +245,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `asList()`
 

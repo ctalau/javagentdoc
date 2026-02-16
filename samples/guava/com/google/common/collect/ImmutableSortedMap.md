@@ -480,7 +480,7 @@ This method returns a `ImmutableSortedMap`, consisting of the entries whose keys
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `pollLastEntry()`
 
@@ -488,7 +488,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `descendingMap()`
 
@@ -517,7 +517,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 Not supported. Use `toImmutableSortedMap`, which offers better type-safety, instead.
  This method exists only to hide `ImmutableMap.toImmutableMap` from consumers of `ImmutableSortedMap`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedMap.toImmutableSortedMap`.
+**Deprecated:**Use `ImmutableSortedMap.toImmutableSortedMap`.
 
 ### `toImmutableMap(`java.util.function.Function<? super T,? extends K>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction, `java.util.function.BinaryOperator<V>` mergeFunction)`
 
@@ -526,7 +526,7 @@ Not supported. Use `toImmutableSortedMap`, which offers better type-safety, inst
 Not supported. Use `toImmutableSortedMap`, which offers better type-safety, instead.
  This method exists only to hide `ImmutableMap.toImmutableMap` from consumers of `ImmutableSortedMap`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedMap.toImmutableSortedMap`.
+**Deprecated:**Use `ImmutableSortedMap.toImmutableSortedMap`.
 
 ### `builder()`
 
@@ -535,7 +535,7 @@ Not supported. Use `toImmutableSortedMap`, which offers better type-safety, inst
 Not supported. Use `naturalOrder`, which offers better type-safety, instead. This method
  exists only to hide `ImmutableMap.builder` from consumers of `ImmutableSortedMap`.
 @throws UnsupportedOperationException always
-**Deprecated:** Use `ImmutableSortedMap.naturalOrder`, which offers better type-safety.
+**Deprecated:**Use `ImmutableSortedMap.naturalOrder`, which offers better type-safety.
 
 ### `builderWithExpectedSize(`int` expectedSize)`
 
@@ -543,7 +543,7 @@ Not supported. Use `naturalOrder`, which offers better type-safety, instead. Thi
 
 Not supported for ImmutableSortedMap.
 @throws UnsupportedOperationException always
-**Deprecated:** Not supported for ImmutableSortedMap.
+**Deprecated:**Not supported for ImmutableSortedMap.
 
 ### `of(`K` k1, `V` v1)`
 
@@ -553,7 +553,7 @@ Not supported. <b>You are attempting to create a map that may contain a non-`Com
  key.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this dummy
  version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass a key of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object)`.</b>
+**Deprecated:**<b>Pass a key of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2)`
 
@@ -563,7 +563,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object)`.</b>
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3)`
 
@@ -573,7 +573,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls to will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object)`.</b>
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4)`
 
@@ -583,7 +583,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
      Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5)`
@@ -594,7 +594,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
      Comparable, Object, Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6)`
@@ -605,7 +605,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
      Comparable, Object, Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7)`
@@ -616,7 +616,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
      Comparable, Object, Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8)`
@@ -627,7 +627,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
      Comparable, Object, Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8, `K` k9, `V` v9)`
@@ -638,7 +638,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
      Comparable, Object, Comparable, Object)`.</b>
 
 ### `of(`K` k1, `V` v1, `K` k2, `V` v2, `K` k3, `V` v3, `K` k4, `V` v4, `K` k5, `V` v5, `K` k6, `V` v6, `K` k7, `V` v7, `K` k8, `V` v8, `K` k9, `V` v9, `K` k10, `V` v10)`
@@ -649,7 +649,7 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
  keys.</b> Proper calls will resolve to the version in `ImmutableSortedMap`, not this
  dummy version.
 @throws UnsupportedOperationException always
-**Deprecated:** <b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
+**Deprecated:**<b>Pass keys of type `Comparable` to use `ImmutableSortedMap.of(Comparable, Object, Comparable, Object, Comparable, Object,
      Comparable, Object, Comparable, Object)`.</b>
 
 ### `ofEntries(`java.util.Map.Entry<? extends K,? extends V>[]` entries)`
@@ -657,5 +657,5 @@ Not supported. <b>You are attempting to create a map that may contain non-`Compa
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
 
 Not supported. Use `ImmutableSortedMap.copyOf(ImmutableMap.ofEntries(...))`.
-**Deprecated:** Use `ImmutableSortedMap.copyOf(ImmutableMap.ofEntries(...))`.
+**Deprecated:**Use `ImmutableSortedMap.copyOf(ImmutableMap.ofEntries(...))`.
 

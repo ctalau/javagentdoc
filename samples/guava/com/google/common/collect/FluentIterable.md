@@ -125,7 +125,7 @@ Returns a fluent iterable containing `elements` in the specified order.
 
 Construct a fluent iterable from another fluent iterable. This is obviously never necessary,
  but is intended to help call out cases where one migration from `Iterable` to `FluentIterable` has obviated the need to explicitly convert to a `FluentIterable`.
-**Deprecated:** instances of `FluentIterable` don't need to be converted to `FluentIterable`
+**Deprecated:**instances of `FluentIterable` don't need to be converted to `FluentIterable`
 
 ### `concat(`java.lang.Iterable<? extends T>` a, `java.lang.Iterable<? extends T>` b)`
 

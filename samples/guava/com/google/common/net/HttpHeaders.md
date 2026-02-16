@@ -928,7 +928,7 @@ The HTTP <a href="https://wicg.github.io/ua-client-hints/#sec-ch-ua-platform-ver
 **Type:** `java.lang.String`
 
 The HTTP <a href="https://wicg.github.io/ua-client-hints/#sec-ch-ua-full-version">`Sec-CH-UA-Full-Version`</a> header field name.
-**Deprecated:** Prefer `SEC_CH_UA_FULL_VERSION_LIST`.
+**Deprecated:**Prefer `SEC_CH_UA_FULL_VERSION_LIST`.
 **Since:** 30.0
 
 ### `SEC_CH_UA_FULL_VERSION_LIST`

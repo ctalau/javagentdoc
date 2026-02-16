@@ -322,7 +322,7 @@ Returns `true` if `value` is within the bounds of this range. For example, on th
 
 **Returns:** `boolean`
 
-**Deprecated:** Provided only to satisfy the `Predicate` interface; use `contains`
+**Deprecated:**Provided only to satisfy the `Predicate` interface; use `contains`
      instead.
 
 ### `containsAll(`java.lang.Iterable<? extends C>` values)`

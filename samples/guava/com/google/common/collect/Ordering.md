@@ -162,7 +162,7 @@ Returns an ordering based on an <i>existing</i> comparator instance. Note that i
 **Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 
 ### `explicit(`java.util.List<T>` valuesInOrder)`
 
@@ -628,5 +628,5 @@ Returns `true` if each element in `iterable` after the first is <i>strictly</i>
  `key` using the binary search algorithm. The list must be sorted using this ordering.
 @param sortedList the list to be searched
 @param key the key to be searched for
-**Deprecated:** Use `Collections.binarySearch(List, Object, Comparator)` directly.
+**Deprecated:**Use `Collections.binarySearch(List, Object, Comparator)` directly.
 

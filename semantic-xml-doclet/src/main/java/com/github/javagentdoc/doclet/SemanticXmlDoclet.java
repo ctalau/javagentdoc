@@ -491,7 +491,7 @@ public final class SemanticXmlDoclet implements Doclet {
         // Convert standalone @tags at line start to markdown
         result = result.replaceAll("(?m)^@since\\s+(.*)$", "**Since:** $1");
         result = result.replaceAll("(?m)^@author\\s+(.*)$", "**Author:** $1");
-        result = result.replaceAll("(?m)^@deprecated\\s+(.*)$", "**Deprecated:** $1");
+        result = result.replaceAll("(?m)^@deprecated\\s*(.*)$", "**Deprecated:**$1");  // Allow empty deprecated
         result = result.replaceAll("(?m)^@see\\s+(.*)$", "**See:** $1");
 
         return result;

@@ -69,7 +69,7 @@ Converts the given `ListenableFuture` to an equivalent `FluentFuture`.
 **Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 28.0
 
 ### `catching(`java.lang.Class<X>` exceptionType, [`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md) fallback, `java.util.concurrent.Executor` executor)`

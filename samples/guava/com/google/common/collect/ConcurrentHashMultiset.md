@@ -171,7 +171,7 @@ Sets the number of occurrences of `element` to `newCount`, but only if the count
 
 **Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
-**Deprecated:** Internal method, use `entrySet()`.
+**Deprecated:**Internal method, use `entrySet()`.
 
 ### `distinctElements()`
 

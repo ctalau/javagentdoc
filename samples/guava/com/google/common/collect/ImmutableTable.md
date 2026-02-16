@@ -189,7 +189,7 @@ Verifies that `rowKey`, `columnKey` and `value` are non-null, and returns a
 
 Guaranteed to throw an exception and leave the table unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `put(`R` rowKey, `C` columnKey, `V` value)`
 
@@ -197,7 +197,7 @@ Guaranteed to throw an exception and leave the table unmodified.
 
 Guaranteed to throw an exception and leave the table unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `putAll([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md) table)`
 
@@ -205,7 +205,7 @@ Guaranteed to throw an exception and leave the table unmodified.
 
 Guaranteed to throw an exception and leave the table unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
 
@@ -213,7 +213,7 @@ Guaranteed to throw an exception and leave the table unmodified.
 
 Guaranteed to throw an exception and leave the table unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `writeReplace()`
 

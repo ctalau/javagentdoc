@@ -200,7 +200,7 @@ Starts a `ClosingFuture` pipeline with a `ListenableFuture`.
      future's result type `C`, see `DeferredCloser.eventuallyClose(Object,
      Executor)`.
 @param closingExecutor the future's result will be closed on this executor
-**Deprecated:** Creating `Future`s of closeable types is dangerous in general because the
+**Deprecated:**Creating `Future`s of closeable types is dangerous in general because the
      underlying value may never be closed if the `Future` is canceled after its operation
      begins. Consider replacing code that creates `ListenableFuture`s of closeable types,
      including those that pass them to this method, with `submit(ClosingCallable,

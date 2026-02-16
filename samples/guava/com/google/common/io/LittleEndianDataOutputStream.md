@@ -42,7 +42,7 @@ Creates a `LittleEndianDataOutputStream` that wraps the given stream.
 
 **Returns:** `void`
 
-**Deprecated:** The semantics of `writeBytes(String s)` are considered dangerous. Please use
+**Deprecated:**The semantics of `writeBytes(String s)` are considered dangerous. Please use
      `writeUTF(String s)`, `writeChars(String s)` or another write method instead.
 
 ### `writeChar(`int` v)`

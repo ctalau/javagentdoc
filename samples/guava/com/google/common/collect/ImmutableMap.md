@@ -242,7 +242,7 @@ Returns an immutable map containing the specified entries. The returned map iter
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `putIfAbsent(`K` key, `V` value)`
 
@@ -250,7 +250,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `replace(`K` key, `V` oldValue, `V` newValue)`
 
@@ -258,7 +258,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `replace(`K` key, `V` value)`
 
@@ -266,7 +266,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `computeIfAbsent(`K` key, `java.util.function.Function<? super K,? extends V>` mappingFunction)`
 
@@ -274,7 +274,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `computeIfPresent(`K` key, `java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
 
@@ -282,7 +282,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `compute(`K` key, `java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
 
@@ -290,7 +290,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `merge(`K` key, `V` value, `java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` function)`
 
@@ -298,7 +298,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `putAll(`java.util.Map<? extends K,? extends V>` map)`
 
@@ -306,7 +306,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `replaceAll(`java.util.function.BiFunction<? super K,? super V,? extends V>` function)`
 
@@ -314,7 +314,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove(`java.lang.Object` o)`
 
@@ -322,7 +322,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove(`java.lang.Object` key, `java.lang.Object` value)`
 
@@ -330,7 +330,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `clear()`
 
@@ -338,7 +338,7 @@ Guaranteed to throw an exception and leave the map unmodified.
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `isEmpty()`
 

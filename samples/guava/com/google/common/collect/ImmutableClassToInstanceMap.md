@@ -83,7 +83,7 @@ Returns an immutable map containing the same entries as `map`. If `map` somehow
 
 Guaranteed to throw an exception and leave the map unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `readResolve()`
 

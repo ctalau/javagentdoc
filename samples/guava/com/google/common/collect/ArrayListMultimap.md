@@ -102,7 +102,7 @@ Creates a new, empty `ArrayList` to hold the collection of values for an arbitra
 **Returns:** `void`
 
 Reduces the memory used by this `ArrayListMultimap`, if feasible.
-**Deprecated:** For a `ListMultimap` that automatically trims to size, use `ImmutableListMultimap`. If you need a mutable collection, remove the `trimToSize`
+**Deprecated:**For a `ListMultimap` that automatically trims to size, use `ImmutableListMultimap`. If you need a mutable collection, remove the `trimToSize`
      call, or switch to a `HashMap<K, ArrayList<V>>`.
 
 ### `writeObject(`java.io.ObjectOutputStream` stream)`

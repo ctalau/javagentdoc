@@ -178,7 +178,7 @@ Returns an immutable multiset containing the given elements, in the "grouped ite
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove(`java.lang.Object` element, `int` occurrences)`
 
@@ -186,7 +186,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `setCount(`E` element, `int` count)`
 
@@ -194,7 +194,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `setCount(`E` element, `int` oldCount, `int` newCount)`
 
@@ -202,7 +202,7 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 Guaranteed to throw an exception and leave the collection unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
 

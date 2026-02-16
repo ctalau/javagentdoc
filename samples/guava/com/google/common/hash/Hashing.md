@@ -56,7 +56,7 @@ Returns a hash function implementing the <a href="https://github.com/aappleby/sm
 
  <p>The C++ equivalent is the MurmurHash3_x86_32 function (Murmur3A), which however does not
  have the bug.
-**Deprecated:** This implementation produces incorrect hash values from the `HashFunction.hashString` method if the string contains non-BMP characters. Use `murmur3_32_fixed(int)` instead.
+**Deprecated:**This implementation produces incorrect hash values from the `HashFunction.hashString` method if the string contains non-BMP characters. Use `murmur3_32_fixed(int)` instead.
 
 ### `murmur3_32()`
 
@@ -68,7 +68,7 @@ Returns a hash function implementing the <a href="https://github.com/aappleby/sm
 
  <p>The C++ equivalent is the MurmurHash3_x86_32 function (Murmur3A), which however does not
  have the bug.
-**Deprecated:** This implementation produces incorrect hash values from the `HashFunction.hashString` method if the string contains non-BMP characters. Use `murmur3_32_fixed()` instead.
+**Deprecated:**This implementation produces incorrect hash values from the `HashFunction.hashString` method if the string contains non-BMP characters. Use `murmur3_32_fixed()` instead.
 
 ### `murmur3_32_fixed(`int` seed)`
 
@@ -133,7 +133,7 @@ Returns a hash function implementing the <a href="https://131002.net/siphash/">6
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 Returns a hash function implementing the MD5 hash algorithm (128 hash bits).
-**Deprecated:** If you must interoperate with a system that requires MD5, then use this method,
+**Deprecated:**If you must interoperate with a system that requires MD5, then use this method,
      despite its deprecation. But if you can choose your hash function, avoid MD5, which is
      neither fast nor secure. As of January 2017, we suggest:
      <ul>
@@ -147,7 +147,7 @@ Returns a hash function implementing the MD5 hash algorithm (128 hash bits).
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 Returns a hash function implementing the SHA-1 algorithm (160 hash bits).
-**Deprecated:** If you must interoperate with a system that requires SHA-1, then use this method,
+**Deprecated:**If you must interoperate with a system that requires SHA-1, then use this method,
      despite its deprecation. But if you can choose your hash function, avoid SHA-1, which is
      neither fast nor secure. As of January 2017, we suggest:
      <ul>

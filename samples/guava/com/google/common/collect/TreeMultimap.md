@@ -112,7 +112,7 @@ Constructs a `TreeMultimap`, ordered by the natural ordering of its keys and val
 **Returns:** `java.util.Comparator<? super K>`
 
 Returns the comparator that orders the multimap keys.
-**Deprecated:** Use `((NavigableSet<K>) multimap.keySet()).comparator()` instead.
+**Deprecated:**Use `((NavigableSet<K>) multimap.keySet()).comparator()` instead.
 
 ### `valueComparator()`
 

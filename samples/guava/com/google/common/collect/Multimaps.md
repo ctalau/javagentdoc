@@ -263,7 +263,7 @@ Returns an unmodifiable view of the specified multimap. Query operations on the 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 10.0
 
 ### `synchronizedSetMultimap([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md) multimap)`
@@ -295,7 +295,7 @@ Returns an unmodifiable view of the specified `SetMultimap`. Query operations on
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 10.0
 
 ### `synchronizedSortedSetMultimap([`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md) multimap)`
@@ -350,7 +350,7 @@ Returns an unmodifiable view of the specified `ListMultimap`. Query operations o
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
 Simply returns its argument.
-**Deprecated:** no need to use this
+**Deprecated:**no need to use this
 **Since:** 10.0
 
 ### `unmodifiableValueCollection(`java.util.Collection<V>` collection)`

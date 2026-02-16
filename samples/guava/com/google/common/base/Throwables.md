@@ -92,7 +92,7 @@ Propagates `throwable` exactly as-is, if and only if it is an instance of `decla
    throw Throwables.propagate(t);
  }
  </pre>
-**Deprecated:** Use `throwIfInstanceOf`, which has the same behavior but rejects `null`.
+**Deprecated:**Use `throwIfInstanceOf`, which has the same behavior but rejects `null`.
 
 ### `throwIfUnchecked(`java.lang.Throwable` throwable)`
 
@@ -120,7 +120,7 @@ Throws `throwable` if it is a `RuntimeException` or `Error`. Example usage:
 **Returns:** `void`
 
 Propagates `throwable` exactly as-is, if and only if it is an instance of `RuntimeException` or `Error`.
-**Deprecated:** Use `throwIfUnchecked`, which has the same behavior but rejects `null`.
+**Deprecated:**Use `throwIfUnchecked`, which has the same behavior but rejects `null`.
 
 ### `propagateIfPossible(`java.lang.Throwable` throwable, `java.lang.Class<X>` declaredType)`
 
@@ -167,7 +167,7 @@ Propagates `throwable` as-is if it is an instance of `RuntimeException` or `Erro
 @param throwable the Throwable to propagate
 @return nothing will ever be returned; this return type is only for your convenience, as
      illustrated in the example above
-**Deprecated:** To preserve behavior, use `throw e` or `throw new RuntimeException(e)`
+**Deprecated:**To preserve behavior, use `throw e` or `throw new RuntimeException(e)`
      directly, or use a combination of `throwIfUnchecked` and `throw new
      RuntimeException(e)`. But consider whether users would be better off if your API threw a
      different type of exception. For background on the deprecation, read <a href="https://goo.gl/Ivn2kc">Why we deprecated `Throwables.propagate`</a>.
@@ -246,7 +246,7 @@ Returns the stack trace of `throwable`, possibly providing slower iteration over
  <p>Note: The special implementation does not respect calls to `Throwable.setStackTrace throwable.setStackTrace`. Instead, it always reflects the original stack trace from the
  exception's creation.
 **Since:** 19.0
-**Deprecated:** This method is equivalent to `Throwable.getStackTrace()` on JDK versions past
+**Deprecated:**This method is equivalent to `Throwable.getStackTrace()` on JDK versions past
      JDK 8 and on all Android versions. Use `Throwable.getStackTrace()` directly, or where
      possible use the `java.lang.StackWalker.walk` method introduced in JDK 9.
 
@@ -257,7 +257,7 @@ Returns the stack trace of `throwable`, possibly providing slower iteration over
 Returns whether `lazyStackTrace` will use the special implementation described in its
  documentation.
 **Since:** 19.0
-**Deprecated:** This method always returns false on JDK versions past JDK 8 and on all Android
+**Deprecated:**This method always returns false on JDK versions past JDK 8 and on all Android
      versions.
 
 ### `jlaStackTrace(`java.lang.Throwable` t)`

@@ -131,5 +131,5 @@ Computes a hash code based on the data that have been provided to this hasher. T
 **Returns:** `int`
 
 {@inheritDoc}
-**Deprecated:** This returns `Object.hashCode()`; you almost certainly mean to call `hash().asInt()`.
+**Deprecated:**This returns `Object.hashCode()`; you almost certainly mean to call `hash().asInt()`.
 

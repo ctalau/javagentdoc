@@ -131,7 +131,7 @@ Returns an immutable multimap containing the specified entries. The returned mul
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
 
@@ -139,7 +139,7 @@ Guaranteed to throw an exception and leave the multimap unmodified.
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `clear()`
 
@@ -147,7 +147,7 @@ Guaranteed to throw an exception and leave the multimap unmodified.
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `get(`K` key)`
 
@@ -171,7 +171,7 @@ Returns an immutable multimap which is the inverse of this one. For every key-va
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `putAll(`K` key, `java.lang.Iterable<? extends V>` values)`
 
@@ -179,7 +179,7 @@ Guaranteed to throw an exception and leave the multimap unmodified.
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `putAll([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md) multimap)`
 
@@ -187,7 +187,7 @@ Guaranteed to throw an exception and leave the multimap unmodified.
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove(`java.lang.Object` key, `java.lang.Object` value)`
 
@@ -195,7 +195,7 @@ Guaranteed to throw an exception and leave the multimap unmodified.
 
 Guaranteed to throw an exception and leave the multimap unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `isPartialView()`
 

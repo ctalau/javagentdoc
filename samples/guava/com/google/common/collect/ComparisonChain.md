@@ -145,7 +145,7 @@ Compares two `double` values as specified by `Double.compare`, <i>if</i> the res
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
 
 Discouraged synonym for `compareFalseFirst`.
-**Deprecated:** Use `compareFalseFirst`; or, if the parameters passed are being either
+**Deprecated:**Use `compareFalseFirst`; or, if the parameters passed are being either
      negated or reversed, undo the negation or reversal and use `compareTrueFirst`.
 **Since:** 19.0
 

@@ -289,7 +289,7 @@ Called by the default implementation of `subList` when `toIndex - fromIndex > 1`
 
 Guaranteed to throw an exception and leave the list unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `set(`int` index, `E` element)`
 
@@ -297,7 +297,7 @@ Guaranteed to throw an exception and leave the list unmodified.
 
 Guaranteed to throw an exception and leave the list unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `add(`int` index, `E` element)`
 
@@ -305,7 +305,7 @@ Guaranteed to throw an exception and leave the list unmodified.
 
 Guaranteed to throw an exception and leave the list unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `remove(`int` index)`
 
@@ -313,7 +313,7 @@ Guaranteed to throw an exception and leave the list unmodified.
 
 Guaranteed to throw an exception and leave the list unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `replaceAll(`java.util.function.UnaryOperator<E>` operator)`
 
@@ -321,7 +321,7 @@ Guaranteed to throw an exception and leave the list unmodified.
 
 Guaranteed to throw an exception and leave the list unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `sort(`java.util.@org.checkerframework.checker.nullness.qual.Nullable Comparator<? super E>` c)`
 
@@ -329,7 +329,7 @@ Guaranteed to throw an exception and leave the list unmodified.
 
 Guaranteed to throw an exception and leave the list unmodified.
 @throws UnsupportedOperationException always
-**Deprecated:** Unsupported operation.
+**Deprecated:**Unsupported operation.
 
 ### `asList()`
 
@@ -337,7 +337,7 @@ Guaranteed to throw an exception and leave the list unmodified.
 
 Returns this list instance.
 **Since:** 2.0
-**Deprecated:** There is no reason to use this; it always returns `this`.
+**Deprecated:**There is no reason to use this; it always returns `this`.
 
 ### `spliterator()`
 
