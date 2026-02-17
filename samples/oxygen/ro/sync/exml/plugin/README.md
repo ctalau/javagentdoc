@@ -1,0 +1,28 @@
+# Package: `ro.sync.exml.plugin`
+
+## Classes and Interfaces
+
+- [WorkspaceAccessOverJSPluginExtension](WorkspaceAccessOverJSPluginExtension.md)
+- [PluginUtil](PluginUtil.md)
+- [PluginURLClassLoader](PluginURLClassLoader.md)
+- [PluginManagerStylesheetProvider](PluginManagerStylesheetProvider.md)
+- [PluginManager](PluginManager.md)
+- [PluginLoadException](PluginLoadException.md)
+- [PluginLicensingException](PluginLicensingException.md)
+- [PluginLateDelegationClassLoader](PluginLateDelegationClassLoader.md)
+- [PluginFileComparator](PluginFileComparator.md)
+- [PluginExtension](PluginExtension.md)
+- [PluginDescriptor](PluginDescriptor.md)
+- [PluginDependencyInjector](PluginDependencyInjector.md)
+- [PluginContributedView](PluginContributedView.md)
+- [PluginContributedToolbar](PluginContributedToolbar.md)
+- [PluginContributedComponent](PluginContributedComponent.md)
+- [PluginContext](PluginContext.md)
+- [PluginConstants](PluginConstants.md)
+- [PluginAdditionalFrameworksProvider](PluginAdditionalFrameworksProvider.md)
+- [PluginAction](PluginAction.md)
+- [Plugin](Plugin.md)
+- [OptionsPageGroupPluginExtension](OptionsPageGroupPluginExtension.md)
+- [ExternalTransformerProvider](ExternalTransformerProvider.md)
+- [AdditionalPluginFolderDescription](AdditionalPluginFolderDescription.md)
+- [AdditionalFolderDescriptionGatherer](AdditionalFolderDescriptionGatherer.md)
