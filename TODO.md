@@ -52,7 +52,15 @@ All originally planned features have been successfully implemented and tested.
 
 ## Known Limitations
 
-**None.** All planned semantic features are implemented.
+### Inner/Nested Classes Not Generated as Separate Files
+
+`generatePackageMarkdown` only iterates direct package members (`pkg.getEnclosedElements()`). Classes declared as inner/nested types within another class are silently skipped — they get neither a separate markdown file nor a mention in their enclosing class's markdown. See `SemanticXmlDoclet.java:250` and `OXYGEN-GENERATION.md` for details.
+
+**Impact:** For the Oxygen 28.0.0.3 sample, this (along with package-private exclusion) accounts for 234 of 1,114 source files having no corresponding markdown output.
+
+### Package-Private Classes Excluded by Default
+
+The `javadoc` tool excludes package-private (default-access) top-level classes unless the `-package` or `-private` flag is passed. These classes are never presented to the doclet.
 
 The doclet successfully processes:
 - All standard Javadoc tags and constructs
