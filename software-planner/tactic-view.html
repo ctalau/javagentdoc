@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Planner - Tactic View</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      --bg: #f6f7fb;
+      --team-bg: #fff;
+      --goal-bg: #eef2ff;
+      --goal-border: #a5b4fc;
+      --drop: #4f46e5;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      padding: 1rem;
+    }
+    h1 {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+    }
+    .team {
+      background: var(--team-bg);
+      border-radius: 12px;
+      padding: 0.8rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    .team-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .goal-row {
+      display: flex;
+      align-items: stretch;
+      overflow-x: auto;
+      gap: 0.35rem;
+      min-height: 3.3rem;
+      padding-bottom: 0.2rem;
+    }
+    .goal {
+      background: var(--goal-bg);
+      border: 1px solid var(--goal-border);
+      border-radius: 8px;
+      padding: 0.55rem 0.7rem;
+      min-width: 140px;
+      max-width: 220px;
+      touch-action: none;
+      user-select: none;
+      white-space: normal;
+      font-size: 0.9rem;
+    }
+    .goal.dragging {
+      opacity: 0.55;
+    }
+    .drop-slot {
+      width: 8px;
+      border-radius: 8px;
+      transition: background 140ms;
+    }
+    .drop-slot.active {
+      background: var(--drop);
+    }
+    .xml {
+      margin-top: 1rem;
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 12px;
+      padding: 0.8rem;
+      white-space: pre-wrap;
+      font-size: 0.75rem;
+      max-height: 220px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tactic view</h1>
+  <div id="board"></div>
+  <div>
+    <h2>Saved XML (localStorage)</h2>
+    <pre id="xmlPreview" class="xml"></pre>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'softwarePlanner.tacticXml';
+    const board = document.getElementById('board');
+    const xmlPreview = document.getElementById('xmlPreview');
+
+    const mockXml = `<?xml version="1.0" encoding="UTF-8"?>
+<tacticView>
+  <team id="frontend" name="Frontend">
+    <goal id="g1">Improve mobile navigation</goal>
+    <goal id="g2">Kanban parity for touch interactions</goal>
+    <goal id="g3">Accessibility pass</goal>
+  </team>
+  <team id="backend" name="Backend">
+    <goal id="g4">Stabilize API contracts</goal>
+    <goal id="g5">Reduce sync latency</goal>
+  </team>
+  <team id="qa" name="QA">
+    <goal id="g6">Regression coverage for drag and drop</goal>
+  </team>
+</tacticView>`;
+
+    function loadXml() {
+      return localStorage.getItem(STORAGE_KEY) || mockXml;
+    }
+
+    function parseXml(xmlText) {
+      const doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+      const parseError = doc.querySelector('parsererror');
+      if (parseError) {
+        return parseXml(mockXml);
+      }
+
+      return {
+        teams: Array.from(doc.querySelectorAll('team')).map((teamNode) => ({
+          id: teamNode.getAttribute('id'),
+          name: teamNode.getAttribute('name') || teamNode.getAttribute('id'),
+          goals: Array.from(teamNode.querySelectorAll(':scope > goal')).map((goalNode) => ({
+            id: goalNode.getAttribute('id'),
+            label: goalNode.textContent.trim()
+          }))
+        }))
+      };
+    }
+
+    function toXml(state) {
+      const esc = (v) => v
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&apos;');
+
+      const lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<tacticView>'];
+      state.teams.forEach((team) => {
+        lines.push(`  <team id="${esc(team.id)}" name="${esc(team.name)}">`);
+        team.goals.forEach((goal) => {
+          lines.push(`    <goal id="${esc(goal.id)}">${esc(goal.label)}</goal>`);
+        });
+        lines.push('  </team>');
+      });
+      lines.push('</tacticView>');
+      return lines.join('\n');
+    }
+
+    function saveState(state) {
+      const xml = toXml(state);
+      localStorage.setItem(STORAGE_KEY, xml);
+      xmlPreview.textContent = xml;
+    }
+
+    function moveGoal(state, goalId, toTeamId, insertIndex) {
+      let sourceTeam = null;
+      let goal = null;
+      state.teams.forEach((team) => {
+        const idx = team.goals.findIndex((g) => g.id === goalId);
+        if (idx !== -1) {
+          sourceTeam = team;
+          goal = team.goals[idx];
+          team.goals.splice(idx, 1);
+        }
+      });
+      if (!goal) return;
+
+      const targetTeam = state.teams.find((team) => team.id === toTeamId);
+      if (!targetTeam) return;
+
+      const bounded = Math.max(0, Math.min(insertIndex, targetTeam.goals.length));
+      targetTeam.goals.splice(bounded, 0, goal);
+    }
+
+    let state = parseXml(loadXml());
+
+    function render() {
+      board.innerHTML = '';
+      state.teams.forEach((team) => {
+        const teamEl = document.createElement('section');
+        teamEl.className = 'team';
+        teamEl.innerHTML = `<div class="team-title">${team.name}</div>`;
+
+        const row = document.createElement('div');
+        row.className = 'goal-row';
+        row.dataset.teamId = team.id;
+
+        const withSlots = [];
+        for (let i = 0; i <= team.goals.length; i++) {
+          withSlots.push({ type: 'slot', index: i });
+          if (i < team.goals.length) withSlots.push({ type: 'goal', goal: team.goals[i] });
+        }
+
+        withSlots.forEach((item) => {
+          if (item.type === 'slot') {
+            const slot = document.createElement('div');
+            slot.className = 'drop-slot';
+            slot.dataset.teamId = team.id;
+            slot.dataset.index = String(item.index);
+            row.appendChild(slot);
+            return;
+          }
+
+          const goalEl = document.createElement('article');
+          goalEl.className = 'goal';
+          goalEl.textContent = item.goal.label;
+          goalEl.dataset.goalId = item.goal.id;
+          goalEl.draggable = true;
+          row.appendChild(goalEl);
+        });
+
+        teamEl.appendChild(row);
+        board.appendChild(teamEl);
+      });
+
+      wireDrag();
+      saveState(state);
+    }
+
+    function wireDrag() {
+      let activeGoalId = null;
+      let pointerDragging = false;
+
+      const clearSlots = () => {
+        document.querySelectorAll('.drop-slot.active').forEach((el) => el.classList.remove('active'));
+      };
+
+      const findSlotFromPoint = (x, y) => {
+        const el = document.elementFromPoint(x, y);
+        return el && el.classList.contains('drop-slot') ? el : null;
+      };
+
+      document.querySelectorAll('.goal').forEach((goalEl) => {
+        goalEl.addEventListener('dragstart', () => {
+          activeGoalId = goalEl.dataset.goalId;
+          goalEl.classList.add('dragging');
+        });
+        goalEl.addEventListener('dragend', () => {
+          goalEl.classList.remove('dragging');
+          activeGoalId = null;
+          clearSlots();
+        });
+
+        goalEl.addEventListener('pointerdown', (ev) => {
+          pointerDragging = true;
+          activeGoalId = goalEl.dataset.goalId;
+          goalEl.classList.add('dragging');
+          goalEl.setPointerCapture(ev.pointerId);
+        });
+
+        goalEl.addEventListener('pointermove', (ev) => {
+          if (!pointerDragging || !activeGoalId) return;
+          clearSlots();
+          const slot = findSlotFromPoint(ev.clientX, ev.clientY);
+          if (slot) slot.classList.add('active');
+        });
+
+        const finishPointer = (ev) => {
+          if (!pointerDragging || !activeGoalId) return;
+          const slot = findSlotFromPoint(ev.clientX, ev.clientY);
+          if (slot) {
+            moveGoal(state, activeGoalId, slot.dataset.teamId, Number(slot.dataset.index));
+            render();
+          } else {
+            goalEl.classList.remove('dragging');
+            clearSlots();
+          }
+          pointerDragging = false;
+          activeGoalId = null;
+        };
+
+        goalEl.addEventListener('pointerup', finishPointer);
+        goalEl.addEventListener('pointercancel', finishPointer);
+      });
+
+      document.querySelectorAll('.drop-slot').forEach((slot) => {
+        slot.addEventListener('dragover', (ev) => {
+          ev.preventDefault();
+          clearSlots();
+          slot.classList.add('active');
+        });
+
+        slot.addEventListener('drop', (ev) => {
+          ev.preventDefault();
+          if (!activeGoalId) return;
+          moveGoal(state, activeGoalId, slot.dataset.teamId, Number(slot.dataset.index));
+          render();
+        });
+      });
+    }
+
+    render();
+  </script>
+</body>
+</html>
