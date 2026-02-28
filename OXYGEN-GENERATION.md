@@ -1,130 +1,109 @@
 # Oxygen XML Documentation Generation
 
-This document describes how the Oxygen XML 28.0.0.3 markdown files in `samples/oxygen/` were generated, and explains the known gap between source files and generated output.
+This document describes how the Oxygen XML 28.0.0.3 markdown files in `samples/oxygen/` were generated, the root causes of missing documentation, and how to regenerate.
 
 ## What Was Generated
 
 - **Output location:** `samples/oxygen/`
-- **Total files committed:** 944 markdown files across 75 packages
+- **Total files committed:** 944 markdown files across 64 packages
   - 880 class/interface/enum markdown files
   - 64 package `README.md` index files
   - 1 root `README.md` index
 - **Source:** `oxygen-28.0.0.3-sources.jar` (1,114 Java source files)
 - **Committed:** 2026-02-17, commit `2cd5399`
 
-## Generation Process
+## Regenerating Documentation
 
-The markdown was generated using the `SemanticXmlDoclet` custom Javadoc doclet in this repository. The process mirrors the Guava generation (`generate-guava-docs-mvn.sh`) but targets Oxygen sources and dependencies.
+Use the dedicated script:
 
-### Steps
-
-1. **Build the doclet:**
-   ```bash
-   cd semantic-xml-doclet
-   mvn clean package
-   ```
-
-2. **Assemble Oxygen dependencies on the classpath:**
-   - `oxygen.jar`
-   - `oxygen-annotations.jar`
-   - `oxygen-basic-utilities.jar`
-   - `oxygen-patched-slf4j.jar`
-   - `oxygen-patched-saxon-12he.jar`
-
-3. **Expand the sources JAR and list all `.java` files:**
-   ```bash
-   jar xf oxygen-28.0.0.3-sources.jar
-   find . -name "*.java" > source-files.txt
-   ```
-
-4. **Run `javadoc` with the custom doclet:**
-   ```bash
-   javadoc \
-     -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
-     -docletpath semantic-xml-doclet/target/semantic-xml-doclet-0.1.0-SNAPSHOT.jar \
-     --semanticOut samples/oxygen/README.md \
-     --semanticFormat markdown \
-     -classpath oxygen.jar:oxygen-annotations.jar:... \
-     -encoding UTF-8 \
-     -quiet \
-     @source-files.txt
-   ```
-
-The doclet creates:
-- `samples/oxygen/README.md` — index of all packages
-- `samples/oxygen/<package/path>/README.md` — per-package index
-- `samples/oxygen/<package/path>/ClassName.md` — per-class documentation
-
-### Re-running Generation
-
-There is currently no dedicated script for Oxygen (unlike Guava, which has `generate-guava-docs-mvn.sh`). To regenerate:
-
-1. Obtain `oxygen-28.0.0.3-sources.jar` and all dependency JARs listed above.
-2. Follow the steps in the **Steps** section above.
-3. Commit the resulting `samples/oxygen/` directory.
-
-> **TODO:** Create `generate-oxygen-docs.sh` modelled on `generate-guava-docs-mvn.sh` to make regeneration reproducible.
-
-## Why Not All Java Sources Have Markdown Files
-
-Of the **1,114 Java source files** in `oxygen-28.0.0.3-sources.jar`, only **880 class markdown files** were generated — a gap of **234 missing types (21%)**.
-
-### Root Cause 1: Inner/Nested Classes Are Not Generated as Separate Files
-
-The doclet iterates over **top-level package members only**. In `generatePackageMarkdown` (`SemanticXmlDoclet.java:250`):
-
-```java
-for (Element enclosed : pkg.getEnclosedElements()) {
-    if (enclosed.getKind().isClass() || enclosed.getKind().isInterface()) {
-        generateClassMarkdown(type, pkgDir, pkgName, docTrees);
-    }
-}
+```bash
+OXYGEN_SOURCES_JAR=/path/to/oxygen-28.0.0.3-sources.jar \
+OXYGEN_DEPS_DIR=/path/to/oxygen/lib \
+./generate-oxygen-docs.sh
 ```
 
-`pkg.getEnclosedElements()` returns only the **direct children of a package** — i.e., top-level classes. Classes declared as inner/nested types within another class are enclosed elements of their *parent class*, not the package, so they are never visited here.
+The script extracts sources, builds a classpath from all JARs in `OXYGEN_DEPS_DIR`,
+runs `javadoc` with the `SemanticXmlDoclet`, and reports any errors that caused packages
+to be excluded.
 
-Additionally, `generateClassMarkdown` only iterates `FIELD`, `CONSTRUCTOR`, and `METHOD` element kinds from the type's enclosed elements — it does not recurse into nested type declarations. So nested classes are neither generated as separate files nor mentioned in their enclosing class's markdown.
-
-**Effect:** Any public or protected inner/nested class (e.g., `OuterClass.InnerClass`) has no markdown file and is completely absent from the output.
-
-### Root Cause 2: Package-Private (Default Access) Classes Are Excluded by javadoc
-
-The `javadoc` tool processes only **public and protected** elements by default. Package-private (default-access) top-level classes present in the sources JAR are excluded from `env.getIncludedElements()` and never reach the doclet.
-
-Oxygen's sources include many single-letter obfuscated implementation classes (e.g., `i`, `ib`, `c`) that are likely package-private internal types. These would not be included unless `javadoc` is run with the `-package` or `-private` visibility flag.
-
-**Effect:** Package-private top-level classes have no markdown file even though their `.java` source is in the JAR.
-
-### Summary of the Gap
-
-| Reason | Description |
-|--------|-------------|
-| Inner/nested classes | Doclet only processes top-level package members; nested types are silently skipped |
-| Package-private classes | `javadoc` default visibility excludes non-public top-level types |
-
-### Potential Fixes
-
-**To include inner/nested classes**, `generatePackageMarkdown` (or a new recursive step) would need to walk the type hierarchy and generate files for enclosed types, e.g.:
-
-```java
-// Pseudocode — not yet implemented
-private void generateClassMarkdownRecursive(TypeElement type, ...) {
-    generateClassMarkdown(type, ...);
-    for (Element enclosed : type.getEnclosedElements()) {
-        if (enclosed.getKind().isClass() || enclosed.getKind().isInterface()) {
-            generateClassMarkdownRecursive((TypeElement) enclosed, ...);
-        }
-    }
-}
+Build the doclet first if needed:
+```bash
+cd semantic-xml-doclet && mvn clean package
 ```
 
-**To include package-private classes**, add the `-package` flag to the `javadoc` invocation:
+See `generate-oxygen-docs.sh` for all options and environment variables.
+
+## Why the `ro.sync.ecss.extensions.api` Package Is Missing
+
+`AuthorDocumentController`, `AuthorOperationArgument`, and all other types in
+`ro.sync.ecss.extensions.api` and its sub-packages are **completely absent** from the
+generated output — there is no `samples/oxygen/ro/sync/ecss/extensions/api/` directory
+at all, even though those types are referenced (as broken links) from generated files.
+
+### Root Cause: Classpath Errors Silently Excluded the Entire Package Tree
+
+The previous generation command piped stderr through `grep -v "^warning:" || true`,
+which suppressed **both warnings and errors**. When `javadoc` encounters types whose
+referenced symbols cannot be resolved (e.g. missing dependency JARs), it emits
+`error: cannot find symbol` messages — these were silently discarded.
+
+When compilation errors occur for a group of types, `javadoc` cannot resolve their
+inter-dependencies and excludes them from `DocletEnvironment.getIncludedElements()`.
+Because the doclet only generates output for packages that appear in that set, the
+entire `ro.sync.ecss.extensions.api` subtree was skipped without any visible indication.
+
+The generation script `generate-oxygen-docs.sh` captures stderr separately so errors
+are visible, making this class of problem diagnosable.
+
+### How to Fix It
+
+1. **Identify missing dependencies** — run the script and check the error log:
+   ```
+   $WORK_DIR/javadoc.log
+   ```
+   Look for `error: cannot find symbol` lines. The missing class names tell you which
+   JARs need to be added to `OXYGEN_DEPS_DIR`.
+
+2. **Add the missing JARs** — common candidates:
+   - JARs bundled with the Oxygen installation (`lib/`, `lib/endorsed/`, etc.)
+   - Third-party JARs that Oxygen depends on (e.g. Swing/AWT come from the JDK and
+     are always available; look for Oxygen-specific frameworks like JGoodies, JAXB
+     implementations, Apache Commons, etc.)
+
+3. **Re-run the script** after adding the JARs until no `error:` lines remain.
+
+## Why Many Obfuscated Class Files Are Present
+
+The sources JAR includes internal implementation classes with obfuscated single-letter
+names (e.g. `i`, `ib`, `c`, `lb` in `ro.sync.ecss.extensions`). These are
+package-level implementation details of the Oxygen runtime, not part of the public API.
+They appear in the generated docs because `javadoc` processes all public and protected
+types by default, and these classes happen to be `public` (required by the JVM even for
+obfuscated code that is referenced across compilation units).
+
+To suppress them, scope the generation to specific public API packages by passing
+`-subpackages` instead of a flat source list:
 
 ```bash
 javadoc \
-  -package \       # includes package-private in addition to public/protected
-  -doclet com.github.javagentdoc.doclet.SemanticXmlDoclet \
-  ...
+  -doclet ... \
+  --semanticOut ... \
+  --semanticFormat markdown \
+  -classpath "$CLASSPATH" \
+  -sourcepath src \
+  -subpackages ro.sync.ecss.extensions.api:ro.sync.exml.workspace.api:ro.sync.exml.plugin
 ```
 
-Whether to do either depends on the intended audience: public API documentation normally excludes both, while comprehensive internal documentation would include them.
+This is not yet wired into `generate-oxygen-docs.sh` but can be added when the desired
+package scope is known.
+
+## Known Gaps Between Sources and Generated Output
+
+Of the **1,114 Java source files** in `oxygen-28.0.0.3-sources.jar`, only **880 class
+markdown files** were generated. The 234-file gap has three causes:
+
+| Cause | Description |
+|-------|-------------|
+| Classpath errors | Types whose dependencies were not on the classpath were excluded from `getIncludedElements()` (primary cause for the missing `api` subtree) |
+| Inner/nested classes | The doclet only generates files for top-level package members; classes nested inside other classes are silently skipped |
+| Package-private classes | `javadoc` excludes package-private types by default |
