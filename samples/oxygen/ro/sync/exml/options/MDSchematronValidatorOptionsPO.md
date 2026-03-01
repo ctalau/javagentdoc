@@ -4,17 +4,17 @@
 
 **Fully Qualified Name:** `ro.sync.exml.options.MDSchematronValidatorOptionsPO`
 
-**Implements:** [`ro.sync.options.PersistentObject`](../../options/PersistentObject.md)
+**Implements:** `ro.sync.options.PersistentObject`
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `mdValidatorOptions`
 
-**Type:** [`ro.sync.options.SerializableLinkedHashMap<java.lang.String,ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO>`](../../options/SerializableLinkedHashMap.md)
+**Type:** `ro.sync.options.SerializableLinkedHashMap<java.lang.String,ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO>`
 
 ## Constructors
 
@@ -24,11 +24,11 @@
 
 ## Methods
 
-### `addValidatorTypeOptions([`ro.sync.exml.validate.scanners.f.c`](../validate/scanners/f/c.md) arg0, [`ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO`](./MDSchematronValidatorTypeOptionsPO.md) arg1)`
+### `addValidatorTypeOptions(`ro.sync.exml.validate.scanners.f.c` arg0, [`ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO`](./MDSchematronValidatorTypeOptionsPO.md) arg1)`
 
 **Returns:** `void`
 
-### `getValidatorTypeOptions([`ro.sync.exml.validate.scanners.f.c`](../validate/scanners/f/c.md) arg0)`
+### `getValidatorTypeOptions(`ro.sync.exml.validate.scanners.f.c` arg0)`
 
 **Returns:** [`ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO`](./MDSchematronValidatorTypeOptionsPO.md)
 

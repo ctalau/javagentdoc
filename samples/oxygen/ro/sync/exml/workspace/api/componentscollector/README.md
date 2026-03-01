@@ -2,7 +2,7 @@
 
 ## Classes and Interfaces
 
-- [IXSLComponentInfo](IXSLComponentInfo.md)
-- [INamespaceInfo](INamespaceInfo.md)
-- [IComponentsProvider](IComponentsProvider.md)
 - [IComponentInfo](IComponentInfo.md)
+- [IComponentsProvider](IComponentsProvider.md)
+- [INamespaceInfo](INamespaceInfo.md)
+- [IXSLComponentInfo](IXSLComponentInfo.md)

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.plugin.PluginAction`
 
-**Extends:** [`ro.sync.ui.application.action.r`](../../ui/application/action/r.md)
+**Extends:** `ro.sync.ui.application.action.r`
 
 ## Fields
 

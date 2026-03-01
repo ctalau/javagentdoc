@@ -22,7 +22,7 @@ The value is `defaultNamespace`
 
 ### `CONVERSION_ELEMENT_CHECKER`
 
-**Type:** [`ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper`](../../commons/operations/CommonsOperationsUtil/ConversionElementHelper.md)
+**Type:** `ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper`
 
 ## Constructors
 

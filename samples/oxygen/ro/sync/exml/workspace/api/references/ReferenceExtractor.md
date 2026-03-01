@@ -1,0 +1,12 @@
+# Interface: `ReferenceExtractor`
+
+**Package:** [`ro.sync.exml.workspace.api.references`](README.md)
+
+**Fully Qualified Name:** `ro.sync.exml.workspace.api.references.ReferenceExtractor`
+
+## Methods
+
+### `extract(`ro.sync.ecss.dom.p` arg0)`
+
+**Returns:** `java.util.Optional<ro.sync.exml.workspace.api.references.Reference>`
+

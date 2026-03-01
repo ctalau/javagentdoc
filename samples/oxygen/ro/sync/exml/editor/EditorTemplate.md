@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.EditorTemplate`
 
-**Extends:** [`ro.sync.options.PersistentObject`](../../options/PersistentObject.md)
+**Extends:** `ro.sync.options.PersistentObject`
 
 ## Description
 

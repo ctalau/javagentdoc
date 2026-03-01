@@ -58,15 +58,15 @@ The text does not contain XML tags for the Author page.
 
 ### `getLocationOnScreenAsPoint(`int` x, `int` y)`
 
-**Returns:** [`ro.sync.exml.view.graphics.Point`](../../../../view/graphics/Point.md)
+**Returns:** `ro.sync.exml.view.graphics.Point`
 
 ### `getLocationRelativeToEditorFromScreen(`int` x, `int` y)`
 
-**Returns:** [`ro.sync.exml.view.graphics.Point`](../../../../view/graphics/Point.md)
+**Returns:** `ro.sync.exml.view.graphics.Point`
 
 ### `modelToViewRectangle(`int` offset)`
 
-**Returns:** [`ro.sync.exml.view.graphics.Rectangle`](../../../../view/graphics/Rectangle.md)
+**Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
 ### `viewToModelOffset(`int` x, `int` y)`
 

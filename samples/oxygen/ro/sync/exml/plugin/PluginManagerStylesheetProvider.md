@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.plugin.PluginManagerStylesheetProvider`
 
-**Extends:** [`ro.sync.ecss.css.eb`](../../ecss/css/eb.md)
+**Extends:** `ro.sync.ecss.css.eb`
 
 ## Fields
 
 ### `b`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ## Constructors
 
@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `getStylesheets([`ro.sync.ecss.j`](../../ecss/j.md) arg0)`
+### `getStylesheets(`ro.sync.ecss.j` arg0)`
 
 **Returns:** `java.util.List<java.net.URL>`
 

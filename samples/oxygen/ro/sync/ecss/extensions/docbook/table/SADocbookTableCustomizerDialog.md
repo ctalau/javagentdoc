@@ -18,7 +18,7 @@ It is used on standalone implementation.
 
 ### `getColumnWidthsSpecifications(`int` tableModelType)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`](../../commons/table/operations/TableCustomizerConstants/ColumnWidthsType.md)
+**Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
 
 ### `getFrameValues(`int` tableModelType)`
 

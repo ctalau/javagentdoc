@@ -6,6 +6,8 @@
 
 **Extends:** [`ro.sync.exml.workspace.api.editor.WSEditorBase`](./WSEditorBase.md), [`ro.sync.exml.editor.EditorPageConstants`](../../../editor/EditorPageConstants.md)
 
+## Description
+
 ## Methods
 
 ### `getCurrentPage()`
@@ -16,15 +18,15 @@
 
 **Returns:** `java.lang.String`
 
-### `addPageChangedListener([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md) arg0)`
+### `addPageChangedListener([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md) pageChangedListener)`
 
 **Returns:** `void`
 
-### `removePageChangedListener([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md) arg0)`
+### `removePageChangedListener([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md) pageChangedListener)`
 
 **Returns:** `void`
 
-### `addEditorListener([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md) arg0)`
+### `addEditorListener([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md) editorListener)`
 
 **Returns:** `void`
 
@@ -32,41 +34,70 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.listeners.WSEditorListener[]`](../listeners/WSEditorListener.md)
 
-### `removeEditorListener([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md) arg0)`
+### `removeEditorListener([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md) editorListener)`
 
 **Returns:** `void`
 
-### `changePage(`java.lang.String` arg0)`
+### `changePage(`java.lang.String` pageID)`
 
 **Returns:** `void`
 
-### `addValidationProblemsFilter([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md) arg0)`
+This does not affect editors opened in the DITA Maps Manager.
+ If problems occur during the page switch or the page ID is not recognized the page will be switched to Text and the operation is aborted.
+ 
+
+
+ Note that in Reviewer edition only the Author page is available.
+
+### `addValidationProblemsFilter([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md) validationProblemsFilter)`
 
 **Returns:** `void`
 
-### `removeValidationProblemsFilter([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md) arg0)`
+Validation can be manual or automatic.
+ Automatic validation is done when modifications occur in the XML file.
+
+### `removeValidationProblemsFilter([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md) validationProblemsFilter)`
 
 **Returns:** `void`
+
+Validation can be manual or automatic.
+ Automatic validation is done when modifications occur in the XML file.
 
 ### `checkValid()`
 
 **Returns:** `boolean`
 
-### `checkValid(`boolean` arg0)`
+For document types which do not support validation, this returns always `true`.
+ If you want to see the problems reported by the validation process you can add a validation problems filter #addValidationProblemsFilter(ValidationProblemsFilter).
+
+### `checkValid(`boolean` automatic)`
 
 **Returns:** `boolean`
+
+For document types which do not support validation, this returns always `true`.
+ If you want to see the problems reported by the validation process you can add a validation problems filter #addValidationProblemsFilter(ValidationProblemsFilter).
 
 ### `getComponent()`
 
 **Returns:** `java.lang.Object`
 
-### `setEditable(`boolean` arg0)`
+Use of this method is discouraged but it may be useful in some cases like:
+ 
+ This can be helpful when you want to set a busy cursor on the entire editor 
+ or when you want to get access to the swing JTabbedPane pane where the editor is located.
+
+### `setEditable(`boolean` editable)`
 
 **Returns:** `void`
+
+This method is not available in the Oxygen Eclipse plugin which relies on the IEditorInput for the information.
 
 ### `isEditable()`
 
 **Returns:** `boolean`
+
+A document can be set as read-only from API, by using the 
+ #setEditable(boolean) method.
 
 ### `getContentType()`
 
@@ -76,7 +107,16 @@
 
 **Returns:** `void`
 
+If the timestamps differ the 
+ document will be reloaded or the user will be asked if the document contains unsaved modifications.
+
+ This method is implemented only for the desktop version of the application.
+
 ### `reload()`
 
 **Returns:** `void`
+
+If the document contains unsaved changes, the end user is asked if they want to continue the reload and lose the modifications.
+
+ This method is implemented only for the desktop version of the application.
 

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.plugin.PluginManager`
 
-**Implements:** [`ro.sync.exml.plugin.ExternalTransformerProvider`](./ExternalTransformerProvider.md), [`ro.sync.util.editorvars.i`](../../util/editorvars/i.md), [`ro.sync.i18n.q`](../../i18n/q.md), [`ro.sync.exml.plugin.PluginConstants`](./PluginConstants.md)
+**Implements:** [`ro.sync.exml.plugin.ExternalTransformerProvider`](./ExternalTransformerProvider.md), `ro.sync.util.editorvars.i`, `ro.sync.i18n.q`, [`ro.sync.exml.plugin.PluginConstants`](./PluginConstants.md)
 
 ## Fields
 
@@ -14,7 +14,7 @@
 
 ### `bc`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `cc`
 
@@ -152,9 +152,9 @@
 
 ### `n(`java.io.File` arg0, `boolean` arg1)`
 
-**Returns:** [`org.w3c.dom.Document`](../../../../org/w3c/dom/Document.md)
+**Returns:** `org.w3c.dom.Document`
 
-### `o([`org.w3c.dom.NodeList`](../../../../org/w3c/dom/NodeList.md) arg0)`
+### `o(`org.w3c.dom.NodeList` arg0)`
 
 **Returns:** `void`
 
@@ -162,15 +162,15 @@
 
 **Returns:** `void`
 
-### `i([`org.w3c.dom.Element`](../../../../org/w3c/dom/Element.md) arg0, `java.io.File` arg1)`
+### `i(`org.w3c.dom.Element` arg0, `java.io.File` arg1)`
 
 **Returns:** `java.lang.ClassLoader`
 
-### `p([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg0, [`org.w3c.dom.NodeList`](../../../../org/w3c/dom/NodeList.md) arg1, `java.lang.ClassLoader` arg2)`
+### `p([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg0, `org.w3c.dom.NodeList` arg1, `java.lang.ClassLoader` arg2)`
 
 **Returns:** `void`
 
-### `m([`org.w3c.dom.NodeList`](../../../../org/w3c/dom/NodeList.md) arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1, `java.lang.ClassLoader` arg2)`
+### `m(`org.w3c.dom.NodeList` arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1, `java.lang.ClassLoader` arg2)`
 
 **Returns:** `void`
 
@@ -178,11 +178,11 @@
 
 **Returns:** `boolean`
 
-### `w([`org.w3c.dom.NodeList`](../../../../org/w3c/dom/NodeList.md) arg0, `java.io.File` arg1)`
+### `w(`org.w3c.dom.NodeList` arg0, `java.io.File` arg1)`
 
 **Returns:** `java.util.List<java.net.URL>`
 
-### `q([`org.w3c.dom.NodeList`](../../../../org/w3c/dom/NodeList.md) arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1, `java.util.HashSet<java.lang.String>` arg2)`
+### `q(`org.w3c.dom.NodeList` arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1, `java.util.HashSet<java.lang.String>` arg2)`
 
 **Returns:** `void`
 
@@ -190,7 +190,7 @@
 
 **Returns:** `int`
 
-### `j([`org.w3c.dom.NodeList`](../../../../org/w3c/dom/NodeList.md) arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1, `java.util.HashSet<java.lang.String>` arg2)`
+### `j(`org.w3c.dom.NodeList` arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1, `java.util.HashSet<java.lang.String>` arg2)`
 
 **Returns:** `void`
 
@@ -202,7 +202,7 @@
 
 **Returns:** `java.lang.ClassLoader`
 
-### `e(`java.io.File` arg0, [`org.w3c.dom.Element`](../../../../org/w3c/dom/Element.md) arg1)`
+### `e(`java.io.File` arg0, `org.w3c.dom.Element` arg1)`
 
 **Returns:** `java.net.URL[]`
 
@@ -282,7 +282,7 @@
 
 **Returns:** `java.io.File[]`
 
-### `getPluginLicense([`org.w3c.dom.Element`](../../../../org/w3c/dom/Element.md) arg0, `java.io.File` arg1)`
+### `getPluginLicense(`org.w3c.dom.Element` arg0, `java.io.File` arg1)`
 
 **Returns:** `java.lang.String`
 

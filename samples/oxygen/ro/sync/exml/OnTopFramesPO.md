@@ -4,17 +4,17 @@
 
 **Fully Qualified Name:** `ro.sync.exml.OnTopFramesPO`
 
-**Implements:** [`ro.sync.options.PersistentObject`](../options/PersistentObject.md)
+**Implements:** `ro.sync.options.PersistentObject`
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `onTopFrames`
 
-**Type:** [`ro.sync.options.SerializableLinkedHashMap<ro.sync.exml.ContentTypePageAssociationPO,ro.sync.options.SerializableList<java.lang.String>>`](../options/SerializableLinkedHashMap>.md)
+**Type:** `ro.sync.options.SerializableLinkedHashMap<ro.sync.exml.ContentTypePageAssociationPO,ro.sync.options.SerializableList<java.lang.String>>`
 
 ## Constructors
 

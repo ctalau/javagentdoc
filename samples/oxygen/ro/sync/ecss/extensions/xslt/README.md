@@ -2,5 +2,5 @@
 
 ## Classes and Interfaces
 
-- [XSLTNodeRendererCustomizer](XSLTNodeRendererCustomizer.md)
 - [XSLTExtensionsBundle](XSLTExtensionsBundle.md)
+- [XSLTNodeRendererCustomizer](XSLTNodeRendererCustomizer.md)

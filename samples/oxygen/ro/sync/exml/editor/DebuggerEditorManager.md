@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.DebuggerEditorManager`
 
-**Extends:** [`ro.sync.exml.editor.bb`](./bb.md), [`ro.sync.ui.marks.m`](../../ui/marks/m.md)
+**Extends:** `ro.sync.exml.editor.bb`, `ro.sync.ui.marks.m`
 
 ## Methods
 

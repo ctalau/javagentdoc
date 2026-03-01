@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.SAEditorInterface`
 
-**Extends:** [`ro.sync.exml.editor.ud`](./ud.md), [`ro.sync.exml.editor.ec`](./ec.md), [`ro.sync.exml.editor.pd`](./pd.md), [`ro.sync.exml.editor.ig`](./ig.md), [`ro.sync.exml.editor.wf`](./wf.md), [`ro.sync.ecss.dita.reference.keyref.c.c`](../../ecss/dita/reference/keyref/c/c.md)
+**Extends:** `ro.sync.exml.editor.ud`, `ro.sync.exml.editor.ec`, `ro.sync.exml.editor.pd`, `ro.sync.exml.editor.ig`, `ro.sync.exml.editor.wf`, `ro.sync.ecss.dita.reference.keyref.c.c`
 
 ## Methods
 
 ### `getEditorManager()`
 
-**Returns:** [`ro.sync.exml.editor.bb`](./bb.md)
+**Returns:** `ro.sync.exml.editor.bb`
 
 ### `getParentFrame()`
 
@@ -42,11 +42,11 @@
 
 ### `getCurrentPage()`
 
-**Returns:** [`ro.sync.exml.editor.mb`](./mb.md)
+**Returns:** `ro.sync.exml.editor.mb`
 
 ### `getTextPage()`
 
-**Returns:** [`ro.sync.exml.editor.pagetext.g`](pagetext/g.md)
+**Returns:** `ro.sync.exml.editor.pagetext.g`
 
 ### `getContent()`
 
@@ -60,7 +60,7 @@
 
 **Returns:** `void`
 
-### `setContent([`ro.sync.basic.io.NonCloseableReader`](../../basic/io/NonCloseableReader.md) arg0, `boolean` arg1, `boolean` arg2)`
+### `setContent(`ro.sync.basic.io.NonCloseableReader` arg0, `boolean` arg1, `boolean` arg2)`
 
 **Returns:** `void`
 

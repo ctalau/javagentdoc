@@ -10,7 +10,7 @@
 
 ### `ncz`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `ocz`
 

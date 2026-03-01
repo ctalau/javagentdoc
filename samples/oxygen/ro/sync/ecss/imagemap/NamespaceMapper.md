@@ -4,6 +4,8 @@
 
 **Fully Qualified Name:** `ro.sync.ecss.imagemap.NamespaceMapper`
 
+**Extends:** `org.apache.xml.serialize.XMLSerializer`
+
 ## Fields
 
 ### `b`
@@ -20,7 +22,7 @@
 
 **Returns:** `void`
 
-### `startElement(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, [`org.xml.sax.Attributes`](../../../../org/xml/sax/Attributes.md) arg3)`
+### `startElement(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `org.xml.sax.Attributes` arg3)`
 
 **Returns:** `void`
 

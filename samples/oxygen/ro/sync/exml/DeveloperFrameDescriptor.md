@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.DeveloperFrameDescriptor`
 
-**Extends:** [`ro.sync.exml.ib`](./ib.md)
+**Extends:** `ro.sync.exml.ib`
 
 ## Fields
 
@@ -64,5 +64,5 @@
 
 ### `getSplashInfo()`
 
-**Returns:** [`ro.sync.g.e.b.b`](../g/e/b/b.md)
+**Returns:** `ro.sync.g.e.b.b`
 

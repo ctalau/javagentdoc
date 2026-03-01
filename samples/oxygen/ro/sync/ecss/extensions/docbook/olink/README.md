@@ -2,4 +2,5 @@
 
 ## Classes and Interfaces
 
+- [EditOLinkOperation](EditOLinkOperation.md)
 - [InsertOLinkOperation](InsertOLinkOperation.md)

@@ -2,6 +2,6 @@
 
 ## Classes and Interfaces
 
-- [CSSResource](CSSResource.md)
-- [CSSGroup](CSSGroup.md)
 - [AuthorCSSAlternativesCustomizer](AuthorCSSAlternativesCustomizer.md)
+- [CSSGroup](CSSGroup.md)
+- [CSSResource](CSSResource.md)

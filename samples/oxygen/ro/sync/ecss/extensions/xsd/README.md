@@ -2,5 +2,5 @@
 
 ## Classes and Interfaces
 
-- [XSDNodeRendererCustomizer](XSDNodeRendererCustomizer.md)
 - [XSDExtensionsBundle](XSDExtensionsBundle.md)
+- [XSDNodeRendererCustomizer](XSDNodeRendererCustomizer.md)

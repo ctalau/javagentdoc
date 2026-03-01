@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.plugin.PluginURLClassLoader`
 
-**Extends:** [`ro.sync.xml.transformer.d`](../../xml/transformer/d.md)
+**Extends:** `ro.sync.xml.transformer.d`
 
 ## Constructors
 

@@ -4,9 +4,9 @@
 
 **Fully Qualified Name:** `ro.sync.exml.EditorFrameDescriptor`
 
-**Extends:** [`ro.sync.exml.ib`](./ib.md)
+**Extends:** `ro.sync.exml.ib`
 
-**Implements:** [`ro.sync.exml.lc`](./lc.md)
+**Implements:** `ro.sync.exml.lc`
 
 ## Fields
 
@@ -58,7 +58,7 @@
 
 ### `getSplashInfo()`
 
-**Returns:** [`ro.sync.g.e.b.b`](../g/e/b/b.md)
+**Returns:** `ro.sync.g.e.b.b`
 
 ### `getIconResources()`
 

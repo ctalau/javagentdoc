@@ -2,6 +2,6 @@
 
 ## Classes and Interfaces
 
-- [ValidatorPluginExtension](ValidatorPluginExtension.md)
-- [ValidationType](ValidationType.md)
 - [ValidationMode](ValidationMode.md)
+- [ValidationType](ValidationType.md)
+- [ValidatorPluginExtension](ValidatorPluginExtension.md)

@@ -2,8 +2,8 @@
 
 ## Classes and Interfaces
 
-- [MetaContentProvider](MetaContentProvider.md)
-- [KeyDefinitionManagerProvider](KeyDefinitionManagerProvider.md)
-- [KeyDefinitionManager](KeyDefinitionManager.md)
-- [KeyDefinitionInfo](KeyDefinitionInfo.md)
 - [EnumerationDefInfo](EnumerationDefInfo.md)
+- [KeyDefinitionInfo](KeyDefinitionInfo.md)
+- [KeyDefinitionManager](KeyDefinitionManager.md)
+- [KeyDefinitionManagerProvider](KeyDefinitionManagerProvider.md)
+- [MetaContentProvider](MetaContentProvider.md)

@@ -10,7 +10,7 @@
 
 ### `type`
 
-**Type:** [`ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType`](PseudoElementDescriptor/PsuedoElementType.md)
+**Type:** `ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType`
 
 ### `index`
 
@@ -20,13 +20,13 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType`](PseudoElementDescriptor/PsuedoElementType.md) type, `int` index)`
+### `<init>(`ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType` type, `int` index)`
 
 ## Methods
 
 ### `getType()`
 
-**Returns:** [`ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType`](PseudoElementDescriptor/PsuedoElementType.md)
+**Returns:** `ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType`
 
 ### `getIndex()`
 

@@ -2,6 +2,6 @@
 
 ## Classes and Interfaces
 
-- [AuthorActionsProvider](AuthorActionsProvider.md)
-- [ActionsProvider](ActionsProvider.md)
 - [ActionPerformedListener](ActionPerformedListener.md)
+- [ActionsProvider](ActionsProvider.md)
+- [AuthorActionsProvider](AuthorActionsProvider.md)

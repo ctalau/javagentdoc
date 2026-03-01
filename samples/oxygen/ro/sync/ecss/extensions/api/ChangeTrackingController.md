@@ -1,0 +1,69 @@
+# Interface: `ChangeTrackingController`
+
+**Package:** [`ro.sync.ecss.extensions.api`](README.md)
+
+**Fully Qualified Name:** `ro.sync.ecss.extensions.api.ChangeTrackingController`
+
+## Description
+
+Can toggle change tracking on and off and check its state.
+
+## Methods
+
+### `isTrackingChanges()`
+
+**Returns:** `boolean`
+
+### `toggleTrackChanges()`
+
+**Returns:** `void`
+
+Each opened document has a separate track changes state.
+ The initial state is provided by the default values set in the user preferences:
+ 
+ https://www.oxygenxml.com/doc/ug-oxygen/index.html?q=/doc/ug-oxygen/topics/preferences-track-changes.html
+ 
+ So after a document is opened, this method can be used to change its track changes state.
+
+### `getChangeHighlights()`
+
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
+
+### `getAttributeChangeHighlights()`
+
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
+
+### `getChangeHighlights(`int` startOffset, `int` endOffset)`
+
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
+
+### `accept(`int` startOffset, `int` endOffset)`
+
+**Returns:** `void`
+
+### `acceptSelection(`int` startOffset, `int` endOffset)`
+
+**Returns:** `void`
+
+The difference from the "ro.sync.ecss.extensions.api.ChangeTrackingController.accept(int, int)" method is 
+ that the end offset is exclusive and you can accept the selection even if you select only one character.
+
+### `accept([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md) highlight)`
+
+**Returns:** `void`
+
+### `reject(`int` startOffset, `int` endOffset)`
+
+**Returns:** `void`
+
+### `rejectSelection(`int` startOffset, `int` endOffset)`
+
+**Returns:** `void`
+
+The difference from the "ro.sync.ecss.extensions.api.ChangeTrackingController.reject(int, int)" method is 
+ that the end offset is exclusive and you can accept the selection even if you select only one character.
+
+### `reject([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md) highlight)`
+
+**Returns:** `void`
+

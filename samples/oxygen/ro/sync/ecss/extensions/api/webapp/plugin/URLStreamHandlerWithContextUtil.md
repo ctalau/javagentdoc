@@ -1,0 +1,73 @@
+# Class: `URLStreamHandlerWithContextUtil`
+
+**Package:** [`ro.sync.ecss.extensions.api.webapp.plugin`](README.md)
+
+**Fully Qualified Name:** `ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContextUtil`
+
+## Description
+
+The context ID is typically added when the user asks the webapp to open an URL
+ and is stripped before displaying a URL to the user.
+
+## Fields
+
+### `logger`
+
+**Type:** `org.slf4j.Logger`
+
+### `instance`
+
+**Type:** [`ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContextUtil`](./URLStreamHandlerWithContextUtil.md)
+
+### `field`
+
+**Type:** `java.lang.reflect.Field`
+
+### `handlersCache`
+
+**Type:** `java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContext>`
+
+## Constructors
+
+### `<init>()`
+
+## Methods
+
+### `getInstance()`
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContextUtil`](./URLStreamHandlerWithContextUtil.md)
+
+### `setUserContext([`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](./UserContext.md) context, `java.net.URL` url)`
+
+**Returns:** `void`
+
+If the URL handler for this URL
+ is an URLStreamHandlerWithContext, it is used to set the context for the URL,
+ otherwise the URL is left unmodified.
+ 
+ Note: If the URL already has a context, the newly set context must have the same id.
+
+### `copyContextId(`java.net.URL` source, `java.net.URL` target)`
+
+**Returns:** `void`
+
+If the two URLs have different protocols, this method does nothing.
+
+### `toStrippedExternalForm(`java.net.URL` url)`
+
+**Returns:** `java.lang.String`
+
+### `getUrlContextId(`java.net.URL` url)`
+
+**Returns:** `java.lang.String`
+
+### `getUrlHandler(`java.net.URL` u)`
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContext`](./URLStreamHandlerWithContext.md)
+
+### `clearCacheForTC()`
+
+**Returns:** `void`
+
+Note: To be used only from TC.
+

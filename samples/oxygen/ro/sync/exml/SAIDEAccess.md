@@ -4,63 +4,63 @@
 
 **Fully Qualified Name:** `ro.sync.exml.SAIDEAccess`
 
-**Extends:** [`ro.sync.exml.mc`](./mc.md)
+**Extends:** `ro.sync.exml.mc`
 
-**Implements:** [`ro.sync.exml.fc`](./fc.md), [`ro.sync.exml.vc`](./vc.md), [`ro.sync.exml.g`](./g.md)
+**Implements:** `ro.sync.exml.fc`, `ro.sync.exml.vc`, `ro.sync.exml.g`
 
 ## Fields
 
 ### `nc`
 
-**Type:** [`org.slf4j.Logger`](../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `ec`
 
-**Type:** [`ro.sync.db.h`](../db/h.md)
+**Type:** `ro.sync.db.h`
 
 ### `kc`
 
-**Type:** [`ro.sync.exml.td`](./td.md)
+**Type:** `ro.sync.exml.td`
 
 ### `lc`
 
-**Type:** [`ro.sync.exml.modules.hierarchy.l`](modules/hierarchy/l.md)
+**Type:** `ro.sync.exml.modules.hierarchy.l`
 
 ### `gc`
 
-**Type:** [`ro.sync.exml.editor.finders.b.h`](editor/finders/b/h.md)
+**Type:** `ro.sync.exml.editor.finders.b.h`
 
 ### `fc`
 
-**Type:** [`ro.sync.f.f.nb`](../f/f/nb.md)
+**Type:** `ro.sync.f.f.nb`
 
 ### `bc`
 
-**Type:** [`ro.sync.exml.docking.f`](docking/f.md)
+**Type:** `ro.sync.exml.docking.f`
 
 ### `hc`
 
-**Type:** [`ro.sync.exml.editor.finders.c`](editor/finders/c.md)
+**Type:** `ro.sync.exml.editor.finders.c`
 
 ### `mc`
 
-**Type:** [`ro.sync.exml.masterfiles.w`](masterfiles/w.md)
+**Type:** `ro.sync.exml.masterfiles.w`
 
 ### `jc`
 
-**Type:** [`ro.sync.exml.zb`](./zb.md)
+**Type:** `ro.sync.exml.zb`
 
 ### `ic`
 
-**Type:** [`ro.sync.k.b.b`](../k/b/b.md)
+**Type:** `ro.sync.k.b.b`
 
 ### `dc`
 
-**Type:** [`ro.sync.diff.ui.t`](../diff/ui/t.md)
+**Type:** `ro.sync.diff.ui.t`
 
 ### `cc`
 
-**Type:** [`ro.sync.exml.project.o`](project/o.md)
+**Type:** `ro.sync.exml.project.o`
 
 ## Constructors
 
@@ -68,27 +68,27 @@
 
 ## Methods
 
-### `setTableOpener([`ro.sync.db.h`](../db/h.md) arg0)`
+### `setTableOpener(`ro.sync.db.h` arg0)`
 
 **Returns:** `void`
 
-### `updateResults(`java.lang.String` arg0, [`ro.sync.db.fb`](../db/fb.md) arg1)`
+### `updateResults(`java.lang.String` arg0, `ro.sync.db.fb` arg1)`
 
 **Returns:** `void`
 
 ### `getPreferencePagePresenter()`
 
-**Returns:** [`ro.sync.exml.td`](./td.md)
+**Returns:** `ro.sync.exml.td`
 
-### `createTransformationHelper([`ro.sync.exml.editor.xmleditor.c`](editor/xmleditor/c.md) arg0, `java.lang.String` arg1)`
+### `createTransformationHelper(`ro.sync.exml.editor.xmleditor.c` arg0, `java.lang.String` arg1)`
 
-**Returns:** [`ro.sync.exml.editor.xmleditor.transform.jb`](editor/xmleditor/transform/jb.md)
+**Returns:** `ro.sync.exml.editor.xmleditor.transform.jb`
 
 ### `showDockableView(`java.lang.String` arg0, `boolean` arg1)`
 
 **Returns:** `void`
 
-### `setDockingManager([`ro.sync.exml.docking.f`](docking/f.md) arg0)`
+### `setDockingManager(`ro.sync.exml.docking.f` arg0)`
 
 **Returns:** `void`
 
@@ -96,23 +96,23 @@
 
 **Returns:** `void`
 
-### `setHierarchyPanel([`ro.sync.exml.modules.hierarchy.l`](modules/hierarchy/l.md) arg0)`
+### `setHierarchyPanel(`ro.sync.exml.modules.hierarchy.l` arg0)`
 
 **Returns:** `void`
 
-### `showComponentDependencies([`ro.sync.exml.editor.hb.g`](editor/hb/g.md) arg0, [`ro.sync.exml.modules.b.i[]`](modules/b/i.md) arg1)`
+### `showComponentDependencies(`ro.sync.exml.editor.hb.g` arg0, `ro.sync.exml.modules.b.i[]` arg1)`
 
 **Returns:** `void`
 
-### `setComponentDependenciesPanel([`ro.sync.exml.editor.finders.b.h`](editor/finders/b/h.md) arg0)`
+### `setComponentDependenciesPanel(`ro.sync.exml.editor.finders.b.h` arg0)`
 
 **Returns:** `void`
 
-### `setFindResourcePanel([`ro.sync.k.b.b`](../k/b/b.md) arg0)`
+### `setFindResourcePanel(`ro.sync.k.b.b` arg0)`
 
 **Returns:** `void`
 
-### `setWatchPanel([`ro.sync.f.f.nb`](../f/f/nb.md) arg0)`
+### `setWatchPanel(`ro.sync.f.f.nb` arg0)`
 
 **Returns:** `void`
 
@@ -122,11 +122,11 @@
 
 ### `getDocumentResourceFactory()`
 
-**Returns:** [`ro.sync.exml.editor.finders.c`](editor/finders/c.md)
+**Returns:** `ro.sync.exml.editor.finders.c`
 
 ### `getResourceManagerFactory()`
 
-**Returns:** [`ro.sync.exml.editor.e`](editor/e.md)
+**Returns:** `ro.sync.exml.editor.e`
 
 ### `initializeForTests([`ro.sync.exml.SAIDEAccess`](./SAIDEAccess.md) arg0)`
 
@@ -134,31 +134,31 @@
 
 ### `getWorkspaceResourceProvider()`
 
-**Returns:** [`ro.sync.exml.project.cb`](project/cb.md)
+**Returns:** `ro.sync.exml.project.cb`
 
 ### `getDiffFilePresenter()`
 
-**Returns:** [`ro.sync.diff.ui.t`](../diff/ui/t.md)
+**Returns:** `ro.sync.diff.ui.t`
 
-### `setDiffFilePresenter([`ro.sync.diff.ui.t`](../diff/ui/t.md) arg0)`
+### `setDiffFilePresenter(`ro.sync.diff.ui.t` arg0)`
 
 **Returns:** `void`
 
-### `setWorkspaceController([`ro.sync.exml.project.o`](project/o.md) arg0)`
+### `setWorkspaceController(`ro.sync.exml.project.o` arg0)`
 
 **Returns:** `void`
 
 ### `getWorkspaceController()`
 
-**Returns:** [`ro.sync.exml.project.o`](project/o.md)
+**Returns:** `ro.sync.exml.project.o`
 
 ### `getDITAMapSelectionInterractor()`
 
-**Returns:** [`ro.sync.exml.editor.xmleditor.pageauthor.k`](editor/xmleditor/pageauthor/k.md)
+**Returns:** `ro.sync.exml.editor.xmleditor.pageauthor.k`
 
 ### `getDITAMapContextResolver()`
 
-**Returns:** [`ro.sync.ecss.dita.mapeditor.q`](../ecss/dita/mapeditor/q.md)
+**Returns:** `ro.sync.ecss.dita.mapeditor.q`
 
 ### `doBrowseRemote(`java.net.URL` arg0)`
 
@@ -174,9 +174,9 @@
 
 ### `getMasterFilesSupport()`
 
-**Returns:** [`ro.sync.exml.masterfiles.w`](masterfiles/w.md)
+**Returns:** `ro.sync.exml.masterfiles.w`
 
-### `refreshFilesInProject([`ro.sync.exml.project.wb`](project/wb.md) arg0)`
+### `refreshFilesInProject(`ro.sync.exml.project.wb` arg0)`
 
 **Returns:** `void`
 
@@ -184,11 +184,11 @@
 
 **Returns:** `void`
 
-### `bd(`java.util.List<java.lang.String>` arg0, [`ro.sync.exml.editor.rc`](editor/rc.md) arg1)`
+### `bd(`java.util.List<java.lang.String>` arg0, `ro.sync.exml.editor.rc` arg1)`
 
 **Returns:** `void`
 
-### `ad([`ro.sync.ecss.dita.mapeditor.c`](../ecss/dita/mapeditor/c.md) arg0)`
+### `ad(`ro.sync.ecss.dita.mapeditor.c` arg0)`
 
 **Returns:** `void`
 
@@ -200,7 +200,7 @@
 
 **Returns:** `void`
 
-### `setSvnAccess([`ro.sync.exml.zb`](./zb.md) arg0)`
+### `setSvnAccess(`ro.sync.exml.zb` arg0)`
 
 **Returns:** `void`
 

@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.DocumentTypeRepository`
 
-**Implements:** [`ro.sync.exml.editor.bh`](./bh.md)
+**Implements:** `ro.sync.exml.editor.bh`
 
 ## Fields
 
 ### `k`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `l`
 
@@ -38,7 +38,7 @@
 
 ### `g`
 
-**Type:** [`ro.sync.exml.editor.persistance.DocumentTypePO[]`](persistance/DocumentTypePO.md)
+**Type:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
 
 ### `f`
 
@@ -54,7 +54,7 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.options.k`](../../options/k.md) arg0)`
+### `<init>(`ro.sync.options.k` arg0)`
 
 ## Methods
 
@@ -62,7 +62,7 @@
 
 **Returns:** `void`
 
-### `reload([`ro.sync.options.NotifyableMap`](../../options/NotifyableMap.md) arg0)`
+### `reload(`ro.sync.options.NotifyableMap` arg0)`
 
 **Returns:** `void`
 
@@ -70,9 +70,9 @@
 
 **Returns:** `void`
 
-### `e([`ro.sync.options.NotifyableMap`](../../options/NotifyableMap.md) arg0)`
+### `e(`ro.sync.options.NotifyableMap` arg0)`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO[]`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
 
 ### `getDocumentTypeLocation(`java.lang.String` arg0)`
 
@@ -90,25 +90,25 @@
 
 **Returns:** `void`
 
-### `store([`ro.sync.options.NotifyableMap`](../../options/NotifyableMap.md) arg0)`
+### `store(`ro.sync.options.NotifyableMap` arg0)`
 
 **Returns:** `void`
 
 ### `getDocumentTypeDescriptor(`java.lang.String` arg0)`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
 
 ### `getDocumentTypeDescriptorUntouched(`java.lang.String` arg0)`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
 
-### `getDocumentTypePO(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, [`org.xml.sax.Attributes`](../../../../org/xml/sax/Attributes.md) arg5, [`ro.sync.basic.io.NonCloseableReader`](../../basic/io/NonCloseableReader.md) arg6)`
+### `getDocumentTypePO(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, `org.xml.sax.Attributes` arg5, `ro.sync.basic.io.NonCloseableReader` arg6)`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
 
-### `getDocumentTypePO(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, [`org.xml.sax.Attributes`](../../../../org/xml/sax/Attributes.md) arg5, [`ro.sync.basic.io.NonCloseableReader`](../../basic/io/NonCloseableReader.md) arg6, `java.util.Map<java.lang.String,java.lang.String>` arg7)`
+### `getDocumentTypePO(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, `org.xml.sax.Attributes` arg5, `ro.sync.basic.io.NonCloseableReader` arg6, `java.util.Map<java.lang.String,java.lang.String>` arg7)`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
 
 ### `g(`java.lang.String` arg0, `java.util.Map<java.lang.String,java.lang.String>` arg1)`
 
@@ -118,11 +118,11 @@
 
 **Returns:** `void`
 
-### `j(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, [`org.xml.sax.Attributes`](../../../../org/xml/sax/Attributes.md) arg4)`
+### `j(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `org.xml.sax.Attributes` arg4)`
 
 **Returns:** `void`
 
-### `l([`org.xml.sax.Attributes`](../../../../org/xml/sax/Attributes.md) arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3)`
+### `l(`org.xml.sax.Attributes` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3)`
 
 **Returns:** `boolean`
 
@@ -130,7 +130,7 @@
 
 **Returns:** `boolean`
 
-### `m(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, [`org.xml.sax.Attributes`](../../../../org/xml/sax/Attributes.md) arg5, `java.util.Map<java.lang.String,java.lang.String>` arg6, `java.lang.String` arg7, [`ro.sync.exml.editor.persistance.f`](persistance/f.md) arg8, [`ro.sync.basic.io.NonCloseableReader`](../../basic/io/NonCloseableReader.md) arg9)`
+### `m(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, `org.xml.sax.Attributes` arg5, `java.util.Map<java.lang.String,java.lang.String>` arg6, `java.lang.String` arg7, `ro.sync.exml.editor.persistance.f` arg8, `ro.sync.basic.io.NonCloseableReader` arg9)`
 
 **Returns:** `boolean`
 
@@ -146,7 +146,7 @@
 
 **Returns:** `boolean`
 
-### `addDocumentType([`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md) arg0)`
+### `addDocumentType(`ro.sync.exml.editor.persistance.DocumentTypePO` arg0)`
 
 **Returns:** `void`
 
@@ -164,11 +164,11 @@
 
 ### `getDocumentTypesForRestoreDefaults()`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO[]`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
 
 ### `getDocumentTypeDescriptors()`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO[]`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
 
 ### `c()`
 
@@ -176,13 +176,13 @@
 
 ### `getClonedDocumentTypeDescriptors()`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO[]`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
 
 ### `getDocumentEnabledTypeDescriptors()`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO[]`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
 
-### `setDocumentTypeDescriptors([`ro.sync.exml.editor.persistance.DocumentTypePO[]`](persistance/DocumentTypePO.md) arg0)`
+### `setDocumentTypeDescriptors(`ro.sync.exml.editor.persistance.DocumentTypePO[]` arg0)`
 
 **Returns:** `void`
 
@@ -194,7 +194,7 @@
 
 **Returns:** `int`
 
-### `insertWithPrioritySort(`java.util.List<ro.sync.exml.editor.persistance.DocumentTypePO>` arg0, [`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md) arg1)`
+### `insertWithPrioritySort(`java.util.List<ro.sync.exml.editor.persistance.DocumentTypePO>` arg0, `ro.sync.exml.editor.persistance.DocumentTypePO` arg1)`
 
 **Returns:** `int`
 
@@ -204,13 +204,13 @@
 
 ### `o(`java.lang.String` arg0)`
 
-**Returns:** [`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md)
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
 
-### `computeBaseStoreLocation([`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md) arg0)`
+### `computeBaseStoreLocation(`ro.sync.exml.editor.persistance.DocumentTypePO` arg0)`
 
 **Returns:** `java.lang.String`
 
-### `getBaseDocumentTypePO([`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md) arg0)`
+### `getBaseDocumentTypePO(`ro.sync.exml.editor.persistance.DocumentTypePO` arg0)`
 
 **Returns:** `java.util.Optional<ro.sync.exml.editor.persistance.DocumentTypePO>`
 
@@ -218,7 +218,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `shouldSkipAddingTemplatesFromDocumentType([`ro.sync.exml.editor.persistance.DocumentTypePO`](persistance/DocumentTypePO.md) arg0, `java.util.Set<ro.sync.exml.editor.persistance.DocumentTypeRulePO>` arg1)`
+### `shouldSkipAddingTemplatesFromDocumentType(`ro.sync.exml.editor.persistance.DocumentTypePO` arg0, `java.util.Set<ro.sync.exml.editor.persistance.DocumentTypeRulePO>` arg1)`
 
 **Returns:** `boolean`
 

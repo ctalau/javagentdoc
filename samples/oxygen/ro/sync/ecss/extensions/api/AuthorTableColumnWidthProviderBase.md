@@ -1,0 +1,46 @@
+# Class: `AuthorTableColumnWidthProviderBase`
+
+**Package:** [`ro.sync.ecss.extensions.api`](README.md)
+
+**Fully Qualified Name:** `ro.sync.ecss.extensions.api.AuthorTableColumnWidthProviderBase`
+
+**Implements:** [`ro.sync.ecss.extensions.api.AuthorTableColumnWidthProvider`](./AuthorTableColumnWidthProvider.md)
+
+## Description
+
+It should be implemented when the author extension being developed offers
+ support for editing data in tabular form.
+
+## Fields
+
+### `errorsListener`
+
+**Type:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)
+
+## Constructors
+
+### `<init>()`
+
+### `<init>([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md) errorsListener)`
+
+## Methods
+
+### `setErrorsListener([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md) errorsListener)`
+
+**Returns:** `void`
+
+### `getAllColspecWidthRepresentations()`
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
+
+If a colspec does not specify a width, it is supposed to be 1*.
+ If the table group specifies more columns than colspecs, those widths are supposed to be 1*.
+
+### `getErrorsListener()`
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)
+
+### `isPreferPercentageColumnWidths(`java.lang.String` tableCellsTagName)`
+
+**Returns:** `boolean`
+

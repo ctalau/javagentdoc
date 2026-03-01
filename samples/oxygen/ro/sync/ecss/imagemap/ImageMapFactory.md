@@ -30,15 +30,15 @@
 
 ### `g(`java.lang.String` arg0, `java.net.URL` arg1, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg2, `int` arg3, `boolean` arg4)`
 
-**Returns:** [`ro.sync.ecss.imagemap.f`](./f.md)
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `d(`java.lang.String` arg0, `java.net.URL` arg1, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg2, `int` arg3, `boolean` arg4)`
 
-**Returns:** [`ro.sync.ecss.imagemap.f`](./f.md)
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `e(`java.lang.String` arg0, `java.net.URL` arg1, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg2, `int` arg3, `boolean` arg4)`
 
-**Returns:** [`ro.sync.ecss.imagemap.f`](./f.md)
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `b(`javax.xml.bind.Unmarshaller` arg0)`
 
@@ -46,17 +46,17 @@
 
 ### `c(`java.lang.String` arg0, `java.net.URL` arg1, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg2, `int` arg3, `boolean` arg4)`
 
-**Returns:** [`ro.sync.ecss.imagemap.f`](./f.md)
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `buildDITAWrapper(`java.lang.String` arg0, `java.net.URL` arg1, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg2, `int` arg3, `boolean` arg4)`
 
-**Returns:** [`ro.sync.ecss.imagemap.f`](./f.md)
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `h(`java.lang.String` arg0, `java.net.URL` arg1, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg2, `int` arg3, `boolean` arg4, `boolean` arg5)`
 
-**Returns:** [`ro.sync.ecss.imagemap.f`](./f.md)
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `f(`java.lang.String` arg0, `java.lang.String` arg1, `java.net.URL` arg2, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg3, `int` arg4, `boolean` arg5)`
 
-**Returns:** [`ro.sync.ecss.imagemap.f`](./f.md)
+**Returns:** `ro.sync.ecss.imagemap.f`
 

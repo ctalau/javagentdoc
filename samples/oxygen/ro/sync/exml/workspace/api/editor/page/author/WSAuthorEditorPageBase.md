@@ -117,7 +117,7 @@ Use of this method is discouraged but it may be useful in some cases like:
 
 ### `getStyles([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md) node)`
 
-**Returns:** [`ro.sync.ecss.css.Styles`](../../../../../../ecss/css/Styles.md)
+**Returns:** `ro.sync.ecss.css.Styles`
 
 This method **MUST** only be used to query styles. If you want to modify styles please use the StylesFilter.
 
@@ -286,7 +286,7 @@ If such an editor is found it will activate
  The search will first look at the BEFORE styles, then the element styles and finally
  the AFTER styles.
 
-### `scrollToRectangle([`ro.sync.exml.view.graphics.Rectangle`](../../../../../view/graphics/Rectangle.md) rectangle)`
+### `scrollToRectangle(`ro.sync.exml.view.graphics.Rectangle` rectangle)`
 
 **Returns:** `void`
 

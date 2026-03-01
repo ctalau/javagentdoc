@@ -2,8 +2,8 @@
 
 ## Classes and Interfaces
 
-- [WSTextXMLSchemaManager](WSTextXMLSchemaManager.md)
-- [WSTextEditorPage](WSTextEditorPage.md)
-- [TextPopupMenuCustomizer](TextPopupMenuCustomizer.md)
-- [IExternalContentCompletionContext](IExternalContentCompletionContext.md)
 - [ExternalContentCompletionProvider](ExternalContentCompletionProvider.md)
+- [IExternalContentCompletionContext](IExternalContentCompletionContext.md)
+- [TextPopupMenuCustomizer](TextPopupMenuCustomizer.md)
+- [WSTextEditorPage](WSTextEditorPage.md)
+- [WSTextXMLSchemaManager](WSTextXMLSchemaManager.md)

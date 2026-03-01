@@ -2,5 +2,5 @@
 
 ## Classes and Interfaces
 
-- [WSDLNodeRendererCustomizer](WSDLNodeRendererCustomizer.md)
 - [WSDLExtensionsBundle](WSDLExtensionsBundle.md)
+- [WSDLNodeRendererCustomizer](WSDLNodeRendererCustomizer.md)

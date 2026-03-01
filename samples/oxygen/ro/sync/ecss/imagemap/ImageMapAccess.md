@@ -8,7 +8,7 @@
 
 ### `c`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `b`
 
@@ -32,7 +32,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `paintImageMapAreas([`ro.sync.exml.view.graphics.Graphics`](../../exml/view/graphics/Graphics.md) arg0, `int` arg1, `int` arg2, `int` arg3, `int` arg4, `double` arg5, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg6, [`ro.sync.ecss.imagemap.IImageMapWrapper<ro.sync.ecss.imagemap.IImageMap>`](./IImageMapWrapper.md) arg7, [`ro.sync.ecss.imagemap.SupportedFrameworks`](./SupportedFrameworks.md) arg8, `int` arg9, `boolean` arg10)`
+### `paintImageMapAreas(`ro.sync.exml.view.graphics.Graphics` arg0, `int` arg1, `int` arg2, `int` arg3, `int` arg4, `double` arg5, [`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md) arg6, [`ro.sync.ecss.imagemap.IImageMapWrapper<ro.sync.ecss.imagemap.IImageMap>`](./IImageMapWrapper.md) arg7, [`ro.sync.ecss.imagemap.SupportedFrameworks`](./SupportedFrameworks.md) arg8, `int` arg9, `boolean` arg10)`
 
 **Returns:** `void`
 

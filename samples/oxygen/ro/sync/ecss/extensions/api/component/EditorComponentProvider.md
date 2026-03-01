@@ -1,0 +1,68 @@
+# Interface: `EditorComponentProvider`
+
+**Package:** [`ro.sync.ecss.extensions.api.component`](README.md)
+
+**Fully Qualified Name:** `ro.sync.ecss.extensions.api.component.EditorComponentProvider`
+
+**Extends:** [`ro.sync.ecss.extensions.api.component.ComponentProvider`](./ComponentProvider.md)
+
+## Description
+
+The editor might have multiple editor pages.
+
+## Fields
+
+### `OUTLINER_PANEL_ID`
+
+**Type:** `int`
+
+### `ATTRIBUTES_PANEL_ID`
+
+**Type:** `int`
+
+### `MODEL_PANEL_ID`
+
+**Type:** `int`
+
+### `ELEMENTS_PANEL_ID`
+
+**Type:** `int`
+
+### `ENTITIES_PANEL_ID`
+
+**Type:** `int`
+
+### `REVIEWS_PANEL_ID`
+
+**Type:** `int`
+
+## Methods
+
+### `showLocation(`java.net.URL` url, `java.io.Reader` reader)`
+
+**Returns:** `void`
+
+If the document pointed by this URL is different than the document currently 
+ loaded in the editor page, this URL will be used to set the content to edit, 
+ to solve relative references (eg: images) and to show the location pointed by the
+ URL reference part. 
+ 
+
+ If the document pointed by this URL is currently loaded in the editor page,
+ only the reference part of the given URL will be used to show the corresponding location
+ in the editor.
+
+### `addAuthorComponentListener([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md) listener)`
+
+**Returns:** `void`
+
+### `removeAuthorComponentListener([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md) listener)`
+
+**Returns:** `void`
+
+### `getAdditionalEditHelper(`int` helperID)`
+
+**Returns:** `javax.swing.JComponent`
+
+It can be the outline, attributes, entities, elements or model helper component, depending on the ID.
+

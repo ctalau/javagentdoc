@@ -20,7 +20,7 @@ One way to obtain an implementation from a plugin is:
 
 ### `getLicenseInformationProvider()`
 
-**Returns:** [`ro.sync.exml.workspace.api.license.LicenseInformationProvider`](../license/LicenseInformationProvider.md)
+**Returns:** `ro.sync.exml.workspace.api.license.LicenseInformationProvider`
 
 ### `getPreferencesDirectory()`
 

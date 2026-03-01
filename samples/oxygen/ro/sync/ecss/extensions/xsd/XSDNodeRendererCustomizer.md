@@ -6,17 +6,22 @@
 
 **Extends:** [`ro.sync.exml.workspace.api.node.customizer.XMLNodeRendererCustomizer`](../../../exml/workspace/api/node/customizer/XMLNodeRendererCustomizer.md)
 
+## Description
+
+A node represents an entry from Author outline, Author bread crumb,
+ Text page outline, content completion proposals window or Elements view.
+
 ## Fields
 
-### `tdz`
+### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
-### `udz`
+### `schNodeRendererCustomizer`
 
 **Type:** [`ro.sync.ecss.extensions.schematron.SchematronNodeRendererCustomizer`](../schematron/SchematronNodeRendererCustomizer.md)
 
-### `vdz`
+### `nameToIconPath`
 
 **Type:** `java.util.Map<java.lang.String,java.lang.String>`
 
@@ -26,11 +31,11 @@
 
 ## Methods
 
-### `jhq(`java.lang.String` arg0)`
+### `getImageURL(`java.lang.String` path)`
 
 **Returns:** `java.lang.String`
 
-### `getRenderingInformation([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md) arg0)`
+### `getRenderingInformation([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md) context)`
 
 **Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../exml/workspace/api/node/customizer/BasicRenderingInformation.md)
 

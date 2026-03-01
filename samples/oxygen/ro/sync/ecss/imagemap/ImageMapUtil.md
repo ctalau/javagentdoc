@@ -8,7 +8,7 @@
 
 ### `b`
 
-**Type:** [`ro.sync.ecss.css.kb`](../css/kb.md)
+**Type:** `ro.sync.ecss.css.kb`
 
 ## Constructors
 
@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `setLexicalUnitEvaluatorForTests([`ro.sync.ecss.css.kb`](../css/kb.md) arg0)`
+### `setLexicalUnitEvaluatorForTests(`ro.sync.ecss.css.kb` arg0)`
 
 **Returns:** `void`
 

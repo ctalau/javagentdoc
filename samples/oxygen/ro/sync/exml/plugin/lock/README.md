@@ -2,6 +2,6 @@
 
 ## Classes and Interfaces
 
-- [LockHandlerBase](LockHandlerBase.md)
-- [LockHandler](LockHandler.md)
 - [LockException](LockException.md)
+- [LockHandler](LockHandler.md)
+- [LockHandlerBase](LockHandlerBase.md)

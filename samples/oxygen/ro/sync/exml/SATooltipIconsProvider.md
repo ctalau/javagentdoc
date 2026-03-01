@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.SATooltipIconsProvider`
 
-**Extends:** [`ro.sync.exml.cc`](./cc.md)
+**Extends:** `ro.sync.exml.cc`
 
 ## Fields
 
@@ -20,63 +20,63 @@
 
 ### `getValidationFatalErrorIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getValidationErrorIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getValidationWarningIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getValidationInfoIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getLinkIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getInformationIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getListBulletPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getIconPath(`java.lang.String` arg0)`
 
 **Returns:** `java.lang.String`
 
-### `getComponentIconPathAndSize([`ro.sync.ui.treetable.b.d._c`](../ui/treetable/b/d/_c.md) arg0, `short` arg1)`
+### `getComponentIconPathAndSize(`ro.sync.ui.treetable.b.d._c` arg0, `short` arg1)`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getComponentIconPathAndSize(`java.lang.String` arg0)`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `c(`short` arg0)`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `f(`short` arg0)`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `b(`short` arg0)`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
-### `d([`ro.sync.ui.treetable.b.d._c`](../ui/treetable/b/d/_c.md) arg0, `java.lang.String` arg1)`
+### `d(`ro.sync.ui.treetable.b.d._c` arg0, `java.lang.String` arg1)`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `e(`java.lang.String` arg0)`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `addWidthHeightForRetinaImages()`
 
@@ -84,17 +84,17 @@
 
 ### `getValidationFatalErrorDisabledIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getValidationErrorIconDisabledPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getValidationWarningDisabledIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 
 ### `getValidationInfoDisabledIconPathAndSize()`
 
-**Returns:** [`ro.sync.exml.cc._b`](cc/_b.md)
+**Returns:** `ro.sync.exml.cc._b`
 

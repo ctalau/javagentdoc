@@ -244,7 +244,7 @@ Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION
 
 **Returns:** `java.util.List<ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription>`
 
-### `addExtension([`ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription`](PluginDescriptor/PluginExtensionDescription.md) descr)`
+### `addExtension(`ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription` descr)`
 
 **Returns:** `void`
 

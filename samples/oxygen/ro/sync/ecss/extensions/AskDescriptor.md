@@ -4,31 +4,33 @@
 
 **Fully Qualified Name:** `ro.sync.ecss.extensions.AskDescriptor`
 
+## Description
+
 ## Fields
 
-### `e`
+### `message`
 
 **Type:** `java.lang.String`
 
-### `d`
+### `type`
 
 **Type:** `java.lang.String`
 
-### `c`
+### `values`
 
 **Type:** `java.util.List<java.lang.String>`
 
-### `f`
+### `renderings`
 
 **Type:** `java.util.List<java.lang.String>`
 
-### `b`
+### `defaultValue`
 
 **Type:** `java.lang.String`
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `java.util.List<java.lang.String>` arg2, `java.util.List<java.lang.String>` arg3, `java.lang.String` arg4)`
+### `<init>(`java.lang.String` type, `java.lang.String` message, `java.util.List<java.lang.String>` values, `java.util.List<java.lang.String>` renderings, `java.lang.String` defaultValue)`
 
 ## Methods
 

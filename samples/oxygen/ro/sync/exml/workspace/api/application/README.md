@@ -2,5 +2,5 @@
 
 ## Classes and Interfaces
 
-- [ApplicationType](ApplicationType.md)
 - [ApplicationInformationAccess](ApplicationInformationAccess.md)
+- [ApplicationType](ApplicationType.md)

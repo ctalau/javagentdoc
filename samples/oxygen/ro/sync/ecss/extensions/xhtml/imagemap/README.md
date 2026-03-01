@@ -5,5 +5,5 @@
 - [EditImageMapOperation](EditImageMapOperation.md)
 - [XHTMLEditImageMapCore](XHTMLEditImageMapCore.md)
 - [XHTMLUpdateImageMapOperation](XHTMLUpdateImageMapOperation.md)
-- [XHTMLWebappImageMapSupportFactory](XHTMLWebappImageMapSupportFactory.md)
 - [XHTMLWebappImageMapSupport](XHTMLWebappImageMapSupport.md)
+- [XHTMLWebappImageMapSupportFactory](XHTMLWebappImageMapSupportFactory.md)

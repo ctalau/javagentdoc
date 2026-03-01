@@ -1,0 +1,30 @@
+# Class: `CapitalizeWordsOperation`
+
+**Package:** [`ro.sync.ecss.extensions.commons.operations.text`](README.md)
+
+**Fully Qualified Name:** `ro.sync.ecss.extensions.commons.operations.text.CapitalizeWordsOperation`
+
+**Extends:** [`ro.sync.ecss.extensions.commons.operations.text.FormSelectedTextOperation`](./FormSelectedTextOperation.md)
+
+## Description
+
+If the start character of a word is lower case, it will be changed to upper case.
+
+## Constructors
+
+### `<init>()`
+
+## Methods
+
+### `isDelimiterBeforeTextNode([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, `int` contentOffset)`
+
+**Returns:** `boolean`
+
+### `processTextContent(`char[]` charArray, `boolean` isDelimiterBefore)`
+
+**Returns:** `char[]`
+
+### `getDescription()`
+
+**Returns:** `java.lang.String`
+

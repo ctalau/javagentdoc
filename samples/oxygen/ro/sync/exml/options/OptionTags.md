@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.options.OptionTags`
 
-**Extends:** [`ro.sync.exml.options.APIAccessibleOptionTags`](./APIAccessibleOptionTags.md), [`ro.sync.exml.options.nc`](./nc.md)
+**Extends:** [`ro.sync.exml.options.APIAccessibleOptionTags`](./APIAccessibleOptionTags.md), `ro.sync.exml.options.nc`
 
 ## Fields
 

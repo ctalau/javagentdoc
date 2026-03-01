@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.ContentTypePageAssociationPO`
 
-**Implements:** [`ro.sync.options.PersistentObject`](../options/PersistentObject.md), `java.lang.Comparable<ro.sync.exml.ContentTypePageAssociationPO>`
+**Implements:** `ro.sync.options.PersistentObject`, `java.lang.Comparable<ro.sync.exml.ContentTypePageAssociationPO>`
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `contentType`
 

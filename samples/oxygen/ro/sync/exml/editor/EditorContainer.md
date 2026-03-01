@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.EditorContainer`
 
-**Extends:** [`ro.sync.exml.editor.je`](./je.md)
+**Extends:** `ro.sync.exml.editor.je`
 
 ## Methods
 
@@ -42,15 +42,15 @@
 
 ### `getAllEditorComponents()`
 
-**Returns:** [`ro.sync.exml.editor.dd[]`](./dd.md)
+**Returns:** `ro.sync.exml.editor.dd[]`
 
 ### `getAllEditorComponentsInVisualOrder()`
 
-**Returns:** [`ro.sync.exml.editor.dd[]`](./dd.md)
+**Returns:** `ro.sync.exml.editor.dd[]`
 
 ### `getTopEditorsComponents()`
 
-**Returns:** [`ro.sync.exml.editor.dd[]`](./dd.md)
+**Returns:** `ro.sync.exml.editor.dd[]`
 
 ### `setVisible(`boolean` arg0)`
 
@@ -100,9 +100,9 @@
 
 **Returns:** `boolean`
 
-### `getEditorsFromTheSameGroup([`ro.sync.exml.editor.dd`](./dd.md) arg0)`
+### `getEditorsFromTheSameGroup(`ro.sync.exml.editor.dd` arg0)`
 
-**Returns:** [`ro.sync.exml.editor.dd[]`](./dd.md)
+**Returns:** `ro.sync.exml.editor.dd[]`
 
 ### `saveLayout()`
 
@@ -116,7 +116,7 @@
 
 **Returns:** `void`
 
-### `updateIconAndTooltip([`ro.sync.exml.editor.dd`](./dd.md) arg0)`
+### `updateIconAndTooltip(`ro.sync.exml.editor.dd` arg0)`
 
 **Returns:** `void`
 

@@ -2,5 +2,5 @@
 
 ## Classes and Interfaces
 
-- [SchematronNodeRendererCustomizer](SchematronNodeRendererCustomizer.md)
 - [SchematronExtensionsBundle](SchematronExtensionsBundle.md)
+- [SchematronNodeRendererCustomizer](SchematronNodeRendererCustomizer.md)

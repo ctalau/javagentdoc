@@ -2,7 +2,7 @@
 
 ## Classes and Interfaces
 
-- [ExternalServiceException](ExternalServiceException.md)
-- [ExternalAIFunction](ExternalAIFunction.md)
-- [AIFunctionsPluginExtension](AIFunctionsPluginExtension.md)
 - [AIConnectorsPluginExtension](AIConnectorsPluginExtension.md)
+- [AIFunctionsPluginExtension](AIFunctionsPluginExtension.md)
+- [ExternalAIFunction](ExternalAIFunction.md)
+- [ExternalServiceException](ExternalServiceException.md)

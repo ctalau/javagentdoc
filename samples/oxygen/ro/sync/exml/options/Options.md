@@ -4,9 +4,9 @@
 
 **Fully Qualified Name:** `ro.sync.exml.options.Options`
 
-**Extends:** [`ro.sync.exml.options.rc`](./rc.md)
+**Extends:** `ro.sync.exml.options.rc`
 
-**Implements:** [`ro.sync.exml.options.OptionTags`](./OptionTags.md), [`ro.sync.exml.options.sb`](./sb.md), [`ro.sync.exml.options.af`](./af.md)
+**Implements:** [`ro.sync.exml.options.OptionTags`](./OptionTags.md), `ro.sync.exml.options.sb`, `ro.sync.exml.options.af`
 
 ## Fields
 
@@ -20,7 +20,7 @@
 
 ### `hd`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `pc`
 
@@ -32,7 +32,7 @@
 
 ### `sc`
 
-**Type:** [`ro.sync.exml.options.td`](./td.md)
+**Type:** `ro.sync.exml.options.td`
 
 ### `lc`
 
@@ -40,7 +40,7 @@
 
 ### `id`
 
-**Type:** [`ro.sync.options.k`](../../options/k.md)
+**Type:** `ro.sync.options.k`
 
 ### `rc`
 
@@ -80,7 +80,7 @@
 
 ### `ec`
 
-**Type:** [`com.google.common.collect.ImmutableMap<java.lang.String,java.util.List<java.lang.String>>`](../../../../com/google/common/collect/ImmutableMap>.md)
+**Type:** `com.google.common.collect.ImmutableMap<java.lang.String,java.util.List<java.lang.String>>`
 
 ### `ad`
 
@@ -96,7 +96,7 @@
 
 ### `gc`
 
-**Type:** [`ro.sync.exml.options.fd`](./fd.md)
+**Type:** `ro.sync.exml.options.fd`
 
 ### `vc`
 
@@ -128,7 +128,7 @@
 
 ### `dc`
 
-**Type:** [`ro.sync.options.d`](../../options/d.md)
+**Type:** `ro.sync.options.d`
 
 ### `jc`
 
@@ -136,11 +136,11 @@
 
 ### `zc`
 
-**Type:** [`ro.sync.exml.options.Options._b`](Options/_b.md)
+**Type:** `ro.sync.exml.options.Options._b`
 
 ### `cc`
 
-**Type:** [`ro.sync.exml.options.xd`](./xd.md)
+**Type:** `ro.sync.exml.options.xd`
 
 ## Constructors
 
@@ -150,7 +150,7 @@
 
 ## Methods
 
-### `setAlternateOptionsProvider([`ro.sync.exml.options.td`](./td.md) arg0)`
+### `setAlternateOptionsProvider(`ro.sync.exml.options.td` arg0)`
 
 **Returns:** `void`
 
@@ -212,7 +212,7 @@
 
 ### `getDefaults()`
 
-**Returns:** [`ro.sync.options.k`](../../options/k.md)
+**Returns:** `ro.sync.options.k`
 
 ### `getInstance(`java.lang.String` arg0)`
 
@@ -222,17 +222,17 @@
 
 **Returns:** `void`
 
-### `init([`ro.sync.options.NotifyableMap`](../../options/NotifyableMap.md) arg0, [`ro.sync.options.k`](../../options/k.md) arg1)`
+### `init(`ro.sync.options.NotifyableMap` arg0, `ro.sync.options.k` arg1)`
 
 **Returns:** `void`
 
-### `init([`ro.sync.options.NotifyableMap`](../../options/NotifyableMap.md) arg0)`
+### `init(`ro.sync.options.NotifyableMap` arg0)`
 
 **Returns:** `void`
 
-### `ac([`ro.sync.options.k`](../../options/k.md) arg0)`
+### `ac(`ro.sync.options.k` arg0)`
 
-**Returns:** [`ro.sync.options.k`](../../options/k.md)
+**Returns:** `ro.sync.options.k`
 
 ### `rb()`
 
@@ -240,7 +240,7 @@
 
 ### `getFrameworksOptionsHandler()`
 
-**Returns:** [`ro.sync.exml.options.fd`](./fd.md)
+**Returns:** `ro.sync.exml.options.fd`
 
 ### `setFixedOptionsFileName(`java.lang.String` arg0)`
 
@@ -286,7 +286,7 @@
 
 **Returns:** `void`
 
-### `loadProjectOptions([`org.w3c.dom.Element`](../../../../org/w3c/dom/Element.md) arg0, [`ro.sync.i18n.c`](../../i18n/c.md) arg1, [`ro.sync.ui.t`](../../ui/t.md) arg2, `java.util.List<java.net.URL>` arg3)`
+### `loadProjectOptions(`org.w3c.dom.Element` arg0, `ro.sync.i18n.c` arg1, `ro.sync.ui.t` arg2, `java.util.List<java.net.URL>` arg3)`
 
 **Returns:** `void`
 
@@ -302,7 +302,7 @@
 
 **Returns:** `boolean`
 
-### `zb(`java.lang.String` arg0, [`ro.sync.i18n.c`](../../i18n/c.md) arg1, [`ro.sync.ui.t`](../../ui/t.md) arg2, `java.util.List<java.net.URL>` arg3)`
+### `zb(`java.lang.String` arg0, `ro.sync.i18n.c` arg1, `ro.sync.ui.t` arg2, `java.util.List<java.net.URL>` arg3)`
 
 **Returns:** `void`
 
@@ -310,7 +310,7 @@
 
 **Returns:** `boolean`
 
-### `vb([`ro.sync.options.k`](../../options/k.md) arg0)`
+### `vb(`ro.sync.options.k` arg0)`
 
 **Returns:** `void`
 
@@ -318,7 +318,7 @@
 
 **Returns:** `void`
 
-### `storeProjectOptions([`org.w3c.dom.Element`](../../../../org/w3c/dom/Element.md) arg0, `java.lang.String` arg1)`
+### `storeProjectOptions(`org.w3c.dom.Element` arg0, `java.lang.String` arg1)`
 
 **Returns:** `void`
 
@@ -350,15 +350,15 @@
 
 **Returns:** `boolean`
 
-### `setFirstInitNotifier([`ro.sync.exml.options.xd`](./xd.md) arg0)`
+### `setFirstInitNotifier(`ro.sync.exml.options.xd` arg0)`
 
 **Returns:** `void`
 
-### `addProjectLoadListener([`ro.sync.exml.options.og`](./og.md) arg0)`
+### `addProjectLoadListener(`ro.sync.exml.options.og` arg0)`
 
 **Returns:** `void`
 
-### `removeProjectLoadListener([`ro.sync.exml.options.og`](./og.md) arg0)`
+### `removeProjectLoadListener(`ro.sync.exml.options.og` arg0)`
 
 **Returns:** `void`
 

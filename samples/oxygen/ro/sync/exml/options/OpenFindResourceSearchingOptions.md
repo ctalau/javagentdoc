@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.options.OpenFindResourceSearchingOptions`
 
-**Implements:** [`ro.sync.options.PersistentObject`](../../options/PersistentObject.md)
+**Implements:** `ro.sync.options.PersistentObject`
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `DEFAULT_MAXIMUM_HITS_NUMBER`
 

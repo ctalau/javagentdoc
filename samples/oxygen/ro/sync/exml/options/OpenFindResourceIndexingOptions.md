@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.options.OpenFindResourceIndexingOptions`
 
-**Implements:** [`ro.sync.options.PersistentObject`](../../options/PersistentObject.md)
+**Implements:** `ro.sync.options.PersistentObject`
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `XML_AWARE_CONTENT_SIZE_LIMIT_DEFAULT_VALUE`
 

@@ -2,7 +2,7 @@
 
 ## Classes and Interfaces
 
-- [WSDITAMapEditorPage](WSDITAMapEditorPage.md)
-- [DITAMapPopupMenuCustomizer](DITAMapPopupMenuCustomizer.md)
-- [DITAMapNodeRendererCustomizerContext](DITAMapNodeRendererCustomizerContext.md)
 - [DITAMapNodeRendererCustomizer](DITAMapNodeRendererCustomizer.md)
+- [DITAMapNodeRendererCustomizerContext](DITAMapNodeRendererCustomizerContext.md)
+- [DITAMapPopupMenuCustomizer](DITAMapPopupMenuCustomizer.md)
+- [WSDITAMapEditorPage](WSDITAMapEditorPage.md)

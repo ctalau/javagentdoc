@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.VersionFromBundle`
 
-**Implements:** [`ro.sync.o.c`](../o/c.md)
+**Implements:** `ro.sync.o.c`
 
 ## Fields
 

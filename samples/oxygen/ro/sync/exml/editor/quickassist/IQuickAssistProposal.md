@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.quickassist.IQuickAssistProposal`
 
-**Extends:** [`ro.sync.contentcompletion.editor.InlineProposal`](../../../contentcompletion/editor/InlineProposal.md)
+**Extends:** `ro.sync.contentcompletion.editor.InlineProposal`
 
 ## Type Parameters
 

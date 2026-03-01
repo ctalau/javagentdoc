@@ -2,10 +2,10 @@
 
 ## Classes and Interfaces
 
-- [WSAuthorEditorPageBase](WSAuthorEditorPageBase.md)
-- [WSAuthorEditorPage](WSAuthorEditorPage.md)
-- [WSAuthorComponentEditorPage](WSAuthorComponentEditorPage.md)
-- [PseudoElementDescriptor](PseudoElementDescriptor.md)
-- [DisplayModeConstants](DisplayModeConstants.md)
-- [AuthorPreviewComponentProvider](AuthorPreviewComponentProvider.md)
 - [AuthorNodeRendererCustomizerContext](AuthorNodeRendererCustomizerContext.md)
+- [AuthorPreviewComponentProvider](AuthorPreviewComponentProvider.md)
+- [DisplayModeConstants](DisplayModeConstants.md)
+- [PseudoElementDescriptor](PseudoElementDescriptor.md)
+- [WSAuthorComponentEditorPage](WSAuthorComponentEditorPage.md)
+- [WSAuthorEditorPage](WSAuthorEditorPage.md)
+- [WSAuthorEditorPageBase](WSAuthorEditorPageBase.md)

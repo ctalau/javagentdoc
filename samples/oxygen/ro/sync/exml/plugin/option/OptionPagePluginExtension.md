@@ -47,7 +47,8 @@ Can be overridden in order to pass the returned value
 
 **Returns:** `javax.swing.JComponent`
 
-(ro.sync.exml.workspace.api.PluginWorkspace.getOptionsStorage()).
+checkboxes) 
+ from the option stored in the options storage. (ro.sync.exml.workspace.api.PluginWorkspace.getOptionsStorage()).
 
  If certain settings can also be changed in other parts of the code, on the first "init" callback
   you can add an options storage listener (ro.sync.exml.workspace.api.options.WSOptionsStorage.addOptionListener(WSOptionListener)) 

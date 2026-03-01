@@ -37,6 +37,7 @@ public final class SemanticXmlDoclet implements Doclet {
     private Path outFile = Paths.get("target/semantic-javadoc.xml");
     private OutputFormat outputFormat = OutputFormat.XML;
     private Path outputDir = null; // For directory-based output
+    private final Set<String> markdownTypeQNames = new HashSet<>();
 
     private enum OutputFormat {
         XML, MARKDOWN
@@ -212,31 +213,54 @@ public final class SemanticXmlDoclet implements Doclet {
         }
         Files.createDirectories(outputDir);
 
+        // Build the set of types that will actually be documented in markdown.
+        markdownTypeQNames.clear();
+        Map<PackageElement, List<TypeElement>> packageTypes = new LinkedHashMap<>();
+        List<PackageElement> packages = env.getIncludedElements().stream()
+            .filter(e -> e.getKind() == ElementKind.PACKAGE)
+            .map(PackageElement.class::cast)
+            .sorted(Comparator.comparing(pkg -> pkg.getQualifiedName().toString()))
+            .toList();
+
+        for (PackageElement pkg : packages) {
+            List<TypeElement> types = pkg.getEnclosedElements().stream()
+                .filter(enclosed -> enclosed.getKind().isClass() || enclosed.getKind().isInterface())
+                .map(TypeElement.class::cast)
+                .filter(this::shouldDocumentType)
+                .sorted(Comparator.comparing(type -> type.getSimpleName().toString()))
+                .toList();
+
+            if (!types.isEmpty()) {
+                packageTypes.put(pkg, types);
+                for (TypeElement type : types) {
+                    markdownTypeQNames.add(type.getQualifiedName().toString());
+                }
+            }
+        }
+
         // Generate README.md as index
         StringBuilder indexMd = new StringBuilder();
         indexMd.append("# API Documentation\n\n");
         indexMd.append("## Packages\n\n");
 
         // Process each package
-        for (Element e : env.getIncludedElements()) {
-            if (e.getKind() == ElementKind.PACKAGE) {
-                PackageElement pkg = (PackageElement) e;
-                String pkgName = pkg.getQualifiedName().toString();
+        for (Map.Entry<PackageElement, List<TypeElement>> entry : packageTypes.entrySet()) {
+            PackageElement pkg = entry.getKey();
+            String pkgName = pkg.getQualifiedName().toString();
 
-                // Add to index
-                String pkgPath = pkgName.replace('.', '/');
-                indexMd.append("- [").append(pkgName).append("](").append(pkgPath).append("/README.md)\n");
+            // Add to index
+            String pkgPath = pkgName.replace('.', '/');
+            indexMd.append("- [").append(pkgName).append("](").append(pkgPath).append("/README.md)\n");
 
-                // Generate package directory and files
-                generatePackageMarkdown(pkg, docTrees);
-            }
+            // Generate package directory and files
+            generatePackageMarkdown(pkg, entry.getValue(), docTrees);
         }
 
         // Write index
         Files.write(outputDir.resolve("README.md"), indexMd.toString().getBytes("UTF-8"));
     }
 
-    private void generatePackageMarkdown(PackageElement pkg, DocTrees docTrees) throws Exception {
+    private void generatePackageMarkdown(PackageElement pkg, List<TypeElement> types, DocTrees docTrees) throws Exception {
         String pkgName = pkg.getQualifiedName().toString();
         Path pkgDir = outputDir.resolve(pkgName.replace('.', '/'));
         Files.createDirectories(pkgDir);
@@ -247,17 +271,14 @@ public final class SemanticXmlDoclet implements Doclet {
         pkgIndex.append("## Classes and Interfaces\n\n");
 
         // Process each type in the package
-        for (Element enclosed : pkg.getEnclosedElements()) {
-            if (enclosed.getKind().isClass() || enclosed.getKind().isInterface()) {
-                TypeElement type = (TypeElement) enclosed;
-                String typeName = type.getSimpleName().toString();
+        for (TypeElement type : types) {
+            String typeName = type.getSimpleName().toString();
 
-                // Add to package index
-                pkgIndex.append("- [").append(typeName).append("](").append(typeName).append(".md)\n");
+            // Add to package index
+            pkgIndex.append("- [").append(typeName).append("](").append(typeName).append(".md)\n");
 
-                // Generate class file
-                generateClassMarkdown(type, pkgDir, pkgName, docTrees);
-            }
+            // Generate class file
+            generateClassMarkdown(type, pkgDir, pkgName, docTrees);
         }
 
         // Write package README
@@ -437,14 +458,15 @@ public final class SemanticXmlDoclet implements Doclet {
     }
 
     private String formatTypeLink(String typeName, String currentPkg) {
-        // Extract the base type (remove generics for link purposes)
-        String baseType = typeName.replaceAll("<.*?>", "").trim();
-
-        // Handle arrays
-        baseType = baseType.replace("[]", "");
+        String baseType = extractBaseType(typeName);
 
         // Skip primitive types
         if (isPrimitive(baseType)) {
+            return "`" + typeName + "`";
+        }
+
+        // Wildcards and unknown tokens are rendered as plain code.
+        if (baseType.isEmpty() || baseType.startsWith("?")) {
             return "`" + typeName + "`";
         }
 
@@ -458,17 +480,57 @@ public final class SemanticXmlDoclet implements Doclet {
             return "`" + typeName + "`";
         }
 
-        // If it's a fully qualified name, create a link (only for project types)
-        if (baseType.contains(".")) {
-            String pkgName = baseType.substring(0, baseType.lastIndexOf('.'));
-            String className = baseType.substring(baseType.lastIndexOf('.') + 1);
-            String relativePath = getRelativePath(currentPkg, pkgName);
-            return "[`" + typeName + "`](" + relativePath + "/" + className + ".md)";
+        String qualifiedType = baseType.contains(".") ? baseType : currentPkg + "." + baseType;
+
+        // Only emit links for types that are actually generated as markdown files.
+        if (!markdownTypeQNames.contains(qualifiedType)) {
+            return "`" + typeName + "`";
         }
 
-        // Otherwise, it's likely in the same package
-        String className = baseType;
-        return "[`" + typeName + "`](./" + className + ".md)";
+        String pkgName = qualifiedType.substring(0, qualifiedType.lastIndexOf('.'));
+        String className = qualifiedType.substring(qualifiedType.lastIndexOf('.') + 1);
+        String relativePath = getRelativePath(currentPkg, pkgName);
+        return "[`" + typeName + "`](" + relativePath + "/" + className + ".md)";
+    }
+
+    private String extractBaseType(String typeName) {
+        if (typeName == null) {
+            return "";
+        }
+
+        String baseType = typeName.trim();
+        if (baseType.isEmpty()) {
+            return "";
+        }
+
+        if (baseType.endsWith("...")) {
+            baseType = baseType.substring(0, baseType.length() - 3).trim();
+        }
+
+        int genericStart = baseType.indexOf('<');
+        if (genericStart >= 0) {
+            baseType = baseType.substring(0, genericStart).trim();
+        }
+
+        while (baseType.endsWith("[]")) {
+            baseType = baseType.substring(0, baseType.length() - 2).trim();
+        }
+
+        if (baseType.startsWith("? extends ")) {
+            baseType = baseType.substring("? extends ".length()).trim();
+        } else if (baseType.startsWith("? super ")) {
+            baseType = baseType.substring("? super ".length()).trim();
+        }
+
+        return baseType;
+    }
+
+    private boolean shouldDocumentType(TypeElement type) {
+        String typeName = type.getSimpleName().toString();
+        if (typeName.isEmpty()) {
+            return false;
+        }
+        return !typeName.matches("[a-z]{1,3}");
     }
 
     private String convertLinksInText(String text, String currentPkg) {

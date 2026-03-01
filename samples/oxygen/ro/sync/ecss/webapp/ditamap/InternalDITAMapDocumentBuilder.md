@@ -14,5 +14,5 @@
 
 ### `createBuilder()`
 
-**Returns:** [`ro.sync.ecss.webapp.c`](../c.md)
+**Returns:** `ro.sync.ecss.webapp.c`
 

@@ -52,7 +52,7 @@
 
 ### `l`
 
-**Type:** [`ro.sync.ecss.webapp.ditamap.DITAMapNode._b`](DITAMapNode/_b.md)
+**Type:** `ro.sync.ecss.webapp.ditamap.DITAMapNode._b`
 
 ### `k`
 
@@ -72,7 +72,7 @@
 
 ## Constructors
 
-### `<init>(`long` arg0, `java.lang.Long` arg1, `java.lang.Long` arg2, [`ro.sync.ecss.webapp.ditamap.DITAMapNode._b`](DITAMapNode/_b.md) arg3, `java.lang.String` arg4, `java.lang.String` arg5, `java.util.Map<java.lang.String,java.lang.String>` arg6, `java.util.Set<java.lang.String>` arg7, `java.util.List<ro.sync.ecss.webapp.ditamap.DITAMapNode>` arg8, `java.lang.String` arg9, `boolean` arg10, `java.lang.String` arg11, `java.lang.String` arg12, `java.lang.String` arg13, `boolean` arg14, `boolean` arg15)`
+### `<init>(`long` arg0, `java.lang.Long` arg1, `java.lang.Long` arg2, `ro.sync.ecss.webapp.ditamap.DITAMapNode._b` arg3, `java.lang.String` arg4, `java.lang.String` arg5, `java.util.Map<java.lang.String,java.lang.String>` arg6, `java.util.Set<java.lang.String>` arg7, `java.util.List<ro.sync.ecss.webapp.ditamap.DITAMapNode>` arg8, `java.lang.String` arg9, `boolean` arg10, `java.lang.String` arg11, `java.lang.String` arg12, `java.lang.String` arg13, `boolean` arg14, `boolean` arg15)`
 
 ### `<init>()`
 
@@ -140,5 +140,5 @@
 
 ### `getNodeType()`
 
-**Returns:** [`ro.sync.ecss.webapp.ditamap.DITAMapNode._b`](DITAMapNode/_b.md)
+**Returns:** `ro.sync.ecss.webapp.ditamap.DITAMapNode._b`
 

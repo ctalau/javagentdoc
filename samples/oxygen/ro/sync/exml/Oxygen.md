@@ -22,7 +22,7 @@
 
 ### `getCPUrlsFromDir(`java.io.File` arg0)`
 
-**Returns:** [`ro.sync.exml.Oxygen._b`](Oxygen/_b.md)
+**Returns:** `ro.sync.exml.Oxygen._b`
 
 ### `setOxygenHome(`java.io.File` arg0)`
 

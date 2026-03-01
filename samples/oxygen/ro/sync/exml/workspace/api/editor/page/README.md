@@ -2,7 +2,7 @@
 
 ## Classes and Interfaces
 
-- [WSTextBasedEditorPage](WSTextBasedEditorPage.md)
-- [WSOutline](WSOutline.md)
-- [WSEditorPage](WSEditorPage.md)
 - [Anchor](Anchor.md)
+- [WSEditorPage](WSEditorPage.md)
+- [WSOutline](WSOutline.md)
+- [WSTextBasedEditorPage](WSTextBasedEditorPage.md)

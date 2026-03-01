@@ -2,5 +2,5 @@
 
 ## Classes and Interfaces
 
-- [OptionPagePluginExtension](OptionPagePluginExtension.md)
 - [ConfigurationOptionsProviderExtension](ConfigurationOptionsProviderExtension.md)
+- [OptionPagePluginExtension](OptionPagePluginExtension.md)

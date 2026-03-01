@@ -1,0 +1,59 @@
+# Class: `WSEditorListener`
+
+**Package:** [`ro.sync.exml.workspace.api.listeners`](README.md)
+
+**Fully Qualified Name:** `ro.sync.exml.workspace.api.listeners.WSEditorListener`
+
+**Extends:** [`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](./WSEditorPageChangedListener.md)
+
+## Description
+
+The listener is added to a WSEditor and receives different callbacks.
+
+## Fields
+
+### `SAVE_OPERATION`
+
+**Type:** `int`
+
+### `SAVE_AS_OPERATION`
+
+**Type:** `int`
+
+## Constructors
+
+### `<init>()`
+
+## Methods
+
+### `editorAboutToBeSavedVeto(`int` operationType)`
+
+**Returns:** `boolean`
+
+### `editorSaved(`int` operationType)`
+
+**Returns:** `void`
+
+### `documentTypeExtensionsReconfigured()`
+
+**Returns:** `void`
+
+For example after a document is opened, the application will re-configure the framework-specific toolbar. After this, the callback will be received.
+ So if you are using code which for example tries to add a listener to one of the actions on the framework-specific toolbar, 
+ the code should re-add the listener when the callback is received.
+
+### `editorAboutToBeClosedVeto(`java.net.URL` editorLocation)`
+
+**Returns:** `boolean`
+
+Decide if the closing should proceed or not.
+
+
+ This method is not called from the Eclipse plug-in. It works only with the stand-alone application.
+
+### `editorReloaded(`java.net.URL` editorURL)`
+
+**Returns:** `void`
+
+Probably F5 was pressed.
+

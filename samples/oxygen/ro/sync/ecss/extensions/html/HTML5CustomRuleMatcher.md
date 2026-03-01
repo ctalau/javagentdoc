@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, `java.lang.String` doctypeSystemID, [`org.xml.sax.Attributes`](../../../../../org/xml/sax/Attributes.md) rootAttributes, `java.util.Map<java.lang.String,java.lang.String>` queryParams, `java.io.Reader` contentReader)`
+### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, `java.lang.String` doctypeSystemID, `org.xml.sax.Attributes` rootAttributes, `java.util.Map<java.lang.String,java.lang.String>` queryParams, `java.io.Reader` contentReader)`
 
 **Returns:** `boolean`
 

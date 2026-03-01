@@ -2,7 +2,7 @@
 
 ## Classes and Interfaces
 
-- [TrustedHostsProviderExtension](TrustedHostsProviderExtension.md)
-- [Response](Response.md)
-- [CspProviderExtension](CspProviderExtension.md)
 - [CspDirective](CspDirective.md)
+- [CspProviderExtension](CspProviderExtension.md)
+- [Response](Response.md)
+- [TrustedHostsProviderExtension](TrustedHostsProviderExtension.md)

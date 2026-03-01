@@ -603,6 +603,8 @@ If it is enabled the indenting of the document
 
 **Type:** `java.lang.String`
 
+-- Changed in v9.2 because the indent size must be greater than 0.
+
 ### `AUTORECOVERY_LOCATION`
 
 **Type:** `java.lang.String`

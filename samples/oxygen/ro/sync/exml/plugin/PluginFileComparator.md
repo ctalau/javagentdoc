@@ -14,7 +14,7 @@
 
 ### `b(`java.lang.String` arg0)`
 
-**Returns:** [`ro.sync.exml.plugin.PluginFileComparator.FileNameComponents`](PluginFileComparator/FileNameComponents.md)
+**Returns:** `ro.sync.exml.plugin.PluginFileComparator.FileNameComponents`
 
 ### `compare(`java.io.File` arg0, `java.io.File` arg1)`
 

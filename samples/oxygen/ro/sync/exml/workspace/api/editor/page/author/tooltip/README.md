@@ -2,6 +2,6 @@
 
 ## Classes and Interfaces
 
-- [TooltipInformation](TooltipInformation.md)
-- [AuthorTooltipCustomizerProvider](AuthorTooltipCustomizerProvider.md)
 - [AuthorTooltipCustomizer](AuthorTooltipCustomizer.md)
+- [AuthorTooltipCustomizerProvider](AuthorTooltipCustomizerProvider.md)
+- [TooltipInformation](TooltipInformation.md)

@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.SAProblemsHighlightColorProvider`
 
-**Extends:** [`ro.sync.exml.dc`](./dc.md)
+**Extends:** `ro.sync.exml.dc`
 
 ## Fields
 
 ### `d`
 
-**Type:** [`ro.sync.options.kb`](../options/kb.md)
+**Type:** `ro.sync.options.kb`
 
 ## Constructors
 
@@ -34,7 +34,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `getHighlightColor([`ro.sync.exml.editor.x.d.g`](editor/x/d/g.md) arg0)`
+### `getHighlightColor(`ro.sync.exml.editor.x.d.g` arg0)`
 
 **Returns:** `java.lang.Object`
 

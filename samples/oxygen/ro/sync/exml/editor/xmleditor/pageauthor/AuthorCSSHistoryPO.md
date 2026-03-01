@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.xmleditor.pageauthor.AuthorCSSHistoryPO`
 
-**Implements:** [`ro.sync.options.PersistentObject`](../../../../options/PersistentObject.md)
+**Implements:** `ro.sync.options.PersistentObject`
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `LIMIT`
 
@@ -18,7 +18,7 @@
 
 ### `map`
 
-**Type:** [`ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>`](../../../../options/SerializableLinkedHashMap.md)
+**Type:** `ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>`
 
 ## Constructors
 

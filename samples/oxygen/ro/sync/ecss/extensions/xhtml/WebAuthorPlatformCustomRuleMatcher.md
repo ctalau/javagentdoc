@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, [`org.xml.sax.Attributes`](../../../../../org/xml/sax/Attributes.md) rootAttributes)`
+### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, `org.xml.sax.Attributes` rootAttributes)`
 
 **Returns:** `boolean`
 

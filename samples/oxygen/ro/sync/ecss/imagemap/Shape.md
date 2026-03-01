@@ -8,7 +8,7 @@
 
 ### `messages`
 
-**Type:** [`ro.sync.i18n.c`](../../i18n/c.md)
+**Type:** `ro.sync.i18n.c`
 
 ## Constructors
 

@@ -4,13 +4,13 @@
 
 **Fully Qualified Name:** `ro.sync.exml.editor.EditorPageAssociation`
 
-**Implements:** [`ro.sync.options.PersistentObject`](../../options/PersistentObject.md), `java.lang.Comparable`
+**Implements:** `ro.sync.options.PersistentObject`, `java.lang.Comparable`
 
 ## Fields
 
 ### `logger`
 
-**Type:** [`org.slf4j.Logger`](../../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `contentType`
 

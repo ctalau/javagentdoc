@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `getImposedImageSize([`ro.sync.exml.view.graphics.Rectangle`](../../exml/view/graphics/Rectangle.md) size)`
+### `getImposedImageSize(`ro.sync.exml.view.graphics.Rectangle` size)`
 
-**Returns:** [`ro.sync.exml.view.graphics.Rectangle`](../../exml/view/graphics/Rectangle.md)
+**Returns:** `ro.sync.exml.view.graphics.Rectangle`
 

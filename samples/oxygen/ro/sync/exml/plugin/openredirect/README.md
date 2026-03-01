@@ -2,5 +2,5 @@
 
 ## Classes and Interfaces
 
-- [OpenRedirectInformation](OpenRedirectInformation.md)
 - [OpenRedirectExtension](OpenRedirectExtension.md)
+- [OpenRedirectInformation](OpenRedirectInformation.md)

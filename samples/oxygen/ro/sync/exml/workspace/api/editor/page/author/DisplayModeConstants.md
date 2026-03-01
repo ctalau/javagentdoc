@@ -20,15 +20,13 @@
 
 **Type:** `int`
 
-. 
- -  For inline elements display two little triangles before and after element content.
+-  For inline elements display two little triangles before and after element content.
 
 ### `DISPLAY_MODE_PARTIAL_TAGS`
 
 **Type:** `int`
 
-. 
- -  For inline elements display two little triangles before and after element content.
+-  For inline elements display two little triangles before and after element content.
 
 ### `DISPLAY_MODE_FULL_TAGS_WITH_ATTRS`
 
@@ -42,6 +40,5 @@
 
 **Type:** `int`
 
-.
- -  For inline elements display two little triangles before and after element content.
+-  For inline elements display two little triangles before and after element content.
 

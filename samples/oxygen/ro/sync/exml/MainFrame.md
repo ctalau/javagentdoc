@@ -4,51 +4,51 @@
 
 **Fully Qualified Name:** `ro.sync.exml.MainFrame`
 
-**Extends:** [`ro.sync.ui.application.b`](../ui/application/b.md)
+**Extends:** `ro.sync.ui.application.b`
 
-**Implements:** [`ro.sync.exml.hd`](./hd.md), [`ro.sync.exml.zc`](./zc.md), [`ro.sync.ecss.extensions.x`](../ecss/extensions/x.md), [`ro.sync.ui.application.pb`](../ui/application/pb.md), [`ro.sync.exml.y`](./y.md), [`ro.sync.exml.r`](./r.md), [`ro.sync.exml.tc`](./tc.md), [`ro.sync.exml.yb`](./yb.md), [`ro.sync.exml.layout.toolbars.d`](layout/toolbars/d.md), [`ro.sync.exml.workspace.api.standalone.actions.ActionsProvider`](workspace/api/standalone/actions/ActionsProvider.md)
+**Implements:** `ro.sync.exml.hd`, `ro.sync.exml.zc`, `ro.sync.ecss.extensions.x`, `ro.sync.ui.application.pb`, `ro.sync.exml.y`, `ro.sync.exml.r`, `ro.sync.exml.tc`, `ro.sync.exml.yb`, `ro.sync.exml.layout.toolbars.d`, [`ro.sync.exml.workspace.api.standalone.actions.ActionsProvider`](workspace/api/standalone/actions/ActionsProvider.md)
 
 ## Fields
 
 ### `oxx`
 
-**Type:** [`org.slf4j.Logger`](../../../org/slf4j/Logger.md)
+**Type:** `org.slf4j.Logger`
 
 ### `zxx`
 
-**Type:** [`ro.sync.exml.controllers.c`](controllers/c.md)
+**Type:** `ro.sync.exml.controllers.c`
 
 ### `ywx`
 
-**Type:** [`ro.sync.exml.controllers.o`](controllers/o.md)
+**Type:** `ro.sync.exml.controllers.o`
 
 ### `iyx`
 
-**Type:** [`ro.sync.exml.controllers.b`](controllers/b.md)
+**Type:** `ro.sync.exml.controllers.b`
 
 ### `byx`
 
-**Type:** [`ro.sync.azcheck.ui.b.g`](../azcheck/ui/b/g.md)
+**Type:** `ro.sync.azcheck.ui.b.g`
 
 ### `wwx`
 
-**Type:** [`ro.sync.exml.editor.pagetext.formatandindent.b`](editor/pagetext/formatandindent/b.md)
+**Type:** `ro.sync.exml.editor.pagetext.formatandindent.b`
 
 ### `jxx`
 
-**Type:** [`ro.sync.exml.controllers.d`](controllers/d.md)
+**Type:** `ro.sync.exml.controllers.d`
 
 ### `pxx`
 
-**Type:** [`ro.sync.exml.controllers.m`](controllers/m.md)
+**Type:** `ro.sync.exml.controllers.m`
 
 ### `qxx`
 
-**Type:** [`ro.sync.exml.controllers.l`](controllers/l.md)
+**Type:** `ro.sync.exml.controllers.l`
 
 ### `bxx`
 
-**Type:** [`ro.sync.exml.controllers.z`](controllers/z.md)
+**Type:** `ro.sync.exml.controllers.z`
 
 ### `ayx`
 
@@ -56,7 +56,7 @@
 
 ### `kyx`
 
-**Type:** [`ro.sync.exml.editor.dh`](editor/dh.md)
+**Type:** `ro.sync.exml.editor.dh`
 
 ### `rxx`
 
@@ -64,11 +64,11 @@
 
 ### `lyx`
 
-**Type:** [`ro.sync.ui.application.menu.g[]`](../ui/application/menu/g.md)
+**Type:** `ro.sync.ui.application.menu.g[]`
 
 ### `ixx`
 
-**Type:** [`ro.sync.exml.editor.results.i`](editor/results/i.md)
+**Type:** `ro.sync.exml.editor.results.i`
 
 ### `lxx`
 
@@ -76,31 +76,31 @@
 
 ### `hyx`
 
-**Type:** [`ro.sync.exml.project.z`](project/z.md)
+**Type:** `ro.sync.exml.project.z`
 
 ### `gyx`
 
-**Type:** [`ro.sync.ui.application.action.d`](../ui/application/action/d.md)
+**Type:** `ro.sync.ui.application.action.d`
 
 ### `fyx`
 
-**Type:** [`ro.sync.ui.application.action.d`](../ui/application/action/d.md)
+**Type:** `ro.sync.ui.application.action.d`
 
 ### `myx`
 
-**Type:** [`ro.sync.exml.editor.of`](editor/of.md)
+**Type:** `ro.sync.exml.editor.of`
 
 ### `dyx`
 
-**Type:** [`ro.sync.exml.editor.nc`](editor/nc.md)
+**Type:** `ro.sync.exml.editor.nc`
 
 ### `cyx`
 
-**Type:** [`ro.sync.ui.application.menu.g`](../ui/application/menu/g.md)
+**Type:** `ro.sync.ui.application.menu.g`
 
 ### `nxx`
 
-**Type:** [`ro.sync.f.d`](../f/d.md)
+**Type:** `ro.sync.f.d`
 
 ### `pyx`
 
@@ -108,11 +108,11 @@
 
 ### `xxx`
 
-**Type:** [`ro.sync.exml.layout.i`](layout/i.md)
+**Type:** `ro.sync.exml.layout.i`
 
 ### `zwx`
 
-**Type:** [`ro.sync.ecss.dita.mapeditor.e`](../ecss/dita/mapeditor/e.md)
+**Type:** `ro.sync.ecss.dita.mapeditor.e`
 
 ### `qyx`
 
@@ -120,19 +120,19 @@
 
 ### `ryx`
 
-**Type:** [`ro.sync.ecss.dita.mapeditor.cb`](../ecss/dita/mapeditor/cb.md)
+**Type:** `ro.sync.ecss.dita.mapeditor.cb`
 
 ### `wxx`
 
-**Type:** [`ro.sync.exml.project.o`](project/o.md)
+**Type:** `ro.sync.exml.project.o`
 
 ### `vwx`
 
-**Type:** [`ro.sync.exml.hb`](./hb.md)
+**Type:** `ro.sync.exml.hb`
 
 ### `oyx`
 
-**Type:** [`ro.sync.exml.l`](./l.md)
+**Type:** `ro.sync.exml.l`
 
 ### `uxx`
 
@@ -140,7 +140,7 @@
 
 ### `kxx`
 
-**Type:** [`ro.sync.exml.oc`](./oc.md)
+**Type:** `ro.sync.exml.oc`
 
 ### `hxx`
 
@@ -156,11 +156,11 @@
 
 ### `nyx`
 
-**Type:** [`ro.sync.exml.docking.i`](docking/i.md)
+**Type:** `ro.sync.exml.docking.i`
 
 ### `fxx`
 
-**Type:** [`ro.sync.exml.editor.x.cb`](editor/x/cb.md)
+**Type:** `ro.sync.exml.editor.x.cb`
 
 ### `uwx`
 
@@ -168,7 +168,7 @@
 
 ### `twx`
 
-**Type:** [`ro.sync.ecss.dita.reference.q`](../ecss/dita/reference/q.md)
+**Type:** `ro.sync.ecss.dita.reference.q`
 
 ### `axx`
 
@@ -180,27 +180,27 @@
 
 ### `xwx`
 
-**Type:** [`ro.sync.exml.i.c`](i/c.md)
+**Type:** `ro.sync.exml.i.c`
 
 ### `gxx`
 
-**Type:** [`ro.sync.exml.rd`](./rd.md)
+**Type:** `ro.sync.exml.rd`
 
 ### `jyx`
 
-**Type:** [`ro.sync.exml.i.d`](i/d.md)
+**Type:** `ro.sync.exml.i.d`
 
 ### `txx`
 
-**Type:** [`ro.sync.ui.application.lb`](../ui/application/lb.md)
+**Type:** `ro.sync.ui.application.lb`
 
 ### `yxx`
 
-**Type:** [`ro.sync.exml.c.d`](c/d.md)
+**Type:** `ro.sync.exml.c.d`
 
 ### `cxx`
 
-**Type:** [`ro.sync.ui.application.menu.g`](../ui/application/menu/g.md)
+**Type:** `ro.sync.ui.application.menu.g`
 
 ### `swx`
 
@@ -216,23 +216,23 @@
 
 ### `vxx`
 
-**Type:** [`ro.sync.exml.editor.bd`](editor/bd.md)
+**Type:** `ro.sync.exml.editor.bd`
 
 ## Constructors
 
-### `<init>([`ro.sync.ui.application.ApplicationMainFrameDescriptor`](../ui/application/ApplicationMainFrameDescriptor.md) arg0, [`ro.sync.exml.ExitHandler`](./ExitHandler.md) arg1, [`ro.sync.exml.kb`](./kb.md) arg2, [`ro.sync.ui.application.p`](../ui/application/p.md) arg3, `boolean` arg4, `boolean` arg5, `java.lang.String[]` arg6)`
+### `<init>([`ro.sync.ui.application.ApplicationMainFrameDescriptor`](../ui/application/ApplicationMainFrameDescriptor.md) arg0, [`ro.sync.exml.ExitHandler`](./ExitHandler.md) arg1, `ro.sync.exml.kb` arg2, `ro.sync.ui.application.p` arg3, `boolean` arg4, `boolean` arg5, `java.lang.String[]` arg6)`
 
-### `<init>([`ro.sync.ui.application.ApplicationMainFrameDescriptor`](../ui/application/ApplicationMainFrameDescriptor.md) arg0, [`ro.sync.exml.ExitHandler`](./ExitHandler.md) arg1, `boolean` arg2, [`ro.sync.exml.kb`](./kb.md) arg3, [`ro.sync.ui.application.p`](../ui/application/p.md) arg4, `boolean` arg5, `boolean` arg6, `java.lang.String[]` arg7)`
+### `<init>([`ro.sync.ui.application.ApplicationMainFrameDescriptor`](../ui/application/ApplicationMainFrameDescriptor.md) arg0, [`ro.sync.exml.ExitHandler`](./ExitHandler.md) arg1, `boolean` arg2, `ro.sync.exml.kb` arg3, `ro.sync.ui.application.p` arg4, `boolean` arg5, `boolean` arg6, `java.lang.String[]` arg7)`
 
 ## Methods
 
 ### `ngp()`
 
-**Returns:** [`ro.sync.exml.docking.i`](docking/i.md)
+**Returns:** `ro.sync.exml.docking.i`
 
 ### `rfp()`
 
-**Returns:** [`ro.sync.exml.docking.i`](docking/i.md)
+**Returns:** `ro.sync.exml.docking.i`
 
 ### `hfp()`
 
@@ -242,7 +242,7 @@
 
 **Returns:** `void`
 
-### `nep([`ro.sync.exml.editor.rc[]`](editor/rc.md) arg0)`
+### `nep(`ro.sync.exml.editor.rc[]` arg0)`
 
 **Returns:** `void`
 
@@ -256,7 +256,7 @@
 
 ### `lae()`
 
-**Returns:** [`ro.sync.ui.application.pb`](../ui/application/pb.md)
+**Returns:** `ro.sync.ui.application.pb`
 
 ### `lep()`
 
@@ -284,11 +284,11 @@
 
 ### `pgp(`java.net.URL` arg0)`
 
-**Returns:** [`ro.sync.exml.editor.dd`](editor/dd.md)
+**Returns:** `ro.sync.exml.editor.dd`
 
 ### `sfp(`java.net.URL` arg0, `java.lang.String` arg1)`
 
-**Returns:** [`ro.sync.exml.editor.dd`](editor/dd.md)
+**Returns:** `ro.sync.exml.editor.dd`
 
 ### `kfp()`
 
@@ -310,13 +310,13 @@
 
 **Returns:** `void`
 
-### `jfp([`ro.sync.ui.i.c`](../ui/i/c.md) arg0)`
+### `jfp(`ro.sync.ui.i.c` arg0)`
 
 **Returns:** `void`
 
 ### `pep()`
 
-**Returns:** [`ro.sync.ui.application.menu.g[]`](../ui/application/menu/g.md)
+**Returns:** `ro.sync.ui.application.menu.g[]`
 
 ### `xep([`ro.sync.exml.plugin.general.GeneralPluginExtension`](plugin/general/GeneralPluginExtension.md) arg0)`
 
@@ -324,11 +324,11 @@
 
 ### `dfp()`
 
-**Returns:** [`ro.sync.exml.editor.bb`](editor/bb.md)
+**Returns:** `ro.sync.exml.editor.bb`
 
 ### `fgp()`
 
-**Returns:** [`ro.sync.exml.l`](./l.md)
+**Returns:** `ro.sync.exml.l`
 
 ### `handleQuit()`
 
@@ -362,13 +362,13 @@
 
 **Returns:** `int`
 
-### `pae([`ro.sync.exml.ub`](./ub.md) arg0)`
+### `pae(`ro.sync.exml.ub` arg0)`
 
 **Returns:** `void`
 
 ### `qep()`
 
-**Returns:** [`ro.sync.exml.controllers.z`](controllers/z.md)
+**Returns:** `ro.sync.exml.controllers.z`
 
 ### `isFocusable()`
 
@@ -378,11 +378,11 @@
 
 **Returns:** `void`
 
-### `pfp([`ro.sync.exml.editor.te`](editor/te.md) arg0)`
+### `pfp(`ro.sync.exml.editor.te` arg0)`
 
 **Returns:** `void`
 
-### `jgp([`ro.sync.exml.editor.te`](editor/te.md) arg0)`
+### `jgp(`ro.sync.exml.editor.te` arg0)`
 
 **Returns:** `void`
 
@@ -390,7 +390,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `uae([`ro.sync.exml.editor.ud`](editor/ud.md) arg0)`
+### `uae(`ro.sync.exml.editor.ud` arg0)`
 
 **Returns:** `void`
 
@@ -400,7 +400,7 @@
 
 ### `oae(`java.lang.String` arg0)`
 
-**Returns:** [`ro.sync.exml.c.j`](c/j.md)
+**Returns:** `ro.sync.exml.c.j`
 
 ### `nae(`java.lang.String` arg0)`
 
@@ -436,19 +436,19 @@
 
 ### `kgp()`
 
-**Returns:** [`ro.sync.exml.layout.i`](layout/i.md)
+**Returns:** `ro.sync.exml.layout.i`
 
 ### `zep()`
 
-**Returns:** [`ro.sync.ecss.dita.mapeditor.e`](../ecss/dita/mapeditor/e.md)
+**Returns:** `ro.sync.ecss.dita.mapeditor.e`
 
 ### `gfp()`
 
-**Returns:** [`ro.sync.f.d`](../f/d.md)
+**Returns:** `ro.sync.f.d`
 
 ### `tfp()`
 
-**Returns:** [`ro.sync.ecss.dita.reference.q`](../ecss/dita/reference/q.md)
+**Returns:** `ro.sync.ecss.dita.reference.q`
 
 ### `handleCloseAllAndHide()`
 
@@ -460,9 +460,9 @@
 
 ### `sae()`
 
-**Returns:** [`ro.sync.ui.application.menu.g`](../ui/application/menu/g.md)
+**Returns:** `ro.sync.ui.application.menu.g`
 
-### `mfp([`ro.sync.exml.sd`](./sd.md) arg0)`
+### `mfp(`ro.sync.exml.sd` arg0)`
 
 **Returns:** `void`
 
@@ -484,11 +484,11 @@
 
 ### `hgp()`
 
-**Returns:** [`ro.sync.exml.project.z`](project/z.md)
+**Returns:** `ro.sync.exml.project.z`
 
 ### `lgp()`
 
-**Returns:** [`ro.sync.exml.project.o`](project/o.md)
+**Returns:** `ro.sync.exml.project.o`
 
 ### `afp([`ro.sync.exml.plugin.urlstreamhandler.URLChooserMenuExtension`](plugin/urlstreamhandler/URLChooserMenuExtension.md) arg0)`
 
@@ -504,31 +504,31 @@
 
 ### `vfp()`
 
-**Returns:** [`ro.sync.ecss.dita.mapeditor.cb`](../ecss/dita/mapeditor/cb.md)
+**Returns:** `ro.sync.ecss.dita.mapeditor.cb`
 
 ### `ofp()`
 
-**Returns:** [`ro.sync.exml.editor.nc`](editor/nc.md)
+**Returns:** `ro.sync.exml.editor.nc`
 
 ### `yep()`
 
-**Returns:** [`ro.sync.exml.controllers.c`](controllers/c.md)
+**Returns:** `ro.sync.exml.controllers.c`
 
 ### `bgp()`
 
-**Returns:** [`ro.sync.exml.controllers.d`](controllers/d.md)
+**Returns:** `ro.sync.exml.controllers.d`
 
 ### `wfp()`
 
-**Returns:** [`ro.sync.exml.editor.x.cb`](editor/x/cb.md)
+**Returns:** `ro.sync.exml.editor.x.cb`
 
 ### `wep()`
 
-**Returns:** [`ro.sync.exml.hb`](./hb.md)
+**Returns:** `ro.sync.exml.hb`
 
 ### `agp()`
 
-**Returns:** [`ro.sync.exml.oc`](./oc.md)
+**Returns:** `ro.sync.exml.oc`
 
 ### `mgp()`
 
@@ -548,7 +548,7 @@
 
 ### `egp()`
 
-**Returns:** [`ro.sync.exml.editor.results.i`](editor/results/i.md)
+**Returns:** `ro.sync.exml.editor.results.i`
 
 ### `invokeAction(`java.lang.Object` arg0)`
 

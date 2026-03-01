@@ -2,8 +2,8 @@
 
 ## Classes and Interfaces
 
-- [XPathException](XPathException.md)
-- [WSXMLTextNodeRange](WSXMLTextNodeRange.md)
-- [WSXMLTextEditorPage](WSXMLTextEditorPage.md)
-- [TextOperationException](TextOperationException.md)
 - [TextDocumentController](TextDocumentController.md)
+- [TextOperationException](TextOperationException.md)
+- [WSXMLTextEditorPage](WSXMLTextEditorPage.md)
+- [WSXMLTextNodeRange](WSXMLTextNodeRange.md)
+- [XPathException](XPathException.md)

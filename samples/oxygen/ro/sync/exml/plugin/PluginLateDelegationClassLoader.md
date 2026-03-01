@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.plugin.PluginLateDelegationClassLoader`
 
-**Extends:** [`ro.sync.xml.transformer.n`](../../xml/transformer/n.md)
+**Extends:** `ro.sync.xml.transformer.n`
 
 ## Fields
 

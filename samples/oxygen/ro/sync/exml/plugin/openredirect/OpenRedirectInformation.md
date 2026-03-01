@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `ro.sync.exml.plugin.openredirect.OpenRedirectInformation`
 
-**Implements:** [`ro.sync.basic.contenttypes.ContentTypes`](../../../basic/contenttypes/ContentTypes.md)
+**Implements:** `ro.sync.basic.contenttypes.ContentTypes`
 
 ## Description
 
