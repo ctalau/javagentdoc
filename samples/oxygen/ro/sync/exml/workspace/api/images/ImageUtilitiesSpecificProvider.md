@@ -8,14 +8,17 @@
 
 ## Methods
 
-### `getIconDecoration(`java.net.URL` resource)`
+### `getIconDecoration(java.net.URL resource)`
 
 **Returns:** `java.lang.Object`
 
 For example if the URL ends in ".xml", this utility returns a small XML-symbol image.
  This is only implemented in the Swing-based application.
 
-### `loadIcon(`java.net.URL` resource)`
+**Parameters:**
+- `resource` (`java.net.URL`): The resource URL.
+
+### `loadIcon(java.net.URL resource)`
 
 **Returns:** `java.lang.Object`
 
@@ -40,4 +43,7 @@ This topic explains how the application tries to load an image based on the init
 
  `PluginWorkspaceProvider.getPluginWorkspace().getImageUtilities()
  .loadIcon(ro.sync.exml.Oxygen.class.getResource("/images/OptionsShortcut16.png"));`
+
+**Parameters:**
+- `resource` (`java.net.URL`): The resource URL
 

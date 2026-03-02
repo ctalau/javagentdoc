@@ -15,19 +15,17 @@
 
 ## Description
 
-A multimap which forwards all its method calls to another multimap. Subclasses should override
- one or more methods to modify the behavior of the backing multimap as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should override
+ one or more methods to modify the behavior of the backing multimap as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the `ForwardingMultimap`.
-**Author:** Robert Konigsberg
-**Since:** 2.0
+ 
+**default method warning:** This class does *not* forward calls to 
+ default methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the ForwardingMultimap.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -43,25 +41,38 @@ Constructor for use by subclasses.
 
 **Returns:** `void`
 
-### `containsEntry(`java.lang.Object` key, `java.lang.Object` value)`
+### `containsEntry(java.lang.Object key, java.lang.Object value)`
 
 **Returns:** `boolean`
 
-### `containsKey(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+- `value` (`java.lang.Object`)
+
+### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
 
-### `containsValue(`java.lang.Object` value)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `containsValue(java.lang.Object value)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `value` (`java.lang.Object`)
 
 ### `entries()`
 
 **Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `java.util.Collection<V>`
+
+**Parameters:**
+- `key` (`K`)
 
 ### `isEmpty()`
 
@@ -75,29 +86,51 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.Set<K>`
 
-### `put(`K` key, `V` value)`
+### `put(K key, V value)`
 
 **Returns:** `boolean`
 
-### `putAll(`K` key, `java.lang.Iterable<? extends V>` values)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `putAll(K key, java.lang.Iterable<? extends V> values)`
 
 **Returns:** `boolean`
 
-### `putAll([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md) multimap)`
+**Parameters:**
+- `key` (`K`)
+- `values` (`java.lang.Iterable<? extends V>`)
+
+### `putAll(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
 
 **Returns:** `boolean`
 
-### `remove(`java.lang.Object` key, `java.lang.Object` value)`
+**Parameters:**
+- `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
+
+### `remove(java.lang.Object key, java.lang.Object value)`
 
 **Returns:** `boolean`
 
-### `removeAll(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+- `value` (`java.lang.Object`)
+
+### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.Collection<V>`
 
-### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
 
 **Returns:** `java.util.Collection<V>`
+
+**Parameters:**
+- `key` (`K`)
+- `values` (`java.lang.Iterable<? extends V>`)
 
 ### `size()`
 
@@ -107,9 +140,12 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.Collection<V>`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

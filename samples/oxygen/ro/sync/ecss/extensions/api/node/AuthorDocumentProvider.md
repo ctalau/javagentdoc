@@ -27,13 +27,19 @@ You can use it to make changes to the structure of nodes, run XPath expressions 
 
 **Returns:** `void`
 
-### `getStyles([`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md) node)`
+### `getStyles(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `ro.sync.ecss.css.Styles`
 
 This method **MUST** only be used to query styles.
 
-### `getLineColumnMapping(`int` offset)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)): The node for which we want to obtain the styles.
+
+### `getLineColumnMapping(int offset)`
 
 **Returns:** `int[]`
+
+**Parameters:**
+- `offset` (`int`): The offset
 

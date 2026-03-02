@@ -91,13 +91,33 @@ Can be null if no parent line box.
 
 ## Constructors
 
-### `<init>(`ro.sync.exml.view.graphics.Graphics` g, `int` currentBoxHeight, `ro.sync.exml.view.graphics.Point` origin, `int` relativeX, `int` textYPadding, `int` length, `int` startOffset, `int` endOffset, `int` baseLine, `int` fontAscent, `int` fontSize, `ro.sync.exml.view.graphics.Point` parentLineBoxOrigin, `int` parentLineBoxWidth, `int` parentLineBoxHeight, `int` viewEndOffset)`
+### `<init>(ro.sync.exml.view.graphics.Graphics g, int currentBoxHeight, ro.sync.exml.view.graphics.Point origin, int relativeX, int textYPadding, int length, int startOffset, int endOffset, int baseLine, int fontAscent, int fontSize, ro.sync.exml.view.graphics.Point parentLineBoxOrigin, int parentLineBoxWidth, int parentLineBoxHeight, int viewEndOffset)`
+
+**Parameters:**
+- `g` (`ro.sync.exml.view.graphics.Graphics`): The graphics
+- `currentBoxHeight` (`int`): The current box height.
+- `origin` (`ro.sync.exml.view.graphics.Point`): Origin (upper left corner of the box in absolute coordinates)
+- `relativeX` (`int`): The x relative to the origin where the highlight must start.
+- `textYPadding` (`int`): The relative Y position from box Y used to paint the box.
+- `length` (`int`): The length of the highlight, in pixels.
+- `startOffset` (`int`): Start offset of highlight
+- `endOffset` (`int`): End offset of highlight
+- `baseLine` (`int`): The base line relative to the box start
+- `fontAscent` (`int`): The font ascent
+- `fontSize` (`int`): The font size
+- `parentLineBoxOrigin` (`ro.sync.exml.view.graphics.Point`): The origin of the parent line box. Can be null.
+- `parentLineBoxWidth` (`int`): The width of the parent line box. Can be -1.
+- `parentLineBoxHeight` (`int`): The height of the parent line box. Can be -1.
+- `viewEndOffset` (`int`): The end offset of the current view over which the highight is being painted.
 
 ## Methods
 
-### `setHighlightOverText(`boolean` isHighlightOverText)`
+### `setHighlightOverText(boolean isHighlightOverText)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `isHighlightOverText` (`boolean`): The isHighlightOverText to set.
 
 ### `getGraphics()`
 
@@ -126,9 +146,12 @@ Usually the highlight should expand
 
 **Returns:** `int`
 
-### `setLength(`int` length)`
+### `setLength(int length)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `length` (`int`): the new value.
 
 ### `getStartOffset()`
 
@@ -166,17 +189,23 @@ Usually the highlight should expand
 
 **Returns:** `ro.sync.exml.view.graphics.Point`
 
-### `setHighlightOverImage(`boolean` isHighlightOverImage)`
+### `setHighlightOverImage(boolean isHighlightOverImage)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `isHighlightOverImage` (`boolean`): `true` if the highlight is over an image
 
 ### `isHighlightOverImage()`
 
 **Returns:** `boolean`
 
-### `setHighlightOverFormControls(`boolean` isHighlightOverFormControl)`
+### `setHighlightOverFormControls(boolean isHighlightOverFormControl)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `isHighlightOverFormControl` (`boolean`): `true` if we have a highlight over form controls.
 
 ### `isHighlightOverFormControl()`
 

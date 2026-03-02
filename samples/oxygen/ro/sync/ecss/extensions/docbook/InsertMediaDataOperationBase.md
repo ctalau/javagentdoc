@@ -30,13 +30,21 @@ The value is `mediaUrl`.
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `insertMediaRef([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.lang.String` ref)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../api/ArgumentsMap.md))
+
+### `insertMediaRef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String ref)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../api/schemaaware/SchemaAwareHandlerResult.md)
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Author access.
+- `ref` (`java.lang.String`): The media reference.
 
 ### `insertNamespace()`
 

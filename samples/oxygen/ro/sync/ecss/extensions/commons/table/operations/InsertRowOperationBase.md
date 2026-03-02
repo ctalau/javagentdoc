@@ -41,7 +41,10 @@ The value is `customRowInsertion`
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md) documentTypeHelper)`
+### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper documentTypeHelper)`
+
+**Parameters:**
+- `documentTypeHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Author Document type helper, has methods specific to a document type.
 
 ## Methods
 
@@ -62,37 +65,91 @@ The first argument defines the location where the operation will be executed
  AuthorConstants#POSITION_INSIDE_LAST
  `
 
-### `doOperationInternal([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md) args)`
+### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `insertRows([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, `java.lang.String` xPathLocation, `java.lang.String` namespace, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md) nodeAtCaret, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, `int` noOfRowsToBeInserted, `java.lang.String` relativePosition)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
+
+### `insertRows(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xPathLocation, java.lang.String namespace, ro.sync.ecss.extensions.api.node.AuthorNode nodeAtCaret, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int noOfRowsToBeInserted, java.lang.String relativePosition)`
 
 **Returns:** `void`
 
-### `getRowXMLFragment([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, `java.lang.String` namespace, `java.lang.String` newCellFragment, `int` newCellColumnIndex, `int` initialNumberOfColumns)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+- `xPathLocation` (`java.lang.String`): The xPath location.
+- `namespace` (`java.lang.String`): The rows namespace.
+- `nodeAtCaret` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node at caret
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The parent table element.
+- `noOfRowsToBeInserted` (`int`): Number of rows to be inserted.
+- `relativePosition` (`java.lang.String`): One of AuthorConstants#POSITION_AFTER or
+ AuthorConstants#POSITION_BEFORE constants.
+
+### `getRowXMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.lang.String namespace, java.lang.String newCellFragment, int newCellColumnIndex, int initialNumberOfColumns)`
 
 **Returns:** `java.lang.String`
 
-### `getRowXMLFragment([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) referenceRowElement, `boolean` preferReferencedRow, `java.lang.String` namespace, `boolean` before)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table element.
+- `namespace` (`java.lang.String`): The namespace of the table row.
+- `newCellFragment` (`java.lang.String`): The row will contain an additional cell added at the given 
+ column index.
+- `newCellColumnIndex` (`int`): The column index of the additional cell
+- `initialNumberOfColumns` (`int`): The initial number of columns.
+
+### `getRowXMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, ro.sync.ecss.extensions.api.node.AuthorElement referenceRowElement, boolean preferReferencedRow, java.lang.String namespace, boolean before)`
 
 **Returns:** `java.lang.String`
 
-### `createCell([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, `java.lang.StringBuilder` newRowStructure, `int` i)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table element.
+- `referenceRowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The reference row element (from the caret position).
+- `preferReferencedRow` (`boolean`): `true` to prefer the referenced row.
+- `namespace` (`java.lang.String`): The namespace of the table row.
+- `before` (`boolean`): `true` to insert before the reference row.
+
+### `createCell(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.lang.StringBuilder newRowStructure, int i)`
 
 **Returns:** `void`
 
-### `mergeArrays(`java.lang.String[]` array1, `java.lang.String[]` array2)`
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table element into which to add the cell.
+- `newRowStructure` (`java.lang.StringBuilder`): The row which will contain the cell.
+- `i` (`int`): The column index of the cell. Used to determine the name of the cell element.
+
+### `mergeArrays(java.lang.String[] array1, java.lang.String[] array2)`
 
 **Returns:** `java.lang.String[]`
 
-### `createCellXMLFragment([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) cell, `java.lang.String[]` skippedAttributes, `java.lang.String[]` allowedAttributes, `java.lang.String` cellContent)`
+**Parameters:**
+- `array1` (`java.lang.String[]`): The first array.
+- `array2` (`java.lang.String[]`): The second array.
+
+### `createCellXMLFragment(ro.sync.ecss.extensions.api.node.AuthorElement cell, java.lang.String[] skippedAttributes, java.lang.String[] allowedAttributes, java.lang.String cellContent)`
 
 **Returns:** `java.lang.String`
 
-### `incrementRowSpans([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) referenceRowElement, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, `int` minRowSpan, `int` numberOfInsertedRows, `java.lang.String` relativePosition)`
+**Parameters:**
+- `cell` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The cell to copy the element name and attributes from.
+- `skippedAttributes` (`java.lang.String[]`): List of skipped attributes names.
+- `allowedAttributes` (`java.lang.String[]`)
+- `cellContent` (`java.lang.String`): The cell content.
+
+### `incrementRowSpans(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, ro.sync.ecss.extensions.api.node.AuthorElement referenceRowElement, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int minRowSpan, int numberOfInsertedRows, java.lang.String relativePosition)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table element.
+- `referenceRowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The reference row element.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+- `minRowSpan` (`int`): The minimum row span that must be updated.
+- `numberOfInsertedRows` (`int`): The number of inserted rows.
+- `relativePosition` (`java.lang.String`)
 
 ### `getArguments()`
 
@@ -102,13 +159,20 @@ The first argument defines the location where the operation will be executed
 
 **Returns:** `java.lang.String`
 
-### `getCellElementName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, `int` columnIndex)`
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
 
 **Returns:** `java.lang.String`
 
-### `getRowElementName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement)`
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table element
+- `columnIndex` (`int`): The column index.
+
+### `getRowElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table parent element.
 
 ### `useCurrentRowTemplateOnInsert()`
 
@@ -118,7 +182,10 @@ The first argument defines the location where the operation will be executed
 
 **Returns:** `java.lang.String`
 
-### `removeCustomInsertionDescriptor([`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md) superArguments)`
+### `removeCustomInsertionDescriptor(ro.sync.ecss.extensions.api.ArgumentDescriptor[] superArguments)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
+
+**Parameters:**
+- `superArguments` ([`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)): The input arguments list.
 

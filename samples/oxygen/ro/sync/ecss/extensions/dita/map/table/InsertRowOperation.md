@@ -16,11 +16,18 @@
 
 ## Methods
 
-### `getCellElementName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, `int` columnIndex)`
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
 
 **Returns:** `java.lang.String`
 
-### `getRowElementName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement)`
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+- `columnIndex` (`int`)
+
+### `getRowElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 

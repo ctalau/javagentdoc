@@ -8,8 +8,7 @@
 
 ## Description
 
-An abstract implementation of `Hasher`, which only requires subtypes to implement `putByte`. Subtypes may provide more efficient implementations, however.
-**Author:** Dimitris Andreou
+Subtypes may provide more efficient implementations, however.
 
 ## Constructors
 
@@ -17,55 +16,98 @@ An abstract implementation of `Hasher`, which only requires subtypes to implemen
 
 ## Methods
 
-### `putBoolean(`boolean` b)`
+### `putBoolean(boolean b)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putDouble(`double` d)`
+**Parameters:**
+- `b` (`boolean`)
+
+### `putDouble(double d)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putFloat(`float` f)`
+**Parameters:**
+- `d` (`double`)
+
+### `putFloat(float f)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putUnencodedChars(`java.lang.CharSequence` charSequence)`
+**Parameters:**
+- `f` (`float`)
+
+### `putUnencodedChars(java.lang.CharSequence charSequence)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putString(`java.lang.CharSequence` charSequence, `java.nio.charset.Charset` charset)`
+**Parameters:**
+- `charSequence` (`java.lang.CharSequence`)
+
+### `putString(java.lang.CharSequence charSequence, java.nio.charset.Charset charset)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytes(`byte[]` bytes)`
+**Parameters:**
+- `charSequence` (`java.lang.CharSequence`)
+- `charset` (`java.nio.charset.Charset`)
+
+### `putBytes(byte[] bytes)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytes(`byte[]` bytes, `int` off, `int` len)`
+**Parameters:**
+- `bytes` (`byte[]`)
+
+### `putBytes(byte[] bytes, int off, int len)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytes(`java.nio.ByteBuffer` b)`
+**Parameters:**
+- `bytes` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `putBytes(java.nio.ByteBuffer b)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putShort(`short` s)`
+**Parameters:**
+- `b` (`java.nio.ByteBuffer`)
+
+### `putShort(short s)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putInt(`int` i)`
+**Parameters:**
+- `s` (`short`)
+
+### `putInt(int i)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putLong(`long` l)`
+**Parameters:**
+- `i` (`int`)
+
+### `putLong(long l)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putChar(`char` c)`
+**Parameters:**
+- `l` (`long`)
+
+### `putChar(char c)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putObject(`T` instance, [`com.google.common.hash.Funnel<? super T>`](./Funnel.md) funnel)`
+**Parameters:**
+- `c` (`char`)
+
+### `putObject(T instance, com.google.common.hash.Funnel<? super T> funnel)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+**Parameters:**
+- `instance` (`T`)
+- `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md))
 

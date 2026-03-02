@@ -13,24 +13,15 @@
 
 ## Description
 
-A base implementation of `NetworkConnections` for directed networks.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <E> Edge parameter type
-
 ## Fields
 
 ### `inEdgeMap`
 
 **Type:** `java.util.Map<E,N>`
 
-Keys are edges incoming to the origin node, values are the source node.
-
 ### `outEdgeMap`
 
 **Type:** `java.util.Map<E,N>`
-
-Keys are edges outgoing from the origin node, values are the target node.
 
 ### `selfLoopCount`
 
@@ -38,7 +29,12 @@ Keys are edges outgoing from the origin node, values are the target node.
 
 ## Constructors
 
-### `<init>(`java.util.Map<E,N>` inEdgeMap, `java.util.Map<E,N>` outEdgeMap, `int` selfLoopCount)`
+### `<init>(java.util.Map<E,N> inEdgeMap, java.util.Map<E,N> outEdgeMap, int selfLoopCount)`
+
+**Parameters:**
+- `inEdgeMap` (`java.util.Map<E,N>`)
+- `outEdgeMap` (`java.util.Map<E,N>`)
+- `selfLoopCount` (`int`)
 
 ## Methods
 
@@ -58,23 +54,42 @@ Keys are edges outgoing from the origin node, values are the target node.
 
 **Returns:** `java.util.Set<E>`
 
-### `adjacentNode(`E` edge)`
+### `adjacentNode(E edge)`
 
 **Returns:** `N`
 
-### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
+**Parameters:**
+- `edge` (`E`)
+
+### `removeInEdge(E edge, boolean isSelfLoop)`
 
 **Returns:** `N`
 
-### `removeOutEdge(`E` edge)`
+**Parameters:**
+- `edge` (`E`)
+- `isSelfLoop` (`boolean`)
+
+### `removeOutEdge(E edge)`
 
 **Returns:** `N`
 
-### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
+**Parameters:**
+- `edge` (`E`)
+
+### `addInEdge(E edge, N node, boolean isSelfLoop)`
 
 **Returns:** `void`
 
-### `addOutEdge(`E` edge, `N` node)`
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
+- `isSelfLoop` (`boolean`)
+
+### `addOutEdge(E edge, N node)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
 

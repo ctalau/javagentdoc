@@ -13,9 +13,6 @@
 
 ## Description
 
-Bimap with zero or more mappings.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `EMPTY`
@@ -28,11 +25,11 @@ Bimap with zero or more mappings.
 
 ### `keyTable`
 
-**Type:** [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md)
+**Type:** `com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`
 
 ### `valueTable`
 
-**Type:** [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md)
+**Type:** `com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`
 
 ### `entries`
 
@@ -52,41 +49,62 @@ Bimap with zero or more mappings.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) keyTable, [`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`](@org/checkerframework/checker/nullness/qual/Nullable ImmutableMapEntry.md) valueTable, `java.util.Map.Entry<K,V>[]` entries, `int` mask, `int` hashCode)`
+### `<init>(com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[] keyTable, com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[] valueTable, java.util.Map.Entry<K,V>[] entries, int mask, int hashCode)`
+
+**Parameters:**
+- `keyTable` (`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`)
+- `valueTable` (`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`)
+- `entries` (`java.util.Map.Entry<K,V>[]`)
+- `mask` (`int`)
+- `hashCode` (`int`)
 
 ## Methods
 
-### `fromEntries(`java.util.Map.Entry<K,V>[]` entries)`
+### `fromEntries(java.util.Map.Entry<K,V>[] entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
-### `fromEntryArray(`int` n, `java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]` entryArray)`
+**Parameters:**
+- `entries` (`java.util.Map.Entry<K,V>[]`)
+
+### `fromEntryArray(int n, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
-### `checkNoConflictInValueBucket(`java.lang.Object` value, `java.util.Map.Entry<?,?>` entry, [`com.google.common.collect.ImmutableMapEntry<?,?>`](./ImmutableMapEntry.md) valueBucketHead)`
+**Parameters:**
+- `n` (`int`)
+- `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
+
+### `checkNoConflictInValueBucket(java.lang.Object value, java.util.Map.Entry<?,?> entry, com.google.common.collect.ImmutableMapEntry<?,?> valueBucketHead)`
 
 **Returns:** `void`
 
-@throws IllegalArgumentException if another entry in the bucket has the same key
-@throws BucketOverflowException if this bucket has too many entries, which may indicate a hash
-     flooding attack
+**Parameters:**
+- `value` (`java.lang.Object`)
+- `entry` (`java.util.Map.Entry<?,?>`)
+- `valueBucketHead` ([`com.google.common.collect.ImmutableMapEntry<?,?>`](./ImmutableMapEntry.md))
 
-### `get(`java.lang.Object` key)`
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
+**Parameters:**
+- `key` (`java.lang.Object`)
+
 ### `createEntrySet()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet>.md)
+**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet.md)
 
 ### `createKeySet()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<K>`](./ImmutableSet.md)
 
-### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
+### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.BiConsumer<? super K,? super V>`)
 
 ### `isHashCodeFast()`
 

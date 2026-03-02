@@ -6,7 +6,7 @@
 
 ## Description
 
-Wrappers around `Buffer` methods that are covariantly overridden in Java 9+. See
+See
  https://github.com/google/guava/issues/3990
 
 ## Constructors
@@ -15,19 +15,33 @@ Wrappers around `Buffer` methods that are covariantly overridden in Java 9+. See
 
 ## Methods
 
-### `clear(`java.nio.Buffer` b)`
+### `clear(java.nio.Buffer b)`
 
 **Returns:** `void`
 
-### `flip(`java.nio.Buffer` b)`
+**Parameters:**
+- `b` (`java.nio.Buffer`)
+
+### `flip(java.nio.Buffer b)`
 
 **Returns:** `void`
 
-### `limit(`java.nio.Buffer` b, `int` limit)`
+**Parameters:**
+- `b` (`java.nio.Buffer`)
+
+### `limit(java.nio.Buffer b, int limit)`
 
 **Returns:** `void`
 
-### `position(`java.nio.Buffer` b, `int` position)`
+**Parameters:**
+- `b` (`java.nio.Buffer`)
+- `limit` (`int`)
+
+### `position(java.nio.Buffer b, int position)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `b` (`java.nio.Buffer`)
+- `position` (`int`)
 

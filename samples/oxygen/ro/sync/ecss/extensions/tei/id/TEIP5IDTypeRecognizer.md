@@ -17,13 +17,30 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 ## Methods
 
-### `detectIDType(`java.lang.String` systemID, [`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md) context, `java.lang.String` attrName, `java.lang.String` attrNs, `java.lang.String` attributeValue, `int` offset)`
+### `detectIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, int offset)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.link.IDTypeIdentifier>`
 
-### `locateIDType(`java.lang.String` systemID, [`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md) context, `java.lang.String` attrName, `java.lang.String` attrNs, `java.lang.String` attributeValue, [`ro.sync.ecss.extensions.api.link.IDTypeIdentifier`](../../api/link/IDTypeIdentifier.md) idIdentifier, `short` mode)`
+**Parameters:**
+- `systemID` (`java.lang.String`)
+- `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md))
+- `attrName` (`java.lang.String`)
+- `attrNs` (`java.lang.String`)
+- `attributeValue` (`java.lang.String`)
+- `offset` (`int`)
+
+### `locateIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, ro.sync.ecss.extensions.api.link.IDTypeIdentifier idIdentifier, short mode)`
 
 **Returns:** `int[]`
+
+**Parameters:**
+- `systemID` (`java.lang.String`)
+- `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md))
+- `attrName` (`java.lang.String`)
+- `attrNs` (`java.lang.String`)
+- `attributeValue` (`java.lang.String`)
+- `idIdentifier` ([`ro.sync.ecss.extensions.api.link.IDTypeIdentifier`](../../api/link/IDTypeIdentifier.md))
+- `mode` (`short`)
 
 ### `isDefaultIDTypeRecognitionAvailable()`
 

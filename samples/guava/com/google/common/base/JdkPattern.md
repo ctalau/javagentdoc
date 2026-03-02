@@ -10,8 +10,6 @@
 
 ## Description
 
-A regex pattern implementation which is backed by the `Pattern`.
-
 ## Fields
 
 ### `pattern`
@@ -24,13 +22,19 @@ A regex pattern implementation which is backed by the `Pattern`.
 
 ## Constructors
 
-### `<init>(`java.util.regex.Pattern` pattern)`
+### `<init>(java.util.regex.Pattern pattern)`
+
+**Parameters:**
+- `pattern` (`java.util.regex.Pattern`)
 
 ## Methods
 
-### `matcher(`java.lang.CharSequence` t)`
+### `matcher(java.lang.CharSequence t)`
 
 **Returns:** [`com.google.common.base.CommonMatcher`](./CommonMatcher.md)
+
+**Parameters:**
+- `t` (`java.lang.CharSequence`)
 
 ### `pattern()`
 

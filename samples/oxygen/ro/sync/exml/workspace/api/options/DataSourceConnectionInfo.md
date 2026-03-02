@@ -51,7 +51,10 @@ Some databases can be accessed using a WEBDAV URL.
 
 ## Methods
 
-### `getProperty(`java.lang.String` propertyId)`
+### `getProperty(java.lang.String propertyId)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `propertyId` (`java.lang.String`): The property identifier.
 

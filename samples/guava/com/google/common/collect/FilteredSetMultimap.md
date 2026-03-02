@@ -13,9 +13,6 @@
 
 ## Description
 
-A supertype for filtered `SetMultimap` implementations.
-**Author:** Louis Wasserman
-
 ## Methods
 
 ### `unfiltered()`

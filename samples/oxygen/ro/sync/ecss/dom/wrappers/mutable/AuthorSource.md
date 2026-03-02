@@ -19,17 +19,28 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md) authorAccess)`
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 The XInclude references over XQuery are not transparent, by default.
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md) authorAccess, `boolean` transparentXqueryUpdateReferences)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access of the author document.
+
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean transparentXqueryUpdateReferences)`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access of the author document.
+- `transparentXqueryUpdateReferences` (`boolean`): `true` to make xinclude nodes
+ transparent in the document model.
 
 ## Methods
 
-### `setSystemId(`java.lang.String` systemId)`
+### `setSystemId(java.lang.String systemId)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `systemId` (`java.lang.String`)
 
 ### `getSystemId()`
 

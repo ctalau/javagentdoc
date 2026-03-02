@@ -31,7 +31,7 @@ Each opened editor contains one or more pages.
 
 ## Methods
 
-### `addToolbarComponentsCustomizer([`ro.sync.exml.workspace.api.standalone.ToolbarComponentsCustomizer`](./ToolbarComponentsCustomizer.md) componentsCustomizer)`
+### `addToolbarComponentsCustomizer(ro.sync.exml.workspace.api.standalone.ToolbarComponentsCustomizer componentsCustomizer)`
 
 **Returns:** `void`
 
@@ -45,19 +45,28 @@ Each opened editor contains one or more pages.
  on how many toolbars were created for that specific document type.
  In this way you can dynamically filter or add to toolbar buttons already declared in the document type associated to the XML editor.
 
-### `addViewComponentCustomizer([`ro.sync.exml.workspace.api.standalone.ViewComponentCustomizer`](./ViewComponentCustomizer.md) viewComponentCustomizer)`
+**Parameters:**
+- `componentsCustomizer` ([`ro.sync.exml.workspace.api.standalone.ToolbarComponentsCustomizer`](./ToolbarComponentsCustomizer.md)): The tool bar components customizer.
+
+### `addViewComponentCustomizer(ro.sync.exml.workspace.api.standalone.ViewComponentCustomizer viewComponentCustomizer)`
 
 **Returns:** `void`
 
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
 
-### `addMenuBarCustomizer([`ro.sync.exml.workspace.api.standalone.MenuBarCustomizer`](./MenuBarCustomizer.md) menuBarCustomizer)`
+**Parameters:**
+- `viewComponentCustomizer` ([`ro.sync.exml.workspace.api.standalone.ViewComponentCustomizer`](./ViewComponentCustomizer.md)): The views component customizer.
+
+### `addMenuBarCustomizer(ro.sync.exml.workspace.api.standalone.MenuBarCustomizer menuBarCustomizer)`
 
 **Returns:** `void`
 
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
 
-### `addTopicRefTargetInfoProvider(`java.lang.String` protocol, [`ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider`](ditamap/TopicRefTargetInfoProvider.md) targetInfoProvider)`
+**Parameters:**
+- `menuBarCustomizer` ([`ro.sync.exml.workspace.api.standalone.MenuBarCustomizer`](./MenuBarCustomizer.md)): The menu bar components customizer.
+
+### `addTopicRefTargetInfoProvider(java.lang.String protocol, ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider targetInfoProvider)`
 
 **Returns:** `void`
 
@@ -67,7 +76,11 @@ This method can be used by a CMS implementor to take control over the way Oxygen
  For example when a DITA Map is opened in the DITA Maps Manager view the CMS can get called to compute titles for all topic references 
  instead of the default Oxygen behavior (requesting the entire content for the referenced URL).
 
-### `showView(`java.lang.String` viewID, `boolean` requestFocus)`
+**Parameters:**
+- `protocol` (`java.lang.String`): The custom protocol of the opened DITA Map for which the plugin will compute the topic reference titles and auxiliary information.
+- `targetInfoProvider` ([`ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider`](ditamap/TopicRefTargetInfoProvider.md)): Gets called to resolve the title for the topic references in the DITA Map.
+
+### `showView(java.lang.String viewID, boolean requestFocus)`
 
 **Returns:** `void`
 
@@ -75,37 +88,62 @@ If the view is hidden, this method brings
  it to front. If the view is in auto-hide state, this 
  method removes its auto-hide state and bring it to front.
 
-### `hideView(`java.lang.String` viewID)`
+**Parameters:**
+- `viewID` (`java.lang.String`): The view ID.
+- `requestFocus` (`boolean`): True to request the focus inside the view after show.
+
+### `hideView(java.lang.String viewID)`
 
 **Returns:** `void`
 
-### `isViewShowing(`java.lang.String` viewID)`
+**Parameters:**
+- `viewID` (`java.lang.String`): The view ID.
+
+### `isViewShowing(java.lang.String viewID)`
 
 **Returns:** `boolean`
 
-### `isViewAvailable(`java.lang.String` viewID)`
+**Parameters:**
+- `viewID` (`java.lang.String`): The view ID.
+
+### `isViewAvailable(java.lang.String viewID)`
 
 **Returns:** `boolean`
 
-### `hideToolbar(`java.lang.String` toolbarID)`
+**Parameters:**
+- `viewID` (`java.lang.String`): The view ID.
+
+### `hideToolbar(java.lang.String toolbarID)`
 
 **Returns:** `void`
 
-### `showToolbar(`java.lang.String` toolbarID)`
+**Parameters:**
+- `toolbarID` (`java.lang.String`): The toolbar ID.
+
+### `showToolbar(java.lang.String toolbarID)`
 
 **Returns:** `void`
 
 If the toolbar is hidden, this method shows it.
 
-### `isToolbarShowing(`java.lang.String` toolbarID)`
+**Parameters:**
+- `toolbarID` (`java.lang.String`): The toolbar ID. You can install a toolbar component customizer and see all available IDs.
+
+### `isToolbarShowing(java.lang.String toolbarID)`
 
 **Returns:** `boolean`
 
-### `getOxygenActionID(`javax.swing.Action` action)`
+**Parameters:**
+- `toolbarID` (`java.lang.String`): The toolbar ID.
+
+### `getOxygenActionID(javax.swing.Action action)`
 
 **Returns:** `java.lang.String`
 
 If the action appears on a contextual menu but is not installed on a main menu it will pe prefixed with the constant "ACTION_WITH_NO_SHORTCUT/"
+
+**Parameters:**
+- `action` (`javax.swing.Action`): The action for which to retrieve the ID.
 
 ### `getActionsProvider()`
 
@@ -113,17 +151,23 @@ If the action appears on a contextual menu but is not installed on a main menu i
 
 It might be `null` when called in certain contexts (for example from the webapp application).
 
-### `addMenusAndToolbarsContributorCustomizer([`ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer`](actions/MenusAndToolbarsContributorCustomizer.md) customizer)`
+### `addMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
 
 **Returns:** `void`
 
 It will be notified to customize various menus and toolbars.
 
-### `removeMenusAndToolbarsContributorCustomizer([`ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer`](actions/MenusAndToolbarsContributorCustomizer.md) customizer)`
+**Parameters:**
+- `customizer` ([`ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer`](actions/MenusAndToolbarsContributorCustomizer.md)): The customizer which will be notified to customize menus and toolbars.
+
+### `removeMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
 
 **Returns:** `void`
 
-### `createEditorComponentProvider(`java.lang.String[]` allowedPages, `java.lang.String` initialPage)`
+**Parameters:**
+- `customizer` ([`ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer`](actions/MenusAndToolbarsContributorCustomizer.md)): The customizer to remove.
+
+### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](../../../../ecss/extensions/api/component/EditorComponentProvider.md)
 
@@ -131,13 +175,24 @@ Such a component is a small XML editing container which can have
   all editing modes and can be added to a custom Swing-based dialog created
  by the developer in order for example to preview content from various target files.
 
-### `createEditorComponentProvider(`java.lang.String[]` allowedPages, `java.lang.String` initialPage, `java.lang.String` contentType)`
+**Parameters:**
+- `allowedPages` (`java.lang.String[]`): The pages which will be used in the editor. One of the constant fields: 
+ EditorPageConstants#PAGE_TEXT, EditorPageConstants#PAGE_AUTHOR, EditorPageConstants#PAGE_GRID
+- `initialPage` (`java.lang.String`): The initial page in which the component will edit.
+
+### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage, java.lang.String contentType)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](../../../../ecss/extensions/api/component/EditorComponentProvider.md)
 
 Such a component is a small editing container which can have
   all editing modes and can be added to a custom Swing-based dialog created
  by the developer in order for example to preview content from various target files.
+
+**Parameters:**
+- `allowedPages` (`java.lang.String[]`): The pages which will be used in the editor. One of the constant fields: 
+ EditorPageConstants#PAGE_TEXT, EditorPageConstants#PAGE_AUTHOR, EditorPageConstants#PAGE_GRID
+- `initialPage` (`java.lang.String`): The initial page in which the component will edit.
+- `contentType` (`java.lang.String`): The proposed content type for the component, `null` to fall back to XML content type.
 
 ### `createAuthorPreviewComponentProvider()`
 
@@ -190,7 +245,11 @@ It works as a map in which any message is accessed by a specific key.
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.project.ProjectController`](project/ProjectController.md)
 
-### `addPluginExtension(`java.lang.String` extensionType, [`ro.sync.exml.plugin.PluginExtension`](../../../plugin/PluginExtension.md) pluginExtension)`
+### `addPluginExtension(java.lang.String extensionType, ro.sync.exml.plugin.PluginExtension pluginExtension)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `extensionType` (`java.lang.String`): The type of the plugin extension; can be a constant from {@linkro.sync.exml.plugin.PluginDescriptor }.
+- `pluginExtension` ([`ro.sync.exml.plugin.PluginExtension`](../../../plugin/PluginExtension.md)): The plugin extension implementation to be added.
 

@@ -12,14 +12,11 @@
 
 ## Description
 
-Note this class is a copy of `com.google.common.collect.AbstractIterator` (for dependency
- reasons).
-
 ## Fields
 
 ### `state`
 
-**Type:** [`com.google.common.base.AbstractIterator.State`](AbstractIterator/State.md)
+**Type:** `com.google.common.base.AbstractIterator.State`
 
 ### `next`
 

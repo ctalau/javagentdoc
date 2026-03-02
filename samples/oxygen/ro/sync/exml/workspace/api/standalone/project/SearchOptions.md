@@ -24,7 +24,13 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `int` arg2, `int` arg3)`
+### `<init>(java.lang.String arg0, java.lang.String arg1, int arg2, int arg3)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`int`)
+- `arg3` (`int`)
 
 ## Methods
 

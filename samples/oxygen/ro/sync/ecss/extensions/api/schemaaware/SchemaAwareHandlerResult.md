@@ -39,9 +39,12 @@ The user can provide a custom implementation in order to transfer useful informa
 
 ## Methods
 
-### `getResult(`java.lang.String` resultId)`
+### `getResult(java.lang.String resultId)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `resultId` (`java.lang.String`): One of the constants defined in this interface.
 
 ### `getType()`
 

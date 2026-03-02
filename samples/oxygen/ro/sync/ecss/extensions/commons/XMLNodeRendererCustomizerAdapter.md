@@ -18,7 +18,10 @@
 
 **Returns:** `java.lang.String`
 
-### `getRenderingInformation([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md) context)`
+### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
 
 **Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../exml/workspace/api/node/customizer/BasicRenderingInformation.md)
+
+**Parameters:**
+- `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md))
 

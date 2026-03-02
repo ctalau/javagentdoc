@@ -26,31 +26,65 @@
 
 ### `<init>()`
 
-### `<init>([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../../dita/ContextKeyManagerProvider.md) keyManagerProvider)`
+### `<init>(ro.sync.ecss.dita.ContextKeyManagerProvider keyManagerProvider)`
+
+**Parameters:**
+- `keyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../../dita/ContextKeyManagerProvider.md)): The key manager provider
 
 ## Methods
 
-### `insertURLs([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.util.List<java.net.URL>` urls, `java.util.List<ro.sync.ecss.extensions.api.ReferenceType>` types, `int` source)`
+### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, java.util.List<ro.sync.ecss.extensions.api.ReferenceType> types, int source)`
 
 **Returns:** `void`
 
-### `adjustCaretOffset([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `int` cp)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `urls` (`java.util.List<java.net.URL>`)
+- `types` (`java.util.List<ro.sync.ecss.extensions.api.ReferenceType>`)
+- `source` (`int`)
+
+### `adjustCaretOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int cp)`
 
 **Returns:** `int`
 
-### `addAttributesToTopicrefWithHref([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.lang.String` topicrefName, [`ro.sync.ecss.extensions.api.ReferenceType`](../../api/ReferenceType.md) refType, `java.lang.StringBuilder` stringBuilder, `java.net.URL` url)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access
+- `cp` (`int`)
+
+### `addAttributesToTopicrefWithHref(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String topicrefName, ro.sync.ecss.extensions.api.ReferenceType refType, java.lang.StringBuilder stringBuilder, java.net.URL url)`
 
 **Returns:** `void`
 
-### `computeTopicrefForDnDFromDitaReusableComponents([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.lang.StringBuilder` stringBuilder, `java.lang.String` tagName, `java.net.URL` url)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
+- `topicrefName` (`java.lang.String`): The topicref name.
+- `refType` ([`ro.sync.ecss.extensions.api.ReferenceType`](../../api/ReferenceType.md)): Reference type.
+- `stringBuilder` (`java.lang.StringBuilder`): String builder for the topicref structure.
+- `url` (`java.net.URL`): The dropped URL.
+
+### `computeTopicrefForDnDFromDitaReusableComponents(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.StringBuilder stringBuilder, java.lang.String tagName, java.net.URL url)`
 
 **Returns:** `void`
 
-### `insertURLs([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.util.List<java.net.URL>` urls, `int` source)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
+- `stringBuilder` (`java.lang.StringBuilder`): String builder for the topicref fragment.
+- `tagName` (`java.lang.String`): The topicref tag name.
+- `url` (`java.net.URL`): URL to drop.
+
+### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
 
 **Returns:** `void`
 
-### `isNodeAtOffsetOrItsAncestorTopic([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `urls` (`java.util.List<java.net.URL>`)
+- `source` (`int`)
+
+### `isNodeAtOffsetOrItsAncestorTopic(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 

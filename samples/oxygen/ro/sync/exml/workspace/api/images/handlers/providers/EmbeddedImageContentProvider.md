@@ -22,7 +22,12 @@ Not `null` when the image is embedded in the content...
 
 ## Constructors
 
-### `<init>(`java.net.URL` systemID, `java.lang.String` imageSerializedContent, `java.lang.String` doctypeContent)`
+### `<init>(java.net.URL systemID, java.lang.String imageSerializedContent, java.lang.String doctypeContent)`
+
+**Parameters:**
+- `systemID` (`java.net.URL`): The system ID of the document which contains the XML image.
+- `imageSerializedContent` (`java.lang.String`): The image serialized content.
+- `doctypeContent` (`java.lang.String`): The doctype content.
 
 ## Methods
 

@@ -8,9 +8,6 @@
 
 ## Description
 
-`HashFunction` adapter for `Mac` instances.
-**Author:** Kurt Alfred Kluever
-
 ## Fields
 
 ### `prototype`
@@ -35,7 +32,12 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` algorithmName, `java.security.Key` key, `java.lang.String` toString)`
+### `<init>(java.lang.String algorithmName, java.security.Key key, java.lang.String toString)`
+
+**Parameters:**
+- `algorithmName` (`java.lang.String`)
+- `key` (`java.security.Key`)
+- `toString` (`java.lang.String`)
 
 ## Methods
 
@@ -43,13 +45,20 @@
 
 **Returns:** `int`
 
-### `supportsClone(`javax.crypto.Mac` mac)`
+### `supportsClone(javax.crypto.Mac mac)`
 
 **Returns:** `boolean`
 
-### `getMac(`java.lang.String` algorithmName, `java.security.Key` key)`
+**Parameters:**
+- `mac` (`javax.crypto.Mac`)
+
+### `getMac(java.lang.String algorithmName, java.security.Key key)`
 
 **Returns:** `javax.crypto.Mac`
+
+**Parameters:**
+- `algorithmName` (`java.lang.String`)
+- `key` (`java.security.Key`)
 
 ### `newHasher()`
 

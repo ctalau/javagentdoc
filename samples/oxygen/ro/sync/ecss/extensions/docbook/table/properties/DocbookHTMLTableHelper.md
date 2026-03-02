@@ -40,35 +40,59 @@
 
 ## Methods
 
-### `isTableRow([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
 
-### `isTableFoot([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `isTableGroup([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `isTableColspec([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableColspec(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `isTableCell([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `getElementTag(`int` elementType)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `getElementTag(int elementType)`
 
 **Returns:** `java.lang.String`
 
-### `getElementName(`int` elementType)`
+**Parameters:**
+- `elementType` (`int`)
+
+### `getElementName(int elementType)`
 
 **Returns:** `java.lang.String`
 
-### `isTable([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `elementType` (`int`)
+
+### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 

@@ -6,9 +6,6 @@
 
 ## Description
 
-Source of `LongAddable` objects that deals with GWT, Unsafe, and all that.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `SUPPLIER`

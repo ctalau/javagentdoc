@@ -16,7 +16,11 @@ It renders the areas from the map over the image.
 
 ## Methods
 
-### `isNodeOfInterest([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node, [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../imagemap/SupportedFrameworks.md) framework)`
+### `isNodeOfInterest(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.imagemap.SupportedFrameworks framework)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+- `framework` ([`ro.sync.ecss.imagemap.SupportedFrameworks`](../../imagemap/SupportedFrameworks.md))
 

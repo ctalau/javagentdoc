@@ -61,7 +61,7 @@ Example:
             }
 ```
 
-### `executeFunction(`java.lang.String` parameters, `java.util.Map<java.lang.String,java.lang.Object>` extraContext)`
+### `executeFunction(java.lang.String parameters, java.util.Map<java.lang.String,java.lang.Object> extraContext)`
 
 **Returns:** `java.lang.String`
 
@@ -75,6 +75,14 @@ This method allows the AI to execute the function, passing in the required param
 
  The function may modify the application's state, provide results back to the AI, or trigger 
  further actions within the application based on the inputs provided.
+
+**Parameters:**
+- `parameters` (`java.lang.String`): A string representing the parameters required to execute the function. 
+                   The format and content of this string should conform to the JSON schema 
+                   returned by #getParameterDescriptions().
+- `extraContext` (`java.util.Map<java.lang.String,java.lang.Object>`): A map containing additional application context or information needed by the function.
+                     When called from WebAuthor, it will contain an "author_document_model" key with the AuthorDocumentModel of the current editor.
+                     It will also contain a "session_id" key with a unique identifier assigned to the execution request session.
 
 ### `isEnabled()`
 

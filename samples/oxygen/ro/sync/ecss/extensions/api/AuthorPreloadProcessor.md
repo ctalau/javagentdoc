@@ -10,7 +10,11 @@ It can be used to set various pseudo classes to elements before the content is p
 
 ## Methods
 
-### `documentAboutToBeLoaded([`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md) document, [`ro.sync.ecss.extensions.api.AuthorPseudoClassController`](./AuthorPseudoClassController.md) pseudoClassController)`
+### `documentAboutToBeLoaded(ro.sync.ecss.extensions.api.node.AuthorDocument document, ro.sync.ecss.extensions.api.AuthorPseudoClassController pseudoClassController)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `document` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md)): The document.
+- `pseudoClassController` ([`ro.sync.ecss.extensions.api.AuthorPseudoClassController`](./AuthorPseudoClassController.md)): The pseudo class controller. Use this interface to set or remove pseudo classes from elements.
 

@@ -62,7 +62,7 @@ try{
  
 ```
 
-### `getLineOfOffset(`int` offset)`
+### `getLineOfOffset(int offset)`
 
 **Returns:** `int`
 
@@ -70,18 +70,27 @@ If the offset is
   between two lines, then the number of the line after is returned. The
   line number returned is indexed in 1.
 
-### `getColumnOfOffset(`int` offset)`
+**Parameters:**
+- `offset` (`int`): Offset in document.
+
+### `getColumnOfOffset(int offset)`
 
 **Returns:** `int`
 
-### `getOffsetOfLineStart(`int` lineNumber)`
+**Parameters:**
+- `offset` (`int`): The offset that is to be checked.
+
+### `getOffsetOfLineStart(int lineNumber)`
 
 **Returns:** `int`
 
 The
   line number is indexed in 1.
 
-### `getOffsetOfLineEnd(`int` lineNumber)`
+**Parameters:**
+- `lineNumber` (`int`): The number of the line. Indexed in 1.
+
+### `getOffsetOfLineEnd(int lineNumber)`
 
 **Returns:** `int`
 
@@ -89,40 +98,61 @@ This will
   be equal to the start offset of the next line, if there is one. The line
   number is indexed in 1.
 
-### `addPopUpMenuCustomizer([`ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer`](./TextPopupMenuCustomizer.md) popUpCustomizer)`
+**Parameters:**
+- `lineNumber` (`int`): The number of the line. Indexed in 1.
+
+### `addPopUpMenuCustomizer(ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer popUpCustomizer)`
 
 **Returns:** `void`
 
 If the customizer is already added, it will not be added again.
 
-### `removePopUpMenuCustomizer([`ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer`](./TextPopupMenuCustomizer.md) popUpCustomizer)`
+**Parameters:**
+- `popUpCustomizer` ([`ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer`](./TextPopupMenuCustomizer.md)): the pop-up menu customizer.
+
+### `removePopUpMenuCustomizer(ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer popUpCustomizer)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `popUpCustomizer` ([`ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer`](./TextPopupMenuCustomizer.md)): the pop-up menu customizer.
 
 ### `getActionsProvider()`
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.text.actions.TextActionsProvider`](actions/TextActionsProvider.md)
 
-### `addExternalContentCompletionProvider([`ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider`](./ExternalContentCompletionProvider.md) ccProvider)`
+### `addExternalContentCompletionProvider(ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider ccProvider)`
 
 **Returns:** `void`
 
 Not implemented in the Oxygen Eclipse Plug-in.
 
-### `removeExternalContentCompletionProvider([`ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider`](./ExternalContentCompletionProvider.md) ccProvider)`
+**Parameters:**
+- `ccProvider` ([`ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider`](./ExternalContentCompletionProvider.md)): The content completion provider.
+
+### `removeExternalContentCompletionProvider(ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider ccProvider)`
 
 **Returns:** `void`
 
 Not implemented in the Oxygen Eclipse Plug-in.
 
-### `addQuickAssistProcessor([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md) processor)`
+**Parameters:**
+- `ccProvider` ([`ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider`](./ExternalContentCompletionProvider.md)): The content completion provider to be removed.
+
+### `addQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
 
 **Returns:** `void`
 
 This allow you to provide quick custom quick assist 
  proposals in the current editor page quick assist menu.
 
-### `removeQuickAssistProcessor([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md) processor)`
+**Parameters:**
+- `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be registered.
+
+### `removeQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be unregistered.
 

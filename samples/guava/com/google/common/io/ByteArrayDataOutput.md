@@ -8,75 +8,109 @@
 
 ## Description
 
-An extension of `DataOutput` for writing to in-memory byte arrays; its methods offer
- identical functionality but do not throw `IOException`.
-**Author:** Jayaprabhakar Kadarkarai
-**Since:** 1.0
-
 ## Methods
 
-### `write(`int` b)`
+### `write(int b)`
 
 **Returns:** `void`
 
-### `write(`byte[]` b)`
+**Parameters:**
+- `b` (`int`)
+
+### `write(byte[] b)`
 
 **Returns:** `void`
 
-### `write(`byte[]` b, `int` off, `int` len)`
+**Parameters:**
+- `b` (`byte[]`)
+
+### `write(byte[] b, int off, int len)`
 
 **Returns:** `void`
 
-### `writeBoolean(`boolean` v)`
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `writeBoolean(boolean v)`
 
 **Returns:** `void`
 
-### `writeByte(`int` v)`
+**Parameters:**
+- `v` (`boolean`)
+
+### `writeByte(int v)`
 
 **Returns:** `void`
 
-### `writeShort(`int` v)`
+**Parameters:**
+- `v` (`int`)
+
+### `writeShort(int v)`
 
 **Returns:** `void`
 
-### `writeChar(`int` v)`
+**Parameters:**
+- `v` (`int`)
+
+### `writeChar(int v)`
 
 **Returns:** `void`
 
-### `writeInt(`int` v)`
+**Parameters:**
+- `v` (`int`)
+
+### `writeInt(int v)`
 
 **Returns:** `void`
 
-### `writeLong(`long` v)`
+**Parameters:**
+- `v` (`int`)
+
+### `writeLong(long v)`
 
 **Returns:** `void`
 
-### `writeFloat(`float` v)`
+**Parameters:**
+- `v` (`long`)
+
+### `writeFloat(float v)`
 
 **Returns:** `void`
 
-### `writeDouble(`double` v)`
+**Parameters:**
+- `v` (`float`)
+
+### `writeDouble(double v)`
 
 **Returns:** `void`
 
-### `writeChars(`java.lang.String` s)`
+**Parameters:**
+- `v` (`double`)
+
+### `writeChars(java.lang.String s)`
 
 **Returns:** `void`
 
-### `writeUTF(`java.lang.String` s)`
+**Parameters:**
+- `s` (`java.lang.String`)
+
+### `writeUTF(java.lang.String s)`
 
 **Returns:** `void`
 
-### `writeBytes(`java.lang.String` s)`
+**Parameters:**
+- `s` (`java.lang.String`)
+
+### `writeBytes(java.lang.String s)`
 
 **Returns:** `void`
 
-**Deprecated:**This method is dangerous as it discards the high byte of every character. For
-     UTF-8, use `write(s.getBytes(StandardCharsets.UTF_8))`.
+**Parameters:**
+- `s` (`java.lang.String`)
 
 ### `toByteArray()`
 
 **Returns:** `byte[]`
-
-Returns the contents that have been written to this instance, as a byte array.
 

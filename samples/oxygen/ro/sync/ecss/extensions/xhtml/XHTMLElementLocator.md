@@ -15,11 +15,21 @@ An internal reference can refer an `id`
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md) idVerifier, `java.lang.String` link)`
+### `<init>(ro.sync.ecss.extensions.api.link.IDTypeVerifier idVerifier, java.lang.String link)`
+
+**Parameters:**
+- `idVerifier` ([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md)): Responsible to verify if an attribute has the ID type.
+- `link` (`java.lang.String`): The link to be identified.
 
 ## Methods
 
-### `startElement(`java.lang.String` uri, `java.lang.String` localName, `java.lang.String` name, [`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md) atts)`
+### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `uri` (`java.lang.String`)
+- `localName` (`java.lang.String`)
+- `name` (`java.lang.String`)
+- `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md))
 

@@ -8,23 +8,37 @@
 
 ## Methods
 
-### `invokeAction(`java.lang.Object` action)`
+### `invokeAction(java.lang.Object action)`
 
 **Returns:** `void`
 
 The action will be invoked only if it is enabled in the current context.
 
-### `getActionID(`java.lang.Object` actionOrUIObject)`
+**Parameters:**
+- `action` (`java.lang.Object`): The action to invoke
+
+### `getActionID(java.lang.Object actionOrUIObject)`
 
 **Returns:** `java.lang.String`
 
 If the action appears on a contextual menu but is not installed on a main menu it will be prefixed with the constant "ACTION_WITH_NO_SHORTCUT/"
 
-### `addActionPerformedListener(`java.lang.Object` action, [`ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener`](../editor/page/author/actions/ActionPerformedListener.md) listener)`
+**Parameters:**
+- `actionOrUIObject` (`java.lang.Object`): The action or UI component for which to retrieve the ID.
+
+### `addActionPerformedListener(java.lang.Object action, ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener listener)`
 
 **Returns:** `void`
 
-### `removeActionPerformedListener(`java.lang.Object` action, [`ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener`](../editor/page/author/actions/ActionPerformedListener.md) listener)`
+**Parameters:**
+- `action` (`java.lang.Object`): The action on which to add the listener.
+- `listener` ([`ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener`](../editor/page/author/actions/ActionPerformedListener.md)): The listener.
+
+### `removeActionPerformedListener(java.lang.Object action, ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener listener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.lang.Object`): The action.
+- `listener` ([`ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener`](../editor/page/author/actions/ActionPerformedListener.md)): The listener.
 

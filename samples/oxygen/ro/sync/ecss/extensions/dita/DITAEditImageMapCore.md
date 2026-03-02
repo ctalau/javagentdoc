@@ -14,19 +14,32 @@
 
 ## Methods
 
-### `getSupportedFramework(`java.lang.String` namespaceURI)`
+### `getSupportedFramework(java.lang.String namespaceURI)`
 
 **Returns:** [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../imagemap/SupportedFrameworks.md)
 
-### `getNodesOfInterestCriteria(`java.lang.String` namespace)`
+**Parameters:**
+- `namespaceURI` (`java.lang.String`)
+
+### `getNodesOfInterestCriteria(java.lang.String namespace)`
 
 **Returns:** `java.lang.String[]`
 
-### `needComplexSurround([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) nodeToEdit)`
+**Parameters:**
+- `namespace` (`java.lang.String`)
+
+### `needComplexSurround(ro.sync.ecss.extensions.api.node.AuthorNode nodeToEdit)`
 
 **Returns:** `boolean`
 
-### `isNodeOfInterest([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) nodeToEdit, `java.lang.String` property2Check)`
+**Parameters:**
+- `nodeToEdit` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+### `isNodeOfInterest(ro.sync.ecss.extensions.api.node.AuthorNode nodeToEdit, java.lang.String property2Check)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `nodeToEdit` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+- `property2Check` (`java.lang.String`)
 

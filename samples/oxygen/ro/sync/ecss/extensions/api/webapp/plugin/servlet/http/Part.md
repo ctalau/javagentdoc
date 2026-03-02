@@ -28,7 +28,7 @@
 
 **Returns:** `long`
 
-### `write(`java.lang.String` fileName)`
+### `write(java.lang.String fileName)`
 
 **Returns:** `void`
 
@@ -36,11 +36,17 @@ This method is not guaranteed to succeed if called more than once for the same p
  implementation to use, for example, file renaming, where possible, rather than copying all of the underlying data,
  thus gaining a significant performance benefit.
 
+**Parameters:**
+- `fileName` (`java.lang.String`): The location into which the uploaded part should be stored. Relative paths are relative to
+ MultipartConfigElement#getLocation(). Absolute paths are used as provided. Note: that this is
+ a system dependent string and URI notation may not be acceptable on all systems. For portability, this string should
+ be generated with the File or Path APIs.
+
 ### `delete()`
 
 **Returns:** `void`
 
-### `getHeader(`java.lang.String` name)`
+### `getHeader(java.lang.String name)`
 
 **Returns:** `java.lang.String`
 
@@ -49,7 +55,10 @@ If the Part did not include a header of the
  returns the first header in the part. The header name is case insensitive. You can use this method with any request
  header.
 
-### `getHeaders(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the header name
+
+### `getHeaders(java.lang.String name)`
 
 **Returns:** `java.util.Collection<java.lang.String>`
 
@@ -58,6 +67,9 @@ Any changes to the returned `Collection` must not affect this `Part`.
  
 
  Part header names are case insensitive.
+
+**Parameters:**
+- `name` (`java.lang.String`): the header name whose values to return
 
 ### `getHeaderNames()`
 

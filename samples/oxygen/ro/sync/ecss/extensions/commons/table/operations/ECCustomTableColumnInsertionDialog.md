@@ -36,27 +36,43 @@
 
 ## Constructors
 
-### `<init>(`org.eclipse.swt.widgets.Shell` arg0, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) arg1)`
+### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1)`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+- `arg1` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md))
 
 ## Methods
 
-### `configureShell(`org.eclipse.swt.widgets.Shell` arg0)`
+### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
 
 **Returns:** `void`
 
-### `createDialogArea(`org.eclipse.swt.widgets.Composite` arg0)`
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+
+### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
 
 **Returns:** `org.eclipse.swt.widgets.Control`
 
-### `showDialog([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md) arg0)`
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
+
+### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md))
 
 ### `initialize()`
 
 **Returns:** `void`
 
-### `createButtonsForButtonBar(`org.eclipse.swt.widgets.Composite` arg0)`
+### `createButtonsForButtonBar(org.eclipse.swt.widgets.Composite arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
 

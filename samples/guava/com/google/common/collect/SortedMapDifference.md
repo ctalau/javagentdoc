@@ -13,10 +13,6 @@
 
 ## Description
 
-An object representing the differences between two sorted maps.
-**Author:** Louis Wasserman
-**Since:** 8.0
-
 ## Methods
 
 ### `entriesOnlyOnLeft()`

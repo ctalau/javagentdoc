@@ -6,49 +6,55 @@
 
 ## Description
 
-A specification of a `CacheBuilder` configuration.
+CacheBuilderSpec supports parsing configuration off of a string, which makes it
+ especially useful for command-line configuration of a CacheBuilder.
 
- <p>`CacheBuilderSpec` supports parsing configuration off of a string, which makes it
- especially useful for command-line configuration of a `CacheBuilder`.
+ 
+The string syntax is a series of comma-separated keys or key-value pairs, each corresponding
+ to a CacheBuilder method.
 
- <p>The string syntax is a series of comma-separated keys or key-value pairs, each corresponding
- to a `CacheBuilder` method.
+ 
 
- <ul>
-   <li>`concurrencyLevel=[integer]`: sets `CacheBuilder.concurrencyLevel`.
-   <li>`initialCapacity=[integer]`: sets `CacheBuilder.initialCapacity`.
-   <li>`maximumSize=[long]`: sets `CacheBuilder.maximumSize`.
-   <li>`maximumWeight=[long]`: sets `CacheBuilder.maximumWeight`.
-   <li>`expireAfterAccess=[duration]`: sets `CacheBuilder.expireAfterAccess`.
-   <li>`expireAfterWrite=[duration]`: sets `CacheBuilder.expireAfterWrite`.
-   <li>`refreshAfterWrite=[duration]`: sets `CacheBuilder.refreshAfterWrite`.
-   <li>`weakKeys`: sets `CacheBuilder.weakKeys`.
-   <li>`softValues`: sets `CacheBuilder.softValues`.
-   <li>`weakValues`: sets `CacheBuilder.weakValues`.
-   <li>`recordStats`: sets `CacheBuilder.recordStats`.
- </ul>
+   - concurrencyLevel=[integer]: sets CacheBuilder#concurrencyLevel.
+   - initialCapacity=[integer]: sets CacheBuilder#initialCapacity.
+   - maximumSize=[long]: sets CacheBuilder#maximumSize.
+   - maximumWeight=[long]: sets CacheBuilder#maximumWeight.
+   - expireAfterAccess=[duration]: sets CacheBuilder#expireAfterAccess.
+   - expireAfterWrite=[duration]: sets CacheBuilder#expireAfterWrite.
+   - refreshAfterWrite=[duration]: sets CacheBuilder#refreshAfterWrite.
+   - weakKeys: sets CacheBuilder#weakKeys.
+   - softValues: sets CacheBuilder#softValues.
+   - weakValues: sets CacheBuilder#weakValues.
+   - recordStats: sets CacheBuilder#recordStats.
+ 
 
- <p>The set of supported keys will grow as `CacheBuilder` evolves, but existing keys will
+
+ 
+The set of supported keys will grow as CacheBuilder evolves, but existing keys will
  never be removed.
 
- <p>Durations are represented by an integer, followed by one of "d", "h", "m", or "s",
+ 
+Durations are represented by an integer, followed by one of "d", "h", "m", or "s",
  representing days, hours, minutes, or seconds respectively. (There is currently no syntax to
  request expiration in milliseconds, microseconds, or nanoseconds.)
 
- <p>Whitespace before and after commas and equal signs is ignored. Keys may not be repeated; it is
+ 
+Whitespace before and after commas and equal signs is ignored. Keys may not be repeated; it is
  also illegal to use the following pairs of keys in a single value:
 
- <ul>
-   <li>`maximumSize` and `maximumWeight`
-   <li>`softValues` and `weakValues`
- </ul>
+ 
 
- <p>`CacheBuilderSpec` does not support configuring `CacheBuilder` methods with
+   - maximumSize and maximumWeight
+   - softValues and weakValues
+ 
+
+
+ 
+CacheBuilderSpec does not support configuring CacheBuilder methods with
  non-value parameters. These must be configured in code.
 
- <p>A new `CacheBuilder` can be instantiated from a `CacheBuilderSpec` using `CacheBuilder.from(CacheBuilderSpec)` or `CacheBuilder.from(String)`.
-**Author:** Adam Winer
-**Since:** 12.0
+ 
+A new CacheBuilder can be instantiated from a CacheBuilderSpec using CacheBuilder#from(CacheBuilderSpec) or CacheBuilder#from(String).
 
 ## Fields
 
@@ -56,19 +62,13 @@ A specification of a `CacheBuilder` configuration.
 
 **Type:** [`com.google.common.base.Splitter`](../base/Splitter.md)
 
-Splits each key-value pair.
-
 ### `KEY_VALUE_SPLITTER`
 
 **Type:** [`com.google.common.base.Splitter`](../base/Splitter.md)
 
-Splits the key from the value.
-
 ### `VALUE_PARSERS`
 
 **Type:** [`com.google.common.collect.ImmutableMap<java.lang.String,com.google.common.cache.CacheBuilderSpec.ValueParser>`](../collect/ImmutableMap.md)
-
-Map of names to ValueParser.
 
 ### `initialCapacity`
 
@@ -88,11 +88,11 @@ Map of names to ValueParser.
 
 ### `keyStrength`
 
-**Type:** [`com.google.common.cache.LocalCache.Strength`](LocalCache/Strength.md)
+**Type:** `com.google.common.cache.LocalCache.Strength`
 
 ### `valueStrength`
 
-**Type:** [`com.google.common.cache.LocalCache.Strength`](LocalCache/Strength.md)
+**Type:** `com.google.common.cache.LocalCache.Strength`
 
 ### `recordStats`
 
@@ -126,64 +126,72 @@ Map of names to ValueParser.
 
 **Type:** `java.lang.String`
 
-Specification; used for toParseableString().
-
 ## Constructors
 
-### `<init>(`java.lang.String` specification)`
+### `<init>(java.lang.String specification)`
+
+**Parameters:**
+- `specification` (`java.lang.String`)
 
 ## Methods
 
-### `parse(`java.lang.String` cacheBuilderSpecification)`
+### `parse(java.lang.String cacheBuilderSpecification)`
 
 **Returns:** [`com.google.common.cache.CacheBuilderSpec`](./CacheBuilderSpec.md)
 
-Creates a CacheBuilderSpec from a string.
-@param cacheBuilderSpecification the string form
+**Parameters:**
+- `cacheBuilderSpecification` (`java.lang.String`): the string form
 
 ### `disableCaching()`
 
 **Returns:** [`com.google.common.cache.CacheBuilderSpec`](./CacheBuilderSpec.md)
 
-Returns a CacheBuilderSpec that will prevent caching.
-
 ### `toCacheBuilder()`
 
 **Returns:** [`com.google.common.cache.CacheBuilder<java.lang.Object,java.lang.Object>`](./CacheBuilder.md)
-
-Returns a CacheBuilder configured according to this instance's specification.
 
 ### `toParsableString()`
 
 **Returns:** `java.lang.String`
 
-Returns a string that can be used to parse an equivalent `CacheBuilderSpec`. The order
+The order
  and form of this representation is not guaranteed, except that reparsing its output will
- produce a `CacheBuilderSpec` equal to this instance.
+ produce a CacheBuilderSpec equal to this instance.
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-Returns a string representation for this CacheBuilderSpec instance. The form of this
+The form of this
  representation is not guaranteed.
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
 
-### `durationInNanos(`long` duration, `java.util.concurrent.TimeUnit` unit)`
+**Parameters:**
+- `obj` (`java.lang.Object`)
+
+### `durationInNanos(long duration, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `java.lang.Long`
 
-Converts an expiration duration/unit pair into a single Long for hashing and equality. Uses
+Uses
  nanos to match CacheBuilder implementation.
 
-### `format(`java.lang.String` format, `java.lang.Object[]` args)`
+**Parameters:**
+- `duration` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `format(java.lang.String format, java.lang.Object[] args)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `format` (`java.lang.String`)
+- `args` (`java.lang.Object[]`)
 

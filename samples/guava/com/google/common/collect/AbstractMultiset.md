@@ -14,13 +14,12 @@
 
 ## Description
 
-This class provides a skeletal implementation of the `Multiset` interface. A new multiset
- implementation can be created easily by extending this class and implementing the `Multiset.entrySet()` method, plus optionally overriding `add(Object, int)` and `remove(Object, int)` to enable modifications to the multiset.
+A new multiset
+ implementation can be created easily by extending this class and implementing the Multiset#entrySet() method, plus optionally overriding #add(Object, int) and #remove(Object, int) to enable modifications to the multiset.
 
- <p>The `count` and `size` implementations all iterate across the set returned by
- `Multiset.entrySet()`, as do many methods acting on the set returned by `elementSet()`. Override those methods for better performance.
-**Author:** Kevin Bourrillion
-**Author:** Louis Wasserman
+ 
+The #count and #size implementations all iterate across the set returned by
+ Multiset#entrySet(), as do many methods acting on the set returned by #elementSet(). Override those methods for better performance.
 
 ## Fields
 
@@ -42,49 +41,82 @@ This class provides a skeletal implementation of the `Multiset` interface. A new
 
 **Returns:** `boolean`
 
-### `contains(`java.lang.Object` element)`
+### `contains(java.lang.Object element)`
 
 **Returns:** `boolean`
 
-### `add(`E` element)`
+**Parameters:**
+- `element` (`java.lang.Object`)
+
+### `add(E element)`
 
 **Returns:** `boolean`
 
-### `add(`E` element, `int` occurrences)`
+**Parameters:**
+- `element` (`E`)
+
+### `add(E element, int occurrences)`
 
 **Returns:** `int`
 
-### `remove(`java.lang.Object` element)`
+**Parameters:**
+- `element` (`E`)
+- `occurrences` (`int`)
+
+### `remove(java.lang.Object element)`
 
 **Returns:** `boolean`
 
-### `remove(`java.lang.Object` element, `int` occurrences)`
+**Parameters:**
+- `element` (`java.lang.Object`)
+
+### `remove(java.lang.Object element, int occurrences)`
 
 **Returns:** `int`
 
-### `setCount(`E` element, `int` count)`
+**Parameters:**
+- `element` (`java.lang.Object`)
+- `occurrences` (`int`)
+
+### `setCount(E element, int count)`
 
 **Returns:** `int`
 
-### `setCount(`E` element, `int` oldCount, `int` newCount)`
+**Parameters:**
+- `element` (`E`)
+- `count` (`int`)
+
+### `setCount(E element, int oldCount, int newCount)`
 
 **Returns:** `boolean`
 
-### `addAll(`java.util.Collection<? extends E>` elementsToAdd)`
+**Parameters:**
+- `element` (`E`)
+- `oldCount` (`int`)
+- `newCount` (`int`)
+
+### `addAll(java.util.Collection<? extends E> elementsToAdd)`
 
 **Returns:** `boolean`
 
-{@inheritDoc}
+This implementation is highly efficient when elementsToAdd is itself a Multiset.
 
- <p>This implementation is highly efficient when `elementsToAdd` is itself a `Multiset`.
+**Parameters:**
+- `elementsToAdd` (`java.util.Collection<? extends E>`)
 
-### `removeAll(`java.util.Collection<?>` elementsToRemove)`
+### `removeAll(java.util.Collection<?> elementsToRemove)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `elementsToRemove` (`java.util.Collection<?>`)
+
+### `retainAll(java.util.Collection<?> elementsToRetain)`
 
 **Returns:** `boolean`
 
-### `retainAll(`java.util.Collection<?>` elementsToRetain)`
-
-**Returns:** `boolean`
+**Parameters:**
+- `elementsToRetain` (`java.util.Collection<?>`)
 
 ### `clear()`
 
@@ -97,8 +129,6 @@ This class provides a skeletal implementation of the `Multiset` interface. A new
 ### `createElementSet()`
 
 **Returns:** `java.util.Set<E>`
-
-Creates a new instance of this multiset's element set, which will be returned by `elementSet()`.
 
 ### `elementIterator()`
 
@@ -120,28 +150,25 @@ Creates a new instance of this multiset's element set, which will be returned by
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-{@inheritDoc}
-
- <p>This implementation returns `true` if `object` is a multiset of the same size
+This implementation returns true if object is a multiset of the same size
  and if, for each element, the two multisets have the same count.
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-{@inheritDoc}
-
- <p>This implementation returns the hash code of `Multiset.entrySet()`.
+This implementation returns the hash code of Multiset#entrySet().
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-{@inheritDoc}
-
- <p>This implementation returns the result of invoking `toString` on `Multiset.entrySet()`.
+This implementation returns the result of invoking toString on Multiset#entrySet().
 

@@ -15,13 +15,15 @@
 
 ## Description
 
-An iterator that transforms a backing list iterator; for internal use. This avoids the object
- overhead of constructing a `Function` for internal methods.
-**Author:** Louis Wasserman
+This avoids the object
+ overhead of constructing a Function for internal methods.
 
 ## Constructors
 
-### `<init>(`java.util.ListIterator<? extends F>` backingIterator)`
+### `<init>(java.util.ListIterator<? extends F> backingIterator)`
+
+**Parameters:**
+- `backingIterator` (`java.util.ListIterator<? extends F>`)
 
 ## Methods
 
@@ -45,11 +47,17 @@ An iterator that transforms a backing list iterator; for internal use. This avoi
 
 **Returns:** `int`
 
-### `set(`T` element)`
+### `set(T element)`
 
 **Returns:** `void`
 
-### `add(`T` element)`
+**Parameters:**
+- `element` (`T`)
+
+### `add(T element)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `element` (`T`)
 

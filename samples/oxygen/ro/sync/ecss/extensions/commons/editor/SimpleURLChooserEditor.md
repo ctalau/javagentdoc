@@ -74,33 +74,56 @@
 
 **Returns:** `java.lang.String`
 
-### `getRendererComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context)`
+### `getRendererComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** `java.lang.Object`
 
-### `getRenderingInfo([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](../../api/editor/RendererLayoutInfo.md)
 
-### `computeRenderingInfo([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+### `computeRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](../../api/editor/RendererLayoutInfo.md)
 
-### `getTooltipText([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context, `int` x, `int` y)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md)): The current context.
+
+### `getTooltipText(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
 
 **Returns:** `java.lang.String`
 
-### `getEditorComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context, `ro.sync.exml.view.graphics.Rectangle` allocation, `ro.sync.exml.view.graphics.Point` mouseLocation)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+- `x` (`int`)
+- `y` (`int`)
+
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseLocation)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+- `allocation` (`ro.sync.exml.view.graphics.Rectangle`)
+- `mouseLocation` (`ro.sync.exml.view.graphics.Point`)
 
 ### `getScrollRectangle()`
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `getApproximativeCharsWidth(`int` numberOfChars, `java.awt.FontMetrics` fontMetrics)`
+### `getApproximativeCharsWidth(int numberOfChars, java.awt.FontMetrics fontMetrics)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `numberOfChars` (`int`): The number of characters.
+- `fontMetrics` (`java.awt.FontMetrics`): The font metrics
 
 ### `requestFocus()`
 
@@ -118,39 +141,65 @@
 
 **Returns:** `void`
 
-### `stopEditing(`boolean` onEnter)`
+### `stopEditing(boolean onEnter)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `onEnter` (`boolean`)
 
 ### `cancelEditing()`
 
 **Returns:** `void`
 
-### `prepareComponents([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context, `boolean` forEditing)`
+### `prepareComponents(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, boolean forEditing)`
 
 **Returns:** `void`
 
-### `setInitialValue([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context, `boolean` forEditing)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md)): The current context.
+- `forEditing` (`boolean`)
+
+### `setInitialValue(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, boolean forEditing)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md)): Editing context.
+- `forEditing` (`boolean`): `true` if we are in the editor. `false` for renderer.
 
 ### `createTextField()`
 
 **Returns:** `javax.swing.JTextField`
 
-### `getCursorType([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context, `int` x, `int` y)`
+### `getCursorType(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](../../api/CursorType.md)
 
-### `getCursorType(`int` x, `int` y)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+- `x` (`int`)
+- `y` (`int`)
+
+### `getCursorType(int x, int y)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](../../api/CursorType.md)
 
-### `refresh([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context)`
+**Parameters:**
+- `x` (`int`)
+- `y` (`int`)
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** `void`
 
-### `insertContent(`java.lang.String` content)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+### `insertContent(java.lang.String content)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `content` (`java.lang.String`)
 

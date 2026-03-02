@@ -66,7 +66,7 @@ The `PrintWriter`
  Either this method or #getOutputStream may be called to write the body, not both, except when #reset
  has been called.
 
-### `setCharacterEncoding(`java.lang.String` encoding)`
+### `setCharacterEncoding(java.lang.String encoding)`
 
 **Returns:** `void`
 
@@ -103,7 +103,11 @@ If the
  HTTP headers if the servlet does not specify a content type; however, it is still used to encode text written via the
  servlet response's writer.
 
-### `setCharacterEncoding(`java.nio.charset.Charset` encoding)`
+**Parameters:**
+- `encoding` (`java.lang.String`): a String specifying only the character set defined by IANA Character Sets
+ (http://www.iana.org/assignments/character-sets) or null
+
+### `setCharacterEncoding(java.nio.charset.Charset encoding)`
 
 **Returns:** `void`
 
@@ -135,21 +139,31 @@ If the
 
  Implementations are strongly encouraged to override this default method and provide a more efficient implementation.
 
-### `setContentLength(`int` len)`
+**Parameters:**
+- `encoding` (`java.nio.charset.Charset`): a Charset instance representing the encoding to use or null
+
+### `setContentLength(int len)`
 
 **Returns:** `void`
 
 This method may be called repeatedly to change the content length. This method has no effect if called after the
  response has been committed.
 
-### `setContentLengthLong(`long` len)`
+**Parameters:**
+- `len` (`int`): an integer specifying the length of the content being returned to the client; sets the Content-Length
+ header
+
+### `setContentLengthLong(long len)`
 
 **Returns:** `void`
 
 This method may be called repeatedly to change the content length. This method has no effect if called after the
  response has been committed.
 
-### `setContentType(`java.lang.String` type)`
+**Parameters:**
+- `len` (`long`): a long specifying the length of the content being returned to the client; sets the Content-Length header
+
+### `setContentType(java.lang.String type)`
 
 **Returns:** `void`
 
@@ -183,7 +197,10 @@ The given
  client if the protocol provides a way for doing so. In the case of HTTP, the `Content-Type` header is
  used.
 
-### `setBufferSize(`int` size)`
+**Parameters:**
+- `type` (`java.lang.String`): a `String` specifying the MIME type of the content or null
+
+### `setBufferSize(int size)`
 
 **Returns:** `void`
 
@@ -200,6 +217,9 @@ The servlet container will use a buffer at least as
 
  This method must be called before any response body content is written; if content has been written or the response
  object has been committed, this method throws an `IllegalStateException`.
+
+**Parameters:**
+- `size` (`int`): the preferred buffer size
 
 ### `getBufferSize()`
 
@@ -239,7 +259,7 @@ The state of calling
  will be staled and the behavior of using the stale object is undefined. If the response has been committed, this
  method throws an `IllegalStateException`.
 
-### `setLocale(`java.util.Locale` loc)`
+### `setLocale(java.util.Locale loc)`
 
 **Returns:** `void`
 
@@ -268,6 +288,9 @@ It also sets the response's character
  `Content-Language` header, the character encoding as part of the `Content-Type` header for text
  media types. Note that the character encoding cannot be communicated via HTTP headers if the servlet does not specify
  a content type; however, it is still used to encode text written via the servlet response's writer.
+
+**Parameters:**
+- `loc` (`java.util.Locale`): the locale of the response or {code @null}
 
 ### `getLocale()`
 

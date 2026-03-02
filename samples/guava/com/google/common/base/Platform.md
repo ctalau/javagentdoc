@@ -6,9 +6,6 @@
 
 ## Description
 
-Methods factored out so that they can be emulated differently in GWT.
-**Author:** Jesse Wilson
-
 ## Fields
 
 ### `logger`
@@ -25,41 +22,55 @@ Methods factored out so that they can be emulated differently in GWT.
 
 ## Methods
 
-### `precomputeCharMatcher([`com.google.common.base.CharMatcher`](./CharMatcher.md) matcher)`
+### `precomputeCharMatcher(com.google.common.base.CharMatcher matcher)`
 
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
-### `getEnumIfPresent(`java.lang.Class<T>` enumClass, `java.lang.String` value)`
+**Parameters:**
+- `matcher` ([`com.google.common.base.CharMatcher`](./CharMatcher.md))
+
+### `getEnumIfPresent(java.lang.Class<T> enumClass, java.lang.String value)`
 
 **Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
 
-### `formatCompact4Digits(`double` value)`
+**Parameters:**
+- `enumClass` (`java.lang.Class<T>`)
+- `value` (`java.lang.String`)
+
+### `formatCompact4Digits(double value)`
 
 **Returns:** `java.lang.String`
 
-### `stringIsNullOrEmpty(`java.lang.String` string)`
+**Parameters:**
+- `value` (`double`)
+
+### `stringIsNullOrEmpty(java.lang.String string)`
 
 **Returns:** `boolean`
 
-### `nullToEmpty(`java.lang.String` string)`
+**Parameters:**
+- `string` (`java.lang.String`)
+
+### `nullToEmpty(java.lang.String string)`
 
 **Returns:** `java.lang.String`
 
-Returns the string if it is not null, or an empty string otherwise.
-@param string the string to test and possibly return
-@return `string` if it is not null; `""` otherwise
+**Parameters:**
+- `string` (`java.lang.String`): the string to test and possibly return
 
-### `emptyToNull(`java.lang.String` string)`
+### `emptyToNull(java.lang.String string)`
 
 **Returns:** `java.lang.String`
 
-Returns the string if it is not empty, or a null string otherwise.
-@param string the string to test and possibly return
-@return `string` if it is not empty; `null` otherwise
+**Parameters:**
+- `string` (`java.lang.String`): the string to test and possibly return
 
-### `compilePattern(`java.lang.String` pattern)`
+### `compilePattern(java.lang.String pattern)`
 
 **Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
+
+**Parameters:**
+- `pattern` (`java.lang.String`)
 
 ### `patternCompilerIsPcreLike()`
 
@@ -69,7 +80,10 @@ Returns the string if it is not empty, or a null string otherwise.
 
 **Returns:** [`com.google.common.base.PatternCompiler`](./PatternCompiler.md)
 
-### `logPatternCompilerError(`java.util.ServiceConfigurationError` e)`
+### `logPatternCompilerError(java.util.ServiceConfigurationError e)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `e` (`java.util.ServiceConfigurationError`)
 

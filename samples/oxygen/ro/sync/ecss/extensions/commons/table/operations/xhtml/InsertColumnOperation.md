@@ -32,19 +32,38 @@
 
 ### `<init>()`
 
-### `<init>([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../AuthorTableHelper.md) documentTypeHelper)`
+### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper documentTypeHelper)`
+
+**Parameters:**
+- `documentTypeHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../AuthorTableHelper.md)): Document type helper, has methods specific to a document type.
 
 ## Methods
 
-### `getCellElementName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md) rowElement, `int` newColumnIndex)`
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
 
 **Returns:** `java.lang.String`
 
-### `getLocalName(`java.lang.String` qName)`
+**Parameters:**
+- `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
+- `newColumnIndex` (`int`)
+
+### `getLocalName(java.lang.String qName)`
 
 **Returns:** `java.lang.String`
 
-### `updateColumnCellsSpan([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../../api/AuthorTableCellSpanProvider.md) tableSupport, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md) tableElem, `int` newColumnIndex, [`ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation`](../../../../api/table/operations/TableColumnSpecificationInformation.md) columnSpecification, `java.lang.String` namespace, `int` noOfColumnsToBeInserted)`
+**Parameters:**
+- `qName` (`java.lang.String`): The name in a qualified form.
+
+### `updateColumnCellsSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement tableElem, int newColumnIndex, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, java.lang.String namespace, int noOfColumnsToBeInserted)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
+- `tableSupport` ([`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../../api/AuthorTableCellSpanProvider.md))
+- `tableElem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
+- `newColumnIndex` (`int`)
+- `columnSpecification` ([`ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation`](../../../../api/table/operations/TableColumnSpecificationInformation.md))
+- `namespace` (`java.lang.String`)
+- `noOfColumnsToBeInserted` (`int`)
 

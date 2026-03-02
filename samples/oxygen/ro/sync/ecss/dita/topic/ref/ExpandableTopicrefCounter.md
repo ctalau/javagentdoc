@@ -14,7 +14,10 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md) authorAccess)`
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access.
 
 ## Methods
 
@@ -30,9 +33,12 @@
 
 **Returns:** `long`
 
-### `createDitaMapRefResolver([`ro.sync.ecss.extensions.api.ExtensionsBundle`](../../../extensions/api/ExtensionsBundle.md) extensionsBundle)`
+### `createDitaMapRefResolver(ro.sync.ecss.extensions.api.ExtensionsBundle extensionsBundle)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.DITAMapReferencesResolver`](../../../extensions/api/DITAMapReferencesResolver.md)
+
+**Parameters:**
+- `extensionsBundle` ([`ro.sync.ecss.extensions.api.ExtensionsBundle`](../../../extensions/api/ExtensionsBundle.md)): The extensions bundle.
 
 ### `getTopicRefsLimit()`
 

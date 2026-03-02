@@ -162,13 +162,19 @@
 
 ## Constructors
 
-### `<init>(`boolean` arg0)`
+### `<init>(boolean arg0)`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ## Methods
 
-### `registerListeners(`javax.swing.JDialog` arg0)`
+### `registerListeners(javax.swing.JDialog arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`javax.swing.JDialog`)
 
 ### `shouldUpdateMnemonics()`
 
@@ -182,13 +188,19 @@
 
 **Returns:** `void`
 
-### `setVisible(`boolean` arg0)`
+### `setVisible(boolean arg0)`
 
 **Returns:** `void`
 
-### `setFocusTraversalPolicy(`java.awt.FocusTraversalPolicy` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setFocusTraversalPolicy(java.awt.FocusTraversalPolicy arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.FocusTraversalPolicy`)
 
 ### `sh()`
 
@@ -222,17 +234,23 @@
 
 **Returns:** `boolean`
 
-### `shouldIgnoreParent(`java.awt.Window` arg0)`
+### `shouldIgnoreParent(java.awt.Window arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.awt.Window`)
 
 ### `shouldShowInTaskBar()`
 
 **Returns:** `boolean`
 
-### `xh(`java.awt.Component` arg0)`
+### `xh(java.awt.Component arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.Component`)
 
 ### `getBounds()`
 
@@ -254,57 +272,90 @@
 
 **Returns:** `boolean`
 
-### `setLocation(`int` arg0, `int` arg1)`
+### `setLocation(int arg0, int arg1)`
 
 **Returns:** `void`
 
-### `setLocation(`java.awt.Point` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
+
+### `setLocation(java.awt.Point arg0)`
 
 **Returns:** `void`
 
-### `setSize(`int` arg0, `int` arg1)`
+**Parameters:**
+- `arg0` (`java.awt.Point`)
+
+### `setSize(int arg0, int arg1)`
 
 **Returns:** `void`
 
-### `setMinimumWidthForPack(`int` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
+
+### `setMinimumWidthForPack(int arg0)`
 
 **Returns:** `void`
 
-### `setMinimumHeightForPack(`int` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `setMinimumHeightForPack(int arg0)`
 
 **Returns:** `void`
 
-### `setSize(`java.awt.Dimension` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `setSize(java.awt.Dimension arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.Dimension`)
 
 ### `getSize()`
 
 **Returns:** `java.awt.Dimension`
 
-### `setTitleTag(`java.lang.String` arg0)`
+### `setTitleTag(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setTitle(`java.lang.String` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setTitle(java.lang.String arg0, java.lang.String arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
 
 ### `getDialogTag()`
 
 **Returns:** `java.lang.String`
 
-### `th(`java.lang.String` arg0)`
+### `th(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getCursor()`
 
 **Returns:** `java.awt.Cursor`
 
-### `setCursor(`java.awt.Cursor` arg0)`
+### `setCursor(java.awt.Cursor arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.Cursor`)
 
 ### `toFront()`
 
@@ -318,45 +369,72 @@
 
 **Returns:** `java.awt.Window`
 
-### `addComponentListener(`java.awt.event.ComponentListener` arg0)`
+### `addComponentListener(java.awt.event.ComponentListener arg0)`
 
 **Returns:** `void`
 
-### `removeComponentListener(`java.awt.event.ComponentListener` arg0)`
+**Parameters:**
+- `arg0` (`java.awt.event.ComponentListener`)
+
+### `removeComponentListener(java.awt.event.ComponentListener arg0)`
 
 **Returns:** `void`
 
-### `addWindowListener(`java.awt.event.WindowListener` arg0)`
+**Parameters:**
+- `arg0` (`java.awt.event.ComponentListener`)
+
+### `addWindowListener(java.awt.event.WindowListener arg0)`
 
 **Returns:** `void`
 
-### `removeWindowListener(`java.awt.event.WindowListener` arg0)`
+**Parameters:**
+- `arg0` (`java.awt.event.WindowListener`)
+
+### `removeWindowListener(java.awt.event.WindowListener arg0)`
 
 **Returns:** `void`
 
-### `addKeyListener(`java.awt.event.KeyListener` arg0)`
+**Parameters:**
+- `arg0` (`java.awt.event.WindowListener`)
+
+### `addKeyListener(java.awt.event.KeyListener arg0)`
 
 **Returns:** `void`
 
-### `removeKeyListener(`java.awt.event.KeyListener` arg0)`
+**Parameters:**
+- `arg0` (`java.awt.event.KeyListener`)
+
+### `removeKeyListener(java.awt.event.KeyListener arg0)`
 
 **Returns:** `void`
 
-### `enableEvents(`long` arg0)`
+**Parameters:**
+- `arg0` (`java.awt.event.KeyListener`)
+
+### `enableEvents(long arg0)`
 
 **Returns:** `void`
 
-### `setDefaultCloseOperation(`int` arg0)`
+**Parameters:**
+- `arg0` (`long`)
+
+### `setDefaultCloseOperation(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ### `getDefaultCloseOperation()`
 
 **Returns:** `int`
 
-### `setJMenuBar(`javax.swing.JMenuBar` arg0)`
+### `setJMenuBar(javax.swing.JMenuBar arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`javax.swing.JMenuBar`)
 
 ### `getRootPane()`
 
@@ -374,17 +452,26 @@
 
 **Returns:** `javax.swing.JCheckBox`
 
-### `setModal(`boolean` arg0)`
+### `setModal(boolean arg0)`
 
 **Returns:** `void`
 
-### `setResizable(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setResizable(boolean arg0)`
 
 **Returns:** `void`
 
-### `setUndecorated(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setUndecorated(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isUndecorated()`
 
@@ -394,21 +481,30 @@
 
 **Returns:** `void`
 
-### `setMinimumSize(`java.awt.Dimension` arg0)`
+### `setMinimumSize(java.awt.Dimension arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.Dimension`)
 
 ### `getMinimumSize()`
 
 **Returns:** `java.awt.Dimension`
 
-### `setMaximumWidthForPack(`int` arg0)`
+### `setMaximumWidthForPack(int arg0)`
 
 **Returns:** `void`
 
-### `setMaximumHeightForPack(`int` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `setMaximumHeightForPack(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ### `getRealDialogForTCs()`
 
@@ -470,9 +566,12 @@
 
 **Returns:** `boolean`
 
-### `isPopupShownFromThisDialog(`ro.sync.ui.application.qb` arg0)`
+### `isPopupShownFromThisDialog(ro.sync.ui.application.qb arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`ro.sync.ui.application.qb`)
 
 ### `wh()`
 
@@ -486,13 +585,19 @@
 
 **Returns:** `void`
 
-### `setDefaultFocusedComponent(`javax.swing.JComponent` arg0)`
+### `setDefaultFocusedComponent(javax.swing.JComponent arg0)`
 
 **Returns:** `void`
 
-### `setModalExclusionType(`java.awt.Dialog.ModalExclusionType` arg0)`
+**Parameters:**
+- `arg0` (`javax.swing.JComponent`)
+
+### `setModalExclusionType(java.awt.Dialog.ModalExclusionType arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.Dialog.ModalExclusionType`)
 
 ### `getModalExclusionType()`
 

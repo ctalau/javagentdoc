@@ -12,12 +12,12 @@
 
 ## Description
 
-An empty contiguous set.
-**Author:** Gregory Kick
-
 ## Constructors
 
-### `<init>([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+### `<init>(com.google.common.collect.DiscreteDomain<C> domain)`
+
+**Parameters:**
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
 ## Methods
 
@@ -33,37 +33,64 @@ An empty contiguous set.
 
 **Returns:** `int`
 
-### `intersection([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md) other)`
+### `intersection(com.google.common.collect.ContiguousSet<C> other)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+**Parameters:**
+- `other` ([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md))
 
 ### `range()`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `range([`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+### `range(com.google.common.collect.BoundType lowerBoundType, com.google.common.collect.BoundType upperBoundType)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `headSetImpl(`C` toElement, `boolean` inclusive)`
+**Parameters:**
+- `lowerBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `headSetImpl(C toElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `subSetImpl(`C` fromElement, `boolean` fromInclusive, `C` toElement, `boolean` toInclusive)`
+**Parameters:**
+- `toElement` (`C`)
+- `inclusive` (`boolean`)
+
+### `subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `tailSetImpl(`C` fromElement, `boolean` fromInclusive)`
+**Parameters:**
+- `fromElement` (`C`)
+- `fromInclusive` (`boolean`)
+- `toElement` (`C`)
+- `toInclusive` (`boolean`)
+
+### `tailSetImpl(C fromElement, boolean fromInclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `contains(`java.lang.Object` object)`
+**Parameters:**
+- `fromElement` (`C`)
+- `fromInclusive` (`boolean`)
+
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-### `indexOf(`java.lang.Object` target)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `indexOf(java.lang.Object target)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 ### `iterator()`
 
@@ -89,9 +116,12 @@ An empty contiguous set.
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `isHashCodeFast()`
 
@@ -105,9 +135,12 @@ An empty contiguous set.
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 
 ### `createDescendingSet()`
 

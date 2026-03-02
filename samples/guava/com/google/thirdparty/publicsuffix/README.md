@@ -2,6 +2,6 @@
 
 ## Classes and Interfaces
 
-- [TrieParser](TrieParser.md)
-- [PublicSuffixType](PublicSuffixType.md)
 - [PublicSuffixPatterns](PublicSuffixPatterns.md)
+- [PublicSuffixType](PublicSuffixType.md)
+- [TrieParser](TrieParser.md)

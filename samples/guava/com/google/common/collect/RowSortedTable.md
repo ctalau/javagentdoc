@@ -14,12 +14,8 @@
 
 ## Description
 
-Interface that extends `Table` and whose rows are sorted.
-
- <p>The `rowKeySet` method returns a `SortedSet` and the `rowMap` method
- returns a `SortedMap`, instead of the `Set` and `Map` specified by the `Table` interface.
-**Author:** Warren Dukes
-**Since:** 8.0
+The #rowKeySet method returns a SortedSet and the #rowMap method
+ returns a SortedMap, instead of the Set and Map specified by the Table interface.
 
 ## Methods
 
@@ -27,15 +23,11 @@ Interface that extends `Table` and whose rows are sorted.
 
 **Returns:** `java.util.SortedSet<R>`
 
-{@inheritDoc}
-
- <p>This method returns a `SortedSet`, instead of the `Set` specified in the `Table` interface.
+This method returns a SortedSet, instead of the Set specified in the Table interface.
 
 ### `rowMap()`
 
 **Returns:** `java.util.SortedMap<R,java.util.Map<C,V>>`
 
-{@inheritDoc}
-
- <p>This method returns a `SortedMap`, instead of the `Map` specified in the `Table` interface.
+This method returns a SortedMap, instead of the Map specified in the Table interface.
 

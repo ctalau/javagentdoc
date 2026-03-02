@@ -8,27 +8,52 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `javax.swing.Icon` arg1, `boolean` arg2, `boolean` arg3, `boolean` arg4, `boolean` arg5)`
+### `<init>(java.lang.String arg0, javax.swing.Icon arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`javax.swing.Icon`)
+- `arg2` (`boolean`)
+- `arg3` (`boolean`)
+- `arg4` (`boolean`)
+- `arg5` (`boolean`)
 
 ## Methods
 
-### `setMenuActions(`java.util.List` arg0)`
+### `setMenuActions(java.util.List arg0)`
 
 **Returns:** `void`
 
-### `setCurrentAction(`javax.swing.Action` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List`)
+
+### `setCurrentAction(javax.swing.Action arg0)`
 
 **Returns:** `void`
 
-### `addActionToMenu(`javax.swing.Action` arg0, `boolean` arg1)`
+**Parameters:**
+- `arg0` (`javax.swing.Action`)
+
+### `addActionToMenu(javax.swing.Action arg0, boolean arg1)`
 
 **Returns:** `void`
 
-### `addActionsToMenu(`java.util.List` arg0)`
+**Parameters:**
+- `arg0` (`javax.swing.Action`)
+- `arg1` (`boolean`)
+
+### `addActionsToMenu(java.util.List arg0)`
 
 **Returns:** `void`
 
-### `insertAction(`javax.swing.Action` arg0, `int` arg1)`
+**Parameters:**
+- `arg0` (`java.util.List`)
+
+### `insertAction(javax.swing.Action arg0, int arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`javax.swing.Action`)
+- `arg1` (`int`)
 

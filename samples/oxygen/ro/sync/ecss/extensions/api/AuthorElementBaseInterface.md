@@ -26,11 +26,14 @@ The element is mapped into the content
 
 **Returns:** `java.lang.String`
 
-### `hasPseudoClass(`java.lang.String` name)`
+### `hasPseudoClass(java.lang.String name)`
 
 **Returns:** `boolean`
 
-### `setPseudoClass(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): The name of the pseudo class. Let say :hover, :active, etc..
+
+### `setPseudoClass(java.lang.String name)`
 
 **Returns:** `void`
 
@@ -41,7 +44,10 @@ The element is mapped into the content
 
  If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
 
-### `removePseudoClass(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): The name of the pseudo class. Let say :hover, :active, etc..
+
+### `removePseudoClass(java.lang.String name)`
 
 **Returns:** `void`
 
@@ -51,6 +57,9 @@ The element is mapped into the content
  All operations on nodes from the document model must be done using the AuthorDocumentController methods.
 
  If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
+
+**Parameters:**
+- `name` (`java.lang.String`): The name of the pseudo class. Let say :hover, :active, etc..
 
 ### `isEmptyCSS3()`
 

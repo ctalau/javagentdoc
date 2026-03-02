@@ -14,10 +14,6 @@
 
 ## Description
 
-An implementation of `RangeSet` backed by a `TreeMap`.
-**Author:** Louis Wasserman
-**Since:** 14.0
-
 ## Fields
 
 ### `rangesByLowerBound`
@@ -38,7 +34,10 @@ An implementation of `RangeSet` backed by a `TreeMap`.
 
 ## Constructors
 
-### `<init>(`java.util.NavigableMap<com.google.common.collect.Cut<C>,com.google.common.collect.Range<C>>` rangesByLowerCut)`
+### `<init>(java.util.NavigableMap<com.google.common.collect.Cut<C>,com.google.common.collect.Range<C>> rangesByLowerCut)`
+
+**Parameters:**
+- `rangesByLowerCut` (`java.util.NavigableMap<com.google.common.collect.Cut<C>,com.google.common.collect.Range<C>>`)
 
 ## Methods
 
@@ -46,24 +45,23 @@ An implementation of `RangeSet` backed by a `TreeMap`.
 
 **Returns:** [`com.google.common.collect.TreeRangeSet<C>`](./TreeRangeSet.md)
 
-Creates an empty `TreeRangeSet` instance.
-
-### `create([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) rangeSet)`
+### `create(com.google.common.collect.RangeSet<C> rangeSet)`
 
 **Returns:** [`com.google.common.collect.TreeRangeSet<C>`](./TreeRangeSet.md)
 
-Returns a `TreeRangeSet` initialized with the ranges in the specified range set.
+**Parameters:**
+- `rangeSet` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `create(`java.lang.Iterable<com.google.common.collect.Range<C>>` ranges)`
+### `create(java.lang.Iterable<com.google.common.collect.Range<C>> ranges)`
 
 **Returns:** [`com.google.common.collect.TreeRangeSet<C>`](./TreeRangeSet.md)
 
-Returns a `TreeRangeSet` representing the union of the specified ranges.
+This is the smallest RangeSet which encloses each of the specified ranges. An
+ element will be contained in this RangeSet if and only if it is contained in at least
+ one Range in ranges.
 
- <p>This is the smallest `RangeSet` which encloses each of the specified ranges. An
- element will be contained in this `RangeSet` if and only if it is contained in at least
- one `Range` in `ranges`.
-**Since:** 21.0
+**Parameters:**
+- `ranges` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
 
 ### `asRanges()`
 
@@ -73,43 +71,67 @@ Returns a `TreeRangeSet` representing the union of the specified ranges.
 
 **Returns:** `java.util.Set<com.google.common.collect.Range<C>>`
 
-### `rangeContaining(`C` value)`
+### `rangeContaining(C value)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `intersects([`com.google.common.collect.Range<C>`](./Range.md) range)`
+**Parameters:**
+- `value` (`C`)
+
+### `intersects(com.google.common.collect.Range<C> range)`
 
 **Returns:** `boolean`
 
-### `encloses([`com.google.common.collect.Range<C>`](./Range.md) range)`
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `encloses(com.google.common.collect.Range<C> range)`
 
 **Returns:** `boolean`
 
-### `rangeEnclosing([`com.google.common.collect.Range<C>`](./Range.md) range)`
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `rangeEnclosing(com.google.common.collect.Range<C> range)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
 ### `span()`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `add([`com.google.common.collect.Range<C>`](./Range.md) rangeToAdd)`
+### `add(com.google.common.collect.Range<C> rangeToAdd)`
 
 **Returns:** `void`
 
-### `remove([`com.google.common.collect.Range<C>`](./Range.md) rangeToRemove)`
+**Parameters:**
+- `rangeToAdd` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `remove(com.google.common.collect.Range<C> rangeToRemove)`
 
 **Returns:** `void`
 
-### `replaceRangeWithSameLowerBound([`com.google.common.collect.Range<C>`](./Range.md) range)`
+**Parameters:**
+- `rangeToRemove` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `replaceRangeWithSameLowerBound(com.google.common.collect.Range<C> range)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
 ### `complement()`
 
 **Returns:** [`com.google.common.collect.RangeSet<C>`](./RangeSet.md)
 
-### `subRangeSet([`com.google.common.collect.Range<C>`](./Range.md) view)`
+### `subRangeSet(com.google.common.collect.Range<C> view)`
 
 **Returns:** [`com.google.common.collect.RangeSet<C>`](./RangeSet.md)
+
+**Parameters:**
+- `view` ([`com.google.common.collect.Range<C>`](./Range.md))
 

@@ -34,13 +34,23 @@ Only filled if the identifier is for a subtopic element.
 
 ## Constructors
 
-### `<init>(`java.lang.String` location, `java.lang.String` topicID, `java.lang.String` elementID, `boolean` topicIsFirstInFile, `boolean` isDeclaration)`
+### `<init>(java.lang.String location, java.lang.String topicID, java.lang.String elementID, boolean topicIsFirstInFile, boolean isDeclaration)`
+
+**Parameters:**
+- `location` (`java.lang.String`): The location
+- `topicID` (`java.lang.String`): The topic ID.
+- `elementID` (`java.lang.String`): The element ID.
+- `topicIsFirstInFile` (`boolean`): `true` if the topic is the first one in the file
+- `isDeclaration` (`boolean`): true if it is a declaration.
 
 ## Methods
 
-### `setElementInMap(`boolean` isElementInMap)`
+### `setElementInMap(boolean isElementInMap)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `isElementInMap` (`boolean`): `true` if it's an element in a DITA Map
 
 ### `isElementInMap()`
 

@@ -48,7 +48,10 @@ The value is 1 << 5.
 
 ## Constructors
 
-### `<init>(`int` modifiers)`
+### `<init>(int modifiers)`
+
+**Parameters:**
+- `modifiers` (`int`): The modifiers.
 
 ## Methods
 
@@ -84,19 +87,28 @@ The value is 1 << 5.
 
 **Returns:** `int`
 
-### `isCtrlPressed(`int` modifiers)`
+### `isCtrlPressed(int modifiers)`
 
 **Returns:** `boolean`
 
-### `isMetaPressed(`int` modifiers)`
+**Parameters:**
+- `modifiers` (`int`): The modifiers
+
+### `isMetaPressed(int modifiers)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `modifiers` (`int`): The modifiers.
 
 ### `isCommandPressed()`
 
 **Returns:** `boolean`
 
-### `isCommandPressed(`int` modifiers)`
+### `isCommandPressed(int modifiers)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `modifiers` (`int`): The modifiers
 

@@ -20,7 +20,11 @@
 
 ### `<init>()`
 
-### `<init>(`int` columnsNumber, `boolean` insertAfter)`
+### `<init>(int columnsNumber, boolean insertAfter)`
+
+**Parameters:**
+- `columnsNumber` (`int`): the number of columns.
+- `insertAfter` (`boolean`): `true` to insert after.
 
 ## Methods
 

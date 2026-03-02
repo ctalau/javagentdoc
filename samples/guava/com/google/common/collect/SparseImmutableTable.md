@@ -14,8 +14,6 @@
 
 ## Description
 
-A `RegularImmutableTable` optimized for sparse data.
-
 ## Fields
 
 ### `EMPTY`
@@ -24,11 +22,11 @@ A `RegularImmutableTable` optimized for sparse data.
 
 ### `rowMap`
 
-**Type:** [`com.google.common.collect.ImmutableMap<R,com.google.common.collect.ImmutableMap<C,V>>`](./ImmutableMap>.md)
+**Type:** [`com.google.common.collect.ImmutableMap<R,com.google.common.collect.ImmutableMap<C,V>>`](./ImmutableMap.md)
 
 ### `columnMap`
 
-**Type:** [`com.google.common.collect.ImmutableMap<C,com.google.common.collect.ImmutableMap<R,V>>`](./ImmutableMap>.md)
+**Type:** [`com.google.common.collect.ImmutableMap<C,com.google.common.collect.ImmutableMap<R,V>>`](./ImmutableMap.md)
 
 ### `cellRowIndices`
 
@@ -40,29 +38,40 @@ A `RegularImmutableTable` optimized for sparse data.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList>.md) cellList, [`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md) rowSpace, [`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md) columnSpace)`
+### `<init>(com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>> cellList, com.google.common.collect.ImmutableSet<R> rowSpace, com.google.common.collect.ImmutableSet<C> columnSpace)`
+
+**Parameters:**
+- `cellList` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList.md))
+- `rowSpace` ([`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md))
+- `columnSpace` ([`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md))
 
 ## Methods
 
 ### `columnMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap.md)
 
 ### `rowMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap.md)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `getCell(`int` index)`
+### `getCell(int index)`
 
-**Returns:** [`com.google.common.collect.Table.Cell<R,C,V>`](Table/Cell.md)
+**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
 
-### `getValue(`int` index)`
+**Parameters:**
+- `index` (`int`)
+
+### `getValue(int index)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `writeReplace()`
 

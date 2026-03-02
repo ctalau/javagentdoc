@@ -12,13 +12,19 @@
 
 ## Methods
 
-### `removeAreas(`java.util.List<ro.sync.ecss.imagemap.b>` arg0)`
+### `removeAreas(java.util.List<ro.sync.ecss.imagemap.b> arg0)`
 
 **Returns:** `void`
 
-### `saveAreas(`java.util.List<ro.sync.ecss.imagemap.b>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.imagemap.b>`)
+
+### `saveAreas(java.util.List<ro.sync.ecss.imagemap.b> arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.imagemap.b>`)
 
 ### `serialize()`
 
@@ -28,7 +34,10 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.imagemap.Shape>`
 
-### `setURI2PrefixMappings(`java.util.Map<java.lang.String,java.lang.String>` arg0)`
+### `setURI2PrefixMappings(java.util.Map<java.lang.String,java.lang.String> arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.util.Map<java.lang.String,java.lang.String>`)
 

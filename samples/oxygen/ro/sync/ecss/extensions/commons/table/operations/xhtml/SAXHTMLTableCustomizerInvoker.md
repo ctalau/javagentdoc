@@ -26,9 +26,15 @@ It is used on standalone implementation.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.xhtml.SAXHTMLTableCustomizerInvoker`](./SAXHTMLTableCustomizerInvoker.md)
 
-### `showCustomizeTableDialog([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md) authorAccess, `int` predefinedRowsCount, `int` predefinedColumnsCount, `int` defaultTableModel)`
+### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](../TableInfo.md)
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
+- `predefinedRowsCount` (`int`)
+- `predefinedColumnsCount` (`int`)
+- `defaultTableModel` (`int`)
 
 ### `clearForTests()`
 

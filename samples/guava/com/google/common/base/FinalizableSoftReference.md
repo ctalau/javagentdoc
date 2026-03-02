@@ -14,16 +14,13 @@
 
 ## Description
 
-Soft reference with a `finalizeReferent()` method which a background thread invokes after
- the garbage collector reclaims the referent. This is a simpler alternative to using a `ReferenceQueue`.
-**Author:** Bob Lee
-**Since:** 2.0
+This is a simpler alternative to using a ReferenceQueue.
 
 ## Constructors
 
-### `<init>(`T` referent, [`com.google.common.base.FinalizableReferenceQueue`](./FinalizableReferenceQueue.md) queue)`
+### `<init>(T referent, com.google.common.base.FinalizableReferenceQueue queue)`
 
-Constructs a new finalizable soft reference.
-@param referent to softly reference
-@param queue that should finalize the referent
+**Parameters:**
+- `referent` (`T`): to softly reference
+- `queue` ([`com.google.common.base.FinalizableReferenceQueue`](./FinalizableReferenceQueue.md)): that should finalize the referent
 

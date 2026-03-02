@@ -6,12 +6,8 @@
 
 ## Description
 
-Wraps an event that was posted, but which had no subscribers and thus could not be delivered.
-
- <p>Registering a DeadEvent subscriber is useful for debugging or logging, as it can detect
+Registering a DeadEvent subscriber is useful for debugging or logging, as it can detect
  misconfigurations in a system's event distribution.
-**Author:** Cliff Biffle
-**Since:** 10.0
 
 ## Fields
 
@@ -25,11 +21,11 @@ Wraps an event that was posted, but which had no subscribers and thus could not 
 
 ## Constructors
 
-### `<init>(`java.lang.Object` source, `java.lang.Object` event)`
+### `<init>(java.lang.Object source, java.lang.Object event)`
 
-Creates a new DeadEvent.
-@param source object broadcasting the DeadEvent (generally the `EventBus`).
-@param event the event that could not be delivered.
+**Parameters:**
+- `source` (`java.lang.Object`): object broadcasting the DeadEvent (generally the EventBus).
+- `event` (`java.lang.Object`): the event that could not be delivered.
 
 ## Methods
 
@@ -37,17 +33,11 @@ Creates a new DeadEvent.
 
 **Returns:** `java.lang.Object`
 
-Returns the object that originated this event (<em>not</em> the object that originated the
- wrapped event). This is generally an `EventBus`.
-@return the source of this event.
+This is generally an EventBus.
 
 ### `getEvent()`
 
 **Returns:** `java.lang.Object`
-
-Returns the wrapped, 'dead' event, which the system was unable to deliver to any registered
- subscriber.
-@return the 'dead' event that could not be delivered.
 
 ### `toString()`
 

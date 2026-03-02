@@ -8,8 +8,6 @@
 
 ## Description
 
-An `Executor` that runs each task in the thread that invokes `Executor.execute execute`.
-
 ## Constructors
 
 ### `<init>()`
@@ -20,13 +18,19 @@ An `Executor` that runs each task in the thread that invokes `Executor.execute e
 
 **Returns:** [`com.google.common.util.concurrent.DirectExecutor[]`](./DirectExecutor.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.common.util.concurrent.DirectExecutor`](./DirectExecutor.md)
 
-### `execute(`java.lang.Runnable` command)`
+**Parameters:**
+- `name` (`java.lang.String`)
+
+### `execute(java.lang.Runnable command)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `command` (`java.lang.Runnable`)
 
 ### `toString()`
 

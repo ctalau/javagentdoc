@@ -22,7 +22,11 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1)`
+### `<init>(java.lang.String arg0, java.lang.String arg1)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
 
 ### `<init>()`
 
@@ -40,9 +44,12 @@
 
 **Returns:** `java.lang.Object`
 
-### `equals(`java.lang.Object` arg0)`
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -52,7 +59,10 @@
 
 **Returns:** `java.lang.String`
 
-### `compareTo([`ro.sync.exml.ContentTypePageAssociationPO`](./ContentTypePageAssociationPO.md) arg0)`
+### `compareTo(ro.sync.exml.ContentTypePageAssociationPO arg0)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `arg0` ([`ro.sync.exml.ContentTypePageAssociationPO`](./ContentTypePageAssociationPO.md))
 

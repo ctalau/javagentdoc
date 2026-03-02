@@ -17,7 +17,10 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 ## Methods
 
-### `getParagraphElement([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 

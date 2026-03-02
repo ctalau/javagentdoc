@@ -12,9 +12,6 @@
 
 ## Description
 
-An implementation of `ContiguousSet` that contains one or more elements.
-**Author:** Gregory Kick
-
 ## Fields
 
 ### `range`
@@ -27,29 +24,53 @@ An implementation of `ContiguousSet` that contains one or more elements.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.Range<C>`](./Range.md) range, [`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+### `<init>(com.google.common.collect.Range<C> range, com.google.common.collect.DiscreteDomain<C> domain)`
+
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
 ## Methods
 
-### `intersectionInCurrentDomain([`com.google.common.collect.Range<C>`](./Range.md) other)`
+### `intersectionInCurrentDomain(com.google.common.collect.Range<C> other)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `headSetImpl(`C` toElement, `boolean` inclusive)`
+**Parameters:**
+- `other` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `headSetImpl(C toElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `subSetImpl(`C` fromElement, `boolean` fromInclusive, `C` toElement, `boolean` toInclusive)`
+**Parameters:**
+- `toElement` (`C`)
+- `inclusive` (`boolean`)
+
+### `subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `tailSetImpl(`C` fromElement, `boolean` inclusive)`
+**Parameters:**
+- `fromElement` (`C`)
+- `fromInclusive` (`boolean`)
+- `toElement` (`C`)
+- `toInclusive` (`boolean`)
+
+### `tailSetImpl(C fromElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `indexOf(`java.lang.Object` target)`
+**Parameters:**
+- `fromElement` (`C`)
+- `inclusive` (`boolean`)
+
+### `indexOf(java.lang.Object target)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 ### `iterator()`
 
@@ -59,9 +80,13 @@ An implementation of `ContiguousSet` that contains one or more elements.
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<C>`](./UnmodifiableIterator.md)
 
-### `equalsOrThrow(`java.lang.Comparable<?>` left, `java.lang.Comparable<?>` right)`
+### `equalsOrThrow(java.lang.Comparable<?> left, java.lang.Comparable<?> right)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `left` (`java.lang.Comparable<?>`)
+- `right` (`java.lang.Comparable<?>`)
 
 ### `isPartialView()`
 
@@ -83,33 +108,49 @@ An implementation of `ContiguousSet` that contains one or more elements.
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-### `containsAll(`java.util.Collection<?>` targets)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `containsAll(java.util.Collection<?> targets)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `targets` (`java.util.Collection<?>`)
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `intersection([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md) other)`
+### `intersection(com.google.common.collect.ContiguousSet<C> other)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+**Parameters:**
+- `other` ([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md))
 
 ### `range()`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `range([`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+### `range(com.google.common.collect.BoundType lowerBoundType, com.google.common.collect.BoundType upperBoundType)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `lowerBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -119,7 +160,10 @@ An implementation of `ContiguousSet` that contains one or more elements.
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

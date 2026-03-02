@@ -13,43 +13,58 @@
 
 ## Description
 
-A `MapIteratorCache` that adds additional caching. In addition to the caching provided by
- `MapIteratorCache`, this structure caches values for the two most recently retrieved keys.
-**Author:** James Sexton
+In addition to the caching provided by
+ MapIteratorCache, this structure caches values for the two most recently retrieved keys.
 
 ## Fields
 
 ### `cacheEntry1`
 
-**Type:** [`com.google.common.graph.MapRetrievalCache.CacheEntry<K,V>`](MapRetrievalCache/CacheEntry.md)
+**Type:** `com.google.common.graph.MapRetrievalCache.CacheEntry<K,V>`
 
 ### `cacheEntry2`
 
-**Type:** [`com.google.common.graph.MapRetrievalCache.CacheEntry<K,V>`](MapRetrievalCache/CacheEntry.md)
+**Type:** `com.google.common.graph.MapRetrievalCache.CacheEntry<K,V>`
 
 ## Constructors
 
-### `<init>(`java.util.Map<K,V>` backingMap)`
+### `<init>(java.util.Map<K,V> backingMap)`
+
+**Parameters:**
+- `backingMap` (`java.util.Map<K,V>`)
 
 ## Methods
 
-### `get(`java.lang.Object` key)`
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `getIfCached(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `getIfCached(java.lang.Object key)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `clearCache()`
 
 **Returns:** `void`
 
-### `addToCache(`K` key, `V` value)`
+### `addToCache(K key, V value)`
 
 **Returns:** `void`
 
-### `addToCache([`com.google.common.graph.MapRetrievalCache.CacheEntry<K,V>`](MapRetrievalCache/CacheEntry.md) entry)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `addToCache(com.google.common.graph.MapRetrievalCache.CacheEntry<K,V> entry)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `entry` (`com.google.common.graph.MapRetrievalCache.CacheEntry<K,V>`)
 

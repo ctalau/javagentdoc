@@ -56,9 +56,12 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.text.TextPageExternalObjectInsertionHandler`](../../api/text/TextPageExternalObjectInsertionHandler.md)
 
-### `getHelpPageID(`java.lang.String` currentEditorPage)`
+### `getHelpPageID(java.lang.String currentEditorPage)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `currentEditorPage` (`java.lang.String`)
 
 ### `getAuthorSchemaAwareEditingHandler()`
 

@@ -42,11 +42,36 @@
 
 ## Constructors
 
-### `<init>(`int` startOffset, `int` endOffset, `int` errorCode, `java.lang.String` lang, `java.lang.String` word)`
+### `<init>(int startOffset, int endOffset, int errorCode, java.lang.String lang, java.lang.String word)`
 
-### `<init>(`int` startOffset, `int` endOffset, `int` errorCode, `java.lang.String` lang, `java.lang.String` word, `java.util.List<java.lang.String>` suggestions)`
+**Parameters:**
+- `startOffset` (`int`): Word start position.
+- `endOffset` (`int`): Word end position.
+- `errorCode` (`int`): Error code result from spellchecking.
+- `lang` (`java.lang.String`): ISO Name for the language of the word.
+- `word` (`java.lang.String`): Word between the offsets.
 
-### `<init>(`int` startOffset, `int` endOffset, `int` errorCode, `java.lang.String` lang, `java.lang.String` word, `java.util.List<java.lang.String>` suggestions, [`ro.sync.ecss.extensions.api.webapp.WebAuthorSpellcheckErrorTypes`](webapp/WebAuthorSpellcheckErrorTypes.md) errorType, `java.lang.String` errorMessage)`
+### `<init>(int startOffset, int endOffset, int errorCode, java.lang.String lang, java.lang.String word, java.util.List<java.lang.String> suggestions)`
+
+**Parameters:**
+- `startOffset` (`int`): Word start position.
+- `endOffset` (`int`): Word end position.
+- `errorCode` (`int`): Error code result from spellchecking.
+- `lang` (`java.lang.String`): ISO Name for the language of the word.
+- `word` (`java.lang.String`): Word between the offsets.
+- `suggestions` (`java.util.List<java.lang.String>`): The suggestions for the word.
+
+### `<init>(int startOffset, int endOffset, int errorCode, java.lang.String lang, java.lang.String word, java.util.List<java.lang.String> suggestions, ro.sync.ecss.extensions.api.webapp.WebAuthorSpellcheckErrorTypes errorType, java.lang.String errorMessage)`
+
+**Parameters:**
+- `startOffset` (`int`): Word start position.
+- `endOffset` (`int`): Word end position.
+- `errorCode` (`int`): Error code result from spellchecking.
+- `lang` (`java.lang.String`): ISO Name for the language of the word.
+- `word` (`java.lang.String`): Word between the offsets.
+- `suggestions` (`java.util.List<java.lang.String>`): The suggestions for the word.
+- `errorType` ([`ro.sync.ecss.extensions.api.webapp.WebAuthorSpellcheckErrorTypes`](webapp/WebAuthorSpellcheckErrorTypes.md)): The error type.
+- `errorMessage` (`java.lang.String`): Error message for the word.
 
 ## Methods
 

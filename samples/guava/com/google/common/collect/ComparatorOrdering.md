@@ -14,8 +14,6 @@
 
 ## Description
 
-An ordering for a pre-existing comparator.
-
 ## Fields
 
 ### `comparator`
@@ -28,17 +26,27 @@ An ordering for a pre-existing comparator.
 
 ## Constructors
 
-### `<init>(`java.util.Comparator<T>` comparator)`
+### `<init>(java.util.Comparator<T> comparator)`
+
+**Parameters:**
+- `comparator` (`java.util.Comparator<T>`)
 
 ## Methods
 
-### `compare(`T` a, `T` b)`
+### `compare(T a, T b)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `a` (`T`)
+- `b` (`T`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

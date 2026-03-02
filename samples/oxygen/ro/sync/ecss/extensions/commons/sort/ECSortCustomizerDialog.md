@@ -62,37 +62,69 @@
 
 ## Constructors
 
-### `<init>(`org.eclipse.swt.widgets.Shell` arg0, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md) arg1, `java.lang.String` arg2, `java.lang.String` arg3)`
+### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.lang.String arg2, java.lang.String arg3)`
 
-### `<init>(`org.eclipse.swt.widgets.Shell` arg0, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md) arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4)`
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+- `arg1` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md))
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+
+### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4)`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+- `arg1` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md))
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.lang.String`)
 
 ## Methods
 
-### `createDialogArea(`org.eclipse.swt.widgets.Composite` arg0)`
+### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
 
 **Returns:** `org.eclipse.swt.widgets.Control`
 
-### `configureShell(`org.eclipse.swt.widgets.Shell` arg0)`
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
+
+### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
 
 **Returns:** `void`
 
-### `getSortInformation(`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>` arg0, `boolean` arg1, `boolean` arg2)`
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+
+### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
+
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
+- `arg1` (`boolean`)
+- `arg2` (`boolean`)
 
 ### `okPressed()`
 
 **Returns:** `void`
 
-### `createSection(`org.eclipse.swt.widgets.Composite` arg0, `java.lang.String` arg1)`
+### `createSection(org.eclipse.swt.widgets.Composite arg0, java.lang.String arg1)`
 
 **Returns:** `org.eclipse.swt.widgets.Composite`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
+- `arg1` (`java.lang.String`)
 
 ### `isResizable()`
 
 **Returns:** `boolean`
 
-### `selectionChanged(`java.lang.String` arg0, `java.lang.String` arg1)`
+### `selectionChanged(java.lang.String arg0, java.lang.String arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
 

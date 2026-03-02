@@ -21,13 +21,19 @@ It should be implemented when the author extension being developed offers
 
 ### `<init>()`
 
-### `<init>([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md) errorsListener)`
+### `<init>(ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener errorsListener)`
+
+**Parameters:**
+- `errorsListener` ([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)): Table layout errors listener
 
 ## Methods
 
-### `setErrorsListener([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md) errorsListener)`
+### `setErrorsListener(ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener errorsListener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `errorsListener` ([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)): The table layout errors listener.
 
 ### `getAllColspecWidthRepresentations()`
 
@@ -40,7 +46,10 @@ If a colspec does not specify a width, it is supposed to be 1*.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)
 
-### `isPreferPercentageColumnWidths(`java.lang.String` tableCellsTagName)`
+### `isPreferPercentageColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The cell tag name
 

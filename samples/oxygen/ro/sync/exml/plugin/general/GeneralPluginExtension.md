@@ -10,10 +10,13 @@
 
 ## Methods
 
-### `process([`ro.sync.exml.plugin.general.GeneralPluginContext`](./GeneralPluginContext.md) context)`
+### `process(ro.sync.exml.plugin.general.GeneralPluginContext context)`
 
 **Returns:** `void`
 
 It receives the current context and it should
  return the processed content.
+
+**Parameters:**
+- `context` ([`ro.sync.exml.plugin.general.GeneralPluginContext`](./GeneralPluginContext.md)): The context the plugin was invoked in.
 

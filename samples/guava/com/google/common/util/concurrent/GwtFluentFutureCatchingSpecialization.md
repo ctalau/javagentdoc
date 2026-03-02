@@ -12,8 +12,7 @@
 
 ## Description
 
-Hidden superclass of `FluentFuture` that provides us a place to declare special GWT
- versions of the `FluentFuture.catching(Class, com.google.common.base.Function) FluentFuture.catching` family of methods. Those versions have slightly different signatures.
+Those versions have slightly different signatures.
 
 ## Constructors
 

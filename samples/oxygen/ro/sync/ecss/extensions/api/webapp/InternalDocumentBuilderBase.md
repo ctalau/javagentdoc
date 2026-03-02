@@ -44,29 +44,48 @@
 
 ## Methods
 
-### `setBackground(`boolean` arg0)`
+### `setBackground(boolean arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setSystemId(`java.net.URL` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setSystemId(java.net.URL arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setSessionAttributes(`java.util.Map<java.lang.String,?>` arg0)`
+**Parameters:**
+- `arg0` (`java.net.URL`)
+
+### `setSessionAttributes(java.util.Map<java.lang.String,?> arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setContent(`java.io.Reader` arg0)`
+**Parameters:**
+- `arg0` (`java.util.Map<java.lang.String,?>`)
+
+### `setContent(java.io.Reader arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setContent(`java.io.Reader` arg0, `java.util.List<java.lang.Byte>` arg1)`
+**Parameters:**
+- `arg0` (`java.io.Reader`)
+
+### `setContent(java.io.Reader arg0, java.util.List<java.lang.Byte> arg1)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setContentEtag(`ro.sync.ecss.dom.ETagDataRecord` arg0)`
+**Parameters:**
+- `arg0` (`java.io.Reader`)
+- `arg1` (`java.util.List<java.lang.Byte>`)
+
+### `setContentEtag(ro.sync.ecss.dom.ETagDataRecord arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
+
+**Parameters:**
+- `arg0` (`ro.sync.ecss.dom.ETagDataRecord`)
 
 ### `getContentType()`
 
@@ -80,7 +99,11 @@
 
 **Returns:** `ro.sync.ecss.webapp.c`
 
-### `checkUserLicense([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md) arg0, `ro.sync.ecss.webapp.d.t` arg1)`
+### `checkUserLicense(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0, ro.sync.ecss.webapp.d.t arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md))
+- `arg1` (`ro.sync.ecss.webapp.d.t`)
 

@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `activated([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
 
@@ -19,11 +19,19 @@ This event is triggered when the Author extension where this listener is
  Listeners like AuthorMouseListener or AuthorListener 
  can be added at this point.
 
-### `deactivated([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The AuthorAccess of the Author page where the 
+ listener was activated.
+
+### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
 
 This event is triggered when another Author extension corresponding to the 
  the current document opened in Author page was activated, 
  the user switches to another editor page or the editor is closed.
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The AuthorAccess of the Author page where the
+ listener was deactivated.
 

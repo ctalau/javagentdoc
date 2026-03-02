@@ -16,7 +16,11 @@
 
 ## Methods
 
-### `installHelp(`org.eclipse.swt.widgets.Shell` arg0, `java.lang.String` arg1)`
+### `installHelp(org.eclipse.swt.widgets.Shell arg0, java.lang.String arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+- `arg1` (`java.lang.String`)
 

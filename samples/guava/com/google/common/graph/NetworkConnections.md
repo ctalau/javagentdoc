@@ -11,12 +11,6 @@
 
 ## Description
 
-An interface for representing and manipulating an origin node's adjacent nodes and incident edges
- in a `Network`.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <E> Edge parameter type
-
 ## Methods
 
 ### `adjacentNodes()`
@@ -43,44 +37,65 @@ An interface for representing and manipulating an origin node's adjacent nodes a
 
 **Returns:** `java.util.Set<E>`
 
-### `edgesConnecting(`N` node)`
+### `edgesConnecting(N node)`
 
 **Returns:** `java.util.Set<E>`
 
-Returns the set of edges connecting the origin node to `node`. For networks without
+For networks without
  parallel edges, this set cannot be of size greater than one.
 
-### `adjacentNode(`E` edge)`
+**Parameters:**
+- `node` (`N`)
+
+### `adjacentNode(E edge)`
 
 **Returns:** `N`
 
-Returns the node that is adjacent to the origin node along `edge`.
+In the directed case, edge is assumed to be an outgoing edge.
 
- <p>In the directed case, `edge` is assumed to be an outgoing edge.
+**Parameters:**
+- `edge` (`E`)
 
-### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
-
-**Returns:** `N`
-
-Remove `edge` from the set of incoming edges. Returns the former predecessor node.
-
- <p>In the undirected case, returns `null` if `isSelfLoop` is true.
-
-### `removeOutEdge(`E` edge)`
+### `removeInEdge(E edge, boolean isSelfLoop)`
 
 **Returns:** `N`
 
-Remove `edge` from the set of outgoing edges. Returns the former successor node.
+Returns the former predecessor node.
 
-### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
+ 
+In the undirected case, returns null if isSelfLoop is true.
+
+**Parameters:**
+- `edge` (`E`)
+- `isSelfLoop` (`boolean`)
+
+### `removeOutEdge(E edge)`
+
+**Returns:** `N`
+
+Returns the former successor node.
+
+**Parameters:**
+- `edge` (`E`)
+
+### `addInEdge(E edge, N node, boolean isSelfLoop)`
 
 **Returns:** `void`
 
-Add `edge` to the set of incoming edges. Implicitly adds `node` as a predecessor.
+Implicitly adds node as a predecessor.
 
-### `addOutEdge(`E` edge, `N` node)`
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
+- `isSelfLoop` (`boolean`)
+
+### `addOutEdge(E edge, N node)`
 
 **Returns:** `void`
 
-Add `edge` to the set of outgoing edges. Implicitly adds `node` as a successor.
+Implicitly adds node as a successor.
+
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
 

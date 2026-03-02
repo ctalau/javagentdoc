@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.reflect.ImmutableTypeToInstanceMap`
 
-**Extends:** [`com.google.common.collect.ForwardingMap<com.google.common.reflect.TypeToken<? extends B>,B>`](../collect/ForwardingMap,B>.md)
+**Extends:** [`com.google.common.collect.ForwardingMap<com.google.common.reflect.TypeToken<? extends B>,B>`](../collect/ForwardingMap.md)
 
 **Implements:** [`com.google.common.reflect.TypeToInstanceMap<B>`](./TypeToInstanceMap.md)
 
@@ -14,19 +14,20 @@
 
 ## Description
 
-A type-to-instance map backed by an `ImmutableMap`. See also `MutableTypeToInstanceMap`.
-**Author:** Ben Yu
-**Since:** 13.0
+See also MutableTypeToInstanceMap.
 
 ## Fields
 
 ### `delegate`
 
-**Type:** [`com.google.common.collect.ImmutableMap<com.google.common.reflect.TypeToken<? extends B>,B>`](../collect/ImmutableMap,B>.md)
+**Type:** [`com.google.common.collect.ImmutableMap<com.google.common.reflect.TypeToken<? extends B>,B>`](../collect/ImmutableMap.md)
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableMap<com.google.common.reflect.TypeToken<? extends B>,B>`](../collect/ImmutableMap,B>.md) delegate)`
+### `<init>(com.google.common.collect.ImmutableMap<com.google.common.reflect.TypeToken<? extends B>,B> delegate)`
+
+**Parameters:**
+- `delegate` ([`com.google.common.collect.ImmutableMap<com.google.common.reflect.TypeToken<? extends B>,B>`](../collect/ImmutableMap.md))
 
 ## Methods
 
@@ -34,59 +35,63 @@ A type-to-instance map backed by an `ImmutableMap`. See also `MutableTypeToInsta
 
 **Returns:** [`com.google.common.reflect.ImmutableTypeToInstanceMap<B>`](./ImmutableTypeToInstanceMap.md)
 
-Returns an empty type to instance map.
-
 ### `builder()`
 
-**Returns:** [`com.google.common.reflect.ImmutableTypeToInstanceMap.Builder<B>`](ImmutableTypeToInstanceMap/Builder.md)
+**Returns:** `com.google.common.reflect.ImmutableTypeToInstanceMap.Builder<B>`
 
-Returns a new builder.
-
-### `getInstance([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md) type)`
+### `getInstance(com.google.common.reflect.TypeToken<T> type)`
 
 **Returns:** `T`
 
-### `getInstance(`java.lang.Class<T>` type)`
+**Parameters:**
+- `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
+
+### `getInstance(java.lang.Class<T> type)`
 
 **Returns:** `T`
 
-### `putInstance([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md) type, `T` value)`
+**Parameters:**
+- `type` (`java.lang.Class<T>`)
+
+### `putInstance(com.google.common.reflect.TypeToken<T> type, T value)`
 
 **Returns:** `T`
 
-Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:**unsupported operation
-@throws UnsupportedOperationException always
+**Parameters:**
+- `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
+- `value` (`T`)
 
-### `putInstance(`java.lang.Class<T>` type, `T` value)`
+### `putInstance(java.lang.Class<T> type, T value)`
 
 **Returns:** `T`
 
-Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:**unsupported operation
-@throws UnsupportedOperationException always
+**Parameters:**
+- `type` (`java.lang.Class<T>`)
+- `value` (`T`)
 
-### `put([`com.google.common.reflect.TypeToken<? extends B>`](./TypeToken.md) key, `B` value)`
+### `put(com.google.common.reflect.TypeToken<? extends B> key, B value)`
 
 **Returns:** `B`
 
-Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:**unsupported operation
-@throws UnsupportedOperationException always
+**Parameters:**
+- `key` ([`com.google.common.reflect.TypeToken<? extends B>`](./TypeToken.md))
+- `value` (`B`)
 
-### `putAll(`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends B>,? extends B>` map)`
+### `putAll(java.util.Map<? extends com.google.common.reflect.TypeToken<? extends B>,? extends B> map)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the map unmodified.
-**Deprecated:**unsupported operation
-@throws UnsupportedOperationException always
+**Parameters:**
+- `map` (`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends B>,? extends B>`)
 
 ### `delegate()`
 
 **Returns:** `java.util.Map<com.google.common.reflect.TypeToken<? extends B>,B>`
 
-### `trustedGet([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md) type)`
+### `trustedGet(com.google.common.reflect.TypeToken<T> type)`
 
 **Returns:** `T`
+
+**Parameters:**
+- `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
 

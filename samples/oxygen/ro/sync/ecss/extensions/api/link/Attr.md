@@ -22,7 +22,12 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` attrQName, `java.lang.String` attrNamespace, `java.lang.String` attrValue)`
+### `<init>(java.lang.String attrQName, java.lang.String attrNamespace, java.lang.String attrValue)`
+
+**Parameters:**
+- `attrQName` (`java.lang.String`): Attribute qualified name.
+- `attrNamespace` (`java.lang.String`): Attribute namespace URI.
+- `attrValue` (`java.lang.String`): Attribute value.
 
 ## Methods
 

@@ -8,7 +8,11 @@
 
 ## Methods
 
-### `processRange([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../node/AuthorDocumentFragment.md) fragment)`
+### `processRange(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../node/AuthorDocumentFragment.md)): The fragment which was created from a specific range. It will be merged back in
+                 the document.
 

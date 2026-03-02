@@ -12,22 +12,34 @@
 
 ## Description
 
-A sorted set of contiguous values in a given `DiscreteDomain`. Example:
+Example:
 
- <pre>`ContiguousSet.create(Range.closed(5, 42), DiscreteDomain.integers())
- `</pre>
+ 
 
- <p>Note that because bounded ranges over `int` and `long` values are so common, this
+```
+
+ ContiguousSet.create(Range.closed(5, 42), DiscreteDomain.integers())
+ 
+```
+
+
+ 
+Note that because bounded ranges over int and long values are so common, this
  particular example can be written as just:
 
- <pre>`ContiguousSet.closed(5, 42)
- `</pre>
+ 
 
- <p><b>Warning:</b> Be extremely careful what you do with conceptually large instances (such as
- `ContiguousSet.create(Range.greaterThan(0), DiscreteDomain.integers()`). Certain operations
- on such a set can be performed efficiently, but others (such as `Set.hashCode` or `Collections.frequency`) can cause major performance problems.
-**Author:** Gregory Kick
-**Since:** 10.0
+```
+
+ ContiguousSet.closed(5, 42)
+ 
+```
+
+
+ 
+**Warning:** Be extremely careful what you do with conceptually large instances (such as
+ ContiguousSet.create(Range.greaterThan(0), DiscreteDomain.integers()). Certain operations
+ on such a set can be performed efficiently, but others (such as Set#hashCode or Collections#frequency) can cause major performance problems.
 
 ## Fields
 
@@ -37,126 +49,166 @@ A sorted set of contiguous values in a given `DiscreteDomain`. Example:
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+### `<init>(com.google.common.collect.DiscreteDomain<C> domain)`
+
+**Parameters:**
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
 ## Methods
 
-### `create([`com.google.common.collect.Range<C>`](./Range.md) range, [`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+### `create(com.google.common.collect.Range<C> range, com.google.common.collect.DiscreteDomain<C> domain)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-Returns a `ContiguousSet` containing the same values in the given domain contained by the range.
-@throws IllegalArgumentException if neither range nor the domain has a lower bound, or if
-     neither has an upper bound
-**Since:** 13.0
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `closed(`int` lower, `int` upper)`
+### `closed(int lower, int upper)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Integer>`](./ContiguousSet.md)
 
-Returns a nonempty contiguous set containing all `int` values from `lower`
- (inclusive) to `upper` (inclusive). (These are the same values contained in `Range.closed(lower, upper)`.)
-@throws IllegalArgumentException if `lower` is greater than `upper`
-**Since:** 23.0
+(These are the same values contained in 
+ Range.closed(lower, upper).)
 
-### `closed(`long` lower, `long` upper)`
+**Parameters:**
+- `lower` (`int`)
+- `upper` (`int`)
+
+### `closed(long lower, long upper)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Long>`](./ContiguousSet.md)
 
-Returns a nonempty contiguous set containing all `long` values from `lower`
- (inclusive) to `upper` (inclusive). (These are the same values contained in `Range.closed(lower, upper)`.)
-@throws IllegalArgumentException if `lower` is greater than `upper`
-**Since:** 23.0
+(These are the same values contained in 
+ Range.closed(lower, upper).)
 
-### `closedOpen(`int` lower, `int` upper)`
+**Parameters:**
+- `lower` (`long`)
+- `upper` (`long`)
+
+### `closedOpen(int lower, int upper)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Integer>`](./ContiguousSet.md)
 
-Returns a contiguous set containing all `int` values from `lower` (inclusive) to
- `upper` (exclusive). If the endpoints are equal, an empty set is returned. (These are the
- same values contained in `Range.closedOpen(lower, upper)`.)
-@throws IllegalArgumentException if `lower` is greater than `upper`
-**Since:** 23.0
+If the endpoints are equal, an empty set is returned. (These are the
+ same values contained in Range.closedOpen(lower, upper).)
 
-### `closedOpen(`long` lower, `long` upper)`
+**Parameters:**
+- `lower` (`int`)
+- `upper` (`int`)
+
+### `closedOpen(long lower, long upper)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Long>`](./ContiguousSet.md)
 
-Returns a contiguous set containing all `long` values from `lower` (inclusive) to
- `upper` (exclusive). If the endpoints are equal, an empty set is returned. (These are the
- same values contained in `Range.closedOpen(lower, upper)`.)
-@throws IllegalArgumentException if `lower` is greater than `upper`
-**Since:** 23.0
+If the endpoints are equal, an empty set is returned. (These are the
+ same values contained in Range.closedOpen(lower, upper).)
 
-### `headSet(`C` toElement)`
+**Parameters:**
+- `lower` (`long`)
+- `upper` (`long`)
 
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
-### `headSet(`C` toElement, `boolean` inclusive)`
+### `headSet(C toElement)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-**Since:** 12.0
+**Parameters:**
+- `toElement` (`C`)
 
-### `subSet(`C` fromElement, `C` toElement)`
-
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
-### `subSet(`C` fromElement, `boolean` fromInclusive, `C` toElement, `boolean` toInclusive)`
+### `headSet(C toElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-**Since:** 12.0
+**Parameters:**
+- `toElement` (`C`)
+- `inclusive` (`boolean`)
 
-### `tailSet(`C` fromElement)`
-
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
-### `tailSet(`C` fromElement, `boolean` inclusive)`
+### `subSet(C fromElement, C toElement)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-**Since:** 12.0
+**Parameters:**
+- `fromElement` (`C`)
+- `toElement` (`C`)
 
-### `headSetImpl(`C` toElement, `boolean` inclusive)`
-
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
-### `subSetImpl(`C` fromElement, `boolean` fromInclusive, `C` toElement, `boolean` toInclusive)`
+### `subSet(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `tailSetImpl(`C` fromElement, `boolean` inclusive)`
+**Parameters:**
+- `fromElement` (`C`)
+- `fromInclusive` (`boolean`)
+- `toElement` (`C`)
+- `toInclusive` (`boolean`)
+
+### `tailSet(C fromElement)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-### `intersection([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md) other)`
+**Parameters:**
+- `fromElement` (`C`)
+
+### `tailSet(C fromElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-Returns the set of values that are contained in both this set and the other.
+**Parameters:**
+- `fromElement` (`C`)
+- `inclusive` (`boolean`)
 
- <p>This method should always be used instead of `Sets.intersection` for `ContiguousSet` instances.
+### `headSetImpl(C toElement, boolean inclusive)`
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+**Parameters:**
+- `toElement` (`C`)
+- `inclusive` (`boolean`)
+
+### `subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+**Parameters:**
+- `fromElement` (`C`)
+- `fromInclusive` (`boolean`)
+- `toElement` (`C`)
+- `toInclusive` (`boolean`)
+
+### `tailSetImpl(C fromElement, boolean inclusive)`
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+**Parameters:**
+- `fromElement` (`C`)
+- `inclusive` (`boolean`)
+
+### `intersection(com.google.common.collect.ContiguousSet<C> other)`
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+This method should always be used instead of Sets#intersection for ContiguousSet instances.
+
+**Parameters:**
+- `other` ([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md))
 
 ### `range()`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-Returns a range, closed on both ends, whose endpoints are the minimum and maximum values
- contained in this set. This is equivalent to `range(CLOSED, CLOSED)`.
-@throws NoSuchElementException if this set is empty
+This is equivalent to range(CLOSED, CLOSED).
 
-### `range([`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+### `range(com.google.common.collect.BoundType lowerBoundType, com.google.common.collect.BoundType upperBoundType)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-Returns the minimal range with the given boundary types for which all values in this set are
- contained within the range.
+Note that this method will return ranges with unbounded endpoints if BoundType#OPEN
+ is requested for a domain minimum or maximum. For example, if set was created from the
+ range [1..Integer.MAX_VALUE] then set.range(CLOSED, OPEN) must return 
+ [1..∞).
 
- <p>Note that this method will return ranges with unbounded endpoints if `BoundType.OPEN`
- is requested for a domain minimum or maximum. For example, if `set` was created from the
- range `[1..Integer.MAX_VALUE]` then `set.range(CLOSED, OPEN)` must return `[1..\u221e)`.
-@throws NoSuchElementException if this set is empty
+**Parameters:**
+- `lowerBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
 ### `createDescendingSet()`
 
@@ -166,16 +218,13 @@ Returns the minimal range with the given boundary types for which all values in 
 
 **Returns:** `java.lang.String`
 
-Returns a shorthand representation of the contents such as `"[1..100]"`.
-
 ### `builder()`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet.Builder<E>`](ImmutableSortedSet/Builder.md)
+**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
 
-Not supported. `ContiguousSet` instances are constructed with `create`. This
- method exists only to hide `ImmutableSet.builder` from consumers of `ContiguousSet`.
-@throws UnsupportedOperationException always
-**Deprecated:**Use `create`.
+ContiguousSet instances are constructed with #create. This
+ method exists only to hide ImmutableSet#builder from consumers of 
+ ContiguousSet.
 
 ### `writeReplace()`
 

@@ -14,9 +14,13 @@
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
 ### `getArguments()`
 
@@ -28,7 +32,11 @@ The reuse content operation will display a dialog for choosing the file to save 
 
 **Returns:** `java.lang.String`
 
-### `generateID([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.lang.String` seed)`
+### `generateID(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String seed)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `seed` (`java.lang.String`)
 

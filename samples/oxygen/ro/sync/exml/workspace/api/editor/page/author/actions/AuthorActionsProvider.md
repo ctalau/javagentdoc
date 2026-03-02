@@ -21,10 +21,14 @@
 Can be null if the author page does not have an associated document type.
  This should get called after each load as the extension actions depend on the loaded document type.
 
-### `invokeAuthorExtensionActionInContext(`java.lang.Object` action, `int` offset)`
+### `invokeAuthorExtensionActionInContext(java.lang.Object action, int offset)`
 
 **Returns:** `void`
 
 If the action is not an extension action, the method runs it without a context offset.
  The action will be invoked only if it is enabled in the execution context offset.
+
+**Parameters:**
+- `action` (`java.lang.Object`): The action to invoke
+- `offset` (`int`): The offset in the document where to invoke the action.
 

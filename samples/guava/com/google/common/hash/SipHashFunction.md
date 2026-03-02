@@ -10,11 +10,6 @@
 
 ## Description
 
-`HashFunction` implementation of SipHash-c-d.
-**Author:** Kurt Alfred Kluever
-**Author:** Jean-Philippe Aumasson
-**Author:** Daniel J. Bernstein
-
 ## Fields
 
 ### `SIP_HASH_24`
@@ -43,12 +38,13 @@
 
 ## Constructors
 
-### `<init>(`int` c, `int` d, `long` k0, `long` k1)`
+### `<init>(int c, int d, long k0, long k1)`
 
-@param c the number of compression rounds (must be positive)
-@param d the number of finalization rounds (must be positive)
-@param k0 the first half of the key
-@param k1 the second half of the key
+**Parameters:**
+- `c` (`int`): the number of compression rounds (must be positive)
+- `d` (`int`): the number of finalization rounds (must be positive)
+- `k0` (`long`): the first half of the key
+- `k1` (`long`): the second half of the key
 
 ## Methods
 
@@ -64,9 +60,12 @@
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

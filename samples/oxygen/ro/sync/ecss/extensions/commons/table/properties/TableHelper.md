@@ -8,15 +8,25 @@
 
 ## Methods
 
-### `isNodeOfType([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node, `int` type)`
+### `isNodeOfType(ro.sync.ecss.extensions.api.node.AuthorElement node, int type)`
 
 **Returns:** `boolean`
 
-### `isTable([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
+- `type` (`int`): The type to search for.
+
+### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
 
-### `isTableGroup([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
+
+### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
 

@@ -44,9 +44,22 @@
 
 ## Constructors
 
-### `<init>(`ro.sync.exml.workspace.b.i.j` arg0, `java.awt.Frame` arg1, `java.lang.String[]` arg2, `java.lang.String` arg3)`
+### `<init>(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3)`
 
-### `<init>(`ro.sync.exml.workspace.b.i.j` arg0, `java.awt.Frame` arg1, `java.lang.String[]` arg2, `java.lang.String` arg3, `java.lang.String` arg4)`
+**Parameters:**
+- `arg0` (`ro.sync.exml.workspace.b.i.j`)
+- `arg1` (`java.awt.Frame`)
+- `arg2` (`java.lang.String[]`)
+- `arg3` (`java.lang.String`)
+
+### `<init>(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
+
+**Parameters:**
+- `arg0` (`ro.sync.exml.workspace.b.i.j`)
+- `arg1` (`java.awt.Frame`)
+- `arg2` (`java.lang.String[]`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.lang.String`)
 
 ## Methods
 
@@ -54,17 +67,32 @@
 
 **Returns:** `void`
 
-### `load(`java.net.URL` arg0, `java.io.Reader` arg1)`
+### `load(java.net.URL arg0, java.io.Reader arg1)`
 
 **Returns:** `void`
 
-### `showLocation(`java.net.URL` arg0, `java.io.Reader` arg1)`
+**Parameters:**
+- `arg0` (`java.net.URL`)
+- `arg1` (`java.io.Reader`)
+
+### `showLocation(java.net.URL arg0, java.io.Reader arg1)`
 
 **Returns:** `void`
 
-### `createEditor(`ro.sync.exml.workspace.b.i.j` arg0, `java.awt.Frame` arg1, `java.lang.String[]` arg2, `java.lang.String` arg3, `java.lang.String` arg4)`
+**Parameters:**
+- `arg0` (`java.net.URL`)
+- `arg1` (`java.io.Reader`)
+
+### `createEditor(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
 
 **Returns:** `ro.sync.exml.editor.dd`
+
+**Parameters:**
+- `arg0` (`ro.sync.exml.workspace.b.i.j`)
+- `arg1` (`java.awt.Frame`)
+- `arg2` (`java.lang.String[]`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.lang.String`)
 
 ### `addActionsToActionMap()`
 
@@ -74,13 +102,19 @@
 
 **Returns:** `java.io.Reader`
 
-### `addAuthorComponentListener([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md) arg0)`
+### `addAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener arg0)`
 
 **Returns:** `void`
 
-### `removeAuthorComponentListener([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md))
+
+### `removeAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md))
 
 ### `getEditorComponent()`
 
@@ -94,9 +128,12 @@
 
 **Returns:** `boolean`
 
-### `setModified(`boolean` arg0)`
+### `setModified(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `getWSEditorAccess()`
 
@@ -110,15 +147,24 @@
 
 **Returns:** `ro.sync.exml.editor.xmleditor.pageauthor.q`
 
-### `getAdditionalEditHelper(`int` arg0)`
+### `getAdditionalEditHelper(int arg0)`
 
 **Returns:** `javax.swing.JComponent`
 
-### `print(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `print(boolean arg0)`
 
 **Returns:** `void`
 
-### `showLocation(`java.net.URL` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `showLocation(java.net.URL arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.net.URL`)
 

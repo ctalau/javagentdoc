@@ -8,9 +8,12 @@
 
 ## Methods
 
-### `processChanges(`boolean` processChanges)`
+### `processChanges(boolean processChanges)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorXPathExpressionBuilder`](./AuthorXPathExpressionBuilder.md)
+
+**Parameters:**
+- `processChanges` (`boolean`): If `true` the delete changes will be ignored.
 
 ### `avoidNamespacePrefixes()`
 

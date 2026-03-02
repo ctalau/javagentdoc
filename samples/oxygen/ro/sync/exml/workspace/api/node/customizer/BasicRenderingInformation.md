@@ -28,19 +28,26 @@ If `null` the default text value will be used for rendering.
 
 ## Methods
 
-### `setRenderedText(`java.lang.String` renderedText)`
+### `setRenderedText(java.lang.String renderedText)`
 
 **Returns:** `void`
 
 If the rendered text is `null` then the default node rendering will be used.
 
-### `setTooltipText(`java.lang.String` tooltipText)`
+**Parameters:**
+- `renderedText` (`java.lang.String`): The rendered text, usually the node name. If `null` the default text will be used for rendering.
+
+### `setTooltipText(java.lang.String tooltipText)`
 
 **Returns:** `void`
 
 If the tooltip text is `null` then the default tooltip text will be used for the node.
 
-### `setIconPath(`java.lang.String` iconPath)`
+**Parameters:**
+- `tooltipText` (`java.lang.String`): The tooltip text which will appear in the tooltip associated with the node.
+ If `null` the default tooltip text will be used for the node.
+
+### `setIconPath(java.lang.String iconPath)`
 
 **Returns:** `void`
 
@@ -64,6 +71,9 @@ The path can be an icon file path, the string representation of an icon URL
 
  The previous sequence assumes that *Icon.gif* icon image is located in the *images* folder inside
  your **jar** file.
+
+**Parameters:**
+- `iconPath` (`java.lang.String`): The path of the icon. If `null` the default icon will be used for the node.
 
 ### `getRenderedText()`
 

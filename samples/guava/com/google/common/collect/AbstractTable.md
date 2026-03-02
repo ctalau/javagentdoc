@@ -14,9 +14,6 @@
 
 ## Description
 
-Skeletal, implementation-agnostic implementation of the `Table` interface.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `cellSet`
@@ -33,13 +30,19 @@ Skeletal, implementation-agnostic implementation of the `Table` interface.
 
 ## Methods
 
-### `containsRow(`java.lang.Object` rowKey)`
+### `containsRow(java.lang.Object rowKey)`
 
 **Returns:** `boolean`
 
-### `containsColumn(`java.lang.Object` columnKey)`
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+
+### `containsColumn(java.lang.Object columnKey)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `columnKey` (`java.lang.Object`)
 
 ### `rowKeySet()`
 
@@ -49,17 +52,28 @@ Skeletal, implementation-agnostic implementation of the `Table` interface.
 
 **Returns:** `java.util.Set<C>`
 
-### `containsValue(`java.lang.Object` value)`
+### `containsValue(java.lang.Object value)`
 
 **Returns:** `boolean`
 
-### `contains(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
+**Parameters:**
+- `value` (`java.lang.Object`)
+
+### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `boolean`
 
-### `get(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
+
+### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
 
 ### `isEmpty()`
 
@@ -69,17 +83,29 @@ Skeletal, implementation-agnostic implementation of the `Table` interface.
 
 **Returns:** `void`
 
-### `remove(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
+### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `V`
 
-### `put(`R` rowKey, `C` columnKey, `V` value)`
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
+
+### `put(R rowKey, C columnKey, V value)`
 
 **Returns:** `V`
 
-### `putAll([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md) table)`
+**Parameters:**
+- `rowKey` (`R`)
+- `columnKey` (`C`)
+- `value` (`V`)
+
+### `putAll(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md))
 
 ### `cellSet()`
 
@@ -113,9 +139,12 @@ Skeletal, implementation-agnostic implementation of the `Table` interface.
 
 **Returns:** `java.util.Spliterator<V>`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -124,6 +153,4 @@ Skeletal, implementation-agnostic implementation of the `Table` interface.
 ### `toString()`
 
 **Returns:** `java.lang.String`
-
-Returns the string representation `rowMap().toString()`.
 

@@ -152,21 +152,37 @@ Pairs key=value separated by comma or new line.
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `canTreatAsScript(`java.lang.String` script)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
+
+### `canTreatAsScript(java.lang.String script)`
 
 **Returns:** `boolean`
 
-### `createTransformer([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `javax.xml.transform.Source` scriptSrc)`
+**Parameters:**
+- `script` (`java.lang.String`): The value of the script parameter.
+
+### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source scriptSrc)`
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createTransformer([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `javax.xml.transform.Source` scriptSrc, [`ro.sync.ecss.extensions.commons.operations.ElementLocationPath`](./ElementLocationPath.md) location)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to different Author resources.
+- `scriptSrc` (`javax.xml.transform.Source`): The XSLT or XQuery script.
+
+### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source scriptSrc, ro.sync.ecss.extensions.commons.operations.ElementLocationPath location)`
 
 **Returns:** `javax.xml.transform.Transformer`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to different Author resources.
+- `scriptSrc` (`javax.xml.transform.Source`): The XSLT or XQuery script.
+- `location` ([`ro.sync.ecss.extensions.commons.operations.ElementLocationPath`](./ElementLocationPath.md)): The location of the "current" element.
 
 ### `getArguments()`
 

@@ -27,33 +27,59 @@ So the link
 
 ## Constructors
 
-### `<init>(`java.lang.String` link)`
+### `<init>(java.lang.String link)`
+
+**Parameters:**
+- `link` (`java.lang.String`): The link used to identify the element.
 
 ## Methods
 
-### `endElement(`java.lang.String` uri, `java.lang.String` localName, `java.lang.String` name)`
+### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
 
 **Returns:** `void`
 
-### `startElement(`java.lang.String` uri, `java.lang.String` localName, `java.lang.String` name, [`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md) atts)`
+**Parameters:**
+- `uri` (`java.lang.String`)
+- `localName` (`java.lang.String`)
+- `name` (`java.lang.String`)
+
+### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Returns:** `boolean`
 
-### `isTopic([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md) atts)`
+**Parameters:**
+- `uri` (`java.lang.String`)
+- `localName` (`java.lang.String`)
+- `name` (`java.lang.String`)
+- `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md))
+
+### `isTopic(ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Returns:** `boolean`
 
-### `hasConrefAttributes([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md) atts)`
+**Parameters:**
+- `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
+
+### `hasConrefAttributes(ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Returns:** `boolean`
 
-### `getIdValue([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md) atts)`
+**Parameters:**
+- `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
+
+### `getIdValue(ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Returns:** `java.lang.String`
 
-### `getLocalName(`java.lang.String` qName)`
+**Parameters:**
+- `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
+
+### `getLocalName(java.lang.String qName)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `qName` (`java.lang.String`)
 
 ### `getNumberOfNestedTopics()`
 

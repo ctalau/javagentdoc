@@ -10,16 +10,12 @@
 
 ## Description
 
-A wrapper class for unsigned `long` values, supporting arithmetic operations.
+In some cases, when speed is more important than code readability, it may be faster simply to
+ treat primitive long values as unsigned, using the methods from UnsignedLongs.
 
- <p>In some cases, when speed is more important than code readability, it may be faster simply to
- treat primitive `long` values as unsigned, using the methods from `UnsignedLongs`.
-
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/PrimitivesExplained#unsigned-support">unsigned
- primitive utilities</a>.
-**Author:** Louis Wasserman
-**Author:** Colin Evans
-**Since:** 11.0
+ 
+See the Guava User Guide article on [unsigned
+ primitive utilities](https://github.com/google/guava/wiki/PrimitivesExplained#unsigned-support).
 
 ## Fields
 
@@ -45,155 +41,164 @@ A wrapper class for unsigned `long` values, supporting arithmetic operations.
 
 ## Constructors
 
-### `<init>(`long` value)`
+### `<init>(long value)`
+
+**Parameters:**
+- `value` (`long`)
 
 ## Methods
 
-### `fromLongBits(`long` bits)`
+### `fromLongBits(long bits)`
 
 **Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
 
-Returns an `UnsignedLong` corresponding to a given bit representation. The argument is
- interpreted as an unsigned 64-bit value. Specifically, the sign bit of `bits` is
+The argument is
+ interpreted as an unsigned 64-bit value. Specifically, the sign bit of bits is
  interpreted as a normal bit, and all other bits are treated as usual.
 
- <p>If the argument is nonnegative, the returned result will be equal to `bits`,
- otherwise, the result will be equal to `2^64 + bits`.
+ 
+If the argument is nonnegative, the returned result will be equal to bits,
+ otherwise, the result will be equal to 2^64 + bits.
 
- <p>To represent decimal constants less than `2^63`, consider `valueOf(long)`
+ 
+To represent decimal constants less than 2^63, consider #valueOf(long)
  instead.
-**Since:** 14.0
 
-### `valueOf(`long` value)`
+**Parameters:**
+- `bits` (`long`)
 
-**Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
-
-Returns an `UnsignedLong` representing the same value as the specified `long`.
-@throws IllegalArgumentException if `value` is negative
-**Since:** 14.0
-
-### `valueOf(`java.math.BigInteger` value)`
+### `valueOf(long value)`
 
 **Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
 
-Returns a `UnsignedLong` representing the same value as the specified `BigInteger`.
- This is the inverse operation of `bigIntegerValue()`.
-@throws IllegalArgumentException if `value` is negative or `value >= 2^64`
+**Parameters:**
+- `value` (`long`)
 
-### `valueOf(`java.lang.String` string)`
-
-**Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
-
-Returns an `UnsignedLong` holding the value of the specified `String`, parsed as an
- unsigned `long` value.
-@throws NumberFormatException if the string does not contain a parsable unsigned `long`
-     value
-
-### `valueOf(`java.lang.String` string, `int` radix)`
+### `valueOf(java.math.BigInteger value)`
 
 **Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
 
-Returns an `UnsignedLong` holding the value of the specified `String`, parsed as an
- unsigned `long` value in the specified radix.
-@throws NumberFormatException if the string does not contain a parsable unsigned `long`
-     value, or `radix` is not between `Character.MIN_RADIX` and `Character.MAX_RADIX`
+This is the inverse operation of #bigIntegerValue().
 
-### `plus([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md) val)`
+**Parameters:**
+- `value` (`java.math.BigInteger`)
+
+### `valueOf(java.lang.String string)`
 
 **Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
 
-Returns the result of adding this and `val`. If the result would have more than 64 bits,
+**Parameters:**
+- `string` (`java.lang.String`)
+
+### `valueOf(java.lang.String string, int radix)`
+
+**Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
+
+**Parameters:**
+- `string` (`java.lang.String`)
+- `radix` (`int`)
+
+### `plus(com.google.common.primitives.UnsignedLong val)`
+
+**Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
+
+If the result would have more than 64 bits,
  returns the low 64 bits of the result.
-**Since:** 14.0
 
-### `minus([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md) val)`
+**Parameters:**
+- `val` ([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md))
+
+### `minus(com.google.common.primitives.UnsignedLong val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
 
-Returns the result of subtracting this and `val`. If the result would have more than 64
+If the result would have more than 64
  bits, returns the low 64 bits of the result.
-**Since:** 14.0
 
-### `times([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md) val)`
+**Parameters:**
+- `val` ([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md))
+
+### `times(com.google.common.primitives.UnsignedLong val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
 
-Returns the result of multiplying this and `val`. If the result would have more than 64
+If the result would have more than 64
  bits, returns the low 64 bits of the result.
-**Since:** 14.0
 
-### `dividedBy([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md) val)`
+**Parameters:**
+- `val` ([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md))
 
-**Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
-
-Returns the result of dividing this by `val`.
-**Since:** 14.0
-
-### `mod([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md) val)`
+### `dividedBy(com.google.common.primitives.UnsignedLong val)`
 
 **Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
 
-Returns this modulo `val`.
-**Since:** 14.0
+**Parameters:**
+- `val` ([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md))
+
+### `mod(com.google.common.primitives.UnsignedLong val)`
+
+**Returns:** [`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md)
+
+**Parameters:**
+- `val` ([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md))
 
 ### `intValue()`
 
 **Returns:** `int`
 
-Returns the value of this `UnsignedLong` as an `int`.
-
 ### `longValue()`
 
 **Returns:** `long`
 
-Returns the value of this `UnsignedLong` as a `long`. This is an inverse operation
- to `fromLongBits`.
+This is an inverse operation
+ to #fromLongBits.
 
- <p>Note that if this `UnsignedLong` holds a value `>= 2^63`, the returned value
- will be equal to `this - 2^64`.
+ 
+Note that if this UnsignedLong holds a value >= 2^63, the returned value
+ will be equal to this - 2^64.
 
 ### `floatValue()`
 
 **Returns:** `float`
 
-Returns the value of this `UnsignedLong` as a `float`, analogous to a widening
- primitive conversion from `long` to `float`, and correctly rounded.
-
 ### `doubleValue()`
 
 **Returns:** `double`
-
-Returns the value of this `UnsignedLong` as a `double`, analogous to a widening
- primitive conversion from `long` to `double`, and correctly rounded.
 
 ### `bigIntegerValue()`
 
 **Returns:** `java.math.BigInteger`
 
-Returns the value of this `UnsignedLong` as a `BigInteger`.
-
-### `compareTo([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md) o)`
+### `compareTo(com.google.common.primitives.UnsignedLong o)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `o` ([`com.google.common.primitives.UnsignedLong`](./UnsignedLong.md))
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-Returns a string representation of the `UnsignedLong` value, in base 10.
-
-### `toString(`int` radix)`
+### `toString(int radix)`
 
 **Returns:** `java.lang.String`
 
-Returns a string representation of the `UnsignedLong` value, in base `radix`. If
- `radix < Character.MIN_RADIX` or `radix > Character.MAX_RADIX`, the radix `10` is used.
+If
+ radix < Character.MIN_RADIX or radix > Character.MAX_RADIX, the radix 
+ 10 is used.
+
+**Parameters:**
+- `radix` (`int`)
 

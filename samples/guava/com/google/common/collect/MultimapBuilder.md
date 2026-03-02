@@ -11,24 +11,27 @@
 
 ## Description
 
-An immutable builder for `Multimap` instances, letting you independently select the desired
- behaviors (for example, ordering) of the backing map and value-collections. Example:
+Example:
 
- <pre>`ListMultimap<UserId, ErrorResponse> errorsByUser =
+ 
+
+```
+
+ ListMultimap<UserId, ErrorResponse> errorsByUser =
      MultimapBuilder.linkedHashKeys().arrayListValues().build();
  SortedSetMultimap<String, Method> methodsForName =
      MultimapBuilder.treeKeys().treeSetValues(this::compareMethods).build();
- `</pre>
+ 
+```
 
- <p>`MultimapBuilder` instances are immutable. Invoking a configuration method has no effect
+
+ 
+MultimapBuilder instances are immutable. Invoking a configuration method has no effect
  on the receiving instance; you must store and use the new builder instance it returns instead.
 
- <p>The generated multimaps are serializable if the key and value types are serializable, unless
+ 
+The generated multimaps are serializable if the key and value types are serializable, unless
  stated otherwise in one of the configuration methods.
-**Author:** Louis Wasserman
-@param <K0> An upper bound on the key type of the generated multimap.
-@param <V0> An upper bound on the value type of the generated multimap.
-**Since:** 16.0
 
 ## Fields
 
@@ -44,83 +47,78 @@ An immutable builder for `Multimap` instances, letting you independently select 
 
 ### `hashKeys()`
 
-**Returns:** [`com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](MultimapBuilder/MultimapBuilderWithKeys.md)
+**Returns:** `com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`
 
-Uses a hash table to map keys to value collections.
+### `hashKeys(int expectedKeys)`
 
-### `hashKeys(`int` expectedKeys)`
+**Returns:** `com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`
 
-**Returns:** [`com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](MultimapBuilder/MultimapBuilderWithKeys.md)
-
-Uses a hash table to map keys to value collections, initialized to expect the specified number
- of keys.
-@throws IllegalArgumentException if `expectedKeys < 0`
+**Parameters:**
+- `expectedKeys` (`int`)
 
 ### `linkedHashKeys()`
 
-**Returns:** [`com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](MultimapBuilder/MultimapBuilderWithKeys.md)
+**Returns:** `com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`
 
-Uses a hash table to map keys to value collections.
-
- <p>The collections returned by `Multimap.keySet()`, `Multimap.keys()`, and `Multimap.asMap()` will iterate through the keys in the order that they were first added to the
+The collections returned by Multimap#keySet(), Multimap#keys(), and Multimap#asMap() will iterate through the keys in the order that they were first added to the
  multimap, save that if all values associated with a key are removed and then the key is added
  back into the multimap, that key will come last in the key iteration order.
 
-### `linkedHashKeys(`int` expectedKeys)`
+### `linkedHashKeys(int expectedKeys)`
 
-**Returns:** [`com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](MultimapBuilder/MultimapBuilderWithKeys.md)
+**Returns:** `com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`
 
-Uses an hash table to map keys to value collections, initialized to expect the specified number
- of keys.
-
- <p>The collections returned by `Multimap.keySet()`, `Multimap.keys()`, and `Multimap.asMap()` will iterate through the keys in the order that they were first added to the
+The collections returned by Multimap#keySet(), Multimap#keys(), and Multimap#asMap() will iterate through the keys in the order that they were first added to the
  multimap, save that if all values associated with a key are removed and then the key is added
  back into the multimap, that key will come last in the key iteration order.
+
+**Parameters:**
+- `expectedKeys` (`int`)
 
 ### `treeKeys()`
 
-**Returns:** [`com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.Comparable>`](MultimapBuilder/MultimapBuilderWithKeys.md)
+**Returns:** `com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<java.lang.Comparable>`
 
-Uses a naturally-ordered `TreeMap` to map keys to value collections.
+The collections returned by Multimap#keySet(), Multimap#keys(), and Multimap#asMap() will iterate through the keys in sorted order.
 
- <p>The collections returned by `Multimap.keySet()`, `Multimap.keys()`, and `Multimap.asMap()` will iterate through the keys in sorted order.
+ 
+For all multimaps generated by the resulting builder, the Multimap#keySet() can be
+ safely cast to a java.util.SortedSet, and the Multimap#asMap() can safely be
+ cast to a java.util.SortedMap.
 
- <p>For all multimaps generated by the resulting builder, the `Multimap.keySet()` can be
- safely cast to a `java.util.SortedSet`, and the `Multimap.asMap()` can safely be
- cast to a `java.util.SortedMap`.
+### `treeKeys(java.util.Comparator<K0> comparator)`
 
-### `treeKeys(`java.util.Comparator<K0>` comparator)`
+**Returns:** `com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<K0>`
 
-**Returns:** [`com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<K0>`](MultimapBuilder/MultimapBuilderWithKeys.md)
+The collections returned by Multimap#keySet(), Multimap#keys(), and Multimap#asMap() will iterate through the keys in sorted order.
 
-Uses a `TreeMap` sorted by the specified comparator to map keys to value collections.
+ 
+For all multimaps generated by the resulting builder, the Multimap#keySet() can be
+ safely cast to a java.util.SortedSet, and the Multimap#asMap() can safely be
+ cast to a java.util.SortedMap.
 
- <p>The collections returned by `Multimap.keySet()`, `Multimap.keys()`, and `Multimap.asMap()` will iterate through the keys in sorted order.
-
- <p>For all multimaps generated by the resulting builder, the `Multimap.keySet()` can be
- safely cast to a `java.util.SortedSet`, and the `Multimap.asMap()` can safely be
- cast to a `java.util.SortedMap`.
-
- <p>Multimaps generated by the resulting builder will not be serializable if `comparator`
+ 
+Multimaps generated by the resulting builder will not be serializable if comparator
  is not serializable.
 
-### `enumKeys(`java.lang.Class<K0>` keyClass)`
+**Parameters:**
+- `comparator` (`java.util.Comparator<K0>`)
 
-**Returns:** [`com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<K0>`](MultimapBuilder/MultimapBuilderWithKeys.md)
+### `enumKeys(java.lang.Class<K0> keyClass)`
 
-Uses an `EnumMap` to map keys to value collections.
-**Since:** 16.0
+**Returns:** `com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys<K0>`
+
+**Parameters:**
+- `keyClass` (`java.lang.Class<K0>`)
 
 ### `build()`
 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-Returns a new, empty `Multimap` with the specified implementation.
-
-### `build([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md) multimap)`
+### `build(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
 
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-Returns a `Multimap` with the specified implementation, initialized with the entries of
- `multimap`.
+**Parameters:**
+- `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
 

@@ -20,19 +20,38 @@
 
 ## Methods
 
-### `insertURLs([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.util.List<java.net.URL>` urls, `java.util.List<ro.sync.ecss.extensions.api.ReferenceType>` types, `int` source)`
+### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, java.util.List<ro.sync.ecss.extensions.api.ReferenceType> types, int source)`
 
 **Returns:** `void`
 
-### `isImageReference([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ReferenceType`](../api/ReferenceType.md) type, `java.net.URL` url)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `urls` (`java.util.List<java.net.URL>`)
+- `types` (`java.util.List<ro.sync.ecss.extensions.api.ReferenceType>`)
+- `source` (`int`)
+
+### `isImageReference(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ReferenceType type, java.net.URL url)`
 
 **Returns:** `boolean`
 
-### `insertURLs([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.util.List<java.net.URL>` urls, `int` source)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
+- `type` ([`ro.sync.ecss.extensions.api.ReferenceType`](../api/ReferenceType.md)): The type.
+- `url` (`java.net.URL`): The URL.
+
+### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
 
 **Returns:** `void`
 
-### `getImporterStylesheetFileName([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `urls` (`java.util.List<java.net.URL>`)
+- `source` (`int`)
+
+### `getImporterStylesheetFileName(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 

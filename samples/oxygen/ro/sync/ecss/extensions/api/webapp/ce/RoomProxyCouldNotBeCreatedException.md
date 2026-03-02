@@ -16,7 +16,11 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` message, `int` statusCode)`
+### `<init>(java.lang.String message, int statusCode)`
+
+**Parameters:**
+- `message` (`java.lang.String`): The exception message.
+- `statusCode` (`int`): The reason status code.
 
 ## Methods
 

@@ -6,9 +6,6 @@
 
 ## Description
 
-Works around an android bug, where parking for more than INT_MAX seconds can produce an abort
- signal on 32 bit devices running Android Q.
-
 ## Fields
 
 ### `MAX_NANOSECONDS_THRESHOLD`
@@ -21,7 +18,11 @@ Works around an android bug, where parking for more than INT_MAX seconds can pro
 
 ## Methods
 
-### `parkNanos(`java.lang.Object` blocker, `long` nanos)`
+### `parkNanos(java.lang.Object blocker, long nanos)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `blocker` (`java.lang.Object`)
+- `nanos` (`long`)
 

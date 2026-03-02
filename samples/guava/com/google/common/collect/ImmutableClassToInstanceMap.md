@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.ImmutableClassToInstanceMap`
 
-**Extends:** [`com.google.common.collect.ForwardingMap<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`](./ForwardingMap,B>.md)
+**Extends:** [`com.google.common.collect.ForwardingMap<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`](./ForwardingMap.md)
 
 **Implements:** [`com.google.common.collect.ClassToInstanceMap<B>`](./ClassToInstanceMap.md), `java.io.Serializable`
 
@@ -14,11 +14,6 @@
 
 ## Description
 
-A `ClassToInstanceMap` whose contents will never change, with many other important
- properties detailed at `ImmutableCollection`.
-**Author:** Kevin Bourrillion
-**Since:** 2.0
-
 ## Fields
 
 ### `EMPTY`
@@ -27,11 +22,14 @@ A `ClassToInstanceMap` whose contents will never change, with many other importa
 
 ### `delegate`
 
-**Type:** [`com.google.common.collect.ImmutableMap<java.lang.Class<? extends B>,B>`](./ImmutableMap,B>.md)
+**Type:** [`com.google.common.collect.ImmutableMap<java.lang.Class<? extends B>,B>`](./ImmutableMap.md)
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableMap<java.lang.Class<? extends B>,B>`](./ImmutableMap,B>.md) delegate)`
+### `<init>(com.google.common.collect.ImmutableMap<java.lang.Class<? extends B>,B> delegate)`
+
+**Parameters:**
+- `delegate` ([`com.google.common.collect.ImmutableMap<java.lang.Class<? extends B>,B>`](./ImmutableMap.md))
 
 ## Methods
 
@@ -39,51 +37,55 @@ A `ClassToInstanceMap` whose contents will never change, with many other importa
 
 **Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
 
-Returns an empty `ImmutableClassToInstanceMap`.
+**Performance note:** the instance returned is a singleton.
 
- <p><b>Performance note:</b> the instance returned is a singleton.
-**Since:** 19.0
-
-### `of(`java.lang.Class<T>` type, `T` value)`
+### `of(java.lang.Class<T> type, T value)`
 
 **Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
 
-Returns an `ImmutableClassToInstanceMap` containing a single entry.
-**Since:** 19.0
+**Parameters:**
+- `type` (`java.lang.Class<T>`)
+- `value` (`T`)
 
 ### `builder()`
 
-**Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap.Builder<B>`](ImmutableClassToInstanceMap/Builder.md)
+**Returns:** `com.google.common.collect.ImmutableClassToInstanceMap.Builder<B>`
 
-Returns a new builder. The generated builder is equivalent to the builder created by the `Builder` constructor.
+The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `copyOf(`java.util.Map<? extends java.lang.Class<? extends S>,? extends S>` map)`
+### `copyOf(java.util.Map<? extends java.lang.Class<? extends S>,? extends S> map)`
 
 **Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
 
-Returns an immutable map containing the same entries as `map`. If `map` somehow
- contains entries with duplicate keys (for example, if it is a `SortedMap` whose
- comparator is not <i>consistent with equals</i>), the results of this method are undefined.
+If map somehow
+ contains entries with duplicate keys (for example, if it is a SortedMap whose
+ comparator is not *consistent with equals*), the results of this method are undefined.
 
- <p><b>Note:</b> Despite what the method name suggests, if `map` is an `ImmutableClassToInstanceMap`, no copy will actually be performed.
-@throws NullPointerException if any key or value in `map` is null
-@throws ClassCastException if any value is not an instance of the type specified by its key
+ 
+**Note:** Despite what the method name suggests, if map is an 
+ ImmutableClassToInstanceMap, no copy will actually be performed.
+
+**Parameters:**
+- `map` (`java.util.Map<? extends java.lang.Class<? extends S>,? extends S>`)
 
 ### `delegate()`
 
 **Returns:** `java.util.Map<java.lang.Class<? extends B>,B>`
 
-### `getInstance(`java.lang.Class<T>` type)`
+### `getInstance(java.lang.Class<T> type)`
 
 **Returns:** `T`
 
-### `putInstance(`java.lang.Class<T>` type, `T` value)`
+**Parameters:**
+- `type` (`java.lang.Class<T>`)
+
+### `putInstance(java.lang.Class<T> type, T value)`
 
 **Returns:** `T`
 
-Guaranteed to throw an exception and leave the map unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `type` (`java.lang.Class<T>`)
+- `value` (`T`)
 
 ### `readResolve()`
 

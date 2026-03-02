@@ -12,15 +12,11 @@
 
 ## Description
 
-Implementation of `ImmutableMultiset` with zero or more elements.
-**Author:** Jared Levy
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `EMPTY_ARRAY`
 
-**Type:** [`com.google.common.collect.Multisets.ImmutableEntry<?>[]`](Multisets/ImmutableEntry.md)
+**Type:** `com.google.common.collect.Multisets.ImmutableEntry<?>[]`
 
 ### `EMPTY`
 
@@ -30,7 +26,7 @@ Implementation of `ImmutableMultiset` with zero or more elements.
 
 **Type:** `double`
 
-Closed addressing tends to perform well even with high load factors. Being conservative here
+Being conservative here
  ensures that the table is still likely to be relatively sparse (hence it misses fast) while
  saving space.
 
@@ -38,23 +34,19 @@ Closed addressing tends to perform well even with high load factors. Being conse
 
 **Type:** `double`
 
-Maximum allowed false positive probability of detecting a hash flooding attack given random
- input.
-
 ### `MAX_HASH_BUCKET_LENGTH`
 
 **Type:** `int`
 
-Maximum allowed length of a hash table bucket before falling back to a j.u.HashMap based
- implementation. Experimentally determined.
+Experimentally determined.
 
 ### `entries`
 
-**Type:** [`com.google.common.collect.Multisets.ImmutableEntry<E>[]`](Multisets/ImmutableEntry.md)
+**Type:** `com.google.common.collect.Multisets.ImmutableEntry<E>[]`
 
 ### `hashTable`
 
-**Type:** [`com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[]`](Multisets/@org/checkerframework/checker/nullness/qual/Nullable ImmutableEntry.md)
+**Type:** `com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[]`
 
 ### `size`
 
@@ -70,25 +62,41 @@ Maximum allowed length of a hash table bucket before falling back to a j.u.HashM
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.Multisets.ImmutableEntry<E>[]`](Multisets/ImmutableEntry.md) entries, [`com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[]`](Multisets/@org/checkerframework/checker/nullness/qual/Nullable ImmutableEntry.md) hashTable, `int` size, `int` hashCode, [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md) elementSet)`
+### `<init>(com.google.common.collect.Multisets.ImmutableEntry<E>[] entries, com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[] hashTable, int size, int hashCode, com.google.common.collect.ImmutableSet<E> elementSet)`
+
+**Parameters:**
+- `entries` (`com.google.common.collect.Multisets.ImmutableEntry<E>[]`)
+- `hashTable` (`com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[]`)
+- `size` (`int`)
+- `hashCode` (`int`)
+- `elementSet` ([`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md))
 
 ## Methods
 
-### `create(`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>` entries)`
+### `create(java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>> entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-### `hashFloodingDetected([`com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[]`](Multisets/@org/checkerframework/checker/nullness/qual/Nullable ImmutableEntry.md) hashTable)`
+**Parameters:**
+- `entries` (`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`)
+
+### `hashFloodingDetected(com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[] hashTable)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `hashTable` (`com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[]`)
 
 ### `isPartialView()`
 
 **Returns:** `boolean`
 
-### `count(`java.lang.Object` element)`
+### `count(java.lang.Object element)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `element` (`java.lang.Object`)
 
 ### `size()`
 
@@ -98,9 +106,12 @@ Maximum allowed length of a hash table bucket before falling back to a j.u.HashM
 
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
 
-### `getEntry(`int` index)`
+### `getEntry(int index)`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `hashCode()`
 

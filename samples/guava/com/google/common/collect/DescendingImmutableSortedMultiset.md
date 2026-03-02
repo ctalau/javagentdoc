@@ -12,9 +12,6 @@
 
 ## Description
 
-A descending wrapper around an `ImmutableSortedMultiset`
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `forward`
@@ -23,21 +20,27 @@ A descending wrapper around an `ImmutableSortedMultiset`
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md) forward)`
+### `<init>(com.google.common.collect.ImmutableSortedMultiset<E> forward)`
+
+**Parameters:**
+- `forward` ([`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md))
 
 ## Methods
 
-### `count(`java.lang.Object` element)`
+### `count(java.lang.Object element)`
 
 **Returns:** `int`
 
+**Parameters:**
+- `element` (`java.lang.Object`)
+
 ### `firstEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `lastEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `size()`
 
@@ -47,21 +50,32 @@ A descending wrapper around an `ImmutableSortedMultiset`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `getEntry(`int` index)`
+### `getEntry(int index)`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `descendingMultiset()`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+**Parameters:**
+- `upperBound` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**Parameters:**
+- `lowerBound` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
 ### `isPartialView()`
 

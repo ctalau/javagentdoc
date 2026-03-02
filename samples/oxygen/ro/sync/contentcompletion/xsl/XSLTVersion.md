@@ -14,7 +14,10 @@
 
 ## Constructors
 
-### `<init>(`int` id)`
+### `<init>(int id)`
+
+**Parameters:**
+- `id` (`int`): The id of the current XSLT version.
 
 ## Methods
 
@@ -22,15 +25,21 @@
 
 **Returns:** [`ro.sync.contentcompletion.xsl.XSLTVersion[]`](./XSLTVersion.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.contentcompletion.xsl.XSLTVersion`](./XSLTVersion.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `getId()`
 
 **Returns:** `int`
 
-### `getXSLTVersionForId(`int` id)`
+### `getXSLTVersionForId(int id)`
 
 **Returns:** [`ro.sync.contentcompletion.xsl.XSLTVersion`](./XSLTVersion.md)
+
+**Parameters:**
+- `id` (`int`): the id of the XSLT version.
 

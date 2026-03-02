@@ -16,17 +16,27 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore`](../imagemap/EditImageMapCore.md) imageMapCore)`
+### `<init>(ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore imageMapCore)`
+
+**Parameters:**
+- `imageMapCore` ([`ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore`](../imagemap/EditImageMapCore.md)): The image map core utilities.
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `processArgumentsMap([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
+
+### `processArgumentsMap(ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The map with arguments for this operation.
 
 ### `getArguments()`
 

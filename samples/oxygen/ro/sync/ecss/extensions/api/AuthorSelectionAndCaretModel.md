@@ -14,11 +14,20 @@
 
 **Returns:** `int`
 
-### `moveTo(`int` offset)`
+### `moveTo(int offset)`
 
 **Returns:** `void`
 
-### `moveTo(`int` offset, `boolean` select)`
+**Parameters:**
+- `offset` (`int`): The new position of the caret.
+
+### `moveTo(int offset, boolean select)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `offset` (`int`): new offset for the caret. The offset must be >= 1 and less
+ than the document size; if not, it is silently ignored.
+- `select` (`boolean`): if true, the current selection is extended to
+ match the new caret offset.
 

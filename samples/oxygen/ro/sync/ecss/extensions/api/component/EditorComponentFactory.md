@@ -36,13 +36,22 @@
 
 **Returns:** `void`
 
-### `setObjectProperty(`java.lang.String` arg0, `java.lang.Object` arg1)`
+### `setObjectProperty(java.lang.String arg0, java.lang.Object arg1)`
 
 **Returns:** `void`
 
-### `createEditorComponentProvider(`java.lang.String[]` arg0, `java.lang.String` arg1, `java.lang.String` arg2)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.Object`)
+
+### `createEditorComponentProvider(java.lang.String[] arg0, java.lang.String arg1, java.lang.String arg2)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md)
+
+**Parameters:**
+- `arg0` (`java.lang.String[]`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
 
 ### `getPublicKey()`
 
@@ -52,15 +61,24 @@
 
 **Returns:** `void`
 
-### `disposeEditorComponentProvider([`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md) arg0)`
+### `disposeEditorComponentProvider(ro.sync.ecss.extensions.api.component.EditorComponentProvider arg0)`
 
 **Returns:** `void`
 
-### `setOpenURLHandler([`ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler`](listeners/OpenURLHandler.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md))
+
+### `setOpenURLHandler(ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler arg0)`
 
 **Returns:** `void`
 
-### `goToReference(`java.net.URL` arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler`](listeners/OpenURLHandler.md))
+
+### `goToReference(java.net.URL arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.net.URL`)
 

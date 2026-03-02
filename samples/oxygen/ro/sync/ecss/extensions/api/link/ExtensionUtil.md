@@ -12,7 +12,10 @@
 
 ## Methods
 
-### `getLocalName(`java.lang.String` qName)`
+### `getLocalName(java.lang.String qName)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `qName` (`java.lang.String`): The qualified name.
 

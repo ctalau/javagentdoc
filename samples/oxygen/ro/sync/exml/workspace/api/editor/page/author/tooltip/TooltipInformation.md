@@ -68,7 +68,14 @@ Can be `null`
 
 ## Constructors
 
-### `<init>(`java.lang.String` description, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../../ecss/extensions/api/node/AuthorNode.md) hoveredNode, `java.lang.String` tooltipOriginInformation, `int` mouseX, `int` mouseY)`
+### `<init>(java.lang.String description, ro.sync.ecss.extensions.api.node.AuthorNode hoveredNode, java.lang.String tooltipOriginInformation, int mouseX, int mouseY)`
+
+**Parameters:**
+- `description` (`java.lang.String`): Original tooltip description. Can be `null`
+- `hoveredNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../../ecss/extensions/api/node/AuthorNode.md)): The hovered node. Can be `null`
+- `tooltipOriginInformation` (`java.lang.String`): Details about where the hovered error came from. Can be `null`
+- `mouseX` (`int`): Mouse X coordinate.
+- `mouseY` (`int`): Mouse Y coordinate.
 
 ## Methods
 
@@ -76,11 +83,14 @@ Can be `null`
 
 **Returns:** `java.lang.String`
 
-### `setDescription(`java.lang.String` description)`
+### `setDescription(java.lang.String description)`
 
 **Returns:** `void`
 
 The description can also be in HTML format.
+
+**Parameters:**
+- `description` (`java.lang.String`): The description.
 
 ### `getMouseX()`
 

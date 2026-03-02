@@ -14,9 +14,13 @@
 
 ## Methods
 
-### `renderControl([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../editor/AuthorInplaceContext.md) context, `java.io.Writer` out)`
+### `renderControl(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.io.Writer out)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../editor/AuthorInplaceContext.md)): The context in which the form control is rendered.
+- `out` (`java.io.Writer`): The output to render the form control to.
 
 ### `isChangeTrackingAware()`
 

@@ -15,33 +15,34 @@
 
 ## Description
 
-A navigable map which forwards all its method calls to another navigable map. Subclasses should
- override one or more methods to modify the behavior of the backing map as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should
+ override one or more methods to modify the behavior of the backing map as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>Warning:</b> The methods of `ForwardingNavigableMap` forward <i>indiscriminately</i>
- to the methods of the delegate. For example, overriding `put` alone <i>will not</i> change
- the behavior of `putAll`, which can lead to unexpected behavior. In this case, you should
- override `putAll` as well, either providing your own implementation, or delegating to the
- provided `standardPutAll` method.
+ 
+**Warning:** The methods of ForwardingNavigableMap forward *indiscriminately*
+ to the methods of the delegate. For example, overriding #put alone *will not* change
+ the behavior of #putAll, which can lead to unexpected behavior. In this case, you should
+ override putAll as well, either providing your own implementation, or delegating to the
+ provided standardPutAll method.
 
- <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the `ForwardingNavigableMap`.
+ 
+**default method warning:** This class does *not* forward calls to 
+ default methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the ForwardingNavigableMap.
 
- <p>Each of the `standard` methods uses the map's comparator (or the natural ordering of the
+ 
+Each of the standard methods uses the map's comparator (or the natural ordering of the
  elements, if there is no comparator) to test element equality. As a result, if the comparator is
- not consistent with equals, some of the standard implementations may violate the `Map`
+ not consistent with equals, some of the standard implementations may violate the Map
  contract.
 
- <p>The `standard` methods and the collection views they return are not guaranteed to be
+ 
+The standard methods and the collection views they return are not guaranteed to be
  thread-safe, even when all of the methods that they depend on are thread-safe.
-**Author:** Louis Wasserman
-**Since:** 12.0
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -49,93 +50,145 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.NavigableMap<K,V>`
 
-### `lowerEntry(`K` key)`
+### `lowerEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `standardLowerEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardLowerEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `lowerEntry` in terms of the `lastEntry()` of `headMap(Object, boolean)`. If you override `headMap`, you may wish to override `lowerEntry` to forward to this implementation.
+If you override headMap, you may wish to override 
+ lowerEntry to forward to this implementation.
 
-### `lowerKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `lowerKey(K key)`
 
 **Returns:** `K`
 
-### `standardLowerKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardLowerKey(K key)`
 
 **Returns:** `K`
 
-A sensible definition of `lowerKey` in terms of `lowerEntry`. If you override
- `lowerEntry`, you may wish to override `lowerKey` to forward to this
+If you override
+ #lowerEntry, you may wish to override lowerKey to forward to this
  implementation.
 
-### `floorEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `floorEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `standardFloorEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardFloorEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `floorEntry` in terms of the `lastEntry()` of `headMap(Object, boolean)`. If you override `headMap`, you may wish to override `floorEntry` to forward to this implementation.
+If you override headMap, you may wish to override 
+ floorEntry to forward to this implementation.
 
-### `floorKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `floorKey(K key)`
 
 **Returns:** `K`
 
-### `standardFloorKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardFloorKey(K key)`
 
 **Returns:** `K`
 
-A sensible definition of `floorKey` in terms of `floorEntry`. If you override
- `floorEntry`, you may wish to override `floorKey` to forward to this
+If you override
+ floorEntry, you may wish to override floorKey to forward to this
  implementation.
 
-### `ceilingEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `ceilingEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `standardCeilingEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardCeilingEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `ceilingEntry` in terms of the `firstEntry()` of `tailMap(Object, boolean)`. If you override `tailMap`, you may wish to override `ceilingEntry` to forward to this implementation.
+If you override tailMap, you may wish to override 
+ ceilingEntry to forward to this implementation.
 
-### `ceilingKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `ceilingKey(K key)`
 
 **Returns:** `K`
 
-### `standardCeilingKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardCeilingKey(K key)`
 
 **Returns:** `K`
 
-A sensible definition of `ceilingKey` in terms of `ceilingEntry`. If you override
- `ceilingEntry`, you may wish to override `ceilingKey` to forward to this
+If you override
+ ceilingEntry, you may wish to override ceilingKey to forward to this
  implementation.
 
-### `higherEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `higherEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `standardHigherEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardHigherEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `higherEntry` in terms of the `firstEntry()` of `tailMap(Object, boolean)`. If you override `tailMap`, you may wish to override `higherEntry` to forward to this implementation.
+If you override tailMap, you may wish to override 
+ higherEntry to forward to this implementation.
 
-### `higherKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `higherKey(K key)`
 
 **Returns:** `K`
 
-### `standardHigherKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `standardHigherKey(K key)`
 
 **Returns:** `K`
 
-A sensible definition of `higherKey` in terms of `higherEntry`. If you override
- `higherEntry`, you may wish to override `higherKey` to forward to this
+If you override
+ higherEntry, you may wish to override higherKey to forward to this
  implementation.
+
+**Parameters:**
+- `key` (`K`)
 
 ### `firstEntry()`
 
@@ -145,15 +198,15 @@ A sensible definition of `higherKey` in terms of `higherEntry`. If you override
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `firstEntry` in terms of the `iterator()` of `entrySet`. If you override `entrySet`, you may wish to override `firstEntry` to
+If you override entrySet, you may wish to override firstEntry to
  forward to this implementation.
 
 ### `standardFirstKey()`
 
 **Returns:** `K`
 
-A sensible definition of `firstKey` in terms of `firstEntry`. If you override
- `firstEntry`, you may wish to override `firstKey` to forward to this
+If you override
+ firstEntry, you may wish to override firstKey to forward to this
  implementation.
 
 ### `lastEntry()`
@@ -164,14 +217,15 @@ A sensible definition of `firstKey` in terms of `firstEntry`. If you override
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `lastEntry` in terms of the `iterator()` of the `entrySet` of `descendingMap`. If you override `descendingMap`, you may wish to
- override `lastEntry` to forward to this implementation.
+If you override descendingMap, you may wish to
+ override lastEntry to forward to this implementation.
 
 ### `standardLastKey()`
 
 **Returns:** `K`
 
-A sensible definition of `lastKey` in terms of `lastEntry`. If you override `lastEntry`, you may wish to override `lastKey` to forward to this implementation.
+If you override 
+ lastEntry, you may wish to override lastKey to forward to this implementation.
 
 ### `pollFirstEntry()`
 
@@ -181,7 +235,7 @@ A sensible definition of `lastKey` in terms of `lastEntry`. If you override `las
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `pollFirstEntry` in terms of the `iterator` of `entrySet`. If you override `entrySet`, you may wish to override `pollFirstEntry` to
+If you override entrySet, you may wish to override pollFirstEntry to
  forward to this implementation.
 
 ### `pollLastEntry()`
@@ -192,8 +246,8 @@ A sensible definition of `pollFirstEntry` in terms of the `iterator` of `entrySe
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-A sensible definition of `pollFirstEntry` in terms of the `iterator` of the `entrySet` of `descendingMap`. If you override `descendingMap`, you may wish to
- override `pollFirstEntry` to forward to this implementation.
+If you override descendingMap, you may wish to
+ override pollFirstEntry to forward to this implementation.
 
 ### `descendingMap()`
 
@@ -211,40 +265,65 @@ A sensible definition of `pollFirstEntry` in terms of the `iterator` of the `ent
 
 **Returns:** `java.util.NavigableSet<K>`
 
-A sensible definition of `descendingKeySet` as the `navigableKeySet` of `descendingMap`. (The `StandardDescendingMap` implementation implements `navigableKeySet` on its own, so as not to cause an infinite loop.) If you override `descendingMap`, you may wish to override `descendingKeySet` to forward to this
+(The StandardDescendingMap implementation implements 
+ navigableKeySet on its own, so as not to cause an infinite loop.) If you override 
+ descendingMap, you may wish to override descendingKeySet to forward to this
  implementation.
 
-### `standardSubMap(`K` fromKey, `K` toKey)`
+### `standardSubMap(K fromKey, K toKey)`
 
 **Returns:** `java.util.SortedMap<K,V>`
 
-A sensible definition of `subMap(Object, Object)` in terms of `subMap(Object,
- boolean, Object, boolean)`. If you override `subMap(K, boolean, K, boolean)`, you may
- wish to override `subMap` to forward to this implementation.
+If you override subMap(K, boolean, K, boolean), you may
+ wish to override subMap to forward to this implementation.
 
-### `subMap(`K` fromKey, `boolean` fromInclusive, `K` toKey, `boolean` toInclusive)`
+**Parameters:**
+- `fromKey` (`K`)
+- `toKey` (`K`)
 
-**Returns:** `java.util.NavigableMap<K,V>`
-
-### `headMap(`K` toKey, `boolean` inclusive)`
-
-**Returns:** `java.util.NavigableMap<K,V>`
-
-### `tailMap(`K` fromKey, `boolean` inclusive)`
+### `subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)`
 
 **Returns:** `java.util.NavigableMap<K,V>`
 
-### `standardHeadMap(`K` toKey)`
+**Parameters:**
+- `fromKey` (`K`)
+- `fromInclusive` (`boolean`)
+- `toKey` (`K`)
+- `toInclusive` (`boolean`)
+
+### `headMap(K toKey, boolean inclusive)`
+
+**Returns:** `java.util.NavigableMap<K,V>`
+
+**Parameters:**
+- `toKey` (`K`)
+- `inclusive` (`boolean`)
+
+### `tailMap(K fromKey, boolean inclusive)`
+
+**Returns:** `java.util.NavigableMap<K,V>`
+
+**Parameters:**
+- `fromKey` (`K`)
+- `inclusive` (`boolean`)
+
+### `standardHeadMap(K toKey)`
 
 **Returns:** `java.util.SortedMap<K,V>`
 
-A sensible definition of `headMap(Object)` in terms of `headMap(Object,
- boolean)`. If you override `headMap(K, boolean)`, you may wish to override `headMap` to forward to this implementation.
+If you override headMap(K, boolean), you may wish to override 
+ headMap to forward to this implementation.
 
-### `standardTailMap(`K` fromKey)`
+**Parameters:**
+- `toKey` (`K`)
+
+### `standardTailMap(K fromKey)`
 
 **Returns:** `java.util.SortedMap<K,V>`
 
-A sensible definition of `tailMap(Object)` in terms of `tailMap(Object,
- boolean)`. If you override `tailMap(K, boolean)`, you may wish to override `tailMap` to forward to this implementation.
+If you override tailMap(K, boolean), you may wish to override 
+ tailMap to forward to this implementation.
+
+**Parameters:**
+- `fromKey` (`K`)
 

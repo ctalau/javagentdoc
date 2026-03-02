@@ -6,8 +6,6 @@
 
 ## Description
 
-A string to be parsed as a number and the radix to interpret it in.
-
 ## Fields
 
 ### `rawValue`
@@ -20,11 +18,18 @@ A string to be parsed as a number and the radix to interpret it in.
 
 ## Constructors
 
-### `<init>(`java.lang.String` rawValue, `int` radix)`
+### `<init>(java.lang.String rawValue, int radix)`
+
+**Parameters:**
+- `rawValue` (`java.lang.String`)
+- `radix` (`int`)
 
 ## Methods
 
-### `fromString(`java.lang.String` stringValue)`
+### `fromString(java.lang.String stringValue)`
 
 **Returns:** [`com.google.common.primitives.ParseRequest`](./ParseRequest.md)
+
+**Parameters:**
+- `stringValue` (`java.lang.String`)
 

@@ -13,14 +13,13 @@
 
 ## Description
 
-A notification of the removal of a single entry. The key and/or value may be null if they were
+The key and/or value may be null if they were
  already garbage collected.
 
- <p>Like other `Entry` instances associated with `CacheBuilder`, this class holds
+ 
+Like other Entry instances associated with CacheBuilder, this class holds
  strong references to the key and value, regardless of the type of references the cache may be
  using.
-**Author:** Charles Fry
-**Since:** 10.0
 
 ## Fields
 
@@ -34,28 +33,32 @@ A notification of the removal of a single entry. The key and/or value may be nul
 
 ## Constructors
 
-### `<init>(`K` key, `V` value, [`com.google.common.cache.RemovalCause`](./RemovalCause.md) cause)`
+### `<init>(K key, V value, com.google.common.cache.RemovalCause cause)`
+
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+- `cause` ([`com.google.common.cache.RemovalCause`](./RemovalCause.md))
 
 ## Methods
 
-### `create(`K` key, `V` value, [`com.google.common.cache.RemovalCause`](./RemovalCause.md) cause)`
+### `create(K key, V value, com.google.common.cache.RemovalCause cause)`
 
 **Returns:** [`com.google.common.cache.RemovalNotification<K,V>`](./RemovalNotification.md)
 
-Creates a new `RemovalNotification` for the given `key`/`value` pair, with
- the given `cause` for the removal. The `key` and/or `value` may be `null` if they were already garbage collected.
-**Since:** 19.0
+The key and/or value may be 
+ null if they were already garbage collected.
+
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+- `cause` ([`com.google.common.cache.RemovalCause`](./RemovalCause.md))
 
 ### `getCause()`
 
 **Returns:** [`com.google.common.cache.RemovalCause`](./RemovalCause.md)
 
-Returns the cause for which the entry was removed.
-
 ### `wasEvicted()`
 
 **Returns:** `boolean`
-
-Returns `true` if there was an automatic removal due to eviction (the cause is neither
- `RemovalCause.EXPLICIT` nor `RemovalCause.REPLACED`).
 

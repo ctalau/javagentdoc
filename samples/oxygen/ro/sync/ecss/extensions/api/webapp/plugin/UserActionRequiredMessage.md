@@ -16,7 +16,11 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.webapp.WebappMessage`](../WebappMessage.md) webappMessage, `java.lang.String` contextUrl)`
+### `<init>(ro.sync.ecss.extensions.api.webapp.WebappMessage webappMessage, java.lang.String contextUrl)`
+
+**Parameters:**
+- `webappMessage` ([`ro.sync.ecss.extensions.api.webapp.WebappMessage`](../WebappMessage.md)): The server message that is presented on client side
+- `contextUrl` (`java.lang.String`): The URL of the resource for which the user action required exception is thrown.
 
 ## Methods
 

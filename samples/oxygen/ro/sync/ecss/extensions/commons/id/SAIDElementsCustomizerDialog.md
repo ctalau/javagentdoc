@@ -61,9 +61,20 @@ It will
 
 ## Constructors
 
-### `<init>(`java.awt.Frame` parentFrame, `java.lang.String` listMessage, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md) authorResourceBundle)`
+### `<init>(java.awt.Frame parentFrame, java.lang.String listMessage, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle)`
 
-### `<init>(`java.awt.Frame` parentFrame, `java.lang.String` listMessage, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md) authorResourceBundle, `boolean` isDocBook)`
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent frame.
+- `listMessage` (`java.lang.String`): The message label used on the list.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md)): The author resource bundle.
+
+### `<init>(java.awt.Frame parentFrame, java.lang.String listMessage, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, boolean isDocBook)`
+
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent frame.
+- `listMessage` (`java.lang.String`): The message label used on the list.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md)): The author resource bundle.
+- `isDocBook` (`boolean`): `true` if we are in DocBook.
 
 ## Methods
 
@@ -83,7 +94,10 @@ It will
 
 **Returns:** `void`
 
-### `showDialog([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md) autoIDElementsInfo)`
+### `showDialog(ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo autoIDElementsInfo)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
+
+**Parameters:**
+- `autoIDElementsInfo` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)): The initial information
 

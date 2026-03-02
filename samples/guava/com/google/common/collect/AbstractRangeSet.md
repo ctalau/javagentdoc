@@ -12,62 +12,89 @@
 
 ## Description
 
-A skeletal implementation of `RangeSet`.
-**Author:** Louis Wasserman
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `contains(`C` value)`
+### `contains(C value)`
 
 **Returns:** `boolean`
 
-### `rangeContaining(`C` value)`
+**Parameters:**
+- `value` (`C`)
+
+### `rangeContaining(C value)`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+**Parameters:**
+- `value` (`C`)
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `add([`com.google.common.collect.Range<C>`](./Range.md) range)`
+### `add(com.google.common.collect.Range<C> range)`
 
 **Returns:** `void`
 
-### `remove([`com.google.common.collect.Range<C>`](./Range.md) range)`
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `remove(com.google.common.collect.Range<C> range)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `enclosesAll([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
+### `enclosesAll(com.google.common.collect.RangeSet<C> other)`
 
 **Returns:** `boolean`
 
-### `addAll([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
+**Parameters:**
+- `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
+
+### `addAll(com.google.common.collect.RangeSet<C> other)`
 
 **Returns:** `void`
 
-### `removeAll([`com.google.common.collect.RangeSet<C>`](./RangeSet.md) other)`
+**Parameters:**
+- `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
+
+### `removeAll(com.google.common.collect.RangeSet<C> other)`
 
 **Returns:** `void`
 
-### `intersects([`com.google.common.collect.Range<C>`](./Range.md) otherRange)`
+**Parameters:**
+- `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
+
+### `intersects(com.google.common.collect.Range<C> otherRange)`
 
 **Returns:** `boolean`
 
-### `encloses([`com.google.common.collect.Range<C>`](./Range.md) otherRange)`
+**Parameters:**
+- `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `encloses(com.google.common.collect.Range<C> otherRange)`
 
 **Returns:** `boolean`
 
-### `equals(`java.lang.Object` obj)`
+**Parameters:**
+- `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

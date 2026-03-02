@@ -8,7 +8,10 @@
 
 ## Constructors
 
-### `<init>(`java.awt.Color` arg0)`
+### `<init>(java.awt.Color arg0)`
+
+**Parameters:**
+- `arg0` (`java.awt.Color`)
 
 ## Methods
 
@@ -16,7 +19,10 @@
 
 **Returns:** `java.awt.Color`
 
-### `setSelectedColor(`java.awt.Color` arg0)`
+### `setSelectedColor(java.awt.Color arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.Color`)
 

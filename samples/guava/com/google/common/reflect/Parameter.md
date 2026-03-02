@@ -8,10 +8,6 @@
 
 ## Description
 
-Represents a method or constructor parameter.
-**Author:** Ben Yu
-**Since:** 14.0
-
 ## Fields
 
 ### `declaration`
@@ -34,15 +30,21 @@ Represents a method or constructor parameter.
 
 **Type:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`
 
-An `AnnotatedType` instance, or `null` under Android VMs (possible only when using
- the Android flavor of Guava). The field is declared with a type of `Object` to avoid
+The field is declared with a type of Object to avoid
  compatibility problems on Android VMs. The corresponding accessor method, however, can have the
  more specific return type as long as users are careful to guard calls to it with version checks
  or reflection: Android VMs ignore the types of elements that aren't used.
 
 ## Constructors
 
-### `<init>([`com.google.common.reflect.Invokable<?,?>`](./Invokable.md) declaration, `int` position, [`com.google.common.reflect.TypeToken<?>`](./TypeToken.md) type, `java.lang.annotation.Annotation[]` annotations, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object` annotatedType)`
+### `<init>(com.google.common.reflect.Invokable<?,?> declaration, int position, com.google.common.reflect.TypeToken<?> type, java.lang.annotation.Annotation[] annotations, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object annotatedType)`
+
+**Parameters:**
+- `declaration` ([`com.google.common.reflect.Invokable<?,?>`](./Invokable.md))
+- `position` (`int`)
+- `type` ([`com.google.common.reflect.TypeToken<?>`](./TypeToken.md))
+- `annotations` (`java.lang.annotation.Annotation[]`)
+- `annotatedType` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`)
 
 ## Methods
 
@@ -50,60 +52,63 @@ An `AnnotatedType` instance, or `null` under Android VMs (possible only when usi
 
 **Returns:** [`com.google.common.reflect.TypeToken<?>`](./TypeToken.md)
 
-Returns the type of the parameter.
-
 ### `getDeclaringInvokable()`
 
 **Returns:** [`com.google.common.reflect.Invokable<?,?>`](./Invokable.md)
 
-Returns the `Invokable` that declares this parameter.
-
-### `isAnnotationPresent(`java.lang.Class<? extends java.lang.annotation.Annotation>` annotationType)`
+### `isAnnotationPresent(java.lang.Class<? extends java.lang.annotation.Annotation> annotationType)`
 
 **Returns:** `boolean`
 
-### `getAnnotation(`java.lang.Class<A>` annotationType)`
+**Parameters:**
+- `annotationType` (`java.lang.Class<? extends java.lang.annotation.Annotation>`)
+
+### `getAnnotation(java.lang.Class<A> annotationType)`
 
 **Returns:** `A`
+
+**Parameters:**
+- `annotationType` (`java.lang.Class<A>`)
 
 ### `getAnnotations()`
 
 **Returns:** `java.lang.annotation.Annotation[]`
 
-### `getAnnotationsByType(`java.lang.Class<A>` annotationType)`
+### `getAnnotationsByType(java.lang.Class<A> annotationType)`
 
 **Returns:** `A[]`
 
-**Since:** 18.0
+**Parameters:**
+- `annotationType` (`java.lang.Class<A>`)
 
 ### `getDeclaredAnnotations()`
 
 **Returns:** `java.lang.annotation.Annotation[]`
 
-**Since:** 18.0
-
-### `getDeclaredAnnotation(`java.lang.Class<A>` annotationType)`
+### `getDeclaredAnnotation(java.lang.Class<A> annotationType)`
 
 **Returns:** `A`
 
-**Since:** 18.0
+**Parameters:**
+- `annotationType` (`java.lang.Class<A>`)
 
-### `getDeclaredAnnotationsByType(`java.lang.Class<A>` annotationType)`
+### `getDeclaredAnnotationsByType(java.lang.Class<A> annotationType)`
 
 **Returns:** `A[]`
 
-**Since:** 18.0
+**Parameters:**
+- `annotationType` (`java.lang.Class<A>`)
 
 ### `getAnnotatedType()`
 
 **Returns:** `java.lang.reflect.AnnotatedType`
 
-Returns the `AnnotatedType` of the parameter.
-**Since:** 25.1 for guava-jre
-
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

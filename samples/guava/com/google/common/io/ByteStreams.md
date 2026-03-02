@@ -6,11 +6,6 @@
 
 ## Description
 
-Provides utility methods for working with byte arrays and I/O streams.
-**Author:** Chris Nokleberg
-**Author:** Colin Decker
-**Since:** 1.0
-
 ## Fields
 
 ### `BUFFER_SIZE`
@@ -21,14 +16,10 @@ Provides utility methods for working with byte arrays and I/O streams.
 
 **Type:** `int`
 
-There are three methods to implement `FileChannel.transferTo(long, long,
- WritableByteChannel)`:
-
- <ol>
-   <li>Use sendfile(2) or equivalent. Requires that both the input channel and the output
+Requires that both the input channel and the output
        channel have their own file descriptors. Generally this only happens when both channels
        are files or sockets. This performs zero copies - the bytes never enter userspace.
-   <li>Use mmap(2) or equivalent. Requires that either the input channel or the output channel
+   - Use mmap(2) or equivalent. Requires that either the input channel or the output channel
        have file descriptors. Bytes are copied from the file into a kernel buffer, then directly
        into the other buffer (userspace). Note that if the file is very large, a naive
        implementation will effectively put the whole file in memory. On many systems with paging
@@ -38,10 +29,11 @@ There are three methods to implement `FileChannel.transferTo(long, long,
        between paging memory and killing other processes - so allocating a gigantic buffer and
        then sequentially accessing it could result in other processes dying. This is solvable
        via madvise(2), but that obviously doesn't exist in java.
-   <li>Ordinary copy. Kernel copies bytes into a kernel buffer, from a kernel buffer into a
+   - Ordinary copy. Kernel copies bytes into a kernel buffer, from a kernel buffer into a
        userspace buffer (byte[] or ByteBuffer), then copies them from that buffer into the
        destination channel.
- </ol>
+ 
+
 
  This value is intended to be large enough to make the overhead of system calls negligible,
  without being so large that it causes problems for systems with atypical memory management if
@@ -51,13 +43,9 @@ There are three methods to implement `FileChannel.transferTo(long, long,
 
 **Type:** `int`
 
-Max array length on JVM.
-
 ### `TO_BYTE_ARRAY_DEQUE_SIZE`
 
 **Type:** `int`
-
-Large enough to never need to expand, given the geometric progression of buffer sizes.
 
 ### `NULL_OUTPUT_STREAM`
 
@@ -73,221 +61,232 @@ Large enough to never need to expand, given the geometric progression of buffer 
 
 **Returns:** `byte[]`
 
-Creates a new byte array for buffering reads or writes.
-
-### `copy(`java.io.InputStream` from, `java.io.OutputStream` to)`
+### `copy(java.io.InputStream from, java.io.OutputStream to)`
 
 **Returns:** `long`
 
-Copies all bytes from the input stream to the output stream. Does not close or flush either
+Does not close or flush either
  stream.
 
- <p><b>Java 9 users and later:</b> this method should be treated as deprecated; use the
- equivalent `InputStream.transferTo` method instead.
-@param from the input stream to read from
-@param to the output stream to write to
-@return the number of bytes copied
-@throws IOException if an I/O error occurs
+ 
+**Java 9 users and later:** this method should be treated as deprecated; use the
+ equivalent InputStream#transferTo method instead.
 
-### `copy(`java.nio.channels.ReadableByteChannel` from, `java.nio.channels.WritableByteChannel` to)`
+**Parameters:**
+- `from` (`java.io.InputStream`): the input stream to read from
+- `to` (`java.io.OutputStream`): the output stream to write to
+
+### `copy(java.nio.channels.ReadableByteChannel from, java.nio.channels.WritableByteChannel to)`
 
 **Returns:** `long`
 
-Copies all bytes from the readable channel to the writable channel. Does not close or flush
+Does not close or flush
  either channel.
-@param from the readable channel to read from
-@param to the writable channel to write to
-@return the number of bytes copied
-@throws IOException if an I/O error occurs
 
-### `toByteArrayInternal(`java.io.InputStream` in, `java.util.Queue<byte[]>` bufs, `int` totalLen)`
+**Parameters:**
+- `from` (`java.nio.channels.ReadableByteChannel`): the readable channel to read from
+- `to` (`java.nio.channels.WritableByteChannel`): the writable channel to write to
 
-**Returns:** `byte[]`
-
-Returns a byte array containing the bytes from the buffers already in `bufs` (which have
- a total combined length of `totalLen` bytes) followed by all bytes remaining in the given
- input stream.
-
-### `combineBuffers(`java.util.Queue<byte[]>` bufs, `int` totalLen)`
+### `toByteArrayInternal(java.io.InputStream in, java.util.Queue<byte[]> bufs, int totalLen)`
 
 **Returns:** `byte[]`
 
-### `toByteArray(`java.io.InputStream` in)`
+**Parameters:**
+- `in` (`java.io.InputStream`)
+- `bufs` (`java.util.Queue<byte[]>`)
+- `totalLen` (`int`)
+
+### `combineBuffers(java.util.Queue<byte[]> bufs, int totalLen)`
 
 **Returns:** `byte[]`
 
-Reads all bytes from an input stream into a byte array. Does not close the stream.
-@param in the input stream to read from
-@return a byte array containing all the bytes from the stream
-@throws IOException if an I/O error occurs
+**Parameters:**
+- `bufs` (`java.util.Queue<byte[]>`)
+- `totalLen` (`int`)
 
-### `toByteArray(`java.io.InputStream` in, `long` expectedSize)`
+### `toByteArray(java.io.InputStream in)`
 
 **Returns:** `byte[]`
 
-Reads all bytes from an input stream into a byte array. The given expected size is used to
+Does not close the stream.
+
+**Parameters:**
+- `in` (`java.io.InputStream`): the input stream to read from
+
+### `toByteArray(java.io.InputStream in, long expectedSize)`
+
+**Returns:** `byte[]`
+
+The given expected size is used to
  create an initial byte array, but if the actual number of bytes read from the stream differs,
  the correct result will be returned anyway.
 
-### `exhaust(`java.io.InputStream` in)`
+**Parameters:**
+- `in` (`java.io.InputStream`)
+- `expectedSize` (`long`)
+
+### `exhaust(java.io.InputStream in)`
 
 **Returns:** `long`
 
-Reads and discards data from the given `InputStream` until the end of the stream is
- reached. Returns the total number of bytes read. Does not close the stream.
-**Since:** 20.0
+Returns the total number of bytes read. Does not close the stream.
 
-### `newDataInput(`byte[]` bytes)`
+**Parameters:**
+- `in` (`java.io.InputStream`)
 
-**Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
-
-Returns a new `ByteArrayDataInput` instance to read from the `bytes` array from the
- beginning.
-
-### `newDataInput(`byte[]` bytes, `int` start)`
+### `newDataInput(byte[] bytes)`
 
 **Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
 
-Returns a new `ByteArrayDataInput` instance to read from the `bytes` array,
- starting at the given position.
-@throws IndexOutOfBoundsException if `start` is negative or greater than the length of
-     the array
+**Parameters:**
+- `bytes` (`byte[]`)
 
-### `newDataInput(`java.io.ByteArrayInputStream` byteArrayInputStream)`
+### `newDataInput(byte[] bytes, int start)`
 
 **Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
 
-Returns a new `ByteArrayDataInput` instance to read from the given `ByteArrayInputStream`. The given input stream is not reset before being read from by the
- returned `ByteArrayDataInput`.
-**Since:** 17.0
+**Parameters:**
+- `bytes` (`byte[]`)
+- `start` (`int`)
+
+### `newDataInput(java.io.ByteArrayInputStream byteArrayInputStream)`
+
+**Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
+
+The given input stream is not reset before being read from by the
+ returned ByteArrayDataInput.
+
+**Parameters:**
+- `byteArrayInputStream` (`java.io.ByteArrayInputStream`)
 
 ### `newDataOutput()`
 
 **Returns:** [`com.google.common.io.ByteArrayDataOutput`](./ByteArrayDataOutput.md)
 
-Returns a new `ByteArrayDataOutput` instance with a default size.
-
-### `newDataOutput(`int` size)`
+### `newDataOutput(int size)`
 
 **Returns:** [`com.google.common.io.ByteArrayDataOutput`](./ByteArrayDataOutput.md)
 
-Returns a new `ByteArrayDataOutput` instance sized to hold `size` bytes before
- resizing.
-@throws IllegalArgumentException if `size` is negative
+**Parameters:**
+- `size` (`int`)
 
-### `newDataOutput(`java.io.ByteArrayOutputStream` byteArrayOutputStream)`
+### `newDataOutput(java.io.ByteArrayOutputStream byteArrayOutputStream)`
 
 **Returns:** [`com.google.common.io.ByteArrayDataOutput`](./ByteArrayDataOutput.md)
 
-Returns a new `ByteArrayDataOutput` instance which writes to the given `ByteArrayOutputStream`. The given output stream is not reset before being written to by the
- returned `ByteArrayDataOutput` and new data will be appended to any existing content.
+The given output stream is not reset before being written to by the
+ returned ByteArrayDataOutput and new data will be appended to any existing content.
 
- <p>Note that if the given output stream was not empty or is modified after the `ByteArrayDataOutput` is created, the contract for `ByteArrayDataOutput.toByteArray` will
+ 
+Note that if the given output stream was not empty or is modified after the 
+ ByteArrayDataOutput is created, the contract for ByteArrayDataOutput#toByteArray will
  not be honored (the bytes returned in the byte array may not be exactly what was written via
- calls to `ByteArrayDataOutput`).
-**Since:** 17.0
+ calls to ByteArrayDataOutput).
+
+**Parameters:**
+- `byteArrayOutputStream` (`java.io.ByteArrayOutputStream`)
 
 ### `nullOutputStream()`
 
 **Returns:** `java.io.OutputStream`
 
-Returns an `OutputStream` that simply discards written bytes.
-**Since:** 14.0 (since 1.0 as com.google.common.io.NullOutputStream)
-
-### `limit(`java.io.InputStream` in, `long` limit)`
+### `limit(java.io.InputStream in, long limit)`
 
 **Returns:** `java.io.InputStream`
 
-Wraps a `InputStream`, limiting the number of bytes which can be read.
-@param in the input stream to be wrapped
-@param limit the maximum number of bytes to be read
-@return a length-limited `InputStream`
-**Since:** 14.0 (since 1.0 as com.google.common.io.LimitInputStream)
+**Parameters:**
+- `in` (`java.io.InputStream`): the input stream to be wrapped
+- `limit` (`long`): the maximum number of bytes to be read
 
-### `readFully(`java.io.InputStream` in, `byte[]` b)`
+### `readFully(java.io.InputStream in, byte[] b)`
 
 **Returns:** `void`
 
-Attempts to read enough bytes from the stream to fill the given byte array, with the same
- behavior as `DataInput.readFully(byte[])`. Does not close the stream.
-@param in the input stream to read from.
-@param b the buffer into which the data is read.
-@throws EOFException if this stream reaches the end before reading all the bytes.
-@throws IOException if an I/O error occurs.
+Does not close the stream.
 
-### `readFully(`java.io.InputStream` in, `byte[]` b, `int` off, `int` len)`
+**Parameters:**
+- `in` (`java.io.InputStream`): the input stream to read from.
+- `b` (`byte[]`): the buffer into which the data is read.
+
+### `readFully(java.io.InputStream in, byte[] b, int off, int len)`
 
 **Returns:** `void`
 
-Attempts to read `len` bytes from the stream into the given array starting at `off`, with the same behavior as `DataInput.readFully(byte[], int, int)`. Does not close
+Does not close
  the stream.
-@param in the input stream to read from.
-@param b the buffer into which the data is read.
-@param off an int specifying the offset into the data.
-@param len an int specifying the number of bytes to read.
-@throws EOFException if this stream reaches the end before reading all the bytes.
-@throws IOException if an I/O error occurs.
 
-### `skipFully(`java.io.InputStream` in, `long` n)`
+**Parameters:**
+- `in` (`java.io.InputStream`): the input stream to read from.
+- `b` (`byte[]`): the buffer into which the data is read.
+- `off` (`int`): an int specifying the offset into the data.
+- `len` (`int`): an int specifying the number of bytes to read.
+
+### `skipFully(java.io.InputStream in, long n)`
 
 **Returns:** `void`
 
-Discards `n` bytes of data from the input stream. This method will block until the full
+This method will block until the full
  amount has been skipped. Does not close the stream.
-@param in the input stream to read from
-@param n the number of bytes to skip
-@throws EOFException if this stream reaches the end before skipping all the bytes
-@throws IOException if an I/O error occurs, or the stream does not support skipping
 
-### `skipUpTo(`java.io.InputStream` in, `long` n)`
+**Parameters:**
+- `in` (`java.io.InputStream`): the input stream to read from
+- `n` (`long`): the number of bytes to skip
+
+### `skipUpTo(java.io.InputStream in, long n)`
 
 **Returns:** `long`
 
-Discards up to `n` bytes of data from the input stream. This method will block until
+This method will block until
  either the full amount has been skipped or until the end of the stream is reached, whichever
  happens first. Returns the total number of bytes skipped.
 
-### `skipSafely(`java.io.InputStream` in, `long` n)`
+**Parameters:**
+- `in` (`java.io.InputStream`)
+- `n` (`long`)
+
+### `skipSafely(java.io.InputStream in, long n)`
 
 **Returns:** `long`
 
-Attempts to skip up to `n` bytes from the given input stream, but not more than `in.available()` bytes. This prevents `FileInputStream` from skipping more bytes than
+This prevents FileInputStream from skipping more bytes than
  actually remain in the file, something that it specifies it can do in its Javadoc despite the fact that it is violating the contract of
- `InputStream.skip()`.
+ InputStream.skip().
 
-### `readBytes(`java.io.InputStream` input, [`com.google.common.io.ByteProcessor<T>`](./ByteProcessor.md) processor)`
+**Parameters:**
+- `in` (`java.io.InputStream`)
+- `n` (`long`)
+
+### `readBytes(java.io.InputStream input, com.google.common.io.ByteProcessor<T> processor)`
 
 **Returns:** `T`
 
-Process the bytes of the given input stream using the given processor.
-@param input the input stream to process
-@param processor the object to which to pass the bytes of the stream
-@return the result of the byte processor
-@throws IOException if an I/O error occurs
-**Since:** 14.0
+**Parameters:**
+- `input` (`java.io.InputStream`): the input stream to process
+- `processor` ([`com.google.common.io.ByteProcessor<T>`](./ByteProcessor.md)): the object to which to pass the bytes of the stream
 
-### `read(`java.io.InputStream` in, `byte[]` b, `int` off, `int` len)`
+### `read(java.io.InputStream in, byte[] b, int off, int len)`
 
 **Returns:** `int`
 
-Reads some bytes from an input stream and stores them into the buffer array `b`. This
- method blocks until `len` bytes of input data have been read into the array, or end of
+This
+ method blocks until len bytes of input data have been read into the array, or end of
  file is detected. The number of bytes read is returned, possibly zero. Does not close the
  stream.
 
- <p>A caller can detect EOF if the number of bytes read is less than `len`. All subsequent
+ 
+A caller can detect EOF if the number of bytes read is less than len. All subsequent
  calls on the same stream will return zero.
 
- <p>If `b` is null, a `NullPointerException` is thrown. If `off` is negative,
- or `len` is negative, or `off+len` is greater than the length of the array `b`, then an `IndexOutOfBoundsException` is thrown. If `len` is zero, then no bytes
- are read. Otherwise, the first byte read is stored into element `b[off]`, the next one
- into `b[off+1]`, and so on. The number of bytes read is, at most, equal to `len`.
-@param in the input stream to read from
-@param b the buffer into which the data is read
-@param off an int specifying the offset into the data
-@param len an int specifying the number of bytes to read
-@return the number of bytes read
-@throws IOException if an I/O error occurs
-@throws IndexOutOfBoundsException if `off` is negative, if `len` is negative, or if
-     `off + len` is greater than `b.length`
+ 
+If b is null, a NullPointerException is thrown. If off is negative,
+ or len is negative, or off+len is greater than the length of the array 
+ b, then an IndexOutOfBoundsException is thrown. If len is zero, then no bytes
+ are read. Otherwise, the first byte read is stored into element b[off], the next one
+ into b[off+1], and so on. The number of bytes read is, at most, equal to len.
+
+**Parameters:**
+- `in` (`java.io.InputStream`): the input stream to read from
+- `b` (`byte[]`): the buffer into which the data is read
+- `off` (`int`): an int specifying the offset into the data
+- `len` (`int`): an int specifying the number of bytes to read
 

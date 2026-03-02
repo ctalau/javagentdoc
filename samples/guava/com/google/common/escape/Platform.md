@@ -6,16 +6,13 @@
 
 ## Description
 
-Methods factored out so that they can be emulated differently in GWT.
-**Author:** Jesse Wilson
-
 ## Fields
 
 ### `DEST_TL`
 
 **Type:** `java.lang.ThreadLocal<char[]>`
 
-A thread-local destination buffer to keep us from creating new buffers. The starting size is
+The starting size is
  1024 characters. If we grow past this we don't put it back in the threadlocal, we just keep
  going and grow as needed.
 
@@ -28,6 +25,4 @@ A thread-local destination buffer to keep us from creating new buffers. The star
 ### `charBufferFromThreadLocal()`
 
 **Returns:** `char[]`
-
-Returns a thread-local 1024-char array.
 

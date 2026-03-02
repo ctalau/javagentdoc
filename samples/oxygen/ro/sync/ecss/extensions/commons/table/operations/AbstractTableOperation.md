@@ -55,49 +55,108 @@ For complex
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md) authorTableHelper)`
+### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper authorTableHelper)`
 
-### `<init>([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md) authorTableHelper, `boolean` markAsChange)`
+**Parameters:**
+- `authorTableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Table helper, has methods specific to each document type.
+
+### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper authorTableHelper, boolean markAsChange)`
+
+**Parameters:**
+- `authorTableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Table helper, has methods specific to each document type.
+- `markAsChange` (`boolean`): `true` if the operation result is marked as a change.
 
 ## Methods
 
-### `getElementAncestor([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md) node, `int` type)`
+### `getElementAncestor(ro.sync.ecss.extensions.api.node.AuthorNode node, int type)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `isElement([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md) node, `java.lang.String` elemLocalName)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The starting node.
+- `type` (`int`): The type of the ancestor.
+
+### `isElement(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String elemLocalName)`
 
 **Returns:** `boolean`
 
-### `isTableElement([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md) node, `int` type)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The AuthorNode to be checked.
+- `elemLocalName` (`java.lang.String`): The local name of the element.
+
+### `isTableElement(ro.sync.ecss.extensions.api.node.AuthorNode node, int type)`
 
 **Returns:** `boolean`
 
-### `findCellInsertionOffset([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement, `int` row, `int` column)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node to be checked.
+- `type` (`int`): The type to search for.
+
+### `findCellInsertionOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int row, int column)`
 
 **Returns:** `int`
 
-### `findPreviousCellInRow([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, `int` column, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) row)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+ Provides access to specific informations and actions for 
+ editor, document, workspace, tables, change tracking, utility
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The element rendered as a table. Its 'display' CSS property
+ is set to 'table'.
+- `row` (`int`): The table row where the insertion will occur, 0 based.
+- `column` (`int`): The column where the insertion will occur, 0 based.
+
+### `findPreviousCellInRow(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int column, ro.sync.ecss.extensions.api.node.AuthorElement row)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `createEmptyCell([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) cell, `java.lang.String[]` skippedAttributes)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+- `column` (`int`): The column for which to find the previous cell.
+- `row` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The row in which to find the previous cell.
+
+### `createEmptyCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cell, java.lang.String[] skippedAttributes)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../../api/node/AuthorDocumentFragment.md)
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md) args)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+ Provides access to specific informations and actions for 
+ editor, document, workspace, tables, change tracking, utility
+- `cell` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The reference cell.
+- `skippedAttributes` (`java.lang.String[]`): The attributes which should not be copied.
+
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `getChangeTrackingBehavior([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md) args)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
+
+### `getChangeTrackingBehavior(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `java.lang.String`
 
-### `doOperationWithoutChangeTracking([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md) args)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access object.
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md)): The operation arguments.
+
+### `doOperationWithoutChangeTracking(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `doOperationInternal([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md) args)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
+
+### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+ Provides access to specific informations and actions for 
+ editor, document, workspace, tables, change tracking, utility a.s.o.
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md)): The map of arguments. **All the arguments defined by method 
+ #getArguments() must be present in the map of arguments.**
 

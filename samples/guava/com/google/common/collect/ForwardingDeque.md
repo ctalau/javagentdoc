@@ -14,24 +14,23 @@
 
 ## Description
 
-A deque which forwards all its method calls to another deque. Subclasses should override one or
- more methods to modify the behavior of the backing deque as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should override one or
+ more methods to modify the behavior of the backing deque as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>Warning:</b> The methods of `ForwardingDeque` forward <b>indiscriminately</b> to the
- methods of the delegate. For example, overriding `add` alone <b>will not</b> change the
- behavior of `offer` which can lead to unexpected behavior. In this case, you should
- override `offer` as well.
+ 
+**Warning:** The methods of ForwardingDeque forward **indiscriminately** to the
+ methods of the delegate. For example, overriding #add alone **will not** change the
+ behavior of #offer which can lead to unexpected behavior. In this case, you should
+ override offer as well.
 
- <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the `ForwardingDeque`.
-**Author:** Kurt Alfred Kluever
-**Since:** 12.0
+ 
+**default method warning:** This class does *not* forward calls to 
+ default methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the ForwardingDeque.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -39,13 +38,19 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.Deque<E>`
 
-### `addFirst(`E` e)`
+### `addFirst(E e)`
 
 **Returns:** `void`
 
-### `addLast(`E` e)`
+**Parameters:**
+- `e` (`E`)
+
+### `addLast(E e)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `e` (`E`)
 
 ### `descendingIterator()`
 
@@ -59,13 +64,19 @@ Constructor for use by subclasses.
 
 **Returns:** `E`
 
-### `offerFirst(`E` e)`
+### `offerFirst(E e)`
 
 **Returns:** `boolean`
 
-### `offerLast(`E` e)`
+**Parameters:**
+- `e` (`E`)
+
+### `offerLast(E e)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `e` (`E`)
 
 ### `peekFirst()`
 
@@ -87,9 +98,12 @@ Constructor for use by subclasses.
 
 **Returns:** `E`
 
-### `push(`E` e)`
+### `push(E e)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `e` (`E`)
 
 ### `removeFirst()`
 
@@ -99,11 +113,17 @@ Constructor for use by subclasses.
 
 **Returns:** `E`
 
-### `removeFirstOccurrence(`java.lang.Object` o)`
+### `removeFirstOccurrence(java.lang.Object o)`
 
 **Returns:** `boolean`
 
-### `removeLastOccurrence(`java.lang.Object` o)`
+**Parameters:**
+- `o` (`java.lang.Object`)
+
+### `removeLastOccurrence(java.lang.Object o)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `o` (`java.lang.Object`)
 

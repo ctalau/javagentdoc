@@ -10,9 +10,6 @@
 
 ## Description
 
-Captures the actual type of `T`.
-**Author:** Ben Yu
-
 ## Constructors
 
 ### `<init>()`
@@ -22,6 +19,4 @@ Captures the actual type of `T`.
 ### `capture()`
 
 **Returns:** `java.lang.reflect.Type`
-
-Returns the captured type.
 

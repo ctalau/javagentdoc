@@ -36,9 +36,14 @@ There is no constraint on pseudo-class name. Let's consider we
 
 ## Methods
 
-### `execute([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.lang.String` pseudoClassName, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) targetElement)`
+### `execute(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String pseudoClassName, ro.sync.ecss.extensions.api.node.AuthorElement targetElement)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The access.
+- `pseudoClassName` (`java.lang.String`): The name of the pseudo class.
+- `targetElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element that is changed.
 
 ### `getDescription()`
 

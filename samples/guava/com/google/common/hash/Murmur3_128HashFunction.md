@@ -10,11 +10,6 @@
 
 ## Description
 
-See MurmurHash3_x64_128 in <a href="http://smhasher.googlecode.com/svn/trunk/MurmurHash3.cpp">the
- C++ implementation</a>.
-**Author:** Austin Appleby
-**Author:** Dimitris Andreou
-
 ## Fields
 
 ### `MURMUR3_128`
@@ -35,7 +30,10 @@ See MurmurHash3_x64_128 in <a href="http://smhasher.googlecode.com/svn/trunk/Mur
 
 ## Constructors
 
-### `<init>(`int` seed)`
+### `<init>(int seed)`
+
+**Parameters:**
+- `seed` (`int`)
 
 ## Methods
 
@@ -51,9 +49,12 @@ See MurmurHash3_x64_128 in <a href="http://smhasher.googlecode.com/svn/trunk/Mur
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

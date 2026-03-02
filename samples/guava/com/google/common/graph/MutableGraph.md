@@ -12,78 +12,73 @@
 
 ## Description
 
-A subinterface of `Graph` which adds mutation methods. When mutation is not required, users
- should prefer the `Graph` interface.
-**Author:** James Sexton
-**Author:** Joshua O'Madadhain
-@param <N> Node parameter type
-**Since:** 20.0
+When mutation is not required, users
+ should prefer the Graph interface.
 
 ## Methods
 
-### `addNode(`N` node)`
+### `addNode(N node)`
 
 **Returns:** `boolean`
 
-Adds `node` if it is not already present.
+**Nodes must be unique**, just as Map keys must be. They must also be non-null.
 
- <p><b>Nodes must be unique</b>, just as `Map` keys must be. They must also be non-null.
-@return `true` if the graph was modified as a result of this call
+**Parameters:**
+- `node` (`N`)
 
-### `putEdge(`N` nodeU, `N` nodeV)`
+### `putEdge(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-Adds an edge connecting `nodeU` to `nodeV` if one is not already present.
-
- <p>If the graph is directed, the resultant edge will be directed; otherwise, it will be
+If the graph is directed, the resultant edge will be directed; otherwise, it will be
  undirected.
 
- <p>If `nodeU` and `nodeV` are not already present in this graph, this method will
- silently `addNode(Object) add` `nodeU` and `nodeV` to the graph.
-@return `true` if the graph was modified as a result of this call
-@throws IllegalArgumentException if the introduction of the edge would violate `allowsSelfLoops()`
+ 
+If nodeU and nodeV are not already present in this graph, this method will
+ silently add nodeU and nodeV to the graph.
 
-### `putEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `putEdge(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
 
-Adds an edge connecting `endpoints` (in the order, if any, specified by `endpoints`) if one is not already present.
-
- <p>If this graph is directed, `endpoints` must be ordered and the added edge will be
+If this graph is directed, endpoints must be ordered and the added edge will be
  directed; if it is undirected, the added edge will be undirected.
 
- <p>If this graph is directed, `endpoints` must be ordered.
+ 
+If this graph is directed, endpoints must be ordered.
 
- <p>If either or both endpoints are not already present in this graph, this method will silently
- `addNode(Object) add` each missing endpoint to the graph.
-@return `true` if the graph was modified as a result of this call
-@throws IllegalArgumentException if the introduction of the edge would violate `allowsSelfLoops()`
-@throws IllegalArgumentException if the endpoints are unordered and the graph is directed
-**Since:** 27.1
+ 
+If either or both endpoints are not already present in this graph, this method will silently
+ add each missing endpoint to the graph.
 
-### `removeNode(`N` node)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-**Returns:** `boolean`
-
-Removes `node` if it is present; all edges incident to `node` will also be removed.
-@return `true` if the graph was modified as a result of this call
-
-### `removeEdge(`N` nodeU, `N` nodeV)`
+### `removeNode(N node)`
 
 **Returns:** `boolean`
 
-Removes the edge connecting `nodeU` to `nodeV`, if it is present.
-@return `true` if the graph was modified as a result of this call
+**Parameters:**
+- `node` (`N`)
 
-### `removeEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+### `removeEdge(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-Removes the edge connecting `endpoints`, if it is present.
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
 
- <p>If this graph is directed, `endpoints` must be ordered.
-@throws IllegalArgumentException if the endpoints are unordered and the graph is directed
-@return `true` if the graph was modified as a result of this call
-**Since:** 27.1
+### `removeEdge(com.google.common.graph.EndpointPair<N> endpoints)`
+
+**Returns:** `boolean`
+
+If this graph is directed, endpoints must be ordered.
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 

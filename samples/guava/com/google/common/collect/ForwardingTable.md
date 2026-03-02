@@ -16,16 +16,12 @@
 
 ## Description
 
-A table which forwards all its method calls to another table. Subclasses should override one or
- more methods to modify the behavior of the backing map as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
-**Author:** Gregory Kick
-**Since:** 7.0
+Subclasses should override one or
+ more methods to modify the behavior of the backing map as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -41,9 +37,12 @@ Constructor for use by subclasses.
 
 **Returns:** `void`
 
-### `column(`C` columnKey)`
+### `column(C columnKey)`
 
 **Returns:** `java.util.Map<R,V>`
+
+**Parameters:**
+- `columnKey` (`C`)
 
 ### `columnKeySet()`
 
@@ -53,45 +52,77 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.Map<C,java.util.Map<R,V>>`
 
-### `contains(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
+### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `boolean`
 
-### `containsColumn(`java.lang.Object` columnKey)`
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
+
+### `containsColumn(java.lang.Object columnKey)`
 
 **Returns:** `boolean`
 
-### `containsRow(`java.lang.Object` rowKey)`
+**Parameters:**
+- `columnKey` (`java.lang.Object`)
+
+### `containsRow(java.lang.Object rowKey)`
 
 **Returns:** `boolean`
 
-### `containsValue(`java.lang.Object` value)`
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+
+### `containsValue(java.lang.Object value)`
 
 **Returns:** `boolean`
 
-### `get(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
+**Parameters:**
+- `value` (`java.lang.Object`)
+
+### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `put(`R` rowKey, `C` columnKey, `V` value)`
+### `put(R rowKey, C columnKey, V value)`
 
 **Returns:** `V`
 
-### `putAll([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md) table)`
+**Parameters:**
+- `rowKey` (`R`)
+- `columnKey` (`C`)
+- `value` (`V`)
+
+### `putAll(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
 
 **Returns:** `void`
 
-### `remove(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
+**Parameters:**
+- `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md))
+
+### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `V`
 
-### `row(`R` rowKey)`
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
+
+### `row(R rowKey)`
 
 **Returns:** `java.util.Map<C,V>`
+
+**Parameters:**
+- `rowKey` (`R`)
 
 ### `rowKeySet()`
 
@@ -109,9 +140,12 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.Collection<V>`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

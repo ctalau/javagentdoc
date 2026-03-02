@@ -14,15 +14,24 @@
 
 ## Methods
 
-### `isInlineNodeTransparentForSpellChecking([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+### `isInlineNodeTransparentForSpellChecking(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
-### `isUiControlInsideMenuCascade([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) elem)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+### `isUiControlInsideMenuCascade(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
 
 **Returns:** `boolean`
 
-### `isInsideProdInfo([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) elem)`
+**Parameters:**
+- `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The element.
+
+### `isInsideProdInfo(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The element.
 

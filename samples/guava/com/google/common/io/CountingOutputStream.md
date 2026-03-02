@@ -8,10 +8,6 @@
 
 ## Description
 
-An OutputStream that counts the number of bytes written.
-**Author:** Chris Nokleberg
-**Since:** 1.0
-
 ## Fields
 
 ### `count`
@@ -20,10 +16,10 @@ An OutputStream that counts the number of bytes written.
 
 ## Constructors
 
-### `<init>(`java.io.OutputStream` out)`
+### `<init>(java.io.OutputStream out)`
 
-Wraps another output stream, counting the number of bytes written.
-@param out the output stream to be wrapped
+**Parameters:**
+- `out` (`java.io.OutputStream`): the output stream to be wrapped
 
 ## Methods
 
@@ -31,15 +27,21 @@ Wraps another output stream, counting the number of bytes written.
 
 **Returns:** `long`
 
-Returns the number of bytes written.
-
-### `write(`byte[]` b, `int` off, `int` len)`
+### `write(byte[] b, int off, int len)`
 
 **Returns:** `void`
 
-### `write(`int` b)`
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `write(int b)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `b` (`int`)
 
 ### `close()`
 

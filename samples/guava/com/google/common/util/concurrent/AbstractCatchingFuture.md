@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.AbstractCatchingFuture`
 
-**Extends:** [`com.google.common.util.concurrent.FluentFuture.TrustedFuture<V>`](FluentFuture/TrustedFuture.md)
+**Extends:** `com.google.common.util.concurrent.FluentFuture.TrustedFuture<V>`
 
 **Implements:** `java.lang.Runnable`
 
@@ -16,8 +16,6 @@
 - `T` extends `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`
 
 ## Description
-
-Implementations of `Futures.catching*`.
 
 ## Fields
 
@@ -35,17 +33,34 @@ Implementations of `Futures.catching*`.
 
 ## Constructors
 
-### `<init>([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) inputFuture, `java.lang.Class<X>` exceptionType, `F` fallback)`
+### `<init>(com.google.common.util.concurrent.ListenableFuture<? extends V> inputFuture, java.lang.Class<X> exceptionType, F fallback)`
+
+**Parameters:**
+- `inputFuture` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md))
+- `exceptionType` (`java.lang.Class<X>`)
+- `fallback` (`F`)
 
 ## Methods
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) input, `java.lang.Class<X>` exceptionType, [`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md) fallback, `java.util.concurrent.Executor` executor)`
+### `create(com.google.common.util.concurrent.ListenableFuture<? extends V> input, java.lang.Class<X> exceptionType, com.google.common.base.Function<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md) input, `java.lang.Class<X>` exceptionType, [`com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>`](./AsyncFunction.md) fallback, `java.util.concurrent.Executor` executor)`
+**Parameters:**
+- `input` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md))
+- `exceptionType` (`java.lang.Class<X>`)
+- `fallback` ([`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md))
+- `executor` (`java.util.concurrent.Executor`)
+
+### `create(com.google.common.util.concurrent.ListenableFuture<? extends V> input, java.lang.Class<X> exceptionType, com.google.common.util.concurrent.AsyncFunction<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+
+**Parameters:**
+- `input` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md))
+- `exceptionType` (`java.lang.Class<X>`)
+- `fallback` ([`com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>`](./AsyncFunction.md))
+- `executor` (`java.util.concurrent.Executor`)
 
 ### `run()`
 
@@ -55,17 +70,20 @@ Implementations of `Futures.catching*`.
 
 **Returns:** `java.lang.String`
 
-### `doFallback(`F` fallback, `X` throwable)`
+### `doFallback(F fallback, X throwable)`
 
 **Returns:** `T`
 
-Template method for subtypes to actually run the fallback.
+**Parameters:**
+- `fallback` (`F`)
+- `throwable` (`X`)
 
-### `setResult(`T` result)`
+### `setResult(T result)`
 
 **Returns:** `void`
 
-Template method for subtypes to actually set the result.
+**Parameters:**
+- `result` (`T`)
 
 ### `afterDone()`
 

@@ -6,11 +6,17 @@
 
 ## Methods
 
-### `createCollector(`java.net.URL` arg0)`
+### `createCollector(java.net.URL arg0)`
 
 **Returns:** [`ro.sync.exml.workspace.api.references.ReferenceCollector`](./ReferenceCollector.md)
 
-### `getCollector(`java.net.URL` arg0)`
+**Parameters:**
+- `arg0` (`java.net.URL`)
+
+### `getCollector(java.net.URL arg0)`
 
 **Returns:** [`ro.sync.exml.workspace.api.references.ReferenceCollector`](./ReferenceCollector.md)
+
+**Parameters:**
+- `arg0` (`java.net.URL`)
 

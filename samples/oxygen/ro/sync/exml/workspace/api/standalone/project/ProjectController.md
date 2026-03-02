@@ -8,25 +8,37 @@
 
 ## Methods
 
-### `addProjectChangeListener([`ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener`](./ProjectChangeListener.md) projectChangeListener)`
+### `addProjectChangeListener(ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener projectChangeListener)`
 
 **Returns:** `void`
 
-### `removeProjectChangeListener([`ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener`](./ProjectChangeListener.md) projectChangeListener)`
+**Parameters:**
+- `projectChangeListener` ([`ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener`](./ProjectChangeListener.md)): The project listener to add.
+
+### `removeProjectChangeListener(ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener projectChangeListener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `projectChangeListener` ([`ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener`](./ProjectChangeListener.md)): The project listener to remove.
 
 ### `getCurrentProjectURL()`
 
 **Returns:** `java.net.URL`
 
-### `addPopUpMenuCustomizer([`ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer`](./ProjectPopupMenuCustomizer.md) popUpCustomizer)`
+### `addPopUpMenuCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer popUpCustomizer)`
 
 **Returns:** `void`
 
-### `removePopUpMenuCustomizer([`ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer`](./ProjectPopupMenuCustomizer.md) popUpCustomizer)`
+**Parameters:**
+- `popUpCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer`](./ProjectPopupMenuCustomizer.md)): the pop-up menu customizer to add.
+
+### `removePopUpMenuCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer popUpCustomizer)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `popUpCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer`](./ProjectPopupMenuCustomizer.md)): the pop-up menu customizer to remove.
 
 ### `getSelectedFiles()`
 
@@ -34,25 +46,40 @@
 
 If both parent and child files/folders are selected, they are all returned.
 
-### `refreshFolders(`java.io.File[]` folders)`
+### `refreshFolders(java.io.File[] folders)`
 
 **Returns:** `void`
 
-### `addLinksToFoldersInProjectRoot(`java.io.File[]` folders)`
+**Parameters:**
+- `folders` (`java.io.File[]`): An array of folders to refresh.
+
+### `addLinksToFoldersInProjectRoot(java.io.File[] folders)`
 
 **Returns:** `void`
 
-### `addRendererCustomizer([`ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer`](./ProjectRendererCustomizer.md) rendererCustomizer)`
+**Parameters:**
+- `folders` (`java.io.File[]`): The folders to refer. They should already be created on disk before calling this API which just links to it.
+
+### `addRendererCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer rendererCustomizer)`
 
 **Returns:** `void`
 
-### `removeRendererCustomizer([`ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer`](./ProjectRendererCustomizer.md) rendererCustomizer)`
+**Parameters:**
+- `rendererCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer`](./ProjectRendererCustomizer.md)): the renderer customizer to add.
+
+### `removeRendererCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer rendererCustomizer)`
 
 **Returns:** `void`
 
-### `loadProject(`java.io.File` project)`
+**Parameters:**
+- `rendererCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer`](./ProjectRendererCustomizer.md)): the renderer customizer to remove.
+
+### `loadProject(java.io.File project)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `project` (`java.io.File`): The project file.
 
 ### `getProjectIndexer()`
 
@@ -64,7 +91,10 @@ If both parent and child files/folders are selected, they are all returned.
 
 If the "Main files" support is disabled, an empty iterator will be returned, even if it contains referenced resources.
 
-### `findInFiles([`ro.sync.exml.workspace.api.standalone.project.SearchParams`](./SearchParams.md) findParams)`
+### `findInFiles(ro.sync.exml.workspace.api.standalone.project.SearchParams findParams)`
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
+
+**Parameters:**
+- `findParams` ([`ro.sync.exml.workspace.api.standalone.project.SearchParams`](./SearchParams.md)): The find parameters.
 

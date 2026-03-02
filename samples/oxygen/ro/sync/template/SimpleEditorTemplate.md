@@ -32,11 +32,26 @@
 
 ### `<init>()`
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3)`
+### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2)`
+### `<init>(java.lang.String arg0, java.lang.String arg1)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+
+### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
 
 ## Methods
 
@@ -60,29 +75,47 @@
 
 **Returns:** `int`
 
-### `getContentInfo(`java.lang.String` arg0)`
+### `getContentInfo(java.lang.String arg0)`
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(`java.lang.String` arg0, `boolean` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `getContentInfo(java.lang.String arg0, boolean arg1)`
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(`java.lang.String` arg0, `boolean` arg1, `boolean` arg2)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+
+### `getContentInfo(java.lang.String arg0, boolean arg1, boolean arg2)`
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `setContent(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`boolean`)
+
+### `setContent(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getCaretPosition()`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` arg0)`
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 
 ### `hashCode()`
 

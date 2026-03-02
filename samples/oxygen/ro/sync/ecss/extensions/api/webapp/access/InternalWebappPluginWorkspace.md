@@ -8,13 +8,19 @@
 
 ## Methods
 
-### `addWebappPreloadProcessor([`ro.sync.ecss.extensions.api.webapp.access.WebappPreloadProcessor`](./WebappPreloadProcessor.md) arg0)`
+### `addWebappPreloadProcessor(ro.sync.ecss.extensions.api.webapp.access.WebappPreloadProcessor arg0)`
 
 **Returns:** `void`
 
-### `removeWebappPreloadProcessor([`ro.sync.ecss.extensions.api.webapp.access.WebappPreloadProcessor`](./WebappPreloadProcessor.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappPreloadProcessor`](./WebappPreloadProcessor.md))
+
+### `removeWebappPreloadProcessor(ro.sync.ecss.extensions.api.webapp.access.WebappPreloadProcessor arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappPreloadProcessor`](./WebappPreloadProcessor.md))
 
 ### `getWebappPreloadProcessors()`
 

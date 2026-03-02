@@ -46,37 +46,63 @@
 
 **Returns:** `ro.sync.exml.cc._b`
 
-### `getIconPath(`java.lang.String` arg0)`
+### `getIconPath(java.lang.String arg0)`
 
 **Returns:** `java.lang.String`
 
-### `getComponentIconPathAndSize(`ro.sync.ui.treetable.b.d._c` arg0, `short` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `getComponentIconPathAndSize(ro.sync.ui.treetable.b.d._c arg0, short arg1)`
 
 **Returns:** `ro.sync.exml.cc._b`
 
-### `getComponentIconPathAndSize(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`ro.sync.ui.treetable.b.d._c`)
+- `arg1` (`short`)
+
+### `getComponentIconPathAndSize(java.lang.String arg0)`
 
 **Returns:** `ro.sync.exml.cc._b`
 
-### `c(`short` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `c(short arg0)`
 
 **Returns:** `ro.sync.exml.cc._b`
 
-### `f(`short` arg0)`
+**Parameters:**
+- `arg0` (`short`)
+
+### `f(short arg0)`
 
 **Returns:** `ro.sync.exml.cc._b`
 
-### `b(`short` arg0)`
+**Parameters:**
+- `arg0` (`short`)
+
+### `b(short arg0)`
 
 **Returns:** `ro.sync.exml.cc._b`
 
-### `d(`ro.sync.ui.treetable.b.d._c` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`short`)
+
+### `d(ro.sync.ui.treetable.b.d._c arg0, java.lang.String arg1)`
 
 **Returns:** `ro.sync.exml.cc._b`
 
-### `e(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`ro.sync.ui.treetable.b.d._c`)
+- `arg1` (`java.lang.String`)
+
+### `e(java.lang.String arg0)`
 
 **Returns:** `ro.sync.exml.cc._b`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `addWidthHeightForRetinaImages()`
 

@@ -14,11 +14,24 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, [`ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[]`](./AuthorDocumentFragmentClipboardObject.md) arg2, [`ro.sync.ecss.component.AuthorContentMetadata`](./AuthorContentMetadata.md) arg3, `ro.sync.ecss.dom.z` arg4, `java.util.List<int[]>` arg5, [`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](../extensions/api/SelectionInterpretationMode.md) arg6)`
+### `<init>(java.lang.String arg0, java.lang.String arg1, ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[] arg2, ro.sync.ecss.component.AuthorContentMetadata arg3, ro.sync.ecss.dom.z arg4, java.util.List<int[]> arg5, ro.sync.ecss.extensions.api.SelectionInterpretationMode arg6)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` ([`ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[]`](./AuthorDocumentFragmentClipboardObject.md))
+- `arg3` ([`ro.sync.ecss.component.AuthorContentMetadata`](./AuthorContentMetadata.md))
+- `arg4` (`ro.sync.ecss.dom.z`)
+- `arg5` (`java.util.List<int[]>`)
+- `arg6` ([`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](../extensions/api/SelectionInterpretationMode.md))
 
 ## Methods
 
-### `isIntervalInsideFragments(`int` arg0, `int` arg1)`
+### `isIntervalInsideFragments(int arg0, int arg1)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
 

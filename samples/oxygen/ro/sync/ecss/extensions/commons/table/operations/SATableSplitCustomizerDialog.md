@@ -20,7 +20,13 @@
 
 ## Constructors
 
-### `<init>(`java.awt.Frame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) authorResourceBundle, `int` maxColumns, `int` maxRows)`
+### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int maxColumns, int maxRows)`
+
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent frame of the dialog.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): The author resource bundle.It is used for translations.
+- `maxColumns` (`int`): The maximum number of columns in which the current cell can be split.
+- `maxRows` (`int`): The maximum number of rows in which the current cell can be split.
 
 ## Methods
 

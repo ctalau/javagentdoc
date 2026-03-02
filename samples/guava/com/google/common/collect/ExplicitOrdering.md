@@ -14,8 +14,6 @@
 
 ## Description
 
-An ordering that compares objects according to a given order.
-
 ## Fields
 
 ### `rankMap`
@@ -28,23 +26,39 @@ An ordering that compares objects according to a given order.
 
 ## Constructors
 
-### `<init>(`java.util.List<T>` valuesInOrder)`
+### `<init>(java.util.List<T> valuesInOrder)`
 
-### `<init>([`com.google.common.collect.ImmutableMap<T,java.lang.Integer>`](./ImmutableMap.md) rankMap)`
+**Parameters:**
+- `valuesInOrder` (`java.util.List<T>`)
+
+### `<init>(com.google.common.collect.ImmutableMap<T,java.lang.Integer> rankMap)`
+
+**Parameters:**
+- `rankMap` ([`com.google.common.collect.ImmutableMap<T,java.lang.Integer>`](./ImmutableMap.md))
 
 ## Methods
 
-### `compare(`T` left, `T` right)`
+### `compare(T left, T right)`
 
 **Returns:** `int`
 
-### `rank(`T` value)`
+**Parameters:**
+- `left` (`T`)
+- `right` (`T`)
+
+### `rank(T value)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `value` (`T`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

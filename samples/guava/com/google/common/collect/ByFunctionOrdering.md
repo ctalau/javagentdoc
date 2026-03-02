@@ -15,9 +15,6 @@
 
 ## Description
 
-An ordering that orders elements by applying an order to the result of a function on those
- elements.
-
 ## Fields
 
 ### `function`
@@ -34,17 +31,28 @@ An ordering that orders elements by applying an order to the result of a functio
 
 ## Constructors
 
-### `<init>([`com.google.common.base.Function<F,? extends T>`](../base/Function.md) function, [`com.google.common.collect.Ordering<T>`](./Ordering.md) ordering)`
+### `<init>(com.google.common.base.Function<F,? extends T> function, com.google.common.collect.Ordering<T> ordering)`
+
+**Parameters:**
+- `function` ([`com.google.common.base.Function<F,? extends T>`](../base/Function.md))
+- `ordering` ([`com.google.common.collect.Ordering<T>`](./Ordering.md))
 
 ## Methods
 
-### `compare(`F` left, `F` right)`
+### `compare(F left, F right)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `left` (`F`)
+- `right` (`F`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

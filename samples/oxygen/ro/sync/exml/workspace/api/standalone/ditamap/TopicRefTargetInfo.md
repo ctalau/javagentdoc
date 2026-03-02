@@ -40,11 +40,46 @@ This is filled on the API side.
 
 ## Methods
 
-### `getProperty(`java.lang.String` propertyName)`
+### `getProperty(java.lang.String propertyName)`
 
 **Returns:** `java.lang.Object`
 
-### `setProperty(`java.lang.String` propertyName, `java.lang.Object` propertyValue)`
+**Parameters:**
+- `propertyName` (`java.lang.String`): The property name. One of the following constants:
+ 
+
+  - #RESOLVED
+
+  - #TITLE
+
+  - #CLASS_VALUE
+
+  - #ELEMENT_NAME
+
+  - #PARSE_ERROR
+
+ 
+
+
+### `setProperty(java.lang.String propertyName, java.lang.Object propertyValue)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `propertyName` (`java.lang.String`): The property name. One of the following constants:
+ 
+
+  - #RESOLVED
+
+  - #TITLE
+
+  - #CLASS_VALUE
+
+  - #ELEMENT_NAME
+
+  - #PARSE_ERROR
+
+ 
+
+- `propertyValue` (`java.lang.Object`): The value of the property.
 

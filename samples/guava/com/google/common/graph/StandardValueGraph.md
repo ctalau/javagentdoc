@@ -13,19 +13,14 @@
 
 ## Description
 
-Standard implementation of `ValueGraph` that supports the options supplied by `AbstractGraphBuilder`.
+This class maintains a map of nodes to GraphConnections.
 
- <p>This class maintains a map of nodes to `GraphConnections`.
-
- <p>Collection-returning accessors return unmodifiable views: the view returned will reflect
+ 
+Collection-returning accessors return unmodifiable views: the view returned will reflect
  changes to the graph (if the graph is mutable) but may not be modified by the user.
 
- <p>The time complexity of all collection-returning accessors is O(1), since views are returned.
-**Author:** James Sexton
-**Author:** Joshua O'Madadhain
-**Author:** Omar Darwish
-@param <N> Node parameter type
-@param <V> Value parameter type
+ 
+The time complexity of all collection-returning accessors is O(1), since views are returned.
 
 ## Fields
 
@@ -43,7 +38,7 @@ Standard implementation of `ValueGraph` that supports the options supplied by `A
 
 ### `nodeConnections`
 
-**Type:** [`com.google.common.graph.MapIteratorCache<N,com.google.common.graph.GraphConnections<N,V>>`](./MapIteratorCache>.md)
+**Type:** [`com.google.common.graph.MapIteratorCache<N,com.google.common.graph.GraphConnections<N,V>>`](./MapIteratorCache.md)
 
 ### `edgeCount`
 
@@ -51,14 +46,17 @@ Standard implementation of `ValueGraph` that supports the options supplied by `A
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md) builder)`
+### `<init>(com.google.common.graph.AbstractGraphBuilder<? super N> builder)`
 
-Constructs a graph with the properties specified in `builder`.
+**Parameters:**
+- `builder` ([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md))
 
-### `<init>([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md) builder, `java.util.Map<N,com.google.common.graph.GraphConnections<N,V>>` nodeConnections, `long` edgeCount)`
+### `<init>(com.google.common.graph.AbstractGraphBuilder<? super N> builder, java.util.Map<N,com.google.common.graph.GraphConnections<N,V>> nodeConnections, long edgeCount)`
 
-Constructs a graph with the properties specified in `builder`, initialized with the given
- node map.
+**Parameters:**
+- `builder` ([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md))
+- `nodeConnections` (`java.util.Map<N,com.google.common.graph.GraphConnections<N,V>>`)
+- `edgeCount` (`long`)
 
 ## Methods
 
@@ -78,55 +76,98 @@ Constructs a graph with the properties specified in `builder`, initialized with 
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `adjacentNodes(`N` node)`
+### `adjacentNodes(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `predecessors(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `predecessors(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `successors(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `successors(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `incidentEdges(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `incidentEdges(N node)`
 
 **Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `node` (`N`)
+
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `hasEdgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
 
-### `edgeValueOrDefault(`N` nodeU, `N` nodeV, `V` defaultValue)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `edgeValueOrDefault(N nodeU, N nodeV, V defaultValue)`
 
 **Returns:** `V`
 
-### `edgeValueOrDefault([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, `V` defaultValue)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+- `defaultValue` (`V`)
+
+### `edgeValueOrDefault(com.google.common.graph.EndpointPair<N> endpoints, V defaultValue)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+- `defaultValue` (`V`)
 
 ### `edgeCount()`
 
 **Returns:** `long`
 
-### `checkedConnections(`N` node)`
+### `checkedConnections(N node)`
 
 **Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
 
-### `containsNode(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `containsNode(N node)`
 
 **Returns:** `boolean`
 
-### `hasEdgeConnectingInternal(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `node` (`N`)
+
+### `hasEdgeConnectingInternal(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `edgeValueOrDefaultInternal(`N` nodeU, `N` nodeV, `V` defaultValue)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `edgeValueOrDefaultInternal(N nodeU, N nodeV, V defaultValue)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+- `defaultValue` (`V`)
 

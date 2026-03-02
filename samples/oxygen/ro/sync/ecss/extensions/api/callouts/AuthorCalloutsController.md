@@ -37,7 +37,7 @@ By default, the comments callouts visibility in Author mode is controlled from O
 
  Note that when there are no review callouts, the callouts side bar is collapsed.
 
-### `setShowCommentsCallouts(`java.lang.Boolean` showCommentsCallouts)`
+### `setShowCommentsCallouts(java.lang.Boolean showCommentsCallouts)`
 
 **Returns:** `void`
 
@@ -47,6 +47,15 @@ This method can be used to override the default option from Oxygen Preferences
  
 
  Note that when there are no review callouts, the callouts side bar is collapsed.
+
+**Parameters:**
+- `showCommentsCallouts` (`java.lang.Boolean`): If `true`, the review callouts with comments
+ are displayed in Author mode. The callouts with comments are hidden when the provided 
+ value is `false`.
+ 
+ 
+ When the value is set to `null`, the option from Oxygen Preferences
+ is taken into consideration.
 
 ### `isShowingDeletionsCallouts()`
 
@@ -59,7 +68,7 @@ By default, the Change Tracking deletions callouts visibility in Author mode is 
 
  Note that when there are no review callouts, the callouts side bar is collapsed.
 
-### `setShowDeletionsCallouts(`java.lang.Boolean` showDeletionsCallouts)`
+### `setShowDeletionsCallouts(java.lang.Boolean showDeletionsCallouts)`
 
 **Returns:** `void`
 
@@ -69,6 +78,14 @@ This method can be used to override the default option from Oxygen Preferences
  
 
  Note that when there are no review callouts, the callouts side bar is collapsed.
+
+**Parameters:**
+- `showDeletionsCallouts` (`java.lang.Boolean`): If `true`, the Track Changes deletions callouts
+ are displayed in Author mode. The deletions callouts are hidden when the provided value is `false`.
+ 
+ 
+ When the value is set to `null`, the option from Oxygen Preferences
+ is taken into consideration.
 
 ### `isShowingInsertionsCallouts()`
 
@@ -81,7 +98,7 @@ By default, the Change Tracking insertions callouts visibility in Author mode is
 
  Note that when there are no review callouts, the callouts side bar is collapsed.
 
-### `setShowInsertionsCallouts(`java.lang.Boolean` showInsertionsCallouts)`
+### `setShowInsertionsCallouts(java.lang.Boolean showInsertionsCallouts)`
 
 **Returns:** `void`
 
@@ -92,7 +109,15 @@ This method can be used to override the default option from Oxygen Preferences
 
  Note that when there are no review callouts, the callouts side bar is collapsed.
 
-### `setCalloutsRenderingInformationProvider([`ro.sync.ecss.extensions.api.callouts.CalloutsRenderingInformationProvider`](./CalloutsRenderingInformationProvider.md) provider)`
+**Parameters:**
+- `showInsertionsCallouts` (`java.lang.Boolean`): If `true`, the Track Changes insertions callouts
+ are displayed in Author mode. The insertions callouts are hidden when the provided value is `false`.
+ 
+ 
+ When the value is set to `null`, the option from Oxygen Preferences
+ is taken into consideration.
+
+### `setCalloutsRenderingInformationProvider(ro.sync.ecss.extensions.api.callouts.CalloutsRenderingInformationProvider provider)`
 
 **Returns:** `void`
 
@@ -103,19 +128,31 @@ The callouts are representations of Track Changes insert and delete highlights,
  By default, the callouts visibility in Author mode is controlled from Oxygen
  Preferences but it can be changed by using the AuthorCalloutsController methods.
 
-### `getCalloutRectangle([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md) persistentHighlight)`
+**Parameters:**
+- `provider` ([`ro.sync.ecss.extensions.api.callouts.CalloutsRenderingInformationProvider`](./CalloutsRenderingInformationProvider.md)): The highlights callout rendering information provider.
+
+### `getCalloutRectangle(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight persistentHighlight)`
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addCalloutActionsProvider([`ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider`](./CalloutActionsProvider.md) actionsProvider)`
+**Parameters:**
+- `persistentHighlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The Author persistent highlight.
+
+### `addCalloutActionsProvider(ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider actionsProvider)`
 
 **Returns:** `void`
 
-### `removeCalloutActionsProvider([`ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider`](./CalloutActionsProvider.md) actionsProvider)`
+**Parameters:**
+- `actionsProvider` ([`ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider`](./CalloutActionsProvider.md)): The callout actions provider.
+
+### `removeCalloutActionsProvider(ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider actionsProvider)`
 
 **Returns:** `void`
 
-### `getDefaultAuthorCalloutRenderingInformation([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md) highlight)`
+**Parameters:**
+- `actionsProvider` ([`ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider`](./CalloutActionsProvider.md)): The callout actions provider.
+
+### `getDefaultAuthorCalloutRenderingInformation(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.callouts.AuthorCalloutRenderingInformation`](./AuthorCalloutRenderingInformation.md)
 
@@ -125,4 +162,8 @@ You can change the rendering information for such highlights by setting a Callou
 
  The callouts are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom review highlights in Author mode.
+
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The Author persistent highlight. 
+ The type of the highlight can be obtained by using the AuthorPersistentHighlight#getType()
 

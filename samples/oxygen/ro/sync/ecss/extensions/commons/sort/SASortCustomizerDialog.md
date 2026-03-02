@@ -44,19 +44,38 @@
 
 ## Constructors
 
-### `<init>(`java.awt.Frame` arg0, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md) arg1, `java.lang.String` arg2, `java.lang.String` arg3)`
+### `<init>(java.awt.Frame arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.lang.String arg2, java.lang.String arg3)`
+
+**Parameters:**
+- `arg0` (`java.awt.Frame`)
+- `arg1` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md))
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
 
 ## Methods
 
-### `addSection(`java.awt.GridBagConstraints` arg0, `java.lang.String` arg1)`
+### `addSection(java.awt.GridBagConstraints arg0, java.lang.String arg1)`
 
 **Returns:** `void`
 
-### `getSortInformation(`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>` arg0, `boolean` arg1, `boolean` arg2)`
+**Parameters:**
+- `arg0` (`java.awt.GridBagConstraints`)
+- `arg1` (`java.lang.String`)
+
+### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
 
-### `selectionChanged(`java.lang.String` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
+- `arg1` (`boolean`)
+- `arg2` (`boolean`)
+
+### `selectionChanged(java.lang.String arg0, java.lang.String arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
 

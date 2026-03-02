@@ -11,17 +11,17 @@
 
 ## Description
 
-A map-like data structure that wraps a backing map and caches values while iterating through
- `unmodifiableKeySet()`. By design, the cache is cleared when this structure is mutated. If
+By design, the cache is cleared when this structure is mutated. If
  this structure is never mutated, it provides a thread-safe view of the backing map.
 
- <p>The `MapIteratorCache` assumes ownership of the backing map, and cannot guarantee
- correctness in the face of external mutations to the backing map. As such, it is <b>strongly</b>
+ 
+The MapIteratorCache assumes ownership of the backing map, and cannot guarantee
+ correctness in the face of external mutations to the backing map. As such, it is **strongly**
  recommended that the caller does not persist a reference to the backing map (unless the backing
  map is immutable).
 
- <p>This class is tailored toward use cases in common.graph. It is *NOT* a general purpose map.
-**Author:** James Sexton
+ 
+This class is tailored toward use cases in common.graph. It is *NOT* a general purpose map.
 
 ## Fields
 
@@ -35,41 +35,63 @@ A map-like data structure that wraps a backing map and caches values while itera
 
 ## Constructors
 
-### `<init>(`java.util.Map<K,V>` backingMap)`
+### `<init>(java.util.Map<K,V> backingMap)`
+
+**Parameters:**
+- `backingMap` (`java.util.Map<K,V>`)
 
 ## Methods
 
-### `put(`K` key, `V` value)`
+### `put(K key, V value)`
 
 **Returns:** `V`
 
-### `remove(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `remove(java.lang.Object key)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `get(`java.lang.Object` key)`
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `getWithoutCaching(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `getWithoutCaching(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `containsKey(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `unmodifiableKeySet()`
 
 **Returns:** `java.util.Set<K>`
 
-### `getIfCached(`java.lang.Object` key)`
+### `getIfCached(java.lang.Object key)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `clearCache()`
 

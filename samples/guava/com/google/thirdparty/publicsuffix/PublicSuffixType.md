@@ -6,10 +6,10 @@
 
 ## Description
 
-<b>Do not use this class directly. For access to public-suffix information, use `com.google.common.net.InternetDomainName`.</b>
+For access to public-suffix information, use com.google.common.net.InternetDomainName.**
 
- <p>Specifies the type of a top-level domain definition.
-**Since:** 23.3
+ 
+Specifies the type of a top-level domain definition.
 
 ## Fields
 
@@ -17,17 +17,17 @@
 
 **Type:** `char`
 
-The character used for an inner node in the trie encoding
-
 ### `leafNodeCode`
 
 **Type:** `char`
 
-The character used for a leaf node in the trie encoding
-
 ## Constructors
 
-### `<init>(`char` innerNodeCode, `char` leafNodeCode)`
+### `<init>(char innerNodeCode, char leafNodeCode)`
+
+**Parameters:**
+- `innerNodeCode` (`char`)
+- `leafNodeCode` (`char`)
 
 ## Methods
 
@@ -35,9 +35,12 @@ The character used for a leaf node in the trie encoding
 
 **Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType[]`](./PublicSuffixType.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType`](./PublicSuffixType.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `getLeafNodeCode()`
 
@@ -47,9 +50,10 @@ The character used for a leaf node in the trie encoding
 
 **Returns:** `char`
 
-### `fromCode(`char` code)`
+### `fromCode(char code)`
 
 **Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType`](./PublicSuffixType.md)
 
-Returns a PublicSuffixType of the right type according to the given code
+**Parameters:**
+- `code` (`char`)
 

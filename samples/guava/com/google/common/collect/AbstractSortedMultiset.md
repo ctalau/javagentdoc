@@ -14,11 +14,8 @@
 
 ## Description
 
-This class provides a skeletal implementation of the `SortedMultiset` interface.
-
- <p>The `count` and `size` implementations all iterate across the set returned by
- `Multiset.entrySet()`, as do many methods acting on the set returned by `elementSet()`. Override those methods for better performance.
-**Author:** Louis Wasserman
+The #count and #size implementations all iterate across the set returned by
+ Multiset#entrySet(), as do many methods acting on the set returned by #elementSet(). Override those methods for better performance.
 
 ## Fields
 
@@ -34,7 +31,10 @@ This class provides a skeletal implementation of the `SortedMultiset` interface.
 
 ### `<init>()`
 
-### `<init>(`java.util.Comparator<? super E>` comparator)`
+### `<init>(java.util.Comparator<? super E> comparator)`
+
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
 
 ## Methods
 
@@ -52,23 +52,29 @@ This class provides a skeletal implementation of the `SortedMultiset` interface.
 
 ### `firstEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `lastEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `pollFirstEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `pollLastEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-### `subMultiset(`E` fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) fromBoundType, `E` toElement, [`com.google.common.collect.BoundType`](./BoundType.md) toBoundType)`
+### `subMultiset(E fromElement, com.google.common.collect.BoundType fromBoundType, E toElement, com.google.common.collect.BoundType toBoundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+**Parameters:**
+- `fromElement` (`E`)
+- `fromBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `toElement` (`E`)
+- `toBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
 ### `descendingEntryIterator()`
 

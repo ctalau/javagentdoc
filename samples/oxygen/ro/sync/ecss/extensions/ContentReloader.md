@@ -6,7 +6,11 @@
 
 ## Methods
 
-### `reloadContent(`java.io.Reader` arg0, `boolean` arg1)`
+### `reloadContent(java.io.Reader arg0, boolean arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.io.Reader`)
+- `arg1` (`boolean`)
 

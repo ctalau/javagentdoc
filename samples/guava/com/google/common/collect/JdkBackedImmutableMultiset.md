@@ -12,9 +12,8 @@
 
 ## Description
 
-An implementation of ImmutableMultiset backed by a JDK Map and a list of entries. Used to protect
+Used to protect
  against hash flooding attacks.
-**Author:** Louis Wasserman
 
 ## Fields
 
@@ -24,7 +23,7 @@ An implementation of ImmutableMultiset backed by a JDK Map and a list of entries
 
 ### `entries`
 
-**Type:** [`com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableList>.md)
+**Type:** [`com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableList.md)
 
 ### `size`
 
@@ -36,25 +35,39 @@ An implementation of ImmutableMultiset backed by a JDK Map and a list of entries
 
 ## Constructors
 
-### `<init>(`java.util.Map<E,java.lang.Integer>` delegateMap, [`com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableList>.md) entries, `long` size)`
+### `<init>(java.util.Map<E,java.lang.Integer> delegateMap, com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>> entries, long size)`
+
+**Parameters:**
+- `delegateMap` (`java.util.Map<E,java.lang.Integer>`)
+- `entries` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableList.md))
+- `size` (`long`)
 
 ## Methods
 
-### `create(`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>` entries)`
+### `create(java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>> entries)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-### `count(`java.lang.Object` element)`
+**Parameters:**
+- `entries` (`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`)
+
+### `count(java.lang.Object element)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `element` (`java.lang.Object`)
 
 ### `elementSet()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
 
-### `getEntry(`int` index)`
+### `getEntry(int index)`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `isPartialView()`
 

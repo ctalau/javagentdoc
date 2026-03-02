@@ -17,11 +17,17 @@ It will offer solutions for solving
 
 ## Methods
 
-### `resolveError([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `resolveError(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
 
-### `resolveError([`ro.sync.ecss.extensions.api.ErrorResolverContextInfo`](./ErrorResolverContextInfo.md) contextInfo)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
+
+### `resolveError(ro.sync.ecss.extensions.api.ErrorResolverContextInfo contextInfo)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `contextInfo` ([`ro.sync.ecss.extensions.api.ErrorResolverContextInfo`](./ErrorResolverContextInfo.md)): The current error context information.
 

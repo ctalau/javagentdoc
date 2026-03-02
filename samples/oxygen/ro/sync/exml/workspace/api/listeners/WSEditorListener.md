@@ -26,13 +26,19 @@ The listener is added to a WSEditor and receives different callbacks.
 
 ## Methods
 
-### `editorAboutToBeSavedVeto(`int` operationType)`
+### `editorAboutToBeSavedVeto(int operationType)`
 
 **Returns:** `boolean`
 
-### `editorSaved(`int` operationType)`
+**Parameters:**
+- `operationType` (`int`): The operation type. One of the constants WSEditorListener#SAVE_AS_OPERATION or WSEditorListener#SAVE_OPERATION.
+
+### `editorSaved(int operationType)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `operationType` (`int`): The operation type. One of the constants WSEditorListener#SAVE_AS_OPERATION or WSEditorListener#SAVE_OPERATION.
 
 ### `documentTypeExtensionsReconfigured()`
 
@@ -42,7 +48,7 @@ For example after a document is opened, the application will re-configure the fr
  So if you are using code which for example tries to add a listener to one of the actions on the framework-specific toolbar, 
  the code should re-add the listener when the callback is received.
 
-### `editorAboutToBeClosedVeto(`java.net.URL` editorLocation)`
+### `editorAboutToBeClosedVeto(java.net.URL editorLocation)`
 
 **Returns:** `boolean`
 
@@ -51,9 +57,15 @@ Decide if the closing should proceed or not.
 
  This method is not called from the Eclipse plug-in. It works only with the stand-alone application.
 
-### `editorReloaded(`java.net.URL` editorURL)`
+**Parameters:**
+- `editorLocation` (`java.net.URL`): The URL of the editor.
+
+### `editorReloaded(java.net.URL editorURL)`
 
 **Returns:** `void`
 
 Probably F5 was pressed.
+
+**Parameters:**
+- `editorURL` (`java.net.URL`): The URL for which the content has been reloaded.
 

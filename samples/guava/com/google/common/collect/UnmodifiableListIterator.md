@@ -14,31 +14,23 @@
 
 ## Description
 
-A list iterator that does not support `remove`, `add`, or `set`.
-**Since:** 7.0
-**Author:** Louis Wasserman
-
 ## Constructors
 
 ### `<init>()`
 
-Constructor for use by subclasses.
-
 ## Methods
 
-### `add(`E` e)`
+### `add(E e)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the underlying data unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `e` (`E`)
 
-### `set(`E` e)`
+### `set(E e)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the underlying data unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `e` (`E`)
 

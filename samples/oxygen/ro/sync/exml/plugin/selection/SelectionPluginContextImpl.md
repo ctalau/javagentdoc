@@ -28,21 +28,36 @@
 
 ### `<init>()`
 
-### `<init>(`java.lang.String` arg0, `java.awt.Frame` arg1, `java.net.URL` arg2, [`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md) arg3)`
+### `<init>(java.lang.String arg0, java.awt.Frame arg1, java.net.URL arg2, ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg3)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.awt.Frame`)
+- `arg2` (`java.net.URL`)
+- `arg3` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md))
 
 ## Methods
 
-### `setSelection(`java.lang.String` arg0)`
+### `setSelection(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFrame(`java.awt.Frame` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFrame(java.awt.Frame arg0)`
 
 **Returns:** `void`
 
-### `setDocumentURL(`java.net.URL` arg0)`
+**Parameters:**
+- `arg0` (`java.awt.Frame`)
+
+### `setDocumentURL(java.net.URL arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.net.URL`)
 
 ### `getSelection()`
 

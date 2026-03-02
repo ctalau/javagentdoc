@@ -12,5 +12,3 @@
 
 ## Description
 
-Explicitly named subinterface of `Supplier` that can be marked @`Immutable`.
-

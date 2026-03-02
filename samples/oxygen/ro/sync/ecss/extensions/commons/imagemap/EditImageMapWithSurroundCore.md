@@ -14,15 +14,27 @@
 
 ## Methods
 
-### `getNodesOfInterest([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) interestNode, `boolean` doSurroundIfMissing)`
+### `getNodesOfInterest(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode interestNode, boolean doSurroundIfMissing)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../../api/node/AuthorNode.md)
 
-### `needComplexSurround([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) nodeToEdit)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
+- `interestNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node of interest if available when calling the method. If `null`
+                            it will be determined from the AuthorAccess, from the caret position.
+- `doSurroundIfMissing` (`boolean`): If `true` the missing part of the image map will be added.
+
+### `needComplexSurround(ro.sync.ecss.extensions.api.node.AuthorNode nodeToEdit)`
 
 **Returns:** `boolean`
 
-### `getNodesOfInterestCriteria(`java.lang.String` namespace)`
+**Parameters:**
+- `nodeToEdit` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to edit.
+
+### `getNodesOfInterestCriteria(java.lang.String namespace)`
 
 **Returns:** `java.lang.String[]`
+
+**Parameters:**
+- `namespace` (`java.lang.String`): The namespace of the document.
 

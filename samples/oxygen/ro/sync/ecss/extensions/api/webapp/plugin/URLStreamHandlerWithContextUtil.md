@@ -37,7 +37,7 @@ The context ID is typically added when the user asks the webapp to open an URL
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContextUtil`](./URLStreamHandlerWithContextUtil.md)
 
-### `setUserContext([`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](./UserContext.md) context, `java.net.URL` url)`
+### `setUserContext(ro.sync.ecss.extensions.api.webapp.plugin.UserContext context, java.net.URL url)`
 
 **Returns:** `void`
 
@@ -47,23 +47,40 @@ If the URL handler for this URL
  
  Note: If the URL already has a context, the newly set context must have the same id.
 
-### `copyContextId(`java.net.URL` source, `java.net.URL` target)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](./UserContext.md)): The context.
+- `url` (`java.net.URL`): The URL.
+
+### `copyContextId(java.net.URL source, java.net.URL target)`
 
 **Returns:** `void`
 
 If the two URLs have different protocols, this method does nothing.
 
-### `toStrippedExternalForm(`java.net.URL` url)`
+**Parameters:**
+- `source` (`java.net.URL`): The URL from which to copy the user context id.
+- `target` (`java.net.URL`): The URL where to copy the user context id.
+
+### `toStrippedExternalForm(java.net.URL url)`
 
 **Returns:** `java.lang.String`
 
-### `getUrlContextId(`java.net.URL` url)`
+**Parameters:**
+- `url` (`java.net.URL`): The URL with the context id.
+
+### `getUrlContextId(java.net.URL url)`
 
 **Returns:** `java.lang.String`
 
-### `getUrlHandler(`java.net.URL` u)`
+**Parameters:**
+- `url` (`java.net.URL`): The URL with the context id.
+
+### `getUrlHandler(java.net.URL u)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContext`](./URLStreamHandlerWithContext.md)
+
+**Parameters:**
+- `u` (`java.net.URL`): The URL.
 
 ### `clearCacheForTC()`
 

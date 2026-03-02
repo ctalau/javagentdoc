@@ -6,54 +6,52 @@
 
 ## Description
 
-Static utility methods pertaining to the `Callable` interface.
-**Author:** Isaac Shum
-**Since:** 1.0
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `returning(`T` value)`
+### `returning(T value)`
 
 **Returns:** `java.util.concurrent.Callable<T>`
 
-Creates a `Callable` which immediately returns a preset value each time it is called.
+**Parameters:**
+- `value` (`T`)
 
-### `asAsyncCallable(`java.util.concurrent.Callable<T>` callable, [`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md) listeningExecutorService)`
+### `asAsyncCallable(java.util.concurrent.Callable<T> callable, com.google.common.util.concurrent.ListeningExecutorService listeningExecutorService)`
 
 **Returns:** [`com.google.common.util.concurrent.AsyncCallable<T>`](./AsyncCallable.md)
 
-Creates an `AsyncCallable` from a `Callable`.
+The AsyncCallable returns the ListenableFuture resulting from ListeningExecutorService#submit(Callable).
 
- <p>The `AsyncCallable` returns the `ListenableFuture` resulting from `ListeningExecutorService.submit(Callable)`.
-**Since:** 20.0
+**Parameters:**
+- `callable` (`java.util.concurrent.Callable<T>`)
+- `listeningExecutorService` ([`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md))
 
-### `threadRenaming(`java.util.concurrent.Callable<T>` callable, [`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md) nameSupplier)`
+### `threadRenaming(java.util.concurrent.Callable<T> callable, com.google.common.base.Supplier<java.lang.String> nameSupplier)`
 
 **Returns:** `java.util.concurrent.Callable<T>`
 
-Wraps the given callable such that for the duration of `Callable.call` the thread that is
- running will have the given name.
-@param callable The callable to wrap
-@param nameSupplier The supplier of thread names, `Supplier.get get` will be called once
+**Parameters:**
+- `callable` (`java.util.concurrent.Callable<T>`): The callable to wrap
+- `nameSupplier` ([`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md)): The supplier of thread names, get will be called once
      for each invocation of the wrapped callable.
 
-### `threadRenaming(`java.lang.Runnable` task, [`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md) nameSupplier)`
+### `threadRenaming(java.lang.Runnable task, com.google.common.base.Supplier<java.lang.String> nameSupplier)`
 
 **Returns:** `java.lang.Runnable`
 
-Wraps the given runnable such that for the duration of `Runnable.run` the thread that is
- running with have the given name.
-@param task The Runnable to wrap
-@param nameSupplier The supplier of thread names, `Supplier.get get` will be called once
+**Parameters:**
+- `task` (`java.lang.Runnable`): The Runnable to wrap
+- `nameSupplier` ([`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md)): The supplier of thread names, get will be called once
      for each invocation of the wrapped callable.
 
-### `trySetName(`java.lang.String` threadName, `java.lang.Thread` currentThread)`
+### `trySetName(java.lang.String threadName, java.lang.Thread currentThread)`
 
 **Returns:** `boolean`
 
-Tries to set name of the given `Thread`, returns true if successful.
+**Parameters:**
+- `threadName` (`java.lang.String`)
+- `currentThread` (`java.lang.Thread`)
 

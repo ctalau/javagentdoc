@@ -20,7 +20,11 @@
 
 ## Constructors
 
-### `<init>(`ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType` type, `int` index)`
+### `<init>(ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType type, int index)`
+
+**Parameters:**
+- `type` (`ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType`): The pseudo element type (before, after, marker, etc).
+- `index` (`int`): The index of the pseudo element (e.g. `1` for `element:before(1)`).
 
 ## Methods
 
@@ -36,9 +40,12 @@
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `toString()`
 

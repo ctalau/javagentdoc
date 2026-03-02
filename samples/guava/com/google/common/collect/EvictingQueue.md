@@ -14,18 +14,17 @@
 
 ## Description
 
-A non-blocking queue which automatically evicts elements from the head of the queue when
- attempting to add new elements onto the queue and it is full. This queue orders elements FIFO
+This queue orders elements FIFO
  (first-in-first-out). This data structure is logically equivalent to a circular buffer (i.e.,
  cyclic buffer or ring buffer).
 
- <p>An evicting queue must be configured with a maximum size. Each time an element is added to a
+ 
+An evicting queue must be configured with a maximum size. Each time an element is added to a
  full queue, the queue automatically removes its head element. This is different from conventional
  bounded queues, which either block or reject new elements when full.
 
- <p>This class is not thread-safe, and does not accept null elements.
-**Author:** Kurt Alfred Kluever
-**Since:** 15.0
+ 
+This class is not thread-safe, and does not accept null elements.
 
 ## Fields
 
@@ -43,50 +42,57 @@ A non-blocking queue which automatically evicts elements from the head of the qu
 
 ## Constructors
 
-### `<init>(`int` maxSize)`
+### `<init>(int maxSize)`
+
+**Parameters:**
+- `maxSize` (`int`)
 
 ## Methods
 
-### `create(`int` maxSize)`
+### `create(int maxSize)`
 
 **Returns:** [`com.google.common.collect.EvictingQueue<E>`](./EvictingQueue.md)
 
-Creates and returns a new evicting queue that will hold up to `maxSize` elements.
-
- <p>When `maxSize` is zero, elements will be evicted immediately after being added to the
+When maxSize is zero, elements will be evicted immediately after being added to the
  queue.
+
+**Parameters:**
+- `maxSize` (`int`)
 
 ### `remainingCapacity()`
 
 **Returns:** `int`
 
-Returns the number of additional elements that this queue can accept without evicting; zero if
- the queue is currently full.
-**Since:** 16.0
-
 ### `delegate()`
 
 **Returns:** `java.util.Queue<E>`
 
-### `offer(`E` e)`
+### `offer(E e)`
 
 **Returns:** `boolean`
 
-Adds the given element to this queue. If the queue is currently full, the element at the head
+If the queue is currently full, the element at the head
  of the queue is evicted to make room.
-@return `true` always
 
-### `add(`E` e)`
+**Parameters:**
+- `e` (`E`)
+
+### `add(E e)`
 
 **Returns:** `boolean`
 
-Adds the given element to this queue. If the queue is currently full, the element at the head
+If the queue is currently full, the element at the head
  of the queue is evicted to make room.
-@return `true` always
 
-### `addAll(`java.util.Collection<? extends E>` collection)`
+**Parameters:**
+- `e` (`E`)
+
+### `addAll(java.util.Collection<? extends E> collection)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `collection` (`java.util.Collection<? extends E>`)
 
 ### `toArray()`
 

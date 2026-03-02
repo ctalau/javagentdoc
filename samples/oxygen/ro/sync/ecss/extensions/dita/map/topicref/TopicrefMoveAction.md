@@ -43,7 +43,10 @@ Can be null
 
 ## Constructors
 
-### `<init>(`ro.sync.ecss.extensions.dita.map.topicref.TopicrefMoveAction.Builder` builder)`
+### `<init>(ro.sync.ecss.extensions.dita.map.topicref.TopicrefMoveAction.Builder builder)`
+
+**Parameters:**
+- `builder` (`ro.sync.ecss.extensions.dita.map.topicref.TopicrefMoveAction.Builder`): the builder of this operation
 
 ## Methods
 
@@ -51,9 +54,12 @@ Can be null
 
 **Returns:** `void`
 
-### `moveNode([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md) toMoveNode)`
+### `moveNode(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)
+
+**Parameters:**
+- `toMoveNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): the node to move
 
 ### `locateNodeByXPath()`
 

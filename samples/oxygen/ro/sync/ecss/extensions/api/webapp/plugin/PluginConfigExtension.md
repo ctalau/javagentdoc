@@ -30,25 +30,45 @@
 
 **Returns:** `void`
 
-### `doGet(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+### `doGet(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
 
-### `doPut(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
+
+### `doPut(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
 
-### `doDelete(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
+
+### `doDelete(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
 
-### `getOption(`java.lang.String` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
+
+### `getOption(java.lang.String arg0, java.lang.String arg1)`
 
 **Returns:** `java.lang.String`
 
-### `setOption(`java.lang.String` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+
+### `setOption(java.lang.String arg0, java.lang.String arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
 
 ### `saveOptions()`
 
@@ -58,9 +78,12 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `setDefaultOptions(`java.util.Map<java.lang.String,java.lang.String>` arg0)`
+### `setDefaultOptions(java.util.Map<java.lang.String,java.lang.String> arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.util.Map<java.lang.String,java.lang.String>`)
 
 ### `getOptionsForm()`
 
@@ -74,7 +97,10 @@
 
 **Returns:** `boolean`
 
-### `serializeMapToJSON(`java.util.Map<java.lang.String,java.lang.Object>` arg0)`
+### `serializeMapToJSON(java.util.Map<java.lang.String,java.lang.Object> arg0)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `arg0` (`java.util.Map<java.lang.String,java.lang.Object>`)
 

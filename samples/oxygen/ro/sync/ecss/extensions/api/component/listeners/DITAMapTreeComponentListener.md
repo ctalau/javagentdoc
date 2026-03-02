@@ -14,9 +14,12 @@ Can be added to notify of global events which occur in the DITA Map Tree.
 
 ## Methods
 
-### `modifiedStateChanged(`boolean` modified)`
+### `modifiedStateChanged(boolean modified)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `modified` (`boolean`): true if the edited text in the component is modified, false otherwise
 
 ### `loadedDocumentChanged()`
 

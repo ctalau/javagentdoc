@@ -14,19 +14,16 @@
 
 ## Description
 
-A `ListenableFuture` which forwards all its method calls to another future. Subclasses
+Subclasses
  should override one or more methods to modify the behavior of the backing future as desired per
- the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+ the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p>Most subclasses can just use `SimpleForwardingListenableFuture`.
-**Author:** Shardul Deo
-**Since:** 4.0
+ 
+Most subclasses can just use SimpleForwardingListenableFuture.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -34,7 +31,11 @@ Constructor for use by subclasses.
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md)
 
-### `addListener(`java.lang.Runnable` listener, `java.util.concurrent.Executor` exec)`
+### `addListener(java.lang.Runnable listener, java.util.concurrent.Executor exec)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `listener` (`java.lang.Runnable`)
+- `exec` (`java.util.concurrent.Executor`)
 

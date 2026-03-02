@@ -26,53 +26,105 @@ It is used on standalone implementation.
 
 ## Constructors
 
-### `<init>(`java.awt.Frame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) authorResourceBundle, `int` predefinedRowsCount, `int` predefinedColumnsCount, `boolean` insertChoiceTable)`
+### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable)`
 
-### `<init>(`java.awt.Frame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) authorResourceBundle, `int` predefinedRowsCount, `int` predefinedColumnsCount, `boolean` insertChoiceTable, `int` defaultTableModel)`
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent frame.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): The author resource bundle.
+- `predefinedRowsCount` (`int`): The predefined number of rows.
+- `predefinedColumnsCount` (`int`): The predefined number of columns.
+- `insertChoiceTable` (`boolean`): `true` to show dialog for a DITA choice table.
 
-### `<init>(`java.awt.Frame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) authorResourceBundle, `int` predefinedRowsCount, `int` predefinedColumnsCount, `boolean` insertChoiceTable, `boolean` isPropertiesTableAccepted, `int` defaultTableModel)`
+### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable, int defaultTableModel)`
+
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent frame.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): The author resource bundle.
+- `predefinedRowsCount` (`int`): The predefined number of rows.
+- `predefinedColumnsCount` (`int`): The predefined number of columns.
+- `insertChoiceTable` (`boolean`): `true` to show dialog for a DITA choice table.
+- `defaultTableModel` (`int`): The default model of the table that will be inserted.
+
+### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable, boolean isPropertiesTableAccepted, int defaultTableModel)`
+
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent frame.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): The author resource bundle.
+- `predefinedRowsCount` (`int`): The predefined number of rows.
+- `predefinedColumnsCount` (`int`): The predefined number of columns.
+- `insertChoiceTable` (`boolean`): `true` to show dialog for a DITA choice table.
+- `isPropertiesTableAccepted` (`boolean`): `true` if a properties table is accepted by the schema
+          (i.e. if it is a global element).
+- `defaultTableModel` (`int`): The default model of the table that will be inserted.
 
 ## Methods
 
-### `getColumnWidthsSpecifications(`int` tableModelType)`
+### `getColumnWidthsSpecifications(int tableModelType)`
 
 **Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
 
-### `getFrameValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getFrameValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
+
+**Parameters:**
+- `tableModelType` (`int`)
 
 ### `createTitleCheckbox()`
 
 **Returns:** `javax.swing.JCheckBox`
 
-### `getDefaultFrameValue(`int` tableModelType)`
+### `getDefaultFrameValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
 
-### `getRowsepValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getRowsepValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
 
-### `getDefaultRowsepValue(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getDefaultRowsepValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
 
-### `getColsepValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getColsepValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
 
-### `getDefaultColsepValue(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getDefaultColsepValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
 
-### `getAlignValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getAlignValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
 
-### `getDefaultAlignValue(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getDefaultAlignValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `tableModelType` (`int`)
 
 ### `getHelpPageID()`
 

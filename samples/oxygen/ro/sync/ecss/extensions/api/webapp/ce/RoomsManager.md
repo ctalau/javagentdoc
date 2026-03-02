@@ -40,21 +40,34 @@
 
 ## Methods
 
-### `createRoomFromDocument([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md) arg0)`
+### `createRoomFromDocument(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0)`
 
 **Returns:** `java.lang.String`
 
-### `createRoomFromDocument([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md) arg0, [`ro.sync.ecss.extensions.api.webapp.ce.SaveStrategy`](./SaveStrategy.md) arg1)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md))
+
+### `createRoomFromDocument(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0, ro.sync.ecss.extensions.api.webapp.ce.SaveStrategy arg1)`
 
 **Returns:** `java.lang.String`
 
-### `getRoom(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md))
+- `arg1` ([`ro.sync.ecss.extensions.api.webapp.ce.SaveStrategy`](./SaveStrategy.md))
+
+### `getRoom(java.lang.String arg0)`
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.webapp.ce.Room>`
 
-### `getRoomTryCreateProxy(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `getRoomTryCreateProxy(java.lang.String arg0)`
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.webapp.ce.Room>`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `isEnabled()`
 
@@ -68,9 +81,12 @@
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.webapp.ce.RoomFactory>`
 
-### `getRoomFactory(`ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription` arg0)`
+### `getRoomFactory(ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.RoomFactory`](./RoomFactory.md)
+
+**Parameters:**
+- `arg0` (`ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription`)
 
 ### `checkLicense()`
 
@@ -80,15 +96,24 @@
 
 **Returns:** `java.util.Optional<ro.sync.g.e.h>`
 
-### `addRoomCreatedListener([`ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener`](./RoomCreatedListener.md) arg0)`
+### `addRoomCreatedListener(ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener arg0)`
 
 **Returns:** `void`
 
-### `removeRoomCreatedListener([`ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener`](./RoomCreatedListener.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener`](./RoomCreatedListener.md))
+
+### `removeRoomCreatedListener(ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener arg0)`
 
 **Returns:** `void`
 
-### `callRoomCreatedListeners(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener`](./RoomCreatedListener.md))
+
+### `callRoomCreatedListeners(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

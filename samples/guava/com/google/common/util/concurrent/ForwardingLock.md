@@ -8,8 +8,6 @@
 
 ## Description
 
-Forwarding wrapper around a `Lock`.
-
 ## Constructors
 
 ### `<init>()`
@@ -32,9 +30,13 @@ Forwarding wrapper around a `Lock`.
 
 **Returns:** `boolean`
 
-### `tryLock(`long` time, `java.util.concurrent.TimeUnit` unit)`
+### `tryLock(long time, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `time` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
 ### `unlock()`
 

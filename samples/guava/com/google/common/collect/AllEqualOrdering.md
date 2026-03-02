@@ -10,9 +10,6 @@
 
 ## Description
 
-An ordering that treats all references as equals, even nulls.
-**Author:** Emily Soldal
-
 ## Fields
 
 ### `INSTANCE`
@@ -29,17 +26,27 @@ An ordering that treats all references as equals, even nulls.
 
 ## Methods
 
-### `compare(`java.lang.Object` left, `java.lang.Object` right)`
+### `compare(java.lang.Object left, java.lang.Object right)`
 
 **Returns:** `int`
 
-### `sortedCopy(`java.lang.Iterable<E>` iterable)`
+**Parameters:**
+- `left` (`java.lang.Object`)
+- `right` (`java.lang.Object`)
+
+### `sortedCopy(java.lang.Iterable<E> iterable)`
 
 **Returns:** `java.util.List<E>`
 
-### `immutableSortedCopy(`java.lang.Iterable<E>` iterable)`
+**Parameters:**
+- `iterable` (`java.lang.Iterable<E>`)
+
+### `immutableSortedCopy(java.lang.Iterable<E> iterable)`
 
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+**Parameters:**
+- `iterable` (`java.lang.Iterable<E>`)
 
 ### `reverse()`
 

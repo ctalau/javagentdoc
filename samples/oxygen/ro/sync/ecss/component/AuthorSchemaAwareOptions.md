@@ -88,7 +88,10 @@
 
 ### `<init>()`
 
-### `<init>(`java.lang.String` arg0)`
+### `<init>(java.lang.String arg0)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ## Methods
 
@@ -100,61 +103,85 @@
 
 **Returns:** `java.lang.String`
 
-### `setSchemaAwareEditingMode(`java.lang.String` arg0)`
+### `setSchemaAwareEditingMode(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setVerifyDeleteTagsAction(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setVerifyDeleteTagsAction(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isVerifyDeleteElementTagsAction()`
 
 **Returns:** `boolean`
 
-### `setEnableSmartDelete(`boolean` arg0)`
+### `setEnableSmartDelete(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isEnableSmartDelete()`
 
 **Returns:** `boolean`
 
-### `setVerifyPasteAndDNDAction(`boolean` arg0)`
+### `setVerifyPasteAndDNDAction(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isVerifyPasteAndDNDAction()`
 
 **Returns:** `boolean`
 
-### `setEnableSmartPaste(`boolean` arg0)`
+### `setEnableSmartPaste(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isEnableSmartPaste()`
 
 **Returns:** `boolean`
 
-### `setVerifyTypingAction(`boolean` arg0)`
+### `setVerifyTypingAction(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isVerifyTypingAction()`
 
 **Returns:** `boolean`
 
-### `setEnableSmartTyping(`boolean` arg0)`
+### `setEnableSmartTyping(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isEnableSmartTyping()`
 
 **Returns:** `boolean`
 
-### `setInsertOnlyElemensFromCCList(`boolean` arg0)`
+### `setInsertOnlyElemensFromCCList(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isInsertOnlyElemensFromCCList()`
 
@@ -164,13 +191,19 @@
 
 **Returns:** `boolean`
 
-### `setVerifyJoinAction(`boolean` arg0)`
+### `setVerifyJoinAction(boolean arg0)`
 
 **Returns:** `void`
 
-### `setVerifyUnwrapAction(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setVerifyUnwrapAction(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isVerifyUnwrapAction()`
 
@@ -196,13 +229,19 @@
 
 **Returns:** `boolean`
 
-### `setShowAllPossibleElementsInCCList(`boolean` arg0)`
+### `setShowAllPossibleElementsInCCList(boolean arg0)`
 
 **Returns:** `void`
 
-### `setInsertOnlyAttrValuesFromCCList(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setInsertOnlyAttrValuesFromCCList(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isInsertOnlyAttrValuesFromCCList()`
 
@@ -212,7 +251,10 @@
 
 **Returns:** `boolean`
 
-### `setShowAvailableCCItemsOnEnter(`boolean` arg0)`
+### `setShowAvailableCCItemsOnEnter(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 

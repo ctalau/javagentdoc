@@ -8,10 +8,6 @@
 
 ## Description
 
-Unchecked version of `java.util.concurrent.TimeoutException`.
-**Author:** Kevin Bourrillion
-**Since:** 1.0
-
 ## Fields
 
 ### `serialVersionUID`
@@ -22,9 +18,19 @@ Unchecked version of `java.util.concurrent.TimeoutException`.
 
 ### `<init>()`
 
-### `<init>(`java.lang.String` message)`
+### `<init>(java.lang.String message)`
 
-### `<init>(`java.lang.Throwable` cause)`
+**Parameters:**
+- `message` (`java.lang.String`)
 
-### `<init>(`java.lang.String` message, `java.lang.Throwable` cause)`
+### `<init>(java.lang.Throwable cause)`
+
+**Parameters:**
+- `cause` (`java.lang.Throwable`)
+
+### `<init>(java.lang.String message, java.lang.Throwable cause)`
+
+**Parameters:**
+- `message` (`java.lang.String`)
+- `cause` (`java.lang.Throwable`)
 

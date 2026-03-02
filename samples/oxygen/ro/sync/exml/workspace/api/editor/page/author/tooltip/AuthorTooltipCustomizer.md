@@ -12,7 +12,11 @@
 
 ## Methods
 
-### `customizeTooltip([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../../../../ecss/extensions/api/AuthorAccess.md) authorAccess, [`ro.sync.exml.workspace.api.editor.page.author.tooltip.TooltipInformation`](./TooltipInformation.md) tooltipInformation)`
+### `customizeTooltip(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.exml.workspace.api.editor.page.author.tooltip.TooltipInformation tooltipInformation)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../../../../ecss/extensions/api/AuthorAccess.md)): Access to the author API.
+- `tooltipInformation` ([`ro.sync.exml.workspace.api.editor.page.author.tooltip.TooltipInformation`](./TooltipInformation.md)): Information about the tooltip which will be displayed. This can also be used to force set a custom tooltip.
 

@@ -12,49 +12,82 @@ It is used on standalone implementation.
 
 ## Constructors
 
-### `<init>(`java.awt.Frame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) authorResourceBundle, `int` predefinedRowsCount, `int` predefinedColumnsCount)`
+### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
+
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent JFrame.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): The author resource bundle.
+- `predefinedRowsCount` (`int`): The predefined number of rows.
+- `predefinedColumnsCount` (`int`): The predefined number of columns.
 
 ## Methods
 
-### `getColumnWidthsSpecifications(`int` tableModelType)`
+### `getColumnWidthsSpecifications(int tableModelType)`
 
 **Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
 
-### `getFrameValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getFrameValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
+
+**Parameters:**
+- `tableModelType` (`int`)
 
 ### `createTitleCheckbox()`
 
 **Returns:** `javax.swing.JCheckBox`
 
-### `getDefaultFrameValue(`int` tableModelType)`
+### `getDefaultFrameValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
 
-### `getRowsepValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getRowsepValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
 
-### `getDefaultRowsepValue(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getDefaultRowsepValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
 
-### `getColsepValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getColsepValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
 
-### `getDefaultColsepValue(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getDefaultColsepValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
 
-### `getAlignValues(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getAlignValues(int tableModelType)`
 
 **Returns:** `java.lang.String[]`
 
-### `getDefaultAlignValue(`int` tableModelType)`
+**Parameters:**
+- `tableModelType` (`int`)
+
+### `getDefaultAlignValue(int tableModelType)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `tableModelType` (`int`)
 
 ### `getHelpPageID()`
 

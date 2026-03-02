@@ -8,10 +8,6 @@
 
 ## Description
 
-An `InputStream` that counts the number of bytes read.
-**Author:** Chris Nokleberg
-**Since:** 1.0
-
 ## Fields
 
 ### `count`
@@ -24,10 +20,10 @@ An `InputStream` that counts the number of bytes read.
 
 ## Constructors
 
-### `<init>(`java.io.InputStream` in)`
+### `<init>(java.io.InputStream in)`
 
-Wraps another input stream, counting the number of bytes read.
-@param in the input stream to be wrapped
+**Parameters:**
+- `in` (`java.io.InputStream`): the input stream to be wrapped
 
 ## Methods
 
@@ -35,23 +31,32 @@ Wraps another input stream, counting the number of bytes read.
 
 **Returns:** `long`
 
-Returns the number of bytes read.
-
 ### `read()`
 
 **Returns:** `int`
 
-### `read(`byte[]` b, `int` off, `int` len)`
+### `read(byte[] b, int off, int len)`
 
 **Returns:** `int`
 
-### `skip(`long` n)`
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `skip(long n)`
 
 **Returns:** `long`
 
-### `mark(`int` readlimit)`
+**Parameters:**
+- `n` (`long`)
+
+### `mark(int readlimit)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `readlimit` (`int`)
 
 ### `reset()`
 

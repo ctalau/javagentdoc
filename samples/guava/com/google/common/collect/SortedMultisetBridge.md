@@ -12,11 +12,6 @@
 
 ## Description
 
-Superinterface of `SortedMultiset` to introduce a bridge method for `elementSet()`,
- to ensure binary compatibility with older Guava versions that specified `elementSet()` to
- return `SortedSet`.
-**Author:** Louis Wasserman
-
 ## Methods
 
 ### `elementSet()`

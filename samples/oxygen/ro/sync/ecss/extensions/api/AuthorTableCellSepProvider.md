@@ -13,21 +13,31 @@ It should be implemented when the author extension being developed offers
 
 ## Methods
 
-### `getColSep([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) cellElement, `int` columnIndex)`
+### `getColSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int columnIndex)`
 
 **Returns:** `boolean`
 
 Note that if the cell is the last from its row, the separator is not painted even if this
  method returns `true`.
 
-### `getRowSep([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) cellElement, `int` columnIndex)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The node that represents a table cell in CSS.
+- `columnIndex` (`int`): The index of the column, used to identify the colspec associated 
+ to the cell. The colspec can give information about the colsep. 1 based.
+
+### `getRowSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int columnIndex)`
 
 **Returns:** `boolean`
 
 Note that if the cell is on the last row, the separator is not painted 
  even if this method returns `true`.
 
-### `init([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) tableElement)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The node that represents a table cell in CSS.
+- `columnIndex` (`int`): The index of the column, used to identify the rowspec associated 
+ to the cell. The rowspec can give information about the colsep. 1 based.
+
+### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `void`
 
@@ -38,4 +48,8 @@ Its intended
  
  A new instance of the table cell span provider is used for every table in a document so 
  cached data cannot be used between different tables..
+
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement representing a table (it has the CSS display property 
+ set on 'table').
 

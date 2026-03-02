@@ -12,9 +12,6 @@
 
 ## Description
 
-Skeletal implementation of `ImmutableSortedSet.descendingSet()`.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `forward`
@@ -23,13 +20,19 @@ Skeletal implementation of `ImmutableSortedSet.descendingSet()`.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md) forward)`
+### `<init>(com.google.common.collect.ImmutableSortedSet<E> forward)`
+
+**Parameters:**
+- `forward` ([`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md))
 
 ## Methods
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `size()`
 
@@ -39,17 +42,31 @@ Skeletal implementation of `ImmutableSortedSet.descendingSet()`.
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
 
-### `headSetImpl(`E` toElement, `boolean` inclusive)`
+### `headSetImpl(E toElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `subSetImpl(`E` fromElement, `boolean` fromInclusive, `E` toElement, `boolean` toInclusive)`
+**Parameters:**
+- `toElement` (`E`)
+- `inclusive` (`boolean`)
+
+### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `tailSetImpl(`E` fromElement, `boolean` inclusive)`
+**Parameters:**
+- `fromElement` (`E`)
+- `fromInclusive` (`boolean`)
+- `toElement` (`E`)
+- `toInclusive` (`boolean`)
+
+### `tailSetImpl(E fromElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+**Parameters:**
+- `fromElement` (`E`)
+- `inclusive` (`boolean`)
 
 ### `descendingSet()`
 
@@ -63,25 +80,40 @@ Skeletal implementation of `ImmutableSortedSet.descendingSet()`.
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `lower(`E` element)`
+### `lower(E element)`
 
 **Returns:** `E`
 
-### `floor(`E` element)`
+**Parameters:**
+- `element` (`E`)
+
+### `floor(E element)`
 
 **Returns:** `E`
 
-### `ceiling(`E` element)`
+**Parameters:**
+- `element` (`E`)
+
+### `ceiling(E element)`
 
 **Returns:** `E`
 
-### `higher(`E` element)`
+**Parameters:**
+- `element` (`E`)
+
+### `higher(E element)`
 
 **Returns:** `E`
 
-### `indexOf(`java.lang.Object` target)`
+**Parameters:**
+- `element` (`E`)
+
+### `indexOf(java.lang.Object target)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 ### `isPartialView()`
 

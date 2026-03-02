@@ -17,15 +17,25 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 ## Methods
 
-### `isList([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) node)`
+### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
-### `areCompatibleLists([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) node1, [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) node2)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+
+### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode node1, ro.sync.ecss.extensions.api.node.AuthorNode node2)`
 
 **Returns:** `boolean`
 
-### `getParagraphElement([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `node1` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+- `node2` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+
+### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 

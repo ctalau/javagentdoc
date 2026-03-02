@@ -2,6 +2,6 @@
 
 ## Classes and Interfaces
 
-- [ParametricNullness](ParametricNullness.md)
-- [HtmlEscapers](HtmlEscapers.md)
 - [ElementTypesAreNonnullByDefault](ElementTypesAreNonnullByDefault.md)
+- [HtmlEscapers](HtmlEscapers.md)
+- [ParametricNullness](ParametricNullness.md)

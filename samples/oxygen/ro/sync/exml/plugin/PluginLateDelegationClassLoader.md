@@ -14,9 +14,16 @@
 
 ## Constructors
 
-### `<init>(`java.net.URL[]` arg0)`
+### `<init>(java.net.URL[] arg0)`
 
-### `<init>(`java.net.URL[]` arg0, `java.lang.ClassLoader` arg1)`
+**Parameters:**
+- `arg0` (`java.net.URL[]`)
+
+### `<init>(java.net.URL[] arg0, java.lang.ClassLoader arg1)`
+
+**Parameters:**
+- `arg0` (`java.net.URL[]`)
+- `arg1` (`java.lang.ClassLoader`)
 
 ## Methods
 
@@ -24,7 +31,10 @@
 
 **Returns:** `void`
 
-### `delegateToParent(`java.lang.String` arg0)`
+### `delegateToParent(java.lang.String arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

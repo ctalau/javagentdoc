@@ -14,8 +14,6 @@
 
 ## Description
 
-An ordering that tries several comparators in order.
-
 ## Fields
 
 ### `comparators`
@@ -28,19 +26,33 @@ An ordering that tries several comparators in order.
 
 ## Constructors
 
-### `<init>(`java.util.Comparator<? super T>` primary, `java.util.Comparator<? super T>` secondary)`
+### `<init>(java.util.Comparator<? super T> primary, java.util.Comparator<? super T> secondary)`
 
-### `<init>(`java.lang.Iterable<? extends java.util.Comparator<? super T>>` comparators)`
+**Parameters:**
+- `primary` (`java.util.Comparator<? super T>`)
+- `secondary` (`java.util.Comparator<? super T>`)
+
+### `<init>(java.lang.Iterable<? extends java.util.Comparator<? super T>> comparators)`
+
+**Parameters:**
+- `comparators` (`java.lang.Iterable<? extends java.util.Comparator<? super T>>`)
 
 ## Methods
 
-### `compare(`T` left, `T` right)`
+### `compare(T left, T right)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `left` (`T`)
+- `right` (`T`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

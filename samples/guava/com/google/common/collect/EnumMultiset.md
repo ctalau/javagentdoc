@@ -14,12 +14,7 @@
 
 ## Description
 
-Multiset implementation specialized for enum elements, supporting all single-element operations
- in O(1).
-
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset">`Multiset`</a>.
-**Author:** Jared Levy
-**Since:** 2.0
+See the Guava User Guide article on [Multiset](https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset).
 
 ## Fields
 
@@ -49,45 +44,55 @@ Multiset implementation specialized for enum elements, supporting all single-ele
 
 ## Constructors
 
-### `<init>(`java.lang.Class<E>` type)`
+### `<init>(java.lang.Class<E> type)`
 
-Creates an empty `EnumMultiset`.
+**Parameters:**
+- `type` (`java.lang.Class<E>`)
 
 ## Methods
 
-### `create(`java.lang.Class<E>` type)`
+### `create(java.lang.Class<E> type)`
 
 **Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
 
-Creates an empty `EnumMultiset`.
+**Parameters:**
+- `type` (`java.lang.Class<E>`)
 
-### `create(`java.lang.Iterable<E>` elements)`
-
-**Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
-
-Creates a new `EnumMultiset` containing the specified elements.
-
- <p>This implementation is highly efficient when `elements` is itself a `Multiset`.
-@param elements the elements that the multiset should contain
-@throws IllegalArgumentException if `elements` is empty
-
-### `create(`java.lang.Iterable<E>` elements, `java.lang.Class<E>` type)`
+### `create(java.lang.Iterable<E> elements)`
 
 **Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
 
-Returns a new `EnumMultiset` instance containing the given elements. Unlike `EnumMultiset.create(Iterable)`, this method does not produce an exception on an empty iterable.
-**Since:** 14.0
+This implementation is highly efficient when elements is itself a Multiset.
 
-### `isActuallyE(`java.lang.Object` o)`
+**Parameters:**
+- `elements` (`java.lang.Iterable<E>`): the elements that the multiset should contain
+
+### `create(java.lang.Iterable<E> elements, java.lang.Class<E> type)`
+
+**Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
+
+Unlike EnumMultiset#create(Iterable), this method does not produce an exception on an empty iterable.
+
+**Parameters:**
+- `elements` (`java.lang.Iterable<E>`)
+- `type` (`java.lang.Class<E>`)
+
+### `isActuallyE(java.lang.Object o)`
 
 **Returns:** `boolean`
 
-### `checkIsE(`java.lang.Object` element)`
+**Parameters:**
+- `o` (`java.lang.Object`)
+
+### `checkIsE(java.lang.Object element)`
 
 **Returns:** `void`
 
-Returns `element` cast to `E`, if it actually is a nonnull E. Otherwise, throws
+Otherwise, throws
  either a NullPointerException or a ClassCastException as appropriate.
+
+**Parameters:**
+- `element` (`java.lang.Object`)
 
 ### `distinctElements()`
 
@@ -97,21 +102,36 @@ Returns `element` cast to `E`, if it actually is a nonnull E. Otherwise, throws
 
 **Returns:** `int`
 
-### `count(`java.lang.Object` element)`
+### `count(java.lang.Object element)`
 
 **Returns:** `int`
 
-### `add(`E` element, `int` occurrences)`
+**Parameters:**
+- `element` (`java.lang.Object`)
+
+### `add(E element, int occurrences)`
 
 **Returns:** `int`
 
-### `remove(`java.lang.Object` element, `int` occurrences)`
+**Parameters:**
+- `element` (`E`)
+- `occurrences` (`int`)
+
+### `remove(java.lang.Object element, int occurrences)`
 
 **Returns:** `int`
 
-### `setCount(`E` element, `int` count)`
+**Parameters:**
+- `element` (`java.lang.Object`)
+- `occurrences` (`int`)
+
+### `setCount(E element, int count)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `element` (`E`)
+- `count` (`int`)
 
 ### `clear()`
 
@@ -125,22 +145,28 @@ Returns `element` cast to `E`, if it actually is a nonnull E. Otherwise, throws
 
 **Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
-### `forEachEntry(`java.util.function.ObjIntConsumer<? super E>` action)`
+### `forEachEntry(java.util.function.ObjIntConsumer<? super E> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.ObjIntConsumer<? super E>`)
 
 ### `iterator()`
 
 **Returns:** `java.util.Iterator<E>`
 
-### `writeObject(`java.io.ObjectOutputStream` stream)`
+### `writeObject(java.io.ObjectOutputStream stream)`
 
 **Returns:** `void`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+**Parameters:**
+- `stream` (`java.io.ObjectOutputStream`)
+
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
 
-@serialData the `Class<E>` for the enum type, the number of distinct elements, the first
-     element, its count, the second element, its count, and so on
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

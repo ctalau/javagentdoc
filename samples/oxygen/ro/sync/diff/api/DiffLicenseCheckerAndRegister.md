@@ -32,19 +32,32 @@
 
 **Returns:** [`ro.sync.diff.api.DiffLicenseMode`](./DiffLicenseMode.md)
 
-### `isDiffLicensedByAnotherComponent(`java.util.List<java.lang.String>` arg0)`
+### `isDiffLicensedByAnotherComponent(java.util.List<java.lang.String> arg0)`
 
 **Returns:** `boolean`
 
-### `registerLicenseKey(`java.io.Reader` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<java.lang.String>`)
+
+### `registerLicenseKey(java.io.Reader arg0)`
 
 **Returns:** `void`
 
-### `detectDiffModeFromAdditionalLicense(`java.lang.String` arg0, `java.lang.String[]` arg1)`
+**Parameters:**
+- `arg0` (`java.io.Reader`)
+
+### `detectDiffModeFromAdditionalLicense(java.lang.String arg0, java.lang.String[] arg1)`
 
 **Returns:** [`ro.sync.diff.api.DiffLicenseMode`](./DiffLicenseMode.md)
 
-### `registerAlternateLicenseKey(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String[]`)
+
+### `registerAlternateLicenseKey(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

@@ -54,7 +54,13 @@ It also extracts the text inside a given line interval.
 
 ## Constructors
 
-### `<init>(`java.lang.String` referenceSystemId, `java.lang.String` encoding, [`ro.sync.ecss.extensions.api.access.AuthorUtilAccess`](../../api/access/AuthorUtilAccess.md) authorUtilAccess)`
+### `<init>(java.lang.String referenceSystemId, java.lang.String encoding, ro.sync.ecss.extensions.api.access.AuthorUtilAccess authorUtilAccess)`
+
+**Parameters:**
+- `referenceSystemId` (`java.lang.String`): The referred file system ID.
+- `encoding` (`java.lang.String`): The encoding of the referred file.
+ if `null` will use the EncodingDetectorSingleton.getInstance().
+- `authorUtilAccess` ([`ro.sync.ecss.extensions.api.access.AuthorUtilAccess`](../../api/access/AuthorUtilAccess.md)): Access to util methods.
 
 ## Methods
 
@@ -74,51 +80,86 @@ It also extracts the text inside a given line interval.
 
 **Returns:** `org.xml.sax.ErrorHandler`
 
-### `getFeature(`java.lang.String` name)`
+### `getFeature(java.lang.String name)`
 
 **Returns:** `boolean`
 
-### `getProperty(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`)
+
+### `getProperty(java.lang.String name)`
 
 **Returns:** `java.lang.Object`
 
-### `parse(`org.xml.sax.InputSource` input)`
+**Parameters:**
+- `name` (`java.lang.String`)
+
+### `parse(org.xml.sax.InputSource input)`
 
 **Returns:** `void`
 
-### `extractContent(`org.xml.sax.InputSource` input)`
+**Parameters:**
+- `input` (`org.xml.sax.InputSource`)
+
+### `extractContent(org.xml.sax.InputSource input)`
 
 **Returns:** `java.lang.StringBuilder`
+
+**Parameters:**
+- `input` (`org.xml.sax.InputSource`): The input. If it's null this will be extracted from the referenceSystemId
 
 ### `extractLineRange()`
 
 **Returns:** `void`
 
-### `parse(`java.lang.String` systemId)`
+### `parse(java.lang.String systemId)`
 
 **Returns:** `void`
 
-### `setContentHandler(`org.xml.sax.ContentHandler` handler)`
+**Parameters:**
+- `systemId` (`java.lang.String`)
+
+### `setContentHandler(org.xml.sax.ContentHandler handler)`
 
 **Returns:** `void`
 
-### `setDTDHandler(`org.xml.sax.DTDHandler` handler)`
+**Parameters:**
+- `handler` (`org.xml.sax.ContentHandler`)
+
+### `setDTDHandler(org.xml.sax.DTDHandler handler)`
 
 **Returns:** `void`
 
-### `setEntityResolver(`org.xml.sax.EntityResolver` resolver)`
+**Parameters:**
+- `handler` (`org.xml.sax.DTDHandler`)
+
+### `setEntityResolver(org.xml.sax.EntityResolver resolver)`
 
 **Returns:** `void`
 
-### `setErrorHandler(`org.xml.sax.ErrorHandler` handler)`
+**Parameters:**
+- `resolver` (`org.xml.sax.EntityResolver`)
+
+### `setErrorHandler(org.xml.sax.ErrorHandler handler)`
 
 **Returns:** `void`
 
-### `setFeature(`java.lang.String` name, `boolean` value)`
+**Parameters:**
+- `handler` (`org.xml.sax.ErrorHandler`)
+
+### `setFeature(java.lang.String name, boolean value)`
 
 **Returns:** `void`
 
-### `setProperty(`java.lang.String` name, `java.lang.Object` value)`
+**Parameters:**
+- `name` (`java.lang.String`)
+- `value` (`boolean`)
+
+### `setProperty(java.lang.String name, java.lang.Object value)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `name` (`java.lang.String`)
+- `value` (`java.lang.Object`)
 

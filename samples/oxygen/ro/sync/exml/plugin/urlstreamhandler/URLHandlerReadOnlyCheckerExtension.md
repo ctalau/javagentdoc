@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `isReadOnly(`java.net.URL` url)`
+### `isReadOnly(java.net.URL url)`
 
 **Returns:** `boolean`
 
@@ -20,9 +20,15 @@ If an URL is marked as read-only Oxygen will present it with a read-only lock ic
  This call back will usually be received often, each time focus is gained by the current editor.
  WARNING: It is advisable to cache the calls for recognized URLs as this method might be called quite often.
 
-### `canCheckReadOnly(`java.lang.String` protocol)`
+**Parameters:**
+- `url` (`java.net.URL`): The URL for which the implementor will decide if it is read-only or not.
+
+### `canCheckReadOnly(java.lang.String protocol)`
 
 **Returns:** `boolean`
 
 This call back will usually be received often, each time focus is gained by the current editor.
+
+**Parameters:**
+- `protocol` (`java.lang.String`): The URL protocol (like "http" or "file")
 

@@ -14,9 +14,6 @@
 
 ## Description
 
-An implementation of `ImmutableTable` that holds a single cell.
-**Author:** Gregory Kick
-
 ## Fields
 
 ### `singleRowKey`
@@ -33,23 +30,34 @@ An implementation of `ImmutableTable` that holds a single cell.
 
 ## Constructors
 
-### `<init>(`R` rowKey, `C` columnKey, `V` value)`
+### `<init>(R rowKey, C columnKey, V value)`
 
-### `<init>([`com.google.common.collect.Table.Cell<R,C,V>`](Table/Cell.md) cell)`
+**Parameters:**
+- `rowKey` (`R`)
+- `columnKey` (`C`)
+- `value` (`V`)
+
+### `<init>(com.google.common.collect.Table.Cell<R,C,V> cell)`
+
+**Parameters:**
+- `cell` (`com.google.common.collect.Table.Cell<R,C,V>`)
 
 ## Methods
 
-### `column(`C` columnKey)`
+### `column(C columnKey)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<R,V>`](./ImmutableMap.md)
 
+**Parameters:**
+- `columnKey` (`C`)
+
 ### `columnMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap.md)
 
 ### `rowMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap.md)
 
 ### `size()`
 
@@ -57,7 +65,7 @@ An implementation of `ImmutableTable` that holds a single cell.
 
 ### `createCellSet()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableSet>.md)
+**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableSet.md)
 
 ### `createValues()`
 

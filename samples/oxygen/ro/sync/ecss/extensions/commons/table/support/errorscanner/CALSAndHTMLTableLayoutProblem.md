@@ -20,9 +20,16 @@
 
 ## Constructors
 
-### `<init>(`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity` severity)`
+### `<init>(ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity severity)`
 
-### `<init>(`java.lang.String` message, `ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity` severity)`
+**Parameters:**
+- `severity` (`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity`): The problem severity, one of Severity constants.
+
+### `<init>(java.lang.String message, ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity severity)`
+
+**Parameters:**
+- `message` (`java.lang.String`)
+- `severity` (`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity`): The problem severity, one of Severity constants.
 
 ## Methods
 
@@ -30,9 +37,12 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.CALSAndHTMLTableLayoutProblem[]`](./CALSAndHTMLTableLayoutProblem.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.CALSAndHTMLTableLayoutProblem`](./CALSAndHTMLTableLayoutProblem.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `getMessage()`
 

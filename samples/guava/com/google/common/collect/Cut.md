@@ -12,12 +12,11 @@
 
 ## Description
 
-Implementation detail for the internal structure of `Range` instances. Represents a unique
- way of "cutting" a "number line" (actually of instances of type `C`, not necessarily
+Represents a unique
+ way of "cutting" a "number line" (actually of instances of type C, not necessarily
  "numbers") into two sections; this can be done below a certain value, above a certain value,
  below all values or above all values. With this object defined in this way, an interval can
- always be represented by a pair of `Cut` instances.
-**Author:** Kevin Bourrillion
+ always be represented by a pair of Cut instances.
 
 ## Fields
 
@@ -31,13 +30,19 @@ Implementation detail for the internal structure of `Range` instances. Represent
 
 ## Constructors
 
-### `<init>(`C` endpoint)`
+### `<init>(C endpoint)`
+
+**Parameters:**
+- `endpoint` (`C`)
 
 ## Methods
 
-### `isLessThan(`C` value)`
+### `isLessThan(C value)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `value` (`C`)
 
 ### `typeAsLowerBound()`
 
@@ -47,45 +52,74 @@ Implementation detail for the internal structure of `Range` instances. Represent
 
 **Returns:** [`com.google.common.collect.BoundType`](./BoundType.md)
 
-### `withLowerBoundType([`com.google.common.collect.BoundType`](./BoundType.md) boundType, [`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+### `withLowerBoundType(com.google.common.collect.BoundType boundType, com.google.common.collect.DiscreteDomain<C> domain)`
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-### `withUpperBoundType([`com.google.common.collect.BoundType`](./BoundType.md) boundType, [`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+**Parameters:**
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
+
+### `withUpperBoundType(com.google.common.collect.BoundType boundType, com.google.common.collect.DiscreteDomain<C> domain)`
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-### `describeAsLowerBound(`java.lang.StringBuilder` sb)`
+**Parameters:**
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
+
+### `describeAsLowerBound(java.lang.StringBuilder sb)`
 
 **Returns:** `void`
 
-### `describeAsUpperBound(`java.lang.StringBuilder` sb)`
+**Parameters:**
+- `sb` (`java.lang.StringBuilder`)
+
+### `describeAsUpperBound(java.lang.StringBuilder sb)`
 
 **Returns:** `void`
 
-### `leastValueAbove([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+**Parameters:**
+- `sb` (`java.lang.StringBuilder`)
+
+### `leastValueAbove(com.google.common.collect.DiscreteDomain<C> domain)`
 
 **Returns:** `C`
 
-### `greatestValueBelow([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+**Parameters:**
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
+
+### `greatestValueBelow(com.google.common.collect.DiscreteDomain<C> domain)`
 
 **Returns:** `C`
 
-### `canonical([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md) domain)`
+**Parameters:**
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
+
+### `canonical(com.google.common.collect.DiscreteDomain<C> domain)`
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-### `compareTo([`com.google.common.collect.Cut<C>`](./Cut.md) that)`
+**Parameters:**
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
+
+### `compareTo(com.google.common.collect.Cut<C> that)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `that` ([`com.google.common.collect.Cut<C>`](./Cut.md))
 
 ### `endpoint()`
 
 **Returns:** `C`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -99,11 +133,17 @@ Implementation detail for the internal structure of `Range` instances. Represent
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-### `belowValue(`C` endpoint)`
+### `belowValue(C endpoint)`
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-### `aboveValue(`C` endpoint)`
+**Parameters:**
+- `endpoint` (`C`)
+
+### `aboveValue(C endpoint)`
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
+
+**Parameters:**
+- `endpoint` (`C`)
 

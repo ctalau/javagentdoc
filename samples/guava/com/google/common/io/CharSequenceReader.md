@@ -8,9 +8,8 @@
 
 ## Description
 
-A `Reader` that reads the characters in a `CharSequence`. Like `StringReader`,
- but works with any `CharSequence`.
-**Author:** Colin Decker
+Like StringReader,
+ but works with any CharSequence.
 
 ## Fields
 
@@ -28,9 +27,10 @@ A `Reader` that reads the characters in a `CharSequence`. Like `StringReader`,
 
 ## Constructors
 
-### `<init>(`java.lang.CharSequence` seq)`
+### `<init>(java.lang.CharSequence seq)`
 
-Creates a new reader wrapping the given character sequence.
+**Parameters:**
+- `seq` (`java.lang.CharSequence`)
 
 ## Methods
 
@@ -46,21 +46,32 @@ Creates a new reader wrapping the given character sequence.
 
 **Returns:** `int`
 
-### `read(`java.nio.CharBuffer` target)`
+### `read(java.nio.CharBuffer target)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `target` (`java.nio.CharBuffer`)
 
 ### `read()`
 
 **Returns:** `int`
 
-### `read(`char[]` cbuf, `int` off, `int` len)`
+### `read(char[] cbuf, int off, int len)`
 
 **Returns:** `int`
 
-### `skip(`long` n)`
+**Parameters:**
+- `cbuf` (`char[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `skip(long n)`
 
 **Returns:** `long`
+
+**Parameters:**
+- `n` (`long`)
 
 ### `ready()`
 
@@ -70,9 +81,12 @@ Creates a new reader wrapping the given character sequence.
 
 **Returns:** `boolean`
 
-### `mark(`int` readAheadLimit)`
+### `mark(int readAheadLimit)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `readAheadLimit` (`int`)
 
 ### `reset()`
 

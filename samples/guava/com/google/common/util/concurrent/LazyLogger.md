@@ -6,8 +6,6 @@
 
 ## Description
 
-A holder for a `Logger` that is initialized only when requested.
-
 ## Fields
 
 ### `loggerName`
@@ -20,7 +18,10 @@ A holder for a `Logger` that is initialized only when requested.
 
 ## Constructors
 
-### `<init>(`java.lang.Class<?>` ownerOfLogger)`
+### `<init>(java.lang.Class<?> ownerOfLogger)`
+
+**Parameters:**
+- `ownerOfLogger` (`java.lang.Class<?>`)
 
 ## Methods
 

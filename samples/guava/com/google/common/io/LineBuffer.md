@@ -6,13 +6,12 @@
 
 ## Description
 
-Package-protected abstract class that implements the line reading algorithm used by `LineReader`. Line separators are per `java.io.BufferedReader`: line feed, carriage return,
+Line separators are per java.io.BufferedReader: line feed, carriage return,
  or carriage return followed immediately by a linefeed.
 
- <p>Subclasses must implement `handleLine`, call `add` to pass character data, and
- call `finish` at the end of stream.
-**Author:** Chris Nokleberg
-**Since:** 1.0
+ 
+Subclasses must implement #handleLine, call #add to pass character data, and
+ call #finish at the end of stream.
 
 ## Fields
 
@@ -20,13 +19,9 @@ Package-protected abstract class that implements the line reading algorithm used
 
 **Type:** `java.lang.StringBuilder`
 
-Holds partial line contents.
-
 ### `sawReturn`
 
 **Type:** `boolean`
-
-Whether a line ending with a CR is pending processing.
 
 ## Constructors
 
@@ -34,38 +29,34 @@ Whether a line ending with a CR is pending processing.
 
 ## Methods
 
-### `add(`char[]` cbuf, `int` off, `int` len)`
+### `add(char[] cbuf, int off, int len)`
 
 **Returns:** `void`
 
-Process additional characters from the stream. When a line separator is found the contents of
- the line and the line separator itself are passed to the abstract `handleLine` method.
-@param cbuf the character buffer to process
-@param off the offset into the buffer
-@param len the number of characters to process
-@throws IOException if an I/O error occurs
-**See:** #finish
+When a line separator is found the contents of
+ the line and the line separator itself are passed to the abstract #handleLine method.
 
-### `finishLine(`boolean` sawNewline)`
+**Parameters:**
+- `cbuf` (`char[]`): the character buffer to process
+- `off` (`int`): the offset into the buffer
+- `len` (`int`): the number of characters to process
+
+### `finishLine(boolean sawNewline)`
 
 **Returns:** `boolean`
 
-Called when a line is complete.
+**Parameters:**
+- `sawNewline` (`boolean`)
 
 ### `finish()`
 
 **Returns:** `void`
 
-Subclasses must call this method after finishing character processing, in order to ensure that
- any unterminated line in the buffer is passed to `handleLine`.
-@throws IOException if an I/O error occurs
-
-### `handleLine(`java.lang.String` line, `java.lang.String` end)`
+### `handleLine(java.lang.String line, java.lang.String end)`
 
 **Returns:** `void`
 
-Called for each line found in the character data passed to `add`.
-@param line a line of text (possibly empty), without any line separators
-@param end the line separator; one of `"\r"`, `"\n"`, `"\r\n"`, or `""`
-@throws IOException if an I/O error occurs
+**Parameters:**
+- `line` (`java.lang.String`): a line of text (possibly empty), without any line separators
+- `end` (`java.lang.String`): the line separator; one of "\r", "\n", "\r\n", or ""
 

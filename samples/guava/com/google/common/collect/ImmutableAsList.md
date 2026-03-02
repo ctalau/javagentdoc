@@ -12,11 +12,6 @@
 
 ## Description
 
-List returned by `ImmutableCollection.asList` that delegates `contains` checks to the
- backing collection.
-**Author:** Jared Levy
-**Author:** Louis Wasserman
-
 ## Constructors
 
 ### `<init>()`
@@ -27,9 +22,12 @@ List returned by `ImmutableCollection.asList` that delegates `contains` checks t
 
 **Returns:** [`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md)
 
-### `contains(`java.lang.Object` target)`
+### `contains(java.lang.Object target)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 ### `size()`
 
@@ -43,9 +41,12 @@ List returned by `ImmutableCollection.asList` that delegates `contains` checks t
 
 **Returns:** `boolean`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 
 ### `writeReplace()`
 

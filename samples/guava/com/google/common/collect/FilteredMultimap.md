@@ -13,9 +13,6 @@
 
 ## Description
 
-An interface for all filtered multimap types.
-**Author:** Louis Wasserman
-
 ## Methods
 
 ### `unfiltered()`
@@ -24,5 +21,5 @@ An interface for all filtered multimap types.
 
 ### `entryPredicate()`
 
-**Returns:** [`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate>.md)
+**Returns:** [`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md)
 

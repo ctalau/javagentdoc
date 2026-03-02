@@ -15,29 +15,31 @@
 
 ## Description
 
-CompactHashMap is an implementation of a Map. All optional operations (put and remove) are
+All optional operations (put and remove) are
  supported. Null keys and values are supported.
 
- <p>`containsKey(k)`, `put(k, v)` and `remove(k)` are all (expected and
+ 
+containsKey(k), put(k, v) and remove(k) are all (expected and
  amortized) constant time operations. Expected in the hashtable sense (depends on the hash
  function doing a good job of distributing the elements to the buckets to a distribution not far
  from uniform), and amortized since some operations can trigger a hash table resize.
 
- <p>Unlike `java.util.HashMap`, iteration is only proportional to the actual `size()`,
- which is optimal, and <i>not</i> the size of the internal hashtable, which could be much larger
- than `size()`. Furthermore, this structure places significantly reduced load on the garbage
+ 
+Unlike java.util.HashMap, iteration is only proportional to the actual size(),
+ which is optimal, and *not* the size of the internal hashtable, which could be much larger
+ than size(). Furthermore, this structure places significantly reduced load on the garbage
  collector by only using a constant number of internal objects.
 
- <p>If there are no removals, then iteration order for the `entrySet`, `keySet`, and
- `values` views is the same as insertion order. Any removal invalidates any ordering
+ 
+If there are no removals, then iteration order for the #entrySet, #keySet, and
+ #values views is the same as insertion order. Any removal invalidates any ordering
  guarantees.
 
- <p>This class should not be assumed to be universally superior to `java.util.HashMap`.
+ 
+This class should not be assumed to be universally superior to java.util.HashMap.
  Generally speaking, this class reduces object allocation and memory consumption at the price of
  moderately increased constant factors of CPU. Only use this class when there is a specific reason
  to prioritize memory over CPU.
-**Author:** Louis Wasserman
-**Author:** Jon Noack
 
 ## Fields
 
@@ -49,89 +51,92 @@ CompactHashMap is an implementation of a Map. All optional operations (put and r
 
 **Type:** `double`
 
-Maximum allowed false positive probability of detecting a hash flooding attack given random
- input.
-
 ### `MAX_HASH_BUCKET_LENGTH`
 
 **Type:** `int`
 
-Maximum allowed length of a hash table bucket before falling back to a j.u.LinkedHashMap-based
- implementation. Experimentally determined.
+Experimentally determined.
 
 ### `table`
 
 **Type:** `java.lang.Object`
 
-The hashtable object. This can be either:
+This can be either:
 
- <ul>
-   <li>a byte[], short[], or int[], with size a power of two, created by
+ 
+
+   - a byte[], short[], or int[], with size a power of two, created by
        CompactHashing.createTable, whose values are either
-       <ul>
-         <li>UNSET, meaning "null pointer"
-         <li>one plus an index into the keys, values, and entries arrays
-       </ul>
-   <li>another java.util.Map delegate implementation. In most modern JDKs, normal java.util hash
+       
+
+         - UNSET, meaning "null pointer"
+         - one plus an index into the keys, values, and entries arrays
+       
+
+   - another java.util.Map delegate implementation. In most modern JDKs, normal java.util hash
        collections intelligently fall back to a binary search tree if hash table collisions are
        detected. Rather than going to all the trouble of reimplementing this ourselves, we
        simply switch over to use the JDK implementation wholesale if probable hash flooding is
        detected, sacrificing the compactness guarantee in very rare cases in exchange for much
        more reliable worst-case behavior.
-   <li>null, if no entries have yet been added to the map
- </ul>
+   - null, if no entries have yet been added to the map
 
 ### `entries`
 
 **Type:** `int[]`
 
-Contains the logical entries, in the range of [0, size()). The high bits of each int are the
+The high bits of each int are the
  part of the smeared hash of the key not covered by the hashtable mask, whereas the low bits are
  the "next" pointer (pointing to the next entry in the bucket chain), which will always be less
  than or equal to the hashtable mask.
 
- <pre>
+ 
+
+```
+
  hash  = aaaaaaaa
  mask  = 00000fff
  next  = 00000bbb
  entry = aaaaabbb
- </pre>
+ 
+```
 
- <p>The pointers in [size(), entries.length) are all "null" (UNSET).
+
+ 
+The pointers in [size(), entries.length) are all "null" (UNSET).
 
 ### `keys`
 
 **Type:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-The keys of the entries in the map, in the range of [0, size()). The keys in [size(),
- keys.length) are all `null`.
+The keys in [size(),
+ keys.length) are all null.
 
 ### `values`
 
 **Type:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-The values of the entries in the map, in the range of [0, size()). The values in [size(),
- values.length) are all `null`.
+The values in [size(),
+ values.length) are all null.
 
 ### `metadata`
 
 **Type:** `int`
 
-Keeps track of metadata like the number of hash table bits and modifications of this data
- structure (to make it possible to throw ConcurrentModificationException in the iterator). Note
+Note
  that we choose not to make this volatile, so we do less of a "best effort" to track such
  errors, for better performance.
 
- <p>For a new instance, where the arrays above have not yet been allocated, the value of `metadata` is the size that the arrays should be allocated with. Once the arrays have been
- allocated, the value of `metadata` combines the number of bits in the "short hash", in
- its bottom `CompactHashing#HASH_TABLE_BITS_MAX_BITS` bits, with a modification count in
+ 
+For a new instance, where the arrays above have not yet been allocated, the value of 
+ metadata is the size that the arrays should be allocated with. Once the arrays have been
+ allocated, the value of metadata combines the number of bits in the "short hash", in
+ its bottom CompactHashing#HASH_TABLE_BITS_MAX_BITS bits, with a modification count in
  the remaining bits that is used to detect concurrent modification during iteration.
 
 ### `size`
 
 **Type:** `int`
-
-The number of elements contained in the set.
 
 ### `keySetView`
 
@@ -149,12 +154,10 @@ The number of elements contained in the set.
 
 ### `<init>()`
 
-Constructs a new empty instance of `CompactHashMap`.
+### `<init>(int expectedSize)`
 
-### `<init>(`int` expectedSize)`
-
-Constructs a new instance of `CompactHashMap` with the specified capacity.
-@param expectedSize the initial capacity of this `CompactHashMap`.
+**Parameters:**
+- `expectedSize` (`int`): the initial capacity of this CompactHashMap.
 
 ## Methods
 
@@ -162,144 +165,179 @@ Constructs a new instance of `CompactHashMap` with the specified capacity.
 
 **Returns:** [`com.google.common.collect.CompactHashMap<K,V>`](./CompactHashMap.md)
 
-Creates an empty `CompactHashMap` instance.
-
-### `createWithExpectedSize(`int` expectedSize)`
+### `createWithExpectedSize(int expectedSize)`
 
 **Returns:** [`com.google.common.collect.CompactHashMap<K,V>`](./CompactHashMap.md)
 
-Creates a `CompactHashMap` instance, with a high enough "initial capacity" that it
- <i>should</i> hold `expectedSize` elements without growth.
-@param expectedSize the number of elements you expect to add to the returned set
-@return a new, empty `CompactHashMap` with enough capacity to hold `expectedSize`
-     elements without resizing
-@throws IllegalArgumentException if `expectedSize` is negative
+**Parameters:**
+- `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `init(`int` expectedSize)`
+### `init(int expectedSize)`
 
 **Returns:** `void`
 
-Pseudoconstructor for serialization support.
+**Parameters:**
+- `expectedSize` (`int`)
 
 ### `needsAllocArrays()`
 
 **Returns:** `boolean`
 
-Returns whether arrays need to be allocated.
-
 ### `allocArrays()`
 
 **Returns:** `int`
-
-Handle lazy allocation of arrays.
 
 ### `delegateOrNull()`
 
 **Returns:** `java.util.Map<K,V>`
 
-### `createHashFloodingResistantDelegate(`int` tableSize)`
+### `createHashFloodingResistantDelegate(int tableSize)`
 
 **Returns:** `java.util.Map<K,V>`
+
+**Parameters:**
+- `tableSize` (`int`)
 
 ### `convertToHashFloodingResistantImplementation()`
 
 **Returns:** `java.util.Map<K,V>`
 
-### `setHashTableMask(`int` mask)`
+### `setHashTableMask(int mask)`
 
 **Returns:** `void`
 
-Stores the hash table mask as the number of bits needed to represent an index.
+**Parameters:**
+- `mask` (`int`)
 
 ### `hashTableMask()`
 
 **Returns:** `int`
 
-Gets the hash table mask using the stored number of hash table bits.
-
 ### `incrementModCount()`
 
 **Returns:** `void`
 
-### `accessEntry(`int` index)`
+### `accessEntry(int index)`
 
 **Returns:** `void`
 
-Mark an access of the specified entry. Used only in `CompactLinkedHashMap` for LRU
+Used only in CompactLinkedHashMap for LRU
  ordering.
 
-### `put(`K` key, `V` value)`
+**Parameters:**
+- `index` (`int`)
+
+### `put(K key, V value)`
 
 **Returns:** `V`
 
-### `insertEntry(`int` entryIndex, `K` key, `V` value, `int` hash, `int` mask)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `insertEntry(int entryIndex, K key, V value, int hash, int mask)`
 
 **Returns:** `void`
 
-Creates a fresh entry with the specified object at the specified position in the entry arrays.
+**Parameters:**
+- `entryIndex` (`int`)
+- `key` (`K`)
+- `value` (`V`)
+- `hash` (`int`)
+- `mask` (`int`)
 
-### `resizeMeMaybe(`int` newSize)`
+### `resizeMeMaybe(int newSize)`
 
 **Returns:** `void`
 
-Resizes the entries storage if necessary.
+**Parameters:**
+- `newSize` (`int`)
 
-### `resizeEntries(`int` newCapacity)`
+### `resizeEntries(int newCapacity)`
 
 **Returns:** `void`
 
-Resizes the internal entries array to the specified capacity, which may be greater or less than
- the current capacity.
+**Parameters:**
+- `newCapacity` (`int`)
 
-### `resizeTable(`int` oldMask, `int` newCapacity, `int` targetHash, `int` targetEntryIndex)`
+### `resizeTable(int oldMask, int newCapacity, int targetHash, int targetEntryIndex)`
 
 **Returns:** `int`
 
-### `indexOf(`java.lang.Object` key)`
+**Parameters:**
+- `oldMask` (`int`)
+- `newCapacity` (`int`)
+- `targetHash` (`int`)
+- `targetEntryIndex` (`int`)
+
+### `indexOf(java.lang.Object key)`
 
 **Returns:** `int`
 
-### `containsKey(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
 
-### `get(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `remove(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `remove(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `removeHelper(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `removeHelper(java.lang.Object key)`
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`
 
-### `moveLastEntry(`int` dstIndex, `int` mask)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `moveLastEntry(int dstIndex, int mask)`
 
 **Returns:** `void`
 
-Moves the last entry in the entry array into `dstIndex`, and nulls out its old position.
+**Parameters:**
+- `dstIndex` (`int`)
+- `mask` (`int`)
 
 ### `firstEntryIndex()`
 
 **Returns:** `int`
 
-### `getSuccessor(`int` entryIndex)`
+### `getSuccessor(int entryIndex)`
 
 **Returns:** `int`
 
-### `adjustAfterRemove(`int` indexBeforeRemove, `int` indexRemoved)`
+**Parameters:**
+- `entryIndex` (`int`)
+
+### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
 
 **Returns:** `int`
 
-Updates the index an iterator is pointing to after a call to remove: returns the index of the
- entry that should be looked at after a removal on indexRemoved, with indexBeforeRemove as the
- index that *was* the next entry that would be looked at.
+**Parameters:**
+- `indexBeforeRemove` (`int`)
+- `indexRemoved` (`int`)
 
-### `replaceAll(`java.util.function.BiFunction<? super K,? super V,? extends V>` function)`
+### `replaceAll(java.util.function.BiFunction<? super K,? super V,? extends V> function)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `function` (`java.util.function.BiFunction<? super K,? super V,? extends V>`)
 
 ### `keySet()`
 
@@ -313,9 +351,12 @@ Updates the index an iterator is pointing to after a call to remove: returns the
 
 **Returns:** `java.util.Iterator<K>`
 
-### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
+### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.BiConsumer<? super K,? super V>`)
 
 ### `entrySet()`
 
@@ -337,9 +378,12 @@ Updates the index an iterator is pointing to after a call to remove: returns the
 
 **Returns:** `boolean`
 
-### `containsValue(`java.lang.Object` value)`
+### `containsValue(java.lang.Object value)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `value` (`java.lang.Object`)
 
 ### `values()`
 
@@ -357,20 +401,23 @@ Updates the index an iterator is pointing to after a call to remove: returns the
 
 **Returns:** `void`
 
-Ensures that this `CompactHashMap` has the smallest representation in memory, given its
- current size.
-
 ### `clear()`
 
 **Returns:** `void`
 
-### `writeObject(`java.io.ObjectOutputStream` stream)`
+### `writeObject(java.io.ObjectOutputStream stream)`
 
 **Returns:** `void`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+**Parameters:**
+- `stream` (`java.io.ObjectOutputStream`)
+
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 
 ### `requireTable()`
 
@@ -388,27 +435,48 @@ Ensures that this `CompactHashMap` has the smallest representation in memory, gi
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-### `key(`int` i)`
+### `key(int i)`
 
 **Returns:** `K`
 
-### `value(`int` i)`
+**Parameters:**
+- `i` (`int`)
+
+### `value(int i)`
 
 **Returns:** `V`
 
-### `entry(`int` i)`
+**Parameters:**
+- `i` (`int`)
+
+### `entry(int i)`
 
 **Returns:** `int`
 
-### `setKey(`int` i, `K` key)`
+**Parameters:**
+- `i` (`int`)
+
+### `setKey(int i, K key)`
 
 **Returns:** `void`
 
-### `setValue(`int` i, `V` value)`
+**Parameters:**
+- `i` (`int`)
+- `key` (`K`)
+
+### `setValue(int i, V value)`
 
 **Returns:** `void`
 
-### `setEntry(`int` i, `int` value)`
+**Parameters:**
+- `i` (`int`)
+- `value` (`V`)
+
+### `setEntry(int i, int value)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `i` (`int`)
+- `value` (`int`)
 

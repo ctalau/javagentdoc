@@ -12,8 +12,6 @@
 
 ## Description
 
-Abstract base class for an incident edges set that allows different implementations of `AbstractSet.iterator()`.
-
 ## Fields
 
 ### `node`
@@ -26,19 +24,29 @@ Abstract base class for an incident edges set that allows different implementati
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md) graph, `N` node)`
+### `<init>(com.google.common.graph.BaseGraph<N> graph, N node)`
+
+**Parameters:**
+- `graph` ([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md))
+- `node` (`N`)
 
 ## Methods
 
-### `remove(`java.lang.Object` o)`
+### `remove(java.lang.Object o)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `o` (`java.lang.Object`)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` obj)`
+### `contains(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 

@@ -15,8 +15,6 @@
 
 ## Description
 
-An immutable `Map.Entry`, used both by `com.google.common.collect.Maps.immutableEntry(Object, Object)` and by other parts of `common.collect` as a superclass.
-
 ## Fields
 
 ### `key`
@@ -33,7 +31,11 @@ An immutable `Map.Entry`, used both by `com.google.common.collect.Maps.immutable
 
 ## Constructors
 
-### `<init>(`K` key, `V` value)`
+### `<init>(K key, V value)`
+
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
 
 ## Methods
 
@@ -45,7 +47,10 @@ An immutable `Map.Entry`, used both by `com.google.common.collect.Maps.immutable
 
 **Returns:** `V`
 
-### `setValue(`V` value)`
+### `setValue(V value)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `value` (`V`)
 

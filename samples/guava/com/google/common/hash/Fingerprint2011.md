@@ -8,22 +8,22 @@
 
 ## Description
 
-Implementation of Geoff Pike's fingerprint2011 hash function. See `Hashing.fingerprint2011`
+See Hashing#fingerprint2011
  for information on the behaviour of the algorithm.
 
- <p>On Intel Core2 2.66, on 1000 bytes, fingerprint2011 takes 0.9 microseconds compared to
+ 
+On Intel Core2 2.66, on 1000 bytes, fingerprint2011 takes 0.9 microseconds compared to
  fingerprint at 4.0 microseconds and md5 at 4.5 microseconds.
 
- <p>Note to maintainers: This implementation relies on signed arithmetic being bit-wise equivalent
+ 
+Note to maintainers: This implementation relies on signed arithmetic being bit-wise equivalent
  to unsigned arithmetic in all cases except:
 
- <ul>
-   <li>comparisons (signed values can be negative)
-   <li>division (avoided here)
-   <li>shifting (right shift must be unsigned)
- </ul>
-**Author:** kylemaddison@google.com (Kyle Maddison)
-**Author:** gpike@google.com (Geoff Pike)
+ 
+
+   - comparisons (signed values can be negative)
+   - division (avoided here)
+   - shifting (right shift must be unsigned)
 
 ## Fields
 
@@ -53,9 +53,14 @@ Implementation of Geoff Pike's fingerprint2011 hash function. See `Hashing.finge
 
 ## Methods
 
-### `hashBytes(`byte[]` input, `int` off, `int` len)`
+### `hashBytes(byte[] input, int off, int len)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+**Parameters:**
+- `input` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
 
 ### `bits()`
 
@@ -65,36 +70,69 @@ Implementation of Geoff Pike's fingerprint2011 hash function. See `Hashing.finge
 
 **Returns:** `java.lang.String`
 
-### `fingerprint(`byte[]` bytes, `int` offset, `int` length)`
+### `fingerprint(byte[] bytes, int offset, int length)`
 
 **Returns:** `long`
 
-### `shiftMix(`long` val)`
+**Parameters:**
+- `bytes` (`byte[]`)
+- `offset` (`int`)
+- `length` (`int`)
+
+### `shiftMix(long val)`
 
 **Returns:** `long`
 
-### `hash128to64(`long` high, `long` low)`
+**Parameters:**
+- `val` (`long`)
+
+### `hash128to64(long high, long low)`
 
 **Returns:** `long`
 
-Implementation of Hash128to64 from util/hash/hash128to64.h
+**Parameters:**
+- `high` (`long`)
+- `low` (`long`)
 
-### `weakHashLength32WithSeeds(`byte[]` bytes, `int` offset, `long` seedA, `long` seedB, `long[]` output)`
+### `weakHashLength32WithSeeds(byte[] bytes, int offset, long seedA, long seedB, long[] output)`
 
 **Returns:** `void`
 
-Computes intermediate hash of 32 bytes of byte array from the given offset. Results are
+Results are
  returned in the output array - this is 12% faster than allocating new arrays every time.
 
-### `fullFingerprint(`byte[]` bytes, `int` offset, `int` length)`
+**Parameters:**
+- `bytes` (`byte[]`)
+- `offset` (`int`)
+- `seedA` (`long`)
+- `seedB` (`long`)
+- `output` (`long[]`)
+
+### `fullFingerprint(byte[] bytes, int offset, int length)`
 
 **Returns:** `long`
 
-### `hashLength33To64(`byte[]` bytes, `int` offset, `int` length)`
+**Parameters:**
+- `bytes` (`byte[]`)
+- `offset` (`int`)
+- `length` (`int`)
+
+### `hashLength33To64(byte[] bytes, int offset, int length)`
 
 **Returns:** `long`
 
-### `murmurHash64WithSeed(`byte[]` bytes, `int` offset, `int` length, `long` seed)`
+**Parameters:**
+- `bytes` (`byte[]`)
+- `offset` (`int`)
+- `length` (`int`)
+
+### `murmurHash64WithSeed(byte[] bytes, int offset, int length, long seed)`
 
 **Returns:** `long`
+
+**Parameters:**
+- `bytes` (`byte[]`)
+- `offset` (`int`)
+- `length` (`int`)
+- `seed` (`long`)
 

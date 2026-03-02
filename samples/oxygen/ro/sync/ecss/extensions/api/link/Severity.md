@@ -16,7 +16,10 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.Severity[]`](./Severity.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.Severity`](./Severity.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

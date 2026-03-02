@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setSelectionInterpretationMode([`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md) interpretationMode)`
+### `setSelectionInterpretationMode(ro.sync.ecss.extensions.api.SelectionInterpretationMode interpretationMode)`
 
 **Returns:** `void`
 
@@ -18,6 +18,9 @@ See SelectionInterpretationMode for more details about the interpretation
  
  This interpretation mode is reseted when the next caret moved is performed or
  another interpretation mode is imposed.
+
+**Parameters:**
+- `interpretationMode` ([`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)): The selection interpretation mode.
 
 ### `getSelectionInterpretationMode()`
 
@@ -81,7 +84,7 @@ This is the last selection made in the
 
 **Returns:** `boolean`
 
-### `setSelection(`int` startOffset, `int` endOffset)`
+### `setSelection(int startOffset, int endOffset)`
 
 **Returns:** `void`
 
@@ -94,7 +97,11 @@ This selection interval is considered to be the current one (the one that
 
  The previous Author selections are discarded.
 
-### `setSelection(`int` startOffset, `int` endOffset, `boolean` scrollToBVisible)`
+**Parameters:**
+- `startOffset` (`int`): **Inclusive** start offset
+- `endOffset` (`int`): **Exclusive** end offset
+
+### `setSelection(int startOffset, int endOffset, boolean scrollToBVisible)`
 
 **Returns:** `void`
 
@@ -107,7 +114,12 @@ This selection interval is considered to be the current one (the one that
 
  The previous Author selections are discarded.
 
-### `addSelection(`int` startOffset, `int` endOffset)`
+**Parameters:**
+- `startOffset` (`int`): **Inclusive** start offset
+- `endOffset` (`int`): **Exclusive** end offset
+- `scrollToBVisible` (`boolean`): `true` to scroll to visible
+
+### `addSelection(int startOffset, int endOffset)`
 
 **Returns:** `void`
 
@@ -122,6 +134,10 @@ This selection interval is considered to be the current one (the one that
  Call AuthorSelectionModel#getSelectionIntervals() method to get all 
  the selection intervals from Author editor page.
 
+**Parameters:**
+- `startOffset` (`int`): **Inclusive** start offset
+- `endOffset` (`int`): **Exclusive** end offset
+
 ### `clearSelection()`
 
 **Returns:** `void`
@@ -135,7 +151,7 @@ The caret will remain in the same position.
  selection interval that points to the caret offset (both ContentInterval#getStartOffset()
  and ContentInterval#getEndOffset() will return the caret position).
 
-### `setSelectionIntervals(`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>` intervals, `boolean` scrollToVisible)`
+### `setSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals, boolean scrollToVisible)`
 
 **Returns:** `void`
 
@@ -148,7 +164,11 @@ Each ContentInterval contains the **inclusive**
  The selection intervals are added to the Author editor page order in which 
  they are in the list. The last selection interval end offset will set the caret position.
 
-### `addSelectionIntervals(`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>` intervals, `boolean` scrollToVisible)`
+**Parameters:**
+- `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): the list containing all the Author editor page selection intervals.
+- `scrollToVisible` (`boolean`): If `true` the start offset of the last interval will be scrolled to visible.
+
+### `addSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals, boolean scrollToVisible)`
 
 **Returns:** `void`
 
@@ -160,4 +180,8 @@ Each ContentInterval contains the **inclusive**
 
  The selection intervals are added to the Author editor page order in which 
  they are in the list. The last selection interval end offset will set the caret position.
+
+**Parameters:**
+- `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): the list containing all the Author editor page selection intervals.
+- `scrollToVisible` (`boolean`): If `true` the start offset of the last interval will be scrolled to visible.
 

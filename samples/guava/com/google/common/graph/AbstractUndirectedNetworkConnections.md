@@ -13,22 +13,18 @@
 
 ## Description
 
-A base implementation of `NetworkConnections` for undirected networks.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <E> Edge parameter type
-
 ## Fields
 
 ### `incidentEdgeMap`
 
 **Type:** `java.util.Map<E,N>`
 
-Keys are edges incident to the origin node, values are the node at the other end.
-
 ## Constructors
 
-### `<init>(`java.util.Map<E,N>` incidentEdgeMap)`
+### `<init>(java.util.Map<E,N> incidentEdgeMap)`
+
+**Parameters:**
+- `incidentEdgeMap` (`java.util.Map<E,N>`)
 
 ## Methods
 
@@ -52,23 +48,42 @@ Keys are edges incident to the origin node, values are the node at the other end
 
 **Returns:** `java.util.Set<E>`
 
-### `adjacentNode(`E` edge)`
+### `adjacentNode(E edge)`
 
 **Returns:** `N`
 
-### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
+**Parameters:**
+- `edge` (`E`)
+
+### `removeInEdge(E edge, boolean isSelfLoop)`
 
 **Returns:** `N`
 
-### `removeOutEdge(`E` edge)`
+**Parameters:**
+- `edge` (`E`)
+- `isSelfLoop` (`boolean`)
+
+### `removeOutEdge(E edge)`
 
 **Returns:** `N`
 
-### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
+**Parameters:**
+- `edge` (`E`)
+
+### `addInEdge(E edge, N node, boolean isSelfLoop)`
 
 **Returns:** `void`
 
-### `addOutEdge(`E` edge, `N` node)`
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
+- `isSelfLoop` (`boolean`)
+
+### `addOutEdge(E edge, N node)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
 

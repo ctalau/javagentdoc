@@ -20,23 +20,38 @@
 
 ## Methods
 
-### `checkExternalLicense([`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md) arg0)`
+### `checkExternalLicense(ro.sync.ecss.extensions.api.component.KeyGenerator arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md))
 
 ### `getAllowedSystemProperty()`
 
 **Returns:** `java.lang.String`
 
-### `checkIfSystemPropertyIsAccepted(`java.lang.String` arg0, [`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md) arg1)`
+### `checkIfSystemPropertyIsAccepted(java.lang.String arg0, ro.sync.ecss.extensions.api.component.KeyGenerator arg1)`
 
 **Returns:** `boolean`
 
-### `decodeSystemProperty(`java.lang.String` arg0, [`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md) arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` ([`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md))
+
+### `decodeSystemProperty(java.lang.String arg0, ro.sync.ecss.extensions.api.component.KeyGenerator arg1)`
 
 **Returns:** `java.lang.String`
 
-### `decryptData(`java.lang.String` arg0, [`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md) arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` ([`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md))
+
+### `decryptData(java.lang.String arg0, ro.sync.ecss.extensions.api.component.KeyGenerator arg1)`
 
 **Returns:** `byte[]`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` ([`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md))
 

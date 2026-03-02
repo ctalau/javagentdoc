@@ -26,13 +26,19 @@
 
 **Returns:** `boolean`
 
-### `setMatchCase(`boolean` matchCase)`
+### `setMatchCase(boolean matchCase)`
 
 **Returns:** `void`
 
-### `setWholeWords(`boolean` wholeWords)`
+**Parameters:**
+- `matchCase` (`boolean`): `true` if search should be case sensitive.
+
+### `setWholeWords(boolean wholeWords)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `wholeWords` (`boolean`): `true` if search should match whole words only.
 
 ### `isWholeWords()`
 

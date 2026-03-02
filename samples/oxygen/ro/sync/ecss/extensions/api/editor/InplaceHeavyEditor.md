@@ -14,7 +14,7 @@ It differs from the classic
 
 ## Methods
 
-### `getRenderingInfo([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
 
@@ -25,9 +25,16 @@ This contains information about the baseline
  **Because a renderer is reused, when this 
  call is received, the renderer must re-initialize itself from the given context.**
 
-### `getEditorComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `ro.sync.exml.view.graphics.Rectangle` allocation)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The editing context.
+
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context where the editor will be used.
+- `allocation` (`ro.sync.exml.view.graphics.Rectangle`): The bounds where the form control will be presented.
 
 ### `dispose()`
 

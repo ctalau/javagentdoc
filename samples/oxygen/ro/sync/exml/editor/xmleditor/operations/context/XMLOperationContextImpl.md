@@ -20,7 +20,11 @@
 
 ### `<init>()`
 
-### `<init>([`ro.sync.exml.editor.xmleditor.operations.context.ContextNodeInfo`](./ContextNodeInfo.md) arg0, `java.lang.String` arg1)`
+### `<init>(ro.sync.exml.editor.xmleditor.operations.context.ContextNodeInfo arg0, java.lang.String arg1)`
+
+**Parameters:**
+- `arg0` ([`ro.sync.exml.editor.xmleditor.operations.context.ContextNodeInfo`](./ContextNodeInfo.md))
+- `arg1` (`java.lang.String`)
 
 ## Methods
 

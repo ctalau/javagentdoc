@@ -8,8 +8,6 @@
 
 ## Description
 
-Forwarding wrapper around a `Condition`.
-
 ## Constructors
 
 ### `<init>()`
@@ -24,21 +22,31 @@ Forwarding wrapper around a `Condition`.
 
 **Returns:** `void`
 
-### `await(`long` time, `java.util.concurrent.TimeUnit` unit)`
+### `await(long time, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `time` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
 ### `awaitUninterruptibly()`
 
 **Returns:** `void`
 
-### `awaitNanos(`long` nanosTimeout)`
+### `awaitNanos(long nanosTimeout)`
 
 **Returns:** `long`
 
-### `awaitUntil(`java.util.Date` deadline)`
+**Parameters:**
+- `nanosTimeout` (`long`)
+
+### `awaitUntil(java.util.Date deadline)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `deadline` (`java.util.Date`)
 
 ### `signal()`
 

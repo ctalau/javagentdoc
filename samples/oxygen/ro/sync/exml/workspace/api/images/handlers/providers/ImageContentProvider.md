@@ -18,7 +18,11 @@
 
 ## Constructors
 
-### `<init>(`java.net.URL` url, `java.io.InputStream` inputStream)`
+### `<init>(java.net.URL url, java.io.InputStream inputStream)`
+
+**Parameters:**
+- `url` (`java.net.URL`): The image URL.
+- `inputStream` (`java.io.InputStream`): The input stream.
 
 ## Methods
 

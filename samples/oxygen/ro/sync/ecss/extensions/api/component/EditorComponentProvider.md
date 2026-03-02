@@ -38,7 +38,7 @@ The editor might have multiple editor pages.
 
 ## Methods
 
-### `showLocation(`java.net.URL` url, `java.io.Reader` reader)`
+### `showLocation(java.net.URL url, java.io.Reader reader)`
 
 **Returns:** `void`
 
@@ -52,17 +52,39 @@ If the document pointed by this URL is different than the document currently
  only the reference part of the given URL will be used to show the corresponding location
  in the editor.
 
-### `addAuthorComponentListener([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md) listener)`
+**Parameters:**
+- `url` (`java.net.URL`): The URL to show location for.
+- `reader` (`java.io.Reader`): The reader over the URL, can be null.
+
+### `addAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener listener)`
 
 **Returns:** `void`
 
-### `removeAuthorComponentListener([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md) listener)`
+**Parameters:**
+- `listener` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md)): The listener.
+
+### `removeAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener listener)`
 
 **Returns:** `void`
 
-### `getAdditionalEditHelper(`int` helperID)`
+**Parameters:**
+- `listener` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md)): The listener.
+
+### `getAdditionalEditHelper(int helperID)`
 
 **Returns:** `javax.swing.JComponent`
 
 It can be the outline, attributes, entities, elements or model helper component, depending on the ID.
+
+**Parameters:**
+- `helperID` (`int`): One of:
+                 
+
+                  - ATTRIBUTES_PANEL_ID,
+                  - ELEMENTS_PANEL_ID, 
+                  - ENTITIES_PANEL_ID,
+                  - MODEL_PANEL_ID,
+                  - OUTLINER_PANEL_ID constants.
+                 
+
 

@@ -12,12 +12,8 @@
 
 ## Description
 
-A class to represent the set of edges connecting an (implicit) origin node to a target node.
-
- <p>The `nodeToOutEdge` map means this class only works on networks without parallel edges.
- See `MultiEdgesConnecting` for a class that works with parallel edges.
-**Author:** James Sexton
-@param <E> Edge parameter type
+The #nodeToOutEdge map means this class only works on networks without parallel edges.
+ See MultiEdgesConnecting for a class that works with parallel edges.
 
 ## Fields
 
@@ -31,7 +27,11 @@ A class to represent the set of edges connecting an (implicit) origin node to a 
 
 ## Constructors
 
-### `<init>(`java.util.Map<?,E>` nodeToEdgeMap, `java.lang.Object` targetNode)`
+### `<init>(java.util.Map<?,E> nodeToEdgeMap, java.lang.Object targetNode)`
+
+**Parameters:**
+- `nodeToEdgeMap` (`java.util.Map<?,E>`)
+- `targetNode` (`java.lang.Object`)
 
 ## Methods
 
@@ -43,9 +43,12 @@ A class to represent the set of edges connecting an (implicit) origin node to a 
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` edge)`
+### `contains(java.lang.Object edge)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `edge` (`java.lang.Object`)
 
 ### `getConnectingEdge()`
 

@@ -14,11 +14,8 @@
 
 ## Description
 
-This class provides a skeletal implementation of `Graph`. It is recommended to extend this
- class rather than implement `Graph` directly.
-**Author:** James Sexton
-@param <N> Node parameter type
-**Since:** 20.0
+It is recommended to extend this
+ class rather than implement Graph directly.
 
 ## Constructors
 
@@ -26,9 +23,12 @@ This class provides a skeletal implementation of `Graph`. It is recommended to e
 
 ## Methods
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -37,6 +37,4 @@ This class provides a skeletal implementation of `Graph`. It is recommended to e
 ### `toString()`
 
 **Returns:** `java.lang.String`
-
-Returns a string representation of this graph.
 

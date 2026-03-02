@@ -13,15 +13,15 @@
 
 ## Description
 
-Basic implementation of a `SortedSetMultimap` with a sorted key set.
-
- <p>This superclass allows `TreeMultimap` to override methods to return navigable set and
+This superclass allows TreeMultimap to override methods to return navigable set and
  map types in non-GWT only, while GWT code will inherit the SortedMap/SortedSet overrides.
-**Author:** Louis Wasserman
 
 ## Constructors
 
-### `<init>(`java.util.SortedMap<K,java.util.Collection<V>>` map)`
+### `<init>(java.util.SortedMap<K,java.util.Collection<V>> map)`
+
+**Parameters:**
+- `map` (`java.util.SortedMap<K,java.util.Collection<V>>`)
 
 ## Methods
 

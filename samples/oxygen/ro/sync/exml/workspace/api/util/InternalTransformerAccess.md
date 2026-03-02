@@ -16,7 +16,11 @@
 
 ## Methods
 
-### `internalCreateXQueryUpdateTransformer(`javax.xml.transform.Source` arg0, `java.net.URL[]` arg1)`
+### `internalCreateXQueryUpdateTransformer(javax.xml.transform.Source arg0, java.net.URL[] arg1)`
 
 **Returns:** `javax.xml.transform.Transformer`
+
+**Parameters:**
+- `arg0` (`javax.xml.transform.Source`)
+- `arg1` (`java.net.URL[]`)
 

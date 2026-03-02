@@ -14,11 +14,17 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String[]` arg0)`
+### `<init>(java.lang.String[] arg0)`
+
+**Parameters:**
+- `arg0` (`java.lang.String[]`)
 
 ## Methods
 
-### `validateEditorPage(`java.lang.String` arg0)`
+### `validateEditorPage(java.lang.String arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

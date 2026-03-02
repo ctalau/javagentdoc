@@ -55,17 +55,34 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 
 **Returns:** `java.lang.String`
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `setOrRemovePseudoClasses([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args, `java.lang.String` xpathLocationKey, `java.lang.String` pseudoClassNamesKey, `boolean` setClasses)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
+
+### `setOrRemovePseudoClasses(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, java.lang.String xpathLocationKey, java.lang.String pseudoClassNamesKey, boolean setClasses)`
 
 **Returns:** `void`
 
-### `getTargetElements([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.lang.Object` xpathLocations, `java.lang.Object` includeAllNodes)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author APi Access.
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): Arguments map.
+- `xpathLocationKey` (`java.lang.String`): Xpath locations key
+- `pseudoClassNamesKey` (`java.lang.String`): Pseudo class names key
+- `setClasses` (`boolean`): `true` to set the classes, `false` to remove them.
+
+### `getTargetElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object xpathLocations, java.lang.Object includeAllNodes)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to Author functionality.
+- `xpathLocations` (`java.lang.Object`): The Xpath locations
+- `includeAllNodes` (`java.lang.Object`): ChangePseudoClassesOperation#YES in order to include comments, text and CDATA nodes,
+                         ChangePseudoClassesOperation#NO to ignore them.
 
 ### `getArguments()`
 

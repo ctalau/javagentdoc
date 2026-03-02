@@ -6,11 +6,6 @@
 
 ## Description
 
-Static utility methods pertaining to `Escaper` instances.
-**Author:** Sven Mawson
-**Author:** David Beaumont
-**Since:** 15.0
-
 ## Fields
 
 ### `NULL_ESCAPER`
@@ -27,70 +22,80 @@ Static utility methods pertaining to `Escaper` instances.
 
 **Returns:** [`com.google.common.escape.Escaper`](./Escaper.md)
 
-Returns an `Escaper` that does no escaping, passing all character data through unchanged.
-
 ### `builder()`
 
-**Returns:** [`com.google.common.escape.Escapers.Builder`](Escapers/Builder.md)
+**Returns:** `com.google.common.escape.Escapers.Builder`
 
-Returns a builder for creating simple, fast escapers. A builder instance can be reused and each
+A builder instance can be reused and each
  escaper that is created will be a snapshot of the current builder state. Builders are not
  thread safe.
 
- <p>The initial state of the builder is such that:
+ 
+The initial state of the builder is such that:
 
- <ul>
-   <li>There are no replacement mappings
-   <li>`safeMin == Character.MIN_VALUE`
-   <li>`safeMax == Character.MAX_VALUE`
-   <li>`unsafeReplacement == null`
- </ul>
+ 
 
- <p>For performance reasons escapers created by this builder are not Unicode aware and will not
+   - There are no replacement mappings
+   - safeMin == Character.MIN_VALUE
+   - safeMax == Character.MAX_VALUE
+   - unsafeReplacement == null
+ 
+
+
+ 
+For performance reasons escapers created by this builder are not Unicode aware and will not
  validate the well-formedness of their input.
 
-### `asUnicodeEscaper([`com.google.common.escape.Escaper`](./Escaper.md) escaper)`
+### `asUnicodeEscaper(com.google.common.escape.Escaper escaper)`
 
 **Returns:** [`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md)
 
-Returns a `UnicodeEscaper` equivalent to the given escaper instance. If the escaper is
+If the escaper is
  already a UnicodeEscaper then it is simply returned, otherwise it is wrapped in a
  UnicodeEscaper.
 
- <p>When a `CharEscaper` escaper is wrapped by this method it acquires extra behavior with
- respect to the well-formedness of Unicode character sequences and will throw `IllegalArgumentException` when given bad input.
-@param escaper the instance to be wrapped
-@return a UnicodeEscaper with the same behavior as the given instance
-@throws NullPointerException if escaper is null
-@throws IllegalArgumentException if escaper is not a UnicodeEscaper or a CharEscaper
+ 
+When a CharEscaper escaper is wrapped by this method it acquires extra behavior with
+ respect to the well-formedness of Unicode character sequences and will throw IllegalArgumentException when given bad input.
 
-### `computeReplacement([`com.google.common.escape.CharEscaper`](./CharEscaper.md) escaper, `char` c)`
+**Parameters:**
+- `escaper` ([`com.google.common.escape.Escaper`](./Escaper.md)): the instance to be wrapped
+
+### `computeReplacement(com.google.common.escape.CharEscaper escaper, char c)`
 
 **Returns:** `java.lang.String`
 
-Returns a string that would replace the given character in the specified escaper, or `null` if no replacement should be made. This method is intended for use in tests through the
- `EscaperAsserts` class; production users of `CharEscaper` should limit themselves
+This method is intended for use in tests through the
+ EscaperAsserts class; production users of CharEscaper should limit themselves
  to its public interface.
-@param c the character to escape if necessary
-@return the replacement string, or `null` if no escaping was needed
 
-### `computeReplacement([`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md) escaper, `int` cp)`
+**Parameters:**
+- `escaper` ([`com.google.common.escape.CharEscaper`](./CharEscaper.md))
+- `c` (`char`): the character to escape if necessary
+
+### `computeReplacement(com.google.common.escape.UnicodeEscaper escaper, int cp)`
 
 **Returns:** `java.lang.String`
 
-Returns a string that would replace the given character in the specified escaper, or `null` if no replacement should be made. This method is intended for use in tests through the
- `EscaperAsserts` class; production users of `UnicodeEscaper` should limit
+This method is intended for use in tests through the
+ EscaperAsserts class; production users of UnicodeEscaper should limit
  themselves to its public interface.
-@param cp the Unicode code point to escape if necessary
-@return the replacement string, or `null` if no escaping was needed
 
-### `stringOrNull(`char[]` in)`
+**Parameters:**
+- `escaper` ([`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md))
+- `cp` (`int`): the Unicode code point to escape if necessary
+
+### `stringOrNull(char[] in)`
 
 **Returns:** `java.lang.String`
 
-### `wrap([`com.google.common.escape.CharEscaper`](./CharEscaper.md) escaper)`
+**Parameters:**
+- `in` (`char[]`)
+
+### `wrap(com.google.common.escape.CharEscaper escaper)`
 
 **Returns:** [`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md)
 
-Private helper to wrap a CharEscaper as a UnicodeEscaper.
+**Parameters:**
+- `escaper` ([`com.google.common.escape.CharEscaper`](./CharEscaper.md))
 

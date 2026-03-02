@@ -20,7 +20,10 @@
 
 ## Methods
 
-### `chooseImageFile([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess)`
+### `chooseImageFile(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Access to some author utility methods.
 

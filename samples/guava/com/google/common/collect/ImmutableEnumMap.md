@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.ImmutableEnumMap`
 
-**Extends:** [`com.google.common.collect.ImmutableMap.IteratorBasedImmutableMap<K,V>`](ImmutableMap/IteratorBasedImmutableMap.md)
+**Extends:** `com.google.common.collect.ImmutableMap.IteratorBasedImmutableMap<K,V>`
 
 ## Type Parameters
 
@@ -12,9 +12,6 @@
 - `V` extends `java.lang.Object`
 
 ## Description
-
-Implementation of `ImmutableMap` backed by a non-empty `java.util.EnumMap`.
-**Author:** Louis Wasserman
 
 ## Fields
 
@@ -24,13 +21,19 @@ Implementation of `ImmutableMap` backed by a non-empty `java.util.EnumMap`.
 
 ## Constructors
 
-### `<init>(`java.util.EnumMap<K,V>` delegate)`
+### `<init>(java.util.EnumMap<K,V> delegate)`
+
+**Parameters:**
+- `delegate` (`java.util.EnumMap<K,V>`)
 
 ## Methods
 
-### `asImmutable(`java.util.EnumMap<K,V>` map)`
+### `asImmutable(java.util.EnumMap<K,V> map)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+**Parameters:**
+- `map` (`java.util.EnumMap<K,V>`)
 
 ### `keyIterator()`
 
@@ -44,29 +47,41 @@ Implementation of `ImmutableMap` backed by a non-empty `java.util.EnumMap`.
 
 **Returns:** `int`
 
-### `containsKey(`java.lang.Object` key)`
+### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
 
-### `get(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
 
+**Parameters:**
+- `object` (`java.lang.Object`)
+
 ### `entryIterator()`
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.Map.Entry<K,V>>`](./UnmodifiableIterator>.md)
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.Map.Entry<K,V>>`](./UnmodifiableIterator.md)
 
 ### `entrySpliterator()`
 
 **Returns:** `java.util.Spliterator<java.util.Map.Entry<K,V>>`
 
-### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
+### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.BiConsumer<? super K,? super V>`)
 
 ### `isPartialView()`
 
@@ -76,7 +91,10 @@ Implementation of `ImmutableMap` backed by a non-empty `java.util.EnumMap`.
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

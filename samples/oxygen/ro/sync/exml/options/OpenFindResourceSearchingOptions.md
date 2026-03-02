@@ -30,7 +30,12 @@
 
 ## Constructors
 
-### `<init>(`boolean` arg0, `boolean` arg1, `int` arg2)`
+### `<init>(boolean arg0, boolean arg1, int arg2)`
+
+**Parameters:**
+- `arg0` (`boolean`)
+- `arg1` (`boolean`)
+- `arg2` (`int`)
 
 ### `<init>()`
 

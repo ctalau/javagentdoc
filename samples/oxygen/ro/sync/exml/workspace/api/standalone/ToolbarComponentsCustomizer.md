@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `customizeToolbar([`ro.sync.exml.workspace.api.standalone.ToolbarInfo`](./ToolbarInfo.md) toolbarInfo)`
+### `customizeToolbar(ro.sync.exml.workspace.api.standalone.ToolbarInfo toolbarInfo)`
 
 **Returns:** `void`
 
@@ -34,4 +34,11 @@
   - ro.sync.exml.MainFrameComponentsConstants#TOOLBAR_DITA_MAP_EXTEND
 
   - ro.sync.exml.MainFrameComponentsConstants#TOOLBAR_DITA_MAP_CUSTOM
+
+**Parameters:**
+- `toolbarInfo` ([`ro.sync.exml.workspace.api.standalone.ToolbarInfo`](./ToolbarInfo.md)): Information about the toolbar (id, default components to add, title).
+ The toolbar ID is either the ID of an existing Oxygen toolbar or the reserved **CUSTOM** toolbar.
+ All Oxygen toolbars IDs are found in ro.sync.exml.MainFrameComponentsConstants and begin with TOOLBAR_ prefix. 
+ 
+ You can set new components in the toolbar and change its title.
 

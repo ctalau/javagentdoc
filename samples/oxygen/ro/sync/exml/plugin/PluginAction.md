@@ -14,7 +14,18 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, [`ro.sync.exml.plugin.PluginExtension`](./PluginExtension.md) arg1, `java.lang.String` arg2)`
+### `<init>(java.lang.String arg0, ro.sync.exml.plugin.PluginExtension arg1, java.lang.String arg2)`
 
-### `<init>(`java.lang.String` arg0, [`ro.sync.exml.plugin.PluginExtension`](./PluginExtension.md) arg1, `javax.swing.Icon` arg2, `java.lang.String` arg3)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` ([`ro.sync.exml.plugin.PluginExtension`](./PluginExtension.md))
+- `arg2` (`java.lang.String`)
+
+### `<init>(java.lang.String arg0, ro.sync.exml.plugin.PluginExtension arg1, javax.swing.Icon arg2, java.lang.String arg3)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` ([`ro.sync.exml.plugin.PluginExtension`](./PluginExtension.md))
+- `arg2` (`javax.swing.Icon`)
+- `arg3` (`java.lang.String`)
 

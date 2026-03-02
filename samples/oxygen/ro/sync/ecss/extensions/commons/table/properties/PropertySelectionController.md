@@ -8,7 +8,11 @@
 
 ## Methods
 
-### `selectionChanged([`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md) property, `java.lang.String` newValue)`
+### `selectionChanged(ro.sync.ecss.extensions.commons.table.properties.TableProperty property, java.lang.String newValue)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `property` ([`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md)): The modified property.
+- `newValue` (`java.lang.String`): The new selected value of the given property
 

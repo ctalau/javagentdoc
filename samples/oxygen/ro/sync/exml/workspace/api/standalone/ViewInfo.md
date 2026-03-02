@@ -30,7 +30,13 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` viewID, `javax.swing.JComponent` component, `java.lang.String` title, `javax.swing.Icon` icon)`
+### `<init>(java.lang.String viewID, javax.swing.JComponent component, java.lang.String title, javax.swing.Icon icon)`
+
+**Parameters:**
+- `viewID` (`java.lang.String`): The unique view ID
+- `component` (`javax.swing.JComponent`): The component which will be placed inside
+- `title` (`java.lang.String`): Title for the view
+- `icon` (`javax.swing.Icon`): The view's icon
 
 ## Methods
 
@@ -46,21 +52,30 @@
 
 **Returns:** `java.lang.String`
 
-### `setComponent(`javax.swing.JComponent` component)`
+### `setComponent(javax.swing.JComponent component)`
 
 **Returns:** `void`
 
-### `setTitle(`java.lang.String` title)`
+**Parameters:**
+- `component` (`javax.swing.JComponent`): The component to set.
+
+### `setTitle(java.lang.String title)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `title` (`java.lang.String`): The title to set.
 
 ### `getIcon()`
 
 **Returns:** `javax.swing.Icon`
 
-### `setIcon(`javax.swing.Icon` icon)`
+### `setIcon(javax.swing.Icon icon)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `icon` (`javax.swing.Icon`): The icon to set.
 
 ### `isCustomized()`
 

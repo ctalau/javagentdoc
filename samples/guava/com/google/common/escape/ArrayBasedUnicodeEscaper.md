@@ -8,22 +8,21 @@
 
 ## Description
 
-A `UnicodeEscaper` that uses an array to quickly look up replacement characters for a given
- code point. An additional safe range is provided that determines whether code points without
+An additional safe range is provided that determines whether code points without
  specific replacements are to be considered safe and left unescaped or should be escaped in a
  general way.
 
- <p>A good example of usage of this class is for HTML escaping where the replacement array
- contains information about the named HTML entities such as `&amp;` and `&quot;` while
- `escapeUnsafe` is overridden to handle general escaping of the form `&#NNNNN;`.
+ 
+A good example of usage of this class is for HTML escaping where the replacement array
+ contains information about the named HTML entities such as &amp; and &quot; while
+ #escapeUnsafe is overridden to handle general escaping of the form &#NNNNN;.
 
- <p>The size of the data structure used by `ArrayBasedUnicodeEscaper` is proportional to the
+ 
+The size of the data structure used by ArrayBasedUnicodeEscaper is proportional to the
  highest valued code point that requires escaping. For example a replacement map containing the
- single character '`\``u1000`' will require approximately 16K of memory. If you need
+ single character '\u1000' will require approximately 16K of memory. If you need
  to create multiple escaper instances that have the same character replacement mapping consider
- using `ArrayBasedEscaperMap`.
-**Author:** David Beaumont
-**Since:** 15.0
+ using ArrayBasedEscaperMap.
 
 ## Fields
 
@@ -53,64 +52,79 @@ A `UnicodeEscaper` that uses an array to quickly look up replacement characters 
 
 ## Constructors
 
-### `<init>(`java.util.Map<java.lang.Character,java.lang.String>` replacementMap, `int` safeMin, `int` safeMax, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable String` unsafeReplacement)`
+### `<init>(java.util.Map<java.lang.Character,java.lang.String> replacementMap, int safeMin, int safeMax, java.lang.@org.checkerframework.checker.nullness.qual.Nullable String unsafeReplacement)`
 
-Creates a new ArrayBasedUnicodeEscaper instance with the given replacement map and specified
- safe range. If `safeMax < safeMin` then no code points are considered safe.
+If safeMax < safeMin then no code points are considered safe.
 
- <p>If a code point has no mapped replacement then it is checked against the safe range. If it
- lies outside that, then `escapeUnsafe` is called, otherwise no escaping is performed.
-@param replacementMap a map of characters to their escaped representations
-@param safeMin the lowest character value in the safe range
-@param safeMax the highest character value in the safe range
-@param unsafeReplacement the default replacement for unsafe characters or null if no default
+ 
+If a code point has no mapped replacement then it is checked against the safe range. If it
+ lies outside that, then #escapeUnsafe is called, otherwise no escaping is performed.
+
+**Parameters:**
+- `replacementMap` (`java.util.Map<java.lang.Character,java.lang.String>`): a map of characters to their escaped representations
+- `safeMin` (`int`): the lowest character value in the safe range
+- `safeMax` (`int`): the highest character value in the safe range
+- `unsafeReplacement` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable String`): the default replacement for unsafe characters or null if no default
      replacement is required
 
-### `<init>([`com.google.common.escape.ArrayBasedEscaperMap`](./ArrayBasedEscaperMap.md) escaperMap, `int` safeMin, `int` safeMax, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable String` unsafeReplacement)`
+### `<init>(com.google.common.escape.ArrayBasedEscaperMap escaperMap, int safeMin, int safeMax, java.lang.@org.checkerframework.checker.nullness.qual.Nullable String unsafeReplacement)`
 
-Creates a new ArrayBasedUnicodeEscaper instance with the given replacement map and specified
- safe range. If `safeMax < safeMin` then no code points are considered safe. This
+If safeMax < safeMin then no code points are considered safe. This
  initializer is useful when explicit instances of ArrayBasedEscaperMap are used to allow the
  sharing of large replacement mappings.
 
- <p>If a code point has no mapped replacement then it is checked against the safe range. If it
- lies outside that, then `escapeUnsafe` is called, otherwise no escaping is performed.
-@param escaperMap the map of replacements
-@param safeMin the lowest character value in the safe range
-@param safeMax the highest character value in the safe range
-@param unsafeReplacement the default replacement for unsafe characters or null if no default
+ 
+If a code point has no mapped replacement then it is checked against the safe range. If it
+ lies outside that, then #escapeUnsafe is called, otherwise no escaping is performed.
+
+**Parameters:**
+- `escaperMap` ([`com.google.common.escape.ArrayBasedEscaperMap`](./ArrayBasedEscaperMap.md)): the map of replacements
+- `safeMin` (`int`): the lowest character value in the safe range
+- `safeMax` (`int`): the highest character value in the safe range
+- `unsafeReplacement` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable String`): the default replacement for unsafe characters or null if no default
      replacement is required
 
 ## Methods
 
-### `escape(`java.lang.String` s)`
+### `escape(java.lang.String s)`
 
 **Returns:** `java.lang.String`
 
-### `escape(`int` cp)`
+**Parameters:**
+- `s` (`java.lang.String`)
+
+### `escape(int cp)`
 
 **Returns:** `char[]`
 
-Escapes a single Unicode code point using the replacement array and safe range values. If the
+If the
  given character does not have an explicit replacement and lies outside the safe range then
- `escapeUnsafe` is called.
-@return the replacement characters, or `null` if no escaping was required
+ #escapeUnsafe is called.
 
-### `nextEscapeIndex(`java.lang.CharSequence` csq, `int` index, `int` end)`
+**Parameters:**
+- `cp` (`int`)
+
+### `nextEscapeIndex(java.lang.CharSequence csq, int index, int end)`
 
 **Returns:** `int`
 
-### `escapeUnsafe(`int` cp)`
+**Parameters:**
+- `csq` (`java.lang.CharSequence`)
+- `index` (`int`)
+- `end` (`int`)
+
+### `escapeUnsafe(int cp)`
 
 **Returns:** `char[]`
 
-Escapes a code point that has no direct explicit value in the replacement array and lies
- outside the stated safe range. Subclasses should override this method to provide generalized
+Subclasses should override this method to provide generalized
  escaping for code points if required.
 
- <p>Note that arrays returned by this method must not be modified once they have been returned.
+ 
+Note that arrays returned by this method must not be modified once they have been returned.
  However it is acceptable to return the same array multiple times (even for different input
  characters).
-@param cp the Unicode code point to escape
-@return the replacement characters, or `null` if no escaping was required
+
+**Parameters:**
+- `cp` (`int`): the Unicode code point to escape
 

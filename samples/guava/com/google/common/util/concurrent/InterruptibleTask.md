@@ -36,43 +36,44 @@
 
 **Returns:** `void`
 
-### `waitForInterrupt(`java.lang.Thread` currentThread)`
+### `waitForInterrupt(java.lang.Thread currentThread)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `currentThread` (`java.lang.Thread`)
 
 ### `isDone()`
 
 **Returns:** `boolean`
 
-Called before runInterruptibly - if true, runInterruptibly and afterRanInterruptibly will not
- be called.
-
 ### `runInterruptibly()`
 
 **Returns:** `T`
 
-Do interruptible work here - do not complete Futures here, as their listeners could be
- interrupted.
-
-### `afterRanInterruptiblySuccess(`T` result)`
+### `afterRanInterruptiblySuccess(T result)`
 
 **Returns:** `void`
 
-Any interruption that happens as a result of calling interruptTask will arrive before this
- method is called. Complete Futures here.
+Complete Futures here.
 
-### `afterRanInterruptiblyFailure(`java.lang.Throwable` error)`
+**Parameters:**
+- `result` (`T`)
+
+### `afterRanInterruptiblyFailure(java.lang.Throwable error)`
 
 **Returns:** `void`
 
-Any interruption that happens as a result of calling interruptTask will arrive before this
- method is called. Complete Futures here.
+Complete Futures here.
+
+**Parameters:**
+- `error` (`java.lang.Throwable`)
 
 ### `interruptTask()`
 
 **Returns:** `void`
 
-Interrupts the running task. Because this internally calls `Thread.interrupt()` which can
+Because this internally calls Thread#interrupt() which can
  in turn invoke arbitrary code it is not safe to call while holding a lock.
 
 ### `toString()`

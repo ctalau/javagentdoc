@@ -46,7 +46,7 @@ This URL stream handler plugin extension provides the possibility to impose
 
 ## Methods
 
-### `canHandleProtocol(`java.lang.String` protocol)`
+### `canHandleProtocol(java.lang.String protocol)`
 
 **Returns:** `boolean`
 
@@ -58,7 +58,10 @@ If this method returns `true` for a specific protocol,
  The plugin can handle multiple protocols like: `http`, `https`, 
  `ftp`, `sftp`.
 
-### `getURLStreamHandler(`java.net.URL` url)`
+**Parameters:**
+- `protocol` (`java.lang.String`): The protocol.
+
+### `getURLStreamHandler(java.net.URL url)`
 
 **Returns:** `java.net.URLStreamHandler`
 
@@ -66,4 +69,7 @@ This method is called for each opened connection of an URL with a protocol
  for which the #canHandleProtocol(String) method returns `true`.
  If this method returns `null`, the Oxygen URLStreamHandler 
  is used.
+
+**Parameters:**
+- `url` (`java.net.URL`): The URL to provide a handler for.
 

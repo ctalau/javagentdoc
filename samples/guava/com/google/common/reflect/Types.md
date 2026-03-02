@@ -6,16 +6,11 @@
 
 ## Description
 
-Utilities for working with `Type`.
-**Author:** Ben Yu
-
 ## Fields
 
 ### `COMMA_JOINER`
 
 **Type:** [`com.google.common.base.Joiner`](../base/Joiner.md)
-
-Class#toString without the "class " and "interface " prefixes
 
 ## Constructors
 
@@ -23,82 +18,111 @@ Class#toString without the "class " and "interface " prefixes
 
 ## Methods
 
-### `newArrayType(`java.lang.reflect.Type` componentType)`
+### `newArrayType(java.lang.reflect.Type componentType)`
 
 **Returns:** `java.lang.reflect.Type`
 
-Returns the array type of `componentType`.
+**Parameters:**
+- `componentType` (`java.lang.reflect.Type`)
 
-### `newParameterizedTypeWithOwner(`java.lang.reflect.Type` ownerType, `java.lang.Class<?>` rawType, `java.lang.reflect.Type[]` arguments)`
-
-**Returns:** `java.lang.reflect.ParameterizedType`
-
-Returns a type where `rawType` is parameterized by `arguments` and is owned by
- `ownerType`.
-
-### `newParameterizedType(`java.lang.Class<?>` rawType, `java.lang.reflect.Type[]` arguments)`
+### `newParameterizedTypeWithOwner(java.lang.reflect.Type ownerType, java.lang.Class<?> rawType, java.lang.reflect.Type[] arguments)`
 
 **Returns:** `java.lang.reflect.ParameterizedType`
 
-Returns a type where `rawType` is parameterized by `arguments`.
+**Parameters:**
+- `ownerType` (`java.lang.reflect.Type`)
+- `rawType` (`java.lang.Class<?>`)
+- `arguments` (`java.lang.reflect.Type[]`)
 
-### `newArtificialTypeVariable(`D` declaration, `java.lang.String` name, `java.lang.reflect.Type[]` bounds)`
+### `newParameterizedType(java.lang.Class<?> rawType, java.lang.reflect.Type[] arguments)`
+
+**Returns:** `java.lang.reflect.ParameterizedType`
+
+**Parameters:**
+- `rawType` (`java.lang.Class<?>`)
+- `arguments` (`java.lang.reflect.Type[]`)
+
+### `newArtificialTypeVariable(D declaration, java.lang.String name, java.lang.reflect.Type[] bounds)`
 
 **Returns:** `java.lang.reflect.TypeVariable<D>`
 
-Returns a new `TypeVariable` that belongs to `declaration` with `name` and
- `bounds`.
+**Parameters:**
+- `declaration` (`D`)
+- `name` (`java.lang.String`)
+- `bounds` (`java.lang.reflect.Type[]`)
 
-### `subtypeOf(`java.lang.reflect.Type` upperBound)`
-
-**Returns:** `java.lang.reflect.WildcardType`
-
-Returns a new `WildcardType` with `upperBound`.
-
-### `supertypeOf(`java.lang.reflect.Type` lowerBound)`
+### `subtypeOf(java.lang.reflect.Type upperBound)`
 
 **Returns:** `java.lang.reflect.WildcardType`
 
-Returns a new `WildcardType` with `lowerBound`.
+**Parameters:**
+- `upperBound` (`java.lang.reflect.Type`)
 
-### `toString(`java.lang.reflect.Type` type)`
+### `supertypeOf(java.lang.reflect.Type lowerBound)`
+
+**Returns:** `java.lang.reflect.WildcardType`
+
+**Parameters:**
+- `lowerBound` (`java.lang.reflect.Type`)
+
+### `toString(java.lang.reflect.Type type)`
 
 **Returns:** `java.lang.String`
 
-Returns a human-readable string representation of `type`.
+The format is subject to change.
 
- <p>The format is subject to change.
+**Parameters:**
+- `type` (`java.lang.reflect.Type`)
 
-### `getComponentType(`java.lang.reflect.Type` type)`
-
-**Returns:** `java.lang.reflect.Type`
-
-### `subtypeOfComponentType(`java.lang.reflect.Type[]` bounds)`
+### `getComponentType(java.lang.reflect.Type type)`
 
 **Returns:** `java.lang.reflect.Type`
 
-Returns `? extends X` if any of `bounds` is a subtype of `X[]`; or null
- otherwise.
+**Parameters:**
+- `type` (`java.lang.reflect.Type`)
 
-### `newTypeVariableImpl(`D` genericDeclaration, `java.lang.String` name, `java.lang.reflect.Type[]` bounds)`
+### `subtypeOfComponentType(java.lang.reflect.Type[] bounds)`
+
+**Returns:** `java.lang.reflect.Type`
+
+**Parameters:**
+- `bounds` (`java.lang.reflect.Type[]`)
+
+### `newTypeVariableImpl(D genericDeclaration, java.lang.String name, java.lang.reflect.Type[] bounds)`
 
 **Returns:** `java.lang.reflect.TypeVariable<D>`
 
-### `toArray(`java.util.Collection<java.lang.reflect.Type>` types)`
+**Parameters:**
+- `genericDeclaration` (`D`)
+- `name` (`java.lang.String`)
+- `bounds` (`java.lang.reflect.Type[]`)
+
+### `toArray(java.util.Collection<java.lang.reflect.Type> types)`
 
 **Returns:** `java.lang.reflect.Type[]`
 
-### `filterUpperBounds(`java.lang.Iterable<java.lang.reflect.Type>` bounds)`
+**Parameters:**
+- `types` (`java.util.Collection<java.lang.reflect.Type>`)
+
+### `filterUpperBounds(java.lang.Iterable<java.lang.reflect.Type> bounds)`
 
 **Returns:** `java.lang.Iterable<java.lang.reflect.Type>`
 
-### `disallowPrimitiveType(`java.lang.reflect.Type[]` types, `java.lang.String` usedAs)`
+**Parameters:**
+- `bounds` (`java.lang.Iterable<java.lang.reflect.Type>`)
+
+### `disallowPrimitiveType(java.lang.reflect.Type[] types, java.lang.String usedAs)`
 
 **Returns:** `void`
 
-### `getArrayClass(`java.lang.Class<?>` componentType)`
+**Parameters:**
+- `types` (`java.lang.reflect.Type[]`)
+- `usedAs` (`java.lang.String`)
+
+### `getArrayClass(java.lang.Class<?> componentType)`
 
 **Returns:** `java.lang.Class<?>`
 
-Returns the `Class` object of arrays with `componentType`.
+**Parameters:**
+- `componentType` (`java.lang.Class<?>`)
 

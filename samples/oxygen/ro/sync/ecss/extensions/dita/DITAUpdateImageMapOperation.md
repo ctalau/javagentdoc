@@ -24,23 +24,38 @@
 
 ## Methods
 
-### `getNewShapesList(`java.lang.String` svgText)`
+### `getNewShapesList(java.lang.String svgText)`
 
 **Returns:** `java.util.List<? extends ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor>`
 
-### `getFrameworkSpecificImageMapDom(`java.lang.String` svgText)`
+**Parameters:**
+- `svgText` (`java.lang.String`)
+
+### `getFrameworkSpecificImageMapDom(java.lang.String svgText)`
 
 **Returns:** `org.w3c.dom.Document`
 
-### `getNewShapesList(`org.w3c.dom.Document` newMapDOM)`
+**Parameters:**
+- `svgText` (`java.lang.String`): The SVG text.
+
+### `getNewShapesList(org.w3c.dom.Document newMapDOM)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.dita.DITAUpdateImageMapOperation.DITANewShapeDescriptor>`
 
-### `getExistingShapesList([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) existingImageMap)`
+**Parameters:**
+- `newMapDOM` (`org.w3c.dom.Document`): The DOM that contains new shapes.
+
+### `getExistingShapesList(ro.sync.ecss.extensions.api.node.AuthorElement existingImageMap)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../api/node/AuthorElement.md)
 
-### `getImageMapElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) currentElement)`
+**Parameters:**
+- `existingImageMap` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
+
+### `getImageMapElement(ro.sync.ecss.extensions.api.node.AuthorElement currentElement)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)
+
+**Parameters:**
+- `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
 

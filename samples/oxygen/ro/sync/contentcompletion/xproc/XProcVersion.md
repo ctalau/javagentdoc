@@ -14,7 +14,10 @@
 
 ## Constructors
 
-### `<init>(`int` id)`
+### `<init>(int id)`
+
+**Parameters:**
+- `id` (`int`): The id of the current XSLT version.
 
 ## Methods
 
@@ -22,15 +25,21 @@
 
 **Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion[]`](./XProcVersion.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion`](./XProcVersion.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `getId()`
 
 **Returns:** `int`
 
-### `getXProcVersionForId(`int` id)`
+### `getXProcVersionForId(int id)`
 
 **Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion`](./XProcVersion.md)
+
+**Parameters:**
+- `id` (`int`): The id of the XProc version.
 

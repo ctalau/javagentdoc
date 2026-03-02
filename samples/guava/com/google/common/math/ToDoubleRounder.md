@@ -10,43 +10,47 @@
 
 ## Description
 
-Helper type to implement rounding `X` to a representable `double` value according to
- a `RoundingMode`.
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `roundToDoubleArbitrarily(`X` x)`
+### `roundToDoubleArbitrarily(X x)`
 
 **Returns:** `double`
 
-Returns x rounded to either the greatest double less than or equal to the precise value of x,
- or the least double greater than or equal to the precise value of x.
+**Parameters:**
+- `x` (`X`)
 
-### `sign(`X` x)`
+### `sign(X x)`
 
 **Returns:** `int`
 
-Returns the sign of x: either -1, 0, or 1.
+**Parameters:**
+- `x` (`X`)
 
-### `toX(`double` d, `java.math.RoundingMode` mode)`
-
-**Returns:** `X`
-
-Returns d's value as an X, rounded with the specified mode.
-
-### `minus(`X` a, `X` b)`
+### `toX(double d, java.math.RoundingMode mode)`
 
 **Returns:** `X`
 
-Returns a - b, guaranteed that both arguments are nonnegative.
+**Parameters:**
+- `d` (`double`)
+- `mode` (`java.math.RoundingMode`)
 
-### `roundToDouble(`X` x, `java.math.RoundingMode` mode)`
+### `minus(X a, X b)`
+
+**Returns:** `X`
+
+**Parameters:**
+- `a` (`X`)
+- `b` (`X`)
+
+### `roundToDouble(X x, java.math.RoundingMode mode)`
 
 **Returns:** `double`
 
-Rounds `x` to a `double`.
+**Parameters:**
+- `x` (`X`)
+- `mode` (`java.math.RoundingMode`)
 

@@ -14,7 +14,10 @@
 
 **Returns:** [`ro.sync.diff.api.DiffLicenseMode[]`](./DiffLicenseMode.md)
 
-### `valueOf(`java.lang.String` arg0)`
+### `valueOf(java.lang.String arg0)`
 
 **Returns:** [`ro.sync.diff.api.DiffLicenseMode`](./DiffLicenseMode.md)
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

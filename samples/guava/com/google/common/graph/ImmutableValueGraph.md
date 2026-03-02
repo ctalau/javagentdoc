@@ -13,36 +13,36 @@
 
 ## Description
 
-A `ValueGraph` whose elements and structural relationships will never change. Instances of
- this class may be obtained with `copyOf(ValueGraph)`.
+Instances of
+ this class may be obtained with #copyOf(ValueGraph).
 
- <p>See the Guava User's Guide's <a href="https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations">discussion
- of the `Immutable*` types</a> for more information on the properties and guarantees
+ 
+See the Guava User's Guide's [discussion
+ of the Immutable* types](https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations) for more information on the properties and guarantees
  provided by this class.
-**Author:** James Sexton
-**Author:** Jens Nyman
-@param <N> Node parameter type
-@param <V> Value parameter type
-**Since:** 20.0
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph)`
+### `<init>(com.google.common.graph.ValueGraph<N,V> graph)`
+
+**Parameters:**
+- `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
 ## Methods
 
-### `copyOf([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph)`
+### `copyOf(com.google.common.graph.ValueGraph<N,V> graph)`
 
 **Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
 
-Returns an immutable copy of `graph`.
+**Parameters:**
+- `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
-### `copyOf([`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md) graph)`
+### `copyOf(com.google.common.graph.ImmutableValueGraph<N,V> graph)`
 
 **Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
 
-Simply returns its argument.
-**Deprecated:**no need to use this
+**Parameters:**
+- `graph` ([`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md))
 
 ### `incidentEdgeOrder()`
 
@@ -52,11 +52,18 @@ Simply returns its argument.
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
-### `getNodeConnections([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph)`
+### `getNodeConnections(com.google.common.graph.ValueGraph<N,V> graph)`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,V>>`](../collect/ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,V>>`](../collect/ImmutableMap.md)
 
-### `connectionsOf([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md) graph, `N` node)`
+**Parameters:**
+- `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
+
+### `connectionsOf(com.google.common.graph.ValueGraph<N,V> graph, N node)`
 
 **Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
+
+**Parameters:**
+- `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
+- `node` (`N`)
 

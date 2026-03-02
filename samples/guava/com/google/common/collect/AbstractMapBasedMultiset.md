@@ -14,10 +14,8 @@
 
 ## Description
 
-Basic implementation of `Multiset<E>` backed by an instance of `Map<E, Count>`.
-
- <p>For serialization to work, the subclass must specify explicit `readObject` and `writeObject` methods.
-**Author:** Kevin Bourrillion
+For serialization to work, the subclass must specify explicit readObject and 
+ writeObject methods.
 
 ## Fields
 
@@ -35,25 +33,27 @@ Basic implementation of `Multiset<E>` backed by an instance of `Map<E, Count>`.
 
 ## Constructors
 
-### `<init>(`java.util.Map<E,com.google.common.collect.Count>` backingMap)`
+### `<init>(java.util.Map<E,com.google.common.collect.Count> backingMap)`
 
-Standard constructor.
+**Parameters:**
+- `backingMap` (`java.util.Map<E,com.google.common.collect.Count>`)
 
 ## Methods
 
-### `setBackingMap(`java.util.Map<E,com.google.common.collect.Count>` backingMap)`
+### `setBackingMap(java.util.Map<E,com.google.common.collect.Count> backingMap)`
 
 **Returns:** `void`
 
-Used during deserialization only. The backing map must be empty.
+The backing map must be empty.
+
+**Parameters:**
+- `backingMap` (`java.util.Map<E,com.google.common.collect.Count>`)
 
 ### `entrySet()`
 
 **Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
-{@inheritDoc}
-
- <p>Invoking `Multiset.Entry.getCount` on an entry in the returned set always returns the
+Invoking Multiset.Entry#getCount on an entry in the returned set always returns the
  current count of that element in the multiset, as opposed to the count at the time the entry
  was retrieved.
 
@@ -65,9 +65,12 @@ Used during deserialization only. The backing map must be empty.
 
 **Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
-### `forEachEntry(`java.util.function.ObjIntConsumer<? super E>` action)`
+### `forEachEntry(java.util.function.ObjIntConsumer<? super E> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.ObjIntConsumer<? super E>`)
 
 ### `clear()`
 
@@ -85,28 +88,44 @@ Used during deserialization only. The backing map must be empty.
 
 **Returns:** `java.util.Iterator<E>`
 
-### `count(`java.lang.Object` element)`
+### `count(java.lang.Object element)`
 
 **Returns:** `int`
 
-### `add(`E` element, `int` occurrences)`
+**Parameters:**
+- `element` (`java.lang.Object`)
+
+### `add(E element, int occurrences)`
 
 **Returns:** `int`
 
-{@inheritDoc}
-@throws IllegalArgumentException if the call would result in more than `Integer.MAX_VALUE` occurrences of `element` in this multiset.
+**Parameters:**
+- `element` (`E`)
+- `occurrences` (`int`)
 
-### `remove(`java.lang.Object` element, `int` occurrences)`
-
-**Returns:** `int`
-
-### `setCount(`E` element, `int` count)`
+### `remove(java.lang.Object element, int occurrences)`
 
 **Returns:** `int`
 
-### `getAndSet([`com.google.common.collect.Count`](./Count.md) i, `int` count)`
+**Parameters:**
+- `element` (`java.lang.Object`)
+- `occurrences` (`int`)
+
+### `setCount(E element, int count)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `element` (`E`)
+- `count` (`int`)
+
+### `getAndSet(com.google.common.collect.Count i, int count)`
+
+**Returns:** `int`
+
+**Parameters:**
+- `i` ([`com.google.common.collect.Count`](./Count.md))
+- `count` (`int`)
 
 ### `readObjectNoData()`
 

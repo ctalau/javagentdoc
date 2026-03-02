@@ -28,7 +28,12 @@
 
 ### `<init>()`
 
-### `<init>(`char` arg0, `char` arg1, `boolean` arg2)`
+### `<init>(char arg0, char arg1, boolean arg2)`
+
+**Parameters:**
+- `arg0` (`char`)
+- `arg1` (`char`)
+- `arg2` (`boolean`)
 
 ## Methods
 
@@ -48,23 +53,32 @@
 
 **Returns:** `boolean`
 
-### `setEnabled(`boolean` arg0)`
+### `setEnabled(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `getStartQuote()`
 
 **Returns:** `char`
 
-### `setStartQoute(`char` arg0)`
+### `setStartQoute(char arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`char`)
 
 ### `getEndQuote()`
 
 **Returns:** `char`
 
-### `setEndQuoteCharacter(`char` arg0)`
+### `setEndQuoteCharacter(char arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`char`)
 

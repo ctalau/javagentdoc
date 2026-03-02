@@ -14,7 +14,11 @@
 
 ## Methods
 
-### `getContentCompletionActions([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess, `int` caretOffset)`
+### `getContentCompletionActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int caretOffset)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction>`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access to the Author API.
+- `caretOffset` (`int`): The caret offset.
 

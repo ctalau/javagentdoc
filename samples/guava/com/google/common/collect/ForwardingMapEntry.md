@@ -15,31 +15,29 @@
 
 ## Description
 
-A map entry which forwards all its method calls to another map entry. Subclasses should override
- one or more methods to modify the behavior of the backing map entry as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should override
+ one or more methods to modify the behavior of the backing map entry as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>Warning:</b> The methods of `ForwardingMapEntry` forward <i>indiscriminately</i> to
- the methods of the delegate. For example, overriding `getValue` alone <i>will not</i>
- change the behavior of `equals`, which can lead to unexpected behavior. In this case, you
- should override `equals` as well, either providing your own implementation, or delegating
- to the provided `standardEquals` method.
+ 
+**Warning:** The methods of ForwardingMapEntry forward *indiscriminately* to
+ the methods of the delegate. For example, overriding #getValue alone *will not*
+ change the behavior of #equals, which can lead to unexpected behavior. In this case, you
+ should override equals as well, either providing your own implementation, or delegating
+ to the provided standardEquals method.
 
- <p>Each of the `standard` methods, where appropriate, use `Objects.equal` to test
+ 
+Each of the standard methods, where appropriate, use Objects#equal to test
  equality for both keys and values. This may not be the desired behavior for map implementations
- that use non-standard notions of key equality, such as the entry of a `SortedMap` whose
- comparator is not consistent with `equals`.
+ that use non-standard notions of key equality, such as the entry of a SortedMap whose
+ comparator is not consistent with equals.
 
- <p>The `standard` methods are not guaranteed to be thread-safe, even when all of the
+ 
+The standard methods are not guaranteed to be thread-safe, even when all of the
  methods that they depend on are thread-safe.
-**Author:** Mike Bostock
-**Author:** Louis Wasserman
-**Since:** 2.0
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -55,38 +53,43 @@ Constructor for use by subclasses.
 
 **Returns:** `V`
 
-### `setValue(`V` value)`
+### `setValue(V value)`
 
 **Returns:** `V`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `value` (`V`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `standardEquals(`java.lang.Object` object)`
+### `standardEquals(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-A sensible definition of `equals(Object)` in terms of `getKey()` and `getValue()`. If you override either of these methods, you may wish to override `equals(Object)` to forward to this implementation.
-**Since:** 7.0
+If you override either of these methods, you may wish to override #equals(Object) to forward to this implementation.
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `standardHashCode()`
 
 **Returns:** `int`
 
-A sensible definition of `hashCode()` in terms of `getKey()` and `getValue()`. If you override either of these methods, you may wish to override `hashCode()` to forward to this implementation.
-**Since:** 7.0
+If you override either of these methods, you may wish to override #hashCode() to forward to this implementation.
 
 ### `standardToString()`
 
 **Returns:** `java.lang.String`
 
-A sensible definition of `toString` in terms of `getKey` and `getValue`.
- If you override either of these methods, you may wish to override `equals` to forward to
+If you override either of these methods, you may wish to override #equals to forward to
  this implementation.
-**Since:** 7.0
 

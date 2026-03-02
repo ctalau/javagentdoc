@@ -6,8 +6,7 @@
 
 ## Description
 
-The subset of the `java.util.regex.Pattern` API which is used by this package, and also
- shared with the `re2j` library. For internal use only. Please refer to the `Pattern`
+For internal use only. Please refer to the Pattern
  javadoc for details.
 
 ## Constructors
@@ -16,9 +15,12 @@ The subset of the `java.util.regex.Pattern` API which is used by this package, a
 
 ## Methods
 
-### `matcher(`java.lang.CharSequence` t)`
+### `matcher(java.lang.CharSequence t)`
 
 **Returns:** [`com.google.common.base.CommonMatcher`](./CommonMatcher.md)
+
+**Parameters:**
+- `t` (`java.lang.CharSequence`)
 
 ### `pattern()`
 
@@ -32,9 +34,12 @@ The subset of the `java.util.regex.Pattern` API which is used by this package, a
 
 **Returns:** `java.lang.String`
 
-### `compile(`java.lang.String` pattern)`
+### `compile(java.lang.String pattern)`
 
 **Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
+
+**Parameters:**
+- `pattern` (`java.lang.String`)
 
 ### `isPcreLike()`
 

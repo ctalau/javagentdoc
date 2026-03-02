@@ -13,12 +13,7 @@
 
 ## Description
 
-An implementation of `RangeMap` based on a `TreeMap`, supporting all optional
- operations.
-
- <p>Like all `RangeMap` implementations, this supports neither null keys nor null values.
-**Author:** Louis Wasserman
-**Since:** 14.0
+Like all RangeMap implementations, this supports neither null keys nor null values.
 
 ## Fields
 
@@ -28,7 +23,7 @@ An implementation of `RangeMap` based on a `TreeMap`, supporting all optional
 
 ### `EMPTY_SUB_RANGE_MAP`
 
-**Type:** [`com.google.common.collect.RangeMap<java.lang.Comparable<?>,java.lang.Object>`](RangeMap,java/lang/Object>.md)
+**Type:** [`com.google.common.collect.RangeMap<java.lang.Comparable<?>,java.lang.Object>`](./RangeMap.md)
 
 ## Constructors
 
@@ -40,37 +35,59 @@ An implementation of `RangeMap` based on a `TreeMap`, supporting all optional
 
 **Returns:** [`com.google.common.collect.TreeRangeMap<K,V>`](./TreeRangeMap.md)
 
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `V`
 
-### `getEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `getEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<com.google.common.collect.Range<K>,V>`
 
-### `put([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
+**Parameters:**
+- `key` (`K`)
+
+### `put(com.google.common.collect.Range<K> range, V value)`
 
 **Returns:** `void`
 
-### `putCoalescing([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
+
+### `putCoalescing(com.google.common.collect.Range<K> range, V value)`
 
 **Returns:** `void`
 
-### `coalescedRange([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
+
+### `coalescedRange(com.google.common.collect.Range<K> range, V value)`
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
-Computes the coalesced range for the given range+value - does not mutate the map.
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
 
-### `coalesce([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value, `java.util.Map.Entry<com.google.common.collect.Cut<K>,com.google.common.collect.TreeRangeMap.RangeMapEntry<K,V>>` entry)`
+### `coalesce(com.google.common.collect.Range<K> range, V value, java.util.Map.Entry<com.google.common.collect.Cut<K>,com.google.common.collect.TreeRangeMap.RangeMapEntry<K,V>> entry)`
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
-Returns the range that spans the given range and entry, if the entry can be coalesced.
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
+- `entry` (`java.util.Map.Entry<com.google.common.collect.Cut<K>,com.google.common.collect.TreeRangeMap.RangeMapEntry<K,V>>`)
 
-### `putAll([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md) rangeMap)`
+### `putAll(com.google.common.collect.RangeMap<K,? extends V> rangeMap)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `rangeMap` ([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md))
 
 ### `clear()`
 
@@ -80,21 +97,37 @@ Returns the range that spans the given range and entry, if the entry can be coal
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
-### `putRangeMapEntry([`com.google.common.collect.Cut<K>`](./Cut.md) lowerBound, [`com.google.common.collect.Cut<K>`](./Cut.md) upperBound, `V` value)`
+### `putRangeMapEntry(com.google.common.collect.Cut<K> lowerBound, com.google.common.collect.Cut<K> upperBound, V value)`
 
 **Returns:** `void`
 
-### `remove([`com.google.common.collect.Range<K>`](./Range.md) rangeToRemove)`
+**Parameters:**
+- `lowerBound` ([`com.google.common.collect.Cut<K>`](./Cut.md))
+- `upperBound` ([`com.google.common.collect.Cut<K>`](./Cut.md))
+- `value` (`V`)
+
+### `remove(com.google.common.collect.Range<K> rangeToRemove)`
 
 **Returns:** `void`
 
-### `split([`com.google.common.collect.Cut<K>`](./Cut.md) cut)`
+**Parameters:**
+- `rangeToRemove` ([`com.google.common.collect.Range<K>`](./Range.md))
+
+### `split(com.google.common.collect.Cut<K> cut)`
 
 **Returns:** `void`
 
-### `merge([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value, `java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
+**Parameters:**
+- `cut` ([`com.google.common.collect.Cut<K>`](./Cut.md))
+
+### `merge(com.google.common.collect.Range<K> range, V value, java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> remappingFunction)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
+- `remappingFunction` (`java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
 ### `asMapOfRanges()`
 
@@ -104,17 +137,23 @@ Returns the range that spans the given range and entry, if the entry can be coal
 
 **Returns:** `java.util.Map<com.google.common.collect.Range<K>,V>`
 
-### `subRangeMap([`com.google.common.collect.Range<K>`](./Range.md) subRange)`
+### `subRangeMap(com.google.common.collect.Range<K> subRange)`
 
 **Returns:** [`com.google.common.collect.RangeMap<K,V>`](./RangeMap.md)
+
+**Parameters:**
+- `subRange` ([`com.google.common.collect.Range<K>`](./Range.md))
 
 ### `emptySubRangeMap()`
 
 **Returns:** [`com.google.common.collect.RangeMap<K,V>`](./RangeMap.md)
 
-### `equals(`java.lang.Object` o)`
+### `equals(java.lang.Object o)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `o` (`java.lang.Object`)
 
 ### `hashCode()`
 

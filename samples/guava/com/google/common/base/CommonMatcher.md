@@ -6,8 +6,7 @@
 
 ## Description
 
-The subset of the `java.util.regex.Matcher` API which is used by this package, and also
- shared with the `re2j` library. For internal use only. Please refer to the `Matcher`
+For internal use only. Please refer to the Matcher
  javadoc for details.
 
 ## Constructors
@@ -24,13 +23,19 @@ The subset of the `java.util.regex.Matcher` API which is used by this package, a
 
 **Returns:** `boolean`
 
-### `find(`int` index)`
+### `find(int index)`
 
 **Returns:** `boolean`
 
-### `replaceAll(`java.lang.String` replacement)`
+**Parameters:**
+- `index` (`int`)
+
+### `replaceAll(java.lang.String replacement)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `replacement` (`java.lang.String`)
 
 ### `end()`
 

@@ -36,11 +36,17 @@ A processor can provide just quick fixes, just quick assists
 The processors are requested depending on this priority, 
  only the proposals of the first processor will be presented.
 
-### `canAssist([`ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext`](./IQuickAssistInvocationContext.md) invocationContext)`
+### `canAssist(ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext invocationContext)`
 
 **Returns:** `boolean`
 
-### `computeQuickAssistProposals([`ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext`](./IQuickAssistInvocationContext.md) invocationContext)`
+**Parameters:**
+- `invocationContext` ([`ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext`](./IQuickAssistInvocationContext.md)): the invocation context
+
+### `computeQuickAssistProposals(ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext invocationContext)`
 
 **Returns:** [`ro.sync.exml.editor.quickassist.IQuickAssistProposal[]`](./IQuickAssistProposal.md)
+
+**Parameters:**
+- `invocationContext` ([`ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext`](./IQuickAssistInvocationContext.md)): the invocation context
 

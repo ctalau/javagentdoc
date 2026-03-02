@@ -22,7 +22,12 @@
 
 ## Constructors
 
-### `<init>(`int` startLocation, `int` endLocation, `java.util.List<java.lang.Long>` nodeIds)`
+### `<init>(int startLocation, int endLocation, java.util.List<java.lang.Long> nodeIds)`
+
+**Parameters:**
+- `startLocation` (`int`): Start offset of the dpi.
+- `endLocation` (`int`): End offset of the dpi (exclusive).
+- `nodeIds` (`java.util.List<java.lang.Long>`): The nodes marked by the dpi.
 
 ## Methods
 

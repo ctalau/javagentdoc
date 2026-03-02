@@ -14,22 +14,18 @@
 
 ## Description
 
-A `BlockingQueue` which forwards all its method calls to another `BlockingQueue`.
- Subclasses should override one or more methods to modify the behavior of the backing collection
- as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator
- pattern</a>.
+Subclasses should override one or more methods to modify the behavior of the backing collection
+ as desired per the [decorator
+ pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the `ForwardingBlockingQueue`.
-**Author:** Raimundo Mirisola
-@param <E> the type of elements held in this collection
-**Since:** 4.0
+ 
+**default method warning:** This class does *not* forward calls to 
+ default methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the ForwardingBlockingQueue.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -37,25 +33,44 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.concurrent.BlockingQueue<E>`
 
-### `drainTo(`java.util.Collection<? super E>` c, `int` maxElements)`
+### `drainTo(java.util.Collection<? super E> c, int maxElements)`
 
 **Returns:** `int`
 
-### `drainTo(`java.util.Collection<? super E>` c)`
+**Parameters:**
+- `c` (`java.util.Collection<? super E>`)
+- `maxElements` (`int`)
+
+### `drainTo(java.util.Collection<? super E> c)`
 
 **Returns:** `int`
 
-### `offer(`E` e, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+**Parameters:**
+- `c` (`java.util.Collection<? super E>`)
+
+### `offer(E e, long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `boolean`
 
-### `poll(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
+**Parameters:**
+- `e` (`E`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `poll(long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `E`
 
-### `put(`E` e)`
+**Parameters:**
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `put(E e)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `e` (`E`)
 
 ### `remainingCapacity()`
 

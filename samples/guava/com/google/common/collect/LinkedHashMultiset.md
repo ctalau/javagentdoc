@@ -12,16 +12,14 @@
 
 ## Description
 
-A `Multiset` implementation with predictable iteration order. Its iterator orders elements
+Its iterator orders elements
  according to when the first occurrence of the element was added. When the multiset contains
  multiple instances of an element, those instances are consecutive in the iteration order. If all
  occurrences of an element are removed, after which that element is added to the multiset, the
  element will appear at the end of the iteration.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset">`Multiset`</a>.
-**Author:** Kevin Bourrillion
-**Author:** Jared Levy
-**Since:** 2.0
+ 
+See the Guava User Guide article on [Multiset](https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset).
 
 ## Fields
 
@@ -33,7 +31,10 @@ A `Multiset` implementation with predictable iteration order. Its iterator order
 
 ### `<init>()`
 
-### `<init>(`int` distinctElements)`
+### `<init>(int distinctElements)`
+
+**Parameters:**
+- `distinctElements` (`int`)
 
 ## Methods
 
@@ -41,34 +42,33 @@ A `Multiset` implementation with predictable iteration order. Its iterator order
 
 **Returns:** [`com.google.common.collect.LinkedHashMultiset<E>`](./LinkedHashMultiset.md)
 
-Creates a new, empty `LinkedHashMultiset` using the default initial capacity.
-
-### `create(`int` distinctElements)`
+### `create(int distinctElements)`
 
 **Returns:** [`com.google.common.collect.LinkedHashMultiset<E>`](./LinkedHashMultiset.md)
 
-Creates a new, empty `LinkedHashMultiset` with the specified expected number of distinct
- elements.
-@param distinctElements the expected number of distinct elements
-@throws IllegalArgumentException if `distinctElements` is negative
+**Parameters:**
+- `distinctElements` (`int`): the expected number of distinct elements
 
-### `create(`java.lang.Iterable<? extends E>` elements)`
+### `create(java.lang.Iterable<? extends E> elements)`
 
 **Returns:** [`com.google.common.collect.LinkedHashMultiset<E>`](./LinkedHashMultiset.md)
 
-Creates a new `LinkedHashMultiset` containing the specified elements.
+This implementation is highly efficient when elements is itself a Multiset.
 
- <p>This implementation is highly efficient when `elements` is itself a `Multiset`.
-@param elements the elements that the multiset should contain
+**Parameters:**
+- `elements` (`java.lang.Iterable<? extends E>`): the elements that the multiset should contain
 
-### `writeObject(`java.io.ObjectOutputStream` stream)`
+### `writeObject(java.io.ObjectOutputStream stream)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectOutputStream`)
+
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
 
-@serialData the number of distinct elements, the first element, its count, the second element,
-     its count, and so on
-
-### `readObject(`java.io.ObjectInputStream` stream)`
-
-**Returns:** `void`
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

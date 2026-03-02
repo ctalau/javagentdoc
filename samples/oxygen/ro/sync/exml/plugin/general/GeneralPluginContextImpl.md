@@ -18,13 +18,20 @@
 
 ## Constructors
 
-### `<init>(`java.awt.Frame` arg0, [`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md) arg1)`
+### `<init>(java.awt.Frame arg0, ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg1)`
+
+**Parameters:**
+- `arg0` (`java.awt.Frame`)
+- `arg1` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md))
 
 ## Methods
 
-### `setFrame(`java.awt.Frame` arg0)`
+### `setFrame(java.awt.Frame arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.awt.Frame`)
 
 ### `getFrame()`
 

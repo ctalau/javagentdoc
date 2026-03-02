@@ -6,10 +6,6 @@
 
 ## Description
 
-The reason why a cached entry was removed.
-**Author:** Charles Fry
-**Since:** 10.0
-
 ## Constructors
 
 ### `<init>()`
@@ -20,14 +16,14 @@ The reason why a cached entry was removed.
 
 **Returns:** [`com.google.common.cache.RemovalCause[]`](./RemovalCause.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.common.cache.RemovalCause`](./RemovalCause.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `wasEvicted()`
 
 **Returns:** `boolean`
-
-Returns `true` if there was an automatic removal due to eviction (the cause is neither
- `EXPLICIT` nor `REPLACED`).
 

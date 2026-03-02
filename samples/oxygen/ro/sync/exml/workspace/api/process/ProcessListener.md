@@ -14,31 +14,54 @@ Listens on an executed process.
 
 ## Methods
 
-### `newOutputLine(`java.lang.String` line)`
+### `newOutputLine(java.lang.String line)`
 
 **Returns:** `void`
 
-### `newErrorLine(`java.lang.String` line)`
+**Parameters:**
+- `line` (`java.lang.String`): The output line.
+
+### `newErrorLine(java.lang.String line)`
 
 **Returns:** `void`
 
-### `processEnded(`int` exitCode)`
+**Parameters:**
+- `line` (`java.lang.String`): The error line.
+
+### `processEnded(int exitCode)`
 
 **Returns:** `void`
 
-### `processStarted(`java.lang.String` processName, `java.lang.String` fullCommand)`
+**Parameters:**
+- `exitCode` (`int`): The exit code of the process.
+
+### `processStarted(java.lang.String processName, java.lang.String fullCommand)`
 
 **Returns:** `void`
 
-### `processAboutToStart(`java.lang.String` processName, `java.lang.String` fullCommand)`
+**Parameters:**
+- `processName` (`java.lang.String`): The name of process.
+- `fullCommand` (`java.lang.String`): The full command line.
+
+### `processAboutToStart(java.lang.String processName, java.lang.String fullCommand)`
 
 **Returns:** `void`
 
-### `processStarted(`java.lang.Process` process)`
+**Parameters:**
+- `processName` (`java.lang.String`): The name of process.
+- `fullCommand` (`java.lang.String`): The full command line.
+
+### `processStarted(java.lang.Process process)`
 
 **Returns:** `void`
 
-### `processCouldNotStart(`java.lang.String` message)`
+**Parameters:**
+- `process` (`java.lang.Process`): The process which started
+
+### `processCouldNotStart(java.lang.String message)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `message` (`java.lang.String`): The error message.
 

@@ -14,7 +14,10 @@
 
 ## Methods
 
-### `setResolveKeyrefsToMetaContentAsConrefs(`boolean` resolveKeyrefsAsConrefs)`
+### `setResolveKeyrefsToMetaContentAsConrefs(boolean resolveKeyrefsAsConrefs)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `resolveKeyrefsAsConrefs` (`boolean`): If true, will resolve keyword keyrefs as conrefs.
 

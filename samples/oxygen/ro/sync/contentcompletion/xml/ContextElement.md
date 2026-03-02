@@ -38,41 +38,56 @@
 
 **Returns:** `ro.sync.outline.xml.Attribute[]`
 
-### `setAttributes(`ro.sync.outline.xml.Attribute[]` arg0)`
+### `setAttributes(ro.sync.outline.xml.Attribute[] arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`ro.sync.outline.xml.Attribute[]`)
 
 ### `getNamespace()`
 
 **Returns:** `java.lang.String`
 
-### `setNamespace(`java.lang.String` arg0)`
+### `setNamespace(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getPrefixNamespaceMapping()`
 
 **Returns:** `ro.sync.xml.ProxyNamespaceMapping`
 
-### `setPnm(`ro.sync.xml.ProxyNamespaceMapping` arg0)`
+### `setPnm(ro.sync.xml.ProxyNamespaceMapping arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`ro.sync.xml.ProxyNamespaceMapping`)
 
 ### `getQName()`
 
 **Returns:** `java.lang.String`
 
-### `setQName(`java.lang.String` arg0)`
+### `setQName(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getType()`
 
 **Returns:** `java.lang.String`
 
-### `setType(`java.lang.String` arg0)`
+### `setType(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `clear()`
 
@@ -86,7 +101,10 @@
 
 **Returns:** `java.lang.Object`
 
-### `equals(`java.lang.Object` arg0)`
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 

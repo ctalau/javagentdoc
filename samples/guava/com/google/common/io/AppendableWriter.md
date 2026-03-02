@@ -8,11 +8,8 @@
 
 ## Description
 
-Writer that places all output on an `Appendable` target. If the target is `Flushable`
- or `Closeable`, flush()es and close()s will also be delegated to the target.
-**Author:** Alan Green
-**Author:** Sebastian Kanthak
-**Since:** 1.0
+If the target is Flushable
+ or Closeable, flush()es and close()s will also be delegated to the target.
 
 ## Fields
 
@@ -26,28 +23,44 @@ Writer that places all output on an `Appendable` target. If the target is `Flush
 
 ## Constructors
 
-### `<init>(`java.lang.Appendable` target)`
+### `<init>(java.lang.Appendable target)`
 
-Creates a new writer that appends everything it writes to `target`.
-@param target target to which to append output
+**Parameters:**
+- `target` (`java.lang.Appendable`): target to which to append output
 
 ## Methods
 
-### `write(`char[]` cbuf, `int` off, `int` len)`
+### `write(char[] cbuf, int off, int len)`
 
 **Returns:** `void`
 
-### `write(`int` c)`
+**Parameters:**
+- `cbuf` (`char[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `write(int c)`
 
 **Returns:** `void`
 
-### `write(`java.lang.String` str)`
+**Parameters:**
+- `c` (`int`)
+
+### `write(java.lang.String str)`
 
 **Returns:** `void`
 
-### `write(`java.lang.String` str, `int` off, `int` len)`
+**Parameters:**
+- `str` (`java.lang.String`)
+
+### `write(java.lang.String str, int off, int len)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `str` (`java.lang.String`)
+- `off` (`int`)
+- `len` (`int`)
 
 ### `flush()`
 
@@ -57,17 +70,28 @@ Creates a new writer that appends everything it writes to `target`.
 
 **Returns:** `void`
 
-### `append(`char` c)`
+### `append(char c)`
 
 **Returns:** `java.io.Writer`
 
-### `append(`java.lang.CharSequence` charSeq)`
+**Parameters:**
+- `c` (`char`)
+
+### `append(java.lang.CharSequence charSeq)`
 
 **Returns:** `java.io.Writer`
 
-### `append(`java.lang.CharSequence` charSeq, `int` start, `int` end)`
+**Parameters:**
+- `charSeq` (`java.lang.CharSequence`)
+
+### `append(java.lang.CharSequence charSeq, int start, int end)`
 
 **Returns:** `java.io.Writer`
+
+**Parameters:**
+- `charSeq` (`java.lang.CharSequence`)
+- `start` (`int`)
+- `end` (`int`)
 
 ### `checkNotClosed()`
 

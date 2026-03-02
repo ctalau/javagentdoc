@@ -8,9 +8,8 @@
 
 ## Description
 
-Skeleton implementation of `HashFunction`, appropriate for non-streaming algorithms. All
- the hash computation done using #newHasher() are delegated to the int, int) method.
-**Author:** Dimitris Andreou
+All
+ the hash computation done using #newHasher() are delegated to the #hashBytes(byte[], int, int) method.
 
 ## Constructors
 
@@ -22,31 +21,55 @@ Skeleton implementation of `HashFunction`, appropriate for non-streaming algorit
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `newHasher(`int` expectedInputSize)`
+### `newHasher(int expectedInputSize)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `hashInt(`int` input)`
+**Parameters:**
+- `expectedInputSize` (`int`)
+
+### `hashInt(int input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashLong(`long` input)`
+**Parameters:**
+- `input` (`int`)
+
+### `hashLong(long input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashUnencodedChars(`java.lang.CharSequence` input)`
+**Parameters:**
+- `input` (`long`)
+
+### `hashUnencodedChars(java.lang.CharSequence input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashString(`java.lang.CharSequence` input, `java.nio.charset.Charset` charset)`
+**Parameters:**
+- `input` (`java.lang.CharSequence`)
+
+### `hashString(java.lang.CharSequence input, java.nio.charset.Charset charset)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashBytes(`byte[]` input, `int` off, `int` len)`
+**Parameters:**
+- `input` (`java.lang.CharSequence`)
+- `charset` (`java.nio.charset.Charset`)
+
+### `hashBytes(byte[] input, int off, int len)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashBytes(`java.nio.ByteBuffer` input)`
+**Parameters:**
+- `input` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `hashBytes(java.nio.ByteBuffer input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+**Parameters:**
+- `input` (`java.nio.ByteBuffer`)
 

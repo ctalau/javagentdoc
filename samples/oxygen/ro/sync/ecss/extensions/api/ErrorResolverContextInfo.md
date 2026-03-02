@@ -18,9 +18,16 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) contextNode)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The AuthorAccess.
+
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The AuthorAccess.
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The error context node.
 
 ## Methods
 
@@ -28,15 +35,21 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)
 
-### `setAuthorAccess([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `setAuthorAccess(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The new author access.
 
 ### `getContextNode()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
-### `setContextNode([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) contextNode)`
+### `setContextNode(ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The error context node.
 

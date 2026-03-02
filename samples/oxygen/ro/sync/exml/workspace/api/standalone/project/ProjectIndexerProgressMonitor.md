@@ -20,15 +20,21 @@
 
 **Returns:** `void`
 
-### `updateDetailsMessage(`java.lang.String` detailsMessage)`
+### `updateDetailsMessage(java.lang.String detailsMessage)`
 
 **Returns:** `void`
 
-### `updateIndexedResourcesCount(`int` count)`
+**Parameters:**
+- `detailsMessage` (`java.lang.String`): The message that show the state of the indexer.
+
+### `updateIndexedResourcesCount(int count)`
 
 **Returns:** `void`
 
 Emmited between a #startIndexing() and a #endIndexing().
+
+**Parameters:**
+- `count` (`int`): The new count.
 
 ### `isCanceled()`
 

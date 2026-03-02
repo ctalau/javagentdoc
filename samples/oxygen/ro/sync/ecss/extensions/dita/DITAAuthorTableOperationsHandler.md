@@ -56,51 +56,98 @@
 
 ## Methods
 
-### `handleInsertColumn([`ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments`](../api/table/operations/AuthorTableInsertColumnArguments.md) tablePasteColumnArgs)`
+### `handleInsertColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments tablePasteColumnArgs)`
 
 **Returns:** `boolean`
 
-### `handleDeleteColumn([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments`](../api/table/operations/AuthorTableDeleteColumnArguments.md) arguments)`
+**Parameters:**
+- `tablePasteColumnArgs` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments`](../api/table/operations/AuthorTableInsertColumnArguments.md))
+
+### `handleDeleteColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments arguments)`
 
 **Returns:** `boolean`
 
-### `isSimpleTable([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `int` tableOffset)`
+**Parameters:**
+- `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments`](../api/table/operations/AuthorTableDeleteColumnArguments.md))
+
+### `isSimpleTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int tableOffset)`
 
 **Returns:** `boolean`
 
-### `handleDeleteRow([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments`](../api/table/operations/AuthorTableDeleteRowArguments.md) arguments)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
+- `tableOffset` (`int`): The table offset.
+
+### `handleDeleteRow(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments arguments)`
 
 **Returns:** `boolean`
 
-### `handleDeleteRows([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments`](../api/table/operations/AuthorTableDeleteRowsArguments.md) arguments)`
+**Parameters:**
+- `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments`](../api/table/operations/AuthorTableDeleteRowArguments.md))
+
+### `handleDeleteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments arguments)`
 
 **Returns:** `boolean`
 
-### `handleDeleteRows([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.util.List<ro.sync.ecss.extensions.api.ContentInterval>` contentIntervals)`
+**Parameters:**
+- `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments`](../api/table/operations/AuthorTableDeleteRowsArguments.md))
+
+### `handleDeleteRows(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> contentIntervals)`
 
 **Returns:** `boolean`
 
-### `getTableElementContainingOffset([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) access, `int` offset)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The Author access.
+- `contentIntervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): The content intervals determining the rows to be deleted (all the 
+ rows intersecting the content intervals are deleted)
+
+### `getTableElementContainingOffset(ro.sync.ecss.extensions.api.AuthorAccess access, int offset)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)
 
-### `getColumnSpecification([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) tableElement, `int` columnIndex)`
+**Parameters:**
+- `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `offset` (`int`)
+
+### `getColumnSpecification(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation`](../api/table/operations/TableColumnSpecificationInformation.md)
 
-### `handleRemoveInvalidColNamesFromTableCells([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) tableElement, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>` cells)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
+- `columnIndex` (`int`)
+
+### `handleRemoveInvalidColNamesFromTableCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
 
 **Returns:** `void`
 
-### `handleAttributeChange([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) currentElement, `java.lang.String` attributeName, [`ro.sync.ecss.extensions.api.node.AttrValue`](../api/node/AttrValue.md) newValue)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
+- `cells` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
+
+### `handleAttributeChange(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue newValue)`
 
 **Returns:** `boolean`
 
-### `handlePasteRows([`ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertRowArguments`](../api/table/operations/AuthorTableInsertRowArguments.md) arguments)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
+- `attributeName` (`java.lang.String`)
+- `newValue` ([`ro.sync.ecss.extensions.api.node.AttrValue`](../api/node/AttrValue.md))
+
+### `handlePasteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertRowArguments arguments)`
 
 **Returns:** `boolean`
 
-### `handleCreateTable([`ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments`](../api/table/operations/AuthorTableArguments.md) arguments)`
+**Parameters:**
+- `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertRowArguments`](../api/table/operations/AuthorTableInsertRowArguments.md))
+
+### `handleCreateTable(ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments arguments)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments`](../api/table/operations/AuthorTableArguments.md))
 

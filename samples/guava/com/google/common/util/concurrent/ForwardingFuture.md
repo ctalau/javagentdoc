@@ -14,18 +14,15 @@
 
 ## Description
 
-A `Future` which forwards all its method calls to another future. Subclasses should
- override one or more methods to modify the behavior of the backing future as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should
+ override one or more methods to modify the behavior of the backing future as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p>Most subclasses can just use `SimpleForwardingFuture`.
-**Author:** Sven Mawson
-**Since:** 1.0
+ 
+Most subclasses can just use SimpleForwardingFuture.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -33,9 +30,12 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.concurrent.Future<? extends V>`
 
-### `cancel(`boolean` mayInterruptIfRunning)`
+### `cancel(boolean mayInterruptIfRunning)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `mayInterruptIfRunning` (`boolean`)
 
 ### `isCancelled()`
 
@@ -49,7 +49,11 @@ Constructor for use by subclasses.
 
 **Returns:** `V`
 
-### `get(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `get(long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 

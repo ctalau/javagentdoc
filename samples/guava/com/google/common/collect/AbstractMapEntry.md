@@ -13,9 +13,6 @@
 
 ## Description
 
-Implementation of the `equals`, `hashCode`, and `toString` methods of `Entry`.
-**Author:** Jared Levy
-
 ## Constructors
 
 ### `<init>()`
@@ -30,13 +27,19 @@ Implementation of the `equals`, `hashCode`, and `toString` methods of `Entry`.
 
 **Returns:** `V`
 
-### `setValue(`V` value)`
+### `setValue(V value)`
 
 **Returns:** `V`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `value` (`V`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -45,6 +48,4 @@ Implementation of the `equals`, `hashCode`, and `toString` methods of `Entry`.
 ### `toString()`
 
 **Returns:** `java.lang.String`
-
-Returns a string representation of the form `{key`={value}}.
 

@@ -6,10 +6,6 @@
 
 ## Description
 
-Represents a standard system property.
-**Author:** Kurt Alfred Kluever
-**Since:** 15.0
-
 ## Fields
 
 ### `key`
@@ -18,7 +14,10 @@ Represents a standard system property.
 
 ## Constructors
 
-### `<init>(`java.lang.String` key)`
+### `<init>(java.lang.String key)`
+
+**Parameters:**
+- `key` (`java.lang.String`)
 
 ## Methods
 
@@ -26,44 +25,44 @@ Represents a standard system property.
 
 **Returns:** [`com.google.common.base.StandardSystemProperty[]`](./StandardSystemProperty.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.common.base.StandardSystemProperty`](./StandardSystemProperty.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `key()`
 
 **Returns:** `java.lang.String`
 
-Returns the key used to look up this system property.
-
 ### `value()`
 
 **Returns:** `java.lang.String`
 
-Returns the current value for this system property by delegating to `System.getProperty(String)`.
+The value returned by this method is non-null except in rare circumstances:
 
- <p>The value returned by this method is non-null except in rare circumstances:
+ 
 
- <ul>
-   <li>`JAVA_EXT_DIRS` was deprecated in Java 8 and removed in Java 9. We have not
+   - #JAVA_EXT_DIRS was deprecated in Java 8 and removed in Java 9. We have not
        confirmed whether it is available under older versions.
-   <li>`JAVA_COMPILER`, while still listed as required as of Java 15, is typically not
+   - #JAVA_COMPILER, while still listed as required as of Java 15, is typically not
        available even under older version.
-   <li>Any property may be cleared through APIs like `System.clearProperty`.
-   <li>Unusual environments like GWT may have their own special handling of system properties.
- </ul>
+   - Any property may be cleared through APIs like System#clearProperty.
+   - Unusual environments like GWT may have their own special handling of system properties.
+ 
 
- <p>Note that `StandardSystemProperty` does not provide constants for more recently added
+
+ 
+Note that StandardSystemProperty does not provide constants for more recently added
  properties, including:
 
- <ul>
-   <li>`java.vendor.version` (added in Java 11, listed as optional as of Java 13)
-   <li>`jdk.module.*` (added in Java 9, optional)
- </ul>
+ 
+
+   - java.vendor.version (added in Java 11, listed as optional as of Java 13)
+   - jdk.module.* (added in Java 9, optional)
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
-
-Returns a string representation of this system property.
 

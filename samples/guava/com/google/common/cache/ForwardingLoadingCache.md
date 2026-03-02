@@ -15,19 +15,16 @@
 
 ## Description
 
-A cache which forwards all its method calls to another cache. Subclasses should override one or
- more methods to modify the behavior of the backing cache as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should override one or
+ more methods to modify the behavior of the backing cache as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p>Note that `get`, `getUnchecked`, and `apply` all expose the same
+ 
+Note that #get, #getUnchecked, and #apply all expose the same
  underlying functionality, so should probably be overridden as a group.
-**Author:** Charles Fry
-**Since:** 11.0
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -35,23 +32,38 @@ Constructor for use by subclasses.
 
 **Returns:** [`com.google.common.cache.LoadingCache<K,V>`](./LoadingCache.md)
 
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `V`
 
-### `getUnchecked(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `getUnchecked(K key)`
 
 **Returns:** `V`
 
-### `getAll(`java.lang.Iterable<? extends K>` keys)`
+**Parameters:**
+- `key` (`K`)
+
+### `getAll(java.lang.Iterable<? extends K> keys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-### `apply(`K` key)`
+**Parameters:**
+- `keys` (`java.lang.Iterable<? extends K>`)
+
+### `apply(K key)`
 
 **Returns:** `V`
 
-### `refresh(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `refresh(K key)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `key` (`K`)
 

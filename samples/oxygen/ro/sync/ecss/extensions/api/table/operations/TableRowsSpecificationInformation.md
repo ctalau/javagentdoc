@@ -32,13 +32,19 @@ It can be extended to provide specific table rows properties for different
 
 ## Constructors
 
-### `<init>(`int` sourceTableColumnsCount)`
+### `<init>(int sourceTableColumnsCount)`
+
+**Parameters:**
+- `sourceTableColumnsCount` (`int`): The number of columns from source table.
 
 ## Methods
 
-### `addSpanningCellIndexes(`java.util.List<java.lang.Integer>` indexes)`
+### `addSpanningCellIndexes(java.util.List<java.lang.Integer> indexes)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `indexes` (`java.util.List<java.lang.Integer>`): Spanning cell indexes (starts with 0)
 
 ### `getSpanningCellIndexes()`
 

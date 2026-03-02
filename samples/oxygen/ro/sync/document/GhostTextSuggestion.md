@@ -18,7 +18,11 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` text, `int` caretPosition)`
+### `<init>(java.lang.String text, int caretPosition)`
+
+**Parameters:**
+- `text` (`java.lang.String`): The text to display as ghost text
+- `caretPosition` (`int`): The position in the document where the ghost text should be displayed
 
 ## Methods
 

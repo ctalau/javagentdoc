@@ -28,7 +28,30 @@
 
 ## Constructors
 
-### `<init>(`ro.sync.ecss.g.j` arg0, `ro.sync.exml.editor.xmleditor.db` arg1, `ro.sync.exml.editor.k.d` arg2, [`ro.sync.ecss.extensions.api.webapp.cc.ContentCompletionManager`](../../extensions/api/webapp/cc/ContentCompletionManager.md) arg3, [`ro.sync.ecss.extensions.api.webapp.review.ReviewController`](../../extensions/api/webapp/review/ReviewController.md) arg4, `ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>` arg5, `ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.node.AuthorNode>` arg6, [`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../extensions/api/AuthorSelectionAndCaretModel.md) arg7, `ro.sync.ecss.webapp.formcontrols.n` arg8, [`ro.sync.ecss.extensions.api.webapp.WebappActionsManager`](../../extensions/api/webapp/WebappActionsManager.md) arg9, `ro.sync.ecss.webapp.t` arg10, `ro.sync.ecss.component.b.c` arg11, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../extensions/api/AuthorAccess.md) arg12, `ro.sync.ecss.webapp.cb` arg13, `ro.sync.ecss.webapp.d.k` arg14, `ro.sync.ecss.webapp.c.b` arg15, `java.lang.String` arg16, `ro.sync.ecss.webapp.i.j` arg17, `ro.sync.ecss.webapp.v` arg18, `java.lang.String` arg19, [`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](../../extensions/api/AuthorExtensionStateListener.md) arg20)`
+### `<init>(ro.sync.ecss.g.j arg0, ro.sync.exml.editor.xmleditor.db arg1, ro.sync.exml.editor.k.d arg2, ro.sync.ecss.extensions.api.webapp.cc.ContentCompletionManager arg3, ro.sync.ecss.extensions.api.webapp.review.ReviewController arg4, ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg5, ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.node.AuthorNode> arg6, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel arg7, ro.sync.ecss.webapp.formcontrols.n arg8, ro.sync.ecss.extensions.api.webapp.WebappActionsManager arg9, ro.sync.ecss.webapp.t arg10, ro.sync.ecss.component.b.c arg11, ro.sync.ecss.extensions.api.AuthorAccess arg12, ro.sync.ecss.webapp.cb arg13, ro.sync.ecss.webapp.d.k arg14, ro.sync.ecss.webapp.c.b arg15, java.lang.String arg16, ro.sync.ecss.webapp.i.j arg17, ro.sync.ecss.webapp.v arg18, java.lang.String arg19, ro.sync.ecss.extensions.api.AuthorExtensionStateListener arg20)`
+
+**Parameters:**
+- `arg0` (`ro.sync.ecss.g.j`)
+- `arg1` (`ro.sync.exml.editor.xmleditor.db`)
+- `arg2` (`ro.sync.exml.editor.k.d`)
+- `arg3` ([`ro.sync.ecss.extensions.api.webapp.cc.ContentCompletionManager`](../../extensions/api/webapp/cc/ContentCompletionManager.md))
+- `arg4` ([`ro.sync.ecss.extensions.api.webapp.review.ReviewController`](../../extensions/api/webapp/review/ReviewController.md))
+- `arg5` (`ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`)
+- `arg6` (`ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.node.AuthorNode>`)
+- `arg7` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../extensions/api/AuthorSelectionAndCaretModel.md))
+- `arg8` (`ro.sync.ecss.webapp.formcontrols.n`)
+- `arg9` ([`ro.sync.ecss.extensions.api.webapp.WebappActionsManager`](../../extensions/api/webapp/WebappActionsManager.md))
+- `arg10` (`ro.sync.ecss.webapp.t`)
+- `arg11` (`ro.sync.ecss.component.b.c`)
+- `arg12` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../extensions/api/AuthorAccess.md))
+- `arg13` (`ro.sync.ecss.webapp.cb`)
+- `arg14` (`ro.sync.ecss.webapp.d.k`)
+- `arg15` (`ro.sync.ecss.webapp.c.b`)
+- `arg16` (`java.lang.String`)
+- `arg17` (`ro.sync.ecss.webapp.i.j`)
+- `arg18` (`ro.sync.ecss.webapp.v`)
+- `arg19` (`java.lang.String`)
+- `arg20` ([`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](../../extensions/api/AuthorExtensionStateListener.md))
 
 ## Methods
 
@@ -36,53 +59,80 @@
 
 **Returns:** `void`
 
-### `fragmentContainsKeyRelatedAttributes([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../extensions/api/node/AuthorDocumentFragment.md) arg0)`
+### `fragmentContainsKeyRelatedAttributes(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment arg0)`
 
 **Returns:** `boolean`
 
-### `containsKeyAttrs([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../extensions/api/node/AuthorDocumentFragment.md))
+
+### `containsKeyAttrs(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
 
 **Returns:** `boolean`
 
-### `nodeContainsKeyRelatedAttributes([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
+
+### `nodeContainsKeyRelatedAttributes(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
 ### `recomputeKeysContext()`
 
 **Returns:** `void`
 
-### `createJSONRenderer(`java.io.Writer` arg0)`
+### `createJSONRenderer(java.io.Writer arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
+
+**Parameters:**
+- `arg0` (`java.io.Writer`)
 
 ### `createDocumentBuilder()`
 
 **Returns:** `ro.sync.ecss.webapp.c`
 
-### `createJSONRendererInternal(`java.io.Writer` arg0)`
+### `createJSONRendererInternal(java.io.Writer arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
+
+**Parameters:**
+- `arg0` (`java.io.Writer`)
 
 ### `forceFullRendering()`
 
 **Returns:** `void`
 
-### `createRenderer(`java.io.Writer` arg0)`
+### `createRenderer(java.io.Writer arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
 
-### `createRenderer(`java.io.Writer` arg0, [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../extensions/api/highlights/AuthorHighlighter.md) arg1)`
+**Parameters:**
+- `arg0` (`java.io.Writer`)
+
+### `createRenderer(java.io.Writer arg0, ro.sync.ecss.extensions.api.highlights.AuthorHighlighter arg1)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
+
+**Parameters:**
+- `arg0` (`java.io.Writer`)
+- `arg1` ([`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../extensions/api/highlights/AuthorHighlighter.md))
 
 ### `getTopicrefRenderer()`
 
 **Returns:** `ro.sync.ecss.webapp.dita.d`
 
-### `getDitamapEntryTitle([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md) arg0, `boolean` arg1, `boolean` arg2)`
+### `getDitamapEntryTitle(ro.sync.ecss.extensions.api.node.AuthorElement arg0, boolean arg1, boolean arg2)`
 
 **Returns:** `ro.sync.ecss.webapp.dita.DITAMapEntryTitleInfo`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md))
+- `arg1` (`boolean`)
+- `arg2` (`boolean`)
 
 ### `getContextKeyManager()`
 
@@ -96,11 +146,17 @@
 
 **Returns:** `ro.sync.ecss.webapp.dita.d`
 
-### `createContextKeyManager(`ro.sync.ecss.webapp.access.e` arg0)`
+### `createContextKeyManager(ro.sync.ecss.webapp.access.e arg0)`
 
 **Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](../../dita/ContextKeyManager.md)
 
-### `invalidateTitle([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md) arg0)`
+**Parameters:**
+- `arg0` (`ro.sync.ecss.webapp.access.e`)
+
+### `invalidateTitle(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md))
 

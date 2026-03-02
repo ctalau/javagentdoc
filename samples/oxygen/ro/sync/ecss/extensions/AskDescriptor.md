@@ -30,7 +30,14 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` type, `java.lang.String` message, `java.util.List<java.lang.String>` values, `java.util.List<java.lang.String>` renderings, `java.lang.String` defaultValue)`
+### `<init>(java.lang.String type, java.lang.String message, java.util.List<java.lang.String> values, java.util.List<java.lang.String> renderings, java.lang.String defaultValue)`
+
+**Parameters:**
+- `type` (`java.lang.String`): The ask type.
+- `message` (`java.lang.String`): The message to display.
+- `values` (`java.util.List<java.lang.String>`): The possible values of the variable.
+- `renderings` (`java.util.List<java.lang.String>`): The renderings list for the values.
+- `defaultValue` (`java.lang.String`): The default value.
 
 ## Methods
 

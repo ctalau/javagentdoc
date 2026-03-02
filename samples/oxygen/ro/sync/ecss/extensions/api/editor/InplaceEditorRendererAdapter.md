@@ -21,29 +21,48 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `java.lang.String`
 
-### `getRendererComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+### `getRendererComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** `java.lang.Object`
 
-### `getRenderingInfo([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+
+### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
 
-### `getTooltipText([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `int` x, `int` y)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+
+### `getTooltipText(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
 
 **Returns:** `java.lang.String`
 
-### `getEditorComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `ro.sync.exml.view.graphics.Rectangle` allocation, `ro.sync.exml.view.graphics.Point` mouseLocation)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+- `x` (`int`)
+- `y` (`int`)
+
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseLocation)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+- `allocation` (`ro.sync.exml.view.graphics.Rectangle`)
+- `mouseLocation` (`ro.sync.exml.view.graphics.Point`)
 
 ### `getScrollRectangle()`
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
 ### `requestFocus()`
 
@@ -61,17 +80,29 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `void`
 
-### `removeEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
 
-### `getCursorType([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `int` x, `int` y)`
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
+
+### `getCursorType(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](../CursorType.md)
 
-### `getCursorType(`int` x, `int` y)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+- `x` (`int`)
+- `y` (`int`)
+
+### `getCursorType(int x, int y)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](../CursorType.md)
+
+**Parameters:**
+- `x` (`int`)
+- `y` (`int`)
 
 ### `commitValue()`
 

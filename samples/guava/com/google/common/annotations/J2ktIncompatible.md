@@ -8,7 +8,3 @@
 
 ## Description
 
-The presence of this annotation on an API indicates that the method may <em>not</em> be used with
- J2kt.
-**Since:** 32.0.0
-

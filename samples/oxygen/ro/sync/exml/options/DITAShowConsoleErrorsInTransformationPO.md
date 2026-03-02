@@ -62,55 +62,76 @@
 
 **Returns:** `boolean`
 
-### `setShowDITAOTErrors(`boolean` arg0)`
+### `setShowDITAOTErrors(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isShowDITAOTWarnings()`
 
 **Returns:** `boolean`
 
-### `setShowDITAOTWarnings(`boolean` arg0)`
+### `setShowDITAOTWarnings(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isShowDITAOTInfos()`
 
 **Returns:** `boolean`
 
-### `setShowDITAOTInfos(`boolean` arg0)`
+### `setShowDITAOTInfos(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isShowFopErrors()`
 
 **Returns:** `boolean`
 
-### `setShowFopErrors(`boolean` arg0)`
+### `setShowFopErrors(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isShowFopWarnings()`
 
 **Returns:** `boolean`
 
-### `setShowFopWarnings(`boolean` arg0)`
+### `setShowFopWarnings(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isShowFopInfos()`
 
 **Returns:** `boolean`
 
-### `setShowFopInfos(`boolean` arg0)`
+### `setShowFopInfos(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isShowXsltProblems()`
 
 **Returns:** `boolean`
 
-### `setShowXsltProblems(`boolean` arg0)`
+### `setShowXsltProblems(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 

@@ -12,12 +12,8 @@
 
 ## Description
 
-This class provides a skeletal implementation of `BaseGraph`.
-
- <p>The methods implemented in this class should not be overridden unless the subclass admits a
+The methods implemented in this class should not be overridden unless the subclass admits a
  more efficient implementation.
-**Author:** James Sexton
-@param <N> Node parameter type
 
 ## Constructors
 
@@ -29,56 +25,71 @@ This class provides a skeletal implementation of `BaseGraph`.
 
 **Returns:** `long`
 
-Returns the number of edges in this graph; used to calculate the size of `Graph.edges()`.
- This implementation requires O(|N|) time. Classes extending this one may manually keep track of
+This implementation requires O(|N|) time. Classes extending this one may manually keep track of
  the number of edges as the graph is updated, and override this method for better performance.
 
 ### `edges()`
 
 **Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-An implementation of `BaseGraph.edges()` defined in terms of `Graph.nodes()` and
- `successors(Object)`.
-
 ### `incidentEdgeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `incidentEdges(`N` node)`
+### `incidentEdges(N node)`
 
 **Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-### `degree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `degree(N node)`
 
 **Returns:** `int`
 
-### `inDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `inDegree(N node)`
 
 **Returns:** `int`
 
-### `outDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `outDegree(N node)`
 
 **Returns:** `int`
 
-### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `node` (`N`)
+
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `hasEdgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
 
-### `validateEndpoints([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `validateEndpoints(com.google.common.graph.EndpointPair<?> endpoints)`
 
 **Returns:** `void`
 
-Throws `IllegalArgumentException` if the ordering of `endpoints` is not compatible
- with the directionality of this graph.
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
 
-### `isOrderingCompatible([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md) endpoints)`
+### `isOrderingCompatible(com.google.common.graph.EndpointPair<?> endpoints)`
 
 **Returns:** `boolean`
 
-Returns `true` iff `endpoints`' ordering is compatible with the directionality of
- this graph.
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
 

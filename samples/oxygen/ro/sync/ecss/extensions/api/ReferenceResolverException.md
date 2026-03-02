@@ -31,9 +31,21 @@ Sometimes the message which will be presented first
 
 ## Constructors
 
-### `<init>(`java.lang.String` errorMessage, `boolean` showInResultsPanel, `boolean` reportAsError)`
+### `<init>(java.lang.String errorMessage, boolean showInResultsPanel, boolean reportAsError)`
 
-### `<init>(`java.lang.String` shortErrorMessage, `java.lang.String` originalErrorMessage, `boolean` showInResultsPanel, `boolean` reportAsError)`
+**Parameters:**
+- `errorMessage` (`java.lang.String`): The error message.
+- `showInResultsPanel` (`boolean`): `true` to also show the message in a results panel.
+- `reportAsError` (`boolean`): `true` to report as error, `false` to report as warning.
+
+### `<init>(java.lang.String shortErrorMessage, java.lang.String originalErrorMessage, boolean showInResultsPanel, boolean reportAsError)`
+
+**Parameters:**
+- `shortErrorMessage` (`java.lang.String`): The short error message. Sometimes the message which 
+                     will be presented first time to the user is shorter than the original message.
+- `originalErrorMessage` (`java.lang.String`): The exception original message.
+- `showInResultsPanel` (`boolean`): `true` to also show the message in a results panel.
+- `reportAsError` (`boolean`): `true` to report as error, `false` to report as warning.
 
 ## Methods
 
@@ -45,9 +57,12 @@ Sometimes the message which will be presented first
 
 **Returns:** `boolean`
 
-### `setErrorResolver([`ro.sync.ecss.extensions.api.ReferenceErrorResolver`](./ReferenceErrorResolver.md) errorResolver)`
+### `setErrorResolver(ro.sync.ecss.extensions.api.ReferenceErrorResolver errorResolver)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `errorResolver` ([`ro.sync.ecss.extensions.api.ReferenceErrorResolver`](./ReferenceErrorResolver.md)): The errorResolver to set.
 
 ### `getErrorResolver()`
 

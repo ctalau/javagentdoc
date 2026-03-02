@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `refreshNodes([`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../node/AuthorNode.md) nodes)`
+### `refreshNodes(ro.sync.ecss.extensions.api.node.AuthorNode[] nodes)`
 
 **Returns:** `void`
 
@@ -21,4 +21,7 @@ If the developer sets an AuthorOutlineCustomizer or an AuthorBreadCrumbCustomize
  Example:
  If the developer renders for a <chapter> the gathered text from the <title> child nodes then he will have to add
  a document listener and when a <title> node's text changes update the parent <chapter>.
+
+**Parameters:**
+- `nodes` ([`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../node/AuthorNode.md)): The nodes to Refresh in the outline/bread crumb
 

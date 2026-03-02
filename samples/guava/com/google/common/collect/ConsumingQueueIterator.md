@@ -12,8 +12,7 @@
 
 ## Description
 
-An Iterator implementation which draws elements from a queue, removing them from the queue as it
- iterates. This class is not thread safe.
+This class is not thread safe.
 
 ## Fields
 
@@ -23,7 +22,10 @@ An Iterator implementation which draws elements from a queue, removing them from
 
 ## Constructors
 
-### `<init>(`java.util.Queue<T>` queue)`
+### `<init>(java.util.Queue<T> queue)`
+
+**Parameters:**
+- `queue` (`java.util.Queue<T>`)
 
 ## Methods
 

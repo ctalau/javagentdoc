@@ -14,54 +14,77 @@
 
 ## Description
 
-An implementation of `ImmutableTable` holding an arbitrary number of cells.
-**Author:** Gregory Kick
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `getCell(`int` iterationIndex)`
+### `getCell(int iterationIndex)`
 
-**Returns:** [`com.google.common.collect.Table.Cell<R,C,V>`](Table/Cell.md)
+**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
+
+**Parameters:**
+- `iterationIndex` (`int`)
 
 ### `createCellSet()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableSet>.md)
+**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableSet.md)
 
-### `getValue(`int` iterationIndex)`
+### `getValue(int iterationIndex)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `iterationIndex` (`int`)
 
 ### `createValues()`
 
 **Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
-### `forCells(`java.util.List<com.google.common.collect.Table.Cell<R,C,V>>` cells, `java.util.Comparator<? super R>` rowComparator, `java.util.Comparator<? super C>` columnComparator)`
+### `forCells(java.util.List<com.google.common.collect.Table.Cell<R,C,V>> cells, java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
-### `forCells(`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>` cells)`
+**Parameters:**
+- `cells` (`java.util.List<com.google.common.collect.Table.Cell<R,C,V>>`)
+- `rowComparator` (`java.util.Comparator<? super R>`)
+- `columnComparator` (`java.util.Comparator<? super C>`)
+
+### `forCells(java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>> cells)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
-### `forCellsInternal(`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>` cells, `java.util.Comparator<? super R>` rowComparator, `java.util.Comparator<? super C>` columnComparator)`
+**Parameters:**
+- `cells` (`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>`)
+
+### `forCellsInternal(java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>> cells, java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
-### `forOrderedComponents([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList>.md) cellList, [`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md) rowSpace, [`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md) columnSpace)`
+**Parameters:**
+- `cells` (`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>`)
+- `rowComparator` (`java.util.Comparator<? super R>`)
+- `columnComparator` (`java.util.Comparator<? super C>`)
+
+### `forOrderedComponents(com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>> cellList, com.google.common.collect.ImmutableSet<R> rowSpace, com.google.common.collect.ImmutableSet<C> columnSpace)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
-A factory that chooses the most space-efficient representation of the table.
+**Parameters:**
+- `cellList` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList.md))
+- `rowSpace` ([`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md))
+- `columnSpace` ([`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md))
 
-### `checkNoDuplicate(`R` rowKey, `C` columnKey, `V` existingValue, `V` newValue)`
+### `checkNoDuplicate(R rowKey, C columnKey, V existingValue, V newValue)`
 
 **Returns:** `void`
 
-@throws IllegalArgumentException if `existingValue` is not null.
+**Parameters:**
+- `rowKey` (`R`)
+- `columnKey` (`C`)
+- `existingValue` (`V`)
+- `newValue` (`V`)
 
 ### `writeReplace()`
 

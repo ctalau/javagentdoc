@@ -8,19 +8,28 @@
 
 ## Methods
 
-### `mouseClicked([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md) e)`
+### `mouseClicked(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
 
 **Returns:** `void`
 
-### `mousePressed([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md) e)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
+
+### `mousePressed(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
 
 **Returns:** `void`
 
-### `mouseReleased([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md) e)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
+
+### `mouseReleased(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
 
 **Returns:** `void`
 
-### `mouseDragged([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md) e)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
+
+### `mouseDragged(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
 
 **Returns:** `void`
 
@@ -29,7 +38,13 @@
  mouse button is released (regardless of whether the mouse position 
  is within the bounds of the author page).
 
-### `mouseMoved([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md) e)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
+
+### `mouseMoved(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
 

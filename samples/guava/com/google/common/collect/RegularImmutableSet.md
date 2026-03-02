@@ -4,16 +4,13 @@
 
 **Fully Qualified Name:** `com.google.common.collect.RegularImmutableSet`
 
-**Extends:** [`com.google.common.collect.ImmutableSet.CachingAsList<E>`](ImmutableSet/CachingAsList.md)
+**Extends:** `com.google.common.collect.ImmutableSet.CachingAsList<E>`
 
 ## Type Parameters
 
 - `E` extends `java.lang.Object`
 
 ## Description
-
-Implementation of `ImmutableSet` with two or more elements.
-**Author:** Kevin Bourrillion
 
 ## Fields
 
@@ -43,13 +40,22 @@ Implementation of `ImmutableSet` with two or more elements.
 
 ## Constructors
 
-### `<init>(`java.lang.Object[]` elements, `int` hashCode, `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` table, `int` mask)`
+### `<init>(java.lang.Object[] elements, int hashCode, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] table, int mask)`
+
+**Parameters:**
+- `elements` (`java.lang.Object[]`)
+- `hashCode` (`int`)
+- `table` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `mask` (`int`)
 
 ## Methods
 
-### `contains(`java.lang.Object` target)`
+### `contains(java.lang.Object target)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 ### `size()`
 
@@ -75,9 +81,13 @@ Implementation of `ImmutableSet` with two or more elements.
 
 **Returns:** `int`
 
-### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
+### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `offset` (`int`)
 
 ### `createAsList()`
 

@@ -22,17 +22,28 @@
 
 ## Constructors
 
-### `<init>(`java.util.List<java.net.URL>` arg0)`
+### `<init>(java.util.List<java.net.URL> arg0)`
+
+**Parameters:**
+- `arg0` (`java.util.List<java.net.URL>`)
 
 ## Methods
 
-### `applicationStarted([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md) arg0)`
+### `applicationStarted(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg0)`
 
 **Returns:** `void`
 
-### `callFunction([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md) arg0, `java.lang.String` arg1, `boolean` arg2)`
+**Parameters:**
+- `arg0` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md))
+
+### `callFunction(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg0, java.lang.String arg1, boolean arg2)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `arg0` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md))
+- `arg1` (`java.lang.String`)
+- `arg2` (`boolean`)
 
 ### `applicationClosing()`
 

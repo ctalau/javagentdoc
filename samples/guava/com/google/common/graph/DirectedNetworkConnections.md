@@ -13,14 +13,14 @@
 
 ## Description
 
-An implementation of `NetworkConnections` for directed networks.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <E> Edge parameter type
-
 ## Constructors
 
-### `<init>(`java.util.Map<E,N>` inEdgeMap, `java.util.Map<E,N>` outEdgeMap, `int` selfLoopCount)`
+### `<init>(java.util.Map<E,N> inEdgeMap, java.util.Map<E,N> outEdgeMap, int selfLoopCount)`
+
+**Parameters:**
+- `inEdgeMap` (`java.util.Map<E,N>`)
+- `outEdgeMap` (`java.util.Map<E,N>`)
+- `selfLoopCount` (`int`)
 
 ## Methods
 
@@ -28,9 +28,14 @@ An implementation of `NetworkConnections` for directed networks.
 
 **Returns:** [`com.google.common.graph.DirectedNetworkConnections<N,E>`](./DirectedNetworkConnections.md)
 
-### `ofImmutable(`java.util.Map<E,N>` inEdges, `java.util.Map<E,N>` outEdges, `int` selfLoopCount)`
+### `ofImmutable(java.util.Map<E,N> inEdges, java.util.Map<E,N> outEdges, int selfLoopCount)`
 
 **Returns:** [`com.google.common.graph.DirectedNetworkConnections<N,E>`](./DirectedNetworkConnections.md)
+
+**Parameters:**
+- `inEdges` (`java.util.Map<E,N>`)
+- `outEdges` (`java.util.Map<E,N>`)
+- `selfLoopCount` (`int`)
 
 ### `predecessors()`
 
@@ -40,7 +45,10 @@ An implementation of `NetworkConnections` for directed networks.
 
 **Returns:** `java.util.Set<N>`
 
-### `edgesConnecting(`N` node)`
+### `edgesConnecting(N node)`
 
 **Returns:** `java.util.Set<E>`
+
+**Parameters:**
+- `node` (`N`)
 

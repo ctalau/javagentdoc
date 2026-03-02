@@ -15,9 +15,6 @@
 
 ## Description
 
-Implementation of `Multimaps.filterKeys(Multimap, Predicate)`.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `unfiltered`
@@ -30,7 +27,11 @@ Implementation of `Multimaps.filterKeys(Multimap, Predicate)`.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.Multimap<K,V>`](./Multimap.md) unfiltered, [`com.google.common.base.Predicate<? super K>`](../base/Predicate.md) keyPredicate)`
+### `<init>(com.google.common.collect.Multimap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+
+**Parameters:**
+- `unfiltered` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
+- `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
 ## Methods
 
@@ -40,19 +41,25 @@ Implementation of `Multimaps.filterKeys(Multimap, Predicate)`.
 
 ### `entryPredicate()`
 
-**Returns:** [`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate>.md)
+**Returns:** [`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `containsKey(`java.lang.Object` key)`
+### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
 
-### `removeAll(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.Collection<V>`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `unmodifiableEmptyCollection()`
 
@@ -66,9 +73,12 @@ Implementation of `Multimaps.filterKeys(Multimap, Predicate)`.
 
 **Returns:** `java.util.Set<K>`
 
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `java.util.Collection<V>`
+
+**Parameters:**
+- `key` (`K`)
 
 ### `entryIterator()`
 

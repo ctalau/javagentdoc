@@ -12,9 +12,12 @@
 
 **Returns:** `java.lang.String`
 
-### `getAttribute(`java.lang.String` attributeName)`
+### `getAttribute(java.lang.String attributeName)`
 
 **Returns:** `java.io.Serializable`
 
 Only attributes with a Serializable value can be retrieved.
+
+**Parameters:**
+- `attributeName` (`java.lang.String`): The attribute name.
 

@@ -14,15 +14,24 @@
 
 ## Methods
 
-### `isTableElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+### `isTableElement(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
 
-### `isHeadElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isHeadElement(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
 
-### `isRowElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isRowElement(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 

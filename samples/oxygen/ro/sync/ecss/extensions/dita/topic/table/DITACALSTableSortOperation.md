@@ -20,27 +20,45 @@
 
 ## Methods
 
-### `isTableBody([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+### `isTableBody(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
 
-### `isTableRow([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
 
-### `isTableHead([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableHead(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
 
-### `isTableFoot([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `isTable([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `isTableGroup([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 

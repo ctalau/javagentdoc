@@ -10,7 +10,10 @@
 
 ## Methods
 
-### `createSchematronValidator(`java.lang.String` arg0)`
+### `createSchematronValidator(java.lang.String arg0)`
 
 **Returns:** [`ro.sync.exml.workspace.api.markdown.MarkdownValidator`](./MarkdownValidator.md)
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

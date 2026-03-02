@@ -26,7 +26,13 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md) authorAccess, `int` insertOffset, `int` rows, `int` columns)`
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int insertOffset, int rows, int columns)`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.
+- `insertOffset` (`int`): The offset where the rows are inserted.
+- `rows` (`int`): number of rows needed for the new table.
+- `columns` (`int`): number of columns needed for the new table.
 
 ## Methods
 

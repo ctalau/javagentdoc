@@ -10,11 +10,17 @@
 
 ## Methods
 
-### `parseFrameworkFile(`java.io.File` arg0)`
+### `parseFrameworkFile(java.io.File arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfo`](./DocumentTypeInfo.md)
 
-### `parseExfFile(`java.io.File` arg0)`
+**Parameters:**
+- `arg0` (`java.io.File`)
+
+### `parseExfFile(java.io.File arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfo`](./DocumentTypeInfo.md)
+
+**Parameters:**
+- `arg0` (`java.io.File`)
 

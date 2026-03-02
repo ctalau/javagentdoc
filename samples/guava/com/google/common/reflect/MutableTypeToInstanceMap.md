@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.reflect.MutableTypeToInstanceMap`
 
-**Extends:** [`com.google.common.collect.ForwardingMap<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`](../collect/ForwardingMap,B>.md)
+**Extends:** [`com.google.common.collect.ForwardingMap<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`](../collect/ForwardingMap.md)
 
 **Implements:** [`com.google.common.reflect.TypeToInstanceMap<B>`](./TypeToInstanceMap.md)
 
@@ -14,9 +14,7 @@
 
 ## Description
 
-A mutable type-to-instance map. See also `ImmutableTypeToInstanceMap`.
-**Author:** Ben Yu
-**Since:** 13.0
+See also ImmutableTypeToInstanceMap.
 
 ## Fields
 
@@ -30,37 +28,54 @@ A mutable type-to-instance map. See also `ImmutableTypeToInstanceMap`.
 
 ## Methods
 
-### `getInstance(`java.lang.Class<T>` type)`
+### `getInstance(java.lang.Class<T> type)`
 
 **Returns:** `T`
 
-### `getInstance([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md) type)`
+**Parameters:**
+- `type` (`java.lang.Class<T>`)
+
+### `getInstance(com.google.common.reflect.TypeToken<T> type)`
 
 **Returns:** `T`
 
-### `putInstance(`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>` type, `T` value)`
+**Parameters:**
+- `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
+
+### `putInstance(java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
 
 **Returns:** `T`
 
-### `putInstance([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md) type, `T` value)`
+**Parameters:**
+- `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>`)
+- `value` (`T`)
+
+### `putInstance(com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
 
 **Returns:** `T`
 
-### `put([`com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>`](./TypeToken.md) key, `B` value)`
+**Parameters:**
+- `type` ([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md))
+- `value` (`T`)
+
+### `put(com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B> key, B value)`
 
 **Returns:** `B`
 
-Not supported. Use `putInstance` instead.
-**Deprecated:**unsupported operation
-@throws UnsupportedOperationException always
+Use #putInstance instead.
 
-### `putAll(`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B>` map)`
+**Parameters:**
+- `key` ([`com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>`](./TypeToken.md))
+- `value` (`B`)
+
+### `putAll(java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B> map)`
 
 **Returns:** `void`
 
-Not supported. Use `putInstance` instead.
-**Deprecated:**unsupported operation
-@throws UnsupportedOperationException always
+Use #putInstance instead.
+
+**Parameters:**
+- `map` (`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B>`)
 
 ### `entrySet()`
 
@@ -70,11 +85,18 @@ Not supported. Use `putInstance` instead.
 
 **Returns:** `java.util.Map<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`
 
-### `trustedPut([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md) type, `T` value)`
+### `trustedPut(com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
 
 **Returns:** `T`
 
-### `trustedGet([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md) type)`
+**Parameters:**
+- `type` ([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md))
+- `value` (`T`)
+
+### `trustedGet(com.google.common.reflect.TypeToken<T> type)`
 
 **Returns:** `T`
+
+**Parameters:**
+- `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
 

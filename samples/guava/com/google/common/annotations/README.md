@@ -2,8 +2,8 @@
 
 ## Classes and Interfaces
 
-- [VisibleForTesting](VisibleForTesting.md)
-- [J2ktIncompatible](J2ktIncompatible.md)
-- [GwtIncompatible](GwtIncompatible.md)
-- [GwtCompatible](GwtCompatible.md)
 - [Beta](Beta.md)
+- [GwtCompatible](GwtCompatible.md)
+- [GwtIncompatible](GwtIncompatible.md)
+- [J2ktIncompatible](J2ktIncompatible.md)
+- [VisibleForTesting](VisibleForTesting.md)

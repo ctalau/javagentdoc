@@ -6,19 +6,24 @@
 
 ## Description
 
-Methods factored out so that they can be emulated differently in GWT.
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `isInstanceOfThrowableClass(`java.lang.Throwable` t, `java.lang.Class<? extends java.lang.Throwable>` expectedClass)`
+### `isInstanceOfThrowableClass(java.lang.Throwable t, java.lang.Class<? extends java.lang.Throwable> expectedClass)`
 
 **Returns:** `boolean`
 
-### `restoreInterruptIfIsInterruptedException(`java.lang.Throwable` t)`
+**Parameters:**
+- `t` (`java.lang.Throwable`)
+- `expectedClass` (`java.lang.Class<? extends java.lang.Throwable>`)
+
+### `restoreInterruptIfIsInterruptedException(java.lang.Throwable t)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `t` (`java.lang.Throwable`)
 

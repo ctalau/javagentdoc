@@ -32,23 +32,44 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
 
-### `isDelimiterBeforeTextNode([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, `int` contentOffset)`
+### `isDelimiterBeforeTextNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int contentOffset)`
 
 **Returns:** `boolean`
 
-### `isWordDelimiter(`char` ch)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
+- `contentOffset` (`int`): The offset where search is started.
+
+### `isWordDelimiter(char ch)`
 
 **Returns:** `boolean`
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md) arguments)`
+**Parameters:**
+- `ch` (`char`): The character that must be evaluated.
+
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap arguments)`
 
 **Returns:** `void`
 
-### `processContentRange([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md) documentController, `int` selStart, `int` selEnd)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
+- `arguments` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
+
+### `processContentRange(ro.sync.ecss.extensions.api.AuthorDocumentController documentController, int selStart, int selEnd)`
 
 **Returns:** `void`
 
-### `processTextContent(`char[]` charArray, `boolean` isDelimiterBefore)`
+**Parameters:**
+- `documentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): The document controller.
+- `selStart` (`int`): The start of the selection.
+- `selEnd` (`int`): The end of the selection.
+
+### `processTextContent(char[] charArray, boolean isDelimiterBefore)`
 
 **Returns:** `char[]`
+
+**Parameters:**
+- `charArray` (`char[]`): The character array that must be processed.
+- `isDelimiterBefore` (`boolean`): `true` if we have a delimiter before the given char array,
+                          `false` otherwise.
 

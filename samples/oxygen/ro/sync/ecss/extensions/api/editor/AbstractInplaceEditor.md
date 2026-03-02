@@ -20,9 +20,12 @@
 
 ## Methods
 
-### `fireEditingStopped([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md) event)`
+### `fireEditingStopped(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Editing event.
 
 ### `fireEditingCanceled()`
 
@@ -40,29 +43,48 @@
 
 **Returns:** `void`
 
-### `addEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
 
-### `removeEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
+
+### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
 
-### `fireCommitValue([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md) event)`
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
+
+### `fireCommitValue(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
 
 **Returns:** `void`
 
-### `getBoolean([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `java.lang.String` key)`
+**Parameters:**
+- `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Editing event.
+
+### `getBoolean(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.lang.String key)`
 
 **Returns:** `java.lang.Boolean`
 
-### `refresh([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context.
+- `key` (`java.lang.String`): The property key.
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** `void`
 
-### `insertContent(`java.lang.String` content)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+
+### `insertContent(java.lang.String content)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `content` (`java.lang.String`)
 
 ### `commitValue()`
 

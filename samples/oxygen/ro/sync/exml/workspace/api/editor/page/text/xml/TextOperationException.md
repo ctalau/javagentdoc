@@ -10,7 +10,14 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` message)`
+### `<init>(java.lang.String message)`
 
-### `<init>(`java.lang.String` message, `java.lang.Throwable` ex)`
+**Parameters:**
+- `message` (`java.lang.String`): The error message.
+
+### `<init>(java.lang.String message, java.lang.Throwable ex)`
+
+**Parameters:**
+- `message` (`java.lang.String`): The error message.
+- `ex` (`java.lang.Throwable`): The exception cause.
 

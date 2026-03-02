@@ -13,10 +13,6 @@
 
 ## Description
 
-`keySet()` implementation for `ImmutableMap`.
-**Author:** Jesse Wilson
-**Author:** Kevin Bourrillion
-
 ## Fields
 
 ### `map`
@@ -25,7 +21,10 @@
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md) map)`
+### `<init>(com.google.common.collect.ImmutableMap<K,V> map)`
+
+**Parameters:**
+- `map` ([`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md))
 
 ## Methods
 
@@ -41,17 +40,26 @@
 
 **Returns:** `java.util.Spliterator<K>`
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-### `get(`int` index)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `get(int index)`
 
 **Returns:** `K`
 
-### `forEach(`java.util.function.Consumer<? super K>` action)`
+**Parameters:**
+- `index` (`int`)
+
+### `forEach(java.util.function.Consumer<? super K> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.Consumer<? super K>`)
 
 ### `isPartialView()`
 

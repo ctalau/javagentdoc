@@ -67,20 +67,32 @@ It is recommended to extend the adapter class InplaceEditorRendererAdapter
 
 ## Methods
 
-### `getRendererComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+### `getRendererComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** `java.lang.Object`
 
 It's up to the caller to use the renderer to paint.
 
-### `getCursorType([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `int` x, `int` y)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The editing context.
+
+### `getCursorType(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](../CursorType.md)
 
 For a more complex renderer, the given X,Y coordinates can be used to decide
  what cursor to return.
 
-### `getCursorType(`int` x, `int` y)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The editing context. Useful if the renderer is a more complex one, 
+ like a text field with an associated button and wants to provide different 
+ cursors when the cursor is over the textfield or over the button. In this case 
+ the renderer will have to initialize itself with this context in order to 
+ decide what the cursor is hovering.
+- `x` (`int`): The x coordinate relative to the renderer bounds.
+- `y` (`int`): The y coordinate relative to the renderer bounds.
+
+### `getCursorType(int x, int y)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](../CursorType.md)
 
@@ -90,14 +102,23 @@ For a more complex renderer, the given X,Y coordinates can be used to decide
  We recommend using #getCursorType(AuthorInplaceContext, int, int) as 
  you can use the provided context to get additional information.
 
-### `getTooltipText([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `int` x, `int` y)`
+**Parameters:**
+- `x` (`int`): The x coordinate relative to the renderer bounds.
+- `y` (`int`): The y coordinate relative to the renderer bounds.
+
+### `getTooltipText(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
 
 **Returns:** `java.lang.String`
 
 **Because a renderer is reused, when this 
  called is received, the renderer must re-initialize itself from the given context.**
 
-### `getRenderingInfo([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The editing context.
+- `x` (`int`): The x coordinate relative to the renderer bounds.
+- `y` (`int`): The y coordinate relative to the renderer bounds.
+
+### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
 
@@ -107,4 +128,7 @@ This contains information about the baseline
  
  **Because a renderer is reused, when this 
  call is received, the renderer must re-initialize itself from the given context.**
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The editing context.
 

@@ -26,19 +26,37 @@ May be prefixed with key scopes.
 
 ## Constructors
 
-### `<init>(`java.lang.String` link)`
+### `<init>(java.lang.String link)`
+
+**Parameters:**
+- `link` (`java.lang.String`): The link used to identify the element.
 
 ## Methods
 
-### `endElement(`java.lang.String` uri, `java.lang.String` localName, `java.lang.String` name)`
+### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
 
 **Returns:** `void`
 
-### `startElement(`java.lang.String` uri, `java.lang.String` localName, `java.lang.String` name, [`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md) atts)`
+**Parameters:**
+- `uri` (`java.lang.String`)
+- `localName` (`java.lang.String`)
+- `name` (`java.lang.String`)
+
+### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Returns:** `boolean`
 
-### `getAttributeValues([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md) atts, `java.lang.String` attrName)`
+**Parameters:**
+- `uri` (`java.lang.String`)
+- `localName` (`java.lang.String`)
+- `name` (`java.lang.String`)
+- `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md))
+
+### `getAttributeValues(ro.sync.ecss.extensions.api.link.Attr[] atts, java.lang.String attrName)`
 
 **Returns:** `java.util.Set<java.lang.String>`
+
+**Parameters:**
+- `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
+- `attrName` (`java.lang.String`)
 

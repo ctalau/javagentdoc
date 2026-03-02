@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `customizeComputedTopicrefTitle([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md) topicref, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md) targetTopicOrMap, `java.lang.String` defaultComputedTitle)`
+### `customizeComputedTopicrefTitle(ro.sync.ecss.extensions.api.node.AuthorNode topicref, ro.sync.ecss.extensions.api.node.AuthorNode targetTopicOrMap, java.lang.String defaultComputedTitle)`
 
 **Returns:** `java.lang.String`
 
@@ -23,7 +23,13 @@ After the API returns the modified title, the title will be cached for the curre
  This kind of method is useful for example if you want to get some significant attributes 
  (maybe profiling attributes) from the topic's root element and display them in the title.
 
-### `customizeRenderedTopicrefTitle([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md) topicref, `java.lang.String` defaultRenderedTitle)`
+**Parameters:**
+- `topicref` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): The topicref node present in the DITA Maps Manager
+- `targetTopicOrMap` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): Oxygen already parsed the document referenced via topicref, computed a title
+  and this parameter gives you access to the root element of the parsed topic.
+- `defaultComputedTitle` (`java.lang.String`): The default title computed by Oxygen
+
+### `customizeRenderedTopicrefTitle(ro.sync.ecss.extensions.api.node.AuthorNode topicref, java.lang.String defaultRenderedTitle)`
 
 **Returns:** `java.lang.String`
 
@@ -32,11 +38,18 @@ This method is called very often, each time the tree or part of the tree is rend
   
  This kind of method is useful for example if you want to number topicrefs displayed in the DITA Maps Manager view based on depth.
 
-### `getRenderingInformation([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../node/customizer/NodeRendererCustomizerContext.md) context)`
+**Parameters:**
+- `topicref` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): The topicref node present in the DITA Maps Manager
+- `defaultRenderedTitle` (`java.lang.String`): The default title which will be rendered by Oxygen
+
+### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
 
 **Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../node/customizer/BasicRenderingInformation.md)
 
 The context is an instance of DITAMapNodeRendererCustomizerContext which has more information about topicrefs.
+
+**Parameters:**
+- `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../node/customizer/NodeRendererCustomizerContext.md))
 
 ### `getDescription()`
 

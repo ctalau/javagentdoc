@@ -13,12 +13,6 @@
 
 ## Description
 
-An implementation of `GraphConnections` for directed graphs.
-**Author:** James Sexton
-**Author:** Jens Nyman
-@param <N> Node parameter type
-@param <V> Value parameter type
-
 ## Fields
 
 ### `PRED`
@@ -33,9 +27,7 @@ An implementation of `GraphConnections` for directed graphs.
 
 **Type:** `java.util.List<com.google.common.graph.DirectedGraphConnections.NodeConnection<N>>`
 
-All node connections in this graph, in edge insertion order.
-
- <p>Note: This field and `adjacentNodeValues` cannot be combined into a single
+Note: This field and #adjacentNodeValues cannot be combined into a single
  LinkedHashMap because one target node may be mapped to both a predecessor and a successor. A
  LinkedHashMap combines two such edges into a single node-value pair, even though the edges may
  not have been inserted consecutively.
@@ -50,17 +42,31 @@ All node connections in this graph, in edge insertion order.
 
 ## Constructors
 
-### `<init>(`java.util.Map<N,java.lang.Object>` adjacentNodeValues, `java.util.List<com.google.common.graph.DirectedGraphConnections.NodeConnection<N>>` orderedNodeConnections, `int` predecessorCount, `int` successorCount)`
+### `<init>(java.util.Map<N,java.lang.Object> adjacentNodeValues, java.util.List<com.google.common.graph.DirectedGraphConnections.NodeConnection<N>> orderedNodeConnections, int predecessorCount, int successorCount)`
+
+**Parameters:**
+- `adjacentNodeValues` (`java.util.Map<N,java.lang.Object>`)
+- `orderedNodeConnections` (`java.util.List<com.google.common.graph.DirectedGraphConnections.NodeConnection<N>>`)
+- `predecessorCount` (`int`)
+- `successorCount` (`int`)
 
 ## Methods
 
-### `of([`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md) incidentEdgeOrder)`
+### `of(com.google.common.graph.ElementOrder<N> incidentEdgeOrder)`
 
 **Returns:** [`com.google.common.graph.DirectedGraphConnections<N,V>`](./DirectedGraphConnections.md)
 
-### `ofImmutable(`N` thisNode, `java.lang.Iterable<com.google.common.graph.EndpointPair<N>>` incidentEdges, [`com.google.common.base.Function<N,V>`](../base/Function.md) successorNodeToValueFn)`
+**Parameters:**
+- `incidentEdgeOrder` ([`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md))
+
+### `ofImmutable(N thisNode, java.lang.Iterable<com.google.common.graph.EndpointPair<N>> incidentEdges, com.google.common.base.Function<N,V> successorNodeToValueFn)`
 
 **Returns:** [`com.google.common.graph.DirectedGraphConnections<N,V>`](./DirectedGraphConnections.md)
+
+**Parameters:**
+- `thisNode` (`N`)
+- `incidentEdges` (`java.lang.Iterable<com.google.common.graph.EndpointPair<N>>`)
+- `successorNodeToValueFn` ([`com.google.common.base.Function<N,V>`](../base/Function.md))
 
 ### `adjacentNodes()`
 
@@ -74,35 +80,61 @@ All node connections in this graph, in edge insertion order.
 
 **Returns:** `java.util.Set<N>`
 
-### `incidentEdgeIterator(`N` thisNode)`
+### `incidentEdgeIterator(N thisNode)`
 
 **Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
 
-### `value(`N` node)`
+**Parameters:**
+- `thisNode` (`N`)
+
+### `value(N node)`
 
 **Returns:** `V`
 
-### `removePredecessor(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `removePredecessor(N node)`
 
 **Returns:** `void`
 
-### `removeSuccessor(`java.lang.Object` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `removeSuccessor(java.lang.Object node)`
 
 **Returns:** `V`
 
-### `addPredecessor(`N` node, `V` unused)`
+**Parameters:**
+- `node` (`java.lang.Object`)
+
+### `addPredecessor(N node, V unused)`
 
 **Returns:** `void`
 
-### `addSuccessor(`N` node, `V` value)`
+**Parameters:**
+- `node` (`N`)
+- `unused` (`V`)
+
+### `addSuccessor(N node, V value)`
 
 **Returns:** `V`
 
-### `isPredecessor(`java.lang.Object` value)`
+**Parameters:**
+- `node` (`N`)
+- `value` (`V`)
+
+### `isPredecessor(java.lang.Object value)`
 
 **Returns:** `boolean`
 
-### `isSuccessor(`java.lang.Object` value)`
+**Parameters:**
+- `value` (`java.lang.Object`)
+
+### `isSuccessor(java.lang.Object value)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `value` (`java.lang.Object`)
 

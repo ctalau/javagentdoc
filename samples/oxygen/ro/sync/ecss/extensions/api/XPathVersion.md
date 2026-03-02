@@ -16,7 +16,10 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.XPathVersion[]`](./XPathVersion.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.XPathVersion`](./XPathVersion.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

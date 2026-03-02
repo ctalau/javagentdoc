@@ -36,9 +36,20 @@ Usually the raw and normalized values point to the same string.
 
 ## Constructors
 
-### `<init>(`java.lang.String` specifiedValue)`
+### `<init>(java.lang.String specifiedValue)`
 
-### `<init>(`java.lang.String` normalizedValue, `java.lang.String` rawValue, `boolean` isSpecified)`
+**Parameters:**
+- `specifiedValue` (`java.lang.String`): The simple attribute value which will be used both as
+ raw value and normalized value.
+
+### `<init>(java.lang.String normalizedValue, java.lang.String rawValue, boolean isSpecified)`
+
+**Parameters:**
+- `normalizedValue` (`java.lang.String`): Attribute normalized value (with entities expanded 
+ and WS's collapsed).
+- `rawValue` (`java.lang.String`): Attribute raw value (as it is specified in text with no white space collapsed and **entities** not expanded).
+- `isSpecified` (`boolean`): `true` if specified in XML, `false` 
+ if this is a default value.
 
 ## Methods
 
@@ -58,9 +69,12 @@ Usually the raw and normalized values point to the same string.
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

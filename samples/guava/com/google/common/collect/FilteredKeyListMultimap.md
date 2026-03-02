@@ -15,12 +15,13 @@
 
 ## Description
 
-Implementation of `Multimaps.filterKeys(ListMultimap, Predicate)`.
-**Author:** Louis Wasserman
-
 ## Constructors
 
-### `<init>([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md) unfiltered, [`com.google.common.base.Predicate<? super K>`](../base/Predicate.md) keyPredicate)`
+### `<init>(com.google.common.collect.ListMultimap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+
+**Parameters:**
+- `unfiltered` ([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md))
+- `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
 ## Methods
 
@@ -28,15 +29,25 @@ Implementation of `Multimaps.filterKeys(ListMultimap, Predicate)`.
 
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `java.util.List<V>`
 
-### `removeAll(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.List<V>`
 
-### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
 
 **Returns:** `java.util.List<V>`
+
+**Parameters:**
+- `key` (`K`)
+- `values` (`java.lang.Iterable<? extends V>`)
 

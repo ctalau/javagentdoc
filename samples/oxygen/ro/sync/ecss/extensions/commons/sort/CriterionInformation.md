@@ -38,11 +38,28 @@ For a table column this can be the text from the corresponding table head cell.
 
 ## Constructors
 
-### `<init>(`int` keyIndex, `java.lang.String` type, `java.lang.String` order, `java.lang.String` displayName)`
+### `<init>(int keyIndex, java.lang.String type, java.lang.String order, java.lang.String displayName)`
 
-### `<init>(`int` keyIndex, `java.lang.String` type, `java.lang.String` order, `java.lang.String` displayName, `boolean` isInitiallyEnabled)`
+**Parameters:**
+- `keyIndex` (`int`): The index in its parent of the element that corresponds to the sorting key.
+- `type` (`java.lang.String`): The sorting type. One of TYPE#TEXT, TYPE#NUMERIC or TYPE#DATE.
+- `order` (`java.lang.String`): The sorting order. One of ORDER#ASCENDING or ORDER#DESCENDING.
+- `displayName` (`java.lang.String`): The key display name. For a table column it can be the text from the corresponding table header cell.
 
-### `<init>(`int` keyIndex, `java.lang.String` displayName)`
+### `<init>(int keyIndex, java.lang.String type, java.lang.String order, java.lang.String displayName, boolean isInitiallyEnabled)`
+
+**Parameters:**
+- `keyIndex` (`int`): The index in its parent of the element that corresponds to the sorting key.
+- `type` (`java.lang.String`): The sorting type. One of TYPE#TEXT, TYPE#NUMERIC or TYPE#DATE.
+- `order` (`java.lang.String`): The sorting order. One of ORDER#ASCENDING or ORDER#DESCENDING.
+- `displayName` (`java.lang.String`): The key display name. For a table column it can be the text from the corresponding table header cell.
+- `isInitiallyEnabled` (`boolean`): `true` if this criterion should be initially enabled.
+
+### `<init>(int keyIndex, java.lang.String displayName)`
+
+**Parameters:**
+- `keyIndex` (`int`): The index in its parent of the element that corresponds to the sorting key.
+- `displayName` (`java.lang.String`): The key display name. For a table column it can be the text from the corresponding table header cell.
 
 ## Methods
 

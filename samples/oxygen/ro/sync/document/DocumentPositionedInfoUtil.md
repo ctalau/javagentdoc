@@ -20,41 +20,71 @@
 
 ## Methods
 
-### `getDpisOfSeverity(`java.util.List<ro.sync.document.DocumentPositionedInfo>` arg0, `int` arg1)`
+### `getDpisOfSeverity(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `getDpisOfMinimumSeverity(`java.util.List<ro.sync.document.DocumentPositionedInfo>` arg0, `int` arg1)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+- `arg1` (`int`)
+
+### `getDpisOfMinimumSeverity(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `hasFatalErrors(`java.util.List<ro.sync.document.DocumentPositionedInfo>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+- `arg1` (`int`)
+
+### `hasFatalErrors(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
 **Returns:** `boolean`
 
-### `hasErrorsOrHigher(`java.util.List<ro.sync.document.DocumentPositionedInfo>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+### `hasErrorsOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
 **Returns:** `boolean`
 
-### `hasWarningsOrHigher(`java.util.List<ro.sync.document.DocumentPositionedInfo>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+### `hasWarningsOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
 **Returns:** `boolean`
 
-### `hasInfosOrHigher(`java.util.List<ro.sync.document.DocumentPositionedInfo>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+### `hasInfosOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
 **Returns:** `boolean`
 
-### `b(`java.util.List<ro.sync.document.DocumentPositionedInfo>` arg0, `int` arg1)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+### `b(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
 
 **Returns:** `boolean`
 
-### `mapDPISeverityToValidationRangeSeverityLevel(`int` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+- `arg1` (`int`)
+
+### `mapDPISeverityToValidationRangeSeverityLevel(int arg0)`
 
 **Returns:** `int`
 
-### `getMaskedAndCorrectedURL(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `getMaskedAndCorrectedURL(java.lang.String arg0)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getMessageCSSStyle()`
 

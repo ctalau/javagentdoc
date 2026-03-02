@@ -139,19 +139,25 @@ This method is called each time an ID must be recognized or certain ID-aware sea
 This method is called each time the document type where the extensions bundle 
  is defined matches a document opened in an editor.
 
-### `createAttributesValueEditor(`boolean` forEclipsePlugin)`
+### `createAttributesValueEditor(boolean forEclipsePlugin)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.AttributesValueEditor`](./AttributesValueEditor.md)
 
 This is used especially from the "Attributes View" and from attributes editing dialogs 
  available on Author mode and Outliner.
 
-### `createCustomAttributeValueEditor(`boolean` forEclipsePlugin)`
+**Parameters:**
+- `forEclipsePlugin` (`boolean`): If `true` the code is called from the Eclipse plugin.
+
+### `createCustomAttributeValueEditor(boolean forEclipsePlugin)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CustomAttributeValueEditor`](./CustomAttributeValueEditor.md)
 
 This is used especially from the "Attributes View" and from attributes editing dialogs 
  available on Author mode and Outliner.
+
+**Parameters:**
+- `forEclipsePlugin` (`boolean`): If `true` the code is called from the Eclipse plugin.
 
 ### `getUniqueAttributesIdentifier()`
 
@@ -169,31 +175,61 @@ If this returns `null` you will not be able to add
  ro.sync.ecss.extensions.api.OptionListener or store and retrieve 
  any options at all.
 
-### `resolveCustomAttributeValue([`ro.sync.ecss.extensions.api.CustomAttributeValueContext`](./CustomAttributeValueContext.md) attributeValueEditingContext)`
+### `resolveCustomAttributeValue(ro.sync.ecss.extensions.api.CustomAttributeValueContext attributeValueEditingContext)`
 
 **Returns:** `java.net.URL`
 
 This method is called when the "Open File at Cursor" action is called in the Text editor page.
 
-### `resolveCustomHref(`java.lang.String` linkHref)`
+**Parameters:**
+- `attributeValueEditingContext` ([`ro.sync.ecss.extensions.api.CustomAttributeValueContext`](./CustomAttributeValueContext.md)): The editing context.
+
+### `resolveCustomHref(java.lang.String linkHref)`
 
 **Returns:** `java.net.URL`
 
-### `resolveCustomHref(`java.net.URL` currentEditorURL, `java.lang.String` linkHref, [`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `linkHref` (`java.lang.String`): The link href as derrived from the CSS
+
+### `resolveCustomHref(java.net.URL currentEditorURL, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.net.URL`
 
-### `resolveCustomHref(`java.net.URL` currentEditorURL, [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) contextNode, `java.lang.String` linkHref, [`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `currentEditorURL` (`java.net.URL`): The URL of the current editor.
+- `linkHref` (`java.lang.String`): The link href as derrived from the CSS
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The Author Access.
+
+### `resolveCustomHref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.net.URL`
 
-### `customizeLinkTooltipDescription(`java.net.URL` currentEditorURL, [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) contextNode, `java.lang.String` linkHref, [`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess, `java.lang.String` computedDescription)`
+**Parameters:**
+- `currentEditorURL` (`java.net.URL`): The URL of the current editor.
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The context node in which the href needs to be computed.
+- `linkHref` (`java.lang.String`): The link href as derrived from the CSS
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The Author Access.
+
+### `customizeLinkTooltipDescription(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
 
 **Returns:** `java.lang.String`
 
-### `customizeImageTooltipDescription([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) contextNode, [`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess, `java.lang.String` computedDescription)`
+**Parameters:**
+- `currentEditorURL` (`java.net.URL`): The current document URL
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The context node
+- `linkHref` (`java.lang.String`): The link href.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The Author access
+- `computedDescription` (`java.lang.String`): The already computed description. Usually something like:
+ "Click to open: URL"
+
+### `customizeImageTooltipDescription(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The context node
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The Author access
+- `computedDescription` (`java.lang.String`): The already computed description.
 
 ### `createAuthorOutlineCustomizer()`
 
@@ -231,17 +267,23 @@ The usual usage for this is to get notified when URLs are dropped from the proje
 
 You can use it in your extensions bundle to see the name of the document type which created this bundle.
 
-### `setDocumentTypeName(`java.lang.String` documentTypeName)`
+### `setDocumentTypeName(java.lang.String documentTypeName)`
 
 **Returns:** `void`
 
 This must not get called by the user code, it is set internal.
 
-### `isContentReference([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) node)`
+**Parameters:**
+- `documentTypeName` (`java.lang.String`): The name of the document type which created this bundle
+
+### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
 This is used in the tables to replace conreffed table rows entirely
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node
 
 ### `getProfilingConditionalTextProvider()`
 
@@ -284,12 +326,15 @@ Permits decoration of the images that
  are displayed in the Author view. For instance it can overlay some meta-information 
  over the image.
 
-### `getHelpPageID(`java.lang.String` currentEditorPage)`
+### `getHelpPageID(java.lang.String currentEditorPage)`
 
 **Returns:** `java.lang.String`
 
 If the returned help page ID is an URL, a web browser will be opened pointing to that URL when the user presses F1 in the dialog or when using the Help button.
  If the returned help page ID is an identifier, when help is invoked, the application will open the Oxygen User's Manual and locate this identifier inside it.
+
+**Parameters:**
+- `currentEditorPage` (`java.lang.String`): The current editor page mode (Text/Grid/Author/Schema), one of the constants in the "ro.sync.exml.editor.EditorPageConstants" interface.
 
 ### `getWebappExtensionsProvier()`
 

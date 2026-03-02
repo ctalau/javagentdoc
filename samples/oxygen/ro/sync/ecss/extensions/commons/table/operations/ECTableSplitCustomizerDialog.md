@@ -40,17 +40,30 @@
 
 ## Constructors
 
-### `<init>(`java.lang.Object` arg0, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) arg1, `int` arg2, `int` arg3, `java.lang.String` arg4)`
+### `<init>(java.lang.Object arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, int arg2, int arg3, java.lang.String arg4)`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
+- `arg1` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md))
+- `arg2` (`int`)
+- `arg3` (`int`)
+- `arg4` (`java.lang.String`)
 
 ## Methods
 
-### `configureShell(`org.eclipse.swt.widgets.Shell` arg0)`
+### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
 
 **Returns:** `void`
 
-### `createDialogArea(`org.eclipse.swt.widgets.Composite` arg0)`
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+
+### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
 
 **Returns:** `org.eclipse.swt.widgets.Control`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
 
 ### `getSplitInformation()`
 

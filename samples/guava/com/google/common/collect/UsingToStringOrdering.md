@@ -10,8 +10,6 @@
 
 ## Description
 
-An ordering that uses the natural order of the string representation of the values.
-
 ## Fields
 
 ### `INSTANCE`
@@ -28,9 +26,13 @@ An ordering that uses the natural order of the string representation of the valu
 
 ## Methods
 
-### `compare(`java.lang.Object` left, `java.lang.Object` right)`
+### `compare(java.lang.Object left, java.lang.Object right)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `left` (`java.lang.Object`)
+- `right` (`java.lang.Object`)
 
 ### `readResolve()`
 

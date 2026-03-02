@@ -24,7 +24,16 @@
 
 ## Constructors
 
-### `<init>(`javax.swing.JPanel` arg0, `java.awt.GridBagConstraints` arg1, [`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md) arg2, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) arg3, [`ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController`](./PropertySelectionController.md) arg4, `int` arg5, `boolean` arg6)`
+### `<init>(javax.swing.JPanel arg0, java.awt.GridBagConstraints arg1, ro.sync.ecss.extensions.commons.table.properties.TableProperty arg2, ro.sync.ecss.extensions.api.AuthorResourceBundle arg3, ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController arg4, int arg5, boolean arg6)`
+
+**Parameters:**
+- `arg0` (`javax.swing.JPanel`)
+- `arg1` (`java.awt.GridBagConstraints`)
+- `arg2` ([`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md))
+- `arg3` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md))
+- `arg4` ([`ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController`](./PropertySelectionController.md))
+- `arg5` (`int`)
+- `arg6` (`boolean`)
 
 ## Methods
 

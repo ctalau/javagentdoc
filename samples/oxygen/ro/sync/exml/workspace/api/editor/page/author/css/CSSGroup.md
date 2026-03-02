@@ -30,13 +30,24 @@ The Styles drop down allows users to choose only one main source.
 
 ## Constructors
 
-### `<init>(`java.lang.String` title, `boolean` isMainSource)`
+### `<init>(java.lang.String title, boolean isMainSource)`
+
+**Parameters:**
+- `title` (`java.lang.String`): The merged css title.
+- `isMainSource` (`boolean`): `true` if this is a main source of CSS styles. 
+ The Styles drop down allows users to choose only one main source.
+ 
+ `false` if this is an alternate source of CSS styles.
+ The Styles drop down allows users to apply multiple alternate styles over a main source.
 
 ## Methods
 
-### `setTitle(`java.lang.String` title)`
+### `setTitle(java.lang.String title)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `title` (`java.lang.String`): The new title.
 
 ### `isMainSource()`
 
@@ -50,25 +61,44 @@ The Styles drop down allows users to choose only one main source.
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSResource>`
 
-### `addURLs([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource[]`](./CSSResource.md) urlsList)`
+### `addURLs(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource[] urlsList)`
 
 **Returns:** `void`
 
-### `addURL([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md) cssRes)`
+**Parameters:**
+- `urlsList` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource[]`](./CSSResource.md)): The CSSResource(s) to be added.
+
+### `addURL(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource cssRes)`
 
 **Returns:** `void`
 
-### `removeURL([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md) cssRes)`
+**Parameters:**
+- `cssRes` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md)): The CSS resource to add.
+
+### `removeURL(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource cssRes)`
 
 **Returns:** `void`
 
-### `setPreferred(`boolean` isMainSource)`
+**Parameters:**
+- `cssRes` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md)): The CSS resource to add.
+
+### `setPreferred(boolean isMainSource)`
 
 **Returns:** `void`
 
-### `equals(`java.lang.Object` obj)`
+**Parameters:**
+- `isMainSource` (`boolean`): `true` if this is a main source of CSS styles. 
+ The Styles drop down allows users to choose only one main source.
+ 
+ `false` if this is an alternate source of CSS styles.
+ The Styles drop down allows users to apply multiple alternate styles over a main source.
+
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

@@ -66,7 +66,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](../api/AuthorExtensionStateListener.md)
 
-### `createContextKeyManager([`ro.sync.ecss.extensions.api.access.EditingSessionContext`](../api/access/EditingSessionContext.md) context)`
+### `createContextKeyManager(ro.sync.ecss.extensions.api.access.EditingSessionContext context)`
 
 **Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](../../dita/ContextKeyManager.md)
 
@@ -74,6 +74,9 @@ The key manager may resolve keys depending on the editing session context.
  The current implementation checks the DITAAccess#DITA_ROOT_MAP_URL_ATTRIBUTE
  and if it was set, the specified map is used. Otherwise, it uses the
  default ditamap in Autor.
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.access.EditingSessionContext`](../api/access/EditingSessionContext.md)): The editing session context.
 
 ### `getClipboardFragmentProcessor()`
 
@@ -111,29 +114,60 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.ElementLocatorProvider`](../api/link/ElementLocatorProvider.md)
 
-### `customizeLinkTooltipDescription(`java.net.URL` currentEditorURL, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) contextNode, `java.lang.String` linkHref, [`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.lang.String` computedDescription)`
+### `customizeLinkTooltipDescription(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
 
 **Returns:** `java.lang.String`
 
-### `customizeImageTooltipDescription([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) contextNode, [`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.lang.String` computedDescription)`
+**Parameters:**
+- `currentEditorURL` (`java.net.URL`)
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+- `linkHref` (`java.lang.String`)
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `computedDescription` (`java.lang.String`)
+
+### `customizeImageTooltipDescription(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
 
 **Returns:** `java.lang.String`
 
-### `computeImageAltText([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) contextNode, [`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.lang.String` computedDescription)`
+**Parameters:**
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `computedDescription` (`java.lang.String`)
+
+### `computeImageAltText(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
 
 **Returns:** `java.lang.String`
 
-### `resolveCustomHref(`java.net.URL` currentEditorURL, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) contextNode, `java.lang.String` linkHref, [`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): Context node.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Author access
+- `computedDescription` (`java.lang.String`): Already computed description
+
+### `resolveCustomHref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.net.URL`
 
-### `resolveCustomKeyref(`java.net.URL` currentEditorURL, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) contextNode, `java.lang.String` linkHref)`
+**Parameters:**
+- `currentEditorURL` (`java.net.URL`)
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+- `linkHref` (`java.lang.String`)
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+
+### `resolveCustomKeyref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref)`
 
 **Returns:** `java.net.URL`
 
-### `isImage([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+**Parameters:**
+- `currentEditorURL` (`java.net.URL`): The URL of the current editor.
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The context node in which the href needs to be computed.
+- `linkHref` (`java.lang.String`): The link href as derrived from the CSS
+
+### `isImage(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node to check.
 
 ### `getAuthorSchemaAwareEditingHandler()`
 
@@ -155,9 +189,12 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** [`ro.sync.ecss.extensions.api.text.TextPageExternalObjectInsertionHandler`](../api/text/TextPageExternalObjectInsertionHandler.md)
 
-### `isContentReference([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 ### `getProfilingConditionalTextProvider()`
 
@@ -195,17 +232,23 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** [`ro.sync.ecss.extensions.api.EditPropertiesHandler`](../api/EditPropertiesHandler.md)
 
-### `getHelpPageID(`java.lang.String` currentEditorPage)`
+### `getHelpPageID(java.lang.String currentEditorPage)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `currentEditorPage` (`java.lang.String`)
 
 ### `getContextKeyManager()`
 
 **Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](../../dita/ContextKeyManager.md)
 
-### `resolveCustomAttributeValue([`ro.sync.ecss.extensions.api.CustomAttributeValueContext`](../api/CustomAttributeValueContext.md) attributeValueEditingContext)`
+### `resolveCustomAttributeValue(ro.sync.ecss.extensions.api.CustomAttributeValueContext attributeValueEditingContext)`
 
 **Returns:** `java.net.URL`
+
+**Parameters:**
+- `attributeValueEditingContext` ([`ro.sync.ecss.extensions.api.CustomAttributeValueContext`](../api/CustomAttributeValueContext.md))
 
 ### `getSpellCheckerHelper()`
 

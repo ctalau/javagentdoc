@@ -103,43 +103,69 @@ The value is `th`
 
 ## Methods
 
-### `getColSpan([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) cellElement)`
+### `getColSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
 **Returns:** `java.lang.Integer`
 
-### `getRowSpan([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) cellElement)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `getRowSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
 **Returns:** `java.lang.Integer`
 
-### `init([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `void`
 
-### `getElementsByLocalName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) element, `java.lang.String` localName)`
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `getElementsByLocalName(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String localName)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../../api/node/AuthorElement.md)
+
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The current element.
+- `localName` (`java.lang.String`): The tag local name to search for.
 
 ### `getDescription()`
 
 **Returns:** `java.lang.String`
 
-### `hasColumnSpecifications([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) tableElement)`
+### `hasColumnSpecifications(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `boolean`
 
-### `getCellWidth([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md) cellElement, `int` colNumberStart, `int` colSpan)`
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+### `getCellWidth(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int colNumberStart, int colSpan)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
 
-### `commitColumnWidthModifications([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md) authorDocumentController, [`ro.sync.ecss.extensions.api.WidthRepresentation[]`](../../../api/WidthRepresentation.md) colWidths, `java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+- `colNumberStart` (`int`)
+- `colSpan` (`int`)
+
+### `commitColumnWidthModifications(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, ro.sync.ecss.extensions.api.WidthRepresentation[] colWidths, java.lang.String tableCellsTagName)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorDocumentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md))
+- `colWidths` ([`ro.sync.ecss.extensions.api.WidthRepresentation[]`](../../../api/WidthRepresentation.md))
+- `tableCellsTagName` (`java.lang.String`)
 
 ### `getInsertColsOffset()`
 
 **Returns:** `int`
 
-### `createXMLFragment([`ro.sync.ecss.extensions.api.WidthRepresentation[]`](../../../api/WidthRepresentation.md) widthRepresentations)`
+### `createXMLFragment(ro.sync.ecss.extensions.api.WidthRepresentation[] widthRepresentations)`
 
 **Returns:** `java.lang.String`
 
@@ -155,51 +181,87 @@ The fragment will contain a list of `col` elements, one for each
  The xmlns attributes will be included in the `col` elements only
  if the table has an associated namespace.
 
-### `commitTableWidthModification([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md) authorDocumentController, `int` newTableWidth, `java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `widthRepresentations` ([`ro.sync.ecss.extensions.api.WidthRepresentation[]`](../../../api/WidthRepresentation.md)): The list of WidthRepresentation specific 
+ for each column in the table
+
+### `commitTableWidthModification(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, int newTableWidth, java.lang.String tableCellsTagName)`
 
 **Returns:** `void`
 
-### `getTableWidth(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `authorDocumentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md))
+- `newTableWidth` (`int`)
+- `tableCellsTagName` (`java.lang.String`)
+
+### `getTableWidth(java.lang.String tableCellsTagName)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md)
+
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`)
 
 ### `getTableWidth()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md)
 
-### `isTableAcceptingWidth(`java.lang.String` tableCellsTagName)`
+### `isTableAcceptingWidth(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
-### `isTableAndColumnsResizable(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`)
+
+### `isTableAndColumnsResizable(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
-### `isAcceptingFixedColumnWidths(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`)
+
+### `isAcceptingFixedColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
-### `isAcceptingPercentageColumnWidths(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`)
+
+### `isAcceptingPercentageColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
-### `isAcceptingProportionalColumnWidths(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`)
+
+### `isAcceptingProportionalColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
-### `isHTMLTableCellTagName(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`)
+
+### `isHTMLTableCellTagName(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The table cell tag name to check.
 
 ### `getAllColspecWidthRepresentations()`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
 
-### `getColSpec(`int` columnIndex)`
+### `getColSpec(int columnIndex)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `isPreferPercentageColumnWidths(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `columnIndex` (`int`): The column index
+
+### `isPreferPercentageColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`)
 

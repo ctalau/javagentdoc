@@ -14,35 +14,35 @@
 
 ## Description
 
-A sorted set which forwards all its method calls to another sorted set. Subclasses should
+Subclasses should
  override one or more methods to modify the behavior of the backing sorted set as desired per the
- <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+ [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>Warning:</b> The methods of `ForwardingSortedSet` forward <i>indiscriminately</i> to
- the methods of the delegate. For example, overriding `add` alone <i>will not</i> change
- the behavior of `addAll`, which can lead to unexpected behavior. In this case, you should
- override `addAll` as well, either providing your own implementation, or delegating to the
- provided `standardAddAll` method.
+ 
+**Warning:** The methods of ForwardingSortedSet forward *indiscriminately* to
+ the methods of the delegate. For example, overriding #add alone *will not* change
+ the behavior of #addAll, which can lead to unexpected behavior. In this case, you should
+ override addAll as well, either providing your own implementation, or delegating to the
+ provided standardAddAll method.
 
- <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the `ForwardingSortedSet`.
+ 
+**default method warning:** This class does *not* forward calls to 
+ default methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the ForwardingSortedSet.
 
- <p>Each of the `standard` methods, where appropriate, uses the set's comparator (or the
+ 
+Each of the standard methods, where appropriate, uses the set's comparator (or the
  natural ordering of the elements, if there is no comparator) to test element equality. As a
  result, if the comparator is not consistent with equals, some of the standard implementations may
- violate the `Set` contract.
+ violate the Set contract.
 
- <p>The `standard` methods and the collection views they return are not guaranteed to be
+ 
+The standard methods and the collection views they return are not guaranteed to be
  thread-safe, even when all of the methods that they depend on are thread-safe.
-**Author:** Mike Bostock
-**Author:** Louis Wasserman
-**Since:** 2.0
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -58,43 +58,60 @@ Constructor for use by subclasses.
 
 **Returns:** `E`
 
-### `headSet(`E` toElement)`
+### `headSet(E toElement)`
 
 **Returns:** `java.util.SortedSet<E>`
+
+**Parameters:**
+- `toElement` (`E`)
 
 ### `last()`
 
 **Returns:** `E`
 
-### `subSet(`E` fromElement, `E` toElement)`
+### `subSet(E fromElement, E toElement)`
 
 **Returns:** `java.util.SortedSet<E>`
 
-### `tailSet(`E` fromElement)`
+**Parameters:**
+- `fromElement` (`E`)
+- `toElement` (`E`)
+
+### `tailSet(E fromElement)`
 
 **Returns:** `java.util.SortedSet<E>`
 
-### `standardContains(`java.lang.Object` object)`
+**Parameters:**
+- `fromElement` (`E`)
+
+### `standardContains(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-A sensible definition of `contains` in terms of the `first()` method of `tailSet`. If you override `tailSet`, you may wish to override `contains` to
+If you override #tailSet, you may wish to override #contains to
  forward to this implementation.
-**Since:** 7.0
 
-### `standardRemove(`java.lang.Object` object)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `standardRemove(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-A sensible definition of `remove` in terms of the `iterator()` method of `tailSet`. If you override `tailSet`, you may wish to override `remove` to
+If you override #tailSet, you may wish to override #remove to
  forward to this implementation.
-**Since:** 7.0
 
-### `standardSubSet(`E` fromElement, `E` toElement)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `standardSubSet(E fromElement, E toElement)`
 
 **Returns:** `java.util.SortedSet<E>`
 
-A sensible default implementation of `subSet(Object, Object)` in terms of `headSet(Object)` and `tailSet(Object)`. In some situations, you may wish to override
- `subSet(Object, Object)` to forward to this implementation.
-**Since:** 7.0
+In some situations, you may wish to override
+ #subSet(Object, Object) to forward to this implementation.
+
+**Parameters:**
+- `fromElement` (`E`)
+- `toElement` (`E`)
 

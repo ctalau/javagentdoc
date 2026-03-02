@@ -50,31 +50,43 @@
 
 **Returns:** `java.lang.String`
 
-### `setCharToReplaceSpacesWith(`java.lang.String` arg0)`
+### `setCharToReplaceSpacesWith(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `isAllLowerCase()`
 
 **Returns:** `boolean`
 
-### `setAllLowerCase(`boolean` arg0)`
+### `setAllLowerCase(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isUpperCaseFirstLetter()`
 
 **Returns:** `boolean`
 
-### `setUpperCaseFirstLetter(`boolean` arg0)`
+### `setUpperCaseFirstLetter(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `getHowToGenerateFilenameFromTitle()`
 
 **Returns:** `int`
 
-### `setHowToGenerateFilenameFromTitle(`int` arg0)`
+### `setHowToGenerateFilenameFromTitle(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 

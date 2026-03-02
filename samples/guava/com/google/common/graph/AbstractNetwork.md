@@ -13,15 +13,12 @@
 
 ## Description
 
-This class provides a skeletal implementation of `Network`. It is recommended to extend
- this class rather than implement `Network` directly.
+It is recommended to extend
+ this class rather than implement Network directly.
 
- <p>The methods implemented in this class should not be overridden unless the subclass admits a
+ 
+The methods implemented in this class should not be overridden unless the subclass admits a
  more efficient implementation.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <E> Edge parameter type
-**Since:** 20.0
 
 ## Constructors
 
@@ -33,72 +30,122 @@ This class provides a skeletal implementation of `Network`. It is recommended to
 
 **Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
 
-### `degree(`N` node)`
+### `degree(N node)`
 
 **Returns:** `int`
 
-### `inDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `inDegree(N node)`
 
 **Returns:** `int`
 
-### `outDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `outDegree(N node)`
 
 **Returns:** `int`
 
-### `adjacentEdges(`E` edge)`
+**Parameters:**
+- `node` (`N`)
+
+### `adjacentEdges(E edge)`
 
 **Returns:** `java.util.Set<E>`
 
-### `edgesConnecting(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `edge` (`E`)
+
+### `edgesConnecting(N nodeU, N nodeV)`
 
 **Returns:** `java.util.Set<E>`
 
-### `edgesConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `edgesConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `java.util.Set<E>`
 
-### `connectedPredicate(`N` nodePresent, `N` nodeToCheck)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `connectedPredicate(N nodePresent, N nodeToCheck)`
 
 **Returns:** [`com.google.common.base.Predicate<E>`](../base/Predicate.md)
 
-### `edgeConnecting(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `nodePresent` (`N`)
+- `nodeToCheck` (`N`)
+
+### `edgeConnecting(N nodeU, N nodeV)`
 
 **Returns:** `java.util.Optional<E>`
 
-### `edgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `edgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `java.util.Optional<E>`
 
-### `edgeConnectingOrNull(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `edgeConnectingOrNull(N nodeU, N nodeV)`
 
 **Returns:** `E`
 
-### `edgeConnectingOrNull([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `edgeConnectingOrNull(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `E`
 
-### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `hasEdgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
 
-### `validateEndpoints([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `validateEndpoints(com.google.common.graph.EndpointPair<?> endpoints)`
 
 **Returns:** `void`
 
-Throws an IllegalArgumentException if the ordering of `endpoints` is not compatible with
- the directionality of this graph.
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
 
-### `isOrderingCompatible([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md) endpoints)`
+### `isOrderingCompatible(com.google.common.graph.EndpointPair<?> endpoints)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
+
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
 
-### `equals(`java.lang.Object` obj)`
-
-**Returns:** `boolean`
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -108,9 +155,10 @@ Throws an IllegalArgumentException if the ordering of `endpoints` is not compati
 
 **Returns:** `java.lang.String`
 
-Returns a string representation of this network.
-
-### `edgeIncidentNodesMap([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
+### `edgeIncidentNodesMap(com.google.common.graph.Network<N,E> network)`
 
 **Returns:** `java.util.Map<E,com.google.common.graph.EndpointPair<N>>`
+
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 

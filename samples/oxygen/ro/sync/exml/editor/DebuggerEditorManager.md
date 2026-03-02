@@ -8,7 +8,11 @@
 
 ## Methods
 
-### `perspectiveWillChange(`int` arg0, `int` arg1)`
+### `perspectiveWillChange(int arg0, int arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
 

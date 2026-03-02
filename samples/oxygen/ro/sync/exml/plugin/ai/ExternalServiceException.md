@@ -26,9 +26,18 @@ If false, it means the error is non-fatal and
 
 ## Constructors
 
-### `<init>(`java.lang.String` message, `boolean` isFatal)`
+### `<init>(java.lang.String message, boolean isFatal)`
 
-### `<init>(`java.lang.String` message, `java.lang.Throwable` cause, `boolean` isFatal)`
+**Parameters:**
+- `message` (`java.lang.String`): the detail message explaining the cause of the exception.
+- `isFatal` (`boolean`): a flag indicating if the exception is fatal and should stop further execution.
+
+### `<init>(java.lang.String message, java.lang.Throwable cause, boolean isFatal)`
+
+**Parameters:**
+- `message` (`java.lang.String`): the detail message explaining the cause of the exception.
+- `cause` (`java.lang.Throwable`): the cause of the exception (a Throwable object).
+- `isFatal` (`boolean`): a flag indicating if the exception is fatal and should stop further execution.
 
 ## Methods
 

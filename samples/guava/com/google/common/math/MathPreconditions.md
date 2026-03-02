@@ -6,56 +6,101 @@
 
 ## Description
 
-A collection of preconditions for math functions.
-**Author:** Louis Wasserman
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `checkPositive(`java.lang.String` role, `int` x)`
+### `checkPositive(java.lang.String role, int x)`
 
 **Returns:** `int`
 
-### `checkPositive(`java.lang.String` role, `long` x)`
+**Parameters:**
+- `role` (`java.lang.String`)
+- `x` (`int`)
+
+### `checkPositive(java.lang.String role, long x)`
 
 **Returns:** `long`
 
-### `checkPositive(`java.lang.String` role, `java.math.BigInteger` x)`
+**Parameters:**
+- `role` (`java.lang.String`)
+- `x` (`long`)
+
+### `checkPositive(java.lang.String role, java.math.BigInteger x)`
 
 **Returns:** `java.math.BigInteger`
 
-### `checkNonNegative(`java.lang.String` role, `int` x)`
+**Parameters:**
+- `role` (`java.lang.String`)
+- `x` (`java.math.BigInteger`)
+
+### `checkNonNegative(java.lang.String role, int x)`
 
 **Returns:** `int`
 
-### `checkNonNegative(`java.lang.String` role, `long` x)`
+**Parameters:**
+- `role` (`java.lang.String`)
+- `x` (`int`)
+
+### `checkNonNegative(java.lang.String role, long x)`
 
 **Returns:** `long`
 
-### `checkNonNegative(`java.lang.String` role, `java.math.BigInteger` x)`
+**Parameters:**
+- `role` (`java.lang.String`)
+- `x` (`long`)
+
+### `checkNonNegative(java.lang.String role, java.math.BigInteger x)`
 
 **Returns:** `java.math.BigInteger`
 
-### `checkNonNegative(`java.lang.String` role, `double` x)`
+**Parameters:**
+- `role` (`java.lang.String`)
+- `x` (`java.math.BigInteger`)
+
+### `checkNonNegative(java.lang.String role, double x)`
 
 **Returns:** `double`
 
-### `checkRoundingUnnecessary(`boolean` condition)`
+**Parameters:**
+- `role` (`java.lang.String`)
+- `x` (`double`)
+
+### `checkRoundingUnnecessary(boolean condition)`
 
 **Returns:** `void`
 
-### `checkInRangeForRoundingInputs(`boolean` condition, `double` input, `java.math.RoundingMode` mode)`
+**Parameters:**
+- `condition` (`boolean`)
+
+### `checkInRangeForRoundingInputs(boolean condition, double input, java.math.RoundingMode mode)`
 
 **Returns:** `void`
 
-### `checkNoOverflow(`boolean` condition, `java.lang.String` methodName, `int` a, `int` b)`
+**Parameters:**
+- `condition` (`boolean`)
+- `input` (`double`)
+- `mode` (`java.math.RoundingMode`)
+
+### `checkNoOverflow(boolean condition, java.lang.String methodName, int a, int b)`
 
 **Returns:** `void`
 
-### `checkNoOverflow(`boolean` condition, `java.lang.String` methodName, `long` a, `long` b)`
+**Parameters:**
+- `condition` (`boolean`)
+- `methodName` (`java.lang.String`)
+- `a` (`int`)
+- `b` (`int`)
+
+### `checkNoOverflow(boolean condition, java.lang.String methodName, long a, long b)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `condition` (`boolean`)
+- `methodName` (`java.lang.String`)
+- `a` (`long`)
+- `b` (`long`)
 

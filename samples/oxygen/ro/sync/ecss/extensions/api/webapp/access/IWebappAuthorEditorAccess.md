@@ -21,7 +21,7 @@
 If the modified status was set to true during a "compound edit" AuthorDocumentController#beginCompoundEdit() 
  this method should also be called inside the same "compound edit".
 
-### `changeActiveCssGroups(`java.util.Set<java.lang.String>` titles)`
+### `changeActiveCssGroups(java.util.Set<java.lang.String> titles)`
 
 **Returns:** `void`
 
@@ -32,6 +32,9 @@ Each CSS file have a title associated with it.
  
  To find the list of all available CSS titles for a specific document type 
  you can call DocumentTypeInfo#getAvailableCssGroups().
+
+**Parameters:**
+- `titles` (`java.util.Set<java.lang.String>`): The titles of the CSS files to use.
 
 ### `getActiveCssGroupsTitles()`
 

@@ -20,11 +20,17 @@
 
 ## Methods
 
-### `getNodesOfInterestCriteria(`java.lang.String` namespace)`
+### `getNodesOfInterestCriteria(java.lang.String namespace)`
 
 **Returns:** `java.lang.String[]`
 
-### `getSupportedFramework(`java.lang.String` namespaceURI)`
+**Parameters:**
+- `namespace` (`java.lang.String`)
+
+### `getSupportedFramework(java.lang.String namespaceURI)`
 
 **Returns:** [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../imagemap/SupportedFrameworks.md)
+
+**Parameters:**
+- `namespaceURI` (`java.lang.String`)
 

@@ -18,7 +18,7 @@ This content will appear inline in the Author page for that particular keyref.
 
 ## Methods
 
-### `getContent(`java.lang.String` nodeClass)`
+### `getContent(java.lang.String nodeClass)`
 
 **Returns:** `java.lang.String`
 
@@ -32,9 +32,15 @@ For an XML like:
  
  `getKeyRefContent("- topic/keyword ")`
 
-### `equals(`java.lang.Object` obj)`
+**Parameters:**
+- `nodeClass` (`java.lang.String`): The "@class" of the node which links.
+
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

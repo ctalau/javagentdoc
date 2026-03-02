@@ -20,7 +20,11 @@
 
 ### `<init>()`
 
-### `<init>(`int` rowsNumber, `boolean` insertBelow)`
+### `<init>(int rowsNumber, boolean insertBelow)`
+
+**Parameters:**
+- `rowsNumber` (`int`): The number of rows.
+- `insertBelow` (`boolean`): `true` to insert below.
 
 ## Methods
 

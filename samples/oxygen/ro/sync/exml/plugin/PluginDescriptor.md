@@ -234,25 +234,34 @@ This filter will be used to filter CSS styles
 
 ## Methods
 
-### `getExtensions(`java.lang.String` key)`
+### `getExtensions(java.lang.String key)`
 
 **Returns:** `java.util.List<ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription>`
 
 Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION.
+
+**Parameters:**
+- `key` (`java.lang.String`): The extension key.
 
 ### `getExtensions()`
 
 **Returns:** `java.util.List<ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription>`
 
-### `addExtension(`ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription` descr)`
+### `addExtension(ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription descr)`
 
 **Returns:** `void`
 
 Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION.
 
-### `addContextInstance(`java.lang.Object` contextInstance)`
+**Parameters:**
+- `descr` (`ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription`): The plugin extension description.
+
+### `addContextInstance(java.lang.Object contextInstance)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `contextInstance` (`java.lang.Object`): a context instance.
 
 ### `getContextInstances()`
 
@@ -262,23 +271,32 @@ Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION
 
 **Returns:** `java.lang.String`
 
-### `setDescription(`java.lang.String` description)`
+### `setDescription(java.lang.String description)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `description` (`java.lang.String`): The description of the plugin.
 
 ### `getName()`
 
 **Returns:** `java.lang.String`
 
-### `setName(`java.lang.String` name)`
+### `setName(java.lang.String name)`
 
 **Returns:** `void`
 
-### `setID(`java.lang.String` id)`
+**Parameters:**
+- `name` (`java.lang.String`): The name of the plugin.
+
+### `setID(java.lang.String id)`
 
 **Returns:** `void`
 
 Empty string is treated as no ID.
+
+**Parameters:**
+- `id` (`java.lang.String`): ID of the plugin.
 
 ### `getID()`
 
@@ -288,61 +306,87 @@ Empty string is treated as no ID.
 
 **Returns:** `java.lang.String`
 
-### `setVendor(`java.lang.String` vendor)`
+### `setVendor(java.lang.String vendor)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `vendor` (`java.lang.String`): The vendor of the plugin.
 
 ### `getVersion()`
 
 **Returns:** `java.lang.String`
 
-### `setVersion(`java.lang.String` version)`
+### `setVersion(java.lang.String version)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `version` (`java.lang.String`): The version of the plugin.
 
 ### `isEnabledStatus()`
 
 **Returns:** `boolean`
 
-### `setEnabledStatus(`boolean` enabledStatus)`
+### `setEnabledStatus(boolean enabledStatus)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `enabledStatus` (`boolean`): `true` if the plugin is enabled. 
+ `false` if the plugin is disabled.
 
 ### `isDisabledFromFile()`
 
 **Returns:** `boolean`
 
-### `setDisabledFromFile(`boolean` isDisabledFromFile)`
+### `setDisabledFromFile(boolean isDisabledFromFile)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `isDisabledFromFile` (`boolean`): The `true` if the plugin
+ is disabled using 'plugin.disable' file.
 
 ### `getBaseDir()`
 
 **Returns:** `java.io.File`
 
-### `setBaseDir(`java.io.File` baseDir)`
+### `setBaseDir(java.io.File baseDir)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `baseDir` (`java.io.File`): The base dir of the plugin.
 
 ### `getConfigUrlPath()`
 
 **Returns:** `java.lang.String`
 
-### `setConfigUrlPath(`java.lang.String` configUrlPath)`
+### `setConfigUrlPath(java.lang.String configUrlPath)`
 
 **Returns:** `void`
 
-### `addPluginContributedView([`ro.sync.exml.plugin.PluginContributedView`](./PluginContributedView.md) viewInfo)`
+**Parameters:**
+- `configUrlPath` (`java.lang.String`): The configUrl to set.
+
+### `addPluginContributedView(ro.sync.exml.plugin.PluginContributedView viewInfo)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `viewInfo` ([`ro.sync.exml.plugin.PluginContributedView`](./PluginContributedView.md)): Information about the view
 
 ### `getContributedViews()`
 
 **Returns:** `java.util.List<ro.sync.exml.plugin.PluginContributedView>`
 
-### `addPluginContributedToolbar([`ro.sync.exml.plugin.PluginContributedToolbar`](./PluginContributedToolbar.md) toolbarInfo)`
+### `addPluginContributedToolbar(ro.sync.exml.plugin.PluginContributedToolbar toolbarInfo)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `toolbarInfo` ([`ro.sync.exml.plugin.PluginContributedToolbar`](./PluginContributedToolbar.md)): Information about the new toolbar.
 
 ### `getContributedToolbars()`
 
@@ -352,9 +396,12 @@ Empty string is treated as no ID.
 
 **Returns:** `boolean`
 
-### `setShouldAcceptLicense(`boolean` shouldAcceptLicense)`
+### `setShouldAcceptLicense(boolean shouldAcceptLicense)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `shouldAcceptLicense` (`boolean`): The shouldAcceptLicense to set.
 
 ### `toString()`
 
@@ -364,7 +411,10 @@ Empty string is treated as no ID.
 
 **Returns:** `java.lang.String`
 
-### `setLicense(`java.lang.String` license)`
+### `setLicense(java.lang.String license)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `license` (`java.lang.String`): The license to set.
 

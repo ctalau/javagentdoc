@@ -8,14 +8,10 @@
 
 ## Description
 
-An `InputStream` that converts characters from a `Reader` into bytes using an
- arbitrary Charset.
-
- <p>This is an alternative to copying the data to an `OutputStream` via a `Writer`,
- which is necessarily blocking. By implementing an `InputStream` it allows consumers to
+This is an alternative to copying the data to an OutputStream via a Writer,
+ which is necessarily blocking. By implementing an InputStream it allows consumers to
  "pull" as much data as they can handle, which is more convenient when dealing with flow
  controlled, async APIs.
-**Author:** Chris Nokleberg
 
 ## Fields
 
@@ -35,54 +31,45 @@ An `InputStream` that converts characters from a `Reader` into bytes using an
 
 **Type:** `java.nio.CharBuffer`
 
-charBuffer holds characters that have been read from the Reader but not encoded yet. The buffer
+The buffer
  is perpetually "flipped" (unencoded characters between position and limit).
 
 ### `byteBuffer`
 
 **Type:** `java.nio.ByteBuffer`
 
-byteBuffer holds encoded characters that have not yet been sent to the caller of the input
- stream. When encoding it is "unflipped" (encoded bytes between 0 and position) and when
+When encoding it is "unflipped" (encoded bytes between 0 and position) and when
  draining it is flipped (undrained bytes between position and limit).
 
 ### `endOfInput`
 
 **Type:** `boolean`
 
-Whether we've finished reading the reader.
-
 ### `draining`
 
 **Type:** `boolean`
-
-Whether we're copying encoded bytes to the caller's buffer.
 
 ### `doneFlushing`
 
 **Type:** `boolean`
 
-Whether we've successfully flushed the encoder.
-
 ## Constructors
 
-### `<init>(`java.io.Reader` reader, `java.nio.charset.Charset` charset, `int` bufferSize)`
+### `<init>(java.io.Reader reader, java.nio.charset.Charset charset, int bufferSize)`
 
-Creates a new input stream that will encode the characters from `reader` into bytes using
- the given character set. Malformed input and unmappable characters will be replaced.
-@param reader input source
-@param charset character set used for encoding chars to bytes
-@param bufferSize size of internal input and output buffers
-@throws IllegalArgumentException if bufferSize is non-positive
+Malformed input and unmappable characters will be replaced.
 
-### `<init>(`java.io.Reader` reader, `java.nio.charset.CharsetEncoder` encoder, `int` bufferSize)`
+**Parameters:**
+- `reader` (`java.io.Reader`): input source
+- `charset` (`java.nio.charset.Charset`): character set used for encoding chars to bytes
+- `bufferSize` (`int`): size of internal input and output buffers
 
-Creates a new input stream that will encode the characters from `reader` into bytes using
- the given character set encoder.
-@param reader input source
-@param encoder character set encoder used for encoding chars to bytes
-@param bufferSize size of internal input and output buffers
-@throws IllegalArgumentException if bufferSize is non-positive
+### `<init>(java.io.Reader reader, java.nio.charset.CharsetEncoder encoder, int bufferSize)`
+
+**Parameters:**
+- `reader` (`java.io.Reader`): input source
+- `encoder` (`java.nio.charset.CharsetEncoder`): character set encoder used for encoding chars to bytes
+- `bufferSize` (`int`): size of internal input and output buffers
 
 ## Methods
 
@@ -94,40 +81,50 @@ Creates a new input stream that will encode the characters from `reader` into by
 
 **Returns:** `int`
 
-### `read(`byte[]` b, `int` off, `int` len)`
+### `read(byte[] b, int off, int len)`
 
 **Returns:** `int`
 
-### `grow(`java.nio.CharBuffer` buf)`
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `grow(java.nio.CharBuffer buf)`
 
 **Returns:** `java.nio.CharBuffer`
 
-Returns a new CharBuffer identical to buf, except twice the capacity.
+**Parameters:**
+- `buf` (`java.nio.CharBuffer`)
 
 ### `readMoreChars()`
 
 **Returns:** `void`
 
-Handle the case of underflow caused by needing more input characters.
-
-### `availableCapacity(`java.nio.Buffer` buffer)`
+### `availableCapacity(java.nio.Buffer buffer)`
 
 **Returns:** `int`
 
-Returns the number of elements between the limit and capacity.
+**Parameters:**
+- `buffer` (`java.nio.Buffer`)
 
-### `startDraining(`boolean` overflow)`
+### `startDraining(boolean overflow)`
 
 **Returns:** `void`
 
-Flips the buffer output buffer so we can start reading bytes from it. If we are starting to
+If we are starting to
  drain because there was overflow, and there aren't actually any characters to drain, then the
  overflow must be due to a small output buffer.
 
-### `drain(`byte[]` b, `int` off, `int` len)`
+**Parameters:**
+- `overflow` (`boolean`)
+
+### `drain(byte[] b, int off, int len)`
 
 **Returns:** `int`
 
-Copy as much of the byte buffer into the output array as possible, returning the (positive)
- number of characters copied.
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
 

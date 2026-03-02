@@ -18,7 +18,10 @@ These directives control various resource types that can be loaded or executed i
 
 **Returns:** [`ro.sync.exml.plugin.workspace.security.CspDirective[]`](./CspDirective.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.exml.plugin.workspace.security.CspDirective`](./CspDirective.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

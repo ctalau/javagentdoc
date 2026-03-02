@@ -13,10 +13,6 @@
 
 ## Description
 
-`values()` implementation for `ImmutableMap`.
-**Author:** Jesse Wilson
-**Author:** Kevin Bourrillion
-
 ## Fields
 
 ### `map`
@@ -25,7 +21,10 @@
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md) map)`
+### `<init>(com.google.common.collect.ImmutableMap<K,V> map)`
+
+**Parameters:**
+- `map` ([`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md))
 
 ## Methods
 
@@ -41,9 +40,12 @@
 
 **Returns:** `java.util.Spliterator<V>`
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `isPartialView()`
 
@@ -53,9 +55,12 @@
 
 **Returns:** [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md)
 
-### `forEach(`java.util.function.Consumer<? super V>` action)`
+### `forEach(java.util.function.Consumer<? super V> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.Consumer<? super V>`)
 
 ### `writeReplace()`
 

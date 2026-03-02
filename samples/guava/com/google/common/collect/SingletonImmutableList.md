@@ -12,9 +12,6 @@
 
 ## Description
 
-Implementation of `ImmutableList` with exactly one element.
-**Author:** Hayward Chan
-
 ## Fields
 
 ### `element`
@@ -23,13 +20,19 @@ Implementation of `ImmutableList` with exactly one element.
 
 ## Constructors
 
-### `<init>(`E` element)`
+### `<init>(E element)`
+
+**Parameters:**
+- `element` (`E`)
 
 ## Methods
 
-### `get(`int` index)`
+### `get(int index)`
 
 **Returns:** `E`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `iterator()`
 
@@ -43,9 +46,13 @@ Implementation of `ImmutableList` with exactly one element.
 
 **Returns:** `int`
 
-### `subList(`int` fromIndex, `int` toIndex)`
+### `subList(int fromIndex, int toIndex)`
 
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+**Parameters:**
+- `fromIndex` (`int`)
+- `toIndex` (`int`)
 
 ### `toString()`
 

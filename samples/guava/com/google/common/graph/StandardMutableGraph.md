@@ -14,13 +14,11 @@
 
 ## Description
 
-Standard implementation of `MutableGraph` that supports both directed and undirected
- graphs. Instances of this class should be constructed with `GraphBuilder`.
+Instances of this class should be constructed with GraphBuilder.
 
- <p>Time complexities for mutation methods are all O(1) except for `removeNode(N node)`,
- which is in O(d_node) where d_node is the degree of `node`.
-**Author:** James Sexton
-@param <N> Node parameter type
+ 
+Time complexities for mutation methods are all O(1) except for removeNode(N node),
+ which is in O(d_node) where d_node is the degree of node.
 
 ## Fields
 
@@ -30,9 +28,10 @@ Standard implementation of `MutableGraph` that supports both directed and undire
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md) builder)`
+### `<init>(com.google.common.graph.AbstractGraphBuilder<? super N> builder)`
 
-Constructs a `MutableGraph` with the properties specified in `builder`.
+**Parameters:**
+- `builder` ([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md))
 
 ## Methods
 
@@ -40,27 +39,47 @@ Constructs a `MutableGraph` with the properties specified in `builder`.
 
 **Returns:** [`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md)
 
-### `addNode(`N` node)`
+### `addNode(N node)`
 
 **Returns:** `boolean`
 
-### `putEdge(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `node` (`N`)
+
+### `putEdge(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `putEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `putEdge(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
 
-### `removeNode(`N` node)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `removeNode(N node)`
 
 **Returns:** `boolean`
 
-### `removeEdge(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `node` (`N`)
+
+### `removeEdge(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `removeEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `removeEdge(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 

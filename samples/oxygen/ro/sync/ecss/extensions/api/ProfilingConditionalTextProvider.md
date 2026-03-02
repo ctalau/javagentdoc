@@ -18,7 +18,7 @@ It differs from one variant of the document to another,
 
 ## Methods
 
-### `getXMLFragmentForContentProfiling(`int` startOffset, `int` endOffset, [`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `getXMLFragmentForContentProfiling(int startOffset, int endOffset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.lang.String`
 
@@ -29,10 +29,18 @@ The returned XML fragment is used to wrap the content included in the
  The first leaf of the XML fragment will be the destination of the text to surround.
  The profiling attributes will be set on the first element of the XML fragment.
 
-### `shouldAddProfilingDirectlyOnElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) element)`
+**Parameters:**
+- `startOffset` (`int`): The start offset of the document content that must be profiled.
+- `endOffset` (`int`): The end offset of the document content that must be profiled.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access class to the author functions.
+
+### `shouldAddProfilingDirectlyOnElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
 If this method returns `false`, the selected contetn will be wrapped 
  in an XML fragment given by #getXMLFragmentForContentProfiling(int, int, AuthorAccess).
+
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element to be analyzed.
 

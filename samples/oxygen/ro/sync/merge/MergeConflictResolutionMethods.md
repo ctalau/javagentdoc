@@ -16,7 +16,10 @@
 
 **Returns:** [`ro.sync.merge.MergeConflictResolutionMethods[]`](./MergeConflictResolutionMethods.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.merge.MergeConflictResolutionMethods`](./MergeConflictResolutionMethods.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `addInputURLChooserCustomizer([`ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer`](./InputURLChooserCustomizer.md) inputURLChooserCustomizer)`
+### `addInputURLChooserCustomizer(ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer inputURLChooserCustomizer)`
 
 **Returns:** `void`
 
@@ -25,11 +25,18 @@ These actions are available in
  When the new action gets called the custom code shows the custom chooser and at the end it can call the 
  **ro.sync.exml.workspace.api.standalone.InputURLChooser** interface to set the new URL in the combo box.
 
-### `addRelativeReferencesResolver(`java.lang.String` protocol, [`ro.sync.exml.workspace.api.util.RelativeReferenceResolver`](../util/RelativeReferenceResolver.md) resolver)`
+**Parameters:**
+- `inputURLChooserCustomizer` ([`ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer`](./InputURLChooserCustomizer.md)): The input URL chooser customizer.
+
+### `addRelativeReferencesResolver(java.lang.String protocol, ro.sync.exml.workspace.api.util.RelativeReferenceResolver resolver)`
 
 **Returns:** `void`
 
 This method can be used by a CMS implementor to take control over the way Oxygen is computing relative references for a certain URL protocol.
  For example when inserting in a DITA Topic a reference to an image Oxygen will try to make the reference relative to the current XML document.
  If the DITA Topic is opened using your custom URL protocol you can take control over they way in which the relative path is computed.
+
+**Parameters:**
+- `protocol` (`java.lang.String`): The URL protocol for which you want to take control over the relativization.
+- `resolver` ([`ro.sync.exml.workspace.api.util.RelativeReferenceResolver`](../util/RelativeReferenceResolver.md)): The custom resolver.
 

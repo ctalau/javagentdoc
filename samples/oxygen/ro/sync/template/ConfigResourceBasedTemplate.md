@@ -24,17 +24,31 @@
 
 ### `<init>()`
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, [`ro.sync.exml.workspace.api.options.ConfigResource`](../exml/workspace/api/options/ConfigResource.md) arg2, [`ro.sync.exml.workspace.api.options.ConfigResource`](../exml/workspace/api/options/ConfigResource.md) arg3)`
+### `<init>(java.lang.String arg0, java.lang.String arg1, ro.sync.exml.workspace.api.options.ConfigResource arg2, ro.sync.exml.workspace.api.options.ConfigResource arg3)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` ([`ro.sync.exml.workspace.api.options.ConfigResource`](../exml/workspace/api/options/ConfigResource.md))
+- `arg3` ([`ro.sync.exml.workspace.api.options.ConfigResource`](../exml/workspace/api/options/ConfigResource.md))
 
 ## Methods
 
-### `setTemplateProperties([`ro.sync.template.ConfigResourceBasedTemplate`](./ConfigResourceBasedTemplate.md) arg0, `java.util.Properties` arg1)`
+### `setTemplateProperties(ro.sync.template.ConfigResourceBasedTemplate arg0, java.util.Properties arg1)`
 
 **Returns:** `void`
 
-### `getAndRemove(`java.util.Properties` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` ([`ro.sync.template.ConfigResourceBasedTemplate`](./ConfigResourceBasedTemplate.md))
+- `arg1` (`java.util.Properties`)
+
+### `getAndRemove(java.util.Properties arg0, java.lang.String arg1)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `arg0` (`java.util.Properties`)
+- `arg1` (`java.lang.String`)
 
 ### `getSource()`
 
@@ -44,9 +58,12 @@
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` arg0)`
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -56,9 +73,12 @@
 
 **Returns:** `java.lang.Object`
 
-### `setOtherProperties(`ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>` arg0)`
+### `setOtherProperties(ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String> arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>`)
 
 ### `getOtherProps()`
 

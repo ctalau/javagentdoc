@@ -6,7 +6,10 @@
 
 ## Methods
 
-### `extract(`ro.sync.ecss.dom.p` arg0)`
+### `extract(ro.sync.ecss.dom.p arg0)`
 
 **Returns:** `java.util.Optional<ro.sync.exml.workspace.api.references.Reference>`
+
+**Parameters:**
+- `arg0` (`ro.sync.ecss.dom.p`)
 

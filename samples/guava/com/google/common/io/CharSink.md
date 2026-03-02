@@ -6,31 +6,31 @@
 
 ## Description
 
-A destination to which characters can be written, such as a text file. Unlike a `Writer`, a
- `CharSink` is not an open, stateful stream that can be written to and closed. Instead, it
- is an immutable <i>supplier</i> of `Writer` instances.
+Unlike a Writer, a
+ CharSink is not an open, stateful stream that can be written to and closed. Instead, it
+ is an immutable *supplier* of Writer instances.
 
- <p>`CharSink` provides two kinds of methods:
+ 
+CharSink provides two kinds of methods:
 
- <ul>
-   <li><b>Methods that return a writer:</b> These methods should return a <i>new</i>, independent
+ 
+
+   - **Methods that return a writer:** These methods should return a *new*, independent
        instance each time they are called. The caller is responsible for ensuring that the
        returned writer is closed.
-   <li><b>Convenience methods:</b> These are implementations of common operations that are
+   - **Convenience methods:** These are implementations of common operations that are
        typically implemented by opening a writer using one of the methods in the first category,
        doing something and finally closing the writer that was opened.
- </ul>
+ 
 
- <p>Any `ByteSink` may be viewed as a `CharSink` with a specific character encoding using `ByteSink.asCharSink(Charset)`. Characters written to the
- resulting `CharSink` will written to the `ByteSink` as encoded bytes.
-**Since:** 14.0
-**Author:** Colin Decker
+
+ 
+Any ByteSink may be viewed as a CharSink with a specific character encoding using ByteSink#asCharSink(Charset). Characters written to the
+ resulting CharSink will written to the ByteSink as encoded bytes.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -38,77 +38,81 @@ Constructor for use by subclasses.
 
 **Returns:** `java.io.Writer`
 
-Opens a new `Writer` for writing to this sink. This method returns a new, independent
+This method returns a new, independent
  writer each time it is called.
 
- <p>The caller is responsible for ensuring that the returned writer is closed.
-@throws IOException if an I/O error occurs while opening the writer
+ 
+The caller is responsible for ensuring that the returned writer is closed.
 
 ### `openBufferedStream()`
 
 **Returns:** `java.io.Writer`
 
-Opens a new buffered `Writer` for writing to this sink. The returned stream is not
- required to be a `BufferedWriter` in order to allow implementations to simply delegate to
- `openStream()` when the stream returned by that method does not benefit from additional
+The returned stream is not
+ required to be a BufferedWriter in order to allow implementations to simply delegate to
+ #openStream() when the stream returned by that method does not benefit from additional
  buffering. This method returns a new, independent writer each time it is called.
 
- <p>The caller is responsible for ensuring that the returned writer is closed.
-@throws IOException if an I/O error occurs while opening the writer
-**Since:** 15.0 (in 14.0 with return type `BufferedWriter`)
+ 
+The caller is responsible for ensuring that the returned writer is closed.
 
-### `write(`java.lang.CharSequence` charSequence)`
-
-**Returns:** `void`
-
-Writes the given character sequence to this sink.
-@throws IOException if an I/O error while writing to this sink
-
-### `writeLines(`java.lang.Iterable<? extends java.lang.CharSequence>` lines)`
+### `write(java.lang.CharSequence charSequence)`
 
 **Returns:** `void`
 
-Writes the given lines of text to this sink with each line (including the last) terminated with
- the operating system's default line separator. This method is equivalent to `writeLines(lines, System.getProperty("line.separator"))`.
-@throws IOException if an I/O error occurs while writing to this sink
+**Parameters:**
+- `charSequence` (`java.lang.CharSequence`)
 
-### `writeLines(`java.lang.Iterable<? extends java.lang.CharSequence>` lines, `java.lang.String` lineSeparator)`
-
-**Returns:** `void`
-
-Writes the given lines of text to this sink with each line (including the last) terminated with
- the given line separator.
-@throws IOException if an I/O error occurs while writing to this sink
-
-### `writeLines(`java.util.stream.Stream<? extends java.lang.CharSequence>` lines)`
+### `writeLines(java.lang.Iterable<? extends java.lang.CharSequence> lines)`
 
 **Returns:** `void`
 
-Writes the given lines of text to this sink with each line (including the last) terminated with
- the operating system's default line separator. This method is equivalent to `writeLines(lines, System.getProperty("line.separator"))`.
-@throws IOException if an I/O error occurs while writing to this sink
-**Since:** 22.0
+This method is equivalent to 
+ writeLines(lines, System.getProperty("line.separator")).
 
-### `writeLines(`java.util.stream.Stream<? extends java.lang.CharSequence>` lines, `java.lang.String` lineSeparator)`
+**Parameters:**
+- `lines` (`java.lang.Iterable<? extends java.lang.CharSequence>`)
 
-**Returns:** `void`
-
-Writes the given lines of text to this sink with each line (including the last) terminated with
- the given line separator.
-@throws IOException if an I/O error occurs while writing to this sink
-**Since:** 22.0
-
-### `writeLines(`java.util.Iterator<? extends java.lang.CharSequence>` lines, `java.lang.String` lineSeparator)`
+### `writeLines(java.lang.Iterable<? extends java.lang.CharSequence> lines, java.lang.String lineSeparator)`
 
 **Returns:** `void`
 
-### `writeFrom(`java.lang.Readable` readable)`
+**Parameters:**
+- `lines` (`java.lang.Iterable<? extends java.lang.CharSequence>`)
+- `lineSeparator` (`java.lang.String`)
+
+### `writeLines(java.util.stream.Stream<? extends java.lang.CharSequence> lines)`
+
+**Returns:** `void`
+
+This method is equivalent to 
+ writeLines(lines, System.getProperty("line.separator")).
+
+**Parameters:**
+- `lines` (`java.util.stream.Stream<? extends java.lang.CharSequence>`)
+
+### `writeLines(java.util.stream.Stream<? extends java.lang.CharSequence> lines, java.lang.String lineSeparator)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `lines` (`java.util.stream.Stream<? extends java.lang.CharSequence>`)
+- `lineSeparator` (`java.lang.String`)
+
+### `writeLines(java.util.Iterator<? extends java.lang.CharSequence> lines, java.lang.String lineSeparator)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `lines` (`java.util.Iterator<? extends java.lang.CharSequence>`)
+- `lineSeparator` (`java.lang.String`)
+
+### `writeFrom(java.lang.Readable readable)`
 
 **Returns:** `long`
 
-Writes all the text from the given `Readable` (such as a `Reader`) to this sink.
- Does not close `readable` if it is `Closeable`.
-@return the number of characters written
-@throws IOException if an I/O error occurs while reading from `readable` or writing to
-     this sink
+Does not close readable if it is Closeable.
+
+**Parameters:**
+- `readable` (`java.lang.Readable`)
 

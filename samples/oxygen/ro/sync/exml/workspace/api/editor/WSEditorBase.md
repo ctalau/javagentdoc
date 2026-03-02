@@ -22,20 +22,27 @@
 
 **Returns:** `void`
 
-### `saveAs(`java.net.URL` location)`
+### `saveAs(java.net.URL location)`
 
 **Returns:** `void`
 
 This method is not implemented in the Oxygen Eclipse plugin.
 
-### `close(`boolean` askForSave)`
+**Parameters:**
+- `location` (`java.net.URL`): The new editor location.
+
+### `close(boolean askForSave)`
 
 **Returns:** `boolean`
 
 If the editor has unsaved content and `askForSave` is
  `true`, the user will be given the opportunity to save it.
 
-### `setModified(`boolean` modified)`
+**Parameters:**
+- `askForSave` (`boolean`): `true` to save the editor contents if required,
+            and `false` to discard any unsaved changes.
+
+### `setModified(boolean modified)`
 
 **Returns:** `void`
 
@@ -55,6 +62,9 @@ For Web Author, can be used to mark the document as clean and to make sure that 
    AuthorOperationWithCustomUndoBehavior.
    - it does nothing if invoked with `false`.
 
+**Parameters:**
+- `modified` (`boolean`): `true` if the document in the current editor contains unsaved modifications.
+
 ### `isNewDocument()`
 
 **Returns:** `boolean`
@@ -71,13 +81,16 @@ The unsaved changes are included. If for the Author page change tracking highlig
 
 The unsaved changes are included. If for the Author page change tracking highlights are present, they are also included as processing instructions.
 
-### `reloadContent(`java.io.Reader` reader)`
+### `reloadContent(java.io.Reader reader)`
 
 **Returns:** `void`
 
 This will lose undo history and any modifications the editor may have.
 
-### `reloadContent(`java.io.Reader` reader, `boolean` discardUndoableEdits)`
+**Parameters:**
+- `reader` (`java.io.Reader`): The reader provided by the extension.
+
+### `reloadContent(java.io.Reader reader, boolean discardUndoableEdits)`
 
 **Returns:** `void`
 
@@ -85,17 +98,29 @@ This will lose any modifications the editor may have unless discardUndoableEdits
  is `false` in which case you will be able to UNDO the editor
  to the content prior to the reload.
 
-### `setEditorTabText(`java.lang.String` tabText)`
+**Parameters:**
+- `reader` (`java.io.Reader`): The reader provided by the extension.
+- `discardUndoableEdits` (`boolean`): `true` to lose undo history.
+
+### `setEditorTabText(java.lang.String tabText)`
 
 **Returns:** `void`
 
 Set it with the value NULL to reset the tab title to the default value (the loaded file name).
 
-### `setEditorTabTooltipText(`java.lang.String` tabTooltip)`
+**Parameters:**
+- `tabText` (`java.lang.String`): the text which appears on the editor's tab, by default it is the loaded file name.
+ NULL to reset the tab title to the default value (the loaded file name).
+
+### `setEditorTabTooltipText(java.lang.String tabTooltip)`
 
 **Returns:** `void`
 
 Set it with the value NULL to reset the tab title to the default value (the loaded file path).
+
+**Parameters:**
+- `tabTooltip` (`java.lang.String`): the tooltip for the editor's tab, by default it is the loaded file path.
+ NULL to reset the tab tooltip to the default value (the loaded file path).
 
 ### `getDocumentTypeInformation()`
 

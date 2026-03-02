@@ -40,11 +40,34 @@ For example for "Row(s)"
 
 ## Constructors
 
-### `<init>(`java.lang.String` key, `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>` properties, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>` nodes)`
+### `<init>(java.lang.String key, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes)`
 
-### `<init>(`java.lang.String` key, `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>` properties, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>` nodes, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>` fragmentsToInsert, `javax.swing.text.Position[]` offsets)`
+**Parameters:**
+- `key` (`java.lang.String`): The tab key name. If no translation for the tab, then it represents the name
+ of the tab.
+- `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The list with the properties which will be presented in the current tab.
+- `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The nodes whose properties will be edited.
 
-### `<init>(`java.lang.String` key, `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>` properties, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>` nodes, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>` fragmentsToInsert, `javax.swing.text.Position[]` offsets, `java.lang.String` contextInfo)`
+### `<init>(java.lang.String key, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes, java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragmentsToInsert, javax.swing.text.Position[] offsets)`
+
+**Parameters:**
+- `key` (`java.lang.String`): The tab key name. If no translation for the tab, then it represents the name
+ of the tab.
+- `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The list with the properties which will be presented in the current tab.
+- `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The nodes whose properties will be edited.
+- `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The list of AuthorDocumentFragments to be inserted.
+- `offsets` (`javax.swing.text.Position[]`): The offsets where the new fragments will be inserted.
+
+### `<init>(java.lang.String key, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes, java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragmentsToInsert, javax.swing.text.Position[] offsets, java.lang.String contextInfo)`
+
+**Parameters:**
+- `key` (`java.lang.String`): The tab key name. If no translation for the tab, 
+                            then it represents the name of the tab.
+- `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The list with the properties which will be presented in the current tab.
+- `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The nodes whose properties will be edited.
+- `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The fragments to be inserted.
+- `offsets` (`javax.swing.text.Position[]`): The offsets where the new fragments will be inserted.
+- `contextInfo` (`java.lang.String`): The context information of the current tab. If no context information, then it will be `null`.
 
 ## Methods
 
@@ -55,50 +78,68 @@ For example for "Row(s)"
 If no translation for the tab, then it represents the name
  of the tab.
 
-### `setTabKey(`java.lang.String` tabKey)`
+### `setTabKey(java.lang.String tabKey)`
 
 **Returns:** `void`
 
 If no translation for the tab, then it represents the name
  of the tab.
 
+**Parameters:**
+- `tabKey` (`java.lang.String`): The new tab Key.
+
 ### `getProperties()`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`
 
-### `setProperties(`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>` properties)`
+### `setProperties(java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The new properties to set.
 
 ### `getNodes()`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `setNodes(`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>` nodes)`
+### `setNodes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The new list of nodes to set.
 
 ### `getFragmentsToInsert()`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`
 
-### `setFragmentsToInsert(`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>` fragmentsToInsert)`
+### `setFragmentsToInsert(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragmentsToInsert)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The fragments which will be inserted in the document.
 
 ### `getInsertOffsets()`
 
 **Returns:** `javax.swing.text.Position[]`
 
-### `setInsertOffsets(`javax.swing.text.Position[]` positions)`
+### `setInsertOffsets(javax.swing.text.Position[] positions)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `positions` (`javax.swing.text.Position[]`): The position where the fragments will be inserted.
 
 ### `getContextInfo()`
 
 **Returns:** `java.lang.String`
 
-### `setContextInfo(`java.lang.String` contextInfo)`
+### `setContextInfo(java.lang.String contextInfo)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `contextInfo` (`java.lang.String`): The context information to set.
 

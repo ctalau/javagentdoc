@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.AbstractNavigableMap`
 
-**Extends:** [`com.google.common.collect.Maps.IteratorBasedAbstractMap<K,V>`](Maps/IteratorBasedAbstractMap.md)
+**Extends:** `com.google.common.collect.Maps.IteratorBasedAbstractMap<K,V>`
 
 **Implements:** `java.util.NavigableMap<K,V>`
 
@@ -15,18 +15,18 @@
 
 ## Description
 
-Skeletal implementation of `NavigableMap`.
-**Author:** Louis Wasserman
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `get(`java.lang.Object` key)`
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `firstEntry()`
 
@@ -52,53 +52,87 @@ Skeletal implementation of `NavigableMap`.
 
 **Returns:** `K`
 
-### `lowerEntry(`K` key)`
+### `lowerEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `floorEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `floorEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `ceilingEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `ceilingEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `higherEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `higherEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
-### `lowerKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `lowerKey(K key)`
 
 **Returns:** `K`
 
-### `floorKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `floorKey(K key)`
 
 **Returns:** `K`
 
-### `ceilingKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `ceilingKey(K key)`
 
 **Returns:** `K`
 
-### `higherKey(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `higherKey(K key)`
 
 **Returns:** `K`
+
+**Parameters:**
+- `key` (`K`)
 
 ### `descendingEntryIterator()`
 
 **Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
-### `subMap(`K` fromKey, `K` toKey)`
+### `subMap(K fromKey, K toKey)`
 
 **Returns:** `java.util.SortedMap<K,V>`
 
-### `headMap(`K` toKey)`
+**Parameters:**
+- `fromKey` (`K`)
+- `toKey` (`K`)
+
+### `headMap(K toKey)`
 
 **Returns:** `java.util.SortedMap<K,V>`
 
-### `tailMap(`K` fromKey)`
+**Parameters:**
+- `toKey` (`K`)
+
+### `tailMap(K fromKey)`
 
 **Returns:** `java.util.SortedMap<K,V>`
+
+**Parameters:**
+- `fromKey` (`K`)
 
 ### `navigableKeySet()`
 

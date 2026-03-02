@@ -6,11 +6,6 @@
 
 ## Description
 
-An immutable hash code of arbitrary bit length.
-**Author:** Dimitris Andreou
-**Author:** Kurt Alfred Kluever
-**Since:** 11.0
-
 ## Fields
 
 ### `hexDigits`
@@ -27,147 +22,143 @@ An immutable hash code of arbitrary bit length.
 
 **Returns:** `int`
 
-Returns the number of bits in this hash code; a positive multiple of 8.
-
 ### `asInt()`
 
 **Returns:** `int`
-
-Returns the first four bytes of this hashcode's bytes, converted to an
- `int` value in little-endian order.
-@throws IllegalStateException if `bits() < 32`
 
 ### `asLong()`
 
 **Returns:** `long`
 
-Returns the first eight bytes of this hashcode's bytes, converted to a
- `long` value in little-endian order.
-@throws IllegalStateException if `bits() < 64`
-
 ### `padToLong()`
 
 **Returns:** `long`
-
-If this hashcode has enough bits, returns `asLong()`, otherwise returns a `long`
- value with `asBytes()` as the least-significant bytes and `0x00` as the remaining
- most-significant bytes.
-**Since:** 14.0 (since 11.0 as `Hashing.padToLong(HashCode)`)
 
 ### `asBytes()`
 
 **Returns:** `byte[]`
 
-Returns the value of this hash code as a byte array. The caller may modify the byte array;
- changes to it will <i>not</i> be reflected in this `HashCode` object or any other arrays
+The caller may modify the byte array;
+ changes to it will *not* be reflected in this HashCode object or any other arrays
  returned by this method.
 
-### `writeBytesTo(`byte[]` dest, `int` offset, `int` maxLength)`
+### `writeBytesTo(byte[] dest, int offset, int maxLength)`
 
 **Returns:** `int`
 
-Copies bytes from this hash code into `dest`.
-@param dest the byte array into which the hash code will be written
-@param offset the start offset in the data
-@param maxLength the maximum number of bytes to write
-@return the number of bytes written to `dest`
-@throws IndexOutOfBoundsException if there is not enough room in `dest`
+**Parameters:**
+- `dest` (`byte[]`): the byte array into which the hash code will be written
+- `offset` (`int`): the start offset in the data
+- `maxLength` (`int`): the maximum number of bytes to write
 
-### `writeBytesToImpl(`byte[]` dest, `int` offset, `int` maxLength)`
+### `writeBytesToImpl(byte[] dest, int offset, int maxLength)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `dest` (`byte[]`)
+- `offset` (`int`)
+- `maxLength` (`int`)
 
 ### `getBytesInternal()`
 
 **Returns:** `byte[]`
 
-Returns a mutable view of the underlying bytes for the given `HashCode` if it is a
- byte-based hashcode. Otherwise it returns `HashCode.asBytes`. Do <i>not</i> mutate this
- array or else you will break the immutability contract of `HashCode`.
+Otherwise it returns HashCode#asBytes. Do *not* mutate this
+ array or else you will break the immutability contract of HashCode.
 
-### `equalsSameBits([`com.google.common.hash.HashCode`](./HashCode.md) that)`
+### `equalsSameBits(com.google.common.hash.HashCode that)`
 
 **Returns:** `boolean`
 
-Returns whether this `HashCode` and that `HashCode` have the same value, given that
- they have the same number of bits.
+**Parameters:**
+- `that` ([`com.google.common.hash.HashCode`](./HashCode.md))
 
-### `fromInt(`int` hash)`
+### `fromInt(int hash)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Creates a 32-bit `HashCode` representation of the given int value. The underlying bytes
+The underlying bytes
  are interpreted in little endian order.
-**Since:** 15.0 (since 12.0 in HashCodes)
 
-### `fromLong(`long` hash)`
+**Parameters:**
+- `hash` (`int`)
+
+### `fromLong(long hash)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Creates a 64-bit `HashCode` representation of the given long value. The underlying bytes
+The underlying bytes
  are interpreted in little endian order.
-**Since:** 15.0 (since 12.0 in HashCodes)
 
-### `fromBytes(`byte[]` bytes)`
+**Parameters:**
+- `hash` (`long`)
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
-
-Creates a `HashCode` from a byte array. The array is defensively copied to preserve the
- immutability contract of `HashCode`. The array cannot be empty.
-**Since:** 15.0 (since 12.0 in HashCodes)
-
-### `fromBytesNoCopy(`byte[]` bytes)`
+### `fromBytes(byte[] bytes)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Creates a `HashCode` from a byte array. The array is <i>not</i> copied defensively, so it
- must be handed-off so as to preserve the immutability contract of `HashCode`.
+The array is defensively copied to preserve the
+ immutability contract of HashCode. The array cannot be empty.
 
-### `fromString(`java.lang.String` string)`
+**Parameters:**
+- `bytes` (`byte[]`)
+
+### `fromBytesNoCopy(byte[] bytes)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Creates a `HashCode` from a hexadecimal (`base 16`) encoded string. The string must
+The array is *not* copied defensively, so it
+ must be handed-off so as to preserve the immutability contract of HashCode.
+
+**Parameters:**
+- `bytes` (`byte[]`)
+
+### `fromString(java.lang.String string)`
+
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+The string must
  be at least 2 characters long, and contain only valid, lower-cased hexadecimal characters.
 
- <p>This method accepts the exact format generated by `toString`. If you require more
- lenient `base 16` decoding, please use `com.google.common.io.BaseEncoding.decode`
- (and pass the result to `fromBytes`).
-**Since:** 15.0
+ 
+This method accepts the exact format generated by #toString. If you require more
+ lenient base 16 decoding, please use com.google.common.io.BaseEncoding#decode
+ (and pass the result to #fromBytes).
 
-### `decode(`char` ch)`
+**Parameters:**
+- `string` (`java.lang.String`)
+
+### `decode(char ch)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `ch` (`char`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-Returns `true` if `object` is a `HashCode` instance with the identical byte
- representation to this hash code.
+**Security note:** this method uses a constant-time (not short-circuiting) implementation
+ to protect against [timing attacks](http://en.wikipedia.org/wiki/Timing_attack).
 
- <p><b>Security note:</b> this method uses a constant-time (not short-circuiting) implementation
- to protect against <a href="http://en.wikipedia.org/wiki/Timing_attack">timing attacks</a>.
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-Returns a "Java hash code" for this `HashCode` instance; this is well-defined (so, for
- example, you can safely put `HashCode` instances into a `HashSet`) but is otherwise
- probably not what you want to use.
-
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-Returns a string containing each byte of `asBytes`, in order, as a two-digit unsigned
- hexadecimal number in lower case.
-
- <p>Note that if the output is considered to be a single hexadecimal number, whether this string
- is big-endian or little-endian depends on the byte order of `asBytes`. This may be
- surprising for implementations of `HashCode` that represent the number in big-endian
+Note that if the output is considered to be a single hexadecimal number, whether this string
+ is big-endian or little-endian depends on the byte order of #asBytes. This may be
+ surprising for implementations of HashCode that represent the number in big-endian
  since everything else in the hashing API uniformly treats multibyte values as little-endian.
 
- <p>To create a `HashCode` from its string representation, see `fromString`.
+ 
+To create a HashCode from its string representation, see #fromString.
 

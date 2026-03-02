@@ -12,7 +12,11 @@
 
 ## Methods
 
-### `chooseURLForLink([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `java.lang.String` title)`
+### `chooseURLForLink(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String title)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
+- `title` (`java.lang.String`): The dialog title.
 

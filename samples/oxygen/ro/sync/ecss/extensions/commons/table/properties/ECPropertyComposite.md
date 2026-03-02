@@ -32,7 +32,14 @@
 
 ## Constructors
 
-### `<init>(`org.eclipse.swt.widgets.Composite` arg0, [`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md) arg1, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) arg2, [`ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController`](./PropertySelectionController.md) arg3, `boolean` arg4)`
+### `<init>(org.eclipse.swt.widgets.Composite arg0, ro.sync.ecss.extensions.commons.table.properties.TableProperty arg1, ro.sync.ecss.extensions.api.AuthorResourceBundle arg2, ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController arg3, boolean arg4)`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
+- `arg1` ([`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md))
+- `arg2` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md))
+- `arg3` ([`ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController`](./PropertySelectionController.md))
+- `arg4` (`boolean`)
 
 ## Methods
 
@@ -52,7 +59,10 @@
 
 **Returns:** `void`
 
-### `radioSelectionChanged(`org.eclipse.swt.widgets.Button` arg0)`
+### `radioSelectionChanged(org.eclipse.swt.widgets.Button arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Button`)
 

@@ -30,15 +30,26 @@ If selected, the row(s) will be inserted below the current location.
 
 ## Constructors
 
-### `<init>(`javax.swing.JFrame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) resourceBundle)`
+### `<init>(javax.swing.JFrame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle resourceBundle)`
+
+**Parameters:**
+- `parentFrame` (`javax.swing.JFrame`): the parent frame
+- `resourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): The resource bundle.
 
 ## Methods
 
-### `showDialog([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md) previousTableRowsInfo)`
+### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo previousTableRowsInfo)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)
 
-### `initialize([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md) previousTableRowsInfo)`
+**Parameters:**
+- `previousTableRowsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)): the previous row information
+
+### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo previousTableRowsInfo)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `previousTableRowsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)): If `null`, defaults will be used. Otherwise, the controls
+ will be initialized with values from this info.
 

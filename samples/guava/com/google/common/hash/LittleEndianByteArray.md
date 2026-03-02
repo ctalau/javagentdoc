@@ -6,71 +6,62 @@
 
 ## Description
 
-Utility functions for loading and storing values from a byte array.
-**Author:** Kevin Damm
-**Author:** Kyle Maddison
-
 ## Fields
 
 ### `byteArray`
 
-**Type:** [`com.google.common.hash.LittleEndianByteArray.LittleEndianBytes`](LittleEndianByteArray/LittleEndianBytes.md)
-
-The instance that actually does the work; delegates to Unsafe or a pure-Java fallback.
+**Type:** `com.google.common.hash.LittleEndianByteArray.LittleEndianBytes`
 
 ## Constructors
 
 ### `<init>()`
 
-Deter instantiation of this class.
-
 ## Methods
 
-### `load64(`byte[]` input, `int` offset)`
+### `load64(byte[] input, int offset)`
 
 **Returns:** `long`
 
-Load 8 bytes into long in a little endian manner, from the substring between position and
- position + 8. The array must have at least 8 bytes from offset (inclusive).
-@param input the input bytes
-@param offset the offset into the array at which to start
-@return a long of a concatenated 8 bytes
+The array must have at least 8 bytes from offset (inclusive).
 
-### `load64Safely(`byte[]` input, `int` offset, `int` length)`
+**Parameters:**
+- `input` (`byte[]`): the input bytes
+- `offset` (`int`): the offset into the array at which to start
+
+### `load64Safely(byte[] input, int offset, int length)`
 
 **Returns:** `long`
 
-Similar to load64, but allows offset + 8 > input.length, padding the result with zeroes. This
+This
  has to explicitly reverse the order of the bytes as it packs them into the result which makes
  it slower than the native version.
-@param input the input bytes
-@param offset the offset into the array at which to start reading
-@param length the number of bytes from the input to read
-@return a long of a concatenated 8 bytes
 
-### `store64(`byte[]` sink, `int` offset, `long` value)`
+**Parameters:**
+- `input` (`byte[]`): the input bytes
+- `offset` (`int`): the offset into the array at which to start reading
+- `length` (`int`): the number of bytes from the input to read
+
+### `store64(byte[] sink, int offset, long value)`
 
 **Returns:** `void`
 
-Store 8 bytes into the provided array at the indicated offset, using the value provided.
-@param sink the output byte array
-@param offset the offset into the array at which to start writing
-@param value the value to write
+**Parameters:**
+- `sink` (`byte[]`): the output byte array
+- `offset` (`int`): the offset into the array at which to start writing
+- `value` (`long`): the value to write
 
-### `load32(`byte[]` source, `int` offset)`
+### `load32(byte[] source, int offset)`
 
 **Returns:** `int`
 
-Load 4 bytes from the provided array at the indicated offset.
-@param source the input bytes
-@param offset the offset into the array at which to start
-@return the value found in the array in the form of a long
+**Parameters:**
+- `source` (`byte[]`): the input bytes
+- `offset` (`int`): the offset into the array at which to start
 
 ### `usingUnsafe()`
 
 **Returns:** `boolean`
 
-Indicates that the loading of Unsafe was successful and the load and store operations will be
- very efficient. May be useful for calling code to fall back on an alternative implementation
+May be useful for calling code to fall back on an alternative implementation
  that is slower than Unsafe.get/store but faster than the pure-Java mask-and-shift.
 

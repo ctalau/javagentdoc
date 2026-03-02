@@ -6,8 +6,7 @@
 
 ## Description
 
-Dummy class that makes the GWT serialization policy happy. It isn't used on the server-side.
-**Author:** Hayward Chan
+It isn't used on the server-side.
 
 ## Constructors
 

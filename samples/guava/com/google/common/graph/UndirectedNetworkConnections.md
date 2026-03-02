@@ -13,14 +13,12 @@
 
 ## Description
 
-An implementation of `NetworkConnections` for undirected networks.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <E> Edge parameter type
-
 ## Constructors
 
-### `<init>(`java.util.Map<E,N>` incidentEdgeMap)`
+### `<init>(java.util.Map<E,N> incidentEdgeMap)`
+
+**Parameters:**
+- `incidentEdgeMap` (`java.util.Map<E,N>`)
 
 ## Methods
 
@@ -28,15 +26,21 @@ An implementation of `NetworkConnections` for undirected networks.
 
 **Returns:** [`com.google.common.graph.UndirectedNetworkConnections<N,E>`](./UndirectedNetworkConnections.md)
 
-### `ofImmutable(`java.util.Map<E,N>` incidentEdges)`
+### `ofImmutable(java.util.Map<E,N> incidentEdges)`
 
 **Returns:** [`com.google.common.graph.UndirectedNetworkConnections<N,E>`](./UndirectedNetworkConnections.md)
+
+**Parameters:**
+- `incidentEdges` (`java.util.Map<E,N>`)
 
 ### `adjacentNodes()`
 
 **Returns:** `java.util.Set<N>`
 
-### `edgesConnecting(`N` node)`
+### `edgesConnecting(N node)`
 
 **Returns:** `java.util.Set<E>`
+
+**Parameters:**
+- `node` (`N`)
 

@@ -12,10 +12,8 @@
 
 ## Description
 
-ImmutableSet implementation backed by a JDK HashSet, used to defend against apparent hash
- flooding. This implementation is never used on the GWT client side, but it must be present there
+This implementation is never used on the GWT client side, but it must be present there
  for serialization to work.
-**Author:** Louis Wasserman
 
 ## Fields
 
@@ -29,17 +27,27 @@ ImmutableSet implementation backed by a JDK HashSet, used to defend against appa
 
 ## Constructors
 
-### `<init>(`java.util.Set<?>` delegate, [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md) delegateList)`
+### `<init>(java.util.Set<?> delegate, com.google.common.collect.ImmutableList<E> delegateList)`
+
+**Parameters:**
+- `delegate` (`java.util.Set<?>`)
+- `delegateList` ([`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md))
 
 ## Methods
 
-### `get(`int` index)`
+### `get(int index)`
 
 **Returns:** `E`
 
-### `contains(`java.lang.Object` object)`
+**Parameters:**
+- `index` (`int`)
+
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `isPartialView()`
 

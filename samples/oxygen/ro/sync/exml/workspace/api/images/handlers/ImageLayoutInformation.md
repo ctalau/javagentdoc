@@ -16,11 +16,24 @@
 
 ## Constructors
 
-### `<init>(`int` x, `int` y, `int` width, `int` height)`
+### `<init>(int x, int y, int width, int height)`
 
 No base line information is given.
 
-### `<init>(`int` x, `int` y, `int` width, `int` height, `int` ascend)`
+**Parameters:**
+- `x` (`int`): The x coordinate.
+- `y` (`int`): The y coordinate.
+- `width` (`int`): The width.
+- `height` (`int`): The height.
+
+### `<init>(int x, int y, int width, int height, int ascend)`
+
+**Parameters:**
+- `x` (`int`): The x coordinate.
+- `y` (`int`): The y coordinate.
+- `width` (`int`): The width.
+- `height` (`int`): The height.
+- `ascend` (`int`): The image ascend, -1 if unknown.
 
 ## Methods
 
@@ -28,17 +41,23 @@ No base line information is given.
 
 **Returns:** `int`
 
-### `setAscend(`int` ascend)`
+### `setAscend(int ascend)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `ascend` (`int`): The image ascend.
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

@@ -8,9 +8,6 @@
 
 ## Description
 
-A mutable value of type `int`, for multisets to use in tracking counts of values.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `value`
@@ -19,7 +16,10 @@ A mutable value of type `int`, for multisets to use in tracking counts of values
 
 ## Constructors
 
-### `<init>(`int` value)`
+### `<init>(int value)`
+
+**Parameters:**
+- `value` (`int`)
 
 ## Methods
 
@@ -27,29 +27,44 @@ A mutable value of type `int`, for multisets to use in tracking counts of values
 
 **Returns:** `int`
 
-### `add(`int` delta)`
+### `add(int delta)`
 
 **Returns:** `void`
 
-### `addAndGet(`int` delta)`
+**Parameters:**
+- `delta` (`int`)
+
+### `addAndGet(int delta)`
 
 **Returns:** `int`
 
-### `set(`int` newValue)`
+**Parameters:**
+- `delta` (`int`)
+
+### `set(int newValue)`
 
 **Returns:** `void`
 
-### `getAndSet(`int` newValue)`
+**Parameters:**
+- `newValue` (`int`)
+
+### `getAndSet(int newValue)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `newValue` (`int`)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `toString()`
 

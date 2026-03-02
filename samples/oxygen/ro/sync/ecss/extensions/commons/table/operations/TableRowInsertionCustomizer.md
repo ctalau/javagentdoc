@@ -22,7 +22,7 @@ Session level persistence.
 
 ## Methods
 
-### `customizeTableRowInsertion([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess)`
+### `customizeTableRowInsertion(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)
 
@@ -30,7 +30,13 @@ A table row insertion customizer dialog is shown, giving the possibility to choo
  properties of the new row(s) to be inserted in the document. An object containing 
  the new information is returned.
 
-### `showCustomTableRowInsertionDialog([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author operations.
+
+### `showCustomTableRowInsertionDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The Author access.
 

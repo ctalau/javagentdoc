@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.AbstractTransformFuture`
 
-**Extends:** [`com.google.common.util.concurrent.FluentFuture.TrustedFuture<O>`](FluentFuture/TrustedFuture.md)
+**Extends:** `com.google.common.util.concurrent.FluentFuture.TrustedFuture<O>`
 
 **Implements:** `java.lang.Runnable`
 
@@ -16,8 +16,6 @@
 - `T` extends `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`
 
 ## Description
-
-Implementations of `Futures.transform*`.
 
 ## Fields
 
@@ -31,33 +29,50 @@ Implementations of `Futures.transform*`.
 
 ## Constructors
 
-### `<init>([`com.google.common.util.concurrent.ListenableFuture<? extends I>`](./ListenableFuture.md) inputFuture, `F` function)`
+### `<init>(com.google.common.util.concurrent.ListenableFuture<? extends I> inputFuture, F function)`
+
+**Parameters:**
+- `inputFuture` ([`com.google.common.util.concurrent.ListenableFuture<? extends I>`](./ListenableFuture.md))
+- `function` (`F`)
 
 ## Methods
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md) input, [`com.google.common.util.concurrent.AsyncFunction<? super I,? extends O>`](./AsyncFunction.md) function, `java.util.concurrent.Executor` executor)`
+### `create(com.google.common.util.concurrent.ListenableFuture<I> input, com.google.common.util.concurrent.AsyncFunction<? super I,? extends O> function, java.util.concurrent.Executor executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
-### `create([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md) input, [`com.google.common.base.Function<? super I,? extends O>`](../../base/Function.md) function, `java.util.concurrent.Executor` executor)`
+**Parameters:**
+- `input` ([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md))
+- `function` ([`com.google.common.util.concurrent.AsyncFunction<? super I,? extends O>`](./AsyncFunction.md))
+- `executor` (`java.util.concurrent.Executor`)
+
+### `create(com.google.common.util.concurrent.ListenableFuture<I> input, com.google.common.base.Function<? super I,? extends O> function, java.util.concurrent.Executor executor)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+
+**Parameters:**
+- `input` ([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md))
+- `function` ([`com.google.common.base.Function<? super I,? extends O>`](../../base/Function.md))
+- `executor` (`java.util.concurrent.Executor`)
 
 ### `run()`
 
 **Returns:** `void`
 
-### `doTransform(`F` function, `I` result)`
+### `doTransform(F function, I result)`
 
 **Returns:** `T`
 
-Template method for subtypes to actually run the transform.
+**Parameters:**
+- `function` (`F`)
+- `result` (`I`)
 
-### `setResult(`T` result)`
+### `setResult(T result)`
 
 **Returns:** `void`
 
-Template method for subtypes to actually set the result.
+**Parameters:**
+- `result` (`T`)
 
 ### `afterDone()`
 

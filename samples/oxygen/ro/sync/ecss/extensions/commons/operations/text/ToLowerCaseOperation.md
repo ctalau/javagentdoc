@@ -14,9 +14,12 @@
 
 ## Methods
 
-### `processText(`java.lang.String` text)`
+### `processText(java.lang.String text)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `text` (`java.lang.String`)
 
 ### `getArguments()`
 

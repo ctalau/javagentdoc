@@ -8,10 +8,13 @@
 
 ## Methods
 
-### `problemsOccured([`ro.sync.document.DocumentPositionedInfo[]`](../../../../../document/DocumentPositionedInfo.md) problems)`
+### `problemsOccured(ro.sync.document.DocumentPositionedInfo[] problems)`
 
 **Returns:** `void`
 
 May be called multiple times, usually for each validated file 
  if problems are detected inside it.
+
+**Parameters:**
+- `problems` ([`ro.sync.document.DocumentPositionedInfo[]`](../../../../../document/DocumentPositionedInfo.md)): The DocumentPositionedInfo array containing possible problems.
 

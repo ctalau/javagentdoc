@@ -14,29 +14,32 @@
 
 ## Description
 
-CompactHashSet is an implementation of a Set. All optional operations (adding and removing) are
+All optional operations (adding and removing) are
  supported. The elements can be any objects.
 
- <p>`contains(x)`, `add(x)` and `remove(x)`, are all (expected and amortized)
+ 
+contains(x), add(x) and remove(x), are all (expected and amortized)
  constant time operations. Expected in the hashtable sense (depends on the hash function doing a
  good job of distributing the elements to the buckets to a distribution not far from uniform), and
  amortized since some operations can trigger a hash table resize.
 
- <p>Unlike `java.util.HashSet`, iteration is only proportional to the actual `size()`,
- which is optimal, and <i>not</i> the size of the internal hashtable, which could be much larger
- than `size()`. Furthermore, this structure only depends on a fixed number of arrays; `add(x)` operations <i>do not</i> create objects for the garbage collector to deal with, and for
- every element added, the garbage collector will have to traverse `1.5` references on
- average, in the marking phase, not `5.0` as in `java.util.HashSet`.
+ 
+Unlike java.util.HashSet, iteration is only proportional to the actual size(),
+ which is optimal, and *not* the size of the internal hashtable, which could be much larger
+ than size(). Furthermore, this structure only depends on a fixed number of arrays; 
+ add(x) operations *do not* create objects for the garbage collector to deal with, and for
+ every element added, the garbage collector will have to traverse 1.5 references on
+ average, in the marking phase, not 5.0 as in java.util.HashSet.
 
- <p>If there are no removals, then `iterator iteration` order is the same as insertion
+ 
+If there are no removals, then iteration order is the same as insertion
  order. Any removal invalidates any ordering guarantees.
 
- <p>This class should not be assumed to be universally superior to `java.util.HashSet`.
+ 
+This class should not be assumed to be universally superior to java.util.HashSet.
  Generally speaking, this class reduces object allocation and memory consumption at the price of
  moderately increased constant factors of CPU. Only use this class when there is a specific reason
  to prioritize memory over CPU.
-**Author:** Dimitris Andreou
-**Author:** Jon Noack
 
 ## Fields
 
@@ -44,69 +47,72 @@ CompactHashSet is an implementation of a Set. All optional operations (adding an
 
 **Type:** `double`
 
-Maximum allowed false positive probability of detecting a hash flooding attack given random
- input.
-
 ### `MAX_HASH_BUCKET_LENGTH`
 
 **Type:** `int`
 
-Maximum allowed length of a hash table bucket before falling back to a j.u.LinkedHashSet based
- implementation. Experimentally determined.
+Experimentally determined.
 
 ### `table`
 
 **Type:** `java.lang.Object`
 
-The hashtable object. This can be either:
+This can be either:
 
- <ul>
-   <li>a byte[], short[], or int[], with size a power of two, created by
+ 
+
+   - a byte[], short[], or int[], with size a power of two, created by
        CompactHashing.createTable, whose values are either
-       <ul>
-         <li>UNSET, meaning "null pointer"
-         <li>one plus an index into the entries and elements array
-       </ul>
-   <li>another java.util.Set delegate implementation. In most modern JDKs, normal java.util hash
+       
+
+         - UNSET, meaning "null pointer"
+         - one plus an index into the entries and elements array
+       
+
+   - another java.util.Set delegate implementation. In most modern JDKs, normal java.util hash
        collections intelligently fall back to a binary search tree if hash table collisions are
        detected. Rather than going to all the trouble of reimplementing this ourselves, we
        simply switch over to use the JDK implementation wholesale if probable hash flooding is
        detected, sacrificing the compactness guarantee in very rare cases in exchange for much
        more reliable worst-case behavior.
-   <li>null, if no entries have yet been added to the map
- </ul>
+   - null, if no entries have yet been added to the map
 
 ### `entries`
 
 **Type:** `int[]`
 
-Contains the logical entries, in the range of [0, size()). The high bits of each int are the
+The high bits of each int are the
  part of the smeared hash of the element not covered by the hashtable mask, whereas the low bits
  are the "next" pointer (pointing to the next entry in the bucket chain), which will always be
  less than or equal to the hashtable mask.
 
- <pre>
+ 
+
+```
+
  hash  = aaaaaaaa
  mask  = 00000fff
  next  = 00000bbb
  entry = aaaaabbb
- </pre>
+ 
+```
 
- <p>The pointers in [size(), entries.length) are all "null" (UNSET).
+
+ 
+The pointers in [size(), entries.length) are all "null" (UNSET).
 
 ### `elements`
 
 **Type:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-The elements contained in the set, in the range of [0, size()). The elements in [size(),
- elements.length) are all `null`.
+The elements in [size(),
+ elements.length) are all null.
 
 ### `metadata`
 
 **Type:** `int`
 
-Keeps track of metadata like the number of hash table bits and modifications of this data
- structure (to make it possible to throw ConcurrentModificationException in the iterator). Note
+Note
  that we choose not to make this volatile, so we do less of a "best effort" to track such
  errors, for better performance.
 
@@ -114,18 +120,14 @@ Keeps track of metadata like the number of hash table bits and modifications of 
 
 **Type:** `int`
 
-The number of elements contained in the set.
-
 ## Constructors
 
 ### `<init>()`
 
-Constructs a new empty instance of `CompactHashSet`.
+### `<init>(int expectedSize)`
 
-### `<init>(`int` expectedSize)`
-
-Constructs a new instance of `CompactHashSet` with the specified capacity.
-@param expectedSize the initial capacity of this `CompactHashSet`.
+**Parameters:**
+- `expectedSize` (`int`): the initial capacity of this CompactHashSet.
 
 ## Methods
 
@@ -133,62 +135,52 @@ Constructs a new instance of `CompactHashSet` with the specified capacity.
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates an empty `CompactHashSet` instance.
-
-### `create(`java.util.Collection<? extends E>` collection)`
+### `create(java.util.Collection<? extends E> collection)`
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates a <i>mutable</i> `CompactHashSet` instance containing the elements of the given
- collection in unspecified order.
-@param collection the elements that the set should contain
-@return a new `CompactHashSet` containing those elements (minus duplicates)
+**Parameters:**
+- `collection` (`java.util.Collection<? extends E>`): the elements that the set should contain
 
-### `create(`E[]` elements)`
+### `create(E[] elements)`
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates a <i>mutable</i> `CompactHashSet` instance containing the given elements in
- unspecified order.
-@param elements the elements that the set should contain
-@return a new `CompactHashSet` containing those elements (minus duplicates)
+**Parameters:**
+- `elements` (`E[]`): the elements that the set should contain
 
-### `createWithExpectedSize(`int` expectedSize)`
+### `createWithExpectedSize(int expectedSize)`
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-Creates a `CompactHashSet` instance, with a high enough "initial capacity" that it
- <i>should</i> hold `expectedSize` elements without growth.
-@param expectedSize the number of elements you expect to add to the returned set
-@return a new, empty `CompactHashSet` with enough capacity to hold `expectedSize`
-     elements without resizing
-@throws IllegalArgumentException if `expectedSize` is negative
+**Parameters:**
+- `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `init(`int` expectedSize)`
+### `init(int expectedSize)`
 
 **Returns:** `void`
 
-Pseudoconstructor for serialization support.
+**Parameters:**
+- `expectedSize` (`int`)
 
 ### `needsAllocArrays()`
 
 **Returns:** `boolean`
 
-Returns whether arrays need to be allocated.
-
 ### `allocArrays()`
 
 **Returns:** `int`
-
-Handle lazy allocation of arrays.
 
 ### `delegateOrNull()`
 
 **Returns:** `java.util.Set<E>`
 
-### `createHashFloodingResistantDelegate(`int` tableSize)`
+### `createHashFloodingResistantDelegate(int tableSize)`
 
 **Returns:** `java.util.Set<E>`
+
+**Parameters:**
+- `tableSize` (`int`)
 
 ### `convertToHashFloodingResistantImplementation()`
 
@@ -198,78 +190,102 @@ Handle lazy allocation of arrays.
 
 **Returns:** `boolean`
 
-### `setHashTableMask(`int` mask)`
+### `setHashTableMask(int mask)`
 
 **Returns:** `void`
 
-Stores the hash table mask as the number of bits needed to represent an index.
+**Parameters:**
+- `mask` (`int`)
 
 ### `hashTableMask()`
 
 **Returns:** `int`
 
-Gets the hash table mask using the stored number of hash table bits.
-
 ### `incrementModCount()`
 
 **Returns:** `void`
 
-### `add(`E` object)`
+### `add(E object)`
 
 **Returns:** `boolean`
 
-### `insertEntry(`int` entryIndex, `E` object, `int` hash, `int` mask)`
+**Parameters:**
+- `object` (`E`)
+
+### `insertEntry(int entryIndex, E object, int hash, int mask)`
 
 **Returns:** `void`
 
-Creates a fresh entry with the specified object at the specified position in the entry arrays.
+**Parameters:**
+- `entryIndex` (`int`)
+- `object` (`E`)
+- `hash` (`int`)
+- `mask` (`int`)
 
-### `resizeMeMaybe(`int` newSize)`
-
-**Returns:** `void`
-
-Resizes the entries storage if necessary.
-
-### `resizeEntries(`int` newCapacity)`
+### `resizeMeMaybe(int newSize)`
 
 **Returns:** `void`
 
-Resizes the internal entries array to the specified capacity, which may be greater or less than
- the current capacity.
+**Parameters:**
+- `newSize` (`int`)
 
-### `resizeTable(`int` oldMask, `int` newCapacity, `int` targetHash, `int` targetEntryIndex)`
+### `resizeEntries(int newCapacity)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `newCapacity` (`int`)
+
+### `resizeTable(int oldMask, int newCapacity, int targetHash, int targetEntryIndex)`
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` object)`
+**Parameters:**
+- `oldMask` (`int`)
+- `newCapacity` (`int`)
+- `targetHash` (`int`)
+- `targetEntryIndex` (`int`)
+
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-### `remove(`java.lang.Object` object)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `remove(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-### `moveLastEntry(`int` dstIndex, `int` mask)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `moveLastEntry(int dstIndex, int mask)`
 
 **Returns:** `void`
 
-Moves the last entry in the entry array into `dstIndex`, and nulls out its old position.
+**Parameters:**
+- `dstIndex` (`int`)
+- `mask` (`int`)
 
 ### `firstEntryIndex()`
 
 **Returns:** `int`
 
-### `getSuccessor(`int` entryIndex)`
+### `getSuccessor(int entryIndex)`
 
 **Returns:** `int`
 
-### `adjustAfterRemove(`int` indexBeforeRemove, `int` indexRemoved)`
+**Parameters:**
+- `entryIndex` (`int`)
+
+### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
 
 **Returns:** `int`
 
-Updates the index an iterator is pointing to after a call to remove: returns the index of the
- entry that should be looked at after a removal on indexRemoved, with indexBeforeRemove as the
- index that *was* the next entry that would be looked at.
+**Parameters:**
+- `indexBeforeRemove` (`int`)
+- `indexRemoved` (`int`)
 
 ### `iterator()`
 
@@ -279,9 +295,12 @@ Updates the index an iterator is pointing to after a call to remove: returns the
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(`java.util.function.Consumer<? super E>` action)`
+### `forEach(java.util.function.Consumer<? super E> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.Consumer<? super E>`)
 
 ### `size()`
 
@@ -295,28 +314,34 @@ Updates the index an iterator is pointing to after a call to remove: returns the
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-### `toArray(`T[]` a)`
+### `toArray(T[] a)`
 
 **Returns:** `T[]`
+
+**Parameters:**
+- `a` (`T[]`)
 
 ### `trimToSize()`
 
 **Returns:** `void`
 
-Ensures that this `CompactHashSet` has the smallest representation in memory, given its
- current size.
-
 ### `clear()`
 
 **Returns:** `void`
 
-### `writeObject(`java.io.ObjectOutputStream` stream)`
+### `writeObject(java.io.ObjectOutputStream stream)`
 
 **Returns:** `void`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+**Parameters:**
+- `stream` (`java.io.ObjectOutputStream`)
+
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 
 ### `requireTable()`
 
@@ -330,19 +355,33 @@ Ensures that this `CompactHashSet` has the smallest representation in memory, gi
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-### `element(`int` i)`
+### `element(int i)`
 
 **Returns:** `E`
 
-### `entry(`int` i)`
+**Parameters:**
+- `i` (`int`)
+
+### `entry(int i)`
 
 **Returns:** `int`
 
-### `setElement(`int` i, `E` value)`
+**Parameters:**
+- `i` (`int`)
+
+### `setElement(int i, E value)`
 
 **Returns:** `void`
 
-### `setEntry(`int` i, `int` value)`
+**Parameters:**
+- `i` (`int`)
+- `value` (`E`)
+
+### `setEntry(int i, int value)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `i` (`int`)
+- `value` (`int`)
 

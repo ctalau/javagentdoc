@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `applicationStarted([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md) pluginWorkspaceAccess)`
+### `applicationStarted(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace pluginWorkspaceAccess)`
 
 **Returns:** `void`
 
@@ -18,6 +18,9 @@ Notified when the application is started.
  
 
  **IMPORTANT**: This method must not block, the plug-in can add its listeners or customize the main menu and then return.
+
+**Parameters:**
+- `pluginWorkspaceAccess` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md)): The workspace access
 
 ### `applicationClosing()`
 

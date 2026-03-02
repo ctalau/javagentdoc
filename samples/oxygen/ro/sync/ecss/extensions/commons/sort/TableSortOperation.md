@@ -14,13 +14,20 @@
 
 ## Methods
 
-### `canBeSorted([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) parent, `int[]` selectedNonIgnoredChildrenInterval)`
+### `canBeSorted(ro.sync.ecss.extensions.api.node.AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
 
 **Returns:** `void`
 
-### `getRowIndexForTableBody([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) table)`
+**Parameters:**
+- `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+- `selectedNonIgnoredChildrenInterval` (`int[]`)
+
+### `getRowIndexForTableBody(ro.sync.ecss.extensions.api.node.AuthorNode table)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `table` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 ### `getHelpPageID()`
 

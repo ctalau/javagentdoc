@@ -86,21 +86,38 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0)`
+### `<init>(java.lang.String arg0)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ## Methods
 
-### `getTemplateType(`java.io.File` arg0)`
+### `getTemplateType(java.io.File arg0)`
 
 **Returns:** `int`
 
-### `getTemplateType(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.io.File`)
+
+### `getTemplateType(java.lang.String arg0)`
 
 **Returns:** `int`
 
-### `setMainProperties(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, `java.lang.String` arg5)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setMainProperties(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.lang.String`)
+- `arg5` (`java.lang.String`)
 
 ### `getTemplateFileName()`
 
@@ -154,9 +171,13 @@
 
 **Returns:** `java.lang.String`
 
-### `setLongDescriptionProvider(`ro.sync.template.e` arg0, [`ro.sync.template.BaseAbstractTemplate`](./BaseAbstractTemplate.md) arg1)`
+### `setLongDescriptionProvider(ro.sync.template.e arg0, ro.sync.template.BaseAbstractTemplate arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`ro.sync.template.e`)
+- `arg1` ([`ro.sync.template.BaseAbstractTemplate`](./BaseAbstractTemplate.md))
 
 ### `getTypeProperty()`
 

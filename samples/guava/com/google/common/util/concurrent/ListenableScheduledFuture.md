@@ -12,7 +12,3 @@
 
 ## Description
 
-Helper interface to implement both `ListenableFuture` and `ScheduledFuture`.
-**Author:** Anthony Zana
-**Since:** 15.0
-

@@ -10,10 +10,7 @@
 
 ## Description
 
-An abstract `ScheduledExecutorService` that allows subclasses to wrap tasks before they are submitted to the underlying executor.
-
- <p>Note that task wrapping may occur even if the task is never executed.
-**Author:** Luke Sandberg
+Note that task wrapping may occur even if the task is never executed.
 
 ## Fields
 
@@ -23,23 +20,48 @@ An abstract `ScheduledExecutorService` that allows subclasses to wrap tasks befo
 
 ## Constructors
 
-### `<init>(`java.util.concurrent.ScheduledExecutorService` delegate)`
+### `<init>(java.util.concurrent.ScheduledExecutorService delegate)`
+
+**Parameters:**
+- `delegate` (`java.util.concurrent.ScheduledExecutorService`)
 
 ## Methods
 
-### `schedule(`java.lang.Runnable` command, `long` delay, `java.util.concurrent.TimeUnit` unit)`
+### `schedule(java.lang.Runnable command, long delay, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `java.util.concurrent.ScheduledFuture<?>`
 
-### `schedule(`java.util.concurrent.Callable<V>` task, `long` delay, `java.util.concurrent.TimeUnit` unit)`
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `delay` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `schedule(java.util.concurrent.Callable<V> task, long delay, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `java.util.concurrent.ScheduledFuture<V>`
 
-### `scheduleAtFixedRate(`java.lang.Runnable` command, `long` initialDelay, `long` period, `java.util.concurrent.TimeUnit` unit)`
+**Parameters:**
+- `task` (`java.util.concurrent.Callable<V>`)
+- `delay` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `scheduleAtFixedRate(java.lang.Runnable command, long initialDelay, long period, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `java.util.concurrent.ScheduledFuture<?>`
 
-### `scheduleWithFixedDelay(`java.lang.Runnable` command, `long` initialDelay, `long` delay, `java.util.concurrent.TimeUnit` unit)`
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `initialDelay` (`long`)
+- `period` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `scheduleWithFixedDelay(java.lang.Runnable command, long initialDelay, long delay, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `java.util.concurrent.ScheduledFuture<?>`
+
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `initialDelay` (`long`)
+- `delay` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 

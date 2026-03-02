@@ -10,5 +10,9 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` message, `java.lang.Throwable` cause)`
+### `<init>(java.lang.String message, java.lang.Throwable cause)`
+
+**Parameters:**
+- `message` (`java.lang.String`): The error message.
+- `cause` (`java.lang.Throwable`): The cause of the exception.
 

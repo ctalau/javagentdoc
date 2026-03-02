@@ -8,7 +8,10 @@
 
 ## Methods
 
-### `roomCreated(`java.lang.String` roomId)`
+### `roomCreated(java.lang.String roomId)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `roomId` (`java.lang.String`): The ID of the room.
 

@@ -26,7 +26,13 @@
 
 ## Constructors
 
-### `<init>(`java.net.URL` referenceURL, `java.lang.String` hrefValue, `boolean` isDITAMap, `boolean` isDITAReference)`
+### `<init>(java.net.URL referenceURL, java.lang.String hrefValue, boolean isDITAMap, boolean isDITAReference)`
+
+**Parameters:**
+- `referenceURL` (`java.net.URL`): The refered URL.
+- `hrefValue` (`java.lang.String`): The href value
+- `isDITAMap` (`boolean`): True if DITA Map
+- `isDITAReference` (`boolean`): `true` if this is a reference to a DITA resource.
 
 ## Methods
 

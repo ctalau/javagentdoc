@@ -20,23 +20,38 @@
 
 ## Methods
 
-### `copyAttributeOnSplit(`java.lang.String` attrQName, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element)`
+### `copyAttributeOnSplit(java.lang.String attrQName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `attrQName` (`java.lang.String`)
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 
 ### `getDescription()`
 
 **Returns:** `java.lang.String`
 
-### `getGenerateIDAttributeQName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element, `java.lang.String[]` elemsWithAutoGeneration, `boolean` forceGeneration)`
+### `getGenerateIDAttributeQName(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String[] elemsWithAutoGeneration, boolean forceGeneration)`
 
 **Returns:** `java.lang.String`
 
-### `isInsideConref([`ro.sync.ecss.extensions.api.AuthorElementBaseInterface`](../../api/AuthorElementBaseInterface.md) element)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+- `elemsWithAutoGeneration` (`java.lang.String[]`)
+- `forceGeneration` (`boolean`)
+
+### `isInsideConref(ro.sync.ecss.extensions.api.AuthorElementBaseInterface element)`
 
 **Returns:** `boolean`
 
-### `process([`ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation`](../../api/content/ClipboardFragmentInformation.md) fragmentInformation)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.AuthorElementBaseInterface`](../../api/AuthorElementBaseInterface.md)): the element
+
+### `process(ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation fragmentInformation)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `fragmentInformation` ([`ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation`](../../api/content/ClipboardFragmentInformation.md))
 

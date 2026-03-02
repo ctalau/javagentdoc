@@ -10,9 +10,6 @@
 
 ## Description
 
-Unused stub class, unreferenced under Java and manually emulated under GWT.
-**Author:** Chris Povirk
-
 ## Constructors
 
 ### `<init>()`

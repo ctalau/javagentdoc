@@ -10,9 +10,6 @@
 
 ## Description
 
-`HashFunction` adapter for `Checksum` instances.
-**Author:** Colin Decker
-
 ## Fields
 
 ### `checksumSupplier`
@@ -33,7 +30,12 @@
 
 ## Constructors
 
-### `<init>([`com.google.common.hash.ImmutableSupplier<? extends java.util.zip.Checksum>`](./ImmutableSupplier.md) checksumSupplier, `int` bits, `java.lang.String` toString)`
+### `<init>(com.google.common.hash.ImmutableSupplier<? extends java.util.zip.Checksum> checksumSupplier, int bits, java.lang.String toString)`
+
+**Parameters:**
+- `checksumSupplier` ([`com.google.common.hash.ImmutableSupplier<? extends java.util.zip.Checksum>`](./ImmutableSupplier.md))
+- `bits` (`int`)
+- `toString` (`java.lang.String`)
 
 ## Methods
 

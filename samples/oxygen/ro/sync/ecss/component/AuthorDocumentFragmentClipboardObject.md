@@ -20,7 +20,11 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../extensions/api/node/AuthorDocumentFragment.md) arg0, `ro.sync.ecss.strictediting.ContentDescription` arg1)`
+### `<init>(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment arg0, ro.sync.ecss.strictediting.ContentDescription arg1)`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../extensions/api/node/AuthorDocumentFragment.md))
+- `arg1` (`ro.sync.ecss.strictediting.ContentDescription`)
 
 ## Methods
 

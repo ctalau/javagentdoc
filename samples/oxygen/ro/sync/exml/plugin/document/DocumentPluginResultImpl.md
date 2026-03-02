@@ -18,13 +18,19 @@
 
 ### `<init>()`
 
-### `<init>(`javax.swing.text.Document` document)`
+### `<init>(javax.swing.text.Document document)`
+
+**Parameters:**
+- `document` (`javax.swing.text.Document`): The processed document.
 
 ## Methods
 
-### `setProcessedDocument(`javax.swing.text.Document` document)`
+### `setProcessedDocument(javax.swing.text.Document document)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `document` (`javax.swing.text.Document`): The current document.
 
 ### `getProcessedDocument()`
 

@@ -6,16 +6,10 @@
 
 ## Description
 
-Provides static methods for working with `Collection` instances.
-
- <p><b>Java 8 users:</b> several common uses for this class are now more comprehensively addressed
- by the new `java.util.stream.Stream` library. Read the method documentation below for
+**Java 8 users:** several common uses for this class are now more comprehensively addressed
+ by the new java.util.stream.Stream library. Read the method documentation below for
  comparisons. These methods are not being deprecated, but we gently encourage you to migrate to
  streams.
-**Author:** Chris Povirk
-**Author:** Mike Bostock
-**Author:** Jared Levy
-**Since:** 2.0
 
 ## Constructors
 
@@ -23,125 +17,153 @@ Provides static methods for working with `Collection` instances.
 
 ## Methods
 
-### `filter(`java.util.Collection<E>` unfiltered, [`com.google.common.base.Predicate<? super E>`](../base/Predicate.md) predicate)`
+### `filter(java.util.Collection<E> unfiltered, com.google.common.base.Predicate<? super E> predicate)`
 
 **Returns:** `java.util.Collection<E>`
 
-Returns the elements of `unfiltered` that satisfy a predicate. The returned collection is
- a live view of `unfiltered`; changes to one affect the other.
+The returned collection is
+ a live view of unfiltered; changes to one affect the other.
 
- <p>The resulting collection's iterator does not support `remove()`, but all other
+ 
+The resulting collection's iterator does not support remove(), but all other
  collection methods are supported. When given an element that doesn't satisfy the predicate, the
- collection's `add()` and `addAll()` methods throw an `IllegalArgumentException`. When methods such as `removeAll()` and `clear()` are
+ collection's add() and addAll() methods throw an IllegalArgumentException. When methods such as removeAll() and clear() are
  called on the filtered collection, only elements that satisfy the filter will be removed from
  the underlying collection.
 
- <p>The returned collection isn't threadsafe or serializable, even if `unfiltered` is.
+ 
+The returned collection isn't threadsafe or serializable, even if unfiltered is.
 
- <p>Many of the filtered collection's methods, such as `size()`, iterate across every
+ 
+Many of the filtered collection's methods, such as size(), iterate across every
  element in the underlying collection and determine which elements satisfy the filter. When a
- live view is <i>not</i> needed, it may be faster to copy `Iterables.filter(unfiltered,
- predicate)` and use the copy.
+ live view is *not* needed, it may be faster to copy Iterables.filter(unfiltered,
+ predicate) and use the copy.
 
- <p><b>Warning:</b> `predicate` must be <i>consistent with equals</i>, as documented at
- `Predicate.apply`. Do not provide a predicate such as `Predicates.instanceOf(ArrayList.class)`, which is inconsistent with equals. (See `Iterables.filter(Iterable, Class)` for related functionality.)
+ 
+**Warning:** predicate must be *consistent with equals*, as documented at
+ Predicate#apply. Do not provide a predicate such as 
+ Predicates.instanceOf(ArrayList.class), which is inconsistent with equals. (See Iterables#filter(Iterable, Class) for related functionality.)
 
- <p><b>`Stream` equivalent:</b> `java.util.stream.Stream.filter Stream.filter`.
+ 
+**Stream equivalent:** Stream.filter.
 
-### `safeContains(`java.util.Collection<?>` collection, `java.lang.Object` object)`
+**Parameters:**
+- `unfiltered` (`java.util.Collection<E>`)
+- `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
+
+### `safeContains(java.util.Collection<?> collection, java.lang.Object object)`
 
 **Returns:** `boolean`
 
-Delegates to `Collection.contains`. Returns `false` if the `contains` method
- throws a `ClassCastException` or `NullPointerException`.
+Returns false if the contains method
+ throws a ClassCastException or NullPointerException.
 
-### `safeRemove(`java.util.Collection<?>` collection, `java.lang.Object` object)`
+**Parameters:**
+- `collection` (`java.util.Collection<?>`)
+- `object` (`java.lang.Object`)
+
+### `safeRemove(java.util.Collection<?> collection, java.lang.Object object)`
 
 **Returns:** `boolean`
 
-Delegates to `Collection.remove`. Returns `false` if the `remove` method
- throws a `ClassCastException` or `NullPointerException`.
+Returns false if the remove method
+ throws a ClassCastException or NullPointerException.
 
-### `transform(`java.util.Collection<F>` fromCollection, [`com.google.common.base.Function<? super F,T>`](../base/Function.md) function)`
+**Parameters:**
+- `collection` (`java.util.Collection<?>`)
+- `object` (`java.lang.Object`)
+
+### `transform(java.util.Collection<F> fromCollection, com.google.common.base.Function<? super F,T> function)`
 
 **Returns:** `java.util.Collection<T>`
 
-Returns a collection that applies `function` to each element of `fromCollection`.
- The returned collection is a live view of `fromCollection`; changes to one affect the
+The returned collection is a live view of fromCollection; changes to one affect the
  other.
 
- <p>The returned collection's `add()` and `addAll()` methods throw an `UnsupportedOperationException`. All other collection methods are supported, as long as `fromCollection` supports them.
+ 
+The returned collection's add() and addAll() methods throw an UnsupportedOperationException. All other collection methods are supported, as long as 
+ fromCollection supports them.
 
- <p>The returned collection isn't threadsafe or serializable, even if `fromCollection` is.
+ 
+The returned collection isn't threadsafe or serializable, even if fromCollection is.
 
- <p>When a live view is <i>not</i> needed, it may be faster to copy the transformed collection
+ 
+When a live view is *not* needed, it may be faster to copy the transformed collection
  and use the copy.
 
- <p>If the input `Collection` is known to be a `List`, consider `Lists.transform`. If only an `Iterable` is available, use `Iterables.transform`.
+ 
+If the input Collection is known to be a List, consider Lists#transform. If only an Iterable is available, use Iterables#transform.
 
- <p><b>`Stream` equivalent:</b> `java.util.stream.Stream.map Stream.map`.
+ 
+**Stream equivalent:** Stream.map.
 
-### `containsAllImpl(`java.util.Collection<?>` self, `java.util.Collection<?>` c)`
+**Parameters:**
+- `fromCollection` (`java.util.Collection<F>`)
+- `function` ([`com.google.common.base.Function<? super F,T>`](../base/Function.md))
+
+### `containsAllImpl(java.util.Collection<?> self, java.util.Collection<?> c)`
 
 **Returns:** `boolean`
 
-Returns `true` if the collection `self` contains all of the elements in the
- collection `c`.
+This method iterates over the specified collection c, checking each element returned
+ by the iterator in turn to see if it is contained in the specified collection self. If
+ all elements are so contained, true is returned, otherwise false.
 
- <p>This method iterates over the specified collection `c`, checking each element returned
- by the iterator in turn to see if it is contained in the specified collection `self`. If
- all elements are so contained, `true` is returned, otherwise `false`.
-@param self a collection which might contain all elements in `c`
-@param c a collection whose elements might be contained by `self`
+**Parameters:**
+- `self` (`java.util.Collection<?>`): a collection which might contain all elements in c
+- `c` (`java.util.Collection<?>`): a collection whose elements might be contained by self
 
-### `toStringImpl(`java.util.Collection<?>` collection)`
+### `toStringImpl(java.util.Collection<?> collection)`
 
 **Returns:** `java.lang.String`
 
-An implementation of `Collection.toString()`.
+**Parameters:**
+- `collection` (`java.util.Collection<?>`)
 
-### `newStringBuilderForCollection(`int` size)`
+### `newStringBuilderForCollection(int size)`
 
 **Returns:** `java.lang.StringBuilder`
 
-Returns best-effort-sized StringBuilder based on the given collection size.
+**Parameters:**
+- `size` (`int`)
 
-### `orderedPermutations(`java.lang.Iterable<E>` elements)`
+### `orderedPermutations(java.lang.Iterable<E> elements)`
 
 **Returns:** `java.util.Collection<java.util.List<E>>`
 
-Returns a `Collection` of all the permutations of the specified `Iterable`.
-
- <p><i>Notes:</i> This is an implementation of the algorithm for Lexicographical Permutations
+*Notes:* This is an implementation of the algorithm for Lexicographical Permutations
  Generation, described in Knuth's "The Art of Computer Programming", Volume 4, Chapter 7,
  Section 7.2.1.2. The iteration order follows the lexicographical order. This means that the
  first permutation will be in ascending order, and the last will be in descending order.
 
- <p>Duplicate elements are considered equal. For example, the list [1, 1] will have only one
- permutation, instead of two. This is why the elements have to implement `Comparable`.
+ 
+Duplicate elements are considered equal. For example, the list [1, 1] will have only one
+ permutation, instead of two. This is why the elements have to implement Comparable.
 
- <p>An empty iterable has only one permutation, which is an empty list.
+ 
+An empty iterable has only one permutation, which is an empty list.
 
- <p>This method is equivalent to `Collections2.orderedPermutations(list,
- Ordering.natural())`.
-@param elements the original iterable whose elements have to be permuted.
-@return an immutable `Collection` containing all the different permutations of the
-     original iterable.
-@throws NullPointerException if the specified iterable is null or has any null elements.
-**Since:** 12.0
+ 
+This method is equivalent to Collections2.orderedPermutations(list,
+ Ordering.natural()).
 
-### `orderedPermutations(`java.lang.Iterable<E>` elements, `java.util.Comparator<? super E>` comparator)`
+**Parameters:**
+- `elements` (`java.lang.Iterable<E>`): the original iterable whose elements have to be permuted.
+
+### `orderedPermutations(java.lang.Iterable<E> elements, java.util.Comparator<? super E> comparator)`
 
 **Returns:** `java.util.Collection<java.util.List<E>>`
 
-Returns a `Collection` of all the permutations of the specified `Iterable` using
- the specified `Comparator` for establishing the lexicographical ordering.
+Examples:
 
- <p>Examples:
+ 
 
- <pre>`for (List<String> perm : orderedPermutations(asList("b", "c", "a"))) {
+```
+
+ for (List<String> perm : orderedPermutations(asList("b", "c", "a"))) {
    println(perm);
- `
+ }
  // -> ["a", "b", "c"]
  // -> ["a", "c", "b"]
  // -> ["b", "a", "c"]
@@ -158,47 +180,49 @@ Returns a `Collection` of all the permutations of the specified `Iterable` using
  // -> [2, 1, 1, 2]
  // -> [2, 1, 2, 1]
  // -> [2, 2, 1, 1]
- }</pre>
+ 
+```
 
- <p><i>Notes:</i> This is an implementation of the algorithm for Lexicographical Permutations
+
+ 
+*Notes:* This is an implementation of the algorithm for Lexicographical Permutations
  Generation, described in Knuth's "The Art of Computer Programming", Volume 4, Chapter 7,
  Section 7.2.1.2. The iteration order follows the lexicographical order. This means that the
  first permutation will be in ascending order, and the last will be in descending order.
 
- <p>Elements that compare equal are considered equal and no new permutations are created by
+ 
+Elements that compare equal are considered equal and no new permutations are created by
  swapping them.
 
- <p>An empty iterable has only one permutation, which is an empty list.
-@param elements the original iterable whose elements have to be permuted.
-@param comparator a comparator for the iterable's elements.
-@return an immutable `Collection` containing all the different permutations of the
-     original iterable.
-@throws NullPointerException If the specified iterable is null, has any null elements, or if
-     the specified comparator is null.
-**Since:** 12.0
+ 
+An empty iterable has only one permutation, which is an empty list.
 
-### `permutations(`java.util.Collection<E>` elements)`
+**Parameters:**
+- `elements` (`java.lang.Iterable<E>`): the original iterable whose elements have to be permuted.
+- `comparator` (`java.util.Comparator<? super E>`): a comparator for the iterable's elements.
+
+### `permutations(java.util.Collection<E> elements)`
 
 **Returns:** `java.util.Collection<java.util.List<E>>`
 
-Returns a `Collection` of all the permutations of the specified `Collection`.
-
- <p><i>Notes:</i> This is an implementation of the Plain Changes algorithm for permutations
+*Notes:* This is an implementation of the Plain Changes algorithm for permutations
  generation, described in Knuth's "The Art of Computer Programming", Volume 4, Chapter 7,
  Section 7.2.1.2.
 
- <p>If the input list contains equal elements, some of the generated permutations will be equal.
+ 
+If the input list contains equal elements, some of the generated permutations will be equal.
 
- <p>An empty collection has only one permutation, which is an empty list.
-@param elements the original collection whose elements have to be permuted.
-@return an immutable `Collection` containing all the different permutations of the
-     original collection.
-@throws NullPointerException if the specified collection is null or has any null elements.
-**Since:** 12.0
+ 
+An empty collection has only one permutation, which is an empty list.
 
-### `isPermutation(`java.util.List<?>` first, `java.util.List<?>` second)`
+**Parameters:**
+- `elements` (`java.util.Collection<E>`): the original collection whose elements have to be permuted.
+
+### `isPermutation(java.util.List<?> first, java.util.List<?> second)`
 
 **Returns:** `boolean`
 
-Returns `true` if the second list is a permutation of the first.
+**Parameters:**
+- `first` (`java.util.List<?>`)
+- `second` (`java.util.List<?>`)
 

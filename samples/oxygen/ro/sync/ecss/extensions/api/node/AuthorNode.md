@@ -116,9 +116,12 @@ The value is `processing-instruction`.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocument`](./AuthorDocument.md)
 
-### `isDescendentOf([`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md) ancestor)`
+### `isDescendentOf(ro.sync.ecss.extensions.api.node.AuthorNode ancestor)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `ancestor` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)): The AuthorNode tested to see if it is an ancestor of this node.
 
 ### `getType()`
 

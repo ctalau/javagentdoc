@@ -6,18 +6,15 @@
 
 ## Description
 
-`Escaper` instances suitable for strings to be included in HTML attribute values and
- <em>most</em> elements' text contents. When possible, avoid manual escaping by using templating
+When possible, avoid manual escaping by using templating
  systems and high-level APIs that provide autoescaping.
- One Google-authored templating system available for external use is <a href="https://developers.google.com/closure/templates/">Closure Templates</a>.
+ One Google-authored templating system available for external use is [Closure Templates](https://developers.google.com/closure/templates/).
 
- <p>HTML escaping is particularly tricky: For example, <a href="http://goo.gl/5TgZb">some
- elements' text contents must not be HTML escaped</a>. As a result, it is impossible to escape an
- HTML document correctly without domain-specific knowledge beyond what `HtmlEscapers`
+ 
+HTML escaping is particularly tricky: For example, [some
+ elements' text contents must not be HTML escaped](http://goo.gl/5TgZb). As a result, it is impossible to escape an
+ HTML document correctly without domain-specific knowledge beyond what HtmlEscapers
  provides. We strongly encourage the use of HTML templating systems.
-**Author:** Sven Mawson
-**Author:** David Beaumont
-**Since:** 15.0
 
 ## Fields
 
@@ -35,13 +32,14 @@
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an `Escaper` instance that escapes HTML metacharacters as specified by <a href="http://www.w3.org/TR/html4/">HTML 4.01</a>. The resulting strings can be used both in
- attribute values and in <em>most</em> elements' text contents, provided that the HTML
+The resulting strings can be used both in
+ attribute values and in *most* elements' text contents, provided that the HTML
  document's character encoding can encode any non-ASCII code points in the input (as UTF-8 and
  other Unicode encodings can).
 
- <p><b>Note:</b> This escaper only performs minimal escaping to make content structurally
+ 
+**Note:** This escaper only performs minimal escaping to make content structurally
  compatible with HTML. Specifically, it does not perform entity replacement (symbolic or
  numeric), so it does not replace non-ASCII code points with character references. This escaper
- escapes only the following five ASCII characters: `'"&<>`.
+ escapes only the following five ASCII characters: '"&<>.
 

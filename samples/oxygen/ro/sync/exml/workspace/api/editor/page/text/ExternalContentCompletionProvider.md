@@ -16,7 +16,11 @@ Can be used to display a custom content completion list,
 
 ## Methods
 
-### `startExternalContentCompletion([`ro.sync.exml.workspace.api.editor.page.text.IExternalContentCompletionContext`](./IExternalContentCompletionContext.md) context)`
+### `startExternalContentCompletion(ro.sync.exml.workspace.api.editor.page.text.IExternalContentCompletionContext context)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `context` ([`ro.sync.exml.workspace.api.editor.page.text.IExternalContentCompletionContext`](./IExternalContentCompletionContext.md)): The current content completion context, such as the position and the text 
+                from the caret.
 

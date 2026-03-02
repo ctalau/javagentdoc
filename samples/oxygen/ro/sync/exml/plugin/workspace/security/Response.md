@@ -18,9 +18,16 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ui.application.security.ResponseType`](../../../../ui/application/security/ResponseType.md) responseType, `java.lang.String` reason)`
+### `<init>(ro.sync.ui.application.security.ResponseType responseType, java.lang.String reason)`
 
-### `<init>([`ro.sync.ui.application.security.ResponseType`](../../../../ui/application/security/ResponseType.md) responseType)`
+**Parameters:**
+- `responseType` ([`ro.sync.ui.application.security.ResponseType`](../../../../ui/application/security/ResponseType.md)): The response types.
+- `reason` (`java.lang.String`): A reason why this response was given for a particular host.
+
+### `<init>(ro.sync.ui.application.security.ResponseType responseType)`
+
+**Parameters:**
+- `responseType` ([`ro.sync.ui.application.security.ResponseType`](../../../../ui/application/security/ResponseType.md)): The response types.
 
 ## Methods
 

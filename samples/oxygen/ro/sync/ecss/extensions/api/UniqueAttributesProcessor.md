@@ -8,11 +8,21 @@
 
 ## Methods
 
-### `copyAttributeOnSplit(`java.lang.String` attrQName, [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) element)`
+### `copyAttributeOnSplit(java.lang.String attrQName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `assignUniqueIDs(`int` startOffset, `int` endOffset, `boolean` forceGeneration)`
+**Parameters:**
+- `attrQName` (`java.lang.String`): The attribute qualified name.
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element.
+
+### `assignUniqueIDs(int startOffset, int endOffset, boolean forceGeneration)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `startOffset` (`int`): Start offset.
+- `endOffset` (`int`): End offset.
+- `forceGeneration` (`boolean`): `true` to generate ID even if the ID generation pattern list
+                        does not match.
 

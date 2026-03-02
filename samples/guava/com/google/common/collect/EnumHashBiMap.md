@@ -13,12 +13,11 @@
 
 ## Description
 
-A `BiMap` backed by an `EnumMap` instance for keys-to-values, and a `HashMap`
- instance for values-to-keys. Null keys are not permitted, but null values are. An `EnumHashBiMap` and its inverse are both serializable.
+Null keys are not permitted, but null values are. An 
+ EnumHashBiMap and its inverse are both serializable.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">`BiMap`</a>.
-**Author:** Mike Bostock
-**Since:** 2.0
+ 
+See the Guava User Guide article on [BiMap](https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap).
 
 ## Fields
 
@@ -32,55 +31,70 @@ A `BiMap` backed by an `EnumMap` instance for keys-to-values, and a `HashMap`
 
 ## Constructors
 
-### `<init>(`java.lang.Class<K>` keyType)`
+### `<init>(java.lang.Class<K> keyType)`
+
+**Parameters:**
+- `keyType` (`java.lang.Class<K>`)
 
 ## Methods
 
-### `create(`java.lang.Class<K>` keyType)`
+### `create(java.lang.Class<K> keyType)`
 
 **Returns:** [`com.google.common.collect.EnumHashBiMap<K,V>`](./EnumHashBiMap.md)
 
-Returns a new, empty `EnumHashBiMap` using the specified key type.
-@param keyType the key type
+**Parameters:**
+- `keyType` (`java.lang.Class<K>`): the key type
 
-### `create(`java.util.Map<K,? extends V>` map)`
+### `create(java.util.Map<K,? extends V> map)`
 
 **Returns:** [`com.google.common.collect.EnumHashBiMap<K,V>`](./EnumHashBiMap.md)
 
-Constructs a new bimap with the same mappings as the specified map. If the specified map is an
- `EnumHashBiMap` or an `EnumBiMap`, the new bimap has the same key type as the input
+If the specified map is an
+ EnumHashBiMap or an EnumBiMap, the new bimap has the same key type as the input
  bimap. Otherwise, the specified map must contain at least one mapping, in order to determine
  the key type.
-@param map the map whose mappings are to be placed in this map
-@throws IllegalArgumentException if map is not an `EnumBiMap` or an `EnumHashBiMap`
-     instance and contains no mappings
 
-### `checkKey(`K` key)`
+**Parameters:**
+- `map` (`java.util.Map<K,? extends V>`): the map whose mappings are to be placed in this map
+
+### `checkKey(K key)`
 
 **Returns:** `K`
 
-### `put(`K` key, `V` value)`
+**Parameters:**
+- `key` (`K`)
+
+### `put(K key, V value)`
 
 **Returns:** `V`
 
-### `forcePut(`K` key, `V` value)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `forcePut(K key, V value)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
 
 ### `keyType()`
 
 **Returns:** `java.lang.Class<K>`
 
-Returns the associated key type.
-
-### `writeObject(`java.io.ObjectOutputStream` stream)`
+### `writeObject(java.io.ObjectOutputStream stream)`
 
 **Returns:** `void`
 
-@serialData the key class, number of entries, first key, first value, second key, second value,
-     and so on.
+**Parameters:**
+- `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

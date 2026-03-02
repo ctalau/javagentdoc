@@ -13,64 +13,82 @@
 
 ## Description
 
-A `Network` whose elements and structural relationships will never change. Instances of
- this class may be obtained with `copyOf(Network)`.
+Instances of
+ this class may be obtained with #copyOf(Network).
 
- <p>See the Guava User's Guide's <a href="https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations">discussion
- of the `Immutable*` types</a> for more information on the properties and guarantees
+ 
+See the Guava User's Guide's [discussion
+ of the Immutable* types](https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations) for more information on the properties and guarantees
  provided by this class.
-**Author:** James Sexton
-**Author:** Joshua O'Madadhain
-**Author:** Omar Darwish
-**Author:** Jens Nyman
-@param <N> Node parameter type
-@param <E> Edge parameter type
-**Since:** 20.0
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
+### `<init>(com.google.common.graph.Network<N,E> network)`
+
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
 ## Methods
 
-### `copyOf([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
+### `copyOf(com.google.common.graph.Network<N,E> network)`
 
 **Returns:** [`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md)
 
-Returns an immutable copy of `network`.
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
-### `copyOf([`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md) network)`
+### `copyOf(com.google.common.graph.ImmutableNetwork<N,E> network)`
 
 **Returns:** [`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md)
 
-Simply returns its argument.
-**Deprecated:**no need to use this
+**Parameters:**
+- `network` ([`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md))
 
 ### `asGraph()`
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
-### `getNodeConnections([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
+### `getNodeConnections(com.google.common.graph.Network<N,E> network)`
 
 **Returns:** `java.util.Map<N,com.google.common.graph.NetworkConnections<N,E>>`
 
-### `getEdgeToReferenceNode([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+
+### `getEdgeToReferenceNode(com.google.common.graph.Network<N,E> network)`
 
 **Returns:** `java.util.Map<E,N>`
 
-### `connectionsOf([`com.google.common.graph.Network<N,E>`](./Network.md) network, `N` node)`
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+
+### `connectionsOf(com.google.common.graph.Network<N,E> network, N node)`
 
 **Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
 
-### `sourceNodeFn([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+- `node` (`N`)
+
+### `sourceNodeFn(com.google.common.graph.Network<N,E> network)`
 
 **Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
 
-### `targetNodeFn([`com.google.common.graph.Network<N,E>`](./Network.md) network)`
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+
+### `targetNodeFn(com.google.common.graph.Network<N,E> network)`
 
 **Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
 
-### `adjacentNodeFn([`com.google.common.graph.Network<N,E>`](./Network.md) network, `N` node)`
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+
+### `adjacentNodeFn(com.google.common.graph.Network<N,E> network, N node)`
 
 **Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
+
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+- `node` (`N`)
 

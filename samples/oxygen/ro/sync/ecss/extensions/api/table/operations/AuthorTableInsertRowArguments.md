@@ -22,7 +22,12 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../../node/AuthorDocumentFragment.md) rowFragments, `int` insertOffset)`
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] rowFragments, int insertOffset)`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.
+- `rowFragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../../node/AuthorDocumentFragment.md)): The array containing the rows nodes that are inserted
+- `insertOffset` (`int`): The offset where the rows are inserted.
 
 ## Methods
 

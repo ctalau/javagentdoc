@@ -70,24 +70,67 @@ The provider is useful in order for Oxygen to show the static text in place in t
 
 ## Methods
 
-### `getProperty(`java.lang.String` propertyName)`
+### `getProperty(java.lang.String propertyName)`
 
 **Returns:** `java.lang.Object`
 
-### `setProperty(`java.lang.String` propertyName, `java.lang.Object` propertyValue)`
+**Parameters:**
+- `propertyName` (`java.lang.String`): The property name. One of the following constants:
+ 
+
+  - #DESCRIPTION
+
+  - #NAME
+
+  - #HREF
+
+  - #DEFINITION_LOCATION
+
+  - #IS_SUBJECT_DEF
+
+  - #SUBJECT_DEF_CHILDREN
+
+ 
+
+
+### `setProperty(java.lang.String propertyName, java.lang.Object propertyValue)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `propertyName` (`java.lang.String`): The property name. One of the following constants:
+ 
+
+  - #DESCRIPTION
+
+  - #NAME
+
+  - #HREF
+
+  - #DEFINITION_LOCATION
+
+  - #IS_SUBJECT_DEF
+
+  - #SUBJECT_DEF_CHILDREN
+
+ 
+
+- `propertyValue` (`java.lang.Object`): The value of the property.
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-### `setAttribute(`java.lang.String` attributeName, `java.lang.String` attributeValue)`
+### `setAttribute(java.lang.String attributeName, java.lang.String attributeValue)`
 
 **Returns:** `void`
 
 For example the application may use the "format" attribute to hide when inserting key references, 
  key definitions which point to DITA resources.
+
+**Parameters:**
+- `attributeName` (`java.lang.String`): The attribute name.
+- `attributeValue` (`java.lang.String`): The value of the attribute.
 
 ### `getAttributes()`
 

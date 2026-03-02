@@ -15,11 +15,8 @@
 
 ## Description
 
-A general-purpose bimap implementation using any two backing `Map` instances.
-
- <p>Note that this class contains `equals()` calls that keep it from supporting `IdentityHashMap` backing maps.
-**Author:** Kevin Bourrillion
-**Author:** Mike Bostock
+Note that this class contains equals() calls that keep it from supporting 
+ IdentityHashMap backing maps.
 
 ## Fields
 
@@ -49,13 +46,17 @@ A general-purpose bimap implementation using any two backing `Map` instances.
 
 ## Constructors
 
-### `<init>(`java.util.Map<K,V>` forward, `java.util.Map<V,K>` backward)`
+### `<init>(java.util.Map<K,V> forward, java.util.Map<V,K> backward)`
 
-Package-private constructor for creating a map-backed bimap.
+**Parameters:**
+- `forward` (`java.util.Map<K,V>`)
+- `backward` (`java.util.Map<V,K>`)
 
-### `<init>(`java.util.Map<K,V>` backward, [`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md) forward)`
+### `<init>(java.util.Map<K,V> backward, com.google.common.collect.AbstractBiMap<V,K> forward)`
 
-Private constructor for inverse bimap.
+**Parameters:**
+- `backward` (`java.util.Map<K,V>`)
+- `forward` ([`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md))
 
 ## Methods
 
@@ -63,72 +64,121 @@ Private constructor for inverse bimap.
 
 **Returns:** `java.util.Map<K,V>`
 
-### `checkKey(`K` key)`
+### `checkKey(K key)`
 
 **Returns:** `K`
 
-Returns its input, or throws an exception if this is not a valid key.
+**Parameters:**
+- `key` (`K`)
 
-### `checkValue(`V` value)`
+### `checkValue(V value)`
 
 **Returns:** `V`
 
-Returns its input, or throws an exception if this is not a valid value.
+**Parameters:**
+- `value` (`V`)
 
-### `setDelegates(`java.util.Map<K,V>` forward, `java.util.Map<V,K>` backward)`
+### `setDelegates(java.util.Map<K,V> forward, java.util.Map<V,K> backward)`
 
 **Returns:** `void`
 
-Specifies the delegate maps going in each direction. Called by the constructor and by
+Called by the constructor and by
  subclasses during deserialization.
 
-### `makeInverse(`java.util.Map<V,K>` backward)`
+**Parameters:**
+- `forward` (`java.util.Map<K,V>`)
+- `backward` (`java.util.Map<V,K>`)
+
+### `makeInverse(java.util.Map<V,K> backward)`
 
 **Returns:** [`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md)
 
-### `setInverse([`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md) inverse)`
+**Parameters:**
+- `backward` (`java.util.Map<V,K>`)
+
+### `setInverse(com.google.common.collect.AbstractBiMap<V,K> inverse)`
 
 **Returns:** `void`
 
-### `containsValue(`java.lang.Object` value)`
+**Parameters:**
+- `inverse` ([`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md))
+
+### `containsValue(java.lang.Object value)`
 
 **Returns:** `boolean`
 
-### `put(`K` key, `V` value)`
+**Parameters:**
+- `value` (`java.lang.Object`)
+
+### `put(K key, V value)`
 
 **Returns:** `V`
 
-### `forcePut(`K` key, `V` value)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `forcePut(K key, V value)`
 
 **Returns:** `V`
 
-### `putInBothMaps(`K` key, `V` value, `boolean` force)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `putInBothMaps(K key, V value, boolean force)`
 
 **Returns:** `V`
 
-### `updateInverseMap(`K` key, `boolean` containedKey, `V` oldValue, `V` newValue)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+- `force` (`boolean`)
+
+### `updateInverseMap(K key, boolean containedKey, V oldValue, V newValue)`
 
 **Returns:** `void`
 
-### `remove(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`K`)
+- `containedKey` (`boolean`)
+- `oldValue` (`V`)
+- `newValue` (`V`)
+
+### `remove(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `removeFromBothMaps(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `removeFromBothMaps(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `removeFromInverseMap(`V` oldValue)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `removeFromInverseMap(V oldValue)`
 
 **Returns:** `void`
 
-### `putAll(`java.util.Map<? extends K,? extends V>` map)`
+**Parameters:**
+- `oldValue` (`V`)
+
+### `putAll(java.util.Map<? extends K,? extends V> map)`
 
 **Returns:** `void`
 
-### `replaceAll(`java.util.function.BiFunction<? super K,? super V,? extends V>` function)`
+**Parameters:**
+- `map` (`java.util.Map<? extends K,? extends V>`)
+
+### `replaceAll(java.util.function.BiFunction<? super K,? super V,? extends V> function)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `function` (`java.util.function.BiFunction<? super K,? super V,? extends V>`)
 
 ### `clear()`
 

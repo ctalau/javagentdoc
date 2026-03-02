@@ -19,11 +19,15 @@ It receives callbacks for
 
 ## Methods
 
-### `apply([`ro.sync.exml.workspace.api.PluginWorkspace`](../../workspace/api/PluginWorkspace.md) pluginWorkspace)`
+### `apply(ro.sync.exml.workspace.api.PluginWorkspace pluginWorkspace)`
 
 **Returns:** `void`
 
 All options associated with the option page must be saved on this method.
+
+**Parameters:**
+- `pluginWorkspace` ([`ro.sync.exml.workspace.api.PluginWorkspace`](../../workspace/api/PluginWorkspace.md)): Access the entire workspace of Oxygen. It can be used to
+ retrieve the OptionsStorage and perform options save operations on it.
 
 ### `restoreDefaults()`
 
@@ -43,7 +47,7 @@ Can be overridden in order to pass the returned value
  to ro.sync.exml.workspace.api.PluginWorkspace#showPreferencesPages(String[], String, boolean),
  which is used for displaying the preferences dialog with certain pages in the table of contents.
 
-### `init([`ro.sync.exml.workspace.api.PluginWorkspace`](../../workspace/api/PluginWorkspace.md) pluginWorkspace)`
+### `init(ro.sync.exml.workspace.api.PluginWorkspace pluginWorkspace)`
 
 **Returns:** `javax.swing.JComponent`
 
@@ -55,6 +59,10 @@ checkboxes)
   and update your UI's settings
 
  when the stored keys are changed in other parts of the code.
+
+**Parameters:**
+- `pluginWorkspace` ([`ro.sync.exml.workspace.api.PluginWorkspace`](../../workspace/api/PluginWorkspace.md)): Access the entire workspace of Oxygen. It can be used to
+ retrieve the OptionsStorage and perform options save/load operations it.
 
 ### `getProjectLevelOptionKeys()`
 

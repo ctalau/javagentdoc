@@ -12,8 +12,6 @@
 
 ## Description
 
-Implementation of `Futures.immediateFuture`.
-
 ## Fields
 
 ### `NULL`
@@ -30,25 +28,39 @@ Implementation of `Futures.immediateFuture`.
 
 ## Constructors
 
-### `<init>(`V` value)`
+### `<init>(V value)`
+
+**Parameters:**
+- `value` (`V`)
 
 ## Methods
 
-### `addListener(`java.lang.Runnable` listener, `java.util.concurrent.Executor` executor)`
+### `addListener(java.lang.Runnable listener, java.util.concurrent.Executor executor)`
 
 **Returns:** `void`
 
-### `cancel(`boolean` mayInterruptIfRunning)`
+**Parameters:**
+- `listener` (`java.lang.Runnable`)
+- `executor` (`java.util.concurrent.Executor`)
+
+### `cancel(boolean mayInterruptIfRunning)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `mayInterruptIfRunning` (`boolean`)
 
 ### `get()`
 
 **Returns:** `V`
 
-### `get(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `get(long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
 ### `isCancelled()`
 

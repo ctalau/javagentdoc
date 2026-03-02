@@ -12,13 +12,11 @@
 
 ## Description
 
-`FluentFuture` that forwards all calls to a delegate.
+Extension
 
- <h3>Extension</h3>
-
- If you want a class like `FluentFuture` but with extra methods, we recommend declaring your
- own subclass of `ListenableFuture`, complete with a method like `from` to adapt an
- existing `ListenableFuture`, implemented atop a `ForwardingListenableFuture` that
+ If you want a class like FluentFuture but with extra methods, we recommend declaring your
+ own subclass of ListenableFuture, complete with a method like #from to adapt an
+ existing ListenableFuture, implemented atop a ForwardingListenableFuture that
  forwards to that future and adds the desired methods.
 
 ## Fields
@@ -29,17 +27,27 @@
 
 ## Constructors
 
-### `<init>([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md) delegate)`
+### `<init>(com.google.common.util.concurrent.ListenableFuture<V> delegate)`
+
+**Parameters:**
+- `delegate` ([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md))
 
 ## Methods
 
-### `addListener(`java.lang.Runnable` listener, `java.util.concurrent.Executor` executor)`
+### `addListener(java.lang.Runnable listener, java.util.concurrent.Executor executor)`
 
 **Returns:** `void`
 
-### `cancel(`boolean` mayInterruptIfRunning)`
+**Parameters:**
+- `listener` (`java.lang.Runnable`)
+- `executor` (`java.util.concurrent.Executor`)
+
+### `cancel(boolean mayInterruptIfRunning)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `mayInterruptIfRunning` (`boolean`)
 
 ### `isCancelled()`
 
@@ -53,9 +61,13 @@
 
 **Returns:** `V`
 
-### `get(`long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `get(long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
 ### `toString()`
 

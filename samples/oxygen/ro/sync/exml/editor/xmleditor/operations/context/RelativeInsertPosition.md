@@ -16,7 +16,10 @@
 
 **Returns:** [`ro.sync.exml.editor.xmleditor.operations.context.RelativeInsertPosition[]`](./RelativeInsertPosition.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.exml.editor.xmleditor.operations.context.RelativeInsertPosition`](./RelativeInsertPosition.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

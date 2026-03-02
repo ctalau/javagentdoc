@@ -13,9 +13,8 @@
 
 ## Description
 
-An iterator that transforms a backing iterator; for internal use. This avoids the object overhead
- of constructing a `com.google.common.base.Function` for internal methods.
-**Author:** Louis Wasserman
+This avoids the object overhead
+ of constructing a Function for internal methods.
 
 ## Fields
 
@@ -25,13 +24,19 @@ An iterator that transforms a backing iterator; for internal use. This avoids th
 
 ## Constructors
 
-### `<init>(`java.util.Iterator<? extends F>` backingIterator)`
+### `<init>(java.util.Iterator<? extends F> backingIterator)`
+
+**Parameters:**
+- `backingIterator` (`java.util.Iterator<? extends F>`)
 
 ## Methods
 
-### `transform(`F` from)`
+### `transform(F from)`
 
 **Returns:** `T`
+
+**Parameters:**
+- `from` (`F`)
 
 ### `hasNext()`
 

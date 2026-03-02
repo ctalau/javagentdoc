@@ -14,7 +14,10 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0)`
+### `<init>(java.lang.String arg0)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ## Methods
 
@@ -22,9 +25,12 @@
 
 **Returns:** `java.lang.String[]`
 
-### `setSchemas(`java.lang.String[]` arg0)`
+### `setSchemas(java.lang.String[] arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String[]`)
 
 ### `asXML()`
 
@@ -38,9 +44,12 @@
 
 **Returns:** `java.lang.String`
 
-### `b([`ro.sync.document.OperationDescription`](./OperationDescription.md) arg0)`
+### `b(ro.sync.document.OperationDescription arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))
 
 ### `asHTML()`
 

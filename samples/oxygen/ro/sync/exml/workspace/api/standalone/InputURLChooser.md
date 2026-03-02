@@ -24,12 +24,15 @@
 
 ## Methods
 
-### `urlChosen(`java.net.URL` selectedURL)`
+### `urlChosen(java.net.URL selectedURL)`
 
 **Returns:** `void`
 
 When the customizer is used in places where a combo box for the URL is not present 
  (like in the DITA Maps Manager view) this method performs the operation on the given URL.
+
+**Parameters:**
+- `selectedURL` (`java.net.URL`): The URL which was probably selected by the user in a custom CMS chooser.
 
 ### `getBrowseMode()`
 

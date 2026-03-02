@@ -14,11 +14,21 @@
 
 ## Methods
 
-### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, `org.xml.sax.Attributes` rootAttributes)`
+### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, org.xml.sax.Attributes rootAttributes)`
 
 **Returns:** `boolean`
 
-### `getVersion(`org.xml.sax.Attributes` rootAttributes)`
+**Parameters:**
+- `systemID` (`java.lang.String`)
+- `rootNamespace` (`java.lang.String`)
+- `rootLocalName` (`java.lang.String`)
+- `doctypePublicID` (`java.lang.String`)
+- `rootAttributes` (`org.xml.sax.Attributes`)
+
+### `getVersion(org.xml.sax.Attributes rootAttributes)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `rootAttributes` (`org.xml.sax.Attributes`): Root attributes.
 

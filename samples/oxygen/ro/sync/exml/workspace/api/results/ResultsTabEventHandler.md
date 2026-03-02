@@ -8,7 +8,10 @@
 
 ## Methods
 
-### `handle([`ro.sync.exml.workspace.api.results.ResultsTabEvent`](./ResultsTabEvent.md) event)`
+### `handle(ro.sync.exml.workspace.api.results.ResultsTabEvent event)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `event` ([`ro.sync.exml.workspace.api.results.ResultsTabEvent`](./ResultsTabEvent.md)): The event to handle.
 

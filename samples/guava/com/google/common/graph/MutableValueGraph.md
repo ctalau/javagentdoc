@@ -13,84 +13,81 @@
 
 ## Description
 
-A subinterface of `ValueGraph` which adds mutation methods. When mutation is not required,
- users should prefer the `ValueGraph` interface.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <V> Value parameter type
-**Since:** 20.0
+When mutation is not required,
+ users should prefer the ValueGraph interface.
 
 ## Methods
 
-### `addNode(`N` node)`
+### `addNode(N node)`
 
 **Returns:** `boolean`
 
-Adds `node` if it is not already present.
+**Nodes must be unique**, just as Map keys must be. They must also be non-null.
 
- <p><b>Nodes must be unique</b>, just as `Map` keys must be. They must also be non-null.
-@return `true` if the graph was modified as a result of this call
+**Parameters:**
+- `node` (`N`)
 
-### `putEdgeValue(`N` nodeU, `N` nodeV, `V` value)`
-
-**Returns:** `V`
-
-Adds an edge connecting `nodeU` to `nodeV` if one is not already present, and sets
- a value for that edge to `value` (overwriting the existing value, if any).
-
- <p>If the graph is directed, the resultant edge will be directed; otherwise, it will be
- undirected.
-
- <p>Values do not have to be unique. However, values must be non-null.
-
- <p>If `nodeU` and `nodeV` are not already present in this graph, this method will
- silently `addNode(Object) add` `nodeU` and `nodeV` to the graph.
-@return the value previously associated with the edge connecting `nodeU` to `nodeV`, or null if there was no such edge.
-@throws IllegalArgumentException if the introduction of the edge would violate `allowsSelfLoops()`
-
-### `putEdgeValue([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, `V` value)`
+### `putEdgeValue(N nodeU, N nodeV, V value)`
 
 **Returns:** `V`
 
-Adds an edge connecting `endpoints` if one is not already present, and sets a value for
- that edge to `value` (overwriting the existing value, if any).
-
- <p>If the graph is directed, the resultant edge will be directed; otherwise, it will be
+If the graph is directed, the resultant edge will be directed; otherwise, it will be
  undirected.
 
- <p>If this graph is directed, `endpoints` must be ordered.
+ 
+Values do not have to be unique. However, values must be non-null.
 
- <p>Values do not have to be unique. However, values must be non-null.
+ 
+If nodeU and nodeV are not already present in this graph, this method will
+ silently add nodeU and nodeV to the graph.
 
- <p>If either or both endpoints are not already present in this graph, this method will silently
- `addNode(Object) add` each missing endpoint to the graph.
-@return the value previously associated with the edge connecting `nodeU` to `nodeV`, or null if there was no such edge.
-@throws IllegalArgumentException if the introduction of the edge would violate `allowsSelfLoops()`
-@throws IllegalArgumentException if the endpoints are unordered and the graph is directed
-**Since:** 27.1
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+- `value` (`V`)
 
-### `removeNode(`N` node)`
+### `putEdgeValue(com.google.common.graph.EndpointPair<N> endpoints, V value)`
+
+**Returns:** `V`
+
+If the graph is directed, the resultant edge will be directed; otherwise, it will be
+ undirected.
+
+ 
+If this graph is directed, endpoints must be ordered.
+
+ 
+Values do not have to be unique. However, values must be non-null.
+
+ 
+If either or both endpoints are not already present in this graph, this method will silently
+ add each missing endpoint to the graph.
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+- `value` (`V`)
+
+### `removeNode(N node)`
 
 **Returns:** `boolean`
 
-Removes `node` if it is present; all edges incident to `node` will also be removed.
-@return `true` if the graph was modified as a result of this call
+**Parameters:**
+- `node` (`N`)
 
-### `removeEdge(`N` nodeU, `N` nodeV)`
-
-**Returns:** `V`
-
-Removes the edge connecting `nodeU` to `nodeV`, if it is present.
-@return the value previously associated with the edge connecting `nodeU` to `nodeV`, or null if there was no such edge.
-
-### `removeEdge([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+### `removeEdge(N nodeU, N nodeV)`
 
 **Returns:** `V`
 
-Removes the edge connecting `endpoints`, if it is present.
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
 
- <p>If this graph is directed, `endpoints` must be ordered.
-@return the value previously associated with the edge connecting `endpoints`, or null if
-     there was no such edge.
-**Since:** 27.1
+### `removeEdge(com.google.common.graph.EndpointPair<N> endpoints)`
+
+**Returns:** `V`
+
+If this graph is directed, endpoints must be ordered.
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 

@@ -230,25 +230,80 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0)`
+### `<init>(java.lang.String arg0)`
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1)`
+### `<init>(java.lang.String arg0, boolean arg1)`
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `int` arg2)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1, `java.lang.String` arg2)`
+### `<init>(java.lang.String arg0, java.lang.String arg1)`
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1, `java.lang.String` arg2, `boolean` arg3)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `int` arg4)`
+### `<init>(java.lang.String arg0, java.lang.String arg1, int arg2)`
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `int` arg4, `boolean` arg5)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`int`)
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `int` arg4, `boolean` arg5, `int` arg6)`
+### `<init>(java.lang.String arg0, boolean arg1, java.lang.String arg2)`
 
-### `<init>(`java.lang.String` arg0, [`ro.sync.contentcompletion.xml.CIValue`](./CIValue.md) arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`java.lang.String`)
+
+### `<init>(java.lang.String arg0, boolean arg1, java.lang.String arg2, boolean arg3)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`boolean`)
+
+### `<init>(java.lang.String arg0, boolean arg1, java.lang.String arg2, java.lang.String arg3, int arg4)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`int`)
+
+### `<init>(java.lang.String arg0, boolean arg1, java.lang.String arg2, java.lang.String arg3, int arg4, boolean arg5)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`int`)
+- `arg5` (`boolean`)
+
+### `<init>(java.lang.String arg0, boolean arg1, java.lang.String arg2, java.lang.String arg3, int arg4, boolean arg5, int arg6)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`int`)
+- `arg5` (`boolean`)
+- `arg6` (`int`)
+
+### `<init>(java.lang.String arg0, ro.sync.contentcompletion.xml.CIValue arg1)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` ([`ro.sync.contentcompletion.xml.CIValue`](./CIValue.md))
 
 ## Methods
 
@@ -272,45 +327,85 @@
 
 **Returns:** `java.lang.String`
 
-### `setAnnotation(`java.lang.String` arg0)`
+### `setAnnotation(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `getCIValues(`java.util.Collection<java.lang.String>` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `getCIValues(java.util.Collection<java.lang.String> arg0)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIValue[]`](./CIValue.md)
 
-### `getCIValues(`java.util.Collection<java.lang.String>` arg0, `int` arg1)`
+**Parameters:**
+- `arg0` (`java.util.Collection<java.lang.String>`)
+
+### `getCIValues(java.util.Collection<java.lang.String> arg0, int arg1)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIValue[]`](./CIValue.md)
 
-### `getCIValues(`java.util.Collection<java.lang.String>` arg0, `int` arg1, `boolean` arg2)`
+**Parameters:**
+- `arg0` (`java.util.Collection<java.lang.String>`)
+- `arg1` (`int`)
+
+### `getCIValues(java.util.Collection<java.lang.String> arg0, int arg1, boolean arg2)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIValue[]`](./CIValue.md)
 
-### `getCIValues(`java.util.Collection<java.lang.String>` arg0, `int` arg1, `boolean` arg2, `boolean` arg3)`
+**Parameters:**
+- `arg0` (`java.util.Collection<java.lang.String>`)
+- `arg1` (`int`)
+- `arg2` (`boolean`)
+
+### `getCIValues(java.util.Collection<java.lang.String> arg0, int arg1, boolean arg2, boolean arg3)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIValue[]`](./CIValue.md)
 
-### `getCIFromIDValues(`java.util.Collection<ro.sync.xml.parser.IDValue>` arg0, `boolean` arg1)`
+**Parameters:**
+- `arg0` (`java.util.Collection<java.lang.String>`)
+- `arg1` (`int`)
+- `arg2` (`boolean`)
+- `arg3` (`boolean`)
+
+### `getCIFromIDValues(java.util.Collection<ro.sync.xml.parser.IDValue> arg0, boolean arg1)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIValue[]`](./CIValue.md)
 
-### `getCIValuesAsList(`java.util.Collection<java.lang.String>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.Collection<ro.sync.xml.parser.IDValue>`)
+- `arg1` (`boolean`)
+
+### `getCIValuesAsList(java.util.Collection<java.lang.String> arg0)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `getCIValuesAsList(`java.util.Collection<java.lang.String>` arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`java.util.Collection<java.lang.String>`)
+
+### `getCIValuesAsList(java.util.Collection<java.lang.String> arg0, java.lang.String arg1)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `getCIValuesAsList(`java.util.Collection<java.lang.String>` arg0, `java.lang.String` arg1, `int` arg2)`
+**Parameters:**
+- `arg0` (`java.util.Collection<java.lang.String>`)
+- `arg1` (`java.lang.String`)
+
+### `getCIValuesAsList(java.util.Collection<java.lang.String> arg0, java.lang.String arg1, int arg2)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `equals(`java.lang.Object` arg0)`
+**Parameters:**
+- `arg0` (`java.util.Collection<java.lang.String>`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`int`)
+
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -328,9 +423,12 @@
 
 **Returns:** `java.lang.String`
 
-### `compareTo([`ro.sync.contentcompletion.xml.CIValue`](./CIValue.md) arg0)`
+### `compareTo(ro.sync.contentcompletion.xml.CIValue arg0)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `arg0` ([`ro.sync.contentcompletion.xml.CIValue`](./CIValue.md))
 
 ### `isUsedInURLAnchors()`
 
@@ -340,31 +438,46 @@
 
 **Returns:** `java.lang.String`
 
-### `setInsertString(`java.lang.String` arg0)`
+### `setInsertString(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getType()`
 
 **Returns:** `int`
 
-### `valueOf(`java.lang.String` arg0)`
+### `valueOf(java.lang.String arg0)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getAfterInsertCaretPosition()`
 
 **Returns:** `int`
 
-### `setAfterInsertCaretPosition(`int` arg0)`
+### `setAfterInsertCaretPosition(int arg0)`
 
 **Returns:** `void`
 
-### `setValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `setValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setType(`int` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setType(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 

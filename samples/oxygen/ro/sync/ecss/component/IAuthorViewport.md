@@ -14,9 +14,14 @@
 
 ## Methods
 
-### `delete(`int` arg0, `int` arg1, `boolean` arg2)`
+### `delete(int arg0, int arg1, boolean arg2)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
+- `arg2` (`boolean`)
 
 ### `getDocumentTypeProvider()`
 
@@ -26,13 +31,20 @@
 
 **Returns:** `ro.sync.ecss.strictediting.IMultipleSelectionSchemaAwareActionsSupport`
 
-### `getStringForClipboard(`int` arg0, `int` arg1)`
+### `getStringForClipboard(int arg0, int arg1)`
 
 **Returns:** `java.lang.String`
 
-### `getCurrentSelectedNode(`ro.sync.ecss.dom.p` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
+
+### `getCurrentSelectedNode(ro.sync.ecss.dom.p arg0)`
 
 **Returns:** `ro.sync.ecss.dom.p`
+
+**Parameters:**
+- `arg0` (`ro.sync.ecss.dom.p`)
 
 ### `getCustomPersistentHighlighter()`
 
@@ -46,21 +58,33 @@
 
 **Returns:** `void`
 
-### `addCaretListener([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md) arg0)`
+### `addCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener arg0)`
 
 **Returns:** `void`
 
-### `removeCaretListener([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md))
+
+### `removeCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener arg0)`
 
 **Returns:** `void`
 
-### `setEditAttributesSupport([`ro.sync.ecss.component.EditAttributesSupport`](./EditAttributesSupport.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md))
+
+### `setEditAttributesSupport(ro.sync.ecss.component.EditAttributesSupport arg0)`
 
 **Returns:** `void`
 
-### `setMultipleSelectionMode(`boolean` arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.component.EditAttributesSupport`](./EditAttributesSupport.md))
+
+### `setMultipleSelectionMode(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isMultipleSelectionMode()`
 
@@ -82,17 +106,28 @@
 
 **Returns:** `ro.sync.ecss.component.callouts.b.c`
 
-### `getTableCellsSelectionInformation(`boolean` arg0)`
+### `getTableCellsSelectionInformation(boolean arg0)`
 
 **Returns:** `ro.sync.ecss.i.b.c.i`
 
-### `getSelectionMetadata(`ro.sync.ecss.i.b.c.i` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `getSelectionMetadata(ro.sync.ecss.i.b.c.i arg0)`
 
 **Returns:** [`ro.sync.ecss.component.AuthorContentMetadata`](./AuthorContentMetadata.md)
 
-### `edit(`ro.sync.ecss.i.l` arg0, `ro.sync.exml.view.k` arg1, `ro.sync.exml.view.graphics.Point` arg2)`
+**Parameters:**
+- `arg0` (`ro.sync.ecss.i.b.c.i`)
+
+### `edit(ro.sync.ecss.i.l arg0, ro.sync.exml.view.k arg1, ro.sync.exml.view.graphics.Point arg2)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`ro.sync.ecss.i.l`)
+- `arg1` (`ro.sync.exml.view.k`)
+- `arg2` (`ro.sync.exml.view.graphics.Point`)
 
 ### `isEditingInplace()`
 
@@ -102,9 +137,12 @@
 
 **Returns:** `int[]`
 
-### `findEditorBox(`ro.sync.ecss.component.editor.l` arg0)`
+### `findEditorBox(ro.sync.ecss.component.editor.l arg0)`
 
 **Returns:** `ro.sync.ecss.component.w`
+
+**Parameters:**
+- `arg0` (`ro.sync.ecss.component.editor.l`)
 
 ### `switchSelectionColorToContentHighlightColor()`
 
@@ -114,17 +152,25 @@
 
 **Returns:** `void`
 
-### `joinSplits(`int[]` arg0)`
+### `joinSplits(int[] arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`int[]`)
 
 ### `getSize()`
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `setCaretGhostOffset(`int` arg0, `int` arg1, `int` arg2)`
+### `setCaretGhostOffset(int arg0, int arg1, int arg2)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
+- `arg2` (`int`)
 
 ### `resetCaretGhostOffset()`
 
@@ -134,9 +180,12 @@
 
 **Returns:** `void`
 
-### `isOffsetInFixedBox(`int` arg0)`
+### `isOffsetInFixedBox(int arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ### `getHighlightsWidgetHelper()`
 
@@ -146,15 +195,21 @@
 
 **Returns:** `int`
 
-### `getCalloutInfo(`java.lang.String` arg0)`
+### `getCalloutInfo(java.lang.String arg0)`
 
 **Returns:** `ro.sync.ecss.component.callouts.c.g`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getCalloutsWidth()`
 
 **Returns:** `int`
 
-### `setCalloutsImposedWidth(`int` arg0)`
+### `setCalloutsImposedWidth(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 

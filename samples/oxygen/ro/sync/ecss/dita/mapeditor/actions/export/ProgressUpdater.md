@@ -8,9 +8,12 @@
 
 ## Methods
 
-### `updateProgressStatus(`java.lang.String` status)`
+### `updateProgressStatus(java.lang.String status)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `status` (`java.lang.String`): The status message.
 
 ### `cancel()`
 

@@ -16,9 +16,12 @@ The handler will receive an input stream for the image and it needs to state if 
 
 ## Methods
 
-### `canHandle(`java.io.InputStream` inputStream)`
+### `canHandle(java.io.InputStream inputStream)`
 
 **Returns:** `boolean`
 
 Ideally will read only some metadata from the stream.
+
+**Parameters:**
+- `inputStream` (`java.io.InputStream`): The binary image input stream. Never NULL.
 

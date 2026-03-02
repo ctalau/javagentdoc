@@ -12,9 +12,12 @@ Instead it receives the ask variables expansion.
 
 ## Methods
 
-### `performActionWithValues(`java.util.List<java.lang.String>` askValues)`
+### `performActionWithValues(java.util.List<java.lang.String> askValues)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.AskDescriptor>`
+
+**Parameters:**
+- `askValues` (`java.util.List<java.lang.String>`): the expanded ask values.
 
 ### `countAsksVariables()`
 

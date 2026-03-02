@@ -13,7 +13,7 @@ It should be implemented when the author extension being developed offers
 
 ## Methods
 
-### `getCellWidth([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) cellElement, `int` colNumberStart, `int` colSpan)`
+### `getCellWidth(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int colNumberStart, int colSpan)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
 
@@ -21,7 +21,12 @@ For example for a CALS table cell the list with the width representations is obt
  computing the column span and then determining the WidthRepresentation
  for each column the cell spans across.
 
-### `init([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) tableElement)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The node that represents a table cell in CSS.
+- `colNumberStart` (`int`): The column number the cell starts at.
+- `colSpan` (`int`): The column span of the cell.
+
+### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `void`
 
@@ -36,7 +41,11 @@ Its intended
  A new instance of the table column width provider is used for every table in a document 
  so cached data cannot be reused between different tables.
 
-### `commitColumnWidthModifications([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md) authorDocumentController, [`ro.sync.ecss.extensions.api.WidthRepresentation[]`](./WidthRepresentation.md) colWidths, `java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element representing a table (it has the CSS display property 
+ set on 'table').
+
+### `commitColumnWidthModifications(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, ro.sync.ecss.extensions.api.WidthRepresentation[] colWidths, java.lang.String tableCellsTagName)`
 
 **Returns:** `void`
 
@@ -45,43 +54,77 @@ For example, for the DocBook CALS tables the method updates the columns
  attribute value of the `colspec` elements. 
  New `colspec` elements will be added if needed.
 
-### `commitTableWidthModification([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md) authorDocumentController, `int` newTableWidth, `java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `authorDocumentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md)): The AuthorDocumentController used to commit the table modifications
+ in the document.
+- `colWidths` ([`ro.sync.ecss.extensions.api.WidthRepresentation[]`](./WidthRepresentation.md)): The new column WidthRepresentation to set. The column widths must be ordered 
+ according to the corresponding column numbers.
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type (e.g. 'entry' for CALS or 'td' for HTML).
+
+### `commitTableWidthModification(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, int newTableWidth, java.lang.String tableCellsTagName)`
 
 **Returns:** `void`
 
 For example in the case of DocBook HTML tables sets the 
  `width` attribute value of the `table` element.
 
-### `isTableAcceptingWidth(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `authorDocumentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md)): The AuthorDocumentController used to commit the table width modifications
+ in the document.
+- `newTableWidth` (`int`): The new table WidthRepresentation to set. The value is given in pixels.
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type (e.g. 'entry' for CALS or 'td' for HTML).
+
+### `isTableAcceptingWidth(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
 For example, for the DocBook CALS tables which do not accept 
  an `width` attribute the method will return `false`.
 
-### `getTableWidth(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type (e.g. 'entry' for CALS or 'td' for HTML).
+
+### `getTableWidth(java.lang.String tableCellsTagName)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.WidthRepresentation`](./WidthRepresentation.md)
 
 For the DocBook HTML tables it returns the WidthRepresentation obtained by analyzing the
  `width` attribute value of the `table` element.
 
-### `isTableAndColumnsResizable(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type (e.g. 'entry' for CALS or 'td' for HTML).
+
+### `isTableAndColumnsResizable(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
 For example in the case of the DocBook CALS tables will return `true`
  only if the given table cells tag name is equal to `'entry'`.
 
-### `isAcceptingFixedColumnWidths(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type (e.g. CALS or HTML).
+
+### `isAcceptingFixedColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
-### `isAcceptingProportionalColumnWidths(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type
+ (e.g. CALS or HTML).
+
+### `isAcceptingProportionalColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
 
-### `isAcceptingPercentageColumnWidths(`java.lang.String` tableCellsTagName)`
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type
+ (e.g. CALS or HTML).
+
+### `isAcceptingPercentageColumnWidths(java.lang.String tableCellsTagName)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type
+ (e.g. CALS or HTML).
 

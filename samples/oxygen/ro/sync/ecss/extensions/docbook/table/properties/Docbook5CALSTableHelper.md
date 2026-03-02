@@ -36,7 +36,10 @@
 
 ## Methods
 
-### `getElementTag(`int` elementType)`
+### `getElementTag(int elementType)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `elementType` (`int`)
 

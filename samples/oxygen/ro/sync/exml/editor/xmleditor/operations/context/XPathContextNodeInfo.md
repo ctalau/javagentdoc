@@ -20,9 +20,16 @@
 
 ### `<init>()`
 
-### `<init>(`java.lang.String` arg0)`
+### `<init>(java.lang.String arg0)`
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `<init>(java.lang.String arg0, boolean arg1)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
 
 ## Methods
 

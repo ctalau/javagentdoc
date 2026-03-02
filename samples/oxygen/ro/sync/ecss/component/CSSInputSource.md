@@ -16,7 +16,11 @@
 
 ## Constructors
 
-### `<init>(`org.w3c.css.sac.InputSource` arg0, `byte` arg1)`
+### `<init>(org.w3c.css.sac.InputSource arg0, byte arg1)`
+
+**Parameters:**
+- `arg0` (`org.w3c.css.sac.InputSource`)
+- `arg1` (`byte`)
 
 ## Methods
 

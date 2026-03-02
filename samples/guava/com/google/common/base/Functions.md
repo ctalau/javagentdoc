@@ -6,15 +6,10 @@
 
 ## Description
 
-Static utility methods pertaining to `com.google.common.base.Function` instances; see that
- class for information about migrating to `java.util.function`.
+All methods return serializable functions as long as they're given serializable parameters.
 
- <p>All methods return serializable functions as long as they're given serializable parameters.
-
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/FunctionalExplained">the use of `Function`</a>.
-**Author:** Mike Bostock
-**Author:** Jared Levy
-**Since:** 2.0
+ 
+See the Guava User Guide article on [the use of Function](https://github.com/google/guava/wiki/FunctionalExplained).
 
 ## Constructors
 
@@ -26,99 +21,108 @@ Static utility methods pertaining to `com.google.common.base.Function` instances
 
 **Returns:** [`com.google.common.base.Function<java.lang.Object,java.lang.String>`](./Function.md)
 
-A function equivalent to the method reference `Object::toString`, for users not yet using
- Java 8. The function simply invokes `toString` on its argument and returns the result. It
- throws a `NullPointerException` on null input.
+The function simply invokes toString on its argument and returns the result. It
+ throws a NullPointerException on null input.
 
- <p><b>Warning:</b> The returned function may not be <i>consistent with equals</i> (as
- documented at `Function.apply`). For example, this function yields different results for
- the two equal instances `ImmutableSet.of(1, 2)` and `ImmutableSet.of(2, 1)`.
+ 
+**Warning:** The returned function may not be *consistent with equals* (as
+ documented at Function#apply). For example, this function yields different results for
+ the two equal instances ImmutableSet.of(1, 2) and ImmutableSet.of(2, 1).
 
- <p><b>Warning:</b> as with all function types in this package, avoid depending on the specific
- `equals`, `hashCode` or `toString` behavior of the returned function. A
- future migration to `java.util.function` will not preserve this behavior.
+ 
+**Warning:** as with all function types in this package, avoid depending on the specific
+ equals, hashCode or toString behavior of the returned function. A
+ future migration to java.util.function will not preserve this behavior.
 
- <p><b>For Java 8 users:</b> use the method reference `Object::toString` instead. In the
- future, when this class requires Java 8, this method will be deprecated. See `Function`
+ 
+**For Java 8 users:** use the method reference Object::toString instead. In the
+ future, when this class requires Java 8, this method will be deprecated. See Function
  for more important information about the Java 8 transition.
 
 ### `identity()`
 
 **Returns:** [`com.google.common.base.Function<E,E>`](./Function.md)
 
-Returns the identity function.
-
- <p><b>Discouraged:</b> Prefer using a lambda like `v -> v`, which is shorter and often
+**Discouraged:** Prefer using a lambda like v -> v, which is shorter and often
  more readable.
 
-### `forMap(`java.util.Map<K,V>` map)`
+### `forMap(java.util.Map<K,V> map)`
 
 **Returns:** [`com.google.common.base.Function<K,V>`](./Function.md)
 
-Returns a function which performs a map lookup. The returned function throws an `IllegalArgumentException` if given a key that does not exist in the map. See also `forMap(Map, Object)`, which returns a default value in this case.
+The returned function throws an IllegalArgumentException if given a key that does not exist in the map. See also #forMap(Map, Object), which returns a default value in this case.
 
- <p>Note: if `map` is a `com.google.common.collect.BiMap` (or can be one), you
- can use `com.google.common.collect.Maps.asConverter Maps.asConverter` instead to get a
+ 
+Note: if map is a BiMap (or can be one), you
+ can use Maps.asConverter instead to get a
  function that also supports reverse conversion.
 
- <p><b>Java 8 users:</b> if you are okay with `null` being returned for an unrecognized
- key (instead of an exception being thrown), you can use the method reference `map::get`
+ 
+**Java 8 users:** if you are okay with null being returned for an unrecognized
+ key (instead of an exception being thrown), you can use the method reference map::get
  instead.
 
-### `forMap(`java.util.Map<K,? extends V>` map, `V` defaultValue)`
+**Parameters:**
+- `map` (`java.util.Map<K,V>`)
+
+### `forMap(java.util.Map<K,? extends V> map, V defaultValue)`
 
 **Returns:** [`com.google.common.base.Function<K,V>`](./Function.md)
 
-Returns a function which performs a map lookup with a default value. The function created by
- this method returns `defaultValue` for all inputs that do not belong to the map's key
- set. See also `forMap(Map)`, which throws an exception in this case.
+The function created by
+ this method returns defaultValue for all inputs that do not belong to the map's key
+ set. See also #forMap(Map), which throws an exception in this case.
 
- <p><b>Java 8 users:</b> you can just write the lambda expression `k ->
- map.getOrDefault(k, defaultValue)` instead.
-@param map source map that determines the function behavior
-@param defaultValue the value to return for inputs that aren't map keys
-@return function that returns `map.get(a)` when `a` is a key, or `defaultValue` otherwise
+ 
+**Java 8 users:** you can just write the lambda expression k ->
+ map.getOrDefault(k, defaultValue) instead.
 
-### `compose([`com.google.common.base.Function<B,C>`](./Function.md) g, [`com.google.common.base.Function<A,? extends B>`](./Function.md) f)`
+**Parameters:**
+- `map` (`java.util.Map<K,? extends V>`): source map that determines the function behavior
+- `defaultValue` (`V`): the value to return for inputs that aren't map keys
+
+### `compose(com.google.common.base.Function<B,C> g, com.google.common.base.Function<A,? extends B> f)`
 
 **Returns:** [`com.google.common.base.Function<A,C>`](./Function.md)
 
-Returns the composition of two functions. For `f: A->B` and `g: B->C`, composition
- is defined as the function h such that `h(a) == g(f(a))` for each `a`.
+For f: A->B and g: B->C, composition
+ is defined as the function h such that h(a) == g(f(a)) for each a.
 
- <p><b>Java 8 users:</b> use `g.compose(f)` or (probably clearer) `f.andThen(g)`
+ 
+**Java 8 users:** use g.compose(f) or (probably clearer) f.andThen(g)
  instead.
-@param g the second function to apply
-@param f the first function to apply
-@return the composition of `f` and `g`
-**See:** <a href="//en.wikipedia.org/wiki/Function_composition">function composition</a>
 
-### `forPredicate([`com.google.common.base.Predicate<T>`](./Predicate.md) predicate)`
+**Parameters:**
+- `g` ([`com.google.common.base.Function<B,C>`](./Function.md)): the second function to apply
+- `f` ([`com.google.common.base.Function<A,? extends B>`](./Function.md)): the first function to apply
+
+### `forPredicate(com.google.common.base.Predicate<T> predicate)`
 
 **Returns:** [`com.google.common.base.Function<T,java.lang.Boolean>`](./Function.md)
 
-Creates a function that returns the same boolean output as the given predicate for all inputs.
+The returned function is *consistent with equals* (as documented at Function#apply) if and only if predicate is itself consistent with equals.
 
- <p>The returned function is <i>consistent with equals</i> (as documented at `Function.apply`) if and only if `predicate` is itself consistent with equals.
+ 
+**Java 8 users:** use the method reference predicate::test instead.
 
- <p><b>Java 8 users:</b> use the method reference `predicate::test` instead.
+**Parameters:**
+- `predicate` ([`com.google.common.base.Predicate<T>`](./Predicate.md))
 
-### `constant(`E` value)`
+### `constant(E value)`
 
 **Returns:** [`com.google.common.base.Function<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object,E>`](./Function.md)
 
-Returns a function that ignores its input and always returns `value`.
+**Java 8 users:** use the lambda expression o -> value instead.
 
- <p><b>Java 8 users:</b> use the lambda expression `o -> value` instead.
-@param value the constant value for the function to return
-@return a function that always returns `value`
+**Parameters:**
+- `value` (`E`): the constant value for the function to return
 
-### `forSupplier([`com.google.common.base.Supplier<T>`](./Supplier.md) supplier)`
+### `forSupplier(com.google.common.base.Supplier<T> supplier)`
 
 **Returns:** [`com.google.common.base.Function<F,T>`](./Function.md)
 
-Returns a function that ignores its input and returns the result of `supplier.get()`.
+**Java 8 users:** use the lambda expression o -> supplier.get() instead.
 
- <p><b>Java 8 users:</b> use the lambda expression `o -> supplier.get()` instead.
-**Since:** 10.0
+**Parameters:**
+- `supplier` ([`com.google.common.base.Supplier<T>`](./Supplier.md))
 

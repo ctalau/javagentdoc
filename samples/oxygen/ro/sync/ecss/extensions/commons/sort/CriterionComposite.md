@@ -36,7 +36,16 @@
 
 ## Constructors
 
-### `<init>(`org.eclipse.swt.widgets.Composite` arg0, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md) arg1, `java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>` arg2, [`ro.sync.ecss.extensions.commons.sort.CriterionInformation`](./CriterionInformation.md) arg3, `boolean` arg4, [`ro.sync.ecss.extensions.commons.sort.KeysController`](./KeysController.md) arg5, `java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>` arg6)`
+### `<init>(org.eclipse.swt.widgets.Composite arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg2, ro.sync.ecss.extensions.commons.sort.CriterionInformation arg3, boolean arg4, ro.sync.ecss.extensions.commons.sort.KeysController arg5, java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg6)`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
+- `arg1` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md))
+- `arg2` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
+- `arg3` ([`ro.sync.ecss.extensions.commons.sort.CriterionInformation`](./CriterionInformation.md))
+- `arg4` (`boolean`)
+- `arg5` ([`ro.sync.ecss.extensions.commons.sort.KeysController`](./KeysController.md))
+- `arg6` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
 
 ## Methods
 

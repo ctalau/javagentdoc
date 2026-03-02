@@ -22,31 +22,49 @@ This is useful in case you need to receive activated() events in more implementa
 
 ## Methods
 
-### `activated([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
 
-### `deactivated([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
+
+### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
 
-### `addListener([`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](./AuthorExtensionStateListener.md) listener)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
+
+### `addListener(ro.sync.ecss.extensions.api.AuthorExtensionStateListener listener)`
 
 **Returns:** `void`
 
-### `removeListener([`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](./AuthorExtensionStateListener.md) listener)`
+**Parameters:**
+- `listener` ([`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](./AuthorExtensionStateListener.md)): The new extension state listener.
+
+### `removeListener(ro.sync.ecss.extensions.api.AuthorExtensionStateListener listener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `listener` ([`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](./AuthorExtensionStateListener.md)): The extension state listener to remove.
 
 ### `getDescription()`
 
 **Returns:** `java.lang.String`
 
-### `fireActivated([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+### `fireActivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
 
-### `fireDeactivated([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
+
+### `fireDeactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
 

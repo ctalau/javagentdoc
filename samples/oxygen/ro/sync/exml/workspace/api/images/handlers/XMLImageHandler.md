@@ -16,7 +16,7 @@ The image is either embedded in the XML content or referenced from it...
 
 ## Methods
 
-### `canHandleNamespace(`java.lang.String` namespace)`
+### `canHandleNamespace(java.lang.String namespace)`
 
 **Returns:** `boolean`
 
@@ -24,7 +24,10 @@ For instance if the element is from
  the MathML namespace, then a MathML handler would return true, and it can be used to generate an image 
  from it.
 
-### `canHandleNodeContext([`ro.sync.exml.workspace.api.node.NodeContext`](../../node/NodeContext.md) nodeContext)`
+**Parameters:**
+- `namespace` (`java.lang.String`): The namespace of the element from the document.
+
+### `canHandleNodeContext(ro.sync.exml.workspace.api.node.NodeContext nodeContext)`
 
 **Returns:** `boolean`
 
@@ -32,9 +35,17 @@ For instance if the element is from
  the MathML namespace, then a MathML handler would return true, and it can be used to generate an image 
  from it.
 
-### `canHandle(`java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `org.xml.sax.Attributes` rootAttributes)`
+**Parameters:**
+- `nodeContext` ([`ro.sync.exml.workspace.api.node.NodeContext`](../../node/NodeContext.md)): The context for an element.
+
+### `canHandle(java.lang.String rootNamespace, java.lang.String rootLocalName, org.xml.sax.Attributes rootAttributes)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `rootNamespace` (`java.lang.String`): The root namespace.
+- `rootLocalName` (`java.lang.String`): The root local name.
+- `rootAttributes` (`org.xml.sax.Attributes`): The root attributes.
 
 ### `canHandleVectorialImages()`
 

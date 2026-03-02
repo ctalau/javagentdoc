@@ -13,7 +13,13 @@ This method can be more efficient than the
 
 ## Methods
 
-### `resolveEntityUrl(`java.lang.String` publicId, `java.lang.String` systemId)`
+### `resolveEntityUrl(java.lang.String publicId, java.lang.String systemId)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `publicId` (`java.lang.String`): The public identifier of the external entity
+        being referenced, or null if none was supplied.
+- `systemId` (`java.lang.String`): The system identifier of the external entity
+        being referenced.
 

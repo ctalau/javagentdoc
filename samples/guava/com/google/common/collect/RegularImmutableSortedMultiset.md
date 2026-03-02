@@ -12,9 +12,6 @@
 
 ## Description
 
-An immutable sorted multiset with one or more distinct elements.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `ZERO_CUMULATIVE_COUNTS`
@@ -43,35 +40,56 @@ An immutable sorted multiset with one or more distinct elements.
 
 ## Constructors
 
-### `<init>(`java.util.Comparator<? super E>` comparator)`
+### `<init>(java.util.Comparator<? super E> comparator)`
 
-### `<init>([`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md) elementSet, `long[]` cumulativeCounts, `int` offset, `int` length)`
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
+
+### `<init>(com.google.common.collect.RegularImmutableSortedSet<E> elementSet, long[] cumulativeCounts, int offset, int length)`
+
+**Parameters:**
+- `elementSet` ([`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md))
+- `cumulativeCounts` (`long[]`)
+- `offset` (`int`)
+- `length` (`int`)
 
 ## Methods
 
-### `getCount(`int` index)`
+### `getCount(int index)`
 
 **Returns:** `int`
 
-### `getEntry(`int` index)`
+**Parameters:**
+- `index` (`int`)
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+### `getEntry(int index)`
 
-### `forEachEntry(`java.util.function.ObjIntConsumer<? super E>` action)`
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
+
+**Parameters:**
+- `index` (`int`)
+
+### `forEachEntry(java.util.function.ObjIntConsumer<? super E> action)`
 
 **Returns:** `void`
 
+**Parameters:**
+- `action` (`java.util.function.ObjIntConsumer<? super E>`)
+
 ### `firstEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `lastEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-### `count(`java.lang.Object` element)`
+### `count(java.lang.Object element)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `element` (`java.lang.Object`)
 
 ### `size()`
 
@@ -81,17 +99,29 @@ An immutable sorted multiset with one or more distinct elements.
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+**Parameters:**
+- `upperBound` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `getSubMultiset(`int` from, `int` to)`
+**Parameters:**
+- `lowerBound` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `getSubMultiset(int from, int to)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**Parameters:**
+- `from` (`int`)
+- `to` (`int`)
 
 ### `isPartialView()`
 

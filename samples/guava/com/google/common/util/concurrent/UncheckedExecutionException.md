@@ -8,16 +8,18 @@
 
 ## Description
 
-Unchecked variant of `java.util.concurrent.ExecutionException`. As with `ExecutionException`, the exception's cause comes from a failed task,
+As with 
+ ExecutionException, the exception's cause comes from a failed task,
  possibly run in another thread.
 
- <p>`UncheckedExecutionException` is intended as an alternative to `ExecutionException` when the exception thrown by a task is an unchecked exception. However, it
+ 
+UncheckedExecutionException is intended as an alternative to 
+ ExecutionException when the exception thrown by a task is an unchecked exception. However, it
  may also wrap a checked exception in some cases.
 
- <p>When wrapping an `Error` from another thread, prefer `ExecutionError`. When
- wrapping a checked exception, prefer `ExecutionException`.
-**Author:** Charles Fry
-**Since:** 10.0
+ 
+When wrapping an Error from another thread, prefer ExecutionError. When
+ wrapping a checked exception, prefer ExecutionException.
 
 ## Fields
 
@@ -29,17 +31,19 @@ Unchecked variant of `java.util.concurrent.ExecutionException`. As with `Executi
 
 ### `<init>()`
 
-Creates a new instance with `null` as its detail message.
+### `<init>(java.lang.String message)`
 
-### `<init>(`java.lang.String` message)`
+**Parameters:**
+- `message` (`java.lang.String`)
 
-Creates a new instance with the given detail message.
+### `<init>(java.lang.String message, java.lang.Throwable cause)`
 
-### `<init>(`java.lang.String` message, `java.lang.Throwable` cause)`
+**Parameters:**
+- `message` (`java.lang.String`)
+- `cause` (`java.lang.Throwable`)
 
-Creates a new instance with the given detail message and cause.
+### `<init>(java.lang.Throwable cause)`
 
-### `<init>(`java.lang.Throwable` cause)`
-
-Creates a new instance with the given cause.
+**Parameters:**
+- `cause` (`java.lang.Throwable`)
 

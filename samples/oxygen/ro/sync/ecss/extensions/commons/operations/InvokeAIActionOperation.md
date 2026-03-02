@@ -38,13 +38,21 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) arg0, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) arg1)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.ArgumentsMap arg1)`
 
 **Returns:** `void`
 
-### `initSelectionContext([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) arg0, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) arg1)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `arg1` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
+
+### `initSelectionContext(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.ArgumentsMap arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `arg1` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
 ### `getArguments()`
 

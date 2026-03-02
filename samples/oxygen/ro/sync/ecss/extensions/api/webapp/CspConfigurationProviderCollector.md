@@ -48,7 +48,10 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.PluginCspConfiguration>`
 
-### `collectCspConfigurations(`java.util.List<ro.sync.ecss.extensions.api.webapp.PluginCspConfiguration>` arg0)`
+### `collectCspConfigurations(java.util.List<ro.sync.ecss.extensions.api.webapp.PluginCspConfiguration> arg0)`
 
 **Returns:** `java.util.List<java.util.Map<ro.sync.exml.plugin.workspace.security.CspDirective,java.util.List<java.lang.String>>>`
+
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.extensions.api.webapp.PluginCspConfiguration>`)
 

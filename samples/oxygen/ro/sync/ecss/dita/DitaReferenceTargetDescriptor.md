@@ -36,9 +36,26 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, `java.lang.String` arg5, `java.lang.String` arg6)`
+### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6)`
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `java.lang.String` arg4, `java.lang.String` arg5)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.lang.String`)
+- `arg5` (`java.lang.String`)
+- `arg6` (`java.lang.String`)
+
+### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.lang.String`)
+- `arg5` (`java.lang.String`)
 
 ## Methods
 

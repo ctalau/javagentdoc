@@ -34,33 +34,56 @@
 
 ## Methods
 
-### `init(`javax.servlet.ServletConfig` arg0)`
+### `init(javax.servlet.ServletConfig arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`javax.servlet.ServletConfig`)
 
 ### `init()`
 
 **Returns:** `void`
 
-### `service(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+### `service(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
 
-### `doGet(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
+
+### `doGet(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
 
-### `doPost(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
+
+### `doPost(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
 
-### `doPut(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
+
+### `doPut(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
 
-### `doDelete(`javax.servlet.http.HttpServletRequest` arg0, `javax.servlet.http.HttpServletResponse` arg1)`
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
+
+### `doDelete(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`javax.servlet.http.HttpServletRequest`)
+- `arg1` (`javax.servlet.http.HttpServletResponse`)
 
 ### `getPath()`
 

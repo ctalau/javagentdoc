@@ -13,14 +13,11 @@
 
 ## Description
 
-Implementation of ImmutableBiMap backed by a pair of JDK HashMaps, which have smartness
- protecting against hash flooding.
-
 ## Fields
 
 ### `entries`
 
-**Type:** [`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList>.md)
+**Type:** [`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList.md)
 
 ### `forwardDelegate`
 
@@ -36,13 +33,22 @@ Implementation of ImmutableBiMap backed by a pair of JDK HashMaps, which have sm
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList>.md) entries, `java.util.Map<K,V>` forwardDelegate, `java.util.Map<V,K>` backwardDelegate)`
+### `<init>(com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>> entries, java.util.Map<K,V> forwardDelegate, java.util.Map<V,K> backwardDelegate)`
+
+**Parameters:**
+- `entries` ([`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList.md))
+- `forwardDelegate` (`java.util.Map<K,V>`)
+- `backwardDelegate` (`java.util.Map<V,K>`)
 
 ## Methods
 
-### `create(`int` n, `java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]` entryArray)`
+### `create(int n, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray)`
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+**Parameters:**
+- `n` (`int`)
+- `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
 
 ### `size()`
 
@@ -52,13 +58,16 @@ Implementation of ImmutableBiMap backed by a pair of JDK HashMaps, which have sm
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md)
 
-### `get(`java.lang.Object` key)`
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
+**Parameters:**
+- `key` (`java.lang.Object`)
+
 ### `createEntrySet()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet>.md)
+**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet.md)
 
 ### `createKeySet()`
 

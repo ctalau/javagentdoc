@@ -16,7 +16,10 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ReferenceType[]`](./ReferenceType.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.ReferenceType`](./ReferenceType.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

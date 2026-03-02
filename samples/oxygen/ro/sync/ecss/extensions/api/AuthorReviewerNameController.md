@@ -8,12 +8,17 @@
 
 ## Methods
 
-### `setReviewerAuthorName(`java.lang.String` authorName)`
+### `setReviewerAuthorName(java.lang.String authorName)`
 
 **Returns:** `void`
 
 By default the author name specified in the Oxygen Preferences is used 
  for serialization.
+
+**Parameters:**
+- `authorName` (`java.lang.String`): The reviewer author name. 
+ If set to `null`, the default author name (as set in the Oxygen Preferences) 
+ will be used in Change Tracking and Comments serialization.
 
 ### `getReviewerAuthorName()`
 

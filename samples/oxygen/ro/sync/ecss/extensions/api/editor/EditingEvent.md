@@ -50,13 +50,41 @@ This will ensure
 
 ## Constructors
 
-### `<init>(`java.lang.String` val)`
+### `<init>(java.lang.String val)`
 
-### `<init>(`java.lang.Runnable` toInvoke, `boolean` requestFocus)`
+**Parameters:**
+- `val` (`java.lang.String`): The value that the user accepted when the editing stopped.
 
-### `<init>([`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](./IAuthorExtensionAction.md) toInvoke)`
+### `<init>(java.lang.Runnable toInvoke, boolean requestFocus)`
 
-### `<init>(`java.lang.String` value, `boolean` requestFocus)`
+**Parameters:**
+- `toInvoke` (`java.lang.Runnable`): The action to be invoked as a result for the edit event.
+- `requestFocus` (`boolean`): `true` if the focus should be requested inside the author component.
+ Depending on how the editing was stopped it might be necessary to skip requesting
+ focus inside the author component. For example if the cause of the stop editing
+ was a focus lost event, we should skip requesting focus since the focus has already 
+ a destination.
 
-### `<init>(`java.lang.Runnable` customEdit, [`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](./IAuthorExtensionAction.md) toInvoke, `java.lang.String` value, `boolean` requestFocus)`
+### `<init>(ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction toInvoke)`
+
+**Parameters:**
+- `toInvoke` ([`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](./IAuthorExtensionAction.md)): The action to be invoked as a result for the edit event.
+
+### `<init>(java.lang.String value, boolean requestFocus)`
+
+**Parameters:**
+- `value` (`java.lang.String`): The value that the user accepted when the editing stopped.
+- `requestFocus` (`boolean`): `true` if the focus should be requested inside the author component.
+ Depending on how the editing was stopped it might be necessary to skip requesting
+ focus inside the author component. For example if the cause of the stop editing
+ was a focus lost event, we should skip requesting focus since the focus has already 
+ a destination.
+
+### `<init>(java.lang.Runnable customEdit, ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction toInvoke, java.lang.String value, boolean requestFocus)`
+
+**Parameters:**
+- `customEdit` (`java.lang.Runnable`)
+- `toInvoke` ([`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](./IAuthorExtensionAction.md))
+- `value` (`java.lang.String`)
+- `requestFocus` (`boolean`)
 

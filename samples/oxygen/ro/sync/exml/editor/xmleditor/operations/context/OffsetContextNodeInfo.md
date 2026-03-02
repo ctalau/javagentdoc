@@ -16,7 +16,10 @@
 
 ### `<init>()`
 
-### `<init>(`int` arg0)`
+### `<init>(int arg0)`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ## Methods
 

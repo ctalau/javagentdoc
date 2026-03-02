@@ -6,21 +6,17 @@
 
 ## Description
 
-A collection of common removal listeners.
-**Author:** Charles Fry
-**Since:** 10.0
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `asynchronous([`com.google.common.cache.RemovalListener<K,V>`](./RemovalListener.md) listener, `java.util.concurrent.Executor` executor)`
+### `asynchronous(com.google.common.cache.RemovalListener<K,V> listener, java.util.concurrent.Executor executor)`
 
 **Returns:** [`com.google.common.cache.RemovalListener<K,V>`](./RemovalListener.md)
 
-Returns a `RemovalListener` which processes all eviction notifications using `executor`.
-@param listener the backing listener
-@param executor the executor with which removal notifications are asynchronously executed
+**Parameters:**
+- `listener` ([`com.google.common.cache.RemovalListener<K,V>`](./RemovalListener.md)): the backing listener
+- `executor` (`java.util.concurrent.Executor`): the executor with which removal notifications are asynchronously executed
 

@@ -16,7 +16,7 @@ For the Eclipse Plugin the dropped files are handled by the platform and this AP
 
 ## Methods
 
-### `insertURLs([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md) textAccess, `java.util.List<java.net.URL>` urls, `int` source)`
+### `insertURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
 
 **Returns:** `void`
 
@@ -30,7 +30,12 @@ The `source` of the insertion can be a **paste** event or a
 
  You can use it to link to those specific files/URLs.
 
-### `acceptsURLs([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md) textAccess, `java.util.List<java.net.URL>` urls, `int` source)`
+**Parameters:**
+- `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access
+- `urls` (`java.util.List<java.net.URL>`): The list of URLs.
+- `source` (`int`): The source of the URLs, one of the ExternalObjectInsertionSources constants.
+
+### `acceptsURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
 
 **Returns:** `boolean`
 
@@ -43,7 +48,12 @@ The `source` of the insertion can be a **paste** event or a
  Also all dropped images are accepted.
  For all other cases we accept by default URLs dropped from inside Oxygen (from views like Project and DITA Maps Manager).
 
-### `acceptsSource([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md) textAccess, `int` source)`
+**Parameters:**
+- `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
+- `urls` (`java.util.List<java.net.URL>`): The list of URLs.
+- `source` (`int`): The source of the URLs, one of the ExternalObjectInsertionSources constants.
+
+### `acceptsSource(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, int source)`
 
 **Returns:** `boolean`
 
@@ -54,13 +64,27 @@ The `source` of the insertion can be a **paste** event or a
 
  By default accepts paste sources and drags from the Oxygen Project and DITA Maps Manager.
 
-### `containsOnlyImages([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md) textPage, `java.util.List<java.net.URL>` urlList)`
+**Parameters:**
+- `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
+- `source` (`int`): The source of the URLs, one of the 
+ ExternalObjectInsertionSources constants (that represents a 
+ **paste** or a **drag and drop** event)
+
+### `containsOnlyImages(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textPage, java.util.List<java.net.URL> urlList)`
 
 **Returns:** `boolean`
 
-### `containsOnlyBinaryResources([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md) textPage, `java.util.List<java.net.URL>` urlList)`
+**Parameters:**
+- `textPage` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
+- `urlList` (`java.util.List<java.net.URL>`): The list of URLs.
+
+### `containsOnlyBinaryResources(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textPage, java.util.List<java.net.URL> urlList)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `textPage` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
+- `urlList` (`java.util.List<java.net.URL>`): The list of URLs.
 
 ### `getDescription()`
 

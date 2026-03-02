@@ -12,9 +12,6 @@
 
 ## Description
 
-Implementation of `ImmutableSet` backed by a non-empty `java.util.EnumSet`.
-**Author:** Jared Levy
-
 ## Fields
 
 ### `delegate`
@@ -27,13 +24,19 @@ Implementation of `ImmutableSet` backed by a non-empty `java.util.EnumSet`.
 
 ## Constructors
 
-### `<init>(`java.util.EnumSet<E>` delegate)`
+### `<init>(java.util.EnumSet<E> delegate)`
+
+**Parameters:**
+- `delegate` (`java.util.EnumSet<E>`)
 
 ## Methods
 
-### `asImmutable(`java.util.EnumSet<E>` set)`
+### `asImmutable(java.util.EnumSet<E> set)`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+**Parameters:**
+- `set` (`java.util.EnumSet<E>`)
 
 ### `isPartialView()`
 
@@ -47,29 +50,41 @@ Implementation of `ImmutableSet` backed by a non-empty `java.util.EnumSet`.
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(`java.util.function.Consumer<? super E>` action)`
+### `forEach(java.util.function.Consumer<? super E> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.Consumer<? super E>`)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-### `containsAll(`java.util.Collection<?>` collection)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `containsAll(java.util.Collection<?> collection)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `collection` (`java.util.Collection<?>`)
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `isHashCodeFast()`
 
@@ -87,7 +102,10 @@ Implementation of `ImmutableSet` backed by a non-empty `java.util.EnumSet`.
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

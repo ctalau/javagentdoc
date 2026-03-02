@@ -28,19 +28,40 @@ It is used to locate references.
 
 ## Methods
 
-### `detectIDType(`java.lang.String` systemID, [`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md) context, `java.lang.String` attrName, `java.lang.String` attrNs, `java.lang.String` attributeValue, `int` offset)`
+### `detectIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, int offset)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.link.IDTypeIdentifier>`
 
 The offset is relative to the attribute value.
 
-### `locateIDType(`java.lang.String` systemID, [`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md) context, `java.lang.String` attrName, `java.lang.String` attrNs, `java.lang.String` attributeValue, [`ro.sync.ecss.extensions.api.link.IDTypeIdentifier`](./IDTypeIdentifier.md) idIdentifier, `short` mode)`
+**Parameters:**
+- `systemID` (`java.lang.String`): The systemID of the resource that specifies the attribute.
+- `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md)): The element content to detect the ID. 
+ The top element from the context element stack represents the parent element.
+- `attrName` (`java.lang.String`): The attribute name.
+- `attrNs` (`java.lang.String`): The attribute namespace.
+- `attributeValue` (`java.lang.String`): The attribute value.
+- `offset` (`int`): The offset that is relative to the attribute value. It is zero based. 
+ If it is -1 and the attribute type is IDREFS then all the IDs should be returned.
+
+### `locateIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, ro.sync.ecss.extensions.api.link.IDTypeIdentifier idIdentifier, short mode)`
 
 **Returns:** `int[]`
 
 If an attribute declaration or reference was identified then compute it's location relative to the attribute value.
  
  Usually the method is used for attributes with IDREFS type to detect the internal ID references.
+
+**Parameters:**
+- `systemID` (`java.lang.String`): The systemID of the resource that specifies the attribute.
+- `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md)): The element content to detect the ID. 
+ The top element from the context element stack represents the parent element.
+- `attrName` (`java.lang.String`): The attribute name.
+- `attrNs` (`java.lang.String`): The attribute namespace.
+- `attributeValue` (`java.lang.String`): The attribute value.
+- `idIdentifier` ([`ro.sync.ecss.extensions.api.link.IDTypeIdentifier`](./IDTypeIdentifier.md)): The ID identifier.
+- `mode` (`short`): The detection mode that is represented as a bitwise mask. 
+ Supported modes are IDTypeRecognizer#MODE_LOCATE_REFERENCES and IDTypeRecognizer#MODE_LOCATE_DECLARATIONS.
 
 ### `isDefaultIDTypeRecognitionAvailable()`
 

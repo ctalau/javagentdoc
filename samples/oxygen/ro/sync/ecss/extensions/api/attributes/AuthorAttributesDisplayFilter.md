@@ -56,15 +56,27 @@ This type of source means that the callback is received
 
 ## Methods
 
-### `shouldFilterAttribute([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md) parentElement, `java.lang.String` attributeQName, `int` source)`
+### `shouldFilterAttribute(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String attributeQName, int source)`
 
 **Returns:** `boolean`
 
 This method should be implemented in subclasses.
 
-### `shouldFilterAttribute([`ro.sync.contentcompletion.xml.CIElement`](../../../../contentcompletion/xml/CIElement.md) parentElement, `java.lang.String` attributeQName, `int` source)`
+**Parameters:**
+- `parentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)): The parent element.
+- `attributeQName` (`java.lang.String`): The name of the attribute.
+- `source` (`int`): The place from which the attribute should be filtered. 
+ One of the constants AuthorAttributesDisplayFilter#SOURCE_ATTRIBUTES_VIEW or AuthorAttributesDisplayFilter#SOURCE_OUTLINE_VIEW
+
+### `shouldFilterAttribute(ro.sync.contentcompletion.xml.CIElement parentElement, java.lang.String attributeQName, int source)`
 
 **Returns:** `boolean`
 
 This method should be implemented in subclasses.
+
+**Parameters:**
+- `parentElement` ([`ro.sync.contentcompletion.xml.CIElement`](../../../../contentcompletion/xml/CIElement.md)): The parent CI element.
+- `attributeQName` (`java.lang.String`): The name of the attribute.
+- `source` (`int`): The place from which the attribute should be filtered. 
+ A possible value can be AuthorAttributesDisplayFilter#SOURCE_INSERT_REFERENCE
 

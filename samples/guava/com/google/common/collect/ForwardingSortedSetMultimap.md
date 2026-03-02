@@ -15,20 +15,17 @@
 
 ## Description
 
-A sorted set multimap which forwards all its method calls to another sorted set multimap.
- Subclasses should override one or more methods to modify the behavior of the backing multimap as
- desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should override one or more methods to modify the behavior of the backing multimap as
+ desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>`default` method warning:</b> This class does <i>not</i> forward calls to `default` methods. Instead, it inherits their default implementations. When those implementations
- invoke methods, they invoke methods on the `ForwardingSortedSetMultimap`.
-**Author:** Kurt Alfred Kluever
-**Since:** 3.0
+ 
+**default method warning:** This class does *not* forward calls to 
+ default methods. Instead, it inherits their default implementations. When those implementations
+ invoke methods, they invoke methods on the ForwardingSortedSetMultimap.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -36,17 +33,27 @@ Constructor for use by subclasses.
 
 **Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `java.util.SortedSet<V>`
 
-### `removeAll(`java.lang.Object` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.SortedSet<V>`
 
-### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
 
 **Returns:** `java.util.SortedSet<V>`
+
+**Parameters:**
+- `key` (`K`)
+- `values` (`java.lang.Iterable<? extends V>`)
 
 ### `valueComparator()`
 

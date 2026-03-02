@@ -14,7 +14,10 @@
 
 **Returns:** [`ro.sync.ecss.dita.DITATopicInsertionPosition[]`](./DITATopicInsertionPosition.md)
 
-### `valueOf(`java.lang.String` arg0)`
+### `valueOf(java.lang.String arg0)`
 
 **Returns:** [`ro.sync.ecss.dita.DITATopicInsertionPosition`](./DITATopicInsertionPosition.md)
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

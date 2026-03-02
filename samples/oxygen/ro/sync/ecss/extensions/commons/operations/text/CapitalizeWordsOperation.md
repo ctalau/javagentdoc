@@ -16,13 +16,21 @@ If the start character of a word is lower case, it will be changed to upper case
 
 ## Methods
 
-### `isDelimiterBeforeTextNode([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, `int` contentOffset)`
+### `isDelimiterBeforeTextNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int contentOffset)`
 
 **Returns:** `boolean`
 
-### `processTextContent(`char[]` charArray, `boolean` isDelimiterBefore)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
+- `contentOffset` (`int`)
+
+### `processTextContent(char[] charArray, boolean isDelimiterBefore)`
 
 **Returns:** `char[]`
+
+**Parameters:**
+- `charArray` (`char[]`)
+- `isDelimiterBefore` (`boolean`)
 
 ### `getDescription()`
 

@@ -25,7 +25,10 @@ Conceptually, it is the root of the document tree, and provides the primary
 
 **Returns:** `int`
 
-### `getElementById(`java.lang.String` id)`
+### `getElementById(java.lang.String id)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorElementBaseInterface`](../AuthorElementBaseInterface.md)
+
+**Parameters:**
+- `id` (`java.lang.String`): The ID of the searched element. Should not contain the # symbol.
 

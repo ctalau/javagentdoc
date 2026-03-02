@@ -8,18 +8,27 @@
 
 ## Methods
 
-### `setReviewsRenderingInformationProvider([`ro.sync.ecss.extensions.api.review.ReviewsRenderingInformationProvider`](./ReviewsRenderingInformationProvider.md) provider)`
+### `setReviewsRenderingInformationProvider(ro.sync.ecss.extensions.api.review.ReviewsRenderingInformationProvider provider)`
 
 **Returns:** `void`
 
 The review entries are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom review highlights in Author mode.
 
-### `addReviewActionsProvider([`ro.sync.ecss.extensions.api.review.ReviewActionsProvider`](./ReviewActionsProvider.md) actionsProvider)`
+**Parameters:**
+- `provider` ([`ro.sync.ecss.extensions.api.review.ReviewsRenderingInformationProvider`](./ReviewsRenderingInformationProvider.md)): The highlights review rendering information provider.
+
+### `addReviewActionsProvider(ro.sync.ecss.extensions.api.review.ReviewActionsProvider actionsProvider)`
 
 **Returns:** `void`
 
-### `removeReviewActionsProvider([`ro.sync.ecss.extensions.api.review.ReviewActionsProvider`](./ReviewActionsProvider.md) actionsProvider)`
+**Parameters:**
+- `actionsProvider` ([`ro.sync.ecss.extensions.api.review.ReviewActionsProvider`](./ReviewActionsProvider.md)): The review actions provider.
+
+### `removeReviewActionsProvider(ro.sync.ecss.extensions.api.review.ReviewActionsProvider actionsProvider)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `actionsProvider` ([`ro.sync.ecss.extensions.api.review.ReviewActionsProvider`](./ReviewActionsProvider.md)): The review actions provider.
 

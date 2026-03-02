@@ -10,10 +10,6 @@
 
 ## Description
 
-`HashFunction` adapter for `MessageDigest` instances.
-**Author:** Kevin Bourrillion
-**Author:** Dimitris Andreou
-
 ## Fields
 
 ### `prototype`
@@ -34,15 +30,27 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` algorithmName, `java.lang.String` toString)`
+### `<init>(java.lang.String algorithmName, java.lang.String toString)`
 
-### `<init>(`java.lang.String` algorithmName, `int` bytes, `java.lang.String` toString)`
+**Parameters:**
+- `algorithmName` (`java.lang.String`)
+- `toString` (`java.lang.String`)
+
+### `<init>(java.lang.String algorithmName, int bytes, java.lang.String toString)`
+
+**Parameters:**
+- `algorithmName` (`java.lang.String`)
+- `bytes` (`int`)
+- `toString` (`java.lang.String`)
 
 ## Methods
 
-### `supportsClone(`java.security.MessageDigest` digest)`
+### `supportsClone(java.security.MessageDigest digest)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `digest` (`java.security.MessageDigest`)
 
 ### `bits()`
 
@@ -52,9 +60,12 @@
 
 **Returns:** `java.lang.String`
 
-### `getMessageDigest(`java.lang.String` algorithmName)`
+### `getMessageDigest(java.lang.String algorithmName)`
 
 **Returns:** `java.security.MessageDigest`
+
+**Parameters:**
+- `algorithmName` (`java.lang.String`)
 
 ### `newHasher()`
 
@@ -64,7 +75,10 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

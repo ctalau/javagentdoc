@@ -81,103 +81,213 @@ False by default, when editing in the Author page
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.dita.ContextKeyManager`](../../../dita/ContextKeyManager.md) keyManager)`
+### `<init>(ro.sync.ecss.dita.ContextKeyManager keyManager)`
+
+**Parameters:**
+- `keyManager` ([`ro.sync.ecss.dita.ContextKeyManager`](../../../dita/ContextKeyManager.md)): The context-aware key manager.
 
 ### `<init>()`
 
-### `<init>([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../../dita/ContextKeyManagerProvider.md) keyManagerProvider)`
+### `<init>(ro.sync.ecss.dita.ContextKeyManagerProvider keyManagerProvider)`
+
+**Parameters:**
+- `keyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../../dita/ContextKeyManagerProvider.md)): The context-aware key manager provider.
 
 ## Methods
 
-### `hasReferences([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node)`
+### `hasReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
-### `hasKeyrefReference([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+
+### `hasKeyrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
 
-### `getDisplayName([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element to be analyzed.
+
+### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `java.lang.String`
 
-### `resolveReference([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node, `java.lang.String` systemID, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `org.xml.sax.EntityResolver` entityResolver)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+
+### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `resolveConrefAndConkeyref([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element, [`ro.sync.ecss.extensions.api.node.AttrValue`](../../api/node/AttrValue.md) classValue, `java.lang.String` systemID, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `org.xml.sax.EntityResolver` entityResolver)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+- `systemID` (`java.lang.String`)
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `entityResolver` (`org.xml.sax.EntityResolver`)
+
+### `resolveConrefAndConkeyref(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.node.AttrValue classValue, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `resolveConrefAndConkeyRefInternal([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element, `java.lang.String` systemID, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `org.xml.sax.EntityResolver` entityResolver, [`ro.sync.ecss.dita.Reference`](../../../dita/Reference.md) conRef, `boolean` isConKeyRef, `boolean` isKeyrefToElementID)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element which has references.
+- `classValue` ([`ro.sync.ecss.extensions.api.node.AttrValue`](../../api/node/AttrValue.md)): The value of the class attribute
+- `systemID` (`java.lang.String`): The system ID of the document which has references.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access implementation.
+ Provides access to specific informations and actions for 
+ editor, document, workspace, tables, change tracking, utility a.s.o.
+- `entityResolver` (`org.xml.sax.EntityResolver`): The entity resolver
+
+### `resolveConrefAndConkeyRefInternal(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver, ro.sync.ecss.dita.Reference conRef, boolean isConKeyRef, boolean isKeyrefToElementID)`
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `computeTopicIdForSelfLink([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element, `java.lang.String[]` topicPath)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element that has references.
+- `systemID` (`java.lang.String`): The system ID of the document that has references.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to the Author API.
+- `entityResolver` (`org.xml.sax.EntityResolver`): Entity resolver.
+- `conRef` ([`ro.sync.ecss.dita.Reference`](../../../dita/Reference.md)): Content reference object.
+- `isConKeyRef` (`boolean`): `true` if it's a conkeyref.
+- `isKeyrefToElementID` (`boolean`): `true` if it's a keyref to an element ID.
+
+### `computeTopicIdForSelfLink(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String[] topicPath)`
 
 **Returns:** `void`
 
-### `treatKeyNotFound([`ro.sync.ecss.dita.Reference`](../../../dita/Reference.md) conRef, `java.lang.String` keyrefValWithOutScope, `java.lang.String` keyrefValWithScope)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element which does the conreffing
+- `topicPath` (`java.lang.String[]`): The topic path.
+
+### `treatKeyNotFound(ro.sync.ecss.dita.Reference conRef, java.lang.String keyrefValWithOutScope, java.lang.String keyrefValWithScope)`
 
 **Returns:** `void`
 
-### `resolveCoderef([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `org.xml.sax.EntityResolver` entityResolver, [`ro.sync.ecss.dita.Reference`](../../../dita/Reference.md) conRef)`
+**Parameters:**
+- `conRef` ([`ro.sync.ecss.dita.Reference`](../../../dita/Reference.md)): Content reference.
+- `keyrefValWithOutScope` (`java.lang.String`): The key reference value without the scope.
+- `keyrefValWithScope` (`java.lang.String`): The key reference value.
+
+### `resolveCoderef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver, ro.sync.ecss.dita.Reference conRef)`
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `getRangeEndPath([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element, `java.lang.String` systemID, [`ro.sync.ecss.extensions.api.node.AttrValue`](../../api/node/AttrValue.md) conrefEndVal, `boolean` isConKeyRef)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to the Author API.
+- `entityResolver` (`org.xml.sax.EntityResolver`): Entity resolver.
+- `conRef` ([`ro.sync.ecss.dita.Reference`](../../../dita/Reference.md)): Content reference.
+
+### `getRangeEndPath(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String systemID, ro.sync.ecss.extensions.api.node.AttrValue conrefEndVal, boolean isConKeyRef)`
 
 **Returns:** `java.lang.String[]`
 
-### `resolveHrefReference(`java.lang.String` hrefValue, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `org.xml.sax.EntityResolver` entityResolver)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The source element which has the attribute
+- `systemID` (`java.lang.String`): The system ID of the document which has references.
+- `conrefEndVal` ([`ro.sync.ecss.extensions.api.node.AttrValue`](../../api/node/AttrValue.md)): Conrefend value.
+- `isConKeyRef` (`boolean`): `true` if is conkeyref.
+
+### `resolveHrefReference(java.lang.String hrefValue, ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `resolveKeyrefReference(`java.lang.String` keyref, `java.lang.String` classValue, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element, `java.lang.String` systemID, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `hrefValue` (`java.lang.String`): The value of the href attribute
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element which has references.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access implementation.
+ Provides access to specific informations and actions for 
+ editor, document, workspace, tables, change tracking, utility a.s.o.
+- `entityResolver` (`org.xml.sax.EntityResolver`): The entity resolver
+
+### `resolveKeyrefReference(java.lang.String keyref, java.lang.String classValue, ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `parseReferencedTopic(`java.lang.String` systemID, `ro.sync.ecss.dita.reference.keyref.KeyInfo` keyInfo)`
+**Parameters:**
+- `keyref` (`java.lang.String`): The value of the keyref attribute
+- `classValue` (`java.lang.String`): The value of the class attribute
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element which has references.
+- `systemID` (`java.lang.String`): The system ID of the node with references.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access implementation.
+ Provides access to specific informations and actions for 
+ editor, document, workspace, tables, change tracking, utility a.s.o.
+
+### `parseReferencedTopic(java.lang.String systemID, ro.sync.ecss.dita.reference.keyref.KeyInfo keyInfo)`
 
 **Returns:** `java.lang.String`
 
-### `getTopicPath(`java.lang.String` value)`
+**Parameters:**
+- `systemID` (`java.lang.String`): The system ID of the topic.
+- `keyInfo` (`ro.sync.ecss.dita.reference.keyref.KeyInfo`): Key info.
+
+### `getTopicPath(java.lang.String value)`
 
 **Returns:** `java.lang.String[]`
+
+**Parameters:**
+- `value` (`java.lang.String`): The `conref` attribute value.
 
 ### `getDescription()`
 
 **Returns:** `java.lang.String`
 
-### `getReferenceUniqueID([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node)`
+### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `java.lang.String`
 
-### `isReferenceChanged([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node, `java.lang.String` attributeName)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+
+### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
 
 **Returns:** `boolean`
 
-### `getReferenceSystemID([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+- `attributeName` (`java.lang.String`)
+
+### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.lang.String`
 
-### `getConrefReferenceSystemID([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+
+### `getConrefReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `java.lang.String`
 
-### `getKeyrefRefereceSystenID([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) element)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The reference element.
+
+### `getKeyrefRefereceSystenID(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `java.lang.String`
 
-### `checkTarget([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node, [`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../api/node/AuthorDocument.md) targetDocument)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The reference element.
+
+### `checkTarget(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.node.AuthorDocument targetDocument)`
 
 **Returns:** `void`
 
-### `setResolveKeyrefsToMetaContentAsConrefs(`boolean` resolveKeyrefsAsConrefs)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+- `targetDocument` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../api/node/AuthorDocument.md))
+
+### `setResolveKeyrefsToMetaContentAsConrefs(boolean resolveKeyrefsAsConrefs)`
 
 **Returns:** `void`
 
-### `getCacheKey([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node)`
+**Parameters:**
+- `resolveKeyrefsAsConrefs` (`boolean`)
+
+### `getCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 

@@ -12,13 +12,20 @@ It also provides methods to save the file, close, etc.
 
 ## Methods
 
-### `getLocationOnScreen(`int` x, `int` y)`
+### `getLocationOnScreen(int x, int y)`
 
 **Returns:** `int[]`
 
-### `modelToView(`int` offset)`
+**Parameters:**
+- `x` (`int`): The "x" coordinate relative to the viewport origin.
+- `y` (`int`): The "y" coordinate relative to the viewport origin.
+
+### `modelToView(int offset)`
 
 **Returns:** `int[]`
+
+**Parameters:**
+- `offset` (`int`): The document offset to get the corresponding caret shape for.
 
 ### `getEditingContext()`
 

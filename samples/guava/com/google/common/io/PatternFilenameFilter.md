@@ -8,10 +8,8 @@
 
 ## Description
 
-File name filter that only accepts files matching a regular expression. This class is thread-safe
+This class is thread-safe
  and immutable.
-**Author:** Apple Chow
-**Since:** 1.0
 
 ## Fields
 
@@ -21,20 +19,23 @@ File name filter that only accepts files matching a regular expression. This cla
 
 ## Constructors
 
-### `<init>(`java.lang.String` patternStr)`
+### `<init>(java.lang.String patternStr)`
 
-Constructs a pattern file name filter object.
-@param patternStr the pattern string on which to filter file names
-@throws PatternSyntaxException if pattern compilation fails (runtime)
+**Parameters:**
+- `patternStr` (`java.lang.String`): the pattern string on which to filter file names
 
-### `<init>(`java.util.regex.Pattern` pattern)`
+### `<init>(java.util.regex.Pattern pattern)`
 
-Constructs a pattern file name filter object.
-@param pattern the pattern on which to filter file names
+**Parameters:**
+- `pattern` (`java.util.regex.Pattern`): the pattern on which to filter file names
 
 ## Methods
 
-### `accept(`java.io.File` dir, `java.lang.String` fileName)`
+### `accept(java.io.File dir, java.lang.String fileName)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `dir` (`java.io.File`)
+- `fileName` (`java.lang.String`)
 

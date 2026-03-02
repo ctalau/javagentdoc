@@ -8,20 +8,31 @@
 
 ## Methods
 
-### `setReadOnly([`ro.sync.exml.workspace.api.editor.ReadOnlyReason`](../ReadOnlyReason.md) reason)`
+### `setReadOnly(ro.sync.exml.workspace.api.editor.ReadOnlyReason reason)`
 
 **Returns:** `void`
 
-### `setReadOnly(`java.lang.String` reason)`
+**Parameters:**
+- `reason` ([`ro.sync.exml.workspace.api.editor.ReadOnlyReason`](../ReadOnlyReason.md)): The reason for making the document read-only. 
+ If `null` is passed, a default message will be displayed.
+
+### `setReadOnly(java.lang.String reason)`
 
 **Returns:** `void`
 
-### `setEditable(`boolean` editable)`
+**Parameters:**
+- `reason` (`java.lang.String`): The reason for making the document read-only. It will be displayed 
+ to the user. If `null` is passed, a default message will be displayed.
+
+### `setEditable(boolean editable)`
 
 **Returns:** `void`
 
 It is recommended to use #setReadOnly(String) if you plan to make 
  the page read-only.
+
+**Parameters:**
+- `editable` (`boolean`): `true` if the page should be editable.
 
 ### `isEditable()`
 

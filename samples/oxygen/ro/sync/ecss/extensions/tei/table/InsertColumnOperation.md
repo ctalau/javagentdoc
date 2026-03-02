@@ -14,11 +14,18 @@
 
 ### `<init>()`
 
-### `<init>([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../../commons/table/operations/AuthorTableHelper.md) tableHelper)`
+### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+
+**Parameters:**
+- `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../../commons/table/operations/AuthorTableHelper.md)): The table helper.
 
 ## Methods
 
-### `getCellElementName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) rowElement, `int` newColumnIndex)`
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+- `newColumnIndex` (`int`)
 

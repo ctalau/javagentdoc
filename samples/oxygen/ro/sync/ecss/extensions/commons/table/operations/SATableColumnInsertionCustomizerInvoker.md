@@ -24,13 +24,19 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnInsertionCustomizer`](./TableColumnInsertionCustomizer.md)
 
-### `setInstance([`ro.sync.ecss.extensions.commons.table.operations.TableColumnInsertionCustomizer`](./TableColumnInsertionCustomizer.md) anotherInstance)`
+### `setInstance(ro.sync.ecss.extensions.commons.table.operations.TableColumnInsertionCustomizer anotherInstance)`
 
 **Returns:** `void`
 
 Don't use it for other purposes.
 
-### `showCustomTableColumnInsertionDialog([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `anotherInstance` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnInsertionCustomizer`](./TableColumnInsertionCustomizer.md)): another instance
+
+### `showCustomTableColumnInsertionDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 

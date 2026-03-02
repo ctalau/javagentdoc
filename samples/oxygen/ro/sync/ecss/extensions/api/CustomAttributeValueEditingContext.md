@@ -16,7 +16,10 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.CustomAttributeValueEditingContext[]`](./CustomAttributeValueEditingContext.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CustomAttributeValueEditingContext`](./CustomAttributeValueEditingContext.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

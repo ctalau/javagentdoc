@@ -14,19 +14,50 @@
 
 ## Methods
 
-### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, `org.xml.sax.Attributes` rootAttributes)`
+### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, org.xml.sax.Attributes rootAttributes)`
 
 **Returns:** `boolean`
 
-### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, `org.xml.sax.Attributes` rootAttributes, `java.io.Reader` contentReader)`
+**Parameters:**
+- `systemID` (`java.lang.String`)
+- `rootNamespace` (`java.lang.String`)
+- `rootLocalName` (`java.lang.String`)
+- `doctypePublicID` (`java.lang.String`)
+- `rootAttributes` (`org.xml.sax.Attributes`)
+
+### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, org.xml.sax.Attributes rootAttributes, java.io.Reader contentReader)`
 
 **Returns:** `boolean`
 
 This method receives a reader over the entire content.
 
-### `matches(`java.lang.String` systemID, `java.lang.String` rootNamespace, `java.lang.String` rootLocalName, `java.lang.String` doctypePublicID, `java.lang.String` doctypeSystemID, `org.xml.sax.Attributes` rootAttributes, `java.util.Map<java.lang.String,java.lang.String>` queryParameters, `java.io.Reader` contentReader)`
+**Parameters:**
+- `systemID` (`java.lang.String`): The system ID of the current file in an URL format with not allowed characters corrected.
+ For example: "file:/C:/path/to/file/file.xml"
+- `rootNamespace` (`java.lang.String`): The namespace of the root.
+- `rootLocalName` (`java.lang.String`): The root local name.
+- `doctypePublicID` (`java.lang.String`): The public id of the specified DTD if any.
+- `rootAttributes` (`org.xml.sax.Attributes`): The root attributes. The attributes are DOM level 2 
+ and the namespaces are available for each one.
+- `contentReader` (`java.io.Reader`): Reader over the entire XML content. Can be used for detection
+ if all other parameters are not enough. The reader does not need to be reset or closed. It may be `null`.
+
+### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, java.lang.String doctypeSystemID, org.xml.sax.Attributes rootAttributes, java.util.Map<java.lang.String,java.lang.String> queryParameters, java.io.Reader contentReader)`
 
 **Returns:** `boolean`
 
 This method receives a reader over the entire content.
+
+**Parameters:**
+- `systemID` (`java.lang.String`): The system ID of the current file in an URL format with not allowed characters corrected.
+ For example: "file:/C:/path/to/file/file.xml"
+- `rootNamespace` (`java.lang.String`): The namespace of the root.
+- `rootLocalName` (`java.lang.String`): The root local name.
+- `doctypePublicID` (`java.lang.String`): The public id of the specified DTD if any.
+- `doctypeSystemID` (`java.lang.String`): The system id of the specified DTD if any.
+- `rootAttributes` (`org.xml.sax.Attributes`): The root attributes. The attributes are DOM level 2 
+ and the namespaces are available for each one.
+- `queryParameters` (`java.util.Map<java.lang.String,java.lang.String>`): The parameters which were set in the query string used to open this resource. May be `null`.
+- `contentReader` (`java.io.Reader`): Reader over the entire XML content. Can be used for detection
+ if all other parameters are not enough. The reader does not need to be reset or closed. It may be `null`.
 

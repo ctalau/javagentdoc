@@ -21,53 +21,112 @@ Provides support for obtaining information about what elements, attributes can b
 
 ## Methods
 
-### `canInsertDocumentFragment([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md) fragment, `int` offset, `short` validationMode)`
+### `canInsertDocumentFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment, int offset, short validationMode)`
 
 **Returns:** `boolean`
 
-### `canInsertDocumentFragments([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](node/AuthorDocumentFragment.md) fragments, `int` offset, `short` validationMode)`
+**Parameters:**
+- `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)): Author fragment.
+- `offset` (`int`): The offset where to check if the fragment can be inserted.
+- `validationMode` (`short`): VALIDATION_MODE_LAX or VALIDATION_MODE_STRICT_FIRST_CHILD_LAX_OTHERS.
+
+### `canInsertDocumentFragments(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, int offset, short validationMode)`
 
 **Returns:** `boolean`
 
-### `canInsertText(`int` offset)`
+**Parameters:**
+- `fragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](node/AuthorDocumentFragment.md)): Author fragment.
+- `offset` (`int`): The offset where to check if the fragments can be inserted.
+- `validationMode` (`short`): VALIDATION_MODE_LAX or VALIDATION_MODE_STRICT_FIRST_CHILD_LAX_OTHERS.
+
+### `canInsertText(int offset)`
 
 **Returns:** `boolean`
 
-### `canInsertDocumentFragments([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](node/AuthorDocumentFragment.md) fragments, [`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md) insertionContext, `short` validationMode)`
+**Parameters:**
+- `offset` (`int`): The offset where to check if text can be inserted.
+
+### `canInsertDocumentFragments(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext insertionContext, short validationMode)`
 
 **Returns:** `boolean`
 
 The 
  insertion context will also be used for resolving namespaces for the nodes inside the fragment.
 
-### `createWhatElementsCanGoHereContext(`int` offset)`
+**Parameters:**
+- `fragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](node/AuthorDocumentFragment.md)): Author fragments.
+- `insertionContext` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): Insertion context.
+- `validationMode` (`short`): VALIDATION_MODE_LAX or VALIDATION_MODE_STRICT_FIRST_CHILD_LAX_OTHERS.
+
+### `createWhatElementsCanGoHereContext(int offset)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)
 
-### `createWhatAttributesCanGoHereContext([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) element)`
+**Parameters:**
+- `offset` (`int`): Offset in document for which to create an element context.
+
+### `createWhatAttributesCanGoHereContext(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext`](../../../contentcompletion/xml/WhatAttributesCanGoHereContext.md)
 
-### `createWhatPossibleValuesHasAttributeContext([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) element, `java.lang.String` attributeName)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element to to create WhatAttributesCanGoHereContext
+
+### `createWhatPossibleValuesHasAttributeContext(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attributeName)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md)
+
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element whose attribute values interest us.
+- `attributeName` (`java.lang.String`): The name of attribute to create context.
 
 ### `getAuthorSchemaAwareOptions()`
 
 **Returns:** [`ro.sync.ecss.component.AuthorSchemaAwareOptions`](../../component/AuthorSchemaAwareOptions.md)
 
-### `whatAttributesCanGoHere([`ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext`](../../../contentcompletion/xml/WhatAttributesCanGoHereContext.md) whatAttributesCanGoHereContext)`
+### `whatAttributesCanGoHere(ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext whatAttributesCanGoHereContext)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
 The returned list of attributes does not include attribute names
  which are already set on the element.
 
-### `whatElementsCanGoHere([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md) whatElementsCanGoHereContext)`
+**Parameters:**
+- `whatAttributesCanGoHereContext` ([`ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext`](../../../contentcompletion/xml/WhatAttributesCanGoHereContext.md)): the context for the call. It must
+ have:
+ 
+
+  - elementName              the name of the element in which will be
+      done the insertion.
+
+  - proxyNamespaceMapping    the proxy - uri mappings defined before the
+      insertion point.
+
+  - previousAttributesNames  the names of the existing attributes in the
+      element, attributes that are before the insertion point.
+
+ 
+
+
+### `whatElementsCanGoHere(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext whatElementsCanGoHereContext)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `whatPossibleValuesHasAttribute([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md) ctxt)`
+**Parameters:**
+- `whatElementsCanGoHereContext` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): the context for the call. It must have:
+ 
+
+  - parentElementName the qName of the parent element
+
+  - previousElementNames the list of qNames of the previous elements
+
+  - previousElementNamespaces the list of qNames of the previous elements
+
+  - proxyNamespaceMapping    the proxy - uri mappings defined before the
+      insertion point.
+
+
+### `whatPossibleValuesHasAttribute(ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext ctxt)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
@@ -75,12 +134,18 @@ If the
  attribute type was an enumeration, then a list with the tokens of the
  enumeration will be returned.
 
-### `whatPossibleValuesHasElement([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md) ctxt)`
+**Parameters:**
+- `ctxt` ([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md)): The context WhatPossiBleValuesHasAttributeContext.
+
+### `whatPossibleValuesHasElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext ctxt)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
 If the element type was an enumeration,
  then a list with the tokens of the enumeration will be returned.
+
+**Parameters:**
+- `ctxt` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): The context.
 
 ### `getGrammarURLs()`
 
@@ -90,11 +155,14 @@ These URLs were set
  using one of the update methods, and includes the URLs that were collected from the calls
  of the `update(InputSource[])` methods.
 
-### `getAttributeDescription([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md) ctxt)`
+### `getAttributeDescription(ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext ctxt)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIAttribute`](../../../contentcompletion/xml/CIAttribute.md)
 
 This model must be human readable.
+
+**Parameters:**
+- `ctxt` ([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md)): the context describing the target attribute.
 
 ### `getEntities()`
 
@@ -103,19 +171,32 @@ This model must be human readable.
 If the DOCTYPE declaration is not changed, the document should not be
  processed each time this method is called.
 
-### `getElementDescription([`ro.sync.contentcompletion.xml.Context`](../../../contentcompletion/xml/Context.md) ctxt)`
+### `getElementDescription(ro.sync.contentcompletion.xml.Context ctxt)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIElement`](../../../contentcompletion/xml/CIElement.md)
 
 This model must be human readable.
 
+**Parameters:**
+- `ctxt` ([`ro.sync.contentcompletion.xml.Context`](../../../contentcompletion/xml/Context.md)): the context describing the target element. It contains:
+
+  - The element names stack, having at top the current element name.
+
+  - The element namespaces stack, having at top the current element namespace.
+
+ 
+
+
 ### `isElementDescriptionSupported()`
 
 **Returns:** `boolean`
 
-### `getChildrenElements([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md) context)`
+### `getChildrenElements(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
+
+**Parameters:**
+- `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): The element context.
 
 ### `isLearnSchema()`
 
@@ -128,9 +209,12 @@ This only happens when Oxygen does not detect an associated schema for the XML d
 
 **Returns:** `boolean`
 
-### `createAuthorDocumentFragment([`ro.sync.contentcompletion.xml.CIElement`](../../../contentcompletion/xml/CIElement.md) element)`
+### `createAuthorDocumentFragment(ro.sync.contentcompletion.xml.CIElement element)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
+
+**Parameters:**
+- `element` ([`ro.sync.contentcompletion.xml.CIElement`](../../../contentcompletion/xml/CIElement.md)): The CI Element from which to create a full fragment which can be inserted
 
 ### `getGlobalElements()`
 
@@ -143,21 +227,35 @@ This only happens when Oxygen does not detect an associated schema for the XML d
 We need this for instance if providing content completion
  proposals as a result schema manager for XSLT.
 
-### `getElementToParentsMap([`ro.sync.ecss.extensions.api.node.NamespaceContext`](node/NamespaceContext.md) namespaceContext)`
+### `getElementToParentsMap(ro.sync.ecss.extensions.api.node.NamespaceContext namespaceContext)`
 
 **Returns:** `java.util.Map<javax.xml.namespace.QName,java.util.Collection<javax.xml.namespace.QName>>`
 
-### `getElementToParentsMap([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) nodeContext)`
+**Parameters:**
+- `namespaceContext` ([`ro.sync.ecss.extensions.api.node.NamespaceContext`](node/NamespaceContext.md)): The namespace declarations active in the document context where this information
+ is requested. Can be `null`.
+
+### `getElementToParentsMap(ro.sync.ecss.extensions.api.node.AuthorNode nodeContext)`
 
 **Returns:** `java.util.Map<javax.xml.namespace.QName,java.util.Collection<javax.xml.namespace.QName>>`
 
-### `getGlobalElements([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) nodeContext)`
+**Parameters:**
+- `nodeContext` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node context where this information
+ is requested. Can be `null`.
+
+### `getGlobalElements(ro.sync.ecss.extensions.api.node.AuthorNode nodeContext)`
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `isRequiredElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) element)`
+**Parameters:**
+- `nodeContext` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The context node
+
+### `isRequiredElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): the element for which the check is performed.
 
 ### `getSchemaRepresentationAsJson()`
 

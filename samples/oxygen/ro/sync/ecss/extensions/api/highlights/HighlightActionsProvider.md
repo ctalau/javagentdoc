@@ -12,9 +12,12 @@
 
 ## Methods
 
-### `getActions([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md) authorAccess)`
+### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.util.List`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The author access.
 
 ### `getCollapsedWidgetIcon()`
 

@@ -18,7 +18,10 @@ Some statuses have colors associated.
 
 **Returns:** [`ro.sync.exml.workspace.api.OperationStatus[]`](./OperationStatus.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.exml.workspace.api.OperationStatus`](./OperationStatus.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

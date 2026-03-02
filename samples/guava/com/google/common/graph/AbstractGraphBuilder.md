@@ -10,9 +10,6 @@
 
 ## Description
 
-A base class for builders that construct graphs with user-defined properties.
-**Author:** James Sexton
-
 ## Fields
 
 ### `directed`
@@ -37,9 +34,9 @@ A base class for builders that construct graphs with user-defined properties.
 
 ## Constructors
 
-### `<init>(`boolean` directed)`
+### `<init>(boolean directed)`
 
-Creates a new instance with the specified edge directionality.
-@param directed if true, creates an instance for graphs whose edges are each directed; if
+**Parameters:**
+- `directed` (`boolean`): if true, creates an instance for graphs whose edges are each directed; if
      false, creates an instance for graphs whose edges are each undirected.
 

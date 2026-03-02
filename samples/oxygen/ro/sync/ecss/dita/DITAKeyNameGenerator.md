@@ -8,7 +8,10 @@
 
 ## Methods
 
-### `generateKeyName(`java.net.URL` resourceURL)`
+### `generateKeyName(java.net.URL resourceURL)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `resourceURL` (`java.net.URL`): The URL of a resource.
 

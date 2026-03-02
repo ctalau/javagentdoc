@@ -8,15 +8,39 @@
 
 ## Methods
 
-### `isLearned(`java.lang.String` lang, `java.lang.String` word)`
+### `isLearned(java.lang.String lang, java.lang.String word)`
 
 **Returns:** `boolean`
 
-### `isForbidden(`java.lang.String` lang, `java.lang.String` word)`
+**Parameters:**
+- `lang` (`java.lang.String`): The language code, may be null. 
+ The language will be determined from the nearest ancestor with xml:lang attribute, 
+ otherwise will default to the user's interface language.
+ Respects the xml:lang encoding (http://www.w3.org/TR/REC-xml/)
+ Ex: "en", "en-GB", "en-US"
+- `word` (`java.lang.String`): The word to check.
+
+### `isForbidden(java.lang.String lang, java.lang.String word)`
 
 **Returns:** `boolean`
 
-### `getSuggestions(`java.lang.String` lang, `java.lang.String` word)`
+**Parameters:**
+- `lang` (`java.lang.String`): The language code, may be null. 
+ The language will be determined from the nearest ancestor with xml:lang attribute, 
+ otherwise will default to the user's interface language.
+ Respects the xml:lang encoding (http://www.w3.org/TR/REC-xml/)
+ Ex: "en", "en-GB", "en-US"
+- `word` (`java.lang.String`): The word to check.
+
+### `getSuggestions(java.lang.String lang, java.lang.String word)`
 
 **Returns:** `java.lang.String[]`
+
+**Parameters:**
+- `lang` (`java.lang.String`): The language code, may be null. 
+ The language will be determined from the nearest ancestor with xml:lang attribute, 
+ otherwise will default to the user's interface language.
+ Respects the xml:lang encoding (http://www.w3.org/TR/REC-xml/)
+ Ex: "en", "en-GB", "en-US"
+- `word` (`java.lang.String`): The word to check.
 

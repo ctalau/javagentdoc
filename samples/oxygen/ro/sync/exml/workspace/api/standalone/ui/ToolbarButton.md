@@ -8,5 +8,9 @@
 
 ## Constructors
 
-### `<init>(`javax.swing.Action` arg0, `boolean` arg1)`
+### `<init>(javax.swing.Action arg0, boolean arg1)`
+
+**Parameters:**
+- `arg0` (`javax.swing.Action`)
+- `arg1` (`boolean`)
 

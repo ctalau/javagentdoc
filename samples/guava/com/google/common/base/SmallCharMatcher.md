@@ -4,13 +4,9 @@
 
 **Fully Qualified Name:** `com.google.common.base.SmallCharMatcher`
 
-**Extends:** [`com.google.common.base.CharMatcher.NamedFastMatcher`](CharMatcher/NamedFastMatcher.md)
+**Extends:** `com.google.common.base.CharMatcher.NamedFastMatcher`
 
 ## Description
-
-An immutable version of CharMatcher for smallish sets of characters that uses a hash table with
- linear probing to check for matches.
-**Author:** Christopher Swenson
 
 ## Fields
 
@@ -44,35 +40,59 @@ An immutable version of CharMatcher for smallish sets of characters that uses a 
 
 ## Constructors
 
-### `<init>(`char[]` table, `long` filter, `boolean` containsZero, `java.lang.String` description)`
+### `<init>(char[] table, long filter, boolean containsZero, java.lang.String description)`
+
+**Parameters:**
+- `table` (`char[]`)
+- `filter` (`long`)
+- `containsZero` (`boolean`)
+- `description` (`java.lang.String`)
 
 ## Methods
 
-### `smear(`int` hashCode)`
+### `smear(int hashCode)`
 
 **Returns:** `int`
 
-### `checkFilter(`int` c)`
+**Parameters:**
+- `hashCode` (`int`)
+
+### `checkFilter(int c)`
 
 **Returns:** `boolean`
 
-### `chooseTableSize(`int` setSize)`
+**Parameters:**
+- `c` (`int`)
+
+### `chooseTableSize(int setSize)`
 
 **Returns:** `int`
 
-Returns an array size suitable for the backing array of a hash table that uses open addressing
- with linear probing in its implementation. The returned size is the smallest power of two that
+The returned size is the smallest power of two that
  can hold setSize elements with the desired load factor.
 
-### `from(`java.util.BitSet` chars, `java.lang.String` description)`
+**Parameters:**
+- `setSize` (`int`)
+
+### `from(java.util.BitSet chars, java.lang.String description)`
 
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
-### `matches(`char` c)`
+**Parameters:**
+- `chars` (`java.util.BitSet`)
+- `description` (`java.lang.String`)
+
+### `matches(char c)`
 
 **Returns:** `boolean`
 
-### `setBits(`java.util.BitSet` table)`
+**Parameters:**
+- `c` (`char`)
+
+### `setBits(java.util.BitSet table)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `table` (`java.util.BitSet`)
 

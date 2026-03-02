@@ -14,17 +14,12 @@
 
 ## Description
 
-A `Multiset` whose contents will never change, with many other important properties
- detailed at `ImmutableCollection`.
-
- <p><b>Grouped iteration.</b> In all current implementations, duplicate elements always appear
- consecutively when iterating. Elements iterate in order by the <i>first</i> appearance of that
+**Grouped iteration.** In all current implementations, duplicate elements always appear
+ consecutively when iterating. Elements iterate in order by the *first* appearance of that
  element when the multiset was created.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">immutable collections</a>.
-**Author:** Jared Levy
-**Author:** Louis Wasserman
-**Since:** 2.0
+ 
+See the Guava User Guide article on [immutable collections](https://github.com/google/guava/wiki/ImmutableCollectionsExplained).
 
 ## Fields
 
@@ -34,7 +29,7 @@ A `Multiset` whose contents will never change, with many other important propert
 
 ### `entrySet`
 
-**Type:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableSet>.md)
+**Type:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableSet.md)
 
 ### `serialVersionUID`
 
@@ -50,115 +45,119 @@ A `Multiset` whose contents will never change, with many other important propert
 
 **Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableMultiset<E>>`
 
-Returns a `Collector` that accumulates the input elements into a new `ImmutableMultiset`. Elements iterate in order by the <i>first</i> appearance of that element in
+Elements iterate in order by the *first* appearance of that element in
  encounter order.
-**Since:** 21.0
 
-### `toImmutableMultiset(`java.util.function.Function<? super T,? extends E>` elementFunction, `java.util.function.ToIntFunction<? super T>` countFunction)`
+### `toImmutableMultiset(java.util.function.Function<? super T,? extends E> elementFunction, java.util.function.ToIntFunction<? super T> countFunction)`
 
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMultiset<E>>`
 
-Returns a `Collector` that accumulates elements into an `ImmutableMultiset` whose
- elements are the result of applying `elementFunction` to the inputs, with counts equal to
- the result of applying `countFunction` to the inputs.
-
- <p>If the mapped elements contain duplicates (according to `Object.equals`), the first
+If the mapped elements contain duplicates (according to Object#equals), the first
  occurrence in encounter order appears in the resulting multiset, with count equal to the sum of
- the outputs of `countFunction.applyAsInt(t)` for each `t` mapped to that element.
-**Since:** 22.0
+ the outputs of countFunction.applyAsInt(t) for each t mapped to that element.
+
+**Parameters:**
+- `elementFunction` (`java.util.function.Function<? super T,? extends E>`)
+- `countFunction` (`java.util.function.ToIntFunction<? super T>`)
 
 ### `of()`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-Returns the empty immutable multiset.
+**Performance note:** the instance returned is a singleton.
 
- <p><b>Performance note:</b> the instance returned is a singleton.
-
-### `of(`E` element)`
+### `of(E element)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-Returns an immutable multiset containing a single element.
-@throws NullPointerException if `element` is null
-**Since:** 6.0 (source-compatible since 2.0)
+**Parameters:**
+- `element` (`E`)
 
-### `of(`E` e1, `E` e2)`
-
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
-
-Returns an immutable multiset containing the given elements, in order.
-@throws NullPointerException if any element is null
-**Since:** 6.0 (source-compatible since 2.0)
-
-### `of(`E` e1, `E` e2, `E` e3)`
+### `of(E e1, E e2)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-Returns an immutable multiset containing the given elements, in the "grouped iteration order"
- described in the class documentation.
-@throws NullPointerException if any element is null
-**Since:** 6.0 (source-compatible since 2.0)
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
 
-### `of(`E` e1, `E` e2, `E` e3, `E` e4)`
-
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
-
-Returns an immutable multiset containing the given elements, in the "grouped iteration order"
- described in the class documentation.
-@throws NullPointerException if any element is null
-**Since:** 6.0 (source-compatible since 2.0)
-
-### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5)`
+### `of(E e1, E e2, E e3)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-Returns an immutable multiset containing the given elements, in the "grouped iteration order"
- described in the class documentation.
-@throws NullPointerException if any element is null
-**Since:** 6.0 (source-compatible since 2.0)
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
 
-### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5, `E` e6, `E[]` others)`
-
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
-
-Returns an immutable multiset containing the given elements, in the "grouped iteration order"
- described in the class documentation.
-@throws NullPointerException if any element is null
-**Since:** 6.0 (source-compatible since 2.0)
-
-### `copyOf(`E[]` elements)`
+### `of(E e1, E e2, E e3, E e4)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-Returns an immutable multiset containing the given elements, in the "grouped iteration order"
- described in the class documentation.
-@throws NullPointerException if any of `elements` is null
-**Since:** 6.0
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
 
-### `copyOf(`java.lang.Iterable<? extends E>` elements)`
-
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
-
-Returns an immutable multiset containing the given elements, in the "grouped iteration order"
- described in the class documentation.
-@throws NullPointerException if any of `elements` is null
-
-### `copyOf(`java.util.Iterator<? extends E>` elements)`
+### `of(E e1, E e2, E e3, E e4, E e5)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-Returns an immutable multiset containing the given elements, in the "grouped iteration order"
- described in the class documentation.
-@throws NullPointerException if any of `elements` is null
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
+- `e5` (`E`)
 
-### `copyFromElements(`E[]` elements)`
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] others)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-### `copyFromEntries(`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>` entries)`
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
+- `e5` (`E`)
+- `e6` (`E`)
+- `others` (`E[]`)
+
+### `copyOf(E[] elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+**Parameters:**
+- `elements` (`E[]`)
+
+### `copyOf(java.lang.Iterable<? extends E> elements)`
+
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+**Parameters:**
+- `elements` (`java.lang.Iterable<? extends E>`)
+
+### `copyOf(java.util.Iterator<? extends E> elements)`
+
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+**Parameters:**
+- `elements` (`java.util.Iterator<? extends E>`)
+
+### `copyFromElements(E[] elements)`
+
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+**Parameters:**
+- `elements` (`E[]`)
+
+### `copyFromEntries(java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>> entries)`
+
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+**Parameters:**
+- `entries` (`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`)
 
 ### `iterator()`
 
@@ -168,49 +167,60 @@ Returns an immutable multiset containing the given elements, in the "grouped ite
 
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-### `add(`E` element, `int` occurrences)`
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+### `add(E element, int occurrences)`
 
 **Returns:** `int`
 
-Guaranteed to throw an exception and leave the collection unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `element` (`E`)
+- `occurrences` (`int`)
 
-### `remove(`java.lang.Object` element, `int` occurrences)`
-
-**Returns:** `int`
-
-Guaranteed to throw an exception and leave the collection unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
-
-### `setCount(`E` element, `int` count)`
+### `remove(java.lang.Object element, int occurrences)`
 
 **Returns:** `int`
 
-Guaranteed to throw an exception and leave the collection unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `element` (`java.lang.Object`)
+- `occurrences` (`int`)
 
-### `setCount(`E` element, `int` oldCount, `int` newCount)`
+### `setCount(E element, int count)`
+
+**Returns:** `int`
+
+**Parameters:**
+- `element` (`E`)
+- `count` (`int`)
+
+### `setCount(E element, int oldCount, int newCount)`
 
 **Returns:** `boolean`
 
-Guaranteed to throw an exception and leave the collection unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `element` (`E`)
+- `oldCount` (`int`)
+- `newCount` (`int`)
 
-### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
+### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `offset` (`int`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -224,31 +234,35 @@ Guaranteed to throw an exception and leave the collection unmodified.
 
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
 
-**Since:** 21.0 (present with return type `Set` since 2.0)
-
 ### `entrySet()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableSet>.md)
+**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableSet.md)
 
 ### `createEntrySet()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableSet>.md)
+**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.collect.Multiset.Entry<E>>`](./ImmutableSet.md)
 
-### `getEntry(`int` index)`
+### `getEntry(int index)`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
 
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
+
 ### `builder()`
 
-**Returns:** [`com.google.common.collect.ImmutableMultiset.Builder<E>`](ImmutableMultiset/Builder.md)
+**Returns:** `com.google.common.collect.ImmutableMultiset.Builder<E>`
 
-Returns a new builder. The generated builder is equivalent to the builder created by the `Builder` constructor.
+The generated builder is equivalent to the builder created by the Builder constructor.
 

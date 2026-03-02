@@ -12,13 +12,20 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../AuthorDocumentController.md)
 
-### `createRenderer(`java.io.Writer` arg0)`
+### `createRenderer(java.io.Writer arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](./AuthorNodesRenderer.md)
 
-### `createRenderer(`java.io.Writer` arg0, [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../highlights/AuthorHighlighter.md) arg1)`
+**Parameters:**
+- `arg0` (`java.io.Writer`)
+
+### `createRenderer(java.io.Writer arg0, ro.sync.ecss.extensions.api.highlights.AuthorHighlighter arg1)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](./AuthorNodesRenderer.md)
+
+**Parameters:**
+- `arg0` (`java.io.Writer`)
+- `arg1` ([`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../highlights/AuthorHighlighter.md))
 
 ### `createReader()`
 
@@ -100,9 +107,12 @@
 
 **Returns:** `ro.sync.exml.editor.xmleditor.db`
 
-### `getDPILocation([`ro.sync.document.DocumentPositionedInfo`](../../../../document/DocumentPositionedInfo.md) arg0)`
+### `getDPILocation(ro.sync.document.DocumentPositionedInfo arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.DPILocation`](./DPILocation.md)
+
+**Parameters:**
+- `arg0` ([`ro.sync.document.DocumentPositionedInfo`](../../../../document/DocumentPositionedInfo.md))
 
 ### `dispose()`
 
@@ -120,9 +130,12 @@
 
 **Returns:** `java.lang.String`
 
-### `setUserId(`java.lang.String` arg0)`
+### `setUserId(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getLicenseeId()`
 

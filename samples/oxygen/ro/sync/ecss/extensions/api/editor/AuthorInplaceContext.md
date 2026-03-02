@@ -48,9 +48,21 @@
 
 ## Constructors
 
-### `<init>(`java.util.Map<java.lang.String,java.lang.Object>` arg0, [`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md) arg1, `ro.sync.ecss.css.Styles` arg2, [`ro.sync.ecss.extensions.api.AuthorSchemaManager`](../AuthorSchemaManager.md) arg3, [`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md) arg4, `java.lang.Object` arg5, [`ro.sync.ecss.extensions.api.editor.DynamicPropertyEvaluator`](./DynamicPropertyEvaluator.md) arg6)`
+### `<init>(java.util.Map<java.lang.String,java.lang.Object> arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1, ro.sync.ecss.css.Styles arg2, ro.sync.ecss.extensions.api.AuthorSchemaManager arg3, ro.sync.ecss.extensions.api.AuthorAccess arg4, java.lang.Object arg5, ro.sync.ecss.extensions.api.editor.DynamicPropertyEvaluator arg6)`
 
-### `<init>([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) arg0)`
+**Parameters:**
+- `arg0` (`java.util.Map<java.lang.String,java.lang.Object>`)
+- `arg1` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md))
+- `arg2` (`ro.sync.ecss.css.Styles`)
+- `arg3` ([`ro.sync.ecss.extensions.api.AuthorSchemaManager`](../AuthorSchemaManager.md))
+- `arg4` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md))
+- `arg5` (`java.lang.Object`)
+- `arg6` ([`ro.sync.ecss.extensions.api.editor.DynamicPropertyEvaluator`](./DynamicPropertyEvaluator.md))
+
+### `<init>(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
 ## Methods
 
@@ -70,9 +82,12 @@
 
 **Returns:** `javax.xml.namespace.QName`
 
-### `getAttributeToEdit(`java.lang.String` arg0)`
+### `getAttributeToEdit(java.lang.String arg0)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getElem()`
 
@@ -90,9 +105,12 @@
 
 **Returns:** `java.lang.Object`
 
-### `setErrorMessage(`java.lang.String` arg0)`
+### `setErrorMessage(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getErrorMessage()`
 
@@ -102,23 +120,32 @@
 
 **Returns:** `ro.sync.ecss.css.Styles`
 
-### `setRelativeMousePosition(`ro.sync.exml.view.graphics.Point` arg0)`
+### `setRelativeMousePosition(ro.sync.exml.view.graphics.Point arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`ro.sync.exml.view.graphics.Point`)
 
 ### `getRelativeMouseLocation()`
 
 **Returns:** `ro.sync.exml.view.graphics.Point`
 
-### `setReadOnlyContext(`boolean` arg0)`
+### `setReadOnlyContext(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isReadOnlyContext()`
 
 **Returns:** `boolean`
 
-### `setParentHost(`java.lang.Object` arg0)`
+### `setParentHost(java.lang.Object arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 

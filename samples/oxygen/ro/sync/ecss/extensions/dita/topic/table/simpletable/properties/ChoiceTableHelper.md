@@ -40,15 +40,24 @@
 
 ## Methods
 
-### `getElementTag(`int` elementType)`
+### `getElementTag(int elementType)`
 
 **Returns:** `java.lang.String`
 
-### `getElementName(`int` elementType)`
+**Parameters:**
+- `elementType` (`int`)
+
+### `getElementName(int elementType)`
 
 **Returns:** `java.lang.String`
 
-### `isTable([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md) node)`
+**Parameters:**
+- `elementType` (`int`)
+
+### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
 

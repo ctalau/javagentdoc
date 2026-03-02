@@ -15,16 +15,12 @@
 
 ## Description
 
-A cache which forwards all its method calls to another cache. Subclasses should override one or
- more methods to modify the behavior of the backing cache as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
-**Author:** Charles Fry
-**Since:** 10.0
+Subclasses should override one or
+ more methods to modify the behavior of the backing cache as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -32,45 +28,56 @@ Constructor for use by subclasses.
 
 **Returns:** [`com.google.common.cache.Cache<K,V>`](./Cache.md)
 
-### `getIfPresent(`java.lang.Object` key)`
+### `getIfPresent(java.lang.Object key)`
 
 **Returns:** `V`
 
-**Since:** 11.0
+**Parameters:**
+- `key` (`java.lang.Object`)
 
-### `get(`K` key, `java.util.concurrent.Callable<? extends V>` valueLoader)`
+### `get(K key, java.util.concurrent.Callable<? extends V> valueLoader)`
 
 **Returns:** `V`
 
-**Since:** 11.0
+**Parameters:**
+- `key` (`K`)
+- `valueLoader` (`java.util.concurrent.Callable<? extends V>`)
 
-### `getAllPresent(`java.lang.Iterable<? extends java.lang.Object>` keys)`
+### `getAllPresent(java.lang.Iterable<? extends java.lang.Object> keys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-**Since:** 11.0
+**Parameters:**
+- `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
 
-### `put(`K` key, `V` value)`
-
-**Returns:** `void`
-
-**Since:** 11.0
-
-### `putAll(`java.util.Map<? extends K,? extends V>` m)`
+### `put(K key, V value)`
 
 **Returns:** `void`
 
-**Since:** 12.0
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
 
-### `invalidate(`java.lang.Object` key)`
-
-**Returns:** `void`
-
-### `invalidateAll(`java.lang.Iterable<? extends java.lang.Object>` keys)`
+### `putAll(java.util.Map<? extends K,? extends V> m)`
 
 **Returns:** `void`
 
-**Since:** 11.0
+**Parameters:**
+- `m` (`java.util.Map<? extends K,? extends V>`)
+
+### `invalidate(java.lang.Object key)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `invalidateAll(java.lang.Iterable<? extends java.lang.Object> keys)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
 
 ### `invalidateAll()`
 

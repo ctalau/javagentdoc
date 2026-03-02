@@ -4,13 +4,11 @@
 
 **Fully Qualified Name:** `com.google.common.collect.NaturalOrdering`
 
-**Extends:** [`com.google.common.collect.Ordering<java.lang.Comparable<?>>`](./Ordering>.md)
+**Extends:** [`com.google.common.collect.Ordering<java.lang.Comparable<?>>`](./Ordering.md)
 
 **Implements:** `java.io.Serializable`
 
 ## Description
-
-An ordering that uses the natural order of the values.
 
 ## Fields
 
@@ -20,11 +18,11 @@ An ordering that uses the natural order of the values.
 
 ### `nullsFirst`
 
-**Type:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Comparable<?>>`](./Ordering>.md)
+**Type:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Comparable<?>>`](./Ordering.md)
 
 ### `nullsLast`
 
-**Type:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Comparable<?>>`](./Ordering>.md)
+**Type:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Comparable<?>>`](./Ordering.md)
 
 ### `serialVersionUID`
 
@@ -36,9 +34,13 @@ An ordering that uses the natural order of the values.
 
 ## Methods
 
-### `compare(`java.lang.Comparable<?>` left, `java.lang.Comparable<?>` right)`
+### `compare(java.lang.Comparable<?> left, java.lang.Comparable<?> right)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `left` (`java.lang.Comparable<?>`)
+- `right` (`java.lang.Comparable<?>`)
 
 ### `nullsFirst()`
 

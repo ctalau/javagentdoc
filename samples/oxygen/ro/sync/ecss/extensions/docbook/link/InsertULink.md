@@ -24,13 +24,22 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `insertULink(`java.lang.String` url, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `boolean` schemaAware)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
+
+### `insertULink(java.lang.String url, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean schemaAware)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `url` (`java.lang.String`): The URL to insert as external link.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
+- `schemaAware` (`boolean`): `true` for schema aware operation.
 
 ### `getArguments()`
 

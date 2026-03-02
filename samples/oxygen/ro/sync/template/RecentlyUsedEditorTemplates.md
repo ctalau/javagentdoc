@@ -20,7 +20,10 @@
 
 ### `<init>()`
 
-### `<init>(`java.util.List<ro.sync.exml.editor.EditorTemplate>` arg0)`
+### `<init>(java.util.List<ro.sync.exml.editor.EditorTemplate> arg0)`
+
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.exml.editor.EditorTemplate>`)
 
 ## Methods
 

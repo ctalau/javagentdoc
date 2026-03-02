@@ -12,10 +12,6 @@
 
 ## Description
 
-An `ImmutableAsList` implementation specialized for when the delegate collection is already
- backed by an `ImmutableList` or array.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `delegate`
@@ -28,9 +24,17 @@ An `ImmutableAsList` implementation specialized for when the delegate collection
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md) delegate, [`com.google.common.collect.ImmutableList<? extends E>`](./ImmutableList.md) delegateList)`
+### `<init>(com.google.common.collect.ImmutableCollection<E> delegate, com.google.common.collect.ImmutableList<? extends E> delegateList)`
 
-### `<init>([`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md) delegate, `java.lang.Object[]` array)`
+**Parameters:**
+- `delegate` ([`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md))
+- `delegateList` ([`com.google.common.collect.ImmutableList<? extends E>`](./ImmutableList.md))
+
+### `<init>(com.google.common.collect.ImmutableCollection<E> delegate, java.lang.Object[] array)`
+
+**Parameters:**
+- `delegate` ([`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md))
+- `array` (`java.lang.Object[]`)
 
 ## Methods
 
@@ -42,17 +46,27 @@ An `ImmutableAsList` implementation specialized for when the delegate collection
 
 **Returns:** [`com.google.common.collect.ImmutableList<? extends E>`](./ImmutableList.md)
 
-### `listIterator(`int` index)`
+### `listIterator(int index)`
 
 **Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
 
-### `forEach(`java.util.function.Consumer<? super E>` action)`
+**Parameters:**
+- `index` (`int`)
+
+### `forEach(java.util.function.Consumer<? super E> action)`
 
 **Returns:** `void`
 
-### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
+**Parameters:**
+- `action` (`java.util.function.Consumer<? super E>`)
+
+### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `offset` (`int`)
 
 ### `internalArray()`
 
@@ -66,9 +80,12 @@ An `ImmutableAsList` implementation specialized for when the delegate collection
 
 **Returns:** `int`
 
-### `get(`int` index)`
+### `get(int index)`
 
 **Returns:** `E`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `writeReplace()`
 

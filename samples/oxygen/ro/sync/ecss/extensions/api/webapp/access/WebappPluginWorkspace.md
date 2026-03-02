@@ -18,21 +18,33 @@
 
 ## Methods
 
-### `addEditingSessionLifecycleListener([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md) arg0)`
+### `addEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
 
 **Returns:** `void`
 
-### `addDITAMapEditingSessionLifecycleListener([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
+
+### `addDITAMapEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
 
 **Returns:** `void`
 
-### `removeEditingSessionLifecycleListener([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
+
+### `removeEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
 
 **Returns:** `void`
 
-### `removeDITAMapEditingSessionLifecycleListener([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
+
+### `removeDITAMapEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
 
 ### `getAllEditingSessionLifecycleListeners()`
 
@@ -50,9 +62,12 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `setDITAKeyDefinitionManagerProvider([`ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManagerProvider`](../../../../../exml/workspace/api/editor/page/ditamap/keys/KeyDefinitionManagerProvider.md) arg0)`
+### `setDITAKeyDefinitionManagerProvider(ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManagerProvider arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManagerProvider`](../../../../../exml/workspace/api/editor/page/ditamap/keys/KeyDefinitionManagerProvider.md))
 
 ### `getSessionStore()`
 

@@ -13,11 +13,6 @@
 
 ## Description
 
-An implementation of `NetworkConnections` for undirected networks with parallel edges.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <E> Edge parameter type
-
 ## Fields
 
 ### `adjacentNodesReference`
@@ -26,7 +21,10 @@ An implementation of `NetworkConnections` for undirected networks with parallel 
 
 ## Constructors
 
-### `<init>(`java.util.Map<E,N>` incidentEdges)`
+### `<init>(java.util.Map<E,N> incidentEdges)`
+
+**Parameters:**
+- `incidentEdges` (`java.util.Map<E,N>`)
 
 ## Methods
 
@@ -34,9 +32,12 @@ An implementation of `NetworkConnections` for undirected networks with parallel 
 
 **Returns:** [`com.google.common.graph.UndirectedMultiNetworkConnections<N,E>`](./UndirectedMultiNetworkConnections.md)
 
-### `ofImmutable(`java.util.Map<E,N>` incidentEdges)`
+### `ofImmutable(java.util.Map<E,N> incidentEdges)`
 
 **Returns:** [`com.google.common.graph.UndirectedMultiNetworkConnections<N,E>`](./UndirectedMultiNetworkConnections.md)
+
+**Parameters:**
+- `incidentEdges` (`java.util.Map<E,N>`)
 
 ### `adjacentNodes()`
 
@@ -46,27 +47,49 @@ An implementation of `NetworkConnections` for undirected networks with parallel 
 
 **Returns:** [`com.google.common.collect.Multiset<N>`](../collect/Multiset.md)
 
-### `edgesConnecting(`N` node)`
+### `edgesConnecting(N node)`
 
 **Returns:** `java.util.Set<E>`
 
-### `removeInEdge(`E` edge, `boolean` isSelfLoop)`
+**Parameters:**
+- `node` (`N`)
+
+### `removeInEdge(E edge, boolean isSelfLoop)`
 
 **Returns:** `N`
 
-### `removeOutEdge(`E` edge)`
+**Parameters:**
+- `edge` (`E`)
+- `isSelfLoop` (`boolean`)
+
+### `removeOutEdge(E edge)`
 
 **Returns:** `N`
 
-### `addInEdge(`E` edge, `N` node, `boolean` isSelfLoop)`
+**Parameters:**
+- `edge` (`E`)
+
+### `addInEdge(E edge, N node, boolean isSelfLoop)`
 
 **Returns:** `void`
 
-### `addOutEdge(`E` edge, `N` node)`
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
+- `isSelfLoop` (`boolean`)
+
+### `addOutEdge(E edge, N node)`
 
 **Returns:** `void`
 
-### `getReference(`java.lang.ref.Reference<T>` reference)`
+**Parameters:**
+- `edge` (`E`)
+- `node` (`N`)
+
+### `getReference(java.lang.ref.Reference<T> reference)`
 
 **Returns:** `T`
+
+**Parameters:**
+- `reference` (`java.lang.ref.Reference<T>`)
 

@@ -35,11 +35,18 @@ See:
 
 ### `<init>()`
 
-### `<init>(`boolean` locateInsideDITAMap)`
+### `<init>(boolean locateInsideDITAMap)`
+
+**Parameters:**
+- `locateInsideDITAMap` (`boolean`): `true` if we need to locate inside a DITA Map
 
 ## Methods
 
-### `getElementLocator([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md) idVerifier, `java.lang.String` link)`
+### `getElementLocator(ro.sync.ecss.extensions.api.link.IDTypeVerifier idVerifier, java.lang.String link)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.ElementLocator`](../api/link/ElementLocator.md)
+
+**Parameters:**
+- `idVerifier` ([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md))
+- `link` (`java.lang.String`)
 

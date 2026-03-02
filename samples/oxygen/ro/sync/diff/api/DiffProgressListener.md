@@ -10,9 +10,12 @@
 
 **Returns:** `void`
 
-### `update([`ro.sync.diff.api.DiffProgressEvent`](./DiffProgressEvent.md) arg0)`
+### `update(ro.sync.diff.api.DiffProgressEvent arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.diff.api.DiffProgressEvent`](./DiffProgressEvent.md))
 
 ### `finished()`
 

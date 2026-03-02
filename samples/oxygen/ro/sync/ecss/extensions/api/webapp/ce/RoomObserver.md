@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `sync(`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.SyncListener` listener)`
+### `sync(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.SyncListener listener)`
 
 **Returns:** `void`
 
@@ -23,6 +23,9 @@ The observer synchronizes its state with changes from multiple users that
  as many changes from the same user as possible (without breaking causality of changes).
  
  After synchronizing changes from a single user the listener is called.
+
+**Parameters:**
+- `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.SyncListener`): The listener to call after synchronizing changes from an user.
 
 ### `createInputStream()`
 
@@ -43,11 +46,17 @@ When it opens such connections,
  The UserContext has the "service account" flag set to true and a 
  header #ROOM_ID_HEADER that contains the ID of the room.
 
-### `addEditListener(`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener` listener)`
+### `addEditListener(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener listener)`
 
 **Returns:** `void`
 
-### `removeEditListener(`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener` listener)`
+**Parameters:**
+- `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener`): The edit listener to register.
+
+### `removeEditListener(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener listener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener`): The edit listener to register.
 

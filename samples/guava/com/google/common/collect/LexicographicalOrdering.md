@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.LexicographicalOrdering`
 
-**Extends:** [`com.google.common.collect.Ordering<java.lang.Iterable<T>>`](./Ordering>.md)
+**Extends:** [`com.google.common.collect.Ordering<java.lang.Iterable<T>>`](./Ordering.md)
 
 **Implements:** `java.io.Serializable`
 
@@ -13,8 +13,6 @@
 - `T` extends `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`
 
 ## Description
-
-An ordering which sorts iterables by comparing corresponding elements pairwise.
 
 ## Fields
 
@@ -28,17 +26,27 @@ An ordering which sorts iterables by comparing corresponding elements pairwise.
 
 ## Constructors
 
-### `<init>(`java.util.Comparator<? super T>` elementOrder)`
+### `<init>(java.util.Comparator<? super T> elementOrder)`
+
+**Parameters:**
+- `elementOrder` (`java.util.Comparator<? super T>`)
 
 ## Methods
 
-### `compare(`java.lang.Iterable<T>` leftIterable, `java.lang.Iterable<T>` rightIterable)`
+### `compare(java.lang.Iterable<T> leftIterable, java.lang.Iterable<T> rightIterable)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `leftIterable` (`java.lang.Iterable<T>`)
+- `rightIterable` (`java.lang.Iterable<T>`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

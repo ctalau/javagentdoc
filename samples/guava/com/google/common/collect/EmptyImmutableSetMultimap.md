@@ -8,9 +8,6 @@
 
 ## Description
 
-Implementation of `ImmutableListMultimap` with no entries.
-**Author:** Mike Ward
-
 ## Fields
 
 ### `INSTANCE`
@@ -29,7 +26,7 @@ Implementation of `ImmutableListMultimap` with no entries.
 
 ### `asMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<java.lang.Object,java.util.Collection<java.lang.Object>>`](./ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<java.lang.Object,java.util.Collection<java.lang.Object>>`](./ImmutableMap.md)
 
 ### `readResolve()`
 

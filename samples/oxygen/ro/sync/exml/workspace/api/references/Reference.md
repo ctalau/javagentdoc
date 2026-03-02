@@ -21,7 +21,11 @@ References have
 
 ## Constructors
 
-### `<init>(`ro.sync.exml.workspace.api.references.Reference.Type` type, `java.lang.String` uri)`
+### `<init>(ro.sync.exml.workspace.api.references.Reference.Type type, java.lang.String uri)`
+
+**Parameters:**
+- `type` (`ro.sync.exml.workspace.api.references.Reference.Type`): the type of the reference
+- `uri` (`java.lang.String`): the URI
 
 ## Methods
 
@@ -41,7 +45,10 @@ References have
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 

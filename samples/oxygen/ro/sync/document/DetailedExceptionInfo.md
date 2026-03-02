@@ -20,7 +20,12 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `java.net.URL` arg1, `java.lang.String` arg2)`
+### `<init>(java.lang.String arg0, java.net.URL arg1, java.lang.String arg2)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.net.URL`)
+- `arg2` (`java.lang.String`)
 
 ## Methods
 

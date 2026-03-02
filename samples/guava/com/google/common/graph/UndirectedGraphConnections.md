@@ -13,11 +13,6 @@
 
 ## Description
 
-An implementation of `GraphConnections` for undirected graphs.
-**Author:** James Sexton
-@param <N> Node parameter type
-@param <V> Value parameter type
-
 ## Fields
 
 ### `adjacentNodeValues`
@@ -26,17 +21,26 @@ An implementation of `GraphConnections` for undirected graphs.
 
 ## Constructors
 
-### `<init>(`java.util.Map<N,V>` adjacentNodeValues)`
+### `<init>(java.util.Map<N,V> adjacentNodeValues)`
+
+**Parameters:**
+- `adjacentNodeValues` (`java.util.Map<N,V>`)
 
 ## Methods
 
-### `of([`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md) incidentEdgeOrder)`
+### `of(com.google.common.graph.ElementOrder<N> incidentEdgeOrder)`
 
 **Returns:** [`com.google.common.graph.UndirectedGraphConnections<N,V>`](./UndirectedGraphConnections.md)
 
-### `ofImmutable(`java.util.Map<N,V>` adjacentNodeValues)`
+**Parameters:**
+- `incidentEdgeOrder` ([`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md))
+
+### `ofImmutable(java.util.Map<N,V> adjacentNodeValues)`
 
 **Returns:** [`com.google.common.graph.UndirectedGraphConnections<N,V>`](./UndirectedGraphConnections.md)
+
+**Parameters:**
+- `adjacentNodeValues` (`java.util.Map<N,V>`)
 
 ### `adjacentNodes()`
 
@@ -50,27 +54,47 @@ An implementation of `GraphConnections` for undirected graphs.
 
 **Returns:** `java.util.Set<N>`
 
-### `incidentEdgeIterator(`N` thisNode)`
+### `incidentEdgeIterator(N thisNode)`
 
 **Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
 
-### `value(`N` node)`
+**Parameters:**
+- `thisNode` (`N`)
+
+### `value(N node)`
 
 **Returns:** `V`
 
-### `removePredecessor(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `removePredecessor(N node)`
 
 **Returns:** `void`
 
-### `removeSuccessor(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `removeSuccessor(N node)`
 
 **Returns:** `V`
 
-### `addPredecessor(`N` node, `V` value)`
+**Parameters:**
+- `node` (`N`)
+
+### `addPredecessor(N node, V value)`
 
 **Returns:** `void`
 
-### `addSuccessor(`N` node, `V` value)`
+**Parameters:**
+- `node` (`N`)
+- `value` (`V`)
+
+### `addSuccessor(N node, V value)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `node` (`N`)
+- `value` (`V`)
 

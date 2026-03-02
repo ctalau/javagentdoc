@@ -33,37 +33,63 @@ Each opened document has a separate track changes state.
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
 
-### `getChangeHighlights(`int` startOffset, `int` endOffset)`
+### `getChangeHighlights(int startOffset, int endOffset)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
 
-### `accept(`int` startOffset, `int` endOffset)`
+**Parameters:**
+- `startOffset` (`int`): The start offset(inclusive).
+- `endOffset` (`int`): The end offset (inclusive).
+
+### `accept(int startOffset, int endOffset)`
 
 **Returns:** `void`
 
-### `acceptSelection(`int` startOffset, `int` endOffset)`
+**Parameters:**
+- `startOffset` (`int`): The interval start offset, inclusive.
+- `endOffset` (`int`): The interval end offset, inclusive.
+
+### `acceptSelection(int startOffset, int endOffset)`
 
 **Returns:** `void`
 
 The difference from the "ro.sync.ecss.extensions.api.ChangeTrackingController.accept(int, int)" method is 
  that the end offset is exclusive and you can accept the selection even if you select only one character.
 
-### `accept([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md) highlight)`
+**Parameters:**
+- `startOffset` (`int`): The interval start offset, inclusive.
+- `endOffset` (`int`): The interval end offset, exclusive.
+
+### `accept(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** `void`
 
-### `reject(`int` startOffset, `int` endOffset)`
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)): The change tracking highlight to be accepted.
+
+### `reject(int startOffset, int endOffset)`
 
 **Returns:** `void`
 
-### `rejectSelection(`int` startOffset, `int` endOffset)`
+**Parameters:**
+- `startOffset` (`int`): The interval start offset, inclusive.
+- `endOffset` (`int`): The interval end offset, inclusive.
+
+### `rejectSelection(int startOffset, int endOffset)`
 
 **Returns:** `void`
 
 The difference from the "ro.sync.ecss.extensions.api.ChangeTrackingController.reject(int, int)" method is 
  that the end offset is exclusive and you can accept the selection even if you select only one character.
 
-### `reject([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md) highlight)`
+**Parameters:**
+- `startOffset` (`int`): The interval start offset, inclusive.
+- `endOffset` (`int`): The interval end offset, exclusive.
+
+### `reject(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)): The change tracking highlight to be accepted.
 

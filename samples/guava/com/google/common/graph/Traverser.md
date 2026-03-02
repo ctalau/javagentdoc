@@ -10,30 +10,27 @@
 
 ## Description
 
-An object that can traverse the nodes that are reachable from a specified (set of) start node(s)
- using a specified `SuccessorsFunction`.
-
- <p>There are two entry points for creating a `Traverser`: `forTree(SuccessorsFunction)` and `forGraph(SuccessorsFunction)`. You should choose one
+There are two entry points for creating a Traverser: #forTree(SuccessorsFunction) and #forGraph(SuccessorsFunction). You should choose one
  based on your answers to the following questions:
 
- <ol>
-   <li>Is there only one path to any node that's reachable from any start node? (If so, the graph
+ 
+
+   - Is there only one path to any node that's reachable from any start node? (If so, the graph
        to be traversed is a tree or forest even if it is a subgraph of a graph which is neither.)
-   <li>Are the node objects' implementations of `equals()`/`hashCode()` <a href="https://github.com/google/guava/wiki/GraphsExplained#non-recursiveness">recursive</a>?
- </ol>
+   - Are the node objects' implementations of equals()/hashCode() [recursive](https://github.com/google/guava/wiki/GraphsExplained#non-recursiveness)?
+ 
 
- <p>If your answers are:
 
- <ul>
-   <li>(1) "no" and (2) "no", use `forGraph(SuccessorsFunction)`.
-   <li>(1) "yes" and (2) "yes", use `forTree(SuccessorsFunction)`.
-   <li>(1) "yes" and (2) "no", you can use either, but `forTree()` will be more efficient.
-   <li>(1) "no" and (2) "yes", <b><i>neither will work</i></b>, but if you transform your node
-       objects into a non-recursive form, you can use `forGraph()`.
- </ul>
-**Author:** Jens Nyman
-@param <N> Node parameter type
-**Since:** 23.1
+ 
+If your answers are:
+
+ 
+
+   - (1) "no" and (2) "no", use #forGraph(SuccessorsFunction).
+   - (1) "yes" and (2) "yes", use #forTree(SuccessorsFunction).
+   - (1) "yes" and (2) "no", you can use either, but forTree() will be more efficient.
+   - (1) "no" and (2) "yes", ***neither will work***, but if you transform your node
+       objects into a non-recursive form, you can use forGraph().
 
 ## Fields
 
@@ -43,233 +40,323 @@ An object that can traverse the nodes that are reachable from a specified (set o
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md) successorFunction)`
+### `<init>(com.google.common.graph.SuccessorsFunction<N> successorFunction)`
+
+**Parameters:**
+- `successorFunction` ([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md))
 
 ## Methods
 
-### `forGraph([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md) graph)`
+### `forGraph(com.google.common.graph.SuccessorsFunction<N> graph)`
 
 **Returns:** [`com.google.common.graph.Traverser<N>`](./Traverser.md)
 
-Creates a new traverser for the given general `graph`.
-
- <p>Traversers created using this method are guaranteed to visit each node reachable from the
+Traversers created using this method are guaranteed to visit each node reachable from the
  start node(s) at most once.
 
- <p>If you know that no node in `graph` is reachable by more than one path from the start
- node(s), consider using `forTree(SuccessorsFunction)` instead.
+ 
+If you know that no node in graph is reachable by more than one path from the start
+ node(s), consider using #forTree(SuccessorsFunction) instead.
 
- <p><b>Performance notes</b>
+ 
+**Performance notes**
 
- <ul>
-   <li>Traversals require <i>O(n)</i> time (where <i>n</i> is the number of nodes reachable from
-       the start node), assuming that the node objects have <i>O(1)</i> `equals()` and
-       `hashCode()` implementations. (See the <a href="https://github.com/google/guava/wiki/GraphsExplained#elements-must-be-useable-as-map-keys">
-       notes on element objects</a> for more information.)
-   <li>While traversing, the traverser will use <i>O(n)</i> space (where <i>n</i> is the number
-       of nodes that have thus far been visited), plus <i>O(H)</i> space (where <i>H</i> is the
+ 
+
+   - Traversals require *O(n)* time (where *n* is the number of nodes reachable from
+       the start node), assuming that the node objects have *O(1)* equals() and
+       hashCode() implementations. (See the [
+       notes on element objects](https://github.com/google/guava/wiki/GraphsExplained#elements-must-be-useable-as-map-keys) for more information.)
+   - While traversing, the traverser will use *O(n)* space (where *n* is the number
+       of nodes that have thus far been visited), plus *O(H)* space (where *H* is the
        number of nodes that have been seen but not yet visited, that is, the "horizon").
- </ul>
-@param graph `SuccessorsFunction` representing a general graph that may have cycles.
 
-### `forTree([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md) tree)`
+**Parameters:**
+- `graph` ([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md)): SuccessorsFunction representing a general graph that may have cycles.
+
+### `forTree(com.google.common.graph.SuccessorsFunction<N> tree)`
 
 **Returns:** [`com.google.common.graph.Traverser<N>`](./Traverser.md)
 
-Creates a new traverser for a directed acyclic graph that has at most one path from the start
- node(s) to any node reachable from the start node(s), and has no paths from any start node to
- any other start node, such as a tree or forest.
-
- <p>`forTree()` is especially useful (versus `forGraph()`) in cases where the data
- structure being traversed is, in addition to being a tree/forest, also defined <a href="https://github.com/google/guava/wiki/GraphsExplained#non-recursiveness">recursively</a>.
- This is because the `forTree()`-based implementations don't keep track of visited nodes,
+forTree() is especially useful (versus forGraph()) in cases where the data
+ structure being traversed is, in addition to being a tree/forest, also defined [recursively](https://github.com/google/guava/wiki/GraphsExplained#non-recursiveness).
+ This is because the forTree()-based implementations don't keep track of visited nodes,
  and therefore don't need to call `equals()` or `hashCode()` on the node objects; this saves
- both time and space versus traversing the same graph using `forGraph()`.
+ both time and space versus traversing the same graph using forGraph().
 
- <p>Providing a graph to be traversed for which there is more than one path from the start
+ 
+Providing a graph to be traversed for which there is more than one path from the start
  node(s) to any node may lead to:
 
- <ul>
-   <li>Traversal not terminating (if the graph has cycles)
-   <li>Nodes being visited multiple times (if multiple paths exist from any start node to any
+ 
+
+   - Traversal not terminating (if the graph has cycles)
+   - Nodes being visited multiple times (if multiple paths exist from any start node to any
        node reachable from any start node)
- </ul>
+ 
 
- <p><b>Performance notes</b>
 
- <ul>
-   <li>Traversals require <i>O(n)</i> time (where <i>n</i> is the number of nodes reachable from
+ 
+**Performance notes**
+
+ 
+
+   - Traversals require *O(n)* time (where *n* is the number of nodes reachable from
        the start node).
-   <li>While traversing, the traverser will use <i>O(H)</i> space (where <i>H</i> is the number
+   - While traversing, the traverser will use *O(H)* space (where *H* is the number
        of nodes that have been seen but not yet visited, that is, the "horizon").
- </ul>
+ 
 
- <p><b>Examples</b> (all edges are directed facing downwards)
 
- <p>The graph below would be valid input with start nodes of `a, f, c`. However, if `b` were <i>also</i> a start node, then there would be multiple paths to reach `e` and
- `h`.
+ 
+**Examples** (all edges are directed facing downwards)
 
- <pre>`a     b      c
+ 
+The graph below would be valid input with start nodes of a, f, c. However, if 
+ b were *also* a start node, then there would be multiple paths to reach e and
+ h.
+
+ 
+
+```
+
+    a     b      c
    / \   / \     |
   /   \ /   \    |
  d     e     f   g
        |
        |
        h
- `</pre>
+ 
+```
 
- <p>.
 
- <p>The graph below would be a valid input with start nodes of `a, f`. However, if `b` were a start node, there would be multiple paths to `f`.
+ 
+.
 
- <pre>`a     b
+ 
+The graph below would be a valid input with start nodes of a, f. However, if 
+ b were a start node, there would be multiple paths to f.
+
+ 
+
+```
+
+    a     b
    / \   / \
   /   \ /   \
  c     d     e
         \   /
          \ /
           f
- `</pre>
+ 
+```
 
- <p><b>Note on binary trees</b>
 
- <p>This method can be used to traverse over a binary tree. Given methods `leftChild(node)` and `rightChild(node)`, this method can be called as
+ 
+**Note on binary trees**
 
- <pre>`Traverser.forTree(node -> ImmutableList.of(leftChild(node), rightChild(node)));
- `</pre>
-@param tree `SuccessorsFunction` representing a directed acyclic graph that has at most
+ 
+This method can be used to traverse over a binary tree. Given methods 
+ leftChild(node) and rightChild(node), this method can be called as
+
+ 
+
+```
+
+ Traverser.forTree(node -> ImmutableList.of(leftChild(node), rightChild(node)));
+ 
+```
+
+**Parameters:**
+- `tree` ([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md)): SuccessorsFunction representing a directed acyclic graph that has at most
      one path between any two nodes
 
-### `breadthFirst(`N` startNode)`
+### `breadthFirst(N startNode)`
 
 **Returns:** `java.lang.Iterable<N>`
 
-Returns an unmodifiable `Iterable` over the nodes reachable from `startNode`, in
- the order of a breadth-first traversal. That is, all the nodes of depth 0 are returned, then
+That is, all the nodes of depth 0 are returned, then
  depth 1, then 2, and so on.
 
- <p><b>Example:</b> The following graph with `startNode` `a` would return nodes in
- the order `abcdef` (assuming successors are returned in alphabetical order).
+ 
+**Example:** The following graph with startNode a would return nodes in
+ the order abcdef (assuming successors are returned in alphabetical order).
 
- <pre>`b ---- a ---- d
+ 
+
+```
+
+ b ---- a ---- d
  |      |
  |      |
  e ---- c ---- f
- `</pre>
+ 
+```
 
- <p>The behavior of this method is undefined if the nodes, or the topology of the graph, change
+
+ 
+The behavior of this method is undefined if the nodes, or the topology of the graph, change
  while iteration is in progress.
 
- <p>The returned `Iterable` can be iterated over multiple times. Every iterator will
+ 
+The returned Iterable can be iterated over multiple times. Every iterator will
  compute its next element on the fly. It is thus possible to limit the traversal to a certain
  number of nodes as follows:
 
- <pre>`Iterables.limit(Traverser.forGraph(graph).breadthFirst(node), maxNumberOfNodes);
- `</pre>
+ 
 
- <p>See <a href="https://en.wikipedia.org/wiki/Breadth-first_search">Wikipedia</a> for more
+```
+
+ Iterables.limit(Traverser.forGraph(graph).breadthFirst(node), maxNumberOfNodes);
+ 
+```
+
+
+ 
+See [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search) for more
  info.
-@throws IllegalArgumentException if `startNode` is not an element of the graph
 
-### `breadthFirst(`java.lang.Iterable<? extends N>` startNodes)`
+**Parameters:**
+- `startNode` (`N`)
 
-**Returns:** `java.lang.Iterable<N>`
-
-Returns an unmodifiable `Iterable` over the nodes reachable from any of the `startNodes`, in the order of a breadth-first traversal. This is equivalent to a breadth-first
- traversal of a graph with an additional root node whose successors are the listed `startNodes`.
-@throws IllegalArgumentException if any of `startNodes` is not an element of the graph
-**See:** #breadthFirst(Object)
-**Since:** 24.1
-
-### `depthFirstPreOrder(`N` startNode)`
+### `breadthFirst(java.lang.Iterable<? extends N> startNodes)`
 
 **Returns:** `java.lang.Iterable<N>`
 
-Returns an unmodifiable `Iterable` over the nodes reachable from `startNode`, in
- the order of a depth-first pre-order traversal. "Pre-order" implies that nodes appear in the
- `Iterable` in the order in which they are first visited.
+This is equivalent to a breadth-first
+ traversal of a graph with an additional root node whose successors are the listed 
+ startNodes.
 
- <p><b>Example:</b> The following graph with `startNode` `a` would return nodes in
- the order `abecfd` (assuming successors are returned in alphabetical order).
+**Parameters:**
+- `startNodes` (`java.lang.Iterable<? extends N>`)
 
- <pre>`b ---- a ---- d
+### `depthFirstPreOrder(N startNode)`
+
+**Returns:** `java.lang.Iterable<N>`
+
+"Pre-order" implies that nodes appear in the
+ Iterable in the order in which they are first visited.
+
+ 
+**Example:** The following graph with startNode a would return nodes in
+ the order abecfd (assuming successors are returned in alphabetical order).
+
+ 
+
+```
+
+ b ---- a ---- d
  |      |
  |      |
  e ---- c ---- f
- `</pre>
+ 
+```
 
- <p>The behavior of this method is undefined if the nodes, or the topology of the graph, change
+
+ 
+The behavior of this method is undefined if the nodes, or the topology of the graph, change
  while iteration is in progress.
 
- <p>The returned `Iterable` can be iterated over multiple times. Every iterator will
+ 
+The returned Iterable can be iterated over multiple times. Every iterator will
  compute its next element on the fly. It is thus possible to limit the traversal to a certain
  number of nodes as follows:
 
- <pre>`Iterables.limit(
+ 
+
+```
+
+ Iterables.limit(
      Traverser.forGraph(graph).depthFirstPreOrder(node), maxNumberOfNodes);
- `</pre>
+ 
+```
 
- <p>See <a href="https://en.wikipedia.org/wiki/Depth-first_search">Wikipedia</a> for more info.
-@throws IllegalArgumentException if `startNode` is not an element of the graph
 
-### `depthFirstPreOrder(`java.lang.Iterable<? extends N>` startNodes)`
+ 
+See [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search) for more info.
+
+**Parameters:**
+- `startNode` (`N`)
+
+### `depthFirstPreOrder(java.lang.Iterable<? extends N> startNodes)`
 
 **Returns:** `java.lang.Iterable<N>`
 
-Returns an unmodifiable `Iterable` over the nodes reachable from any of the `startNodes`, in the order of a depth-first pre-order traversal. This is equivalent to a
+This is equivalent to a
  depth-first pre-order traversal of a graph with an additional root node whose successors are
- the listed `startNodes`.
-@throws IllegalArgumentException if any of `startNodes` is not an element of the graph
-**See:** #depthFirstPreOrder(Object)
-**Since:** 24.1
+ the listed startNodes.
 
-### `depthFirstPostOrder(`N` startNode)`
+**Parameters:**
+- `startNodes` (`java.lang.Iterable<? extends N>`)
+
+### `depthFirstPostOrder(N startNode)`
 
 **Returns:** `java.lang.Iterable<N>`
 
-Returns an unmodifiable `Iterable` over the nodes reachable from `startNode`, in
- the order of a depth-first post-order traversal. "Post-order" implies that nodes appear in the
- `Iterable` in the order in which they are visited for the last time.
+"Post-order" implies that nodes appear in the
+ Iterable in the order in which they are visited for the last time.
 
- <p><b>Example:</b> The following graph with `startNode` `a` would return nodes in
- the order `fcebda` (assuming successors are returned in alphabetical order).
+ 
+**Example:** The following graph with startNode a would return nodes in
+ the order fcebda (assuming successors are returned in alphabetical order).
 
- <pre>`b ---- a ---- d
+ 
+
+```
+
+ b ---- a ---- d
  |      |
  |      |
  e ---- c ---- f
- `</pre>
+ 
+```
 
- <p>The behavior of this method is undefined if the nodes, or the topology of the graph, change
+
+ 
+The behavior of this method is undefined if the nodes, or the topology of the graph, change
  while iteration is in progress.
 
- <p>The returned `Iterable` can be iterated over multiple times. Every iterator will
+ 
+The returned Iterable can be iterated over multiple times. Every iterator will
  compute its next element on the fly. It is thus possible to limit the traversal to a certain
  number of nodes as follows:
 
- <pre>`Iterables.limit(
+ 
+
+```
+
+ Iterables.limit(
      Traverser.forGraph(graph).depthFirstPostOrder(node), maxNumberOfNodes);
- `</pre>
+ 
+```
 
- <p>See <a href="https://en.wikipedia.org/wiki/Depth-first_search">Wikipedia</a> for more info.
-@throws IllegalArgumentException if `startNode` is not an element of the graph
 
-### `depthFirstPostOrder(`java.lang.Iterable<? extends N>` startNodes)`
+ 
+See [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search) for more info.
+
+**Parameters:**
+- `startNode` (`N`)
+
+### `depthFirstPostOrder(java.lang.Iterable<? extends N> startNodes)`
 
 **Returns:** `java.lang.Iterable<N>`
 
-Returns an unmodifiable `Iterable` over the nodes reachable from any of the `startNodes`, in the order of a depth-first post-order traversal. This is equivalent to a
+This is equivalent to a
  depth-first post-order traversal of a graph with an additional root node whose successors are
- the listed `startNodes`.
-@throws IllegalArgumentException if any of `startNodes` is not an element of the graph
-**See:** #depthFirstPostOrder(Object)
-**Since:** 24.1
+ the listed startNodes.
+
+**Parameters:**
+- `startNodes` (`java.lang.Iterable<? extends N>`)
 
 ### `newTraversal()`
 
-**Returns:** [`com.google.common.graph.Traverser.Traversal<N>`](Traverser/Traversal.md)
+**Returns:** `com.google.common.graph.Traverser.Traversal<N>`
 
-### `validate(`java.lang.Iterable<? extends N>` startNodes)`
+### `validate(java.lang.Iterable<? extends N> startNodes)`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<N>`](../collect/ImmutableSet.md)
+
+**Parameters:**
+- `startNodes` (`java.lang.Iterable<? extends N>`)
 

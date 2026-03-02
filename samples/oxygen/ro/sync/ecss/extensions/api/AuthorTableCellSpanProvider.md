@@ -13,7 +13,7 @@ It should be implemented when the author extension being developed offers
 
 ## Methods
 
-### `getColSpan([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) cellElement)`
+### `getColSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
 **Returns:** `java.lang.Integer`
 
@@ -21,14 +21,20 @@ For example, for the DocBook CALS tables the number of columns the cell spans ac
  is computed by looking at the `spanspec` attribute. In case the `spanspec` 
  attribute is missing then the column span is defined by the `namest` and `nameend` attribute.
 
-### `getRowSpan([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) cellElement)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The node that represents a table cell in CSS.
+
+### `getRowSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
 **Returns:** `java.lang.Integer`
 
 For example, for the DocBook CALS tables this value is computed
  by looking at the `morerows` attribute.
 
-### `init([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) tableElement)`
+**Parameters:**
+- `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement that represents a table cell in CSS.
+
+### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `void`
 
@@ -40,10 +46,17 @@ Its intended
  A new instance of the table cell span provider is used for every table in a document so 
  cached data cannot be used between different tables..
 
-### `hasColumnSpecifications([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md) tableElement)`
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement representing a table (it has the CSS display property 
+ set on 'table').
+
+### `hasColumnSpecifications(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Returns:** `boolean`
 
 For example the 
  CALS table model requires `colspec` elements to be present.
+
+**Parameters:**
+- `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement that is rendered as a table.
 

@@ -18,7 +18,11 @@
 
 ## Constructors
 
-### `<init>(`ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType` eventType, `boolean` showContentCompletionWindowOnEnter)`
+### `<init>(ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType eventType, boolean showContentCompletionWindowOnEnter)`
+
+**Parameters:**
+- `eventType` (`ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType`): the event type.
+- `showContentCompletionWindowOnEnter` (`boolean`): `true` if the content completion window should be shown when ENTER is pressed.
 
 ## Methods
 

@@ -18,15 +18,25 @@
 
 **Returns:** `java.lang.String`
 
-### `createImageMapSupport([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context)`
+### `createImageMapSupport(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappImageMapSupport`](../../api/webapp/imagemap/WebappImageMapSupport.md)
 
-### `getMapId([`ro.sync.ecss.extensions.api.node.AttrValue`](../../api/node/AttrValue.md) useMapAttr)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+### `getMapId(ro.sync.ecss.extensions.api.node.AttrValue useMapAttr)`
 
 **Returns:** `java.lang.String`
 
-### `getMapElement([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) context, `java.lang.String` mapId)`
+**Parameters:**
+- `useMapAttr` ([`ro.sync.ecss.extensions.api.node.AttrValue`](../../api/node/AttrValue.md)): The attribute that points to the map element.
+
+### `getMapElement(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.lang.String mapId)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md)): The form control context.
+- `mapId` (`java.lang.String`): The ID of the map linked to the current image.
 

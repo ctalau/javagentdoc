@@ -17,7 +17,11 @@ Path entries should be percent-encoded. Folder paths
 
 ## Constructors
 
-### `<init>(`java.lang.String` absolutePath)`
+### `<init>(java.lang.String absolutePath)`
+
+**Parameters:**
+- `absolutePath` (`java.lang.String`): The absolute URL path. Path entries should be percent-encoded. Folder paths 
+ should end with a '/' character.
 
 ## Methods
 

@@ -32,7 +32,14 @@
 
 ## Constructors
 
-### `<init>(`org.xml.sax.XMLReader` xmlReader, `java.lang.String[]` topicPath, `java.lang.String[]` endTopicPath, `java.lang.String` sourceClass, `boolean` isKeyReference)`
+### `<init>(org.xml.sax.XMLReader xmlReader, java.lang.String[] topicPath, java.lang.String[] endTopicPath, java.lang.String sourceClass, boolean isKeyReference)`
+
+**Parameters:**
+- `xmlReader` (`org.xml.sax.XMLReader`): The wrapped XML Reader.
+- `topicPath` (`java.lang.String[]`): The topic IDs path. If null, the first encountered topic will be used.
+- `endTopicPath` (`java.lang.String[]`): If a "conrefend" is specified, this is the end range path
+- `sourceClass` (`java.lang.String`): The class attribute value of the element which makes the conref...
+- `isKeyReference` (`boolean`): `true` if the reference is a key reference.
 
 ## Methods
 
@@ -52,47 +59,82 @@
 
 **Returns:** `org.xml.sax.ErrorHandler`
 
-### `getFeature(`java.lang.String` name)`
+### `getFeature(java.lang.String name)`
 
 **Returns:** `boolean`
 
-### `getProperty(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`)
+
+### `getProperty(java.lang.String name)`
 
 **Returns:** `java.lang.Object`
 
-### `parse(`org.xml.sax.InputSource` input)`
+**Parameters:**
+- `name` (`java.lang.String`)
+
+### `parse(org.xml.sax.InputSource input)`
 
 **Returns:** `void`
 
-### `processParserException(`java.lang.Exception` ex)`
+**Parameters:**
+- `input` (`org.xml.sax.InputSource`)
+
+### `processParserException(java.lang.Exception ex)`
 
 **Returns:** `void`
 
-### `parse(`java.lang.String` systemId)`
+**Parameters:**
+- `ex` (`java.lang.Exception`): The exception.
+
+### `parse(java.lang.String systemId)`
 
 **Returns:** `void`
 
-### `setContentHandler(`org.xml.sax.ContentHandler` handler)`
+**Parameters:**
+- `systemId` (`java.lang.String`)
+
+### `setContentHandler(org.xml.sax.ContentHandler handler)`
 
 **Returns:** `void`
 
-### `setDTDHandler(`org.xml.sax.DTDHandler` handler)`
+**Parameters:**
+- `handler` (`org.xml.sax.ContentHandler`)
+
+### `setDTDHandler(org.xml.sax.DTDHandler handler)`
 
 **Returns:** `void`
 
-### `setEntityResolver(`org.xml.sax.EntityResolver` resolver)`
+**Parameters:**
+- `handler` (`org.xml.sax.DTDHandler`)
+
+### `setEntityResolver(org.xml.sax.EntityResolver resolver)`
 
 **Returns:** `void`
 
-### `setErrorHandler(`org.xml.sax.ErrorHandler` handler)`
+**Parameters:**
+- `resolver` (`org.xml.sax.EntityResolver`)
+
+### `setErrorHandler(org.xml.sax.ErrorHandler handler)`
 
 **Returns:** `void`
 
-### `setFeature(`java.lang.String` name, `boolean` value)`
+**Parameters:**
+- `handler` (`org.xml.sax.ErrorHandler`)
+
+### `setFeature(java.lang.String name, boolean value)`
 
 **Returns:** `void`
 
-### `setProperty(`java.lang.String` name, `java.lang.Object` value)`
+**Parameters:**
+- `name` (`java.lang.String`)
+- `value` (`boolean`)
+
+### `setProperty(java.lang.String name, java.lang.Object value)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `name` (`java.lang.String`)
+- `value` (`java.lang.Object`)
 

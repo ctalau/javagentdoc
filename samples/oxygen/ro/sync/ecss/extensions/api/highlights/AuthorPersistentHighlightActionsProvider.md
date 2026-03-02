@@ -12,7 +12,7 @@ You can set such a provider by using the
 
 ## Methods
 
-### `getActions([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md) highlight)`
+### `getActions(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** `java.util.List<javax.swing.AbstractAction>`
 
@@ -32,10 +32,18 @@ This method is called only for the highlights that have a a callout associated.
  AuthorCalloutsController#setCalloutsRenderingInformationProvider(
  ro.sync.ecss.extensions.api.callouts.CalloutsRenderingInformationProvider)
 
-### `getDefaultAction([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md) highlight)`
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The highlight for which the actions are requested. Never 
+  `null`.
+
+### `getDefaultAction(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** `javax.swing.AbstractAction`
 
 Is not necessary that this action to 
  be included in the ones returned by #getActions(AuthorPersistentHighlight).
+
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The highlight for which the default action is requested. 
+  Never `null`.
 

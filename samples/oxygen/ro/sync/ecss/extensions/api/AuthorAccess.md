@@ -68,13 +68,16 @@ This is also responsible for adding and removing listeners that are notified
 It works as a map in which any message is 
  accessed by a key defined in the ExtensionTags interface.
 
-### `getElementByAnchor(`java.lang.String` anchor)`
+### `getElementByAnchor(java.lang.String anchor)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
 The syntax of the anchor is interpreted by the ElementLocatorProvider provided by the framework.
 
-### `getCaretOffsetByAnchor(`java.lang.String` anchor)`
+**Parameters:**
+- `anchor` (`java.lang.String`): The anchor.
+
+### `getCaretOffsetByAnchor(java.lang.String anchor)`
 
 **Returns:** `int`
 
@@ -83,4 +86,7 @@ The syntax of the anchor is interpreted by the ElementLocatorProvider provided b
  "short;locationInfo\0pathItems\0isWhitespaceBefore\0tokenPosition\0chCount\0anchorsOnChangeTrackingPI"
  
  example: "short;chrysanthemum/section_anp_qrw_p1b /section[1]/p[3]/b[1] false 0 16 false"
+
+**Parameters:**
+- `anchor` (`java.lang.String`): The anchor.
 

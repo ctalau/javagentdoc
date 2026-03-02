@@ -8,28 +8,34 @@
 
 ## Description
 
-An extension of `DataInput` for reading from in-memory byte arrays; its methods offer
- identical functionality but do not throw `IOException`.
-
- <p><b>Warning:</b> The caller is responsible for not attempting to read past the end of the
- array. If any method encounters the end of the array prematurely, it throws `IllegalStateException` to signify <i>programmer error</i>. This behavior is a technical violation
+**Warning:** The caller is responsible for not attempting to read past the end of the
+ array. If any method encounters the end of the array prematurely, it throws IllegalStateException to signify *programmer error*. This behavior is a technical violation
  of the supertype's contract, which specifies a checked exception.
-**Author:** Kevin Bourrillion
-**Since:** 1.0
 
 ## Methods
 
-### `readFully(`byte[]` b)`
+### `readFully(byte[] b)`
 
 **Returns:** `void`
 
-### `readFully(`byte[]` b, `int` off, `int` len)`
+**Parameters:**
+- `b` (`byte[]`)
+
+### `readFully(byte[] b, int off, int len)`
 
 **Returns:** `void`
 
-### `skipBytes(`int` n)`
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `skipBytes(int n)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `n` (`int`)
 
 ### `readBoolean()`
 

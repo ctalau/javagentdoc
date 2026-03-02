@@ -8,62 +8,79 @@
 
 ## Description
 
-A `ScheduledExecutorService` that returns `ListenableFuture` instances from its
- `ExecutorService` methods. To create an instance from an existing `ScheduledExecutorService`, call `MoreExecutors.listeningDecorator(ScheduledExecutorService)`.
-**Author:** Chris Povirk
-**Since:** 10.0
+To create an instance from an existing ScheduledExecutorService, call MoreExecutors#listeningDecorator(ScheduledExecutorService).
 
 ## Methods
 
-### `schedule(`java.lang.Runnable` command, `long` delay, `java.util.concurrent.TimeUnit` unit)`
+### `schedule(java.lang.Runnable command, long delay, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
 
-**Since:** 15.0 (previously returned ScheduledFuture)
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `delay` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
-### `schedule(`java.lang.Runnable` command, `java.time.Duration` delay)`
+### `schedule(java.lang.Runnable command, java.time.Duration delay)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
 
-Duration-based overload of `schedule(Runnable, long, TimeUnit)`.
-**Since:** 29.0
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `delay` (`java.time.Duration`)
 
-### `schedule(`java.util.concurrent.Callable<V>` callable, `long` delay, `java.util.concurrent.TimeUnit` unit)`
+### `schedule(java.util.concurrent.Callable<V> callable, long delay, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<V>`](./ListenableScheduledFuture.md)
 
-**Since:** 15.0 (previously returned ScheduledFuture)
+**Parameters:**
+- `callable` (`java.util.concurrent.Callable<V>`)
+- `delay` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
-### `schedule(`java.util.concurrent.Callable<V>` callable, `java.time.Duration` delay)`
+### `schedule(java.util.concurrent.Callable<V> callable, java.time.Duration delay)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<V>`](./ListenableScheduledFuture.md)
 
-Duration-based overload of `schedule(Callable, long, TimeUnit)`.
-**Since:** 29.0
+**Parameters:**
+- `callable` (`java.util.concurrent.Callable<V>`)
+- `delay` (`java.time.Duration`)
 
-### `scheduleAtFixedRate(`java.lang.Runnable` command, `long` initialDelay, `long` period, `java.util.concurrent.TimeUnit` unit)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
-
-**Since:** 15.0 (previously returned ScheduledFuture)
-
-### `scheduleAtFixedRate(`java.lang.Runnable` command, `java.time.Duration` initialDelay, `java.time.Duration` period)`
+### `scheduleAtFixedRate(java.lang.Runnable command, long initialDelay, long period, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
 
-Duration-based overload of `scheduleAtFixedRate(Runnable, long, long, TimeUnit)`.
-**Since:** 29.0
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `initialDelay` (`long`)
+- `period` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
-### `scheduleWithFixedDelay(`java.lang.Runnable` command, `long` initialDelay, `long` delay, `java.util.concurrent.TimeUnit` unit)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
-
-**Since:** 15.0 (previously returned ScheduledFuture)
-
-### `scheduleWithFixedDelay(`java.lang.Runnable` command, `java.time.Duration` initialDelay, `java.time.Duration` delay)`
+### `scheduleAtFixedRate(java.lang.Runnable command, java.time.Duration initialDelay, java.time.Duration period)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
 
-Duration-based overload of `scheduleWithFixedDelay(Runnable, long, long, TimeUnit)`.
-**Since:** 29.0
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `initialDelay` (`java.time.Duration`)
+- `period` (`java.time.Duration`)
+
+### `scheduleWithFixedDelay(java.lang.Runnable command, long initialDelay, long delay, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `initialDelay` (`long`)
+- `delay` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `scheduleWithFixedDelay(java.lang.Runnable command, java.time.Duration initialDelay, java.time.Duration delay)`
+
+**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+
+**Parameters:**
+- `command` (`java.lang.Runnable`)
+- `initialDelay` (`java.time.Duration`)
+- `delay` (`java.time.Duration`)
 

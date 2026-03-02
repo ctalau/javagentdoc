@@ -6,10 +6,6 @@
 
 ## Description
 
-Options for use with recursive delete methods (`MoreFiles.deleteRecursively` and `MoreFiles.deleteDirectoryContents`).
-**Since:** 21.0
-**Author:** Colin Decker
-
 ## Constructors
 
 ### `<init>()`
@@ -20,7 +16,10 @@ Options for use with recursive delete methods (`MoreFiles.deleteRecursively` and
 
 **Returns:** [`com.google.common.io.RecursiveDeleteOption[]`](./RecursiveDeleteOption.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.common.io.RecursiveDeleteOption`](./RecursiveDeleteOption.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

@@ -18,7 +18,10 @@
 
 **Returns:** [`ro.sync.diff.api.AuthorDifferencePerformer`](./AuthorDifferencePerformer.md)
 
-### `registerLicenseKey(`java.io.Reader` arg0)`
+### `registerLicenseKey(java.io.Reader arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.io.Reader`)
 

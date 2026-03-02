@@ -187,17 +187,23 @@ This condition *SHOULD* be considered permanent.
 
 ## Methods
 
-### `addCookie([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Cookie`](./Cookie.md) cookie)`
+### `addCookie(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Cookie cookie)`
 
 **Returns:** `void`
 
 This method can be called multiple times to set more than one cookie.
 
-### `containsHeader(`java.lang.String` name)`
+**Parameters:**
+- `cookie` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Cookie`](./Cookie.md)): the Cookie to return to the client
+
+### `containsHeader(java.lang.String name)`
 
 **Returns:** `boolean`
 
-### `encodeURL(`java.lang.String` url)`
+**Parameters:**
+- `name` (`java.lang.String`): the header name
+
+### `encodeURL(java.lang.String url)`
 
 **Returns:** `java.lang.String`
 
@@ -214,7 +220,10 @@ The
 
  If the URL is relative, it is always relative to the current HttpServletRequest.
 
-### `encodeRedirectURL(`java.lang.String` url)`
+**Parameters:**
+- `url` (`java.lang.String`): the url to be encoded.
+
+### `encodeRedirectURL(java.lang.String url)`
 
 **Returns:** `java.lang.String`
 
@@ -232,7 +241,10 @@ The implementation of this method includes the logic to determine whether the se
 
  If the URL is relative, it is always relative to the current HttpServletRequest.
 
-### `sendError(`int` sc, `java.lang.String` msg)`
+**Parameters:**
+- `url` (`java.lang.String`): the url to be encoded.
+
+### `sendError(int sc, java.lang.String msg)`
 
 **Returns:** `void`
 
@@ -255,7 +267,11 @@ The server defaults to
  If the response has already been committed, this method throws an IllegalStateException. After using this method, the
  response should be considered to be committed and should not be written to.
 
-### `sendError(`int` sc)`
+**Parameters:**
+- `sc` (`int`): the error status code
+- `msg` (`java.lang.String`): the descriptive message
+
+### `sendError(int sc)`
 
 **Returns:** `void`
 
@@ -270,7 +286,10 @@ The server will preserve cookies and may clear or update any headers needed to s
  If the response has already been committed, this method throws an IllegalStateException. After using this method, the
  response should be considered to be committed and should not be written to.
 
-### `sendRedirect(`java.lang.String` location)`
+**Parameters:**
+- `sc` (`int`): the error status code
+
+### `sendRedirect(java.lang.String location)`
 
 **Returns:** `void`
 
@@ -287,7 +306,10 @@ The buffer will be replaced with the data set by this method. Calling this metho
  If the response has already been committed, this method throws an IllegalStateException. After using this method, the
  response should be considered to be committed and should not be written to.
 
-### `setDateHeader(`java.lang.String` name, `long` date)`
+**Parameters:**
+- `location` (`java.lang.String`): the redirect location URL
+
+### `setDateHeader(java.lang.String name, long date)`
 
 **Returns:** `void`
 
@@ -295,14 +317,22 @@ The date is specified in terms of milliseconds since the
  epoch. If the header had already been set, the new value overwrites the previous one. The `containsHeader`
  method can be used to test for the presence of a header before setting its value.
 
-### `addDateHeader(`java.lang.String` name, `long` date)`
+**Parameters:**
+- `name` (`java.lang.String`): the name of the header to set
+- `date` (`long`): the assigned date value
+
+### `addDateHeader(java.lang.String name, long date)`
 
 **Returns:** `void`
 
 The date is specified in terms of milliseconds since the
  epoch. This method allows response headers to have multiple values.
 
-### `setHeader(`java.lang.String` name, `java.lang.String` value)`
+**Parameters:**
+- `name` (`java.lang.String`): the name of the header to set
+- `date` (`long`): the additional date value
+
+### `setHeader(java.lang.String name, java.lang.String value)`
 
 **Returns:** `void`
 
@@ -310,13 +340,23 @@ If the header had already been set, the new value overwrites
  the previous one. The `containsHeader` method can be used to test for the presence of a header before
  setting its value.
 
-### `addHeader(`java.lang.String` name, `java.lang.String` value)`
+**Parameters:**
+- `name` (`java.lang.String`): the name of the header
+- `value` (`java.lang.String`): the header value If it contains octet string, it should be encoded according to RFC 2047
+ (http://www.ietf.org/rfc/rfc2047.txt)
+
+### `addHeader(java.lang.String name, java.lang.String value)`
 
 **Returns:** `void`
 
 This method allows response headers to have multiple values.
 
-### `setIntHeader(`java.lang.String` name, `int` value)`
+**Parameters:**
+- `name` (`java.lang.String`): the name of the header
+- `value` (`java.lang.String`): the additional header value If it contains octet string, it should be encoded according to RFC 2047
+ (http://www.ietf.org/rfc/rfc2047.txt)
+
+### `setIntHeader(java.lang.String name, int value)`
 
 **Returns:** `void`
 
@@ -324,14 +364,22 @@ If the header had already been set, the new value
  overwrites the previous one. The `containsHeader` method can be used to test for the presence of a header
  before setting its value.
 
-### `addIntHeader(`java.lang.String` name, `int` value)`
+**Parameters:**
+- `name` (`java.lang.String`): the name of the header
+- `value` (`int`): the assigned integer value
+
+### `addIntHeader(java.lang.String name, int value)`
 
 **Returns:** `void`
 
 This method allows response headers to have multiple
  values.
 
-### `setStatus(`int` sc)`
+**Parameters:**
+- `name` (`java.lang.String`): the name of the header
+- `value` (`int`): the assigned integer value
+
+### `setStatus(int sc)`
 
 **Returns:** `void`
 
@@ -353,11 +401,14 @@ This method is used to set the return status code when there is no error (for ex
  Valid status codes are those in the 2XX, 3XX, 4XX, and 5XX ranges. Other status codes are treated as container
  specific.
 
+**Parameters:**
+- `sc` (`int`): the status code
+
 ### `getStatus()`
 
 **Returns:** `int`
 
-### `getHeader(`java.lang.String` name)`
+### `getHeader(java.lang.String name)`
 
 **Returns:** `java.lang.String`
 
@@ -369,7 +420,10 @@ If a response header with the given name exists and contains multiple values, th
  This method considers only response headers set or added via #setHeader, #addHeader,
  #setDateHeader, #addDateHeader, #setIntHeader, or #addIntHeader, respectively.
 
-### `getHeaders(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): the name of the response header whose value to return
+
+### `getHeaders(java.lang.String name)`
 
 **Returns:** `java.util.Collection<java.lang.String>`
 
@@ -379,6 +433,9 @@ This method considers only response headers set or added via #setHeader, #addHea
  
 
  Any changes to the returned `Collection` must not affect this `HttpServletResponse`.
+
+**Parameters:**
+- `name` (`java.lang.String`): the name of the response header whose values to return
 
 ### `getHeaderNames()`
 

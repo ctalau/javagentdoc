@@ -12,18 +12,13 @@
 
 ## Description
 
-A `Graph` whose elements and structural relationships will never change. Instances of this
- class may be obtained with `copyOf(Graph)`.
+Instances of this
+ class may be obtained with #copyOf(Graph).
 
- <p>See the Guava User's Guide's <a href="https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations">discussion
- of the `Immutable*` types</a> for more information on the properties and guarantees
+ 
+See the Guava User's Guide's [discussion
+ of the Immutable* types](https://github.com/google/guava/wiki/GraphsExplained#immutable-implementations) for more information on the properties and guarantees
  provided by this class.
-**Author:** James Sexton
-**Author:** Joshua O'Madadhain
-**Author:** Omar Darwish
-**Author:** Jens Nyman
-@param <N> Node parameter type
-**Since:** 20.0
 
 ## Fields
 
@@ -33,34 +28,45 @@ A `Graph` whose elements and structural relationships will never change. Instanc
 
 ## Constructors
 
-### `<init>([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md) backingGraph)`
+### `<init>(com.google.common.graph.BaseGraph<N> backingGraph)`
+
+**Parameters:**
+- `backingGraph` ([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md))
 
 ## Methods
 
-### `copyOf([`com.google.common.graph.Graph<N>`](./Graph.md) graph)`
+### `copyOf(com.google.common.graph.Graph<N> graph)`
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
-Returns an immutable copy of `graph`.
+**Parameters:**
+- `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `copyOf([`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md) graph)`
+### `copyOf(com.google.common.graph.ImmutableGraph<N> graph)`
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
-Simply returns its argument.
-**Deprecated:**no need to use this
+**Parameters:**
+- `graph` ([`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md))
 
 ### `incidentEdgeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `getNodeConnections([`com.google.common.graph.Graph<N>`](./Graph.md) graph)`
+### `getNodeConnections(com.google.common.graph.Graph<N> graph)`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>>`](../collect/ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>>`](../collect/ImmutableMap.md)
 
-### `connectionsOf([`com.google.common.graph.Graph<N>`](./Graph.md) graph, `N` node)`
+**Parameters:**
+- `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
+
+### `connectionsOf(com.google.common.graph.Graph<N> graph, N node)`
 
 **Returns:** [`com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>`](./GraphConnections.md)
+
+**Parameters:**
+- `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
+- `node` (`N`)
 
 ### `delegate()`
 

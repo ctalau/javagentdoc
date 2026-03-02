@@ -6,13 +6,8 @@
 
 ## Description
 
-`Escaper` instances suitable for strings to be included in particular sections of URLs.
-
- <p>If the resulting URLs are inserted into an HTML or XML document, they will require additional
- escaping with `com.google.common.html.HtmlEscapers` or `com.google.common.xml.XmlEscapers`.
-**Author:** David Beaumont
-**Author:** Chris Povirk
-**Since:** 15.0
+If the resulting URLs are inserted into an HTML or XML document, they will require additional
+ escaping with com.google.common.html.HtmlEscapers or com.google.common.xml.XmlEscapers.
 
 ## Fields
 
@@ -46,81 +41,94 @@
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an `Escaper` instance that escapes strings so they can be safely included in <a href="https://goo.gl/MplK6I">URL form parameter names and values</a>. Escaping is performed
- with the UTF-8 character encoding. The caller is responsible for <a href="https://goo.gl/9EfkM1">replacing any unpaired carriage return or line feed characters
- with a CR+LF pair</a> on any non-file inputs before escaping them with this escaper.
+Escaping is performed
+ with the UTF-8 character encoding. The caller is responsible for [replacing any unpaired carriage return or line feed characters
+ with a CR+LF pair](https://goo.gl/9EfkM1) on any non-file inputs before escaping them with this escaper.
 
- <p>When escaping a String, the following rules apply:
+ 
+When escaping a String, the following rules apply:
 
- <ul>
-   <li>The alphanumeric characters "a" through "z", "A" through "Z" and "0" through "9" remain
+ 
+
+   - The alphanumeric characters "a" through "z", "A" through "Z" and "0" through "9" remain
        the same.
-   <li>The special characters ".", "-", "*", and "_" remain the same.
-   <li>The space character " " is converted into a plus sign "+".
-   <li>All other characters are converted into one or more bytes using UTF-8 encoding and each
+   - The special characters ".", "-", "*", and "_" remain the same.
+   - The space character " " is converted into a plus sign "+".
+   - All other characters are converted into one or more bytes using UTF-8 encoding and each
        byte is then represented by the 3-character string "%XY", where "XY" is the two-digit,
        uppercase, hexadecimal representation of the byte value.
- </ul>
+ 
 
- <p>This escaper is suitable for escaping parameter names and values even when <a href="https://goo.gl/utn6M">using the non-standard semicolon</a>, rather than the ampersand, as
+
+ 
+This escaper is suitable for escaping parameter names and values even when [using the non-standard semicolon](https://goo.gl/utn6M), rather than the ampersand, as
  a parameter delimiter. Nevertheless, we recommend using the ampersand unless you must
  interoperate with systems that require semicolons.
 
- <p><b>Note:</b> Unlike other escapers, URL escapers produce <a href="https://url.spec.whatwg.org/#percent-encode">uppercase</a> hexadecimal sequences.
+ 
+**Note:** Unlike other escapers, URL escapers produce [uppercase](https://url.spec.whatwg.org/#percent-encode) hexadecimal sequences.
 
 ### `urlPathSegmentEscaper()`
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an `Escaper` instance that escapes strings so they can be safely included in <a href="https://goo.gl/m2MIf0">URL path segments</a>. The returned escaper escapes all non-ASCII
- characters, even though <a href="https://goo.gl/e7E0In">many of these are accepted in modern
- URLs</a>. (<a href="https://goo.gl/jfVxXW">If the escaper were to leave these characters
- unescaped, they would be escaped by the consumer at parse time, anyway.</a>) Additionally, the
+The returned escaper escapes all non-ASCII
+ characters, even though [many of these are accepted in modern
+ URLs](https://goo.gl/e7E0In). ([If the escaper were to leave these characters
+ unescaped, they would be escaped by the consumer at parse time, anyway.](https://goo.gl/jfVxXW)) Additionally, the
  escaper escapes the slash character ("/"). While slashes are acceptable in URL paths, they are
  considered by the specification to be separators between "path segments." This implies that, if
  you wish for your path to contain slashes, you must escape each segment separately and then
  join them.
 
- <p>When escaping a String, the following rules apply:
+ 
+When escaping a String, the following rules apply:
 
- <ul>
-   <li>The alphanumeric characters "a" through "z", "A" through "Z" and "0" through "9" remain
+ 
+
+   - The alphanumeric characters "a" through "z", "A" through "Z" and "0" through "9" remain
        the same.
-   <li>The unreserved characters ".", "-", "~", and "_" remain the same.
-   <li>The general delimiters "@" and ":" remain the same.
-   <li>The subdelimiters "!", "$", "&amp;", "'", "(", ")", "*", "+", ",", ";", and "=" remain
+   - The unreserved characters ".", "-", "~", and "_" remain the same.
+   - The general delimiters "@" and ":" remain the same.
+   - The subdelimiters "!", "$", "&", "'", "(", ")", "*", "+", ",", ";", and "=" remain
        the same.
-   <li>The space character " " is converted into %20.
-   <li>All other characters are converted into one or more bytes using UTF-8 encoding and each
+   - The space character " " is converted into %20.
+   - All other characters are converted into one or more bytes using UTF-8 encoding and each
        byte is then represented by the 3-character string "%XY", where "XY" is the two-digit,
        uppercase, hexadecimal representation of the byte value.
- </ul>
+ 
 
- <p><b>Note:</b> Unlike other escapers, URL escapers produce <a href="https://url.spec.whatwg.org/#percent-encode">uppercase</a> hexadecimal sequences.
+
+ 
+**Note:** Unlike other escapers, URL escapers produce [uppercase](https://url.spec.whatwg.org/#percent-encode) hexadecimal sequences.
 
 ### `urlFragmentEscaper()`
 
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 
-Returns an `Escaper` instance that escapes strings so they can be safely included in a <a href="https://goo.gl/xXEq4p">URL fragment</a>. The returned escaper escapes all non-ASCII
- characters, even though <a href="https://goo.gl/e7E0In">many of these are accepted in modern
- URLs</a>.
+The returned escaper escapes all non-ASCII
+ characters, even though [many of these are accepted in modern
+ URLs](https://goo.gl/e7E0In).
 
- <p>When escaping a String, the following rules apply:
+ 
+When escaping a String, the following rules apply:
 
- <ul>
-   <li>The alphanumeric characters "a" through "z", "A" through "Z" and "0" through "9" remain
+ 
+
+   - The alphanumeric characters "a" through "z", "A" through "Z" and "0" through "9" remain
        the same.
-   <li>The unreserved characters ".", "-", "~", and "_" remain the same.
-   <li>The general delimiters "@" and ":" remain the same.
-   <li>The subdelimiters "!", "$", "&amp;", "'", "(", ")", "*", "+", ",", ";", and "=" remain
+   - The unreserved characters ".", "-", "~", and "_" remain the same.
+   - The general delimiters "@" and ":" remain the same.
+   - The subdelimiters "!", "$", "&", "'", "(", ")", "*", "+", ",", ";", and "=" remain
        the same.
-   <li>The space character " " is converted into %20.
-   <li>Fragments allow unescaped "/" and "?", so they remain the same.
-   <li>All other characters are converted into one or more bytes using UTF-8 encoding and each
+   - The space character " " is converted into %20.
+   - Fragments allow unescaped "/" and "?", so they remain the same.
+   - All other characters are converted into one or more bytes using UTF-8 encoding and each
        byte is then represented by the 3-character string "%XY", where "XY" is the two-digit,
        uppercase, hexadecimal representation of the byte value.
- </ul>
+ 
 
- <p><b>Note:</b> Unlike other escapers, URL escapers produce <a href="https://url.spec.whatwg.org/#percent-encode">uppercase</a> hexadecimal sequences.
+
+ 
+**Note:** Unlike other escapers, URL escapers produce [uppercase](https://url.spec.whatwg.org/#percent-encode) hexadecimal sequences.
 

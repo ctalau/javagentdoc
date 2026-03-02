@@ -6,11 +6,9 @@
 
 ## Description
 
-Utilities for treating interruptible operations as uninterruptible. In all cases, if a thread is
+In all cases, if a thread is
  interrupted during such a call, the call continues to block until the result is available or the
  timeout elapses, and only then re-interrupts the thread.
-**Author:** Anthony Zana
-**Since:** 10.0
 
 ## Constructors
 
@@ -18,210 +16,223 @@ Utilities for treating interruptible operations as uninterruptible. In all cases
 
 ## Methods
 
-### `awaitUninterruptibly(`java.util.concurrent.CountDownLatch` latch)`
+### `awaitUninterruptibly(java.util.concurrent.CountDownLatch latch)`
 
 **Returns:** `void`
 
-Invokes `latch.``CountDownLatch.await() await()` uninterruptibly.
+**Parameters:**
+- `latch` (`java.util.concurrent.CountDownLatch`)
 
-### `awaitUninterruptibly(`java.util.concurrent.CountDownLatch` latch, `java.time.Duration` timeout)`
-
-**Returns:** `boolean`
-
-Invokes `latch.``CountDownLatch.await(long, TimeUnit) await(timeout, unit)`
- uninterruptibly.
-**Since:** 28.0
-
-### `awaitUninterruptibly(`java.util.concurrent.CountDownLatch` latch, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `awaitUninterruptibly(java.util.concurrent.CountDownLatch latch, java.time.Duration timeout)`
 
 **Returns:** `boolean`
 
-Invokes `latch.``CountDownLatch.await(long, TimeUnit) await(timeout, unit)`
- uninterruptibly.
+**Parameters:**
+- `latch` (`java.util.concurrent.CountDownLatch`)
+- `timeout` (`java.time.Duration`)
 
-### `awaitUninterruptibly(`java.util.concurrent.locks.Condition` condition, `java.time.Duration` timeout)`
-
-**Returns:** `boolean`
-
-Invokes `condition.``Condition.await(long, TimeUnit) await(timeout, unit)`
- uninterruptibly.
-**Since:** 28.0
-
-### `awaitUninterruptibly(`java.util.concurrent.locks.Condition` condition, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `awaitUninterruptibly(java.util.concurrent.CountDownLatch latch, long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `boolean`
 
-Invokes `condition.``Condition.await(long, TimeUnit) await(timeout, unit)`
- uninterruptibly.
-**Since:** 23.6
+**Parameters:**
+- `latch` (`java.util.concurrent.CountDownLatch`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
-### `joinUninterruptibly(`java.lang.Thread` toJoin)`
+### `awaitUninterruptibly(java.util.concurrent.locks.Condition condition, java.time.Duration timeout)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `condition` (`java.util.concurrent.locks.Condition`)
+- `timeout` (`java.time.Duration`)
+
+### `awaitUninterruptibly(java.util.concurrent.locks.Condition condition, long timeout, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `condition` (`java.util.concurrent.locks.Condition`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `joinUninterruptibly(java.lang.Thread toJoin)`
 
 **Returns:** `void`
 
-Invokes `toJoin.``Thread.join() join()` uninterruptibly.
+**Parameters:**
+- `toJoin` (`java.lang.Thread`)
 
-### `joinUninterruptibly(`java.lang.Thread` toJoin, `java.time.Duration` timeout)`
-
-**Returns:** `void`
-
-Invokes `unit.``TimeUnit.timedJoin(Thread, long) timedJoin(toJoin, timeout)`
- uninterruptibly.
-**Since:** 28.0
-
-### `joinUninterruptibly(`java.lang.Thread` toJoin, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `joinUninterruptibly(java.lang.Thread toJoin, java.time.Duration timeout)`
 
 **Returns:** `void`
 
-Invokes `unit.``TimeUnit.timedJoin(Thread, long) timedJoin(toJoin, timeout)`
- uninterruptibly.
+**Parameters:**
+- `toJoin` (`java.lang.Thread`)
+- `timeout` (`java.time.Duration`)
 
-### `getUninterruptibly(`java.util.concurrent.Future<V>` future)`
+### `joinUninterruptibly(java.lang.Thread toJoin, long timeout, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `toJoin` (`java.lang.Thread`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `getUninterruptibly(java.util.concurrent.Future<V> future)`
 
 **Returns:** `V`
 
-Invokes `future.``Future.get() get()` uninterruptibly.
+Similar methods:
 
- <p>Similar methods:
+ 
 
- <ul>
-   <li>To retrieve a result from a `Future` that is already done, use `Futures.getDone Futures.getDone`.
-   <li>To treat `InterruptedException` uniformly with other exceptions, use `Futures.getChecked(Future, Class) Futures.getChecked`.
-   <li>To get uninterruptibility and remove checked exceptions, use `Futures.getUnchecked`.
- </ul>
-@throws ExecutionException if the computation threw an exception
-@throws CancellationException if the computation was cancelled
+   - To retrieve a result from a Future that is already done, use Futures.getDone.
+   - To treat InterruptedException uniformly with other exceptions, use Futures.getChecked.
+   - To get uninterruptibility and remove checked exceptions, use Futures#getUnchecked.
 
-### `getUninterruptibly(`java.util.concurrent.Future<V>` future, `java.time.Duration` timeout)`
+**Parameters:**
+- `future` (`java.util.concurrent.Future<V>`)
 
-**Returns:** `V`
-
-Invokes `future.``Future.get(long, TimeUnit) get(timeout, unit)` uninterruptibly.
-
- <p>Similar methods:
-
- <ul>
-   <li>To retrieve a result from a `Future` that is already done, use `Futures.getDone Futures.getDone`.
-   <li>To treat `InterruptedException` uniformly with other exceptions, use `Futures.getChecked(Future, Class, long, TimeUnit) Futures.getChecked`.
-   <li>To get uninterruptibility and remove checked exceptions, use `Futures.getUnchecked`.
- </ul>
-@throws ExecutionException if the computation threw an exception
-@throws CancellationException if the computation was cancelled
-@throws TimeoutException if the wait timed out
-**Since:** 28.0
-
-### `getUninterruptibly(`java.util.concurrent.Future<V>` future, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `getUninterruptibly(java.util.concurrent.Future<V> future, java.time.Duration timeout)`
 
 **Returns:** `V`
 
-Invokes `future.``Future.get(long, TimeUnit) get(timeout, unit)` uninterruptibly.
+Similar methods:
 
- <p>Similar methods:
+ 
 
- <ul>
-   <li>To retrieve a result from a `Future` that is already done, use `Futures.getDone Futures.getDone`.
-   <li>To treat `InterruptedException` uniformly with other exceptions, use `Futures.getChecked(Future, Class, long, TimeUnit) Futures.getChecked`.
-   <li>To get uninterruptibility and remove checked exceptions, use `Futures.getUnchecked`.
- </ul>
-@throws ExecutionException if the computation threw an exception
-@throws CancellationException if the computation was cancelled
-@throws TimeoutException if the wait timed out
+   - To retrieve a result from a Future that is already done, use Futures.getDone.
+   - To treat InterruptedException uniformly with other exceptions, use Futures.getChecked.
+   - To get uninterruptibility and remove checked exceptions, use Futures#getUnchecked.
 
-### `takeUninterruptibly(`java.util.concurrent.BlockingQueue<E>` queue)`
+**Parameters:**
+- `future` (`java.util.concurrent.Future<V>`)
+- `timeout` (`java.time.Duration`)
+
+### `getUninterruptibly(java.util.concurrent.Future<V> future, long timeout, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** `V`
+
+Similar methods:
+
+ 
+
+   - To retrieve a result from a Future that is already done, use Futures.getDone.
+   - To treat InterruptedException uniformly with other exceptions, use Futures.getChecked.
+   - To get uninterruptibility and remove checked exceptions, use Futures#getUnchecked.
+
+**Parameters:**
+- `future` (`java.util.concurrent.Future<V>`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `takeUninterruptibly(java.util.concurrent.BlockingQueue<E> queue)`
 
 **Returns:** `E`
 
-Invokes `queue.``BlockingQueue.take() take()` uninterruptibly.
+**Parameters:**
+- `queue` (`java.util.concurrent.BlockingQueue<E>`)
 
-### `putUninterruptibly(`java.util.concurrent.BlockingQueue<E>` queue, `E` element)`
-
-**Returns:** `void`
-
-Invokes `queue.``BlockingQueue.put(Object) put(element)` uninterruptibly.
-@throws ClassCastException if the class of the specified element prevents it from being added
-     to the given queue
-@throws IllegalArgumentException if some property of the specified element prevents it from
-     being added to the given queue
-
-### `sleepUninterruptibly(`java.time.Duration` sleepFor)`
+### `putUninterruptibly(java.util.concurrent.BlockingQueue<E> queue, E element)`
 
 **Returns:** `void`
 
-Invokes `unit.``TimeUnit.sleep(long) sleep(sleepFor)` uninterruptibly.
-**Since:** 28.0
+**Parameters:**
+- `queue` (`java.util.concurrent.BlockingQueue<E>`)
+- `element` (`E`)
 
-### `sleepUninterruptibly(`long` sleepFor, `java.util.concurrent.TimeUnit` unit)`
-
-**Returns:** `void`
-
-Invokes `unit.``TimeUnit.sleep(long) sleep(sleepFor)` uninterruptibly.
-
-### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `java.time.Duration` timeout)`
-
-**Returns:** `boolean`
-
-Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(1,
- timeout, unit)` uninterruptibly.
-**Since:** 28.0
-
-### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
-
-**Returns:** `boolean`
-
-Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(1,
- timeout, unit)` uninterruptibly.
-**Since:** 18.0
-
-### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `int` permits, `java.time.Duration` timeout)`
-
-**Returns:** `boolean`
-
-Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(permits,
- timeout, unit)` uninterruptibly.
-**Since:** 28.0
-
-### `tryAcquireUninterruptibly(`java.util.concurrent.Semaphore` semaphore, `int` permits, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
-
-**Returns:** `boolean`
-
-Invokes `semaphore.``Semaphore.tryAcquire(int, long, TimeUnit) tryAcquire(permits,
- timeout, unit)` uninterruptibly.
-**Since:** 18.0
-
-### `tryLockUninterruptibly(`java.util.concurrent.locks.Lock` lock, `java.time.Duration` timeout)`
-
-**Returns:** `boolean`
-
-Invokes `lock.``Lock.tryLock(long, TimeUnit) tryLock(timeout, unit)`
- uninterruptibly.
-**Since:** 30.0
-
-### `tryLockUninterruptibly(`java.util.concurrent.locks.Lock` lock, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
-
-**Returns:** `boolean`
-
-Invokes `lock.``Lock.tryLock(long, TimeUnit) tryLock(timeout, unit)`
- uninterruptibly.
-**Since:** 30.0
-
-### `awaitTerminationUninterruptibly(`java.util.concurrent.ExecutorService` executor)`
+### `sleepUninterruptibly(java.time.Duration sleepFor)`
 
 **Returns:** `void`
 
-Invokes `executor.``ExecutorService.awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)` uninterruptibly with no timeout.
-**Since:** 30.0
+**Parameters:**
+- `sleepFor` (`java.time.Duration`)
 
-### `awaitTerminationUninterruptibly(`java.util.concurrent.ExecutorService` executor, `java.time.Duration` timeout)`
+### `sleepUninterruptibly(long sleepFor, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `sleepFor` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `tryAcquireUninterruptibly(java.util.concurrent.Semaphore semaphore, java.time.Duration timeout)`
 
 **Returns:** `boolean`
 
-Invokes `executor.``ExecutorService.awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)` uninterruptibly.
-**Since:** 30.0
+**Parameters:**
+- `semaphore` (`java.util.concurrent.Semaphore`)
+- `timeout` (`java.time.Duration`)
 
-### `awaitTerminationUninterruptibly(`java.util.concurrent.ExecutorService` executor, `long` timeout, `java.util.concurrent.TimeUnit` unit)`
+### `tryAcquireUninterruptibly(java.util.concurrent.Semaphore semaphore, long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `boolean`
 
-Invokes `executor.``ExecutorService.awaitTermination(long, TimeUnit) awaitTermination(long, TimeUnit)` uninterruptibly.
-**Since:** 30.0
+**Parameters:**
+- `semaphore` (`java.util.concurrent.Semaphore`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `tryAcquireUninterruptibly(java.util.concurrent.Semaphore semaphore, int permits, java.time.Duration timeout)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `semaphore` (`java.util.concurrent.Semaphore`)
+- `permits` (`int`)
+- `timeout` (`java.time.Duration`)
+
+### `tryAcquireUninterruptibly(java.util.concurrent.Semaphore semaphore, int permits, long timeout, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `semaphore` (`java.util.concurrent.Semaphore`)
+- `permits` (`int`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `tryLockUninterruptibly(java.util.concurrent.locks.Lock lock, java.time.Duration timeout)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `lock` (`java.util.concurrent.locks.Lock`)
+- `timeout` (`java.time.Duration`)
+
+### `tryLockUninterruptibly(java.util.concurrent.locks.Lock lock, long timeout, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `lock` (`java.util.concurrent.locks.Lock`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
+
+### `awaitTerminationUninterruptibly(java.util.concurrent.ExecutorService executor)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `executor` (`java.util.concurrent.ExecutorService`)
+
+### `awaitTerminationUninterruptibly(java.util.concurrent.ExecutorService executor, java.time.Duration timeout)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `executor` (`java.util.concurrent.ExecutorService`)
+- `timeout` (`java.time.Duration`)
+
+### `awaitTerminationUninterruptibly(java.util.concurrent.ExecutorService executor, long timeout, java.util.concurrent.TimeUnit unit)`
+
+**Returns:** `boolean`
+
+**Parameters:**
+- `executor` (`java.util.concurrent.ExecutorService`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 

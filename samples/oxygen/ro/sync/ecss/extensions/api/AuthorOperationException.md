@@ -16,15 +16,25 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` message)`
+### `<init>(java.lang.String message)`
 
-### `<init>(`java.lang.String` message, `java.lang.Throwable` cause)`
+**Parameters:**
+- `message` (`java.lang.String`): The error message.
+
+### `<init>(java.lang.String message, java.lang.Throwable cause)`
+
+**Parameters:**
+- `message` (`java.lang.String`): The error message.
+- `cause` (`java.lang.Throwable`): The cause of the exception.
 
 ## Methods
 
-### `setOperationRejectedOnPurpose(`boolean` operationRejected)`
+### `setOperationRejectedOnPurpose(boolean operationRejected)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `operationRejected` (`boolean`): The operationRejected to set.
 
 ### `isOperationRejectedOnPurpose()`
 

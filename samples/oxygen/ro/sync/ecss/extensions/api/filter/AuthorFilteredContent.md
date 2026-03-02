@@ -16,7 +16,10 @@ The content represents the entire text content of the Author page + additional m
 
 ## Methods
 
-### `getOriginalOffset(`int` filteredOffset)`
+### `getOriginalOffset(int filteredOffset)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `filteredOffset` (`int`): The filtered offset.
 

@@ -13,8 +13,6 @@
 
 ## Description
 
-Aggregate future that collects (stores) results of each future.
-
 ## Fields
 
 ### `values`
@@ -23,23 +21,37 @@ Aggregate future that collects (stores) results of each future.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>`](../../collect/ImmutableCollection>.md) futures, `boolean` allMustSucceed)`
+### `<init>(com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>> futures, boolean allMustSucceed)`
+
+**Parameters:**
+- `futures` ([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>`](../../collect/ImmutableCollection.md))
+- `allMustSucceed` (`boolean`)
 
 ## Methods
 
-### `collectOneValue(`int` index, `V` returnValue)`
+### `collectOneValue(int index, V returnValue)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `index` (`int`)
+- `returnValue` (`V`)
 
 ### `handleAllCompleted()`
 
 **Returns:** `void`
 
-### `releaseResources([`com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason`](AggregateFuture/ReleaseResourcesReason.md) reason)`
+### `releaseResources(com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason reason)`
 
 **Returns:** `void`
 
-### `combine(`java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>>` values)`
+**Parameters:**
+- `reason` (`com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason`)
+
+### `combine(java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>> values)`
 
 **Returns:** `C`
+
+**Parameters:**
+- `values` (`java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>>`)
 

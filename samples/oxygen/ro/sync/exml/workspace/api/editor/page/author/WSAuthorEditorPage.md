@@ -50,7 +50,7 @@ The WSAuthorEditorPage has most of the methods which can also be found in the Au
  Provides access to specific components corresponding to editor, document, workspace,
  tables, change tracking and utility informations and actions.
 
-### `addQuickAssistProcessor([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md) processor)`
+### `addQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
 
 **Returns:** `void`
 
@@ -58,7 +58,13 @@ This allow you to provide quick custom quick assist
  proposals in the current editor page quick assist menu.
  The quick assist processor cannot be registered for WebAuthor application.
 
-### `removeQuickAssistProcessor([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md) processor)`
+**Parameters:**
+- `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be registered.
+
+### `removeQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be unregistered.
 

@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.util.concurrent.AggregateFutureState`
 
-**Extends:** [`com.google.common.util.concurrent.AbstractFuture.TrustedFuture<OutputT>`](AbstractFuture/TrustedFuture.md)
+**Extends:** `com.google.common.util.concurrent.AbstractFuture.TrustedFuture<OutputT>`
 
 ## Type Parameters
 
@@ -12,13 +12,12 @@
 
 ## Description
 
-A helper which does some thread-safe operations for aggregate futures, which must be implemented
- differently in GWT. Namely:
+Namely:
 
- <ul>
-   <li>Lazily initializes a set of seen exceptions
-   <li>Decrements a counter atomically
- </ul>
+ 
+
+   - Lazily initializes a set of seen exceptions
+   - Decrements a counter atomically
 
 ## Fields
 
@@ -32,7 +31,7 @@ A helper which does some thread-safe operations for aggregate futures, which mus
 
 ### `ATOMIC_HELPER`
 
-**Type:** [`com.google.common.util.concurrent.AggregateFutureState.AtomicHelper`](AggregateFutureState/AtomicHelper.md)
+**Type:** `com.google.common.util.concurrent.AggregateFutureState.AtomicHelper`
 
 ### `log`
 
@@ -40,7 +39,10 @@ A helper which does some thread-safe operations for aggregate futures, which mus
 
 ## Constructors
 
-### `<init>(`int` remainingFutures)`
+### `<init>(int remainingFutures)`
+
+**Parameters:**
+- `remainingFutures` (`int`)
 
 ## Methods
 
@@ -48,11 +50,12 @@ A helper which does some thread-safe operations for aggregate futures, which mus
 
 **Returns:** `java.util.Set<java.lang.Throwable>`
 
-### `addInitialException(`java.util.Set<java.lang.Throwable>` seen)`
+### `addInitialException(java.util.Set<java.lang.Throwable> seen)`
 
 **Returns:** `void`
 
-Populates `seen` with the exception that was passed to `setException`.
+**Parameters:**
+- `seen` (`java.util.Set<java.lang.Throwable>`)
 
 ### `decrementRemainingAndGet()`
 

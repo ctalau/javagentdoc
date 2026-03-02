@@ -13,10 +13,6 @@
 
 ## Description
 
-Implementation of `ImmutableMap` with exactly one entry.
-**Author:** Jesse Wilson
-**Author:** Kevin Bourrillion
-
 ## Fields
 
 ### `singleKey`
@@ -37,31 +33,52 @@ Implementation of `ImmutableMap` with exactly one entry.
 
 ## Constructors
 
-### `<init>(`K` singleKey, `V` singleValue)`
+### `<init>(K singleKey, V singleValue)`
 
-### `<init>(`K` singleKey, `V` singleValue, [`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md) inverse)`
+**Parameters:**
+- `singleKey` (`K`)
+- `singleValue` (`V`)
+
+### `<init>(K singleKey, V singleValue, com.google.common.collect.ImmutableBiMap<V,K> inverse)`
+
+**Parameters:**
+- `singleKey` (`K`)
+- `singleValue` (`V`)
+- `inverse` ([`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md))
 
 ## Methods
 
-### `get(`java.lang.Object` key)`
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
+### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
 
 **Returns:** `void`
 
-### `containsKey(`java.lang.Object` key)`
+**Parameters:**
+- `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
 
-### `containsValue(`java.lang.Object` value)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `containsValue(java.lang.Object value)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `value` (`java.lang.Object`)
 
 ### `isPartialView()`
 
@@ -69,7 +86,7 @@ Implementation of `ImmutableMap` with exactly one entry.
 
 ### `createEntrySet()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet>.md)
+**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet.md)
 
 ### `createKeySet()`
 

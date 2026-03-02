@@ -52,15 +52,28 @@
 
 ## Constructors
 
-### `<init>(`javax.swing.JFrame` arg0, `java.lang.String` arg1, `boolean` arg2)`
+### `<init>(javax.swing.JFrame arg0, java.lang.String arg1, boolean arg2)`
 
-### `<init>(`java.awt.Frame` arg0, `java.lang.String` arg1, `boolean` arg2)`
+**Parameters:**
+- `arg0` (`javax.swing.JFrame`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`boolean`)
+
+### `<init>(java.awt.Frame arg0, java.lang.String arg1, boolean arg2)`
+
+**Parameters:**
+- `arg0` (`java.awt.Frame`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`boolean`)
 
 ## Methods
 
-### `detectParentFrame(`java.awt.Window` arg0)`
+### `detectParentFrame(java.awt.Window arg0)`
 
 **Returns:** `java.awt.Window`
+
+**Parameters:**
+- `arg0` (`java.awt.Window`)
 
 ### `doOK()`
 
@@ -78,21 +91,31 @@
 
 **Returns:** `int`
 
-### `setOkButtonText(`java.lang.String` arg0)`
+### `setOkButtonText(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setCancelButtonText(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setCancelButtonText(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getContentPane()`
 
 **Returns:** `java.awt.Container`
 
-### `setButtonText(`javax.swing.JButton` arg0, `java.lang.String` arg1)`
+### `setButtonText(javax.swing.JButton arg0, java.lang.String arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`javax.swing.JButton`)
+- `arg1` (`java.lang.String`)
 
 ### `getOkButton()`
 
@@ -102,17 +125,23 @@
 
 **Returns:** `javax.swing.JButton`
 
-### `setVisible(`boolean` arg0)`
+### `setVisible(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `setDialogLocation()`
 
 **Returns:** `void`
 
-### `getHiDPIAwareDimension(`java.awt.Dimension` arg0)`
+### `getHiDPIAwareDimension(java.awt.Dimension arg0)`
 
 **Returns:** `java.awt.Dimension`
+
+**Parameters:**
+- `arg0` (`java.awt.Dimension`)
 
 ### `getHelpPageID()`
 

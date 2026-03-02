@@ -58,85 +58,133 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetFractionDigitsValue(`java.lang.String` arg0)`
+### `setFacetFractionDigitsValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetMaxExclusiveValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetMaxExclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetMaxInclusiveValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetMaxInclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetMaxLengthValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetMaxLengthValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetMinInclusiveValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetMinInclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setPossiblesValues(`java.util.List<java.lang.String>` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setPossiblesValues(java.util.List<java.lang.String> arg0)`
 
 **Returns:** `void`
 
-### `setFacetTotalDigitsValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<java.lang.String>`)
+
+### `setFacetTotalDigitsValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetWhitespaceValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetWhitespaceValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setModelDescription(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setModelDescription(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetLengthValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetLengthValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetMinLengthValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetMinLengthValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFacetMinExclusiveValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFacetMinExclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetPattern()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetPattern(`java.lang.String` arg0)`
+### `setFacetPattern(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getAnnotation()`
 
 **Returns:** `java.lang.String`
 
-### `setAssertions(`java.lang.String` arg0)`
+### `setAssertions(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getAssertions()`
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentMode(`java.lang.String` arg0)`
+### `setOpenContentMode(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getOpenContentMode()`
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentWildcardDescription(`java.lang.String` arg0)`
+### `setOpenContentWildcardDescription(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getOpenContentWildcardDescription()`
 

@@ -52,9 +52,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getEditorComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) arg0, `ro.sync.exml.view.graphics.Rectangle` arg1, `ro.sync.exml.view.graphics.Point` arg2)`
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0, ro.sync.exml.view.graphics.Rectangle arg1, ro.sync.exml.view.graphics.Point arg2)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+- `arg1` (`ro.sync.exml.view.graphics.Rectangle`)
+- `arg2` (`ro.sync.exml.view.graphics.Point`)
 
 ### `getScrollRectangle()`
 
@@ -76,35 +81,53 @@
 
 **Returns:** `void`
 
-### `stopEditing(`boolean` arg0)`
+### `stopEditing(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `cancelEditing()`
 
 **Returns:** `void`
 
-### `prepareComponents([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) arg0)`
+### `prepareComponents(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
 
 **Returns:** `void`
 
-### `setInitialValue([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+### `setInitialValue(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
 
 ### `dispose()`
 
 **Returns:** `void`
 
-### `canDoOperation(`int` arg0)`
+### `canDoOperation(int arg0)`
 
 **Returns:** `boolean`
 
-### `doOperation(`int` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `doOperation(int arg0)`
 
 **Returns:** `void`
 
-### `refresh([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md) arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
 

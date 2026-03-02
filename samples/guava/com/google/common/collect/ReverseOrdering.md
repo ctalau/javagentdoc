@@ -14,8 +14,6 @@
 
 ## Description
 
-An ordering that uses the reverse of a given order.
-
 ## Fields
 
 ### `forwardOrder`
@@ -28,57 +26,99 @@ An ordering that uses the reverse of a given order.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.Ordering<? super T>`](./Ordering.md) forwardOrder)`
+### `<init>(com.google.common.collect.Ordering<? super T> forwardOrder)`
+
+**Parameters:**
+- `forwardOrder` ([`com.google.common.collect.Ordering<? super T>`](./Ordering.md))
 
 ## Methods
 
-### `compare(`T` a, `T` b)`
+### `compare(T a, T b)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `a` (`T`)
+- `b` (`T`)
 
 ### `reverse()`
 
 **Returns:** [`com.google.common.collect.Ordering<S>`](./Ordering.md)
 
-### `min(`E` a, `E` b)`
+### `min(E a, E b)`
 
 **Returns:** `E`
 
-### `min(`E` a, `E` b, `E` c, `E[]` rest)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+
+### `min(E a, E b, E c, E[] rest)`
 
 **Returns:** `E`
 
-### `min(`java.util.Iterator<E>` iterator)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+- `c` (`E`)
+- `rest` (`E[]`)
+
+### `min(java.util.Iterator<E> iterator)`
 
 **Returns:** `E`
 
-### `min(`java.lang.Iterable<E>` iterable)`
+**Parameters:**
+- `iterator` (`java.util.Iterator<E>`)
+
+### `min(java.lang.Iterable<E> iterable)`
 
 **Returns:** `E`
 
-### `max(`E` a, `E` b)`
+**Parameters:**
+- `iterable` (`java.lang.Iterable<E>`)
+
+### `max(E a, E b)`
 
 **Returns:** `E`
 
-### `max(`E` a, `E` b, `E` c, `E[]` rest)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+
+### `max(E a, E b, E c, E[] rest)`
 
 **Returns:** `E`
 
-### `max(`java.util.Iterator<E>` iterator)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+- `c` (`E`)
+- `rest` (`E[]`)
+
+### `max(java.util.Iterator<E> iterator)`
 
 **Returns:** `E`
 
-### `max(`java.lang.Iterable<E>` iterable)`
+**Parameters:**
+- `iterator` (`java.util.Iterator<E>`)
+
+### `max(java.lang.Iterable<E> iterable)`
 
 **Returns:** `E`
+
+**Parameters:**
+- `iterable` (`java.lang.Iterable<E>`)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `toString()`
 

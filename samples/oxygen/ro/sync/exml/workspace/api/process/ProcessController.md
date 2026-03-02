@@ -22,9 +22,12 @@ This method blocks until the process ends.
 
 Will also kill sub-processes.
 
-### `sendMessage(`java.lang.String` message)`
+### `sendMessage(java.lang.String message)`
 
 **Returns:** `void`
 
 The message will be sent  "UTF-8" encoded via the java.lang.Process.getOutputStream().
+
+**Parameters:**
+- `message` (`java.lang.String`): The message.
 

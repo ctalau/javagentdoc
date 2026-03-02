@@ -58,7 +58,10 @@ The end offset is absolute in the Author Document's content.
 
 **Returns:** `boolean`
 
-### `replaceText(`java.lang.CharSequence` newTextContent)`
+### `replaceText(java.lang.CharSequence newTextContent)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `newTextContent` (`java.lang.CharSequence`): The new text content.
 

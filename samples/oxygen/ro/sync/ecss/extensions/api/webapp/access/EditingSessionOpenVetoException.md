@@ -16,7 +16,11 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` htmlMessage)`
+### `<init>(java.lang.String htmlMessage)`
+
+**Parameters:**
+- `htmlMessage` (`java.lang.String`): The HTML formatted message that will be presented
+ to the user as the reason for the editing session opening was aborted.
 
 ## Methods
 

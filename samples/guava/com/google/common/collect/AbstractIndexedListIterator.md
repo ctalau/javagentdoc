@@ -12,10 +12,8 @@
 
 ## Description
 
-This class provides a skeletal implementation of the `ListIterator` interface across a
- fixed number of elements that may be retrieved by position. It does not support `remove`,
- `set`, or `add`.
-**Author:** Jared Levy
+It does not support #remove,
+ #set, or #add.
 
 ## Fields
 
@@ -29,27 +27,33 @@ This class provides a skeletal implementation of the `ListIterator` interface ac
 
 ## Constructors
 
-### `<init>(`int` size)`
+### `<init>(int size)`
 
-Constructs an iterator across a sequence of the given size whose initial position is 0. That
- is, the first call to `next()` will return the first element (or throw `NoSuchElementException` if `size` is zero).
-@throws IllegalArgumentException if `size` is negative
+That
+ is, the first call to #next() will return the first element (or throw NoSuchElementException if size is zero).
 
-### `<init>(`int` size, `int` position)`
+**Parameters:**
+- `size` (`int`)
 
-Constructs an iterator across a sequence of the given size with the given initial position.
- That is, the first call to `nextIndex()` will return `position`, and the first
- call to `next()` will return the element at that index, if available. Calls to `previous()` can retrieve the preceding `position` elements.
-@throws IndexOutOfBoundsException if `position` is negative or is greater than `size`
-@throws IllegalArgumentException if `size` is negative
+### `<init>(int size, int position)`
+
+That is, the first call to #nextIndex() will return position, and the first
+ call to #next() will return the element at that index, if available. Calls to #previous() can retrieve the preceding position elements.
+
+**Parameters:**
+- `size` (`int`)
+- `position` (`int`)
 
 ## Methods
 
-### `get(`int` index)`
+### `get(int index)`
 
 **Returns:** `E`
 
-Returns the element with the specified index. This method is called by `next()`.
+This method is called by #next().
+
+**Parameters:**
+- `index` (`int`)
 
 ### `hasNext()`
 

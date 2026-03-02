@@ -12,9 +12,12 @@
 
 ## Methods
 
-### `transformationFinished(`boolean` success)`
+### `transformationFinished(boolean success)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `success` (`boolean`): `true` if the finished transformation was succesfull.
 
 ### `transformationStopped()`
 

@@ -22,11 +22,18 @@
 
 ## Methods
 
-### `makeUrlRelative([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `java.lang.String` url)`
+### `makeUrlRelative(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String url)`
 
 **Returns:** `java.lang.String`
 
-### `getBaseURL([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access of the XML document.
+- `url` (`java.lang.String`): The url.
+
+### `getBaseURL(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.net.URL`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access of the XML document.
 

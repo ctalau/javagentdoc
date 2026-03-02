@@ -22,23 +22,39 @@
 
 ## Methods
 
-### `minimizeAuthorCollection(`java.util.Collection<? extends ro.sync.ecss.extensions.api.node.AuthorNode>` collection)`
+### `minimizeAuthorCollection(java.util.Collection<? extends ro.sync.ecss.extensions.api.node.AuthorNode> collection)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-### `getFirstLeaf([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](./AuthorDocumentFragment.md) fragment)`
+**Parameters:**
+- `collection` (`java.util.Collection<? extends ro.sync.ecss.extensions.api.node.AuthorNode>`): A collection of nodes.
+
+### `getFirstLeaf(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
 
-### `getPossibleLeaf(`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>` children)`
+**Parameters:**
+- `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](./AuthorDocumentFragment.md)): The document fragment.
+
+### `getPossibleLeaf(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> children)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
 
-### `getFirstChildElement([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](./AuthorParentNode.md) parentNode)`
+**Parameters:**
+- `children` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`): The children
+
+### `getFirstChildElement(ro.sync.ecss.extensions.api.node.AuthorParentNode parentNode)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](./AuthorElement.md)
 
-### `getChildIndex(`int` offset, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>` children)`
+**Parameters:**
+- `parentNode` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](./AuthorParentNode.md)): The parent element.
+
+### `getChildIndex(int offset, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> children)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `offset` (`int`): Searched offset.
+- `children` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`): The list of children.
 

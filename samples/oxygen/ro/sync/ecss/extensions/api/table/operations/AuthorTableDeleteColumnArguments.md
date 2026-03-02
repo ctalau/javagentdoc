@@ -18,7 +18,13 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md) authorAccess, `java.util.List<ro.sync.ecss.extensions.api.ContentInterval>` columnCellsIntervals)`
+### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> columnCellsIntervals)`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.
+- `columnCellsIntervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): The list of intervals of the cells that compose 
+ the deleted column. Each ContentInterval contains the start and end 
+ offsets of the cells.
 
 ## Methods
 

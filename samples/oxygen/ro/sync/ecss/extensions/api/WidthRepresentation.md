@@ -47,11 +47,35 @@ This value can be relative to the parent width,
 
 ## Constructors
 
-### `<init>(`float` fixedWidthValue, `ro.sync.ecss.extensions.api.WidthRepresentation.Unit` fixedWidthUnit, `float` relativeWidth, `boolean` isRelativeToParent)`
+### `<init>(float fixedWidthValue, ro.sync.ecss.extensions.api.WidthRepresentation.Unit fixedWidthUnit, float relativeWidth, boolean isRelativeToParent)`
 
-### `<init>(`java.lang.String` widthString, `boolean` acceptPercents)`
+**Parameters:**
+- `fixedWidthValue` (`float`): The fixed width value. Ex: 2.5
+- `fixedWidthUnit` (`ro.sync.ecss.extensions.api.WidthRepresentation.Unit`): The unit of fixed width. Defaults to PIXEL.
+- `relativeWidth` (`float`): The relative width part. Ex: 0.33
+- `isRelativeToParent` (`boolean`): If `true` then the relative width represents
+        a percentage of the parent table width, otherwise the relative value
+        represent a proportional width which is evaluated taking into account 
+        the proportional values of the other columns.    
+ 
+For example, if there are two columns with 70% and 30% relative widths then
+        the table total width will be divided according with this values. 
+ 
+If the relative widths for the two columns are specified in proportional units and,
+        for example, have the values 1 for the first column and 2 for the second column
+        then the second column will be twice as large as the first one.
+
+### `<init>(java.lang.String widthString, boolean acceptPercents)`
 
 Create a ColWidth corresponding to the given width representation.
+
+**Parameters:**
+- `widthString` (`java.lang.String`): The string representation of the Width. The 
+      representation format must be a sum of terms with the following format: 
+      n(*|%|units). If there are more that one terms with the same form (fixed 
+      or relative) then corresponding width (fixed or relative) will be reseted.
+- `acceptPercents` (`boolean`): If `true` then percentage values are
+      accepted
 
 ## Methods
 
@@ -83,9 +107,12 @@ Create a ColWidth corresponding to the given width representation.
 
 **Returns:** `java.lang.String`
 
-### `setAlign(`java.lang.String` align)`
+### `setAlign(java.lang.String align)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `align` (`java.lang.String`): The align value.
 
 ### `toString()`
 

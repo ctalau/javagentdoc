@@ -18,27 +18,47 @@
 
 **Returns:** `java.lang.String`
 
-### `addPageChangedListener([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md) pageChangedListener)`
+### `addPageChangedListener(ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener pageChangedListener)`
 
 **Returns:** `void`
 
-### `removePageChangedListener([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md) pageChangedListener)`
+**Parameters:**
+- `pageChangedListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md)): The page changed listener.
+ 
+
+
+ Note that in Reviewer edition only the Author page is available.
+
+### `removePageChangedListener(ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener pageChangedListener)`
 
 **Returns:** `void`
 
-### `addEditorListener([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md) editorListener)`
+**Parameters:**
+- `pageChangedListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md)): The page changed listener.
+ 
+
+
+ Note that in Reviewer edition only the Author page is available.
+
+### `addEditorListener(ro.sync.exml.workspace.api.listeners.WSEditorListener editorListener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md)): The editor listener.
 
 ### `getEditorListeners()`
 
 **Returns:** [`ro.sync.exml.workspace.api.listeners.WSEditorListener[]`](../listeners/WSEditorListener.md)
 
-### `removeEditorListener([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md) editorListener)`
+### `removeEditorListener(ro.sync.exml.workspace.api.listeners.WSEditorListener editorListener)`
 
 **Returns:** `void`
 
-### `changePage(`java.lang.String` pageID)`
+**Parameters:**
+- `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md)): The editor listener.
+
+### `changePage(java.lang.String pageID)`
 
 **Returns:** `void`
 
@@ -49,19 +69,30 @@ This does not affect editors opened in the DITA Maps Manager.
 
  Note that in Reviewer edition only the Author page is available.
 
-### `addValidationProblemsFilter([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md) validationProblemsFilter)`
+**Parameters:**
+- `pageID` (`java.lang.String`): The ID of the page, one of the constant fields: 
+ EditorPageConstants#PAGE_TEXT, EditorPageConstants#PAGE_AUTHOR, EditorPageConstants#PAGE_GRID, 
+ EditorPageConstants#PAGE_DESIGN
+
+### `addValidationProblemsFilter(ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter validationProblemsFilter)`
 
 **Returns:** `void`
 
 Validation can be manual or automatic.
  Automatic validation is done when modifications occur in the XML file.
 
-### `removeValidationProblemsFilter([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md) validationProblemsFilter)`
+**Parameters:**
+- `validationProblemsFilter` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md)): a filter for problems encountered during validation of the current editor.
+
+### `removeValidationProblemsFilter(ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter validationProblemsFilter)`
 
 **Returns:** `void`
 
 Validation can be manual or automatic.
  Automatic validation is done when modifications occur in the XML file.
+
+**Parameters:**
+- `validationProblemsFilter` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](validation/ValidationProblemsFilter.md)): a filter for problems encountered during validation of the current editor.
 
 ### `checkValid()`
 
@@ -70,12 +101,18 @@ Validation can be manual or automatic.
 For document types which do not support validation, this returns always `true`.
  If you want to see the problems reported by the validation process you can add a validation problems filter #addValidationProblemsFilter(ValidationProblemsFilter).
 
-### `checkValid(`boolean` automatic)`
+### `checkValid(boolean automatic)`
 
 **Returns:** `boolean`
 
 For document types which do not support validation, this returns always `true`.
  If you want to see the problems reported by the validation process you can add a validation problems filter #addValidationProblemsFilter(ValidationProblemsFilter).
+
+**Parameters:**
+- `automatic` (`boolean`): `true` If Oxygen performs automatic validation 
+                      (identical with the validation performed when the document is modified) 
+                      or `false` if Oxygen should perform manual validation 
+                      (identical to the validation made when you press the Validate toolbar action).
 
 ### `getComponent()`
 
@@ -86,11 +123,14 @@ Use of this method is discouraged but it may be useful in some cases like:
  This can be helpful when you want to set a busy cursor on the entire editor 
  or when you want to get access to the swing JTabbedPane pane where the editor is located.
 
-### `setEditable(`boolean` editable)`
+### `setEditable(boolean editable)`
 
 **Returns:** `void`
 
 This method is not available in the Oxygen Eclipse plugin which relies on the IEditorInput for the information.
+
+**Parameters:**
+- `editable` (`boolean`): `true` if the editor should be editable.
 
 ### `isEditable()`
 

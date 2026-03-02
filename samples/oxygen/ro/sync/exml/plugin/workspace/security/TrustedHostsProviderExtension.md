@@ -22,7 +22,10 @@
 
 ## Methods
 
-### `isTrusted(`java.lang.String` arg0)`
+### `isTrusted(java.lang.String arg0)`
 
 **Returns:** [`ro.sync.exml.plugin.workspace.security.Response`](./Response.md)
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

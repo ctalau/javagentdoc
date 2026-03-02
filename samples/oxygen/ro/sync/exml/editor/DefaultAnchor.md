@@ -24,15 +24,25 @@
 
 ### `<init>()`
 
-### `<init>(`int` arg0)`
+### `<init>(int arg0)`
 
-### `<init>(`int` arg0, `boolean` arg1)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `<init>(int arg0, boolean arg1)`
+
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`boolean`)
 
 ## Methods
 
-### `setNonWhitespaceAnchor(`boolean` arg0)`
+### `setNonWhitespaceAnchor(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isNonWhitespaceAnchor()`
 

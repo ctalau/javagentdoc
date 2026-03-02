@@ -35,7 +35,11 @@ Adding a caret listener starting from an AuthorAccess :
 
 ## Methods
 
-### `caretMoved([`ro.sync.ecss.extensions.api.AuthorCaretEvent`](./AuthorCaretEvent.md) caretEvent)`
+### `caretMoved(ro.sync.ecss.extensions.api.AuthorCaretEvent caretEvent)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `caretEvent` ([`ro.sync.ecss.extensions.api.AuthorCaretEvent`](./AuthorCaretEvent.md)): The AuthorCaretEvent containing information about the offset 
+ and the author node holding the offset.
 

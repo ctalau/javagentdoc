@@ -10,7 +10,7 @@ Persistent highlights get serialized as processing instructions in the XML conte
 
 ## Methods
 
-### `getHighlightPainter([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md) highlight)`
+### `getHighlightPainter(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.HighlightPainter`](./HighlightPainter.md)
 
@@ -20,9 +20,15 @@ If a `null` value is returned the default highlight
 
  You can use or customize instances of the default ColorHighlightPainter.
 
-### `getTooltip([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md) highlight)`
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The AuthorPersistentHighlight to get the painter for.
+
+### `getTooltip(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** `java.lang.String`
 
 If a `null` value is returned the default tooltip text will be used.
+
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The AuthorPersistentHighlight to get the tooltip for.
 

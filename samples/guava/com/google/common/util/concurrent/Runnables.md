@@ -6,9 +6,6 @@
 
 ## Description
 
-Static utility methods pertaining to the `Runnable` interface.
-**Since:** 16.0
-
 ## Fields
 
 ### `EMPTY_RUNNABLE`
@@ -24,6 +21,4 @@ Static utility methods pertaining to the `Runnable` interface.
 ### `doNothing()`
 
 **Returns:** `java.lang.Runnable`
-
-Returns a `Runnable` instance that does nothing when run.
 

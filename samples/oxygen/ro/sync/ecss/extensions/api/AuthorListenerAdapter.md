@@ -17,55 +17,89 @@
 
 ## Methods
 
-### `attributeChanged([`ro.sync.ecss.extensions.api.AttributeChangedEvent`](./AttributeChangedEvent.md) e)`
+### `attributeChanged(ro.sync.ecss.extensions.api.AttributeChangedEvent e)`
 
 **Returns:** `void`
 
-### `authorNodeNameChanged([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) node)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.AttributeChangedEvent`](./AttributeChangedEvent.md))
+
+### `authorNodeNameChanged(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `void`
 
-### `authorNodeStructureChanged([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+
+### `authorNodeStructureChanged(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `void`
 
-### `beforeAttributeChange([`ro.sync.ecss.extensions.api.AttributeChangedEvent`](./AttributeChangedEvent.md) e)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+
+### `beforeAttributeChange(ro.sync.ecss.extensions.api.AttributeChangedEvent e)`
 
 **Returns:** `void`
 
-### `beforeAuthorNodeStructureChange([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) authorNode)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.AttributeChangedEvent`](./AttributeChangedEvent.md))
+
+### `beforeAuthorNodeStructureChange(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
 
 **Returns:** `void`
 
-### `beforeAuthorNodeNameChange([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md) authorNode)`
+**Parameters:**
+- `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+
+### `beforeAuthorNodeNameChange(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
 
 **Returns:** `void`
 
-### `beforeContentDelete([`ro.sync.ecss.extensions.api.DocumentContentDeletedEvent`](./DocumentContentDeletedEvent.md) e)`
+**Parameters:**
+- `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+
+### `beforeContentDelete(ro.sync.ecss.extensions.api.DocumentContentDeletedEvent e)`
 
 **Returns:** `void`
 
-### `beforeContentInsert([`ro.sync.ecss.extensions.api.DocumentContentInsertedEvent`](./DocumentContentInsertedEvent.md) e)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.DocumentContentDeletedEvent`](./DocumentContentDeletedEvent.md))
+
+### `beforeContentInsert(ro.sync.ecss.extensions.api.DocumentContentInsertedEvent e)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.DocumentContentInsertedEvent`](./DocumentContentInsertedEvent.md))
 
 ### `beforeDoctypeChange()`
 
 **Returns:** `void`
 
-### `contentDeleted([`ro.sync.ecss.extensions.api.DocumentContentDeletedEvent`](./DocumentContentDeletedEvent.md) e)`
+### `contentDeleted(ro.sync.ecss.extensions.api.DocumentContentDeletedEvent e)`
 
 **Returns:** `void`
 
-### `contentInserted([`ro.sync.ecss.extensions.api.DocumentContentInsertedEvent`](./DocumentContentInsertedEvent.md) e)`
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.DocumentContentDeletedEvent`](./DocumentContentDeletedEvent.md))
+
+### `contentInserted(ro.sync.ecss.extensions.api.DocumentContentInsertedEvent e)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `e` ([`ro.sync.ecss.extensions.api.DocumentContentInsertedEvent`](./DocumentContentInsertedEvent.md))
 
 ### `doctypeChanged()`
 
 **Returns:** `void`
 
-### `documentChanged([`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md) oldDocument, [`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md) newDocument)`
+### `documentChanged(ro.sync.ecss.extensions.api.node.AuthorDocument oldDocument, ro.sync.ecss.extensions.api.node.AuthorDocument newDocument)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `oldDocument` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md))
+- `newDocument` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md))
 

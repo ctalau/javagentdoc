@@ -12,9 +12,12 @@
 
 ### `<init>()`
 
-### `<init>(`javax.swing.table.TableModel` tableModel)`
+### `<init>(javax.swing.table.TableModel tableModel)`
 
-### `<init>(`java.util.Vector` rowData, `java.util.Vector` columnNames)`
+**Parameters:**
+- `tableModel` (`javax.swing.table.TableModel`): the model of the table.
+
+### `<init>(java.util.Vector rowData, java.util.Vector columnNames)`
 
 The column names are given by `columnNames`. The
  `Vectors` contained in `rowData`
@@ -27,4 +30,8 @@ The column names are given by `columnNames`. The
 ```
 ((Vector)rowData.elementAt(1)).elementAt(5);
 ```
+
+**Parameters:**
+- `rowData` (`java.util.Vector`): The data for the new table.
+- `columnNames` (`java.util.Vector`): The names of each column.
 

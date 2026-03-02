@@ -10,25 +10,39 @@ The result of the diff is a list with the differences between the resources.
 
 ## Methods
 
-### `setBaseDocument([`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md) baseAuthorAccess)`
+### `setBaseDocument(ro.sync.ecss.extensions.api.AuthorAccess baseAuthorAccess)`
 
 **Returns:** `void`
 
 It can be `null`.
 
-### `setDocumentsToCompare([`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md) leftAuthorAccess, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md) rightAuthorAccess)`
+**Parameters:**
+- `baseAuthorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md)): The access to the base Author document.
+
+### `setDocumentsToCompare(ro.sync.ecss.extensions.api.AuthorAccess leftAuthorAccess, ro.sync.ecss.extensions.api.AuthorAccess rightAuthorAccess)`
 
 **Returns:** `void`
 
-### `setOptions([`ro.sync.diff.api.DiffOptions`](./DiffOptions.md) diffOptions)`
+**Parameters:**
+- `leftAuthorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md)): The access to the left Author document.
+- `rightAuthorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md)): The access to the right Author document.
+
+### `setOptions(ro.sync.diff.api.DiffOptions diffOptions)`
 
 **Returns:** `void`
 
 It can be `null` meaning a default set of options will be used.
 
-### `performDiff([`ro.sync.diff.api.DiffProgressListener`](./DiffProgressListener.md) diffProgressListener)`
+**Parameters:**
+- `diffOptions` ([`ro.sync.diff.api.DiffOptions`](./DiffOptions.md)): The options.
+
+### `performDiff(ro.sync.diff.api.DiffProgressListener diffProgressListener)`
 
 **Returns:** `java.util.List<ro.sync.diff.api.Difference>`
+
+**Parameters:**
+- `diffProgressListener` ([`ro.sync.diff.api.DiffProgressListener`](./DiffProgressListener.md)): The DiffProgressListener notified about the progress of the diff.
+        It can be `null` when the diff progress doesn't need to be monitored.
 
 ### `stop()`
 

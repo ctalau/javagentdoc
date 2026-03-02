@@ -34,17 +34,23 @@
 
 **Returns:** `java.lang.String`
 
-### `setAttributeName(`java.lang.String` arg0)`
+### `setAttributeName(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getAttributeValue()`
 
 **Returns:** `java.lang.String`
 
-### `setAttributeValue(`java.lang.String` arg0)`
+### `setAttributeValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `toString()`
 
@@ -62,25 +68,36 @@
 
 **Returns:** `java.lang.String`
 
-### `getAncestorValues(`java.lang.String` arg0, `java.lang.String` arg1, `java.lang.String` arg2)`
+### `getAncestorValues(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
 
 **Returns:** `java.util.List<java.lang.String>`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
 
 ### `getCurrentValuePrefix()`
 
 **Returns:** `java.lang.String`
 
-### `setCurrentValuePrefix(`java.lang.String` arg0)`
+### `setCurrentValuePrefix(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getCurrentValueBeforeActivationChar()`
 
 **Returns:** `java.lang.String`
 
-### `setCurrentValueBeforeActivationChar(`java.lang.String` arg0)`
+### `setCurrentValueBeforeActivationChar(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `clone()`
 

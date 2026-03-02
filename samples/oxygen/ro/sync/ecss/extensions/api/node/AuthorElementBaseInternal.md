@@ -6,11 +6,17 @@
 
 ## Methods
 
-### `setPseudoClassInternal(`java.lang.String` arg0)`
+### `setPseudoClassInternal(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `removePseudoClassInternal(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `removePseudoClassInternal(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

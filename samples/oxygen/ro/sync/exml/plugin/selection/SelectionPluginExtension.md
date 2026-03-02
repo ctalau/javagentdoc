@@ -16,10 +16,13 @@ This is intended to work as follows: the user makes a selection in the editor
 
 ## Methods
 
-### `process([`ro.sync.exml.plugin.selection.SelectionPluginContext`](./SelectionPluginContext.md) context)`
+### `process(ro.sync.exml.plugin.selection.SelectionPluginContext context)`
 
 **Returns:** [`ro.sync.exml.plugin.selection.SelectionPluginResult`](./SelectionPluginResult.md)
 
 It receives the current context and it should
  return the processed content.
+
+**Parameters:**
+- `context` ([`ro.sync.exml.plugin.selection.SelectionPluginContext`](./SelectionPluginContext.md)): The context the plugin was invoked in.
 

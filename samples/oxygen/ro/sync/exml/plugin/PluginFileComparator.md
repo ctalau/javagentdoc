@@ -12,11 +12,18 @@
 
 ## Methods
 
-### `b(`java.lang.String` arg0)`
+### `b(java.lang.String arg0)`
 
 **Returns:** `ro.sync.exml.plugin.PluginFileComparator.FileNameComponents`
 
-### `compare(`java.io.File` arg0, `java.io.File` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `compare(java.io.File arg0, java.io.File arg1)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `arg0` (`java.io.File`)
+- `arg1` (`java.io.File`)
 

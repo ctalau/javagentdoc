@@ -13,9 +13,6 @@
 
 ## Description
 
-A dummy superclass of `ImmutableMultimap` that can be instanceof'd without ProGuard
- retaining additional implementation details of `ImmutableMultimap`.
-
 ## Constructors
 
 ### `<init>()`

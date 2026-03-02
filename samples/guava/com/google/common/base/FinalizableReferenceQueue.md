@@ -8,18 +8,22 @@
 
 ## Description
 
-A reference queue with an associated background thread that dequeues references and invokes
- `FinalizableReference.finalizeReferent()` on them.
+Keep a strong reference to this object until all of the associated referents have been
+ finalized. If this object is garbage collected earlier, the backing thread will not invoke 
+ finalizeReferent() on the remaining references.
 
- <p>Keep a strong reference to this object until all of the associated referents have been
- finalized. If this object is garbage collected earlier, the backing thread will not invoke `finalizeReferent()` on the remaining references.
-
- <p>As an example of how this is used, imagine you have a class `MyServer` that creates a
- `java.net.ServerSocket`, and you would like to ensure that the `ServerSocket` is closed even if the `MyServer` object is garbage-collected without calling
- its `close` method. You <em>could</em> use a finalizer to accomplish this, but that has a
+ 
+As an example of how this is used, imagine you have a class MyServer that creates a
+ ServerSocket, and you would like to ensure that the 
+ ServerSocket is closed even if the MyServer object is garbage-collected without calling
+ its close method. You *could* use a finalizer to accomplish this, but that has a
  number of well-known problems. Here is how you might use this class instead:
 
- <pre>`public class MyServer implements Closeable {
+ 
+
+```
+
+ public class MyServer implements Closeable {
    private static final FinalizableReferenceQueue frq = new FinalizableReferenceQueue();
    // You might also share this between several objects.
 
@@ -32,7 +36,7 @@ A reference queue with an associated background thread that dequeues references 
      ...
      this.serverSocket = new ServerSocket(...);
      ...
-   `
+   }
 
    public static MyServer create(...) {
      MyServer myServer = new MyServer(...);
@@ -58,9 +62,8 @@ A reference queue with an associated background thread that dequeues references 
      serverSocket.close();
    }
  }
- }</pre>
-**Author:** Bob Lee
-**Since:** 2.0
+ 
+```
 
 ## Fields
 
@@ -76,13 +79,9 @@ A reference queue with an associated background thread that dequeues references 
 
 **Type:** `java.lang.reflect.Method`
 
-Reference to Finalizer.startFinalizer().
-
 ### `queue`
 
 **Type:** `java.lang.ref.ReferenceQueue<java.lang.Object>`
-
-The actual reference queue that our background thread will poll.
 
 ### `frqRef`
 
@@ -92,13 +91,9 @@ The actual reference queue that our background thread will poll.
 
 **Type:** `boolean`
 
-Whether or not the background thread started successfully.
-
 ## Constructors
 
 ### `<init>()`
-
-Constructs a new queue.
 
 ## Methods
 
@@ -110,19 +105,20 @@ Constructs a new queue.
 
 **Returns:** `void`
 
-Repeatedly dequeues references from the queue and invokes `FinalizableReference.finalizeReferent()` on them until the queue is empty. This method is a
+This method is a
  no-op if the background thread was created successfully.
 
-### `loadFinalizer([`com.google.common.base.FinalizableReferenceQueue.FinalizerLoader[]`](FinalizableReferenceQueue/FinalizerLoader.md) loaders)`
+### `loadFinalizer(com.google.common.base.FinalizableReferenceQueue.FinalizerLoader[] loaders)`
 
 **Returns:** `java.lang.Class<?>`
 
-Iterates through the given loaders until it finds one that can load Finalizer.
-@return Finalizer.class
+**Parameters:**
+- `loaders` (`com.google.common.base.FinalizableReferenceQueue.FinalizerLoader[]`)
 
-### `getStartFinalizer(`java.lang.Class<?>` finalizer)`
+### `getStartFinalizer(java.lang.Class<?> finalizer)`
 
 **Returns:** `java.lang.reflect.Method`
 
-Looks up Finalizer.startFinalizer().
+**Parameters:**
+- `finalizer` (`java.lang.Class<?>`)
 

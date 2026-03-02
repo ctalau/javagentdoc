@@ -14,17 +14,13 @@
 
 ## Description
 
-A `SortedMultiset` whose contents will never change, with many other important properties
- detailed at `ImmutableCollection`.
-
- <p><b>Warning:</b> as with any sorted collection, you are strongly advised not to use a `Comparator` or `Comparable` type whose comparison behavior is <i>inconsistent with
- equals</i>. That is, `a.compareTo(b)` or `comparator.compare(a, b)` should equal zero
- <i>if and only if</i> `a.equals(b)`. If this advice is not followed, the resulting
+**Warning:** as with any sorted collection, you are strongly advised not to use a Comparator or Comparable type whose comparison behavior is *inconsistent with
+ equals*. That is, a.compareTo(b) or comparator.compare(a, b) should equal zero
+ *if and only if* a.equals(b). If this advice is not followed, the resulting
  collection will not correctly obey its specification.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">immutable collections</a>.
-**Author:** Louis Wasserman
-**Since:** 12.0
+ 
+See the Guava User Guide article on [immutable collections](https://github.com/google/guava/wiki/ImmutableCollectionsExplained).
 
 ## Fields
 
@@ -42,166 +38,195 @@ A `SortedMultiset` whose contents will never change, with many other important p
 
 ## Methods
 
-### `toImmutableSortedMultiset(`java.util.Comparator<? super E>` comparator)`
+### `toImmutableSortedMultiset(java.util.Comparator<? super E> comparator)`
 
 **Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSortedMultiset<E>>`
 
-Returns a `Collector` that accumulates the input elements into a new `ImmutableMultiset`. Elements are sorted by the specified comparator.
+Elements are sorted by the specified comparator.
 
- <p><b>Warning:</b> `comparator` should be <i>consistent with `equals`</i> as
- explained in the `Comparator` documentation.
-**Since:** 21.0
+ 
+**Warning:** comparator should be *consistent with equals* as
+ explained in the Comparator documentation.
 
-### `toImmutableSortedMultiset(`java.util.Comparator<? super E>` comparator, `java.util.function.Function<? super T,? extends E>` elementFunction, `java.util.function.ToIntFunction<? super T>` countFunction)`
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
+
+### `toImmutableSortedMultiset(java.util.Comparator<? super E> comparator, java.util.function.Function<? super T,? extends E> elementFunction, java.util.function.ToIntFunction<? super T> countFunction)`
 
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableSortedMultiset<E>>`
 
-Returns a `Collector` that accumulates elements into an `ImmutableSortedMultiset`
- whose elements are the result of applying `elementFunction` to the inputs, with counts
- equal to the result of applying `countFunction` to the inputs.
-
- <p>If the mapped elements contain duplicates (according to `comparator`), the first
+If the mapped elements contain duplicates (according to comparator), the first
  occurrence in encounter order appears in the resulting multiset, with count equal to the sum of
- the outputs of `countFunction.applyAsInt(t)` for each `t` mapped to that element.
-**Since:** 22.0
+ the outputs of countFunction.applyAsInt(t) for each t mapped to that element.
+
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
+- `elementFunction` (`java.util.function.Function<? super T,? extends E>`)
+- `countFunction` (`java.util.function.ToIntFunction<? super T>`)
 
 ### `of()`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns the empty immutable sorted multiset.
+**Performance note:** the instance returned is a singleton.
 
- <p><b>Performance note:</b> the instance returned is a singleton.
-
-### `of(`E` element)`
+### `of(E element)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing a single element.
+**Parameters:**
+- `element` (`E`)
 
-### `of(`E` e1, `E` e2)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
-
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering.
-@throws NullPointerException if any element is null
-
-### `of(`E` e1, `E` e2, `E` e3)`
+### `of(E e1, E e2)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering.
-@throws NullPointerException if any element is null
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
 
-### `of(`E` e1, `E` e2, `E` e3, `E` e4)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
-
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering.
-@throws NullPointerException if any element is null
-
-### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5)`
+### `of(E e1, E e2, E e3)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering.
-@throws NullPointerException if any element is null
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
 
-### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5, `E` e6, `E[]` remaining)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
-
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering.
-@throws NullPointerException if any element is null
-
-### `copyOf(`E[]` elements)`
+### `of(E e1, E e2, E e3, E e4)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering.
-@throws NullPointerException if any of `elements` is null
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
 
-### `copyOf(`java.lang.Iterable<? extends E>` elements)`
+### `of(E e1, E e2, E e3, E e4, E e5)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering. To create a copy of a `SortedMultiset` that preserves the comparator, call
- `copyOfSorted` instead. This method iterates over `elements` at most once.
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
+- `e5` (`E`)
 
- <p>Note that if `s` is a `Multiset<String>`, then `ImmutableSortedMultiset.copyOf(s)` returns an `ImmutableSortedMultiset<String>`
- containing each of the strings in `s`, while `ImmutableSortedMultiset.of(s)`
- returns an `ImmutableSortedMultiset<Multiset<String>>` containing one element (the given
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] remaining)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
+- `e5` (`E`)
+- `e6` (`E`)
+- `remaining` (`E[]`)
+
+### `copyOf(E[] elements)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**Parameters:**
+- `elements` (`E[]`)
+
+### `copyOf(java.lang.Iterable<? extends E> elements)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+To create a copy of a SortedMultiset that preserves the comparator, call
+ #copyOfSorted instead. This method iterates over elements at most once.
+
+ 
+Note that if s is a Multiset<String>, then 
+ ImmutableSortedMultiset.copyOf(s) returns an ImmutableSortedMultiset<String>
+ containing each of the strings in s, while ImmutableSortedMultiset.of(s)
+ returns an ImmutableSortedMultiset<Multiset<String>> containing one element (the given
  multiset itself).
 
- <p>Despite the method name, this method attempts to avoid actually copying the data when it is
+ 
+Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
  undocumented and subject to change.
 
- <p>This method is not type-safe, as it may be called on elements that are not mutually
+ 
+This method is not type-safe, as it may be called on elements that are not mutually
  comparable.
-@throws ClassCastException if the elements are not mutually comparable
-@throws NullPointerException if any of `elements` is null
 
-### `copyOf(`java.util.Iterator<? extends E>` elements)`
+**Parameters:**
+- `elements` (`java.lang.Iterable<? extends E>`)
+
+### `copyOf(java.util.Iterator<? extends E> elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing the given elements sorted by their natural
- ordering.
-
- <p>This method is not type-safe, as it may be called on elements that are not mutually
+This method is not type-safe, as it may be called on elements that are not mutually
  comparable.
-@throws ClassCastException if the elements are not mutually comparable
-@throws NullPointerException if any of `elements` is null
 
-### `copyOf(`java.util.Comparator<? super E>` comparator, `java.util.Iterator<? extends E>` elements)`
+**Parameters:**
+- `elements` (`java.util.Iterator<? extends E>`)
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
-
-Returns an immutable sorted multiset containing the given elements sorted by the given `Comparator`.
-@throws NullPointerException if `comparator` or any of `elements` is null
-
-### `copyOf(`java.util.Comparator<? super E>` comparator, `java.lang.Iterable<? extends E>` elements)`
+### `copyOf(java.util.Comparator<? super E> comparator, java.util.Iterator<? extends E> elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing the given elements sorted by the given `Comparator`. This method iterates over `elements` at most once.
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
+- `elements` (`java.util.Iterator<? extends E>`)
 
- <p>Despite the method name, this method attempts to avoid actually copying the data when it is
+### `copyOf(java.util.Comparator<? super E> comparator, java.lang.Iterable<? extends E> elements)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+This method iterates over elements at most once.
+
+ 
+Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
  undocumented and subject to change.
-@throws NullPointerException if `comparator` or any of `elements` is null
 
-### `copyOfSorted([`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md) sortedMultiset)`
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
+- `elements` (`java.lang.Iterable<? extends E>`)
+
+### `copyOfSorted(com.google.common.collect.SortedMultiset<E> sortedMultiset)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Returns an immutable sorted multiset containing the elements of a sorted multiset, sorted by
- the same `Comparator`. That behavior differs from `copyOf(Iterable)`, which always
+That behavior differs from #copyOf(Iterable), which always
  uses the natural ordering of the elements.
 
- <p>Despite the method name, this method attempts to avoid actually copying the data when it is
+ 
+Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
  undocumented and subject to change.
 
- <p>This method is safe to use even when `sortedMultiset` is a synchronized or concurrent
+ 
+This method is safe to use even when sortedMultiset is a synchronized or concurrent
  collection that is currently being modified by another thread.
-@throws NullPointerException if `sortedMultiset` or any of its elements is null
 
-### `copyOfSortedEntries(`java.util.Comparator<? super E>` comparator, `java.util.Collection<com.google.common.collect.Multiset.Entry<E>>` entries)`
+**Parameters:**
+- `sortedMultiset` ([`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md))
+
+### `copyOfSortedEntries(java.util.Comparator<? super E> comparator, java.util.Collection<com.google.common.collect.Multiset.Entry<E>> entries)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
+- `entries` (`java.util.Collection<com.google.common.collect.Multiset.Entry<E>>`)
+
+### `emptyMultiset(java.util.Comparator<? super E> comparator)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `emptyMultiset(`java.util.Comparator<? super E>` comparator)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super E>`)
 
 ### `comparator()`
 
@@ -217,157 +242,202 @@ Returns an immutable sorted multiset containing the elements of a sorted multise
 
 ### `pollFirstEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-{@inheritDoc}
-
- <p>This implementation is guaranteed to throw an `UnsupportedOperationException`.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+This implementation is guaranteed to throw an UnsupportedOperationException.
 
 ### `pollLastEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-{@inheritDoc}
+This implementation is guaranteed to throw an UnsupportedOperationException.
 
- <p>This implementation is guaranteed to throw an `UnsupportedOperationException`.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
-
-### `headMultiset(`E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `subMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) lowerBoundType, `E` upperBound, [`com.google.common.collect.BoundType`](./BoundType.md) upperBoundType)`
+**Parameters:**
+- `upperBound` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `subMultiset(E lowerBound, com.google.common.collect.BoundType lowerBoundType, E upperBound, com.google.common.collect.BoundType upperBoundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `tailMultiset(`E` lowerBound, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+**Parameters:**
+- `lowerBound` (`E`)
+- `lowerBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `upperBound` (`E`)
+- `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `orderedBy(`java.util.Comparator<E>` comparator)`
+**Parameters:**
+- `lowerBound` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset.Builder<E>`](ImmutableSortedMultiset/Builder.md)
+### `orderedBy(java.util.Comparator<E> comparator)`
 
-Returns a builder that creates immutable sorted multisets with an explicit comparator. If the
- comparator has a more general type than the set being generated, such as creating a `SortedMultiset<Integer>` with a `Comparator<Number>`, use the `Builder` constructor
+**Returns:** `com.google.common.collect.ImmutableSortedMultiset.Builder<E>`
+
+If the
+ comparator has a more general type than the set being generated, such as creating a 
+ SortedMultiset<Integer> with a Comparator<Number>, use the Builder constructor
  instead.
-@throws NullPointerException if `comparator` is null
+
+**Parameters:**
+- `comparator` (`java.util.Comparator<E>`)
 
 ### `reverseOrder()`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset.Builder<E>`](ImmutableSortedMultiset/Builder.md)
+**Returns:** `com.google.common.collect.ImmutableSortedMultiset.Builder<E>`
 
-Returns a builder that creates immutable sorted multisets whose elements are ordered by the
- reverse of their natural ordering.
-
- <p>Note: the type parameter `E` extends `Comparable<?>` rather than `Comparable<? super E>` as a workaround for javac <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6468354">bug 6468354</a>.
+Note: the type parameter E extends Comparable<?> rather than 
+ Comparable<? super E> as a workaround for javac [bug 6468354](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6468354).
 
 ### `naturalOrder()`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset.Builder<E>`](ImmutableSortedMultiset/Builder.md)
+**Returns:** `com.google.common.collect.ImmutableSortedMultiset.Builder<E>`
 
-Returns a builder that creates immutable sorted multisets whose elements are ordered by their
- natural ordering. The sorted multisets use `Ordering.natural()` as the comparator. This
- method provides more type-safety than `builder`, as it can be called only for classes
- that implement `Comparable`.
+The sorted multisets use Ordering#natural() as the comparator. This
+ method provides more type-safety than #builder, as it can be called only for classes
+ that implement Comparable.
 
- <p>Note: the type parameter `E` extends `Comparable<?>` rather than `Comparable<? super E>` as a workaround for javac <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6468354">bug 6468354</a>.
+ 
+Note: the type parameter E extends Comparable<?> rather than 
+ Comparable<? super E> as a workaround for javac [bug 6468354](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6468354).
 
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 
 ### `toImmutableMultiset()`
 
 **Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableMultiset<E>>`
 
-Not supported. Use `toImmutableSortedMultiset` instead. This method exists only to hide
- `ImmutableMultiset.toImmutableMultiset` from consumers of `ImmutableSortedMultiset`.
-@throws UnsupportedOperationException always
-**Deprecated:**Use `ImmutableSortedMultiset.toImmutableSortedMultiset`.
-**Since:** 21.0
+Use #toImmutableSortedMultiset instead. This method exists only to hide
+ ImmutableMultiset#toImmutableMultiset from consumers of 
+ ImmutableSortedMultiset.
 
-### `toImmutableMultiset(`java.util.function.Function<? super T,? extends E>` elementFunction, `java.util.function.ToIntFunction<? super T>` countFunction)`
+### `toImmutableMultiset(java.util.function.Function<? super T,? extends E> elementFunction, java.util.function.ToIntFunction<? super T> countFunction)`
 
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMultiset<E>>`
 
-Not supported. Use `toImmutableSortedMultiset` instead. This method exists only to hide
- `ImmutableMultiset.toImmutableMultiset` from consumers of `ImmutableSortedMultiset`.
-@throws UnsupportedOperationException always
-**Deprecated:**Use `ImmutableSortedMultiset.toImmutableSortedMultiset`.
-**Since:** 22.0
+Use #toImmutableSortedMultiset instead. This method exists only to hide
+ ImmutableMultiset#toImmutableMultiset from consumers of 
+ ImmutableSortedMultiset.
+
+**Parameters:**
+- `elementFunction` (`java.util.function.Function<? super T,? extends E>`)
+- `countFunction` (`java.util.function.ToIntFunction<? super T>`)
 
 ### `builder()`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset.Builder<E>`](ImmutableSortedMultiset/Builder.md)
+**Returns:** `com.google.common.collect.ImmutableSortedMultiset.Builder<E>`
 
-Not supported. Use `naturalOrder`, which offers better type-safety, instead. This method
- exists only to hide `ImmutableMultiset.builder` from consumers of `ImmutableSortedMultiset`.
-@throws UnsupportedOperationException always
-**Deprecated:**Use `ImmutableSortedMultiset.naturalOrder`, which offers better type-safety.
+Use #naturalOrder, which offers better type-safety, instead. This method
+ exists only to hide ImmutableMultiset#builder from consumers of 
+ ImmutableSortedMultiset.
 
-### `of(`E` element)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
-
-Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
-@throws UnsupportedOperationException always
-**Deprecated:**<b>Pass a parameter of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable)`.</b>
-
-### `of(`E` e1, `E` e2)`
+### `of(E element)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
-@throws UnsupportedOperationException always
-**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable)`.</b>
+**You are attempting to create a multiset that may contain a non-
+ Comparable element.** Proper calls will resolve to the version in 
+ ImmutableSortedMultiset, not this dummy version.
 
-### `of(`E` e1, `E` e2, `E` e3)`
+**Parameters:**
+- `element` (`E`)
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
-
-Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
-@throws UnsupportedOperationException always
-**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable)`.</b>
-
-### `of(`E` e1, `E` e2, `E` e3, `E` e4)`
+### `of(E e1, E e2)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
-@throws UnsupportedOperationException always
-**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable)`. </b>
+**You are attempting to create a multiset that may contain a non-
+ Comparable element.** Proper calls will resolve to the version in 
+ ImmutableSortedMultiset, not this dummy version.
 
-### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5)`
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
-
-Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
-@throws UnsupportedOperationException always
-**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable, Comparable)` .
-     </b>
-
-### `of(`E` e1, `E` e2, `E` e3, `E` e4, `E` e5, `E` e6, `E[]` remaining)`
+### `of(E e1, E e2, E e3)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-Not supported. <b>You are attempting to create a multiset that may contain a non-`Comparable` element.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
-@throws UnsupportedOperationException always
-**Deprecated:**<b>Pass the parameters of type `Comparable` to use `ImmutableSortedMultiset.of(Comparable, Comparable, Comparable, Comparable, Comparable,
-     Comparable, Comparable...)` . </b>
+**You are attempting to create a multiset that may contain a non-
+ Comparable element.** Proper calls will resolve to the version in 
+ ImmutableSortedMultiset, not this dummy version.
 
-### `copyOf(`Z[]` elements)`
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+
+### `of(E e1, E e2, E e3, E e4)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**You are attempting to create a multiset that may contain a non-
+ Comparable element.** Proper calls will resolve to the version in 
+ ImmutableSortedMultiset, not this dummy version.
+
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
+
+### `of(E e1, E e2, E e3, E e4, E e5)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**You are attempting to create a multiset that may contain a non-
+ Comparable element.** Proper calls will resolve to the version in 
+ ImmutableSortedMultiset, not this dummy version.
+
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
+- `e5` (`E`)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] remaining)`
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+**You are attempting to create a multiset that may contain a non-
+ Comparable element.** Proper calls will resolve to the version in 
+ ImmutableSortedMultiset, not this dummy version.
+
+**Parameters:**
+- `e1` (`E`)
+- `e2` (`E`)
+- `e3` (`E`)
+- `e4` (`E`)
+- `e5` (`E`)
+- `e6` (`E`)
+- `remaining` (`E[]`)
+
+### `copyOf(Z[] elements)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<Z>`](./ImmutableSortedMultiset.md)
 
-Not supported. <b>You are attempting to create a multiset that may contain non-`Comparable` elements.</b> Proper calls will resolve to the version in `ImmutableSortedMultiset`, not this dummy version.
-@throws UnsupportedOperationException always
-**Deprecated:**<b>Pass parameters of type `Comparable` to use `ImmutableSortedMultiset.copyOf(Comparable[])`.</b>
+**You are attempting to create a multiset that may contain non-
+ Comparable elements.** Proper calls will resolve to the version in 
+ ImmutableSortedMultiset, not this dummy version.
+
+**Parameters:**
+- `elements` (`Z[]`)
 

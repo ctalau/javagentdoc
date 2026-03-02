@@ -15,21 +15,19 @@
 
 ## Description
 
-A concurrent map which forwards all its method calls to another concurrent map. Subclasses should
- override one or more methods to modify the behavior of the backing map as desired per the <a href="http://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>.
+Subclasses should
+ override one or more methods to modify the behavior of the backing map as desired per the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern).
 
- <p><b>`default` method warning:</b> This class forwards calls to <i>only some</i> `default` methods. Specifically, it forwards calls only for methods that existed <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html">before
- `default` methods were introduced</a>. For newer methods, like `forEach`, it inherits
+ 
+**default method warning:** This class forwards calls to *only some* 
+ default methods. Specifically, it forwards calls only for methods that existed [before
+ default methods were introduced](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentMap.html). For newer methods, like forEach, it inherits
  their default implementations. When those implementations invoke methods, they invoke methods on
- the `ForwardingConcurrentMap`.
-**Author:** Charles Fry
-**Since:** 2.0
+ the ForwardingConcurrentMap.
 
 ## Constructors
 
 ### `<init>()`
-
-Constructor for use by subclasses.
 
 ## Methods
 
@@ -37,19 +35,36 @@ Constructor for use by subclasses.
 
 **Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
-### `putIfAbsent(`K` key, `V` value)`
+### `putIfAbsent(K key, V value)`
 
 **Returns:** `V`
 
-### `remove(`java.lang.Object` key, `java.lang.Object` value)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `remove(java.lang.Object key, java.lang.Object value)`
 
 **Returns:** `boolean`
 
-### `replace(`K` key, `V` value)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+- `value` (`java.lang.Object`)
+
+### `replace(K key, V value)`
 
 **Returns:** `V`
 
-### `replace(`K` key, `V` oldValue, `V` newValue)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `replace(K key, V oldValue, V newValue)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `key` (`K`)
+- `oldValue` (`V`)
+- `newValue` (`V`)
 

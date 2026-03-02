@@ -8,18 +8,17 @@
 
 ## Description
 
-Executor ensuring that all Runnables submitted are executed in order, using the provided
- Executor, and sequentially such that no two will ever be running at the same time.
+Tasks submitted to #execute(Runnable) are executed in FIFO order.
 
- <p>Tasks submitted to `execute(Runnable)` are executed in FIFO order.
-
- <p>The execution of tasks is done by one thread as long as there are tasks left in the queue.
+ 
+The execution of tasks is done by one thread as long as there are tasks left in the queue.
  When a task is interrupted, execution of subsequent tasks
- continues. See `QueueWorker.workOnQueue` for details.
+ continues. See QueueWorker#workOnQueue for details.
 
- <p>`RuntimeException`s thrown by tasks are simply logged and the executor keeps trucking.
- If an `Error` is thrown, the error will propagate and execution will stop until it is
- restarted by a call to `execute`.
+ 
+RuntimeExceptions thrown by tasks are simply logged and the executor keeps trucking.
+ If an Error is thrown, the error will propagate and execution will stop until it is
+ restarted by a call to #execute.
 
 ## Fields
 
@@ -31,48 +30,44 @@ Executor ensuring that all Runnables submitted are executed in order, using the 
 
 **Type:** `java.util.concurrent.Executor`
 
-Underlying executor that all submitted Runnable objects are run on.
-
 ### `queue`
 
 **Type:** `java.util.Deque<java.lang.Runnable>`
 
 ### `workerRunningState`
 
-**Type:** [`com.google.common.util.concurrent.SequentialExecutor.WorkerRunningState`](SequentialExecutor/WorkerRunningState.md)
-
-see `WorkerRunningState`
+**Type:** `com.google.common.util.concurrent.SequentialExecutor.WorkerRunningState`
 
 ### `workerRunCount`
 
 **Type:** `long`
 
-This counter prevents an ABA issue where a thread may successfully schedule the worker, the
- worker runs and exhausts the queue, another thread enqueues a task and fails to schedule the
- worker, and then the first thread's call to delegate.execute() returns. Without this counter,
+Without this counter,
  it would observe the QUEUING state and set it to QUEUED, and the worker would never be
  scheduled again for future submissions.
 
 ### `worker`
 
-**Type:** [`com.google.common.util.concurrent.SequentialExecutor.QueueWorker`](SequentialExecutor/QueueWorker.md)
+**Type:** `com.google.common.util.concurrent.SequentialExecutor.QueueWorker`
 
 ## Constructors
 
-### `<init>(`java.util.concurrent.Executor` executor)`
+### `<init>(java.util.concurrent.Executor executor)`
 
-Use `MoreExecutors.newSequentialExecutor`
+**Parameters:**
+- `executor` (`java.util.concurrent.Executor`)
 
 ## Methods
 
-### `execute(`java.lang.Runnable` task)`
+### `execute(java.lang.Runnable task)`
 
 **Returns:** `void`
 
-Adds a task to the queue and makes sure a worker thread is running.
-
- <p>If this method throws, e.g. a `RejectedExecutionException` from the delegate executor,
+If this method throws, e.g. a RejectedExecutionException from the delegate executor,
  execution of tasks will stop until a call to this method is made.
+
+**Parameters:**
+- `task` (`java.lang.Runnable`)
 
 ### `toString()`
 

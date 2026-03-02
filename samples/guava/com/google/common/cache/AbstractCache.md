@@ -13,52 +13,50 @@
 
 ## Description
 
-This class provides a skeletal implementation of the `Cache` interface to minimize the
- effort required to implement this interface.
-
- <p>To implement a cache, the programmer needs only to extend this class and provide an
- implementation for the `put` and `getIfPresent` methods. `getAllPresent` is
- implemented in terms of `getIfPresent`; `putAll` is implemented in terms of `put`, `invalidateAll(Iterable)` is implemented in terms of `invalidate`. The
- method `cleanUp` is a no-op. All other methods throw an `UnsupportedOperationException`.
-**Author:** Charles Fry
-**Since:** 10.0
+To implement a cache, the programmer needs only to extend this class and provide an
+ implementation for the #put and #getIfPresent methods. #getAllPresent is
+ implemented in terms of #getIfPresent; #putAll is implemented in terms of #put, #invalidateAll(Iterable) is implemented in terms of #invalidate. The
+ method #cleanUp is a no-op. All other methods throw an UnsupportedOperationException.
 
 ## Constructors
 
 ### `<init>()`
 
-Constructor for use by subclasses.
-
 ## Methods
 
-### `get(`K` key, `java.util.concurrent.Callable<? extends V>` valueLoader)`
+### `get(K key, java.util.concurrent.Callable<? extends V> valueLoader)`
 
 **Returns:** `V`
 
-**Since:** 11.0
+**Parameters:**
+- `key` (`K`)
+- `valueLoader` (`java.util.concurrent.Callable<? extends V>`)
 
-### `getAllPresent(`java.lang.Iterable<? extends java.lang.Object>` keys)`
+### `getAllPresent(java.lang.Iterable<? extends java.lang.Object> keys)`
 
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-{@inheritDoc}
-
- <p>This implementation of `getAllPresent` lacks any insight into the internal cache data
+This implementation of getAllPresent lacks any insight into the internal cache data
  structure, and is thus forced to return the query keys instead of the cached keys. This is only
- possible with an unsafe cast which requires `keys` to actually be of type `K`.
-**Since:** 11.0
+ possible with an unsafe cast which requires keys to actually be of type K.
 
-### `put(`K` key, `V` value)`
+**Parameters:**
+- `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
 
-**Returns:** `void`
-
-**Since:** 11.0
-
-### `putAll(`java.util.Map<? extends K,? extends V>` m)`
+### `put(K key, V value)`
 
 **Returns:** `void`
 
-**Since:** 12.0
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `putAll(java.util.Map<? extends K,? extends V> m)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `m` (`java.util.Map<? extends K,? extends V>`)
 
 ### `cleanUp()`
 
@@ -68,15 +66,19 @@ Constructor for use by subclasses.
 
 **Returns:** `long`
 
-### `invalidate(`java.lang.Object` key)`
+### `invalidate(java.lang.Object key)`
 
 **Returns:** `void`
 
-### `invalidateAll(`java.lang.Iterable<? extends java.lang.Object>` keys)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `invalidateAll(java.lang.Iterable<? extends java.lang.Object> keys)`
 
 **Returns:** `void`
 
-**Since:** 11.0
+**Parameters:**
+- `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
 
 ### `invalidateAll()`
 

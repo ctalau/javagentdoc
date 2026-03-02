@@ -28,31 +28,67 @@
 
 ## Methods
 
-### `build([`ro.sync.ecss.dom.wrappers.mutable.AuthorSource`](./AuthorSource.md) arg0, `net.sf.saxon.Configuration` arg1)`
+### `build(ro.sync.ecss.dom.wrappers.mutable.AuthorSource arg0, net.sf.saxon.Configuration arg1)`
 
 **Returns:** `net.sf.saxon.om.NodeInfo`
 
-### `makeWrapper(`org.w3c.dom.Node` arg0, [`ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper`](./DocumentWrapper.md) arg1, [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md) arg2, `int` arg3)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.dom.wrappers.mutable.AuthorSource`](./AuthorSource.md))
+- `arg1` (`net.sf.saxon.Configuration`)
+
+### `makeWrapper(org.w3c.dom.Node arg0, ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg1, ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper arg2, int arg3)`
 
 **Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
 
-### `setContextNode([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md) arg0, `net.sf.saxon.om.NodeInfo` arg1, `net.sf.saxon.Configuration` arg2, `net.sf.saxon.query.DynamicQueryContext` arg3)`
+**Parameters:**
+- `arg0` (`org.w3c.dom.Node`)
+- `arg1` ([`ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper`](./DocumentWrapper.md))
+- `arg2` ([`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md))
+- `arg3` (`int`)
+
+### `setContextNode(ro.sync.ecss.extensions.api.AuthorAccess arg0, net.sf.saxon.om.NodeInfo arg1, net.sf.saxon.Configuration arg2, net.sf.saxon.query.DynamicQueryContext arg3)`
 
 **Returns:** `void`
 
-### `getLocationXpathExpression([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md))
+- `arg1` (`net.sf.saxon.om.NodeInfo`)
+- `arg2` (`net.sf.saxon.Configuration`)
+- `arg3` (`net.sf.saxon.query.DynamicQueryContext`)
+
+### `getLocationXpathExpression(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
 
 **Returns:** `java.lang.String`
 
-### `getNodesByXPath(`net.sf.saxon.om.NodeInfo` arg0, `net.sf.saxon.Configuration` arg1, `java.lang.String` arg2, [`ro.sync.ecss.extensions.api.node.NamespaceContext`](../../../extensions/api/node/NamespaceContext.md) arg3)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md))
+
+### `getNodesByXPath(net.sf.saxon.om.NodeInfo arg0, net.sf.saxon.Configuration arg1, java.lang.String arg2, ro.sync.ecss.extensions.api.node.NamespaceContext arg3)`
 
 **Returns:** `net.sf.saxon.om.NodeInfo`
 
-### `setSelectionContext([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md) arg0, `net.sf.saxon.om.NodeInfo` arg1, `net.sf.saxon.Configuration` arg2, `net.sf.saxon.query.DynamicQueryContext` arg3)`
+**Parameters:**
+- `arg0` (`net.sf.saxon.om.NodeInfo`)
+- `arg1` (`net.sf.saxon.Configuration`)
+- `arg2` (`java.lang.String`)
+- `arg3` ([`ro.sync.ecss.extensions.api.node.NamespaceContext`](../../../extensions/api/node/NamespaceContext.md))
+
+### `setSelectionContext(ro.sync.ecss.extensions.api.AuthorAccess arg0, net.sf.saxon.om.NodeInfo arg1, net.sf.saxon.Configuration arg2, net.sf.saxon.query.DynamicQueryContext arg3)`
 
 **Returns:** `void`
 
-### `initializeQueryContext([`ro.sync.ecss.dom.wrappers.mutable.AuthorSource`](./AuthorSource.md) arg0, `net.sf.saxon.Configuration` arg1, `net.sf.saxon.query.DynamicQueryContext` arg2)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md))
+- `arg1` (`net.sf.saxon.om.NodeInfo`)
+- `arg2` (`net.sf.saxon.Configuration`)
+- `arg3` (`net.sf.saxon.query.DynamicQueryContext`)
+
+### `initializeQueryContext(ro.sync.ecss.dom.wrappers.mutable.AuthorSource arg0, net.sf.saxon.Configuration arg1, net.sf.saxon.query.DynamicQueryContext arg2)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.dom.wrappers.mutable.AuthorSource`](./AuthorSource.md))
+- `arg1` (`net.sf.saxon.Configuration`)
+- `arg2` (`net.sf.saxon.query.DynamicQueryContext`)
 

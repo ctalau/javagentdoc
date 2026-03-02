@@ -8,9 +8,6 @@
 
 ## Description
 
-Abstract `Hasher` that handles converting primitives to bytes using a scratch `ByteBuffer` and streams all bytes to a sink to compute the hash.
-**Author:** Colin Decker
-
 ## Fields
 
 ### `scratch`
@@ -23,65 +20,98 @@ Abstract `Hasher` that handles converting primitives to bytes using a scratch `B
 
 ## Methods
 
-### `update(`byte` b)`
+### `update(byte b)`
 
 **Returns:** `void`
 
-Updates this hasher with the given byte.
+**Parameters:**
+- `b` (`byte`)
 
-### `update(`byte[]` b)`
-
-**Returns:** `void`
-
-Updates this hasher with the given bytes.
-
-### `update(`byte[]` b, `int` off, `int` len)`
+### `update(byte[] b)`
 
 **Returns:** `void`
 
-Updates this hasher with `len` bytes starting at `off` in the given buffer.
+**Parameters:**
+- `b` (`byte[]`)
 
-### `update(`java.nio.ByteBuffer` b)`
+### `update(byte[] b, int off, int len)`
 
 **Returns:** `void`
 
-Updates this hasher with bytes from the given buffer.
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
 
-### `update(`int` bytes)`
+### `update(java.nio.ByteBuffer b)`
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+**Returns:** `void`
 
-Updates the sink with the given number of bytes from the buffer.
+**Parameters:**
+- `b` (`java.nio.ByteBuffer`)
 
-### `putByte(`byte` b)`
-
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
-
-### `putBytes(`byte[]` bytes)`
-
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
-
-### `putBytes(`byte[]` bytes, `int` off, `int` len)`
+### `update(int bytes)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putBytes(`java.nio.ByteBuffer` bytes)`
+**Parameters:**
+- `bytes` (`int`)
+
+### `putByte(byte b)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putShort(`short` s)`
+**Parameters:**
+- `b` (`byte`)
+
+### `putBytes(byte[] bytes)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putInt(`int` i)`
+**Parameters:**
+- `bytes` (`byte[]`)
+
+### `putBytes(byte[] bytes, int off, int len)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putLong(`long` l)`
+**Parameters:**
+- `bytes` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `putBytes(java.nio.ByteBuffer bytes)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-### `putChar(`char` c)`
+**Parameters:**
+- `bytes` (`java.nio.ByteBuffer`)
+
+### `putShort(short s)`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+**Parameters:**
+- `s` (`short`)
+
+### `putInt(int i)`
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+**Parameters:**
+- `i` (`int`)
+
+### `putLong(long l)`
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+**Parameters:**
+- `l` (`long`)
+
+### `putChar(char c)`
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+**Parameters:**
+- `c` (`char`)
 

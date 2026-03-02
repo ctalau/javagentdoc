@@ -13,5 +13,8 @@ For instance another
 
 ## Constructors
 
-### `<init>(`java.lang.String` msg)`
+### `<init>(java.lang.String msg)`
+
+**Parameters:**
+- `msg` (`java.lang.String`): The message.
 

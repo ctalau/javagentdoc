@@ -26,23 +26,32 @@
 
 **Returns:** `int`
 
-### `setPositionInDoc(`int` arg0)`
+### `setPositionInDoc(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ### `getDoc()`
 
 **Returns:** [`ro.sync.document.SyntaxDocumentBase`](../../document/SyntaxDocumentBase.md)
 
-### `setDoc([`ro.sync.document.SyntaxDocumentBase`](../../document/SyntaxDocumentBase.md) arg0)`
+### `setDoc(ro.sync.document.SyntaxDocumentBase arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.document.SyntaxDocumentBase`](../../document/SyntaxDocumentBase.md))
 
 ### `clone()`
 
 **Returns:** `java.lang.Object`
 
-### `equals(`java.lang.Object` arg0)`
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 

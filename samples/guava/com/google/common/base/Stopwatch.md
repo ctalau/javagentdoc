@@ -6,61 +6,77 @@
 
 ## Description
 
-An object that accurately measures <i>elapsed time</i>: the measured duration between two
- successive readings of "now" in the same process.
-
- <p>In contrast, <i>wall time</i> is a reading of "now" as given by a method like
- `System.currentTimeMillis()`, best represented as an `java.time.Instant`. Such values
- <i>can</i> be subtracted to obtain a `Duration` (such as by `Duration.between`), but
- doing so does <i>not</i> give a reliable measurement of elapsed time, because wall time readings
+In contrast, *wall time* is a reading of "now" as given by a method like
+ System#currentTimeMillis(), best represented as an java.time.Instant. Such values
+ *can* be subtracted to obtain a Duration (such as by Duration.between), but
+ doing so does *not* give a reliable measurement of elapsed time, because wall time readings
  are inherently approximate, routinely affected by periodic clock corrections. Because this class
- (by default) uses `System.nanoTime`, it is unaffected by these changes.
+ (by default) uses System#nanoTime, it is unaffected by these changes.
 
- <p>Use this class instead of direct calls to `System.nanoTime` for two reasons:
+ 
+Use this class instead of direct calls to System#nanoTime for two reasons:
 
- <ul>
-   <li>The raw `long` values returned by `nanoTime` are meaningless and unsafe to use
-       in any other way than how `Stopwatch` uses them.
-   <li>An alternative source of nanosecond ticks can be substituted, for example for testing or
+ 
+
+   - The raw long values returned by nanoTime are meaningless and unsafe to use
+       in any other way than how Stopwatch uses them.
+   - An alternative source of nanosecond ticks can be substituted, for example for testing or
        performance reasons, without affecting most of your code.
- </ul>
+ 
 
- <p>The one downside of `Stopwatch` relative to `System.nanoTime()` is that `Stopwatch` requires object allocation and additional method calls, which can reduce the accuracy
- of the elapsed times reported. `Stopwatch` is still suitable for logging and metrics where
+
+ 
+The one downside of Stopwatch relative to System#nanoTime() is that 
+ Stopwatch requires object allocation and additional method calls, which can reduce the accuracy
+ of the elapsed times reported. Stopwatch is still suitable for logging and metrics where
  reasonably accurate values are sufficient. If the uncommon case that you need to maximize
- accuracy, use `System.nanoTime()` directly instead.
+ accuracy, use System.nanoTime() directly instead.
 
- <p>Basic usage:
+ 
+Basic usage:
 
- <pre>`Stopwatch stopwatch = Stopwatch.createStarted();
+ 
+
+```
+
+ Stopwatch stopwatch = Stopwatch.createStarted();
  doSomething();
  stopwatch.stop(); // optional
 
  Duration duration = stopwatch.elapsed();
 
  log.info("time: " + stopwatch); // formatted string like "12.3 ms"
- `</pre>
+ 
+```
 
- <p>The state-changing methods are not idempotent; it is an error to start or stop a stopwatch
+
+ 
+The state-changing methods are not idempotent; it is an error to start or stop a stopwatch
  that is already in the desired state.
 
- <p>When testing code that uses this class, use `createUnstarted(Ticker)` or `createStarted(Ticker)` to supply a fake or mock ticker. This allows you to simulate any valid
+ 
+When testing code that uses this class, use #createUnstarted(Ticker) or #createStarted(Ticker) to supply a fake or mock ticker. This allows you to simulate any valid
  behavior of the stopwatch.
 
- <p><b>Note:</b> This class is not thread-safe.
+ 
+**Note:** This class is not thread-safe.
 
- <p><b>Warning for Android users:</b> a stopwatch with default behavior may not continue to keep
+ 
+**Warning for Android users:** a stopwatch with default behavior may not continue to keep
  time while the device is asleep. Instead, create one like this:
 
- <pre>`Stopwatch.createStarted(
+ 
+
+```
+
+ Stopwatch.createStarted(
       new Ticker() {
         public long read() {
           return android.os.SystemClock.elapsedRealtimeNanos(); // requires API Level 17
-        `
+        }
       });
- }</pre>
-**Author:** Kevin Bourrillion
-**Since:** 10.0
+ 
+```
 
 ## Fields
 
@@ -84,7 +100,10 @@ An object that accurately measures <i>elapsed time</i>: the measured duration be
 
 ### `<init>()`
 
-### `<init>([`com.google.common.base.Ticker`](./Ticker.md) ticker)`
+### `<init>(com.google.common.base.Ticker ticker)`
+
+**Parameters:**
+- `ticker` ([`com.google.common.base.Ticker`](./Ticker.md))
 
 ## Methods
 
@@ -92,98 +111,83 @@ An object that accurately measures <i>elapsed time</i>: the measured duration be
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-Creates (but does not start) a new stopwatch using `System.nanoTime` as its time source.
-**Since:** 15.0
-
-### `createUnstarted([`com.google.common.base.Ticker`](./Ticker.md) ticker)`
+### `createUnstarted(com.google.common.base.Ticker ticker)`
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-Creates (but does not start) a new stopwatch, using the specified time source.
-**Since:** 15.0
+**Parameters:**
+- `ticker` ([`com.google.common.base.Ticker`](./Ticker.md))
 
 ### `createStarted()`
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-Creates (and starts) a new stopwatch using `System.nanoTime` as its time source.
-**Since:** 15.0
-
-### `createStarted([`com.google.common.base.Ticker`](./Ticker.md) ticker)`
+### `createStarted(com.google.common.base.Ticker ticker)`
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-Creates (and starts) a new stopwatch, using the specified time source.
-**Since:** 15.0
+**Parameters:**
+- `ticker` ([`com.google.common.base.Ticker`](./Ticker.md))
 
 ### `isRunning()`
 
 **Returns:** `boolean`
 
-Returns `true` if `start()` has been called on this stopwatch, and `stop()`
- has not been called since the last call to `start()`.
-
 ### `start()`
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
-
-Starts the stopwatch.
-@return this `Stopwatch` instance
-@throws IllegalStateException if the stopwatch is already running.
 
 ### `stop()`
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-Stops the stopwatch. Future reads will return the fixed duration that had elapsed up to this
+Future reads will return the fixed duration that had elapsed up to this
  point.
-@return this `Stopwatch` instance
-@throws IllegalStateException if the stopwatch is already stopped.
 
 ### `reset()`
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-Sets the elapsed time for this stopwatch to zero, and places it in a stopped state.
-@return this `Stopwatch` instance
-
 ### `elapsedNanos()`
 
 **Returns:** `long`
 
-### `elapsed(`java.util.concurrent.TimeUnit` desiredUnit)`
+### `elapsed(java.util.concurrent.TimeUnit desiredUnit)`
 
 **Returns:** `long`
 
-Returns the current elapsed time shown on this stopwatch, expressed in the desired time unit,
- with any fraction rounded down.
+**Note:** the overhead of measurement can be more than a microsecond, so it is generally
+ not useful to specify TimeUnit#NANOSECONDS precision here.
 
- <p><b>Note:</b> the overhead of measurement can be more than a microsecond, so it is generally
- not useful to specify `TimeUnit.NANOSECONDS` precision here.
+ 
+It is generally not a good idea to use an ambiguous, unitless long to represent
+ elapsed time. Therefore, we recommend using #elapsed() instead, which returns a
+ strongly-typed Duration instance.
 
- <p>It is generally not a good idea to use an ambiguous, unitless `long` to represent
- elapsed time. Therefore, we recommend using `elapsed()` instead, which returns a
- strongly-typed `Duration` instance.
-**Since:** 14.0 (since 10.0 as `elapsedTime()`)
+**Parameters:**
+- `desiredUnit` (`java.util.concurrent.TimeUnit`)
 
 ### `elapsed()`
 
 **Returns:** `java.time.Duration`
 
-Returns the current elapsed time shown on this stopwatch as a `Duration`. Unlike `elapsed(TimeUnit)`, this method does not lose any precision due to rounding.
-**Since:** 22.0
+Unlike #elapsed(TimeUnit), this method does not lose any precision due to rounding.
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-Returns a string representation of the current elapsed time.
-
-### `chooseUnit(`long` nanos)`
+### `chooseUnit(long nanos)`
 
 **Returns:** `java.util.concurrent.TimeUnit`
 
-### `abbreviate(`java.util.concurrent.TimeUnit` unit)`
+**Parameters:**
+- `nanos` (`long`)
+
+### `abbreviate(java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `unit` (`java.util.concurrent.TimeUnit`)
 

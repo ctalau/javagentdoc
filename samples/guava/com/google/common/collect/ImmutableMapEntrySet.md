@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.ImmutableMapEntrySet`
 
-**Extends:** [`com.google.common.collect.ImmutableSet.CachingAsList<java.util.Map.Entry<K,V>>`](ImmutableSet/CachingAsList>.md)
+**Extends:** `com.google.common.collect.ImmutableSet.CachingAsList<java.util.Map.Entry<K,V>>`
 
 ## Type Parameters
 
@@ -12,10 +12,6 @@
 - `V` extends `java.lang.Object`
 
 ## Description
-
-`entrySet()` implementation for `ImmutableMap`.
-**Author:** Jesse Wilson
-**Author:** Kevin Bourrillion
 
 ## Constructors
 
@@ -31,9 +27,12 @@
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `isPartialView()`
 
@@ -51,7 +50,10 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

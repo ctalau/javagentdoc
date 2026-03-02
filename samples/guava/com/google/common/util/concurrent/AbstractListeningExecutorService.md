@@ -10,14 +10,12 @@
 
 ## Description
 
-Abstract `ListeningExecutorService` implementation that creates `ListenableFuture`
- instances for each `Runnable` and `Callable` submitted to it. These tasks are run
- with the abstract `execute execute(Runnable)` method.
+These tasks are run
+ with the abstract execute(Runnable) method.
 
- <p>In addition to `execute`, subclasses must implement all methods related to shutdown and
+ 
+In addition to #execute, subclasses must implement all methods related to shutdown and
  termination.
-**Author:** Chris Povirk
-**Since:** 14.0
 
 ## Constructors
 
@@ -25,27 +23,40 @@ Abstract `ListeningExecutorService` implementation that creates `ListenableFutur
 
 ## Methods
 
-### `newTaskFor(`java.lang.Runnable` runnable, `T` value)`
+### `newTaskFor(java.lang.Runnable runnable, T value)`
 
 **Returns:** `java.util.concurrent.RunnableFuture<T>`
 
-**Since:** 19.0 (present with return type `ListenableFutureTask` since 14.0)
+**Parameters:**
+- `runnable` (`java.lang.Runnable`)
+- `value` (`T`)
 
-### `newTaskFor(`java.util.concurrent.Callable<T>` callable)`
+### `newTaskFor(java.util.concurrent.Callable<T> callable)`
 
 **Returns:** `java.util.concurrent.RunnableFuture<T>`
 
-**Since:** 19.0 (present with return type `ListenableFutureTask` since 14.0)
+**Parameters:**
+- `callable` (`java.util.concurrent.Callable<T>`)
 
-### `submit(`java.lang.Runnable` task)`
+### `submit(java.lang.Runnable task)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
 
-### `submit(`java.lang.Runnable` task, `T` result)`
+**Parameters:**
+- `task` (`java.lang.Runnable`)
+
+### `submit(java.lang.Runnable task, T result)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 
-### `submit(`java.util.concurrent.Callable<T>` task)`
+**Parameters:**
+- `task` (`java.lang.Runnable`)
+- `result` (`T`)
+
+### `submit(java.util.concurrent.Callable<T> task)`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+
+**Parameters:**
+- `task` (`java.util.concurrent.Callable<T>`)
 

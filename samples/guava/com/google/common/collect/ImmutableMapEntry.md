@@ -13,33 +13,43 @@
 
 ## Description
 
-Implementation of `Entry` for `ImmutableMap` that adds extra methods to traverse hash
- buckets for the key and the value. This allows reuse in `RegularImmutableMap` and `RegularImmutableBiMap`, which don't have to recopy the entries created by their `Builder`
+This allows reuse in RegularImmutableMap and RegularImmutableBiMap, which don't have to recopy the entries created by their Builder
  implementations.
 
- <p>This base implementation has no key or value pointers, so instances of ImmutableMapEntry (but
+ 
+This base implementation has no key or value pointers, so instances of ImmutableMapEntry (but
  not its subclasses) can be reused when copied from one ImmutableMap to another.
-**Author:** Louis Wasserman
 
 ## Constructors
 
-### `<init>(`K` key, `V` value)`
+### `<init>(K key, V value)`
 
-### `<init>([`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md) contents)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `<init>(com.google.common.collect.ImmutableMapEntry<K,V> contents)`
+
+**Parameters:**
+- `contents` ([`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md))
 
 ## Methods
 
-### `createEntryArray(`int` size)`
+### `createEntryArray(int size)`
 
 **Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>[]`](./ImmutableMapEntry.md)
 
-Creates an `ImmutableMapEntry` array to hold parameterized entries. The result must never
+The result must never
  be upcast back to ImmutableMapEntry[] (or Object[], etc.), or allowed to escape the class.
 
- <p>The returned array has all its elements set to their initial null values. However, we don't
- declare it as `@Nullable ImmutableMapEntry[]` because our checker doesn't require newly
- created arrays to have a `@Nullable` element type even when they're created directly with
- `new ImmutableMapEntry[...]`, so it seems silly to insist on that only here.
+ 
+The returned array has all its elements set to their initial null values. However, we don't
+ declare it as @Nullable ImmutableMapEntry[] because our checker doesn't require newly
+ created arrays to have a @Nullable element type even when they're created directly with
+ new ImmutableMapEntry[...], so it seems silly to insist on that only here.
+
+**Parameters:**
+- `size` (`int`)
 
 ### `getNextInKeyBucket()`
 
@@ -52,7 +62,4 @@ Creates an `ImmutableMapEntry` array to hold parameterized entries. The result m
 ### `isReusable()`
 
 **Returns:** `boolean`
-
-Returns true if this entry has no bucket links and can safely be reused as a terminal entry in
- a bucket in another map.
 

@@ -13,20 +13,15 @@
 
 ## Description
 
-A `RangeMap` whose contents will never change, with many other important properties
- detailed at `ImmutableCollection`.
-**Author:** Louis Wasserman
-**Since:** 14.0
-
 ## Fields
 
 ### `EMPTY`
 
-**Type:** [`com.google.common.collect.ImmutableRangeMap<java.lang.Comparable<?>,java.lang.Object>`](ImmutableRangeMap,java/lang/Object>.md)
+**Type:** [`com.google.common.collect.ImmutableRangeMap<java.lang.Comparable<?>,java.lang.Object>`](./ImmutableRangeMap.md)
 
 ### `ranges`
 
-**Type:** [`com.google.common.collect.ImmutableList<com.google.common.collect.Range<K>>`](./ImmutableList>.md)
+**Type:** [`com.google.common.collect.ImmutableList<com.google.common.collect.Range<K>>`](./ImmutableList.md)
 
 ### `values`
 
@@ -38,120 +33,135 @@ A `RangeMap` whose contents will never change, with many other important propert
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<com.google.common.collect.Range<K>>`](./ImmutableList>.md) ranges, [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md) values)`
+### `<init>(com.google.common.collect.ImmutableList<com.google.common.collect.Range<K>> ranges, com.google.common.collect.ImmutableList<V> values)`
+
+**Parameters:**
+- `ranges` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Range<K>>`](./ImmutableList.md))
+- `values` ([`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md))
 
 ## Methods
 
-### `toImmutableRangeMap(`java.util.function.Function<? super T,com.google.common.collect.Range<K>>` keyFunction, `java.util.function.Function<? super T,? extends V>` valueFunction)`
+### `toImmutableRangeMap(java.util.function.Function<? super T,com.google.common.collect.Range<K>> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
 
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableRangeMap<K,V>>`
 
-Returns a `Collector` that accumulates the input elements into a new `ImmutableRangeMap`. As in `Builder`, overlapping ranges are not permitted.
-**Since:** 23.1
+As in Builder, overlapping ranges are not permitted.
+
+**Parameters:**
+- `keyFunction` (`java.util.function.Function<? super T,com.google.common.collect.Range<K>>`)
+- `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
 ### `of()`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeMap<K,V>`](./ImmutableRangeMap.md)
 
-Returns an empty immutable range map.
+**Performance note:** the instance returned is a singleton.
 
- <p><b>Performance note:</b> the instance returned is a singleton.
-
-### `of([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
+### `of(com.google.common.collect.Range<K> range, V value)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeMap<K,V>`](./ImmutableRangeMap.md)
 
-Returns an immutable range map mapping a single range to a single value.
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
 
-### `copyOf([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md) rangeMap)`
+### `copyOf(com.google.common.collect.RangeMap<K,? extends V> rangeMap)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeMap<K,V>`](./ImmutableRangeMap.md)
+
+**Parameters:**
+- `rangeMap` ([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md))
 
 ### `builder()`
 
-**Returns:** [`com.google.common.collect.ImmutableRangeMap.Builder<K,V>`](ImmutableRangeMap/Builder.md)
+**Returns:** `com.google.common.collect.ImmutableRangeMap.Builder<K,V>`
 
-Returns a new builder for an immutable range map.
-
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `V`
 
-### `getEntry(`K` key)`
+**Parameters:**
+- `key` (`K`)
+
+### `getEntry(K key)`
 
 **Returns:** `java.util.Map.Entry<com.google.common.collect.Range<K>,V>`
+
+**Parameters:**
+- `key` (`K`)
 
 ### `span()`
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
-### `put([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
+### `put(com.google.common.collect.Range<K> range, V value)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the `RangeMap` unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
 
-### `putCoalescing([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value)`
-
-**Returns:** `void`
-
-Guaranteed to throw an exception and leave the `RangeMap` unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
-
-### `putAll([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md) rangeMap)`
+### `putCoalescing(com.google.common.collect.Range<K> range, V value)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the `RangeMap` unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
+
+### `putAll(com.google.common.collect.RangeMap<K,? extends V> rangeMap)`
+
+**Returns:** `void`
+
+**Parameters:**
+- `rangeMap` ([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md))
 
 ### `clear()`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the `RangeMap` unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
-
-### `remove([`com.google.common.collect.Range<K>`](./Range.md) range)`
+### `remove(com.google.common.collect.Range<K> range)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the `RangeMap` unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
 
-### `merge([`com.google.common.collect.Range<K>`](./Range.md) range, `V` value, `java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>` remappingFunction)`
+### `merge(com.google.common.collect.Range<K> range, V value, java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> remappingFunction)`
 
 **Returns:** `void`
 
-Guaranteed to throw an exception and leave the `RangeMap` unmodified.
-@throws UnsupportedOperationException always
-**Deprecated:**Unsupported operation.
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+- `value` (`V`)
+- `remappingFunction` (`java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
 ### `asMapOfRanges()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<com.google.common.collect.Range<K>,V>`](./ImmutableMap,V>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<com.google.common.collect.Range<K>,V>`](./ImmutableMap.md)
 
 ### `asDescendingMapOfRanges()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<com.google.common.collect.Range<K>,V>`](./ImmutableMap,V>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<com.google.common.collect.Range<K>,V>`](./ImmutableMap.md)
 
-### `subRangeMap([`com.google.common.collect.Range<K>`](./Range.md) range)`
+### `subRangeMap(com.google.common.collect.Range<K> range)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeMap<K,V>`](./ImmutableRangeMap.md)
+
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<K>`](./Range.md))
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` o)`
+### `equals(java.lang.Object o)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `o` (`java.lang.Object`)
 
 ### `toString()`
 
@@ -161,7 +171,10 @@ Guaranteed to throw an exception and leave the `RangeMap` unmodified.
 
 **Returns:** `java.lang.Object`
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getAttribute(`java.lang.String` name)`
+### `getAttribute(java.lang.String name)`
 
 **Returns:** `java.lang.Object`
 
@@ -22,6 +22,9 @@ Attributes can be set two ways. The servlet container may set attributes to make
 
  Attribute names should follow the same conventions as package names. The Jakarta Servlet specification reserves names
  matching `jakarta.*`.
+
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the attribute
 
 ### `getAttributeNames()`
 
@@ -40,14 +43,17 @@ This method returns `null` if
  ServletContext#setRequestCharacterEncoding, deployment descriptor), and per container (for all web
  applications deployed in that container, using vendor specific configuration).
 
-### `setCharacterEncoding(`java.lang.String` encoding)`
+### `setCharacterEncoding(java.lang.String encoding)`
 
 **Returns:** `void`
 
 This method must be called prior to
  reading request parameters or reading input using getReader(). Otherwise, it has no effect.
 
-### `setCharacterEncoding(`java.nio.charset.Charset` encoding)`
+**Parameters:**
+- `encoding` (`java.lang.String`): `String` containing the name of the character encoding.
+
+### `setCharacterEncoding(java.nio.charset.Charset encoding)`
 
 **Returns:** `void`
 
@@ -56,6 +62,9 @@ This method must be called prior to reading
  
 
  Implementations are strongly encouraged to override this default method and provide a more efficient implementation.
+
+**Parameters:**
+- `encoding` (`java.nio.charset.Charset`): `Charset` representing the character encoding.
 
 ### `getContentLength()`
 
@@ -76,7 +85,7 @@ This method must be called prior to reading
 Either this method or
  #getReader may be called to read the body, not both.
 
-### `getParameter(`java.lang.String` name)`
+### `getParameter(java.lang.String name)`
 
 **Returns:** `java.lang.String`
 
@@ -98,17 +107,23 @@ Request parameters are extra information sent with the request. For HTTP servlet
  If the parameter data was sent in the request body, such as occurs with an HTTP POST request, then reading the body
  directly via #getInputStream or #getReader can interfere with the execution of this method.
 
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the parameter
+
 ### `getParameterNames()`
 
 **Returns:** `java.util.Enumeration<java.lang.String>`
 
 If the request has no parameters, the method returns an empty `Enumeration`.
 
-### `getParameterValues(`java.lang.String` name)`
+### `getParameterValues(java.lang.String name)`
 
 **Returns:** `java.lang.String[]`
 
 If the parameter has a single value, the array has a length of 1.
+
+**Parameters:**
+- `name` (`java.lang.String`): a `String` containing the name of the parameter whose value is requested
 
 ### `getParameterMap()`
 
@@ -168,7 +183,7 @@ By default
 If the engine cannot or chooses
  not to resolve the hostname (to improve performance), this method returns the IP address.
 
-### `setAttribute(`java.lang.String` name, `java.lang.Object` o)`
+### `setAttribute(java.lang.String name, java.lang.Object o)`
 
 **Returns:** `void`
 
@@ -184,7 +199,11 @@ Attributes are reset between requests. This method is most often used in
  It is warned that when the request is dispatched from the servlet resides in a different web application by
  `RequestDispatcher`, the object set by this method may not be correctly retrieved in the caller servlet.
 
-### `removeAttribute(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the attribute
+- `o` (`java.lang.Object`): the `Object` to be stored
+
+### `removeAttribute(java.lang.String name)`
 
 **Returns:** `void`
 
@@ -195,6 +214,9 @@ This method is not generally needed as attributes only persist as long as the
 
  Attribute names should follow the same conventions as package names. Names beginning with `jakarta.*` are
  reserved for use by the Jakarta Servlet specification.
+
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the attribute to remove
 
 ### `getLocale()`
 

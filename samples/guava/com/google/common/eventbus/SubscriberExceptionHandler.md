@@ -6,14 +6,13 @@
 
 ## Description
 
-Handler for exceptions thrown by event subscribers.
-**Since:** 16.0
-
 ## Methods
 
-### `handleException(`java.lang.Throwable` exception, [`com.google.common.eventbus.SubscriberExceptionContext`](./SubscriberExceptionContext.md) context)`
+### `handleException(java.lang.Throwable exception, com.google.common.eventbus.SubscriberExceptionContext context)`
 
 **Returns:** `void`
 
-Handles exceptions thrown by subscribers.
+**Parameters:**
+- `exception` (`java.lang.Throwable`)
+- `context` ([`com.google.common.eventbus.SubscriberExceptionContext`](./SubscriberExceptionContext.md))
 

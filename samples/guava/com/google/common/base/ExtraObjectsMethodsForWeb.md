@@ -6,7 +6,7 @@
 
 ## Description
 
-Holder for extra methods of `Objects` only in web. Intended to be empty for regular
+Intended to be empty for regular
  version.
 
 ## Constructors

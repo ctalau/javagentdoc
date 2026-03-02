@@ -22,15 +22,33 @@ It paints the areas of the image map over the image.
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore`](./EditImageMapCore.md) imageMapCore)`
+### `<init>(ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore imageMapCore)`
+
+**Parameters:**
+- `imageMapCore` ([`ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore`](./EditImageMapCore.md)): The image map core.
 
 ## Methods
 
-### `isNodeOfInterest([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node, [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../../imagemap/SupportedFrameworks.md) framework)`
+### `isNodeOfInterest(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.imagemap.SupportedFrameworks framework)`
 
 **Returns:** `boolean`
 
-### `paint(`ro.sync.exml.view.graphics.Graphics` g, `int` x, `int` y, `int` imageWidth, `int` imageHeight, `ro.sync.exml.view.graphics.Rectangle` originalSize, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) element, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `boolean` wasAnnotated)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The current node.
+- `framework` ([`ro.sync.ecss.imagemap.SupportedFrameworks`](../../../imagemap/SupportedFrameworks.md)): The current framework.
+
+### `paint(ro.sync.exml.view.graphics.Graphics g, int x, int y, int imageWidth, int imageHeight, ro.sync.exml.view.graphics.Rectangle originalSize, ro.sync.ecss.extensions.api.node.AuthorNode element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean wasAnnotated)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `g` (`ro.sync.exml.view.graphics.Graphics`)
+- `x` (`int`)
+- `y` (`int`)
+- `imageWidth` (`int`)
+- `imageHeight` (`int`)
+- `originalSize` (`ro.sync.exml.view.graphics.Rectangle`)
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `wasAnnotated` (`boolean`)
 

@@ -6,10 +6,8 @@
 
 ## Description
 
-Utility class for converting between various ASCII case formats. Behavior is undefined for
+Behavior is undefined for
  non-ASCII input.
-**Author:** Mike Bostock
-**Since:** 1.0
 
 ## Fields
 
@@ -23,7 +21,11 @@ Utility class for converting between various ASCII case formats. Behavior is und
 
 ## Constructors
 
-### `<init>([`com.google.common.base.CharMatcher`](./CharMatcher.md) wordBoundary, `java.lang.String` wordSeparator)`
+### `<init>(com.google.common.base.CharMatcher wordBoundary, java.lang.String wordSeparator)`
+
+**Parameters:**
+- `wordBoundary` ([`com.google.common.base.CharMatcher`](./CharMatcher.md))
+- `wordSeparator` (`java.lang.String`)
 
 ## Methods
 
@@ -31,40 +33,58 @@ Utility class for converting between various ASCII case formats. Behavior is und
 
 **Returns:** [`com.google.common.base.CaseFormat[]`](./CaseFormat.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.common.base.CaseFormat`](./CaseFormat.md)
 
-### `to([`com.google.common.base.CaseFormat`](./CaseFormat.md) format, `java.lang.String` str)`
+**Parameters:**
+- `name` (`java.lang.String`)
+
+### `to(com.google.common.base.CaseFormat format, java.lang.String str)`
 
 **Returns:** `java.lang.String`
 
-Converts the specified `String str` from this format to the specified `format`. A
- "best effort" approach is taken; if `str` does not conform to the assumed format, then
+A
+ "best effort" approach is taken; if str does not conform to the assumed format, then
  the behavior of this method is undefined but we make a reasonable effort at converting anyway.
 
-### `convert([`com.google.common.base.CaseFormat`](./CaseFormat.md) format, `java.lang.String` s)`
+**Parameters:**
+- `format` ([`com.google.common.base.CaseFormat`](./CaseFormat.md))
+- `str` (`java.lang.String`)
+
+### `convert(com.google.common.base.CaseFormat format, java.lang.String s)`
 
 **Returns:** `java.lang.String`
 
-Enum values can override for performance reasons.
+**Parameters:**
+- `format` ([`com.google.common.base.CaseFormat`](./CaseFormat.md))
+- `s` (`java.lang.String`)
 
-### `converterTo([`com.google.common.base.CaseFormat`](./CaseFormat.md) targetFormat)`
+### `converterTo(com.google.common.base.CaseFormat targetFormat)`
 
 **Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.String>`](./Converter.md)
 
-Returns a serializable `Converter` that converts strings from this format to `targetFormat`.
-**Since:** 16.0
+**Parameters:**
+- `targetFormat` ([`com.google.common.base.CaseFormat`](./CaseFormat.md))
 
-### `normalizeWord(`java.lang.String` word)`
-
-**Returns:** `java.lang.String`
-
-### `normalizeFirstWord(`java.lang.String` word)`
+### `normalizeWord(java.lang.String word)`
 
 **Returns:** `java.lang.String`
 
-### `firstCharOnlyToUpper(`java.lang.String` word)`
+**Parameters:**
+- `word` (`java.lang.String`)
+
+### `normalizeFirstWord(java.lang.String word)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `word` (`java.lang.String`)
+
+### `firstCharOnlyToUpper(java.lang.String word)`
+
+**Returns:** `java.lang.String`
+
+**Parameters:**
+- `word` (`java.lang.String`)
 

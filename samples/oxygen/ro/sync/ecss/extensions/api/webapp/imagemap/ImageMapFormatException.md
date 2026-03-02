@@ -10,7 +10,14 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` message, `java.lang.Exception` cause)`
+### `<init>(java.lang.String message, java.lang.Exception cause)`
 
-### `<init>(`java.lang.String` message)`
+**Parameters:**
+- `message` (`java.lang.String`): The message.
+- `cause` (`java.lang.Exception`): The cause.
+
+### `<init>(java.lang.String message)`
+
+**Parameters:**
+- `message` (`java.lang.String`): The message.
 

@@ -30,13 +30,22 @@ The value is `imageUrl`.
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `insertImageRef([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess, `ro.sync.ecss.docbook.DocBookImageInfo` imageInfo, `boolean` isInlineGraphicAccepted)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../api/ArgumentsMap.md))
+
+### `insertImageRef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.docbook.DocBookImageInfo imageInfo, boolean isInlineGraphicAccepted)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../api/schemaaware/SchemaAwareHandlerResult.md)
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access
+- `imageInfo` (`ro.sync.ecss.docbook.DocBookImageInfo`): The image information.
+- `isInlineGraphicAccepted` (`boolean`): `true` if an inline graphic is accepted.
 
 ### `getArguments()`
 

@@ -100,11 +100,20 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.EditPropertiesHandler`](../api/EditPropertiesHandler.md)
 
-### `hasASibling([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md) element, `java.lang.String` siblingName, `java.lang.String[]` siblingAttributes, `java.lang.String` siblingAttrValue)`
+### `hasASibling(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String siblingName, java.lang.String[] siblingAttributes, java.lang.String siblingAttrValue)`
 
 **Returns:** `boolean`
 
-### `getHelpPageID(`java.lang.String` currentEditorPage)`
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The current element.
+- `siblingName` (`java.lang.String`): The sibling name.
+- `siblingAttributes` (`java.lang.String[]`): The sibbling attributes to check.
+- `siblingAttrValue` (`java.lang.String`): The value that sibling's attributes must have.
+
+### `getHelpPageID(java.lang.String currentEditorPage)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `currentEditorPage` (`java.lang.String`)
 

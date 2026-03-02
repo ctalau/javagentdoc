@@ -8,10 +8,6 @@
 
 ## Description
 
-An `OutputStream` that maintains a hash of the data written to it.
-**Author:** Nick Piepmeier
-**Since:** 16.0
-
 ## Fields
 
 ### `hasher`
@@ -20,28 +16,37 @@ An `OutputStream` that maintains a hash of the data written to it.
 
 ## Constructors
 
-### `<init>([`com.google.common.hash.HashFunction`](./HashFunction.md) hashFunction, `java.io.OutputStream` out)`
+### `<init>(com.google.common.hash.HashFunction hashFunction, java.io.OutputStream out)`
 
-Creates an output stream that hashes using the given `HashFunction`, and forwards all
- data written to it to the underlying `OutputStream`.
+The OutputStream should not be written to before or after the hand-off.
 
- <p>The `OutputStream` should not be written to before or after the hand-off.
+**Parameters:**
+- `hashFunction` ([`com.google.common.hash.HashFunction`](./HashFunction.md))
+- `out` (`java.io.OutputStream`)
 
 ## Methods
 
-### `write(`int` b)`
+### `write(int b)`
 
 **Returns:** `void`
 
-### `write(`byte[]` bytes, `int` off, `int` len)`
+**Parameters:**
+- `b` (`int`)
+
+### `write(byte[] bytes, int off, int len)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `bytes` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
 
 ### `hash()`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-Returns the `HashCode` based on the data written to this stream. The result is
+The result is
  unspecified if this method is called more than once on the same instance.
 
 ### `close()`

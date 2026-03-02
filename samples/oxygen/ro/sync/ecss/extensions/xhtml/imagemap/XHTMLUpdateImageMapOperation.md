@@ -14,23 +14,39 @@
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `getImageNode([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
+
+### `getImageNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
 
-### `getNewShapesList(`java.lang.String` svgText)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
+
+### `getNewShapesList(java.lang.String svgText)`
 
 **Returns:** `java.util.List<? extends ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor>`
 
-### `getExistingShapesList([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) existingImageMap)`
+**Parameters:**
+- `svgText` (`java.lang.String`)
+
+### `getExistingShapesList(ro.sync.ecss.extensions.api.node.AuthorElement existingImageMap)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../api/node/AuthorElement.md)
 
-### `getImageMapElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) currentElement)`
+**Parameters:**
+- `existingImageMap` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+### `getImageMapElement(ro.sync.ecss.extensions.api.node.AuthorElement currentElement)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
+
+**Parameters:**
+- `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 

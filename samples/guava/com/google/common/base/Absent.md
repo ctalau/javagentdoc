@@ -12,8 +12,6 @@
 
 ## Description
 
-Implementation of an `Optional` not containing a reference.
-
 ## Fields
 
 ### `INSTANCE`
@@ -42,17 +40,26 @@ Implementation of an `Optional` not containing a reference.
 
 **Returns:** `T`
 
-### `or(`T` defaultValue)`
+### `or(T defaultValue)`
 
 **Returns:** `T`
 
-### `or([`com.google.common.base.Optional<? extends T>`](./Optional.md) secondChoice)`
+**Parameters:**
+- `defaultValue` (`T`)
+
+### `or(com.google.common.base.Optional<? extends T> secondChoice)`
 
 **Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
 
-### `or([`com.google.common.base.Supplier<? extends T>`](./Supplier.md) supplier)`
+**Parameters:**
+- `secondChoice` ([`com.google.common.base.Optional<? extends T>`](./Optional.md))
+
+### `or(com.google.common.base.Supplier<? extends T> supplier)`
 
 **Returns:** `T`
+
+**Parameters:**
+- `supplier` ([`com.google.common.base.Supplier<? extends T>`](./Supplier.md))
 
 ### `orNull()`
 
@@ -62,13 +69,19 @@ Implementation of an `Optional` not containing a reference.
 
 **Returns:** `java.util.Set<T>`
 
-### `transform([`com.google.common.base.Function<? super T,V>`](./Function.md) function)`
+### `transform(com.google.common.base.Function<? super T,V> function)`
 
 **Returns:** [`com.google.common.base.Optional<V>`](./Optional.md)
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `function` ([`com.google.common.base.Function<? super T,V>`](./Function.md))
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

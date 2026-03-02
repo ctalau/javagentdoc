@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.IndexedImmutableSet`
 
-**Extends:** [`com.google.common.collect.ImmutableSet.CachingAsList<E>`](ImmutableSet/CachingAsList.md)
+**Extends:** `com.google.common.collect.ImmutableSet.CachingAsList<E>`
 
 ## Type Parameters
 
@@ -16,9 +16,12 @@
 
 ## Methods
 
-### `get(`int` index)`
+### `get(int index)`
 
 **Returns:** `E`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `iterator()`
 
@@ -28,13 +31,20 @@
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(`java.util.function.Consumer<? super E>` consumer)`
+### `forEach(java.util.function.Consumer<? super E> consumer)`
 
 **Returns:** `void`
 
-### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
+**Parameters:**
+- `consumer` (`java.util.function.Consumer<? super E>`)
+
+### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `offset` (`int`)
 
 ### `createAsList()`
 

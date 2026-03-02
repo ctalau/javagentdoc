@@ -23,12 +23,15 @@ The author content contains the entire XML document text and special marker char
 
 ## Methods
 
-### `getAttribute(`java.lang.String` name)`
+### `getAttribute(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AttrValue`](./AttrValue.md)
 
 If no such
  attribute exists, returns `null`.
+
+**Parameters:**
+- `name` (`java.lang.String`): Name of the attribute.
 
 ### `getNamespace()`
 
@@ -38,45 +41,67 @@ If no such
 
 **Returns:** `java.lang.String`
 
-### `getChild(`java.lang.String` childLocalName)`
+### `getChild(java.lang.String childLocalName)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
 
-### `getElementsByLocalName(`java.lang.String` localName)`
+**Parameters:**
+- `childLocalName` (`java.lang.String`): The local name of the searched children.
+
+### `getElementsByLocalName(java.lang.String localName)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](./AuthorElement.md)
+
+**Parameters:**
+- `localName` (`java.lang.String`): The local name of the searched children.
 
 ### `getAttributesCount()`
 
 **Returns:** `int`
 
-### `getAttributeAtIndex(`int` index)`
+### `getAttributeAtIndex(int index)`
 
 **Returns:** `java.lang.String`
 
-### `setAttribute(`java.lang.String` qName, [`ro.sync.ecss.extensions.api.node.AttrValue`](./AttrValue.md) attributeValue)`
+**Parameters:**
+- `index` (`int`): The index of the searched attribute, 0 based.
+
+### `setAttribute(java.lang.String qName, ro.sync.ecss.extensions.api.node.AttrValue attributeValue)`
 
 **Returns:** `void`
 
 If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
 
-### `setName(`java.lang.String` newName)`
+**Parameters:**
+- `qName` (`java.lang.String`): The qualified name of the attribute to be set.
+- `attributeValue` ([`ro.sync.ecss.extensions.api.node.AttrValue`](./AttrValue.md)): The AttrValue to set. Must not be `null`.
+
+### `setName(java.lang.String newName)`
 
 **Returns:** `void`
 
 If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
 
-### `removeAttribute(`java.lang.String` qName)`
+**Parameters:**
+- `newName` (`java.lang.String`): The new qualified name to be set.
+
+### `removeAttribute(java.lang.String qName)`
 
 **Returns:** `void`
 
 If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
 
-### `getAttributeNamespace(`java.lang.String` attributePrefix)`
+**Parameters:**
+- `qName` (`java.lang.String`): The qualified name of the attribute to remove.
+
+### `getAttributeNamespace(java.lang.String attributePrefix)`
 
 **Returns:** `java.lang.String`
 
-### `setAttributesNoNSUpdate(`java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>` attrs)`
+**Parameters:**
+- `attributePrefix` (`java.lang.String`): Prefix of attribute.
+
+### `setAttributesNoNSUpdate(java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue> attrs)`
 
 **Returns:** `void`
 
@@ -86,6 +111,9 @@ If the element is part of the edited document, an java.lang.UnsupportedOperation
   All operations on nodes from the document model must be done using the 
   AuthorDocumentController methods.
  If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
+
+**Parameters:**
+- `attrs` (`java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>`): The map containing attribute qNames and their attributeValues.
 
 ### `getPseudoClassNames()`
 

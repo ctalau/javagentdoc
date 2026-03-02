@@ -14,14 +14,11 @@
 
 ## Description
 
-Implementation of `Lists.cartesianProduct(List)`.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `axes`
 
-**Type:** [`com.google.common.collect.ImmutableList<java.util.List<E>>`](./ImmutableList>.md)
+**Type:** [`com.google.common.collect.ImmutableList<java.util.List<E>>`](./ImmutableList.md)
 
 ### `axesSizeProduct`
 
@@ -29,35 +26,57 @@ Implementation of `Lists.cartesianProduct(List)`.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<java.util.List<E>>`](./ImmutableList>.md) axes)`
+### `<init>(com.google.common.collect.ImmutableList<java.util.List<E>> axes)`
+
+**Parameters:**
+- `axes` ([`com.google.common.collect.ImmutableList<java.util.List<E>>`](./ImmutableList.md))
 
 ## Methods
 
-### `create(`java.util.List<? extends java.util.List<? extends E>>` lists)`
+### `create(java.util.List<? extends java.util.List<? extends E>> lists)`
 
 **Returns:** `java.util.List<java.util.List<E>>`
 
-### `getAxisIndexForProductIndex(`int` index, `int` axis)`
+**Parameters:**
+- `lists` (`java.util.List<? extends java.util.List<? extends E>>`)
+
+### `getAxisIndexForProductIndex(int index, int axis)`
 
 **Returns:** `int`
 
-### `indexOf(`java.lang.Object` o)`
+**Parameters:**
+- `index` (`int`)
+- `axis` (`int`)
+
+### `indexOf(java.lang.Object o)`
 
 **Returns:** `int`
 
-### `lastIndexOf(`java.lang.Object` o)`
+**Parameters:**
+- `o` (`java.lang.Object`)
+
+### `lastIndexOf(java.lang.Object o)`
 
 **Returns:** `int`
 
-### `get(`int` index)`
+**Parameters:**
+- `o` (`java.lang.Object`)
+
+### `get(int index)`
 
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+**Parameters:**
+- `index` (`int`)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` object)`
+### `contains(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 

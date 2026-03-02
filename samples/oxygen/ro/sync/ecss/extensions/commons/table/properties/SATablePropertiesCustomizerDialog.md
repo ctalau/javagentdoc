@@ -24,11 +24,19 @@
 
 ## Constructors
 
-### `<init>(`java.awt.Frame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) authorResourceBundle, [`ro.sync.exml.workspace.api.util.ColorThemeUtilities`](../../../../../exml/workspace/api/util/ColorThemeUtilities.md) colorThemeUtilities)`
+### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, ro.sync.exml.workspace.api.util.ColorThemeUtilities colorThemeUtilities)`
+
+**Parameters:**
+- `parentFrame` (`java.awt.Frame`): The parent frame of the dialog.
+- `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): The author resource bundle.It is used for translations.
+- `colorThemeUtilities` ([`ro.sync.exml.workspace.api.util.ColorThemeUtilities`](../../../../../exml/workspace/api/util/ColorThemeUtilities.md)): The color theme.
 
 ## Methods
 
-### `getTablePropertiesInformation([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md) info)`
+### `getTablePropertiesInformation(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo info)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md)
+
+**Parameters:**
+- `info` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md)): The information used to customize the "Table Properties dialog"
 

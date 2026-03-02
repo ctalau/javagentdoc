@@ -6,10 +6,8 @@
 
 ## Description
 
-A class for reading lines of text. Provides the same functionality as `java.io.BufferedReader.readLine()` but for all `Readable` objects, not just instances of
- `Reader`.
-**Author:** Chris Nokleberg
-**Since:** 1.0
+Provides the same functionality as java.io.BufferedReader#readLine() but for all Readable objects, not just instances of
+ Reader.
 
 ## Fields
 
@@ -39,9 +37,10 @@ A class for reading lines of text. Provides the same functionality as `java.io.B
 
 ## Constructors
 
-### `<init>(`java.lang.Readable` readable)`
+### `<init>(java.lang.Readable readable)`
 
-Creates a new instance that will read lines from the given `Readable` object.
+**Parameters:**
+- `readable` (`java.lang.Readable`)
 
 ## Methods
 
@@ -49,9 +48,7 @@ Creates a new instance that will read lines from the given `Readable` object.
 
 **Returns:** `java.lang.String`
 
-Reads a line of text. A line is considered to be terminated by any one of a line feed (`'\n'`), a carriage return (`'\r'`), or a carriage return followed immediately by a
- linefeed (`"\r\n"`).
-@return a `String` containing the contents of the line, not including any
-     line-termination characters, or `null` if the end of the stream has been reached.
-@throws IOException if an I/O error occurs
+A line is considered to be terminated by any one of a line feed (
+ '\n'), a carriage return ('\r'), or a carriage return followed immediately by a
+ linefeed ("\r\n").
 

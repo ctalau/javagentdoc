@@ -24,7 +24,11 @@
 
 ### `<init>()`
 
-### `<init>(`boolean` arg0, `java.lang.String` arg1)`
+### `<init>(boolean arg0, java.lang.String arg1)`
+
+**Parameters:**
+- `arg0` (`boolean`)
+- `arg1` (`java.lang.String`)
 
 ## Methods
 
@@ -36,13 +40,19 @@
 
 **Returns:** `java.lang.String`
 
-### `setValidationEnable(`boolean` arg0)`
+### `setValidationEnable(boolean arg0)`
 
 **Returns:** `void`
 
-### `setSchematronPath(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setSchematronPath(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `checkValid()`
 

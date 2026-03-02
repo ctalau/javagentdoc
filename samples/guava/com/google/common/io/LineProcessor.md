@@ -10,25 +10,19 @@
 
 ## Description
 
-A callback to be used with the streaming `readLines` methods.
-
- <p>`processLine` will be called for each line that is read, and should return `false` when you want to stop processing.
-**Author:** Miles Barr
-**Since:** 1.0
+#processLine will be called for each line that is read, and should return 
+ false when you want to stop processing.
 
 ## Methods
 
-### `processLine(`java.lang.String` line)`
+### `processLine(java.lang.String line)`
 
 **Returns:** `boolean`
 
-This method will be called once for each line.
-@param line the line read from the input, without delimiter
-@return true to continue processing, false to stop
+**Parameters:**
+- `line` (`java.lang.String`): the line read from the input, without delimiter
 
 ### `getResult()`
 
 **Returns:** `T`
-
-Return the result of processing all the lines.
 

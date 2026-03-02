@@ -6,8 +6,6 @@
 
 ## Description
 
-A utility class to hold various constants used by the Guava Graph library.
-
 ## Fields
 
 ### `EXPECTED_DEGREE`

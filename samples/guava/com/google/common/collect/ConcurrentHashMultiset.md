@@ -14,13 +14,10 @@
 
 ## Description
 
-A multiset that supports concurrent modifications and that provides atomic versions of most
- `Multiset` operations (exceptions where noted). Null elements are not supported.
+Null elements are not supported.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset">`Multiset`</a>.
-**Author:** Cliff L. Biffle
-**Author:** mike nonemacher
-**Since:** 2.0
+ 
+See the Guava User Guide article on [Multiset](https://github.com/google/guava/wiki/NewCollectionTypesExplained#multiset).
 
 ## Fields
 
@@ -28,15 +25,16 @@ A multiset that supports concurrent modifications and that provides atomic versi
 
 **Type:** `java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger>`
 
-The number of occurrences of each element.
-
 ### `serialVersionUID`
 
 **Type:** `long`
 
 ## Constructors
 
-### `<init>(`java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger>` countMap)`
+### `<init>(java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger> countMap)`
+
+**Parameters:**
+- `countMap` (`java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger>`)
 
 ## Methods
 
@@ -44,120 +42,107 @@ The number of occurrences of each element.
 
 **Returns:** [`com.google.common.collect.ConcurrentHashMultiset<E>`](./ConcurrentHashMultiset.md)
 
-Creates a new, empty `ConcurrentHashMultiset` using the default initial capacity, load
- factor, and concurrency settings.
-
-### `create(`java.lang.Iterable<? extends E>` elements)`
+### `create(java.lang.Iterable<? extends E> elements)`
 
 **Returns:** [`com.google.common.collect.ConcurrentHashMultiset<E>`](./ConcurrentHashMultiset.md)
 
-Creates a new `ConcurrentHashMultiset` containing the specified elements, using the
- default initial capacity, load factor, and concurrency settings.
+This implementation is highly efficient when elements is itself a Multiset.
 
- <p>This implementation is highly efficient when `elements` is itself a `Multiset`.
-@param elements the elements that the multiset should contain
+**Parameters:**
+- `elements` (`java.lang.Iterable<? extends E>`): the elements that the multiset should contain
 
-### `create(`java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger>` countMap)`
+### `create(java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger> countMap)`
 
 **Returns:** [`com.google.common.collect.ConcurrentHashMultiset<E>`](./ConcurrentHashMultiset.md)
 
-Creates a new, empty `ConcurrentHashMultiset` using `countMap` as the internal
- backing map.
-
- <p>This instance will assume ownership of `countMap`, and other code should not maintain
+This instance will assume ownership of countMap, and other code should not maintain
  references to the map or modify it in any way.
 
- <p>The returned multiset is serializable if the input map is.
-@param countMap backing map for storing the elements in the multiset and their counts. It must
-     be empty.
-@throws IllegalArgumentException if `countMap` is not empty
-**Since:** 20.0
+ 
+The returned multiset is serializable if the input map is.
 
-### `count(`java.lang.Object` element)`
+**Parameters:**
+- `countMap` (`java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger>`): backing map for storing the elements in the multiset and their counts. It must
+     be empty.
+
+### `count(java.lang.Object element)`
 
 **Returns:** `int`
 
-Returns the number of occurrences of `element` in this multiset.
-@param element the element to look for
-@return the nonnegative number of occurrences of the element
+**Parameters:**
+- `element` (`java.lang.Object`): the element to look for
 
 ### `size()`
 
 **Returns:** `int`
 
-{@inheritDoc}
-
- <p>If the data in the multiset is modified by any other threads during this method, it is
+If the data in the multiset is modified by any other threads during this method, it is
  undefined which (if any) of these modifications will be reflected in the result.
 
 ### `toArray()`
 
 **Returns:** `java.lang.Object[]`
 
-### `toArray(`T[]` array)`
+### `toArray(T[] array)`
 
 **Returns:** `T[]`
+
+**Parameters:**
+- `array` (`T[]`)
 
 ### `snapshot()`
 
 **Returns:** `java.util.List<E>`
 
-### `add(`E` element, `int` occurrences)`
+### `add(E element, int occurrences)`
 
 **Returns:** `int`
 
-Adds a number of occurrences of the specified element to this multiset.
-@param element the element to add
-@param occurrences the number of occurrences to add
-@return the previous count of the element before the operation; possibly zero
-@throws IllegalArgumentException if `occurrences` is negative, or if the resulting amount
-     would exceed `Integer.MAX_VALUE`
+**Parameters:**
+- `element` (`E`): the element to add
+- `occurrences` (`int`): the number of occurrences to add
 
-### `remove(`java.lang.Object` element, `int` occurrences)`
+### `remove(java.lang.Object element, int occurrences)`
 
 **Returns:** `int`
 
-Removes a number of occurrences of the specified element from this multiset. If the multiset
+If the multiset
  contains fewer than this number of occurrences to begin with, all occurrences will be removed.
-@param element the element whose occurrences should be removed
-@param occurrences the number of occurrences of the element to remove
-@return the count of the element before the operation; possibly zero
-@throws IllegalArgumentException if `occurrences` is negative
 
-### `removeExactly(`java.lang.Object` element, `int` occurrences)`
+**Parameters:**
+- `element` (`java.lang.Object`): the element whose occurrences should be removed
+- `occurrences` (`int`): the number of occurrences of the element to remove
+
+### `removeExactly(java.lang.Object element, int occurrences)`
 
 **Returns:** `boolean`
 
-Removes exactly the specified number of occurrences of `element`, or makes no change if
- this is not possible.
+This method, in contrast to #remove(Object, int), has no effect when the element
+ count is smaller than occurrences.
 
- <p>This method, in contrast to `remove(Object, int)`, has no effect when the element
- count is smaller than `occurrences`.
-@param element the element to remove
-@param occurrences the number of occurrences of `element` to remove
-@return `true` if the removal was possible (including if `occurrences` is zero)
-@throws IllegalArgumentException if `occurrences` is negative
+**Parameters:**
+- `element` (`java.lang.Object`): the element to remove
+- `occurrences` (`int`): the number of occurrences of element to remove
 
-### `setCount(`E` element, `int` count)`
+### `setCount(E element, int count)`
 
 **Returns:** `int`
 
-Adds or removes occurrences of `element` such that the `count` of the element
- becomes `count`.
-@return the count of `element` in the multiset before this call
-@throws IllegalArgumentException if `count` is negative
+**Parameters:**
+- `element` (`E`)
+- `count` (`int`)
 
-### `setCount(`E` element, `int` expectedOldCount, `int` newCount)`
+### `setCount(E element, int expectedOldCount, int newCount)`
 
 **Returns:** `boolean`
 
-Sets the number of occurrences of `element` to `newCount`, but only if the count is
- currently `expectedOldCount`. If `element` does not appear in the multiset exactly
- `expectedOldCount` times, no changes will be made.
-@return `true` if the change was successful. This usually indicates that the multiset has
-     been modified, but not always: in the case that `expectedOldCount == newCount`, the
-     method will return `true` if the condition was met.
-@throws IllegalArgumentException if `expectedOldCount` or `newCount` is negative
+If element does not appear in the multiset exactly
+ expectedOldCount times, no changes will be made.
+
+**Parameters:**
+- `element` (`E`)
+- `expectedOldCount` (`int`)
+- `newCount` (`int`)
 
 ### `createElementSet()`
 
@@ -170,8 +155,6 @@ Sets the number of occurrences of `element` to `newCount`, but only if the count
 ### `createEntrySet()`
 
 **Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
-
-**Deprecated:**Internal method, use `entrySet()`.
 
 ### `distinctElements()`
 
@@ -193,13 +176,17 @@ Sets the number of occurrences of `element` to `newCount`, but only if the count
 
 **Returns:** `void`
 
-### `writeObject(`java.io.ObjectOutputStream` stream)`
+### `writeObject(java.io.ObjectOutputStream stream)`
 
 **Returns:** `void`
 
-@serialData the ConcurrentMap of elements and their counts.
+**Parameters:**
+- `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

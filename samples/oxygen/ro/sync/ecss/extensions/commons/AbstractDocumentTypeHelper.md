@@ -14,25 +14,41 @@
 
 ## Methods
 
-### `isElement([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node, `java.lang.String` elemLocalName)`
+### `isElement(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String elemLocalName)`
 
 **Returns:** `boolean`
 
-### `isTableCell([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The AuthorNode to be checked.
+- `elemLocalName` (`java.lang.String`): The local name of the element.
+
+### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
-### `isTable([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+### `isTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
-### `isTableRow([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
-### `getTableElementForDeletion([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) element)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+### `getTableElementForDeletion(ro.sync.ecss.extensions.api.node.AuthorNode element)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)
+
+**Parameters:**
+- `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 ### `getTableCellElementNames()`
 
@@ -50,13 +66,19 @@
 
 **Returns:** `java.lang.String[]`
 
-### `isContentReference([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
 This is used in the tables to replace conreffed table rows entirely
 
-### `isColspec([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) node)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node
+
+### `isColspec(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node.
 

@@ -14,8 +14,6 @@
 
 ## Description
 
-A `RegularImmutableTable` optimized for dense data.
-
 ## Fields
 
 ### `rowKeyToIndex`
@@ -28,11 +26,11 @@ A `RegularImmutableTable` optimized for dense data.
 
 ### `rowMap`
 
-**Type:** [`com.google.common.collect.ImmutableMap<R,com.google.common.collect.ImmutableMap<C,V>>`](./ImmutableMap>.md)
+**Type:** [`com.google.common.collect.ImmutableMap<R,com.google.common.collect.ImmutableMap<C,V>>`](./ImmutableMap.md)
 
 ### `columnMap`
 
-**Type:** [`com.google.common.collect.ImmutableMap<C,com.google.common.collect.ImmutableMap<R,V>>`](./ImmutableMap>.md)
+**Type:** [`com.google.common.collect.ImmutableMap<C,com.google.common.collect.ImmutableMap<R,V>>`](./ImmutableMap.md)
 
 ### `rowCounts`
 
@@ -44,7 +42,7 @@ A `RegularImmutableTable` optimized for dense data.
 
 ### `values`
 
-**Type:** [`@org.checkerframework.checker.nullness.qual.Nullable V[][]`](../../../../@org/checkerframework/checker/nullness/qual/Nullable V.md)
+**Type:** `@org.checkerframework.checker.nullness.qual.Nullable V[][]`
 
 ### `cellRowIndices`
 
@@ -56,33 +54,48 @@ A `RegularImmutableTable` optimized for dense data.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList>.md) cellList, [`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md) rowSpace, [`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md) columnSpace)`
+### `<init>(com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>> cellList, com.google.common.collect.ImmutableSet<R> rowSpace, com.google.common.collect.ImmutableSet<C> columnSpace)`
+
+**Parameters:**
+- `cellList` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList.md))
+- `rowSpace` ([`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md))
+- `columnSpace` ([`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md))
 
 ## Methods
 
 ### `columnMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap.md)
 
 ### `rowMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap>.md)
+**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap.md)
 
-### `get(`java.lang.Object` rowKey, `java.lang.Object` columnKey)`
+### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `getCell(`int` index)`
+### `getCell(int index)`
 
-**Returns:** [`com.google.common.collect.Table.Cell<R,C,V>`](Table/Cell.md)
+**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
 
-### `getValue(`int` index)`
+**Parameters:**
+- `index` (`int`)
+
+### `getValue(int index)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `index` (`int`)
 
 ### `writeReplace()`
 

@@ -15,13 +15,21 @@ The listener will be triggered before an action is performed (and will be able t
 
 ## Methods
 
-### `beforeActionPerformed(`java.lang.Object` actionEvent)`
+### `beforeActionPerformed(java.lang.Object actionEvent)`
 
 **Returns:** `boolean`
 
 If the callback rejects, the other added listeners will also not get called.
 
-### `afterActionPerformed(`java.lang.Object` actionEvent)`
+**Parameters:**
+- `actionEvent` (`java.lang.Object`): The action event. For Swing it is an instance of java.awt.event.ActionEvent. 
+ For Eclipse it is an instance of org.eclipse.swt.widgets.Event.
+
+### `afterActionPerformed(java.lang.Object actionEvent)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `actionEvent` (`java.lang.Object`): The action event. For Swing it is an instance of java.awt.event.ActionEvent. 
+ For Eclipse it is an instance of org.eclipse.swt.widgets.Event.
 

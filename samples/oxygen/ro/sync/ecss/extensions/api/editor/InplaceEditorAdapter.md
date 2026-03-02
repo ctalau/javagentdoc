@@ -21,17 +21,25 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `java.lang.String`
 
-### `getEditorComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `ro.sync.exml.view.graphics.Rectangle` allocation, `ro.sync.exml.view.graphics.Point` mouseInvocationLocation)`
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseInvocationLocation)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+- `allocation` (`ro.sync.exml.view.graphics.Rectangle`)
+- `mouseInvocationLocation` (`ro.sync.exml.view.graphics.Point`)
 
 ### `getScrollRectangle()`
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
 ### `requestFocus()`
 
@@ -49,11 +57,17 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `void`
 
-### `removeEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
 
-### `refresh([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 

@@ -12,9 +12,8 @@
 
 ## Description
 
-A class to allow `Graph` implementations to be backed by a `BaseGraph`. This is not
+This is not
  currently planned to be released as a general-purpose forwarding class.
-**Author:** James Sexton
 
 ## Constructors
 
@@ -34,9 +33,6 @@ A class to allow `Graph` implementations to be backed by a `BaseGraph`. This is 
 
 **Returns:** `long`
 
-Defer to `AbstractGraph.edges()` (based on `successors(Object)`) for full edges()
- implementation.
-
 ### `isDirected()`
 
 **Returns:** `boolean`
@@ -53,39 +49,67 @@ Defer to `AbstractGraph.edges()` (based on `successors(Object)`) for full edges(
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `adjacentNodes(`N` node)`
+### `adjacentNodes(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `predecessors(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `predecessors(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `successors(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `successors(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `incidentEdges(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `incidentEdges(N node)`
 
 **Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-### `degree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `degree(N node)`
 
 **Returns:** `int`
 
-### `inDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `inDegree(N node)`
 
 **Returns:** `int`
 
-### `outDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `outDegree(N node)`
 
 **Returns:** `int`
 
-### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `node` (`N`)
+
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `hasEdgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 

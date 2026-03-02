@@ -20,7 +20,11 @@ Used in both eXml and WA.
 
 ## Constructors
 
-### `<init>(`java.lang.String` content, `int` imposedCaretOffset)`
+### `<init>(java.lang.String content, int imposedCaretOffset)`
+
+**Parameters:**
+- `content` (`java.lang.String`): The content.
+- `imposedCaretOffset` (`int`): The imposed caret offset inside the content.
 
 ## Methods
 

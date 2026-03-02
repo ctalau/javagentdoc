@@ -14,8 +14,6 @@
 
 ## Description
 
-An ordering that treats `null` as less than all other values.
-
 ## Fields
 
 ### `ordering`
@@ -28,13 +26,20 @@ An ordering that treats `null` as less than all other values.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.Ordering<? super T>`](./Ordering.md) ordering)`
+### `<init>(com.google.common.collect.Ordering<? super T> ordering)`
+
+**Parameters:**
+- `ordering` ([`com.google.common.collect.Ordering<? super T>`](./Ordering.md))
 
 ## Methods
 
-### `compare(`T` left, `T` right)`
+### `compare(T left, T right)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `left` (`T`)
+- `right` (`T`)
 
 ### `reverse()`
 
@@ -48,9 +53,12 @@ An ordering that treats `null` as less than all other values.
 
 **Returns:** [`com.google.common.collect.Ordering<@org.checkerframework.checker.nullness.qual.Nullable S>`](./Ordering.md)
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 

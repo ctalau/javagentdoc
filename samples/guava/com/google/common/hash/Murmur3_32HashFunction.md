@@ -10,12 +10,6 @@
 
 ## Description
 
-See MurmurHash3_x86_32 in <a href="https://github.com/aappleby/smhasher/blob/master/src/MurmurHash3.cpp">the C++
- implementation</a>.
-**Author:** Austin Appleby
-**Author:** Dimitris Andreou
-**Author:** Kurt Alfred Kluever
-
 ## Fields
 
 ### `MURMUR3_32`
@@ -56,7 +50,11 @@ See MurmurHash3_x86_32 in <a href="https://github.com/aappleby/smhasher/blob/mas
 
 ## Constructors
 
-### `<init>(`int` seed, `boolean` supplementaryPlaneFix)`
+### `<init>(int seed, boolean supplementaryPlaneFix)`
+
+**Parameters:**
+- `seed` (`int`)
+- `supplementaryPlaneFix` (`boolean`)
 
 ## Methods
 
@@ -72,59 +70,104 @@ See MurmurHash3_x86_32 in <a href="https://github.com/aappleby/smhasher/blob/mas
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `hashInt(`int` input)`
+### `hashInt(int input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashLong(`long` input)`
+**Parameters:**
+- `input` (`int`)
+
+### `hashLong(long input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashUnencodedChars(`java.lang.CharSequence` input)`
+**Parameters:**
+- `input` (`long`)
+
+### `hashUnencodedChars(java.lang.CharSequence input)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashString(`java.lang.CharSequence` input, `java.nio.charset.Charset` charset)`
+**Parameters:**
+- `input` (`java.lang.CharSequence`)
+
+### `hashString(java.lang.CharSequence input, java.nio.charset.Charset charset)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `hashBytes(`byte[]` input, `int` off, `int` len)`
+**Parameters:**
+- `input` (`java.lang.CharSequence`)
+- `charset` (`java.nio.charset.Charset`)
+
+### `hashBytes(byte[] input, int off, int len)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `getIntLittleEndian(`byte[]` input, `int` offset)`
+**Parameters:**
+- `input` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `getIntLittleEndian(byte[] input, int offset)`
 
 **Returns:** `int`
 
-### `mixK1(`int` k1)`
+**Parameters:**
+- `input` (`byte[]`)
+- `offset` (`int`)
+
+### `mixK1(int k1)`
 
 **Returns:** `int`
 
-### `mixH1(`int` h1, `int` k1)`
+**Parameters:**
+- `k1` (`int`)
+
+### `mixH1(int h1, int k1)`
 
 **Returns:** `int`
 
-### `fmix(`int` h1, `int` length)`
+**Parameters:**
+- `h1` (`int`)
+- `k1` (`int`)
+
+### `fmix(int h1, int length)`
 
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-### `codePointToFourUtf8Bytes(`int` codePoint)`
+**Parameters:**
+- `h1` (`int`)
+- `length` (`int`)
+
+### `codePointToFourUtf8Bytes(int codePoint)`
 
 **Returns:** `long`
 
-### `charToThreeUtf8Bytes(`char` c)`
+**Parameters:**
+- `codePoint` (`int`)
+
+### `charToThreeUtf8Bytes(char c)`
 
 **Returns:** `long`
 
-### `charToTwoUtf8Bytes(`char` c)`
+**Parameters:**
+- `c` (`char`)
+
+### `charToTwoUtf8Bytes(char c)`
 
 **Returns:** `long`
+
+**Parameters:**
+- `c` (`char`)
 

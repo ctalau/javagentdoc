@@ -34,7 +34,15 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` fileNameWildcard, `java.lang.String` searchString, `java.lang.String` xpathExpression, `boolean` caseSensitive, `boolean` regexp, `int` maxMatches)`
+### `<init>(java.lang.String fileNameWildcard, java.lang.String searchString, java.lang.String xpathExpression, boolean caseSensitive, boolean regexp, int maxMatches)`
+
+**Parameters:**
+- `fileNameWildcard` (`java.lang.String`): The file name wildcard
+- `searchString` (`java.lang.String`): Search string
+- `xpathExpression` (`java.lang.String`): Filter xpath expression
+- `caseSensitive` (`boolean`): Case sensitive
+- `regexp` (`boolean`): Regexp enabled
+- `maxMatches` (`int`): Maximum matches.
 
 ## Methods
 

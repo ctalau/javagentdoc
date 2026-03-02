@@ -8,29 +8,54 @@
 
 ## Constructors
 
-### `<init>(`ro.sync.exml.workspace.b.i.f` arg0, `java.awt.Frame` arg1, `java.lang.String[]` arg2, `java.lang.String` arg3)`
+### `<init>(ro.sync.exml.workspace.b.i.f arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3)`
+
+**Parameters:**
+- `arg0` (`ro.sync.exml.workspace.b.i.f`)
+- `arg1` (`java.awt.Frame`)
+- `arg2` (`java.lang.String[]`)
+- `arg3` (`java.lang.String`)
 
 ## Methods
 
-### `createEditor(`ro.sync.exml.workspace.b.i.j` arg0, `java.awt.Frame` arg1, `java.lang.String[]` arg2, `java.lang.String` arg3, `java.lang.String` arg4)`
+### `createEditor(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
 
 **Returns:** `ro.sync.exml.editor.dd`
 
-### `setEditorPopUpCustomizer([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md) arg0)`
+**Parameters:**
+- `arg0` (`ro.sync.exml.workspace.b.i.j`)
+- `arg1` (`java.awt.Frame`)
+- `arg2` (`java.lang.String[]`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.lang.String`)
+
+### `setEditorPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer arg0)`
 
 **Returns:** `void`
 
-### `setOutlinerPopUpCustomizer([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md))
+
+### `setOutlinerPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer arg0)`
 
 **Returns:** `void`
 
-### `showBreadCrumb(`boolean` arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md))
+
+### `showBreadCrumb(boolean arg0)`
 
 **Returns:** `void`
 
-### `setBreadCrumbPopUpCustomizer([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md) arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setBreadCrumbPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md))
 
 ### `createExtensionActionsToolbars()`
 

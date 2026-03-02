@@ -22,11 +22,14 @@ The `AuthorDnDListener` interface
 
 ## Methods
 
-### `authorDragOver(`java.awt.dnd.DropTargetDragEvent` event)`
+### `authorDragOver(java.awt.dnd.DropTargetDragEvent event)`
 
 **Returns:** `boolean`
 
-### `authorDrop(`java.awt.datatransfer.Transferable` transferable, `java.awt.dnd.DropTargetDropEvent` event)`
+**Parameters:**
+- `event` (`java.awt.dnd.DropTargetDragEvent`): The DropTargetDropEvent event.
+
+### `authorDrop(java.awt.datatransfer.Transferable transferable, java.awt.dnd.DropTargetDropEvent event)`
 
 **Returns:** `boolean`
 
@@ -37,19 +40,37 @@ This method is responsible for undertaking
  object that represents the data object(s) to 
  be transfered.
 
-### `authorSupportsFlavor(`java.awt.datatransfer.DataFlavor` flavor)`
+**Parameters:**
+- `transferable` (`java.awt.datatransfer.Transferable`): The Transferable object.
+- `event` (`java.awt.dnd.DropTargetDropEvent`): The DropTargetDragEvent event.
+
+### `authorSupportsFlavor(java.awt.datatransfer.DataFlavor flavor)`
 
 **Returns:** `boolean`
 
-### `authorDragExit(`java.awt.dnd.DropTargetEvent` event)`
+**Parameters:**
+- `flavor` (`java.awt.datatransfer.DataFlavor`): The DataFlavor flavor.
+
+### `authorDragExit(java.awt.dnd.DropTargetEvent event)`
 
 **Returns:** `boolean`
 
-### `authorDragEnter(`java.awt.dnd.DropTargetDragEvent` event)`
+**Parameters:**
+- `event` (`java.awt.dnd.DropTargetEvent`): The DropTargetEvent event.
+
+### `authorDragEnter(java.awt.dnd.DropTargetDragEvent event)`
 
 **Returns:** `boolean`
 
-### `init([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../ecss/extensions/api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `event` (`java.awt.dnd.DropTargetDragEvent`): The DropTargetDragEvent event.
+
+### `init(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../ecss/extensions/api/AuthorAccess.md)): The AuthorAccess providing access to 
+ specific components corresponding to editor, document, workspace, 
+ tables, change tracking and utility informations and actions.
 

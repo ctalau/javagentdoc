@@ -6,34 +6,48 @@
 
 ## Description
 
-Precondition checks useful in collection implementations.
-
 ## Constructors
 
 ### `<init>()`
 
 ## Methods
 
-### `checkEntryNotNull(`java.lang.Object` key, `java.lang.Object` value)`
+### `checkEntryNotNull(java.lang.Object key, java.lang.Object value)`
 
 **Returns:** `void`
 
-### `checkNonnegative(`int` value, `java.lang.String` name)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+- `value` (`java.lang.Object`)
+
+### `checkNonnegative(int value, java.lang.String name)`
 
 **Returns:** `int`
 
-### `checkNonnegative(`long` value, `java.lang.String` name)`
+**Parameters:**
+- `value` (`int`)
+- `name` (`java.lang.String`)
+
+### `checkNonnegative(long value, java.lang.String name)`
 
 **Returns:** `long`
 
-### `checkPositive(`int` value, `java.lang.String` name)`
+**Parameters:**
+- `value` (`long`)
+- `name` (`java.lang.String`)
+
+### `checkPositive(int value, java.lang.String name)`
 
 **Returns:** `void`
 
-### `checkRemove(`boolean` canRemove)`
+**Parameters:**
+- `value` (`int`)
+- `name` (`java.lang.String`)
+
+### `checkRemove(boolean canRemove)`
 
 **Returns:** `void`
 
-Precondition tester for `Iterator.remove()` that throws an exception with a consistent
- error message.
+**Parameters:**
+- `canRemove` (`boolean`)
 

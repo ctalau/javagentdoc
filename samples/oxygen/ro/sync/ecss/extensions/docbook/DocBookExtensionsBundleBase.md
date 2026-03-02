@@ -68,9 +68,15 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.LinkTextResolver`](../api/link/LinkTextResolver.md)
 
-### `resolveCustomHref(`java.net.URL` currentEditorURL, [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md) contextNode, `java.lang.String` linkHref, [`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md) authorAccess)`
+### `resolveCustomHref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `java.net.URL`
+
+**Parameters:**
+- `currentEditorURL` (`java.net.URL`)
+- `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+- `linkHref` (`java.lang.String`)
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 
 ### `getAuthorActionEventHandler()`
 

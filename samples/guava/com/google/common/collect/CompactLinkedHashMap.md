@@ -13,22 +13,24 @@
 
 ## Description
 
-CompactLinkedHashMap is an implementation of a Map with insertion or LRU iteration order,
- maintained with a doubly linked list through the entries. All optional operations (put and
+All optional operations (put and
  remove) are supported. Null keys and values are supported.
 
- <p>`containsKey(k)`, `put(k, v)` and `remove(k)` are all (expected and
+ 
+containsKey(k), put(k, v) and remove(k) are all (expected and
  amortized) constant time operations. Expected in the hashtable sense (depends on the hash
  function doing a good job of distributing the elements to the buckets to a distribution not far
  from uniform), and amortized since some operations can trigger a hash table resize.
 
- <p>As compared with `java.util.LinkedHashMap`, this structure places significantly reduced
+ 
+As compared with java.util.LinkedHashMap, this structure places significantly reduced
  load on the garbage collector by only using a constant number of internal objects.
 
- <p>This class should not be assumed to be universally superior to `java.util.LinkedHashMap`. Generally speaking, this class reduces object allocation and memory
+ 
+This class should not be assumed to be universally superior to 
+ java.util.LinkedHashMap. Generally speaking, this class reduces object allocation and memory
  consumption at the price of moderately increased constant factors of CPU. Only use this class
  when there is a specific reason to prioritize memory over CPU.
-**Author:** Louis Wasserman
 
 ## Fields
 
@@ -40,25 +42,22 @@ CompactLinkedHashMap is an implementation of a Map with insertion or LRU iterati
 
 **Type:** `long[]`
 
-Contains the link pointers corresponding with the entries, in the range of [0, size()). The
+The
  high 32 bits of each long is the "prev" pointer, whereas the low 32 bits is the "succ" pointer
  (pointing to the next entry in the linked list). The pointers in [size(), entries.length) are
  all "null" (UNSET).
 
- <p>A node with "prev" pointer equal to `ENDPOINT` is the first node in the linked list,
- and a node with "next" pointer equal to `ENDPOINT` is the last node.
+ 
+A node with "prev" pointer equal to ENDPOINT is the first node in the linked list,
+ and a node with "next" pointer equal to ENDPOINT is the last node.
 
 ### `firstEntry`
 
 **Type:** `int`
 
-Pointer to the first node in the linked list, or `ENDPOINT` if there are no entries.
-
 ### `lastEntry`
 
 **Type:** `int`
-
-Pointer to the last node in the linked list, or `ENDPOINT` if there are no entries.
 
 ### `accessOrder`
 
@@ -68,9 +67,16 @@ Pointer to the last node in the linked list, or `ENDPOINT` if there are no entri
 
 ### `<init>()`
 
-### `<init>(`int` expectedSize)`
+### `<init>(int expectedSize)`
 
-### `<init>(`int` expectedSize, `boolean` accessOrder)`
+**Parameters:**
+- `expectedSize` (`int`)
+
+### `<init>(int expectedSize, boolean accessOrder)`
+
+**Parameters:**
+- `expectedSize` (`int`)
+- `accessOrder` (`boolean`)
 
 ## Methods
 
@@ -78,77 +84,117 @@ Pointer to the last node in the linked list, or `ENDPOINT` if there are no entri
 
 **Returns:** [`com.google.common.collect.CompactLinkedHashMap<K,V>`](./CompactLinkedHashMap.md)
 
-Creates an empty `CompactLinkedHashMap` instance.
-
-### `createWithExpectedSize(`int` expectedSize)`
+### `createWithExpectedSize(int expectedSize)`
 
 **Returns:** [`com.google.common.collect.CompactLinkedHashMap<K,V>`](./CompactLinkedHashMap.md)
 
-Creates a `CompactLinkedHashMap` instance, with a high enough "initial capacity" that it
- <i>should</i> hold `expectedSize` elements without rebuilding internal data structures.
-@param expectedSize the number of elements you expect to add to the returned set
-@return a new, empty `CompactLinkedHashMap` with enough capacity to hold `expectedSize` elements without resizing
-@throws IllegalArgumentException if `expectedSize` is negative
+**Parameters:**
+- `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `init(`int` expectedSize)`
+### `init(int expectedSize)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `expectedSize` (`int`)
 
 ### `allocArrays()`
 
 **Returns:** `int`
 
-### `createHashFloodingResistantDelegate(`int` tableSize)`
+### `createHashFloodingResistantDelegate(int tableSize)`
 
 **Returns:** `java.util.Map<K,V>`
+
+**Parameters:**
+- `tableSize` (`int`)
 
 ### `convertToHashFloodingResistantImplementation()`
 
 **Returns:** `java.util.Map<K,V>`
 
-### `getPredecessor(`int` entry)`
+### `getPredecessor(int entry)`
 
 **Returns:** `int`
 
-### `getSuccessor(`int` entry)`
+**Parameters:**
+- `entry` (`int`)
+
+### `getSuccessor(int entry)`
 
 **Returns:** `int`
 
-### `setSuccessor(`int` entry, `int` succ)`
+**Parameters:**
+- `entry` (`int`)
+
+### `setSuccessor(int entry, int succ)`
 
 **Returns:** `void`
 
-### `setPredecessor(`int` entry, `int` pred)`
+**Parameters:**
+- `entry` (`int`)
+- `succ` (`int`)
+
+### `setPredecessor(int entry, int pred)`
 
 **Returns:** `void`
 
-### `setSucceeds(`int` pred, `int` succ)`
+**Parameters:**
+- `entry` (`int`)
+- `pred` (`int`)
+
+### `setSucceeds(int pred, int succ)`
 
 **Returns:** `void`
 
-### `insertEntry(`int` entryIndex, `K` key, `V` value, `int` hash, `int` mask)`
+**Parameters:**
+- `pred` (`int`)
+- `succ` (`int`)
+
+### `insertEntry(int entryIndex, K key, V value, int hash, int mask)`
 
 **Returns:** `void`
 
-### `accessEntry(`int` index)`
+**Parameters:**
+- `entryIndex` (`int`)
+- `key` (`K`)
+- `value` (`V`)
+- `hash` (`int`)
+- `mask` (`int`)
+
+### `accessEntry(int index)`
 
 **Returns:** `void`
 
-### `moveLastEntry(`int` dstIndex, `int` mask)`
+**Parameters:**
+- `index` (`int`)
+
+### `moveLastEntry(int dstIndex, int mask)`
 
 **Returns:** `void`
 
-### `resizeEntries(`int` newCapacity)`
+**Parameters:**
+- `dstIndex` (`int`)
+- `mask` (`int`)
+
+### `resizeEntries(int newCapacity)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `newCapacity` (`int`)
 
 ### `firstEntryIndex()`
 
 **Returns:** `int`
 
-### `adjustAfterRemove(`int` indexBeforeRemove, `int` indexRemoved)`
+### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `indexBeforeRemove` (`int`)
+- `indexRemoved` (`int`)
 
 ### `createEntrySet()`
 
@@ -170,11 +216,18 @@ Creates a `CompactLinkedHashMap` instance, with a high enough "initial capacity"
 
 **Returns:** `long[]`
 
-### `link(`int` i)`
+### `link(int i)`
 
 **Returns:** `long`
 
-### `setLink(`int` i, `long` value)`
+**Parameters:**
+- `i` (`int`)
+
+### `setLink(int i, long value)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `i` (`int`)
+- `value` (`long`)
 

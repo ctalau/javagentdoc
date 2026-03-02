@@ -13,15 +13,19 @@
 
 ## Description
 
-A dummy superclass to support GWT serialization of the element types of a `HashMultimap`.
- The GWT supersource for this class contains a field for each type.
+The GWT supersource for this class contains a field for each type.
 
- <p>For details about this hack, see `GwtSerializationDependencies`, which takes the same
+ 
+For details about this hack, see GwtSerializationDependencies, which takes the same
  approach but with a subclass rather than a superclass.
 
- <p>TODO(cpovirk): Consider applying this subclass approach to our other types.
+ 
+TODO(cpovirk): Consider applying this subclass approach to our other types.
 
 ## Constructors
 
-### `<init>(`java.util.Map<K,java.util.Collection<V>>` map)`
+### `<init>(java.util.Map<K,java.util.Collection<V>> map)`
+
+**Parameters:**
+- `map` (`java.util.Map<K,java.util.Collection<V>>`)
 

@@ -60,7 +60,10 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.IDTypeRecognizer`](../api/link/IDTypeRecognizer.md)
 
-### `getHelpPageID(`java.lang.String` currentEditorPage)`
+### `getHelpPageID(java.lang.String currentEditorPage)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `currentEditorPage` (`java.lang.String`)
 

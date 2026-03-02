@@ -30,15 +30,26 @@ If selected, the column(s) will be inserted after the current location.
 
 ## Constructors
 
-### `<init>(`javax.swing.JFrame` parentFrame, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) resourceBundle)`
+### `<init>(javax.swing.JFrame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle resourceBundle)`
+
+**Parameters:**
+- `parentFrame` (`javax.swing.JFrame`): the parent frame.
+- `resourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): the resource bundle.
 
 ## Methods
 
-### `showDialog([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md) previousTableColumnsInfo)`
+### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo previousTableColumnsInfo)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
 
-### `initialize([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md) previousTableColumnsInfo)`
+**Parameters:**
+- `previousTableColumnsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)): the previous columns information
+
+### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo previousTableColumnsInfo)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `previousTableColumnsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)): If `null`, defaults will be used. Otherwise, the controls
+ will be initialized with values from this info.
 

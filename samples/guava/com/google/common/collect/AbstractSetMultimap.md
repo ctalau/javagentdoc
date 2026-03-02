@@ -15,8 +15,7 @@
 
 ## Description
 
-Basic implementation of the `SetMultimap` interface. It's a wrapper around `AbstractMapBasedMultimap` that converts the returned collections into `Sets`. The `createCollection` method must return a `Set`.
-**Author:** Jared Levy
+It's a wrapper around AbstractMapBasedMultimap that converts the returned collections into Sets. The #createCollection method must return a Set.
 
 ## Fields
 
@@ -26,10 +25,10 @@ Basic implementation of the `SetMultimap` interface. It's a wrapper around `Abst
 
 ## Constructors
 
-### `<init>(`java.util.Map<K,java.util.Collection<V>>` map)`
+### `<init>(java.util.Map<K,java.util.Collection<V>> map)`
 
-Creates a new multimap that uses the provided map.
-@param map place to store the mapping from each key to its corresponding values
+**Parameters:**
+- `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
 
 ## Methods
 
@@ -41,77 +40,84 @@ Creates a new multimap that uses the provided map.
 
 **Returns:** `java.util.Set<V>`
 
-### `unmodifiableCollectionSubclass(`java.util.Collection<E>` collection)`
+### `unmodifiableCollectionSubclass(java.util.Collection<E> collection)`
 
 **Returns:** `java.util.Collection<E>`
 
-### `wrapCollection(`K` key, `java.util.Collection<V>` collection)`
+**Parameters:**
+- `collection` (`java.util.Collection<E>`)
+
+### `wrapCollection(K key, java.util.Collection<V> collection)`
 
 **Returns:** `java.util.Collection<V>`
 
-### `get(`K` key)`
+**Parameters:**
+- `key` (`K`)
+- `collection` (`java.util.Collection<V>`)
+
+### `get(K key)`
 
 **Returns:** `java.util.Set<V>`
 
-{@inheritDoc}
+Because a SetMultimap has unique values for a given key, this method returns a
+ Set, instead of the Collection specified in the Multimap interface.
 
- <p>Because a `SetMultimap` has unique values for a given key, this method returns a
- `Set`, instead of the `Collection` specified in the `Multimap` interface.
+**Parameters:**
+- `key` (`K`)
 
 ### `entries()`
 
 **Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-{@inheritDoc}
+Because a SetMultimap has unique values for a given key, this method returns a
+ Set, instead of the Collection specified in the Multimap interface.
 
- <p>Because a `SetMultimap` has unique values for a given key, this method returns a
- `Set`, instead of the `Collection` specified in the `Multimap` interface.
-
-### `removeAll(`java.lang.Object` key)`
+### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.Set<V>`
 
-{@inheritDoc}
+Because a SetMultimap has unique values for a given key, this method returns a
+ Set, instead of the Collection specified in the Multimap interface.
 
- <p>Because a `SetMultimap` has unique values for a given key, this method returns a
- `Set`, instead of the `Collection` specified in the `Multimap` interface.
+**Parameters:**
+- `key` (`java.lang.Object`)
 
-### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
+### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
 
 **Returns:** `java.util.Set<V>`
 
-{@inheritDoc}
+Because a SetMultimap has unique values for a given key, this method returns a
+ Set, instead of the Collection specified in the Multimap interface.
 
- <p>Because a `SetMultimap` has unique values for a given key, this method returns a
- `Set`, instead of the `Collection` specified in the `Multimap` interface.
+ 
+Any duplicates in values will be stored in the multimap once.
 
- <p>Any duplicates in `values` will be stored in the multimap once.
+**Parameters:**
+- `key` (`K`)
+- `values` (`java.lang.Iterable<? extends V>`)
 
 ### `asMap()`
 
 **Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-{@inheritDoc}
-
- <p>Though the method signature doesn't say so explicitly, the returned map has `Set`
+Though the method signature doesn't say so explicitly, the returned map has Set
  values.
 
-### `put(`K` key, `V` value)`
+### `put(K key, V value)`
 
 **Returns:** `boolean`
 
-Stores a key-value pair in the multimap.
-@param key key to store in the multimap
-@param value value to store in the multimap
-@return `true` if the method increased the size of the multimap, or `false` if the
-     multimap already contained the key-value pair
+**Parameters:**
+- `key` (`K`): key to store in the multimap
+- `value` (`V`): value to store in the multimap
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-Compares the specified object to this multimap for equality.
-
- <p>Two `SetMultimap` instances are equal if, for each key, they contain the same values.
+Two SetMultimap instances are equal if, for each key, they contain the same values.
  Equality does not depend on the ordering of keys or values.
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 

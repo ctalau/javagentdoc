@@ -30,25 +30,35 @@ This controller can override review entries display options and contextual menu 
 
 Form: `yyyyMMdd'T'HHmmssZ`
 
-### `getReviewerAutoColor(`java.lang.String` reviewerAuthorName)`
+### `getReviewerAutoColor(java.lang.String reviewerAuthorName)`
 
 **Returns:** `ro.sync.exml.view.graphics.Color`
 
 It is used when in the Oxygen Preferences **Auto** coloring is set for the `Insert`, `Delete` or `Comment` reviews.
 
-### `setReviewRenderer([`ro.sync.ecss.extensions.api.highlights.PersistentHighlightRenderer`](highlights/PersistentHighlightRenderer.md) renderer)`
+**Parameters:**
+- `reviewerAuthorName` (`java.lang.String`): The reviewer author name.
+
+### `setReviewRenderer(ro.sync.ecss.extensions.api.highlights.PersistentHighlightRenderer renderer)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `renderer` ([`ro.sync.ecss.extensions.api.highlights.PersistentHighlightRenderer`](highlights/PersistentHighlightRenderer.md)): the renderer used to customize painting for the review highlights.
 
 ### `getCommentHighlights()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
 
-### `getCommentHighlights(`int` startOffset, `int` endOffset)`
+### `getCommentHighlights(int startOffset, int endOffset)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
 
-### `setPersistentHighlightProperties([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md) highlight, `java.util.LinkedHashMap<java.lang.String,java.lang.String>` properties)`
+**Parameters:**
+- `startOffset` (`int`): The start offset(inclusive).
+- `endOffset` (`int`): The end offset (inclusive).
+
+### `setPersistentHighlightProperties(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.util.LinkedHashMap<java.lang.String,java.lang.String> properties)`
 
 **Returns:** `void`
 
@@ -60,7 +70,19 @@ A copy of the initial properties can be obtained from AuthorPersistentHighlight#
  comments or track changes processing instructions, that cannot be changed. You can see the name of 
  these specific properties in AuthorPersistentHighlightConstants.
 
-### `removePersistentHighlightProperties([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md) highlight, `java.util.List<java.lang.String>` properties)`
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)): The highlight.
+- `properties` (`java.util.LinkedHashMap<java.lang.String,java.lang.String>`): name/value pairs which will get serialized to disk. 
+ 
+Notes:
+
+ 1. Each property name must be a valid XML attribute name.
+
+ 2. Each property value will be escaped to be a valid XML attribute value.
+ 3. A `null` value means that the property will be removed.
+
+
+### `removePersistentHighlightProperties(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.util.List<java.lang.String> properties)`
 
 **Returns:** `void`
 
@@ -69,7 +91,11 @@ A copy of the initial properties can be obtained from AuthorPersistentHighlight#
  processing instructions cannot be removed. You can see the name of these specific properties 
  in AuthorPersistentHighlightConstants
 
-### `addAuthorPersistentHighlightListener([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener`](highlights/AuthorPersistentHighlightsListener.md) listener)`
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)): The highlight.
+- `properties` (`java.util.List<java.lang.String>`): The names of the properties to be removed.
+
+### `addAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
 
 **Returns:** `void`
 
@@ -80,13 +106,22 @@ In the persistent highlights are included:
   -  Additional persistent highlights 
     added using AuthorPersistentHighlighter#addHighlight(int, int, java.util.LinkedHashMap)
 
-### `removeAuthorPersistentHighlightListener([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener`](highlights/AuthorPersistentHighlightsListener.md) listener)`
+**Parameters:**
+- `listener` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener`](highlights/AuthorPersistentHighlightsListener.md)): The listener
+
+### `removeAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
 
 **Returns:** `void`
 
-### `addPersistentHighlightsFilter([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsFilter`](highlights/AuthorPersistentHighlightsFilter.md) persistentHighlightsFilter)`
+**Parameters:**
+- `listener` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener`](highlights/AuthorPersistentHighlightsListener.md)): The listener to remove.
+
+### `addPersistentHighlightsFilter(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsFilter persistentHighlightsFilter)`
 
 **Returns:** `void`
 
 A filter capable of filtering the highlights by author is present by default.
+
+**Parameters:**
+- `persistentHighlightsFilter` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsFilter`](highlights/AuthorPersistentHighlightsFilter.md)): The filter to be added.
 

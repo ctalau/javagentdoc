@@ -116,9 +116,24 @@
 
 ### `<init>()`
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1, `boolean` arg2, `java.lang.String` arg3, `java.util.List<java.lang.String>` arg4)`
+### `<init>(java.lang.String arg0, boolean arg1, boolean arg2, java.lang.String arg3, java.util.List<java.lang.String> arg4)`
 
-### `<init>(`java.lang.String` arg0, `java.lang.String` arg1, `boolean` arg2, `boolean` arg3, `java.lang.String` arg4, `java.util.List<java.lang.String>` arg5)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`boolean`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`java.util.List<java.lang.String>`)
+
+### `<init>(java.lang.String arg0, java.lang.String arg1, boolean arg2, boolean arg3, java.lang.String arg4, java.util.List<java.lang.String> arg5)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`boolean`)
+- `arg3` (`boolean`)
+- `arg4` (`java.lang.String`)
+- `arg5` (`java.util.List<java.lang.String>`)
 
 ## Methods
 
@@ -126,9 +141,12 @@
 
 **Returns:** `ro.sync.contentcompletion.xml.CIAttribute.EditableState`
 
-### `setEditableState(`ro.sync.contentcompletion.xml.CIAttribute.EditableState` arg0)`
+### `setEditableState(ro.sync.contentcompletion.xml.CIAttribute.EditableState arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`ro.sync.contentcompletion.xml.CIAttribute.EditableState`)
 
 ### `isFixed()`
 
@@ -138,9 +156,12 @@
 
 **Returns:** `java.lang.String`
 
-### `setName(`java.lang.String` arg0)`
+### `setName(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getNamespace()`
 
@@ -162,9 +183,12 @@
 
 **Returns:** `java.util.List<java.lang.String>`
 
-### `equals(`java.lang.Object` arg0)`
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
 
 ### `hashCode()`
 
@@ -174,173 +198,248 @@
 
 **Returns:** `java.lang.String`
 
-### `compareTo([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md) arg0)`
+### `compareTo(ro.sync.contentcompletion.xml.CIAttribute arg0)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `arg0` ([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md))
 
 ### `getFacetFractionDigitsValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetFractionDigitsValue(`java.lang.String` arg0)`
+### `setFacetFractionDigitsValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetLengthValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetLengthValue(`java.lang.String` arg0)`
+### `setFacetLengthValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetMaxExclusiveValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetMaxExclusiveValue(`java.lang.String` arg0)`
+### `setFacetMaxExclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetMaxInclusiveValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetMaxInclusiveValue(`java.lang.String` arg0)`
+### `setFacetMaxInclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetMaxLengthValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetMaxLengthValue(`java.lang.String` arg0)`
+### `setFacetMaxLengthValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetMinExclusiveValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetMinExclusiveValue(`java.lang.String` arg0)`
+### `setFacetMinExclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetMinInclusiveValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetMinInclusiveValue(`java.lang.String` arg0)`
+### `setFacetMinInclusiveValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetMinLengthValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetMinLengthValue(`java.lang.String` arg0)`
+### `setFacetMinLengthValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetTotalDigitsValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetTotalDigitsValue(`java.lang.String` arg0)`
+### `setFacetTotalDigitsValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetWhitespaceValue()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetWhitespaceValue(`java.lang.String` arg0)`
+### `setFacetWhitespaceValue(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getFacetPattern()`
 
 **Returns:** `java.lang.String`
 
-### `setFacetPattern(`java.lang.String` arg0)`
+### `setFacetPattern(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getModelDescription()`
 
 **Returns:** `java.lang.String`
 
-### `setModelDescription(`java.lang.String` arg0)`
+### `setModelDescription(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setDefaultValue(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setDefaultValue(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setOverridingDefaultValueProvider(`ro.sync.contentcompletion.xml.CIAttribute._b` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setOverridingDefaultValueProvider(ro.sync.contentcompletion.xml.CIAttribute._b arg0)`
 
 **Returns:** `void`
 
-### `setPossiblesValues(`java.util.List<java.lang.String>` arg0)`
+**Parameters:**
+- `arg0` (`ro.sync.contentcompletion.xml.CIAttribute._b`)
+
+### `setPossiblesValues(java.util.List<java.lang.String> arg0)`
 
 **Returns:** `void`
 
-### `setRequired(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<java.lang.String>`)
+
+### `setRequired(boolean arg0)`
 
 **Returns:** `void`
 
-### `setNamespace(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setNamespace(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setFixed(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setFixed(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `getAnnotation()`
 
 **Returns:** `java.lang.String`
 
-### `setAnnotation(`java.lang.String` arg0)`
+### `setAnnotation(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `isDeclareXmlns()`
 
 **Returns:** `boolean`
 
-### `setDeclareXmlns(`boolean` arg0)`
+### `setDeclareXmlns(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `getPrefix()`
 
 **Returns:** `java.lang.String`
 
-### `setPrefix(`java.lang.String` arg0)`
+### `setPrefix(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setAssertions(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setAssertions(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getAssertions()`
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentMode(`java.lang.String` arg0)`
+### `setOpenContentMode(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getOpenContentMode()`
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentWildcardDescription(`java.lang.String` arg0)`
+### `setOpenContentWildcardDescription(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getOpenContentWildcardDescription()`
 

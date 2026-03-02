@@ -18,7 +18,11 @@
 
 ## Constructors
 
-### `<init>(`int` startOffset, `int` endOffset)`
+### `<init>(int startOffset, int endOffset)`
+
+**Parameters:**
+- `startOffset` (`int`): Interval **inclusive** start offset.
+- `endOffset` (`int`): Interval **exclusive** end offset.
 
 ## Methods
 
@@ -34,13 +38,19 @@
 
 **Returns:** `int`
 
-### `contains(`int` offset)`
+### `contains(int offset)`
 
 **Returns:** `boolean`
 
-### `equals(`java.lang.Object` obj)`
+**Parameters:**
+- `offset` (`int`): An offset.
+
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

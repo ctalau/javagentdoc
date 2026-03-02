@@ -8,51 +8,58 @@
 
 ## Description
 
-An immutable array of `long` values, with an API resembling `List`.
+Advantages compared to long[]:
 
- <p>Advantages compared to `long[]`:
+ 
 
- <ul>
-   <li>All the many well-known advantages of immutability (read <i>Effective Java</i>, third
+   - All the many well-known advantages of immutability (read *Effective Java*, third
        edition, Item 17).
-   <li>Has the value-based (not identity-based) `equals`, `hashCode`, and `toString` behavior you expect.
-   <li>Offers useful operations beyond just `get` and `length`, so you don't have to
-       hunt through classes like `Arrays` and `Longs` for them.
-   <li>Supports a copy-free `subArray` view, so methods that accept this type don't need to
+   - Has the value-based (not identity-based) #equals, #hashCode, and #toString behavior you expect.
+   - Offers useful operations beyond just get and length, so you don't have to
+       hunt through classes like Arrays and Longs for them.
+   - Supports a copy-free #subArray view, so methods that accept this type don't need to
        add overloads that accept start and end indexes.
-   <li>Can be streamed without "breaking the chain": `foo.getBarLongs().stream()...`.
-   <li>Access to all collection-based utilities via `asList` (though at the cost of
+   - Can be streamed without "breaking the chain": foo.getBarLongs().stream()....
+   - Access to all collection-based utilities via #asList (though at the cost of
        allocating garbage).
- </ul>
+ 
 
- <p>Disadvantages compared to `long[]`:
 
- <ul>
-   <li>Memory footprint has a fixed overhead (about 24 bytes per instance).
-   <li><i>Some</i> construction use cases force the data to be copied (though several construction
+ 
+Disadvantages compared to long[]:
+
+ 
+
+   - Memory footprint has a fixed overhead (about 24 bytes per instance).
+   - *Some* construction use cases force the data to be copied (though several construction
        APIs are offered that don't).
-   <li>Can't be passed directly to methods that expect `long[]` (though the most common
+   - Can't be passed directly to methods that expect long[] (though the most common
        utilities do have replacements here).
-   <li>Dependency on `com.google.common` / Guava.
- </ul>
+   - Dependency on com.google.common / Guava.
+ 
 
- <p>Advantages compared to `com.google.common.collect.ImmutableList``<Long>`:
 
- <ul>
-   <li>Improved memory compactness and locality.
-   <li>Can be queried without allocating garbage.
-   <li>Access to `LongStream` features (like `LongStream.sum`) using `stream()`
-       instead of the awkward `stream().mapToLong(v -> v)`.
- </ul>
+ 
+Advantages compared to ImmutableList
+ <Long>:
 
- <p>Disadvantages compared to `ImmutableList<Long>`:
+ 
 
- <ul>
-   <li>Can't be passed directly to methods that expect `Iterable`, `Collection`, or
-       `List` (though the most common utilities do have replacements here, and there is a
-       lazy `asList` view).
- </ul>
-**Since:** 22.0
+   - Improved memory compactness and locality.
+   - Can be queried without allocating garbage.
+   - Access to LongStream features (like LongStream#sum) using stream()
+       instead of the awkward stream().mapToLong(v -> v).
+ 
+
+
+ 
+Disadvantages compared to ImmutableList<Long>:
+
+ 
+
+   - Can't be passed directly to methods that expect Iterable, Collection, or
+       List (though the most common utilities do have replacements here, and there is a
+       lazy #asList view).
 
 ## Fields
 
@@ -74,9 +81,17 @@ An immutable array of `long` values, with an API resembling `List`.
 
 ## Constructors
 
-### `<init>(`long[]` array)`
+### `<init>(long[] array)`
 
-### `<init>(`long[]` array, `int` start, `int` end)`
+**Parameters:**
+- `array` (`long[]`)
+
+### `<init>(long[] array, int start, int end)`
+
+**Parameters:**
+- `array` (`long[]`)
+- `start` (`int`)
+- `end` (`int`)
 
 ## Methods
 
@@ -84,168 +99,199 @@ An immutable array of `long` values, with an API resembling `List`.
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns the empty array.
-
-### `of(`long` e0)`
+### `of(long e0)`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns an immutable array containing a single value.
+**Parameters:**
+- `e0` (`long`)
 
-### `of(`long` e0, `long` e1)`
-
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
-Returns an immutable array containing the given values, in order.
-
-### `of(`long` e0, `long` e1, `long` e2)`
+### `of(long e0, long e1)`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns an immutable array containing the given values, in order.
+**Parameters:**
+- `e0` (`long`)
+- `e1` (`long`)
 
-### `of(`long` e0, `long` e1, `long` e2, `long` e3)`
-
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
-Returns an immutable array containing the given values, in order.
-
-### `of(`long` e0, `long` e1, `long` e2, `long` e3, `long` e4)`
+### `of(long e0, long e1, long e2)`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns an immutable array containing the given values, in order.
+**Parameters:**
+- `e0` (`long`)
+- `e1` (`long`)
+- `e2` (`long`)
 
-### `of(`long` e0, `long` e1, `long` e2, `long` e3, `long` e4, `long` e5)`
-
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
-Returns an immutable array containing the given values, in order.
-
-### `of(`long` first, `long[]` rest)`
+### `of(long e0, long e1, long e2, long e3)`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns an immutable array containing the given values, in order.
+**Parameters:**
+- `e0` (`long`)
+- `e1` (`long`)
+- `e2` (`long`)
+- `e3` (`long`)
 
- <p>The array `rest` must not be longer than `Integer.MAX_VALUE - 1`.
-
-### `copyOf(`long[]` values)`
-
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
-Returns an immutable array containing the given values, in order.
-
-### `copyOf(`java.util.Collection<java.lang.Long>` values)`
+### `of(long e0, long e1, long e2, long e3, long e4)`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns an immutable array containing the given values, in order.
+**Parameters:**
+- `e0` (`long`)
+- `e1` (`long`)
+- `e2` (`long`)
+- `e3` (`long`)
+- `e4` (`long`)
 
-### `copyOf(`java.lang.Iterable<java.lang.Long>` values)`
-
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
-Returns an immutable array containing the given values, in order.
-
- <p><b>Performance note:</b> this method delegates to `copyOf(Collection)` if `values` is a `Collection`. Otherwise it creates a `builder` and uses `Builder.addAll(Iterable)`, with all the performance implications associated with that.
-
-### `copyOf(`java.util.stream.LongStream` stream)`
+### `of(long e0, long e1, long e2, long e3, long e4, long e5)`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns an immutable array containing all the values from `stream`, in order.
+**Parameters:**
+- `e0` (`long`)
+- `e1` (`long`)
+- `e2` (`long`)
+- `e3` (`long`)
+- `e4` (`long`)
+- `e5` (`long`)
 
-### `builder(`int` initialCapacity)`
+### `of(long first, long[] rest)`
 
-**Returns:** [`com.google.common.primitives.ImmutableLongArray.Builder`](ImmutableLongArray/Builder.md)
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns a new, empty builder for `ImmutableLongArray` instances, sized to hold up to
- `initialCapacity` values without resizing. The returned builder is not thread-safe.
+The array rest must not be longer than Integer.MAX_VALUE - 1.
 
- <p><b>Performance note:</b> When feasible, `initialCapacity` should be the exact number
+**Parameters:**
+- `first` (`long`)
+- `rest` (`long[]`)
+
+### `copyOf(long[] values)`
+
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+**Parameters:**
+- `values` (`long[]`)
+
+### `copyOf(java.util.Collection<java.lang.Long> values)`
+
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+**Parameters:**
+- `values` (`java.util.Collection<java.lang.Long>`)
+
+### `copyOf(java.lang.Iterable<java.lang.Long> values)`
+
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+**Performance note:** this method delegates to #copyOf(Collection) if 
+ values is a Collection. Otherwise it creates a #builder and uses Builder#addAll(Iterable), with all the performance implications associated with that.
+
+**Parameters:**
+- `values` (`java.lang.Iterable<java.lang.Long>`)
+
+### `copyOf(java.util.stream.LongStream stream)`
+
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+**Parameters:**
+- `stream` (`java.util.stream.LongStream`)
+
+### `builder(int initialCapacity)`
+
+**Returns:** `com.google.common.primitives.ImmutableLongArray.Builder`
+
+The returned builder is not thread-safe.
+
+ 
+**Performance note:** When feasible, initialCapacity should be the exact number
  of values that will be added, if that knowledge is readily available. It is better to guess a
- value slightly too high than slightly too low. If the value is not exact, the `ImmutableLongArray` that is built will very likely occupy more memory than strictly necessary;
- to trim memory usage, build using `builder.build().trimmed()`.
+ value slightly too high than slightly too low. If the value is not exact, the ImmutableLongArray that is built will very likely occupy more memory than strictly necessary;
+ to trim memory usage, build using builder.build().trimmed().
+
+**Parameters:**
+- `initialCapacity` (`int`)
 
 ### `builder()`
 
-**Returns:** [`com.google.common.primitives.ImmutableLongArray.Builder`](ImmutableLongArray/Builder.md)
+**Returns:** `com.google.common.primitives.ImmutableLongArray.Builder`
 
-Returns a new, empty builder for `ImmutableLongArray` instances, with a default initial
- capacity. The returned builder is not thread-safe.
+The returned builder is not thread-safe.
 
- <p><b>Performance note:</b> The `ImmutableLongArray` that is built will very likely
- occupy more memory than necessary; to trim memory usage, build using `builder.build().trimmed()`.
+ 
+**Performance note:** The ImmutableLongArray that is built will very likely
+ occupy more memory than necessary; to trim memory usage, build using 
+ builder.build().trimmed().
 
 ### `length()`
 
 **Returns:** `int`
 
-Returns the number of values in this array.
-
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-Returns `true` if there are no values in this array (`length` is zero).
-
-### `get(`int` index)`
+### `get(int index)`
 
 **Returns:** `long`
 
-Returns the `long` value present at the given index.
-@throws IndexOutOfBoundsException if `index` is negative, or greater than or equal to
-     `length`
+**Parameters:**
+- `index` (`int`)
 
-### `indexOf(`long` target)`
-
-**Returns:** `int`
-
-Returns the smallest index for which `get` returns `target`, or `-1` if no
- such index exists. Equivalent to `asList().indexOf(target)`.
-
-### `lastIndexOf(`long` target)`
+### `indexOf(long target)`
 
 **Returns:** `int`
 
-Returns the largest index for which `get` returns `target`, or `-1` if no
- such index exists. Equivalent to `asList().lastIndexOf(target)`.
+Equivalent to asList().indexOf(target).
 
-### `contains(`long` target)`
+**Parameters:**
+- `target` (`long`)
+
+### `lastIndexOf(long target)`
+
+**Returns:** `int`
+
+Equivalent to asList().lastIndexOf(target).
+
+**Parameters:**
+- `target` (`long`)
+
+### `contains(long target)`
 
 **Returns:** `boolean`
 
-Returns `true` if `target` is present at any index in this array. Equivalent to
- `asList().contains(target)`.
+Equivalent to
+ asList().contains(target).
 
-### `forEach(`java.util.function.LongConsumer` consumer)`
+**Parameters:**
+- `target` (`long`)
+
+### `forEach(java.util.function.LongConsumer consumer)`
 
 **Returns:** `void`
 
-Invokes `consumer` for each value contained in this array, in order.
+**Parameters:**
+- `consumer` (`java.util.function.LongConsumer`)
 
 ### `stream()`
 
 **Returns:** `java.util.stream.LongStream`
 
-Returns a stream over the values in this array, in order.
-
 ### `toArray()`
 
 **Returns:** `long[]`
 
-Returns a new, mutable copy of this array's values, as a primitive `long[]`.
-
-### `subArray(`int` startIndex, `int` endIndex)`
+### `subArray(int startIndex, int endIndex)`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns a new immutable array containing the values in the specified range.
+**Performance note:** The returned array has the same full memory footprint as this one
+ does (no actual copying is performed). To reduce memory usage, use subArray(start,
+ end).trimmed().
 
- <p><b>Performance note:</b> The returned array has the same full memory footprint as this one
- does (no actual copying is performed). To reduce memory usage, use `subArray(start,
- end).trimmed()`.
+**Parameters:**
+- `startIndex` (`int`)
+- `endIndex` (`int`)
 
 ### `spliterator()`
 
@@ -255,37 +301,33 @@ Returns a new immutable array containing the values in the specified range.
 
 **Returns:** `java.util.List<java.lang.Long>`
 
-Returns an immutable <i>view</i> of this array's values as a `List`; note that `long` values are boxed into `Long` instances on demand, which can be very expensive. The
+The
  returned list should be used once and discarded. For any usages beyond that, pass the returned
- list to `com.google.common.collect.ImmutableList.copyOf(Collection) ImmutableList.copyOf`
+ list to ImmutableList.copyOf
  and use that list instead.
 
-### `equals(`java.lang.Object` object)`
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
 
-Returns `true` if `object` is an `ImmutableLongArray` containing the same
- values as this one, in the same order.
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-Returns an unspecified hash code for the contents of this immutable array.
-
 ### `toString()`
 
 **Returns:** `java.lang.String`
-
-Returns a string representation of this array in the same form as `Arrays.toString(long[])`, for example `"[1, 2, 3]"`.
 
 ### `trimmed()`
 
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-Returns an immutable array containing the same values as `this` array. This is logically
- a no-op, and in some circumstances `this` itself is returned. However, if this instance
- is a `subArray` view of a larger array, this method will copy only the appropriate range
+This is logically
+ a no-op, and in some circumstances this itself is returned. However, if this instance
+ is a #subArray view of a larger array, this method will copy only the appropriate range
  of values, resulting in an equivalent array with a smaller memory footprint.
 
 ### `isPartialView()`

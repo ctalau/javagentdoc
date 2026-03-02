@@ -26,7 +26,12 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` toolbarID, `javax.swing.JComponent[]` components, `java.lang.String` title)`
+### `<init>(java.lang.String toolbarID, javax.swing.JComponent[] components, java.lang.String title)`
+
+**Parameters:**
+- `toolbarID` (`java.lang.String`): The unique toolbar ID
+- `components` (`javax.swing.JComponent[]`): The components array
+- `title` (`java.lang.String`): Title for the toolbar
 
 ## Methods
 
@@ -42,13 +47,19 @@
 
 **Returns:** `java.lang.String`
 
-### `setComponents(`javax.swing.JComponent[]` components)`
+### `setComponents(javax.swing.JComponent[] components)`
 
 **Returns:** `void`
 
-### `setTitle(`java.lang.String` title)`
+**Parameters:**
+- `components` (`javax.swing.JComponent[]`): The components to set.
+
+### `setTitle(java.lang.String title)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `title` (`java.lang.String`): The title to set.
 
 ### `isCustomized()`
 

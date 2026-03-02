@@ -26,7 +26,13 @@
 
 ## Constructors
 
-### `<init>(`int` startOffset, `int` endOffset, `java.lang.String` word, `java.lang.String[]` suggestions)`
+### `<init>(int startOffset, int endOffset, java.lang.String word, java.lang.String[] suggestions)`
+
+**Parameters:**
+- `startOffset` (`int`): Start offset of the word.
+- `endOffset` (`int`): End offset of the word.
+- `word` (`java.lang.String`): The targeted word for suggestions.
+- `suggestions` (`java.lang.String[]`): List of suggestions.
 
 ## Methods
 

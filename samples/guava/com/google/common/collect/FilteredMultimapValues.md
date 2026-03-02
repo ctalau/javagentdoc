@@ -13,9 +13,6 @@
 
 ## Description
 
-Implementation for `FilteredMultimap.values()`.
-**Author:** Louis Wasserman
-
 ## Fields
 
 ### `multimap`
@@ -24,7 +21,10 @@ Implementation for `FilteredMultimap.values()`.
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.FilteredMultimap<K,V>`](./FilteredMultimap.md) multimap)`
+### `<init>(com.google.common.collect.FilteredMultimap<K,V> multimap)`
+
+**Parameters:**
+- `multimap` ([`com.google.common.collect.FilteredMultimap<K,V>`](./FilteredMultimap.md))
 
 ## Methods
 
@@ -32,25 +32,37 @@ Implementation for `FilteredMultimap.values()`.
 
 **Returns:** `java.util.Iterator<V>`
 
-### `contains(`java.lang.Object` o)`
+### `contains(java.lang.Object o)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `o` (`java.lang.Object`)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `remove(`java.lang.Object` o)`
+### `remove(java.lang.Object o)`
 
 **Returns:** `boolean`
 
-### `removeAll(`java.util.Collection<?>` c)`
+**Parameters:**
+- `o` (`java.lang.Object`)
+
+### `removeAll(java.util.Collection<?> c)`
 
 **Returns:** `boolean`
 
-### `retainAll(`java.util.Collection<?>` c)`
+**Parameters:**
+- `c` (`java.util.Collection<?>`)
+
+### `retainAll(java.util.Collection<?> c)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `c` (`java.util.Collection<?>`)
 
 ### `clear()`
 

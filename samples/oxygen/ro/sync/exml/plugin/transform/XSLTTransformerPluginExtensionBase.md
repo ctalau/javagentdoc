@@ -14,7 +14,10 @@
 
 ## Methods
 
-### `getXSLTTransformerFactory([`ro.sync.exml.plugin.transform.ConfigurationProperties`](./ConfigurationProperties.md) properties)`
+### `getXSLTTransformerFactory(ro.sync.exml.plugin.transform.ConfigurationProperties properties)`
 
 **Returns:** `javax.xml.transform.TransformerFactory`
+
+**Parameters:**
+- `properties` ([`ro.sync.exml.plugin.transform.ConfigurationProperties`](./ConfigurationProperties.md)): Configuration properties.
 

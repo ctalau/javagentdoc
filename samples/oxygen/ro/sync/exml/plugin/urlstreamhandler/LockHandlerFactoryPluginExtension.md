@@ -17,7 +17,10 @@
 Might be `null` if not 
  supported.
 
-### `isLockingSupported(`java.lang.String` protocol)`
+### `isLockingSupported(java.lang.String protocol)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `protocol` (`java.lang.String`): The URL protocol (like "http" or "file")
 

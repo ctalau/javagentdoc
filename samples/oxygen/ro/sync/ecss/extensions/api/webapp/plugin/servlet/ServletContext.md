@@ -8,12 +8,15 @@
 
 ## Methods
 
-### `getRealPath(`java.lang.String` path)`
+### `getRealPath(java.lang.String path)`
 
 **Returns:** `java.lang.String`
 
 For example, the path "/index.html" returns the absolute file path on the server's filesystem would be served by a request for "http://host/contextPath/index.html", where contextPath is the context path of this ServletContext..
  The real path returned will be in a form appropriate to the computer and operating system on which the servlet container is running, including the proper path separators. This method returns null if the servlet container cannot translate the virtual path to a real path for any reason (such as when the content is being made available from a .war archive).
+
+**Parameters:**
+- `path` (`java.lang.String`): String specifying a virtual path
 
 ### `getContextPath()`
 
@@ -23,7 +26,7 @@ The context path is the portion of the request URI that is used to select the co
 
  It is possible that a servlet container may match a context by more than one context path. In such cases the HttpServletRequest.getContextPath() will return the actual context path used by the request and it may differ from the path returned by this method. The context path returned by this method should be considered as the prime or preferred context path of the application.
 
-### `getAttribute(`java.lang.String` name)`
+### `getAttribute(java.lang.String name)`
 
 **Returns:** `java.lang.Object`
 
@@ -40,13 +43,16 @@ An attribute allows a servlet container to give the servlet additional informati
  Attribute names should follow the same convention as package names. The Jakarta Servlet specification reserves names
  matching `java.*`, `javax.*`, and `sun.*`.
 
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the attribute
+
 ### `getAttributeNames()`
 
 **Returns:** `java.util.Enumeration<java.lang.String>`
 
 Use the #getAttribute method with an attribute name to get the value of an attribute.
 
-### `setAttribute(`java.lang.String` name, `java.lang.Object` object)`
+### `setAttribute(java.lang.String name, java.lang.Object object)`
 
 **Returns:** `void`
 
@@ -64,7 +70,11 @@ If the name specified is already used for an
  Attribute names should follow the same convention as package names. The Jakarta Servlet specification reserves names
  matching `java.*`, `javax.*`, and `sun.*`.
 
-### `removeAttribute(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the attribute
+- `object` (`java.lang.Object`): an `Object` representing the attribute to be bound
+
+### `removeAttribute(java.lang.String name)`
 
 **Returns:** `void`
 
@@ -74,4 +84,7 @@ After removal, subsequent calls to
  
 
  If listeners are configured on the `ServletContext` the container notifies them accordingly.
+
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the attribute to be removed
 

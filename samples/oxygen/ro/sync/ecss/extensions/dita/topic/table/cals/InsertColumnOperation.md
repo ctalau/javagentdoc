@@ -14,7 +14,11 @@
 
 ## Methods
 
-### `getCellElementName([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md) row, `int` newColumnIndex)`
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement row, int newColumnIndex)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `row` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
+- `newColumnIndex` (`int`)
 

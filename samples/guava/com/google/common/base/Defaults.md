@@ -6,10 +6,6 @@
 
 ## Description
 
-This class provides default values for all Java types, as defined by the JLS.
-**Author:** Ben Yu
-**Since:** 1.0
-
 ## Fields
 
 ### `DOUBLE_DEFAULT`
@@ -26,10 +22,13 @@ This class provides default values for all Java types, as defined by the JLS.
 
 ## Methods
 
-### `defaultValue(`java.lang.Class<T>` type)`
+### `defaultValue(java.lang.Class<T> type)`
 
 **Returns:** `T`
 
-Returns the default value of `type` as defined by JLS --- `0` for numbers, `false` for `boolean` and `'\0'` for `char`. For non-primitive types and
- `void`, `null` is returned.
+For non-primitive types and
+ void, null is returned.
+
+**Parameters:**
+- `type` (`java.lang.Class<T>`)
 

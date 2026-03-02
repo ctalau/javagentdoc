@@ -6,10 +6,8 @@
 
 ## Description
 
-Indicates whether an endpoint of some range is contained in the range itself ("closed") or not
- ("open"). If a range is unbounded on a side, it is neither open nor closed on that side; the
+If a range is unbounded on a side, it is neither open nor closed on that side; the
  bound simply does not exist.
-**Since:** 10.0
 
 ## Fields
 
@@ -19,7 +17,10 @@ Indicates whether an endpoint of some range is contained in the range itself ("c
 
 ## Constructors
 
-### `<init>(`boolean` inclusive)`
+### `<init>(boolean inclusive)`
+
+**Parameters:**
+- `inclusive` (`boolean`)
 
 ## Methods
 
@@ -27,13 +28,17 @@ Indicates whether an endpoint of some range is contained in the range itself ("c
 
 **Returns:** [`com.google.common.collect.BoundType[]`](./BoundType.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.common.collect.BoundType`](./BoundType.md)
 
-### `forBoolean(`boolean` inclusive)`
+**Parameters:**
+- `name` (`java.lang.String`)
+
+### `forBoolean(boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.BoundType`](./BoundType.md)
 
-Returns the bound type corresponding to a boolean value for inclusivity.
+**Parameters:**
+- `inclusive` (`boolean`)
 

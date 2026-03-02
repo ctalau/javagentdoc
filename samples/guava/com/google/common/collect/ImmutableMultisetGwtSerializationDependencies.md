@@ -12,14 +12,18 @@
 
 ## Description
 
-A dummy superclass to support GWT serialization of the element type of an `ImmutableMultiset`. The GWT supersource for this class contains a field of type `E`.
+The GWT supersource for this class contains a field of type E.
 
- <p>For details about this hack, see `GwtSerializationDependencies`, which takes the same
+ 
+For details about this hack, see GwtSerializationDependencies, which takes the same
  approach but with a subclass rather than a superclass.
 
- <p>TODO(cpovirk): Consider applying this subclass approach to our other types.
+ 
+TODO(cpovirk): Consider applying this subclass approach to our other types.
 
- <p>For `ImmutableMultiset` in particular, I ran into a problem with the `GwtSerializationDependencies` approach: When autogenerating a serializer for the new class, GWT
+ 
+For ImmutableMultiset in particular, I ran into a problem with the 
+ GwtSerializationDependencies approach: When autogenerating a serializer for the new class, GWT
  tries to refer to our dummy serializer for the superclass,
  ImmutableMultiset_CustomFieldSerializer. But that type has no methods (since it's never actually
  used). We could probably fix the problem by adding dummy methods to that class, but that is

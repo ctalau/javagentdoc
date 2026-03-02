@@ -13,67 +13,70 @@
 
 ## Description
 
-A `Multimap` that can hold duplicate key-value pairs and that maintains the insertion
- ordering of values for a given key. See the `Multimap` documentation for information common
+See the Multimap documentation for information common
  to all multimaps.
 
- <p>The `get`, `removeAll`, and `replaceValues` methods each return a `List` of values. Though the method signature doesn't say so explicitly, the map returned by
- `asMap` has `List` values.
+ 
+The #get, #removeAll, and #replaceValues methods each return a List of values. Though the method signature doesn't say so explicitly, the map returned by
+ #asMap has List values.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap">`Multimap`</a>.
-**Author:** Jared Levy
-**Since:** 2.0
+ 
+See the Guava User Guide article on [Multimap](https://github.com/google/guava/wiki/NewCollectionTypesExplained#multimap).
 
 ## Methods
 
-### `get(`K` key)`
+### `get(K key)`
 
 **Returns:** `java.util.List<V>`
 
-{@inheritDoc}
+Because the values for a given key may have duplicates and follow the insertion ordering,
+ this method returns a List, instead of the java.util.Collection specified in
+ the Multimap interface.
 
- <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a `List`, instead of the `java.util.Collection` specified in
- the `Multimap` interface.
+**Parameters:**
+- `key` (`K`)
 
-### `removeAll(`java.lang.Object` key)`
-
-**Returns:** `java.util.List<V>`
-
-{@inheritDoc}
-
- <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a `List`, instead of the `java.util.Collection` specified in
- the `Multimap` interface.
-
-### `replaceValues(`K` key, `java.lang.Iterable<? extends V>` values)`
+### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.List<V>`
 
-{@inheritDoc}
+Because the values for a given key may have duplicates and follow the insertion ordering,
+ this method returns a List, instead of the java.util.Collection specified in
+ the Multimap interface.
 
- <p>Because the values for a given key may have duplicates and follow the insertion ordering,
- this method returns a `List`, instead of the `java.util.Collection` specified in
- the `Multimap` interface.
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
+
+**Returns:** `java.util.List<V>`
+
+Because the values for a given key may have duplicates and follow the insertion ordering,
+ this method returns a List, instead of the java.util.Collection specified in
+ the Multimap interface.
+
+**Parameters:**
+- `key` (`K`)
+- `values` (`java.lang.Iterable<? extends V>`)
 
 ### `asMap()`
 
 **Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-{@inheritDoc}
+**Note:** The returned map's values are guaranteed to be of type List. To obtain
+ this map with the more specific generic type Map<K, List<V>>, call Multimaps#asMap(ListMultimap) instead.
 
- <p><b>Note:</b> The returned map's values are guaranteed to be of type `List`. To obtain
- this map with the more specific generic type `Map<K, List<V>>`, call `Multimaps.asMap(ListMultimap)` instead.
-
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
 
-Compares the specified object to this multimap for equality.
-
- <p>Two `ListMultimap` instances are equal if, for each key, they contain the same values
+Two ListMultimap instances are equal if, for each key, they contain the same values
  in the same order. If the value orderings disagree, the multimaps will not be considered equal.
 
- <p>An empty `ListMultimap` is equal to any other empty `Multimap`, including an
- empty `SetMultimap`.
+ 
+An empty ListMultimap is equal to any other empty Multimap, including an
+ empty SetMultimap.
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 

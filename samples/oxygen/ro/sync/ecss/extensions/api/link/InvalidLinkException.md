@@ -26,9 +26,18 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` message)`
+### `<init>(java.lang.String message)`
 
-### `<init>(`java.lang.String` message, [`ro.sync.ecss.extensions.api.link.Severity`](./Severity.md) severity, `boolean` presentInplace)`
+**Parameters:**
+- `message` (`java.lang.String`): Error message.
+
+### `<init>(java.lang.String message, ro.sync.ecss.extensions.api.link.Severity severity, boolean presentInplace)`
+
+**Parameters:**
+- `message` (`java.lang.String`): Error message.
+- `severity` ([`ro.sync.ecss.extensions.api.link.Severity`](./Severity.md)): A hint about the severity of the exception.
+- `presentInplace` (`boolean`): `true` if the error message should be presented right in the document area,
+ the same place where the link text should have been presented. `false` to report the error in the results area of the editor.
 
 ## Methods
 
@@ -40,9 +49,12 @@
 
 **Returns:** `boolean`
 
-### `setShortMessage(`java.lang.String` shortMessage)`
+### `setShortMessage(java.lang.String shortMessage)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `shortMessage` (`java.lang.String`): The short message.
 
 ### `getShortMessage()`
 

@@ -12,15 +12,18 @@
 
 ## Description
 
-Captures a free type variable that can be used in `TypeToken.where`. For example:
+For example:
 
- <pre>`static <T> TypeToken<List<T>> listOf(Class<T> elementType) {
-   return new TypeToken<List<T>>() {`
+ 
+
+```
+
+ static <T> TypeToken<List<T>> listOf(Class<T> elementType) {
+   return new TypeToken<List<T>>() {}
        .where(new TypeParameter<T>() {}, elementType);
  }
- }</pre>
-**Author:** Ben Yu
-**Since:** 12.0
+ 
+```
 
 ## Fields
 
@@ -38,9 +41,12 @@ Captures a free type variable that can be used in `TypeToken.where`. For example
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` o)`
+### `equals(java.lang.Object o)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `o` (`java.lang.Object`)
 
 ### `toString()`
 

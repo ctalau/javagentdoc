@@ -14,9 +14,8 @@
 
 ## Description
 
-A skeleton implementation of a descending multiset. Only needs `forwardMultiset()` and
- `entryIterator()`.
-**Author:** Louis Wasserman
+Only needs forwardMultiset() and
+ entryIterator().
 
 ## Fields
 
@@ -52,23 +51,37 @@ A skeleton implementation of a descending multiset. Only needs `forwardMultiset(
 
 ### `pollFirstEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `pollLastEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-### `headMultiset(`E` toElement, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
-
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
-
-### `subMultiset(`E` fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) fromBoundType, `E` toElement, [`com.google.common.collect.BoundType`](./BoundType.md) toBoundType)`
+### `headMultiset(E toElement, com.google.common.collect.BoundType boundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-### `tailMultiset(`E` fromElement, [`com.google.common.collect.BoundType`](./BoundType.md) boundType)`
+**Parameters:**
+- `toElement` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `subMultiset(E fromElement, com.google.common.collect.BoundType fromBoundType, E toElement, com.google.common.collect.BoundType toBoundType)`
 
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+**Parameters:**
+- `fromElement` (`E`)
+- `fromBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+- `toElement` (`E`)
+- `toBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+### `tailMultiset(E fromElement, com.google.common.collect.BoundType boundType)`
+
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+**Parameters:**
+- `fromElement` (`E`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
 ### `delegate()`
 
@@ -80,11 +93,11 @@ A skeleton implementation of a descending multiset. Only needs `forwardMultiset(
 
 ### `firstEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `lastEntry()`
 
-**Returns:** [`com.google.common.collect.Multiset.Entry<E>`](Multiset/Entry.md)
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `entryIterator()`
 
@@ -106,9 +119,12 @@ A skeleton implementation of a descending multiset. Only needs `forwardMultiset(
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-### `toArray(`T[]` array)`
+### `toArray(T[] array)`
 
 **Returns:** `T[]`
+
+**Parameters:**
+- `array` (`T[]`)
 
 ### `toString()`
 

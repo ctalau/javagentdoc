@@ -16,11 +16,20 @@
 
 ## Methods
 
-### `injectDependencies(`java.lang.Object` arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1)`
+### `injectDependencies(java.lang.Object arg0, ro.sync.exml.plugin.PluginDescriptor arg1)`
 
 **Returns:** `void`
 
-### `c(`java.lang.Object` arg0, [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md) arg1, `java.lang.reflect.Field` arg2)`
+**Parameters:**
+- `arg0` (`java.lang.Object`)
+- `arg1` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
+
+### `c(java.lang.Object arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.lang.reflect.Field arg2)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.Object`)
+- `arg1` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
+- `arg2` (`java.lang.reflect.Field`)
 

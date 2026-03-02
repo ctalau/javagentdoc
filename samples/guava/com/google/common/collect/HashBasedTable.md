@@ -14,24 +14,26 @@
 
 ## Description
 
-Implementation of `Table` using linked hash tables. This guarantees predictable iteration
+This guarantees predictable iteration
  order of the various views.
 
- <p>The views returned by `column`, `columnKeySet()`, and `columnMap()` have
- iterators that don't support `remove()`. Otherwise, all optional operations are supported.
+ 
+The views returned by #column, #columnKeySet(), and #columnMap() have
+ iterators that don't support remove(). Otherwise, all optional operations are supported.
  Null row keys, columns keys, and values are not supported.
 
- <p>Lookups by row key are often faster than lookups by column key, because the data is stored in
- a `Map<R, Map<C, V>>`. A method call like `column(columnKey).get(rowKey)` still runs
- quickly, since the row key is provided. However, `column(columnKey).size()` takes longer,
+ 
+Lookups by row key are often faster than lookups by column key, because the data is stored in
+ a Map<R, Map<C, V>>. A method call like column(columnKey).get(rowKey) still runs
+ quickly, since the row key is provided. However, column(columnKey).size() takes longer,
  since an iteration across all row keys occurs.
 
- <p>Note that this implementation is not synchronized. If multiple threads access this table
+ 
+Note that this implementation is not synchronized. If multiple threads access this table
  concurrently and one of the threads modifies the table, it must be synchronized externally.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#table">`Table`</a>.
-**Author:** Jared Levy
-**Since:** 7.0
+ 
+See the Guava User Guide article on [Table](https://github.com/google/guava/wiki/NewCollectionTypesExplained#table).
 
 ## Fields
 
@@ -41,7 +43,11 @@ Implementation of `Table` using linked hash tables. This guarantees predictable 
 
 ## Constructors
 
-### `<init>(`java.util.Map<R,java.util.Map<C,V>>` backingMap, [`com.google.common.collect.HashBasedTable.Factory<C,V>`](HashBasedTable/Factory.md) factory)`
+### `<init>(java.util.Map<R,java.util.Map<C,V>> backingMap, com.google.common.collect.HashBasedTable.Factory<C,V> factory)`
+
+**Parameters:**
+- `backingMap` (`java.util.Map<R,java.util.Map<C,V>>`)
+- `factory` (`com.google.common.collect.HashBasedTable.Factory<C,V>`)
 
 ## Methods
 
@@ -49,24 +55,18 @@ Implementation of `Table` using linked hash tables. This guarantees predictable 
 
 **Returns:** [`com.google.common.collect.HashBasedTable<R,C,V>`](./HashBasedTable.md)
 
-Creates an empty `HashBasedTable`.
-
-### `create(`int` expectedRows, `int` expectedCellsPerRow)`
+### `create(int expectedRows, int expectedCellsPerRow)`
 
 **Returns:** [`com.google.common.collect.HashBasedTable<R,C,V>`](./HashBasedTable.md)
 
-Creates an empty `HashBasedTable` with the specified map sizes.
-@param expectedRows the expected number of distinct row keys
-@param expectedCellsPerRow the expected number of column key / value mappings in each row
-@throws IllegalArgumentException if `expectedRows` or `expectedCellsPerRow` is
-     negative
+**Parameters:**
+- `expectedRows` (`int`): the expected number of distinct row keys
+- `expectedCellsPerRow` (`int`): the expected number of column key / value mappings in each row
 
-### `create([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md) table)`
+### `create(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
 
 **Returns:** [`com.google.common.collect.HashBasedTable<R,C,V>`](./HashBasedTable.md)
 
-Creates a `HashBasedTable` with the same mappings as the specified table.
-@param table the table to copy
-@throws NullPointerException if any of the row keys, column keys, or values in `table` is
-     null
+**Parameters:**
+- `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md)): the table to copy
 

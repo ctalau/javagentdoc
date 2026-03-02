@@ -14,7 +14,10 @@
 
 ## Constructors
 
-### `<init>(`int` internalIdMapping)`
+### `<init>(int internalIdMapping)`
+
+**Parameters:**
+- `internalIdMapping` (`int`)
 
 ## Methods
 
@@ -22,9 +25,12 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.ui.urlpanel.LocalFileBrowseType[]`](./LocalFileBrowseType.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.ui.urlpanel.LocalFileBrowseType`](./LocalFileBrowseType.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `getInternalIdMapping()`
 

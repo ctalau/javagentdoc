@@ -41,13 +41,20 @@ It uses weak references to avoid a memory leak.
 
 ## Methods
 
-### `resolveReference([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node)`
+### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `java.lang.String`
 
-### `resolveXrefReference([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node, `java.lang.String` linkendOrHrefAttrValue)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+
+### `resolveXrefReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String linkendOrHrefAttrValue)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): Author node that contains the xref.
+- `linkendOrHrefAttrValue` (`java.lang.String`): The value of the linkend or href attribute.
 
 ### `refresh()`
 
@@ -57,27 +64,48 @@ It uses weak references to avoid a memory leak.
 
 **Returns:** `void`
 
-### `findElementWithId([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md) node, `java.lang.String` id)`
+### `findElementWithId(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String id)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-### `getIDAttribute([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) elem, `java.lang.String` id)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node in whose children (including the node itself)
+ we look for the element with the given ID.
+- `id` (`java.lang.String`): The ID of the element to be returned.
+
+### `getIDAttribute(ro.sync.ecss.extensions.api.node.AuthorElement elem, java.lang.String id)`
 
 **Returns:** `java.lang.String`
 
-### `getTitleValue([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) elem)`
+**Parameters:**
+- `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The current element.
+- `id` (`java.lang.String`): The value of the attribute whose name we are looking for.
+
+### `getTitleValue(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
 
 **Returns:** `java.lang.String`
 
-### `getFirstChildElement([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md) elem)`
+**Parameters:**
+- `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The current element.
+
+### `getFirstChildElement(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-### `activated([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element.
+
+### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
 
-### `deactivated([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+
+### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 

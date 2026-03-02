@@ -48,17 +48,29 @@
 
 ## Constructors
 
-### `<init>(`org.eclipse.swt.widgets.Shell` arg0, `java.lang.String` arg1, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md) arg2, `boolean` arg3)`
+### `<init>(org.eclipse.swt.widgets.Shell arg0, java.lang.String arg1, ro.sync.ecss.extensions.api.AuthorResourceBundle arg2, boolean arg3)`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+- `arg1` (`java.lang.String`)
+- `arg2` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../api/AuthorResourceBundle.md))
+- `arg3` (`boolean`)
 
 ## Methods
 
-### `configureShell(`org.eclipse.swt.widgets.Shell` arg0)`
+### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
 
 **Returns:** `void`
 
-### `createDialogArea(`org.eclipse.swt.widgets.Composite` arg0)`
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Shell`)
+
+### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
 
 **Returns:** `org.eclipse.swt.widgets.Control`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.Composite`)
 
 ### `updateButtonState()`
 
@@ -80,9 +92,12 @@
 
 **Returns:** `void`
 
-### `showDialog([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md) arg0)`
+### `showDialog(ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md))
 
 ### `getHelpPageID()`
 

@@ -26,13 +26,21 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` arg0, `boolean` arg1, `java.lang.String` arg2)`
+### `<init>(java.lang.String arg0, boolean arg1, java.lang.String arg2)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`boolean`)
+- `arg2` (`java.lang.String`)
 
 ## Methods
 
-### `setOwnerName(`java.lang.String` arg0)`
+### `setOwnerName(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getOwnerName()`
 
@@ -50,7 +58,10 @@
 
 **Returns:** `java.lang.String`
 
-### `getOpenErrorMessage(`boolean` arg0)`
+### `getOpenErrorMessage(boolean arg0)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `arg0` (`boolean`)
 

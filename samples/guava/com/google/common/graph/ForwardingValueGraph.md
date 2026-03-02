@@ -13,10 +13,8 @@
 
 ## Description
 
-A class to allow `ValueGraph` implementations to be backed by a provided delegate. This is
+This is
  not currently planned to be released as a general-purpose forwarding class.
-**Author:** James Sexton
-**Author:** Joshua O'Madadhain
 
 ## Constructors
 
@@ -36,9 +34,6 @@ A class to allow `ValueGraph` implementations to be backed by a provided delegat
 
 **Returns:** `long`
 
-Defer to `AbstractValueGraph.edges()` (based on `successors(Object)`) for full
- edges() implementation.
-
 ### `isDirected()`
 
 **Returns:** `boolean`
@@ -55,51 +50,92 @@ Defer to `AbstractValueGraph.edges()` (based on `successors(Object)`) for full
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `adjacentNodes(`N` node)`
+### `adjacentNodes(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `predecessors(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `predecessors(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `successors(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `successors(N node)`
 
 **Returns:** `java.util.Set<N>`
 
-### `degree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `degree(N node)`
 
 **Returns:** `int`
 
-### `inDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `inDegree(N node)`
 
 **Returns:** `int`
 
-### `outDegree(`N` node)`
+**Parameters:**
+- `node` (`N`)
+
+### `outDegree(N node)`
 
 **Returns:** `int`
 
-### `hasEdgeConnecting(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `node` (`N`)
+
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Returns:** `boolean`
 
-### `hasEdgeConnecting([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `boolean`
 
-### `edgeValue(`N` nodeU, `N` nodeV)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `edgeValue(N nodeU, N nodeV)`
 
 **Returns:** `java.util.Optional<V>`
 
-### `edgeValue([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+
+### `edgeValue(com.google.common.graph.EndpointPair<N> endpoints)`
 
 **Returns:** `java.util.Optional<V>`
 
-### `edgeValueOrDefault(`N` nodeU, `N` nodeV, `V` defaultValue)`
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+### `edgeValueOrDefault(N nodeU, N nodeV, V defaultValue)`
 
 **Returns:** `V`
 
-### `edgeValueOrDefault([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md) endpoints, `V` defaultValue)`
+**Parameters:**
+- `nodeU` (`N`)
+- `nodeV` (`N`)
+- `defaultValue` (`V`)
+
+### `edgeValueOrDefault(com.google.common.graph.EndpointPair<N> endpoints, V defaultValue)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+- `defaultValue` (`V`)
 

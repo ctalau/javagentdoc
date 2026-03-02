@@ -20,7 +20,12 @@
 
 ## Constructors
 
-### `<init>(`java.lang.String` cssURL, `byte` origin)`
+### `<init>(java.lang.String cssURL, byte origin)`
+
+**Parameters:**
+- `cssURL` (`java.lang.String`): The CSS url.
+- `origin` (`byte`): The CSS origin. Can be SOURCE_DOCUMENT, SOURCE_DOCUMENT_TYPE or SOURCE_XHTML_DOCUMENT. 
+ See the "SOURCE_" constants.
 
 ## Methods
 
@@ -36,9 +41,12 @@
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` obj)`
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

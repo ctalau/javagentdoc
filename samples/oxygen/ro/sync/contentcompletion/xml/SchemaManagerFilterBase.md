@@ -18,13 +18,21 @@ This should be implemented if the
 
 ## Methods
 
-### `getElementDescription([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md) element, [`ro.sync.contentcompletion.xml.Context`](./Context.md) ctxt)`
+### `getElementDescription(ro.sync.contentcompletion.xml.CIElement element, ro.sync.contentcompletion.xml.Context ctxt)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)
 
-### `getAttributeDescription([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md) attribute, [`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](./WhatPossibleValuesHasAttributeContext.md) ctxt)`
+**Parameters:**
+- `element` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)): The element description which has been computed in the context by the default schema manager implementation.
+- `ctxt` ([`ro.sync.contentcompletion.xml.Context`](./Context.md)): The context.
+
+### `getAttributeDescription(ro.sync.contentcompletion.xml.CIAttribute attribute, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext ctxt)`
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)
+
+**Parameters:**
+- `attribute` ([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)): The attribute description which has been computed in the context by the default schema manager implementation.
+- `ctxt` ([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](./WhatPossibleValuesHasAttributeContext.md)): The context.
 
 ### `invalidate()`
 

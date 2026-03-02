@@ -44,11 +44,34 @@
 
 ## Constructors
 
-### `<init>([`ro.sync.ecss.extensions.api.Content`](../Content.md) arg0, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>` arg1, `int` arg2, `int` arg3)`
+### `<init>(ro.sync.ecss.extensions.api.Content arg0, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg1, int arg2, int arg3)`
 
-### `<init>([`ro.sync.ecss.extensions.api.Content`](../Content.md) arg0, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>` arg1, `int` arg2, `int` arg3, `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>` arg4, `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>` arg5)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.Content`](../Content.md))
+- `arg1` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
+- `arg2` (`int`)
+- `arg3` (`int`)
 
-### `<init>([`ro.sync.ecss.extensions.api.Content`](../Content.md) arg0, `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>` arg1, `int` arg2, `int` arg3, `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>` arg4, `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>` arg5, `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>>` arg6)`
+### `<init>(ro.sync.ecss.extensions.api.Content arg0, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg1, int arg2, int arg3, java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg4, java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg5)`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.Content`](../Content.md))
+- `arg1` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
+- `arg2` (`int`)
+- `arg3` (`int`)
+- `arg4` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`)
+- `arg5` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`)
+
+### `<init>(ro.sync.ecss.extensions.api.Content arg0, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg1, int arg2, int arg3, java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg4, java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg5, java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>> arg6)`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.Content`](../Content.md))
+- `arg1` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
+- `arg2` (`int`)
+- `arg3` (`int`)
+- `arg4` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`)
+- `arg5` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`)
+- `arg6` (`java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>>`)
 
 ## Methods
 
@@ -80,13 +103,19 @@
 
 **Returns:** `int`
 
-### `setLeftSplits(`int` arg0)`
+### `setLeftSplits(int arg0)`
 
 **Returns:** `void`
 
-### `setRighSplits(`int` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `setRighSplits(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ### `getChangeHighlights()`
 
@@ -100,17 +129,26 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`
 
-### `setCommentAndCustomHighlights(`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>` arg0)`
+### `setCommentAndCustomHighlights(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg0)`
 
 **Returns:** `void`
 
-### `setChangeHighlights(`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`)
+
+### `setChangeHighlights(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg0)`
 
 **Returns:** `void`
 
-### `setAttributesChanges(`java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>>` arg0)`
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`)
+
+### `setAttributesChanges(java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>> arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>>`)
 
 ### `isEmpty()`
 
@@ -124,31 +162,47 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](./AuthorDocumentFragment.md)
 
-### `clonePersistentMarkers([`ro.sync.ecss.extensions.api.Content`](../Content.md) arg0)`
+### `clonePersistentMarkers(ro.sync.ecss.extensions.api.Content arg0)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`
 
-### `cloneChangeMarkers([`ro.sync.ecss.extensions.api.Content`](../Content.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.Content`](../Content.md))
+
+### `cloneChangeMarkers(ro.sync.ecss.extensions.api.Content arg0)`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`
 
-### `cloneAttributeChanges([`ro.sync.ecss.extensions.api.Content`](../Content.md) arg0, `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorNode,ro.sync.ecss.extensions.api.node.AuthorNode>` arg1)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.Content`](../Content.md))
+
+### `cloneAttributeChanges(ro.sync.ecss.extensions.api.Content arg0, java.util.Map<ro.sync.ecss.extensions.api.node.AuthorNode,ro.sync.ecss.extensions.api.node.AuthorNode> arg1)`
 
 **Returns:** `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>>`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.Content`](../Content.md))
+- `arg1` (`java.util.Map<ro.sync.ecss.extensions.api.node.AuthorNode,ro.sync.ecss.extensions.api.node.AuthorNode>`)
 
 ### `cloneContent()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.Content`](../Content.md)
 
-### `setSuggestedRelativeCaretOffset(`int` arg0)`
+### `setSuggestedRelativeCaretOffset(int arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ### `getSuggestedRelativeCaretOffset()`
 
 **Returns:** `int`
 
-### `setContentNodes(`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>` arg0)`
+### `setContentNodes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
 

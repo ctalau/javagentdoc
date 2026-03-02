@@ -36,7 +36,11 @@
 
 ## Constructors
 
-### `<init>(`byte` arg0, `java.lang.String` arg1)`
+### `<init>(byte arg0, java.lang.String arg1)`
+
+**Parameters:**
+- `arg0` (`byte`)
+- `arg1` (`java.lang.String`)
 
 ## Methods
 
@@ -48,17 +52,23 @@
 
 **Returns:** `java.lang.String`
 
-### `setScenarioName(`java.lang.String` arg0)`
+### `setScenarioName(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getScenarioName()`
 
 **Returns:** `java.lang.String`
 
-### `setDocTypeName(`java.lang.String` arg0)`
+### `setDocTypeName(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getDocTypeName()`
 
@@ -80,13 +90,19 @@
 
 **Returns:** `java.lang.String`
 
-### `equals(`java.lang.Object` arg0)`
+### `equals(java.lang.Object arg0)`
 
 **Returns:** `boolean`
 
-### `b([`ro.sync.document.OperationDescription`](./OperationDescription.md) arg0)`
+**Parameters:**
+- `arg0` (`java.lang.Object`)
+
+### `b(ro.sync.document.OperationDescription arg0)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))
 
 ### `hashCode()`
 

@@ -12,10 +12,6 @@
 
 ## Description
 
-Implementation of `ImmutableSet` with exactly one element.
-**Author:** Kevin Bourrillion
-**Author:** Nick Kralevich
-
 ## Fields
 
 ### `element`
@@ -24,7 +20,10 @@ Implementation of `ImmutableSet` with exactly one element.
 
 ## Constructors
 
-### `<init>(`E` element)`
+### `<init>(E element)`
+
+**Parameters:**
+- `element` (`E`)
 
 ## Methods
 
@@ -32,9 +31,12 @@ Implementation of `ImmutableSet` with exactly one element.
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` target)`
+### `contains(java.lang.Object target)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 ### `iterator()`
 
@@ -48,9 +50,13 @@ Implementation of `ImmutableSet` with exactly one element.
 
 **Returns:** `boolean`
 
-### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
+### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `offset` (`int`)
 
 ### `hashCode()`
 

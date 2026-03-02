@@ -8,10 +8,6 @@
 
 ## Description
 
-A `Reader` that concatenates multiple readers.
-**Author:** Bin Zhu
-**Since:** 1.0
-
 ## Fields
 
 ### `it`
@@ -24,7 +20,10 @@ A `Reader` that concatenates multiple readers.
 
 ## Constructors
 
-### `<init>(`java.util.Iterator<? extends com.google.common.io.CharSource>` readers)`
+### `<init>(java.util.Iterator<? extends com.google.common.io.CharSource> readers)`
+
+**Parameters:**
+- `readers` (`java.util.Iterator<? extends com.google.common.io.CharSource>`)
 
 ## Methods
 
@@ -32,15 +31,21 @@ A `Reader` that concatenates multiple readers.
 
 **Returns:** `void`
 
-Closes the current reader and opens the next one, if any.
-
-### `read(`char[]` cbuf, `int` off, `int` len)`
+### `read(char[] cbuf, int off, int len)`
 
 **Returns:** `int`
 
-### `skip(`long` n)`
+**Parameters:**
+- `cbuf` (`char[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `skip(long n)`
 
 **Returns:** `long`
+
+**Parameters:**
+- `n` (`long`)
 
 ### `ready()`
 

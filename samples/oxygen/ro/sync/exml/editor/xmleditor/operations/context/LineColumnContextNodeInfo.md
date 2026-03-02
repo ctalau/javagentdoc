@@ -20,7 +20,11 @@
 
 ### `<init>()`
 
-### `<init>(`int` arg0, `int` arg1)`
+### `<init>(int arg0, int arg1)`
+
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
 
 ## Methods
 

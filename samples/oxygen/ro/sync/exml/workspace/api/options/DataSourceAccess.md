@@ -6,9 +6,12 @@
 
 ## Methods
 
-### `getDataSourceConnectionInfo(`java.lang.String` arg0)`
+### `getDataSourceConnectionInfo(java.lang.String arg0)`
 
 **Returns:** [`ro.sync.exml.workspace.api.options.DataSourceConnectionInfo`](./DataSourceConnectionInfo.md)
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getAvailableDataSourceConnectionInfos()`
 

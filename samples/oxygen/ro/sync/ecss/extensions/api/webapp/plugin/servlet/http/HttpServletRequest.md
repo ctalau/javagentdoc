@@ -17,7 +17,7 @@
 This method
  returns `null` if no cookies were sent.
 
-### `getDateHeader(`java.lang.String` name)`
+### `getDateHeader(java.lang.String name)`
 
 **Returns:** `long`
 
@@ -33,7 +33,10 @@ Use this method with headers that contain dates, such as `If-Modified-Since`.
  with the same name, this method returns the value of the first header in the request. If the header can't be
  converted to a date, the method throws an `IllegalArgumentException`.
 
-### `getHeader(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of the header
+
+### `getHeader(java.lang.String name)`
 
 **Returns:** `java.lang.String`
 
@@ -42,7 +45,10 @@ If the request did not include a header
  method returns the value of the first header in the request. The header name is case insensitive. You can use this
  method with any request header.
 
-### `getHeaders(`java.lang.String` name)`
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the header name
+
+### `getHeaders(java.lang.String name)`
 
 **Returns:** `java.util.Enumeration<java.lang.String>`
 
@@ -53,6 +59,9 @@ Some headers, such as `Accept-Language` can be sent by clients as several header
 
  If the request did not include any headers of the specified name, this method returns an empty
  `Enumeration`. The header name is case insensitive. You can use this method with any request header.
+
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the header name
 
 ### `getHeaderNames()`
 
@@ -66,7 +75,7 @@ If the request has no headers, this method
  Some servlet containers do not allow servlets to access headers using this method, in which case this method returns
  `null`
 
-### `getIntHeader(`java.lang.String` name)`
+### `getIntHeader(java.lang.String name)`
 
 **Returns:** `int`
 
@@ -78,6 +87,9 @@ If the request does not have a header of
  
 
  The header name is case insensitive.
+
+**Parameters:**
+- `name` (`java.lang.String`): a `String` specifying the name of a request header
 
 ### `getMethod()`
 
@@ -184,7 +196,7 @@ This path starts with a "/" character and includes the
  This method will return an empty string ("") if the servlet used to process this request was matched using the "/*"
  pattern.
 
-### `getSession(`boolean` create)`
+### `getSession(boolean create)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpSession`](./HttpSession.md)
 
@@ -196,6 +208,10 @@ If `create` is `false` and the request has no valid `HttpSession`, this method
  To make sure the session is properly maintained, you must call this method before the response is committed. If the
  container is using cookies to maintain session integrity and is asked to create a new session when the response is
  committed, an IllegalStateException is thrown.
+
+**Parameters:**
+- `create` (`boolean`): `true` to create a new session for this request if necessary; `false` to return
+ `null` if there's no current session
 
 ### `getSession()`
 
@@ -212,7 +228,10 @@ If this request is of type `multipart/form-data`, but does not contain any `Part
 
  Any changes to the returned `Collection` must not affect this `HttpServletRequest`.
 
-### `getPart(`java.lang.String` name)`
+### `getPart(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Part`](./Part.md)
+
+**Parameters:**
+- `name` (`java.lang.String`): the name of the requested `Part`
 

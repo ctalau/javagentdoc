@@ -27,9 +27,12 @@ Such models belong to different users and are edited concurrently and synchroniz
 
 ## Methods
 
-### `getPeerContext(`int` peerId)`
+### `getPeerContext(int peerId)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.PeerContext`](./PeerContext.md)
+
+**Parameters:**
+- `peerId` (`int`): The peer ID.
 
 ### `getObserver()`
 

@@ -16,7 +16,10 @@
 
 **Returns:** [`ro.sync.ui.application.security.ResponseType[]`](./ResponseType.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.ui.application.security.ResponseType`](./ResponseType.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

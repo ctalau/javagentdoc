@@ -14,19 +14,17 @@
 
 ## Description
 
-Phantom reference with a `finalizeReferent()` method which a background thread invokes
- after the garbage collector reclaims the referent. This is a simpler alternative to using a
- `ReferenceQueue`.
+This is a simpler alternative to using a
+ ReferenceQueue.
 
- <p>Unlike a normal phantom reference, this reference will be cleared automatically.
-**Author:** Bob Lee
-**Since:** 2.0
+ 
+Unlike a normal phantom reference, this reference will be cleared automatically.
 
 ## Constructors
 
-### `<init>(`T` referent, [`com.google.common.base.FinalizableReferenceQueue`](./FinalizableReferenceQueue.md) queue)`
+### `<init>(T referent, com.google.common.base.FinalizableReferenceQueue queue)`
 
-Constructs a new finalizable phantom reference.
-@param referent to phantom reference
-@param queue that should finalize the referent
+**Parameters:**
+- `referent` (`T`): to phantom reference
+- `queue` ([`com.google.common.base.FinalizableReferenceQueue`](./FinalizableReferenceQueue.md)): that should finalize the referent
 

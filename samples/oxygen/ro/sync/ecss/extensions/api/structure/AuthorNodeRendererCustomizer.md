@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customizeRenderingInformation([`ro.sync.ecss.extensions.api.structure.RenderingInformation`](./RenderingInformation.md) renderInfo)`
+### `customizeRenderingInformation(ro.sync.ecss.extensions.api.structure.RenderingInformation renderInfo)`
 
 **Returns:** `void`
 
@@ -20,4 +20,8 @@ By default a node is represented in the Outline by its tag name and a additional
  For more information, search the oXygen documentation for "cc_config.xml" 
  configuration file. 
  For DITA, this file is in "frameworks/dita/resources/cc_config.xml".
+
+**Parameters:**
+- `renderInfo` ([`ro.sync.ecss.extensions.api.structure.RenderingInformation`](./RenderingInformation.md)): The default information which will get displayed. 
+ You can set custom values for each field
 

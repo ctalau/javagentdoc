@@ -8,10 +8,13 @@
 
 ## Methods
 
-### `getArgumentValue(`java.lang.String` argumentName)`
+### `getArgumentValue(java.lang.String argumentName)`
 
 **Returns:** `java.lang.Object`
 
 The argument name must be one of the arguments defined 
  in AuthorOperation#getArguments() method.
+
+**Parameters:**
+- `argumentName` (`java.lang.String`): The name of the argument.
 

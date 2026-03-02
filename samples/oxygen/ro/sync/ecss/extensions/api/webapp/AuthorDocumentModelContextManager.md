@@ -10,11 +10,17 @@
 
 ## Methods
 
-### `installContext([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md) arg0)`
+### `installContext(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0)`
 
 **Returns:** `void`
 
-### `uninstallContext([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md) arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md))
+
+### `uninstallContext(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md))
 

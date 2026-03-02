@@ -14,11 +14,14 @@
 
 ## Methods
 
-### `ignoreNode([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md) node)`
+### `ignoreNode(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Returns:** `boolean`
 
-### `customizeRenderingInformation([`ro.sync.ecss.extensions.api.structure.RenderingInformation`](./RenderingInformation.md) renderInfo)`
+**Parameters:**
+- `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The node to check for ignore.
+
+### `customizeRenderingInformation(ro.sync.ecss.extensions.api.structure.RenderingInformation renderInfo)`
 
 **Returns:** `void`
 
@@ -26,7 +29,14 @@ For more information, search the oXygen documentation for "cc_config.xml"
  configuration file. 
  For DITA, this file is in "frameworks/dita/resources/cc_config.xml".
 
-### `customizePopUpMenu(`java.lang.Object` popUp, [`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md) authorAccess)`
+**Parameters:**
+- `renderInfo` ([`ro.sync.ecss.extensions.api.structure.RenderingInformation`](./RenderingInformation.md))
+
+### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `popUp` (`java.lang.Object`)
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md))
 

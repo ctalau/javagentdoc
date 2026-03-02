@@ -58,7 +58,17 @@
 
 ## Constructors
 
-### `<init>(`boolean` arg0, `java.lang.String` arg1, `java.lang.String` arg2, `java.lang.String` arg3, `boolean` arg4, `boolean` arg5, `int` arg6, `java.lang.String` arg7)`
+### `<init>(boolean arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, boolean arg5, int arg6, java.lang.String arg7)`
+
+**Parameters:**
+- `arg0` (`boolean`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
+- `arg3` (`java.lang.String`)
+- `arg4` (`boolean`)
+- `arg5` (`boolean`)
+- `arg6` (`int`)
+- `arg7` (`java.lang.String`)
 
 ### `<init>()`
 

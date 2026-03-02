@@ -6,7 +6,7 @@
 
 ## Description
 
-Holder for web specializations of methods of `Floats`. Intended to be empty for regular
+Intended to be empty for regular
  version.
 
 ## Constructors

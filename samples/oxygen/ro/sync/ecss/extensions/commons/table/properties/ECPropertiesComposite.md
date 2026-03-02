@@ -38,7 +38,14 @@
 
 ## Constructors
 
-### `<init>(`org.eclipse.swt.widgets.TabFolder` arg0, `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>` arg1, `java.lang.String` arg2, [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md) arg3, [`ro.sync.exml.workspace.api.util.ColorThemeUtilities`](../../../../../exml/workspace/api/util/ColorThemeUtilities.md) arg4)`
+### `<init>(org.eclipse.swt.widgets.TabFolder arg0, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> arg1, java.lang.String arg2, ro.sync.ecss.extensions.api.AuthorResourceBundle arg3, ro.sync.exml.workspace.api.util.ColorThemeUtilities arg4)`
+
+**Parameters:**
+- `arg0` (`org.eclipse.swt.widgets.TabFolder`)
+- `arg1` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`)
+- `arg2` (`java.lang.String`)
+- `arg3` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md))
+- `arg4` ([`ro.sync.exml.workspace.api.util.ColorThemeUtilities`](../../../../../exml/workspace/api/util/ColorThemeUtilities.md))
 
 ## Methods
 
@@ -46,11 +53,19 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`
 
-### `addGroup(`java.lang.String` arg0, `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>` arg1)`
+### `addGroup(java.lang.String arg0, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> arg1)`
 
 **Returns:** `void`
 
-### `selectionChanged([`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md) arg0, `java.lang.String` arg1)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`)
+
+### `selectionChanged(ro.sync.ecss.extensions.commons.table.properties.TableProperty arg0, java.lang.String arg1)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md))
+- `arg1` (`java.lang.String`)
 

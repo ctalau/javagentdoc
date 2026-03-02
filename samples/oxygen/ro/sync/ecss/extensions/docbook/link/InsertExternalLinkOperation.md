@@ -28,9 +28,13 @@
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
 ### `getDescription()`
 
@@ -40,7 +44,12 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../api/ArgumentDescriptor.md)
 
-### `insertExternalLink(`java.lang.String` url, [`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, `boolean` schemaAware)`
+### `insertExternalLink(java.lang.String url, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean schemaAware)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `url` (`java.lang.String`): The URL to insert as external link.
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
+- `schemaAware` (`boolean`): The schema aware.
 

@@ -15,10 +15,6 @@
 
 ## Description
 
-Equivalence applied on functional result.
-**Author:** Bob Lee
-**Since:** 10.0
-
 ## Fields
 
 ### `serialVersionUID`
@@ -35,21 +31,35 @@ Equivalence applied on functional result.
 
 ## Constructors
 
-### `<init>([`com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T>`](./Function.md) function, [`com.google.common.base.Equivalence<T>`](./Equivalence.md) resultEquivalence)`
+### `<init>(com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T> function, com.google.common.base.Equivalence<T> resultEquivalence)`
+
+**Parameters:**
+- `function` ([`com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T>`](./Function.md))
+- `resultEquivalence` ([`com.google.common.base.Equivalence<T>`](./Equivalence.md))
 
 ## Methods
 
-### `doEquivalent(`F` a, `F` b)`
+### `doEquivalent(F a, F b)`
 
 **Returns:** `boolean`
 
-### `doHash(`F` a)`
+**Parameters:**
+- `a` (`F`)
+- `b` (`F`)
+
+### `doHash(F a)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` obj)`
+**Parameters:**
+- `a` (`F`)
+
+### `equals(java.lang.Object obj)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `obj` (`java.lang.Object`)
 
 ### `hashCode()`
 

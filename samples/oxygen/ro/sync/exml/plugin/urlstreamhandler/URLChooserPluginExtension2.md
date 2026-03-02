@@ -16,7 +16,10 @@ Allows the user to browse a repository of resources
 
 ## Methods
 
-### `chooseURLs([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md) workspaceAccess)`
+### `chooseURLs(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace workspaceAccess)`
 
 **Returns:** `java.net.URL[]`
+
+**Parameters:**
+- `workspaceAccess` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md)): Access to the Oxygen workspace.
 

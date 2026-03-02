@@ -33,13 +33,53 @@ The translation file must be located in a directory named "i18n", placed in the 
 
 ## Methods
 
-### `getMessage(`java.lang.String` messageKey)`
+### `getMessage(java.lang.String messageKey)`
 
 **Returns:** `java.lang.String`
 
 As a fallback if a message is not found the key value is returned.
 
-### `hasMessage(`java.lang.String` messageKey)`
+**Parameters:**
+- `messageKey` (`java.lang.String`): The key of the message which is accessed.
+ In the following translation XML sample, the "messageKey" that you can be used
+ to get the message translation is "key_name": 
+ 
+ 
+
+```
+
+ 
+ <?xml version="1.0" encoding="UTF-8"?>
+ <translation>
+     <languageList>
+       <language description="English US" lang="en_US"/>
+       <language description="German" lang="de_DE"/>
+       <language description="French" lang="fr_FR"/>
+    </languageList>
+    <key value="key_name1">
+       <comment>key description1</comment>
+      <val lang="en_US">en_US_translation1</val>
+      <val lang="de_DE">de_DE_translation1</val>
+      <val lang="fr_FR">fr_FR_translation1</val>
+  </key>
+   <key value="key_name2">
+       <comment>key description2</comment>
+      <val lang="en_US">en_US_translation2</val>
+      <val lang="de_DE">de_DE_translation2</val>
+      <val lang="fr_FR">fr_FR_translation2</val>
+  </key>
+  ........................
+ </translation>
+ 
+ 
+
+```
+
+
+### `hasMessage(java.lang.String messageKey)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `messageKey` (`java.lang.String`): The message key
 

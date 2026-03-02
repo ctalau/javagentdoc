@@ -4,7 +4,7 @@
 
 **Fully Qualified Name:** `com.google.common.collect.HashBiMap`
 
-**Extends:** [`com.google.common.collect.Maps.IteratorBasedAbstractMap<K,V>`](Maps/IteratorBasedAbstractMap.md)
+**Extends:** `com.google.common.collect.Maps.IteratorBasedAbstractMap<K,V>`
 
 **Implements:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md), `java.io.Serializable`
 
@@ -15,15 +15,14 @@
 
 ## Description
 
-A `BiMap` backed by two hash tables. This implementation allows null keys and values. A
- `HashBiMap` and its inverse are both serializable.
+This implementation allows null keys and values. A
+ HashBiMap and its inverse are both serializable.
 
- <p>This implementation guarantees insertion-based iteration order of its keys.
+ 
+This implementation guarantees insertion-based iteration order of its keys.
 
- <p>See the Guava User Guide article on <a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap">`BiMap` </a>.
-**Author:** Louis Wasserman
-**Author:** Mike Bostock
-**Since:** 2.0
+ 
+See the Guava User Guide article on [BiMap ](https://github.com/google/guava/wiki/NewCollectionTypesExplained#bimap).
 
 ## Fields
 
@@ -33,19 +32,19 @@ A `BiMap` backed by two hash tables. This implementation allows null keys and va
 
 ### `hashTableKToV`
 
-**Type:** [`com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`](HashBiMap/@org/checkerframework/checker/nullness/qual/Nullable BiEntry.md)
+**Type:** `com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`
 
 ### `hashTableVToK`
 
-**Type:** [`com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`](HashBiMap/@org/checkerframework/checker/nullness/qual/Nullable BiEntry.md)
+**Type:** `com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`
 
 ### `firstInKeyInsertionOrder`
 
-**Type:** [`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md)
+**Type:** `com.google.common.collect.HashBiMap.BiEntry<K,V>`
 
 ### `lastInKeyInsertionOrder`
 
-**Type:** [`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md)
+**Type:** `com.google.common.collect.HashBiMap.BiEntry<K,V>`
 
 ### `size`
 
@@ -69,7 +68,10 @@ A `BiMap` backed by two hash tables. This implementation allows null keys and va
 
 ## Constructors
 
-### `<init>(`int` expectedSize)`
+### `<init>(int expectedSize)`
+
+**Parameters:**
+- `expectedSize` (`int`)
 
 ## Methods
 
@@ -77,93 +79,136 @@ A `BiMap` backed by two hash tables. This implementation allows null keys and va
 
 **Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
 
-Returns a new, empty `HashBiMap` with the default initial capacity (16).
-
-### `create(`int` expectedSize)`
+### `create(int expectedSize)`
 
 **Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
 
-Constructs a new, empty bimap with the specified expected size.
-@param expectedSize the expected number of entries
-@throws IllegalArgumentException if the specified expected size is negative
+**Parameters:**
+- `expectedSize` (`int`): the expected number of entries
 
-### `create(`java.util.Map<? extends K,? extends V>` map)`
+### `create(java.util.Map<? extends K,? extends V> map)`
 
 **Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
 
-Constructs a new bimap containing initial values from `map`. The bimap is created with an
+The bimap is created with an
  initial capacity sufficient to hold the mappings in the specified map.
 
-### `init(`int` expectedSize)`
+**Parameters:**
+- `map` (`java.util.Map<? extends K,? extends V>`)
+
+### `init(int expectedSize)`
 
 **Returns:** `void`
 
-### `delete([`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md) entry)`
+**Parameters:**
+- `expectedSize` (`int`)
+
+### `delete(com.google.common.collect.HashBiMap.BiEntry<K,V> entry)`
 
 **Returns:** `void`
 
-Finds and removes `entry` from the bucket linked lists in both the key-to-value direction
- and the value-to-key direction.
+**Parameters:**
+- `entry` (`com.google.common.collect.HashBiMap.BiEntry<K,V>`)
 
-### `insert([`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md) entry, [`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md) oldEntryForKey)`
+### `insert(com.google.common.collect.HashBiMap.BiEntry<K,V> entry, com.google.common.collect.HashBiMap.BiEntry<K,V> oldEntryForKey)`
 
 **Returns:** `void`
 
-### `seekByKey(`java.lang.Object` key, `int` keyHash)`
+**Parameters:**
+- `entry` (`com.google.common.collect.HashBiMap.BiEntry<K,V>`)
+- `oldEntryForKey` (`com.google.common.collect.HashBiMap.BiEntry<K,V>`)
 
-**Returns:** [`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md)
+### `seekByKey(java.lang.Object key, int keyHash)`
 
-### `seekByValue(`java.lang.Object` value, `int` valueHash)`
+**Returns:** `com.google.common.collect.HashBiMap.BiEntry<K,V>`
 
-**Returns:** [`com.google.common.collect.HashBiMap.BiEntry<K,V>`](HashBiMap/BiEntry.md)
+**Parameters:**
+- `key` (`java.lang.Object`)
+- `keyHash` (`int`)
 
-### `containsKey(`java.lang.Object` key)`
+### `seekByValue(java.lang.Object value, int valueHash)`
+
+**Returns:** `com.google.common.collect.HashBiMap.BiEntry<K,V>`
+
+**Parameters:**
+- `value` (`java.lang.Object`)
+- `valueHash` (`int`)
+
+### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
 
-### `containsValue(`java.lang.Object` value)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `containsValue(java.lang.Object value)`
 
 **Returns:** `boolean`
 
-Returns `true` if this BiMap contains an entry whose value is equal to `value` (or,
- equivalently, if this inverse view contains a key that is equal to `value`).
-
- <p>Due to the property that values in a BiMap are unique, this will tend to execute in
+Due to the property that values in a BiMap are unique, this will tend to execute in
  faster-than-linear time.
-@param value the object to search for in the values of this BiMap
-@return true if a mapping exists from a key to the specified value
 
-### `get(`java.lang.Object` key)`
+**Parameters:**
+- `value` (`java.lang.Object`): the object to search for in the values of this BiMap
 
-**Returns:** `V`
-
-### `put(`K` key, `V` value)`
+### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
-### `put(`K` key, `V` value, `boolean` force)`
+**Parameters:**
+- `key` (`java.lang.Object`)
+
+### `put(K key, V value)`
 
 **Returns:** `V`
 
-### `forcePut(`K` key, `V` value)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `put(K key, V value, boolean force)`
 
 **Returns:** `V`
 
-### `putInverse(`V` value, `K` key, `boolean` force)`
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+- `force` (`boolean`)
+
+### `forcePut(K key, V value)`
+
+**Returns:** `V`
+
+**Parameters:**
+- `key` (`K`)
+- `value` (`V`)
+
+### `putInverse(V value, K key, boolean force)`
 
 **Returns:** `K`
+
+**Parameters:**
+- `value` (`V`)
+- `key` (`K`)
+- `force` (`boolean`)
 
 ### `rehashIfNecessary()`
 
 **Returns:** `void`
 
-### `createTable(`int` length)`
+### `createTable(int length)`
 
-**Returns:** [`com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`](HashBiMap/@org/checkerframework/checker/nullness/qual/Nullable BiEntry.md)
+**Returns:** `com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`
 
-### `remove(`java.lang.Object` key)`
+**Parameters:**
+- `length` (`int`)
+
+### `remove(java.lang.Object key)`
 
 **Returns:** `V`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `clear()`
 
@@ -185,25 +230,35 @@ Returns `true` if this BiMap contains an entry whose value is equal to `value` (
 
 **Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
-### `forEach(`java.util.function.BiConsumer<? super K,? super V>` action)`
+### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
 
 **Returns:** `void`
 
-### `replaceAll(`java.util.function.BiFunction<? super K,? super V,? extends V>` function)`
+**Parameters:**
+- `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+### `replaceAll(java.util.function.BiFunction<? super K,? super V,? extends V> function)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `function` (`java.util.function.BiFunction<? super K,? super V,? extends V>`)
 
 ### `inverse()`
 
 **Returns:** [`com.google.common.collect.BiMap<V,K>`](./BiMap.md)
 
-### `writeObject(`java.io.ObjectOutputStream` stream)`
+### `writeObject(java.io.ObjectOutputStream stream)`
 
 **Returns:** `void`
 
-@serialData the number of entries, first key, first value, second key, second value, and so on.
+**Parameters:**
+- `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(`java.io.ObjectInputStream` stream)`
+### `readObject(java.io.ObjectInputStream stream)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `stream` (`java.io.ObjectInputStream`)
 

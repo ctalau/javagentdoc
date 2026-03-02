@@ -94,19 +94,67 @@
 
 ## Constructors
 
-### `<init>(`int` arg0, `boolean` arg1, `boolean` arg2, `boolean` arg3, `boolean` arg4, `boolean` arg5, `boolean` arg6, `boolean` arg7, `boolean` arg8, `boolean` arg9, `boolean` arg10, `boolean` arg11, `boolean` arg12, `boolean` arg13, `boolean` arg14, `ro.sync.diff.factory.DiffInfo._b` arg15, `boolean` arg16, `java.lang.String` arg17)`
+### `<init>(int arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, ro.sync.diff.factory.DiffInfo._b arg15, boolean arg16, java.lang.String arg17)`
 
-### `<init>(`int` arg0, `int` arg1, `boolean` arg2, `boolean` arg3, `boolean` arg4, `boolean` arg5, `boolean` arg6, `boolean` arg7, `boolean` arg8, `boolean` arg9, `boolean` arg10, `boolean` arg11, `boolean` arg12, `boolean` arg13, `boolean` arg14, `boolean` arg15, `ro.sync.diff.factory.DiffInfo._b` arg16, `ro.sync.diff.factory.DiffInfo._b` arg17, `boolean` arg18, `java.lang.String` arg19)`
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`boolean`)
+- `arg2` (`boolean`)
+- `arg3` (`boolean`)
+- `arg4` (`boolean`)
+- `arg5` (`boolean`)
+- `arg6` (`boolean`)
+- `arg7` (`boolean`)
+- `arg8` (`boolean`)
+- `arg9` (`boolean`)
+- `arg10` (`boolean`)
+- `arg11` (`boolean`)
+- `arg12` (`boolean`)
+- `arg13` (`boolean`)
+- `arg14` (`boolean`)
+- `arg15` (`ro.sync.diff.factory.DiffInfo._b`)
+- `arg16` (`boolean`)
+- `arg17` (`java.lang.String`)
 
-### `<init>([`ro.sync.diff.api.DiffOptions`](../api/DiffOptions.md) arg0)`
+### `<init>(int arg0, int arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, boolean arg15, ro.sync.diff.factory.DiffInfo._b arg16, ro.sync.diff.factory.DiffInfo._b arg17, boolean arg18, java.lang.String arg19)`
+
+**Parameters:**
+- `arg0` (`int`)
+- `arg1` (`int`)
+- `arg2` (`boolean`)
+- `arg3` (`boolean`)
+- `arg4` (`boolean`)
+- `arg5` (`boolean`)
+- `arg6` (`boolean`)
+- `arg7` (`boolean`)
+- `arg8` (`boolean`)
+- `arg9` (`boolean`)
+- `arg10` (`boolean`)
+- `arg11` (`boolean`)
+- `arg12` (`boolean`)
+- `arg13` (`boolean`)
+- `arg14` (`boolean`)
+- `arg15` (`boolean`)
+- `arg16` (`ro.sync.diff.factory.DiffInfo._b`)
+- `arg17` (`ro.sync.diff.factory.DiffInfo._b`)
+- `arg18` (`boolean`)
+- `arg19` (`java.lang.String`)
+
+### `<init>(ro.sync.diff.api.DiffOptions arg0)`
+
+**Parameters:**
+- `arg0` ([`ro.sync.diff.api.DiffOptions`](../api/DiffOptions.md))
 
 ### `<init>()`
 
 ## Methods
 
-### `getThreeWayAlgorithm(`int` arg0)`
+### `getThreeWayAlgorithm(int arg0)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `arg0` (`int`)
 
 ### `clone()`
 
@@ -116,9 +164,12 @@
 
 **Returns:** `java.lang.String`
 
-### `getAsDiffOptions(`boolean` arg0)`
+### `getAsDiffOptions(boolean arg0)`
 
 **Returns:** [`ro.sync.diff.api.DiffOptions`](../api/DiffOptions.md)
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `checkValid()`
 

@@ -45,13 +45,21 @@ We need some initial equation so that we can render a equation
 
 ## Methods
 
-### `doOperation([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md) args)`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Returns:** `void`
 
-### `editImage([`ro.sync.exml.workspace.api.images.handlers.ImageHandler`](../../../../exml/workspace/api/images/handlers/ImageHandler.md) handler, [`ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider`](../../../../exml/workspace/api/images/handlers/providers/EmbeddedImageContentProvider.md) cp)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+- `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
+
+### `editImage(ro.sync.exml.workspace.api.images.handlers.ImageHandler handler, ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider cp)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `handler` ([`ro.sync.exml.workspace.api.images.handlers.ImageHandler`](../../../../exml/workspace/api/images/handlers/ImageHandler.md)): The image handler
+- `cp` ([`ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider`](../../../../exml/workspace/api/images/handlers/providers/EmbeddedImageContentProvider.md)): The image provider
 
 ### `getArguments()`
 
@@ -61,11 +69,18 @@ We need some initial equation so that we can render a equation
 
 **Returns:** `java.lang.String`
 
-### `createDefaultFragmentToEdit([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md) authorAccess, [`ro.sync.ecss.extensions.api.AuthorSchemaManager`](../../api/AuthorSchemaManager.md) asm)`
+### `createDefaultFragmentToEdit(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager asm)`
 
 **Returns:** `java.lang.String`
 
-### `extractMathMLFragment(`java.lang.String` xmlFragment)`
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
+- `asm` ([`ro.sync.ecss.extensions.api.AuthorSchemaManager`](../../api/AuthorSchemaManager.md)): The author schema manager.
+
+### `extractMathMLFragment(java.lang.String xmlFragment)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `xmlFragment` (`java.lang.String`): The XML fragment.
 

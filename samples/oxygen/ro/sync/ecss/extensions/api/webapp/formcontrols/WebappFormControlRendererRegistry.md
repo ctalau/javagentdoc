@@ -20,15 +20,25 @@
 
 ## Methods
 
-### `registerRenderer(`java.lang.String` arg0, [`ro.sync.ecss.extensions.api.webapp.formcontrols.WebappFormControlRenderer`](./WebappFormControlRenderer.md) arg1)`
+### `registerRenderer(java.lang.String arg0, ro.sync.ecss.extensions.api.webapp.formcontrols.WebappFormControlRenderer arg1)`
 
 **Returns:** `void`
 
-### `getRenderer([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../editor/AuthorInplaceContext.md) arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` ([`ro.sync.ecss.extensions.api.webapp.formcontrols.WebappFormControlRenderer`](./WebappFormControlRenderer.md))
+
+### `getRenderer(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.formcontrols.WebappFormControlRenderer`](./WebappFormControlRenderer.md)
 
-### `getHTMLContentCss(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../editor/AuthorInplaceContext.md))
+
+### `getHTMLContentCss(java.lang.String arg0)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 

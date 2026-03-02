@@ -8,10 +8,8 @@
 
 ## Description
 
-An `InputStream` that concatenates multiple substreams. At most one stream will be open at
+At most one stream will be open at
  a time.
-**Author:** Chris Nokleberg
-**Since:** 1.0
 
 ## Fields
 
@@ -25,10 +23,10 @@ An `InputStream` that concatenates multiple substreams. At most one stream will 
 
 ## Constructors
 
-### `<init>(`java.util.Iterator<? extends com.google.common.io.ByteSource>` it)`
+### `<init>(java.util.Iterator<? extends com.google.common.io.ByteSource> it)`
 
-Creates a new instance.
-@param it an iterator of I/O suppliers that will provide each substream
+**Parameters:**
+- `it` (`java.util.Iterator<? extends com.google.common.io.ByteSource>`): an iterator of I/O suppliers that will provide each substream
 
 ## Methods
 
@@ -39,8 +37,6 @@ Creates a new instance.
 ### `advance()`
 
 **Returns:** `void`
-
-Closes the current input stream and opens the next one, if any.
 
 ### `available()`
 
@@ -54,11 +50,19 @@ Closes the current input stream and opens the next one, if any.
 
 **Returns:** `int`
 
-### `read(`byte[]` b, `int` off, `int` len)`
+### `read(byte[] b, int off, int len)`
 
 **Returns:** `int`
 
-### `skip(`long` n)`
+**Parameters:**
+- `b` (`byte[]`)
+- `off` (`int`)
+- `len` (`int`)
+
+### `skip(long n)`
 
 **Returns:** `long`
+
+**Parameters:**
+- `n` (`long`)
 

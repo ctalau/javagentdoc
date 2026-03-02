@@ -30,7 +30,11 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperationInternal([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md) authorAccess, `boolean` expand)`
+### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean expand)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
+- `expand` (`boolean`)
 

@@ -14,16 +14,22 @@ For example the user clicked on a link in the Author page.
 
 ## Methods
 
-### `handleOpenURL(`java.net.URL` toOpen)`
+### `handleOpenURL(java.net.URL toOpen)`
 
 **Returns:** `void`
 
 For example a click was made in the Author page.
 
-### `handleOpenURLAsDITAMapTree(`java.net.URL` toOpen)`
+**Parameters:**
+- `toOpen` (`java.net.URL`): The URL which should be opened by the developer's code.
+
+### `handleOpenURLAsDITAMapTree(java.net.URL toOpen)`
 
 **Returns:** `void`
 
 For example a map is opened in the DITAMapTreeComponentProvider and the user double clicks a map referenced in the current map.
  By default this method delegates to handleOpenURL(URL) but it can be overwritten to open the URL as a DITAMapTreeComponentProvider.
+
+**Parameters:**
+- `toOpen` (`java.net.URL`): The URL which should be opened by the developer's code.
 

@@ -8,12 +8,15 @@
 
 ## Methods
 
-### `computeTopicRefTargetInfo(`java.util.Map<ro.sync.exml.workspace.api.standalone.ditamap.TopicRefInfo,ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfo>` ditaMapTargetReferences)`
+### `computeTopicRefTargetInfo(java.util.Map<ro.sync.exml.workspace.api.standalone.ditamap.TopicRefInfo,ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfo> ditaMapTargetReferences)`
 
 **Returns:** `void`
 
 The TopicRefTargetInfo values are initialized but contain no properties inside. 
  After the call back, the map is used by Oxygen to show titles for each topic reference in the DITA Maps Manager view.
+
+**Parameters:**
+- `ditaMapTargetReferences` (`java.util.Map<ro.sync.exml.workspace.api.standalone.ditamap.TopicRefInfo,ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfo>`): A map of topic references.
 
 ### `clearCache()`
 

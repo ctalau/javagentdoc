@@ -6,11 +6,6 @@
 
 ## Description
 
-Static methods for implementing hash-based collections.
-**Author:** Kevin Bourrillion
-**Author:** Jesse Wilson
-**Author:** Austin Appleby
-
 ## Fields
 
 ### `C1`
@@ -31,19 +26,34 @@ Static methods for implementing hash-based collections.
 
 ## Methods
 
-### `smear(`int` hashCode)`
+### `smear(int hashCode)`
 
 **Returns:** `int`
 
-### `smearedHash(`java.lang.Object` o)`
+**Parameters:**
+- `hashCode` (`int`)
+
+### `smearedHash(java.lang.Object o)`
 
 **Returns:** `int`
 
-### `closedTableSize(`int` expectedEntries, `double` loadFactor)`
+**Parameters:**
+- `o` (`java.lang.Object`)
+
+### `closedTableSize(int expectedEntries, double loadFactor)`
 
 **Returns:** `int`
 
-### `needsResizing(`int` size, `int` tableSize, `double` loadFactor)`
+**Parameters:**
+- `expectedEntries` (`int`)
+- `loadFactor` (`double`)
+
+### `needsResizing(int size, int tableSize, double loadFactor)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `size` (`int`)
+- `tableSize` (`int`)
+- `loadFactor` (`double`)
 

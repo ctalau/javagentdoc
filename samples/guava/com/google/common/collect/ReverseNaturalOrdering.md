@@ -4,13 +4,11 @@
 
 **Fully Qualified Name:** `com.google.common.collect.ReverseNaturalOrdering`
 
-**Extends:** [`com.google.common.collect.Ordering<java.lang.Comparable<?>>`](./Ordering>.md)
+**Extends:** [`com.google.common.collect.Ordering<java.lang.Comparable<?>>`](./Ordering.md)
 
 **Implements:** `java.io.Serializable`
 
 ## Description
-
-An ordering that uses the reverse of the natural order of the values.
 
 ## Fields
 
@@ -28,45 +26,81 @@ An ordering that uses the reverse of the natural order of the values.
 
 ## Methods
 
-### `compare(`java.lang.Comparable<?>` left, `java.lang.Comparable<?>` right)`
+### `compare(java.lang.Comparable<?> left, java.lang.Comparable<?> right)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `left` (`java.lang.Comparable<?>`)
+- `right` (`java.lang.Comparable<?>`)
 
 ### `reverse()`
 
 **Returns:** [`com.google.common.collect.Ordering<S>`](./Ordering.md)
 
-### `min(`E` a, `E` b)`
+### `min(E a, E b)`
 
 **Returns:** `E`
 
-### `min(`E` a, `E` b, `E` c, `E[]` rest)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+
+### `min(E a, E b, E c, E[] rest)`
 
 **Returns:** `E`
 
-### `min(`java.util.Iterator<E>` iterator)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+- `c` (`E`)
+- `rest` (`E[]`)
+
+### `min(java.util.Iterator<E> iterator)`
 
 **Returns:** `E`
 
-### `min(`java.lang.Iterable<E>` iterable)`
+**Parameters:**
+- `iterator` (`java.util.Iterator<E>`)
+
+### `min(java.lang.Iterable<E> iterable)`
 
 **Returns:** `E`
 
-### `max(`E` a, `E` b)`
+**Parameters:**
+- `iterable` (`java.lang.Iterable<E>`)
+
+### `max(E a, E b)`
 
 **Returns:** `E`
 
-### `max(`E` a, `E` b, `E` c, `E[]` rest)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+
+### `max(E a, E b, E c, E[] rest)`
 
 **Returns:** `E`
 
-### `max(`java.util.Iterator<E>` iterator)`
+**Parameters:**
+- `a` (`E`)
+- `b` (`E`)
+- `c` (`E`)
+- `rest` (`E[]`)
+
+### `max(java.util.Iterator<E> iterator)`
 
 **Returns:** `E`
 
-### `max(`java.lang.Iterable<E>` iterable)`
+**Parameters:**
+- `iterator` (`java.util.Iterator<E>`)
+
+### `max(java.lang.Iterable<E> iterable)`
 
 **Returns:** `E`
+
+**Parameters:**
+- `iterable` (`java.lang.Iterable<E>`)
 
 ### `readResolve()`
 

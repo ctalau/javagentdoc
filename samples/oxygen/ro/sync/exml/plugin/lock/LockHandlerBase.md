@@ -18,7 +18,11 @@
 
 **Returns:** `boolean`
 
-### `isSaveAllowed(`java.net.URL` url, `int` timeoutSeconds)`
+### `isSaveAllowed(java.net.URL url, int timeoutSeconds)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `url` (`java.net.URL`): The URL for which the check is performed.
+- `timeoutSeconds` (`int`): The timeout in seconds to set for the lock .
 

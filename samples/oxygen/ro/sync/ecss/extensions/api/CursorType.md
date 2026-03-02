@@ -16,9 +16,12 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType[]`](./CursorType.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](./CursorType.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 
 ### `isResizeCursor()`
 

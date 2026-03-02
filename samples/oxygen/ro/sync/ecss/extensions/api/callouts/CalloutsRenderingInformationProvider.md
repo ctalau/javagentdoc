@@ -27,7 +27,7 @@ By default it only handles custom persistent highlights but you can override the
 
 ## Methods
 
-### `getCalloutRenderingInformation([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md) highlight)`
+### `getCalloutRenderingInformation(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.callouts.AuthorCalloutRenderingInformation`](./AuthorCalloutRenderingInformation.md)
 
@@ -42,7 +42,10 @@ For **custom highlights** the callout rendering information is requested only fo
  The callouts are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom review highlights in Author mode.
 
-### `shouldRenderAsCallout([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md) highlight)`
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The Author persistent highlight. The type of the highlight can be obtained by using the AuthorPersistentHighlight#getType()
+
+### `shouldRenderAsCallout(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Returns:** `boolean`
 
@@ -56,6 +59,9 @@ The callouts are representations of Track Changes insert and delete highlights,
  
 
  The implementation of this method must be fast, being called frequently.
+
+**Parameters:**
+- `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The Author custom persistent highlight.
 
 ### `handlesAlsoDefaultHighlights()`
 

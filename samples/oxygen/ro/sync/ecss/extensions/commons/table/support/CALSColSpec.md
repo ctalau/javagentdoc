@@ -63,11 +63,32 @@ This can be `true` if the separator
 
 ## Constructors
 
-### `<init>(`int` indexInDocument, `int` colNumber, `boolean` colNumberSpecified, `java.lang.String` colName, `java.lang.String` colWidth, `java.lang.Boolean` colSep, `java.lang.Boolean` rowSep)`
+### `<init>(int indexInDocument, int colNumber, boolean colNumberSpecified, java.lang.String colName, java.lang.String colWidth, java.lang.Boolean colSep, java.lang.Boolean rowSep)`
 
-### `<init>(`int` indexInDocument, `int` colNumber, `boolean` colNumberSpecified, `java.lang.String` colName, [`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md) colWidth)`
+**Parameters:**
+- `indexInDocument` (`int`): Index in colspec elements list.
+- `colNumber` (`int`): The number of the column. It is 1 based.
+- `colNumberSpecified` (`boolean`): `true` if the column number was specified as an attribute
+- `colName` (`java.lang.String`): The name of the column.
+- `colWidth` (`java.lang.String`): The string representation of the column width 
+ as described in the WidthRepresentation.
+- `colSep` (`java.lang.Boolean`): `true` if the column separators are needed for that column, 
+   `false` if not, `null` if the framework default should apply. 
+   For instance Docbook has the colsep on true by default, while DITA on false.
+- `rowSep` (`java.lang.Boolean`): `true` if the row separators are needed for that column, 
+   `false` if not, `null` if the framework default should apply. 
+   For instance Docbook has the rowsep on true by default, while DITA on false.
+
+### `<init>(int indexInDocument, int colNumber, boolean colNumberSpecified, java.lang.String colName, ro.sync.ecss.extensions.api.WidthRepresentation colWidth)`
 
 The rowsep and colsep are set to null, i.e. the document type default.
+
+**Parameters:**
+- `indexInDocument` (`int`): Index in colspec elements list.
+- `colNumber` (`int`): The number of this column. It is 1 based.
+- `colNumberSpecified` (`boolean`): `true` if the column number was specified as an attribute
+- `colName` (`java.lang.String`): The name of this column.
+- `colWidth` ([`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md)): The column width representation.
 
 ## Methods
 
@@ -103,7 +124,7 @@ The rowsep and colsep are set to null, i.e. the document type default.
 
 **Returns:** `java.lang.String`
 
-### `createXMLFragment(`java.lang.String` ns)`
+### `createXMLFragment(java.lang.String ns)`
 
 **Returns:** `java.lang.String`
 
@@ -115,19 +136,34 @@ The general format of the generated fragment is:
  <colspec colnum="integer_value" colname="string_value" colwidth="string_value" xmlns="URI"/>
  `
 
-### `appendAttrWithValue(`java.lang.StringBuilder` buffer, `java.lang.String` attrName, `java.lang.String` attrValue, `boolean` allowEmptyValue)`
+**Parameters:**
+- `ns` (`java.lang.String`): The namespace URI of the table element. It can be `null`.
+
+### `appendAttrWithValue(java.lang.StringBuilder buffer, java.lang.String attrName, java.lang.String attrValue, boolean allowEmptyValue)`
 
 **Returns:** `void`
 
-### `setColWidth([`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md) colWidth)`
+**Parameters:**
+- `buffer` (`java.lang.StringBuilder`): The buffer where to append the attribute name and its value.
+- `attrName` (`java.lang.String`): The attribute name.
+- `attrValue` (`java.lang.String`): The attribute value.
+- `allowEmptyValue` (`boolean`): `true` to allow empty values, `false` if checking for `null` is enough.
+
+### `setColWidth(ro.sync.ecss.extensions.api.WidthRepresentation colWidth)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `colWidth` ([`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md)): The column width to be set.
 
 ### `getAlign()`
 
 **Returns:** `java.lang.String`
 
-### `setAlign(`java.lang.String` align)`
+### `setAlign(java.lang.String align)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `align` (`java.lang.String`): The textAlign to set.
 

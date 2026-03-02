@@ -12,10 +12,8 @@
 
 ## Description
 
-An immutable sorted set with one or more elements. TODO(jlevy): Consider separate class for a
+TODO(jlevy): Consider separate class for a
  single-element sorted set.
-**Author:** Jared Levy
-**Author:** Louis Wasserman
 
 ## Fields
 
@@ -29,7 +27,11 @@ An immutable sorted set with one or more elements. TODO(jlevy): Consider separat
 
 ## Constructors
 
-### `<init>([`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md) elements, `java.util.Comparator<? super E>` comparator)`
+### `<init>(com.google.common.collect.ImmutableList<E> elements, java.util.Comparator<? super E> comparator)`
+
+**Parameters:**
+- `elements` ([`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md))
+- `comparator` (`java.util.Comparator<? super E>`)
 
 ## Methods
 
@@ -57,37 +59,56 @@ An immutable sorted set with one or more elements. TODO(jlevy): Consider separat
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(`java.util.function.Consumer<? super E>` action)`
+### `forEach(java.util.function.Consumer<? super E> action)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `action` (`java.util.function.Consumer<? super E>`)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(`java.lang.Object` o)`
+### `contains(java.lang.Object o)`
 
 **Returns:** `boolean`
 
-### `containsAll(`java.util.Collection<?>` targets)`
+**Parameters:**
+- `o` (`java.lang.Object`)
+
+### `containsAll(java.util.Collection<?> targets)`
 
 **Returns:** `boolean`
 
-### `unsafeBinarySearch(`java.lang.Object` key)`
+**Parameters:**
+- `targets` (`java.util.Collection<?>`)
+
+### `unsafeBinarySearch(java.lang.Object key)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 ### `isPartialView()`
 
 **Returns:** `boolean`
 
-### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` offset)`
+### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
 
 **Returns:** `int`
 
-### `equals(`java.lang.Object` object)`
+**Parameters:**
+- `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `offset` (`int`)
+
+### `equals(java.lang.Object object)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 ### `first()`
 
@@ -97,53 +118,94 @@ An immutable sorted set with one or more elements. TODO(jlevy): Consider separat
 
 **Returns:** `E`
 
-### `lower(`E` element)`
+### `lower(E element)`
 
 **Returns:** `E`
 
-### `floor(`E` element)`
+**Parameters:**
+- `element` (`E`)
+
+### `floor(E element)`
 
 **Returns:** `E`
 
-### `ceiling(`E` element)`
+**Parameters:**
+- `element` (`E`)
+
+### `ceiling(E element)`
 
 **Returns:** `E`
 
-### `higher(`E` element)`
+**Parameters:**
+- `element` (`E`)
+
+### `higher(E element)`
 
 **Returns:** `E`
 
-### `headSetImpl(`E` toElement, `boolean` inclusive)`
+**Parameters:**
+- `element` (`E`)
+
+### `headSetImpl(E toElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `headIndex(`E` toElement, `boolean` inclusive)`
+**Parameters:**
+- `toElement` (`E`)
+- `inclusive` (`boolean`)
+
+### `headIndex(E toElement, boolean inclusive)`
 
 **Returns:** `int`
 
-### `subSetImpl(`E` fromElement, `boolean` fromInclusive, `E` toElement, `boolean` toInclusive)`
+**Parameters:**
+- `toElement` (`E`)
+- `inclusive` (`boolean`)
+
+### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `tailSetImpl(`E` fromElement, `boolean` inclusive)`
+**Parameters:**
+- `fromElement` (`E`)
+- `fromInclusive` (`boolean`)
+- `toElement` (`E`)
+- `toInclusive` (`boolean`)
+
+### `tailSetImpl(E fromElement, boolean inclusive)`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-### `tailIndex(`E` fromElement, `boolean` inclusive)`
+**Parameters:**
+- `fromElement` (`E`)
+- `inclusive` (`boolean`)
+
+### `tailIndex(E fromElement, boolean inclusive)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `fromElement` (`E`)
+- `inclusive` (`boolean`)
 
 ### `unsafeComparator()`
 
 **Returns:** `java.util.Comparator<java.lang.Object>`
 
-### `getSubSet(`int` newFromIndex, `int` newToIndex)`
+### `getSubSet(int newFromIndex, int newToIndex)`
 
 **Returns:** [`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md)
 
-### `indexOf(`java.lang.Object` target)`
+**Parameters:**
+- `newFromIndex` (`int`)
+- `newToIndex` (`int`)
+
+### `indexOf(java.lang.Object target)`
 
 **Returns:** `int`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 ### `createAsList()`
 

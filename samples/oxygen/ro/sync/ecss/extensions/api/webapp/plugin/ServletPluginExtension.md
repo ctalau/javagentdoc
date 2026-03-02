@@ -58,36 +58,59 @@ The path should be unique among other webapp servlet plugins paths
  
  Example: "plugin-path"
 
-### `init([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletConfig`](servlet/ServletConfig.md) config)`
+### `init(ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletConfig config)`
 
 **Returns:** `void`
 
 Consider overriding the #init() method instead. If you decide to override this one,
  call the super implementation.
 
+**Parameters:**
+- `config` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletConfig`](servlet/ServletConfig.md)): The configuration.
+
 ### `init()`
 
 **Returns:** `void`
 
-### `service([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md) req, [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md) resp)`
+### `service(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
 **Returns:** `void`
 
-### `doGet([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md) req, [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md) resp)`
+**Parameters:**
+- `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
+- `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+### `doGet(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
 **Returns:** `void`
 
-### `doPost([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md) req, [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md) resp)`
+**Parameters:**
+- `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
+- `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+### `doPost(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
 **Returns:** `void`
 
-### `doPut([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md) req, [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md) resp)`
+**Parameters:**
+- `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
+- `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+### `doPut(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
 **Returns:** `void`
 
-### `doDelete([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md) req, [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md) resp)`
+**Parameters:**
+- `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
+- `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+### `doDelete(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
+- `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
 
 ### `getServletConfig()`
 

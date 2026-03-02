@@ -30,25 +30,37 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `addGuessElement([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md) arg0)`
+### `addGuessElement(ro.sync.contentcompletion.xml.CIElement arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md))
 
 ### `getNamespace()`
 
 **Returns:** `java.lang.String`
 
-### `setDeclareXmlns(`boolean` arg0)`
+### `setDeclareXmlns(boolean arg0)`
 
 **Returns:** `void`
 
-### `setContentType(`int` arg0)`
+**Parameters:**
+- `arg0` (`boolean`)
+
+### `setContentType(int arg0)`
 
 **Returns:** `void`
 
-### `setHasFixedValueType(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`int`)
+
+### `setHasFixedValueType(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isEmpty()`
 
@@ -66,17 +78,26 @@
 
 **Returns:** `boolean`
 
-### `setName(`java.lang.String` arg0)`
+### `setName(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setPrefix(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setPrefix(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setNamespace(`java.lang.String` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setNamespace(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getQName()`
 
@@ -90,9 +111,12 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `setAttributes(`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>` arg0)`
+### `setAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
 
 ### `hasPrefix()`
 
@@ -102,21 +126,30 @@
 
 **Returns:** `java.lang.String`
 
-### `setAnnotation(`java.lang.String` arg0)`
+### `setAnnotation(java.lang.String arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 ### `getTypeDescription()`
 
 **Returns:** `java.lang.String`
 
-### `setTypeDescription(`java.lang.String` arg0)`
+### `setTypeDescription(java.lang.String arg0)`
 
 **Returns:** `void`
 
-### `setNillable(`boolean` arg0)`
+**Parameters:**
+- `arg0` (`java.lang.String`)
+
+### `setNillable(boolean arg0)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `arg0` (`boolean`)
 
 ### `isNillable()`
 

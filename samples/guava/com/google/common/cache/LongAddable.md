@@ -6,18 +6,18 @@
 
 ## Description
 
-Abstract interface for objects that can concurrently add longs.
-**Author:** Louis Wasserman
-
 ## Methods
 
 ### `increment()`
 
 **Returns:** `void`
 
-### `add(`long` x)`
+### `add(long x)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `x` (`long`)
 
 ### `sum()`
 

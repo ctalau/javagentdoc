@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `findElementsByXPath(`java.lang.String` xpathExpression)`
+### `findElementsByXPath(java.lang.String xpathExpression)`
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextNodeRange[]`](./WSXMLTextNodeRange.md)
 
@@ -31,7 +31,10 @@ The result of this function is an array of WSXMLTextNodeRange selected
  
  will return an empty array.
 
-### `evaluateXPath(`java.lang.String` xpathExpression)`
+**Parameters:**
+- `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
+
+### `evaluateXPath(java.lang.String xpathExpression)`
 
 **Returns:** `java.lang.Object[]`
 
@@ -59,6 +62,9 @@ This function returns the result of the given XPath expression as an array of Ob
  will return an array containing all DOM Nodes and having as last component
  the total number of nodes.
 
+**Parameters:**
+- `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
+
 ### `getXMLSchemaManager()`
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager`](../WSTextXMLSchemaManager.md)
@@ -67,7 +73,13 @@ This function returns the result of the given XPath expression as an array of Ob
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.text.xml.TextDocumentController`](./TextDocumentController.md)
 
-### `getXPath(`int` offset, `boolean` includeIndexInParent)`
+### `getXPath(int offset, boolean includeIndexInParent)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `offset` (`int`): The current offset.
+- `includeIndexInParent` (`boolean`): If `true` the child index in parent is included.
+       Example (without index): /personnel/person/name/family
+       Example (with index):    /personnel/person[2]/name[1]/family[1]
 

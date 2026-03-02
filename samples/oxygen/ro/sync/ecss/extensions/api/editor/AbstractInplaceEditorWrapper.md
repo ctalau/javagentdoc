@@ -27,21 +27,32 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 **Returns:** `java.lang.String`
 
-### `createEditor([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+### `createEditor(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.InplaceEditor`](./InplaceEditor.md)
 
-### `getEditorComponent([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context, `ro.sync.exml.view.graphics.Rectangle` allocation, `ro.sync.exml.view.graphics.Point` mouseInvocationLocation)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): Editing context.
+
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseInvocationLocation)`
 
 **Returns:** `java.lang.Object`
+
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+- `allocation` (`ro.sync.exml.view.graphics.Rectangle`)
+- `mouseInvocationLocation` (`ro.sync.exml.view.graphics.Point`)
 
 ### `getScrollRectangle()`
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
+
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
 ### `requestFocus()`
 
@@ -63,15 +74,24 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 **Returns:** `void`
 
-### `removeEditingListener([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md) editingListener)`
+### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Returns:** `void`
 
-### `refresh([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md) context)`
+**Parameters:**
+- `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Returns:** `void`
 
-### `insertContent(`java.lang.String` xmlContent)`
+**Parameters:**
+- `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
+
+### `insertContent(java.lang.String xmlContent)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `xmlContent` (`java.lang.String`)
 

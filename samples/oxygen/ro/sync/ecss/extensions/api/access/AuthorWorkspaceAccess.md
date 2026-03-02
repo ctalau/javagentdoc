@@ -10,15 +10,23 @@
 
 ## Methods
 
-### `open(`java.io.File` file)`
+### `open(java.io.File file)`
 
 **Returns:** `boolean`
+
+**Parameters:**
+- `file` (`java.io.File`): The file to be opened.
 
 ### `getAllEditorLocations()`
 
 **Returns:** `java.net.URL[]`
 
-### `getEditorAccess(`java.net.URL` location)`
+### `getEditorAccess(java.net.URL location)`
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](../../../../exml/workspace/api/editor/WSEditor.md)
+
+**Parameters:**
+- `location` (`java.net.URL`): The editor location
+ 
+
 

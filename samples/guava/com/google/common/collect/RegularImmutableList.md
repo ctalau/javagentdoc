@@ -12,9 +12,6 @@
 
 ## Description
 
-Implementation of `ImmutableList` backed by a simple array.
-**Author:** Kevin Bourrillion
-
 ## Fields
 
 ### `EMPTY`
@@ -27,7 +24,10 @@ Implementation of `ImmutableList` backed by a simple array.
 
 ## Constructors
 
-### `<init>(`java.lang.Object[]` array)`
+### `<init>(java.lang.Object[] array)`
+
+**Parameters:**
+- `array` (`java.lang.Object[]`)
 
 ## Methods
 
@@ -51,17 +51,27 @@ Implementation of `ImmutableList` backed by a simple array.
 
 **Returns:** `int`
 
-### `copyIntoArray(`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]` dst, `int` dstOff)`
+### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int dstOff)`
 
 **Returns:** `int`
 
-### `get(`int` index)`
+**Parameters:**
+- `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+- `dstOff` (`int`)
+
+### `get(int index)`
 
 **Returns:** `E`
 
-### `listIterator(`int` index)`
+**Parameters:**
+- `index` (`int`)
+
+### `listIterator(int index)`
 
 **Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
+
+**Parameters:**
+- `index` (`int`)
 
 ### `spliterator()`
 

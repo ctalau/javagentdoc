@@ -110,11 +110,43 @@ The only legal values are the following constants:
 
 ## Constructors
 
-### `<init>(`int` x, `int` y, `boolean` isPopupTrigger, `int` state, `int` modifiers, `int` clickCount)`
+### `<init>(int x, int y, boolean isPopupTrigger, int state, int modifiers, int clickCount)`
 
-### `<init>(`int` x, `int` y, `boolean` isPopupTrigger, `int` state, `int` modifiers, `int` clickCount, `int` button)`
+**Parameters:**
+- `x` (`int`): The x coordinate of the mouse event.
+- `y` (`int`): The y coordinate of the mouse event.
+- `isPopupTrigger` (`boolean`): `true` if it is pop-up trigger.
+- `state` (`int`): One of the constants #STATE_PRESSED, #STATE_RELEASED,
+ #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
+- `modifiers` (`int`): Marks if CTRL, SHIFT, ALT, ALT GR, META were pressed.
+- `clickCount` (`int`): Click count.
 
-### `<init>(`int` x, `int` y, `boolean` isPopupTrigger, `int` state, `int` modifiers, `int` clickCount, `int` button, `boolean` wheelUp)`
+### `<init>(int x, int y, boolean isPopupTrigger, int state, int modifiers, int clickCount, int button)`
+
+**Parameters:**
+- `x` (`int`): The x coordinate of the mouse event.
+- `y` (`int`): The y coordinate of the mouse event.
+- `isPopupTrigger` (`boolean`): `true` if it is pop-up trigger.
+- `state` (`int`): One of the constants #STATE_PRESSED, #STATE_RELEASED,
+ #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
+- `modifiers` (`int`): Marks if CTRL, SHIFT, ALT, ALT GR, META were pressed.
+- `clickCount` (`int`): Click count.
+- `button` (`int`): One of the constants #BUTTON1, #BUTTON2, #BUTTON3, #NOBUTTON.
+
+### `<init>(int x, int y, boolean isPopupTrigger, int state, int modifiers, int clickCount, int button, boolean wheelUp)`
+
+**Parameters:**
+- `x` (`int`): The x coordinate of the mouse event.
+- `y` (`int`): The y coordinate of the mouse event.
+- `isPopupTrigger` (`boolean`): `true` if it is pop-up trigger.
+- `state` (`int`): One of the constants #STATE_PRESSED, #STATE_RELEASED,
+                        #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
+- `modifiers` (`int`): Marks if CTRL, SHIFT, ALT, ALT GR, META were pressed.
+- `clickCount` (`int`): Click count.
+- `button` (`int`): One of the constants #BUTTON1, #BUTTON2, #BUTTON3,
+                        #NOBUTTON.
+- `wheelUp` (`boolean`): `true` if the mouse wheel is rotated up (away from the user), 
+                        `false` if the mouse wheel is rotated down (towards the user).
 
 ## Methods
 
@@ -122,9 +154,12 @@ The only legal values are the following constants:
 
 **Returns:** `java.lang.String`
 
-### `getStateDescription(`int` state)`
+### `getStateDescription(int state)`
 
 **Returns:** `java.lang.String`
+
+**Parameters:**
+- `state` (`int`)
 
 ### `getClickCount()`
 

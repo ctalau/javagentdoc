@@ -6,9 +6,8 @@
 
 ## Description
 
-Modes for opening a file for writing. The default when mode when none is specified is to truncate
+The default when mode when none is specified is to truncate
  the file before writing.
-**Author:** Colin Decker
 
 ## Constructors
 
@@ -20,7 +19,10 @@ Modes for opening a file for writing. The default when mode when none is specifi
 
 **Returns:** [`com.google.common.io.FileWriteMode[]`](./FileWriteMode.md)
 
-### `valueOf(`java.lang.String` name)`
+### `valueOf(java.lang.String name)`
 
 **Returns:** [`com.google.common.io.FileWriteMode`](./FileWriteMode.md)
+
+**Parameters:**
+- `name` (`java.lang.String`)
 

@@ -6,10 +6,6 @@
 
 ## Description
 
-Static utility methods pertaining to classes in the `java.util.concurrent.atomic` package.
-**Author:** Kurt Alfred Kluever
-**Since:** 10.0
-
 ## Constructors
 
 ### `<init>()`
@@ -20,31 +16,24 @@ Static utility methods pertaining to classes in the `java.util.concurrent.atomic
 
 **Returns:** `java.util.concurrent.atomic.AtomicReference<@org.checkerframework.checker.nullness.qual.Nullable V>`
 
-Creates an `AtomicReference` instance with no initial value.
-@return a new `AtomicReference` with no initial value
-
-### `newReference(`V` initialValue)`
+### `newReference(V initialValue)`
 
 **Returns:** `java.util.concurrent.atomic.AtomicReference<V>`
 
-Creates an `AtomicReference` instance with the given initial value.
-@param initialValue the initial value
-@return a new `AtomicReference` with the given initial value
+**Parameters:**
+- `initialValue` (`V`): the initial value
 
-### `newReferenceArray(`int` length)`
+### `newReferenceArray(int length)`
 
 **Returns:** `java.util.concurrent.atomic.AtomicReferenceArray<@org.checkerframework.checker.nullness.qual.Nullable E>`
 
-Creates an `AtomicReferenceArray` instance of given length.
-@param length the length of the array
-@return a new `AtomicReferenceArray` with the given length
+**Parameters:**
+- `length` (`int`): the length of the array
 
-### `newReferenceArray(`E[]` array)`
+### `newReferenceArray(E[] array)`
 
 **Returns:** `java.util.concurrent.atomic.AtomicReferenceArray<E>`
 
-Creates an `AtomicReferenceArray` instance with the same length as, and all elements
- copied from, the given array.
-@param array the array to copy elements from
-@return a new `AtomicReferenceArray` copied from the given array
+**Parameters:**
+- `array` (`E[]`): the array to copy elements from
 
