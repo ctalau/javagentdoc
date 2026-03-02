@@ -433,8 +433,6 @@ public final class SemanticXmlDoclet implements Doclet {
         appendParametersSignature(md, m);
         md.append(")`\n\n");
 
-        md.append("**Returns:** ").append(formatTypeLink(m.getReturnType().toString(), currentPkg)).append("\n\n");
-
         SemanticDocumentation semanticDoc = parseSemanticDocumentation(docTrees, m);
         if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
             String description = semanticDoc.getBodyText();
@@ -442,6 +440,8 @@ public final class SemanticXmlDoclet implements Doclet {
         }
 
         appendParameterDocumentation(md, m, semanticDoc, currentPkg);
+
+        md.append("**Returns:** ").append(formatTypeLink(m.getReturnType().toString(), currentPkg)).append("\n\n");
     }
 
     private SemanticDocumentation parseSemanticDocumentation(DocTrees docTrees, Element element) {
@@ -485,11 +485,54 @@ public final class SemanticXmlDoclet implements Doclet {
 
             String description = paramDescriptions.get(paramName);
             if (description != null && !description.isBlank()) {
-                md.append(": ").append(convertLinksInText(description, currentPkg));
+                appendParameterDescription(md, description, currentPkg);
             }
             md.append("\n");
         }
         md.append("\n");
+    }
+
+    private void appendParameterDescription(StringBuilder md, String description, String currentPkg) {
+        String convertedDescription = convertLinksInText(description, currentPkg).strip();
+        if (convertedDescription.isEmpty()) {
+            return;
+        }
+
+        String[] lines = convertedDescription.split("\\R", -1);
+        if (startsWithMarkdownBlock(lines[0])) {
+            md.append(":\n");
+            for (String line : lines) {
+                md.append("  ").append(line).append("\n");
+            }
+            // remove the extra trailing newline added by loop;
+            // outer caller appends one newline per parameter item.
+            md.deleteCharAt(md.length() - 1);
+            return;
+        }
+
+        md.append(": ").append(lines[0]);
+        for (int i = 1; i < lines.length; i++) {
+            md.append("\n  ").append(lines[i]);
+        }
+    }
+
+    private boolean startsWithMarkdownBlock(String line) {
+        if (line == null) {
+            return false;
+        }
+
+        String trimmed = line.stripLeading();
+        if (trimmed.startsWith("- ") || trimmed.startsWith("* ") || trimmed.startsWith("```")) {
+            return true;
+        }
+
+        int idx = 0;
+        while (idx < trimmed.length() && Character.isDigit(trimmed.charAt(idx))) {
+            idx++;
+        }
+        return idx > 0 && idx + 1 < trimmed.length()
+            && trimmed.charAt(idx) == '.'
+            && trimmed.charAt(idx + 1) == ' ';
     }
 
     private String formatTypeLink(String typeName, String currentPkg) {

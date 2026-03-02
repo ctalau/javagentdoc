@@ -97,6 +97,62 @@ public class MarkdownParameterDocumentationTest {
             markdown.contains("- `count` (`int`): item count"),
             "Expected primitive parameter with @param description"
         );
+
+        int processHeaderIndex = markdown.indexOf("### `process(");
+        int paramsIndex = markdown.indexOf("**Parameters:**", processHeaderIndex);
+        int returnsIndex = markdown.indexOf("**Returns:**", processHeaderIndex);
+        assertTrue(paramsIndex > processHeaderIndex, "Expected parameters section after method header");
+        assertTrue(returnsIndex > paramsIndex, "Expected returns section after parameters section");
+    }
+
+    @Test
+    public void testHtmlMarkupInParamDescriptionsRendersAsNestedMarkdown() throws Exception {
+        Path sourceDir = tempDir.resolve("src");
+        Files.createDirectories(sourceDir);
+
+        Path sourceFile = sourceDir.resolve("Service.java");
+        Files.writeString(sourceFile, """
+            package test;
+
+            public class Service {
+                /**
+                 * Renders a value.
+                 *
+                 * @param notes <p><b>Overview</b> with <a href="https://example.com/docs">link</a> and <code>code()</code>.</p><p>Second paragraph.</p>
+                 * @param config <ul><li>First option</li><li>Second option with <code>x</code></li></ul>
+                 * @return rendered value
+                 */
+                public String render(String notes, String config) {
+                    return notes;
+                }
+            }
+            """);
+
+        Path outputFile = tempDir.resolve("docs/README.md");
+        runDoclet(sourceDir, outputFile);
+
+        Path serviceDoc = tempDir.resolve("docs/test/Service.md");
+        assertTrue(Files.exists(serviceDoc), "Expected generated markdown for Service");
+        String markdown = Files.readString(serviceDoc);
+
+        assertTrue(
+            markdown.contains("- `notes` (`java.lang.String`): **Overview** with [link](https://example.com/docs) and `code()`."),
+            "Expected bold/link/code HTML markup converted to markdown in inline parameter text"
+        );
+        assertTrue(
+            markdown.contains("\n  Second paragraph.\n"),
+            "Expected second paragraph to stay nested under the parameter list item"
+        );
+        assertTrue(
+            markdown.contains("- `config` (`java.lang.String`):\n  - First option\n  - Second option with `x`\n"),
+            "Expected HTML list in @param to render as a nested markdown list"
+        );
+
+        int renderHeaderIndex = markdown.indexOf("### `render(java.lang.String notes, java.lang.String config)`");
+        int paramsIndex = markdown.indexOf("**Parameters:**", renderHeaderIndex);
+        int returnsIndex = markdown.indexOf("**Returns:**", renderHeaderIndex);
+        assertTrue(paramsIndex > renderHeaderIndex, "Expected parameters section after render method header");
+        assertTrue(returnsIndex > paramsIndex, "Expected returns section after parameters section for render");
     }
 
     private void runDoclet(Path sourceDir, Path outputFile) throws IOException {

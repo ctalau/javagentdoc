@@ -191,6 +191,9 @@ public final class SemanticDocTreeVisitor {
         }
 
         if (tree instanceof List<?>) {
+            if (extractor == null) {
+                extractor = new TextExtractor(links, docTrees, docTreePath);
+            }
             StringBuilder sb = new StringBuilder();
             for (Object item : (List<?>) tree) {
                 if (item instanceof DocTree) {
@@ -335,14 +338,16 @@ public final class SemanticDocTreeVisitor {
             for (DocTree attr : node.getAttributes()) {
                 if (attr instanceof AttributeTree attrTree) {
                     String attrName = attrTree.getName().toString().toLowerCase();
-                    List<? extends DocTree> valueList = attrTree.getValue();
-                    StringBuilder attrValue = new StringBuilder();
-                    for (DocTree val : valueList) {
-                        attrValue.append(extractText(val, null, null, docTreePath, this));
+                    String value = extractAttributeValue(attrTree);
+                    if (!attrName.isBlank()) {
+                        attributes.put(attrName, value);
                     }
-                    // Remove surrounding quotes
-                    String value = attrValue.toString().replaceAll("^\"|\"$", "").replaceAll("^'|'$", "");
-                    attributes.put(attrName, value);
+                }
+            }
+            if ("a".equals(tagName) && !attributes.containsKey("href")) {
+                String href = extractHrefFromStartElement(node.toString());
+                if (!href.isBlank()) {
+                    attributes.put("href", href);
                 }
             }
             attributeStack.push(attributes);
@@ -360,6 +365,84 @@ public final class SemanticDocTreeVisitor {
                 // Strip out other HTML tags but preserve their content
                 default -> "";
             };
+        }
+
+        private String extractAttributeValue(AttributeTree attrTree) {
+            StringBuilder attrValue = new StringBuilder();
+            List<? extends DocTree> valueList = attrTree.getValue();
+            if (valueList != null) {
+                for (DocTree val : valueList) {
+                    attrValue.append(extractText(val, null, null, docTreePath, this));
+                }
+            }
+
+            String value = stripAttributeQuotes(attrValue.toString());
+            if (!value.isBlank()) {
+                return value;
+            }
+
+            // Fallback: some JDK DocTree implementations expose the full attribute in toString().
+            String raw = attrTree.toString();
+            int equalsIndex = raw.indexOf('=');
+            if (equalsIndex >= 0 && equalsIndex + 1 < raw.length()) {
+                return stripAttributeQuotes(raw.substring(equalsIndex + 1).trim());
+            }
+
+            return value;
+        }
+
+        private String stripAttributeQuotes(String rawValue) {
+            if (rawValue == null) {
+                return "";
+            }
+            return rawValue
+                .replaceAll("^\"|\"$", "")
+                .replaceAll("^'|'$", "");
+        }
+
+        private String extractHrefFromStartElement(String rawTag) {
+            if (rawTag == null || rawTag.isBlank()) {
+                return "";
+            }
+
+            String lower = rawTag.toLowerCase(Locale.ROOT);
+            int hrefIndex = lower.indexOf("href");
+            if (hrefIndex < 0) {
+                return "";
+            }
+
+            int equalsIndex = lower.indexOf('=', hrefIndex);
+            if (equalsIndex < 0) {
+                return "";
+            }
+
+            int valueStart = equalsIndex + 1;
+            while (valueStart < rawTag.length() && Character.isWhitespace(rawTag.charAt(valueStart))) {
+                valueStart++;
+            }
+
+            if (valueStart >= rawTag.length()) {
+                return "";
+            }
+
+            char first = rawTag.charAt(valueStart);
+            if (first == '"' || first == '\'') {
+                int end = rawTag.indexOf(first, valueStart + 1);
+                if (end > valueStart + 1) {
+                    return rawTag.substring(valueStart + 1, end).trim();
+                }
+                return "";
+            }
+
+            int end = valueStart;
+            while (end < rawTag.length()) {
+                char current = rawTag.charAt(end);
+                if (Character.isWhitespace(current) || current == '>') {
+                    break;
+                }
+                end++;
+            }
+            return rawTag.substring(valueStart, end).trim();
         }
 
         @Override
