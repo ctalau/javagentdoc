@@ -416,45 +416,80 @@ public final class SemanticXmlDoclet implements Doclet {
 
     private void appendConstructorMarkdownDetailed(StringBuilder md, ExecutableElement c, String currentPkg, DocTrees docTrees) {
         md.append("### `").append(c.getSimpleName()).append("(");
-        appendParametersWithTypes(md, c, currentPkg);
+        appendParametersSignature(md, c);
         md.append(")`\n\n");
 
-        DocCommentTree doc = docTrees.getDocCommentTree(c);
-        if (doc != null) {
-            SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc, docTrees, c);
-            if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
-                String description = semanticDoc.getBodyText();
-                md.append(convertLinksInText(description, currentPkg)).append("\n\n");
-            }
+        SemanticDocumentation semanticDoc = parseSemanticDocumentation(docTrees, c);
+        if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
+            String description = semanticDoc.getBodyText();
+            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
         }
+
+        appendParameterDocumentation(md, c, semanticDoc, currentPkg);
     }
 
     private void appendMethodMarkdownDetailed(StringBuilder md, ExecutableElement m, String currentPkg, DocTrees docTrees) {
         md.append("### `").append(m.getSimpleName()).append("(");
-        appendParametersWithTypes(md, m, currentPkg);
+        appendParametersSignature(md, m);
         md.append(")`\n\n");
 
         md.append("**Returns:** ").append(formatTypeLink(m.getReturnType().toString(), currentPkg)).append("\n\n");
 
-        DocCommentTree doc = docTrees.getDocCommentTree(m);
-        if (doc != null) {
-            SemanticDocumentation semanticDoc = SemanticDocTreeVisitor.parse(doc, docTrees, m);
-            if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
-                String description = semanticDoc.getBodyText();
-                md.append(convertLinksInText(description, currentPkg)).append("\n\n");
-            }
+        SemanticDocumentation semanticDoc = parseSemanticDocumentation(docTrees, m);
+        if (semanticDoc != null && !semanticDoc.getBodyText().isEmpty()) {
+            String description = semanticDoc.getBodyText();
+            md.append(convertLinksInText(description, currentPkg)).append("\n\n");
         }
+
+        appendParameterDocumentation(md, m, semanticDoc, currentPkg);
     }
 
-    private void appendParametersWithTypes(StringBuilder md, ExecutableElement e, String currentPkg) {
+    private SemanticDocumentation parseSemanticDocumentation(DocTrees docTrees, Element element) {
+        DocCommentTree doc = docTrees.getDocCommentTree(element);
+        if (doc == null) {
+            return null;
+        }
+        return SemanticDocTreeVisitor.parse(doc, docTrees, element);
+    }
+
+    private void appendParametersSignature(StringBuilder md, ExecutableElement e) {
         List<? extends VariableElement> params = e.getParameters();
         for (int i = 0; i < params.size(); i++) {
             VariableElement p = params.get(i);
-            md.append(formatTypeLink(p.asType().toString(), currentPkg)).append(" ").append(p.getSimpleName());
+            md.append(p.asType().toString()).append(" ").append(p.getSimpleName());
             if (i < params.size() - 1) {
                 md.append(", ");
             }
         }
+    }
+
+    private void appendParameterDocumentation(StringBuilder md, ExecutableElement e,
+                                              SemanticDocumentation semanticDoc, String currentPkg) {
+        List<? extends VariableElement> params = e.getParameters();
+        if (params.isEmpty()) {
+            return;
+        }
+
+        Map<String, String> paramDescriptions = new HashMap<>();
+        if (semanticDoc != null) {
+            for (SemanticDocumentation.ParamDoc param : semanticDoc.getParams()) {
+                paramDescriptions.put(param.getName(), param.getDescription());
+            }
+        }
+
+        md.append("**Parameters:**\n");
+        for (VariableElement p : params) {
+            String paramName = p.getSimpleName().toString();
+            String paramType = formatTypeLink(p.asType().toString(), currentPkg);
+            md.append("- `").append(paramName).append("` (").append(paramType).append(")");
+
+            String description = paramDescriptions.get(paramName);
+            if (description != null && !description.isBlank()) {
+                md.append(": ").append(convertLinksInText(description, currentPkg));
+            }
+            md.append("\n");
+        }
+        md.append("\n");
     }
 
     private String formatTypeLink(String typeName, String currentPkg) {
