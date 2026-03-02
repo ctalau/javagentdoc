@@ -66,22 +66,22 @@
 
 ### `getListXMLFragment(java.lang.String listType, java.util.Map<java.lang.String,java.lang.String> attributes, int numberOfListItems, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `java.lang.StringBuilder`
-
 **Parameters:**
 - `listType` (`java.lang.String`)
 - `attributes` (`java.util.Map<java.lang.String,java.lang.String>`)
 - `numberOfListItems` (`int`)
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 
-### `getXMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String listType, java.lang.String parentListType)`
+**Returns:** `java.lang.StringBuilder`
 
-**Returns:** `java.lang.String`
+### `getXMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String listType, java.lang.String parentListType)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 - `listType` (`java.lang.String`)
 - `parentListType` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getArguments()`
 
@@ -89,12 +89,12 @@
 
 ### `getLIContent(java.lang.String listType, boolean addPara)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `listType` (`java.lang.String`): The list type. Allowed values: #ORDERED_LIST, #UNORDERED_LIST,
- #VARIABLE_LIST, and #PROCEDURE
+   #VARIABLE_LIST, and #PROCEDURE
 - `addPara` (`boolean`)
+
+**Returns:** `java.lang.String`
 
 ### `getDescription()`
 
@@ -102,28 +102,26 @@
 
 ### `insertContent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode listNode, java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> selectedFragmentsInfos)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 - `listNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 - `selectedFragmentsInfos` (`java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`)
 
-### `getFragmentToInsert(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo selectedFragmentInfo)`
+**Returns:** `void`
 
-**Returns:** `java.lang.StringBuilder`
+### `getFragmentToInsert(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo selectedFragmentInfo)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
 - `selectedFragmentInfo` (`ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo`): The selected fragment info.
+
+**Returns:** `java.lang.StringBuilder`
 
 ### `getConversionElementsChecker()`
 
 **Returns:** `ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper`
 
 ### `computeFragment(ro.sync.ecss.extensions.api.node.AuthorNode node, boolean isBlock, int startSelection, int endSelection, ro.sync.ecss.extensions.api.AuthorDocumentController controller)`
-
-**Returns:** `java.lang.String`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The content node.
@@ -132,31 +130,33 @@
 - `endSelection` (`int`): The end of the selection.
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../api/AuthorDocumentController.md)): The document controller.
 
-### `getParentListType(ro.sync.ecss.extensions.api.node.AuthorNode nodeAtOffset)`
-
 **Returns:** `java.lang.String`
+
+### `getParentListType(ro.sync.ecss.extensions.api.node.AuthorNode nodeAtOffset)`
 
 **Parameters:**
 - `nodeAtOffset` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
-### `isListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+**Returns:** `boolean`
 
 ### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
-### `getListTypeDescription(java.lang.String listType)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getListTypeDescription(java.lang.String listType)`
 
 **Parameters:**
 - `listType` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 

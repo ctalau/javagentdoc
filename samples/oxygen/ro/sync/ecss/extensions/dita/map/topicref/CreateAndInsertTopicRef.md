@@ -48,86 +48,86 @@ The value is `insertPosition`.
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
 
-### `getFrameworkFolder(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `void`
 
-**Returns:** `java.io.File`
+### `getFrameworkFolder(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
 
-### `createTopicAndInsertReference(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments arguments)`
+**Returns:** `java.io.File`
 
-**Returns:** `void`
+### `createTopicAndInsertReference(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments arguments)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access of the map.
 - `arguments` (`ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments`): The arguments.
 
-### `createTopic(java.net.URL folderUrl, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+**Returns:** `void`
 
-**Returns:** `java.net.URL`
+### `createTopic(java.net.URL folderUrl, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `folderUrl` (`java.net.URL`): The URL where to create the topic.
 - `args` (`ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments`): The arguments.
 
-### `getContentForNewTopic(ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+**Returns:** `java.net.URL`
 
-**Returns:** `java.lang.String`
+### `getContentForNewTopic(ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `args` (`ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments`): The operation arguments.
 
-### `proposeFolderUrl(ro.sync.ecss.extensions.api.AuthorAccess access)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.net.URL`
+### `proposeFolderUrl(ro.sync.ecss.extensions.api.AuthorAccess access)`
 
 **Parameters:**
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
 
-### `getFolderOfMap(ro.sync.ecss.extensions.api.AuthorAccess access)`
-
 **Returns:** `java.net.URL`
+
+### `getFolderOfMap(ro.sync.ecss.extensions.api.AuthorAccess access)`
 
 **Parameters:**
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access for the map.
 
-### `getReferenceNodeOfInsertionPosition(ro.sync.ecss.extensions.api.AuthorAccess access)`
+**Returns:** `java.net.URL`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)
+### `getReferenceNodeOfInsertionPosition(ro.sync.ecss.extensions.api.AuthorAccess access)`
 
 **Parameters:**
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 
-### `getTopicUrl(java.net.URL folderUrl, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)
 
-**Returns:** `java.net.URL`
+### `getTopicUrl(java.net.URL folderUrl, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `folderUrl` (`java.net.URL`): The folder URL.
 - `args` (`ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments`): The arguments.
 
-### `getFolderUrl(java.net.URL editorLocation, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+**Returns:** `java.net.URL`
 
-**Returns:** `java.util.Optional<java.net.URL>`
+### `getFolderUrl(java.net.URL editorLocation, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor location.
 - `args` (`ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments`): The operation arguments.
 
-### `resolveRelativeUrl(java.net.URL baseUrl, java.lang.String relative)`
+**Returns:** `java.util.Optional<java.net.URL>`
 
-**Returns:** `java.net.URL`
+### `resolveRelativeUrl(java.net.URL baseUrl, java.lang.String relative)`
 
 **Parameters:**
 - `baseUrl` (`java.net.URL`): The base URL.
 - `relative` (`java.lang.String`): The relative URL.
+
+**Returns:** `java.net.URL`
 
 ### `getArguments()`
 

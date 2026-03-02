@@ -33,8 +33,6 @@ Each opened editor contains one or more pages.
 
 ### `addToolbarComponentsCustomizer(ro.sync.exml.workspace.api.standalone.ToolbarComponentsCustomizer componentsCustomizer)`
 
-**Returns:** `void`
-
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
  
 
@@ -48,27 +46,27 @@ Each opened editor contains one or more pages.
 **Parameters:**
 - `componentsCustomizer` ([`ro.sync.exml.workspace.api.standalone.ToolbarComponentsCustomizer`](./ToolbarComponentsCustomizer.md)): The tool bar components customizer.
 
-### `addViewComponentCustomizer(ro.sync.exml.workspace.api.standalone.ViewComponentCustomizer viewComponentCustomizer)`
-
 **Returns:** `void`
+
+### `addViewComponentCustomizer(ro.sync.exml.workspace.api.standalone.ViewComponentCustomizer viewComponentCustomizer)`
 
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
 
 **Parameters:**
 - `viewComponentCustomizer` ([`ro.sync.exml.workspace.api.standalone.ViewComponentCustomizer`](./ViewComponentCustomizer.md)): The views component customizer.
 
-### `addMenuBarCustomizer(ro.sync.exml.workspace.api.standalone.MenuBarCustomizer menuBarCustomizer)`
-
 **Returns:** `void`
+
+### `addMenuBarCustomizer(ro.sync.exml.workspace.api.standalone.MenuBarCustomizer menuBarCustomizer)`
 
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
 
 **Parameters:**
 - `menuBarCustomizer` ([`ro.sync.exml.workspace.api.standalone.MenuBarCustomizer`](./MenuBarCustomizer.md)): The menu bar components customizer.
 
-### `addTopicRefTargetInfoProvider(java.lang.String protocol, ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider targetInfoProvider)`
-
 **Returns:** `void`
+
+### `addTopicRefTargetInfoProvider(java.lang.String protocol, ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider targetInfoProvider)`
 
 This method can be used by a CMS implementor to take control over the way Oxygen is gathering information about each topic reference.
  The protocol is the protocol of the URL of the opened DITA Map.
@@ -80,9 +78,9 @@ This method can be used by a CMS implementor to take control over the way Oxygen
 - `protocol` (`java.lang.String`): The custom protocol of the opened DITA Map for which the plugin will compute the topic reference titles and auxiliary information.
 - `targetInfoProvider` ([`ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider`](ditamap/TopicRefTargetInfoProvider.md)): Gets called to resolve the title for the topic references in the DITA Map.
 
-### `showView(java.lang.String viewID, boolean requestFocus)`
-
 **Returns:** `void`
+
+### `showView(java.lang.String viewID, boolean requestFocus)`
 
 If the view is hidden, this method brings 
  it to front. If the view is in auto-hide state, this 
@@ -92,84 +90,84 @@ If the view is hidden, this method brings
 - `viewID` (`java.lang.String`): The view ID.
 - `requestFocus` (`boolean`): True to request the focus inside the view after show.
 
-### `hideView(java.lang.String viewID)`
-
 **Returns:** `void`
+
+### `hideView(java.lang.String viewID)`
 
 **Parameters:**
 - `viewID` (`java.lang.String`): The view ID.
+
+**Returns:** `void`
 
 ### `isViewShowing(java.lang.String viewID)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `viewID` (`java.lang.String`): The view ID.
+
+**Returns:** `boolean`
 
 ### `isViewAvailable(java.lang.String viewID)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `viewID` (`java.lang.String`): The view ID.
 
-### `hideToolbar(java.lang.String toolbarID)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `hideToolbar(java.lang.String toolbarID)`
 
 **Parameters:**
 - `toolbarID` (`java.lang.String`): The toolbar ID.
 
-### `showToolbar(java.lang.String toolbarID)`
-
 **Returns:** `void`
+
+### `showToolbar(java.lang.String toolbarID)`
 
 If the toolbar is hidden, this method shows it.
 
 **Parameters:**
 - `toolbarID` (`java.lang.String`): The toolbar ID. You can install a toolbar component customizer and see all available IDs.
 
-### `isToolbarShowing(java.lang.String toolbarID)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isToolbarShowing(java.lang.String toolbarID)`
 
 **Parameters:**
 - `toolbarID` (`java.lang.String`): The toolbar ID.
 
-### `getOxygenActionID(javax.swing.Action action)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getOxygenActionID(javax.swing.Action action)`
 
 If the action appears on a contextual menu but is not installed on a main menu it will pe prefixed with the constant "ACTION_WITH_NO_SHORTCUT/"
 
 **Parameters:**
 - `action` (`javax.swing.Action`): The action for which to retrieve the ID.
 
-### `getActionsProvider()`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.exml.workspace.api.standalone.actions.ActionsProvider`](actions/ActionsProvider.md)
+### `getActionsProvider()`
 
 It might be `null` when called in certain contexts (for example from the webapp application).
 
-### `addMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
+**Returns:** [`ro.sync.exml.workspace.api.standalone.actions.ActionsProvider`](actions/ActionsProvider.md)
 
-**Returns:** `void`
+### `addMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
 
 It will be notified to customize various menus and toolbars.
 
 **Parameters:**
 - `customizer` ([`ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer`](actions/MenusAndToolbarsContributorCustomizer.md)): The customizer which will be notified to customize menus and toolbars.
 
-### `removeMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
-
 **Returns:** `void`
+
+### `removeMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
 
 **Parameters:**
 - `customizer` ([`ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer`](actions/MenusAndToolbarsContributorCustomizer.md)): The customizer to remove.
 
-### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](../../../../ecss/extensions/api/component/EditorComponentProvider.md)
+### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage)`
 
 Such a component is a small XML editing container which can have
   all editing modes and can be added to a custom Swing-based dialog created
@@ -177,12 +175,12 @@ Such a component is a small XML editing container which can have
 
 **Parameters:**
 - `allowedPages` (`java.lang.String[]`): The pages which will be used in the editor. One of the constant fields: 
- EditorPageConstants#PAGE_TEXT, EditorPageConstants#PAGE_AUTHOR, EditorPageConstants#PAGE_GRID
+   EditorPageConstants#PAGE_TEXT, EditorPageConstants#PAGE_AUTHOR, EditorPageConstants#PAGE_GRID
 - `initialPage` (`java.lang.String`): The initial page in which the component will edit.
 
-### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage, java.lang.String contentType)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](../../../../ecss/extensions/api/component/EditorComponentProvider.md)
+
+### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage, java.lang.String contentType)`
 
 Such a component is a small editing container which can have
   all editing modes and can be added to a custom Swing-based dialog created
@@ -190,17 +188,17 @@ Such a component is a small editing container which can have
 
 **Parameters:**
 - `allowedPages` (`java.lang.String[]`): The pages which will be used in the editor. One of the constant fields: 
- EditorPageConstants#PAGE_TEXT, EditorPageConstants#PAGE_AUTHOR, EditorPageConstants#PAGE_GRID
+   EditorPageConstants#PAGE_TEXT, EditorPageConstants#PAGE_AUTHOR, EditorPageConstants#PAGE_GRID
 - `initialPage` (`java.lang.String`): The initial page in which the component will edit.
 - `contentType` (`java.lang.String`): The proposed content type for the component, `null` to fall back to XML content type.
+
+**Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](../../../../ecss/extensions/api/component/EditorComponentProvider.md)
 
 ### `createAuthorPreviewComponentProvider()`
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.author.AuthorPreviewComponentProvider`](../editor/page/author/AuthorPreviewComponentProvider.md)
 
 ### `getResourceBundle()`
-
-**Returns:** [`ro.sync.exml.workspace.api.PluginResourceBundle`](../PluginResourceBundle.md)
 
 It works as a map in which any message is accessed by a specific key.
  The translation file must be located in a directory named "i18n" (placed in the plugin's root directory).
@@ -237,6 +235,8 @@ It works as a map in which any message is accessed by a specific key.
 
 ```
 
+**Returns:** [`ro.sync.exml.workspace.api.PluginResourceBundle`](../PluginResourceBundle.md)
+
 ### `getProxyDetailsProvider()`
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.proxy.ProxyDetailsProvider`](proxy/ProxyDetailsProvider.md)
@@ -247,9 +247,9 @@ It works as a map in which any message is accessed by a specific key.
 
 ### `addPluginExtension(java.lang.String extensionType, ro.sync.exml.plugin.PluginExtension pluginExtension)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `extensionType` (`java.lang.String`): The type of the plugin extension; can be a constant from {@linkro.sync.exml.plugin.PluginDescriptor }.
 - `pluginExtension` ([`ro.sync.exml.plugin.PluginExtension`](../../../plugin/PluginExtension.md)): The plugin extension implementation to be added.
+
+**Returns:** `void`
 

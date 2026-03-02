@@ -89,17 +89,17 @@ The value is 1 << 5.
 
 ### `isCtrlPressed(int modifiers)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `modifiers` (`int`): The modifiers
 
-### `isMetaPressed(int modifiers)`
-
 **Returns:** `boolean`
+
+### `isMetaPressed(int modifiers)`
 
 **Parameters:**
 - `modifiers` (`int`): The modifiers.
+
+**Returns:** `boolean`
 
 ### `isCommandPressed()`
 
@@ -107,8 +107,8 @@ The value is 1 << 5.
 
 ### `isCommandPressed(int modifiers)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `modifiers` (`int`): The modifiers
+
+**Returns:** `boolean`
 

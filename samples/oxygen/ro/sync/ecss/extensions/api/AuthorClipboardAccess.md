@@ -10,13 +10,13 @@
 
 ### `getAuthorObjectFromClipboard()`
 
-**Returns:** [`ro.sync.ecss.component.AuthorClipboardObject`](../../component/AuthorClipboardObject.md)
-
 Not implemented for the *WebAuthor* distribution.
+
+**Returns:** [`ro.sync.ecss.component.AuthorClipboardObject`](../../component/AuthorClipboardObject.md)
 
 ### `getTextFromClipboard()`
 
-**Returns:** `java.lang.String`
-
 Not implemented for the *WebAuthor* distribution.
+
+**Returns:** `java.lang.String`
 

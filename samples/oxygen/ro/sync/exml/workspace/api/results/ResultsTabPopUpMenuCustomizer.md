@@ -10,8 +10,6 @@
 
 ### `customizePopUpMenu(java.lang.Object popUp)`
 
-**Returns:** `void`
-
 If everything is removed then the menu will not be shown.
 
  For the stand-alone implementation the object is a `JPopupMenu`.
@@ -20,4 +18,6 @@ If everything is removed then the menu will not be shown.
 
 **Parameters:**
 - `popUp` (`java.lang.Object`): The pop-up menu.
+
+**Returns:** `void`
 

@@ -22,10 +22,10 @@
 
 ### `fireEditingStopped(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Editing event.
+
+**Returns:** `void`
 
 ### `fireEditingCanceled()`
 
@@ -45,46 +45,46 @@
 
 ### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
+
+**Returns:** `void`
 
 ### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
-### `fireCommitValue(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
-
 **Returns:** `void`
+
+### `fireCommitValue(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
 
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Editing event.
 
-### `getBoolean(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.lang.String key)`
+**Returns:** `void`
 
-**Returns:** `java.lang.Boolean`
+### `getBoolean(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.lang.String key)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context.
 - `key` (`java.lang.String`): The property key.
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+**Returns:** `java.lang.Boolean`
 
-**Returns:** `void`
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
-### `insertContent(java.lang.String content)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `insertContent(java.lang.String content)`
 
 **Parameters:**
 - `content` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `commitValue()`
 

@@ -40,17 +40,17 @@
 
 ### `setDocument(javax.swing.text.Document arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.text.Document`)
 
-### `setFrame(java.awt.Frame arg0)`
-
 **Returns:** `void`
+
+### `setFrame(java.awt.Frame arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)
+
+**Returns:** `void`
 
 ### `getDocument()`
 

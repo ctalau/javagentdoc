@@ -24,84 +24,84 @@
 
 ### `setUserContext(ro.sync.ecss.extensions.api.webapp.plugin.UserContext arg0, java.net.URL arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](./UserContext.md))
 - `arg1` (`java.net.URL`)
 
-### `setContextId(java.net.URL arg0, java.lang.String arg1)`
-
 **Returns:** `void`
+
+### `setContextId(java.net.URL arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.lang.String`)
 
-### `getContextId(ro.sync.ecss.extensions.api.webapp.plugin.UserContext arg0)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getContextId(ro.sync.ecss.extensions.api.webapp.plugin.UserContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](./UserContext.md))
 
-### `stripUrlContextId(java.net.URL arg0)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.net.URL`
+### `stripUrlContextId(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `java.net.URL`
 
 ### `stripUrl(java.net.URL arg0)`
 
-**Returns:** `java.net.URL`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `java.net.URL`
 
 ### `getUrlContextId(java.net.URL arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
-### `openConnection(java.net.URL arg0, java.net.Proxy arg1)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.net.URLConnection`
+### `openConnection(java.net.URL arg0, java.net.Proxy arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.net.Proxy`)
 
-### `openConnection(java.net.URL arg0)`
-
 **Returns:** `java.net.URLConnection`
+
+### `openConnection(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
-### `openConnectionInContext(java.lang.String arg0, java.net.URL arg1, java.net.Proxy arg2)`
-
 **Returns:** `java.net.URLConnection`
+
+### `openConnectionInContext(java.lang.String arg0, java.net.URL arg1, java.net.Proxy arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.net.URL`)
 - `arg2` (`java.net.Proxy`)
 
-### `hashCode(java.net.URL arg0)`
+**Returns:** `java.net.URLConnection`
 
-**Returns:** `int`
+### `hashCode(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
-### `hostsEqual(java.net.URL arg0, java.net.URL arg1)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `hostsEqual(java.net.URL arg0, java.net.URL arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.net.URL`)
+
+**Returns:** `boolean`
 

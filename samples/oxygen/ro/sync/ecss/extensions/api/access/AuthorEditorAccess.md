@@ -14,25 +14,25 @@ It also provides methods to save the file, close, etc.
 
 ### `getLocationOnScreen(int x, int y)`
 
-**Returns:** `int[]`
-
 **Parameters:**
 - `x` (`int`): The "x" coordinate relative to the viewport origin.
 - `y` (`int`): The "y" coordinate relative to the viewport origin.
 
-### `modelToView(int offset)`
-
 **Returns:** `int[]`
+
+### `modelToView(int offset)`
 
 **Parameters:**
 - `offset` (`int`): The document offset to get the corresponding caret shape for.
 
-### `getEditingContext()`
+**Returns:** `int[]`
 
-**Returns:** [`ro.sync.ecss.extensions.api.access.EditingSessionContext`](./EditingSessionContext.md)
+### `getEditingContext()`
 
 An editing session corresponds to an editor instance, contains custom 
  attributes that can be set from the API.
+
+**Returns:** [`ro.sync.ecss.extensions.api.access.EditingSessionContext`](./EditingSessionContext.md)
 
 ### `getExtensionsBundle()`
 

@@ -24,16 +24,16 @@ A custom implementation to handle editing properties for an author node. For exa
 
 ### `editProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
-### `canEditProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `canEditProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
+
+**Returns:** `boolean`
 

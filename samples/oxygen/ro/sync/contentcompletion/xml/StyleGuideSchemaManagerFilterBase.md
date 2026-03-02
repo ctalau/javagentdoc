@@ -37,74 +37,74 @@
 
 ### `filterElements(java.util.List<ro.sync.contentcompletion.xml.CIElement> arg0, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext arg1)`
 
-**Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIElement>`)
 - `arg1` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](./WhatElementsCanGoHereContext.md))
 
-### `getMappingFileLocation(ro.sync.contentcompletion.xml.Context arg0)`
+**Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-**Returns:** `java.lang.String`
+### `getMappingFileLocation(ro.sync.contentcompletion.xml.Context arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.Context`](./Context.md))
 
-### `mergeExistingAnnotation(java.lang.String arg0, ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation arg1)`
-
 **Returns:** `java.lang.String`
+
+### `mergeExistingAnnotation(java.lang.String arg0, ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation`)
 
-### `filterAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0, ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext arg1)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
+### `filterAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0, ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
 - `arg1` ([`ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext`](./WhatAttributesCanGoHereContext.md))
 
-### `getElementDescription(ro.sync.contentcompletion.xml.CIElement arg0, ro.sync.contentcompletion.xml.Context arg1)`
+**Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-**Returns:** [`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)
+### `getElementDescription(ro.sync.contentcompletion.xml.CIElement arg0, ro.sync.contentcompletion.xml.Context arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md))
 - `arg1` ([`ro.sync.contentcompletion.xml.Context`](./Context.md))
 
-### `getAttributeDescription(ro.sync.contentcompletion.xml.CIAttribute arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1)`
+**Returns:** [`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)
 
-**Returns:** [`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)
+### `getAttributeDescription(ro.sync.contentcompletion.xml.CIAttribute arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md))
 - `arg1` ([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](./WhatPossibleValuesHasAttributeContext.md))
 
-### `getHTMLDocumentation(java.lang.String arg0, java.lang.String arg1)`
+**Returns:** [`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)
 
-**Returns:** `ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation`
+### `getHTMLDocumentation(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `getDocumentation(java.lang.String arg0)`
+**Returns:** `ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation`
 
-**Returns:** `java.util.Map<java.lang.String,ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation>`
+### `getDocumentation(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `getHTMLDocumentationForAttribute(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+**Returns:** `java.util.Map<java.lang.String,ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation>`
 
-**Returns:** `ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation`
+### `getHTMLDocumentationForAttribute(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.String`)
+
+**Returns:** `ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation`
 
 ### `invalidate()`
 
@@ -112,10 +112,10 @@
 
 ### `parseStyleGuideConfigurationMap(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `shouldRedirectThroughOxygenWebSite()`
 

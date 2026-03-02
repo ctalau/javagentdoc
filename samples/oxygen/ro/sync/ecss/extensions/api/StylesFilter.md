@@ -138,20 +138,20 @@ If your StylesFilter implementation also implements the AuthorExtensionStateList
 
 ### `filter(ro.sync.ecss.css.Styles styles, ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
 
-**Returns:** `ro.sync.ecss.css.Styles`
-
 A common use-case is to change only some of the CSS properties from the original styles and keep the others.
  To this end, one should use Styles#setProperty(int, Object) on the original styles and return them.
 
 **Parameters:**
 - `styles` (`ro.sync.ecss.css.Styles`): The original CSS styles associated with the specified 
- `authorNode`.  This object should only be used for the lifetime of 
- the method. It shouldn't be kept in a cache.
+   `authorNode`.  This object should only be used for the lifetime of 
+   the method. It shouldn't be kept in a cache.
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node to filter the CSS style for. If this node points to a processing
-                    instruction, a CDATA or a comment then the real node can be obtained by
-                    casting this object to ArtificialNode 
-                    and using ArtificialNode#getWrappedNode(). The node can be part of 
-                    the document object model, or a pseudo element (A :before or an :after). To obtain the 
-                    pseudo level (distance of the pseudo element from its parent), 
-                    use Styles#getPseudoLevel().
+                      instruction, a CDATA or a comment then the real node can be obtained by
+                      casting this object to ArtificialNode 
+                      and using ArtificialNode#getWrappedNode(). The node can be part of 
+                      the document object model, or a pseudo element (A :before or an :after). To obtain the 
+                      pseudo level (distance of the pseudo element from its parent), 
+                      use Styles#getPseudoLevel().
+
+**Returns:** `ro.sync.ecss.css.Styles`
 

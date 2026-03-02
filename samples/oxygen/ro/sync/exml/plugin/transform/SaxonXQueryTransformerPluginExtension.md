@@ -12,15 +12,15 @@
 
 ### `getXQueryTransformer(javax.xml.transform.Source source, ro.sync.exml.editor.xmleditor.transform.advanced.XQuerySaxonHEAdvancedOptions advOptions, javax.xml.transform.URIResolver uriResolver, boolean validationOnly)`
 
-**Returns:** `javax.xml.transform.Transformer`
-
 **Parameters:**
 - `source` (`javax.xml.transform.Source`): The XQuery source.
 - `advOptions` (`ro.sync.exml.editor.xmleditor.transform.advanced.XQuerySaxonHEAdvancedOptions`): Advanced options. Can be XQuerySaxonHEAdvancedOptions, XQuerySaxonPEAdvancedOptions
- or XQuerySaxonEEAdvancedOptions.
+   or XQuerySaxonEEAdvancedOptions.
 - `uriResolver` (`javax.xml.transform.URIResolver`): The URI resolver.
 - `validationOnly` (`boolean`): `true` if the transformer is used only to compile the query, to see
- if there are any errors.
+   if there are any errors.
+
+**Returns:** `javax.xml.transform.Transformer`
 
 ### `getEdition()`
 

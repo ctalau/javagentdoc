@@ -20,16 +20,16 @@ For example when a user
 
 ### `editProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): Author node to edit the properties for.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Author access.
 
-### `canEditProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `canEditProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): Author node to edit the properties for.
+
+**Returns:** `boolean`
 

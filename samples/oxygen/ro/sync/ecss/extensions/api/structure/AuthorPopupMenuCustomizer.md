@@ -10,8 +10,6 @@
 
 ### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 If everything is removed then the menu will not be shown.
 
  For the standalone implementation the object is a *JPopupMenu*.
@@ -21,4 +19,6 @@ If everything is removed then the menu will not be shown.
 **Parameters:**
 - `popUp` (`java.lang.Object`): The pop-up Menu.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): Access class to the author functions.
+
+**Returns:** `void`
 

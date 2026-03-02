@@ -25,106 +25,106 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 ### `isMovableListItem(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode candidate)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 - `candidate` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
-### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `boolean`
+
+### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
-### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
-### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode node1, ro.sync.ecss.extensions.api.node.AuthorNode node2)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode node1, ro.sync.ecss.extensions.api.node.AuthorNode node2)`
 
 **Parameters:**
 - `node1` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 - `node2` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
-### `getListItemAncestorToSplit(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess access)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
+### `getListItemAncestorToSplit(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess access)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
-### `matchesClass(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String classFragment)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `matchesClass(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String classFragment)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element.
 - `classFragment` (`java.lang.String`): The DITA class fragment.
 
-### `handleEvent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType eventType)`
-
 **Returns:** `boolean`
+
+### `handleEvent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType eventType)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 - `eventType` (`ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType`)
 
-### `handleEnterAtTableEnd(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
-
 **Returns:** `boolean`
+
+### `handleEnterAtTableEnd(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): the author access.
 
-### `handleEnterInBeforeSectionTitle(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
-
 **Returns:** `boolean`
+
+### `handleEnterInBeforeSectionTitle(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
+
+**Returns:** `boolean`
 
 ### `isCaretBeforeSectionTitle(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
+
+**Returns:** `boolean`
 
 ### `getSectionBeforeTitle(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
 
-### `canHandleEvent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorActionEventDetails eventDetails)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `canHandleEvent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorActionEventDetails eventDetails)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 - `eventDetails` ([`ro.sync.ecss.extensions.api.AuthorActionEventDetails`](./AuthorActionEventDetails.md))
 
-### `shouldHandleEnter(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean showCCWindow)`
-
 **Returns:** `boolean`
+
+### `shouldHandleEnter(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean showCCWindow)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): the author access.
 - `showCCWindow` (`boolean`): whether the CC window will be shown.
 
-### `isCaretAtTableEnd(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
-
 **Returns:** `boolean`
+
+### `isCaretAtTableEnd(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): the author access.
+
+**Returns:** `boolean`
 

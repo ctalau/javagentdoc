@@ -31,16 +31,16 @@ The XInclude references over XQuery are not transparent, by default.
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access of the author document.
 - `transparentXqueryUpdateReferences` (`boolean`): `true` to make xinclude nodes
- transparent in the document model.
+   transparent in the document model.
 
 ## Methods
 
 ### `setSystemId(java.lang.String systemId)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `systemId` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getSystemId()`
 

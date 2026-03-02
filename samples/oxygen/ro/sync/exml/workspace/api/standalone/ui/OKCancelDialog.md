@@ -70,10 +70,10 @@
 
 ### `detectParentFrame(java.awt.Window arg0)`
 
-**Returns:** `java.awt.Window`
-
 **Parameters:**
 - `arg0` (`java.awt.Window`)
+
+**Returns:** `java.awt.Window`
 
 ### `doOK()`
 
@@ -93,17 +93,17 @@
 
 ### `setOkButtonText(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setCancelButtonText(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getContentPane()`
 
@@ -111,11 +111,11 @@
 
 ### `setButtonText(javax.swing.JButton arg0, java.lang.String arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.JButton`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getOkButton()`
 
@@ -127,10 +127,10 @@
 
 ### `setVisible(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setDialogLocation()`
 
@@ -138,10 +138,10 @@
 
 ### `getHiDPIAwareDimension(java.awt.Dimension arg0)`
 
-**Returns:** `java.awt.Dimension`
-
 **Parameters:**
 - `arg0` (`java.awt.Dimension`)
+
+**Returns:** `java.awt.Dimension`
 
 ### `getHelpPageID()`
 

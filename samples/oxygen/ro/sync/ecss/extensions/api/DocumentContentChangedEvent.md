@@ -50,9 +50,9 @@
 
 ### `getType()`
 
-**Returns:** `int`
-
 It can be one of the constants:
  #INSERT_TEXT_EVENT, #INSERT_FRAGMENT_EVENT, #INSERT_NODE_EVENT
  #DELETE_TEXT_EVENT, #DELETE_FRAGMENT_EVENT
+
+**Returns:** `int`
 

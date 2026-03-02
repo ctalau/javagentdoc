@@ -39,10 +39,10 @@ can contain editor variables.
 
 ### `getValue(java.lang.String property)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `property` (`java.lang.String`): The property to get the value.
+
+**Returns:** `java.lang.Object`
 
 ### `performAction()`
 
@@ -50,8 +50,8 @@ can contain editor variables.
 
 ### `performAction(int imposedActionOffset)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `imposedActionOffset` (`int`): The imposed offset where the action should take place.
+
+**Returns:** `void`
 

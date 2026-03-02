@@ -29,7 +29,7 @@ If there is no selection the list contains a single entry with [caret offset, ca
 **Parameters:**
 - `offset` (`int`): The absolute caret position inside the Author page.
 - `selectionIntervals` (`java.util.List<int[]>`): The selection [start offset, end offset] intervals list. 
- If there is no selection the list contains a single entry with [caret offset, caret offset].
+   If there is no selection the list contains a single entry with [caret offset, caret offset].
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node holding the caret offset.
 
 ## Methods
@@ -52,9 +52,9 @@ If there is no selection the list contains a single entry with [caret offset, ca
 
 ### `getSelectionIntervals()`
 
-**Returns:** `java.util.List<int[]>`
-
 If there is no selection the list contains a single [caret offset, caret offset] entry.
+
+**Returns:** `java.util.List<int[]>`
 
 ### `toString()`
 

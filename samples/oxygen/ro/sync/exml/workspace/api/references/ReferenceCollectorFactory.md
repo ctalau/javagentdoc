@@ -8,15 +8,15 @@
 
 ### `createCollector(java.net.URL arg0)`
 
-**Returns:** [`ro.sync.exml.workspace.api.references.ReferenceCollector`](./ReferenceCollector.md)
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** [`ro.sync.exml.workspace.api.references.ReferenceCollector`](./ReferenceCollector.md)
 
 ### `getCollector(java.net.URL arg0)`
 
-**Returns:** [`ro.sync.exml.workspace.api.references.ReferenceCollector`](./ReferenceCollector.md)
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** [`ro.sync.exml.workspace.api.references.ReferenceCollector`](./ReferenceCollector.md)
 

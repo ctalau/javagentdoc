@@ -48,10 +48,10 @@
 
 ### `setElementStack(java.util.Stack<ro.sync.contentcompletion.xml.ContextElement> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.Stack<ro.sync.contentcompletion.xml.ContextElement>`)
+
+**Returns:** `void`
 
 ### `getElementStack()`
 
@@ -59,10 +59,10 @@
 
 ### `setPrefixNamespaceMapping(ro.sync.xml.ProxyNamespaceMapping arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.xml.ProxyNamespaceMapping`)
+
+**Returns:** `void`
 
 ### `getPrefixNamespaceMapping()`
 
@@ -74,10 +74,10 @@
 
 ### `setPreviousSiblingElements(java.util.List<ro.sync.contentcompletion.xml.ContextElement> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.ContextElement>`)
+
+**Returns:** `void`
 
 ### `getPreviousSiblingElements()`
 
@@ -85,10 +85,10 @@
 
 ### `setNextSiblingElements(java.util.List<ro.sync.contentcompletion.xml.ContextElement> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.ContextElement>`)
+
+**Returns:** `void`
 
 ### `getNextSiblingElements()`
 
@@ -96,42 +96,42 @@
 
 ### `executeXPath(java.lang.String arg0, java.lang.String[] arg1)`
 
-**Returns:** `java.util.List<java.lang.String>`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String[]`)
 
-### `executeXPath(java.lang.String arg0, java.lang.String[] arg1, boolean arg2)`
+**Returns:** `java.util.List<java.lang.String>`
 
-**Returns:** `java.util.List`
+### `executeXPath(java.lang.String arg0, java.lang.String[] arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String[]`)
 - `arg2` (`boolean`)
 
-### `setXMLReader(org.xml.sax.XMLReader arg0)`
+**Returns:** `java.util.List`
 
-**Returns:** `void`
+### `setXMLReader(org.xml.sax.XMLReader arg0)`
 
 **Parameters:**
 - `arg0` (`org.xml.sax.XMLReader`)
 
-### `setAdditionalContextInformationProvider(ro.sync.contentcompletion.xml.o arg0)`
-
 **Returns:** `void`
+
+### `setAdditionalContextInformationProvider(ro.sync.contentcompletion.xml.o arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.contentcompletion.xml.o`)
 
-### `pushContextElement(ro.sync.contentcompletion.xml.ContextElement arg0, java.util.List<ro.sync.contentcompletion.xml.ContextElement> arg1)`
-
 **Returns:** `void`
+
+### `pushContextElement(ro.sync.contentcompletion.xml.ContextElement arg0, java.util.List<ro.sync.contentcompletion.xml.ContextElement> arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.ContextElement`](./ContextElement.md))
 - `arg1` (`java.util.List<ro.sync.contentcompletion.xml.ContextElement>`)
+
+**Returns:** `void`
 
 ### `clone()`
 
@@ -139,10 +139,10 @@
 
 ### `setIdValuesList(java.util.List<ro.sync.xml.parser.IDValue> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.xml.parser.IDValue>`)
+
+**Returns:** `void`
 
 ### `getIdValuesList()`
 
@@ -158,25 +158,25 @@
 
 ### `getDefaultAttributeValue(ro.sync.contentcompletion.xml.ContextElement arg0, java.lang.String arg1)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.ContextElement`](./ContextElement.md))
 - `arg1` (`java.lang.String`)
 
-### `getProxyNamespaceMapping(ro.sync.contentcompletion.xml.Context arg0)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.String[]`
+### `getProxyNamespaceMapping(ro.sync.contentcompletion.xml.Context arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.Context`](./Context.md))
 
-### `equals(java.lang.Object arg0)`
+**Returns:** `java.lang.String[]`
 
-**Returns:** `boolean`
+### `equals(java.lang.Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `toString()`
 

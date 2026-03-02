@@ -42,17 +42,17 @@
 
 ### `setValidationEnable(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setSchematronPath(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `setSchematronPath(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `checkValid()`
 

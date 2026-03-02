@@ -18,8 +18,8 @@
 
 ### `getStyleGuideInformation(java.lang.String arg0)`
 
-**Returns:** `java.util.Map<java.lang.String,ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation>`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.util.Map<java.lang.String,ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation>`
 

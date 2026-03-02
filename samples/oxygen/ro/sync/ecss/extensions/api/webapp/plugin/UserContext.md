@@ -40,10 +40,10 @@
 
 ### `isServiceAccount()`
 
-**Returns:** `boolean`
-
 For example, in a concurrent editing session, users join and leave. 
  In order to have a robust way to save changes, a plugin may 
  choose to use a dedicated set of credentials that do not belong to any 
  of those users. Such credentials belong to a "service account".
+
+**Returns:** `boolean`
 

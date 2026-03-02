@@ -16,8 +16,6 @@
 
 ### `customizeToolbar(ro.sync.exml.workspace.api.standalone.ToolbarInfo toolbarInfo)`
 
-**Returns:** `void`
-
 **NOTICE** You will also receive notification for the Author extension toolbars (which are 
  dynamically constructed based on the document type of the current selected XML file).
  The notifications will be received before the toolbars are constructed after an XML editor which is opened in the Author page was selected.  
@@ -37,8 +35,10 @@
 
 **Parameters:**
 - `toolbarInfo` ([`ro.sync.exml.workspace.api.standalone.ToolbarInfo`](./ToolbarInfo.md)): Information about the toolbar (id, default components to add, title).
- The toolbar ID is either the ID of an existing Oxygen toolbar or the reserved **CUSTOM** toolbar.
- All Oxygen toolbars IDs are found in ro.sync.exml.MainFrameComponentsConstants and begin with TOOLBAR_ prefix. 
- 
- You can set new components in the toolbar and change its title.
+   The toolbar ID is either the ID of an existing Oxygen toolbar or the reserved **CUSTOM** toolbar.
+   All Oxygen toolbars IDs are found in ro.sync.exml.MainFrameComponentsConstants and begin with TOOLBAR_ prefix. 
+   
+   You can set new components in the toolbar and change its title.
+
+**Returns:** `void`
 

@@ -101,86 +101,84 @@ So when they change we must also refresh.
 
 ### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): Author node.
 
-### `resolveTopicRefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.node.AttrValue classValue)`
+**Returns:** `java.lang.String`
 
-**Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
+### `resolveTopicRefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.node.AttrValue classValue)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element that contains the topicref reference.
 - `classValue` ([`ro.sync.ecss.extensions.api.node.AttrValue`](../../api/node/AttrValue.md)): The value of the class attribute
 
-### `extractNavTitle(ro.sync.ecss.extensions.api.node.AuthorElement element)`
-
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
+
+### `extractNavTitle(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The topicref/topichead element.
 
-### `findNavtitleInTopicmetaChildren(ro.sync.ecss.extensions.api.node.AuthorElement topicmeta)`
-
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
+
+### `findNavtitleInTopicmetaChildren(ro.sync.ecss.extensions.api.node.AuthorElement topicmeta)`
 
 **Parameters:**
 - `topicmeta` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The topicmeta element
 
-### `resolveHrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String hrefValue)`
-
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
+
+### `resolveHrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String hrefValue)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element that contains the href reference.
 - `hrefValue` (`java.lang.String`): The href reference value
 
-### `resolveKeyrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String keyref, java.lang.String classValue)`
-
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
+
+### `resolveKeyrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String keyref, java.lang.String classValue)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element that contains the keyref reference.
 - `keyref` (`java.lang.String`): The keyref reference value
 - `classValue` (`java.lang.String`): The value of the class attribute
 
-### `resolveKeyRefToKeydefMetadata(java.lang.String classValue, ro.sync.ecss.dita.reference.keyref.KeyInfo keyInfo)`
-
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
+
+### `resolveKeyRefToKeydefMetadata(java.lang.String classValue, ro.sync.ecss.dita.reference.keyref.KeyInfo keyInfo)`
 
 **Parameters:**
 - `classValue` (`java.lang.String`): Class value.
 - `keyInfo` (`ro.sync.ecss.dita.reference.keyref.KeyInfo`): Key info.
 
-### `getLocationForDisplay(java.lang.String absoluteLocation, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-**Returns:** `java.lang.String`
+### `getLocationForDisplay(java.lang.String absoluteLocation, ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `absoluteLocation` (`java.lang.String`): The absolute location.
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The context node.
 
-### `getFileNotFoundInfo(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String hrefValue, java.io.FileNotFoundException e)`
+**Returns:** `java.lang.String`
 
-**Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
+### `getFileNotFoundInfo(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String hrefValue, java.io.FileNotFoundException e)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node being resolved.
 - `hrefValue` (`java.lang.String`): The href to resolve.
 - `e` (`java.io.FileNotFoundException`): The exception.
 
-### `computeCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String hrefValue)`
+**Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-**Returns:** `java.lang.String`
+### `computeCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String hrefValue)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The current node
 - `hrefValue` (`java.lang.String`): Href value
 
-### `getParentTopicID(ro.sync.ecss.extensions.api.node.AuthorNode element)`
-
 **Returns:** `java.lang.String`
+
+### `getParentTopicID(ro.sync.ecss.extensions.api.node.AuthorNode element)`
 
 If the element 
  is a topic element, this method will return the given element's ID. If 
@@ -190,40 +188,42 @@ If the element
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element for which should be computed the parent topic ID.
 
-### `computeKeyScopesHash(ro.sync.ecss.extensions.api.node.AuthorNode elem)`
-
 **Returns:** `java.lang.String`
+
+### `computeKeyScopesHash(ro.sync.ecss.extensions.api.node.AuthorNode elem)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element.
 
-### `isLocalDITAReference(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isLocalDITAReference(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Reference element.
+
+**Returns:** `boolean`
 
 ### `isLocalReference(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Reference element.
 
-### `update(java.util.Set<java.lang.String> modifiedURLs)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `update(java.util.Set<java.lang.String> modifiedURLs)`
 
 **Parameters:**
 - `modifiedURLs` (`java.util.Set<java.lang.String>`): The URLs that are modified.
 
-### `isHrefElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isHrefElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `refresh()`
 
@@ -231,19 +231,19 @@ If the element
 
 ### `refreshNodeReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
-### `buildKeyrefCacheKey(ro.sync.ecss.extensions.api.node.AuthorElement node, java.lang.String keyName, java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo> keys)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `buildKeyrefCacheKey(ro.sync.ecss.extensions.api.node.AuthorElement node, java.lang.String keyName, java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo> keys)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The node on which the keyRef appears.
 - `keyName` (`java.lang.String`): The name of the keyRef.
 - `keys` (`java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo>`): The keys map.
+
+**Returns:** `java.lang.String`
 
 ### `clearReferencesCache()`
 
@@ -251,15 +251,15 @@ If the element
 
 ### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+
+**Returns:** `void`
 
 ### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+
+**Returns:** `void`
 

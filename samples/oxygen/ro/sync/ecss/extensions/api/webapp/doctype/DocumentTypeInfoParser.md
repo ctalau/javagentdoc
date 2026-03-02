@@ -12,15 +12,15 @@
 
 ### `parseFrameworkFile(java.io.File arg0)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfo`](./DocumentTypeInfo.md)
-
 **Parameters:**
 - `arg0` (`java.io.File`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfo`](./DocumentTypeInfo.md)
 
 ### `parseExfFile(java.io.File arg0)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfo`](./DocumentTypeInfo.md)
-
 **Parameters:**
 - `arg0` (`java.io.File`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfo`](./DocumentTypeInfo.md)
 

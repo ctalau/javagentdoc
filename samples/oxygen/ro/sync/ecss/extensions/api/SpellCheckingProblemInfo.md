@@ -101,9 +101,9 @@
 
 ### `getSuggestions()`
 
-**Returns:** `java.util.List<java.lang.String>`
-
 Custom spell checking engines may provide suggestions on detection.
+
+**Returns:** `java.util.List<java.lang.String>`
 
 ### `getErrorMessage()`
 

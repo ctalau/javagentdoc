@@ -55,17 +55,17 @@
 
 ### `addGroup(java.lang.String arg0, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`)
 
-### `selectionChanged(ro.sync.ecss.extensions.commons.table.properties.TableProperty arg0, java.lang.String arg1)`
-
 **Returns:** `void`
+
+### `selectionChanged(ro.sync.ecss.extensions.commons.table.properties.TableProperty arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md))
 - `arg1` (`java.lang.String`)
+
+**Returns:** `void`
 

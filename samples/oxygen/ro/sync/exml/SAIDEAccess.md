@@ -70,18 +70,18 @@
 
 ### `setTableOpener(ro.sync.db.h arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.db.h`)
 
-### `updateResults(java.lang.String arg0, ro.sync.db.fb arg1)`
-
 **Returns:** `void`
+
+### `updateResults(java.lang.String arg0, ro.sync.db.fb arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`ro.sync.db.fb`)
+
+**Returns:** `void`
 
 ### `getPreferencePagePresenter()`
 
@@ -89,78 +89,78 @@
 
 ### `createTransformationHelper(ro.sync.exml.editor.xmleditor.c arg0, java.lang.String arg1)`
 
-**Returns:** `ro.sync.exml.editor.xmleditor.transform.jb`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.xmleditor.c`)
 - `arg1` (`java.lang.String`)
 
-### `showDockableView(java.lang.String arg0, boolean arg1)`
+**Returns:** `ro.sync.exml.editor.xmleditor.transform.jb`
 
-**Returns:** `void`
+### `showDockableView(java.lang.String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 
-### `setDockingManager(ro.sync.exml.docking.f arg0)`
-
 **Returns:** `void`
+
+### `setDockingManager(ro.sync.exml.docking.f arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.docking.f`)
 
-### `showHierarchyOrDependences(java.lang.String arg0, boolean arg1, java.lang.String arg2)`
-
 **Returns:** `void`
+
+### `showHierarchyOrDependences(java.lang.String arg0, boolean arg1, java.lang.String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 - `arg2` (`java.lang.String`)
 
-### `setHierarchyPanel(ro.sync.exml.modules.hierarchy.l arg0)`
-
 **Returns:** `void`
+
+### `setHierarchyPanel(ro.sync.exml.modules.hierarchy.l arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.modules.hierarchy.l`)
 
-### `showComponentDependencies(ro.sync.exml.editor.hb.g arg0, ro.sync.exml.modules.b.i[] arg1)`
-
 **Returns:** `void`
+
+### `showComponentDependencies(ro.sync.exml.editor.hb.g arg0, ro.sync.exml.modules.b.i[] arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.hb.g`)
 - `arg1` (`ro.sync.exml.modules.b.i[]`)
 
-### `setComponentDependenciesPanel(ro.sync.exml.editor.finders.b.h arg0)`
-
 **Returns:** `void`
+
+### `setComponentDependenciesPanel(ro.sync.exml.editor.finders.b.h arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.finders.b.h`)
 
-### `setFindResourcePanel(ro.sync.k.b.b arg0)`
-
 **Returns:** `void`
+
+### `setFindResourcePanel(ro.sync.k.b.b arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.k.b.b`)
 
-### `setWatchPanel(ro.sync.f.f.nb arg0)`
-
 **Returns:** `void`
+
+### `setWatchPanel(ro.sync.f.f.nb arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.f.f.nb`)
 
-### `addWatchExpression(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `addWatchExpression(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getDocumentResourceFactory()`
 
@@ -172,10 +172,10 @@
 
 ### `initializeForTests(ro.sync.exml.SAIDEAccess arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.SAIDEAccess`](./SAIDEAccess.md))
+
+**Returns:** `void`
 
 ### `getWorkspaceResourceProvider()`
 
@@ -187,17 +187,17 @@
 
 ### `setDiffFilePresenter(ro.sync.diff.ui.t arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.diff.ui.t`)
 
-### `setWorkspaceController(ro.sync.exml.project.o arg0)`
-
 **Returns:** `void`
+
+### `setWorkspaceController(ro.sync.exml.project.o arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.project.o`)
+
+**Returns:** `void`
 
 ### `getWorkspaceController()`
 
@@ -213,10 +213,10 @@
 
 ### `doBrowseRemote(java.net.URL arg0)`
 
-**Returns:** `java.net.URL`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `java.net.URL`
 
 ### `doBrowseForResource()`
 
@@ -232,72 +232,72 @@
 
 ### `refreshFilesInProject(ro.sync.exml.project.wb arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.project.wb`)
 
-### `refreshDMMResourcesWithSysIDs(java.util.List<java.lang.String> arg0)`
-
 **Returns:** `void`
+
+### `refreshDMMResourcesWithSysIDs(java.util.List<java.lang.String> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
 
-### `bd(java.util.List<java.lang.String> arg0, ro.sync.exml.editor.rc arg1)`
-
 **Returns:** `void`
+
+### `bd(java.util.List<java.lang.String> arg0, ro.sync.exml.editor.rc arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
 - `arg1` (`ro.sync.exml.editor.rc`)
 
-### `ad(ro.sync.ecss.dita.mapeditor.c arg0)`
-
 **Returns:** `void`
+
+### `ad(ro.sync.ecss.dita.mapeditor.c arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.mapeditor.c`)
 
-### `doBrowseRemote(java.net.URL arg0, boolean arg1)`
+**Returns:** `void`
 
-**Returns:** `java.net.URL`
+### `doBrowseRemote(java.net.URL arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`boolean`)
 
-### `doMoveResource(java.io.File arg0, java.io.File arg1, boolean arg2)`
+**Returns:** `java.net.URL`
 
-**Returns:** `void`
+### `doMoveResource(java.io.File arg0, java.io.File arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`java.io.File`)
 - `arg2` (`boolean`)
 
-### `setSvnAccess(ro.sync.exml.zb arg0)`
-
 **Returns:** `void`
+
+### `setSvnAccess(ro.sync.exml.zb arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.zb`)
 
-### `disableOpen(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `disableOpen(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `showOpenFindResource(java.lang.String arg0, boolean arg1, boolean arg2)`
-
 **Returns:** `void`
+
+### `showOpenFindResource(java.lang.String arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 - `arg2` (`boolean`)
+
+**Returns:** `void`
 
 ### `saveAllEditors()`
 

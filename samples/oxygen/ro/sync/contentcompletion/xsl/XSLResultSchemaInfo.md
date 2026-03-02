@@ -55,10 +55,10 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

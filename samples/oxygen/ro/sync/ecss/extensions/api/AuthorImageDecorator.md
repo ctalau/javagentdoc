@@ -21,8 +21,6 @@ It receives the graphics device, the size and position of the underlying image.
 
 ### `paint(ro.sync.exml.view.graphics.Graphics g, int x, int y, int imageWidth, int imageHeight, ro.sync.exml.view.graphics.Rectangle originalSize, ro.sync.ecss.extensions.api.node.AuthorNode element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean wasAnnotated)`
 
-**Returns:** `void`
-
 The image was already painted in the provided Graphics.
 
 **Parameters:**
@@ -35,6 +33,8 @@ The image was already painted in the provided Graphics.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The element to be painted.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
 - `wasAnnotated` (`boolean`): If `true` the image was annotated with previous dimensions.
+
+**Returns:** `void`
 
 ### `getDescription()`
 

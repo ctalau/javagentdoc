@@ -16,43 +16,43 @@
 
 ### `isTableBody(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableHead(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 
-### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement element)`
-
 **Returns:** `boolean`
+
+### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 

@@ -27,25 +27,25 @@
 
 ### `moveCaretToPosition(java.lang.String insertionLocation)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `insertionLocation` (`java.lang.String`): The insertion location.
 
-### `getFirstPositionInNodeWhereTopicrefCanBeInserted(ro.sync.ecss.extensions.api.node.AuthorNode currentNode)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `getFirstPositionInNodeWhereTopicrefCanBeInserted(ro.sync.ecss.extensions.api.node.AuthorNode currentNode)`
 
 **Parameters:**
 - `currentNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The current node.
 
-### `canTopicRefBeInsertedAtPosition(int caretOffset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment topicrefFrag)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `canTopicRefBeInsertedAtPosition(int caretOffset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment topicrefFrag)`
 
 **Parameters:**
 - `caretOffset` (`int`): The offset.
 - `topicrefFrag` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../../api/node/AuthorDocumentFragment.md)): A fragment that contains a topicref element.
+
+**Returns:** `boolean`
 
 ### `createTopicrefFragment()`
 
@@ -57,15 +57,15 @@
 
 ### `getElementChildren(ro.sync.ecss.extensions.api.node.AuthorNode context)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
-
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node.
 
-### `getInsertionPositionsInNode(ro.sync.ecss.extensions.api.node.AuthorNode context)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-**Returns:** `java.util.List<java.lang.Integer>`
+### `getInsertionPositionsInNode(ro.sync.ecss.extensions.api.node.AuthorNode context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The context node.
+
+**Returns:** `java.util.List<java.lang.Integer>`
 

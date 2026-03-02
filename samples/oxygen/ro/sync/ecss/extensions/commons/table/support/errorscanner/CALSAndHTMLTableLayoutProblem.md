@@ -39,10 +39,10 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.CALSAndHTMLTableLayoutProblem`](./CALSAndHTMLTableLayoutProblem.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.CALSAndHTMLTableLayoutProblem`](./CALSAndHTMLTableLayoutProblem.md)
 
 ### `getMessage()`
 

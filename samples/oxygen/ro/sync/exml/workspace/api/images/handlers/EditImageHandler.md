@@ -16,15 +16,15 @@
 
 ### `editImage(ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider contentProvider)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `contentProvider` ([`ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider`](providers/EmbeddedImageContentProvider.md)): The image content provider.
 
-### `editImage(java.net.URL url)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `editImage(java.net.URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to be edited.
+
+**Returns:** `boolean`
 

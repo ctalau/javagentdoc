@@ -32,10 +32,10 @@
 
 ### `addGuessElement(ro.sync.contentcompletion.xml.CIElement arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md))
+
+**Returns:** `void`
 
 ### `getNamespace()`
 
@@ -43,24 +43,24 @@
 
 ### `setDeclareXmlns(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setContentType(int arg0)`
-
 **Returns:** `void`
+
+### `setContentType(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
 
-### `setHasFixedValueType(boolean arg0)`
-
 **Returns:** `void`
+
+### `setHasFixedValueType(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isEmpty()`
 
@@ -80,24 +80,24 @@
 
 ### `setName(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setPrefix(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setNamespace(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getQName()`
 
@@ -113,10 +113,10 @@
 
 ### `setAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
+
+**Returns:** `void`
 
 ### `hasPrefix()`
 
@@ -128,10 +128,10 @@
 
 ### `setAnnotation(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getTypeDescription()`
 
@@ -139,17 +139,17 @@
 
 ### `setTypeDescription(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setNillable(boolean arg0)`
-
 **Returns:** `void`
+
+### `setNillable(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isNillable()`
 

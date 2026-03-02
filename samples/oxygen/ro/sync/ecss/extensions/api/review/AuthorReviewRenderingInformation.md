@@ -22,28 +22,28 @@
 
 ### `getTooltip()`
 
-**Returns:** `java.lang.String`
-
 By default this shows the review creation or modification time.
 
-### `getComment(int limit)`
-
 **Returns:** `java.lang.String`
+
+### `getComment(int limit)`
 
 This could be a part of the real comment stored in the change or persistent highlight.
 
 **Parameters:**
 - `limit` (`int`): the suggested text limit (in characters).
 
-### `getContentFromTarget(int limit)`
-
 **Returns:** `java.lang.String`
+
+### `getContentFromTarget(int limit)`
 
 This will be presented in the content part of the review entry. Note that it is not
  necessary to provide the entire content related to the review entry.
 
 **Parameters:**
 - `limit` (`int`): the suggested text limit (in characters).
+
+**Returns:** `java.lang.String`
 
 ### `getColor()`
 

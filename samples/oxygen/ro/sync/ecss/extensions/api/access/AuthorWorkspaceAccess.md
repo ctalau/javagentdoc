@@ -12,10 +12,10 @@
 
 ### `open(java.io.File file)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `file` (`java.io.File`): The file to be opened.
+
+**Returns:** `boolean`
 
 ### `getAllEditorLocations()`
 
@@ -23,10 +23,8 @@
 
 ### `getEditorAccess(java.net.URL location)`
 
-**Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](../../../../exml/workspace/api/editor/WSEditor.md)
-
 **Parameters:**
 - `location` (`java.net.URL`): The editor location
- 
 
+**Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](../../../../exml/workspace/api/editor/WSEditor.md)
 

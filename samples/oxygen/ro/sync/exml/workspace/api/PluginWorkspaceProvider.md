@@ -16,8 +16,8 @@
 
 ### `setPluginWorkspace(ro.sync.exml.workspace.api.PluginWorkspace arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.PluginWorkspace`](./PluginWorkspace.md))
+
+**Returns:** `void`
 

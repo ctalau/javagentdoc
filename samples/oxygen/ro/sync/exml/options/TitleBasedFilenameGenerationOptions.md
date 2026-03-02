@@ -52,10 +52,10 @@
 
 ### `setCharToReplaceSpacesWith(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `isAllLowerCase()`
 
@@ -63,10 +63,10 @@
 
 ### `setAllLowerCase(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isUpperCaseFirstLetter()`
 
@@ -74,10 +74,10 @@
 
 ### `setUpperCaseFirstLetter(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `getHowToGenerateFilenameFromTitle()`
 
@@ -85,8 +85,8 @@
 
 ### `setHowToGenerateFilenameFromTitle(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 

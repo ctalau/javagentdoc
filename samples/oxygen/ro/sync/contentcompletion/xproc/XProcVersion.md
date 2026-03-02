@@ -27,10 +27,10 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion`](./XProcVersion.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion`](./XProcVersion.md)
 
 ### `getId()`
 
@@ -38,8 +38,8 @@
 
 ### `getXProcVersionForId(int id)`
 
-**Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion`](./XProcVersion.md)
-
 **Parameters:**
 - `id` (`int`): The id of the XProc version.
+
+**Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion`](./XProcVersion.md)
 

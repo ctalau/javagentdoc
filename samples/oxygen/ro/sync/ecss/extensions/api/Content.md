@@ -10,13 +10,13 @@
 
 ### `createPosition(int offset)`
 
-**Returns:** `javax.swing.text.Position`
-
 The position offset is changed as the
  content is edited.
 
 **Parameters:**
 - `offset` (`int`): The offset in the content >= 0
+
+**Returns:** `javax.swing.text.Position`
 
 ### `getLength()`
 
@@ -24,33 +24,31 @@ The position offset is changed as the
 
 ### `insertChars(int where, char[] ch, int start, int length)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `where` (`int`): Offset into the content to make the insertion >= 0
 - `ch` (`char[]`): The char buffer to insert from.
 - `start` (`int`): Start of useful data in the char buffer.
 - `length` (`int`): Length of useful data in the char buffer.
 
-### `remove(int where, int nitems)`
-
 **Returns:** `void`
+
+### `remove(int where, int nitems)`
 
 **Parameters:**
 - `where` (`int`): The offset into the sequence to make the removal >= 0.
 - `nitems` (`int`): The number of items in the sequence to be removed >= 0.
 
-### `getString(int where, int len)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getString(int where, int len)`
 
 **Parameters:**
 - `where` (`int`): Offset into the sequence to fetch >= 0.
 - `len` (`int`): Number of characters to copy >= 0.
 
-### `getChars(int where, int len, javax.swing.text.Segment chars)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `getChars(int where, int len, javax.swing.text.Segment chars)`
 
 If the desired content spans the gap, we copy the content.  
  If the desired content does not span the gap, the actual store is returned to avoid the copy since
@@ -60,4 +58,6 @@ If the desired content spans the gap, we copy the content.
 - `where` (`int`): The starting position >= 0, where + len <= length()
 - `len` (`int`): The number of characters to be retrieved >= 0
 - `chars` (`javax.swing.text.Segment`): The Segment object to return the characters into.
+
+**Returns:** `void`
 

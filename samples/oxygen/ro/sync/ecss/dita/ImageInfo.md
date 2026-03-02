@@ -85,10 +85,10 @@
 
 ### `getValue(java.lang.String arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getProperties()`
 

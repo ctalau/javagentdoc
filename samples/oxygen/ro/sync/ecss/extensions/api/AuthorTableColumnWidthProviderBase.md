@@ -30,17 +30,17 @@ It should be implemented when the author extension being developed offers
 
 ### `setErrorsListener(ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener errorsListener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `errorsListener` ([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)): The table layout errors listener.
 
-### `getAllColspecWidthRepresentations()`
+**Returns:** `void`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
+### `getAllColspecWidthRepresentations()`
 
 If a colspec does not specify a width, it is supposed to be 1*.
  If the table group specifies more columns than colspecs, those widths are supposed to be 1*.
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
 
 ### `getErrorsListener()`
 
@@ -48,8 +48,8 @@ If a colspec does not specify a width, it is supposed to be 1*.
 
 ### `isPreferPercentageColumnWidths(java.lang.String tableCellsTagName)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`): The cell tag name
+
+**Returns:** `boolean`
 

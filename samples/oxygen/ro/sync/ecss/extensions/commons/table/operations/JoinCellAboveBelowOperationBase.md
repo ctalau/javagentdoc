@@ -35,17 +35,17 @@ The operation is possible only for cells that span over the same number of colum
 
 ### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
 
+**Returns:** `void`
+
 ### `createDeleteRowOperation()`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.DeleteRowOperationBase`](./DeleteRowOperationBase.md)
-
 Can be overwritten by custom code.
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.DeleteRowOperationBase`](./DeleteRowOperationBase.md)
 
 ### `getArguments()`
 

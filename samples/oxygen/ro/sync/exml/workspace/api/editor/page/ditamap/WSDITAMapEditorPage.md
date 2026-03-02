@@ -12,24 +12,24 @@
 
 ### `getDocumentController()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../../../../ecss/extensions/api/AuthorDocumentController.md)
-
 It has methods for changing the document model.
  The insertions of XML content using the controller are not schema aware.
 
-### `getOptionsStorage()`
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../../../../ecss/extensions/api/AuthorDocumentController.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.OptionsStorage`](../../../../../../ecss/extensions/api/OptionsStorage.md)
+### `getOptionsStorage()`
 
 This is also responsible for adding and removing listeners that are notified
  about the option changes.
 
-### `setPopUpMenuCustomizer(ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapPopupMenuCustomizer popUpCustomizer)`
+**Returns:** [`ro.sync.ecss.extensions.api.OptionsStorage`](../../../../../../ecss/extensions/api/OptionsStorage.md)
 
-**Returns:** `void`
+### `setPopUpMenuCustomizer(ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapPopupMenuCustomizer`](./DITAMapPopupMenuCustomizer.md)): the pop-up menu customizer.
+
+**Returns:** `void`
 
 ### `getDITAMapTreeComponent()`
 
@@ -37,26 +37,26 @@ This is also responsible for adding and removing listeners that are notified
 
 ### `addAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
-**Returns:** `void`
-
 The filter will be applied when editing the attributes for a topic reference.
 
 **Parameters:**
 - `attributesDisplayFilter` ([`ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter`](../../../../../../ecss/extensions/api/attributes/AuthorAttributesDisplayFilter.md)): The AuthorAttributesDisplayFilter to be added.
 
-### `removeAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
-
 **Returns:** `void`
+
+### `removeAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
 **Parameters:**
 - `attributesDisplayFilter` ([`ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter`](../../../../../../ecss/extensions/api/attributes/AuthorAttributesDisplayFilter.md)): The AuthorAttributesDisplayFilter to be removed.
 
-### `setEditable(boolean editable)`
-
 **Returns:** `void`
+
+### `setEditable(boolean editable)`
 
 **Parameters:**
 - `editable` (`boolean`): `true` if the DITA Map page should be editable.
+
+**Returns:** `void`
 
 ### `isEditable()`
 
@@ -64,10 +64,10 @@ The filter will be applied when editing the attributes for a topic reference.
 
 ### `getSelectedNodes(boolean minimizeSelection)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../../../../../../ecss/extensions/api/node/AuthorNode.md)
-
 **Parameters:**
 - `minimizeSelection` (`boolean`): If `true` and a parent and a child is selected, then only the parent is the list.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../../../../../../ecss/extensions/api/node/AuthorNode.md)
 
 ### `getActionsProvider()`
 
@@ -75,23 +75,23 @@ The filter will be applied when editing the attributes for a topic reference.
 
 ### `addDropHandler(ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler dropHandler)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `dropHandler` ([`ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler`](dnd/DITAMapTreeDropHandler.md)): The newly added drop handler
+
+**Returns:** `void`
 
 ### `removeDropHandler(ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler dropHandler)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `dropHandler` ([`ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler`](dnd/DITAMapTreeDropHandler.md)): The newly added drop handler
 
-### `refreshReferences()`
-
 **Returns:** `void`
 
+### `refreshReferences()`
+
 This is equivalent to pressing F5 in the map tree.
+
+**Returns:** `void`
 
 ### `getReviewController()`
 
@@ -99,25 +99,25 @@ This is equivalent to pressing F5 in the map tree.
 
 ### `addNodeRendererCustomizer(ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapNodeRendererCustomizer customizer)`
 
-**Returns:** `void`
-
 The customizer can customize the icon and title which appears for each topicref
  in the DITA Maps Manager view.
 
 **Parameters:**
 - `customizer` ([`ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapNodeRendererCustomizer`](./DITAMapNodeRendererCustomizer.md)): The customizer can customize the icon and title which appears for each topicref
- in the DITA Maps Manager view.
+   in the DITA Maps Manager view.
+
+**Returns:** `void`
 
 ### `removeNodeRendererCustomizer(ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapNodeRendererCustomizer customizer)`
 
-**Returns:** `void`
-
 The customizer can customize the icon and title which appears for each topicref
  in the DITA Maps Manager view.
 
 **Parameters:**
 - `customizer` ([`ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapNodeRendererCustomizer`](./DITAMapNodeRendererCustomizer.md)): The customizer can customize the icon and title which appears for each topicref
- in the DITA Maps Manager view.
+   in the DITA Maps Manager view.
+
+**Returns:** `void`
 
 ### `getUnsavedContentReferenceManager()`
 
@@ -125,11 +125,11 @@ The customizer can customize the icon and title which appears for each topicref
 
 ### `getCurrentSelectedURLs(boolean recurseReferences, boolean includeBinaryAndExternalResources)`
 
-**Returns:** `java.net.URL[]`
-
 **Parameters:**
 - `recurseReferences` (`boolean`): `true` to recursively collect references. `false` to limit to 
- the first level of references.
+   the first level of references.
 - `includeBinaryAndExternalResources` (`boolean`): `true` to include also resources which are possibly binary, 
- for example they have the format attribute set to a binary extension or which have external scope.
+   for example they have the format attribute set to a binary extension or which have external scope.
+
+**Returns:** `java.net.URL[]`
 

@@ -61,80 +61,80 @@
 
 ### `getFeature(java.lang.String name)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `getProperty(java.lang.String name)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `name` (`java.lang.String`)
 
-### `parse(org.xml.sax.InputSource input)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `void`
+### `parse(org.xml.sax.InputSource input)`
 
 **Parameters:**
 - `input` (`org.xml.sax.InputSource`)
 
-### `processParserException(java.lang.Exception ex)`
-
 **Returns:** `void`
+
+### `processParserException(java.lang.Exception ex)`
 
 **Parameters:**
 - `ex` (`java.lang.Exception`): The exception.
 
-### `parse(java.lang.String systemId)`
-
 **Returns:** `void`
+
+### `parse(java.lang.String systemId)`
 
 **Parameters:**
 - `systemId` (`java.lang.String`)
 
-### `setContentHandler(org.xml.sax.ContentHandler handler)`
-
 **Returns:** `void`
+
+### `setContentHandler(org.xml.sax.ContentHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.ContentHandler`)
 
-### `setDTDHandler(org.xml.sax.DTDHandler handler)`
-
 **Returns:** `void`
+
+### `setDTDHandler(org.xml.sax.DTDHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.DTDHandler`)
 
-### `setEntityResolver(org.xml.sax.EntityResolver resolver)`
-
 **Returns:** `void`
+
+### `setEntityResolver(org.xml.sax.EntityResolver resolver)`
 
 **Parameters:**
 - `resolver` (`org.xml.sax.EntityResolver`)
 
-### `setErrorHandler(org.xml.sax.ErrorHandler handler)`
-
 **Returns:** `void`
+
+### `setErrorHandler(org.xml.sax.ErrorHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.ErrorHandler`)
 
-### `setFeature(java.lang.String name, boolean value)`
-
 **Returns:** `void`
+
+### `setFeature(java.lang.String name, boolean value)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 - `value` (`boolean`)
 
-### `setProperty(java.lang.String name, java.lang.Object value)`
-
 **Returns:** `void`
+
+### `setProperty(java.lang.String name, java.lang.Object value)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 - `value` (`java.lang.Object`)
+
+**Returns:** `void`
 

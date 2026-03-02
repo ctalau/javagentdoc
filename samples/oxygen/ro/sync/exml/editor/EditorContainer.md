@@ -10,28 +10,26 @@
 
 ### `addChangeListener(javax.swing.event.ChangeListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.event.ChangeListener`)
 
-### `addContainerListener(java.awt.event.ContainerListener arg0)`
-
 **Returns:** `void`
+
+### `addContainerListener(java.awt.event.ContainerListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.ContainerListener`)
 
-### `addMouseListener(java.awt.event.MouseListener arg0)`
-
 **Returns:** `void`
+
+### `addMouseListener(java.awt.event.MouseListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.MouseListener`)
 
-### `addTab(java.lang.String arg0, java.lang.String arg1, javax.swing.Icon arg2, javax.swing.JComponent arg3, java.lang.String arg4)`
-
 **Returns:** `void`
+
+### `addTab(java.lang.String arg0, java.lang.String arg1, javax.swing.Icon arg2, javax.swing.JComponent arg3, java.lang.String arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -40,9 +38,9 @@
 - `arg3` (`javax.swing.JComponent`)
 - `arg4` (`java.lang.String`)
 
-### `replaceTab(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, javax.swing.Icon arg3, javax.swing.JComponent arg4, javax.swing.JComponent arg5)`
-
 **Returns:** `void`
+
+### `replaceTab(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, javax.swing.Icon arg3, javax.swing.JComponent arg4, javax.swing.JComponent arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -52,13 +50,15 @@
 - `arg4` (`javax.swing.JComponent`)
 - `arg5` (`javax.swing.JComponent`)
 
-### `setSelectedComponent(java.awt.Component arg0, java.lang.String arg1)`
-
 **Returns:** `void`
+
+### `setSelectedComponent(java.awt.Component arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.awt.Component`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getSelectedComponent()`
 
@@ -82,17 +82,17 @@
 
 ### `setVisible(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setBorder(javax.swing.border.Border arg0)`
-
 **Returns:** `void`
+
+### `setBorder(javax.swing.border.Border arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.border.Border`)
+
+**Returns:** `void`
 
 ### `getBackground()`
 
@@ -104,19 +104,19 @@
 
 ### `remove(javax.swing.JComponent arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.JComponent`)
 
-### `setTitle(javax.swing.JComponent arg0, java.lang.String arg1, java.lang.String arg2)`
-
 **Returns:** `void`
+
+### `setTitle(javax.swing.JComponent arg0, java.lang.String arg1, java.lang.String arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JComponent`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `repaintHost()`
 
@@ -124,31 +124,31 @@
 
 ### `removeChangeListener(javax.swing.event.ChangeListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.event.ChangeListener`)
 
-### `removeMouseListener(java.awt.event.MouseListener arg0)`
-
 **Returns:** `void`
+
+### `removeMouseListener(java.awt.event.MouseListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.MouseListener`)
 
-### `removeContainerListener(java.awt.event.ContainerListener arg0)`
-
 **Returns:** `void`
+
+### `removeContainerListener(java.awt.event.ContainerListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.ContainerListener`)
 
-### `setListenersEnabled(boolean arg0)`
-
 **Returns:** `void`
+
+### `setListenersEnabled(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isEnabledListeners()`
 
@@ -156,10 +156,10 @@
 
 ### `getEditorsFromTheSameGroup(ro.sync.exml.editor.dd arg0)`
 
-**Returns:** `ro.sync.exml.editor.dd[]`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.dd`)
+
+**Returns:** `ro.sync.exml.editor.dd[]`
 
 ### `saveLayout()`
 
@@ -175,22 +175,22 @@
 
 ### `updateIconAndTooltip(ro.sync.exml.editor.dd arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.dd`)
 
-### `setAllowDetachingEditors(boolean arg0)`
-
 **Returns:** `void`
+
+### `setAllowDetachingEditors(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setShowEditorTabs(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 

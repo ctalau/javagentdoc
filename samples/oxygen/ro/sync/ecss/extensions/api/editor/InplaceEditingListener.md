@@ -32,8 +32,6 @@
 
 ### `editingStopped(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
 
-**Returns:** `void`
-
 This will commit the value into the document **ONLY
  if the following conditions apply**:
 
@@ -51,27 +49,27 @@ This will commit the value into the document **ONLY
 
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Provides information about the editing. If `null` 
- we should handle this as a cancel event.
-
-### `editingCanceled()`
+   we should handle this as a cancel event.
 
 **Returns:** `void`
+
+### `editingCanceled()`
 
 **OBS:** Before or after firing this event, the editor should release
  any held resources. For example a SWT editor will have to dispose() any 
  created images, fonts or controls.
 
-### `editingOccured()`
-
 **Returns:** `void`
+
+### `editingOccured()`
 
 OBS: THIS EVENT IS VERY IMPORTANT. If no #editingOccured() event
  is received, the value from the editor will not be committed when the editing 
  is stopped. See #editingStopped(EditingEvent) for more information.
 
-### `commitValue(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
-
 **Returns:** `void`
+
+### `commitValue(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
 
 Will only commit if a new string value is provided and only if the value 
  that must be committed is different from the current value.
@@ -80,6 +78,8 @@ Will only commit if a new string value is provided and only if the value
 
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Editing event. Currently only the string value from within is of interest.
- Also in case of custom form controls any given EditingEvent#customEdit will
- also be executed.
+   Also in case of custom form controls any given EditingEvent#customEdit will
+   also be executed.
+
+**Returns:** `void`
 

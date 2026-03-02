@@ -59,46 +59,46 @@
 
 ### `paint(ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo`](./HighlightPainterInfo.md))
+
+**Returns:** `void`
 
 ### `getHighlightLength(ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo`](./HighlightPainterInfo.md))
 
-### `setColor(ro.sync.exml.view.graphics.Color arg0)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `setColor(ro.sync.exml.view.graphics.Color arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
 
-### `setTextDecoration(ro.sync.ecss.extensions.api.highlights.ColorHighlightPainter.TextDecoration arg0)`
-
 **Returns:** `void`
+
+### `setTextDecoration(ro.sync.ecss.extensions.api.highlights.ColorHighlightPainter.TextDecoration arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.extensions.api.highlights.ColorHighlightPainter.TextDecoration`)
 
-### `setBgColor(ro.sync.exml.view.graphics.Color arg0)`
-
 **Returns:** `void`
+
+### `setBgColor(ro.sync.exml.view.graphics.Color arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
 
-### `setBgColor(ro.sync.exml.view.graphics.Color arg0, boolean arg1)`
-
 **Returns:** `void`
+
+### `setBgColor(ro.sync.exml.view.graphics.Color arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
 - `arg1` (`boolean`)
+
+**Returns:** `void`
 
 ### `useBaseLineForUnderline()`
 
@@ -106,17 +106,17 @@
 
 ### `setTextDecorationStroke(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `setStrikeOut(boolean arg0)`
-
 **Returns:** `void`
+
+### `setStrikeOut(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `getBgColor()`
 
@@ -128,10 +128,10 @@
 
 ### `setTextForegroundColor(ro.sync.exml.view.graphics.Color arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
+
+**Returns:** `void`
 
 ### `getTextForegroundColor()`
 

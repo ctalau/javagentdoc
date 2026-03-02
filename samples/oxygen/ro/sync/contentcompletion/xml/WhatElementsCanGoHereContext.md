@@ -28,10 +28,10 @@
 
 ### `setPositionInDoc(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `getDoc()`
 
@@ -39,10 +39,10 @@
 
 ### `setDoc(ro.sync.document.SyntaxDocumentBase arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.document.SyntaxDocumentBase`](../../document/SyntaxDocumentBase.md))
+
+**Returns:** `void`
 
 ### `clone()`
 
@@ -50,8 +50,8 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

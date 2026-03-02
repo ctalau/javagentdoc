@@ -10,11 +10,11 @@
 
 ### `getServletName()`
 
-**Returns:** `java.lang.String`
-
 The name may be provided via server administration, assigned in the web
  application deployment descriptor, or for an unregistered (and thus unnamed) servlet instance it will be the
  servlet's class name.
+
+**Returns:** `java.lang.String`
 
 ### `getServletContext()`
 
@@ -22,10 +22,10 @@ The name may be provided via server administration, assigned in the web
 
 ### `getInitParameter(java.lang.String name)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `name` (`java.lang.String`): the name of the initialization parameter whose value to get
+
+**Returns:** `java.lang.String`
 
 ### `getInitParameterNames()`
 

@@ -29,20 +29,20 @@ Such models belong to different users and are edited concurrently and synchroniz
 
 ### `getPeerContext(int peerId)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.PeerContext`](./PeerContext.md)
-
 **Parameters:**
 - `peerId` (`int`): The peer ID.
 
-### `getObserver()`
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.PeerContext`](./PeerContext.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver`](./RoomObserver.md)
+### `getObserver()`
 
 Note: The room observer needs to be requested when the room is created.
 
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver`](./RoomObserver.md)
+
 ### `close()`
 
-**Returns:** `void`
-
 Should do any necessary cleanup and should notify all peers.
+
+**Returns:** `void`
 

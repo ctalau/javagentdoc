@@ -28,85 +28,85 @@
 
 ### `isDITAVariable(ro.sync.ecss.extensions.api.node.AuthorNode candidate)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `candidate` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The candidate node.
 
-### `getSingleChild(ro.sync.ecss.extensions.api.node.AuthorNode candidate, java.lang.String childLocalName)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
+### `getSingleChild(ro.sync.ecss.extensions.api.node.AuthorNode candidate, java.lang.String childLocalName)`
 
 **Parameters:**
 - `candidate` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The candidate.
 - `childLocalName` (`java.lang.String`): The child.
 
-### `isElementWithName(ro.sync.ecss.extensions.api.node.AuthorNode candidate, java.lang.String localName)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `isElementWithName(ro.sync.ecss.extensions.api.node.AuthorNode candidate, java.lang.String localName)`
 
 **Parameters:**
 - `candidate` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The candidate.
 - `localName` (`java.lang.String`): The local name.
 
-### `updatePseudoClass(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `updatePseudoClass(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to update.
 
-### `updatePseudoClassBelow(ro.sync.ecss.extensions.api.node.AuthorNode node, int depth)`
-
 **Returns:** `void`
+
+### `updatePseudoClassBelow(ro.sync.ecss.extensions.api.node.AuthorNode node, int depth)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node.
 - `depth` (`int`): The depth, excluding the current node.
 
-### `updatePseudoClassAbove(ro.sync.ecss.extensions.api.node.AuthorNode node, int count)`
-
 **Returns:** `void`
+
+### `updatePseudoClassAbove(ro.sync.ecss.extensions.api.node.AuthorNode node, int count)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node.
 - `count` (`int`): The number of ancestors to update, excluding the current node.
 
-### `authorNodeNameChanged(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `void`
+
+### `authorNodeNameChanged(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+
+**Returns:** `void`
 
 ### `authorNodeStructureChanged(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
-### `documentChanged(ro.sync.ecss.extensions.api.node.AuthorDocument oldDocument, ro.sync.ecss.extensions.api.node.AuthorDocument newDocument)`
-
 **Returns:** `void`
+
+### `documentChanged(ro.sync.ecss.extensions.api.node.AuthorDocument oldDocument, ro.sync.ecss.extensions.api.node.AuthorDocument newDocument)`
 
 **Parameters:**
 - `oldDocument` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../api/node/AuthorDocument.md))
 - `newDocument` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../api/node/AuthorDocument.md))
 
-### `contentDeleted(ro.sync.ecss.extensions.api.DocumentContentDeletedEvent e)`
-
 **Returns:** `void`
+
+### `contentDeleted(ro.sync.ecss.extensions.api.DocumentContentDeletedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.DocumentContentDeletedEvent`](../../api/DocumentContentDeletedEvent.md))
 
-### `contentInserted(ro.sync.ecss.extensions.api.DocumentContentInsertedEvent e)`
-
 **Returns:** `void`
+
+### `contentInserted(ro.sync.ecss.extensions.api.DocumentContentInsertedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.DocumentContentInsertedEvent`](../../api/DocumentContentInsertedEvent.md))
+
+**Returns:** `void`
 
 ### `doctypeChanged()`
 
@@ -118,31 +118,31 @@
 
 ### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
+
+**Returns:** `void`
 
 ### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 
-### `documentAboutToBeLoaded(ro.sync.ecss.extensions.api.node.AuthorDocument document, ro.sync.ecss.extensions.api.AuthorPseudoClassController pseudoClassController)`
-
 **Returns:** `void`
+
+### `documentAboutToBeLoaded(ro.sync.ecss.extensions.api.node.AuthorDocument document, ro.sync.ecss.extensions.api.AuthorPseudoClassController pseudoClassController)`
 
 **Parameters:**
 - `document` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../api/node/AuthorDocument.md))
 - `pseudoClassController` ([`ro.sync.ecss.extensions.api.AuthorPseudoClassController`](../../api/AuthorPseudoClassController.md))
 
-### `updatePseudoClassDirectlyBelow(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorPseudoClassController pseudoClassController)`
-
 **Returns:** `void`
+
+### `updatePseudoClassDirectlyBelow(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorPseudoClassController pseudoClassController)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The root of the subtree.
 - `pseudoClassController` ([`ro.sync.ecss.extensions.api.AuthorPseudoClassController`](../../api/AuthorPseudoClassController.md)): Pseudo class controller
+
+**Returns:** `void`
 

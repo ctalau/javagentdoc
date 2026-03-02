@@ -19,22 +19,22 @@
 
 ### `getElementsWithModifiedAttributes(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo tableInfo)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`
-
 **Parameters:**
 - `tableInfo` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md))
 
-### `getColSpecs(java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>> map)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
+### `getColSpecs(java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`)
 
-### `getCellIndexes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-**Returns:** `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`
+### `getCellIndexes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
 
 **Parameters:**
 - `cells` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
+
+**Returns:** `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`
 

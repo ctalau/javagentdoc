@@ -12,8 +12,8 @@ Provides the plugin processed data.
 
 ### `getProcessedSelection()`
 
-**Returns:** `java.lang.String`
-
 The string can also contain editor variables available also to Oxygen code templates like ${caret} to position the caret at a certain location
  or ${selection} to surround the current selection with the processed string.
+
+**Returns:** `java.lang.String`
 

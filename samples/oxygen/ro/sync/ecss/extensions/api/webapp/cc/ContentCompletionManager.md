@@ -17,10 +17,10 @@ For every action we have two methods: one that returns a list of proposals
 
 ### `getProposedElementsForInsert(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
-
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
 
 ### `getAllPossibleElementsForInsert()`
 
@@ -28,83 +28,81 @@ For every action we have two methods: one that returns a list of proposals
 
 ### `executeInsert(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `ccItem` ([`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)): The content completion item chosen by the user.
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
 
-### `getProposedElementsForRename(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
+**Returns:** `void`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
+### `getProposedElementsForRename(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
- The selection should be either collapsed, or an entire element should be
- selected.
+   The selection should be either collapsed, or an entire element should be
+   selected.
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
 
 ### `executeRename(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel, ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
 - `ccItem` ([`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)): The content completion item chosen for rename.
 
-### `executeNewLine(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
-
 **Returns:** `void`
+
+### `executeNewLine(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
+
+**Returns:** `void`
 
 ### `getProposedElementsForSurround(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
-
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
 
-### `executeSurround(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
 
-**Returns:** `void`
+### `executeSurround(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `ccItem` ([`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)): The content completion item chosen by the user.
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
 
-### `getProposedElementsToSplit(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
+**Returns:** `void`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
+### `getProposedElementsToSplit(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
 
-### `executeSplit(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy>`
 
-**Returns:** `void`
+### `executeSplit(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `ccItem` ([`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)): The element chosen by the user.
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection model of the document.
 
-### `executeSplit(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
-
 **Returns:** `void`
+
+### `executeSplit(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection and caret model of the document.
 
-### `getNewLineProposal(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)
+### `getNewLineProposal(ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): Selection and caret model.
 
-### `executeInsertInvalid(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)
 
-**Returns:** `void`
+### `executeInsertInvalid(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 Some schema aware strategies will be employed to find a good position to insert the 
  element.
@@ -113,11 +111,13 @@ Some schema aware strategies will be employed to find a good position to insert 
 - `ccItem` ([`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)): The selected element.
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection.
 
-### `executeAction(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
-
 **Returns:** `void`
+
+### `executeAction(ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel selectionModel)`
 
 **Parameters:**
 - `ccItem` ([`ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy`](./CCItemProxy.md)): The selected element.
 - `selectionModel` ([`ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel`](../../AuthorSelectionAndCaretModel.md)): The selection.
+
+**Returns:** `void`
 

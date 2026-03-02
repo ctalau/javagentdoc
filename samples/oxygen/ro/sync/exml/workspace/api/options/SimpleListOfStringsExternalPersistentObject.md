@@ -32,10 +32,10 @@ Used as an example and for tests.
 
 ### `addItem(java.lang.String item)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `item` (`java.lang.String`): The item to add.
+
+**Returns:** `void`
 
 ### `checkValid()`
 

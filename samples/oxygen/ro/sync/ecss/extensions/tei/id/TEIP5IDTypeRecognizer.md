@@ -19,8 +19,6 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 ### `detectIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, int offset)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.link.IDTypeIdentifier>`
-
 **Parameters:**
 - `systemID` (`java.lang.String`)
 - `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md))
@@ -29,9 +27,9 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 - `attributeValue` (`java.lang.String`)
 - `offset` (`int`)
 
-### `locateIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, ro.sync.ecss.extensions.api.link.IDTypeIdentifier idIdentifier, short mode)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.link.IDTypeIdentifier>`
 
-**Returns:** `int[]`
+### `locateIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, ro.sync.ecss.extensions.api.link.IDTypeIdentifier idIdentifier, short mode)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -41,6 +39,8 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 - `attributeValue` (`java.lang.String`)
 - `idIdentifier` ([`ro.sync.ecss.extensions.api.link.IDTypeIdentifier`](../../api/link/IDTypeIdentifier.md))
 - `mode` (`short`)
+
+**Returns:** `int[]`
 
 ### `isDefaultIDTypeRecognitionAvailable()`
 

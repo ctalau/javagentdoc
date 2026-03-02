@@ -35,7 +35,7 @@
 - `description` (`java.lang.String`): Error message.
 - `presentToUser` (`boolean`): `true` if the error message must be presented to the user.
 - `showLinkToSchemaAwarePreferences` (`boolean`): If `true` when the error message is presented to the user a link
- to the Schema Aware preference page will be added.
+   to the Schema Aware preference page will be added.
 
 ### `<init>(java.lang.String title, java.lang.String description, boolean presentToUser)`
 
@@ -50,8 +50,8 @@
 - `title` (`java.lang.String`): Title to be presented to the user.
 - `description` (`java.lang.String`): Error message.
 - `cause` (`java.lang.Throwable`): The exception cause. A null value is
-         permitted, and indicates that the cause is nonexistent or
-         unknown.
+           permitted, and indicates that the cause is nonexistent or
+           unknown.
 - `presentToUser` (`boolean`): `true` if the error message must be presented to the user.
 
 ## Methods
@@ -66,10 +66,10 @@
 
 ### `setHtmlMessage(java.lang.String htmlMessage)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `htmlMessage` (`java.lang.String`): An error message that uses HTML elements for styling.
+
+**Returns:** `void`
 
 ### `getHtmlMessage()`
 
@@ -77,10 +77,10 @@
 
 ### `setShowLinkToSchemaAwarePreferences(boolean showLinkToSchemaAwarePreferences)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `showLinkToSchemaAwarePreferences` (`boolean`): The showLinkToSchemaAwarePreferences to set.
+
+**Returns:** `void`
 
 ### `isShowLinkToSchemaAwarePreferences()`
 
@@ -88,8 +88,8 @@
 
 ### `setPresentToUser(boolean presentToUser)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `presentToUser` (`boolean`): The presentToUser to set.
+
+**Returns:** `void`
 

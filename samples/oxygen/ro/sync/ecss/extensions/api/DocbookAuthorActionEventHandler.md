@@ -29,16 +29,14 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 ### `promoteSubListItems(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.node.AuthorNode theDemotedCandidate, ro.sync.ecss.extensions.api.node.AuthorNode listElement)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
 - `theDemotedCandidate` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 - `listElement` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
-### `getSubListToPromote(ro.sync.ecss.extensions.api.node.AuthorNode parent, int level, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> lastSubList)`
-
 **Returns:** `void`
+
+### `getSubListToPromote(ro.sync.ecss.extensions.api.node.AuthorNode parent, int level, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> lastSubList)`
 
 If there are more than 1 sublists,
  then we don't promote them anymore. We let them be demoted along
@@ -48,50 +46,52 @@ If there are more than 1 sublists,
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): Initially the demoted item.
 - `level` (`int`): The level inside the item that was demoted.
 - `lastSubList` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`): A list where we want to store the last sublist inside the demoted item.
-                      Needed a list in order to be able to store and return from recursion the last sublist.
+                        Needed a list in order to be able to store and return from recursion the last sublist.
+
+**Returns:** `void`
 
 ### `isParagraph(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
-**Returns:** `boolean`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): the node for which we perform the check.
 
-### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `boolean`
+
+### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
-### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode node1, ro.sync.ecss.extensions.api.node.AuthorNode node2)`
-
 **Returns:** `boolean`
+
+### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode node1, ro.sync.ecss.extensions.api.node.AuthorNode node2)`
 
 **Parameters:**
 - `node1` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 - `node2` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
-### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
-### `getListItemAncestorToSplit(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess access)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
+### `getListItemAncestorToSplit(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess access)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
-### `hasLocalName(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String localName)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `hasLocalName(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String localName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node to check.
 - `localName` (`java.lang.String`): The local name.
+
+**Returns:** `boolean`
 

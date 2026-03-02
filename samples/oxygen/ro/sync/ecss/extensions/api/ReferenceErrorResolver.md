@@ -13,8 +13,8 @@ It will offer solutions for solving
 
 ### `resolveError(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access to the author page.
+
+**Returns:** `void`
 

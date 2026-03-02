@@ -31,10 +31,10 @@
 
 ### `setOperationRejectedOnPurpose(boolean operationRejected)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `operationRejected` (`boolean`): The operationRejected to set.
+
+**Returns:** `void`
 
 ### `isOperationRejectedOnPurpose()`
 

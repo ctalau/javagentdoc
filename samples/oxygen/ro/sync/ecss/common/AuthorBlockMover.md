@@ -29,18 +29,18 @@
 
 ### `d(ro.sync.ecss.common.AuthorBlockMover._b arg0, ro.sync.ecss.css.db arg1)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
-
 **Parameters:**
 - `arg0` (`ro.sync.ecss.common.AuthorBlockMover._b`)
 - `arg1` (`ro.sync.ecss.css.db`)
 
-### `b(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-**Returns:** `boolean`
+### `b(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
+
+**Returns:** `boolean`
 
 ### `e()`
 
@@ -52,19 +52,19 @@
 
 ### `i(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0, ro.sync.ecss.common.AuthorBlockMover._b arg1)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
 - `arg1` (`ro.sync.ecss.common.AuthorBlockMover._b`)
 
-### `h(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0, ro.sync.contentcompletion.xml.ContextElement arg1)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `h(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0, ro.sync.contentcompletion.xml.ContextElement arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
 - `arg1` ([`ro.sync.contentcompletion.xml.ContextElement`](../../contentcompletion/xml/ContextElement.md))
+
+**Returns:** `boolean`
 
 ### `c()`
 
@@ -72,23 +72,23 @@
 
 ### `moveBlock(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `moveBlock(ro.sync.ecss.common.AuthorBlockMover._b arg0)`
-
 **Returns:** `void`
+
+### `moveBlock(ro.sync.ecss.common.AuthorBlockMover._b arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.common.AuthorBlockMover._b`)
 
-### `f(int arg0, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] arg1)`
-
 **Returns:** `void`
+
+### `f(int arg0, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] arg1)`
 
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../extensions/api/node/AuthorDocumentFragment.md))
+
+**Returns:** `void`
 

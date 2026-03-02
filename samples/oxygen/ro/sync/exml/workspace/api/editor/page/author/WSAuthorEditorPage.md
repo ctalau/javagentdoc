@@ -12,9 +12,9 @@
 
 ### `getDocumentController()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../../../../ecss/extensions/api/AuthorDocumentController.md)
-
 It has methods for changing the document model.
+
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../../../../ecss/extensions/api/AuthorDocumentController.md)
 
 ### `getTableAccess()`
 
@@ -30,18 +30,16 @@ It has methods for changing the document model.
 
 ### `getOptionsStorage()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.OptionsStorage`](../../../../../../ecss/extensions/api/OptionsStorage.md)
-
 This is also responsible for adding and removing listeners that are notified
  about the option changes.
+
+**Returns:** [`ro.sync.ecss.extensions.api.OptionsStorage`](../../../../../../ecss/extensions/api/OptionsStorage.md)
 
 ### `getOutlineAccess()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.access.AuthorOutlineAccess`](../../../../../../ecss/extensions/api/access/AuthorOutlineAccess.md)
 
 ### `getAuthorAccess()`
-
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../../../ecss/extensions/api/AuthorAccess.md)
 
 The WSAuthorEditorPage has most of the methods which can also be found in the AuthorAccess.
  This method is offered only as an useful way to have utility methods which take AuthorAccess as a parameter and 
@@ -50,9 +48,9 @@ The WSAuthorEditorPage has most of the methods which can also be found in the Au
  Provides access to specific components corresponding to editor, document, workspace,
  tables, change tracking and utility informations and actions.
 
-### `addQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../../../ecss/extensions/api/AuthorAccess.md)
 
-**Returns:** `void`
+### `addQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
 
 This allow you to provide quick custom quick assist 
  proposals in the current editor page quick assist menu.
@@ -61,10 +59,12 @@ This allow you to provide quick custom quick assist
 **Parameters:**
 - `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be registered.
 
-### `removeQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
-
 **Returns:** `void`
+
+### `removeQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
 
 **Parameters:**
 - `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be unregistered.
+
+**Returns:** `void`
 

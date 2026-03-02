@@ -12,10 +12,10 @@
 
 ### `renderNode(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md))
+
+**Returns:** `void`
 
 ### `getRenderedContentType()`
 

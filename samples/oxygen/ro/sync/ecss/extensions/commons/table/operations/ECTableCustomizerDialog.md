@@ -286,17 +286,17 @@
 
 ### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+**Returns:** `void`
 
-**Returns:** `org.eclipse.swt.widgets.Control`
+### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
+
+**Returns:** `org.eclipse.swt.widgets.Control`
 
 ### `updateRadioButtonsSelection()`
 
@@ -304,115 +304,115 @@
 
 ### `setFrameComboInput(java.lang.String[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `void`
 
 ### `setRowsepComboInput(java.lang.String[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `void`
 
 ### `setColsepComboInput(java.lang.String[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `void`
 
 ### `setAlignComboInput(java.lang.String[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
-### `setColWidthsComboInput(java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType> arg0)`
-
 **Returns:** `void`
+
+### `setColWidthsComboInput(java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`)
 
-### `getFrameValues(int arg0)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String[]`
+### `getFrameValues(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getRowsepValues(int arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getColsepValues(int arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getAlignValues(int arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultFrameValue(int arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getDefaultRowsepValue(int arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getDefaultColsepValue(int arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getDefaultAlignValue(int arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getColumnWidthsSpecifications(int arg0)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `createTitleCheckbox(org.eclipse.swt.widgets.Composite arg0)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`
 
-**Returns:** `org.eclipse.swt.widgets.Button`
+### `createTitleCheckbox(org.eclipse.swt.widgets.Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableInfo arg0)`
+**Returns:** `org.eclipse.swt.widgets.Button`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
+### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md))
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
 ### `initialize()`
 
@@ -424,45 +424,45 @@
 
 ### `updateTitleState(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `updateSeparatorsState(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `updateAlignState(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `updateColWidthsCombo(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `tableModelChanged(int arg0)`
-
 **Returns:** `void`
+
+### `tableModelChanged(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
 
-### `createButtonsForButtonBar(org.eclipse.swt.widgets.Composite arg0)`
-
 **Returns:** `void`
+
+### `createButtonsForButtonBar(org.eclipse.swt.widgets.Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
+
+**Returns:** `void`
 
 ### `getHelpPageID()`
 

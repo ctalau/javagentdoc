@@ -29,22 +29,20 @@
 
 ### `hasReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
-### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
-
 **Returns:** `boolean`
+
+### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 - `attributeName` (`java.lang.String`)
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+**Returns:** `boolean`
 
-**Returns:** `javax.xml.transform.sax.SAXSource`
+### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
@@ -52,27 +50,29 @@
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../extensions/api/AuthorAccess.md))
 - `entityResolver` (`org.xml.sax.EntityResolver`)
 
-### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `javax.xml.transform.sax.SAXSource`
 
-**Returns:** `java.lang.String`
+### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
+
+**Returns:** `java.lang.String`
 
 ### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
-### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
-
 **Returns:** `java.lang.String`
+
+### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../extensions/api/AuthorAccess.md))
+
+**Returns:** `java.lang.String`
 
 ### `getWrappedResolver()`
 
@@ -80,26 +80,26 @@
 
 ### `hasEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `systemID` (`java.lang.String`)
 - `referenceNodeParent` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
+
+**Returns:** `boolean`
 
 ### `allowsValidatationForEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `systemID` (`java.lang.String`)
 - `referenceNodeParent` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
-### `replaceReference(ro.sync.ecss.extensions.api.node.AuthorDocumentProvider targetProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorReferenceNode referenceNode)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `replaceReference(ro.sync.ecss.extensions.api.node.AuthorDocumentProvider targetProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorReferenceNode referenceNode)`
 
 **Parameters:**
 - `targetProvider` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../../extensions/api/node/AuthorDocumentProvider.md))
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../extensions/api/AuthorAccess.md))
 - `referenceNode` ([`ro.sync.ecss.extensions.api.node.AuthorReferenceNode`](../../extensions/api/node/AuthorReferenceNode.md))
+
+**Returns:** `void`
 

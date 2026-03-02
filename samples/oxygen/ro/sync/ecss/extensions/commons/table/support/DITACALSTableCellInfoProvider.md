@@ -16,15 +16,15 @@
 
 ### `isTableCell(java.lang.String tableCellsTagName)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
 
-### `isColspec(ro.sync.ecss.extensions.api.node.AuthorElement child)`
-
 **Returns:** `boolean`
+
+### `isColspec(ro.sync.ecss.extensions.api.node.AuthorElement child)`
 
 **Parameters:**
 - `child` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 

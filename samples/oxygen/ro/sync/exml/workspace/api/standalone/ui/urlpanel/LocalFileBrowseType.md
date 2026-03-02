@@ -27,10 +27,10 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.exml.workspace.api.standalone.ui.urlpanel.LocalFileBrowseType`](./LocalFileBrowseType.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.exml.workspace.api.standalone.ui.urlpanel.LocalFileBrowseType`](./LocalFileBrowseType.md)
 
 ### `getInternalIdMapping()`
 

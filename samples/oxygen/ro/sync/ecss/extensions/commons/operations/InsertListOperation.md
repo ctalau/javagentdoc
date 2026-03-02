@@ -50,140 +50,140 @@
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `removeEmptyListElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<javax.swing.text.Position> positions)`
+**Returns:** `void`
 
-**Returns:** `java.util.Optional<java.util.Map<java.lang.String,java.lang.String>>`
+### `removeEmptyListElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<javax.swing.text.Position> positions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `positions` (`java.util.List<javax.swing.text.Position>`): The positions where to look for empty lists.
 
-### `getSelectedList(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
+**Returns:** `java.util.Optional<java.util.Map<java.lang.String,java.lang.String>>`
 
-**Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorElement>`
+### `getSelectedList(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
 
 **Parameters:**
 - `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): The intervals.
 
-### `getSelectedList(ro.sync.ecss.extensions.api.ContentInterval interval)`
-
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorElement>`
+
+### `getSelectedList(ro.sync.ecss.extensions.api.ContentInterval interval)`
 
 **Parameters:**
 - `interval` ([`ro.sync.ecss.extensions.api.ContentInterval`](../../api/ContentInterval.md)): The interval.
 
-### `insertFragmentsInListAtOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert, int offset)`
+**Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-**Returns:** `void`
+### `insertFragmentsInListAtOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert, int offset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `fragmentsToConvert` (`java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`): The fragments to convert.
 - `offset` (`int`): The offset where the list is located.
 
-### `deleteEmptyFragments(java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert)`
-
 **Returns:** `void`
+
+### `deleteEmptyFragments(java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert)`
 
 **Parameters:**
 - `fragmentsToConvert` (`java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`): The fragments to convert.
 
-### `shoudConvertElementAtCaret(java.lang.String convertElement, boolean isAtStart)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `shoudConvertElementAtCaret(java.lang.String convertElement, boolean isAtStart)`
 
 **Parameters:**
 - `convertElement` (`java.lang.String`)
 - `isAtStart` (`boolean`): `true` if the caret is at the start of the element to be converted.
 
-### `getFragmentsToConvert(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`
+### `getFragmentsToConvert(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): The intervals to convert.
 
-### `getIntervalsToConvert(java.lang.String convertElementAtCaretArgValue)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`
+### `getIntervalsToConvert(java.lang.String convertElementAtCaretArgValue)`
 
 **Parameters:**
 - `convertElementAtCaretArgValue` (`java.lang.String`): "true", "false" or "auto" controlling if the element at caret should be converted when 
- no selection is found in the document.
+   no selection is found in the document.
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`
 
 ### `containsOnlyStartSentinels(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int startOffset, int endOffset)`
-
-**Returns:** `boolean`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `startOffset` (`int`): The start offset.
 - `endOffset` (`int`): The end offset (exclusive).
 
+**Returns:** `boolean`
+
 ### `getElementAtCaretToConvert(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper)`
+
+**Parameters:**
+- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
+- `helper` (`ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper`): Used to check if the elements from selection can be converted 
+   in other elements (table cells or list entries)
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-**Parameters:**
-- `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
-- `helper` (`ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper`): Used to check if the elements from selection can be converted 
- in other elements (table cells or list entries)
-
 ### `canBeConverted(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper, ro.sync.ecss.extensions.api.node.AuthorNode candidate)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `helper` (`ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper`): Used to check if the elements from selection can be converted 
- in other elements (table cells or list entries)
+   in other elements (table cells or list entries)
 - `candidate` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element to check.
 
-### `isEmptyListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `boolean`
+
+### `isEmptyListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to check.
 
-### `isListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `boolean`
+
+### `isListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element to check.
+
+**Returns:** `boolean`
 
 ### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element to check.
 
-### `insertAtCaret(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, boolean schemaAware)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `insertAtCaret(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, boolean schemaAware)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): Arguments of the operation.
 - `schemaAware` (`boolean`): `true` if the insertion should be schema aware.
 
-### `getParentListType(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getParentListType(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 Can be `null`.
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node at offset.
+
+**Returns:** `java.lang.String`
 
 ### `getConversionElementsChecker()`
 
@@ -191,12 +191,12 @@ Can be `null`.
 
 ### `insertContent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode listNode, java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> selectedFragmentsInfos)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `listNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The list node.
 - `selectedFragmentsInfos` (`java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`): The fragments to be inserted.
+
+**Returns:** `void`
 
 ### `getNamespace()`
 
@@ -204,16 +204,14 @@ Can be `null`.
 
 ### `getXMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String listType, java.lang.String parentListType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `listType` (`java.lang.String`): The type of the list to be inserted.
 - `parentListType` (`java.lang.String`): The type of the parent list, can be `null`
 
-### `getListXMLFragment(java.lang.String listType, java.util.Map<java.lang.String,java.lang.String> listAttributes, int numberOfListItems, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.StringBuilder`
+### `getListXMLFragment(java.lang.String listType, java.util.Map<java.lang.String,java.lang.String> listAttributes, int numberOfListItems, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `listType` (`java.lang.String`): The list type.
@@ -221,10 +219,12 @@ Can be `null`.
 - `numberOfListItems` (`int`): The number of list items.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 
-### `getListTypeDescription(java.lang.String listType)`
+**Returns:** `java.lang.StringBuilder`
 
-**Returns:** `java.lang.String`
+### `getListTypeDescription(java.lang.String listType)`
 
 **Parameters:**
 - `listType` (`java.lang.String`): The list type.
+
+**Returns:** `java.lang.String`
 

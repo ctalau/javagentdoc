@@ -41,14 +41,12 @@ The user can provide a custom implementation in order to transfer useful informa
 
 ### `getResult(java.lang.String resultId)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `resultId` (`java.lang.String`): One of the constants defined in this interface.
 
-### `getType()`
+**Returns:** `java.lang.Object`
 
-**Returns:** `java.lang.String`
+### `getType()`
 
 Depending on a result type, different information is available through
  #getResult(String) method.
@@ -72,4 +70,6 @@ Depending on a result type, different information is available through
 
  - #TYPE_HANDLE_TYPING_OPERATION for typing operation, 
  see AuthorSchemaAwareEditingHandler#handleTyping(int, char, AuthorAccess).
+
+**Returns:** `java.lang.String`
 

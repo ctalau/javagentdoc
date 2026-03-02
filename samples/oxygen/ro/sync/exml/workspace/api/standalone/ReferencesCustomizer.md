@@ -10,8 +10,6 @@
 
 ### `addInputURLChooserCustomizer(ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer inputURLChooserCustomizer)`
 
-**Returns:** `void`
-
 These actions are available in 
  Oxygen, in any control or dialog that contains an URL input box. 
  
@@ -28,9 +26,9 @@ These actions are available in
 **Parameters:**
 - `inputURLChooserCustomizer` ([`ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer`](./InputURLChooserCustomizer.md)): The input URL chooser customizer.
 
-### `addRelativeReferencesResolver(java.lang.String protocol, ro.sync.exml.workspace.api.util.RelativeReferenceResolver resolver)`
-
 **Returns:** `void`
+
+### `addRelativeReferencesResolver(java.lang.String protocol, ro.sync.exml.workspace.api.util.RelativeReferenceResolver resolver)`
 
 This method can be used by a CMS implementor to take control over the way Oxygen is computing relative references for a certain URL protocol.
  For example when inserting in a DITA Topic a reference to an image Oxygen will try to make the reference relative to the current XML document.
@@ -39,4 +37,6 @@ This method can be used by a CMS implementor to take control over the way Oxygen
 **Parameters:**
 - `protocol` (`java.lang.String`): The URL protocol for which you want to take control over the relativization.
 - `resolver` ([`ro.sync.exml.workspace.api.util.RelativeReferenceResolver`](../util/RelativeReferenceResolver.md)): The custom resolver.
+
+**Returns:** `void`
 

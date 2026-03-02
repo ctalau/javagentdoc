@@ -69,23 +69,21 @@
 
 ### `load(java.net.URL arg0, java.io.Reader arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.io.Reader`)
+
+**Returns:** `void`
 
 ### `showLocation(java.net.URL arg0, java.io.Reader arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.io.Reader`)
 
-### `createEditor(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
+**Returns:** `void`
 
-**Returns:** `ro.sync.exml.editor.dd`
+### `createEditor(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)
@@ -93,6 +91,8 @@
 - `arg2` (`java.lang.String[]`)
 - `arg3` (`java.lang.String`)
 - `arg4` (`java.lang.String`)
+
+**Returns:** `ro.sync.exml.editor.dd`
 
 ### `addActionsToActionMap()`
 
@@ -104,17 +104,17 @@
 
 ### `addAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md))
+
+**Returns:** `void`
 
 ### `removeAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md))
+
+**Returns:** `void`
 
 ### `getEditorComponent()`
 
@@ -130,10 +130,10 @@
 
 ### `setModified(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `getWSEditorAccess()`
 
@@ -149,22 +149,22 @@
 
 ### `getAdditionalEditHelper(int arg0)`
 
-**Returns:** `javax.swing.JComponent`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `print(boolean arg0)`
+**Returns:** `javax.swing.JComponent`
 
-**Returns:** `void`
+### `print(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `showLocation(java.net.URL arg0)`
-
 **Returns:** `void`
+
+### `showLocation(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `void`
 

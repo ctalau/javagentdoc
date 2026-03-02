@@ -46,10 +46,10 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -61,8 +61,8 @@
 
 ### `compareTo(ro.sync.exml.ContentTypePageAssociationPO arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.ContentTypePageAssociationPO`](./ContentTypePageAssociationPO.md))
+
+**Returns:** `int`
 

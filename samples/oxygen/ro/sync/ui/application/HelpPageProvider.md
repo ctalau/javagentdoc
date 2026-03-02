@@ -2046,8 +2046,8 @@ DITA_OT transformation options tab.
 
 ### `getHelpPageID()`
 
-**Returns:** `java.lang.String`
-
 Use null if no help page is available for the dialog (no help is shown). 
  Use HelpDialog.MAIN_PAGE_ID to open the help at the main page.
+
+**Returns:** `java.lang.String`
 

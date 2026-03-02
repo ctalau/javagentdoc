@@ -38,47 +38,45 @@ Case 1: If there is no selection in the document:
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `getSelectedIntervals(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `void`
 
-**Returns:** `java.util.List<int[]>`
+### `getSelectedIntervals(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 
-### `performToggleSelection(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String fragment, ro.sync.ecss.extensions.api.node.AuthorElement wrapNode, boolean schemaAware)`
+**Returns:** `java.util.List<int[]>`
 
-**Returns:** `void`
+### `performToggleSelection(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String fragment, ro.sync.ecss.extensions.api.node.AuthorElement wrapNode, boolean schemaAware)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 - `fragment` (`java.lang.String`): The fragment to either wrap or unwrap the selection.
 - `wrapNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The actual node that is wrapped/unwrapped from the previous fragment.
- We give both to avoid being computed again.
+   We give both to avoid being computed again.
 - `schemaAware` (`boolean`): `true` if the operation can interogate the schema.
 
-### `isAllWrapped(java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction> toProcess)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isAllWrapped(java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction> toProcess)`
 
 **Parameters:**
 - `toProcess` (`java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction>`): The intervals to process.
 
-### `sortAscending(java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction> toProcess)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `sortAscending(java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction> toProcess)`
 
 **Parameters:**
 - `toProcess` (`java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction>`): Intervals to sort.
 
-### `collectToggleIntervals(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction> collectedIntervals, ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, ro.sync.ecss.extensions.api.node.AuthorElement wrapNode, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment authorFragment, int[] balancedInterval, boolean raw, boolean schemaAware)`
-
 **Returns:** `void`
+
+### `collectToggleIntervals(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction> collectedIntervals, ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, ro.sync.ecss.extensions.api.node.AuthorElement wrapNode, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment authorFragment, int[] balancedInterval, boolean raw, boolean schemaAware)`
 
 Either wrapped or unwrapped.
  If an interval can't be toggled it will be split into smaller parts.
@@ -88,15 +86,15 @@ Either wrapped or unwrapped.
 - `collectedIntervals` (`java.util.List<ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction>`): The list with the intervals that can be toggled.
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): Author document controller.
 - `wrapNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The node to wrap/unwrap. We pass this to avoid the overhead of 
- computing it from the fragment.
+   computing it from the fragment.
 - `authorFragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)): The fragment to wrap/unwrap.
 - `balancedInterval` (`int[]`): The interval to process.
 - `raw` (`boolean`): `true` if this interval comes from the selection model (unprocessed).
 - `schemaAware` (`boolean`): `true` if schema information should be used to decide if the toggle is possible.
 
-### `extendSelectionOverSentinels(int startOffset, int endOffset, int maxStartOffset, int maxEndOffset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `void`
 
-**Returns:** `int[]`
+### `extendSelectionOverSentinels(int startOffset, int endOffset, int maxStartOffset, int maxEndOffset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `startOffset` (`int`): Start selection offset.
@@ -105,16 +103,16 @@ Either wrapped or unwrapped.
 - `maxEndOffset` (`int`): Maxim end offset.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The object which provides access to Author functions.
 
-### `getElementAtCaretOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `int[]`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
+### `getElementAtCaretOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 
-### `getElementMatchingReferenceElement(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement, boolean topElement)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
+
+### `getElementMatchingReferenceElement(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement, boolean topElement)`
 
 The search starts from the given `startElement ` and continues with its parents. 
  If `topElement` is `true` then the top parent matching element 
@@ -126,17 +124,17 @@ The search starts from the given `startElement ` and continues with its parents.
 - `referenceElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The reference element.
 - `topElement` (`boolean`): `true` to return the top matching element.
 
-### `elementMatchesReferenceElement(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `elementMatchesReferenceElement(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element.
 - `referenceElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The reference element.
 
-### `getElementFromFragment(java.lang.String fragment, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
+### `getElementFromFragment(java.lang.String fragment, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 If the fragment contains more 
  than one element then an exception is thrown.
@@ -144,6 +142,8 @@ If the fragment contains more
 **Parameters:**
 - `fragment` (`java.lang.String`): The given fragment.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
 ### `getArguments()`
 
@@ -155,17 +155,15 @@ If the fragment contains more
 
 ### `unwrap(ro.sync.ecss.extensions.api.node.AuthorElement element, int start, int end, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `int[]`
-
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Element to unwrap.
 - `start` (`int`): Interval start offset (inclusive).
 - `end` (`int`): Interval end offset (inclusive).
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 
-### `unwrapElementsMatchingReferenceElement(int start, int end, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `int[]`
 
-**Returns:** `ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.UnwrapResult`
+### `unwrapElementsMatchingReferenceElement(int start, int end, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `start` (`int`): Interval start offset.
@@ -173,9 +171,9 @@ If the fragment contains more
 - `referenceElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The reference element.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
 
-### `canToggleSchemaAware(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int start, int end, ro.sync.ecss.extensions.api.node.AuthorElement wrapNode, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment surroundFragment)`
+**Returns:** `ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.UnwrapResult`
 
-**Returns:** `ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction`
+### `canToggleSchemaAware(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int start, int end, ro.sync.ecss.extensions.api.node.AuthorElement wrapNode, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment surroundFragment)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -184,9 +182,9 @@ If the fragment contains more
 - `wrapNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The node to wrap/unwrap.
 - `surroundFragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)): The fragment to surround with.
 
-### `isFullyWrappedInterval(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int start, int end, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement)`
+**Returns:** `ro.sync.ecss.extensions.commons.operations.ToggleSurroundWithElementOperation.IntervalAndAction`
 
-**Returns:** `boolean`
+### `isFullyWrappedInterval(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int start, int end, ro.sync.ecss.extensions.api.node.AuthorElement referenceElement)`
 
 Some code based on the one
  from #unwrapElementsMatchingReferenceElement(int, int, AuthorElement, AuthorAccess)
@@ -198,9 +196,9 @@ Some code based on the one
 - `end` (`int`): Interval end. Inclusive.
 - `referenceElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element to toggle.
 
-### `canWrap(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment surroundInFragment, int start, int end, ro.sync.ecss.extensions.api.node.AuthorNode parentOfChange, short validationMode)`
-
 **Returns:** `boolean`
+
+### `canWrap(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment surroundInFragment, int start, int end, ro.sync.ecss.extensions.api.node.AuthorNode parentOfChange, short validationMode)`
 
 It first checks if the surrounding fragment is accepted by the schema at the given offset.
  The second check is performed by altering the elements context adding the elements from the surrounding fragment, and
@@ -214,26 +212,28 @@ It first checks if the surrounding fragment is accepted by the schema at the giv
 - `parentOfChange` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node containing the change.
 - `validationMode` (`short`): The validation mode.
 
-### `pushContextElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementName)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `pushContextElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementName)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): An element context.
 - `elementName` (`java.lang.String`): Element name to push in the context.
 
-### `getElementsPath(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../api/node/AuthorElement.md)
+### `getElementsPath(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
 
 **Parameters:**
 - `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)): The document fragment to check.
 
-### `getEquiIntervalFromMarker(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int[] interval)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../api/node/AuthorElement.md)
 
-**Returns:** `java.util.List<int[]>`
+### `getEquiIntervalFromMarker(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int[] interval)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 - `interval` (`int[]`): The interval to split..
+
+**Returns:** `java.util.List<int[]>`
 

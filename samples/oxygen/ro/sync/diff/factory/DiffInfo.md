@@ -151,10 +151,10 @@
 
 ### `getThreeWayAlgorithm(int arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `int`
 
 ### `clone()`
 
@@ -166,10 +166,10 @@
 
 ### `getAsDiffOptions(boolean arg0)`
 
-**Returns:** [`ro.sync.diff.api.DiffOptions`](../api/DiffOptions.md)
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** [`ro.sync.diff.api.DiffOptions`](../api/DiffOptions.md)
 
 ### `checkValid()`
 

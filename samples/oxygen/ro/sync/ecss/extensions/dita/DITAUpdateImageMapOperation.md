@@ -26,36 +26,36 @@
 
 ### `getNewShapesList(java.lang.String svgText)`
 
-**Returns:** `java.util.List<? extends ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor>`
-
 **Parameters:**
 - `svgText` (`java.lang.String`)
 
-### `getFrameworkSpecificImageMapDom(java.lang.String svgText)`
+**Returns:** `java.util.List<? extends ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor>`
 
-**Returns:** `org.w3c.dom.Document`
+### `getFrameworkSpecificImageMapDom(java.lang.String svgText)`
 
 **Parameters:**
 - `svgText` (`java.lang.String`): The SVG text.
 
-### `getNewShapesList(org.w3c.dom.Document newMapDOM)`
+**Returns:** `org.w3c.dom.Document`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.dita.DITAUpdateImageMapOperation.DITANewShapeDescriptor>`
+### `getNewShapesList(org.w3c.dom.Document newMapDOM)`
 
 **Parameters:**
 - `newMapDOM` (`org.w3c.dom.Document`): The DOM that contains new shapes.
 
-### `getExistingShapesList(ro.sync.ecss.extensions.api.node.AuthorElement existingImageMap)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.dita.DITAUpdateImageMapOperation.DITANewShapeDescriptor>`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../api/node/AuthorElement.md)
+### `getExistingShapesList(ro.sync.ecss.extensions.api.node.AuthorElement existingImageMap)`
 
 **Parameters:**
 - `existingImageMap` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
 
-### `getImageMapElement(ro.sync.ecss.extensions.api.node.AuthorElement currentElement)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../api/node/AuthorElement.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)
+### `getImageMapElement(ro.sync.ecss.extensions.api.node.AuthorElement currentElement)`
 
 **Parameters:**
 - `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)
 

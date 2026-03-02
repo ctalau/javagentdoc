@@ -54,24 +54,24 @@ It is used on standalone implementation.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
 - `insertChoiceTable` (`boolean`): `true` to show dialog for a DITA choice table.
 - `isPropertiesTableAccepted` (`boolean`): `true` if a properties table is accepted by the schema
-          (i.e. if it is a global element).
+            (i.e. if it is a global element).
 - `defaultTableModel` (`int`): The default model of the table that will be inserted.
 
 ## Methods
 
 ### `getColumnWidthsSpecifications(int tableModelType)`
 
-**Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
 
 ### `getFrameValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `createTitleCheckbox()`
 
@@ -79,52 +79,52 @@ It is used on standalone implementation.
 
 ### `getDefaultFrameValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getRowsepValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultRowsepValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getColsepValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultColsepValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getAlignValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultAlignValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getHelpPageID()`
 

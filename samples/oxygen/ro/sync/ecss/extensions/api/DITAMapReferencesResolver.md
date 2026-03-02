@@ -18,18 +18,18 @@
 
 ### `setResolveAllTopicReferences(boolean resolveAllTopicRefs)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `resolveAllTopicRefs` (`boolean`): If true, will resolve both map references and topic references.
- If false, will resolve only map references, defaults to false
+   If false, will resolve only map references, defaults to false
+
+**Returns:** `void`
 
 ### `setExpandMapReferences(boolean isExpandMapRefs)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `isExpandMapRefs` (`boolean`): `true` to expand the references.
+
+**Returns:** `void`
 
 ### `getGrammarCache()`
 
@@ -37,8 +37,8 @@
 
 ### `setGrammarCache(java.lang.Object grammarCache)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `grammarCache` (`java.lang.Object`): The grammar cache to be used.
+
+**Returns:** `void`
 

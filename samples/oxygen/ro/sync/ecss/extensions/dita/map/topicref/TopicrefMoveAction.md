@@ -56,10 +56,10 @@ Can be null
 
 ### `moveNode(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)
-
 **Parameters:**
 - `toMoveNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): the node to move
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)
 
 ### `locateNodeByXPath()`
 

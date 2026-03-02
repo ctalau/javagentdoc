@@ -36,18 +36,18 @@
 
 ### `putOnTopFrames(ro.sync.exml.ContentTypePageAssociationPO arg0, java.util.List<java.lang.String> arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.ContentTypePageAssociationPO`](./ContentTypePageAssociationPO.md))
 - `arg1` (`java.util.List<java.lang.String>`)
 
-### `getOnTopFrames(ro.sync.exml.ContentTypePageAssociationPO arg0)`
+**Returns:** `void`
 
-**Returns:** `java.util.List<java.lang.String>`
+### `getOnTopFrames(ro.sync.exml.ContentTypePageAssociationPO arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.ContentTypePageAssociationPO`](./ContentTypePageAssociationPO.md))
+
+**Returns:** `java.util.List<java.lang.String>`
 
 ### `toString()`
 

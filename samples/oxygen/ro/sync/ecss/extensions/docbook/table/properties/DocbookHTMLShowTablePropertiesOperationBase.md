@@ -41,12 +41,12 @@
 
 ### `processFragment(ro.sync.ecss.extensions.api.node.AuthorElement currentNode, java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, boolean moveToHeader)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `currentNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
 - `moveToHeader` (`boolean`)
+
+**Returns:** `void`
 
 ### `getTableAttribute()`
 
@@ -54,17 +54,17 @@
 
 ### `getColSpecs(java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>> map)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
-
 **Parameters:**
 - `map` (`java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`)
 
-### `getCellIndexes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-**Returns:** `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`
+### `getCellIndexes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
 
 **Parameters:**
 - `cells` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
+
+**Returns:** `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`
 
 ### `getHelpPageID()`
 

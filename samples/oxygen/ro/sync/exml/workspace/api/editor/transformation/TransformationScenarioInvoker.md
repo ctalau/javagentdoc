@@ -10,17 +10,15 @@
 
 ### `runTransformationScenarios(java.lang.String[] scenarioNames, ro.sync.exml.workspace.api.editor.transformation.TransformationFeedback transformationFeedback)`
 
-**Returns:** `void`
-
 A separate thread is started and runs each scenario sequentially. The method returns immediately.
 
 **Parameters:**
 - `scenarioNames` (`java.lang.String[]`): An array of scenario names defined in the document type associated to the current editor.
 - `transformationFeedback` ([`ro.sync.exml.workspace.api.editor.transformation.TransformationFeedback`](./TransformationFeedback.md)): An interface through which the user receives feedback from the started transformation process.
 
-### `runTransformationScenario(java.lang.String scenarioName, java.util.Map<java.lang.String,java.lang.String> scenarioParameters, ro.sync.exml.workspace.api.editor.transformation.TransformationFeedback transformationFeedback)`
-
 **Returns:** `void`
+
+### `runTransformationScenario(java.lang.String scenarioName, java.util.Map<java.lang.String,java.lang.String> scenarioParameters, ro.sync.exml.workspace.api.editor.transformation.TransformationFeedback transformationFeedback)`
 
 A separate thread is started and runs each scenario sequentially. The method returns immediately.
 
@@ -28,6 +26,8 @@ A separate thread is started and runs each scenario sequentially. The method ret
 - `scenarioName` (`java.lang.String`): The scenario name defined in the document type associated to the current editor.
 - `scenarioParameters` (`java.util.Map<java.lang.String,java.lang.String>`): Pairs of transformation scenario names and values that will be used when running this transformation.
 - `transformationFeedback` ([`ro.sync.exml.workspace.api.editor.transformation.TransformationFeedback`](./TransformationFeedback.md)): An interface through which the user receives feedback from the started transformation process.
+
+**Returns:** `void`
 
 ### `stopCurrentTransformationScenario()`
 

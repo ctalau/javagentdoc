@@ -10,16 +10,16 @@
 
 ### `modifiedStateChanged(boolean modified)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `modified` (`boolean`): true if the edited text in the component is modified, false otherwise
 
-### `loadedDocumentChanged()`
-
 **Returns:** `void`
 
+### `loadedDocumentChanged()`
+
 load(URL, Reader) was called
+
+**Returns:** `void`
 
 ### `documentTypeChanged()`
 

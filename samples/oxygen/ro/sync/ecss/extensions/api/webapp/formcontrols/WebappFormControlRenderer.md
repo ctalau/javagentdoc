@@ -16,15 +16,13 @@
 
 ### `renderControl(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.io.Writer out)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../editor/AuthorInplaceContext.md)): The context in which the form control is rendered.
 - `out` (`java.io.Writer`): The output to render the form control to.
 
-### `isChangeTrackingAware()`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isChangeTrackingAware()`
 
 In these cases, if the method returns `true`, in the HTML rendering, there will be 
  some additional HTML span elements that wrap the form-control markup 
@@ -34,4 +32,6 @@ In these cases, if the method returns `true`, in the HTML rendering, there will 
 If the method returns `false`, comment and change markers will not be rendered over
  the form-control. This option is provided for backwards-compatibility reasons, so it is recommended 
  to override this method and return true.
+
+**Returns:** `boolean`
 

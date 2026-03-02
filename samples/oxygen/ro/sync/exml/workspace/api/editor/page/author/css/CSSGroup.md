@@ -35,19 +35,19 @@ The Styles drop down allows users to choose only one main source.
 **Parameters:**
 - `title` (`java.lang.String`): The merged css title.
 - `isMainSource` (`boolean`): `true` if this is a main source of CSS styles. 
- The Styles drop down allows users to choose only one main source.
- 
- `false` if this is an alternate source of CSS styles.
- The Styles drop down allows users to apply multiple alternate styles over a main source.
+   The Styles drop down allows users to choose only one main source.
+   
+   `false` if this is an alternate source of CSS styles.
+   The Styles drop down allows users to apply multiple alternate styles over a main source.
 
 ## Methods
 
 ### `setTitle(java.lang.String title)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `title` (`java.lang.String`): The new title.
+
+**Returns:** `void`
 
 ### `isMainSource()`
 
@@ -63,42 +63,42 @@ The Styles drop down allows users to choose only one main source.
 
 ### `addURLs(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource[] urlsList)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `urlsList` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource[]`](./CSSResource.md)): The CSSResource(s) to be added.
 
-### `addURL(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource cssRes)`
-
 **Returns:** `void`
+
+### `addURL(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource cssRes)`
 
 **Parameters:**
 - `cssRes` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md)): The CSS resource to add.
+
+**Returns:** `void`
 
 ### `removeURL(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource cssRes)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `cssRes` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md)): The CSS resource to add.
 
-### `setPreferred(boolean isMainSource)`
-
 **Returns:** `void`
+
+### `setPreferred(boolean isMainSource)`
 
 **Parameters:**
 - `isMainSource` (`boolean`): `true` if this is a main source of CSS styles. 
- The Styles drop down allows users to choose only one main source.
- 
- `false` if this is an alternate source of CSS styles.
- The Styles drop down allows users to apply multiple alternate styles over a main source.
+   The Styles drop down allows users to choose only one main source.
+   
+   `false` if this is an alternate source of CSS styles.
+   The Styles drop down allows users to apply multiple alternate styles over a main source.
+
+**Returns:** `void`
 
 ### `equals(java.lang.Object obj)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

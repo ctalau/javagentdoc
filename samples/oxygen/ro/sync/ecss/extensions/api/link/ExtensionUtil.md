@@ -14,8 +14,8 @@
 
 ### `getLocalName(java.lang.String qName)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `qName` (`java.lang.String`): The qualified name.
+
+**Returns:** `java.lang.String`
 

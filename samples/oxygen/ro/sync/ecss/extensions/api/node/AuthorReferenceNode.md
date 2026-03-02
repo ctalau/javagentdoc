@@ -57,8 +57,8 @@ Includes the root element.
 
 ### `getReferenceType()`
 
-**Returns:** `int`
-
 Used to differentiate between XML entities and
  other reference (e.g. `XInclude` elements).
+
+**Returns:** `int`
 

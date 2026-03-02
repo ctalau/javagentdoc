@@ -26,27 +26,27 @@ IMPORTANT, this default constructor is mostly intended to facilitate creating su
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option whose value modification
- triggers the listener notification.
+   triggers the listener notification.
 
 ## Methods
 
 ### `optionValueChanged(ro.sync.ecss.extensions.api.OptionChangedEvent event)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.OptionChangedEvent`](./OptionChangedEvent.md)): An OptionChangedEvent which indicates that the value 
- of the associated option has been changed.
-
-### `setKey(java.lang.String key)`
+   of the associated option has been changed.
 
 **Returns:** `void`
+
+### `setKey(java.lang.String key)`
 
 The key must be set before the listener is added.
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option whose value modification
- triggers the listener notification.
+   triggers the listener notification.
+
+**Returns:** `void`
 
 ### `getKey()`
 

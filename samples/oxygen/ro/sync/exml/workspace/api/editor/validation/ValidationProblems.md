@@ -42,10 +42,10 @@
 
 ### `addValidationProblems(ro.sync.exml.workspace.api.editor.validation.ValidationProblems arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblems`](./ValidationProblems.md))
+
+**Returns:** `void`
 
 ### `getProblemsList()`
 
@@ -53,10 +53,10 @@
 
 ### `setProblemsList(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+**Returns:** `void`
 
 ### `getValidationType()`
 

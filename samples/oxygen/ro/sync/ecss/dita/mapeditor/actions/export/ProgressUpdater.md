@@ -10,10 +10,10 @@
 
 ### `updateProgressStatus(java.lang.String status)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `status` (`java.lang.String`): The status message.
+
+**Returns:** `void`
 
 ### `cancel()`
 

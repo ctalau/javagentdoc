@@ -10,8 +10,8 @@
 
 ### `message(ro.sync.document.DocumentPositionedInfo message)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `message` ([`ro.sync.document.DocumentPositionedInfo`](../../../document/DocumentPositionedInfo.md)): The message containing inside an xsl:message or xsl:assert.
+
+**Returns:** `void`
 

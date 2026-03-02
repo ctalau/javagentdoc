@@ -25,7 +25,7 @@
 **Parameters:**
 - `cssURL` (`java.lang.String`): The CSS url.
 - `origin` (`byte`): The CSS origin. Can be SOURCE_DOCUMENT, SOURCE_DOCUMENT_TYPE or SOURCE_XHTML_DOCUMENT. 
- See the "SOURCE_" constants.
+   See the "SOURCE_" constants.
 
 ## Methods
 
@@ -43,10 +43,10 @@
 
 ### `equals(java.lang.Object obj)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

@@ -71,28 +71,26 @@ The moved node will be inserted in the first leaf will be this fragment
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `moveNode(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode, ro.sync.ecss.extensions.api.node.AuthorNode toDeleteNode, boolean selectNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
-
 **Returns:** `void`
+
+### `moveNode(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode, ro.sync.ecss.extensions.api.node.AuthorNode toDeleteNode, boolean selectNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Parameters:**
 - `toMoveNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to be moved.
 - `toDeleteNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to be deleted
 - `selectNode` (`boolean`): `true` if the node should be selected after the move operation
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
- Provides access to specific informations and actions for 
- editor, document, workspace, tables, change tracking, utility a.s.o.
+   Provides access to specific informations and actions for 
+   editor, document, workspace, tables, change tracking, utility a.s.o.
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The map of arguments.
 
-### `getFragmentToMove(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode, ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, boolean alwaysPreserveTrackedChanges, boolean moveOnlyContent)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)
+### `getFragmentToMove(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode, ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, boolean alwaysPreserveTrackedChanges, boolean moveOnlyContent)`
 
 **Parameters:**
 - `toMoveNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The context node.
@@ -100,9 +98,9 @@ The moved node will be inserted in the first leaf will be this fragment
 - `alwaysPreserveTrackedChanges` (`boolean`): `true` to preserve track changes
 - `moveOnlyContent` (`boolean`): `true` if only the content of the node is moved.
 
-### `moveFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragmentToMove, int insertionOffset, boolean selectNode, ro.sync.ecss.extensions.api.node.AuthorNode toDeleteNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)
 
-**Returns:** `void`
+### `moveFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragmentToMove, int insertionOffset, boolean selectNode, ro.sync.ecss.extensions.api.node.AuthorNode toDeleteNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Parameters:**
 - `fragmentToMove` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)): The fragment to be moved.
@@ -110,25 +108,27 @@ The moved node will be inserted in the first leaf will be this fragment
 - `selectNode` (`boolean`): `true` if the node should be selected after the move operation
 - `toDeleteNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to be deleted
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
- Provides access to specific informations and actions for 
- editor, document, workspace, tables, change tracking, utility a.s.o.
+   Provides access to specific informations and actions for 
+   editor, document, workspace, tables, change tracking, utility a.s.o.
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The map of arguments.
 
-### `isAlwaysPreserveTrackChangesTrue(ro.sync.ecss.extensions.api.ArgumentsMap args)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isAlwaysPreserveTrackChangesTrue(ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The arguments.
 
-### `executeLocationXPath(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xPathExpression, boolean processTrackChanges)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
+### `executeLocationXPath(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xPathExpression, boolean processTrackChanges)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author Access.
 - `xPathExpression` (`java.lang.String`): Xpath expression.
 - `processTrackChanges` (`boolean`): Process track changes.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
 
 ### `getArguments()`
 

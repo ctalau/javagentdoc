@@ -10,17 +10,17 @@
 
 ### `getNamespaceForPrefix(java.lang.String prefix)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `prefix` (`java.lang.String`): The prefix.
 
-### `getPrefixForNamespace(java.lang.String namespace)`
-
 **Returns:** `java.lang.String`
+
+### `getPrefixForNamespace(java.lang.String namespace)`
 
 **Parameters:**
 - `namespace` (`java.lang.String`): The namespace.
+
+**Returns:** `java.lang.String`
 
 ### `getNamespaces()`
 

@@ -27,10 +27,10 @@
 
 ### `setProcessedDocument(javax.swing.text.Document document)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `document` (`javax.swing.text.Document`): The current document.
+
+**Returns:** `void`
 
 ### `getProcessedDocument()`
 

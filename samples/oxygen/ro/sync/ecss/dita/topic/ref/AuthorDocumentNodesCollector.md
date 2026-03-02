@@ -27,10 +27,10 @@
 
 ### `collect(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../extensions/api/node/AuthorNode.md))
+
+**Returns:** `void`
 
 ### `collect()`
 
@@ -38,8 +38,8 @@
 
 ### `collectNodes(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access for the document.
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 

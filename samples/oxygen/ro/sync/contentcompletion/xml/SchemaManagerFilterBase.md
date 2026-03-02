@@ -20,19 +20,19 @@ This should be implemented if the
 
 ### `getElementDescription(ro.sync.contentcompletion.xml.CIElement element, ro.sync.contentcompletion.xml.Context ctxt)`
 
-**Returns:** [`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)
-
 **Parameters:**
 - `element` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)): The element description which has been computed in the context by the default schema manager implementation.
 - `ctxt` ([`ro.sync.contentcompletion.xml.Context`](./Context.md)): The context.
 
-### `getAttributeDescription(ro.sync.contentcompletion.xml.CIAttribute attribute, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext ctxt)`
+**Returns:** [`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)
 
-**Returns:** [`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)
+### `getAttributeDescription(ro.sync.contentcompletion.xml.CIAttribute attribute, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext ctxt)`
 
 **Parameters:**
 - `attribute` ([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)): The attribute description which has been computed in the context by the default schema manager implementation.
 - `ctxt` ([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](./WhatPossibleValuesHasAttributeContext.md)): The context.
+
+**Returns:** [`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)
 
 ### `invalidate()`
 

@@ -29,9 +29,9 @@
 
 ### `isIntervalInsideFragments(int arg0, int arg1)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`int`)
+
+**Returns:** `boolean`
 

@@ -13,10 +13,10 @@ Used to obtain the node whose graphic representation contains a certain point
 
 ### `getOffset()`
 
-**Returns:** `int`
-
 It is located within the bounds of the determined AuthorNode
  which also contains the given position.
+
+**Returns:** `int`
 
 ### `getAuthorNode()`
 

@@ -40,16 +40,16 @@ If selected, the column(s) will be inserted after the current location.
 
 ### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo previousTableColumnsInfo)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
-
 **Parameters:**
 - `previousTableColumnsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)): the previous columns information
 
-### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo previousTableColumnsInfo)`
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
 
-**Returns:** `void`
+### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo previousTableColumnsInfo)`
 
 **Parameters:**
 - `previousTableColumnsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)): If `null`, defaults will be used. Otherwise, the controls
- will be initialized with values from this info.
+   will be initialized with values from this info.
+
+**Returns:** `void`
 

@@ -22,15 +22,15 @@
 
 ### `getNodesOfInterestCriteria(java.lang.String namespace)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `namespace` (`java.lang.String`)
 
-### `getSupportedFramework(java.lang.String namespaceURI)`
+**Returns:** `java.lang.String[]`
 
-**Returns:** [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../imagemap/SupportedFrameworks.md)
+### `getSupportedFramework(java.lang.String namespaceURI)`
 
 **Parameters:**
 - `namespaceURI` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../imagemap/SupportedFrameworks.md)
 

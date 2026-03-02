@@ -36,7 +36,7 @@ Can be null
 
 **Parameters:**
 - `severity` (`int`): Severity. One of the severity constants from class DocumentPositionedInfo: 
- SEVERITY_ERROR, SEVERITY_FATAL, SEVERITY_INFO , SEVERITY_WARN.
+   SEVERITY_ERROR, SEVERITY_FATAL, SEVERITY_INFO , SEVERITY_WARN.
 - `message` (`java.lang.String`): Error message.
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md)): The author node. The node base URL will be used as a system ID location.
 
@@ -44,7 +44,7 @@ Can be null
 
 **Parameters:**
 - `severity` (`int`): Severity. One of the severity constants from class DocumentPositionedInfo: 
- SEVERITY_ERROR, SEVERITY_FATAL, SEVERITY_INFO , SEVERITY_WARN.
+   SEVERITY_ERROR, SEVERITY_FATAL, SEVERITY_INFO , SEVERITY_WARN.
 - `message` (`java.lang.String`): Error message.
 - `systemID` (`java.lang.String`): System ID
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md)): The author node.
@@ -53,7 +53,7 @@ Can be null
 
 **Parameters:**
 - `severity` (`int`): Severity. One of the severity constants from class DocumentPositionedInfo: 
- SEVERITY_ERROR, SEVERITY_FATAL, SEVERITY_INFO , SEVERITY_WARN.
+   SEVERITY_ERROR, SEVERITY_FATAL, SEVERITY_INFO , SEVERITY_WARN.
 - `message` (`java.lang.String`): Error message.
 - `systemID` (`java.lang.String`): System ID
 - `startOffset` (`int`): The start offset of the problem, mapped in the Author content.
@@ -63,11 +63,11 @@ Can be null
 
 ### `getSystemID(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `systemID` (`java.lang.String`): The proposed system ID, can be `null`
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md)): The current node, can be `null`
+
+**Returns:** `java.lang.String`
 
 ### `getNode()`
 
@@ -75,10 +75,10 @@ Can be null
 
 ### `setSelectEntireNode(boolean selectEntireNode)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `selectEntireNode` (`boolean`): `true` if the entire node should be selected.
+
+**Returns:** `void`
 
 ### `isSelectEntireNode()`
 

@@ -34,7 +34,7 @@
 - `resultType` (`ro.sync.merge.MergeResult.ResultType`): The type of the merge result.
 - `mergedString` (`java.lang.String`): The merged string.
 - `mergingOccurred` (`java.lang.Boolean`): Flag telling whether merging occurred or not. 
- If the two left|right files were identical `mergingOccurred` will be false;
+   If the two left|right files were identical `mergingOccurred` will be false;
 
 ### `<init>()`
 
@@ -50,10 +50,10 @@
 
 ### `setMergedString(java.lang.String mergedString)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `mergedString` (`java.lang.String`): The new merged string.
+
+**Returns:** `void`
 
 ### `getResultType()`
 
@@ -61,8 +61,8 @@
 
 ### `setResultType(ro.sync.merge.MergeResult.ResultType result)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `result` (`ro.sync.merge.MergeResult.ResultType`): The new value of the result type.
+
+**Returns:** `void`
 

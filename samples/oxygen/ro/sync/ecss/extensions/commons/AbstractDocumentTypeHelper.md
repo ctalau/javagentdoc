@@ -16,39 +16,39 @@
 
 ### `isElement(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String elemLocalName)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The AuthorNode to be checked.
 - `elemLocalName` (`java.lang.String`): The local name of the element.
 
-### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `boolean`
+
+### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+**Returns:** `boolean`
 
 ### `isTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+**Returns:** `boolean`
 
 ### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
-### `getTableElementForDeletion(ro.sync.ecss.extensions.api.node.AuthorNode element)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)
+### `getTableElementForDeletion(ro.sync.ecss.extensions.api.node.AuthorNode element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)
 
 ### `getTableCellElementNames()`
 
@@ -68,17 +68,17 @@
 
 ### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 This is used in the tables to replace conreffed table rows entirely
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node
 
-### `isColspec(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `boolean`
+
+### `isColspec(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node.
+
+**Returns:** `boolean`
 

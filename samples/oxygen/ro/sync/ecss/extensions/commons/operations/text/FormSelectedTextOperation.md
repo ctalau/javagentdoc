@@ -34,42 +34,42 @@
 
 ### `isDelimiterBeforeTextNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int contentOffset)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `contentOffset` (`int`): The offset where search is started.
 
-### `isWordDelimiter(char ch)`
-
 **Returns:** `boolean`
+
+### `isWordDelimiter(char ch)`
 
 **Parameters:**
 - `ch` (`char`): The character that must be evaluated.
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap arguments)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap arguments)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `arguments` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
 
-### `processContentRange(ro.sync.ecss.extensions.api.AuthorDocumentController documentController, int selStart, int selEnd)`
-
 **Returns:** `void`
+
+### `processContentRange(ro.sync.ecss.extensions.api.AuthorDocumentController documentController, int selStart, int selEnd)`
 
 **Parameters:**
 - `documentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): The document controller.
 - `selStart` (`int`): The start of the selection.
 - `selEnd` (`int`): The end of the selection.
 
-### `processTextContent(char[] charArray, boolean isDelimiterBefore)`
+**Returns:** `void`
 
-**Returns:** `char[]`
+### `processTextContent(char[] charArray, boolean isDelimiterBefore)`
 
 **Parameters:**
 - `charArray` (`char[]`): The character array that must be processed.
 - `isDelimiterBefore` (`boolean`): `true` if we have a delimiter before the given char array,
-                          `false` otherwise.
+                            `false` otherwise.
+
+**Returns:** `char[]`
 

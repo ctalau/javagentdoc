@@ -16,8 +16,6 @@
 
 ### `customizeComputedTopicrefTitle(ro.sync.ecss.extensions.api.node.AuthorNode topicref, ro.sync.ecss.extensions.api.node.AuthorNode targetTopicOrMap, java.lang.String defaultComputedTitle)`
 
-**Returns:** `java.lang.String`
-
 After the API returns the modified title, the title will be cached for the current referenced topic. 
  So this method is called usually once for every individual referenced topic.
  This kind of method is useful for example if you want to get some significant attributes 
@@ -26,12 +24,12 @@ After the API returns the modified title, the title will be cached for the curre
 **Parameters:**
 - `topicref` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): The topicref node present in the DITA Maps Manager
 - `targetTopicOrMap` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): Oxygen already parsed the document referenced via topicref, computed a title
-  and this parameter gives you access to the root element of the parsed topic.
+    and this parameter gives you access to the root element of the parsed topic.
 - `defaultComputedTitle` (`java.lang.String`): The default title computed by Oxygen
 
-### `customizeRenderedTopicrefTitle(ro.sync.ecss.extensions.api.node.AuthorNode topicref, java.lang.String defaultRenderedTitle)`
-
 **Returns:** `java.lang.String`
+
+### `customizeRenderedTopicrefTitle(ro.sync.ecss.extensions.api.node.AuthorNode topicref, java.lang.String defaultRenderedTitle)`
 
 This method is called very often, each time the tree or part of the tree is rendered.
  It is also called separately if there are multiple topicrefs pointing to the same topic.
@@ -42,14 +40,16 @@ This method is called very often, each time the tree or part of the tree is rend
 - `topicref` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): The topicref node present in the DITA Maps Manager
 - `defaultRenderedTitle` (`java.lang.String`): The default title which will be rendered by Oxygen
 
-### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../node/customizer/BasicRenderingInformation.md)
+### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
 
 The context is an instance of DITAMapNodeRendererCustomizerContext which has more information about topicrefs.
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../node/customizer/NodeRendererCustomizerContext.md))
+
+**Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../node/customizer/BasicRenderingInformation.md)
 
 ### `getDescription()`
 

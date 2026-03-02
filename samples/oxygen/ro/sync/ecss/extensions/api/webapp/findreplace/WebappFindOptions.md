@@ -28,17 +28,17 @@
 
 ### `setMatchCase(boolean matchCase)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `matchCase` (`boolean`): `true` if search should be case sensitive.
 
-### `setWholeWords(boolean wholeWords)`
-
 **Returns:** `void`
+
+### `setWholeWords(boolean wholeWords)`
 
 **Parameters:**
 - `wholeWords` (`boolean`): `true` if search should match whole words only.
+
+**Returns:** `void`
 
 ### `isWholeWords()`
 

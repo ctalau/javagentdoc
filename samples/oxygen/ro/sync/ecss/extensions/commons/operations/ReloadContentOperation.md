@@ -42,27 +42,27 @@
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `isArgumentTrue(ro.sync.ecss.extensions.api.ArgumentsMap args, java.lang.String argumentName)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isArgumentTrue(ro.sync.ecss.extensions.api.ArgumentsMap args, java.lang.String argumentName)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The arguments map.
 - `argumentName` (`java.lang.String`): The argument name.
 
-### `reloadFromReaderIfModified(ro.sync.ecss.extensions.api.access.AuthorEditorAccess editorAccess, java.io.Reader contentReader)`
-
 **Returns:** `boolean`
+
+### `reloadFromReaderIfModified(ro.sync.ecss.extensions.api.access.AuthorEditorAccess editorAccess, java.io.Reader contentReader)`
 
 **Parameters:**
 - `editorAccess` ([`ro.sync.ecss.extensions.api.access.AuthorEditorAccess`](../../api/access/AuthorEditorAccess.md)): The editor access.
 - `contentReader` (`java.io.Reader`): The reader.
+
+**Returns:** `boolean`
 
 ### `getArguments()`
 

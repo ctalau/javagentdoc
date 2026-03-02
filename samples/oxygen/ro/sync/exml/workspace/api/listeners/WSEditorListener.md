@@ -28,29 +28,27 @@ The listener is added to a WSEditor and receives different callbacks.
 
 ### `editorAboutToBeSavedVeto(int operationType)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `operationType` (`int`): The operation type. One of the constants WSEditorListener#SAVE_AS_OPERATION or WSEditorListener#SAVE_OPERATION.
+
+**Returns:** `boolean`
 
 ### `editorSaved(int operationType)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `operationType` (`int`): The operation type. One of the constants WSEditorListener#SAVE_AS_OPERATION or WSEditorListener#SAVE_OPERATION.
 
-### `documentTypeExtensionsReconfigured()`
-
 **Returns:** `void`
+
+### `documentTypeExtensionsReconfigured()`
 
 For example after a document is opened, the application will re-configure the framework-specific toolbar. After this, the callback will be received.
  So if you are using code which for example tries to add a listener to one of the actions on the framework-specific toolbar, 
  the code should re-add the listener when the callback is received.
 
-### `editorAboutToBeClosedVeto(java.net.URL editorLocation)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `editorAboutToBeClosedVeto(java.net.URL editorLocation)`
 
 Decide if the closing should proceed or not.
 
@@ -60,12 +58,14 @@ Decide if the closing should proceed or not.
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The URL of the editor.
 
-### `editorReloaded(java.net.URL editorURL)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `editorReloaded(java.net.URL editorURL)`
 
 Probably F5 was pressed.
 
 **Parameters:**
 - `editorURL` (`java.net.URL`): The URL for which the content has been reloaded.
+
+**Returns:** `void`
 

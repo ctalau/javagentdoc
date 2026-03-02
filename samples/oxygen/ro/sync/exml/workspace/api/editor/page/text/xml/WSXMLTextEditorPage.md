@@ -12,8 +12,6 @@
 
 ### `findElementsByXPath(java.lang.String xpathExpression)`
 
-**Returns:** [`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextNodeRange[]`](./WSXMLTextNodeRange.md)
-
 The result of this function is an array of WSXMLTextNodeRange selected 
  by the given XPath expression.
  
@@ -34,9 +32,9 @@ The result of this function is an array of WSXMLTextNodeRange selected
 **Parameters:**
 - `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
 
-### `evaluateXPath(java.lang.String xpathExpression)`
+**Returns:** [`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextNodeRange[]`](./WSXMLTextNodeRange.md)
 
-**Returns:** `java.lang.Object[]`
+### `evaluateXPath(java.lang.String xpathExpression)`
 
 This function returns the result of the given XPath expression as an array of Object.
  
@@ -65,6 +63,8 @@ This function returns the result of the given XPath expression as an array of Ob
 **Parameters:**
 - `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
 
+**Returns:** `java.lang.Object[]`
+
 ### `getXMLSchemaManager()`
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager`](../WSTextXMLSchemaManager.md)
@@ -75,11 +75,11 @@ This function returns the result of the given XPath expression as an array of Ob
 
 ### `getXPath(int offset, boolean includeIndexInParent)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `offset` (`int`): The current offset.
 - `includeIndexInParent` (`boolean`): If `true` the child index in parent is included.
-       Example (without index): /personnel/person/name/family
-       Example (with index):    /personnel/person[2]/name[1]/family[1]
+         Example (without index): /personnel/person/name/family
+         Example (with index):    /personnel/person[2]/name[1]/family[1]
+
+**Returns:** `java.lang.String`
 

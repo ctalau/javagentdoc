@@ -12,15 +12,15 @@
 
 ### `getLockHandler()`
 
-**Returns:** [`ro.sync.exml.plugin.lock.LockHandler`](../lock/LockHandler.md)
-
 Might be `null` if not 
  supported.
 
-### `isLockingSupported(java.lang.String protocol)`
+**Returns:** [`ro.sync.exml.plugin.lock.LockHandler`](../lock/LockHandler.md)
 
-**Returns:** `boolean`
+### `isLockingSupported(java.lang.String protocol)`
 
 **Parameters:**
 - `protocol` (`java.lang.String`): The URL protocol (like "http" or "file")
+
+**Returns:** `boolean`
 

@@ -79,10 +79,10 @@
 
 ### `setTextContent(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getHtmlContent()`
 
@@ -90,24 +90,24 @@
 
 ### `writeObject(java.io.ObjectOutputStream arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream arg0)`
-
 **Returns:** `void`
+
+### `readObject(java.io.ObjectInputStream arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.ObjectInputStream`)
 
-### `setPurposeID(int arg0)`
-
 **Returns:** `void`
+
+### `setPurposeID(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `getPurposeID()`
 

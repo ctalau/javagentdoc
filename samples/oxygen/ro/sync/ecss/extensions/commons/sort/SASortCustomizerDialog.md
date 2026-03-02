@@ -56,26 +56,26 @@
 
 ### `addSection(java.awt.GridBagConstraints arg0, java.lang.String arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.GridBagConstraints`)
 - `arg1` (`java.lang.String`)
 
-### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
+### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
 - `arg1` (`boolean`)
 - `arg2` (`boolean`)
 
-### `selectionChanged(java.lang.String arg0, java.lang.String arg1)`
+**Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
 
-**Returns:** `void`
+### `selectionChanged(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `void`
 

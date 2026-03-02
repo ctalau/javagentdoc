@@ -39,18 +39,18 @@
 
 ### `addRequestProperty(java.lang.String key, java.lang.String value)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `key` (`java.lang.String`)
 - `value` (`java.lang.String`)
 
-### `equals(java.lang.Object obj)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `equals(java.lang.Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `getAllowUserInteraction()`
 
@@ -66,10 +66,10 @@
 
 ### `getContent(java.lang.Class[] classes)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `classes` (`java.lang.Class[]`)
+
+**Returns:** `java.lang.Object`
 
 ### `getContentEncoding()`
 
@@ -105,40 +105,40 @@
 
 ### `getHeaderField(int n)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `n` (`int`)
 
-### `getHeaderField(java.lang.String name)`
-
 **Returns:** `java.lang.String`
+
+### `getHeaderField(java.lang.String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
-### `getHeaderFieldDate(java.lang.String name, long Default)`
+**Returns:** `java.lang.String`
 
-**Returns:** `long`
+### `getHeaderFieldDate(java.lang.String name, long Default)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 - `Default` (`long`)
 
-### `getHeaderFieldInt(java.lang.String name, int Default)`
+**Returns:** `long`
 
-**Returns:** `int`
+### `getHeaderFieldInt(java.lang.String name, int Default)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 - `Default` (`int`)
 
-### `getHeaderFieldKey(int n)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getHeaderFieldKey(int n)`
 
 **Parameters:**
 - `n` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getHeaderFields()`
 
@@ -166,10 +166,10 @@
 
 ### `getRequestProperty(java.lang.String key)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `key` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getURL()`
 
@@ -185,67 +185,67 @@
 
 ### `setAllowUserInteraction(boolean allowuserinteraction)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `allowuserinteraction` (`boolean`)
 
-### `setConnectTimeout(int timeout)`
-
 **Returns:** `void`
+
+### `setConnectTimeout(int timeout)`
 
 **Parameters:**
 - `timeout` (`int`)
 
-### `setDefaultUseCaches(boolean defaultusecaches)`
-
 **Returns:** `void`
+
+### `setDefaultUseCaches(boolean defaultusecaches)`
 
 **Parameters:**
 - `defaultusecaches` (`boolean`)
 
-### `setDoInput(boolean doinput)`
-
 **Returns:** `void`
+
+### `setDoInput(boolean doinput)`
 
 **Parameters:**
 - `doinput` (`boolean`)
 
-### `setDoOutput(boolean dooutput)`
-
 **Returns:** `void`
+
+### `setDoOutput(boolean dooutput)`
 
 **Parameters:**
 - `dooutput` (`boolean`)
 
-### `setIfModifiedSince(long ifmodifiedsince)`
-
 **Returns:** `void`
+
+### `setIfModifiedSince(long ifmodifiedsince)`
 
 **Parameters:**
 - `ifmodifiedsince` (`long`)
 
-### `setReadTimeout(int timeout)`
-
 **Returns:** `void`
+
+### `setReadTimeout(int timeout)`
 
 **Parameters:**
 - `timeout` (`int`)
 
-### `setRequestProperty(java.lang.String key, java.lang.String value)`
-
 **Returns:** `void`
+
+### `setRequestProperty(java.lang.String key, java.lang.String value)`
 
 **Parameters:**
 - `key` (`java.lang.String`)
 - `value` (`java.lang.String`)
 
-### `setUseCaches(boolean usecaches)`
-
 **Returns:** `void`
+
+### `setUseCaches(boolean usecaches)`
 
 **Parameters:**
 - `usecaches` (`boolean`)
+
+**Returns:** `void`
 
 ### `toString()`
 

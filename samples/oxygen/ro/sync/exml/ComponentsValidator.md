@@ -22,74 +22,74 @@
 
 ### `validateMenuOrTaggedAction(java.lang.String[] arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `boolean`
 
 ### `validateToolbarTaggedAction(java.lang.String[] arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
-### `validateToolbarComposite(java.lang.String arg0)`
-
 **Returns:** `boolean`
+
+### `validateToolbarComposite(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `validateComponent(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `validateAccelAction(java.lang.String arg0, java.lang.String arg1)`
-
 **Returns:** `boolean`
+
+### `validateAccelAction(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `validateContentType(java.lang.String arg0)`
-
 **Returns:** `boolean`
+
+### `validateContentType(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `validateOptionPane(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `validateOption(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `validateLibrary(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `validateNewEditorTemplate(ro.sync.exml.editor.EditorTemplate arg0)`
-
 **Returns:** `boolean`
+
+### `validateNewEditorTemplate(ro.sync.exml.editor.EditorTemplate arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.EditorTemplate`](editor/EditorTemplate.md))
+
+**Returns:** `boolean`
 
 ### `isDebuggerPerspectiveAllowed()`
 
@@ -97,31 +97,31 @@
 
 ### `isPerspectiveAllowed(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `validateSHMarker(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `validateEditorPage(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `canonicalize(java.lang.String[] arg0)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `canonicalize(java.lang.String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `java.lang.String`
 
 ### `isMasterFilesSupportAvailable()`
 
@@ -129,8 +129,8 @@
 
 ### `validateScenario(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 

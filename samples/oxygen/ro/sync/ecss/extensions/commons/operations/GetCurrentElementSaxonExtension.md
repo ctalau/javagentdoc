@@ -41,10 +41,10 @@
 
 ### `getResultType(net.sf.saxon.value.SequenceType[] suppliedArgumentTypes)`
 
-**Returns:** `net.sf.saxon.value.SequenceType`
-
 **Parameters:**
 - `suppliedArgumentTypes` (`net.sf.saxon.value.SequenceType[]`)
+
+**Returns:** `net.sf.saxon.value.SequenceType`
 
 ### `makeCallExpression()`
 

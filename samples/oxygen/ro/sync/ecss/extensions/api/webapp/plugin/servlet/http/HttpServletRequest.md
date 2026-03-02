@@ -12,14 +12,12 @@
 
 ### `getCookies()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Cookie[]`](./Cookie.md)
-
 This method
  returns `null` if no cookies were sent.
 
-### `getDateHeader(java.lang.String name)`
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Cookie[]`](./Cookie.md)
 
-**Returns:** `long`
+### `getDateHeader(java.lang.String name)`
 
 Use this method with headers that contain dates, such as `If-Modified-Since`.
 
@@ -36,9 +34,9 @@ Use this method with headers that contain dates, such as `If-Modified-Since`.
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the name of the header
 
-### `getHeader(java.lang.String name)`
+**Returns:** `long`
 
-**Returns:** `java.lang.String`
+### `getHeader(java.lang.String name)`
 
 If the request did not include a header
  of the specified name, this method returns `null`. If there are multiple headers with the same name, this
@@ -48,9 +46,9 @@ If the request did not include a header
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the header name
 
-### `getHeaders(java.lang.String name)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Enumeration<java.lang.String>`
+### `getHeaders(java.lang.String name)`
 
 Some headers, such as `Accept-Language` can be sent by clients as several headers each with a different
  value rather than sending the header as a comma separated list.
@@ -63,9 +61,9 @@ Some headers, such as `Accept-Language` can be sent by clients as several header
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the header name
 
-### `getHeaderNames()`
-
 **Returns:** `java.util.Enumeration<java.lang.String>`
+
+### `getHeaderNames()`
 
 If the request has no headers, this method
  returns an empty enumeration.
@@ -75,9 +73,9 @@ If the request has no headers, this method
  Some servlet containers do not allow servlets to access headers using this method, in which case this method returns
  `null`
 
-### `getIntHeader(java.lang.String name)`
+**Returns:** `java.util.Enumeration<java.lang.String>`
 
-**Returns:** `int`
+### `getIntHeader(java.lang.String name)`
 
 If the request does not have a header of
  the specified name, this method returns -1. If there are multiple headers with the same name, this method returns the
@@ -91,13 +89,13 @@ If the request does not have a header of
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the name of a request header
 
+**Returns:** `int`
+
 ### `getMethod()`
 
 **Returns:** `java.lang.String`
 
 ### `getPathInfo()`
-
-**Returns:** `java.lang.String`
 
 The extra path
  information follows the servlet path but precedes the query string and will start with a "/" character.
@@ -106,9 +104,9 @@ The extra path
 
  This method returns `null` if there was no extra path information.
 
-### `getPathTranslated()`
-
 **Returns:** `java.lang.String`
+
+### `getPathTranslated()`
 
 If the URL does not have any extra path information, this method returns `null` or the servlet container
  cannot translate the virtual path to a real path for any reason (such as when the web application is executed from an
@@ -116,9 +114,9 @@ If the URL does not have any extra path information, this method returns `null` 
 
  The web container does not decode this string.
 
-### `getContextPath()`
-
 **Returns:** `java.lang.String`
+
+### `getContextPath()`
 
 The context path always comes first
  in a request URI. The path starts with a "/" character but does not end with a "/" character. For servlets in the
@@ -132,16 +130,16 @@ The context path always comes first
  ServletContext#getContextPath() should be considered as the prime or preferred context path
  of the application.
 
-### `getQueryString()`
-
 **Returns:** `java.lang.String`
+
+### `getQueryString()`
 
 This method returns `null`
  if the URL does not have a query string.
 
-### `getRequestURI()`
-
 **Returns:** `java.lang.String`
+
+### `getRequestURI()`
 
 The web container does not decode this String. For example:
 
@@ -162,9 +160,9 @@ The web container does not decode this String. For example:
  
  /xyz
 
-### `getRequestURL()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.StringBuffer`
+### `getRequestURL()`
 
 The returned URL contains a protocol, server name, port
  number, and server path, but it does not include query string parameters.
@@ -184,9 +182,9 @@ The returned URL contains a protocol, server name, port
 
  This method is useful for creating redirect messages and for reporting errors.
 
-### `getServletPath()`
+**Returns:** `java.lang.StringBuffer`
 
-**Returns:** `java.lang.String`
+### `getServletPath()`
 
 This path starts with a "/" character and includes the
  path to the servlet, but does not include any extra path information or a query string.
@@ -196,9 +194,9 @@ This path starts with a "/" character and includes the
  This method will return an empty string ("") if the servlet used to process this request was matched using the "/*"
  pattern.
 
-### `getSession(boolean create)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpSession`](./HttpSession.md)
+### `getSession(boolean create)`
 
 If `create` is `false` and the request has no valid `HttpSession`, this method
  returns `null`.
@@ -211,15 +209,15 @@ If `create` is `false` and the request has no valid `HttpSession`, this method
 
 **Parameters:**
 - `create` (`boolean`): `true` to create a new session for this request if necessary; `false` to return
- `null` if there's no current session
+   `null` if there's no current session
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpSession`](./HttpSession.md)
 
 ### `getSession()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpSession`](./HttpSession.md)
 
 ### `getParts()`
-
-**Returns:** `java.util.Collection<ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Part>`
 
 If this request is of type `multipart/form-data`, but does not contain any `Part` components,
  the returned `Collection` will be empty.
@@ -228,10 +226,12 @@ If this request is of type `multipart/form-data`, but does not contain any `Part
 
  Any changes to the returned `Collection` must not affect this `HttpServletRequest`.
 
-### `getPart(java.lang.String name)`
+**Returns:** `java.util.Collection<ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Part>`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Part`](./Part.md)
+### `getPart(java.lang.String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`): the name of the requested `Part`
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Part`](./Part.md)
 

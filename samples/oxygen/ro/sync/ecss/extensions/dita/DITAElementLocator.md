@@ -36,16 +36,14 @@ So the link
 
 ### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `uri` (`java.lang.String`)
 - `localName` (`java.lang.String`)
 - `name` (`java.lang.String`)
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -53,33 +51,35 @@ So the link
 - `name` (`java.lang.String`)
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md))
 
-### `isTopic(ro.sync.ecss.extensions.api.link.Attr[] atts)`
-
 **Returns:** `boolean`
+
+### `isTopic(ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
+
+**Returns:** `boolean`
 
 ### `hasConrefAttributes(ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
+
+**Returns:** `boolean`
 
 ### `getIdValue(ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
 
-### `getLocalName(java.lang.String qName)`
-
 **Returns:** `java.lang.String`
+
+### `getLocalName(java.lang.String qName)`
 
 **Parameters:**
 - `qName` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getNumberOfNestedTopics()`
 

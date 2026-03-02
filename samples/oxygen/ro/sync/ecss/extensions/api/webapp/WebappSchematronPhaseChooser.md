@@ -10,12 +10,12 @@
 
 ### `choosePhase(java.lang.String schematronSystemId)`
 
-**Returns:** `java.lang.String`
-
 In order to obtain the available phases in that Schematron file, one can 
  use WebappDocumentValidator#getSchematronPhases(String). Note that
  a call to this method needs to parse the file. Caching the phases is recommended.
 
 **Parameters:**
 - `schematronSystemId` (`java.lang.String`): The system ID of the Schematron file.
+
+**Returns:** `java.lang.String`
 

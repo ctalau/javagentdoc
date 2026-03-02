@@ -10,10 +10,10 @@
 
 ### `corectLineDelimiters(java.lang.String arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `computeTabString()`
 
@@ -25,10 +25,10 @@
 
 ### `getLeftTokenItem(int arg0)`
 
-**Returns:** `ro.sync.outline.ITokenItem`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `ro.sync.outline.ITokenItem`
 
 ### `getTokenMarker()`
 
@@ -40,17 +40,17 @@
 
 ### `getLeftStartTokenItemOffset(int arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `int`
 
 ### `getRightStartTokenItem(int arg0)`
 
-**Returns:** `ro.sync.outline.ITokenItem`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `ro.sync.outline.ITokenItem`
 
 ### `getGhostTextProvider()`
 
@@ -58,8 +58,8 @@
 
 ### `setGhostTextProvider(ro.sync.document.GhostTextProvider arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.document.GhostTextProvider`](./GhostTextProvider.md))
+
+**Returns:** `void`
 

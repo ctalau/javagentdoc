@@ -30,13 +30,13 @@ This constructor will consider that table tab should be selected when the
 
 **Parameters:**
 - `categories` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`): The properties that will be edited in the table properties 
- for the given element. The element will be also the tab name in the dialog.
+   for the given element. The element will be also the tab name in the dialog.
 
 ### `<init>(java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo> categories, ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo.TAB_TYPE selectedTab)`
 
 **Parameters:**
 - `categories` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`): The properties that will be edited in the table properties 
- for the given element. The element will be also the tab name in the dialog.
+   for the given element. The element will be also the tab name in the dialog.
 - `selectedTab` (`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo.TAB_TYPE`): The tab that is selected when the dialog is shown.
 
 ## Methods

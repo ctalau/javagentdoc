@@ -49,17 +49,17 @@
 
 ### `setComponents(javax.swing.JComponent[] components)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `components` (`javax.swing.JComponent[]`): The components to set.
 
-### `setTitle(java.lang.String title)`
-
 **Returns:** `void`
+
+### `setTitle(java.lang.String title)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The title to set.
+
+**Returns:** `void`
 
 ### `isCustomized()`
 

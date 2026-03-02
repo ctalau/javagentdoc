@@ -22,69 +22,69 @@
 
 ### `getDpisOfSeverity(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
 
-**Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 - `arg1` (`int`)
+
+**Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
 ### `getDpisOfMinimumSeverity(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
 
-**Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 - `arg1` (`int`)
+
+**Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
 ### `hasFatalErrors(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+**Returns:** `boolean`
 
 ### `hasErrorsOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+**Returns:** `boolean`
 
 ### `hasWarningsOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
+
+**Returns:** `boolean`
 
 ### `hasInfosOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 
-### `b(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
-
 **Returns:** `boolean`
+
+### `b(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 - `arg1` (`int`)
 
-### `mapDPISeverityToValidationRangeSeverityLevel(int arg0)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `mapDPISeverityToValidationRangeSeverityLevel(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
 
-### `getMaskedAndCorrectedURL(java.lang.String arg0)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getMaskedAndCorrectedURL(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getMessageCSSStyle()`
 

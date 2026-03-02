@@ -28,17 +28,17 @@
 
 ### `addFront(ro.sync.ecss.extensions.commons.operations.ElementLocationPath.ElementLocationPathComponent comp)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.operations.ElementLocationPath`](./ElementLocationPath.md)
-
 **Parameters:**
 - `comp` (`ro.sync.ecss.extensions.commons.operations.ElementLocationPath.ElementLocationPathComponent`): The component to add.
 
-### `getCurrentElementLocation(ro.sync.ecss.extensions.api.AuthorReviewController authorReviewController, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, ro.sync.ecss.extensions.api.node.AuthorElement sourceElement)`
-
 **Returns:** [`ro.sync.ecss.extensions.commons.operations.ElementLocationPath`](./ElementLocationPath.md)
+
+### `getCurrentElementLocation(ro.sync.ecss.extensions.api.AuthorReviewController authorReviewController, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, ro.sync.ecss.extensions.api.node.AuthorElement sourceElement)`
 
 **Parameters:**
 - `authorReviewController` ([`ro.sync.ecss.extensions.api.AuthorReviewController`](../../api/AuthorReviewController.md)): The author review controller, used to identify deleted nodes.
 - `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The current element at caret.
 - `sourceElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element to transform.
+
+**Returns:** [`ro.sync.ecss.extensions.commons.operations.ElementLocationPath`](./ElementLocationPath.md)
 

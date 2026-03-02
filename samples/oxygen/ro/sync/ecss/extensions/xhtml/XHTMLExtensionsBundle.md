@@ -102,18 +102,18 @@
 
 ### `hasASibling(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String siblingName, java.lang.String[] siblingAttributes, java.lang.String siblingAttrValue)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The current element.
 - `siblingName` (`java.lang.String`): The sibling name.
 - `siblingAttributes` (`java.lang.String[]`): The sibbling attributes to check.
 - `siblingAttrValue` (`java.lang.String`): The value that sibling's attributes must have.
 
-### `getHelpPageID(java.lang.String currentEditorPage)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getHelpPageID(java.lang.String currentEditorPage)`
 
 **Parameters:**
 - `currentEditorPage` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 

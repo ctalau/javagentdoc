@@ -22,8 +22,6 @@
 
 ### `getImageMap(ro.sync.ecss.imagemap.SupportedFrameworks arg0, ro.sync.ecss.extensions.api.AuthorAccess arg1, int arg2, java.net.URL arg3, java.util.Map<java.lang.String,java.lang.String> arg4, java.lang.String[] arg5)`
 
-**Returns:** [`ro.sync.ecss.imagemap.IImageMapWrapper`](./IImageMapWrapper.md)
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.imagemap.SupportedFrameworks`](./SupportedFrameworks.md))
 - `arg1` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -32,9 +30,9 @@
 - `arg4` (`java.util.Map<java.lang.String,java.lang.String>`)
 - `arg5` (`java.lang.String[]`)
 
-### `getImageMap(ro.sync.ecss.imagemap.SupportedFrameworks arg0, ro.sync.ecss.extensions.api.AuthorAccess arg1, int arg2, java.net.URL arg3, java.util.Map<java.lang.String,java.lang.String> arg4, boolean arg5, java.lang.String[] arg6)`
-
 **Returns:** [`ro.sync.ecss.imagemap.IImageMapWrapper`](./IImageMapWrapper.md)
+
+### `getImageMap(ro.sync.ecss.imagemap.SupportedFrameworks arg0, ro.sync.ecss.extensions.api.AuthorAccess arg1, int arg2, java.net.URL arg3, java.util.Map<java.lang.String,java.lang.String> arg4, boolean arg5, java.lang.String[] arg6)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.imagemap.SupportedFrameworks`](./SupportedFrameworks.md))
@@ -45,9 +43,9 @@
 - `arg5` (`boolean`)
 - `arg6` (`java.lang.String[]`)
 
-### `g(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4)`
+**Returns:** [`ro.sync.ecss.imagemap.IImageMapWrapper`](./IImageMapWrapper.md)
 
-**Returns:** `ro.sync.ecss.imagemap.f`
+### `g(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -55,22 +53,22 @@
 - `arg2` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 - `arg3` (`int`)
 - `arg4` (`boolean`)
+
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `d(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4)`
 
-**Returns:** `ro.sync.ecss.imagemap.f`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.net.URL`)
 - `arg2` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 - `arg3` (`int`)
 - `arg4` (`boolean`)
+
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `e(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4)`
 
-**Returns:** `ro.sync.ecss.imagemap.f`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.net.URL`)
@@ -78,16 +76,16 @@
 - `arg3` (`int`)
 - `arg4` (`boolean`)
 
-### `b(javax.xml.bind.Unmarshaller arg0)`
+**Returns:** `ro.sync.ecss.imagemap.f`
 
-**Returns:** `void`
+### `b(javax.xml.bind.Unmarshaller arg0)`
 
 **Parameters:**
 - `arg0` (`javax.xml.bind.Unmarshaller`)
 
-### `c(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4)`
+**Returns:** `void`
 
-**Returns:** `ro.sync.ecss.imagemap.f`
+### `c(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -95,11 +93,11 @@
 - `arg2` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 - `arg3` (`int`)
 - `arg4` (`boolean`)
+
+**Returns:** `ro.sync.ecss.imagemap.f`
 
 ### `buildDITAWrapper(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4)`
 
-**Returns:** `ro.sync.ecss.imagemap.f`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.net.URL`)
@@ -107,9 +105,9 @@
 - `arg3` (`int`)
 - `arg4` (`boolean`)
 
-### `h(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4, boolean arg5)`
-
 **Returns:** `ro.sync.ecss.imagemap.f`
+
+### `h(java.lang.String arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2, int arg3, boolean arg4, boolean arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -119,9 +117,9 @@
 - `arg4` (`boolean`)
 - `arg5` (`boolean`)
 
-### `f(java.lang.String arg0, java.lang.String arg1, java.net.URL arg2, ro.sync.ecss.extensions.api.AuthorAccess arg3, int arg4, boolean arg5)`
-
 **Returns:** `ro.sync.ecss.imagemap.f`
+
+### `f(java.lang.String arg0, java.lang.String arg1, java.net.URL arg2, ro.sync.ecss.extensions.api.AuthorAccess arg3, int arg4, boolean arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -130,4 +128,6 @@
 - `arg3` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 - `arg4` (`int`)
 - `arg5` (`boolean`)
+
+**Returns:** `ro.sync.ecss.imagemap.f`
 

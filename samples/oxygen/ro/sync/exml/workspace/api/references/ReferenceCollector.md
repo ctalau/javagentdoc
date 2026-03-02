@@ -13,10 +13,10 @@ Errors and exceptions during
 
 ### `setErrorHandler(ro.sync.exml.workspace.api.references.ErrorHandler errorHandler)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `errorHandler` ([`ro.sync.exml.workspace.api.references.ErrorHandler`](./ErrorHandler.md))
+
+**Returns:** `void`
 
 ### `getErrorHandler()`
 

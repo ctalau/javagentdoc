@@ -47,19 +47,19 @@ We need some initial equation so that we can render a equation
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `editImage(ro.sync.exml.workspace.api.images.handlers.ImageHandler handler, ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider cp)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `editImage(ro.sync.exml.workspace.api.images.handlers.ImageHandler handler, ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider cp)`
 
 **Parameters:**
 - `handler` ([`ro.sync.exml.workspace.api.images.handlers.ImageHandler`](../../../../exml/workspace/api/images/handlers/ImageHandler.md)): The image handler
 - `cp` ([`ro.sync.exml.workspace.api.images.handlers.providers.EmbeddedImageContentProvider`](../../../../exml/workspace/api/images/handlers/providers/EmbeddedImageContentProvider.md)): The image provider
+
+**Returns:** `java.lang.String`
 
 ### `getArguments()`
 
@@ -71,16 +71,16 @@ We need some initial equation so that we can render a equation
 
 ### `createDefaultFragmentToEdit(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager asm)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 - `asm` ([`ro.sync.ecss.extensions.api.AuthorSchemaManager`](../../api/AuthorSchemaManager.md)): The author schema manager.
 
-### `extractMathMLFragment(java.lang.String xmlFragment)`
-
 **Returns:** `java.lang.String`
+
+### `extractMathMLFragment(java.lang.String xmlFragment)`
 
 **Parameters:**
 - `xmlFragment` (`java.lang.String`): The XML fragment.
+
+**Returns:** `java.lang.String`
 

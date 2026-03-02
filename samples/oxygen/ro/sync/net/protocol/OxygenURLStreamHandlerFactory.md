@@ -33,8 +33,8 @@
 
 ### `createURLStreamHandler(java.lang.String arg0)`
 
-**Returns:** `java.net.URLStreamHandler`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.net.URLStreamHandler`
 

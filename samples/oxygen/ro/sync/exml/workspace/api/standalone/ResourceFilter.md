@@ -10,9 +10,9 @@
 
 ### `getExtensions()`
 
-**Returns:** `java.lang.String[]`
-
 Example: "dita", "ditamap", "bookmap", "ditaval".
+
+**Returns:** `java.lang.String[]`
 
 ### `getDescription()`
 

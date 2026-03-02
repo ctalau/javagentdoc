@@ -28,16 +28,16 @@
 - `displayString` (`java.lang.String`): The display String for the group.
 - `iconPath` (`java.lang.String`): The path to the icon of this group.
 - `isQuickFix` (`boolean`): `true` if it is a quick fix group, 
-                      `false` if it is a refactory group.
+                        `false` if it is a refactory group.
 
 ## Methods
 
 ### `equals(java.lang.Object obj)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `getDisplayString()`
 

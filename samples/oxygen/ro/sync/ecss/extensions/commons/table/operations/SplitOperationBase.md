@@ -25,22 +25,20 @@
 
 ### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
 
-### `getSplitInfoFromArguments(ro.sync.ecss.extensions.api.ArgumentsMap args)`
+**Returns:** `void`
 
-**Returns:** `int[]`
+### `getSplitInfoFromArguments(ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md)): The map of arguments.
 
-### `splitNoInitialSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cell, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, ro.sync.ecss.extensions.api.AuthorDocumentController controller, int nrOfColumnsForSplit, int nrOfRowsForSplit)`
+**Returns:** `int[]`
 
-**Returns:** `void`
+### `splitNoInitialSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cell, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, ro.sync.ecss.extensions.api.AuthorDocumentController controller, int nrOfColumnsForSplit, int nrOfRowsForSplit)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -49,6 +47,8 @@
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): The Author document controller
 - `nrOfColumnsForSplit` (`int`): The split columns number
 - `nrOfRowsForSplit` (`int`): The split rows number
+
+**Returns:** `void`
 
 ### `getInsertRowOperation()`
 
@@ -64,8 +64,6 @@
 
 ### `splitWithInitialSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cell, ro.sync.ecss.extensions.api.node.AuthorElement tableElem, int initialRowSpan, int initialColSpan, ro.sync.ecss.extensions.api.AuthorDocumentController controller, int nrOfColumnsForSplit, int nrOfRowsForSplit)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
 - `cell` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table cell to span.
@@ -76,15 +74,17 @@
 - `nrOfColumnsForSplit` (`int`): The split columns number
 - `nrOfRowsForSplit` (`int`): The split rows number
 
-### `determineCurrentSpan(int currentSpan, int countForSplit, int initialSpan, int i)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `determineCurrentSpan(int currentSpan, int countForSplit, int initialSpan, int i)`
 
 **Parameters:**
 - `currentSpan` (`int`): The last computed span.
 - `countForSplit` (`int`): The new number of cells.
 - `initialSpan` (`int`): The initial span of the the cell which will be split.
 - `i` (`int`): The current step.
+
+**Returns:** `int`
 
 ### `getDescription()`
 
@@ -104,13 +104,13 @@
 
 ### `updateColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement cell, int colSpan)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to author functionality.
 - `tableSupport` ([`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../api/AuthorTableCellSpanProvider.md)): The table cell span support.
 - `cell` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table cell to update the column span for.
 - `colSpan` (`int`): The number of columns that this cell spans over
+
+**Returns:** `void`
 
 ### `getHelpPageID()`
 

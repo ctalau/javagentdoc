@@ -14,25 +14,25 @@
 
 ### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `java.util.List`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The author access.
 
-### `getCollapsedWidgetIcon()`
+**Returns:** `java.util.List`
 
-**Returns:** `java.lang.Object`
+### `getCollapsedWidgetIcon()`
 
 The collapsed widget is shown
  when hovering over a highlight.
 
-### `getExpandedWidgetIcon()`
-
 **Returns:** `java.lang.Object`
+
+### `getExpandedWidgetIcon()`
 
 The expanded widget is shown
  when hovering over the collapsed widget. The collapsed widget is shown
  when hovering over a highlight.
+
+**Returns:** `java.lang.Object`
 
 ### `getRenderingStyle()`
 

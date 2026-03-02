@@ -110,33 +110,33 @@ Will stop the parsing
 
 ### `createInvalidRangeException(java.lang.String situation)`
 
-**Returns:** `org.xml.sax.SAXException`
-
 **Parameters:**
 - `situation` (`java.lang.String`): The particular situation
 
-### `setContentHandler(org.xml.sax.ContentHandler contentHandler)`
+**Returns:** `org.xml.sax.SAXException`
 
-**Returns:** `void`
+### `setContentHandler(org.xml.sax.ContentHandler contentHandler)`
 
 **Parameters:**
 - `contentHandler` (`org.xml.sax.ContentHandler`): The contentHandler to set.
 
-### `setLexicalHandler(org.xml.sax.ext.LexicalHandler lexicalHandler)`
-
 **Returns:** `void`
+
+### `setLexicalHandler(org.xml.sax.ext.LexicalHandler lexicalHandler)`
 
 **Parameters:**
 - `lexicalHandler` (`org.xml.sax.ext.LexicalHandler`): The lexicalHandler to set.
 
-### `characters(char[] ch, int start, int length)`
-
 **Returns:** `void`
+
+### `characters(char[] ch, int start, int length)`
 
 **Parameters:**
 - `ch` (`char[]`)
 - `start` (`int`)
 - `length` (`int`)
+
+**Returns:** `void`
 
 ### `endDocument()`
 
@@ -144,58 +144,58 @@ Will stop the parsing
 
 ### `createConrefDescr(java.lang.String[] topicPath, boolean createFullPath)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `topicPath` (`java.lang.String[]`): The topic path array.
 - `createFullPath` (`boolean`)
 
-### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
 - `localName` (`java.lang.String`)
 - `name` (`java.lang.String`)
 
-### `endPrefixMapping(java.lang.String prefix)`
-
 **Returns:** `void`
+
+### `endPrefixMapping(java.lang.String prefix)`
 
 **Parameters:**
 - `prefix` (`java.lang.String`)
 
-### `ignorableWhitespace(char[] ch, int start, int length)`
-
 **Returns:** `void`
+
+### `ignorableWhitespace(char[] ch, int start, int length)`
 
 **Parameters:**
 - `ch` (`char[]`)
 - `start` (`int`)
 - `length` (`int`)
 
-### `processingInstruction(java.lang.String target, java.lang.String data)`
-
 **Returns:** `void`
+
+### `processingInstruction(java.lang.String target, java.lang.String data)`
 
 **Parameters:**
 - `target` (`java.lang.String`)
 - `data` (`java.lang.String`)
 
-### `setDocumentLocator(org.xml.sax.Locator locator)`
-
 **Returns:** `void`
+
+### `setDocumentLocator(org.xml.sax.Locator locator)`
 
 **Parameters:**
 - `locator` (`org.xml.sax.Locator`)
 
-### `skippedEntity(java.lang.String name)`
-
 **Returns:** `void`
+
+### `skippedEntity(java.lang.String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `startDocument()`
 
@@ -203,30 +203,30 @@ Will stop the parsing
 
 ### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, org.xml.sax.Attributes atts)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `uri` (`java.lang.String`)
 - `localName` (`java.lang.String`)
 - `name` (`java.lang.String`)
 - `atts` (`org.xml.sax.Attributes`)
 
-### `startPrefixMapping(java.lang.String prefix, java.lang.String uri)`
-
 **Returns:** `void`
+
+### `startPrefixMapping(java.lang.String prefix, java.lang.String uri)`
 
 **Parameters:**
 - `prefix` (`java.lang.String`)
 - `uri` (`java.lang.String`)
 
-### `comment(char[] ch, int start, int length)`
-
 **Returns:** `void`
+
+### `comment(char[] ch, int start, int length)`
 
 **Parameters:**
 - `ch` (`char[]`)
 - `start` (`int`)
 - `length` (`int`)
+
+**Returns:** `void`
 
 ### `endCDATA()`
 
@@ -238,10 +238,10 @@ Will stop the parsing
 
 ### `endEntity(java.lang.String name)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `startCDATA()`
 
@@ -249,19 +249,19 @@ Will stop the parsing
 
 ### `startDTD(java.lang.String name, java.lang.String publicId, java.lang.String systemId)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `name` (`java.lang.String`)
 - `publicId` (`java.lang.String`)
 - `systemId` (`java.lang.String`)
 
-### `startEntity(java.lang.String name)`
-
 **Returns:** `void`
+
+### `startEntity(java.lang.String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getNumberOfAncestorTopics()`
 

@@ -56,21 +56,21 @@
 
 ### `makeWrapper(org.w3c.dom.Node arg0, ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg1)`
 
-**Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
-
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
 - `arg1` ([`ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper`](./DocumentWrapper.md))
 
-### `makeWrapper(org.w3c.dom.Node arg0, ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg1, ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper arg2, int arg3)`
-
 **Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
+
+### `makeWrapper(org.w3c.dom.Node arg0, ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg1, ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper arg2, int arg3)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
 - `arg1` ([`ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper`](./DocumentWrapper.md))
 - `arg2` ([`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md))
 - `arg3` (`int`)
+
+**Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
 
 ### `getTreeInfo()`
 
@@ -86,25 +86,25 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
 
-### `equalOrNull(java.lang.String arg0, java.lang.String arg1)`
-
 **Returns:** `boolean`
+
+### `equalOrNull(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `compareOrder(net.sf.saxon.om.NodeInfo arg0)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `compareOrder(net.sf.saxon.om.NodeInfo arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo`)
+
+**Returns:** `int`
 
 ### `getUnicodeStringValue()`
 
@@ -112,18 +112,18 @@
 
 ### `emptyIfNull(java.lang.String arg0)`
 
-**Returns:** `net.sf.saxon.str.UnicodeString`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `expandStringValue(org.w3c.dom.NodeList arg0, net.sf.saxon.str.UnicodeBuilder arg1)`
+**Returns:** `net.sf.saxon.str.UnicodeString`
 
-**Returns:** `void`
+### `expandStringValue(org.w3c.dom.NodeList arg0, net.sf.saxon.str.UnicodeBuilder arg1)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.NodeList`)
 - `arg1` (`net.sf.saxon.str.UnicodeBuilder`)
+
+**Returns:** `void`
 
 ### `getLocalPart()`
 
@@ -131,10 +131,10 @@
 
 ### `getLocalName(org.w3c.dom.Node arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
+
+**Returns:** `java.lang.String`
 
 ### `getNamespaceUri()`
 
@@ -142,17 +142,17 @@
 
 ### `getElementURI(org.w3c.dom.Element arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`org.w3c.dom.Element`)
 
-### `getAttributeURI(org.w3c.dom.Attr arg0)`
-
 **Returns:** `java.lang.String`
+
+### `getAttributeURI(org.w3c.dom.Attr arg0)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Attr`)
+
+**Returns:** `java.lang.String`
 
 ### `getPrefix()`
 
@@ -172,48 +172,48 @@
 
 ### `iterateAttributes(net.sf.saxon.pattern.NodeTest arg0)`
 
-**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
-
 **Parameters:**
 - `arg0` (`net.sf.saxon.pattern.NodeTest`)
+
+**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
 
 ### `isElementOnly(net.sf.saxon.pattern.NodeTest arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`net.sf.saxon.pattern.NodeTest`)
+
+**Returns:** `boolean`
 
 ### `iterateChildren(net.sf.saxon.pattern.NodeTest arg0)`
 
-**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
-
 **Parameters:**
 - `arg0` (`net.sf.saxon.pattern.NodeTest`)
+
+**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
 
 ### `iterateSiblings(net.sf.saxon.pattern.NodeTest arg0, boolean arg1)`
 
-**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
-
 **Parameters:**
 - `arg0` (`net.sf.saxon.pattern.NodeTest`)
 - `arg1` (`boolean`)
+
+**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
 
 ### `iterateDescendants(net.sf.saxon.pattern.NodeTest arg0, boolean arg1)`
 
-**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
-
 **Parameters:**
 - `arg0` (`net.sf.saxon.pattern.NodeTest`)
 - `arg1` (`boolean`)
 
-### `getAttributeValue(net.sf.saxon.om.NamespaceUri arg0, java.lang.String arg1)`
+**Returns:** `net.sf.saxon.tree.iter.AxisIterator`
 
-**Returns:** `java.lang.String`
+### `getAttributeValue(net.sf.saxon.om.NamespaceUri arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NamespaceUri`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getRoot()`
 
@@ -225,17 +225,17 @@
 
 ### `generateId(java.lang.StringBuilder arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.StringBuilder`)
 
-### `getDeclaredNamespaces(net.sf.saxon.om.NamespaceBinding[] arg0)`
+**Returns:** `void`
 
-**Returns:** `net.sf.saxon.om.NamespaceBinding[]`
+### `getDeclaredNamespaces(net.sf.saxon.om.NamespaceBinding[] arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NamespaceBinding[]`)
+
+**Returns:** `net.sf.saxon.om.NamespaceBinding[]`
 
 ### `getAllNamespaces()`
 
@@ -251,10 +251,10 @@
 
 ### `spannedWrapper(org.w3c.dom.Node arg0)`
 
-**Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
-
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
+
+**Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
 
 ### `getFirstChild()`
 
@@ -266,18 +266,18 @@
 
 ### `getSuccessorElement(net.sf.saxon.tree.util.SteppingNode arg0, net.sf.saxon.om.NamespaceUri arg1, java.lang.String arg2)`
 
-**Returns:** `net.sf.saxon.tree.util.SteppingNode`
-
 **Parameters:**
 - `arg0` (`net.sf.saxon.tree.util.SteppingNode`)
 - `arg1` (`net.sf.saxon.om.NamespaceUri`)
 - `arg2` (`java.lang.String`)
 
-### `getSuccessorNode(org.w3c.dom.Node arg0, org.w3c.dom.Node arg1)`
+**Returns:** `net.sf.saxon.tree.util.SteppingNode`
 
-**Returns:** `org.w3c.dom.Node`
+### `getSuccessorNode(org.w3c.dom.Node arg0, org.w3c.dom.Node arg1)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
 - `arg1` (`org.w3c.dom.Node`)
+
+**Returns:** `org.w3c.dom.Node`
 

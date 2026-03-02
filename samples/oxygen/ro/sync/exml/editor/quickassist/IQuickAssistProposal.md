@@ -24,8 +24,6 @@ A completion proposal contains information used to present the proposed completi
 
 ### `getSelection()`
 
-**Returns:** `int[]`
-
 If it returns
  `null`, no new selection is set.
 
@@ -34,11 +32,13 @@ If it returns
  this would be done by installing a document listener or by using a
  document position during #apply().
 
+**Returns:** `int[]`
+
 ### `getImage()`
 
-**Returns:** `I`
-
 The image would typically be shown to the left of the display string.
+
+**Returns:** `I`
 
 ### `getParentGroup()`
 

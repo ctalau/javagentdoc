@@ -61,24 +61,24 @@
 
 ### `fragmentContainsKeyRelatedAttributes(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../extensions/api/node/AuthorDocumentFragment.md))
 
-### `containsKeyAttrs(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
-
 **Returns:** `boolean`
+
+### `containsKeyAttrs(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
+
+**Returns:** `boolean`
 
 ### `nodeContainsKeyRelatedAttributes(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
+
+**Returns:** `boolean`
 
 ### `recomputeKeysContext()`
 
@@ -86,10 +86,10 @@
 
 ### `createJSONRenderer(java.io.Writer arg0)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
-
 **Parameters:**
 - `arg0` (`java.io.Writer`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
 
 ### `createDocumentBuilder()`
 
@@ -97,10 +97,10 @@
 
 ### `createJSONRendererInternal(java.io.Writer arg0)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
-
 **Parameters:**
 - `arg0` (`java.io.Writer`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
 
 ### `forceFullRendering()`
 
@@ -108,18 +108,18 @@
 
 ### `createRenderer(java.io.Writer arg0)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
-
 **Parameters:**
 - `arg0` (`java.io.Writer`)
 
-### `createRenderer(java.io.Writer arg0, ro.sync.ecss.extensions.api.highlights.AuthorHighlighter arg1)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
+
+### `createRenderer(java.io.Writer arg0, ro.sync.ecss.extensions.api.highlights.AuthorHighlighter arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
 - `arg1` ([`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../extensions/api/highlights/AuthorHighlighter.md))
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
 
 ### `getTopicrefRenderer()`
 
@@ -127,12 +127,12 @@
 
 ### `getDitamapEntryTitle(ro.sync.ecss.extensions.api.node.AuthorElement arg0, boolean arg1, boolean arg2)`
 
-**Returns:** `ro.sync.ecss.webapp.dita.DITAMapEntryTitleInfo`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md))
 - `arg1` (`boolean`)
 - `arg2` (`boolean`)
+
+**Returns:** `ro.sync.ecss.webapp.dita.DITAMapEntryTitleInfo`
 
 ### `getContextKeyManager()`
 
@@ -148,15 +148,15 @@
 
 ### `createContextKeyManager(ro.sync.ecss.webapp.access.e arg0)`
 
-**Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](../../dita/ContextKeyManager.md)
-
 **Parameters:**
 - `arg0` (`ro.sync.ecss.webapp.access.e`)
 
-### `invalidateTitle(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+**Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](../../dita/ContextKeyManager.md)
 
-**Returns:** `void`
+### `invalidateTitle(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md))
+
+**Returns:** `void`
 

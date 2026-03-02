@@ -29,14 +29,12 @@
 
 ### `paint(ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo pi)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `pi` ([`ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo`](./HighlightPainterInfo.md))
 
-### `paintHighlight(ro.sync.exml.view.graphics.Graphics g, int x, int y, int width, int height)`
-
 **Returns:** `void`
+
+### `paintHighlight(ro.sync.exml.view.graphics.Graphics g, int x, int y, int width, int height)`
 
 **Parameters:**
 - `g` (`ro.sync.exml.view.graphics.Graphics`): The graphics used for paint.
@@ -45,10 +43,12 @@
 - `width` (`int`): The rectangle width.
 - `height` (`int`): The rectangle height.
 
-### `setFillColor(ro.sync.exml.view.graphics.Color fillColor)`
-
 **Returns:** `void`
+
+### `setFillColor(ro.sync.exml.view.graphics.Color fillColor)`
 
 **Parameters:**
 - `fillColor` (`ro.sync.exml.view.graphics.Color`): The fill color to set.
+
+**Returns:** `void`
 

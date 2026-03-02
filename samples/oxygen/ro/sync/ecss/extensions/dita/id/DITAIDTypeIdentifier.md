@@ -47,10 +47,10 @@ Only filled if the identifier is for a subtopic element.
 
 ### `setElementInMap(boolean isElementInMap)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `isElementInMap` (`boolean`): `true` if it's an element in a DITA Map
+
+**Returns:** `void`
 
 ### `isElementInMap()`
 

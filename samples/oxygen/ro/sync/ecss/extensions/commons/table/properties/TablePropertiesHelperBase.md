@@ -16,67 +16,67 @@
 
 ### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableBody(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableHead(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableColspec(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
-### `isNodeOfType(ro.sync.ecss.extensions.api.node.AuthorElement node, int type)`
-
 **Returns:** `boolean`
+
+### `isNodeOfType(ro.sync.ecss.extensions.api.node.AuthorElement node, int type)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 - `type` (`int`)
+
+**Returns:** `boolean`
 
 ### `allowsFooter()`
 
@@ -84,31 +84,31 @@
 
 ### `getFirstChildOfTypeFromParentWithType(ro.sync.ecss.extensions.api.node.AuthorElement currentRow, int childType, int parentType)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
-
 **Parameters:**
 - `currentRow` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 - `childType` (`int`)
 - `parentType` (`int`)
 
-### `getElementType(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-**Returns:** `int`
+### `getElementType(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
-### `getElementTag(int elementType)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getElementTag(int elementType)`
 
 **Parameters:**
 - `elementType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getElementName(int elementType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `elementType` (`int`)
+
+**Returns:** `java.lang.String`
 

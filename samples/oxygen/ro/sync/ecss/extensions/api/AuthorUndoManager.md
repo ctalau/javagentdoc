@@ -19,17 +19,17 @@ It allows to register listeners that are notified
 
 ### `addUndoableEditListener(javax.swing.event.UndoableEditListener listener)`
 
-**Returns:** `void`
-
 The listener is notified when an edit occurs, with the **previous** undoable edit.
 
 **Parameters:**
 - `listener` (`javax.swing.event.UndoableEditListener`): The listener to be added
 
-### `removeUndoableEditListener(javax.swing.event.UndoableEditListener listener)`
-
 **Returns:** `void`
+
+### `removeUndoableEditListener(javax.swing.event.UndoableEditListener listener)`
 
 **Parameters:**
 - `listener` (`javax.swing.event.UndoableEditListener`): The listener to be removed
+
+**Returns:** `void`
 

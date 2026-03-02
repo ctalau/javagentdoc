@@ -20,8 +20,6 @@
 
 ### `createCellXMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, boolean cellsFragment, java.lang.String cellElementName, int currentFragmentIndex, java.lang.String namespace, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper authorTableHelper, java.lang.String[] imposedAttributesFragments)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
 - `fragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../../../api/node/AuthorDocumentFragment.md)): The list of all content fragments.
@@ -31,19 +29,19 @@
 - `namespace` (`java.lang.String`): The cell namespace.
 - `authorTableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Author table helper.
 - `imposedAttributesFragments` (`java.lang.String[]`): Imposed attributes for the created cell.
-                                    Each fragment has the following form: "attribute_name=\"attribute_value\""
+                                      Each fragment has the following form: "attribute_name=\"attribute_value\""
+
+**Returns:** `java.lang.String`
 
 ### `isIgnoredAttribute(java.lang.String attrName, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
-
-**Returns:** `boolean`
 
 **Parameters:**
 - `attrName` (`java.lang.String`): The attribute name.
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Author table helper
 
-### `getContentFromFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean cellsFragment, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getContentFromFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean cellsFragment, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
 
 If the cellsFragment parameter is `true`, 
  the returned content represent the content of the cell, otherwise the fragment itself.
@@ -53,18 +51,18 @@ If the cellsFragment parameter is `true`,
 - `cellsFragment` (`boolean`): `true` if the fragment represent a cell fragment
 - `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../../api/node/AuthorDocumentFragment.md)): The Author fragment.
 
-### `nodeHasProperties(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String name, java.lang.String namespace)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `nodeHasProperties(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String name, java.lang.String namespace)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node to check.
 - `name` (`java.lang.String`): The name to compare the node name with.
 - `namespace` (`java.lang.String`): The namespace to compare the node namespace with.
 
-### `getTableElementContainingOffset(int offset, ro.sync.ecss.extensions.api.AuthorAccess access, java.lang.String[] tableClassValues)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
+### `getTableElementContainingOffset(int offset, ro.sync.ecss.extensions.api.AuthorAccess access, java.lang.String[] tableClassValues)`
 
 Used for DITA and DITA Maps
  table operations.
@@ -74,9 +72,9 @@ Used for DITA and DITA Maps
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author operations.
 - `tableClassValues` (`java.lang.String[]`): Possible table class attributes values.
 
-### `getTableElementContainingOffset(int offset, java.lang.String namespace, ro.sync.ecss.extensions.api.AuthorAccess access, java.lang.String[] tableElementNames)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
+
+### `getTableElementContainingOffset(int offset, java.lang.String namespace, ro.sync.ecss.extensions.api.AuthorAccess access, java.lang.String[] tableElementNames)`
 
 **Parameters:**
 - `offset` (`int`): The offset to search the parent table element for.
@@ -84,52 +82,52 @@ Used for DITA and DITA Maps
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author operations.
 - `tableElementNames` (`java.lang.String[]`): Possible table element names.
 
-### `isChoiceTableAllowed(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `isChoiceTableAllowed(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+
+**Returns:** `boolean`
 
 ### `areOtherTablesThanChoicetableAllowed(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
+
+**Returns:** `boolean`
 
 ### `isPropertiesTableGlobalElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
 
-### `getTableElementsOfTypeFromSelection(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int type, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
+### `getTableElementsOfTypeFromSelection(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int type, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access
 - `type` (`int`): The type of the elements to be collected.
- Can be one of TYPE_ prefixed constants from TableHelperConstants.
+   Can be one of TYPE_ prefixed constants from TableHelperConstants.
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)): Utility class to determine information about table nodes.
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table parent elements.
 
-### `getTableElementsOfType(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.lang.Integer[]> selections, int type, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
-
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
+
+### `getTableElementsOfType(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.lang.Integer[]> selections, int type, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access
 - `selections` (`java.util.List<java.lang.Integer[]>`): The currently selected nodes. They can be mixed.
 - `type` (`int`): The type of the elements to be collected.
- Can be one of TYPE_ prefixed constants from TableHelperConstants.
+   Can be one of TYPE_ prefixed constants from TableHelperConstants.
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)): Utility class to determine information about table nodes.
 
-### `computeElementsList(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> elementsList, ro.sync.ecss.extensions.api.node.AuthorElement node, int startOffset, int endOffset, int type, boolean fullySelected, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-**Returns:** `void`
+### `computeElementsList(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> elementsList, ro.sync.ecss.extensions.api.node.AuthorElement node, int startOffset, int endOffset, int type, boolean fullySelected, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
 
 **Parameters:**
 - `elementsList` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The list which will contain the elements.
@@ -137,33 +135,33 @@ Used for DITA and DITA Maps
 - `startOffset` (`int`): Selection start.
 - `endOffset` (`int`): Selection end.
 - `type` (`int`): The elements type.
- Can be one of TYPE_ prefixed constants from TableHelperConstants.
+   Can be one of TYPE_ prefixed constants from TableHelperConstants.
 - `fullySelected` (`boolean`): `true` if the nodes should be entire contained by the selection.
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)): Utility class to determine information about table nodes.
 
-### `getElementAncestor(ro.sync.ecss.extensions.api.node.AuthorNode node, int type, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
+### `getElementAncestor(ro.sync.ecss.extensions.api.node.AuthorNode node, int type, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The starting node.
 - `type` (`int`): The type of the ancestor.
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)): Utility class to determine information about table nodes.
 
-### `getChildElements(ro.sync.ecss.extensions.api.node.AuthorElement node, int type, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> children, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-**Returns:** `void`
+### `getChildElements(ro.sync.ecss.extensions.api.node.AuthorElement node, int type, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> children, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The parent node.
 - `type` (`int`): The child elements type. 
- Can be one of TYPE_ prefixed constants from TableHelperConstants.
+   Can be one of TYPE_ prefixed constants from TableHelperConstants.
 - `children` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The list with collected children. Empty when the function is called.
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)): Utility class to determine information about table nodes.
 
-### `getCellIndexes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper, boolean isCals)`
+**Returns:** `void`
 
-**Returns:** `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`
+### `getCellIndexes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.properties.TableHelper tableHelper, boolean isCals)`
 
 **Parameters:**
 - `cells` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The selected cells.
@@ -171,16 +169,16 @@ Used for DITA and DITA Maps
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)): Utility class to determine information about table nodes.
 - `isCals` (`boolean`): `true` if it is a CALS table
 
-### `createTableHelper(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper authorTableHelper)`
+**Returns:** `java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)
+### `createTableHelper(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper authorTableHelper)`
 
 **Parameters:**
 - `authorTableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): The Author table helper
 
-### `placeCaretInFirstCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult result)`
+**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.TableHelper`](../properties/TableHelper.md)
 
-**Returns:** `void`
+### `placeCaretInFirstCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult result)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Author access.
@@ -188,17 +186,17 @@ Used for DITA and DITA Maps
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): Controller.
 - `result` ([`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../../../api/schemaaware/SchemaAwareHandlerResult.md)): Insert operation result.
 
-### `getFirstCell(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, ro.sync.ecss.extensions.api.access.AuthorEditorAccess authorEditorAccess)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
+### `getFirstCell(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, ro.sync.ecss.extensions.api.access.AuthorEditorAccess authorEditorAccess)`
 
 **Parameters:**
 - `parentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The parent element.
 - `authorEditorAccess` ([`ro.sync.ecss.extensions.api.access.AuthorEditorAccess`](../../../api/access/AuthorEditorAccess.md)): Author editor access.
 
-### `removeInvalidColNamesFromCALSTableCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-**Returns:** `void`
+### `removeInvalidColNamesFromCALSTableCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
 
 Remove references to column names which are not defined in the table.
 
@@ -207,9 +205,9 @@ Remove references to column names which are not defined in the table.
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table element
 - `cells` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The list of cells.
 
-### `handleColumnSpecAttributeChange(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper helper, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue newValue)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `handleColumnSpecAttributeChange(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper helper, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue newValue)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Author access
@@ -218,12 +216,14 @@ Remove references to column names which are not defined in the table.
 - `attributeName` (`java.lang.String`): Name of changed attribute
 - `newValue` ([`ro.sync.ecss.extensions.api.node.AttrValue`](../../../api/node/AttrValue.md)): The new attribute value
 
-### `iterateCells(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper helper, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> toChange, ro.sync.ecss.extensions.api.node.AuthorElement rowElement)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `iterateCells(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper helper, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> toChange, ro.sync.ecss.extensions.api.node.AuthorElement rowElement)`
 
 **Parameters:**
 - `helper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): The helper.
 - `toChange` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): List where to add all cells.
 - `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The current row.
+
+**Returns:** `void`
 

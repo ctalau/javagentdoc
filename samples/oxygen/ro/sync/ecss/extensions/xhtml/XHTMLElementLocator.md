@@ -25,11 +25,11 @@ An internal reference can refer an `id`
 
 ### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `uri` (`java.lang.String`)
 - `localName` (`java.lang.String`)
 - `name` (`java.lang.String`)
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md))
+
+**Returns:** `boolean`
 

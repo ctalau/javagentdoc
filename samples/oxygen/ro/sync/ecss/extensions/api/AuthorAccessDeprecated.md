@@ -10,29 +10,27 @@
 
 ### `getSelectionStart()`
 
-**Returns:** `int`
-
 It is inclusive.
+
+**Returns:** `int`
 
 ### `getSelectionEnd()`
 
-**Returns:** `int`
-
 It is exclusive.
+
+**Returns:** `int`
 
 ### `getSelectedText()`
 
-**Returns:** `java.lang.String`
-
 The text does not contains XML tags.
+
+**Returns:** `java.lang.String`
 
 ### `getCaretOffset()`
 
 **Returns:** `int`
 
 ### `insertText(java.lang.String text, int offset)`
-
-**Returns:** `void`
 
 After the operation is performed the caret will be positioned at the end 
  of the inserted text.
@@ -41,9 +39,9 @@ After the operation is performed the caret will be positioned at the end
 - `text` (`java.lang.String`): The text to insert.
 - `offset` (`int`): The offset of the insertion point, 0 based.
 
-### `insertXMLFragment(java.lang.String xmlFragment, int offset)`
-
 **Returns:** `void`
+
+### `insertXMLFragment(java.lang.String xmlFragment, int offset)`
 
 After the operation is performed the caret will be positioned at the end of the inserted XML fragment.
 
@@ -51,9 +49,9 @@ After the operation is performed the caret will be positioned at the end of the 
 - `xmlFragment` (`java.lang.String`): The XML fragment.
 - `offset` (`int`): The offset of the insertion point, 0 based.
 
-### `insertXMLFragment(java.lang.String xmlFragment, java.lang.String xpathLocation, java.lang.String relativePosition)`
-
 **Returns:** `void`
+
+### `insertXMLFragment(java.lang.String xmlFragment, java.lang.String xpathLocation, java.lang.String relativePosition)`
 
 Note: if the `xpathLocation` is not specified then the XML fragment 
  will be inserted at the caret position(`relativePosition` is ignored). 
@@ -65,8 +63,10 @@ Note: if the `xpathLocation` is not specified then the XML fragment
 - `xmlFragment` (`java.lang.String`): The XML fragment.
 - `xpathLocation` (`java.lang.String`): The xpath location.
 - `relativePosition` (`java.lang.String`): The position relative to the node identified by the xpath location. 
- Can be one of the constants: AuthorConstants.POSITION_BEFORE, AuthorConstants.POSITION_AFTER,
- AuthorConstants.POSITION_INSIDE.
+   Can be one of the constants: AuthorConstants.POSITION_BEFORE, AuthorConstants.POSITION_AFTER,
+   AuthorConstants.POSITION_INSIDE.
+
+**Returns:** `void`
 
 ### `deleteSelection()`
 
@@ -82,19 +82,17 @@ Note: if the `xpathLocation` is not specified then the XML fragment
 
 ### `surroundInFragment(java.lang.String xmlFragment, int startOffset, int endOffset)`
 
-**Returns:** `void`
-
 If endOffset < startOffset the `xmlFragment` will be inserted at `startOffset`.
 
 **Parameters:**
 - `xmlFragment` (`java.lang.String`): The XML fragment which will surround the given offsets.
- The first XML fragment leaf(deepest on the first branch) will be the surround point.
+   The first XML fragment leaf(deepest on the first branch) will be the surround point.
 - `startOffset` (`int`): The start offset of the fragment to be surrounded, 0 based and inclusive.
 - `endOffset` (`int`): The end offset of the fragment to be surrounded, 0 based and inclusive.
 
-### `surroundInText(java.lang.String header, java.lang.String footer, int startOffset, int endOffset)`
-
 **Returns:** `void`
+
+### `surroundInText(java.lang.String header, java.lang.String footer, int startOffset, int endOffset)`
 
 **Parameters:**
 - `header` (`java.lang.String`): The header to be inserted before the surrounded text.
@@ -102,20 +100,22 @@ If endOffset < startOffset the `xmlFragment` will be inserted at `startOffset`.
 - `startOffset` (`int`): The start offset of the text to be surrounded, 0 based.
 - `endOffset` (`int`): The end offset of the text to be surrounded, zero based.
 
-### `setCaretPosition(int offset)`
-
 **Returns:** `void`
+
+### `setCaretPosition(int offset)`
 
 **Parameters:**
 - `offset` (`int`): The offset where the caret should be positioned, 0 based.
 
-### `select(int startOffset, int endOffset)`
-
 **Returns:** `void`
+
+### `select(int startOffset, int endOffset)`
 
 **Parameters:**
 - `startOffset` (`int`): Inclusive start offset
 - `endOffset` (`int`): Exclusive end offset
+
+**Returns:** `void`
 
 ### `getWordAtCaret()`
 
@@ -126,8 +126,6 @@ If endOffset < startOffset the `xmlFragment` will be inserted at `startOffset`.
 **Returns:** `java.lang.Object`
 
 ### `makeRelative(java.net.URL baseURL, java.net.URL childURL)`
-
-**Returns:** `java.lang.String`
 
 The child path is relatively expressed to the base file. If is
  not possible, the child URL is returned. 
@@ -143,12 +141,14 @@ The child path is relatively expressed to the base file. If is
 - `baseURL` (`java.net.URL`): The base URL.
 - `childURL` (`java.net.URL`): The child URL.
 
-### `escapeAttributeValue(java.lang.String attributeValue)`
-
 **Returns:** `java.lang.String`
+
+### `escapeAttributeValue(java.lang.String attributeValue)`
 
 **Parameters:**
 - `attributeValue` (`java.lang.String`): The attribute value.
+
+**Returns:** `java.lang.String`
 
 ### `getEditorLocation()`
 
@@ -156,14 +156,12 @@ The child path is relatively expressed to the base file. If is
 
 ### `locateFile(java.net.URL url)`
 
-**Returns:** `java.io.File`
-
 **Parameters:**
 - `url` (`java.net.URL`): The URL to be checked.
 
-### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, boolean openForSave)`
-
 **Returns:** `java.io.File`
+
+### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, boolean openForSave)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
@@ -171,92 +169,92 @@ The child path is relatively expressed to the base file. If is
 - `filterDescr` (`java.lang.String`): Description for this file filter.
 - `openForSave` (`boolean`): True to show the file chooser for saving, false to use it for opening
 
-### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
-
 **Returns:** `java.io.File`
+
+### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
 - `allowedExtensions` (`java.lang.String[]`): Allowed file extensions.
 - `filterDescr` (`java.lang.String`): Description for this file filter.
 
-### `chooseURL(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
+**Returns:** `java.io.File`
 
-**Returns:** `java.net.URL`
+### `chooseURL(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
 - `allowedExtensions` (`java.lang.String[]`): Allowed extensions.
 - `filterDescr` (`java.lang.String`): Description for this file filter.
 
-### `getTableCellAbove(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+**Returns:** `java.net.URL`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
+### `getTableCellAbove(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table cell element.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
 ### `getTableCellBelow(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
-
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table cell element.
 
-### `getTableCellIndex(ro.sync.ecss.extensions.api.node.AuthorElement authorElement)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-**Returns:** `int[]`
+### `getTableCellIndex(ro.sync.ecss.extensions.api.node.AuthorElement authorElement)`
 
 **Parameters:**
 - `authorElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element.
 
-### `getTableCellAt(int row, int column, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+**Returns:** `int[]`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
+### `getTableCellAt(int row, int column, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Parameters:**
 - `row` (`int`): The row, 0 based.
 - `column` (`int`): The column, 0 based.
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table element.
 
-### `getTableRow(int index, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
+
+### `getTableRow(int index, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Parameters:**
 - `index` (`int`): The index of the row to find, 0 based.
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table element.
 
-### `getTableRowCount(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-**Returns:** `int`
+### `getTableRowCount(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table element.
+
+**Returns:** `int`
 
 ### `getTableNumberOfColumns(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table element.
 
-### `getTableColSpanIndices(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+**Returns:** `int`
 
-**Returns:** `int[]`
+### `getTableColSpanIndices(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
 The indices are 0 based.
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table cell element.
 
+**Returns:** `int[]`
+
 ### `isStandalone()`
 
 **Returns:** `boolean`
 
 ### `inInlineContext(int offset)`
-
-**Returns:** `boolean`
 
 For example a text paragraph determines an inline context, 
  and for an offset inside this paragraph the method will return `true`. 
@@ -265,9 +263,9 @@ For example a text paragraph determines an inline context,
 **Parameters:**
 - `offset` (`int`): The offset in the document, zero based.
 
-### `insertMultipleElements(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String[] elementNames, int[] offsets, java.lang.String namespace)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `insertMultipleElements(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String[] elementNames, int[] offsets, java.lang.String namespace)`
 
 The offsets and elements must be in the document order.
 
@@ -277,9 +275,9 @@ The offsets and elements must be in the document order.
 - `offsets` (`int[]`): The absolute offsets where the elements will be inserted.
 - `namespace` (`java.lang.String`): The namespace of the new inserted elements. `null` for default namespace.
 
-### `multipleDelete(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
-
 **Returns:** `void`
+
+### `multipleDelete(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
 
 The offsets must be in document order and the intervals 
  must not intersect with one another.
@@ -289,9 +287,9 @@ The offsets must be in document order and the intervals
 - `startOffsets` (`int[]`): The start offset for each interval. Must be in document order.
 - `endOffsets` (`int[]`): The end offset for each interval. Must be in document order.
 
-### `removeClonedElementAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attrName)`
-
 **Returns:** `void`
+
+### `removeClonedElementAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attrName)`
 
 Warning: Use this only when the element is not from the existing content.
  All operations on nodes from the document model must be done through the AuthorDocumentController.
@@ -300,9 +298,9 @@ Warning: Use this only when the element is not from the existing content.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): Element node.
 - `attrName` (`java.lang.String`): The attribute name to remove.
 
-### `setClonedElementAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String name, ro.sync.ecss.extensions.api.node.AttrValue attributeValue)`
-
 **Returns:** `void`
+
+### `setClonedElementAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String name, ro.sync.ecss.extensions.api.node.AttrValue attributeValue)`
 
 Warning: Use this only when the element is not from the existing content.
  All operations on nodes from the document model must be done through the AuthorDocumentController.
@@ -312,16 +310,18 @@ Warning: Use this only when the element is not from the existing content.
 - `name` (`java.lang.String`): Name of the attribute to be set.
 - `attributeValue` ([`ro.sync.ecss.extensions.api.node.AttrValue`](node/AttrValue.md)): The attribute value to set. Must not be `null`.
 
-### `showConfirmDialog(java.lang.String title, java.lang.String message, java.lang.String[] buttonNames, int[] buttonIds)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `showConfirmDialog(java.lang.String title, java.lang.String message, java.lang.String[] buttonNames, int[] buttonIds)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The dialog title.
 - `message` (`java.lang.String`): The message to be presented to the user.
 - `buttonNames` (`java.lang.String[]`): The names of the buttons representing the choices.
 - `buttonIds` (`int[]`): The id for each button. Used to identify which button was pressed.
- All ids must be greater or equal to 0.
+   All ids must be greater or equal to 0.
+
+**Returns:** `int`
 
 ### `newNonValidatingXMLReader()`
 
@@ -329,21 +329,19 @@ Warning: Use this only when the element is not from the existing content.
 
 ### `correctURL(java.lang.String url)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `url` (`java.lang.String`): The URL to be corrected.
 
-### `showErrorMessage(java.lang.String message)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `showErrorMessage(java.lang.String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message to be presented.
 
-### `resolvePath(java.net.URL baseURL, java.lang.String relativeLocation, boolean entityResolve, boolean uriResolve)`
+**Returns:** `void`
 
-**Returns:** `java.net.URL`
+### `resolvePath(java.net.URL baseURL, java.lang.String relativeLocation, boolean entityResolve, boolean uriResolve)`
 
 **Parameters:**
 - `baseURL` (`java.net.URL`): The URL of the current opened XML file.
@@ -351,9 +349,9 @@ Warning: Use this only when the element is not from the existing content.
 - `entityResolve` (`boolean`): True to pass through catalog entity resolver
 - `uriResolve` (`boolean`): True to pass through catalog URI resolver.
 
-### `findNodesByXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
+**Returns:** `java.net.URL`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
+### `findNodesByXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
 
 The result of this function is an array of AuthorNode's selected by the given XPath expression.
  Author text nodes, Author CDATA section nodes and Author comment nodes can be ignored for performance reasons.
@@ -378,9 +376,9 @@ The result of this function is an array of AuthorNode's selected by the given XP
 - `ignoreCData` (`boolean`): If `true` Author CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` Author comments will not be returned.
 
-### `evaluateXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
 
-**Returns:** `java.lang.Object[]`
+### `evaluateXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
 
 This functions returns the result of the given XPath expression as an array of Object's.
  Author DOM text nodes, DOM CDATA sections and DOM comments wrappers can be ignored for performance reasons.
@@ -413,27 +411,29 @@ This functions returns the result of the given XPath expression as an array of O
 - `ignoreCData` (`boolean`): If `true` DOM CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` DOM comments will not be returned.
 
-### `addAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
+**Returns:** `java.lang.Object[]`
 
-**Returns:** `void`
+### `addAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorListener`](./AuthorListener.md)): The listener to be added.
 
-### `removeAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
-
 **Returns:** `void`
+
+### `removeAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorListener`](./AuthorListener.md)): The listener to be removed.
 
-### `viewToModel(int x, int y)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorViewToModelInfo`](./AuthorViewToModelInfo.md)
+### `viewToModel(int x, int y)`
 
 **Parameters:**
 - `x` (`int`): The "x" coordinate relative to the viewport origin.
 - `y` (`int`): The "y" coordinate relative to the viewport origin.
+
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorViewToModelInfo`](./AuthorViewToModelInfo.md)
 
 ### `isTrackingChanges()`
 

@@ -10,8 +10,6 @@
 
 ### `getAttribute(java.lang.String name)`
 
-**Returns:** `java.lang.Object`
-
 Attributes can be set two ways. The servlet container may set attributes to make available custom information about a
  request. For example, for requests made using HTTPS, the attribute
  `jakarta.servlet.request.X509Certificate` can be used to retrieve information on the certificate of the
@@ -26,16 +24,16 @@ Attributes can be set two ways. The servlet container may set attributes to make
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the name of the attribute
 
-### `getAttributeNames()`
+**Returns:** `java.lang.Object`
 
-**Returns:** `java.util.Enumeration<java.lang.String>`
+### `getAttributeNames()`
 
 This method
  returns an empty `Enumeration` if the request has no attributes available to it.
 
-### `getCharacterEncoding()`
+**Returns:** `java.util.Enumeration<java.lang.String>`
 
-**Returns:** `java.lang.String`
+### `getCharacterEncoding()`
 
 This method returns `null` if
  no request encoding character encoding has been specified. The following methods for specifying the request character
@@ -43,9 +41,9 @@ This method returns `null` if
  ServletContext#setRequestCharacterEncoding, deployment descriptor), and per container (for all web
  applications deployed in that container, using vendor specific configuration).
 
-### `setCharacterEncoding(java.lang.String encoding)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setCharacterEncoding(java.lang.String encoding)`
 
 This method must be called prior to
  reading request parameters or reading input using getReader(). Otherwise, it has no effect.
@@ -53,9 +51,9 @@ This method must be called prior to
 **Parameters:**
 - `encoding` (`java.lang.String`): `String` containing the name of the character encoding.
 
-### `setCharacterEncoding(java.nio.charset.Charset encoding)`
-
 **Returns:** `void`
+
+### `setCharacterEncoding(java.nio.charset.Charset encoding)`
 
 This method must be called prior to reading
  request parameters or reading input using getReader(). Otherwise, it has no effect.
@@ -65,6 +63,8 @@ This method must be called prior to reading
 
 **Parameters:**
 - `encoding` (`java.nio.charset.Charset`): `Charset` representing the character encoding.
+
+**Returns:** `void`
 
 ### `getContentLength()`
 
@@ -80,14 +80,12 @@ This method must be called prior to reading
 
 ### `getInputStream()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletInputStream`](./ServletInputStream.md)
-
 Either this method or
  #getReader may be called to read the body, not both.
 
-### `getParameter(java.lang.String name)`
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletInputStream`](./ServletInputStream.md)
 
-**Returns:** `java.lang.String`
+### `getParameter(java.lang.String name)`
 
 Request parameters are extra information sent with the request. For HTTP servlets, parameters are contained in
  the query string or posted form data.
@@ -110,27 +108,29 @@ Request parameters are extra information sent with the request. For HTTP servlet
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the name of the parameter
 
-### `getParameterNames()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Enumeration<java.lang.String>`
+### `getParameterNames()`
 
 If the request has no parameters, the method returns an empty `Enumeration`.
 
-### `getParameterValues(java.lang.String name)`
+**Returns:** `java.util.Enumeration<java.lang.String>`
 
-**Returns:** `java.lang.String[]`
+### `getParameterValues(java.lang.String name)`
 
 If the parameter has a single value, the array has a length of 1.
 
 **Parameters:**
 - `name` (`java.lang.String`): a `String` containing the name of the parameter whose value is requested
 
-### `getParameterMap()`
+**Returns:** `java.lang.String[]`
 
-**Returns:** `java.util.Map<java.lang.String,java.lang.String[]>`
+### `getParameterMap()`
 
 Request parameters are extra information sent with the request. For HTTP servlets, parameters are contained in the
  query string or posted form data.
+
+**Returns:** `java.util.Map<java.lang.String,java.lang.String[]>`
 
 ### `getProtocol()`
 
@@ -138,54 +138,52 @@ Request parameters are extra information sent with the request. For HTTP servlet
 
 ### `getScheme()`
 
-**Returns:** `java.lang.String`
-
 Different schemes have different rules for constructing URLs, as noted in RFC 1738.
 
-### `getServerName()`
-
 **Returns:** `java.lang.String`
+
+### `getServerName()`
 
 It may be derived from a protocol specific
  mechanism, such as the `Host` header, or the HTTP/2 authority, or
  [RFC 7239](https://tools.ietf.org/html/rfc7239), otherwise the resolved server name or the server IP
  address.
 
-### `getServerPort()`
+**Returns:** `java.lang.String`
 
-**Returns:** `int`
+### `getServerPort()`
 
 It may be derived from a protocol specific mechanism, such as
  the `Host` header, or HTTP authority, or [RFC 7239](https://tools.ietf.org/html/rfc7239),
  otherwise the server port where the client connection was accepted on.
 
-### `getReader()`
+**Returns:** `int`
 
-**Returns:** `java.io.BufferedReader`
+### `getReader()`
 
 The reader translates the
  character data according to the character encoding used on the body. Either this method or #getInputStream
  may be called to read the body, not both.
 
-### `getRemoteAddr()`
+**Returns:** `java.io.BufferedReader`
 
-**Returns:** `java.lang.String`
+### `getRemoteAddr()`
 
 By default
  this is either the address of the client or last proxy that sent the request. In some cases a protocol specific
  mechanism, such as [RFC 7239](https://tools.ietf.org/html/rfc7239), may be used to obtain an address
  different to that of the actual TCP/IP connection.
 
-### `getRemoteHost()`
-
 **Returns:** `java.lang.String`
+
+### `getRemoteHost()`
 
 If the engine cannot or chooses
  not to resolve the hostname (to improve performance), this method returns the IP address.
 
-### `setAttribute(java.lang.String name, java.lang.Object o)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setAttribute(java.lang.String name, java.lang.Object o)`
 
 Attributes are reset between requests. This method is most often used in
  conjunction with RequestDispatcher.
@@ -203,9 +201,9 @@ Attributes are reset between requests. This method is most often used in
 - `name` (`java.lang.String`): a `String` specifying the name of the attribute
 - `o` (`java.lang.Object`): the `Object` to be stored
 
-### `removeAttribute(java.lang.String name)`
-
 **Returns:** `void`
+
+### `removeAttribute(java.lang.String name)`
 
 This method is not generally needed as attributes only persist as long as the
  request is being handled.
@@ -218,20 +216,22 @@ This method is not generally needed as attributes only persist as long as the
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the name of the attribute to remove
 
-### `getLocale()`
+**Returns:** `void`
 
-**Returns:** `java.util.Locale`
+### `getLocale()`
 
 If the client request doesn't provide an Accept-Language header, this method returns the default locale for
  the server.
 
-### `getLocales()`
+**Returns:** `java.util.Locale`
 
-**Returns:** `java.util.Enumeration<java.util.Locale>`
+### `getLocales()`
 
 If the client
  request doesn't provide an Accept-Language header, this method returns an `Enumeration` containing one
  `Locale`, the default locale for the server.
+
+**Returns:** `java.util.Enumeration<java.util.Locale>`
 
 ### `isSecure()`
 
@@ -239,35 +239,35 @@ If the client
 
 ### `getRemotePort()`
 
-**Returns:** `int`
-
 By
  default this is either the port of the client or last proxy that sent the request. In some cases, protocol specific
  mechanisms such as [RFC 7239](https://tools.ietf.org/html/rfc7239) may be used to obtain a port different
  to that of the actual TCP/IP connection.
 
-### `getLocalName()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getLocalName()`
 
 If the engine cannot or chooses
  not to resolve the hostname (to improve performance), this method returns the IP address.
 
-### `getLocalAddr()`
-
 **Returns:** `java.lang.String`
+
+### `getLocalAddr()`
 
 In some
  cases a protocol specific mechanism, such as [RFC 7239](https://tools.ietf.org/html/rfc7239), may be used
  to obtain an address different to that of the actual TCP/IP connection.
 
-### `getLocalPort()`
+**Returns:** `java.lang.String`
 
-**Returns:** `int`
+### `getLocalPort()`
 
 In some
  cases, a protocol specific mechanism such as [RFC 7239](https://tools.ietf.org/html/rfc7239) may be used
  to obtain an address different to that of the actual TCP/IP connection.
+
+**Returns:** `int`
 
 ### `getServletContext()`
 

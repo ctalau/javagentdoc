@@ -38,64 +38,64 @@
 
 ### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableBody(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableHead(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isTableColspec(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
 
-### `getElementTag(int elementType)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getElementTag(int elementType)`
 
 **Parameters:**
 - `elementType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getElementName(int elementType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `elementType` (`int`)
+
+**Returns:** `java.lang.String`
 

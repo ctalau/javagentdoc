@@ -16,22 +16,22 @@
 
 ### `isTableElement(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isHeadElement(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `isRowElement(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 

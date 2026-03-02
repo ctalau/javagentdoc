@@ -42,22 +42,22 @@
 
 ### `getElementTag(int elementType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `elementType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getElementName(int elementType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `elementType` (`int`)
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 

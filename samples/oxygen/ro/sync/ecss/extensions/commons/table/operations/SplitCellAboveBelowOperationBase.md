@@ -41,29 +41,29 @@ The value is `Split point`.
 
 ### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
 
-### `splitCell(ro.sync.ecss.extensions.api.node.AuthorElement cell, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean above)`
-
 **Returns:** `void`
+
+### `splitCell(ro.sync.ecss.extensions.api.node.AuthorElement cell, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean above)`
 
 **Parameters:**
 - `cell` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table cell to split.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to author functionality.
 - `above` (`boolean`): If `true` the cell will be split above.
 
-### `clearCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, java.lang.String[] removedAttributes)`
-
 **Returns:** `void`
+
+### `clearCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, java.lang.String[] removedAttributes)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to author functionality.
 - `cellElem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table cell to remove the specified attributes for.
 - `removedAttributes` (`java.lang.String[]`): The attributes which should be removed.
+
+**Returns:** `void`
 
 ### `getArguments()`
 

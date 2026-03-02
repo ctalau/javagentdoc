@@ -13,29 +13,29 @@ To add this listener use the
 
 ### `highlightAdded(ro.sync.ecss.extensions.api.highlights.Highlight highlight)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.Highlight`](./Highlight.md)): The added highlight.
 
-### `highlightRemoved(ro.sync.ecss.extensions.api.highlights.Highlight highlight)`
-
 **Returns:** `void`
+
+### `highlightRemoved(ro.sync.ecss.extensions.api.highlights.Highlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.Highlight`](./Highlight.md)): The removed highlight.
 
-### `highlightsRemoved(ro.sync.ecss.extensions.api.highlights.Highlight[] highlights)`
-
 **Returns:** `void`
+
+### `highlightsRemoved(ro.sync.ecss.extensions.api.highlights.Highlight[] highlights)`
 
 **Parameters:**
 - `highlights` ([`ro.sync.ecss.extensions.api.highlights.Highlight[]`](./Highlight.md)): The removed highlights.
 
-### `allHighlightsRemoved(java.util.List<ro.sync.ecss.extensions.api.highlights.Highlight> removedHighlights)`
-
 **Returns:** `void`
+
+### `allHighlightsRemoved(java.util.List<ro.sync.ecss.extensions.api.highlights.Highlight> removedHighlights)`
 
 **Parameters:**
 - `removedHighlights` (`java.util.List<ro.sync.ecss.extensions.api.highlights.Highlight>`): The list of removed highlights.
+
+**Returns:** `void`
 

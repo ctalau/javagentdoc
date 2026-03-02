@@ -41,10 +41,10 @@ It can be extended to provide specific table rows properties for different
 
 ### `addSpanningCellIndexes(java.util.List<java.lang.Integer> indexes)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `indexes` (`java.util.List<java.lang.Integer>`): Spanning cell indexes (starts with 0)
+
+**Returns:** `void`
 
 ### `getSpanningCellIndexes()`
 

@@ -33,19 +33,19 @@ The actions must be defined by the corresponding framework, or one of the common
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object actionIDs)`
+**Returns:** `void`
 
-**Returns:** `java.util.List<java.lang.Object>`
+### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object actionIDs)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 - `actionIDs` (`java.lang.Object`): Action ids.
+
+**Returns:** `java.util.List<java.lang.Object>`
 
 ### `getArguments()`
 

@@ -23,8 +23,8 @@ The GuiElements#RADIO_BUTTONS type means that the values will be presented
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.GuiElements`](./GuiElements.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.GuiElements`](./GuiElements.md)
 

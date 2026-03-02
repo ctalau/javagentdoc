@@ -10,14 +10,12 @@
 
 ### `processChanges(boolean processChanges)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorXPathExpressionBuilder`](./AuthorXPathExpressionBuilder.md)
-
 **Parameters:**
 - `processChanges` (`boolean`): If `true` the delete changes will be ignored.
 
-### `avoidNamespacePrefixes()`
-
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorXPathExpressionBuilder`](./AuthorXPathExpressionBuilder.md)
+
+### `avoidNamespacePrefixes()`
 
 For example, intead of generating an expression like the one below that uses namespace prefixes
  
@@ -33,6 +31,8 @@ Generate an expression that use the full namespace URI for the element.
 ```
 /*[namespace-uri()='http://docbook.org/ns/docbook' and local-name()='article']/*[namespace-uri()='http://docbook.org/ns/docbook' and local-name()='sect1'][1]
 ```
+
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorXPathExpressionBuilder`](./AuthorXPathExpressionBuilder.md)
 
 ### `getXpathExpresion()`
 

@@ -77,34 +77,34 @@
 
 ### `getContentInfo(java.lang.String arg0)`
 
-**Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1)`
-
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
+
+### `getContentInfo(java.lang.String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1, boolean arg2)`
-
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
+
+### `getContentInfo(java.lang.String arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 - `arg2` (`boolean`)
 
-### `setContent(java.lang.String arg0)`
+**Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-**Returns:** `void`
+### `setContent(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getCaretPosition()`
 
@@ -112,10 +112,10 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

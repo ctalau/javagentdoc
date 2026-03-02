@@ -48,8 +48,8 @@ The SelectionInterpretationMode#TABLE_COLUMN interpretation mode is
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)
 

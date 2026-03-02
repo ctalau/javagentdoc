@@ -12,8 +12,6 @@
 
 ### `toggleMarkAsDone(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
-**Returns:** `void`
-
 This state is also applied 
  to all its replies.
  The highlight can one of the following types: 
@@ -32,9 +30,9 @@ This state is also applied
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)): The highlight to toggle the done state for.
 
-### `addReply(java.lang.String replyComment, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight parentHighlight)`
-
 **Returns:** `void`
+
+### `addReply(java.lang.String replyComment, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight parentHighlight)`
 
 If the highlight is the last child of its parent, 
  the reply is added to the parent highlight instead.
@@ -62,9 +60,9 @@ If the highlight is the last child of its parent,
 - `replyComment` (`java.lang.String`): The reply comment.
 - `parentHighlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)): The parent highlight.
 
-### `addReply(java.util.Map<java.lang.String,java.lang.String> properties, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight parentHighlight)`
-
 **Returns:** `void`
+
+### `addReply(java.util.Map<java.lang.String,java.lang.String> properties, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight parentHighlight)`
 
 The parent highlight can one of the following types: 
  
@@ -90,13 +88,13 @@ The parent highlight can one of the following types:
 
 **Parameters:**
 - `properties` (`java.util.Map<java.lang.String,java.lang.String>`): The reply properties. See 
-                    ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightConstants 
-                    for properties that are meaningful in Oxygen.
+                      ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightConstants 
+                      for properties that are meaningful in Oxygen.
 - `parentHighlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)): The parent highlight.
 
-### `addComment(int startOffset, int endOffset, java.lang.String comment)`
-
 **Returns:** `void`
+
+### `addComment(int startOffset, int endOffset, java.lang.String comment)`
 
 An error message is reported if the 
  comment cannot be added.
@@ -106,9 +104,9 @@ An error message is reported if the
 - `endOffset` (`int`): The end offset of the marker (exclusive).
 - `comment` (`java.lang.String`): The comment of the marker.
 
-### `addCommentOnSelection(int startOffset, int endOffset, java.lang.String comment)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `addCommentOnSelection(int startOffset, int endOffset, java.lang.String comment)`
 
 It returns `false` if the comment 
  cannot be added.
@@ -118,9 +116,9 @@ It returns `false` if the comment
 - `endOffset` (`int`): Interval end offset. Inclusive
 - `comment` (`java.lang.String`): The comment.
 
-### `addPersistentMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, java.util.Map<java.lang.String,java.lang.String> properties)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)
+### `addPersistentMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, java.util.Map<java.lang.String,java.lang.String> properties)`
 
 It returns `false` if the comment 
  cannot be added.
@@ -130,23 +128,25 @@ It returns `false` if the comment
 - `startOffset` (`int`): The selection start offset.
 - `endOffset` (`int`): Interval end offset. Inclusive
 - `properties` (`java.util.Map<java.lang.String,java.lang.String>`): The comment properties. See 
-                   ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightConstants 
-                   for properties that are meaningful in Oxygen.
+                     ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightConstants 
+                     for properties that are meaningful in Oxygen.
+
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)
 
 ### `removeComment(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)): The comment marker.
 
-### `editComment(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.lang.String newComment)`
-
 **Returns:** `void`
+
+### `editComment(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.lang.String newComment)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)): The marker.
 - `newComment` (`java.lang.String`): The new comment.
+
+**Returns:** `void`
 
 ### `getAllHighlights()`
 
@@ -154,8 +154,8 @@ It returns `false` if the comment
 
 ### `getAuthorNumber(java.lang.String author)`
 
-**Returns:** `java.lang.Integer`
-
 **Parameters:**
 - `author` (`java.lang.String`): The name of the author.
+
+**Returns:** `java.lang.Integer`
 

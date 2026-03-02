@@ -210,17 +210,17 @@
 
 ### `flipSeverity(int arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `equals(java.lang.Object arg0)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(java.lang.Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -228,52 +228,52 @@
 
 ### `setSeverity(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `setColumn(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `setLine(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `setMessage(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `setMessage(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setMaskPasswordsInURLs(boolean arg0)`
-
 **Returns:** `void`
+
+### `setMaskPasswordsInURLs(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setLength(int arg0)`
-
 **Returns:** `void`
+
+### `setLength(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
 
-### `setSystemID(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `setSystemID(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getLength()`
 
@@ -313,11 +313,11 @@
 
 ### `getMessageWithEngine(boolean arg0, boolean arg1)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`boolean`)
 - `arg1` (`boolean`)
+
+**Returns:** `java.lang.String`
 
 ### `getMessageWithSeverity()`
 
@@ -325,25 +325,25 @@
 
 ### `getMessageWithSeverity(boolean arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `getMessageWithSeverity(boolean arg0, boolean arg1)`
-
 **Returns:** `java.lang.String`
+
+### `getMessageWithSeverity(boolean arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`boolean`)
 - `arg1` (`boolean`)
 
-### `wnb(boolean arg0)`
-
 **Returns:** `java.lang.String`
+
+### `wnb(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `java.lang.String`
 
 ### `ynb()`
 
@@ -355,10 +355,10 @@
 
 ### `setOffset(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `getOffset()`
 
@@ -374,10 +374,10 @@
 
 ### `setAdditionalInfo(java.net.URL arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `void`
 
 ### `isHighlightToColumn()`
 
@@ -385,10 +385,10 @@
 
 ### `setHighlightToColumn(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `getEndColumn()`
 
@@ -400,24 +400,24 @@
 
 ### `setEndLine(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `setEndColumn(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `setData(ro.sync.document.DPIData arg0)`
-
 **Returns:** `void`
+
+### `setData(ro.sync.document.DPIData arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.DPIData`](./DPIData.md))
+
+**Returns:** `void`
 
 ### `getData()`
 
@@ -425,10 +425,10 @@
 
 ### `setDetailedExceptionInfo(ro.sync.document.DetailedExceptionInfo arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.document.DetailedExceptionInfo`](./DetailedExceptionInfo.md))
+
+**Returns:** `void`
 
 ### `getDetailedExceptionInfo()`
 
@@ -436,10 +436,10 @@
 
 ### `setEngineName(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getEngineName()`
 
@@ -455,8 +455,6 @@
 
 ### `asXML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`boolean`)
 - `arg1` (`boolean`)
@@ -465,9 +463,9 @@
 - `arg4` (`boolean`)
 - `arg5` (`boolean`)
 
-### `asXML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
-
 **Returns:** `java.lang.String`
+
+### `asXML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -477,6 +475,8 @@
 - `arg4` (`boolean`)
 - `arg5` (`boolean`)
 - `arg6` (`boolean`)
+
+**Returns:** `java.lang.String`
 
 ### `asJSON()`
 
@@ -484,8 +484,6 @@
 
 ### `asJSON(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`boolean`)
 - `arg1` (`boolean`)
@@ -494,9 +492,9 @@
 - `arg4` (`boolean`)
 - `arg5` (`boolean`)
 
-### `asJSON(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
-
 **Returns:** `java.lang.String`
+
+### `asJSON(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -506,6 +504,8 @@
 - `arg4` (`boolean`)
 - `arg5` (`boolean`)
 - `arg6` (`boolean`)
+
+**Returns:** `java.lang.String`
 
 ### `asText()`
 
@@ -513,8 +513,6 @@
 
 ### `asText(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`boolean`)
 - `arg1` (`boolean`)
@@ -523,9 +521,9 @@
 - `arg4` (`boolean`)
 - `arg5` (`boolean`)
 
-### `asText(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
-
 **Returns:** `java.lang.String`
+
+### `asText(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -536,16 +534,18 @@
 - `arg5` (`boolean`)
 - `arg6` (`boolean`)
 
+**Returns:** `java.lang.String`
+
 ### `getImposedInitialPage()`
 
 **Returns:** `java.lang.String`
 
 ### `setImposedInitialPage(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getAnchor()`
 
@@ -553,10 +553,10 @@
 
 ### `setAnchor(ro.sync.exml.editor.Anchor arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.Anchor`](../exml/editor/Anchor.md))
+
+**Returns:** `void`
 
 ### `getMatchRange()`
 
@@ -564,10 +564,10 @@
 
 ### `setMatchRange(int[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int[]`)
+
+**Returns:** `void`
 
 ### `getMessageHighlightOffset()`
 
@@ -575,17 +575,17 @@
 
 ### `setMessageHighlightOffset(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `setOperationDescription(ro.sync.document.OperationDescription arg0)`
-
 **Returns:** `void`
+
+### `setOperationDescription(ro.sync.document.OperationDescription arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))
+
+**Returns:** `void`
 
 ### `getOperationDescription()`
 
@@ -597,10 +597,10 @@
 
 ### `setDITAAdditionalInfo(ro.sync.document.o arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.document.o`)
+
+**Returns:** `void`
 
 ### `getECAdditionalInfo()`
 
@@ -608,41 +608,39 @@
 
 ### `setECAdditionalInfo(ro.sync.document.bc arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.document.bc`)
 
-### `setTemporaryPositions(javax.swing.text.Position arg0, javax.swing.text.Position arg1, java.lang.String arg2)`
-
 **Returns:** `void`
+
+### `setTemporaryPositions(javax.swing.text.Position arg0, javax.swing.text.Position arg1, java.lang.String arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.text.Position`)
 - `arg1` (`javax.swing.text.Position`)
 - `arg2` (`java.lang.String`)
 
-### `getStartEndPositions(java.lang.String arg0)`
+**Returns:** `void`
 
-**Returns:** `javax.swing.text.Position[]`
+### `getStartEndPositions(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setStartEndPositionsMap(java.util.Map<java.lang.String,javax.swing.text.Position[]> arg0)`
+**Returns:** `javax.swing.text.Position[]`
 
-**Returns:** `void`
+### `setStartEndPositionsMap(java.util.Map<java.lang.String,javax.swing.text.Position[]> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,javax.swing.text.Position[]>`)
+
+**Returns:** `void`
 
 ### `asHTML()`
 
 **Returns:** `java.lang.String`
 
 ### `asHTML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5)`
-
-**Returns:** `java.lang.String`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -652,9 +650,9 @@
 - `arg4` (`boolean`)
 - `arg5` (`boolean`)
 
-### `asHTML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
-
 **Returns:** `java.lang.String`
+
+### `asHTML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -665,9 +663,9 @@
 - `arg5` (`boolean`)
 - `arg6` (`boolean`)
 
-### `asHTML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7)`
-
 **Returns:** `java.lang.String`
+
+### `asHTML(boolean arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -679,23 +677,25 @@
 - `arg6` (`boolean`)
 - `arg7` (`boolean`)
 
+**Returns:** `java.lang.String`
+
 ### `xnb()`
 
 **Returns:** `java.lang.String`
 
 ### `setHtmlMessageFragment(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setErrorKey(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getErrorKey()`
 
@@ -707,8 +707,8 @@
 
 ### `setElementTarget(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 

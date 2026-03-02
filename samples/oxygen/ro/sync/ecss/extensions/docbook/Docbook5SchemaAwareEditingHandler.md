@@ -25,15 +25,15 @@
 
 ### `getInfoElementChildOfSect(java.lang.String sectElementName)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `sectElementName` (`java.lang.String`)
 
-### `changeElementsToMoveUpDown(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> selectedElements)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `changeElementsToMoveUpDown(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> selectedElements)`
 
 **Parameters:**
 - `selectedElements` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
+
+**Returns:** `boolean`
 

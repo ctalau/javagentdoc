@@ -80,17 +80,17 @@
 
 ### `setPluginsDir(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setUserPluginsDir(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getInstance()`
 
@@ -98,10 +98,10 @@
 
 ### `setInstanceFromTC(ro.sync.exml.plugin.PluginManager arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.PluginManager`](./PluginManager.md))
+
+**Returns:** `void`
 
 ### `getPlugins()`
 
@@ -125,10 +125,10 @@
 
 ### `disableLateDelegationCLForTests(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `getExceptions()`
 
@@ -140,10 +140,10 @@
 
 ### `removePluginExceptions(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `getExceptionsWebapp()`
 
@@ -155,196 +155,196 @@
 
 ### `eb(java.io.File arg0, java.util.HashSet<java.lang.String> arg1, java.util.HashSet<java.lang.String> arg2, java.util.Set<java.lang.String> arg3)`
 
-**Returns:** [`ro.sync.exml.plugin.Plugin`](./Plugin.md)
-
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`java.util.HashSet<java.lang.String>`)
 - `arg2` (`java.util.HashSet<java.lang.String>`)
 - `arg3` (`java.util.Set<java.lang.String>`)
 
-### `l(ro.sync.exml.plugin.PluginDescriptor arg0, java.lang.ClassLoader arg1, java.lang.String arg2)`
-
 **Returns:** [`ro.sync.exml.plugin.Plugin`](./Plugin.md)
+
+### `l(ro.sync.exml.plugin.PluginDescriptor arg0, java.lang.ClassLoader arg1, java.lang.String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 - `arg1` (`java.lang.ClassLoader`)
 - `arg2` (`java.lang.String`)
 
-### `c(ro.sync.exml.plugin.PluginDescriptor arg0)`
+**Returns:** [`ro.sync.exml.plugin.Plugin`](./Plugin.md)
 
-**Returns:** `boolean`
+### `c(ro.sync.exml.plugin.PluginDescriptor arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 
-### `n(java.io.File arg0, boolean arg1)`
+**Returns:** `boolean`
 
-**Returns:** `org.w3c.dom.Document`
+### `n(java.io.File arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`boolean`)
 
-### `o(org.w3c.dom.NodeList arg0)`
+**Returns:** `org.w3c.dom.Document`
 
-**Returns:** `void`
+### `o(org.w3c.dom.NodeList arg0)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.NodeList`)
 
-### `h(java.lang.String arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.util.Set<java.lang.String> arg2)`
-
 **Returns:** `void`
+
+### `h(java.lang.String arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.util.Set<java.lang.String> arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 - `arg2` (`java.util.Set<java.lang.String>`)
 
-### `i(org.w3c.dom.Element arg0, java.io.File arg1)`
+**Returns:** `void`
 
-**Returns:** `java.lang.ClassLoader`
+### `i(org.w3c.dom.Element arg0, java.io.File arg1)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Element`)
 - `arg1` (`java.io.File`)
 
-### `p(ro.sync.exml.plugin.PluginDescriptor arg0, org.w3c.dom.NodeList arg1, java.lang.ClassLoader arg2)`
+**Returns:** `java.lang.ClassLoader`
 
-**Returns:** `void`
+### `p(ro.sync.exml.plugin.PluginDescriptor arg0, org.w3c.dom.NodeList arg1, java.lang.ClassLoader arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 - `arg1` (`org.w3c.dom.NodeList`)
 - `arg2` (`java.lang.ClassLoader`)
 
-### `m(org.w3c.dom.NodeList arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.lang.ClassLoader arg2)`
-
 **Returns:** `void`
+
+### `m(org.w3c.dom.NodeList arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.lang.ClassLoader arg2)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.NodeList`)
 - `arg1` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 - `arg2` (`java.lang.ClassLoader`)
 
-### `s(java.lang.Class arg0)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `s(java.lang.Class arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Class`)
 
-### `w(org.w3c.dom.NodeList arg0, java.io.File arg1)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.List<java.net.URL>`
+### `w(org.w3c.dom.NodeList arg0, java.io.File arg1)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.NodeList`)
 - `arg1` (`java.io.File`)
 
-### `q(org.w3c.dom.NodeList arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.util.HashSet<java.lang.String> arg2)`
+**Returns:** `java.util.List<java.net.URL>`
 
-**Returns:** `void`
+### `q(org.w3c.dom.NodeList arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.util.HashSet<java.lang.String> arg2)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.NodeList`)
 - `arg1` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 - `arg2` (`java.util.HashSet<java.lang.String>`)
 
-### `g(java.lang.String arg0)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `g(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `j(org.w3c.dom.NodeList arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.util.HashSet<java.lang.String> arg2)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `j(org.w3c.dom.NodeList arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.util.HashSet<java.lang.String> arg2)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.NodeList`)
 - `arg1` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 - `arg2` (`java.util.HashSet<java.lang.String>`)
 
-### `x(ro.sync.exml.plugin.PluginDescriptor arg0)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `x(ro.sync.exml.plugin.PluginDescriptor arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 
-### `createPluginClassLoader(java.net.URL[] arg0, java.lang.ClassLoader arg1, boolean arg2)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.ClassLoader`
+### `createPluginClassLoader(java.net.URL[] arg0, java.lang.ClassLoader arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.net.URL[]`)
 - `arg1` (`java.lang.ClassLoader`)
 - `arg2` (`boolean`)
 
-### `e(java.io.File arg0, org.w3c.dom.Element arg1)`
+**Returns:** `java.lang.ClassLoader`
 
-**Returns:** `java.net.URL[]`
+### `e(java.io.File arg0, org.w3c.dom.Element arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`org.w3c.dom.Element`)
 
+**Returns:** `java.net.URL[]`
+
 ### `fb(java.io.File arg0, java.net.URL arg1)`
+
+**Parameters:**
+- `arg0` (`java.io.File`)
+- `arg1` (`java.net.URL`)
 
 **Returns:** `boolean`
 
+### `f(java.io.File arg0, java.lang.String arg1)`
+
 **Parameters:**
 - `arg0` (`java.io.File`)
-- `arg1` (`java.net.URL`)
-
-### `f(java.io.File arg0, java.lang.String arg1)`
+- `arg1` (`java.lang.String`)
 
 **Returns:** `java.util.List<java.net.URL>`
 
-**Parameters:**
-- `arg0` (`java.io.File`)
-- `arg1` (`java.lang.String`)
-
 ### `ab(java.io.File arg0, java.net.URL arg1)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`java.net.URL`)
 
-### `r(java.io.File arg0, java.lang.String arg1)`
+**Returns:** `void`
 
-**Returns:** `java.net.URL`
+### `r(java.io.File arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`java.lang.String`)
 
-### `bb(java.net.URL arg0)`
+**Returns:** `java.net.URL`
 
-**Returns:** `void`
+### `bb(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
+**Returns:** `void`
+
 ### `hasCustomURLHandlerPlugin(java.lang.String arg0)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `arg0` (`java.lang.String`)
-
 ### `z(java.lang.String arg0)`
 
-**Returns:** `java.util.List<ro.sync.exml.plugin.Plugin>`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.util.List<ro.sync.exml.plugin.Plugin>`
 
 ### `getPluginsAlreadyLoadedExceptions()`
 
@@ -352,12 +352,12 @@
 
 ### `u(java.lang.String arg0, java.lang.Throwable arg1, ro.sync.exml.plugin.PluginDescriptor arg2)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Throwable`)
 - `arg2` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
+
+**Returns:** `void`
 
 ### `k()`
 
@@ -381,35 +381,35 @@
 
 ### `openConnectionWithTargetedURLHandler(java.net.URL arg0, java.net.Proxy arg1)`
 
-**Returns:** `java.net.URLConnection`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.net.Proxy`)
 
-### `gb(java.lang.String arg0, java.lang.Class[] arg1, java.lang.Object arg2)`
+**Returns:** `java.net.URLConnection`
 
-**Returns:** `java.lang.reflect.Method`
+### `gb(java.lang.String arg0, java.lang.Class[] arg1, java.lang.Object arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Class[]`)
 - `arg2` (`java.lang.Object`)
 
-### `cb(ro.sync.exml.plugin.PluginDescriptor arg0, ro.sync.exml.plugin.PluginDescriptor arg1)`
+**Returns:** `java.lang.reflect.Method`
 
-**Returns:** `int`
+### `cb(ro.sync.exml.plugin.PluginDescriptor arg0, ro.sync.exml.plugin.PluginDescriptor arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 - `arg1` ([`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md))
 
-### `getPluginFolderLocation(java.lang.String arg0)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getPluginFolderLocation(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getExtraTranslationLanguageFiles()`
 
@@ -417,25 +417,25 @@
 
 ### `getPluginLicense(org.w3c.dom.Element arg0, java.io.File arg1)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`org.w3c.dom.Element`)
 - `arg1` (`java.io.File`)
 
-### `createInstanceFromPlugins(java.lang.String arg0)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.Object`
+### `createInstanceFromPlugins(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `b(ro.sync.exml.plugin.Plugin arg0)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `java.lang.ClassLoader`
+### `b(ro.sync.exml.plugin.Plugin arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.Plugin`](./Plugin.md))
+
+**Returns:** `java.lang.ClassLoader`
 
 ### `y()`
 
@@ -443,8 +443,8 @@
 
 ### `getPluginID(java.io.File arg0)`
 
-**Returns:** `java.util.Optional<java.lang.String>`
-
 **Parameters:**
 - `arg0` (`java.io.File`)
+
+**Returns:** `java.util.Optional<java.lang.String>`
 

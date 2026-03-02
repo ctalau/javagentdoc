@@ -83,26 +83,26 @@
 
 ### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
 
-**Returns:** `org.eclipse.swt.widgets.Control`
-
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
 
-### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
+**Returns:** `org.eclipse.swt.widgets.Control`
 
-**Returns:** `void`
+### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
-### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
+### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
 - `arg1` (`boolean`)
 - `arg2` (`boolean`)
+
+**Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
 
 ### `okPressed()`
 
@@ -110,11 +110,11 @@
 
 ### `createSection(org.eclipse.swt.widgets.Composite arg0, java.lang.String arg1)`
 
-**Returns:** `org.eclipse.swt.widgets.Composite`
-
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `org.eclipse.swt.widgets.Composite`
 
 ### `isResizable()`
 
@@ -122,9 +122,9 @@
 
 ### `selectionChanged(java.lang.String arg0, java.lang.String arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `void`
 

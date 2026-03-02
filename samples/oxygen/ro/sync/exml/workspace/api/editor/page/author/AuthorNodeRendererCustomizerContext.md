@@ -10,7 +10,7 @@
 
 ### `getAuthorNode()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)
-
 the node for which we are customizing the rendering.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)
 

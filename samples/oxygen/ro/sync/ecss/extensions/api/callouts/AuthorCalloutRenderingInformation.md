@@ -34,31 +34,31 @@ By default, the callouts visibility in Author mode is controlled from Oxygen
 
 ### `getComment(int limit)`
 
-**Returns:** `java.lang.String`
-
 This could be a part of the real comment stored in the change or persistent highlight.
 
 **Parameters:**
 - `limit` (`int`): the suggested text limit (in characters). This value comes from the 
- Callouts Options (user preferences). Examples: 80 or 160 characters.
-
-### `getContentFromTarget(int limit)`
+   Callouts Options (user preferences). Examples: 80 or 160 characters.
 
 **Returns:** `java.lang.String`
+
+### `getContentFromTarget(int limit)`
 
 This will be presented in the content part of the callout. Note that it is not
  necessary to provide the entire content related to the callout.
 
 **Parameters:**
 - `limit` (`int`): the suggested text limit (in characters). This value comes from the 
- Callouts Options (user preferences). Examples: 80 or 160 characters.
+   Callouts Options (user preferences). Examples: 80 or 160 characters.
+
+**Returns:** `java.lang.String`
 
 ### `getAdditionalData()`
 
-**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
-
 The callout additional data must be provided as a map between data type and actual callout data.
  It will be rendered inside the callout as "data_type: data" strings, separated by new lines.
+
+**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
 ### `getCalloutType()`
 

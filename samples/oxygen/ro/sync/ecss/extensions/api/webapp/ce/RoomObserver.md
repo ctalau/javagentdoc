@@ -16,8 +16,6 @@
 
 ### `sync(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.SyncListener listener)`
 
-**Returns:** `void`
-
 The observer synchronizes its state with changes from multiple users that 
  changed the document since the last sync. The observer tries to batch together
  as many changes from the same user as possible (without breaking causality of changes).
@@ -26,6 +24,8 @@ The observer synchronizes its state with changes from multiple users that
 
 **Parameters:**
 - `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.SyncListener`): The listener to call after synchronizing changes from an user.
+
+**Returns:** `void`
 
 ### `createInputStream()`
 
@@ -37,8 +37,6 @@ The observer synchronizes its state with changes from multiple users that
 
 ### `getUserContext()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](../plugin/UserContext.md)
-
 When it opens such connections, 
  the URLStreamHandlerWithContext instance will receive this 
  UserContext.
@@ -46,17 +44,19 @@ When it opens such connections,
  The UserContext has the "service account" flag set to true and a 
  header #ROOM_ID_HEADER that contains the ID of the room.
 
-### `addEditListener(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener listener)`
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](../plugin/UserContext.md)
 
-**Returns:** `void`
+### `addEditListener(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener listener)`
 
 **Parameters:**
 - `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener`): The edit listener to register.
+
+**Returns:** `void`
 
 ### `removeEditListener(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener listener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener`): The edit listener to register.
+
+**Returns:** `void`
 

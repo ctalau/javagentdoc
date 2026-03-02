@@ -10,8 +10,6 @@
 
 ### `setSelectionInterpretationMode(ro.sync.ecss.extensions.api.SelectionInterpretationMode interpretationMode)`
 
-**Returns:** `void`
-
 See SelectionInterpretationMode for more details about the interpretation
  of selection in Author mode.
  
@@ -22,9 +20,9 @@ See SelectionInterpretationMode for more details about the interpretation
 **Parameters:**
 - `interpretationMode` ([`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)): The selection interpretation mode.
 
-### `getSelectionInterpretationMode()`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)
+### `getSelectionInterpretationMode()`
 
 See SelectionInterpretationMode for more details about the interpretation
  of selection in Author mode.
@@ -33,9 +31,9 @@ See SelectionInterpretationMode for more details about the interpretation
  This interpretation mode is reseted when the next caret moved is performed or
  another interpretation mode is imposed.
 
-### `getSelectionIntervals()`
+**Returns:** [`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`
+### `getSelectionIntervals()`
 
 Each ContentInterval contains the **inclusive** 
  start selection offset and the **exclusive** end selection offset.
@@ -56,9 +54,9 @@ Each ContentInterval contains the **inclusive**
  This method never returns `null`. If there is no selection,
  the list contains a single ContentInterval that points to the caret offset.
 
-### `getSelectionInterval()`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`
 
-**Returns:** [`ro.sync.ecss.extensions.api.ContentInterval`](./ContentInterval.md)
+### `getSelectionInterval()`
 
 This is the last selection made in the
  Author editor page (the last selection from the #getSelectionIntervals()
@@ -76,6 +74,8 @@ This is the last selection made in the
  This method never returns `null`. If there is no selection,
  both the start and end offset of the interval will be the caret position.
 
+**Returns:** [`ro.sync.ecss.extensions.api.ContentInterval`](./ContentInterval.md)
+
 ### `hasSelection()`
 
 **Returns:** `boolean`
@@ -85,8 +85,6 @@ This is the last selection made in the
 **Returns:** `boolean`
 
 ### `setSelection(int startOffset, int endOffset)`
-
-**Returns:** `void`
 
 This selection interval is considered to be the current one (the one that 
  will be returned by the AuthorSelectionModel#getSelectionInterval() 
@@ -101,9 +99,9 @@ This selection interval is considered to be the current one (the one that
 - `startOffset` (`int`): **Inclusive** start offset
 - `endOffset` (`int`): **Exclusive** end offset
 
-### `setSelection(int startOffset, int endOffset, boolean scrollToBVisible)`
-
 **Returns:** `void`
+
+### `setSelection(int startOffset, int endOffset, boolean scrollToBVisible)`
 
 This selection interval is considered to be the current one (the one that 
  will be returned by the AuthorSelectionModel#getSelectionInterval() 
@@ -119,9 +117,9 @@ This selection interval is considered to be the current one (the one that
 - `endOffset` (`int`): **Exclusive** end offset
 - `scrollToBVisible` (`boolean`): `true` to scroll to visible
 
-### `addSelection(int startOffset, int endOffset)`
-
 **Returns:** `void`
+
+### `addSelection(int startOffset, int endOffset)`
 
 This selection interval is considered to be the current one (the one that 
  will be returned by the AuthorSelectionModel#getSelectionInterval() 
@@ -138,9 +136,9 @@ This selection interval is considered to be the current one (the one that
 - `startOffset` (`int`): **Inclusive** start offset
 - `endOffset` (`int`): **Exclusive** end offset
 
-### `clearSelection()`
-
 **Returns:** `void`
+
+### `clearSelection()`
 
 The caret will remain in the same position.
  
@@ -151,9 +149,9 @@ The caret will remain in the same position.
  selection interval that points to the caret offset (both ContentInterval#getStartOffset()
  and ContentInterval#getEndOffset() will return the caret position).
 
-### `setSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals, boolean scrollToVisible)`
-
 **Returns:** `void`
+
+### `setSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals, boolean scrollToVisible)`
 
 Each ContentInterval contains the **inclusive** 
  start selection offset and the **exclusive** end selection offset.
@@ -167,11 +165,11 @@ Each ContentInterval contains the **inclusive**
 **Parameters:**
 - `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): the list containing all the Author editor page selection intervals.
 - `scrollToVisible` (`boolean`): If `true` the start offset of the last interval will be scrolled to visible.
+
+**Returns:** `void`
 
 ### `addSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals, boolean scrollToVisible)`
 
-**Returns:** `void`
-
 Each ContentInterval contains the **inclusive** 
  start selection offset and the **exclusive** end selection offset.
  
@@ -184,4 +182,6 @@ Each ContentInterval contains the **inclusive**
 **Parameters:**
 - `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): the list containing all the Author editor page selection intervals.
 - `scrollToVisible` (`boolean`): If `true` the start offset of the last interval will be scrolled to visible.
+
+**Returns:** `void`
 

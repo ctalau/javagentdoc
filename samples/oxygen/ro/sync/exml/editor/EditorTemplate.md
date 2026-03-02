@@ -56,9 +56,9 @@ It also has a description
 
 ### `getAdditionalInformation()`
 
-**Returns:** `java.lang.String`
-
 Framework, Path etc).
+
+**Returns:** `java.lang.String`
 
 ### `isCustomizable()`
 
@@ -82,15 +82,15 @@ Framework, Path etc).
 
 ### `getFilenamePrefix()`
 
-**Returns:** `java.lang.String`
-
 This method returns the value of the "filenamePrefix" property or `null` if
  the property is not set.
 
-### `getFilenameSuffix()`
-
 **Returns:** `java.lang.String`
+
+### `getFilenameSuffix()`
 
 This method returns the value of the "filenameSuffix" property or `null` if
  the property is not set.
+
+**Returns:** `java.lang.String`
 

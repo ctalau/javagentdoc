@@ -41,8 +41,6 @@ The value is `'namespace'`.
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 You can check if the operation was invoked from the oXygen standalone application 
  or from the oXygen plugin for Eclipse by using the method: 
  ro.sync.exml.workspace.api.Workspace#getPlatform().
@@ -50,10 +48,12 @@ You can check if the operation was invoked from the oXygen standalone applicatio
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
- Provides access to specific informations and actions for 
- editor, document, workspace, tables, change tracking, utility a.s.o.
+   Provides access to specific informations and actions for 
+   editor, document, workspace, tables, change tracking, utility a.s.o.
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](./ArgumentsMap.md)): The map of arguments. **All the arguments defined by method 
- #getArguments() must be present in the map of arguments.**
+   #getArguments() must be present in the map of arguments.**
+
+**Returns:** `void`
 
 ### `getArguments()`
 

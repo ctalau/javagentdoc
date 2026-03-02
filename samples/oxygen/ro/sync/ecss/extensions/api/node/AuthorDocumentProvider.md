@@ -10,10 +10,10 @@
 
 ### `getAuthorDocumentController()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../AuthorDocumentController.md)
-
 You can use it to make changes to the structure of nodes, run XPath expressions to identify 
  nodes and much more.
+
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../AuthorDocumentController.md)
 
 ### `getContentReader()`
 
@@ -29,17 +29,17 @@ You can use it to make changes to the structure of nodes, run XPath expressions 
 
 ### `getStyles(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `ro.sync.ecss.css.Styles`
-
 This method **MUST** only be used to query styles.
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)): The node for which we want to obtain the styles.
 
-### `getLineColumnMapping(int offset)`
+**Returns:** `ro.sync.ecss.css.Styles`
 
-**Returns:** `int[]`
+### `getLineColumnMapping(int offset)`
 
 **Parameters:**
 - `offset` (`int`): The offset
+
+**Returns:** `int[]`
 

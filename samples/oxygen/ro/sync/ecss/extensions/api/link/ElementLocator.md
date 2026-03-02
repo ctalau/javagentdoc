@@ -26,25 +26,23 @@ The source XML is parsed and notifications will be forwarded
 
 ### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String qName, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
-**Returns:** `boolean`
-
 This method is invoked at the beginning of every element in the 
  XML document; an event will be fired for every `startElement` 
  (even when the element is empty).
 
 **Parameters:**
 - `uri` (`java.lang.String`): the namespace URI, or the empty string if the
-        element has no namespace URI or if namespace
-        processing is not being performed
+          element has no namespace URI or if namespace
+          processing is not being performed
 - `localName` (`java.lang.String`): the local name of the element
 - `qName` (`java.lang.String`): the qualified name of the element
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](./Attr.md)): an array with the attributes attached to the element. If
-        there are no attributes, it shall be empty. 
-        The attributes are represented as Attr objects.
+          there are no attributes, it shall be empty. 
+          The attributes are represented as Attr objects.
+
+**Returns:** `boolean`
 
 ### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String qName)`
-
-**Returns:** `void`
 
 This method is invoked at the end of every
  element in the XML document; an event will be fired 
@@ -52,8 +50,10 @@ This method is invoked at the end of every
 
 **Parameters:**
 - `uri` (`java.lang.String`): the namespace URI, or the empty string if the
-        element has no namespace URI or if namespace
-        processing is not being performed
+          element has no namespace URI or if namespace
+          processing is not being performed
 - `localName` (`java.lang.String`): the local name of the element
 - `qName` (`java.lang.String`): the qualified XML name of the element
+
+**Returns:** `void`
 

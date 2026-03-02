@@ -16,8 +16,6 @@ It differs from the classic
 
 ### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
-
 This contains information about the baseline
  and the size in a certain context. The baseline is measured from the top of 
  the component.
@@ -28,26 +26,28 @@ This contains information about the baseline
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The editing context.
 
-### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation)`
+**Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
 
-**Returns:** `java.lang.Object`
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context where the editor will be used.
 - `allocation` (`ro.sync.exml.view.graphics.Rectangle`): The bounds where the form control will be presented.
 
-### `dispose()`
+**Returns:** `java.lang.Object`
 
-**Returns:** `void`
+### `dispose()`
 
 This is the time to dispose any resources allocated with it.
 
-### `deactivate()`
-
 **Returns:** `void`
+
+### `deactivate()`
 
 For example 
  another editor was selected. 
  
  For example, if a media player form control that is playing receives this event it should pause.
+
+**Returns:** `void`
 

@@ -20,8 +20,8 @@
 
 ### `getProperty(java.lang.String key)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `key` (`java.lang.String`): the key.
+
+**Returns:** `java.lang.Object`
 

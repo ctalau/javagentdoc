@@ -16,8 +16,6 @@
 
 ### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, java.lang.String doctypeSystemID, org.xml.sax.Attributes rootAttributes, java.util.Map<java.lang.String,java.lang.String> queryParams, java.io.Reader contentReader)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `systemID` (`java.lang.String`)
 - `rootNamespace` (`java.lang.String`)
@@ -27,6 +25,8 @@
 - `rootAttributes` (`org.xml.sax.Attributes`)
 - `queryParams` (`java.util.Map<java.lang.String,java.lang.String>`)
 - `contentReader` (`java.io.Reader`)
+
+**Returns:** `boolean`
 
 ### `getDescription()`
 

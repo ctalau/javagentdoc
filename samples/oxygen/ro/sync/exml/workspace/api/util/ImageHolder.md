@@ -10,14 +10,14 @@
 
 ### `writeTo(java.io.OutputStream out)`
 
-**Returns:** `void`
-
 This method does not close the output stream.
  
  This method does not close or flush the output stream.
 
 **Parameters:**
 - `out` (`java.io.OutputStream`): The output stream.
+
+**Returns:** `void`
 
 ### `getType()`
 

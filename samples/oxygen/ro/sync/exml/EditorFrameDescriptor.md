@@ -46,10 +46,10 @@
 
 ### `printCommandLineHelp(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getTipOfTheDayResourceName()`
 

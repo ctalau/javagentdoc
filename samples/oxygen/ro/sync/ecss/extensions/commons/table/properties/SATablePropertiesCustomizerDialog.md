@@ -35,8 +35,8 @@
 
 ### `getTablePropertiesInformation(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo info)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md)
-
 **Parameters:**
 - `info` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md)): The information used to customize the "Table Properties dialog"
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md)
 

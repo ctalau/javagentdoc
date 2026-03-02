@@ -16,14 +16,12 @@
 
 ### `ignoreNode(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The node to check for ignore.
 
-### `customizeRenderingInformation(ro.sync.ecss.extensions.api.structure.RenderingInformation renderInfo)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `customizeRenderingInformation(ro.sync.ecss.extensions.api.structure.RenderingInformation renderInfo)`
 
 For more information, search the oXygen documentation for "cc_config.xml" 
  configuration file. 
@@ -32,11 +30,13 @@ For more information, search the oXygen documentation for "cc_config.xml"
 **Parameters:**
 - `renderInfo` ([`ro.sync.ecss.extensions.api.structure.RenderingInformation`](./RenderingInformation.md))
 
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
-
 **Returns:** `void`
+
+### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `popUp` (`java.lang.Object`)
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md))
+
+**Returns:** `void`
 

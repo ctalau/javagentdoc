@@ -10,9 +10,9 @@
 
 ### `getContextDescription()`
 
-**Returns:** `java.lang.String`
-
 Can be `null` if no such description is available.
+
+**Returns:** `java.lang.String`
 
 ### `getAttributeEditingContextDescription()`
 

@@ -10,8 +10,8 @@
 
 ### `isInlineNodeTransparentForSpellChecking(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The author node.
+
+**Returns:** `boolean`
 

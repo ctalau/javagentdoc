@@ -64,20 +64,20 @@ Set in endElement().
 
 ### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `uri` (`java.lang.String`)
 - `localName` (`java.lang.String`)
 - `name` (`java.lang.String`)
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
 - `localName` (`java.lang.String`)
 - `name` (`java.lang.String`)
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md))
+
+**Returns:** `boolean`
 

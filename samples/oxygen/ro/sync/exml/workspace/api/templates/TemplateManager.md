@@ -36,36 +36,32 @@
 
 ### `getAllTemplatesCategories(int templateToShow)`
 
-**Returns:** `java.util.List<ro.sync.exml.workspace.api.templates.TemplatesCategory>`
-
 **Parameters:**
 - `templateToShow` (`int`): Bit level OR between:
-                        
-
-                          - TemplateManager#SHOW_DEFAULTS
-                          - TemplateManager#SHOW_FILE_TEMPLATES
-                          - TemplateManager#SHOW_ARCHIVE_TEMPLATES
-                          - TemplateManager#SHOW_RECENTLY_USED
-                          - TemplateManager#SHOW_ECLIPSE_DEFAULTS
-                          - TemplateManager#SHOW_ONLY_DITA_TEMPLATES
-                        
-
-
-### `getTemplatesFromConfigs(java.util.List<ro.sync.exml.workspace.api.options.ConfigResource> configs, int templateToShow)`
+                          
+  
+                            - TemplateManager#SHOW_DEFAULTS
+                            - TemplateManager#SHOW_FILE_TEMPLATES
+                            - TemplateManager#SHOW_ARCHIVE_TEMPLATES
+                            - TemplateManager#SHOW_RECENTLY_USED
+                            - TemplateManager#SHOW_ECLIPSE_DEFAULTS
+                            - TemplateManager#SHOW_ONLY_DITA_TEMPLATES
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.templates.TemplatesCategory>`
+
+### `getTemplatesFromConfigs(java.util.List<ro.sync.exml.workspace.api.options.ConfigResource> configs, int templateToShow)`
 
 **Parameters:**
 - `configs` (`java.util.List<ro.sync.exml.workspace.api.options.ConfigResource>`): The config resources to convert to templates.
 - `templateToShow` (`int`): Bit level OR between:
-                        
+                          
+  
+                            - TemplateManager#SHOW_DEFAULTS
+                            - TemplateManager#SHOW_FILE_TEMPLATES
+                            - TemplateManager#SHOW_ARCHIVE_TEMPLATES
+                            - TemplateManager#SHOW_RECENTLY_USED
+                            - TemplateManager#SHOW_ECLIPSE_DEFAULTS
+                            - TemplateManager#SHOW_ONLY_DITA_TEMPLATES
 
-                          - TemplateManager#SHOW_DEFAULTS
-                          - TemplateManager#SHOW_FILE_TEMPLATES
-                          - TemplateManager#SHOW_ARCHIVE_TEMPLATES
-                          - TemplateManager#SHOW_RECENTLY_USED
-                          - TemplateManager#SHOW_ECLIPSE_DEFAULTS
-                          - TemplateManager#SHOW_ONLY_DITA_TEMPLATES
-                        
-
+**Returns:** `java.util.List<ro.sync.exml.workspace.api.templates.TemplatesCategory>`
 

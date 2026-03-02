@@ -43,9 +43,9 @@ If false, it means the error is non-fatal and
 
 ### `isFatal()`
 
-**Returns:** `boolean`
-
 If true, it indicates that the error is critical and further interaction with the AI or 
  further tool executions should be halted. If false, it means the error is non-fatal and 
  the system can recover or continue executing other tasks.
+
+**Returns:** `boolean`
 

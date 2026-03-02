@@ -36,19 +36,19 @@
 
 ### `setTemplateProperties(ro.sync.template.ConfigResourceBasedTemplate arg0, java.util.Properties arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.template.ConfigResourceBasedTemplate`](./ConfigResourceBasedTemplate.md))
 - `arg1` (`java.util.Properties`)
 
-### `getAndRemove(java.util.Properties arg0, java.lang.String arg1)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getAndRemove(java.util.Properties arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.Properties`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getSource()`
 
@@ -60,10 +60,10 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -75,10 +75,10 @@
 
 ### `setOtherProperties(ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>`)
+
+**Returns:** `void`
 
 ### `getOtherProps()`
 

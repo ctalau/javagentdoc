@@ -24,11 +24,11 @@
 
 ### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1, int arg2, int arg3)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](../TableInfo.md)
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
 - `arg1` (`int`)
 - `arg2` (`int`)
 - `arg3` (`int`)
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](../TableInfo.md)
 

@@ -26,7 +26,7 @@ It
 **Parameters:**
 - `message` (`java.lang.String`): The message that explains why the editor is read-only.
 - `code` (`java.lang.String`): The code of the cause for which the editor is read-only. It 
- will be only accessible through the API.
+   will be only accessible through the API.
 
 ### `<init>(java.lang.String message)`
 

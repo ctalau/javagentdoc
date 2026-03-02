@@ -10,8 +10,8 @@
 
 ### `shouldFilterNode(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The Author node.
+
+**Returns:** `boolean`
 

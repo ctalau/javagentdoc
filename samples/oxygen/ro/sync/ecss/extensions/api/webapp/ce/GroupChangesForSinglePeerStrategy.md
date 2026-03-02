@@ -16,12 +16,12 @@ Used to write document snapshots with changes made from the last save,
 
 ### `openConnection(java.net.URL documentUrl, ro.sync.ecss.extensions.api.webapp.ce.PeerContext author)`
 
-**Returns:** `java.net.URLConnection`
-
 It facilitates storing revisions for each peer individually.
 
 **Parameters:**
 - `documentUrl` (`java.net.URL`): The document URL.
-    Note that it has the UserInfo stripped.
+      Note that it has the UserInfo stripped.
 - `author` ([`ro.sync.ecss.extensions.api.webapp.ce.PeerContext`](./PeerContext.md)): The context of peer whose only changes are about to be saved onto the URL connection.
+
+**Returns:** `java.net.URLConnection`
 

@@ -17,17 +17,15 @@ This interface is used
 
 ### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `java.lang.String`
-
 This text will be used inside
  author page next to the the link element.
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): Author node.
 
-### `update(java.util.Set<java.lang.String> modifiedURLs)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `update(java.util.Set<java.lang.String> modifiedURLs)`
 
 Update the cache of references if any of the 
  resolved links were loaded from one of these URL.
@@ -35,12 +33,14 @@ Update the cache of references if any of the
 **Parameters:**
 - `modifiedURLs` (`java.util.Set<java.lang.String>`): The URLs that are modified.
 
-### `refresh()`
-
 **Returns:** `void`
+
+### `refresh()`
 
 Any cache should be cleared in order to 
  prepare for future evaluations.
+
+**Returns:** `void`
 
 ### `clearReferencesCache()`
 
@@ -48,29 +48,27 @@ Any cache should be cleared in order to
 
 ### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 All kinds of listeners 
  can be added on this call (like AuthorMouseListener or AuthorListener).
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The AuthorAccess of the Author page where the 
- listener was activated.
-
-### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+   listener was activated.
 
 **Returns:** `void`
+
+### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 All listeners 
  should be removed on this call.
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The AuthorAccess of the Author page where the 
- listener was activated.
-
-### `refreshNodeReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+   listener was activated.
 
 **Returns:** `void`
+
+### `refreshNodeReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 After performing an internal refresh the resolver must get an editor access 
  using AuthorAccess#getEditorAccess() and call AuthorEditorAccess#refresh(AuthorNode)
@@ -78,4 +76,6 @@ After performing an internal refresh the resolver must get an editor access
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The node to be refresh.
+
+**Returns:** `void`
 

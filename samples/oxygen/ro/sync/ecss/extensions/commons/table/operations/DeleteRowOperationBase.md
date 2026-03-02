@@ -17,13 +17,11 @@ If there is a selection in the table all the rows that intersect
 
 **Parameters:**
 - `documentTypeHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): The table helper specific to a document type. 
- An implementation of ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper.
+   An implementation of ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper.
 
 ## Methods
 
 ### `performDeleteRows(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> contentIntervals)`
-
-**Returns:** `boolean`
 
 The rows that must be deleted are determined in the following order:
  
@@ -37,11 +35,11 @@ The rows that must be deleted are determined in the following order:
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The access to Author operations.
 - `contentIntervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): The content intervals that intersects the rows that must be deleted.
- Each interval contains two integers, one for start interval offset and one for end interval offset.
-
-### `performDeleteRows(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int startRowOffset, int endRowOffset)`
+   Each interval contains two integers, one for start interval offset and one for end interval offset.
 
 **Returns:** `boolean`
+
+### `performDeleteRows(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int startRowOffset, int endRowOffset)`
 
 The row that must be deleted is determined in the following order:
  
@@ -57,15 +55,17 @@ The row that must be deleted is determined in the following order:
 - `startRowOffset` (`int`): The start row offset.
 - `endRowOffset` (`int`): The end row offset.
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 For this operation the caret must be inside a table cell.
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
+
+**Returns:** `void`
 
 ### `getArguments()`
 
@@ -77,7 +77,7 @@ For this operation the caret must be inside a table cell.
 
 ### `createSplitCellOperation()`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.SplitCellAboveBelowOperationBase`](./SplitCellAboveBelowOperationBase.md)
-
 The operation is needed to split the cells that span over multiple rows and start on the row to be deleted.
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.SplitCellAboveBelowOperationBase`](./SplitCellAboveBelowOperationBase.md)
 

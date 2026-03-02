@@ -14,8 +14,6 @@
 
 ### `editorAboutToBeOpenedVeto(java.net.URL editorLocation)`
 
-**Returns:** `boolean`
-
 You can reject the opening of the editor by returning `false`.
  If the open is not rejected then the WSEditorChangeListener#editorAboutToBeOpened(URL) and then WSEditorChangeListener#editorOpened(URL) methods will be called.
  If you want to open another file instead, you must start a thread which calls the API to open the other file and then return `false`.
@@ -26,39 +24,39 @@ You can reject the opening of the editor by returning `false`.
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location.
 
-### `editorAboutToBeOpened(java.net.URL editorLocation)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `editorAboutToBeOpened(java.net.URL editorLocation)`
 
 If the open does not fail, then the WSEditorChangeListener#editorOpened(URL) method will be called.
 
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location
 
-### `editorOpened(java.net.URL editorLocation)`
-
 **Returns:** `void`
+
+### `editorOpened(java.net.URL editorLocation)`
 
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location
+
+**Returns:** `void`
 
 ### `editorClosed(java.net.URL editorLocation)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location
 
-### `editorSelected(java.net.URL editorLocation)`
-
 **Returns:** `void`
+
+### `editorSelected(java.net.URL editorLocation)`
 
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location. Can be `null` if no editor is opened or a switch between editors is pending.
 
-### `editorPageChanged(java.net.URL editorLocation)`
-
 **Returns:** `void`
+
+### `editorPageChanged(java.net.URL editorLocation)`
 
 This means the user switched for example from the **Text** to the **Author** page.
  An XML Editor usually has 3 pages: **Text**, **Grid** and **Author**.
@@ -66,18 +64,18 @@ This means the user switched for example from the **Text** to the **Author** pag
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location
 
-### `editorActivated(java.net.URL editorLocation)`
-
 **Returns:** `void`
+
+### `editorActivated(java.net.URL editorLocation)`
 
 It is the selected editor but also the editor in which the focus is present.
 
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location
 
-### `editorDeactivated(java.net.URL editorLocation)`
-
 **Returns:** `void`
+
+### `editorDeactivated(java.net.URL editorLocation)`
 
 Focus is no longer present in it. 
  Maybe the editor was already closed.
@@ -85,33 +83,33 @@ Focus is no longer present in it.
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location
 
-### `editorAboutToBeClosed(java.net.URL editorLocation)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `editorAboutToBeClosed(java.net.URL editorLocation)`
 
 You can reject the close of the editor by returning `false`.
 
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor's location
 
-### `editorRelocated(java.net.URL previousEditorLocation, java.net.URL newEditorLocation)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `editorRelocated(java.net.URL previousEditorLocation, java.net.URL newEditorLocation)`
 
 Probably **Save As** was called on the opened editor.
 
 **Parameters:**
 - `previousEditorLocation` (`java.net.URL`): The previous editor's location
 - `newEditorLocation` (`java.net.URL`): The current editor's location
- 
- In the standalone Oxygen version the listener is usually called after the 
- end user has used the "Save as" or "Save to URL" actions and saved the editor contents somewhere else.
- 
- This method is not called in the Eclipse plugin.
+   
+   In the standalone Oxygen version the listener is usually called after the 
+   end user has used the "Save as" or "Save to URL" actions and saved the editor contents somewhere else.
+   
+   This method is not called in the Eclipse plugin.
+
+**Returns:** `void`
 
 ### `editorsAboutToBeClosed(java.net.URL[] editorLocations)`
-
-**Returns:** `boolean`
 
 This event is triggered before the application will try to check which of these editors are modified and to show a batch save dialog for them.
  You can reject the close of the editor by returning `false`.
@@ -122,4 +120,6 @@ This event is triggered before the application will try to check which of these 
 
 **Parameters:**
 - `editorLocations` (`java.net.URL[]`): The locations of the editors which will be batch closed.
+
+**Returns:** `boolean`
 

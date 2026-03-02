@@ -22,8 +22,8 @@
 
 ### `getIdentifierType()`
 
-**Returns:** `java.lang.String`
-
 By example for the default ID type recognition
  returns XML ID.
+
+**Returns:** `java.lang.String`
 

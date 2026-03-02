@@ -20,31 +20,31 @@
 
 ### `hasImposedEditorVariableCaretOffset(java.lang.String xmlFragment)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `xmlFragment` (`java.lang.String`): The XML fragment.
 
-### `moveCaretToImposedEditorVariableOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int insertionOffset)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `moveCaretToImposedEditorVariableOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int insertionOffset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `insertionOffset` (`int`): The offset where the operation inserted the XML fragment.
 
-### `detectCaretPI(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, int startSearch)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
+### `detectCaretPI(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, int startSearch)`
 
 **Parameters:**
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md))
 - `startSearch` (`int`)
 
-### `detectCaretPI(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
+
+### `detectCaretPI(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The current node.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
 

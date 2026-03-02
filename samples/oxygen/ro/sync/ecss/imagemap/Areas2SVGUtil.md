@@ -18,9 +18,9 @@
 
 ### `fromSVG(java.lang.String arg0, ro.sync.ecss.imagemap.SupportedFrameworks arg1)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` ([`ro.sync.ecss.imagemap.SupportedFrameworks`](./SupportedFrameworks.md))
+
+**Returns:** `java.lang.String`
 

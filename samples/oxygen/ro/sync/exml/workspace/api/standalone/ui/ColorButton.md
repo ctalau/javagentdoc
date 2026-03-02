@@ -21,8 +21,8 @@
 
 ### `setSelectedColor(java.awt.Color arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.Color`)
+
+**Returns:** `void`
 

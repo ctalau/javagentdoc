@@ -10,7 +10,7 @@
 
 ### `getZLayer()`
 
-**Returns:** `ro.sync.ecss.extensions.api.highlights.PrioritizableHighlightPainter.ZLayer`
-
 One of ZLayer#BASE_LAYER, ZLayer#MIDDLE_LAYER or ZLayer#TOP_LAYER.
+
+**Returns:** `ro.sync.ecss.extensions.api.highlights.PrioritizableHighlightPainter.ZLayer`
 

@@ -16,20 +16,20 @@
 
 ### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source xslSrc, ro.sync.ecss.extensions.commons.operations.ElementLocationPath currentElementLocation)`
 
-**Returns:** `javax.xml.transform.Transformer`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author Access.
 - `xslSrc` (`javax.xml.transform.Source`): The stylesheet source
 - `currentElementLocation` ([`ro.sync.ecss.extensions.commons.operations.ElementLocationPath`](./ElementLocationPath.md)): The XPath location of the current element.
 
-### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source scriptSrc)`
-
 **Returns:** `javax.xml.transform.Transformer`
+
+### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source scriptSrc)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `scriptSrc` (`javax.xml.transform.Source`)
+
+**Returns:** `javax.xml.transform.Transformer`
 
 ### `getDescription()`
 
@@ -37,8 +37,8 @@
 
 ### `canTreatAsScript(java.lang.String script)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `script` (`java.lang.String`)
+
+**Returns:** `boolean`
 

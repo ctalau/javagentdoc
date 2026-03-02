@@ -10,21 +10,19 @@
 
 ### `setComment(java.lang.String purpose)`
 
-**Returns:** `void`
-
 The comment is useful if the browser presents the cookie to
  the user. Comments are not supported by Netscape Version 0 cookies.
 
 **Parameters:**
 - `purpose` (`java.lang.String`): a `String` specifying the comment to display to the user
 
+**Returns:** `void`
+
 ### `getComment()`
 
 **Returns:** `java.lang.String`
 
 ### `setDomain(java.lang.String domain)`
-
-**Returns:** `void`
 
 The form of the domain name is specified by RFC 2109. A domain name begins with a dot (`.foo.com`) and
  means that the cookie is visible to servers in a specified Domain Name System (DNS) zone (for example,
@@ -34,15 +32,15 @@ The form of the domain name is specified by RFC 2109. A domain name begins with 
 **Parameters:**
 - `domain` (`java.lang.String`): the domain name within which this cookie is visible; form is according to RFC 2109
 
-### `getDomain()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getDomain()`
 
 Domain names are formatted according to RFC 2109.
 
-### `setMaxAge(int expiry)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setMaxAge(int expiry)`
 
 A positive value indicates that the cookie will expire after that many seconds have passed. Note that the value is
  the *maximum* age when the cookie will expire, not the cookie's current age.
@@ -54,17 +52,17 @@ A positive value indicates that the cookie will expire after that many seconds h
 
 **Parameters:**
 - `expiry` (`int`): an integer specifying the maximum age of the cookie in seconds; if negative, means the cookie is not
- stored; if zero, deletes the cookie
+   stored; if zero, deletes the cookie
+
+**Returns:** `void`
 
 ### `getMaxAge()`
 
-**Returns:** `int`
-
 By default, `-1` is returned, which indicates that the cookie will persist until browser shutdown.
 
-### `setPath(java.lang.String uri)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `setPath(java.lang.String uri)`
 
 The cookie is visible to all the pages in the directory you specify, and all the pages in that directory's
  subdirectories. A cookie's path must include the servlet that set the cookie, for example, */catalog*, which
@@ -77,22 +75,24 @@ The cookie is visible to all the pages in the directory you specify, and all the
 **Parameters:**
 - `uri` (`java.lang.String`): a `String` specifying a path
 
-### `getPath()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getPath()`
 
 The cookie is visible to all subpaths on the
  server.
 
-### `setSecure(boolean flag)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setSecure(boolean flag)`
 
 The default value is `false`.
 
 **Parameters:**
 - `flag` (`boolean`): if `true`, sends the cookie from the browser to the server only when using a secure protocol;
- if `false`, sent on any protocol
+   if `false`, sent on any protocol
+
+**Returns:** `void`
 
 ### `getSecure()`
 
@@ -100,13 +100,11 @@ The default value is `false`.
 
 ### `getName()`
 
-**Returns:** `java.lang.String`
-
 The name cannot be changed after creation.
 
-### `setValue(java.lang.String newValue)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setValue(java.lang.String newValue)`
 
 If you use a binary value, you may want to use BASE64 encoding.
 
@@ -119,21 +117,21 @@ If you use a binary value, you may want to use BASE64 encoding.
 **Parameters:**
 - `newValue` (`java.lang.String`): the new value of the cookie
 
+**Returns:** `void`
+
 ### `getValue()`
 
 **Returns:** `java.lang.String`
 
 ### `getVersion()`
 
-**Returns:** `int`
-
 Version 1 complies with RFC 2109, and version 0
  complies with the original cookie specification drafted by Netscape. Cookies provided by a browser use and identify
  the browser's cookie version.
 
-### `setVersion(int v)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `setVersion(int v)`
 
 Version 0 complies with the original Netscape cookie specification. Version 1 complies with RFC 2109.
 
@@ -143,11 +141,11 @@ Version 0 complies with the original Netscape cookie specification. Version 1 co
 
 **Parameters:**
 - `v` (`int`): 0 if the cookie should comply with the original Netscape specification; 1 if the cookie should comply with
- RFC 2109
-
-### `setHttpOnly(boolean isHttpOnly)`
+   RFC 2109
 
 **Returns:** `void`
+
+### `setHttpOnly(boolean isHttpOnly)`
 
 If isHttpOnly is set to true, this cookie is marked as *HttpOnly*, by adding the
  HttpOnly attribute to it.
@@ -159,6 +157,8 @@ If isHttpOnly is set to true, this cookie is marked as *HttpOnly*, by adding the
 
 **Parameters:**
 - `isHttpOnly` (`boolean`): true if this cookie is to be marked as *HttpOnly*, false otherwise
+
+**Returns:** `void`
 
 ### `isHttpOnly()`
 

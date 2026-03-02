@@ -29,17 +29,17 @@
 
 ### `wrap(org.w3c.dom.Node arg0)`
 
-**Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
-
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
 
-### `setDOMLevel(int arg0)`
+**Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
 
-**Returns:** `void`
+### `setDOMLevel(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `getDOMLevel()`
 
@@ -47,11 +47,11 @@
 
 ### `selectID(java.lang.String arg0, boolean arg1)`
 
-**Returns:** `net.sf.saxon.om.NodeInfo`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
+
+**Returns:** `net.sf.saxon.om.NodeInfo`
 
 ### `getUnparsedEntityNames()`
 
@@ -59,17 +59,17 @@
 
 ### `getUnparsedEntity(java.lang.String arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `getUnparsedEntity(org.w3c.dom.Entity arg0)`
-
 **Returns:** `java.lang.String[]`
+
+### `getUnparsedEntity(org.w3c.dom.Entity arg0)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Entity`)
+
+**Returns:** `java.lang.String[]`
 
 ### `isMutable()`
 

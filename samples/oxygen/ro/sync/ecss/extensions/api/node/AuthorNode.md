@@ -118,23 +118,21 @@ The value is `processing-instruction`.
 
 ### `isDescendentOf(ro.sync.ecss.extensions.api.node.AuthorNode ancestor)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `ancestor` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)): The AuthorNode tested to see if it is an ancestor of this node.
 
-### `getType()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `getType()`
 
 Can be one of the constants:
  #NODE_TYPE_CDATA, #NODE_TYPE_COMMENT, #NODE_TYPE_DOCUMENT,
  #NODE_TYPE_ELEMENT, #NODE_TYPE_PI, #NODE_TYPE_PSEUDO_DOCTYPE,
  #NODE_TYPE_PSEUDO_ELEMENT, #NODE_TYPE_REFERENCE.
 
-### `getStartOffset()`
-
 **Returns:** `int`
+
+### `getStartOffset()`
 
 The author content contains the entire XML document text and special marker characters.
  Each author node points in the content to the start and end marker characters which are used to  
@@ -146,11 +144,11 @@ The author content contains the entire XML document text and special marker char
 
  The image represents part of the document content and red markers represent special control
  characters which represent the node ranges.
+
+**Returns:** `int`
 
 ### `getEndOffset()`
 
-**Returns:** `int`
-
 The author content contains the entire XML document text and special marker characters.
  Each author node points in the content to the start and end marker characters which are used to  
  delimit it's range.
@@ -162,9 +160,9 @@ The author content contains the entire XML document text and special marker char
  The image represents part of the document content and red markers represent special control
  characters which represent the node ranges.
 
-### `getName()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getName()`
 
 Depending on the node type the method returns:
  
@@ -182,6 +180,8 @@ Depending on the node type the method returns:
 
    - #NODE_TYPE_PI - the constant #NODE_NAME_PI
 
+**Returns:** `java.lang.String`
+
 ### `getParent()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
@@ -192,8 +192,6 @@ Depending on the node type the method returns:
 
 ### `getXMLBaseURL()`
 
-**Returns:** `java.net.URL`
-
 It is resolved taking into account the values of all the `'xml:base'` 
  attributes from the ancestors and the document URL if necessary. 
  
@@ -203,22 +201,24 @@ It is resolved taking into account the values of all the `'xml:base'`
  
  See specification: [http://www.w3.org/TR/xmlbase/](http://www.w3.org/TR/xmlbase/).
 
-### `getTextContent()`
+**Returns:** `java.net.URL`
 
-**Returns:** `java.lang.String`
+### `getTextContent()`
 
 The returned value is obtained by adding all the descendants 
  text content. The special sentinel characters are removed.
 
-### `getContentIterator()`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.ContentIterator`](./ContentIterator.md)
+### `getContentIterator()`
 
 The content may contain special characters which have the value equal to 0. 
  These special characters are the markers for content referenced by descendant nodes.
  
  
 More about how Author Nodes point to the content:
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.ContentIterator`](./ContentIterator.md)
 
 ### `getNamespace()`
 

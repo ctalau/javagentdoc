@@ -50,10 +50,10 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -61,10 +61,10 @@
 
 ### `compareTo(java.lang.Object arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `toString()`
 

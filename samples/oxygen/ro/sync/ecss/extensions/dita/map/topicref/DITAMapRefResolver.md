@@ -72,49 +72,47 @@ If false, will resolve only map references, defaults to false
 
 ### `hasReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 
-### `isKeyReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
-
 **Returns:** `boolean`
+
+### `isKeyReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The Author node.
 
-### `getHrefInfo(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `boolean`
 
-**Returns:** `ro.sync.ecss.extensions.dita.map.topicref.DITAMapRefResolver.HrefInfo`
+### `getHrefInfo(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node
 
-### `getHrefValue(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+**Returns:** `ro.sync.ecss.extensions.dita.map.topicref.DITAMapRefResolver.HrefInfo`
 
-**Returns:** `java.lang.String`
+### `getHrefValue(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The element.
 
-### `isInRelTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isInRelTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node
 
-### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+**Returns:** `java.lang.String`
 
-**Returns:** `javax.xml.transform.sax.SAXSource`
+### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
@@ -122,83 +120,85 @@ If false, will resolve only map references, defaults to false
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `entityResolver` (`org.xml.sax.EntityResolver`)
 
-### `resolveOtherFormatToDITA(ro.sync.ecss.extensions.api.node.AuthorNode node, org.xml.sax.InputSource inputSource)`
+**Returns:** `javax.xml.transform.sax.SAXSource`
 
-**Returns:** `org.xml.sax.InputSource`
+### `resolveOtherFormatToDITA(ro.sync.ecss.extensions.api.node.AuthorNode node, org.xml.sax.InputSource inputSource)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node.
 - `inputSource` (`org.xml.sax.InputSource`): The input source
 
-### `hasEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
+**Returns:** `org.xml.sax.InputSource`
 
-**Returns:** `boolean`
+### `hasEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
 - `referenceNodeParent` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
+
+**Returns:** `boolean`
 
 ### `allowsValidatationForEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `systemID` (`java.lang.String`)
 - `referenceNodeParent` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 
-### `replaceReference(ro.sync.ecss.extensions.api.node.AuthorDocumentProvider targetProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorReferenceNode referenceNode)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `replaceReference(ro.sync.ecss.extensions.api.node.AuthorDocumentProvider targetProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorReferenceNode referenceNode)`
 
 **Parameters:**
 - `targetProvider` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../../../api/node/AuthorDocumentProvider.md))
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `referenceNode` ([`ro.sync.ecss.extensions.api.node.AuthorReferenceNode`](../../../api/node/AuthorReferenceNode.md))
 
-### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 
-### `checkTarget(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.node.AuthorDocument targetDocument)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `checkTarget(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.node.AuthorDocument targetDocument)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 - `targetDocument` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../../api/node/AuthorDocument.md))
 
-### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 
-### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 - `attributeName` (`java.lang.String`)
 
-### `setResolveAllTopicReferences(boolean resolveAllTopicRefs)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `setResolveAllTopicReferences(boolean resolveAllTopicRefs)`
 
 **Parameters:**
 - `resolveAllTopicRefs` (`boolean`)
 
-### `setExpandMapReferences(boolean isExpand)`
-
 **Returns:** `void`
+
+### `setExpandMapReferences(boolean isExpand)`
 
 **Parameters:**
 - `isExpand` (`boolean`)
+
+**Returns:** `void`
 
 ### `getGrammarCache()`
 
@@ -206,15 +206,15 @@ If false, will resolve only map references, defaults to false
 
 ### `setGrammarCache(java.lang.Object grammarCache)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `grammarCache` (`java.lang.Object`)
 
-### `getCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
+
+**Returns:** `java.lang.String`
 

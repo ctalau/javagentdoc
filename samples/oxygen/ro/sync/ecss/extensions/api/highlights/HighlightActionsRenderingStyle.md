@@ -18,8 +18,8 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.highlights.HighlightActionsRenderingStyle`](./HighlightActionsRenderingStyle.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.HighlightActionsRenderingStyle`](./HighlightActionsRenderingStyle.md)
 

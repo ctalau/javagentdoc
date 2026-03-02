@@ -22,8 +22,6 @@
 
 ### `customizeRenderingInformation(ro.sync.ecss.extensions.api.structure.RenderingInformation renderInfo)`
 
-**Returns:** `void`
-
 The breadcrumb cannot assign a certain icon for a rendered node.
  
  By default a node is represented in the Outline by its tag name and a additional information obtained 
@@ -37,19 +35,19 @@ The breadcrumb cannot assign a certain icon for a rendered node.
 
 **Parameters:**
 - `renderInfo` ([`ro.sync.ecss.extensions.api.structure.RenderingInformation`](./RenderingInformation.md)): The default information which will get displayed. 
- You can set custom values for each field
-
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+   You can set custom values for each field
 
 **Returns:** `void`
+
+### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `popUp` (`java.lang.Object`)
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md))
 
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode clickedNode)`
-
 **Returns:** `void`
+
+### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode clickedNode)`
 
 If everything is removed then the menu will not be shown.
 
@@ -61,4 +59,6 @@ If everything is removed then the menu will not be shown.
 - `popUp` (`java.lang.Object`): The pop-up Menu.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): Access class to the author functions.
 - `clickedNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The current clicked node in the Author page.
+
+**Returns:** `void`
 

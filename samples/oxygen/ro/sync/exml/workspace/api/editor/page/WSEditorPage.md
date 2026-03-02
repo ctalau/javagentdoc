@@ -10,23 +10,21 @@
 
 ### `setReadOnly(ro.sync.exml.workspace.api.editor.ReadOnlyReason reason)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `reason` ([`ro.sync.exml.workspace.api.editor.ReadOnlyReason`](../ReadOnlyReason.md)): The reason for making the document read-only. 
- If `null` is passed, a default message will be displayed.
+   If `null` is passed, a default message will be displayed.
+
+**Returns:** `void`
 
 ### `setReadOnly(java.lang.String reason)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `reason` (`java.lang.String`): The reason for making the document read-only. It will be displayed 
- to the user. If `null` is passed, a default message will be displayed.
-
-### `setEditable(boolean editable)`
+   to the user. If `null` is passed, a default message will be displayed.
 
 **Returns:** `void`
+
+### `setEditable(boolean editable)`
 
 It is recommended to use #setReadOnly(String) if you plan to make 
  the page read-only.
@@ -34,12 +32,14 @@ It is recommended to use #setReadOnly(String) if you plan to make
 **Parameters:**
 - `editable` (`boolean`): `true` if the page should be editable.
 
-### `isEditable()`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isEditable()`
 
 A document can be set as read-only from API, by using the 
  #setEditable(boolean) method.
+
+**Returns:** `boolean`
 
 ### `getParentEditor()`
 
@@ -47,10 +47,10 @@ A document can be set as read-only from API, by using the
 
 ### `requestFocus()`
 
-**Returns:** `void`
-
 Works for all editing modes (Text/Grid/Author) in the standalone and Eclipse-based Oxygen and Author Component distributions.
  Does not do anything in the WebAuthor online editor.
+
+**Returns:** `void`
 
 ### `hasFocus()`
 

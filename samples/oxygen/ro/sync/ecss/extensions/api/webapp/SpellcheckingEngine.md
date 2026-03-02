@@ -10,8 +10,8 @@
 
 ### `check(java.util.List<ro.sync.exml.workspace.api.util.TextChunkDescriptor> text)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.SpellCheckingProblemInfoWithSuggestions>`
-
 **Parameters:**
 - `text` (`java.util.List<ro.sync.exml.workspace.api.util.TextChunkDescriptor>`): The list of text descriptors to check.
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.SpellCheckingProblemInfoWithSuggestions>`
 

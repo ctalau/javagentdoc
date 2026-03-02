@@ -47,8 +47,8 @@ References have
 
 ### `equals(java.lang.Object obj)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

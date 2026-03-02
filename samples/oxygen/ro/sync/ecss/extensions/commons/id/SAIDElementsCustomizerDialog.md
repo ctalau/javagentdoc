@@ -96,8 +96,8 @@ It will
 
 ### `showDialog(ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo autoIDElementsInfo)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
-
 **Parameters:**
 - `autoIDElementsInfo` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)): The initial information
+
+**Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
 

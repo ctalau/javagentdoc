@@ -40,24 +40,24 @@
 
 ### `setSelection(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setFrame(java.awt.Frame arg0)`
-
 **Returns:** `void`
+
+### `setFrame(java.awt.Frame arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)
 
-### `setDocumentURL(java.net.URL arg0)`
-
 **Returns:** `void`
+
+### `setDocumentURL(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `void`
 
 ### `getSelection()`
 

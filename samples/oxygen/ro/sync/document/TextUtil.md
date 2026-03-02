@@ -38,31 +38,29 @@
 
 ### `normalizeAndCollapseWhitespace(java.lang.String arg0, boolean arg1)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 
-### `normalizeWhitespace(java.lang.StringBuilder arg0)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `normalizeWhitespace(java.lang.StringBuilder arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.StringBuilder`)
 
-### `getColumnNumber(ro.sync.document.ob arg0, int arg1, int arg2)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `getColumnNumber(ro.sync.document.ob arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`ro.sync.document.ob`)
 - `arg1` (`int`)
 - `arg2` (`int`)
 
-### `getColumnNumber(ro.sync.document.ob arg0, int arg1, int arg2, boolean arg3)`
-
 **Returns:** `int`
+
+### `getColumnNumber(ro.sync.document.ob arg0, int arg1, int arg2, boolean arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.document.ob`)
@@ -70,49 +68,49 @@
 - `arg2` (`int`)
 - `arg3` (`boolean`)
 
-### `getSomeTextConsideringWordBounds(java.lang.String arg0, int arg1)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getSomeTextConsideringWordBounds(java.lang.String arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`int`)
 
-### `getTextWithoutTags(java.lang.String arg0)`
-
 **Returns:** `java.lang.String`
+
+### `getTextWithoutTags(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `normalizeAndCollapseWhitespace(java.lang.String arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `computeChNumberAndOffset(int arg0, javax.swing.text.Document arg1, char arg2)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.List`
+### `computeChNumberAndOffset(int arg0, javax.swing.text.Document arg1, char arg2)`
 
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`javax.swing.text.Document`)
 - `arg2` (`char`)
 
-### `computeNonWSCharCount(javax.swing.text.Document arg0, int arg1, int arg2)`
+**Returns:** `java.util.List`
 
-**Returns:** `int`
+### `computeNonWSCharCount(javax.swing.text.Document arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.text.Document`)
 - `arg1` (`int`)
 - `arg2` (`int`)
 
-### `getOffsetAfterChAndOffset(int arg0, int arg1, javax.swing.text.Document arg2, char arg3, boolean arg4)`
-
 **Returns:** `int`
+
+### `getOffsetAfterChAndOffset(int arg0, int arg1, javax.swing.text.Document arg2, char arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -121,25 +119,25 @@
 - `arg3` (`char`)
 - `arg4` (`boolean`)
 
-### `getOffsetAfterNonWSChars(int arg0, javax.swing.text.Document arg1, int arg2)`
-
 **Returns:** `int`
+
+### `getOffsetAfterNonWSChars(int arg0, javax.swing.text.Document arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`javax.swing.text.Document`)
 - `arg2` (`int`)
 
-### `eatBackUntilNonWhiteSpace(java.lang.StringBuilder arg0)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `eatBackUntilNonWhiteSpace(java.lang.StringBuilder arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.StringBuilder`)
 
-### `replaceAll(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, ro.sync.syntaxhighlight.marker.TokenMarker arg3, byte arg4)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `replaceAll(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, ro.sync.syntaxhighlight.marker.TokenMarker arg3, byte arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -147,4 +145,6 @@
 - `arg2` (`java.lang.String`)
 - `arg3` (`ro.sync.syntaxhighlight.marker.TokenMarker`)
 - `arg4` (`byte`)
+
+**Returns:** `java.lang.String`
 

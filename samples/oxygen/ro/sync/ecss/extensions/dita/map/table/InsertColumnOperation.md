@@ -23,9 +23,9 @@
 
 ### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 - `newColumnIndex` (`int`)
+
+**Returns:** `java.lang.String`
 

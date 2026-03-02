@@ -12,7 +12,7 @@
 
 ### `getTopicRefTargetInfo()`
 
-**Returns:** [`ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfo`](../../../standalone/ditamap/TopicRefTargetInfo.md)
-
 May be `null`
+
+**Returns:** [`ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfo`](../../../standalone/ditamap/TopicRefTargetInfo.md)
 

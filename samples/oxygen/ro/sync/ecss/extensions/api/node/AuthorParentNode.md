@@ -16,7 +16,7 @@
 
 ### `getParentElement()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorElementBaseInterface`](../AuthorElementBaseInterface.md)
-
 Skips nodes which should be considered as transparent when matching the CSS selectors like reference nodes.
+
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorElementBaseInterface`](../AuthorElementBaseInterface.md)
 

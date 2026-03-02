@@ -18,8 +18,8 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.exml.plugin.transform.SaxonEdition`](./SaxonEdition.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.exml.plugin.transform.SaxonEdition`](./SaxonEdition.md)
 

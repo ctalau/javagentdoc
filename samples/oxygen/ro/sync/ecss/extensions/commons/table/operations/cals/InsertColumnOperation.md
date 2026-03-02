@@ -33,15 +33,13 @@
 
 ### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../../api/ArgumentsMap.md))
 
-### `updateColumnCellsSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement tgroup, int newColumnIndex, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, java.lang.String namespace, int noOfColumnsToBeInserted)`
-
 **Returns:** `void`
+
+### `updateColumnCellsSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement tgroup, int newColumnIndex, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, java.lang.String namespace, int noOfColumnsToBeInserted)`
 
 For CALS tables the column specifications must be updated.
 
@@ -54,27 +52,29 @@ For CALS tables the column specifications must be updated.
 - `namespace` (`java.lang.String`)
 - `noOfColumnsToBeInserted` (`int`)
 
-### `getDefaultColWidthValue()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getDefaultColWidthValue()`
 
 Can be overwritten by an implementor.
 
-### `getUniqueColSpecName(java.util.Set<java.lang.String> colSpecNames, int colSpecIndex)`
-
 **Returns:** `java.lang.String`
+
+### `getUniqueColSpecName(java.util.Set<java.lang.String> colSpecNames, int colSpecIndex)`
 
 **Parameters:**
 - `colSpecNames` (`java.util.Set<java.lang.String>`): The set of column specification names.
 - `colSpecIndex` (`int`): The index of the column specification, 1 based.
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement row, int newColumnIndex)`
-
 **Returns:** `java.lang.String`
+
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement row, int newColumnIndex)`
 
 **Parameters:**
 - `row` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
 - `newColumnIndex` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getDefaultContentForEmptyCells()`
 

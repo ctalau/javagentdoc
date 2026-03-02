@@ -16,18 +16,18 @@
 
 ### `canBeSorted(ro.sync.ecss.extensions.api.node.AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 - `selectedNonIgnoredChildrenInterval` (`int[]`)
 
-### `getRowIndexForTableBody(ro.sync.ecss.extensions.api.node.AuthorNode table)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `getRowIndexForTableBody(ro.sync.ecss.extensions.api.node.AuthorNode table)`
 
 **Parameters:**
 - `table` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
+
+**Returns:** `int`
 
 ### `getHelpPageID()`
 

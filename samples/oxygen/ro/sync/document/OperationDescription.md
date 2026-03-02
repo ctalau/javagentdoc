@@ -54,10 +54,10 @@
 
 ### `setScenarioName(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getScenarioName()`
 
@@ -65,10 +65,10 @@
 
 ### `setDocTypeName(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getDocTypeName()`
 
@@ -92,17 +92,17 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
 
-### `b(ro.sync.document.OperationDescription arg0)`
-
 **Returns:** `boolean`
+
+### `b(ro.sync.document.OperationDescription arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

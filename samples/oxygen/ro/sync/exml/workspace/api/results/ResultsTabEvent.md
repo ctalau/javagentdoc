@@ -18,7 +18,7 @@
 
 ### `getEventType()`
 
-**Returns:** `ro.sync.exml.workspace.api.results.ResultsTabEvent.ResultsTabEventType`
-
 One of the values defined in ResultsTabEventType.
+
+**Returns:** `ro.sync.exml.workspace.api.results.ResultsTabEvent.ResultsTabEventType`
 

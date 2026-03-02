@@ -16,11 +16,11 @@ The document plugin can be called from the contextual menu.
 
 ### `process(ro.sync.exml.plugin.document.DocumentPluginContext context)`
 
-**Returns:** [`ro.sync.exml.plugin.document.DocumentPluginResult`](./DocumentPluginResult.md)
-
 It receives the current context and it should
  return the processed content.
 
 **Parameters:**
 - `context` ([`ro.sync.exml.plugin.document.DocumentPluginContext`](./DocumentPluginContext.md)): The context the plugin was invoked in.
+
+**Returns:** [`ro.sync.exml.plugin.document.DocumentPluginResult`](./DocumentPluginResult.md)
 

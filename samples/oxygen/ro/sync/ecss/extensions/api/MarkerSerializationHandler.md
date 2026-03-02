@@ -8,24 +8,24 @@
 
 ### `shouldSerializePersistentMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md))
+
+**Returns:** `boolean`
 
 ### `getModifiedMarkerProperties(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight arg0)`
 
-**Returns:** `java.util.LinkedHashMap<java.lang.String,java.lang.String>`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md))
 
-### `beforeSerializeEditableReference(ro.sync.ecss.extensions.api.webapp.review.ReviewController arg0)`
+**Returns:** `java.util.LinkedHashMap<java.lang.String,java.lang.String>`
 
-**Returns:** `void`
+### `beforeSerializeEditableReference(ro.sync.ecss.extensions.api.webapp.review.ReviewController arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.review.ReviewController`](webapp/review/ReviewController.md))
+
+**Returns:** `void`
 
 ### `afterSerializeEditableReference()`
 

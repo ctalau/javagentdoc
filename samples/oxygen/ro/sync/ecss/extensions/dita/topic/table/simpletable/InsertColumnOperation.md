@@ -33,28 +33,28 @@
 
 ### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../../api/ArgumentsMap.md))
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
 
 **Parameters:**
 - `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
 - `newColumnIndex` (`int`)
 
-### `getCellName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, java.lang.String[] possibleValues, int newColumnIndex)`
-
 **Returns:** `java.lang.String`
+
+### `getCellName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, java.lang.String[] possibleValues, int newColumnIndex)`
 
 **Parameters:**
 - `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)): The row element to insert the cell into.
 - `possibleValues` (`java.lang.String[]`): The possible cell names.
 - `newColumnIndex` (`int`): The index where the cell can be inserted.
+
+**Returns:** `java.lang.String`
 
 ### `getDefaultContentForEmptyCells()`
 
@@ -66,8 +66,6 @@
 
 ### `updateColumnCellsSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement tableElem, int newColumnIndex, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, java.lang.String namespace, int noOfColumnsToBeInserted)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
 - `tableSupport` ([`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../../api/AuthorTableCellSpanProvider.md))
@@ -76,4 +74,6 @@
 - `columnSpecification` ([`ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation`](../../../../api/table/operations/TableColumnSpecificationInformation.md))
 - `namespace` (`java.lang.String`)
 - `noOfColumnsToBeInserted` (`int`)
+
+**Returns:** `void`
 

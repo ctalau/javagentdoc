@@ -48,12 +48,12 @@ The options can be read from client-side like in the code snippet below:
 
 ### `getPath()`
 
-**Returns:** `java.lang.String`
-
 The path should be unique among other webapp servlet plugins paths and not an empty String.
  and should contain only lower case letters or the '-' sign.
  
  Example: "plugin-path".
+
+**Returns:** `java.lang.String`
 
 ### `init()`
 
@@ -61,15 +61,13 @@ The path should be unique among other webapp servlet plugins paths and not an em
 
 ### `doGet(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): The HTTP request
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): The HTTP response
 
-### `doPut(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
-
 **Returns:** `void`
+
+### `doPut(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
 Derived methods should use setOption in this method. And afterwards call saveOptions().
 
@@ -77,9 +75,9 @@ Derived methods should use setOption in this method. And afterwards call saveOpt
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): The HTTP request object
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): The HTTP response object
 
-### `doDelete(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
-
 **Returns:** `void`
+
+### `doDelete(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
 It sets the options back to their defaults and saves them on disk.
  
@@ -92,25 +90,25 @@ In derived classes return your plugin to the default options and call the super 
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): The HTTP request object
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): The HTTP response object
 
-### `getOption(java.lang.String key, java.lang.String defaultValue)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getOption(java.lang.String key, java.lang.String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key for the option to return
 - `defaultValue` (`java.lang.String`): The value to return if the key doesn't exist
 
-### `getSecretOption(java.lang.String key, java.lang.String defaultValue)`
-
 **Returns:** `java.lang.String`
+
+### `getSecretOption(java.lang.String key, java.lang.String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`)
 - `defaultValue` (`java.lang.String`)
 
-### `getOrMigrateSecretOption(java.lang.String key, java.lang.String defaultValue)`
-
 **Returns:** `java.lang.String`
+
+### `getOrMigrateSecretOption(java.lang.String key, java.lang.String defaultValue)`
 
 If no encrypted option is found,
  it falls back to a non-encrypted value, encrypts it, saves it securely, and removes 
@@ -120,21 +118,23 @@ If no encrypted option is found,
 - `key` (`java.lang.String`): The key for the option.
 - `defaultValue` (`java.lang.String`): The default value to return if no option is found.
 
-### `setOption(java.lang.String key, java.lang.String value)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setOption(java.lang.String key, java.lang.String value)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option to set
 - `value` (`java.lang.String`): The value of the option to set
 
-### `setSecretOption(java.lang.String key, java.lang.String value)`
-
 **Returns:** `void`
+
+### `setSecretOption(java.lang.String key, java.lang.String value)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option to set
 - `value` (`java.lang.String`): The value of the secret option to set
+
+**Returns:** `void`
 
 ### `saveOptions()`
 
@@ -146,26 +146,26 @@ If no encrypted option is found,
 
 ### `setDefaultOptions(java.util.Map<java.lang.String,java.lang.String> defaultOptions)`
 
-**Returns:** `void`
-
 If you want the default values for your options to be empty/null make 
  sure to set them as empty/null, don't leave them out of the defaultOptions map.
 
 **Parameters:**
 - `defaultOptions` (`java.util.Map<java.lang.String,java.lang.String>`): the defaultOptions to set
 
-### `getOptionsForm()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getOptionsForm()`
 
 The form inputs name attribute should be the option name.
 
-### `getOptionsJson()`
-
 **Returns:** `java.lang.String`
+
+### `getOptionsJson()`
 
 These options will be available for all type of users so you should
   not include sensitive options that should require authorization.
+
+**Returns:** `java.lang.String`
 
 ### `requiresAuthorization()`
 
@@ -173,8 +173,8 @@ These options will be available for all type of users so you should
 
 ### `serializeMapToJSON(java.util.Map<java.lang.String,java.lang.Object> map)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `map` (`java.util.Map<java.lang.String,java.lang.Object>`): the map to serialize to JSON string.
+
+**Returns:** `java.lang.String`
 

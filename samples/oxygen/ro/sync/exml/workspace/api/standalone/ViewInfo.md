@@ -54,17 +54,17 @@
 
 ### `setComponent(javax.swing.JComponent component)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `component` (`javax.swing.JComponent`): The component to set.
 
-### `setTitle(java.lang.String title)`
-
 **Returns:** `void`
+
+### `setTitle(java.lang.String title)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The title to set.
+
+**Returns:** `void`
 
 ### `getIcon()`
 
@@ -72,10 +72,10 @@
 
 ### `setIcon(javax.swing.Icon icon)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `icon` (`javax.swing.Icon`): The icon to set.
+
+**Returns:** `void`
 
 ### `isCustomized()`
 

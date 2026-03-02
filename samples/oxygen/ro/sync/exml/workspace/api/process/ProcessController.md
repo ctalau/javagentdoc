@@ -12,22 +12,22 @@ Can be used to start or stop it.
 
 ### `start()`
 
-**Returns:** `void`
-
 This method blocks until the process ends.
+
+**Returns:** `void`
 
 ### `stop()`
 
-**Returns:** `void`
-
 Will also kill sub-processes.
 
-### `sendMessage(java.lang.String message)`
-
 **Returns:** `void`
+
+### `sendMessage(java.lang.String message)`
 
 The message will be sent  "UTF-8" encoded via the java.lang.Process.getOutputStream().
 
 **Parameters:**
 - `message` (`java.lang.String`): The message.
+
+**Returns:** `void`
 

@@ -19,15 +19,15 @@ It will offer solutions for solving
 
 ### `resolveError(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
-### `resolveError(ro.sync.ecss.extensions.api.ErrorResolverContextInfo contextInfo)`
-
 **Returns:** `void`
+
+### `resolveError(ro.sync.ecss.extensions.api.ErrorResolverContextInfo contextInfo)`
 
 **Parameters:**
 - `contextInfo` ([`ro.sync.ecss.extensions.api.ErrorResolverContextInfo`](./ErrorResolverContextInfo.md)): The current error context information.
+
+**Returns:** `void`
 

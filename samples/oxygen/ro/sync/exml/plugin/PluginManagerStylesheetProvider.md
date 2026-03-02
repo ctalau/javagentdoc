@@ -20,8 +20,8 @@
 
 ### `getStylesheets(ro.sync.ecss.j arg0)`
 
-**Returns:** `java.util.List<java.net.URL>`
-
 **Parameters:**
 - `arg0` (`ro.sync.ecss.j`)
+
+**Returns:** `java.util.List<java.net.URL>`
 

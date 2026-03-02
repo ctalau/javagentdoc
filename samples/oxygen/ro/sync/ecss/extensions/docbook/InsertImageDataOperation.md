@@ -32,26 +32,26 @@ The value is `imageUrl`.
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../api/ArgumentsMap.md))
 
-### `insertImageRef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.docbook.DocBookImageInfo imageInfo, boolean isInlineMediaObjectAccepted)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../api/schemaaware/SchemaAwareHandlerResult.md)
+### `insertImageRef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.docbook.DocBookImageInfo imageInfo, boolean isInlineMediaObjectAccepted)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Access to the Author-specific functions.
 - `imageInfo` (`ro.sync.ecss.docbook.DocBookImageInfo`): An object containing information about the image to be inserted.
 - `isInlineMediaObjectAccepted` (`boolean`): `true` if an inline media object is accepted according to the schema.
 
+**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../api/schemaaware/SchemaAwareHandlerResult.md)
+
 ### `getArguments()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../api/ArgumentDescriptor.md)
-
 The operation will display a dialog for choosing the image fileref.
+
+**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../api/ArgumentDescriptor.md)
 
 ### `getDescription()`
 

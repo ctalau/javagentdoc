@@ -10,20 +10,20 @@
 
 ### `unlock(java.net.URL resource)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `resource` (`java.net.URL`): The URL to unlock
 
-### `updateLock(java.net.URL resource, int timeoutSeconds)`
-
 **Returns:** `void`
+
+### `updateLock(java.net.URL resource, int timeoutSeconds)`
 
 This will get called at the beginning to lock the resource and after that periodically.
 
 **Parameters:**
 - `resource` (`java.net.URL`): The URL to lock.
 - `timeoutSeconds` (`int`): The timeout in seconds to set for the lock 
- (so that the lock expires after the timeout passes).
- The refresh on the lock is called about every (timeout/2) seconds.
+   (so that the lock expires after the timeout passes).
+   The refresh on the lock is called about every (timeout/2) seconds.
+
+**Returns:** `void`
 

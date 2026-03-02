@@ -18,31 +18,29 @@ This interface defines the structure for function that can be invoked by the AI 
 
 ### `getName()`
 
-**Returns:** `java.lang.String`
-
 Must be a-z, A-Z, 0-9, or contain underscores and dashes, with a maximum length of 64.
  
 
  The name should uniquely identify the external AI function and can be used 
  to locate and execute the function.
 
-### `getDescription()`
-
 **Returns:** `java.lang.String`
+
+### `getDescription()`
 
 This method provides a detailed description of the AI function's purpose and behavior. 
  It should explain what the function does, what kind of data it processes, 
  and any relevant details about its operation.
 
-### `getUIDecription()`
-
 **Returns:** `java.lang.String`
+
+### `getUIDecription()`
 
 This description will not be sent to the AI.
 
-### `getParameterDescriptions()`
-
 **Returns:** `java.lang.String`
+
+### `getParameterDescriptions()`
 
 Example: 
  
@@ -61,9 +59,9 @@ Example:
             }
 ```
 
-### `executeFunction(java.lang.String parameters, java.util.Map<java.lang.String,java.lang.Object> extraContext)`
-
 **Returns:** `java.lang.String`
+
+### `executeFunction(java.lang.String parameters, java.util.Map<java.lang.String,java.lang.Object> extraContext)`
 
 This method allows the AI to execute the function, passing in the required parameters (which should 
  conform to the JSON schema returned by #getParameterDescriptions()) and any additional application context 
@@ -78,15 +76,15 @@ This method allows the AI to execute the function, passing in the required param
 
 **Parameters:**
 - `parameters` (`java.lang.String`): A string representing the parameters required to execute the function. 
-                   The format and content of this string should conform to the JSON schema 
-                   returned by #getParameterDescriptions().
+                     The format and content of this string should conform to the JSON schema 
+                     returned by #getParameterDescriptions().
 - `extraContext` (`java.util.Map<java.lang.String,java.lang.Object>`): A map containing additional application context or information needed by the function.
-                     When called from WebAuthor, it will contain an "author_document_model" key with the AuthorDocumentModel of the current editor.
-                     It will also contain a "session_id" key with a unique identifier assigned to the execution request session.
+                       When called from WebAuthor, it will contain an "author_document_model" key with the AuthorDocumentModel of the current editor.
+                       It will also contain a "session_id" key with a unique identifier assigned to the execution request session.
+
+**Returns:** `java.lang.String`
 
 ### `isEnabled()`
-
-**Returns:** `boolean`
 
 This method allows the system to verify if the function is active and available for invocation.
  It is useful for determining whether the function should be executed in a given context, based on its enabled state.
@@ -95,4 +93,6 @@ This method allows the system to verify if the function is active and available 
 
  The default implementation returns `true`, indicating that the function is enabled. 
  However, this method can be overridden to introduce custom logic for enabling or disabling the function.
+
+**Returns:** `boolean`
 

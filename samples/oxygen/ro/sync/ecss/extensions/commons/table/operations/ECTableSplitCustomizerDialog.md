@@ -53,17 +53,17 @@
 
 ### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+**Returns:** `void`
 
-**Returns:** `org.eclipse.swt.widgets.Control`
+### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
+
+**Returns:** `org.eclipse.swt.widgets.Control`
 
 ### `getSplitInformation()`
 

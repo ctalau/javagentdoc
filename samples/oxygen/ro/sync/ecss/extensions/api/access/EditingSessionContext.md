@@ -31,20 +31,20 @@ In Web Author, attributes can be added to the editing context by using:
 
 ### `setAttribute(java.lang.String attr, java.lang.Object value)`
 
-**Returns:** `void`
-
 If the attribute is already set it overrides the previous value.
 
 **Parameters:**
 - `attr` (`java.lang.String`): The attribute name.
 - `value` (`java.lang.Object`): The attribute value.
 
-### `getAttribute(java.lang.String attr)`
+**Returns:** `void`
 
-**Returns:** `java.lang.Object`
+### `getAttribute(java.lang.String attr)`
 
 **Parameters:**
 - `attr` (`java.lang.String`): The attribute name.
+
+**Returns:** `java.lang.Object`
 
 ### `getAttributes()`
 

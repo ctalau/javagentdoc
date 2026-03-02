@@ -14,8 +14,6 @@ You can set such a provider by using the
 
 ### `getActions(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
-**Returns:** `java.util.List<javax.swing.AbstractAction>`
-
 This method is called only for the highlights that have a a callout associated.
  
 
@@ -34,16 +32,18 @@ This method is called only for the highlights that have a a callout associated.
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The highlight for which the actions are requested. Never 
-  `null`.
+    `null`.
+
+**Returns:** `java.util.List<javax.swing.AbstractAction>`
 
 ### `getDefaultAction(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
-
-**Returns:** `javax.swing.AbstractAction`
 
 Is not necessary that this action to 
  be included in the ones returned by #getActions(AuthorPersistentHighlight).
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The highlight for which the default action is requested. 
-  Never `null`.
+    Never `null`.
+
+**Returns:** `javax.swing.AbstractAction`
 

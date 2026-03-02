@@ -57,10 +57,10 @@ The item has a type, a name and a path for an icon to be displayed to the
 
 ### `getSortPriority()`
 
-**Returns:** `int`
-
 By default it is #NORMAL_SORT_PRIORITY for all 
  items except for "Split"-type entries which have a priority of #SPLIT_ITEM_PRIORITY.
+
+**Returns:** `int`
 
 ### `getElementProxy()`
 

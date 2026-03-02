@@ -8,8 +8,8 @@
 
 ### `actionRegistered(java.util.Map<java.lang.String,java.lang.Object> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,java.lang.Object>`)
+
+**Returns:** `void`
 

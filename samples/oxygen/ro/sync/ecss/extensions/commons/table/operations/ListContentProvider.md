@@ -14,10 +14,10 @@
 
 ### `getElements(java.lang.Object arg0)`
 
-**Returns:** `java.lang.Object[]`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `java.lang.Object[]`
 
 ### `dispose()`
 
@@ -25,10 +25,10 @@
 
 ### `inputChanged(org.eclipse.jface.viewers.Viewer arg0, java.lang.Object arg1, java.lang.Object arg2)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`org.eclipse.jface.viewers.Viewer`)
 - `arg1` (`java.lang.Object`)
 - `arg2` (`java.lang.Object`)
+
+**Returns:** `void`
 

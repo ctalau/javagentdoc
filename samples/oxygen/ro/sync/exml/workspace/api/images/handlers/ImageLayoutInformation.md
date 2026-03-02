@@ -43,10 +43,10 @@ No base line information is given.
 
 ### `setAscend(int ascend)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `ascend` (`int`): The image ascend.
+
+**Returns:** `void`
 
 ### `toString()`
 
@@ -54,10 +54,10 @@ No base line information is given.
 
 ### `equals(java.lang.Object obj)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

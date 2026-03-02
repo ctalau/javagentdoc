@@ -16,11 +16,11 @@
 
 ### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source xquerySrc)`
 
-**Returns:** `javax.xml.transform.Transformer`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 - `xquerySrc` (`javax.xml.transform.Source`): The XQuery source.
+
+**Returns:** `javax.xml.transform.Transformer`
 
 ### `getDescription()`
 

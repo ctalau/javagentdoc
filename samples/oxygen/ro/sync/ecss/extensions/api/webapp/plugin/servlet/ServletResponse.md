@@ -10,8 +10,6 @@
 
 ### `getCharacterEncoding()`
 
-**Returns:** `java.lang.String`
-
 The following
  methods for specifying the response character encoding are consulted, in decreasing order of priority: per request,
  perweb-app (using ServletContext#setResponseCharacterEncoding, deployment descriptor), and per container (for
@@ -26,9 +24,9 @@ The following
 
  See RFC 2047 (http://www.ietf.org/rfc/rfc2047.txt) for more information about character encoding and MIME.
 
-### `getContentType()`
-
 **Returns:** `java.lang.String`
+
+### `getContentType()`
 
 The content type proper must have been
  specified using #setContentType before the response is committed. If no content type has been specified, this
@@ -36,9 +34,9 @@ The content type proper must have been
  specified as described in #getCharacterEncoding or #getWriter has been called, the charset parameter
  is included in the string returned. If no character encoding has been specified, the charset parameter is omitted.
 
-### `getOutputStream()`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletOutputStream`](./ServletOutputStream.md)
+### `getOutputStream()`
 
 The servlet container does
  not encode the binary data.
@@ -50,9 +48,9 @@ The servlet container does
  Either this method or #getWriter may be called to write the body, not both, except when #reset has
  been called.
 
-### `getWriter()`
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletOutputStream`](./ServletOutputStream.md)
 
-**Returns:** `java.io.PrintWriter`
+### `getWriter()`
 
 The `PrintWriter`
  uses the character encoding returned by #getCharacterEncoding. If the response's character encoding has not
@@ -66,9 +64,9 @@ The `PrintWriter`
  Either this method or #getOutputStream may be called to write the body, not both, except when #reset
  has been called.
 
-### `setCharacterEncoding(java.lang.String encoding)`
+**Returns:** `java.io.PrintWriter`
 
-**Returns:** `void`
+### `setCharacterEncoding(java.lang.String encoding)`
 
 If the
  response character encoding has already been set by ServletContext#setResponseCharacterEncoding, the
@@ -105,11 +103,11 @@ If the
 
 **Parameters:**
 - `encoding` (`java.lang.String`): a String specifying only the character set defined by IANA Character Sets
- (http://www.iana.org/assignments/character-sets) or null
-
-### `setCharacterEncoding(java.nio.charset.Charset encoding)`
+   (http://www.iana.org/assignments/character-sets) or null
 
 **Returns:** `void`
+
+### `setCharacterEncoding(java.nio.charset.Charset encoding)`
 
 If the
  response character encoding has already been set by ServletContext#setResponseCharacterEncoding, the
@@ -142,20 +140,20 @@ If the
 **Parameters:**
 - `encoding` (`java.nio.charset.Charset`): a Charset instance representing the encoding to use or null
 
-### `setContentLength(int len)`
-
 **Returns:** `void`
+
+### `setContentLength(int len)`
 
 This method may be called repeatedly to change the content length. This method has no effect if called after the
  response has been committed.
 
 **Parameters:**
 - `len` (`int`): an integer specifying the length of the content being returned to the client; sets the Content-Length
- header
-
-### `setContentLengthLong(long len)`
+   header
 
 **Returns:** `void`
+
+### `setContentLengthLong(long len)`
 
 This method may be called repeatedly to change the content length. This method has no effect if called after the
  response has been committed.
@@ -163,9 +161,9 @@ This method may be called repeatedly to change the content length. This method h
 **Parameters:**
 - `len` (`long`): a long specifying the length of the content being returned to the client; sets the Content-Length header
 
-### `setContentType(java.lang.String type)`
-
 **Returns:** `void`
+
+### `setContentType(java.lang.String type)`
 
 The given
  content type may include a character encoding specification, for example, `text/html;charset=UTF-8`. The
@@ -200,9 +198,9 @@ The given
 **Parameters:**
 - `type` (`java.lang.String`): a `String` specifying the MIME type of the content or null
 
-### `setBufferSize(int size)`
-
 **Returns:** `void`
+
+### `setBufferSize(int size)`
 
 The servlet container will use a buffer at least as
  large as the size requested. The actual buffer size used can be found using `getBufferSize`.
@@ -221,36 +219,36 @@ The servlet container will use a buffer at least as
 **Parameters:**
 - `size` (`int`): the preferred buffer size
 
-### `getBufferSize()`
+**Returns:** `void`
 
-**Returns:** `int`
+### `getBufferSize()`
 
 If no buffering is used, this method returns 0.
 
-### `flushBuffer()`
+**Returns:** `int`
 
-**Returns:** `void`
+### `flushBuffer()`
 
 A call to this method automatically commits the
  response, meaning the status code and headers will be written.
 
-### `resetBuffer()`
-
 **Returns:** `void`
+
+### `resetBuffer()`
 
 If the response
  has been committed, this method throws an `IllegalStateException`.
 
-### `isCommitted()`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isCommitted()`
 
 A committed response has already had its status code
  and headers written.
 
-### `reset()`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `reset()`
 
 The state of calling
  #getWriter or #getOutputStream is also cleared. It is legal, for instance, to call
@@ -259,9 +257,9 @@ The state of calling
  will be staled and the behavior of using the stale object is undefined. If the response has been committed, this
  method throws an `IllegalStateException`.
 
-### `setLocale(java.util.Locale loc)`
-
 **Returns:** `void`
+
+### `setLocale(java.util.Locale loc)`
 
 It also sets the response's character
  encoding appropriately for the locale, if the character encoding has not been explicitly set using
@@ -292,11 +290,13 @@ It also sets the response's character
 **Parameters:**
 - `loc` (`java.util.Locale`): the locale of the response or {code @null}
 
-### `getLocale()`
+**Returns:** `void`
 
-**Returns:** `java.util.Locale`
+### `getLocale()`
 
 Calls made to
  `setLocale` after the response is committed have no effect. If no locale has been specified, the
  container's default locale is returned.
+
+**Returns:** `java.util.Locale`
 

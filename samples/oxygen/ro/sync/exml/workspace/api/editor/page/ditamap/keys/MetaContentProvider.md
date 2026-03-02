@@ -20,8 +20,6 @@ This content will appear inline in the Author page for that particular keyref.
 
 ### `getContent(java.lang.String nodeClass)`
 
-**Returns:** `java.lang.String`
-
 For an XML like:
 
  `
@@ -35,12 +33,14 @@ For an XML like:
 **Parameters:**
 - `nodeClass` (`java.lang.String`): The "@class" of the node which links.
 
-### `equals(java.lang.Object obj)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `equals(java.lang.Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

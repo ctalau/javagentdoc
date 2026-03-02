@@ -28,24 +28,24 @@ The value is `mediaUrl`.
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../api/ArgumentsMap.md))
 
-### `createMediaContentToInsert(java.lang.String ref)`
+**Returns:** `void`
 
-**Returns:** `java.lang.StringBuilder`
+### `createMediaContentToInsert(java.lang.String ref)`
 
 **Parameters:**
 - `ref` (`java.lang.String`): Relative reference of the media file.
 
+**Returns:** `java.lang.StringBuilder`
+
 ### `getArguments()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../api/ArgumentDescriptor.md)
-
 The operation will display a dialog for choosing the media file.
+
+**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../api/ArgumentDescriptor.md)
 
 ### `getDescription()`
 

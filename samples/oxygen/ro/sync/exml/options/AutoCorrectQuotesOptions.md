@@ -55,10 +55,10 @@
 
 ### `setEnabled(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `getStartQuote()`
 
@@ -66,10 +66,10 @@
 
 ### `setStartQoute(char arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`char`)
+
+**Returns:** `void`
 
 ### `getEndQuote()`
 
@@ -77,8 +77,8 @@
 
 ### `setEndQuoteCharacter(char arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`char`)
+
+**Returns:** `void`
 

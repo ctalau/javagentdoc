@@ -44,7 +44,7 @@ For example for "Row(s)"
 
 **Parameters:**
 - `key` (`java.lang.String`): The tab key name. If no translation for the tab, then it represents the name
- of the tab.
+   of the tab.
 - `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The list with the properties which will be presented in the current tab.
 - `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The nodes whose properties will be edited.
 
@@ -52,7 +52,7 @@ For example for "Row(s)"
 
 **Parameters:**
 - `key` (`java.lang.String`): The tab key name. If no translation for the tab, then it represents the name
- of the tab.
+   of the tab.
 - `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The list with the properties which will be presented in the current tab.
 - `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The nodes whose properties will be edited.
 - `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The list of AuthorDocumentFragments to be inserted.
@@ -62,7 +62,7 @@ For example for "Row(s)"
 
 **Parameters:**
 - `key` (`java.lang.String`): The tab key name. If no translation for the tab, 
-                            then it represents the name of the tab.
+                              then it represents the name of the tab.
 - `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The list with the properties which will be presented in the current tab.
 - `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The nodes whose properties will be edited.
 - `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The fragments to be inserted.
@@ -73,14 +73,12 @@ For example for "Row(s)"
 
 ### `getTabKey()`
 
-**Returns:** `java.lang.String`
-
 If no translation for the tab, then it represents the name
  of the tab.
 
-### `setTabKey(java.lang.String tabKey)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setTabKey(java.lang.String tabKey)`
 
 If no translation for the tab, then it represents the name
  of the tab.
@@ -88,16 +86,18 @@ If no translation for the tab, then it represents the name
 **Parameters:**
 - `tabKey` (`java.lang.String`): The new tab Key.
 
+**Returns:** `void`
+
 ### `getProperties()`
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`
 
 ### `setProperties(java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The new properties to set.
+
+**Returns:** `void`
 
 ### `getNodes()`
 
@@ -105,10 +105,10 @@ If no translation for the tab, then it represents the name
 
 ### `setNodes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The new list of nodes to set.
+
+**Returns:** `void`
 
 ### `getFragmentsToInsert()`
 
@@ -116,10 +116,10 @@ If no translation for the tab, then it represents the name
 
 ### `setFragmentsToInsert(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragmentsToInsert)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The fragments which will be inserted in the document.
+
+**Returns:** `void`
 
 ### `getInsertOffsets()`
 
@@ -127,10 +127,10 @@ If no translation for the tab, then it represents the name
 
 ### `setInsertOffsets(javax.swing.text.Position[] positions)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `positions` (`javax.swing.text.Position[]`): The position where the fragments will be inserted.
+
+**Returns:** `void`
 
 ### `getContextInfo()`
 
@@ -138,8 +138,8 @@ If no translation for the tab, then it represents the name
 
 ### `setContextInfo(java.lang.String contextInfo)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `contextInfo` (`java.lang.String`): The context information to set.
+
+**Returns:** `void`
 

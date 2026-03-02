@@ -29,31 +29,31 @@ A node represents an entry from Author outline, Author bread crumb,
 
 ### `getImageURL(java.lang.String path)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `path` (`java.lang.String`): The image path to search for.
 
-### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../exml/workspace/api/node/customizer/BasicRenderingInformation.md)
+### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md))
 
-### `getDITAClass(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+**Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../exml/workspace/api/node/customizer/BasicRenderingInformation.md)
 
-**Returns:** `ro.sync.ecss.extensions.dita.DITANodeRendererCustomizer.DitaClass`
+### `getDITAClass(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md)): The context to determine the dita class for.
 
-### `getDitaClassForClassValue(java.lang.String classValue)`
-
 **Returns:** `ro.sync.ecss.extensions.dita.DITANodeRendererCustomizer.DitaClass`
+
+### `getDitaClassForClassValue(java.lang.String classValue)`
 
 **Parameters:**
 - `classValue` (`java.lang.String`): The class attribute value.
+
+**Returns:** `ro.sync.ecss.extensions.dita.DITANodeRendererCustomizer.DitaClass`
 
 ### `getDescription()`
 

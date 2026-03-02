@@ -14,17 +14,17 @@
 
 ### `invokeAction(java.lang.Object action)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `action` (`java.lang.Object`): The action to invoke
 
-### `getActionID(java.lang.Object action)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getActionID(java.lang.Object action)`
 
 If the action appears on a contextual menu but is not installed on a main menu it will pe prefixed with the constant "ACTION_WITH_NO_SHORTCUT/"
 
 **Parameters:**
 - `action` (`java.lang.Object`): The action for which to retrieve the ID.
+
+**Returns:** `java.lang.String`
 

@@ -28,7 +28,7 @@ This constructor is deprecated, you should use the #OptionChangedEvent(String, O
 
 **Parameters:**
 - `optionKey` (`java.lang.String`): The identification key of the option
- whose value modification generated this event.
+   whose value modification generated this event.
 - `oldValue` (`java.lang.String`): The old value of the option.
 - `newValue` (`java.lang.String`): The new value of the option.
 
@@ -36,7 +36,7 @@ This constructor is deprecated, you should use the #OptionChangedEvent(String, O
 
 **Parameters:**
 - `optionKey` (`java.lang.String`): The identification key of the option
- whose value modification generated this event.
+   whose value modification generated this event.
 - `oldValue` (`java.lang.Object`): The old value of the option.
 - `newValue` (`java.lang.Object`): The new value of the option.
 
@@ -48,15 +48,15 @@ This constructor is deprecated, you should use the #OptionChangedEvent(String, O
 
 ### `getOldValue()`
 
-**Returns:** `java.lang.String`
-
 This method is deprecated, you should use the #getOldObjectValue() method instead.
+
+**Returns:** `java.lang.String`
 
 ### `getNewValue()`
 
-**Returns:** `java.lang.String`
-
 This method is deprecated, you should use the #getNewObjectValue() method instead.
+
+**Returns:** `java.lang.String`
 
 ### `getOldObjectValue()`
 

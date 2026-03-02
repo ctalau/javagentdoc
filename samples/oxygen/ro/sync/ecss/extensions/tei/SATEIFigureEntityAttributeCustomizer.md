@@ -16,8 +16,8 @@ It is used on standalone implementation.
 
 ### `getAttributeValue(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Provides access to author functionality.
+
+**Returns:** `java.lang.String`
 

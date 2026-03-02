@@ -24,29 +24,29 @@ One way to obtain an implementation from a plugin is:
 
 ### `getPreferencesDirectory()`
 
-**Returns:** `java.lang.String`
-
 Can be used to save additional user data there.
+
+**Returns:** `java.lang.String`
 
 ### `getUserInterfaceLanguage()`
 
-**Returns:** `java.lang.String`
-
 Examples of format: **en_US**, **fr_FR**, **de_DE**, **jp_JP**, **it_IT**, **nl_NL**
+
+**Returns:** `java.lang.String`
 
 ### `getVersion()`
 
-**Returns:** `java.lang.String`
-
 Can be used to decide if some extension functions are available or not.
 
-### `getVersionBuildID()`
-
 **Returns:** `java.lang.String`
+
+### `getVersionBuildID()`
 
 It is a string with a format like "YYYYMMDDHH".
  Example: "2013110816".
  This is the same information present in the Help menu -> About dialog.
+
+**Returns:** `java.lang.String`
 
 ### `getApplicationType()`
 

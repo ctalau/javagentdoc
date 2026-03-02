@@ -103,42 +103,42 @@
 
 ### `getIDGenerationElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access
 - `defaultOptions` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)): Default options
 
-### `getIdGenerationPattern(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
+**Returns:** `java.lang.String[]`
 
-**Returns:** `java.lang.String`
+### `getIdGenerationPattern(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
 - `defaultOptions` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md))
 
-### `isAutoGenerateIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isAutoGenerateIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
 - `defaultOptions` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)): The default options
 
-### `isFilterIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
-
 **Returns:** `boolean`
+
+### `isFilterIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
 - `defaultOptions` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)): The default options.
 
-### `splitStrings(java.lang.String optionsString)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String[]`
+### `splitStrings(java.lang.String optionsString)`
 
 **Parameters:**
 - `optionsString` (`java.lang.String`): String read from options with comma separated values
+
+**Returns:** `java.lang.String[]`
 
 ### `isAutoGenerateIDs()`
 
@@ -158,10 +158,10 @@
 
 ### `saveToOptions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
+
+**Returns:** `void`
 
 ### `getElementsAsOptionsString()`
 
@@ -169,78 +169,78 @@
 
 ### `generateID(java.lang.String idGenerationPattern, java.lang.String elementLocalName)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `idGenerationPattern` (`java.lang.String`): The pattern.
 - `elementLocalName` (`java.lang.String`): The element local name
 
-### `generateID(java.lang.String idGenerationPattern, java.lang.String elementLocalName, java.lang.String editorLocation)`
-
 **Returns:** `java.lang.String`
+
+### `generateID(java.lang.String idGenerationPattern, java.lang.String elementLocalName, java.lang.String editorLocation)`
 
 **Parameters:**
 - `idGenerationPattern` (`java.lang.String`): The pattern.
 - `elementLocalName` (`java.lang.String`): The element local name
 - `editorLocation` (`java.lang.String`): Editor location
 
-### `replaceAll(java.lang.String original, java.lang.String match, java.lang.String toReplaceWith)`
-
 **Returns:** `java.lang.String`
+
+### `replaceAll(java.lang.String original, java.lang.String match, java.lang.String toReplaceWith)`
 
 **Parameters:**
 - `original` (`java.lang.String`): The original string.
 - `match` (`java.lang.String`): The match string (not a regular expression)
 - `toReplaceWith` (`java.lang.String`): String to replace with
 
-### `setAutoGenerateIds(boolean autoGenerateIds)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setAutoGenerateIds(boolean autoGenerateIds)`
 
 **Parameters:**
 - `autoGenerateIds` (`boolean`): `true` to auto generate IDs.
 
-### `setElementsWithIDGeneration(java.lang.String[] elementsWithIDGeneration)`
-
 **Returns:** `void`
+
+### `setElementsWithIDGeneration(java.lang.String[] elementsWithIDGeneration)`
 
 **Parameters:**
 - `elementsWithIDGeneration` (`java.lang.String[]`): a list of elements with ID generation
 
-### `setRemoveIDsOnCopy(boolean removeIDsOnCopy)`
-
 **Returns:** `void`
+
+### `setRemoveIDsOnCopy(boolean removeIDsOnCopy)`
 
 **Parameters:**
 - `removeIDsOnCopy` (`boolean`): The filterIDsOnCopy to set.
 
-### `setIdGenerationPattern(java.lang.String idGenerationPattern)`
-
 **Returns:** `void`
+
+### `setIdGenerationPattern(java.lang.String idGenerationPattern)`
 
 **Parameters:**
 - `idGenerationPattern` (`java.lang.String`): The idGeneration pattern.
 
-### `getPatternTooltip()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getPatternTooltip()`
 
 Can be overwritten to provide another tooltip.
 
-### `setPatternTooltip(java.lang.String patternTooltip)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setPatternTooltip(java.lang.String patternTooltip)`
 
 **Parameters:**
 - `patternTooltip` (`java.lang.String`): the pattern tooltip which will be shown in the configuration dialog.
 
-### `loadDefaultsFromConfiguration(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String proposedXMLResourceName)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
+### `loadDefaultsFromConfiguration(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String proposedXMLResourceName)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
 - `proposedXMLResourceName` (`java.lang.String`): The proposed name of the resource from which to load the configuration.
+
+**Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
 
 ### `getAttrQname()`
 

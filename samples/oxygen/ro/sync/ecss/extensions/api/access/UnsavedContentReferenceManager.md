@@ -18,22 +18,22 @@
 
 ### `getUnsavedReferenceInputStream(java.net.URL referenceUrl)`
 
-**Returns:** `java.io.InputStream`
-
 This input stream offers the entire content of the reference, with all the unsaved modifications
  applied.
 
 **Parameters:**
 - `referenceUrl` (`java.net.URL`): The reference URL.
 
-### `markReferenceAsSaved(java.net.URL referenceUrl)`
+**Returns:** `java.io.InputStream`
 
-**Returns:** `void`
+### `markReferenceAsSaved(java.net.URL referenceUrl)`
 
 Signal to the application that the reference should now be considered as saved.
 
 **Parameters:**
 - `referenceUrl` (`java.net.URL`): The reference URL.
+
+**Returns:** `void`
 
 ### `isDocumentUnsaved()`
 
@@ -41,7 +41,7 @@ Signal to the application that the reference should now be considered as saved.
 
 ### `markDocumentAsSaved()`
 
-**Returns:** `void`
-
 Signal to the application that the document should now be considered as saved.
+
+**Returns:** `void`
 

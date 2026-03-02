@@ -12,8 +12,6 @@
 
 ### `applicationStarted(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace pluginWorkspaceAccess)`
 
-**Returns:** `void`
-
 Notified when the application is started.
  
 
@@ -22,9 +20,11 @@ Notified when the application is started.
 **Parameters:**
 - `pluginWorkspaceAccess` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md)): The workspace access
 
+**Returns:** `void`
+
 ### `applicationClosing()`
 
-**Returns:** `boolean`
-
 You can reject the close.
+
+**Returns:** `boolean`
 

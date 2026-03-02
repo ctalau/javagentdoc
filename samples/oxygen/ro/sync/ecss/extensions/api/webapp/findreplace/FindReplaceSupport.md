@@ -10,32 +10,30 @@
 
 ### `getSearchHighlightsProvider(java.lang.String searchFor, boolean matchCase, boolean wholeWords)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../highlights/AuthorHighlighter.md)
-
 **Parameters:**
 - `searchFor` (`java.lang.String`): The string to search for.
 - `matchCase` (`boolean`): Flag for matching case on the search string.
 - `wholeWords` (`boolean`): Find whole words only.
 
-### `getSearchHighlightsProvider(java.lang.String searchFor, ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions options)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../highlights/AuthorHighlighter.md)
+
+### `getSearchHighlightsProvider(java.lang.String searchFor, ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions options)`
 
 **Parameters:**
 - `searchFor` (`java.lang.String`): The string to search for.
 - `options` ([`ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions`](./WebappFindOptions.md)): The search options.
 
-### `replaceAll(java.lang.String textToFind, java.lang.String textToReplaceWith)`
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../highlights/AuthorHighlighter.md)
 
-**Returns:** `void`
+### `replaceAll(java.lang.String textToFind, java.lang.String textToReplaceWith)`
 
 **Parameters:**
 - `textToFind` (`java.lang.String`): The text to search for.
 - `textToReplaceWith` (`java.lang.String`): The text to replace with.
 
-### `replaceAll(java.lang.String textToFind, java.lang.String textToReplaceWith, ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions options)`
-
 **Returns:** `void`
+
+### `replaceAll(java.lang.String textToFind, java.lang.String textToReplaceWith, ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions options)`
 
 Also considers the options.
 
@@ -44,18 +42,20 @@ Also considers the options.
 - `textToReplaceWith` (`java.lang.String`): The text to replace with.
 - `options` ([`ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions`](./WebappFindOptions.md)): The search options.
 
-### `replace(int[] selectionOffsets, java.lang.String textToReplaceWith)`
-
 **Returns:** `void`
+
+### `replace(int[] selectionOffsets, java.lang.String textToReplaceWith)`
 
 **Parameters:**
 - `selectionOffsets` (`int[]`): The offsets.
 - `textToReplaceWith` (`java.lang.String`): The replacement text.
 
-### `getSearchHighlightsProvider(java.lang.String searchFor)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../highlights/AuthorHighlighter.md)
+### `getSearchHighlightsProvider(java.lang.String searchFor)`
 
 **Parameters:**
 - `searchFor` (`java.lang.String`): The string to search for.
+
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../highlights/AuthorHighlighter.md)
 

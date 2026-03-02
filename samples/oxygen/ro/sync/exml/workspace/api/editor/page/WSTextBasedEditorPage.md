@@ -12,21 +12,21 @@
 
 ### `getSelectionStart()`
 
-**Returns:** `int`
-
 It is inclusive.
+
+**Returns:** `int`
 
 ### `getSelectionEnd()`
 
-**Returns:** `int`
-
 It is exclusive.
+
+**Returns:** `int`
 
 ### `getSelectedText()`
 
-**Returns:** `java.lang.String`
-
 The text does not contain XML tags for the Author page.
+
+**Returns:** `java.lang.String`
 
 ### `getCaretOffset()`
 
@@ -46,18 +46,18 @@ The text does not contain XML tags for the Author page.
 
 ### `setCaretPosition(int offset)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `offset` (`int`): The offset where the caret should be positioned, 0 based.
 
-### `select(int startOffset, int endOffset)`
-
 **Returns:** `void`
+
+### `select(int startOffset, int endOffset)`
 
 **Parameters:**
 - `startOffset` (`int`): Inclusive start offset
 - `endOffset` (`int`): Exclusive end offset
+
+**Returns:** `void`
 
 ### `getWordAtCaret()`
 
@@ -65,45 +65,43 @@ The text does not contain XML tags for the Author page.
 
 ### `getLocationOnScreenAsPoint(int x, int y)`
 
-**Returns:** `ro.sync.exml.view.graphics.Point`
-
 **Parameters:**
 - `x` (`int`): The "x" coordinate relative to the viewport origin.
 - `y` (`int`): The "y" coordinate relative to the viewport origin.
 
-### `getLocationRelativeToEditorFromScreen(int x, int y)`
-
 **Returns:** `ro.sync.exml.view.graphics.Point`
+
+### `getLocationRelativeToEditorFromScreen(int x, int y)`
 
 **Parameters:**
 - `x` (`int`): The "x" coordinate which is relative to the main application frame/display.
 - `y` (`int`): The "y" coordinate which is relative to the main application frame/display.
 
-### `modelToViewRectangle(int offset)`
+**Returns:** `ro.sync.exml.view.graphics.Point`
 
-**Returns:** `ro.sync.exml.view.graphics.Rectangle`
+### `modelToViewRectangle(int offset)`
 
 **Parameters:**
 - `offset` (`int`): The document offset to get the corresponding caret shape for.
 
-### `viewToModelOffset(int x, int y)`
+**Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-**Returns:** `int`
+### `viewToModelOffset(int x, int y)`
 
 **Parameters:**
 - `x` (`int`): The "x" coordinate relative to the editing component origin.
 - `y` (`int`): The "y" coordinate relative to the editing component origin.
 
-### `getStartEndOffsets(ro.sync.document.DocumentPositionedInfo dpInfo)`
+**Returns:** `int`
 
-**Returns:** `int[]`
+### `getStartEndOffsets(ro.sync.document.DocumentPositionedInfo dpInfo)`
 
 **Parameters:**
 - `dpInfo` ([`ro.sync.document.DocumentPositionedInfo`](../../../../../document/DocumentPositionedInfo.md)): The document position information.
 
-### `createAnchor(int offset)`
+**Returns:** `int[]`
 
-**Returns:** [`ro.sync.exml.workspace.api.editor.page.Anchor`](./Anchor.md)
+### `createAnchor(int offset)`
 
 The anchor can later be used in the current or in another editing mode to identify an offset particular to it.
  For example you can create an anchor in the Author editing mode based on an Author-specific offset and then use 
@@ -114,12 +112,14 @@ The anchor can later be used in the current or in another editing mode to identi
 **Parameters:**
 - `offset` (`int`): The offset in the edited content.
 
-### `getOffsetForAnchor(ro.sync.exml.workspace.api.editor.page.Anchor anchor)`
+**Returns:** [`ro.sync.exml.workspace.api.editor.page.Anchor`](./Anchor.md)
 
-**Returns:** `int`
+### `getOffsetForAnchor(ro.sync.exml.workspace.api.editor.page.Anchor anchor)`
 
 **Parameters:**
 - `anchor` ([`ro.sync.exml.workspace.api.editor.page.Anchor`](./Anchor.md)): The anchor.
+
+**Returns:** `int`
 
 ### `scrollCaretToVisible()`
 
@@ -127,7 +127,7 @@ The anchor can later be used in the current or in another editing mode to identi
 
 ### `copy()`
 
-**Returns:** `void`
-
 If there is no selection, this method does nothing.
+
+**Returns:** `void`
 

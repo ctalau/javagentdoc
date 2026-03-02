@@ -34,22 +34,22 @@
 
 ### `getAttributeQName(int index)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `index` (`int`): Index of the attribute.
 
-### `getAttributeValue(java.lang.String attrQName)`
-
 **Returns:** `java.lang.String`
+
+### `getAttributeValue(java.lang.String attrQName)`
 
 **Parameters:**
 - `attrQName` (`java.lang.String`): The qualified attribute name.
 
-### `getAttributeNamespace(java.lang.String attrQName)`
-
 **Returns:** `java.lang.String`
+
+### `getAttributeNamespace(java.lang.String attrQName)`
 
 **Parameters:**
 - `attrQName` (`java.lang.String`): The attribute qualified name.
+
+**Returns:** `java.lang.String`
 

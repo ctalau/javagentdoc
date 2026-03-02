@@ -46,10 +46,10 @@
 
 ### `equals(java.lang.Object arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -61,10 +61,10 @@
 
 ### `setOtherProperties(ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>`)
+
+**Returns:** `void`
 
 ### `getOtherProps()`
 
@@ -72,27 +72,27 @@
 
 ### `getContentInfo(java.lang.String arg0)`
 
-**Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1)`
-
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
+
+### `getContentInfo(java.lang.String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1, boolean arg2)`
-
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
+
+### `getContentInfo(java.lang.String arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 - `arg2` (`boolean`)
+
+**Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
 ### `getTemplateFileName()`
 

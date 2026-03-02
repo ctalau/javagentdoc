@@ -12,8 +12,6 @@
 
 ### `delete(int startOffset, int endOffset)`
 
-**Returns:** `boolean`
-
 The author content contains the entire XML document text and special marker characters.
  Each author node points in the content to the start and end marker characters which are used to  
  delimit it's range.
@@ -31,9 +29,9 @@ The author content contains the entire XML document text and special marker char
 - `startOffset` (`int`): Start offset, 0 based, inclusive.
 - `endOffset` (`int`): End offset, 0 based, inclusive.
 
-### `delete(int startOffset, int endOffset, boolean backspace)`
-
 **Returns:** `boolean`
+
+### `delete(int startOffset, int endOffset, boolean backspace)`
 
 The author content contains the entire XML document text and special marker characters.
  Each author node points in the content to the start and end marker characters which are used to  
@@ -52,27 +50,27 @@ The author content contains the entire XML document text and special marker char
 - `startOffset` (`int`): Start offset, 0 based, inclusive.
 - `endOffset` (`int`): End offset, 0 based, inclusive.
 - `backspace` (`boolean`): `true` if delete operation was triggered 
- by the user pressing the backspace key.
-
-### `deleteNode(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+   by the user pressing the backspace key.
 
 **Returns:** `boolean`
+
+### `deleteNode(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The AuthorNode to delete.
 
-### `replaceRoot(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `replaceRoot(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
 
 The fragment must contain only one element, otherwise the replacement will not be performed.
 
 **Parameters:**
 - `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)): The document fragment containing the new root element.
 
-### `createDocumentFragment(int startOffset, int endOffset)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
+### `createDocumentFragment(int startOffset, int endOffset)`
 
 The offset ranges must be from the current AuthorDocument.
  
@@ -98,9 +96,9 @@ The change tracking markers are automatically accepted in the fragment if change
 - `startOffset` (`int`): The start offset, 0 based, inclusive.
 - `endOffset` (`int`): The end offset, 0 based, inclusive.
 
-### `createDocumentFragment(int startOffset, int endOffset, boolean preserveTrackChange)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
+
+### `createDocumentFragment(int startOffset, int endOffset, boolean preserveTrackChange)`
 
 The offset ranges must be from the current AuthorDocument.
  
@@ -124,12 +122,12 @@ The offset ranges must be from the current AuthorDocument.
 - `startOffset` (`int`): The start offset, 0 based, inclusive.
 - `endOffset` (`int`): The end offset, 0 based, inclusive.
 - `preserveTrackChange` (`boolean`): `true` to preserve track changes exactly as they are,
-  no matter if change tracking is enabled or disabled. `false` to preserve the changes if change tracking is disabled
-  or to automatically accept them if change tracking is enabled.
-
-### `createNewDocumentFragmentInContext(java.lang.String xmlFragment, int contentOffset)`
+    no matter if change tracking is enabled or disabled. `false` to preserve the changes if change tracking is disabled
+    or to automatically accept them if change tracking is enabled.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
+
+### `createNewDocumentFragmentInContext(java.lang.String xmlFragment, int contentOffset)`
 
 The author content contains the entire XML document text and special marker characters.
  Each author node points in the content to the start and end marker characters which are used to  
@@ -147,13 +145,13 @@ The author content contains the entire XML document text and special marker char
 **Parameters:**
 - `xmlFragment` (`java.lang.String`): The XML Fragment.
 - `contentOffset` (`int`): The offset where the XML fragment should be inserted.
- This method doesn't perform any insertion. This parameter is used to
- resolve entities and default attribute values from the DTD in the
- specified XML fragment.
+   This method doesn't perform any insertion. This parameter is used to
+   resolve entities and default attribute values from the DTD in the
+   specified XML fragment.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
 
 ### `createNewDocumentFragmentsInContext(java.lang.String[] xmlFragments, int[] contentOffsets)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](node/AuthorDocumentFragment.md)
 
 This method should be used when multiple Author document fragments must be created.
  In this situation the fragments are created faster than creating each of them by calling 
@@ -178,12 +176,12 @@ This method should be used when multiple Author document fragments must be creat
 **Parameters:**
 - `xmlFragments` (`java.lang.String[]`): The array of XML fragments.
 - `contentOffsets` (`int[]`): The offsets where the XML fragments should be inserted. 
- The xml fragments and context offsets arrays must have the same size. The 
- nth offset corresponds to the nth xml fragment.
+   The xml fragments and context offsets arrays must have the same size. The 
+   nth offset corresponds to the nth xml fragment.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](node/AuthorDocumentFragment.md)
 
 ### `createNewDocumentTextFragment(java.lang.String textFragment)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
 
 The returned 
  fragment will contain **only a text node** and if the text fragment contains 
@@ -193,9 +191,9 @@ The returned
 **Parameters:**
 - `textFragment` (`java.lang.String`): The text fragment.
 
-### `serializeFragmentToXML(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
 
-**Returns:** `java.lang.String`
+### `serializeFragmentToXML(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
 
 The following code example extracts the selection as an XML fragment, 
  processes and then reinserts it:
@@ -230,9 +228,9 @@ The following code example extracts the selection as an XML fragment,
 **Parameters:**
 - `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)): The AuthorDocumentFragment to serialize.
 
-### `setAttribute(java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue value, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setAttribute(java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue value, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 If the element does not have the attribute specified by name, then an attribute with the specified value will be automatically created. 
  
@@ -243,12 +241,12 @@ If the element does not have the attribute specified by name, then an attribute 
 **Parameters:**
 - `attributeName` (`java.lang.String`): Name of the attribute being changed.
 - `value` ([`ro.sync.ecss.extensions.api.node.AttrValue`](node/AttrValue.md)): New AttrValue for the attribute. If `null`, the attribute is 
- removed from the element.
+   removed from the element.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement whose attribute is changing.
 
-### `setMultipleAttributes(int parentElementStartOffset, int[] elementOffsets, java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue> attributes)`
-
 **Returns:** `void`
+
+### `setMultipleAttributes(int parentElementStartOffset, int[] elementOffsets, java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue> attributes)`
 
 Attributes set in this manner will be subject to undo/redo.
 
@@ -256,23 +254,23 @@ Attributes set in this manner will be subject to undo/redo.
 - `parentElementStartOffset` (`int`): The start offset of the parent element.
 - `elementOffsets` (`int[]`): The start offset for each element.
 - `attributes` (`java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>`): The list with attributes. Every attribute name is mapped to 
- an AttrValue object. If the value is `null`, the attribute will
- be removed.
-
-### `setMultipleDistinctAttributes(int parentElementStartOffset, int[] elementOffsets, java.util.List<java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>> attributes)`
+   an AttrValue object. If the value is `null`, the attribute will
+   be removed.
 
 **Returns:** `void`
+
+### `setMultipleDistinctAttributes(int parentElementStartOffset, int[] elementOffsets, java.util.List<java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>> attributes)`
 
 **Parameters:**
 - `parentElementStartOffset` (`int`): The start offset of an ancestor node which contains all other elements.
 - `elementOffsets` (`int[]`): The start offset for each element.
 - `attributes` (`java.util.List<java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>>`): The list with attribute sets. Every attribute name is mapped to 
- an AttrValue object. If the value is `null`, the attribute will
- be removed.
-
-### `removeAttribute(java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+   an AttrValue object. If the value is `null`, the attribute will
+   be removed.
 
 **Returns:** `void`
+
+### `removeAttribute(java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 Attributes removed in this manner (as opposed to calling 
  AuthorElement#setAttribute(String, AttrValue) directly) will 
@@ -282,9 +280,9 @@ Attributes removed in this manner (as opposed to calling
 - `attributeName` (`java.lang.String`): Name of the attribute to remove.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement whose attribute will be removed.
 
-### `setPseudoClassUndoable(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
-
 **Returns:** `void`
+
+### `setPseudoClassUndoable(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 This change *IS* subject to undo/redo.
 
@@ -292,9 +290,9 @@ This change *IS* subject to undo/redo.
 - `pseudoClass` (`java.lang.String`): Name of the pseudo class being set.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement whose attribute is changing.
 
-### `removePseudoClassUndoable(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
-
 **Returns:** `void`
+
+### `removePseudoClassUndoable(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 This change *IS* subject to undo/redo.
 
@@ -302,9 +300,9 @@ This change *IS* subject to undo/redo.
 - `pseudoClass` (`java.lang.String`): Name of the pseudo class being set.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement whose attribute will be removed.
 
-### `getNodeAtOffset(int offset)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
+### `getNodeAtOffset(int offset)`
 
 The given offset must be
  greater or equal to 0 and less than the current document length.
@@ -335,18 +333,18 @@ The given offset must be
 **Parameters:**
 - `offset` (`int`): The offset in the content, zero based.
 
-### `getContentInformationAtOffset(int offset)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.content.OffsetInformation`](content/OffsetInformation.md)
+### `getContentInformationAtOffset(int offset)`
 
 If the offset is on a marker character the returned result will also contain the node which contains the range indicated by the marker.
 
 **Parameters:**
 - `offset` (`int`): The offset in the content, zero based.
 
-### `createDocumentFragment(ro.sync.ecss.extensions.api.node.AuthorNode node, boolean copyContent)`
+**Returns:** [`ro.sync.ecss.extensions.api.content.OffsetInformation`](content/OffsetInformation.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
+### `createDocumentFragment(ro.sync.ecss.extensions.api.node.AuthorNode node, boolean copyContent)`
 
 The node must be from the current AuthorDocument.
  The attributes of the elements will be copied. 
@@ -356,11 +354,11 @@ The node must be from the current AuthorDocument.
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The AuthorNode to be duplicated.
 - `copyContent` (`boolean`): If `true` the content of the node will 
- also be duplicated.
+   also be duplicated.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
 
 ### `getText(int offset, int length)`
-
-**Returns:** `java.lang.String`
 
 The document text content can be obtained by adding all the text nodes
  content.
@@ -396,9 +394,9 @@ The document text content can be obtained by adding all the text nodes
 - `offset` (`int`): The starting offset >= 0.
 - `length` (`int`): The number of characters to retrieve >= 0
 
-### `getTextContentLength()`
+**Returns:** `java.lang.String`
 
-**Returns:** `int`
+### `getTextContentLength()`
 
 This is the number of valid 
  characters in the document text. The length
@@ -426,13 +424,13 @@ This is the number of valid
  2 + 7 + 9 = 18
  `
 
+**Returns:** `int`
+
 ### `getUndoManager()`
 
 **Returns:** `javax.swing.undo.UndoManager`
 
 ### `beginCompoundEdit()`
-
-**Returns:** `void`
 
 This method should be called
  to signal to the editing support that a complex editing operation begins.
@@ -440,16 +438,16 @@ This method should be called
  and `endCompoundEdit()` methods calls are regarded by the UndoManager 
  as a single operation which can be undone/redone in one step.
 
-### `endCompoundEdit()`
-
 **Returns:** `void`
+
+### `endCompoundEdit()`
 
 This method should be called
  to signal to the editing support that a complex editing operation ends.
 
-### `cancelCompoundEdit()`
-
 **Returns:** `void`
+
+### `cancelCompoundEdit()`
 
 This method should be called
  to signal to the editing support that all edits performed so far inside a current compound edit must be undone.
@@ -459,9 +457,9 @@ This method should be called
  Note that the compound edit does not end after a call to this method, so an
  explicit call to #endCompoundEdit() is required.
 
-### `insertText(int offset, java.lang.String text)`
-
 **Returns:** `void`
+
+### `insertText(int offset, java.lang.String text)`
 
 After the operation the caret will be 
  positioned at the end of the inserted text.
@@ -484,9 +482,9 @@ After the operation the caret will be
 - `offset` (`int`): The insert position, 0 based.
 - `text` (`java.lang.String`): The text to be inserted.
 
-### `insertXMLFragment(java.lang.String xmlFragment, int offset)`
-
 **Returns:** `void`
+
+### `insertXMLFragment(java.lang.String xmlFragment, int offset)`
 
 After the operation the caret will be positioned in the first leaf of the fragment.
  
@@ -508,9 +506,9 @@ After the operation the caret will be positioned in the first leaf of the fragme
 - `xmlFragment` (`java.lang.String`): The XML fragment to insert.
 - `offset` (`int`): The insert position, 0 based.
 
-### `insertXMLFragment(java.lang.String xmlFragment, java.lang.String xpathLocation, java.lang.String relativePosition)`
-
 **Returns:** `void`
+
+### `insertXMLFragment(java.lang.String xmlFragment, java.lang.String xpathLocation, java.lang.String relativePosition)`
 
 Note: if the `xpathLocation` is not specified then the XML fragment 
  will be inserted at caret position and the `relativePosition` will be ignored. 
@@ -522,12 +520,12 @@ Note: if the `xpathLocation` is not specified then the XML fragment
 - `xmlFragment` (`java.lang.String`): The XML fragment.
 - `xpathLocation` (`java.lang.String`): The XPath location.
 - `relativePosition` (`java.lang.String`): The position relative to the node identified by the XPath location. 
- Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
- AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
-
-### `insertXMLFragment(java.lang.String xmlFragment, ro.sync.ecss.extensions.api.node.AuthorNode relativeTo, java.lang.String relativePosition)`
+   Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
+   AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
 
 **Returns:** `void`
+
+### `insertXMLFragment(java.lang.String xmlFragment, ro.sync.ecss.extensions.api.node.AuthorNode relativeTo, java.lang.String relativePosition)`
 
 After the operation the caret will be positioned at the end of the inserted XML fragment.
 
@@ -535,12 +533,12 @@ After the operation the caret will be positioned at the end of the inserted XML 
 - `xmlFragment` (`java.lang.String`): The XML fragment.
 - `relativeTo` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node to insert fragment relative to.
 - `relativePosition` (`java.lang.String`): The position relative to the node. 
- Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
- AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
+   Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
+   AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
+
+**Returns:** `void`
 
 ### `insertXMLFragmentSchemaAware(java.lang.String xmlFragment, int offset)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
 
 A normal insertion is executed when no schema is specified or schema aware feature is disable by the user
  (see Preferences / Editor / Pages / Author / Schema aware).
@@ -671,9 +669,9 @@ If the developer specifies an AuthorSchemaAwareEditingHandler then this handler 
 - `xmlFragment` (`java.lang.String`): The XML fragment to insert.
 - `offset` (`int`): The insert position, 0 based.
 
-### `insertXMLFragmentSchemaAware(java.lang.String xmlFragment, int offset, boolean replaceSelection)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
+
+### `insertXMLFragmentSchemaAware(java.lang.String xmlFragment, int offset, boolean replaceSelection)`
 
 A normal insertion is executed when no schema is specified or schema aware feature is disable by the user
  (see Preferences / Editor / Pages / Author / Schema aware).
@@ -804,11 +802,11 @@ If the developer specifies an AuthorSchemaAwareEditingHandler then this handler 
 - `xmlFragment` (`java.lang.String`): The XML fragment to insert.
 - `offset` (`int`): The insert position, 0 based.
 - `replaceSelection` (`boolean`): `true` to replace the selected Author content with the fragment, 
- `false` to leave the selected content and paste at caret position.
-
-### `insertXMLFragmentSchemaAware(java.lang.String xmlFragment, int offset, int actionID, boolean replaceSelection)`
+   `false` to leave the selected content and paste at caret position.
 
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
+
+### `insertXMLFragmentSchemaAware(java.lang.String xmlFragment, int offset, int actionID, boolean replaceSelection)`
 
 The insertion behavior depends on the action type (specified by the 
  actionID parameter) that triggered it. For more details see the 
@@ -818,13 +816,13 @@ The insertion behavior depends on the action type (specified by the
 - `xmlFragment` (`java.lang.String`): The XML fragment to insert.
 - `offset` (`int`): The insert position, 0 based.
 - `actionID` (`int`): The action that caused the insertion. One of the constants 
- in AuthorSchemaAwareEditingHandler.
+   in AuthorSchemaAwareEditingHandler.
 - `replaceSelection` (`boolean`): `true` to replace the selected Author content with the fragment, 
- `false` to leave the selected content and paste at caret position.
+   `false` to leave the selected content and paste at caret position.
+
+**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
 
 ### `insertFragment(int insertOffset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment frag)`
-
-**Returns:** `void`
 
 The author content contains the entire XML document text and special marker characters.
  Each author node points in the content to the start and end marker characters which are used to  
@@ -843,9 +841,9 @@ The author content contains the entire XML document text and special marker char
 - `insertOffset` (`int`): The offset where the fragment will be inserted, 0 based.
 - `frag` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)): The AuthorDocumentFragment to be inserted. Never `null`.
 
-### `processContentRange(int startOffset, int endOffset, ro.sync.ecss.extensions.api.content.RangeProcessor rangeProcessor)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `processContentRange(int startOffset, int endOffset, ro.sync.ecss.extensions.api.content.RangeProcessor rangeProcessor)`
 
 You will receive a call back which will give you the AuthorDocumentFragment to process.
  When finished, the range will be replaced with the processed fragment. 
@@ -868,11 +866,11 @@ The image represents part of the document content and red markers represent spec
 - `startOffset` (`int`): Start offset of the processed range (inclusive).
 - `endOffset` (`int`): End offset of the processed range (inclusive).
 - `rangeProcessor` ([`ro.sync.ecss.extensions.api.content.RangeProcessor`](content/RangeProcessor.md)): The range processor which gets notified to process the
-                        AuthorDocumentFragment.
+                          AuthorDocumentFragment.
+
+**Returns:** `boolean`
 
 ### `insertFragmentSchemaAware(int insertOffset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment frag)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
 
 A normal insertion is executed when no schema is specified or schema aware feature is disable by the user
  (see Preferences / Editor / Pages / Author / Schema aware).
@@ -897,9 +895,9 @@ For more details about schema aware solutions see comments from #insertXMLFragme
 - `insertOffset` (`int`): The offset where the fragment will be inserted, 0 based.
 - `frag` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)): The AuthorDocumentFragment to be inserted.
 
-### `surroundInFragment(java.lang.String xmlFragment, int startOffset, int endOffset)`
+**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
 
-**Returns:** `void`
+### `surroundInFragment(java.lang.String xmlFragment, int startOffset, int endOffset)`
 
 If `endOffset < startOffset` the `xmlFragment` 
  will be inserted at `startOffset`.
@@ -920,13 +918,13 @@ If `endOffset < startOffset` the `xmlFragment`
 
 **Parameters:**
 - `xmlFragment` (`java.lang.String`): The XML fragment which will surround the given interval.
- The first leaf node of the XML fragment will be the parent of the surrounded content.
+   The first leaf node of the XML fragment will be the parent of the surrounded content.
 - `startOffset` (`int`): The start offset of the content to be surrounded, 0 based and inclusive.
 - `endOffset` (`int`): The end offset of the content to be surrounded, 0 based and inclusive.
 
-### `surroundInFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment xmlFragment, int startOffset, int endOffset)`
-
 **Returns:** `void`
+
+### `surroundInFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment xmlFragment, int startOffset, int endOffset)`
 
 If `endOffset < startOffset` the `xmlFragment` 
  will be inserted at `startOffset`.
@@ -947,13 +945,13 @@ If `endOffset < startOffset` the `xmlFragment`
 
 **Parameters:**
 - `xmlFragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)): The XML fragment which will surround the given interval.
- The first leaf node of the XML fragment will be the parent of the surrounded content.
+   The first leaf node of the XML fragment will be the parent of the surrounded content.
 - `startOffset` (`int`): The start offset of the content to be surrounded, 0 based and inclusive.
 - `endOffset` (`int`): The end offset of the content to be surrounded, 0 based and inclusive.
 
-### `surroundInText(java.lang.String header, java.lang.String footer, int startOffset, int endOffset)`
-
 **Returns:** `void`
+
+### `surroundInText(java.lang.String header, java.lang.String footer, int startOffset, int endOffset)`
 
 The method inserts the `header` at `startOffset` and 
  the `footer` at `endOffset`.
@@ -978,9 +976,9 @@ The method inserts the `header` at `startOffset` and
 - `startOffset` (`int`): The start offset of the text to be surrounded, 0 based.
 - `endOffset` (`int`): The end offset of the text to be surrounded, 0 based.
 
-### `inInlineContext(int offset)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `inInlineContext(int offset)`
 
 The CSS **display** property is taken into account when determining this state.
  
@@ -992,16 +990,16 @@ The CSS **display** property is taken into account when determining this state.
 **Parameters:**
 - `offset` (`int`): The offset in the document, zero based.
 
-### `addAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `addAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorListener`](./AuthorListener.md)): The AuthorListener to be added.
 
-### `addAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
-
 **Returns:** `void`
+
+### `addAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
 
 In the persistent highlights are included:
  
@@ -1013,32 +1011,32 @@ In the persistent highlights are included:
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener`](highlights/AuthorPersistentHighlightsListener.md)): The listener
 
-### `removeAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
-
 **Returns:** `void`
+
+### `removeAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener`](highlights/AuthorPersistentHighlightsListener.md)): The listener to remove.
 
-### `addPersistentHighlightsFilter(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsFilter persistentHighlightsFilter)`
-
 **Returns:** `void`
+
+### `addPersistentHighlightsFilter(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsFilter persistentHighlightsFilter)`
 
 A filter capable of filtering the highlights by author is present by default.
 
 **Parameters:**
 - `persistentHighlightsFilter` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsFilter`](highlights/AuthorPersistentHighlightsFilter.md)): The filter to be added.
 
-### `removeAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
-
 **Returns:** `void`
+
+### `removeAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorListener`](./AuthorListener.md)): The AuthorListener to be removed.
 
-### `evaluateXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers)`
+**Returns:** `void`
 
-**Returns:** `java.lang.Object[]`
+### `evaluateXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers)`
 
 This function returns the result of the given XPath expression as an array of Object.
  Author DOM text nodes, DOM CDATA sections and DOM comment wrappers can be 
@@ -1075,13 +1073,13 @@ You can also use the XPath extension functions *oxy:current-selected-element()* 
 - `ignoreCData` (`boolean`): If `true` DOM CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` DOM comments will not be returned.
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
-
-### `evaluateXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers, ro.sync.ecss.extensions.api.XPathVersion xpathVersion)`
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
 
 **Returns:** `java.lang.Object[]`
+
+### `evaluateXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers, ro.sync.ecss.extensions.api.XPathVersion xpathVersion)`
 
 This function returns the result of the given XPath expression as an array of Object.
  Author DOM text nodes, DOM CDATA sections and DOM comment wrappers can be 
@@ -1114,19 +1112,19 @@ You can also use the XPath extension functions *oxy:current-selected-element()* 
 **Parameters:**
 - `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node in the context of which the relative XPath Expressions will computed. 
- If `null` the context node will be the node at the current caret position.
+   If `null` the context node will be the node at the current caret position.
 - `ignoreTexts` (`boolean`): If `true` DOM text nodes will not be returned.
 - `ignoreCData` (`boolean`): If `true` DOM CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` DOM comments will not be returned.
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
 - `xpathVersion` ([`ro.sync.ecss.extensions.api.XPathVersion`](./XPathVersion.md)): Used version of XPath.
 
-### `evaluateXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
-
 **Returns:** `java.lang.Object[]`
+
+### `evaluateXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
 
 This function returns the result of the given XPath expression as an array of Object.
  Author DOM text nodes, DOM CDATA sections and DOM comment wrappers can be 
@@ -1166,9 +1164,9 @@ You can also use the XPath extension functions *oxy:current-selected-element()* 
 - `ignoreCData` (`boolean`): If `true` DOM CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` DOM comments will not be returned.
 
-### `findNodesByXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers)`
+**Returns:** `java.lang.Object[]`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
+### `findNodesByXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers)`
 
 The result of this function is an array of AuthorNode selected 
  by the given XPath expression.
@@ -1198,13 +1196,13 @@ The result of this function is an array of AuthorNode selected
 - `ignoreCData` (`boolean`): If `true` Author CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` Author comments will not be returned.
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
-
-### `findNodesByXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
+
+### `findNodesByXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
 
 The result of this function is an array of AuthorNode selected 
  by the given XPath expression.
@@ -1234,24 +1232,24 @@ The result of this function is an array of AuthorNode selected
 - `ignoreCData` (`boolean`): If `true` Author CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` Author comments will not be returned.
 
-### `getXPathLocationOffset(java.lang.String xpathLocation, java.lang.String relativePosition, boolean processChangeMarkers)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
 
-**Returns:** `int`
+### `getXPathLocationOffset(java.lang.String xpathLocation, java.lang.String relativePosition, boolean processChangeMarkers)`
 
 **Parameters:**
 - `xpathLocation` (`java.lang.String`): The XPath defining a node in document.
 - `relativePosition` (`java.lang.String`): The relative position to the node. 
- One of the following: AuthorConstants#POSITION_BEFORE, 
- AuthorConstants#POSITION_INSIDE_FIRST, AuthorConstants#POSITION_INSIDE_LAST or
- AuthorConstants#POSITION_AFTER
+   One of the following: AuthorConstants#POSITION_BEFORE, 
+   AuthorConstants#POSITION_INSIDE_FIRST, AuthorConstants#POSITION_INSIDE_LAST or
+   AuthorConstants#POSITION_AFTER
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
-
-### `getXPathLocationOffset(java.lang.String xpathLocation, java.lang.String relativePosition)`
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
 
 **Returns:** `int`
+
+### `getXPathLocationOffset(java.lang.String xpathLocation, java.lang.String relativePosition)`
 
 If change tracking (insert/remove/comment) markers exist in the document they will be ignored 
  and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
@@ -1259,13 +1257,13 @@ If change tracking (insert/remove/comment) markers exist in the document they wi
 **Parameters:**
 - `xpathLocation` (`java.lang.String`): The XPath defining a node in document.
 - `relativePosition` (`java.lang.String`): The relative position to the node. 
- One of the following: AuthorConstants#POSITION_BEFORE, 
- AuthorConstants#POSITION_INSIDE_FIRST, AuthorConstants#POSITION_INSIDE_LAST or
- AuthorConstants#POSITION_AFTER
+   One of the following: AuthorConstants#POSITION_BEFORE, 
+   AuthorConstants#POSITION_INSIDE_FIRST, AuthorConstants#POSITION_INSIDE_LAST or
+   AuthorConstants#POSITION_AFTER
+
+**Returns:** `int`
 
 ### `insertMultipleElements(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String[] elementNames, int[] offsets, java.lang.String namespace)`
-
-**Returns:** `void`
 
 Note: *The offsets and fragments must be in document order. The offset 
  must be given in the original document, before any insertion occurs.*
@@ -1310,14 +1308,14 @@ Note: *The offsets and fragments must be in document order. The offset
 
 **Parameters:**
 - `parentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The parent element that contains all the new inserted 
- elements.
+   elements.
 - `elementNames` (`java.lang.String[]`): The element names to be inserted.
 - `offsets` (`int[]`): The absolute offsets where the elements will be inserted.
 - `namespace` (`java.lang.String`): The namespace of the new inserted elements.
 
-### `insertMultipleFragments(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, int[] offsets)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `insertMultipleFragments(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, int[] offsets)`
 
 Note: *The offsets and fragments must be in document order. The offset 
  must be given in the original document, before any insertion occurs.*
@@ -1362,14 +1360,14 @@ Note: *The offsets and fragments must be in document order. The offset
 
 **Parameters:**
 - `parentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The parent element that contains all the new inserted 
- elements.
+   elements.
 - `fragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](node/AuthorDocumentFragment.md)): The fragments to be inserted.
 - `offsets` (`int[]`): The absolute offsets where the fragments will be inserted. 
- The offset must be given in the original document.
+   The offset must be given in the original document.
+
+**Returns:** `boolean`
 
 ### `multipleDelete(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
-
-**Returns:** `void`
 
 Note: *The offsets must be in document order and the intervals must not 
  intersect with each other.*
@@ -1391,13 +1389,13 @@ Note: *The offsets must be in document order and the intervals must not
 **Parameters:**
 - `parentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element that contains all the deleted intervals.
 - `startOffsets` (`int[]`): The start offset for each interval.
- Must be in document order.
+   Must be in document order.
 - `endOffsets` (`int[]`): The end offset for each interval.
- Must be in document order. 0 based and inclusive.
-
-### `setDoctype(ro.sync.ecss.extensions.api.AuthorDocumentType docType)`
+   Must be in document order. 0 based and inclusive.
 
 **Returns:** `void`
+
+### `setDoctype(ro.sync.ecss.extensions.api.AuthorDocumentType docType)`
 
 This is a good method to add new entities (regular or unparsed) to the internal document type of the document.
  
@@ -1407,13 +1405,13 @@ This is a good method to add new entities (regular or unparsed) to the internal 
 **Parameters:**
 - `docType` ([`ro.sync.ecss.extensions.api.AuthorDocumentType`](./AuthorDocumentType.md)): The document type information.
 
+**Returns:** `void`
+
 ### `getDoctype()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentType`](./AuthorDocumentType.md)
 
 ### `getCommonParentNode(ro.sync.ecss.extensions.api.node.AuthorDocument doc, int startOffset, int endOffset)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
 The author content contains the entire XML document text and special marker characters.
  Each author node points in the content to the start and end marker characters which are used to  
@@ -1433,9 +1431,9 @@ The author content contains the entire XML document text and special marker char
 - `startOffset` (`int`): The start offset.
 - `endOffset` (`int`): The end offset.
 
-### `getNodesToSelect(int selectionStart, int selectionEnd)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
+### `getNodesToSelect(int selectionStart, int selectionEnd)`
 
 Balanced selection and select all nodes between first and last selected nodes.
 
@@ -1443,19 +1441,21 @@ Balanced selection and select all nodes between first and last selected nodes.
 - `selectionStart` (`int`): The selection start.
 - `selectionEnd` (`int`): The selection end exclusive.
 
-### `getCommonAncestor(ro.sync.ecss.extensions.api.node.AuthorNode[] nodes)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
+### `getCommonAncestor(ro.sync.ecss.extensions.api.node.AuthorNode[] nodes)`
 
 **Parameters:**
 - `nodes` ([`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)): The array which contains the nodes.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
 ### `getStrictCommonAncestor(ro.sync.ecss.extensions.api.node.AuthorNode[] nodes)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
-
 **Parameters:**
 - `nodes` ([`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)): The array which contains the nodes.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
 ### `getAuthorDocumentNode()`
 
@@ -1463,18 +1463,16 @@ Balanced selection and select all nodes between first and last selected nodes.
 
 ### `setDocumentFilter(ro.sync.ecss.extensions.api.AuthorDocumentFilter authorDocumentFilter)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorDocumentFilter` ([`ro.sync.ecss.extensions.api.AuthorDocumentFilter`](./AuthorDocumentFilter.md)): The AuthorDocumentFilter to be used.
+
+**Returns:** `void`
 
 ### `getDocumentFilter()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentFilter`](./AuthorDocumentFilter.md)
 
 ### `getChars(int where, int len, javax.swing.text.Segment chars)`
-
-**Returns:** `void`
 
 Each AuthorNode points to specific start and end character markers in the content.
  The start and end offsets pointed to by the AuthorNode can be retrieved using the
@@ -1493,17 +1491,17 @@ Each AuthorNode points to specific start and end character markers in the conten
 - `len` (`int`): The number of characters to be retrieved >= 0
 - `chars` (`javax.swing.text.Segment`): The Segment object to return the characters int.o
 
-### `getContentCharSequence()`
+**Returns:** `void`
 
-**Returns:** `java.lang.CharSequence`
+### `getContentCharSequence()`
 
 Each AuthorNode points to specific start and end character markers in the content.
  The start and end offsets pointed to by the AuthorNode can be retrieved using the
  AuthorNode.getStartOffset() and AuthorNode.getEndOffset()
 
-### `getFilteredContent(int start, int end, ro.sync.ecss.extensions.api.filter.AuthorNodesFilter nodesFilter)`
+**Returns:** `java.lang.CharSequence`
 
-**Returns:** [`ro.sync.ecss.extensions.api.filter.AuthorFilteredContent`](filter/AuthorFilteredContent.md)
+### `getFilteredContent(int start, int end, ro.sync.ecss.extensions.api.filter.AuthorNodesFilter nodesFilter)`
 
 The content represents the entire text content of the Author page + additional markers/sentinels 
  at offsets which are pointed to by the AuthorNodes.
@@ -1523,14 +1521,14 @@ The content represents the entire text content of the Author page + additional m
 - `end` (`int`): The end position >= 0, inclusive
 - `nodesFilter` ([`ro.sync.ecss.extensions.api.filter.AuthorNodesFilter`](filter/AuthorNodesFilter.md)): Provides information about the Author nodes that should be filtered.
 
+**Returns:** [`ro.sync.ecss.extensions.api.filter.AuthorFilteredContent`](filter/AuthorFilteredContent.md)
+
 ### `getAuthorSchemaManager()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorSchemaManager`](./AuthorSchemaManager.md)
 
 ### `insertXMLFragmentSchemaAware(java.lang.String xmlFragment, java.lang.String xpathLocation, java.lang.String relativePosition)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
-
 Note: if the `xpathLocation` is not specified then the XML fragment 
  will be inserted at caret position and the `relativePosition` will be ignored. 
  
@@ -1542,13 +1540,13 @@ For more details about schema aware solutions see comments from #insertXMLFragme
 - `xmlFragment` (`java.lang.String`): The XML fragment.
 - `xpathLocation` (`java.lang.String`): The XPath location.
 - `relativePosition` (`java.lang.String`): The position relative to the node identified by the XPath location. 
- Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
- AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
+   Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
+   AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
+
+**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
 
 ### `insertXMLFragmentSchemaAware(java.lang.String xmlFragment, java.lang.String xpathLocation, java.lang.String relativePosition, boolean insertEvenIfInvalid)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
-
 Note: if the `xpathLocation` is not specified then the XML fragment 
  will be inserted at caret position and the `relativePosition` will be ignored. 
  
@@ -1560,22 +1558,22 @@ For more details about schema aware solutions see comments from #insertXMLFragme
 - `xmlFragment` (`java.lang.String`): The XML fragment.
 - `xpathLocation` (`java.lang.String`): The XPath location.
 - `relativePosition` (`java.lang.String`): The position relative to the node identified by the XPath location. 
- Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
- AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
+   Can be one of the constants: AuthorConstants#POSITION_BEFORE, AuthorConstants#POSITION_AFTER, 
+   AuthorConstants#POSITION_INSIDE_FIRST or AuthorConstants#POSITION_INSIDE_LAST.
 - `insertEvenIfInvalid` (`boolean`): `true` to insert the fragment even if the document becomes invalid. This is used as a last attempt
- after all the schema aware insertion strategies have failed.
+   after all the schema aware insertion strategies have failed.
+
+**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](schemaaware/SchemaAwareHandlerResult.md)
 
 ### `insertElement(int caretOffset, ro.sync.ecss.extensions.api.node.AuthorNode element)`
-
-**Returns:** `boolean`
 
 **Parameters:**
 - `caretOffset` (`int`): The offset in the document.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The element to insert.
 
-### `createElement(java.lang.String qName)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
+### `createElement(java.lang.String qName)`
 
 Please note that this method does not insert the default attributes from the 
  schema so it is recommended to use #createNewDocumentFragmentInContext(String, int)
@@ -1584,9 +1582,9 @@ Please note that this method does not insert the default attributes from the
 **Parameters:**
 - `qName` (`java.lang.String`): The qualified name of the element.
 
-### `isEditable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `isEditable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 A node is not editable for one of the following cases:
  
@@ -1598,25 +1596,25 @@ A node is not editable for one of the following cases:
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node to test if is editable.
 
-### `renameElement(ro.sync.ecss.extensions.api.node.AuthorElement contextNode, java.lang.String newName)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `renameElement(ro.sync.ecss.extensions.api.node.AuthorElement contextNode, java.lang.String newName)`
 
 **Parameters:**
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element to rename.
 - `newName` (`java.lang.String`): The new qualified name to set to it.
 
-### `getTextContentIterator(int startOffset, int endOffset)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.content.TextContentIterator`](content/TextContentIterator.md)
+### `getTextContentIterator(int startOffset, int endOffset)`
 
 **Parameters:**
 - `startOffset` (`int`): Start offset, 0 based, inclusive.
 - `endOffset` (`int`): End offset, 0 based, inclusive.
 
-### `createPositionInContent(int offset)`
+**Returns:** [`ro.sync.ecss.extensions.api.content.TextContentIterator`](content/TextContentIterator.md)
 
-**Returns:** `javax.swing.text.Position`
+### `createPositionInContent(int offset)`
 
 The position is updated automatically when modifications occur before it. 
  It behaves exactly like a javax.swing.text.Position added to a swing Document.
@@ -1624,25 +1622,25 @@ The position is updated automatically when modifications occur before it.
 **Parameters:**
 - `offset` (`int`): The offset where to create the position
 
-### `addClipboardFragmentProcessor(ro.sync.ecss.extensions.api.content.ClipboardFragmentProcessor clipboardFragmentProcessor)`
+**Returns:** `javax.swing.text.Position`
 
-**Returns:** `void`
+### `addClipboardFragmentProcessor(ro.sync.ecss.extensions.api.content.ClipboardFragmentProcessor clipboardFragmentProcessor)`
 
 The processor specified in the ExtensionsBundle will have maximum priority.
 
 **Parameters:**
 - `clipboardFragmentProcessor` ([`ro.sync.ecss.extensions.api.content.ClipboardFragmentProcessor`](content/ClipboardFragmentProcessor.md)): a processor which can analyze and modify AuthorDocumentFragment objects before they are inserted in the Author.
 
-### `removeClipboardFragmentProcessor(ro.sync.ecss.extensions.api.content.ClipboardFragmentProcessor clipboardFragmentProcessor)`
-
 **Returns:** `void`
+
+### `removeClipboardFragmentProcessor(ro.sync.ecss.extensions.api.content.ClipboardFragmentProcessor clipboardFragmentProcessor)`
 
 **Parameters:**
 - `clipboardFragmentProcessor` ([`ro.sync.ecss.extensions.api.content.ClipboardFragmentProcessor`](content/ClipboardFragmentProcessor.md)): a processor which can analyze and modify AuthorDocumentFragment objects before they are inserted in the Author.
 
-### `addUniqueAttributesProcessor(ro.sync.ecss.extensions.api.UniqueAttributesProcessor uniqueAttributesProcessor)`
-
 **Returns:** `void`
+
+### `addUniqueAttributesProcessor(ro.sync.ecss.extensions.api.UniqueAttributesProcessor uniqueAttributesProcessor)`
 
 The processor can also specify which attributes can be copied on split.
  
@@ -1650,7 +1648,9 @@ The processor can also specify which attributes can be copied on split.
 
 **Parameters:**
 - `uniqueAttributesProcessor` ([`ro.sync.ecss.extensions.api.UniqueAttributesProcessor`](./UniqueAttributesProcessor.md)): a processor which is asked to automatically generate unique IDs after content has been inserted in the Author.
- The processor can also specify which attributes can be copied on split.
+   The processor can also specify which attributes can be copied on split.
+
+**Returns:** `void`
 
 ### `getUniqueAttributesProcessor()`
 
@@ -1658,19 +1658,17 @@ The processor can also specify which attributes can be copied on split.
 
 ### `removeUniqueAttributesProcessor(ro.sync.ecss.extensions.api.UniqueAttributesProcessor uniqueAttributesProcessor)`
 
-**Returns:** `void`
-
 The processor can also specify which attributes can be copied on split.
  
  The UniqueAttributesRecognizer specified in the ExtensionsBundle will have maximum priority.
 
 **Parameters:**
 - `uniqueAttributesProcessor` ([`ro.sync.ecss.extensions.api.UniqueAttributesProcessor`](./UniqueAttributesProcessor.md)): a processor which is asked to automatically generate unique IDs after content has been inserted in the Author.
- The processor can also specify which attributes can be copied on split.
+   The processor can also specify which attributes can be copied on split.
+
+**Returns:** `void`
 
 ### `findNodesByXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
 
 The result of this function is an array of AuthorNode selected 
  by the given XPath expression.
@@ -1700,18 +1698,18 @@ The result of this function is an array of AuthorNode selected
 **Parameters:**
 - `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node in the context of which the relative XPath Expressions will computed. 
- The context node should be an AuthorElement. If `null`, the context node will be the element at the current caret position.
+   The context node should be an AuthorElement. If `null`, the context node will be the element at the current caret position.
 - `ignoreTexts` (`boolean`): If `true` Author text nodes will not be returned.
 - `ignoreCData` (`boolean`): If `true` Author CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` Author comments will not be returned.
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
-
-### `findNodesByXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers, ro.sync.ecss.extensions.api.XPathVersion xpathVersion)`
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
+
+### `findNodesByXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers, ro.sync.ecss.extensions.api.XPathVersion xpathVersion)`
 
 The result of this function is an array of AuthorNode selected 
  by the given XPath expression.
@@ -1738,19 +1736,19 @@ The result of this function is an array of AuthorNode selected
 **Parameters:**
 - `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node in the context of which the relative XPath Expressions will computed. 
- The context node should be an AuthorElement. If `null`, the context node will be the element at the current caret position.
+   The context node should be an AuthorElement. If `null`, the context node will be the element at the current caret position.
 - `ignoreTexts` (`boolean`): If `true` Author text nodes will not be returned.
 - `ignoreCData` (`boolean`): If `true` Author CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` Author comments will not be returned.
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
 - `xpathVersion` ([`ro.sync.ecss.extensions.api.XPathVersion`](./XPathVersion.md)): Used version of XPath.
 
-### `findNodesByXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers, ro.sync.ecss.extensions.api.XPathVersion xpathVersion, boolean transparentReferences)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
+
+### `findNodesByXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers, ro.sync.ecss.extensions.api.XPathVersion xpathVersion, boolean transparentReferences)`
 
 The result of this function is an array of AuthorNode selected 
  by the given XPath expression.
@@ -1777,21 +1775,21 @@ The result of this function is an array of AuthorNode selected
 **Parameters:**
 - `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the current caret position.
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node in the context of which the relative XPath Expressions will computed.
- The context node should be an AuthorElement. If `null`, the context node will be the element at the current caret position.
+   The context node should be an AuthorElement. If `null`, the context node will be the element at the current caret position.
 - `ignoreTexts` (`boolean`): If `true` Author text nodes will not be returned.
 - `ignoreCData` (`boolean`): If `true` Author CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` Author comments will not be returned.
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
 - `xpathVersion` ([`ro.sync.ecss.extensions.api.XPathVersion`](./XPathVersion.md)): Used version of XPath.
 - `transparentReferences` (`boolean`): If `true` the references (like XInclude, or entities) will be transparent for the Xpath execution.
- The Xpath will see the referenced nodes as though they belong to the document.
+   The Xpath will see the referenced nodes as though they belong to the document.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
 
 ### `evaluateXPath(java.lang.String xpathExpression, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments, boolean processChangeMarkers)`
-
-**Returns:** `java.lang.Object[]`
 
 This function returns the result of the given XPath expression as an array of Object.
  Author DOM text nodes, DOM CDATA sections and DOM comment wrappers can be 
@@ -1827,18 +1825,18 @@ You can also use the XPath extension functions *oxy:current-selected-element()* 
 **Parameters:**
 - `xpathExpression` (`java.lang.String`): The XPath expression. If the XPath expression is relative, it will be computed in the context of the context node.
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node in the context of which the relative XPath Expressions will computed. 
- If `null` the context node will be the node at the current caret position.
+   If `null` the context node will be the node at the current caret position.
 - `ignoreTexts` (`boolean`): If `true` DOM text nodes will not be returned.
 - `ignoreCData` (`boolean`): If `true` DOM CDATA sections will not be returned.
 - `ignoreComments` (`boolean`): If `true` DOM comments will not be returned.
 - `processChangeMarkers` (`boolean`): If `false` the change markers (inserts/deletes/comments) will be ignored 
- and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
- If `true` the XPath will be applied over the document as if the change markers are applied.
- (All changes processed to processing instructions like when the XML document gets saved on disk).
+   and the XPath will return results as if the insert changes are accepted, the delete changes are rejected and the comment changes are ignored.
+   If `true` the XPath will be applied over the document as if the change markers are applied.
+   (All changes processed to processing instructions like when the XML document gets saved on disk).
+
+**Returns:** `java.lang.Object[]`
 
 ### `unwrapDocumentFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragmentToUnwrap)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
 
 If the given fragment has a root 
  element, this method returns a fragment containing the content of the root 
@@ -1861,17 +1859,17 @@ If the given fragment has a root
 **Parameters:**
 - `fragmentToUnwrap` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)): The Author document fragment to be unwrapped.
 
-### `getUnparsedEntityUri(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String entityName)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
 
-**Returns:** `java.lang.String`
+### `getUnparsedEntityUri(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String entityName)`
 
 **Parameters:**
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): Context node.
 - `entityName` (`java.lang.String`): Unparsed entity name.
 
-### `refreshNodeReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `refreshNodeReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 If a node has expanded references on it created using the "ro.sync.ecss.extensions.api.AuthorReferenceResolver" API this method
  will call again the API to provide a fresh reference content for the node.
@@ -1879,9 +1877,9 @@ If a node has expanded references on it created using the "ro.sync.ecss.extensio
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node on which to refresh the references.
 
-### `setRenderingInfoChangedListener(ro.sync.ecss.component.RenderingInfoChangedListener listener)`
-
 **Returns:** `void`
+
+### `setRenderingInfoChangedListener(ro.sync.ecss.component.RenderingInfoChangedListener listener)`
 
 The rendering info is represented by the node's styles computed from
  the associated CSS stylesheet and its content.
@@ -1889,9 +1887,9 @@ The rendering info is represented by the node's styles computed from
 **Parameters:**
 - `listener` ([`ro.sync.ecss.component.RenderingInfoChangedListener`](../../component/RenderingInfoChangedListener.md)): The listener.
 
-### `getXPathExpression(int offset)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getXPathExpression(int offset)`
 
 The offset must be a valid document offset.
  
@@ -1906,9 +1904,9 @@ The offset must be a valid document offset.
 **Parameters:**
 - `offset` (`int`): The offset of the node to get the XPath expression for.
 
-### `getXPathExpression(int offset, boolean processChanges)`
-
 **Returns:** `java.lang.String`
+
+### `getXPathExpression(int offset, boolean processChanges)`
 
 The offset must be a valid document offset.
  
@@ -1921,9 +1919,9 @@ The offset must be a valid document offset.
 - `offset` (`int`): The offset of the node to get the XPath expression for.
 - `processChanges` (`boolean`): if `true` nodes which have been marked as deletion changes are ignored when building the expession.
 
-### `getXPathExpressionBuilder(int offset)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorXPathExpressionBuilder`](./AuthorXPathExpressionBuilder.md)
+### `getXPathExpressionBuilder(int offset)`
 
 The offset must be a valid document offset.
  
@@ -1935,9 +1933,9 @@ The offset must be a valid document offset.
 **Parameters:**
 - `offset` (`int`): The offset of the node to get the XPath expression for.
 
-### `disableLayoutUpdate()`
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorXPathExpressionBuilder`](./AuthorXPathExpressionBuilder.md)
 
-**Returns:** `void`
+### `disableLayoutUpdate()`
 
 On every model change event the view model is updated accordingly. This call
  will disable this support. 
@@ -1954,9 +1952,9 @@ On every model change event the view model is updated accordingly. This call
  **Important** #enableLayoutUpdate(AuthorNode) should allways be 
  called at the end.
 
-### `enableLayoutUpdate(ro.sync.ecss.extensions.api.node.AuthorNode ancestorOfChanges)`
-
 **Returns:** `void`
+
+### `enableLayoutUpdate(ro.sync.ecss.extensions.api.node.AuthorNode ancestorOfChanges)`
 
 Enables the layout update on model changes that was previously disabled 
  using AuthorDocumentController#disableLayoutUpdate() and fires
@@ -1964,19 +1962,19 @@ Enables the layout update on model changes that was previously disabled
 
 **Parameters:**
 - `ancestorOfChanges` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node that contains all the structural changes.
- If `null` the root element will be used instead.
+   If `null` the root element will be used instead.
+
+**Returns:** `void`
 
 ### `split(ro.sync.ecss.extensions.api.node.AuthorNode toSplit, int splitOffset)`
-
-**Returns:** `boolean`
 
 **Parameters:**
 - `toSplit` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node to split
 - `splitOffset` (`int`): The split offset
 
-### `getFilteredText(int offset, int length)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `getFilteredText(int offset, int length)`
 
 The content marked as deleted (using change tracking) will be filtered out.
  Also the special sentinel characters are removed.
@@ -1985,22 +1983,24 @@ The content marked as deleted (using change tracking) will be filtered out.
 - `offset` (`int`): The starting offset >= 0.
 - `length` (`int`): The number of characters to retrieve >= 0
 
-### `markSelection(java.util.List<int[]> newSelection, int newCaretOffset, ro.sync.ecss.extensions.api.SelectionInterpretationMode newSelectionType, java.util.List<int[]> oldSelection, int oldCaretOffset, ro.sync.ecss.extensions.api.SelectionInterpretationMode oldSelectionType)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `markSelection(java.util.List<int[]> newSelection, int newCaretOffset, ro.sync.ecss.extensions.api.SelectionInterpretationMode newSelectionType, java.util.List<int[]> oldSelection, int oldCaretOffset, ro.sync.ecss.extensions.api.SelectionInterpretationMode oldSelectionType)`
 
 It also keeps 
  and restores the selection when undo and redo actions are performed.
 
 **Parameters:**
 - `newSelection` (`java.util.List<int[]>`): New selection intervals. An interval is an array with start 
- and end offsets or `null` if not interested. Each ContentInterval 
- contains the **inclusive** start selection offset and the **exclusive** end selection offset.
+   and end offsets or `null` if not interested. Each ContentInterval 
+   contains the **inclusive** start selection offset and the **exclusive** end selection offset.
 - `newCaretOffset` (`int`): New caret offset.
 - `newSelectionType` ([`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)): New selection type.
 - `oldSelection` (`java.util.List<int[]>`): Old selection intervals. An interval is an array with start 
- and end offsets or `null` if not interested. Each ContentInterval 
- contains the **inclusive** start selection offset and the **exclusive** end selection offset.
+   and end offsets or `null` if not interested. Each ContentInterval 
+   contains the **inclusive** start selection offset and the **exclusive** end selection offset.
 - `oldCaretOffset` (`int`): Old caret offset.
 - `oldSelectionType` ([`ro.sync.ecss.extensions.api.SelectionInterpretationMode`](./SelectionInterpretationMode.md)): Old selection type.
+
+**Returns:** `void`
 

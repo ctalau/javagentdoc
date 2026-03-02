@@ -51,16 +51,14 @@ For example, if the Web Author is available at `https://example.com/oxygen-xml-w
 
 ### `getPath()`
 
-**Returns:** `java.lang.String`
-
 The path should be unique among other webapp servlet plugins paths
  and should contain only lower case letters or the '-' sign.
  
  Example: "plugin-path"
 
-### `init(ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletConfig config)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `init(ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletConfig config)`
 
 Consider overriding the #init() method instead. If you decide to override this one,
  call the super implementation.
@@ -68,49 +66,51 @@ Consider overriding the #init() method instead. If you decide to override this o
 **Parameters:**
 - `config` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletConfig`](servlet/ServletConfig.md)): The configuration.
 
+**Returns:** `void`
+
 ### `init()`
 
 **Returns:** `void`
 
 ### `service(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+**Returns:** `void`
 
 ### `doGet(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+**Returns:** `void`
 
 ### `doPost(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+**Returns:** `void`
 
 ### `doPut(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+**Returns:** `void`
 
 ### `doDelete(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
 - `resp` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse`](servlet/http/HttpServletResponse.md)): the response.
+
+**Returns:** `void`
 
 ### `getServletConfig()`
 

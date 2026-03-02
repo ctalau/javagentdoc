@@ -24,8 +24,6 @@ Session level persistence.
 
 ### `customizeTableColumnInsertion(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
-
 A table column insertion customizer dialog is shown, giving the possibility to choose the 
  properties of the new column(s) to be inserted in the document. An object containing 
  the new information is returned.
@@ -33,10 +31,12 @@ A table column insertion customizer dialog is shown, giving the possibility to c
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author operations.
 
-### `showCustomTableColumnInsertionDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
-
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
+
+### `showCustomTableColumnInsertionDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The Author access.
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
 

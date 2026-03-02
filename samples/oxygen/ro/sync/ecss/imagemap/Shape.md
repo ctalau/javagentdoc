@@ -22,10 +22,10 @@
 
 ### `valueOf(java.lang.String arg0)`
 
-**Returns:** [`ro.sync.ecss.imagemap.Shape`](./Shape.md)
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.imagemap.Shape`](./Shape.md)
 
 ### `toString()`
 

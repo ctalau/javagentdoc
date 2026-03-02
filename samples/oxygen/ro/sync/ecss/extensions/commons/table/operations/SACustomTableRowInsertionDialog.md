@@ -40,16 +40,16 @@ If selected, the row(s) will be inserted below the current location.
 
 ### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo previousTableRowsInfo)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)
-
 **Parameters:**
 - `previousTableRowsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)): the previous row information
 
-### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo previousTableRowsInfo)`
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)
 
-**Returns:** `void`
+### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo previousTableRowsInfo)`
 
 **Parameters:**
 - `previousTableRowsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)): If `null`, defaults will be used. Otherwise, the controls
- will be initialized with values from this info.
+   will be initialized with values from this info.
+
+**Returns:** `void`
 

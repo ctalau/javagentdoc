@@ -63,17 +63,17 @@
 
 ### `setInstance(ro.sync.exml.editor.DocumentTypeRepository arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.DocumentTypeRepository`](./DocumentTypeRepository.md))
 
-### `reload(ro.sync.options.NotifyableMap arg0)`
-
 **Returns:** `void`
+
+### `reload(ro.sync.options.NotifyableMap arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.options.NotifyableMap`)
+
+**Returns:** `void`
 
 ### `n()`
 
@@ -81,17 +81,17 @@
 
 ### `e(ro.sync.options.NotifyableMap arg0)`
 
-**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
-
 **Parameters:**
 - `arg0` (`ro.sync.options.NotifyableMap`)
 
-### `getDocumentTypeLocation(java.lang.String arg0)`
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO[]`
 
-**Returns:** `java.lang.String`
+### `getDocumentTypeLocation(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `reloadFromOptions()`
 
@@ -107,28 +107,26 @@
 
 ### `store(ro.sync.options.NotifyableMap arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.options.NotifyableMap`)
 
-### `getDocumentTypeDescriptor(java.lang.String arg0)`
+**Returns:** `void`
 
-**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
+### `getDocumentTypeDescriptor(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
 
 ### `getDocumentTypeDescriptorUntouched(java.lang.String arg0)`
 
-**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `getDocumentTypePO(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, org.xml.sax.Attributes arg5, ro.sync.basic.io.NonCloseableReader arg6)`
-
 **Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
+
+### `getDocumentTypePO(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, org.xml.sax.Attributes arg5, ro.sync.basic.io.NonCloseableReader arg6)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -139,9 +137,9 @@
 - `arg5` (`org.xml.sax.Attributes`)
 - `arg6` (`ro.sync.basic.io.NonCloseableReader`)
 
-### `getDocumentTypePO(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, org.xml.sax.Attributes arg5, ro.sync.basic.io.NonCloseableReader arg6, java.util.Map<java.lang.String,java.lang.String> arg7)`
-
 **Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
+
+### `getDocumentTypePO(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, org.xml.sax.Attributes arg5, ro.sync.basic.io.NonCloseableReader arg6, java.util.Map<java.lang.String,java.lang.String> arg7)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -153,17 +151,17 @@
 - `arg6` (`ro.sync.basic.io.NonCloseableReader`)
 - `arg7` (`java.util.Map<java.lang.String,java.lang.String>`)
 
-### `g(java.lang.String arg0, java.util.Map<java.lang.String,java.lang.String> arg1)`
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
 
-**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
+### `g(java.lang.String arg0, java.util.Map<java.lang.String,java.lang.String> arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.util.Map<java.lang.String,java.lang.String>`)
 
-### `h(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6)`
+**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-**Returns:** `void`
+### `h(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -174,9 +172,9 @@
 - `arg5` (`java.lang.String`)
 - `arg6` (`java.lang.String`)
 
-### `j(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, org.xml.sax.Attributes arg4)`
-
 **Returns:** `void`
+
+### `j(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, org.xml.sax.Attributes arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -185,9 +183,9 @@
 - `arg3` (`java.lang.String`)
 - `arg4` (`org.xml.sax.Attributes`)
 
-### `l(org.xml.sax.Attributes arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `l(org.xml.sax.Attributes arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
 
 **Parameters:**
 - `arg0` (`org.xml.sax.Attributes`)
@@ -195,17 +193,17 @@
 - `arg2` (`java.lang.String`)
 - `arg3` (`java.lang.String`)
 
-### `f(java.lang.String arg0, java.lang.String arg1)`
-
 **Returns:** `boolean`
+
+### `f(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `m(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, org.xml.sax.Attributes arg5, java.util.Map<java.lang.String,java.lang.String> arg6, java.lang.String arg7, ro.sync.exml.editor.persistance.f arg8, ro.sync.basic.io.NonCloseableReader arg9)`
-
 **Returns:** `boolean`
+
+### `m(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, org.xml.sax.Attributes arg5, java.util.Map<java.lang.String,java.lang.String> arg6, java.lang.String arg7, ro.sync.exml.editor.persistance.f arg8, ro.sync.basic.io.NonCloseableReader arg9)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -219,46 +217,48 @@
 - `arg8` (`ro.sync.exml.editor.persistance.f`)
 - `arg9` (`ro.sync.basic.io.NonCloseableReader`)
 
-### `d(java.lang.String arg0, java.lang.String arg1)`
-
 **Returns:** `boolean`
+
+### `d(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `k(java.lang.String arg0, java.lang.String arg1)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `b(java.lang.String arg0, java.lang.String arg1)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `addDocumentType(ro.sync.exml.editor.persistance.DocumentTypePO arg0)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `addDocumentType(ro.sync.exml.editor.persistance.DocumentTypePO arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.persistance.DocumentTypePO`)
 
-### `updateDocumentTypeMapping(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
-
 **Returns:** `void`
+
+### `updateDocumentTypeMapping(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.String`)
 - `arg3` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `toString()`
 
@@ -290,14 +290,12 @@
 
 ### `setDocumentTypeDescriptors(ro.sync.exml.editor.persistance.DocumentTypePO[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.persistance.DocumentTypePO[]`)
 
-### `addDocumentTypeMapping(java.net.URL arg0, java.net.URL arg1, java.lang.String arg2, java.lang.String arg3)`
-
 **Returns:** `void`
+
+### `addDocumentTypeMapping(java.net.URL arg0, java.net.URL arg1, java.lang.String arg2, java.lang.String arg3)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -305,49 +303,51 @@
 - `arg2` (`java.lang.String`)
 - `arg3` (`java.lang.String`)
 
-### `i(java.lang.String arg0)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `i(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `insertWithPrioritySort(java.util.List<ro.sync.exml.editor.persistance.DocumentTypePO> arg0, ro.sync.exml.editor.persistance.DocumentTypePO arg1)`
-
 **Returns:** `int`
+
+### `insertWithPrioritySort(java.util.List<ro.sync.exml.editor.persistance.DocumentTypePO> arg0, ro.sync.exml.editor.persistance.DocumentTypePO arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.exml.editor.persistance.DocumentTypePO>`)
 - `arg1` (`ro.sync.exml.editor.persistance.DocumentTypePO`)
 
-### `shouldMakePathsRelativeToFramework(java.lang.String arg0, java.lang.String arg1)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `shouldMakePathsRelativeToFramework(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `o(java.lang.String arg0)`
+**Returns:** `boolean`
 
-**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
+### `o(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
+**Returns:** `ro.sync.exml.editor.persistance.DocumentTypePO`
+
 ### `computeBaseStoreLocation(ro.sync.exml.editor.persistance.DocumentTypePO arg0)`
+
+**Parameters:**
+- `arg0` (`ro.sync.exml.editor.persistance.DocumentTypePO`)
 
 **Returns:** `java.lang.String`
 
-**Parameters:**
-- `arg0` (`ro.sync.exml.editor.persistance.DocumentTypePO`)
-
 ### `getBaseDocumentTypePO(ro.sync.exml.editor.persistance.DocumentTypePO arg0)`
 
-**Returns:** `java.util.Optional<ro.sync.exml.editor.persistance.DocumentTypePO>`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.persistance.DocumentTypePO`)
+
+**Returns:** `java.util.Optional<ro.sync.exml.editor.persistance.DocumentTypePO>`
 
 ### `getFilePatterns()`
 
@@ -355,16 +355,16 @@
 
 ### `shouldSkipAddingTemplatesFromDocumentType(ro.sync.exml.editor.persistance.DocumentTypePO arg0, java.util.Set<ro.sync.exml.editor.persistance.DocumentTypeRulePO> arg1)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.persistance.DocumentTypePO`)
 - `arg1` (`java.util.Set<ro.sync.exml.editor.persistance.DocumentTypeRulePO>`)
 
-### `reloadExternalActions(java.lang.String arg0)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `reloadExternalActions(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 

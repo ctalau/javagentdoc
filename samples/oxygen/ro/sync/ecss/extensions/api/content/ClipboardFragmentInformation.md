@@ -35,8 +35,6 @@ The fragment received in the callback can either be directly processed or a new 
 
 ### `getPurposeID()`
 
-**Returns:** `int`
-
 One of the constants:
  
 
@@ -45,17 +43,19 @@ One of the constants:
   - AuthorSchemaAwareEditingHandler#CREATE_FRAGMENT_PURPOSE_DND_COPY
   - AuthorSchemaAwareEditingHandler#CREATE_FRAGMENT_PURPOSE_DND_MOVE
 
-### `getClipboardObjectID()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getClipboardObjectID()`
 
 For example if multiple pastes are made with same content, the same object ID is returned.
 
-### `getFragmentOriginalLocation()`
-
 **Returns:** `java.lang.String`
 
+### `getFragmentOriginalLocation()`
+
 If the fragment was pasted from outside of Oxygen, the original location is null.
+
+**Returns:** `java.lang.String`
 
 ### `getFragment()`
 
@@ -63,20 +63,20 @@ If the fragment was pasted from outside of Oxygen, the original location is null
 
 ### `setFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment newFragment)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `newFragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../node/AuthorDocumentFragment.md)): The fragment which will be pasted/dropped.
 
-### `getOriginalLocation()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getOriginalLocation()`
 
 If the fragment was pasted from outside of Oxygen, the original location is null.
 
-### `getLocationOfLastPaste()`
-
 **Returns:** `java.lang.String`
 
+### `getLocationOfLastPaste()`
+
 Can be `null`
+
+**Returns:** `java.lang.String`
 

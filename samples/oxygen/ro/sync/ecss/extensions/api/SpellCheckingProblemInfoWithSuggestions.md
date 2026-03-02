@@ -40,8 +40,8 @@
 
 ### `checkNotNull(java.util.List<java.lang.String> suggestions)`
 
-**Returns:** `java.util.List<java.lang.String>`
-
 **Parameters:**
 - `suggestions` (`java.util.List<java.lang.String>`): The suggestions.
+
+**Returns:** `java.util.List<java.lang.String>`
 

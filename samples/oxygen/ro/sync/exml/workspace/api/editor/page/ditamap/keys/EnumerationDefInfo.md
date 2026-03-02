@@ -66,18 +66,18 @@
 
 ### `equals(java.lang.Object obj)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `verifyKSEquals(java.util.Stack<java.util.Set<java.lang.String>> ks1, java.util.Stack<java.util.Set<java.lang.String>> ks2)`
-
 **Returns:** `boolean`
+
+### `verifyKSEquals(java.util.Stack<java.util.Set<java.lang.String>> ks1, java.util.Stack<java.util.Set<java.lang.String>> ks2)`
 
 **Parameters:**
 - `ks1` (`java.util.Stack<java.util.Set<java.lang.String>>`): Key scope 1
 - `ks2` (`java.util.Stack<java.util.Set<java.lang.String>>`): Key scope 2
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -89,17 +89,17 @@
 
 ### `addReferencedKey(java.lang.String keyRef)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `keyRef` (`java.lang.String`): The keyref.
 
-### `setKeyScopes(java.util.Stack<java.util.Set<java.lang.String>> keyScopes)`
-
 **Returns:** `void`
+
+### `setKeyScopes(java.util.Stack<java.util.Set<java.lang.String>> keyScopes)`
 
 **Parameters:**
 - `keyScopes` (`java.util.Stack<java.util.Set<java.lang.String>>`): The keyScopes to set.
+
+**Returns:** `void`
 
 ### `getKeyScopes()`
 
@@ -111,10 +111,10 @@
 
 ### `setSingleValue(java.lang.Boolean singleValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `singleValue` (`java.lang.Boolean`): `null` if we do not have this information, 
-`true` if should allow single value, 
-`false` if it should allow multiple values.
+  `true` if should allow single value, 
+  `false` if it should allow multiple values.
+
+**Returns:** `void`
 

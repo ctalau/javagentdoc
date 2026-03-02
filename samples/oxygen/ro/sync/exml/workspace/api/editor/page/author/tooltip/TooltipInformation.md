@@ -85,12 +85,12 @@ Can be `null`
 
 ### `setDescription(java.lang.String description)`
 
-**Returns:** `void`
-
 The description can also be in HTML format.
 
 **Parameters:**
 - `description` (`java.lang.String`): The description.
+
+**Returns:** `void`
 
 ### `getMouseX()`
 
@@ -106,7 +106,7 @@ The description can also be in HTML format.
 
 ### `getHoveredErrorOriginInformation()`
 
-**Returns:** `java.lang.String`
-
 Can be `null`.
+
+**Returns:** `java.lang.String`
 

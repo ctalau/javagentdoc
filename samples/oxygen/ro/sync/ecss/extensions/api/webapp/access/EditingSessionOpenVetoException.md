@@ -20,7 +20,7 @@
 
 **Parameters:**
 - `htmlMessage` (`java.lang.String`): The HTML formatted message that will be presented
- to the user as the reason for the editing session opening was aborted.
+   to the user as the reason for the editing session opening was aborted.
 
 ## Methods
 

@@ -10,23 +10,21 @@
 
 ### `openDiffFilesApplication(java.lang.String leftLabelText, java.net.URL leftURL, java.lang.String rightLabelText, java.net.URL rightURL)`
 
-**Returns:** `java.lang.Object`
-
 The comparison will begin automatically and the content types for the URLs will be auto-detected.
  
  This works only when the API is used in the standalone version of Oxygen.
 
 **Parameters:**
 - `leftLabelText` (`java.lang.String`): The left - side label text. When `null`, 
- the leftURL value is presented in the files comparison tool. When specified, it is presented instead of the leftURL value.
+   the leftURL value is presented in the files comparison tool. When specified, it is presented instead of the leftURL value.
 - `leftURL` (`java.net.URL`): The left-side URL to diff. Can be `null`.
 - `rightLabelText` (`java.lang.String`): The right - side label text. When `null`, 
- the rightURL value is presented in the files comparison tool. When specified, it is presented instead of the rightURL value.
+   the rightURL value is presented in the files comparison tool. When specified, it is presented instead of the rightURL value.
 - `rightURL` (`java.net.URL`): The right-side URL to diff. Can be `null`.
 
-### `openDiffFilesApplication(java.net.URL leftURL, java.net.URL rightURL)`
-
 **Returns:** `java.lang.Object`
+
+### `openDiffFilesApplication(java.net.URL leftURL, java.net.URL rightURL)`
 
 The comparison will begin automatically and the content types for the URLs will be auto-detected.
  
@@ -36,9 +34,9 @@ The comparison will begin automatically and the content types for the URLs will 
 - `leftURL` (`java.net.URL`): The left-side URL to diff. Can be `null`.
 - `rightURL` (`java.net.URL`): The right-side URL to diff. Can be `null`.
 
-### `openDiffFilesApplication(java.net.URL leftURL, java.net.URL rightURL, java.net.URL ancestorURL)`
-
 **Returns:** `java.lang.Object`
+
+### `openDiffFilesApplication(java.net.URL leftURL, java.net.URL rightURL, java.net.URL ancestorURL)`
 
 If the ancestor URL is specified the comparison will be performed in three-way mode. The left
  and right URLs will be compared relatively to the ancestor (base) URL.
@@ -53,9 +51,9 @@ If the ancestor URL is specified the comparison will be performed in three-way m
 - `rightURL` (`java.net.URL`): The right-side URL to diff. Can be `null`.
 - `ancestorURL` (`java.net.URL`): The ancestor (base) URL to diff. Can be `null`.
 
-### `openDiffFilesApplication(java.lang.String leftLabelText, java.net.URL leftURL, java.lang.String rightLabelText, java.net.URL rightURL, java.net.URL ancestorURL, boolean showAncestorURLPanel)`
-
 **Returns:** `java.lang.Object`
+
+### `openDiffFilesApplication(java.lang.String leftLabelText, java.net.URL leftURL, java.lang.String rightLabelText, java.net.URL rightURL, java.net.URL ancestorURL, boolean showAncestorURLPanel)`
 
 If the ancestor URL is specified the comparison will be performed in three-way mode. The left
  and right URLs will be compared relatively to the ancestor (base) URL.
@@ -67,17 +65,17 @@ If the ancestor URL is specified the comparison will be performed in three-way m
 
 **Parameters:**
 - `leftLabelText` (`java.lang.String`): The left - side label text. When `null`, 
- the leftURL value is presented in the files comparison tool. When specified, it is presented instead of the leftURL value.
+   the leftURL value is presented in the files comparison tool. When specified, it is presented instead of the leftURL value.
 - `leftURL` (`java.net.URL`): The left-side URL to diff. Can be `null`.
 - `rightLabelText` (`java.lang.String`): The right - side label text. When `null`, 
- the rightURL value is presented in the files comparison tool. When specified, it is presented instead of the rightURL value.
+   the rightURL value is presented in the files comparison tool. When specified, it is presented instead of the rightURL value.
 - `rightURL` (`java.net.URL`): The right-side URL to diff. Can be `null`.
 - `ancestorURL` (`java.net.URL`): The ancestor (base) URL to diff. Can be `null`.
 - `showAncestorURLPanel` (`boolean`): True if should show the ancestor url panel in a three way comparison
 
-### `openMergeApplication(java.io.File baseDir, java.io.File personalModifiedFilesDir, java.io.File externalModifiedFilesDir, java.util.Map<java.lang.String,java.lang.String> mergeOptions)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `java.util.List<ro.sync.diff.merge.api.MergedFileState>`
+### `openMergeApplication(java.io.File baseDir, java.io.File personalModifiedFilesDir, java.io.File externalModifiedFilesDir, java.util.Map<java.lang.String,java.lang.String> mergeOptions)`
 
 These differences are obtained as a result of a three-way 
  comparison between:
@@ -110,14 +108,14 @@ These differences are obtained as a result of a three-way
 **Parameters:**
 - `baseDir` (`java.io.File`): The directory containing initial, unaltered files.
 - `personalModifiedFilesDir` (`java.io.File`): The directory containing the files modified by you. 
- These files are modified during the merging.
+   These files are modified during the merging.
 - `externalModifiedFilesDir` (`java.io.File`): The directory containing the files modified by others.
 - `mergeOptions` (`java.util.Map<java.lang.String,java.lang.String>`): The options used in the merge operation. The keys that can be used in this map 
- are found in MergeFilesOptionsConstants.
+   are found in MergeFilesOptionsConstants.
+
+**Returns:** `java.util.List<ro.sync.diff.merge.api.MergedFileState>`
 
 ### `openPreviewDialog(java.lang.String title, java.lang.String previewButtonName, java.util.LinkedHashMap<java.net.URL,java.net.URL> resourcesMap)`
-
-**Returns:** `java.util.List<java.net.URL>`
 
 The resources are presented in the order in which they are placed in the map.
 
@@ -126,9 +124,9 @@ The resources are presented in the order in which they are placed in the map.
 - `previewButtonName` (`java.lang.String`): The preview button name. If `null` it defaults to "Update".
 - `resourcesMap` (`java.util.LinkedHashMap<java.net.URL,java.net.URL>`): A map between an URL containing the initial content and an URL containing the modified content.
 
-### `openPreviewDialog(java.lang.String title, java.lang.String previewButtonName, java.lang.String operationDescriptionLabelText, java.lang.String leftSideLabelText, java.lang.String rightSideLabelText, java.util.LinkedHashMap<java.net.URL,java.net.URL> resourcesMap)`
-
 **Returns:** `java.util.List<java.net.URL>`
+
+### `openPreviewDialog(java.lang.String title, java.lang.String previewButtonName, java.lang.String operationDescriptionLabelText, java.lang.String leftSideLabelText, java.lang.String rightSideLabelText, java.util.LinkedHashMap<java.net.URL,java.net.URL> resourcesMap)`
 
 The resources are presented in the order in which they are placed in the map.
 
@@ -136,16 +134,16 @@ The resources are presented in the order in which they are placed in the map.
 - `title` (`java.lang.String`): The dialog title. If `null` it defaults to "Preview"
 - `previewButtonName` (`java.lang.String`): The preview button name. If `null` it defaults to "Update".
 - `operationDescriptionLabelText` (`java.lang.String`): The text of the label that describes the operation for which the 'preview changes' 
-                                      dialog is displayed. If `null` it defaults to "Changes to be performed".
+                                        dialog is displayed. If `null` it defaults to "Changes to be performed".
 - `leftSideLabelText` (`java.lang.String`): The text of the label that describes the left side of the diff panel.
-                           If `null` it defaults to "Current".
+                             If `null` it defaults to "Current".
 - `rightSideLabelText` (`java.lang.String`): The text of the label that describes the right side of the diff panel.
-                           If `null` it defaults to "Proposed changes".
+                             If `null` it defaults to "Proposed changes".
 - `resourcesMap` (`java.util.LinkedHashMap<java.net.URL,java.net.URL>`): A map between an URL containing the initial content and an URL containing the modified content.
 
-### `openMergeApplication(java.lang.String dialogTitle, java.lang.String applyButtonText, boolean applyAllChangesInitialy, java.lang.String leftLabelText, java.net.URL leftURL, boolean leftURLEditable, boolean leftURLModified, java.lang.String rightLabelText, java.net.URL rightURL, boolean rightEditorEditable, boolean rightURLModified, java.net.URL ancestorURL)`
+**Returns:** `java.util.List<java.net.URL>`
 
-**Returns:** `boolean`
+### `openMergeApplication(java.lang.String dialogTitle, java.lang.String applyButtonText, boolean applyAllChangesInitialy, java.lang.String leftLabelText, java.net.URL leftURL, boolean leftURLEditable, boolean leftURLModified, java.lang.String rightLabelText, java.net.URL rightURL, boolean rightEditorEditable, boolean rightURLModified, java.net.URL ancestorURL)`
 
 The tool is presented in a modal dialog.
  The content in the right part is read only and can be merged to the left part.  
@@ -163,14 +161,16 @@ The tool is presented in a modal dialog.
 - `applyButtonText` (`java.lang.String`): The text for the "Apply" button, by default it is "Apply".
 - `applyAllChangesInitialy` (`boolean`): `true` to apply all changes from the not editable to the editable panel if Apply is pressed just after the dialog is opened.
 - `leftLabelText` (`java.lang.String`): The left - side label text. When `null`, 
- the leftURL value is presented in the files comparison tool. When specified, it is presented instead of the leftURL value.
+   the leftURL value is presented in the files comparison tool. When specified, it is presented instead of the leftURL value.
 - `leftURL` (`java.net.URL`): The left-side URL to diff. Can be `null`.
 - `leftURLEditable` (`boolean`): `true` if the left editor is editable.
 - `leftURLModified` (`boolean`): `true` to assume the left URL modified from the very beginning.
 - `rightLabelText` (`java.lang.String`): The right - side label text. When `null`, 
- the rightURL value is presented in the files comparison tool. When specified, it is presented instead of the rightURL value.
+   the rightURL value is presented in the files comparison tool. When specified, it is presented instead of the rightURL value.
 - `rightURL` (`java.net.URL`): The right-side URL to diff. Can be `null`.
 - `rightEditorEditable` (`boolean`): `true` if the right editor is editable.
 - `rightURLModified` (`boolean`): `true` to assume the right URL modified from the very beginning.
 - `ancestorURL` (`java.net.URL`): The ancestor (base) URL to diff. Can be `null`.
+
+**Returns:** `boolean`
 

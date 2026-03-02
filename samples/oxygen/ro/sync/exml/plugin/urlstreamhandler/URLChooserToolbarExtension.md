@@ -16,16 +16,16 @@ Provides toolbar icon and toolbar tooltip for the button to be inserted in the "
 
 ### `getToolbarIcon()`
 
-**Returns:** `javax.swing.Icon`
-
 The action will be placed in the "File" toolbar. Return `null`
  if the action should not be included in the toolbar.
 
-### `getToolbarTooltip()`
+**Returns:** `javax.swing.Icon`
 
-**Returns:** `java.lang.String`
+### `getToolbarTooltip()`
 
 If the tooltip is `null` but 
  there is an icon provided, the `URLChooserPluginExtension.getMenuName()` will be 
  used instead.
+
+**Returns:** `java.lang.String`
 

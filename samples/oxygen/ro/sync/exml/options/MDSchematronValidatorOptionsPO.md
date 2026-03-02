@@ -29,18 +29,18 @@
 
 ### `addValidatorTypeOptions(ro.sync.exml.validate.scanners.f.c arg0, ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.validate.scanners.f.c`)
 - `arg1` ([`ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO`](./MDSchematronValidatorTypeOptionsPO.md))
 
-### `getValidatorTypeOptions(ro.sync.exml.validate.scanners.f.c arg0)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO`](./MDSchematronValidatorTypeOptionsPO.md)
+### `getValidatorTypeOptions(ro.sync.exml.validate.scanners.f.c arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.validate.scanners.f.c`)
+
+**Returns:** [`ro.sync.exml.options.MDSchematronValidatorTypeOptionsPO`](./MDSchematronValidatorTypeOptionsPO.md)
 
 ### `checkValid()`
 

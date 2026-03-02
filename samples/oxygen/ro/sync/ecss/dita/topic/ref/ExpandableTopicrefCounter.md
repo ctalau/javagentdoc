@@ -35,10 +35,10 @@
 
 ### `createDitaMapRefResolver(ro.sync.ecss.extensions.api.ExtensionsBundle extensionsBundle)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.DITAMapReferencesResolver`](../../../extensions/api/DITAMapReferencesResolver.md)
-
 **Parameters:**
 - `extensionsBundle` ([`ro.sync.ecss.extensions.api.ExtensionsBundle`](../../../extensions/api/ExtensionsBundle.md)): The extensions bundle.
+
+**Returns:** [`ro.sync.ecss.extensions.api.DITAMapReferencesResolver`](../../../extensions/api/DITAMapReferencesResolver.md)
 
 ### `getTopicRefsLimit()`
 

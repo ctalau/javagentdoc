@@ -84,10 +84,10 @@
 
 ### `getAttributeToEdit(java.lang.String arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getElem()`
 
@@ -107,10 +107,10 @@
 
 ### `setErrorMessage(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getErrorMessage()`
 
@@ -122,10 +122,10 @@
 
 ### `setRelativeMousePosition(ro.sync.exml.view.graphics.Point arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Point`)
+
+**Returns:** `void`
 
 ### `getRelativeMouseLocation()`
 
@@ -133,10 +133,10 @@
 
 ### `setReadOnlyContext(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isReadOnlyContext()`
 
@@ -144,8 +144,8 @@
 
 ### `setParentHost(java.lang.Object arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `void`
 

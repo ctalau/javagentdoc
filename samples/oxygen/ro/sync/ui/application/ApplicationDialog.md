@@ -171,10 +171,10 @@
 
 ### `registerListeners(javax.swing.JDialog arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.JDialog`)
+
+**Returns:** `void`
 
 ### `shouldUpdateMnemonics()`
 
@@ -190,17 +190,17 @@
 
 ### `setVisible(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setFocusTraversalPolicy(java.awt.FocusTraversalPolicy arg0)`
-
 **Returns:** `void`
+
+### `setFocusTraversalPolicy(java.awt.FocusTraversalPolicy arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.FocusTraversalPolicy`)
+
+**Returns:** `void`
 
 ### `sh()`
 
@@ -236,10 +236,10 @@
 
 ### `shouldIgnoreParent(java.awt.Window arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.awt.Window`)
+
+**Returns:** `boolean`
 
 ### `shouldShowInTaskBar()`
 
@@ -247,10 +247,10 @@
 
 ### `xh(java.awt.Component arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.Component`)
+
+**Returns:** `void`
 
 ### `getBounds()`
 
@@ -274,47 +274,47 @@
 
 ### `setLocation(int arg0, int arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`int`)
 
-### `setLocation(java.awt.Point arg0)`
-
 **Returns:** `void`
+
+### `setLocation(java.awt.Point arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Point`)
 
-### `setSize(int arg0, int arg1)`
-
 **Returns:** `void`
+
+### `setSize(int arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`int`)
 
-### `setMinimumWidthForPack(int arg0)`
-
 **Returns:** `void`
+
+### `setMinimumWidthForPack(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `setMinimumHeightForPack(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `setSize(java.awt.Dimension arg0)`
-
 **Returns:** `void`
+
+### `setSize(java.awt.Dimension arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Dimension`)
+
+**Returns:** `void`
 
 ### `getSize()`
 
@@ -322,18 +322,18 @@
 
 ### `setTitleTag(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setTitle(java.lang.String arg0, java.lang.String arg1)`
-
 **Returns:** `void`
+
+### `setTitle(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getDialogTag()`
 
@@ -341,10 +341,10 @@
 
 ### `th(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getCursor()`
 
@@ -352,10 +352,10 @@
 
 ### `setCursor(java.awt.Cursor arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.Cursor`)
+
+**Returns:** `void`
 
 ### `toFront()`
 
@@ -371,59 +371,59 @@
 
 ### `addComponentListener(java.awt.event.ComponentListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.event.ComponentListener`)
+
+**Returns:** `void`
 
 ### `removeComponentListener(java.awt.event.ComponentListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.event.ComponentListener`)
 
-### `addWindowListener(java.awt.event.WindowListener arg0)`
-
 **Returns:** `void`
+
+### `addWindowListener(java.awt.event.WindowListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.WindowListener`)
+
+**Returns:** `void`
 
 ### `removeWindowListener(java.awt.event.WindowListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.event.WindowListener`)
 
-### `addKeyListener(java.awt.event.KeyListener arg0)`
-
 **Returns:** `void`
+
+### `addKeyListener(java.awt.event.KeyListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.KeyListener`)
+
+**Returns:** `void`
 
 ### `removeKeyListener(java.awt.event.KeyListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.event.KeyListener`)
 
-### `enableEvents(long arg0)`
-
 **Returns:** `void`
+
+### `enableEvents(long arg0)`
 
 **Parameters:**
 - `arg0` (`long`)
 
-### `setDefaultCloseOperation(int arg0)`
-
 **Returns:** `void`
+
+### `setDefaultCloseOperation(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `getDefaultCloseOperation()`
 
@@ -431,10 +431,10 @@
 
 ### `setJMenuBar(javax.swing.JMenuBar arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.JMenuBar`)
+
+**Returns:** `void`
 
 ### `getRootPane()`
 
@@ -454,24 +454,24 @@
 
 ### `setModal(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setResizable(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setUndecorated(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isUndecorated()`
 
@@ -483,10 +483,10 @@
 
 ### `setMinimumSize(java.awt.Dimension arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.Dimension`)
+
+**Returns:** `void`
 
 ### `getMinimumSize()`
 
@@ -494,17 +494,17 @@
 
 ### `setMaximumWidthForPack(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `setMaximumHeightForPack(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `getRealDialogForTCs()`
 
@@ -568,10 +568,10 @@
 
 ### `isPopupShownFromThisDialog(ro.sync.ui.application.qb arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`ro.sync.ui.application.qb`)
+
+**Returns:** `boolean`
 
 ### `wh()`
 
@@ -587,17 +587,17 @@
 
 ### `setDefaultFocusedComponent(javax.swing.JComponent arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.JComponent`)
 
-### `setModalExclusionType(java.awt.Dialog.ModalExclusionType arg0)`
-
 **Returns:** `void`
+
+### `setModalExclusionType(java.awt.Dialog.ModalExclusionType arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Dialog.ModalExclusionType`)
+
+**Returns:** `void`
 
 ### `getModalExclusionType()`
 

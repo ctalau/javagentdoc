@@ -16,8 +16,8 @@
 
 ### `preserveIDsWhenPastingBetweenResources(int fragmentPurpose)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `fragmentPurpose` (`int`)
+
+**Returns:** `boolean`
 

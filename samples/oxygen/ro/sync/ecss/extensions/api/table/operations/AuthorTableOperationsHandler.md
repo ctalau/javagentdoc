@@ -17,8 +17,6 @@ It should be implemented when the author extension being developed offers
 
 ### `handleInsertColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments arguments)`
 
-**Returns:** `boolean`
-
 This method is called when pasting or dropping content for which the 
  SelectionInterpretationMode#TABLE_COLUMN interpretation mode was imposed.
  
@@ -39,13 +37,13 @@ This method is called when pasting or dropping content for which the
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments`](./AuthorTableInsertColumnArguments.md)): The arguments for insert column operation like: 
- the offset where the column is inserted, the array containing the cells fragments
- that compose an Author table column, information about column width specification, 
- the Author access.
-
-### `handleDeleteColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments arguments)`
+   the offset where the column is inserted, the array containing the cells fragments
+   that compose an Author table column, information about column width specification, 
+   the Author access.
 
 **Returns:** `boolean`
+
+### `handleDeleteColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments arguments)`
 
 This method is called when deleting content  (by drag and drop or cut operations)  
  for which the SelectionInterpretationMode#TABLE_COLUMN interpretation mode was imposed.
@@ -67,11 +65,11 @@ This method is called when deleting content  (by drag and drop or cut operations
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments`](./AuthorTableDeleteColumnArguments.md)): The arguments for delete column operation (like the Author access
- and the column cells start and end offsets).
-
-### `handleDeleteRow(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments arguments)`
+   and the column cells start and end offsets).
 
 **Returns:** `boolean`
+
+### `handleDeleteRow(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments arguments)`
 
 This method is called when deleting content (by drag and drop or cut operations) 
  for which the SelectionInterpretationMode#TABLE_ROW interpretation mode was imposed.
@@ -93,11 +91,11 @@ This method is called when deleting content (by drag and drop or cut operations)
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments`](./AuthorTableDeleteRowArguments.md)): The arguments for delete row operation (like the Author access and 
- the content interval of the row element that must be deleted).
-
-### `handleDeleteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments arguments)`
+   the content interval of the row element that must be deleted).
 
 **Returns:** `boolean`
+
+### `handleDeleteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments arguments)`
 
 All the rows that intersects the given content intervals will be deleted.
  
@@ -121,11 +119,11 @@ All the rows that intersects the given content intervals will be deleted.
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments`](./AuthorTableDeleteRowsArguments.md)): The arguments for delete rows operation (like the Author access and 
- the content intervals that determine the rows element that must be deleted).
+   the content intervals that determine the rows element that must be deleted).
+
+**Returns:** `boolean`
 
 ### `getTableElementContainingOffset(ro.sync.ecss.extensions.api.AuthorAccess access, int offset)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)
 
 This method can be used to obtain the closest table that contains the given 
  offset.
@@ -134,9 +132,9 @@ This method can be used to obtain the closest table that contains the given
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): Access to Author operations.
 - `offset` (`int`): The offset to search the parent table element for.
 
-### `getColumnSpecification(ro.sync.ecss.extensions.api.AuthorAccess access, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation`](./TableColumnSpecificationInformation.md)
+### `getColumnSpecification(ro.sync.ecss.extensions.api.AuthorAccess access, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
 
 This information is requested when a column is copied or dragged and 
  it can be used when the column must be inserted in the document (on paste or
@@ -148,18 +146,18 @@ This information is requested when a column is copied or dragged and
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)): The table that contains the column.
 - `columnIndex` (`int`): The column index, `0` based.
 
-### `handleRemoveInvalidColNamesFromTableCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
+**Returns:** [`ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation`](./TableColumnSpecificationInformation.md)
 
-**Returns:** `void`
+### `handleRemoveInvalidColNamesFromTableCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The author access.
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)): The table element.
 - `cells` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The list of table cells.
 
-### `handleAttributeChange(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue newValue)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `handleAttributeChange(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue newValue)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author Access.
@@ -167,9 +165,9 @@ This information is requested when a column is copied or dragged and
 - `attributeName` (`java.lang.String`): The attribute name.
 - `newValue` ([`ro.sync.ecss.extensions.api.node.AttrValue`](../../node/AttrValue.md)): The new value.
 
-### `handlePasteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertRowArguments arguments)`
-
 **Returns:** `boolean`
+
+### `handlePasteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertRowArguments arguments)`
 
 This method is called when pasting or dropping content for which the 
  SelectionInterpretationMode#TABLE_ROW interpretation mode was imposed.
@@ -191,16 +189,18 @@ This method is called when pasting or dropping content for which the
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertRowArguments`](./AuthorTableInsertRowArguments.md)): The arguments for insert column operation like: 
- the offset where the rows are inserted, the array containing the rows fragments,
-  information about column width specification, 
- the Author access.
-
-### `handleCreateTable(ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments arguments)`
+   the offset where the rows are inserted, the array containing the rows fragments,
+    information about column width specification, 
+   the Author access.
 
 **Returns:** `boolean`
 
+### `handleCreateTable(ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments arguments)`
+
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments`](./AuthorTableArguments.md)): The arguments for copied cells like: 
- the offset where the rows are inserted, the array containing the rows fragments,
- how many rows and columns the new table should have, the Author access.
+   the offset where the rows are inserted, the array containing the rows fragments,
+   how many rows and columns the new table should have, the Author access.
+
+**Returns:** `boolean`
 

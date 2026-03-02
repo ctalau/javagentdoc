@@ -23,7 +23,7 @@
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.
 - `rowInterval` ([`ro.sync.ecss.extensions.api.ContentInterval`](../../ContentInterval.md)): The content interval (containing the **inclusive** start offset and 
- **exclusive** end offset) determining the row that must be deleted.
+   **exclusive** end offset) determining the row that must be deleted.
 
 ## Methods
 

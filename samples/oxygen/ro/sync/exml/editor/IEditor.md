@@ -18,10 +18,10 @@
 
 ### `setCaretPosition(ro.sync.exml.editor.Anchor arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.Anchor`](./Anchor.md))
+
+**Returns:** `void`
 
 ### `save()`
 

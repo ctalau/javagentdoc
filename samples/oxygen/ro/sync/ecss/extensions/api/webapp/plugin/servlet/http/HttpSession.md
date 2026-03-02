@@ -14,8 +14,8 @@ See also:
 
 ### `getId()`
 
-**Returns:** `java.lang.String`
-
 The identifier is assigned by the servlet
  container and is implementation dependent.
+
+**Returns:** `java.lang.String`
 

@@ -22,13 +22,13 @@
 
 ### `getNodesOfInterest(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode interestNode, boolean doSurroundIfMissing)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../../api/node/AuthorNode.md)
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
 - `interestNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node of interest if available when calling the method. If `null`
-                            it will be determined from the AuthorAccess, from the caret position.
+                              it will be determined from the AuthorAccess, from the caret position.
 - `doSurroundIfMissing` (`boolean`): If `true` the missing part of the image map will be added.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../../api/node/AuthorNode.md)
 
 ### `generateMapID()`
 
@@ -36,8 +36,8 @@
 
 ### `getSupportedFramework(java.lang.String namespaceURI)`
 
-**Returns:** [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../../imagemap/SupportedFrameworks.md)
-
 **Parameters:**
 - `namespaceURI` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.imagemap.SupportedFrameworks`](../../../imagemap/SupportedFrameworks.md)
 

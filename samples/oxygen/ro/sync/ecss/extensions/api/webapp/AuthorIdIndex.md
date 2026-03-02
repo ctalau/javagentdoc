@@ -14,14 +14,12 @@
 
 ### `getObjectById(long id)`
 
-**Returns:** `T`
-
 **Parameters:**
 - `id` (`long`): the id.
 
-### `getId(T object)`
+**Returns:** `T`
 
-**Returns:** `long`
+### `getId(T object)`
 
 If this index has not assigned an id already to the given object, a unique
  id is assigned and returned.
@@ -29,10 +27,12 @@ If this index has not assigned an id already to the given object, a unique
 **Parameters:**
 - `object` (`T`): The object.
 
-### `getIdIfExists(T object)`
+**Returns:** `long`
 
-**Returns:** `java.lang.Long`
+### `getIdIfExists(T object)`
 
 **Parameters:**
 - `object` (`T`): The object.
+
+**Returns:** `java.lang.Long`
 

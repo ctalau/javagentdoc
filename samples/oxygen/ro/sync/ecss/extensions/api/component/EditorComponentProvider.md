@@ -40,8 +40,6 @@ The editor might have multiple editor pages.
 
 ### `showLocation(java.net.URL url, java.io.Reader reader)`
 
-**Returns:** `void`
-
 If the document pointed by this URL is different than the document currently 
  loaded in the editor page, this URL will be used to set the content to edit, 
  to solve relative references (eg: images) and to show the location pointed by the
@@ -56,35 +54,35 @@ If the document pointed by this URL is different than the document currently
 - `url` (`java.net.URL`): The URL to show location for.
 - `reader` (`java.io.Reader`): The reader over the URL, can be null.
 
-### `addAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener listener)`
-
 **Returns:** `void`
+
+### `addAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md)): The listener.
+
+**Returns:** `void`
 
 ### `removeAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener listener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md)): The listener.
 
-### `getAdditionalEditHelper(int helperID)`
+**Returns:** `void`
 
-**Returns:** `javax.swing.JComponent`
+### `getAdditionalEditHelper(int helperID)`
 
 It can be the outline, attributes, entities, elements or model helper component, depending on the ID.
 
 **Parameters:**
 - `helperID` (`int`): One of:
-                 
+                   
+  
+                    - ATTRIBUTES_PANEL_ID,
+                    - ELEMENTS_PANEL_ID, 
+                    - ENTITIES_PANEL_ID,
+                    - MODEL_PANEL_ID,
+                    - OUTLINER_PANEL_ID constants.
 
-                  - ATTRIBUTES_PANEL_ID,
-                  - ELEMENTS_PANEL_ID, 
-                  - ENTITIES_PANEL_ID,
-                  - MODEL_PANEL_ID,
-                  - OUTLINER_PANEL_ID constants.
-                 
-
+**Returns:** `javax.swing.JComponent`
 

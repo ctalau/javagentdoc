@@ -14,10 +14,10 @@ One may choose to update the UI only at the end of such a batch.
 
 ### `beginEdit()`
 
-**Returns:** `void`
-
 beginEdit and endEdit can't be nested. If beginEdit is called more than once 
  before an endEdit then events will be lost.
+
+**Returns:** `void`
 
 ### `endEdit()`
 

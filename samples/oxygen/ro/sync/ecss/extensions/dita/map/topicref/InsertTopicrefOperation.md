@@ -35,24 +35,24 @@ Can be a topic
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
 
-### `getTopicUrlFromArgs(ro.sync.ecss.extensions.api.ArgumentsMap args)`
+**Returns:** `void`
 
-**Returns:** `java.net.URL`
+### `getTopicUrlFromArgs(ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md)): The arguments.
 
+**Returns:** `java.net.URL`
+
 ### `getArguments()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
-
 The operation will display a dialog for choosing the topic to refer.
+
+**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
 
 ### `getDescription()`
 

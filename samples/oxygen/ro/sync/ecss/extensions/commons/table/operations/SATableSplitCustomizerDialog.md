@@ -32,7 +32,7 @@
 
 ### `getSplitInformation()`
 
-**Returns:** `int[]`
-
 (horizontally and vertically)
+
+**Returns:** `int[]`
 

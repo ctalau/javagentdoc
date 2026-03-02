@@ -10,8 +10,6 @@
 
 ### `setPseudoClass(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
-**Returns:** `void`
-
 This change *IS NOT* subject to undo/redo.
  
 What is good for: You can use a non standard (custom) pseudo class to impose a style 
@@ -54,13 +52,15 @@ Another example:
 - `pseudoClass` (`java.lang.String`): Name of the pseudo class being set.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement whose attribute is changing.
 
-### `removePseudoClass(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
-
 **Returns:** `void`
+
+### `removePseudoClass(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 This change *IS NOT* subject to undo/redo.
 
 **Parameters:**
 - `pseudoClass` (`java.lang.String`): Name of the pseudo class being set.
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The AuthorElement whose attribute will be removed.
+
+**Returns:** `void`
 

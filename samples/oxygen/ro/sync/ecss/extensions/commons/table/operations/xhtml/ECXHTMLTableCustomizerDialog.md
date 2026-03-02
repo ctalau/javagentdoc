@@ -21,73 +21,73 @@
 
 ### `getFrameValues(int arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getColumnWidthsSpecifications(int arg0)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `createTitleCheckbox(org.eclipse.swt.widgets.Composite arg0)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`
 
-**Returns:** `org.eclipse.swt.widgets.Button`
+### `createTitleCheckbox(org.eclipse.swt.widgets.Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
 
-### `getDefaultFrameValue(int arg0)`
+**Returns:** `org.eclipse.swt.widgets.Button`
 
-**Returns:** `java.lang.String`
+### `getDefaultFrameValue(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getRowsepValues(int arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getColsepValues(int arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultRowsepValue(int arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getDefaultColsepValue(int arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getAlignValues(int arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultAlignValue(int arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getHelpPageID()`
 

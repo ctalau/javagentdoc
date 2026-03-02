@@ -18,8 +18,6 @@ For the Eclipse Plugin the dropped files are handled by the platform and this AP
 
 ### `insertURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
 
-**Returns:** `void`
-
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event.
  
@@ -35,9 +33,9 @@ The `source` of the insertion can be a **paste** event or a
 - `urls` (`java.util.List<java.net.URL>`): The list of URLs.
 - `source` (`int`): The source of the URLs, one of the ExternalObjectInsertionSources constants.
 
-### `acceptsURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `acceptsURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event. If the source is of **drag and drop** type and 
@@ -53,9 +51,9 @@ The `source` of the insertion can be a **paste** event or a
 - `urls` (`java.util.List<java.net.URL>`): The list of URLs.
 - `source` (`int`): The source of the URLs, one of the ExternalObjectInsertionSources constants.
 
-### `acceptsSource(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, int source)`
-
 **Returns:** `boolean`
+
+### `acceptsSource(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event. If the source is of **drag and drop** type and 
@@ -67,24 +65,26 @@ The `source` of the insertion can be a **paste** event or a
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
 - `source` (`int`): The source of the URLs, one of the 
- ExternalObjectInsertionSources constants (that represents a 
- **paste** or a **drag and drop** event)
+   ExternalObjectInsertionSources constants (that represents a 
+   **paste** or a **drag and drop** event)
+
+**Returns:** `boolean`
 
 ### `containsOnlyImages(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textPage, java.util.List<java.net.URL> urlList)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `textPage` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
 - `urlList` (`java.util.List<java.net.URL>`): The list of URLs.
+
+**Returns:** `boolean`
 
 ### `containsOnlyBinaryResources(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textPage, java.util.List<java.net.URL> urlList)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `textPage` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
 - `urlList` (`java.util.List<java.net.URL>`): The list of URLs.
+
+**Returns:** `boolean`
 
 ### `getDescription()`
 

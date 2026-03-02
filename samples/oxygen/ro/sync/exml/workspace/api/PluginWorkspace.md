@@ -22,52 +22,46 @@
 
 ### `getAllEditorLocations(int editingArea)`
 
-**Returns:** `java.net.URL[]`
-
 In such cases
  the URLs for these not yet instantiated editors are not returned by this method.
 
 **Parameters:**
 - `editingArea` (`int`): One of the constants in this class:
- 
+   
+  
+   #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
+   
+  
+   #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
 
- #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
- 
-
- #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
- 
-
+**Returns:** `java.net.URL[]`
 
 ### `getEditorAccess(java.net.URL location, int editingArea)`
-
-**Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](editor/WSEditor.md)
 
 **Parameters:**
 - `location` (`java.net.URL`): The editor location
 - `editingArea` (`int`): One of the constants in this class:
- 
-
- #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
- 
-
- #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
- 
-
-
-### `getCurrentEditorAccess(int editingArea)`
+   
+  
+   #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
+   
+  
+   #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](editor/WSEditor.md)
 
+### `getCurrentEditorAccess(int editingArea)`
+
 **Parameters:**
 - `editingArea` (`int`): One of the constants in this class:
- 
+   
+  
+   #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
+   
+  
+   #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
 
- #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
- 
-
- #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
- 
-
+**Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](editor/WSEditor.md)
 
 ### `getXMLUtilAccess()`
 
@@ -95,60 +89,54 @@ In such cases
 
 ### `addEditorChangeListener(ro.sync.exml.workspace.api.listeners.WSEditorChangeListener editorListener, int editingArea)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorChangeListener`](listeners/WSEditorChangeListener.md)): The listener notified when an editor is added, removed or the editor page is changed.
 - `editingArea` (`int`): One of the constants in this class:
- 
+   
+  
+   #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
+   
+  
+   #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
 
- #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
- 
-
- #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
- 
-
+**Returns:** `void`
 
 ### `removeEditorChangeListener(ro.sync.exml.workspace.api.listeners.WSEditorChangeListener editorListener, int editingArea)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorChangeListener`](listeners/WSEditorChangeListener.md)): The listener notified when an editor is added, removed or the editor page is changed.
 - `editingArea` (`int`): One of the constants in this class:
- 
+   
+  
+   #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
+   
+  
+   #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
 
- #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
- 
-
- #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
- 
-
+**Returns:** `void`
 
 ### `getEditorChangeListeners(int editingArea)`
 
-**Returns:** [`ro.sync.exml.workspace.api.listeners.WSEditorChangeListener[]`](listeners/WSEditorChangeListener.md)
-
 **Parameters:**
 - `editingArea` (`int`): One of the constants in this class:
- 
+   
+  
+   #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
+   
+  
+   #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
 
- #MAIN_EDITING_AREA - for the editors in the main Oxygen workspace area.
- 
-
- #DITA_MAPS_EDITING_AREA - for the editors in the DITA Maps Manager view workspace area.
+**Returns:** [`ro.sync.exml.workspace.api.listeners.WSEditorChangeListener[]`](listeners/WSEditorChangeListener.md)
 
 ### `getOptionsStorage()`
-
-**Returns:** [`ro.sync.exml.workspace.api.options.WSOptionsStorage`](options/WSOptionsStorage.md)
 
 It is also responsible for adding and removing listeners that are notified
  about the option changes.
  These keys are common to all plugin implementations.
 
-### `setDITAKeyDefinitionManager(ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager keyDefitionManager)`
+**Returns:** [`ro.sync.exml.workspace.api.options.WSOptionsStorage`](options/WSOptionsStorage.md)
 
-**Returns:** `void`
+### `setDITAKeyDefinitionManager(ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager keyDefitionManager)`
 
 This API can be used by the developer to take control over the key definitions which will be used to resolve keyrefs and conkeyrefs for
  topics opened in the Author page.
@@ -156,43 +144,43 @@ This API can be used by the developer to take control over the key definitions w
 **Parameters:**
 - `keyDefitionManager` ([`ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager`](editor/page/ditamap/keys/KeyDefinitionManager.md)): The key definition manager
 
-### `addAuthorCSSAlternativesCustomizer(ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer cssAlternativesCustomizer)`
-
 **Returns:** `void`
+
+### `addAuthorCSSAlternativesCustomizer(ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer cssAlternativesCustomizer)`
 
 **Parameters:**
 - `cssAlternativesCustomizer` ([`ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer`](editor/page/author/css/AuthorCSSAlternativesCustomizer.md)): The CSS alternatives customizer.
+
+**Returns:** `void`
 
 ### `removeAuthorCSSAlternativesCustomizer(ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer cssAlternativesCustomizer)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `cssAlternativesCustomizer` ([`ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer`](editor/page/author/css/AuthorCSSAlternativesCustomizer.md)): The CSS alternatives customizer.
 
-### `addBatchOperationsListener(ro.sync.exml.workspace.api.listeners.BatchOperationsListener listener)`
-
 **Returns:** `void`
+
+### `addBatchOperationsListener(ro.sync.exml.workspace.api.listeners.BatchOperationsListener listener)`
 
 The listener is only called with REPLACE_ALL events for the standalone version of Oxygen.
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.listeners.BatchOperationsListener`](listeners/BatchOperationsListener.md)): The batch operations listener.
 
-### `removeBatchOperationsListener(ro.sync.exml.workspace.api.listeners.BatchOperationsListener listener)`
-
 **Returns:** `void`
+
+### `removeBatchOperationsListener(ro.sync.exml.workspace.api.listeners.BatchOperationsListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.listeners.BatchOperationsListener`](listeners/BatchOperationsListener.md)): The batch operations listener.
+
+**Returns:** `void`
 
 ### `getBatchOperationsListenersAccess()`
 
 **Returns:** [`ro.sync.exml.workspace.api.listeners.BatchOperationsListener`](listeners/BatchOperationsListener.md)
 
 ### `createAuthorDocumentProvider(java.net.URL systemId, java.io.Reader documentReader)`
-
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../../../ecss/extensions/api/node/AuthorDocumentProvider.md)
 
 References are not expanded. 
  The provider creates a structure of AuthorNodes and allows it to be manipulated via an AuthorDocumentController.
@@ -205,12 +193,12 @@ The parsing of the XML content to Author Nodes is quite fast and may also be use
 
 **Parameters:**
 - `systemId` (`java.net.URL`): The system id of the resource. If `null`, the reader must be provided
-      and relative DTD entity references will not be properly resolved.
+        and relative DTD entity references will not be properly resolved.
 - `documentReader` (`java.io.Reader`): The document reader. If `null`, the reader will be created internally.
 
-### `createAuthorDocumentProvider(java.net.URL systemId, java.io.Reader documentReader, boolean expandReferences)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../../../ecss/extensions/api/node/AuthorDocumentProvider.md)
+
+### `createAuthorDocumentProvider(java.net.URL systemId, java.io.Reader documentReader, boolean expandReferences)`
 
 The provider creates a structure of AuthorNodes and allows it to be manipulated via an AuthorDocumentController.
  
@@ -222,13 +210,15 @@ The parsing of the XML content to Author Nodes is quite fast and may also be use
 
 **Parameters:**
 - `systemId` (`java.net.URL`): The system id of the resource. If `null`, the reader must be provided
-      and relative DTD entity references will not be properly resolved.
+        and relative DTD entity references will not be properly resolved.
 - `documentReader` (`java.io.Reader`): The document reader. If `null`, the reader will be created internally.
 - `expandReferences` (`boolean`): `true` to expand references in the created document.
 
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../../../ecss/extensions/api/node/AuthorDocumentProvider.md)
+
 ### `getComponentsProvider()`
 
-**Returns:** [`ro.sync.exml.workspace.api.componentscollector.IComponentsProvider`](componentscollector/IComponentsProvider.md)
-
 The provider allows you to obtain the components from an editor.
+
+**Returns:** [`ro.sync.exml.workspace.api.componentscollector.IComponentsProvider`](componentscollector/IComponentsProvider.md)
 

@@ -24,31 +24,31 @@ This is useful in case you need to receive activated() events in more implementa
 
 ### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
+
+**Returns:** `void`
 
 ### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
-### `addListener(ro.sync.ecss.extensions.api.AuthorExtensionStateListener listener)`
-
 **Returns:** `void`
+
+### `addListener(ro.sync.ecss.extensions.api.AuthorExtensionStateListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](./AuthorExtensionStateListener.md)): The new extension state listener.
 
-### `removeListener(ro.sync.ecss.extensions.api.AuthorExtensionStateListener listener)`
-
 **Returns:** `void`
+
+### `removeListener(ro.sync.ecss.extensions.api.AuthorExtensionStateListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](./AuthorExtensionStateListener.md)): The extension state listener to remove.
+
+**Returns:** `void`
 
 ### `getDescription()`
 
@@ -56,15 +56,15 @@ This is useful in case you need to receive activated() events in more implementa
 
 ### `fireActivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
+
+**Returns:** `void`
 
 ### `fireDeactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
+
+**Returns:** `void`
 

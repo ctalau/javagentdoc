@@ -53,13 +53,11 @@ The Author Persistent Highlight has one of the following types defined in
 
 ### `getEndOffset()`
 
-**Returns:** `int`
-
 **Note:** empty persistent highlights have `startOffset == endOffset & isEmpty() == true`
 
-### `getClonedProperties()`
+**Returns:** `int`
 
-**Returns:** `java.util.LinkedHashMap<java.lang.String,java.lang.String>`
+### `getClonedProperties()`
 
 The properties can contain 
  details about the highlight author or the highlight modification timestamp, 
@@ -89,6 +87,8 @@ The properties can contain
  and can be changed using the AuthorPersistentHighlighter#setProperties(AuthorPersistentHighlight, LinkedHashMap)
  method.
 
+**Returns:** `java.util.LinkedHashMap<java.lang.String,java.lang.String>`
+
 ### `getType()`
 
 **Returns:** `ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType`
@@ -99,10 +99,10 @@ The properties can contain
 
 ### `clone(ro.sync.ecss.extensions.api.Content content)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)
-
 **Parameters:**
 - `content` ([`ro.sync.ecss.extensions.api.Content`](../Content.md)): The new content in which to clone the current highlight.
+
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)
 
 ### `getPropertiesIterator()`
 
@@ -110,8 +110,8 @@ The properties can contain
 
 ### `getProperty(java.lang.String key)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `key` (`java.lang.String`): The property key.
+
+**Returns:** `java.lang.String`
 

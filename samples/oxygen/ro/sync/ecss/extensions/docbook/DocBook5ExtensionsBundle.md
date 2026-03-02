@@ -74,8 +74,8 @@
 
 ### `getHelpPageID(java.lang.String currentEditorPage)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `currentEditorPage` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 

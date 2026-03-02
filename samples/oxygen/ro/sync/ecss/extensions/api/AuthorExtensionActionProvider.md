@@ -8,15 +8,15 @@
 
 ### `getExtensionAction(java.lang.String arg0)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](editor/IAuthorExtensionAction.md)
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `getExtensionAction(ro.sync.ecss.css.functions.lc arg0)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](editor/IAuthorExtensionAction.md)
+
+### `getExtensionAction(ro.sync.ecss.css.functions.lc arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.css.functions.lc`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](editor/IAuthorExtensionAction.md)
 

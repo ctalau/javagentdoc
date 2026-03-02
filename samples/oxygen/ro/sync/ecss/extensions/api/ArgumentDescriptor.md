@@ -75,11 +75,11 @@ This Map
 **Parameters:**
 - `name` (`java.lang.String`): The name of the argument.
 - `type` (`int`): The type of the argument, one of:
- ArgumentDescriptor#TYPE_STRING,
- ArgumentDescriptor#TYPE_FRAGMENT,
- ArgumentDescriptor#TYPE_SCRIPT,
- ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
- ArgumentDescriptor#TYPE_CONSTANT_LIST,
+   ArgumentDescriptor#TYPE_STRING,
+   ArgumentDescriptor#TYPE_FRAGMENT,
+   ArgumentDescriptor#TYPE_SCRIPT,
+   ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
+   ArgumentDescriptor#TYPE_CONSTANT_LIST,
 - `description` (`java.lang.String`): The description of the argument.
 
 ### `<init>(java.lang.String name, int type, java.lang.String description, java.lang.String defaultValue)`
@@ -87,11 +87,11 @@ This Map
 **Parameters:**
 - `name` (`java.lang.String`): The name of the argument.
 - `type` (`int`): The type of the argument, one of:
- ArgumentDescriptor#TYPE_STRING,
- ArgumentDescriptor#TYPE_FRAGMENT,
- ArgumentDescriptor#TYPE_SCRIPT,
- ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
- ArgumentDescriptor#TYPE_CONSTANT_LIST,
+   ArgumentDescriptor#TYPE_STRING,
+   ArgumentDescriptor#TYPE_FRAGMENT,
+   ArgumentDescriptor#TYPE_SCRIPT,
+   ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
+   ArgumentDescriptor#TYPE_CONSTANT_LIST,
 - `description` (`java.lang.String`): The description of the argument.
 - `defaultValue` (`java.lang.String`): The default value of the argument.
 
@@ -100,11 +100,11 @@ This Map
 **Parameters:**
 - `name` (`java.lang.String`): The name of the argument.
 - `type` (`int`): The type of the argument, one of:
- ArgumentDescriptor#TYPE_STRING,
- ArgumentDescriptor#TYPE_FRAGMENT,
- ArgumentDescriptor#TYPE_SCRIPT,
- ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
- ArgumentDescriptor#TYPE_CONSTANT_LIST,
+   ArgumentDescriptor#TYPE_STRING,
+   ArgumentDescriptor#TYPE_FRAGMENT,
+   ArgumentDescriptor#TYPE_SCRIPT,
+   ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
+   ArgumentDescriptor#TYPE_CONSTANT_LIST,
 - `description` (`java.lang.String`): The description of the argument.
 - `allowedValues` (`java.lang.String[]`): The allowed values for the defined argument.
 - `defaultValue` (`java.lang.String`): The default value of the argument.
@@ -125,15 +125,15 @@ This Map
 
 ### `decodeType(int type)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `type` (`int`): The argument type, one of:
- ArgumentDescriptor#TYPE_STRING,
- ArgumentDescriptor#TYPE_FRAGMENT,
- ArgumentDescriptor#TYPE_SCRIPT,
- ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
- ArgumentDescriptor#TYPE_CONSTANT_LIST,
+   ArgumentDescriptor#TYPE_STRING,
+   ArgumentDescriptor#TYPE_FRAGMENT,
+   ArgumentDescriptor#TYPE_SCRIPT,
+   ArgumentDescriptor#TYPE_XPATH_EXPRESSION,
+   ArgumentDescriptor#TYPE_CONSTANT_LIST,
+
+**Returns:** `java.lang.String`
 
 ### `getAllowedValues()`
 

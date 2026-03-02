@@ -14,10 +14,10 @@
 
 ### `addGuessElement(ro.sync.contentcompletion.xml.CIElement arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md))
+
+**Returns:** `void`
 
 ### `getAttributes()`
 
@@ -69,73 +69,73 @@
 
 ### `setAnnotation(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0)`
-
 **Returns:** `void`
+
+### `setAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
 
-### `setContentType(int arg0)`
-
 **Returns:** `void`
+
+### `setContentType(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
 
-### `setDeclareXmlns(boolean arg0)`
-
 **Returns:** `void`
+
+### `setDeclareXmlns(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setName(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setNamespace(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setNillable(boolean arg0)`
-
 **Returns:** `void`
+
+### `setNillable(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setPrefix(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `setPrefix(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setTypeDescription(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `compareTo(ro.sync.contentcompletion.xml.CIElement arg0)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `compareTo(ro.sync.contentcompletion.xml.CIElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md))
+
+**Returns:** `int`
 
 ### `getAnnotation()`
 
@@ -199,101 +199,101 @@
 
 ### `setFacetFractionDigitsValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetLengthValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetMaxExclusiveValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetMaxInclusiveValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetMaxLengthValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetMinExclusiveValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetMinInclusiveValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetMinLengthValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetPattern(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetTotalDigitsValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFacetWhitespaceValue(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setModelDescription(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setPossiblesValues(java.util.List<java.lang.String> arg0)`
-
 **Returns:** `void`
+
+### `setPossiblesValues(java.util.List<java.lang.String> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
 
-### `setAssertions(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `setAssertions(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getAssertions()`
 
@@ -301,10 +301,10 @@
 
 ### `setOpenContentMode(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getOpenContentMode()`
 
@@ -312,10 +312,10 @@
 
 ### `setOpenContentWildcardDescription(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getOpenContentWildcardDescription()`
 
@@ -327,8 +327,8 @@
 
 ### `setHasFixedValueType(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 

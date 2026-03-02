@@ -20,8 +20,8 @@
 
 ### `registerLicenseKey(java.io.Reader arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.io.Reader`)
+
+**Returns:** `void`
 

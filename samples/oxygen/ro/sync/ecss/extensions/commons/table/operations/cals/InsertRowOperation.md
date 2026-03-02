@@ -29,26 +29,26 @@
 
 ### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../../api/ArgumentsMap.md))
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
 - `columnIndex` (`int`)
 
-### `getRowElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
-
 **Returns:** `java.lang.String`
+
+### `getRowElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
+
+**Returns:** `java.lang.String`
 
 ### `useCurrentRowTemplateOnInsert()`
 

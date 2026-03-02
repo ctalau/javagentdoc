@@ -16,14 +16,12 @@
 
 ### `getCategoriesAndProperties(java.util.List<java.lang.Integer[]> selections)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`
-
 **Parameters:**
 - `selections` (`java.util.List<java.lang.Integer[]>`)
 
-### `getRowsTabInformation(java.util.List<java.lang.Integer[]> selections)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](../../../commons/table/properties/TabInfo.md)
+### `getRowsTabInformation(java.util.List<java.lang.Integer[]> selections)`
 
 This information will contain the properties 
  which will be edited, the rows on which those properties applies and some context 
@@ -32,9 +30,9 @@ This information will contain the properties
 **Parameters:**
 - `selections` (`java.util.List<java.lang.Integer[]>`): The list with the selection intervals.
 
-### `computeFragmentsToMoveInsideFooter(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
+**Returns:** [`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](../../../commons/table/properties/TabInfo.md)
 
-**Returns:** `boolean`
+### `computeFragmentsToMoveInsideFooter(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
 
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
@@ -42,28 +40,30 @@ This information will contain the properties
 - `tabInfo` ([`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](../../../commons/table/properties/TabInfo.md))
 - `nodesToModify` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
 - `currentNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `computeFragmentMoveInsideHeader(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
 - `offsets` (`java.util.List<javax.swing.text.Position>`)
 - `tabInfo` ([`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](../../../commons/table/properties/TabInfo.md))
 - `nodesToModify` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
 - `currentNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `computeFragmentsToMoveInsideBody(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
 - `offsets` (`java.util.List<javax.swing.text.Position>`)
 - `tabInfo` ([`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](../../../commons/table/properties/TabInfo.md))
 - `nodesToModify` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
 - `currentNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `getTableAttribute()`
 

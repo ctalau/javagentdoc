@@ -22,17 +22,17 @@
 
 ### `installProtocols(java.net.URLStreamHandlerFactory arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.net.URLStreamHandlerFactory`)
+
+**Returns:** `void`
 
 ### `b(java.net.URLStreamHandlerFactory arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.net.URLStreamHandlerFactory`)
+
+**Returns:** `void`
 
 ### `inhibitInstallProtocols()`
 
@@ -44,8 +44,8 @@
 
 ### `isBuiltInProtocol(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `boolean`
 

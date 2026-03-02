@@ -14,8 +14,8 @@
 
 ### `filterValidationProblems(ro.sync.exml.workspace.api.editor.validation.ValidationProblems validationProblems)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `validationProblems` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblems`](./ValidationProblems.md)): The problems found by Oxygen.
+
+**Returns:** `void`
 

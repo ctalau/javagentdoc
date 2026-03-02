@@ -24,11 +24,11 @@
 
 ### `getXSLTTransformerFactory(ro.sync.exml.plugin.transform.XSLMessageListener messageListener)`
 
-**Returns:** `javax.xml.transform.TransformerFactory`
-
 **Parameters:**
 - `messageListener` ([`ro.sync.exml.plugin.transform.XSLMessageListener`](./XSLMessageListener.md)): A listener that will receive events when an xsl:message 
- or xsl:assert is triggered.
+   or xsl:assert is triggered.
+
+**Returns:** `javax.xml.transform.TransformerFactory`
 
 ### `isXSLT20Transformer()`
 

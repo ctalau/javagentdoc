@@ -22,11 +22,11 @@
 
 ### `copyAttributeOnSplit(java.lang.String attrQName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `attrQName` (`java.lang.String`)
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 
 ### `getDescription()`
 
@@ -34,24 +34,24 @@
 
 ### `getGenerateIDAttributeQName(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String[] elemsWithAutoGeneration, boolean forceGeneration)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 - `elemsWithAutoGeneration` (`java.lang.String[]`)
 - `forceGeneration` (`boolean`)
 
-### `isInsideConref(ro.sync.ecss.extensions.api.AuthorElementBaseInterface element)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isInsideConref(ro.sync.ecss.extensions.api.AuthorElementBaseInterface element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.AuthorElementBaseInterface`](../../api/AuthorElementBaseInterface.md)): the element
 
-### `process(ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation fragmentInformation)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `process(ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation fragmentInformation)`
 
 **Parameters:**
 - `fragmentInformation` ([`ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation`](../../api/content/ClipboardFragmentInformation.md))
+
+**Returns:** `void`
 

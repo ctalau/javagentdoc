@@ -114,10 +114,10 @@ Can be null if no parent line box.
 
 ### `setHighlightOverText(boolean isHighlightOverText)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `isHighlightOverText` (`boolean`): The isHighlightOverText to set.
+
+**Returns:** `void`
 
 ### `getGraphics()`
 
@@ -125,10 +125,10 @@ Can be null if no parent line box.
 
 ### `getCurrentBoxHeight()`
 
-**Returns:** `int`
-
 Usually the highlight should expand 
  as high as the containing box.
+
+**Returns:** `int`
 
 ### `getOrigin()`
 
@@ -148,10 +148,10 @@ Usually the highlight should expand
 
 ### `setLength(int length)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `length` (`int`): the new value.
+
+**Returns:** `void`
 
 ### `getStartOffset()`
 
@@ -191,10 +191,10 @@ Usually the highlight should expand
 
 ### `setHighlightOverImage(boolean isHighlightOverImage)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `isHighlightOverImage` (`boolean`): `true` if the highlight is over an image
+
+**Returns:** `void`
 
 ### `isHighlightOverImage()`
 
@@ -202,10 +202,10 @@ Usually the highlight should expand
 
 ### `setHighlightOverFormControls(boolean isHighlightOverFormControl)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `isHighlightOverFormControl` (`boolean`): `true` if we have a highlight over form controls.
+
+**Returns:** `void`
 
 ### `isHighlightOverFormControl()`
 

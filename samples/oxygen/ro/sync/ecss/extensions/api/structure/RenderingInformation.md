@@ -39,9 +39,9 @@ This will be used only in the Outliner.
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The node to render
 - `renderedText` (`java.lang.String`): The rendered text. This will be used both in the Outliner and the Bread Crumb.
- By default it is usually the node name.
+   By default it is usually the node name.
 - `additionalRenderedText` (`java.lang.String`): The additional rendered text. This will be used only in the Outliner.
- By default it shows some node text content.
+   By default it shows some node text content.
 - `tooltipText` (`java.lang.String`): The tooltip text which will appear in the tooltip associated with the node
 
 ### `<init>(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String renderedText, java.lang.String additionalRenderedText, java.lang.String additionalRenderedAttributeValue, java.lang.String tooltipText)`
@@ -49,29 +49,27 @@ This will be used only in the Outliner.
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The node to render
 - `renderedText` (`java.lang.String`): The rendered text. This will be used both in the Outliner and the Bread Crumb.
- By default it is usually the node name.
+   By default it is usually the node name.
 - `additionalRenderedText` (`java.lang.String`): The additional rendered text. This will be used only in the Outliner.
- By default it shows some node text content .
+   By default it shows some node text content .
 - `additionalRenderedAttributeValue` (`java.lang.String`): The additional rendered attribute value. This will be used only in the Outliner.
- By default it shows the value of the first attribute.
+   By default it shows the value of the first attribute.
 - `tooltipText` (`java.lang.String`): The tooltip text which will appear in the tooltip associated with the node
 
 ## Methods
 
 ### `setAdditionalRenderedText(java.lang.String additionalRenderedText)`
 
-**Returns:** `void`
-
 This will be used only in the Outliner.
  By default it shows some node text content.
 
 **Parameters:**
 - `additionalRenderedText` (`java.lang.String`): The additional rendered text. This will be used only in the Outliner.
- By default it shows some node text content.
-
-### `setAdditionalRenderedAttributeValue(java.lang.String additionalRenderedAttributeValue)`
+   By default it shows some node text content.
 
 **Returns:** `void`
+
+### `setAdditionalRenderedAttributeValue(java.lang.String additionalRenderedAttributeValue)`
 
 This will be used only in the Outliner.
  By default it shows the value of the first attribute.
@@ -79,19 +77,21 @@ This will be used only in the Outliner.
 **Parameters:**
 - `additionalRenderedAttributeValue` (`java.lang.String`): The additional rendered attribute value.
 
-### `getAdditionalRenderedText()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getAdditionalRenderedText()`
 
 This will be used only in the Outliner.
  By default it shows some node text content.
 
-### `getAdditionalRenderedAttributeValue()`
-
 **Returns:** `java.lang.String`
+
+### `getAdditionalRenderedAttributeValue()`
 
 This will be used only in the Outliner.
  By default it shows the value of the first attribute.
+
+**Returns:** `java.lang.String`
 
 ### `getNode()`
 
@@ -99,12 +99,12 @@ This will be used only in the Outliner.
 
 ### `setIgnoreNodeFromDisplay(boolean ignoreNodeFromDisplay)`
 
-**Returns:** `void`
-
 This takes effect only on the Breadcrumb Customizer.
 
 **Parameters:**
 - `ignoreNodeFromDisplay` (`boolean`): Set this to `true` to ignore this node from being displayed.
+
+**Returns:** `void`
 
 ### `isIgnoreNodeFromDisplay()`
 

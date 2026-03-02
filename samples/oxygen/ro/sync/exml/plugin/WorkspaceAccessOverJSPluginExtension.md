@@ -31,19 +31,19 @@
 
 ### `applicationStarted(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md))
 
-### `callFunction(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg0, java.lang.String arg1, boolean arg2)`
+**Returns:** `void`
 
-**Returns:** `java.lang.Object`
+### `callFunction(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg0, java.lang.String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md))
 - `arg1` (`java.lang.String`)
 - `arg2` (`boolean`)
+
+**Returns:** `java.lang.Object`
 
 ### `applicationClosing()`
 

@@ -44,20 +44,20 @@
 
 ### `getFont()`
 
-**Returns:** `ro.sync.exml.view.graphics.Font`
-
 Some image handlers (for example an SVG or a MathML image handler) might use this information to render and compute the image sizes...
+
+**Returns:** `ro.sync.exml.view.graphics.Font`
 
 ### `getDotsPerInch()`
 
-**Returns:** `int`
-
 The default is 96.
+
+**Returns:** `int`
 
 ### `getImageDimensions()`
 
-**Returns:** `ro.sync.exml.view.graphics.Dimension`
-
 Some image handlers (for example an SVG or a MathML image handler) might use this information to scale images without losing accuracy.
  If the handler does not use this information, the image is automatically scaled by the application to the display dimensions.
+
+**Returns:** `ro.sync.exml.view.graphics.Dimension`
 

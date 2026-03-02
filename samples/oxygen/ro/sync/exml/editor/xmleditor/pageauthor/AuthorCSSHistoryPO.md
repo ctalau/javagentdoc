@@ -28,25 +28,25 @@
 
 ### `proposeSelection(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0)`
 
-**Returns:** `java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`
-
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`)
 
-### `rememberSelection(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg1)`
+**Returns:** `java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`
 
-**Returns:** `void`
+### `rememberSelection(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`)
 - `arg1` (`java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`)
 
-### `serialize(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `serialize(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`)
+
+**Returns:** `java.lang.String`
 
 ### `checkValid()`
 

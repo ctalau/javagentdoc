@@ -105,17 +105,17 @@
 
 ### `setSchemaAwareEditingMode(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setVerifyDeleteTagsAction(boolean arg0)`
-
 **Returns:** `void`
+
+### `setVerifyDeleteTagsAction(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isVerifyDeleteElementTagsAction()`
 
@@ -123,10 +123,10 @@
 
 ### `setEnableSmartDelete(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isEnableSmartDelete()`
 
@@ -134,10 +134,10 @@
 
 ### `setVerifyPasteAndDNDAction(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isVerifyPasteAndDNDAction()`
 
@@ -145,10 +145,10 @@
 
 ### `setEnableSmartPaste(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isEnableSmartPaste()`
 
@@ -156,10 +156,10 @@
 
 ### `setVerifyTypingAction(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isVerifyTypingAction()`
 
@@ -167,10 +167,10 @@
 
 ### `setEnableSmartTyping(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isEnableSmartTyping()`
 
@@ -178,10 +178,10 @@
 
 ### `setInsertOnlyElemensFromCCList(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isInsertOnlyElemensFromCCList()`
 
@@ -193,17 +193,17 @@
 
 ### `setVerifyJoinAction(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setVerifyUnwrapAction(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isVerifyUnwrapAction()`
 
@@ -231,17 +231,17 @@
 
 ### `setShowAllPossibleElementsInCCList(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setInsertOnlyAttrValuesFromCCList(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isInsertOnlyAttrValuesFromCCList()`
 
@@ -253,8 +253,8 @@
 
 ### `setShowAvailableCCItemsOnEnter(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 

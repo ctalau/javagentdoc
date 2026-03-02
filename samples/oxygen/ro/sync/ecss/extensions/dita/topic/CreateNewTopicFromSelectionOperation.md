@@ -20,20 +20,20 @@
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `extractNewDocContent(ro.sync.ecss.extensions.api.AuthorDocumentController sourceCtrl, int selectionStart, int selectionEnd)`
+**Returns:** `void`
 
-**Returns:** `ro.sync.ecss.extensions.dita.topic.CreateNewTopicFromSelectionOperation.DocContent`
+### `extractNewDocContent(ro.sync.ecss.extensions.api.AuthorDocumentController sourceCtrl, int selectionStart, int selectionEnd)`
 
 **Parameters:**
 - `sourceCtrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): The document controller over the current document (source)
 - `selectionStart` (`int`): The start offset of the selection of the source document
 - `selectionEnd` (`int`): The end offset of the selection of the source document
+
+**Returns:** `ro.sync.ecss.extensions.dita.topic.CreateNewTopicFromSelectionOperation.DocContent`
 
 ### `getArguments()`
 
@@ -41,32 +41,32 @@
 
 ### `isTitle(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
-### `openAndGetAuthorPage(ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess workspaceAccess, java.net.URL toOpen)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage`](../../../../exml/workspace/api/editor/page/author/WSAuthorEditorPage.md)
+### `openAndGetAuthorPage(ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess workspaceAccess, java.net.URL toOpen)`
 
 **Parameters:**
 - `workspaceAccess` ([`ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess`](../../api/access/AuthorWorkspaceAccess.md)): Offers access to Author API.
 - `toOpen` (`java.net.URL`): The URL to open.
 
-### `insertInTopicBody(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragmentToInsert)`
+**Returns:** [`ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage`](../../../../exml/workspace/api/editor/page/author/WSAuthorEditorPage.md)
 
-**Returns:** `void`
+### `insertInTopicBody(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragmentToInsert)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): The document controller
 - `fragmentToInsert` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)): The fragment that will be inserted.
 
-### `getAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attrName)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attrName)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element
 - `attrName` (`java.lang.String`): The attribute name.
+
+**Returns:** `java.lang.String`
 

@@ -18,8 +18,8 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.ReferenceType`](./ReferenceType.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.ReferenceType`](./ReferenceType.md)
 

@@ -12,7 +12,7 @@
 
 ### `getTextForegroundColor()`
 
-**Returns:** `ro.sync.exml.view.graphics.Color`
-
 NULL for inhibiting this feature.
+
+**Returns:** `ro.sync.exml.view.graphics.Color`
 

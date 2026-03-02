@@ -263,17 +263,17 @@
 
 ### `nep(ro.sync.exml.editor.rc[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.rc[]`)
 
-### `wae(boolean arg0)`
-
 **Returns:** `void`
+
+### `wae(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `qfp()`
 
@@ -289,17 +289,17 @@
 
 ### `setVisible(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `nfp(boolean arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `boolean`
 
 ### `dgp()`
 
@@ -307,10 +307,10 @@
 
 ### `igp(boolean arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `boolean`
 
 ### `cfp()`
 
@@ -318,18 +318,18 @@
 
 ### `pgp(java.net.URL arg0)`
 
-**Returns:** `ro.sync.exml.editor.dd`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
-### `sfp(java.net.URL arg0, java.lang.String arg1)`
-
 **Returns:** `ro.sync.exml.editor.dd`
+
+### `sfp(java.net.URL arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `ro.sync.exml.editor.dd`
 
 ### `kfp()`
 
@@ -341,10 +341,10 @@
 
 ### `ffp(java.lang.String[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `void`
 
 ### `jep()`
 
@@ -356,10 +356,10 @@
 
 ### `jfp(ro.sync.ui.i.c arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.ui.i.c`)
+
+**Returns:** `void`
 
 ### `pep()`
 
@@ -367,10 +367,10 @@
 
 ### `xep(ro.sync.exml.plugin.general.GeneralPluginExtension arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.general.GeneralPluginExtension`](plugin/general/GeneralPluginExtension.md))
+
+**Returns:** `void`
 
 ### `dfp()`
 
@@ -390,17 +390,17 @@
 
 ### `handleOpen(java.net.URL arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `void`
 
 ### `tep(java.net.URL arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `void`
 
 ### `handlePrefs()`
 
@@ -412,10 +412,10 @@
 
 ### `rae(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `qae()`
 
@@ -423,10 +423,10 @@
 
 ### `pae(ro.sync.exml.ub arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.ub`)
+
+**Returns:** `void`
 
 ### `qep()`
 
@@ -442,31 +442,31 @@
 
 ### `pfp(ro.sync.exml.editor.te arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.te`)
+
+**Returns:** `void`
 
 ### `jgp(ro.sync.exml.editor.te arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.te`)
 
-### `open(java.net.URL arg0)`
+**Returns:** `void`
 
-**Returns:** `java.lang.Object`
+### `open(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
-### `uae(ro.sync.exml.editor.ud arg0)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `void`
+### `uae(ro.sync.exml.editor.ud arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.ud`)
+
+**Returns:** `void`
 
 ### `getHelpPageID()`
 
@@ -474,17 +474,17 @@
 
 ### `oae(java.lang.String arg0)`
 
-**Returns:** `ro.sync.exml.c.j`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `ro.sync.exml.c.j`
 
 ### `nae(java.lang.String arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `sep()`
 
@@ -492,45 +492,45 @@
 
 ### `lfp(java.lang.String[] arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `java.lang.String`
 
 ### `qgp(java.lang.String[] arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `java.lang.String`
 
 ### `cae(java.lang.String[] arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `boolean`
 
 ### `hae(java.lang.String[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
-### `ogp(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `ogp(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `mep(java.lang.String[] arg0)`
+**Returns:** `void`
 
-**Returns:** `java.net.URL`
+### `mep(java.lang.String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `java.net.URL`
 
 ### `kgp()`
 
@@ -554,10 +554,10 @@
 
 ### `bae(java.awt.Font arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.Font`)
+
+**Returns:** `void`
 
 ### `sae()`
 
@@ -565,17 +565,17 @@
 
 ### `mfp(ro.sync.exml.sd arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.sd`)
 
-### `cgp(boolean arg0)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `cgp(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `boolean`
 
 ### `bfp()`
 
@@ -583,17 +583,17 @@
 
 ### `ufp(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `tae(java.net.URL arg0)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `tae(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `void`
 
 ### `hgp()`
 
@@ -605,17 +605,17 @@
 
 ### `afp(ro.sync.exml.plugin.urlstreamhandler.URLChooserMenuExtension arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.plugin.urlstreamhandler.URLChooserMenuExtension`](plugin/urlstreamhandler/URLChooserMenuExtension.md))
 
-### `vae(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `vae(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `efp()`
 
@@ -655,10 +655,10 @@
 
 ### `zae(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `yae()`
 
@@ -674,33 +674,33 @@
 
 ### `invokeAction(java.lang.Object arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `void`
 
 ### `getActionID(java.lang.Object arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
+
+**Returns:** `java.lang.String`
 
 ### `addActionPerformedListener(java.lang.Object arg0, ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
 - `arg1` ([`ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener`](workspace/api/editor/page/author/actions/ActionPerformedListener.md))
+
+**Returns:** `void`
 
 ### `removeActionPerformedListener(java.lang.Object arg0, ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.Object`)
 - `arg1` ([`ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener`](workspace/api/editor/page/author/actions/ActionPerformedListener.md))
+
+**Returns:** `void`
 
 ### `getGlobalActions()`
 
@@ -708,17 +708,17 @@
 
 ### `registerAction(java.lang.String arg0, java.lang.Object arg1, java.lang.String arg2)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Object`)
 - `arg2` (`java.lang.String`)
 
-### `unregisterAction(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `unregisterAction(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 

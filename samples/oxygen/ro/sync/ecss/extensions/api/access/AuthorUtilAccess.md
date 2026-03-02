@@ -12,10 +12,10 @@
 
 ### `escapeAttributeValue(java.lang.String attributeValue)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `attributeValue` (`java.lang.String`): The attribute value.
+
+**Returns:** `java.lang.String`
 
 ### `newNonValidatingXMLReader()`
 
@@ -23,18 +23,18 @@
 
 ### `resolvePath(java.net.URL baseURL, java.lang.String relativeLocation, boolean entityResolve, boolean uriResolve)`
 
-**Returns:** `java.net.URL`
-
 **Parameters:**
 - `baseURL` (`java.net.URL`): The URL of the current opened XML file.
 - `relativeLocation` (`java.lang.String`): The relative location to be resolved.
 - `entityResolve` (`boolean`): `true` if the catalog entity resolver should be used.
 - `uriResolve` (`boolean`): `true` if the catalog URI resolver should be used.
 
-### `resetXMLCatalogs()`
+**Returns:** `java.net.URL`
 
-**Returns:** `void`
+### `resetXMLCatalogs()`
 
 This way next time the catalogs are needed
  they will first be rebuilt.
+
+**Returns:** `void`
 

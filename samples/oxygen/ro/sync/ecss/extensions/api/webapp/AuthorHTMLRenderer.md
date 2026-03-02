@@ -20,15 +20,15 @@
 
 ### `renderNodeContentAndSentinels(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md))
 
-### `getResolvedStylesDescriptor(ro.sync.ecss.extensions.api.node.AuthorParentNode arg0)`
+**Returns:** `void`
 
-**Returns:** `ro.sync.ecss.css.CssInspectorModel`
+### `getResolvedStylesDescriptor(ro.sync.ecss.extensions.api.node.AuthorParentNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](../node/AuthorParentNode.md))
+
+**Returns:** `ro.sync.ecss.css.CssInspectorModel`
 

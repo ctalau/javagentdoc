@@ -117,7 +117,7 @@ The only legal values are the following constants:
 - `y` (`int`): The y coordinate of the mouse event.
 - `isPopupTrigger` (`boolean`): `true` if it is pop-up trigger.
 - `state` (`int`): One of the constants #STATE_PRESSED, #STATE_RELEASED,
- #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
+   #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
 - `modifiers` (`int`): Marks if CTRL, SHIFT, ALT, ALT GR, META were pressed.
 - `clickCount` (`int`): Click count.
 
@@ -128,7 +128,7 @@ The only legal values are the following constants:
 - `y` (`int`): The y coordinate of the mouse event.
 - `isPopupTrigger` (`boolean`): `true` if it is pop-up trigger.
 - `state` (`int`): One of the constants #STATE_PRESSED, #STATE_RELEASED,
- #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
+   #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
 - `modifiers` (`int`): Marks if CTRL, SHIFT, ALT, ALT GR, META were pressed.
 - `clickCount` (`int`): Click count.
 - `button` (`int`): One of the constants #BUTTON1, #BUTTON2, #BUTTON3, #NOBUTTON.
@@ -140,13 +140,13 @@ The only legal values are the following constants:
 - `y` (`int`): The y coordinate of the mouse event.
 - `isPopupTrigger` (`boolean`): `true` if it is pop-up trigger.
 - `state` (`int`): One of the constants #STATE_PRESSED, #STATE_RELEASED,
-                        #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
+                          #STATE_CLICKED, #STATE_MOVED or #STATE_DRAGGED.
 - `modifiers` (`int`): Marks if CTRL, SHIFT, ALT, ALT GR, META were pressed.
 - `clickCount` (`int`): Click count.
 - `button` (`int`): One of the constants #BUTTON1, #BUTTON2, #BUTTON3,
-                        #NOBUTTON.
+                          #NOBUTTON.
 - `wheelUp` (`boolean`): `true` if the mouse wheel is rotated up (away from the user), 
-                        `false` if the mouse wheel is rotated down (towards the user).
+                          `false` if the mouse wheel is rotated down (towards the user).
 
 ## Methods
 
@@ -156,10 +156,10 @@ The only legal values are the following constants:
 
 ### `getStateDescription(int state)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `state` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getClickCount()`
 
@@ -171,13 +171,13 @@ The only legal values are the following constants:
 
 ### `isPopupTrigger()`
 
-**Returns:** `boolean`
-
 **Note**: Popup menus are triggered differently
  on different systems. Therefore, `isPopupTrigger`
  should be checked in both `mousePressed`
  and `mouseReleased`
  for proper cross-platform functionality.
+
+**Returns:** `boolean`
 
 ### `getX()`
 

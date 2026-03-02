@@ -28,15 +28,15 @@ Sometimes the message which will be presented first
 
 **Parameters:**
 - `shortMessage` (`java.lang.String`): The short error message. Sometimes the message which will be presented first 
-                      time to the user is shorter than the original message.
+                        time to the user is shorter than the original message.
 - `errorMessage` (`java.lang.String`): The error message
 
 ## Methods
 
 ### `getShortMessage()`
 
-**Returns:** `java.lang.String`
-
 Sometimes the message which will be presented first 
  time to the user is shorter than the original message.
+
+**Returns:** `java.lang.String`
 

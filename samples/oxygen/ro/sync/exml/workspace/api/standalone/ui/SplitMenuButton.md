@@ -22,38 +22,38 @@
 
 ### `setMenuActions(java.util.List arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.List`)
 
-### `setCurrentAction(javax.swing.Action arg0)`
-
 **Returns:** `void`
+
+### `setCurrentAction(javax.swing.Action arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
 
-### `addActionToMenu(javax.swing.Action arg0, boolean arg1)`
-
 **Returns:** `void`
+
+### `addActionToMenu(javax.swing.Action arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
 - `arg1` (`boolean`)
 
-### `addActionsToMenu(java.util.List arg0)`
-
 **Returns:** `void`
+
+### `addActionsToMenu(java.util.List arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List`)
 
-### `insertAction(javax.swing.Action arg0, int arg1)`
-
 **Returns:** `void`
+
+### `insertAction(javax.swing.Action arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
 - `arg1` (`int`)
+
+**Returns:** `void`
 

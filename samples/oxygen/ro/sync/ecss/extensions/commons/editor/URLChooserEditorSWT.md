@@ -54,12 +54,12 @@
 
 ### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0, ro.sync.exml.view.graphics.Rectangle arg1, ro.sync.exml.view.graphics.Point arg2)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
 - `arg1` (`ro.sync.exml.view.graphics.Rectangle`)
 - `arg2` (`ro.sync.exml.view.graphics.Point`)
+
+**Returns:** `java.lang.Object`
 
 ### `getScrollRectangle()`
 
@@ -83,10 +83,10 @@
 
 ### `stopEditing(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `cancelEditing()`
 
@@ -94,17 +94,17 @@
 
 ### `prepareComponents(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+**Returns:** `void`
 
 ### `setInitialValue(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+**Returns:** `void`
 
 ### `dispose()`
 
@@ -112,22 +112,22 @@
 
 ### `canDoOperation(int arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `boolean`
 
 ### `doOperation(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
-
 **Returns:** `void`
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
+
+**Returns:** `void`
 

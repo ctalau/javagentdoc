@@ -16,16 +16,16 @@ Can be added to notify of global events which occur in the DITA Map Tree.
 
 ### `modifiedStateChanged(boolean modified)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `modified` (`boolean`): true if the edited text in the component is modified, false otherwise
 
-### `loadedDocumentChanged()`
-
 **Returns:** `void`
 
+### `loadedDocumentChanged()`
+
 load(URL, Reader) was called
+
+**Returns:** `void`
 
 ### `documentTypeChanged()`
 

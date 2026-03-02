@@ -65,7 +65,7 @@ If the property current value was never modified,
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
 - `propertyRenderString` (`java.lang.String`): The string that will be presented in the SATablePropertiesCustomizerDialog. It
-                          can be different from the attribute name or it can be even the same.
+                            can be different from the attribute name or it can be even the same.
 - `propertyValues` (`java.util.List<java.lang.String>`): The list with the attribute's possible values.
 - `currentValue` (`java.lang.String`): The current of the attribute.
 
@@ -74,7 +74,7 @@ If the property current value was never modified,
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
 - `propertyRenderString` (`java.lang.String`): The string that will be presented in the SATablePropertiesCustomizerDialog. It
-                          can be different from the attribute name or it can be even the same.
+                            can be different from the attribute name or it can be even the same.
 - `propertyValues` (`java.util.List<java.lang.String>`): The list with the attribute's possible values.
 - `currentValue` (`java.lang.String`): The current of the attribute.
 - `isAttribute` (`boolean`): `true` if the current property represents an attribute.
@@ -84,30 +84,30 @@ If the property current value was never modified,
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
 - `propertyRenderString` (`java.lang.String`): The string that will be presented in the SATablePropertiesCustomizerDialog. It
-                              can be different from the attribute name or it can be even the same.
+                                can be different from the attribute name or it can be even the same.
 - `propertyValues` (`java.util.List<java.lang.String>`): The list with the attribute's possible values.
 - `currentValue` (`java.lang.String`): The current of the attribute.
 - `isAttribute` (`boolean`): `true` if the current property represents an attribute.
 - `isActive` (`boolean`): `true` if the combobox corresponding to the current property is enabled,
-                              `false` otherwise.
+                                `false` otherwise.
 
 ### `<init>(java.lang.String propertyName, java.lang.String propertyRenderString, java.util.List<java.lang.String> propertyValues, java.lang.String currentValue, java.lang.String parentGroup, ro.sync.ecss.extensions.commons.table.properties.GuiElements guiType, java.util.Map<java.lang.String,java.lang.String> icons, boolean isAttribute, boolean isActive)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
 - `propertyRenderString` (`java.lang.String`): The string that will be presented in the SATablePropertiesCustomizerDialog. It
-                              can be different from the attribute name or it can be even the same.
+                                can be different from the attribute name or it can be even the same.
 - `propertyValues` (`java.util.List<java.lang.String>`): The list with the attribute's possible values.
 - `currentValue` (`java.lang.String`): The current of the attribute.
 - `parentGroup` (`java.lang.String`): The group name that will include the current property.
 - `guiType` ([`ro.sync.ecss.extensions.commons.table.properties.GuiElements`](./GuiElements.md)): The type of GUI element that will be used to represent the values for the current property.
-                              If is one of GuiElements#COMBOBOX, GuiElements#RADIO_BUTTONS.
-                              The default is GuiElements#COMBOBOX. If this parameter is set to `null`, the element that
-                              will be used is GuiElements#COMBOBOX.
+                                If is one of GuiElements#COMBOBOX, GuiElements#RADIO_BUTTONS.
+                                The default is GuiElements#COMBOBOX. If this parameter is set to `null`, the element that
+                                will be used is GuiElements#COMBOBOX.
 - `icons` (`java.util.Map<java.lang.String,java.lang.String>`): The list of icons. An icon for every value. If empty icon corresponds to a value, the icon will be null
 - `isAttribute` (`boolean`): `true` if the current property represents an attribute.
 - `isActive` (`boolean`): `true` if the combobox corresponding to the current property is enabled,
-                              `false` otherwise.
+                                `false` otherwise.
 
 ## Methods
 
@@ -129,10 +129,10 @@ If the property current value was never modified,
 
 ### `setCurrentValue(java.lang.String currentValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `currentValue` (`java.lang.String`): The new value to set.
+
+**Returns:** `void`
 
 ### `getParentGroup()`
 
@@ -140,10 +140,10 @@ If the property current value was never modified,
 
 ### `setParentGroup(java.lang.String parentGroup)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `parentGroup` (`java.lang.String`): The group that includes the current property.
+
+**Returns:** `void`
 
 ### `isAttribute()`
 
@@ -151,10 +151,10 @@ If the property current value was never modified,
 
 ### `equals(java.lang.Object obj)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `toString()`
 
@@ -166,13 +166,13 @@ If the property current value was never modified,
 
 ### `setOldValue(java.lang.String oldValue)`
 
-**Returns:** `void`
-
 It should be correlated with setting 
  a new  value.
 
 **Parameters:**
 - `oldValue` (`java.lang.String`): The old value to set.
+
+**Returns:** `void`
 
 ### `isActive()`
 
@@ -184,18 +184,18 @@ It should be correlated with setting
 
 ### `setValues(java.util.List<java.lang.String> values)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `values` (`java.util.List<java.lang.String>`): Values for the current property.
 
-### `setGuiType(ro.sync.ecss.extensions.commons.table.properties.GuiElements guiType)`
-
 **Returns:** `void`
+
+### `setGuiType(ro.sync.ecss.extensions.commons.table.properties.GuiElements guiType)`
 
 **Parameters:**
 - `guiType` ([`ro.sync.ecss.extensions.commons.table.properties.GuiElements`](./GuiElements.md)): The new type GUI elements which will be used to present the values 
- for the property.
+   for the property.
+
+**Returns:** `void`
 
 ### `getGuiType()`
 
@@ -203,15 +203,15 @@ It should be correlated with setting
 
 ### `getIcons()`
 
-**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
-
 If the list contains null objects,
  then an empty icon should be used.
 
-### `setIcons(java.util.Map<java.lang.String,java.lang.String> icons)`
+**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-**Returns:** `void`
+### `setIcons(java.util.Map<java.lang.String,java.lang.String> icons)`
 
 **Parameters:**
 - `icons` (`java.util.Map<java.lang.String,java.lang.String>`): The icons to set.
+
+**Returns:** `void`
 

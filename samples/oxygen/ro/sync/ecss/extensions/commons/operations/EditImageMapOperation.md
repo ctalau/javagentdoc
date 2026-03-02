@@ -25,18 +25,18 @@
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `processArgumentsMap(ro.sync.ecss.extensions.api.ArgumentsMap args)`
-
 **Returns:** `void`
+
+### `processArgumentsMap(ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The map with arguments for this operation.
+
+**Returns:** `void`
 
 ### `getArguments()`
 

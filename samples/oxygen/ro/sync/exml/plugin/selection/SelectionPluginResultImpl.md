@@ -22,14 +22,12 @@
 
 **Parameters:**
 - `selection` (`java.lang.String`): The processed selection.
- The string can also contain editor variables available also to Oxygen code templates like ${caret} to position the caret at a certain location
- or ${selection} to surround the current selection with the processed string.
+   The string can also contain editor variables available also to Oxygen code templates like ${caret} to position the caret at a certain location
+   or ${selection} to surround the current selection with the processed string.
 
 ## Methods
 
 ### `setProcessedSelection(java.lang.String selection)`
-
-**Returns:** `void`
 
 The string can also contain editor variables available also to Oxygen code templates like ${caret} to position the caret at a certain location
  or ${selection} to surround the current selection with the processed string.
@@ -37,10 +35,12 @@ The string can also contain editor variables available also to Oxygen code templ
 **Parameters:**
 - `selection` (`java.lang.String`): The current selection.
 
-### `getProcessedSelection()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getProcessedSelection()`
 
 The string can also contain editor variables available also to Oxygen code templates like ${caret} to position the caret at a certain location
  or ${selection} to surround the current selection with the processed string.
+
+**Returns:** `java.lang.String`
 

@@ -21,19 +21,19 @@ It receives callbacks for
 
 ### `apply(ro.sync.exml.workspace.api.PluginWorkspace pluginWorkspace)`
 
-**Returns:** `void`
-
 All options associated with the option page must be saved on this method.
 
 **Parameters:**
 - `pluginWorkspace` ([`ro.sync.exml.workspace.api.PluginWorkspace`](../../workspace/api/PluginWorkspace.md)): Access the entire workspace of Oxygen. It can be used to
- retrieve the OptionsStorage and perform options save operations on it.
-
-### `restoreDefaults()`
+   retrieve the OptionsStorage and perform options save operations on it.
 
 **Returns:** `void`
 
+### `restoreDefaults()`
+
 All options associated with the option page must be restored to their default values.
+
+**Returns:** `void`
 
 ### `getTitle()`
 
@@ -41,15 +41,13 @@ All options associated with the option page must be restored to their default va
 
 ### `getKey()`
 
-**Returns:** `java.lang.String`
-
 Can be overridden in order to pass the returned value
  to ro.sync.exml.workspace.api.PluginWorkspace#showPreferencesPages(String[], String, boolean),
  which is used for displaying the preferences dialog with certain pages in the table of contents.
 
-### `init(ro.sync.exml.workspace.api.PluginWorkspace pluginWorkspace)`
+**Returns:** `java.lang.String`
 
-**Returns:** `javax.swing.JComponent`
+### `init(ro.sync.exml.workspace.api.PluginWorkspace pluginWorkspace)`
 
 checkboxes) 
  from the option stored in the options storage. (ro.sync.exml.workspace.api.PluginWorkspace.getOptionsStorage()).
@@ -62,7 +60,9 @@ checkboxes)
 
 **Parameters:**
 - `pluginWorkspace` ([`ro.sync.exml.workspace.api.PluginWorkspace`](../../workspace/api/PluginWorkspace.md)): Access the entire workspace of Oxygen. It can be used to
- retrieve the OptionsStorage and perform options save/load operations it.
+   retrieve the OptionsStorage and perform options save/load operations it.
+
+**Returns:** `javax.swing.JComponent`
 
 ### `getProjectLevelOptionKeys()`
 
@@ -70,7 +70,7 @@ checkboxes)
 
 ### `getHelpPageURL()`
 
-**Returns:** `java.lang.String`
-
 Use null if no help page is available for the dialog (no help is shown).
+
+**Returns:** `java.lang.String`
 

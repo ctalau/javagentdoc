@@ -28,15 +28,13 @@ The element is mapped into the content
 
 ### `hasPseudoClass(java.lang.String name)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `name` (`java.lang.String`): The name of the pseudo class. Let say :hover, :active, etc..
+
+**Returns:** `boolean`
 
 ### `setPseudoClass(java.lang.String name)`
 
-**Returns:** `void`
-
 **Warning:** Use this only when the element is from an AuthorDocumentFragment and not from 
  the current AuthorDocument content.
 
@@ -46,11 +44,11 @@ The element is mapped into the content
 
 **Parameters:**
 - `name` (`java.lang.String`): The name of the pseudo class. Let say :hover, :active, etc..
+
+**Returns:** `void`
 
 ### `removePseudoClass(java.lang.String name)`
 
-**Returns:** `void`
-
 **Warning:** Use this only when the element is from an AuthorDocumentFragment and not from 
  the current AuthorDocument content.
 
@@ -60,6 +58,8 @@ The element is mapped into the content
 
 **Parameters:**
 - `name` (`java.lang.String`): The name of the pseudo class. Let say :hover, :active, etc..
+
+**Returns:** `void`
 
 ### `isEmptyCSS3()`
 

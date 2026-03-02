@@ -159,38 +159,38 @@
 
 ### `setAlternateOptionsProvider(ro.sync.exml.options.td arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.options.td`)
 
-### `setApplicationOptionsName(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `setApplicationOptionsName(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setIsAuthor(boolean arg0)`
-
 **Returns:** `void`
+
+### `setIsAuthor(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setIsDeveloper(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `setIsJSONEditor(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isAuthor()`
 
@@ -206,20 +206,20 @@
 
 ### `u(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
 
-**Returns:** `java.io.File`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.String`)
 - `arg3` (`java.lang.String`)
 
-### `bc(java.io.File arg0)`
+**Returns:** `java.io.File`
 
-**Returns:** `void`
+### `bc(java.io.File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
+
+**Returns:** `void`
 
 ### `importOldProperties()`
 
@@ -227,11 +227,11 @@
 
 ### `kb(java.lang.String[] arg0, java.lang.String arg1)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `dumpConfigurationNow()`
 
@@ -251,10 +251,10 @@
 
 ### `getInstance(java.lang.String arg0)`
 
-**Returns:** [`ro.sync.exml.options.Options`](./Options.md)
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** [`ro.sync.exml.options.Options`](./Options.md)
 
 ### `clearInstanceTest()`
 
@@ -262,25 +262,25 @@
 
 ### `init(ro.sync.options.NotifyableMap arg0, ro.sync.options.k arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.options.NotifyableMap`)
 - `arg1` (`ro.sync.options.k`)
 
-### `init(ro.sync.options.NotifyableMap arg0)`
-
 **Returns:** `void`
+
+### `init(ro.sync.options.NotifyableMap arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.options.NotifyableMap`)
 
-### `ac(ro.sync.options.k arg0)`
+**Returns:** `void`
 
-**Returns:** `ro.sync.options.k`
+### `ac(ro.sync.options.k arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.options.k`)
+
+**Returns:** `ro.sync.options.k`
 
 ### `rb()`
 
@@ -292,10 +292,10 @@
 
 ### `setFixedOptionsFileName(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `s()`
 
@@ -303,85 +303,85 @@
 
 ### `getObject(java.lang.String arg0, java.lang.Class arg1)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Class`)
+
+**Returns:** `java.lang.Object`
 
 ### `g(java.lang.String arg0, java.lang.Class arg1)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Class`)
 
-### `wb(java.lang.String arg0, boolean arg1, java.lang.Class arg2)`
-
 **Returns:** `java.lang.Object`
+
+### `wb(java.lang.String arg0, boolean arg1, java.lang.Class arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 - `arg2` (`java.lang.Class`)
+
+**Returns:** `java.lang.Object`
 
 ### `ob(java.lang.String arg0, boolean arg1, java.lang.Class arg2)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`boolean`)
 - `arg2` (`java.lang.Class`)
 
+**Returns:** `java.lang.Object`
+
 ### `nb(java.lang.String arg0)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `arg0` (`java.lang.String`)
-
 ### `putObject(java.lang.String arg0, java.lang.Object arg1)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Object`)
+
+**Returns:** `void`
 
 ### `pb(java.lang.String arg0, java.lang.Object arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Object`)
+
+**Returns:** `void`
 
 ### `ib(java.lang.String arg0, java.lang.Object arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Object`)
 
-### `removeInternal(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `removeInternal(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `loadProjectOptions(org.w3c.dom.Element arg0, ro.sync.i18n.c arg1, ro.sync.ui.t arg2, java.util.List<java.net.URL> arg3)`
-
 **Returns:** `void`
+
+### `loadProjectOptions(org.w3c.dom.Element arg0, ro.sync.i18n.c arg1, ro.sync.ui.t arg2, java.util.List<java.net.URL> arg3)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Element`)
 - `arg1` (`ro.sync.i18n.c`)
 - `arg2` (`ro.sync.ui.t`)
 - `arg3` (`java.util.List<java.net.URL>`)
+
+**Returns:** `void`
 
 ### `jb()`
 
@@ -389,21 +389,19 @@
 
 ### `hb(java.util.function.Supplier<java.util.Map<java.lang.String,java.util.List<java.lang.String>>> arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.util.function.Supplier<java.util.Map<java.lang.String,java.util.List<java.lang.String>>>`)
 
-### `ub(java.util.List<java.lang.String> arg0)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `ub(java.util.List<java.lang.String> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
 
-### `zb(java.lang.String arg0, ro.sync.i18n.c arg1, ro.sync.ui.t arg2, java.util.List<java.net.URL> arg3)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `zb(java.lang.String arg0, ro.sync.i18n.c arg1, ro.sync.ui.t arg2, java.util.List<java.net.URL> arg3)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -411,16 +409,18 @@
 - `arg2` (`ro.sync.ui.t`)
 - `arg3` (`java.util.List<java.net.URL>`)
 
+**Returns:** `void`
+
 ### `mb()`
 
 **Returns:** `boolean`
 
 ### `vb(ro.sync.options.k arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.options.k`)
+
+**Returns:** `void`
 
 ### `refreshExternalDocumentTypes()`
 
@@ -428,18 +428,18 @@
 
 ### `storeProjectOptions(org.w3c.dom.Element arg0, java.lang.String arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`org.w3c.dom.Element`)
 - `arg1` (`java.lang.String`)
 
-### `tb(java.lang.String arg0)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `tb(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `clearProjectOptions()`
 
@@ -447,25 +447,25 @@
 
 ### `setLoadFromPrjChanged(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setGlobalOptions(java.io.File arg0, boolean arg1)`
-
 **Returns:** `void`
+
+### `setGlobalOptions(java.io.File arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`boolean`)
 
-### `useThemeSupport(boolean arg0)`
-
 **Returns:** `void`
+
+### `useThemeSupport(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isThemeSupportAllowed()`
 
@@ -473,31 +473,31 @@
 
 ### `existProjectOptionsForPage(java.lang.String arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setFirstInitNotifier(ro.sync.exml.options.xd arg0)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `setFirstInitNotifier(ro.sync.exml.options.xd arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.options.xd`)
 
-### `addProjectLoadListener(ro.sync.exml.options.og arg0)`
-
 **Returns:** `void`
+
+### `addProjectLoadListener(ro.sync.exml.options.og arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.options.og`)
+
+**Returns:** `void`
 
 ### `removeProjectLoadListener(ro.sync.exml.options.og arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.exml.options.og`)
+
+**Returns:** `void`
 
 ### `yb()`
 

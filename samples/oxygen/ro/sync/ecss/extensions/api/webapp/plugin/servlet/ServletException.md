@@ -25,7 +25,7 @@ The message can be written to the server log and/or
 **Parameters:**
 - `message` (`java.lang.String`): a `String` containing the text of the exception message
 - `rootCause` (`java.lang.Throwable`): the `Throwable` exception that interfered with the servlet's normal operation, making
- this servlet exception necessary
+   this servlet exception necessary
 
 ### `<init>(java.lang.Throwable rootCause)`
 
@@ -40,5 +40,5 @@ The exception's message is based on the localized message
 
 **Parameters:**
 - `rootCause` (`java.lang.Throwable`): the `Throwable` exception that interfered with the servlet's normal operation, making the
- servlet exception necessary
+   servlet exception necessary
 

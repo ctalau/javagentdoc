@@ -14,8 +14,8 @@ It is invoked before the main frame of the editor is displayed.
 
 ### `getComponentsValidator()`
 
-**Returns:** [`ro.sync.exml.ComponentsValidator`](../../ComponentsValidator.md)
-
 It acts like a filter, removing buttons/toolbars, views, menu items
  from the main interface.
+
+**Returns:** [`ro.sync.exml.ComponentsValidator`](../../ComponentsValidator.md)
 

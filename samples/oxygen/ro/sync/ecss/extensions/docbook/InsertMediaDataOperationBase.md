@@ -32,19 +32,19 @@ The value is `mediaUrl`.
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../api/ArgumentsMap.md))
 
-### `insertMediaRef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String ref)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../api/schemaaware/SchemaAwareHandlerResult.md)
+### `insertMediaRef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String ref)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Author access.
 - `ref` (`java.lang.String`): The media reference.
+
+**Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../api/schemaaware/SchemaAwareHandlerResult.md)
 
 ### `insertNamespace()`
 
@@ -52,9 +52,9 @@ The value is `mediaUrl`.
 
 ### `getArguments()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../api/ArgumentDescriptor.md)
-
 The operation will display a dialog for choosing the image fileref.
+
+**Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../api/ArgumentDescriptor.md)
 
 ### `getDescription()`
 

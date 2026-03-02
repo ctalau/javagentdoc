@@ -24,15 +24,13 @@
 
 ### `startPrefixMapping(java.lang.String arg0, java.lang.String arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `startElement(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, org.xml.sax.Attributes arg3)`
-
 **Returns:** `void`
+
+### `startElement(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, org.xml.sax.Attributes arg3)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -40,21 +38,23 @@
 - `arg2` (`java.lang.String`)
 - `arg3` (`org.xml.sax.Attributes`)
 
+**Returns:** `void`
+
 ### `endElement(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
+- `arg1` (`java.lang.String`)
+- `arg2` (`java.lang.String`)
 
 **Returns:** `void`
 
-**Parameters:**
-- `arg0` (`java.lang.String`)
-- `arg1` (`java.lang.String`)
-- `arg2` (`java.lang.String`)
-
 ### `b(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 

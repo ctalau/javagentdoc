@@ -37,10 +37,10 @@
 
 ### `setAuthorAccess(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The new author access.
+
+**Returns:** `void`
 
 ### `getContextNode()`
 
@@ -48,8 +48,8 @@
 
 ### `setContextNode(ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The error context node.
+
+**Returns:** `void`
 

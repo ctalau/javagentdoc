@@ -10,25 +10,23 @@
 
 ### `getRealPath(java.lang.String path)`
 
-**Returns:** `java.lang.String`
-
 For example, the path "/index.html" returns the absolute file path on the server's filesystem would be served by a request for "http://host/contextPath/index.html", where contextPath is the context path of this ServletContext..
  The real path returned will be in a form appropriate to the computer and operating system on which the servlet container is running, including the proper path separators. This method returns null if the servlet container cannot translate the virtual path to a real path for any reason (such as when the content is being made available from a .war archive).
 
 **Parameters:**
 - `path` (`java.lang.String`): String specifying a virtual path
 
-### `getContextPath()`
-
 **Returns:** `java.lang.String`
+
+### `getContextPath()`
 
 The context path is the portion of the request URI that is used to select the context of the request. The context path always comes first in a request URI. The path starts with a "/" character but does not end with a "/" character. For servlets in the default (root) context, this method returns "".
 
  It is possible that a servlet container may match a context by more than one context path. In such cases the HttpServletRequest.getContextPath() will return the actual context path used by the request and it may differ from the path returned by this method. The context path returned by this method should be considered as the prime or preferred context path of the application.
 
-### `getAttribute(java.lang.String name)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.Object`
+### `getAttribute(java.lang.String name)`
 
 An attribute allows a servlet container to give the servlet additional information not already provided by this
  interface. See your server documentation for information about its attributes. A list of supported attributes can be
@@ -46,15 +44,15 @@ An attribute allows a servlet container to give the servlet additional informati
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the name of the attribute
 
-### `getAttributeNames()`
+**Returns:** `java.lang.Object`
 
-**Returns:** `java.util.Enumeration<java.lang.String>`
+### `getAttributeNames()`
 
 Use the #getAttribute method with an attribute name to get the value of an attribute.
 
-### `setAttribute(java.lang.String name, java.lang.Object object)`
+**Returns:** `java.util.Enumeration<java.lang.String>`
 
-**Returns:** `void`
+### `setAttribute(java.lang.String name, java.lang.Object object)`
 
 If the name specified is already used for an
  attribute, this method will replace the attribute with the new to the new attribute.
@@ -74,9 +72,9 @@ If the name specified is already used for an
 - `name` (`java.lang.String`): a `String` specifying the name of the attribute
 - `object` (`java.lang.Object`): an `Object` representing the attribute to be bound
 
-### `removeAttribute(java.lang.String name)`
-
 **Returns:** `void`
+
+### `removeAttribute(java.lang.String name)`
 
 After removal, subsequent calls to
  #getAttribute to retrieve the attribute's value will return `null`.
@@ -87,4 +85,6 @@ After removal, subsequent calls to
 
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the name of the attribute to be removed
+
+**Returns:** `void`
 

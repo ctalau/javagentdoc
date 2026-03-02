@@ -16,48 +16,48 @@
 
 ### `getSortParent(int offset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
-
 **Parameters:**
 - `offset` (`int`)
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 
-### `isIgnored(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-**Returns:** `boolean`
+### `isIgnored(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
-### `checkValidForSorting(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `checkValidForSorting(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to check.
 
-### `canBeSorted(ro.sync.ecss.extensions.api.node.AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
-
 **Returns:** `void`
+
+### `canBeSorted(ro.sync.ecss.extensions.api.node.AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 - `selectedNonIgnoredChildrenInterval` (`int[]`)
 
-### `getSortKeysValues(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation sortInfo)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String[]`
+### `getSortKeysValues(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation sortInfo)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 - `sortInfo` ([`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md))
 
-### `getSortCriteria(ro.sync.ecss.extensions.api.node.AuthorElement parent)`
+**Returns:** `java.lang.String[]`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`
+### `getSortCriteria(ro.sync.ecss.extensions.api.node.AuthorElement parent)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`
 
 ### `getHelpPageID()`
 

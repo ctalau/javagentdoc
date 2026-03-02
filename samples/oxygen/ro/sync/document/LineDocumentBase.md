@@ -14,31 +14,31 @@
 
 ### `getLineOfOffset(int arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `int`
 
 ### `getColumnOfOffset(int arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `int`
 
 ### `getOffsetOfLineStart(int arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `int`
 
 ### `getOffsetOfLineEnd(int arg0)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `int`
 
 ### `getLineCount()`
 
@@ -46,31 +46,31 @@
 
 ### `merge(java.lang.CharSequence arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.CharSequence`)
 
-### `getLineText(int arg0)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.CharSequence`
+### `getLineText(int arg0)`
 
 **Parameters:**
 - `arg0` (`int`)
 
-### `addLastNotifiedDocumentListener(javax.swing.event.DocumentListener arg0)`
+**Returns:** `java.lang.CharSequence`
 
-**Returns:** `void`
+### `addLastNotifiedDocumentListener(javax.swing.event.DocumentListener arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.event.DocumentListener`)
+
+**Returns:** `void`
 
 ### `removeLastNotifiedDocumentListener(javax.swing.event.DocumentListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`javax.swing.event.DocumentListener`)
+
+**Returns:** `void`
 
 ### `isUseSpacesInsteadTab()`
 
@@ -78,8 +78,8 @@
 
 ### `setUseSpacesInsteadTab(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 

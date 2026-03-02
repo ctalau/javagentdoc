@@ -10,59 +10,57 @@
 
 ### `setOptionsDoctypePrefix(java.lang.String optionsDoctypePrefix)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `optionsDoctypePrefix` (`java.lang.String`): The document type prefix used to build the options keys.
- This should not be `null`.
-
-### `addOptionListener(ro.sync.exml.workspace.api.options.WSOptionListener listener)`
+   This should not be `null`.
 
 **Returns:** `void`
+
+### `addOptionListener(ro.sync.exml.workspace.api.options.WSOptionListener listener)`
 
 The listener is notified when the value of its associated option changes.
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.options.WSOptionListener`](./WSOptionListener.md)): The OptionListener to be added.
 
-### `removeOptionListener(ro.sync.exml.workspace.api.options.WSOptionListener listener)`
-
 **Returns:** `void`
+
+### `removeOptionListener(ro.sync.exml.workspace.api.options.WSOptionListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.options.WSOptionListener`](./WSOptionListener.md)): The OptionListener to be removed.
 
-### `getOption(java.lang.String key, java.lang.String defaultValue)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getOption(java.lang.String key, java.lang.String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies an option.
 - `defaultValue` (`java.lang.String`): The default value for the specified option.
+
+**Returns:** `java.lang.String`
 
 ### `setOption(java.lang.String key, java.lang.String value)`
 
-**Returns:** `void`
-
 If the supplied value is `null`
  The option will be removed from storage.
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option whose value is to be modified.
 - `value` (`java.lang.String`): The new value of the option. If `null`
- the option will be removed from the storage.
+   the option will be removed from the storage.
+
+**Returns:** `void`
 
 ### `getSecretOption(java.lang.String key, java.lang.String defaultValue)`
-
-**Returns:** `java.lang.String`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies an option.
 - `defaultValue` (`java.lang.String`): The default value for the specified option.
 
-### `setSecretOption(java.lang.String key, java.lang.String value)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setSecretOption(java.lang.String key, java.lang.String value)`
 
 If the supplied value is `null`
  The option will be removed from storage.
@@ -70,40 +68,42 @@ If the supplied value is `null`
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option whose value is to be modified.
 - `value` (`java.lang.String`): The new value of the option. If `null`
- the option will be removed from the storage.
-
-### `setPersistentObjectOption(java.lang.String key, ro.sync.exml.workspace.api.options.ExternalPersistentObject persistentObject)`
+   the option will be removed from the storage.
 
 **Returns:** `void`
+
+### `setPersistentObjectOption(java.lang.String key, ro.sync.exml.workspace.api.options.ExternalPersistentObject persistentObject)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key.
 - `persistentObject` ([`ro.sync.exml.workspace.api.options.ExternalPersistentObject`](./ExternalPersistentObject.md)): The persistent object.
 
-### `getPersistentObjectOption(java.lang.String key, ro.sync.exml.workspace.api.options.ExternalPersistentObject defaultValue)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.exml.workspace.api.options.ExternalPersistentObject`](./ExternalPersistentObject.md)
+### `getPersistentObjectOption(java.lang.String key, ro.sync.exml.workspace.api.options.ExternalPersistentObject defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key.
 - `defaultValue` ([`ro.sync.exml.workspace.api.options.ExternalPersistentObject`](./ExternalPersistentObject.md)): Default value
 
-### `getStringArrayOption(java.lang.String key, java.lang.String[] defaultValues)`
+**Returns:** [`ro.sync.exml.workspace.api.options.ExternalPersistentObject`](./ExternalPersistentObject.md)
 
-**Returns:** `java.lang.String[]`
+### `getStringArrayOption(java.lang.String key, java.lang.String[] defaultValues)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies the option.
 - `defaultValues` (`java.lang.String[]`): The default values for the specified option.
 
-### `setStringArrayOption(java.lang.String key, java.lang.String[] values)`
+**Returns:** `java.lang.String[]`
 
-**Returns:** `void`
+### `setStringArrayOption(java.lang.String key, java.lang.String[] values)`
 
 If the provided value is `null`, the option will be removed from storage.
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies the option.
 - `values` (`java.lang.String[]`): The new values to set. If `null`, the option 
-                    will be removed from the storage.
+                      will be removed from the storage.
+
+**Returns:** `void`
 

@@ -49,8 +49,6 @@ The path to the importer stylesheet must be added in the Classpath tab
 
 ### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
 
-**Returns:** `void`
-
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event.
  
@@ -66,9 +64,9 @@ The `source` of the insertion can be a **paste** event or a
 - `urls` (`java.util.List<java.net.URL>`): The list of URLs.
 - `source` (`int`): The source of the URLs, one of the AuthorExternalObjectInsertionHandler constants.
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, java.util.List<ro.sync.ecss.extensions.api.ReferenceType> types, int source)`
-
 **Returns:** `void`
+
+### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, java.util.List<ro.sync.ecss.extensions.api.ReferenceType> types, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event.
@@ -86,9 +84,9 @@ The `source` of the insertion can be a **paste** event or a
 - `types` (`java.util.List<ro.sync.ecss.extensions.api.ReferenceType>`): The type of the URL reference - if null, the type will be inferred.
 - `source` (`int`): The source of the URLs, one of the AuthorExternalObjectInsertionHandler constants.
 
-### `acceptURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `acceptURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event. If the source is of **drag and drop** type and 
@@ -104,9 +102,9 @@ The `source` of the insertion can be a **paste** event or a
 - `urls` (`java.util.List<java.net.URL>`): The list of URLs.
 - `source` (`int`): The source of the URLs, one of the AuthorExternalObjectInsertionHandler constants.
 
-### `acceptSource(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int source)`
-
 **Returns:** `boolean`
+
+### `acceptSource(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event. If the source is of **drag and drop** type and 
@@ -118,36 +116,36 @@ The `source` of the insertion can be a **paste** event or a
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
 - `source` (`int`): The source of the URLs, one of the 
- AuthorExternalObjectInsertionHandler constants (that represents a 
- **paste** or a **drag and drop** event)
+   AuthorExternalObjectInsertionHandler constants (that represents a 
+   **paste** or a **drag and drop** event)
+
+**Returns:** `boolean`
 
 ### `containOnlyImages(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urlList)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 - `urlList` (`java.util.List<java.net.URL>`): The list of URLs
+
+**Returns:** `boolean`
 
 ### `containOnlyBinaryResources(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urlList)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 - `urlList` (`java.util.List<java.net.URL>`): The list of URLs
 
-### `insertXHTMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.io.Reader xhtmlContentReader)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `insertXHTMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.io.Reader xhtmlContentReader)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
 - `xhtmlContentReader` (`java.io.Reader`): The XTHML content reader
 
-### `insertImportedContent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String importedContent)`
-
 **Returns:** `void`
+
+### `insertImportedContent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String importedContent)`
 
 The insertion is done schema aware.
 
@@ -155,20 +153,22 @@ The insertion is done schema aware.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
 - `importedContent` (`java.lang.String`): The imported content.
 
-### `getOnlyTextContentStylesheet(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `void`
 
-**Returns:** `javax.xml.transform.stream.StreamSource`
+### `getOnlyTextContentStylesheet(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
 
-### `getClassStylesheetResource(java.lang.Class clazz, java.lang.String resourcePath)`
-
 **Returns:** `javax.xml.transform.stream.StreamSource`
+
+### `getClassStylesheetResource(java.lang.Class clazz, java.lang.String resourcePath)`
 
 **Parameters:**
 - `clazz` (`java.lang.Class`): The class where to search for the stylesheet resource
 - `resourcePath` (`java.lang.String`): The resource to find.
+
+**Returns:** `javax.xml.transform.stream.StreamSource`
 
 ### `getFilterContentOfOutputStylesheet()`
 
@@ -176,25 +176,23 @@ The insertion is done schema aware.
 
 ### `simpleTransform(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xml, java.lang.String xsl)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): helper object for creating the transformer
 - `xml` (`java.lang.String`): the input XML of the transformation
 - `xsl` (`java.lang.String`): the input XSLT of the transformation
 
-### `simpleTransform(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xml, javax.xml.transform.stream.StreamSource xsl)`
-
 **Returns:** `java.lang.String`
+
+### `simpleTransform(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xml, javax.xml.transform.stream.StreamSource xsl)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): helper object for creating the transformer
 - `xml` (`java.lang.String`): the input XML of the transformation
 - `xsl` (`javax.xml.transform.stream.StreamSource`): the input XSLT of the transformation
 
-### `applyAssociatedXSL(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xhtml, javax.xml.transform.stream.StreamSource importerStylesheet, boolean copyWordImageResources)`
-
 **Returns:** `java.lang.String`
+
+### `applyAssociatedXSL(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xhtml, javax.xml.transform.stream.StreamSource importerStylesheet, boolean copyWordImageResources)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The AuthorAccess object of the current Author document.
@@ -202,56 +200,56 @@ The insertion is done schema aware.
 - `importerStylesheet` (`javax.xml.transform.stream.StreamSource`): The XSLT stylesheet for applying to specified XHTML fragment.
 - `copyWordImageResources` (`boolean`): `true` if the stylesheet should copy temp images files from Word.
 
-### `setParametersToTransform(javax.xml.transform.Transformer transformer, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean copyWordImageResources)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setParametersToTransform(javax.xml.transform.Transformer transformer, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean copyWordImageResources)`
 
 **Parameters:**
 - `transformer` (`javax.xml.transform.Transformer`): The XSLT transformer.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
 - `copyWordImageResources` (`boolean`): `true` to copy image resources from word document
 
-### `checkInsideTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `checkInsideTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
 
-### `setExtraXSLTParam(java.lang.String name, java.lang.Object value)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `setExtraXSLTParam(java.lang.String name, java.lang.Object value)`
 
 **Parameters:**
 - `name` (`java.lang.String`): Param name.
 - `value` (`java.lang.Object`): Param value.
 
-### `getParentURL(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getParentURL(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 Friendly for tests
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The access for the current editor.
 
-### `getContextPathNamesAndUris(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.String[]`
+### `getContextPathNamesAndUris(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
 
-### `readInitialXHTMLContent(java.io.Reader xhtmlContentReader)`
+**Returns:** `java.lang.String[]`
 
-**Returns:** `java.lang.String`
+### `readInitialXHTMLContent(java.io.Reader xhtmlContentReader)`
 
 **Parameters:**
 - `xhtmlContentReader` (`java.io.Reader`): The XHTML content reader
 
-### `createImporterStylesheetSource(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `java.lang.String`
 
-**Returns:** `javax.xml.transform.stream.StreamSource`
+### `createImporterStylesheetSource(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 The main
  stylesheet will be applied in a pipeline after the preprocessing stylesheets and generates 
@@ -260,17 +258,17 @@ The main
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The Author access API.
 
-### `getStylesheetResource(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String stylesheetFileName)`
-
 **Returns:** `javax.xml.transform.stream.StreamSource`
+
+### `getStylesheetResource(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String stylesheetFileName)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): the current framework
 - `stylesheetFileName` (`java.lang.String`): the name of the stylesheet resource
 
-### `getImporterStylesheetFileName(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `javax.xml.transform.stream.StreamSource`
 
-**Returns:** `java.lang.String`
+### `getImporterStylesheetFileName(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 It will be resolved 
  in the context of the current class loader.
@@ -278,9 +276,9 @@ It will be resolved
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access API.
 
-### `getBaseURLAtCaretPosition(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.net.URL`
+### `getBaseURLAtCaretPosition(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 Usually this is the URL of the opened editor but it can vary if nodes 
  have xml:base defined on them.
@@ -288,19 +286,21 @@ Usually this is the URL of the opened editor but it can vary if nodes
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access
 
-### `checkImportedXHTMLContentIsPreservedEntirely()`
+**Returns:** `java.net.URL`
 
-**Returns:** `boolean`
+### `checkImportedXHTMLContentIsPreservedEntirely()`
 
 If the data is not preserved the content will be copied without any styling and a warning will appear in the console.
 
-### `testDataIsPreserved(java.lang.String contentProcessedByStylesheets, java.lang.String allWordsPresent)`
-
 **Returns:** `boolean`
+
+### `testDataIsPreserved(java.lang.String contentProcessedByStylesheets, java.lang.String allWordsPresent)`
 
 **Parameters:**
 - `contentProcessedByStylesheets` (`java.lang.String`)
 - `allWordsPresent` (`java.lang.String`)
+
+**Returns:** `boolean`
 
 ### `getDescription()`
 
@@ -308,8 +308,8 @@ If the data is not preserved the content will be copied without any styling and 
 
 ### `readExternalPastePreferences(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The author access.
+
+**Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 

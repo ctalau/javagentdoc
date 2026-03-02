@@ -74,10 +74,10 @@
 
 ### `open(java.net.URL arg0)`
 
-**Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](editor/WSEditor.md)
-
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** [`ro.sync.exml.workspace.api.editor.WSEditor`](editor/WSEditor.md)
 
 ### `getCurrentEditorXMLContent()`
 
@@ -89,17 +89,17 @@
 
 ### `invokeAuthorExtensionActionForID(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `moveCaretRelativeTo(java.lang.String arg0, int arg1, boolean arg2)`
-
 **Returns:** `void`
+
+### `moveCaretRelativeTo(java.lang.String arg0, int arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`int`)
 - `arg2` (`boolean`)
+
+**Returns:** `void`
 

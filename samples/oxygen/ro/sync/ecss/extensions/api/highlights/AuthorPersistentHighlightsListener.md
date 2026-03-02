@@ -17,51 +17,49 @@ You can register such a listener using
 
 ### `highlightAdded(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): Added highlight.
 
-### `highlightsAdded(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> highlights)`
-
 **Returns:** `void`
+
+### `highlightsAdded(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> highlights)`
 
 **Parameters:**
 - `highlights` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`): Added highlights.
 
-### `highlightRemoved(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
-
 **Returns:** `void`
+
+### `highlightRemoved(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The removed highlight.
 
-### `highlightsRemoved(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> highlights)`
-
 **Returns:** `void`
+
+### `highlightsRemoved(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> highlights)`
 
 **Parameters:**
 - `highlights` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`): The list of highlights to be removed.
 
-### `highlightUpdated(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
-
 **Returns:** `void`
+
+### `highlightUpdated(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The updated highlight.
 
-### `highlightRangeReconfiguredUpdated(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, int oldStartOffset, int oldEndOffset)`
-
 **Returns:** `void`
+
+### `highlightRangeReconfiguredUpdated(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, int oldStartOffset, int oldEndOffset)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The updated highlight.
 - `oldStartOffset` (`int`): The old start range for the highlight.
 - `oldEndOffset` (`int`): The old end range for the highlight
 
-### `highlightsChanged()`
-
 **Returns:** `void`
+
+### `highlightsChanged()`
 
 API code which inserts or deletes multiple fragments in one operation like:
 
@@ -85,4 +83,6 @@ API code which inserts or deletes multiple fragments in one operation like:
 
   
   event.
+
+**Returns:** `void`
 

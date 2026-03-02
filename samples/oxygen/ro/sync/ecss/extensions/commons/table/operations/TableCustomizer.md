@@ -32,8 +32,6 @@ Session level persistence.
 
 ### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
-
 A table customizer dialog is shown, giving the possibility to choose the 
  properties of a new table to be inserted in the document. An object containing 
  the new table information is returned.
@@ -41,9 +39,9 @@ A table customizer dialog is shown, giving the possibility to choose the
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author operations.
 
-### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount)`
-
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
+
+### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount)`
 
 A table customizer dialog is shown, giving the possibility to choose the 
  properties of a new table to be inserted in the document. An object containing 
@@ -52,16 +50,16 @@ A table customizer dialog is shown, giving the possibility to choose the
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author operations.
 - `predefinedRowsCount` (`int`): The predefined number of rows, `-1` 
- if the user can control the number of inserted column.
+   if the user can control the number of inserted column.
 - `predefinedColumnsCount` (`int`): The predefined number of columns, `-1` 
- if the user can control the number of inserted column.
- If predefined columns count and predefined rows count values are positive 
- then the dialog will not contain any field for defining the table columns
- and rows count and the inserted table will use the predefined values.
-
-### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
+   if the user can control the number of inserted column.
+   If predefined columns count and predefined rows count values are positive 
+   then the dialog will not contain any field for defining the table columns
+   and rows count and the inserted table will use the predefined values.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
+
+### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The Author access.
@@ -69,9 +67,9 @@ A table customizer dialog is shown, giving the possibility to choose the
 - `predefinedColumnsCount` (`int`): Predefined number of columns.
 - `defaultTableModel` (`int`): The default model of the table that will be inserted.
 
-### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
-
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
+
+### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 A table customizer dialog is shown, giving the possibility to choose the 
  properties of a new table to be inserted in the document. An object containing 
@@ -80,20 +78,22 @@ A table customizer dialog is shown, giving the possibility to choose the
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author operations.
 - `predefinedRowsCount` (`int`): The predefined number of rows, `-1` 
- if the user can control the number of inserted column.
+   if the user can control the number of inserted column.
 - `predefinedColumnsCount` (`int`): The predefined number of columns, `-1` 
- if the user can control the number of inserted column.
- If predefined columns count and predefined rows count values are positive 
- then the dialog will not contain any field for defining the table columns
- and rows count and the inserted table will use the predefined values.
+   if the user can control the number of inserted column.
+   If predefined columns count and predefined rows count values are positive 
+   then the dialog will not contain any field for defining the table columns
+   and rows count and the inserted table will use the predefined values.
 - `defaultTableModel` (`int`): The default model of the table that will be inserted.
-
-### `getTableInfoObject(java.lang.String tableCustomizerOptions)`
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
+### `getTableInfoObject(java.lang.String tableCustomizerOptions)`
+
 **Parameters:**
 - `tableCustomizerOptions` (`java.lang.String`): the options serialization to be deserialized.
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
 ### `serializeTableCustomizerOptions()`
 

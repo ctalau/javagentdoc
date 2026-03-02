@@ -33,17 +33,17 @@ A node represents an entry from Author outline, Author bread crumb,
 
 ### `getImageURL(java.lang.String path)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `path` (`java.lang.String`): The image path to search for.
 
-### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../exml/workspace/api/node/customizer/BasicRenderingInformation.md)
+### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md))
+
+**Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../exml/workspace/api/node/customizer/BasicRenderingInformation.md)
 
 ### `getDescription()`
 

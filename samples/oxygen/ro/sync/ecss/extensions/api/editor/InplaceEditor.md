@@ -68,45 +68,40 @@ A SWT implementation should also implement org.eclipse.jface.text.ITextOperation
 
 ### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseInvocationLocation)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context where the editor will be used.
 - `allocation` (`ro.sync.exml.view.graphics.Rectangle`): The bounds where the editor will be shown. This is normally
- the bounds of the box in which the value being edited is rendered. If the 
- editor requires to be presented in different bounds it should alter this parameter.
- The X,Y coordinates are relative to the parent in which the editor will be added.
+   the bounds of the box in which the value being edited is rendered. If the 
+   editor requires to be presented in different bounds it should alter this parameter.
+   The X,Y coordinates are relative to the parent in which the editor will be added.
 - `mouseInvocationLocation` (`ro.sync.exml.view.graphics.Point`): if the editor was requested using the mouse this
- parameter represents the X,Y location where the event took place. It is relative to the parent
- in which the editor will be added. `null` if the editor wasn't requested through 
- mouse interaction.
- 
- 
+   parameter represents the X,Y location where the event took place. It is relative to the parent
+   in which the editor will be added. `null` if the editor wasn't requested through 
+   mouse interaction.
+   
+   
+  
+   
+  
+   **OBS**: This is the very first call received by an editor. This ensures that the 
+   editor is properly initialized for the subsequent calls (like a #requestFocus() call).
+   
+  
+   **OBS**: An editor implementation will have to add listeners onto itself like:
+   
+  
+    - a KeyListener for handling key events like: ENTER to stop editing 
+    (by calling InplaceEditingListener#editingStopped(EditingEvent)) 
+    and ESCAPE to cancel it (by calling InplaceEditingListener#editingCanceled()).
+  
+    - a FocusListener to stop editing when the focus is given to a component that is not 
+    part of the editor (by calling InplaceEditingListener#editingStopped(EditingEvent)).
+  
+    - a DocumentListener to fire InplaceEditingListener#editingOccured() events (If the editor has a document).
 
- 
-
- **OBS**: This is the very first call received by an editor. This ensures that the 
- editor is properly initialized for the subsequent calls (like a #requestFocus() call).
- 
-
- **OBS**: An editor implementation will have to add listeners onto itself like:
- 
-
-  - a KeyListener for handling key events like: ENTER to stop editing 
-  (by calling InplaceEditingListener#editingStopped(EditingEvent)) 
-  and ESCAPE to cancel it (by calling InplaceEditingListener#editingCanceled()).
-
-  - a FocusListener to stop editing when the focus is given to a component that is not 
-  part of the editor (by calling InplaceEditingListener#editingStopped(EditingEvent)).
-
-  - a DocumentListener to fire InplaceEditingListener#editingOccured() events (If the editor has a document).
-
- 
-
+**Returns:** `java.lang.Object`
 
 ### `getScrollRectangle()`
-
-**Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
 The coordinate should be relative to the editor itself.
  
@@ -116,9 +111,9 @@ The coordinate should be relative to the editor itself.
  when this method is useful. The caret rectangle should be returned so that 
  the part of the editor with the caret is presented.
 
-### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+**Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-**Returns:** `void`
+### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 - InplaceEditingListener#editingOccured() to signal modification in 
    the editor. This event marks the editor as dirty and it's value will be 
@@ -132,6 +127,8 @@ The coordinate should be relative to the editor itself.
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md)): Editing listener.
 
+**Returns:** `void`
+
 ### `requestFocus()`
 
 **Returns:** `void`
@@ -142,38 +139,36 @@ The coordinate should be relative to the editor itself.
 
 ### `stopEditing()`
 
-**Returns:** `void`
-
 The editor should release
  any held resources and notify InplaceEditingListener#editingStopped(EditingEvent).
  
  OBS: The current value will be committed only if at least one 
  InplaceEditingListener#editingOccured() event was issued before this moment.
 
-### `commitValue()`
-
 **Returns:** `void`
+
+### `commitValue()`
 
 Will only commit if a new string value is provided and only if the value 
  that must be committed is different from the current value.
 
-### `cancelEditing()`
-
 **Returns:** `void`
+
+### `cancelEditing()`
 
 The editor should release
  any held resources and notify InplaceEditingListener#editingCanceled().
 
-### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
-
 **Returns:** `void`
+
+### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md)): Editing listener.
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
-
 **Returns:** `void`
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 In this situation it might be good 
  for the editor to refresh the presented data.
@@ -192,9 +187,9 @@ In this situation it might be good
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): An updated editing context for this editor.
 
-### `insertContent(java.lang.String content)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `insertContent(java.lang.String content)`
 
 The form control should insert this text as it sees fit. For example a text field
  might insert it at the caret position. An example when this event comes is when the user 
@@ -202,6 +197,8 @@ The form control should insert this text as it sees fit. For example a text fiel
 
 **Parameters:**
 - `content` (`java.lang.String`): Content to be inserted.
+
+**Returns:** `boolean`
 
 ### `allowsRepostingEvents()`
 

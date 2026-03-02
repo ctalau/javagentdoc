@@ -24,17 +24,17 @@ It is used on standalone implementation.
 
 ### `getColumnWidthsSpecifications(int tableModelType)`
 
-**Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
 
 ### `getFrameValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `createTitleCheckbox()`
 
@@ -42,59 +42,59 @@ It is used on standalone implementation.
 
 ### `main(java.lang.String[] args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `args` (`java.lang.String[]`): Not used.
 
-### `getDefaultFrameValue(int tableModelType)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getDefaultFrameValue(int tableModelType)`
 
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getRowsepValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultRowsepValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getColsepValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultColsepValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getAlignValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultAlignValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`)
+
+**Returns:** `java.lang.String`
 
 ### `getHelpPageID()`
 

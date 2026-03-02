@@ -10,8 +10,6 @@
 
 ### `makeRelative(java.net.URL baseURL, java.net.URL childURL)`
 
-**Returns:** `java.lang.String`
-
 The query and fragment identifier are preserved if the initial reference contains them.
  
 
@@ -26,9 +24,9 @@ The query and fragment identifier are preserved if the initial reference contain
 - `baseURL` (`java.net.URL`): The base URL.
 - `childURL` (`java.net.URL`): The child URL.
 
-### `correctURL(java.lang.String url)`
-
 **Returns:** `java.lang.String`
+
+### `correctURL(java.lang.String url)`
 
 The URL correction takes an URL like:
 
@@ -41,9 +39,9 @@ The URL correction takes an URL like:
 **Parameters:**
 - `url` (`java.lang.String`): The URL to be corrected.
 
-### `uncorrectURL(java.lang.String url)`
-
 **Returns:** `java.lang.String`
+
+### `uncorrectURL(java.lang.String url)`
 
 The URL un-correction takes an URL like:
 
@@ -56,9 +54,9 @@ The URL un-correction takes an URL like:
 **Parameters:**
 - `url` (`java.lang.String`): The URL to be corrected.
 
-### `convertFileToURL(java.io.File file)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.net.URL`
+### `convertFileToURL(java.io.File file)`
 
 The URL correction takes a File like:
 
@@ -71,48 +69,48 @@ The URL correction takes a File like:
 **Parameters:**
 - `file` (`java.io.File`): The File to be corrected.
 
-### `removeUserCredentials(java.net.URL url)`
-
 **Returns:** `java.net.URL`
+
+### `removeUserCredentials(java.net.URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL from which the user credentials will be removed.
 
-### `locateFile(java.net.URL url)`
+**Returns:** `java.net.URL`
 
-**Returns:** `java.io.File`
+### `locateFile(java.net.URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to be checked.
 
-### `getExtension(java.net.URL url)`
+**Returns:** `java.io.File`
 
-**Returns:** `java.lang.String`
+### `getExtension(java.net.URL url)`
 
 The extension is lower cased.
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to extract the extension for.
 
-### `getFileName(java.lang.String urlPath)`
-
 **Returns:** `java.lang.String`
+
+### `getFileName(java.lang.String urlPath)`
 
 **Parameters:**
 - `urlPath` (`java.lang.String`): An URL path
 
-### `isSupportedImageURL(java.net.URL url)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isSupportedImageURL(java.net.URL url)`
 
 The image extension is used
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL
 
-### `isUnhandledBinaryResourceURL(java.net.URL url)`
-
 **Returns:** `boolean`
+
+### `isUnhandledBinaryResourceURL(java.net.URL url)`
 
 The resource file extension is checked against a list of binary file patterns configured in the Oxygen options.
  
@@ -121,9 +119,9 @@ The resource file extension is checked against a list of binary file patterns co
 **Parameters:**
 - `url` (`java.net.URL`): The URL
 
-### `expandEditorVariables(java.lang.String pathWithEditorVariables, java.net.URL currentEditedURL)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `expandEditorVariables(java.lang.String pathWithEditorVariables, java.net.URL currentEditedURL)`
 
 If there's an external framework associated with the current editor, any $framework, $frameworks,
  $frameworkDir or $frameworksDir variable will be expanded in the context of 
@@ -134,9 +132,9 @@ If there's an external framework associated with the current editor, any $framew
 - `pathWithEditorVariables` (`java.lang.String`): The path containing editor variables
 - `currentEditedURL` (`java.net.URL`): The current edited URL. Can be `null` but it may be necessary to expand editor variables like "${cfd}".
 
-### `expandEditorVariables(java.lang.String pathWithEditorVariables, java.net.URL currentEditedURL, boolean expandAskEditorVariables)`
-
 **Returns:** `java.lang.String`
+
+### `expandEditorVariables(java.lang.String pathWithEditorVariables, java.net.URL currentEditedURL, boolean expandAskEditorVariables)`
 
 If there's an external framework associated with the current editor, any $framework, $frameworks,
  $frameworkDir or $frameworksDir variable will be expanded in the context of 
@@ -147,9 +145,9 @@ If there's an external framework associated with the current editor, any $framew
 - `currentEditedURL` (`java.net.URL`): The current edited URL. Can be `null` but it may be necessary to expand editor variables like "${cfd}".
 - `expandAskEditorVariables` (`boolean`): `true` to also expand "ask" and "answer" editor variables.
 
-### `encrypt(java.lang.String toEncrypt)`
-
 **Returns:** `java.lang.String`
+
+### `encrypt(java.lang.String toEncrypt)`
 
 The encryption/decryption is application-specific so a string encrypted in one Oxygen installation cannot be decrypted in another.
  You can use this method if you want to store user-specific data on disk with a moderate level of security.
@@ -157,9 +155,9 @@ The encryption/decryption is application-specific so a string encrypted in one O
 **Parameters:**
 - `toEncrypt` (`java.lang.String`): The string to encrypt.
 
-### `decrypt(java.lang.String toDecrypt)`
-
 **Returns:** `java.lang.String`
+
+### `decrypt(java.lang.String toDecrypt)`
 
 The encryption/decryption is application-specific so a string encrypted in one Oxygen installation cannot be decrypted in another.
  You can use this method if you want to store user-specific data on disk with a moderate level of security.
@@ -167,9 +165,9 @@ The encryption/decryption is application-specific so a string encrypted in one O
 **Parameters:**
 - `toDecrypt` (`java.lang.String`): The string to decrypt.
 
-### `addCustomEditorVariablesResolver(ro.sync.exml.workspace.api.util.EditorVariablesResolver resolver)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `addCustomEditorVariablesResolver(ro.sync.exml.workspace.api.util.EditorVariablesResolver resolver)`
 
 The resolver receives a string which may or may not contain custom editor variables.
  It can either return the unmodified string or a modified version of the string in which certain editor variables have been expanded to certain values.
@@ -177,46 +175,48 @@ The resolver receives a string which may or may not contain custom editor variab
 **Parameters:**
 - `resolver` ([`ro.sync.exml.workspace.api.util.EditorVariablesResolver`](./EditorVariablesResolver.md)): The resolver.
 
-### `removeCustomEditorVariablesResolver(ro.sync.exml.workspace.api.util.EditorVariablesResolver resolver)`
-
 **Returns:** `void`
+
+### `removeCustomEditorVariablesResolver(ro.sync.exml.workspace.api.util.EditorVariablesResolver resolver)`
 
 **Parameters:**
 - `resolver` ([`ro.sync.exml.workspace.api.util.EditorVariablesResolver`](./EditorVariablesResolver.md)): The resolver to remove.
 
-### `createReader(java.net.URL url, java.lang.String defaultEncoding)`
+**Returns:** `void`
 
-**Returns:** `java.io.Reader`
+### `createReader(java.net.URL url, java.lang.String defaultEncoding)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to be opened.
 - `defaultEncoding` (`java.lang.String`): The encoding to be used when all other ways of detecting it returned 
- null. This is used instead of creating the input stream reader with no encoding arguments. This 
- is a JAVA encoding.
+   null. This is used instead of creating the input stream reader with no encoding arguments. This 
+   is a JAVA encoding.
+
+**Returns:** `java.io.Reader`
 
 ### `createImage(java.lang.String imageUrl)`
-
-**Returns:** `java.awt.image.BufferedImage`
 
 **Parameters:**
 - `imageUrl` (`java.lang.String`): The URL of the image for which to return the buffered image.
 
-### `optimizeImage(java.net.URL imageUrl)`
+**Returns:** `java.awt.image.BufferedImage`
 
-**Returns:** [`ro.sync.exml.workspace.api.util.ImageHolder`](./ImageHolder.md)
+### `optimizeImage(java.net.URL imageUrl)`
 
 In case the image is too large it scales it down to fit a normal page.
 
 **Parameters:**
 - `imageUrl` (`java.net.URL`): The image URL.
 
-### `getContentType(java.lang.String systemID)`
+**Returns:** [`ro.sync.exml.workspace.api.util.ImageHolder`](./ImageHolder.md)
 
-**Returns:** `java.lang.String`
+### `getContentType(java.lang.String systemID)`
 
 The content type is detected from the file extension based on the file extension 
  associations saved in the application preferences.
 
 **Parameters:**
 - `systemID` (`java.lang.String`): The systemID to get the content type for.
+
+**Returns:** `java.lang.String`
 

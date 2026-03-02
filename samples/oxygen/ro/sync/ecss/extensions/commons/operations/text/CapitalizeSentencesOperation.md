@@ -24,26 +24,26 @@ If the start character of a sentence is lower case, it will be changed to upper 
 
 ### `isDelimiterBeforeTextNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int contentOffset)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 - `contentOffset` (`int`)
 
-### `processTextContent(char[] charArray, boolean isDelimiterBefore)`
+**Returns:** `boolean`
 
-**Returns:** `char[]`
+### `processTextContent(char[] charArray, boolean isDelimiterBefore)`
 
 **Parameters:**
 - `charArray` (`char[]`)
 - `isDelimiterBefore` (`boolean`)
 
-### `isSentenceDelimiter(char ch)`
+**Returns:** `char[]`
 
-**Returns:** `boolean`
+### `isSentenceDelimiter(char ch)`
 
 **Parameters:**
 - `ch` (`char`): The character that must be evaluated.
+
+**Returns:** `boolean`
 
 ### `getDescription()`
 

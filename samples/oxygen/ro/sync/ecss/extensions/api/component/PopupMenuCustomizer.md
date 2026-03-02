@@ -10,10 +10,10 @@
 
 ### `customize(javax.swing.JPopupMenu popUp)`
 
-**Returns:** `void`
-
 If everything is removed then the menu will not be shown.
 
 **Parameters:**
 - `popUp` (`javax.swing.JPopupMenu`): The pop-up Menu.
+
+**Returns:** `void`
 

@@ -96,10 +96,10 @@
 
 ### `registerLicenseKey(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `dispose()`
 
@@ -115,14 +115,12 @@
 
 ### `registerLicenseServer(ro.sync.g.b.bb arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.g.b.bb`)
 
-### `init(java.io.File arg0, java.net.URL arg1, java.net.URL arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6)`
-
 **Returns:** `void`
+
+### `init(java.io.File arg0, java.net.URL arg1, java.net.URL arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -133,9 +131,9 @@
 - `arg5` (`java.lang.String`)
 - `arg6` (`java.lang.String`)
 
-### `init(java.net.URL[] arg0, java.net.URL arg1, java.net.URL arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6)`
-
 **Returns:** `void`
+
+### `init(java.net.URL[] arg0, java.net.URL arg1, java.net.URL arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6)`
 
 **Parameters:**
 - `arg0` (`java.net.URL[]`)
@@ -146,9 +144,9 @@
 - `arg5` (`java.lang.String`)
 - `arg6` (`java.lang.String`)
 
-### `init(java.net.URL[] arg0, java.io.File arg1, java.net.URL arg2, java.net.URL arg3, java.lang.String arg4, java.lang.String arg5, ro.sync.g.b.bb arg6)`
-
 **Returns:** `void`
+
+### `init(java.net.URL[] arg0, java.io.File arg1, java.net.URL arg2, java.net.URL arg3, java.lang.String arg4, java.lang.String arg5, ro.sync.g.b.bb arg6)`
 
 **Parameters:**
 - `arg0` (`java.net.URL[]`)
@@ -158,6 +156,8 @@
 - `arg4` (`java.lang.String`)
 - `arg5` (`java.lang.String`)
 - `arg6` (`ro.sync.g.b.bb`)
+
+**Returns:** `void`
 
 ### `setAppletFrameAsParentFrame()`
 
@@ -169,28 +169,28 @@
 
 ### `setObjectProperty(java.lang.String arg0, java.lang.Object arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.Object`)
 
-### `createEditorComponentProvider(java.lang.String[] arg0, java.lang.String arg1)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md)
+### `createEditorComponentProvider(java.lang.String[] arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 - `arg1` (`java.lang.String`)
 
-### `createEditorComponentProvider(java.lang.String[] arg0, java.lang.String arg1, java.lang.String arg2)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md)
+
+### `createEditorComponentProvider(java.lang.String[] arg0, java.lang.String arg1, java.lang.String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md)
 
 ### `createEditorManager()`
 
@@ -202,25 +202,25 @@
 
 ### `disposeEditorComponentProvider(ro.sync.ecss.extensions.api.component.EditorComponentProvider arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md))
 
-### `disposeDITAMapComponentProvider(ro.sync.ecss.extensions.api.component.ditamap.DITAMapTreeComponentProvider arg0)`
-
 **Returns:** `void`
+
+### `disposeDITAMapComponentProvider(ro.sync.ecss.extensions.api.component.ditamap.DITAMapTreeComponentProvider arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.extensions.api.component.ditamap.DITAMapTreeComponentProvider`)
 
-### `getPreferencesPathForApplet(java.net.URL arg0, java.lang.String arg1)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getPreferencesPathForApplet(java.net.URL arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `getSpellCheckOptions()`
 
@@ -228,75 +228,75 @@
 
 ### `setSpellCheckOptions(ro.sync.azcheck.ui.SpellCheckOptions arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.azcheck.ui.SpellCheckOptions`)
 
-### `setAutoCorrectState(boolean arg0)`
-
 **Returns:** `void`
+
+### `setAutoCorrectState(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setOpenURLHandler(ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler arg0)`
-
 **Returns:** `void`
+
+### `setOpenURLHandler(ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler`](listeners/OpenURLHandler.md))
 
-### `addInputURLChooserCustomizer(ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer arg0)`
-
 **Returns:** `void`
+
+### `addInputURLChooserCustomizer(ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.InputURLChooserCustomizer`](../../../../exml/workspace/api/standalone/InputURLChooserCustomizer.md))
 
-### `addRelativeReferencesResolver(java.lang.String arg0, ro.sync.exml.workspace.api.util.RelativeReferenceResolver arg1)`
-
 **Returns:** `void`
+
+### `addRelativeReferencesResolver(java.lang.String arg0, ro.sync.exml.workspace.api.util.RelativeReferenceResolver arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` ([`ro.sync.exml.workspace.api.util.RelativeReferenceResolver`](../../../../exml/workspace/api/util/RelativeReferenceResolver.md))
 
-### `addDITAMapTreeTargetInformationProvider(java.lang.String arg0, ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider arg1)`
-
 **Returns:** `void`
+
+### `addDITAMapTreeTargetInformationProvider(java.lang.String arg0, ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` ([`ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider`](../../../../exml/workspace/api/standalone/ditamap/TopicRefTargetInfoProvider.md))
 
-### `setMathFlowFixedLicenseKeyForEditor(java.lang.String arg0)`
-
 **Returns:** `void`
+
+### `setMathFlowFixedLicenseKeyForEditor(java.lang.String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setMathFlowFixedLicenseKeyForComposer(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setMathFlowFixedLicenseFile(java.io.File arg0)`
-
 **Returns:** `void`
+
+### `setMathFlowFixedLicenseFile(java.io.File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
+
+**Returns:** `void`
 
 ### `setMathFlowInstallationFolder(java.io.File arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.io.File`)
+
+**Returns:** `void`
 
 ### `getXMLUtilAccess()`
 
@@ -320,10 +320,10 @@
 
 ### `setDITAKeyDefinitionManager(ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager`](../../../../exml/workspace/api/editor/page/ditamap/keys/KeyDefinitionManager.md))
+
+**Returns:** `void`
 
 ### `getWorkspaceUtilities()`
 
@@ -335,8 +335,8 @@
 
 ### `setParentFrame(java.awt.Frame arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.awt.Frame`)
+
+**Returns:** `void`
 

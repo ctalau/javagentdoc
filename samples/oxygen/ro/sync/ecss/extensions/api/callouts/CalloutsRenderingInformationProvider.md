@@ -29,8 +29,6 @@ By default it only handles custom persistent highlights but you can override the
 
 ### `getCalloutRenderingInformation(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.callouts.AuthorCalloutRenderingInformation`](./AuthorCalloutRenderingInformation.md)
-
 For **custom highlights** the callout rendering information is requested only for that custom
  persistent highlights for which the #shouldRenderAsCallout(AuthorPersistentHighlight)
  
@@ -45,9 +43,9 @@ For **custom highlights** the callout rendering information is requested only fo
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The Author persistent highlight. The type of the highlight can be obtained by using the AuthorPersistentHighlight#getType()
 
-### `shouldRenderAsCallout(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+**Returns:** [`ro.sync.ecss.extensions.api.callouts.AuthorCalloutRenderingInformation`](./AuthorCalloutRenderingInformation.md)
 
-**Returns:** `boolean`
+### `shouldRenderAsCallout(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
 
 The callouts are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom persistent highlights in Author mode.
@@ -63,9 +61,9 @@ The callouts are representations of Track Changes insert and delete highlights,
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The Author custom persistent highlight.
 
-### `handlesAlsoDefaultHighlights()`
-
 **Returns:** `boolean`
+
+### `handlesAlsoDefaultHighlights()`
 
 The callout rendering information is requested only if the application
  preferences are configured to show callouts for these highlight types. 
@@ -74,4 +72,6 @@ The callout rendering information is requested only if the application
 
  The callouts are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom review highlights in Author mode.
+
+**Returns:** `boolean`
 

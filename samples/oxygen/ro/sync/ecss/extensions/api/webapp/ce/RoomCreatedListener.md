@@ -10,8 +10,8 @@
 
 ### `roomCreated(java.lang.String roomId)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `roomId` (`java.lang.String`): The ID of the room.
+
+**Returns:** `void`
 

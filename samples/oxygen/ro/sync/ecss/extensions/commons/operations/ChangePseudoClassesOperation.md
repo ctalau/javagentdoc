@@ -57,15 +57,13 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `setOrRemovePseudoClasses(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, java.lang.String xpathLocationKey, java.lang.String pseudoClassNamesKey, boolean setClasses)`
-
 **Returns:** `void`
+
+### `setOrRemovePseudoClasses(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, java.lang.String xpathLocationKey, java.lang.String pseudoClassNamesKey, boolean setClasses)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author APi Access.
@@ -74,15 +72,17 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 - `pseudoClassNamesKey` (`java.lang.String`): Pseudo class names key
 - `setClasses` (`boolean`): `true` to set the classes, `false` to remove them.
 
-### `getTargetElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object xpathLocations, java.lang.Object includeAllNodes)`
+**Returns:** `void`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
+### `getTargetElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object xpathLocations, java.lang.Object includeAllNodes)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to Author functionality.
 - `xpathLocations` (`java.lang.Object`): The Xpath locations
 - `includeAllNodes` (`java.lang.Object`): ChangePseudoClassesOperation#YES in order to include comments, text and CDATA nodes,
-                         ChangePseudoClassesOperation#NO to ignore them.
+                           ChangePseudoClassesOperation#NO to ignore them.
+
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
 ### `getArguments()`
 

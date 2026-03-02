@@ -14,8 +14,8 @@
 
 ### `restoreTransientStateFromSnapshot(byte[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`byte[]`)
+
+**Returns:** `void`
 

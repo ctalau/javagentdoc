@@ -22,17 +22,17 @@
 
 ### `setFixedTitle(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `setFixedTooltip(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getPropertiesMap()`
 
@@ -68,33 +68,33 @@
 
 ### `setContent(ro.sync.basic.io.NonCloseableReader arg0, boolean arg1, boolean arg2)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`ro.sync.basic.io.NonCloseableReader`)
 - `arg1` (`boolean`)
 - `arg2` (`boolean`)
 
-### `addValidationProblemsFilter(ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter arg0)`
-
 **Returns:** `void`
+
+### `addValidationProblemsFilter(ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](../workspace/api/editor/validation/ValidationProblemsFilter.md))
+
+**Returns:** `void`
 
 ### `removeValidationProblemsFilter(ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter`](../workspace/api/editor/validation/ValidationProblemsFilter.md))
 
-### `saveDocumentAs(java.net.URL arg0)`
-
 **Returns:** `void`
+
+### `saveDocumentAs(java.net.URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
+
+**Returns:** `void`
 
 ### `createInputStream()`
 

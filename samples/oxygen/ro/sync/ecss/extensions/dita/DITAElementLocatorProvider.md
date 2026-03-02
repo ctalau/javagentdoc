@@ -44,9 +44,9 @@ See:
 
 ### `getElementLocator(ro.sync.ecss.extensions.api.link.IDTypeVerifier idVerifier, java.lang.String link)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.link.ElementLocator`](../api/link/ElementLocator.md)
-
 **Parameters:**
 - `idVerifier` ([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md))
 - `link` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.link.ElementLocator`](../api/link/ElementLocator.md)
 

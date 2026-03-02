@@ -12,8 +12,6 @@
 
 ### `refreshNodes(ro.sync.ecss.extensions.api.node.AuthorNode[] nodes)`
 
-**Returns:** `void`
-
 If the developer sets an AuthorOutlineCustomizer or an AuthorBreadCrumbCustomizer which uses as render text
  for a node the information available in another node, if the second node changes, the Outline/Bread Crumb components
  do not know what other nodes to update.
@@ -24,4 +22,6 @@ If the developer sets an AuthorOutlineCustomizer or an AuthorBreadCrumbCustomize
 
 **Parameters:**
 - `nodes` ([`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../node/AuthorNode.md)): The nodes to Refresh in the outline/bread crumb
+
+**Returns:** `void`
 

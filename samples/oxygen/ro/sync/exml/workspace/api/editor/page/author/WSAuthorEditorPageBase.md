@@ -12,70 +12,70 @@
 
 ### `viewToModel(int x, int y)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorViewToModelInfo`](../../../../../../ecss/extensions/api/AuthorViewToModelInfo.md)
-
 **Parameters:**
 - `x` (`int`): The "x" coordinate relative to the viewport origin.
 - `y` (`int`): The "y" coordinate relative to the viewport origin.
 
-### `setPopUpMenuCustomizer(ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer popUpCustomizer)`
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorViewToModelInfo`](../../../../../../ecss/extensions/api/AuthorViewToModelInfo.md)
 
-**Returns:** `void`
+### `setPopUpMenuCustomizer(ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer`](../../../../../../ecss/extensions/api/structure/AuthorPopupMenuCustomizer.md)): the pop-up menu customizer.
+
+**Returns:** `void`
 
 ### `addPopUpMenuCustomizer(ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer popUpCustomizer)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer`](../../../../../../ecss/extensions/api/structure/AuthorPopupMenuCustomizer.md)): the pop-up menu customizer.
- If the customizer is already added, it will not be added again.
+   If the customizer is already added, it will not be added again.
+
+**Returns:** `void`
 
 ### `removePopUpMenuCustomizer(ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer popUpCustomizer)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer`](../../../../../../ecss/extensions/api/structure/AuthorPopupMenuCustomizer.md)): the pop-up menu customizer.
 
-### `addAuthorMouseListener(ro.sync.ecss.extensions.api.AuthorMouseListener mouseListener)`
-
 **Returns:** `void`
+
+### `addAuthorMouseListener(ro.sync.ecss.extensions.api.AuthorMouseListener mouseListener)`
 
 **Parameters:**
 - `mouseListener` ([`ro.sync.ecss.extensions.api.AuthorMouseListener`](../../../../../../ecss/extensions/api/AuthorMouseListener.md)): The AuthorMouseListener to be added.
 
-### `removeAuthorMouseListener(ro.sync.ecss.extensions.api.AuthorMouseListener mouseListener)`
-
 **Returns:** `void`
+
+### `removeAuthorMouseListener(ro.sync.ecss.extensions.api.AuthorMouseListener mouseListener)`
 
 **Parameters:**
 - `mouseListener` ([`ro.sync.ecss.extensions.api.AuthorMouseListener`](../../../../../../ecss/extensions/api/AuthorMouseListener.md)): The AuthorMouseListener to be removed.
 
-### `addAuthorCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener caretListener)`
-
 **Returns:** `void`
+
+### `addAuthorCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener caretListener)`
 
 **Parameters:**
 - `caretListener` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../../../../../../ecss/extensions/api/AuthorCaretListener.md)): The AuthorCaretListener to be added.
 
-### `removeAuthorCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener caretListener)`
-
 **Returns:** `void`
+
+### `removeAuthorCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener caretListener)`
 
 **Parameters:**
 - `caretListener` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../../../../../../ecss/extensions/api/AuthorCaretListener.md)): The AuthorCaretListener to be removed.
 
-### `refresh(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
-
 **Returns:** `void`
+
+### `refresh(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
 
 **Note:** This should be called on the AWT thread because it will generate a layout event.
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): The node for which the layout and styles will be recomputed.
+
+**Returns:** `void`
 
 ### `refresh()`
 
@@ -87,24 +87,22 @@
 
 ### `getPersistentHighlighter()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlighter`](../../../../../../ecss/extensions/api/highlights/AuthorPersistentHighlighter.md)
-
 Persistent highlights get serialized in the XML as processing instructions with the form:
  
 
  `<?oxy_custom_start prop1="val1"....?> xml content <?oxy_custom_end?>`
 
-### `getBalancedSelectionStart()`
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlighter`](../../../../../../ecss/extensions/api/highlights/AuthorPersistentHighlighter.md)
 
-**Returns:** `int`
+### `getBalancedSelectionStart()`
 
 If the selection start is immediately to the right of a start tag and the corresponding end tag 
  is contained in the selection, then the balanced selection start will be obtained by extending
  the selection start to contain the start tag.
 
-### `getBalancedSelectionEnd()`
-
 **Returns:** `int`
+
+### `getBalancedSelectionEnd()`
 
 The offset is **exclusive**
  
@@ -114,9 +112,9 @@ The offset is **exclusive**
  the selection end to contain the end tag. If the selection end is to the right of a tag which does not have the 
  start included in the selection, then the selection end is decreased.
 
-### `getBalancedSelection(int selectionStart, int selectionEnd)`
+**Returns:** `int`
 
-**Returns:** `int[]`
+### `getBalancedSelection(int selectionStart, int selectionEnd)`
 
 If the selection start is immediately to the right of a start tag and the corresponding end tag 
  is contained in the selection, then the balanced selection start will be obtained by extending
@@ -129,11 +127,13 @@ If the selection start is immediately to the right of a start tag and the corres
 - `selectionStart` (`int`): The inclusive selection start.
 - `selectionEnd` (`int`): The exclusive selection end.
 
+**Returns:** `int[]`
+
 ### `getDefaultAuthorSchemaAwareEditingHandler()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorSchemaAwareEditingHandler`](../../../../../../ecss/extensions/api/AuthorSchemaAwareEditingHandler.md)
-
 This can be used from a custom AuthorSchemaAwareEditingHandler implementation from an ExtensionsBundle to delegate various operations to.
+
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorSchemaAwareEditingHandler`](../../../../../../ecss/extensions/api/AuthorSchemaAwareEditingHandler.md)
 
 ### `getActionsProvider()`
 
@@ -141,48 +141,46 @@ This can be used from a custom AuthorSchemaAwareEditingHandler implementation fr
 
 ### `getAuthorComponent()`
 
-**Returns:** `java.lang.Object`
-
 Use of this method is discouraged but it may be useful in some cases like:
  
  This can be helpful when you want to set a busy cursor on the component for example or when you want to get access to the scroll bars.
  You can also request focus in the component by casting it to its native equivalent.
 
-### `getStyles(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `ro.sync.ecss.css.Styles`
+### `getStyles(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
 This method **MUST** only be used to query styles. If you want to modify styles please use the StylesFilter.
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)): The node for which we want to obtain the styles.
 
-### `getPseudoElementStyles(ro.sync.ecss.extensions.api.node.AuthorParentNode node)`
+**Returns:** `ro.sync.ecss.css.Styles`
 
-**Returns:** `java.util.Map<ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor,ro.sync.ecss.css.Styles>`
+### `getPseudoElementStyles(ro.sync.ecss.extensions.api.node.AuthorParentNode node)`
 
 This method **MUST** only be used to query styles. If you want to modify styles, use the StylesFilter.
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](../../../../../../ecss/extensions/api/node/AuthorParentNode.md)): The node for which we want to obtain the pseudo-element styles.
 
-### `addAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
+**Returns:** `java.util.Map<ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor,ro.sync.ecss.css.Styles>`
 
-**Returns:** `void`
+### `addAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
 **Parameters:**
 - `attributesDisplayFilter` ([`ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter`](../../../../../../ecss/extensions/api/attributes/AuthorAttributesDisplayFilter.md)): The AuthorAttributesDisplayFilter to be added.
+
+**Returns:** `void`
 
 ### `removeAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `attributesDisplayFilter` ([`ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter`](../../../../../../ecss/extensions/api/attributes/AuthorAttributesDisplayFilter.md)): The AuthorAttributesDisplayFilter to be added.
 
-### `getFullySelectedNode()`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)
+### `getFullySelectedNode()`
 
 In such cases the method AuthorDocumentController#getNodeAtOffset(int) called for the caret offset always returns the parent of the selected element
  as the caret is actually outside the selected element.
@@ -190,9 +188,9 @@ In such cases the method AuthorDocumentController#getNodeAtOffset(int) called fo
  Thus, in order to obtain the context node, this method should be used and if it returns `null` 
  you can use the AuthorDocumentController#getNodeAtOffset(int) method.
 
-### `getFullySelectedNode(int selectionStart, int selectionEnd)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)
+
+### `getFullySelectedNode(int selectionStart, int selectionEnd)`
 
 In such cases the method AuthorDocumentController#getNodeAtOffset(int) called for the caret offset always returns the parent of the selected element
  as the caret is actually outside the selected element.
@@ -204,13 +202,13 @@ In such cases the method AuthorDocumentController#getNodeAtOffset(int) called fo
 - `selectionStart` (`int`): **Inclusive** start offset.
 - `selectionEnd` (`int`): **Exclusive** end offset.
 
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../ecss/extensions/api/node/AuthorNode.md)
+
 ### `getAuthorSelectionModel()`
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorSelectionModel`](../../../../../../ecss/extensions/api/AuthorSelectionModel.md)
 
 ### `getSelectionStart()`
-
-**Returns:** `int`
 
 It is **inclusive**.
  
@@ -229,9 +227,9 @@ It is **inclusive**.
 
  If there is no selection in Author editor page, the caret offset is returned.
 
-### `getSelectionEnd()`
-
 **Returns:** `int`
+
+### `getSelectionEnd()`
 
 It is **exclusive**
  
@@ -250,9 +248,9 @@ It is **exclusive**
 
  If there is no selection in Author editor page, the caret offset is returned.
 
-### `getSelectedText()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `getSelectedText()`
 
 The text does not contain XML tags for the Author page. 
  
@@ -266,9 +264,9 @@ The text does not contain XML tags for the Author page.
  Use AuthorSelectionModel to get more information and access to the Author 
  editor page selection.
 
-### `deleteSelection()`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `deleteSelection()`
 
 If the Author editor page has multiple selection intervals, this method deletes 
  the content from the last selected interval.
@@ -277,13 +275,13 @@ If the Author editor page has multiple selection intervals, this method deletes
  Use AuthorSelectionModel to get more information and access to the Author 
  editor page selection.
 
+**Returns:** `void`
+
 ### `hasSelection()`
 
 **Returns:** `boolean`
 
 ### `select(int startOffset, int endOffset)`
-
-**Returns:** `void`
 
 Use AuthorSelectionModel to get more information and access to the Author 
  editor page selection.
@@ -292,9 +290,9 @@ Use AuthorSelectionModel to get more information and access to the Author
 - `startOffset` (`int`): **Inclusive** start offset
 - `endOffset` (`int`): **Exclusive** end offset
 
-### `isOffsetInInvisibleBounds(int offset)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isOffsetInInvisibleBounds(int offset)`
 
 For example: oxy-collapse-text nodes, 'display: none' nodes or 
  tracked deleted content which is not presented in 'Final' mode.
@@ -302,9 +300,9 @@ For example: oxy-collapse-text nodes, 'display: none' nodes or
 **Parameters:**
 - `offset` (`int`): The offset to check.
 
-### `moveOutOfInvisibleBounds(int offset, boolean forward)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `moveOutOfInvisibleBounds(int offset, boolean forward)`
 
 If this is the case, this method returns an offset which is outside
  that region in the specified direction. 
@@ -315,11 +313,11 @@ If this is the case, this method returns an offset which is outside
 **Parameters:**
 - `offset` (`int`): The offset to check.
 - `forward` (`boolean`): `true` if we should move to a position in a 
- forward direction.
+   forward direction.
+
+**Returns:** `int`
 
 ### `goToNextEditablePosition(int startOffset, int endOffset)`
-
-**Returns:** `void`
 
 Depending on which is first, this can be:
  
@@ -337,9 +335,9 @@ Depending on which is first, this can be:
 - `startOffset` (`int`): The offset from where to start looking.
 - `endOffset` (`int`): The offset where to stop looking for.
 
-### `editAttribute(ro.sync.ecss.extensions.api.node.AuthorElement targetElement, java.lang.String attributeName)`
-
 **Returns:** `void`
+
+### `editAttribute(ro.sync.ecss.extensions.api.node.AuthorElement targetElement, java.lang.String attributeName)`
 
 If such an editor is found it will activate
  the editor to start editing. 
@@ -355,9 +353,9 @@ If such an editor is found it will activate
 - `targetElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../../ecss/extensions/api/node/AuthorElement.md)): The parent element of the attribute.
 - `attributeName` (`java.lang.String`): The QName of the searched attribute.
 
-### `scrollToRectangle(ro.sync.exml.view.graphics.Rectangle rectangle)`
-
 **Returns:** `void`
+
+### `scrollToRectangle(ro.sync.exml.view.graphics.Rectangle rectangle)`
 
 To find the rectangle 
  that corresponds to a specific offset in the Author document you can use the
@@ -366,32 +364,34 @@ To find the rectangle
 **Parameters:**
 - `rectangle` (`ro.sync.exml.view.graphics.Rectangle`): The rectangle to scroll to.
 
+**Returns:** `void`
+
 ### `getAuthorFoldManager()`
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.author.fold.AuthorFoldManager`](fold/AuthorFoldManager.md)
 
 ### `addDNDListener(java.lang.Object dndListener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `dndListener` (`java.lang.Object`): The drag and drop listener.
- Needs to be an instance of "ro.sync.exml.editor.xmleditor.pageauthor.AuthorDnDListener" for the standalone implementation and
- com.oxygenxml.editor.editors.author.AuthorDnDListener for the Eclipse implementation.
-
-### `removeDNDListener(java.lang.Object dndListener)`
+   Needs to be an instance of "ro.sync.exml.editor.xmleditor.pageauthor.AuthorDnDListener" for the standalone implementation and
+   com.oxygenxml.editor.editors.author.AuthorDnDListener for the Eclipse implementation.
 
 **Returns:** `void`
+
+### `removeDNDListener(java.lang.Object dndListener)`
 
 **Parameters:**
 - `dndListener` (`java.lang.Object`): The drag and drop listener to remove.
 
-### `setTagsDisplayMode(int displayMode)`
-
 **Returns:** `void`
+
+### `setTagsDisplayMode(int displayMode)`
 
 **Parameters:**
 - `displayMode` (`int`): The tags display mode, one of DisplayModeConstants constants.
+
+**Returns:** `void`
 
 ### `getTagsDisplayMode()`
 
@@ -399,9 +399,9 @@ To find the rectangle
 
 ### `buildURLForReferencedContent(int caretOffset, boolean shortAnchor)`
 
-**Returns:** `java.net.URL`
-
 **Parameters:**
 - `caretOffset` (`int`): The offset at which the caret is currently located.
 - `shortAnchor` (`boolean`): Flag telling whether to build a short version of the referenced content URL or not. This format is used in Web Author.
+
+**Returns:** `java.net.URL`
 

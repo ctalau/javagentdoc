@@ -16,12 +16,12 @@
 
 ### `delete(int arg0, int arg1, boolean arg2)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`int`)
 - `arg2` (`boolean`)
+
+**Returns:** `boolean`
 
 ### `getDocumentTypeProvider()`
 
@@ -33,18 +33,18 @@
 
 ### `getStringForClipboard(int arg0, int arg1)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`int`)
 
-### `getCurrentSelectedNode(ro.sync.ecss.dom.p arg0)`
+**Returns:** `java.lang.String`
 
-**Returns:** `ro.sync.ecss.dom.p`
+### `getCurrentSelectedNode(ro.sync.ecss.dom.p arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dom.p`)
+
+**Returns:** `ro.sync.ecss.dom.p`
 
 ### `getCustomPersistentHighlighter()`
 
@@ -60,31 +60,31 @@
 
 ### `addCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md))
+
+**Returns:** `void`
 
 ### `removeCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md))
 
-### `setEditAttributesSupport(ro.sync.ecss.component.EditAttributesSupport arg0)`
-
 **Returns:** `void`
+
+### `setEditAttributesSupport(ro.sync.ecss.component.EditAttributesSupport arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.component.EditAttributesSupport`](./EditAttributesSupport.md))
 
-### `setMultipleSelectionMode(boolean arg0)`
-
 **Returns:** `void`
+
+### `setMultipleSelectionMode(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isMultipleSelectionMode()`
 
@@ -108,26 +108,26 @@
 
 ### `getTableCellsSelectionInformation(boolean arg0)`
 
-**Returns:** `ro.sync.ecss.i.b.c.i`
-
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `getSelectionMetadata(ro.sync.ecss.i.b.c.i arg0)`
+**Returns:** `ro.sync.ecss.i.b.c.i`
 
-**Returns:** [`ro.sync.ecss.component.AuthorContentMetadata`](./AuthorContentMetadata.md)
+### `getSelectionMetadata(ro.sync.ecss.i.b.c.i arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.i.b.c.i`)
 
-### `edit(ro.sync.ecss.i.l arg0, ro.sync.exml.view.k arg1, ro.sync.exml.view.graphics.Point arg2)`
+**Returns:** [`ro.sync.ecss.component.AuthorContentMetadata`](./AuthorContentMetadata.md)
 
-**Returns:** `boolean`
+### `edit(ro.sync.ecss.i.l arg0, ro.sync.exml.view.k arg1, ro.sync.exml.view.graphics.Point arg2)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.i.l`)
 - `arg1` (`ro.sync.exml.view.k`)
 - `arg2` (`ro.sync.exml.view.graphics.Point`)
+
+**Returns:** `boolean`
 
 ### `isEditingInplace()`
 
@@ -139,10 +139,10 @@
 
 ### `findEditorBox(ro.sync.ecss.component.editor.l arg0)`
 
-**Returns:** `ro.sync.ecss.component.w`
-
 **Parameters:**
 - `arg0` (`ro.sync.ecss.component.editor.l`)
+
+**Returns:** `ro.sync.ecss.component.w`
 
 ### `switchSelectionColorToContentHighlightColor()`
 
@@ -154,10 +154,10 @@
 
 ### `joinSplits(int[] arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`int[]`)
+
+**Returns:** `boolean`
 
 ### `getSize()`
 
@@ -165,12 +165,12 @@
 
 ### `setCaretGhostOffset(int arg0, int arg1, int arg2)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`int`)
 - `arg2` (`int`)
+
+**Returns:** `void`
 
 ### `resetCaretGhostOffset()`
 
@@ -182,10 +182,10 @@
 
 ### `isOffsetInFixedBox(int arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `boolean`
 
 ### `getHighlightsWidgetHelper()`
 
@@ -197,10 +197,10 @@
 
 ### `getCalloutInfo(java.lang.String arg0)`
 
-**Returns:** `ro.sync.ecss.component.callouts.c.g`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `ro.sync.ecss.component.callouts.c.g`
 
 ### `getCalloutsWidth()`
 
@@ -208,8 +208,8 @@
 
 ### `setCalloutsImposedWidth(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 

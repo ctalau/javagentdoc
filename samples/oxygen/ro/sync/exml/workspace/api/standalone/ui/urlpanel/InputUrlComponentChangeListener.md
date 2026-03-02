@@ -14,8 +14,8 @@
 
 ### `urlSelected(java.net.URL url)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `url` (`java.net.URL`): The url, or null if it is not a valid url.
+
+**Returns:** `void`
 

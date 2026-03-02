@@ -27,10 +27,10 @@
 
 ### `setSchemas(java.lang.String[] arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `void`
 
 ### `asXML()`
 
@@ -46,10 +46,10 @@
 
 ### `b(ro.sync.document.OperationDescription arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))
+
+**Returns:** `boolean`
 
 ### `asHTML()`
 

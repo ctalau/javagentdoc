@@ -18,24 +18,24 @@
 
 ### `isPluginInstalled(java.lang.String[] arg0)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** `boolean`
 
 ### `getPlugin(java.lang.String[] arg0)`
 
-**Returns:** [`ro.sync.exml.plugin.Plugin`](./Plugin.md)
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** [`ro.sync.exml.plugin.Plugin`](./Plugin.md)
 
 ### `getPluginDescriptor(java.lang.String[] arg0)`
 
-**Returns:** [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md)
-
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
+
+**Returns:** [`ro.sync.exml.plugin.PluginDescriptor`](./PluginDescriptor.md)
 
 ### `getPluginDirs()`
 
@@ -55,17 +55,17 @@
 
 ### `addPluginStylesFilters(ro.sync.ecss.extensions.api.StylesFilter arg0, ro.sync.ecss.extensions.api.AuthorAccess arg1)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.StylesFilter`](../../ecss/extensions/api/StylesFilter.md)
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.StylesFilter`](../../ecss/extensions/api/StylesFilter.md))
 - `arg1` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md))
 
-### `compareVersions(java.lang.String arg0, java.lang.String arg1)`
+**Returns:** [`ro.sync.ecss.extensions.api.StylesFilter`](../../ecss/extensions/api/StylesFilter.md)
 
-**Returns:** `int`
+### `compareVersions(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `int`
 

@@ -56,45 +56,43 @@
 
 ### `containsExtension(java.lang.String extension, java.lang.String[] allowedExtensions)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `extension` (`java.lang.String`): Searched extension.
 - `allowedExtensions` (`java.lang.String[]`): Array with the allowed extensions.
 
-### `detectOutputclass(java.lang.String href)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `detectOutputclass(java.lang.String href)`
 
 If an extension is not found, the selected type is iFrame.
 
 **Parameters:**
 - `href` (`java.lang.String`): The file href.
 
-### `isMediaReference(java.net.URL url)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isMediaReference(java.net.URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): Resource's URL.
 
-### `isEmbeddedContent(java.lang.String url)`
-
 **Returns:** `boolean`
+
+### `isEmbeddedContent(java.lang.String url)`
 
 **Parameters:**
 - `url` (`java.lang.String`): the referred resource.
 
-### `isRecognizedAsMedia(java.lang.String hostURL)`
-
 **Returns:** `boolean`
+
+### `isRecognizedAsMedia(java.lang.String hostURL)`
 
 **Parameters:**
 - `hostURL` (`java.lang.String`): Video host (like YouTube or Vimeo)
 
-### `correctMediaEmbeddedReference(java.lang.String url)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `correctMediaEmbeddedReference(java.lang.String url)`
 
 ```
 
@@ -106,31 +104,33 @@ If an extension is not found, the selected type is iFrame.
 **Parameters:**
 - `url` (`java.lang.String`): The inserted media reference.
 
-### `isAudioReference(java.lang.String fileName)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isAudioReference(java.lang.String fileName)`
 
 **Parameters:**
 - `fileName` (`java.lang.String`): The name of the file to check.
+
+**Returns:** `boolean`
 
 ### `hasAudioFormat(java.lang.String format)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `format` (`java.lang.String`): resource format.
 
-### `isVideoReference(java.lang.String fileName)`
-
 **Returns:** `boolean`
+
+### `isVideoReference(java.lang.String fileName)`
 
 **Parameters:**
 - `fileName` (`java.lang.String`): The name of the file to check.
 
-### `hasVideoFormat(java.lang.String format)`
-
 **Returns:** `boolean`
+
+### `hasVideoFormat(java.lang.String format)`
 
 **Parameters:**
 - `format` (`java.lang.String`): resource format.
+
+**Returns:** `boolean`
 

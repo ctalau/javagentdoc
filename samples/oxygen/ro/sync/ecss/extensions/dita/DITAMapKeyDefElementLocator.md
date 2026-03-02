@@ -35,16 +35,14 @@ May be prefixed with key scopes.
 
 ### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `uri` (`java.lang.String`)
 - `localName` (`java.lang.String`)
 - `name` (`java.lang.String`)
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -52,11 +50,13 @@ May be prefixed with key scopes.
 - `name` (`java.lang.String`)
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md))
 
-### `getAttributeValues(ro.sync.ecss.extensions.api.link.Attr[] atts, java.lang.String attrName)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Set<java.lang.String>`
+### `getAttributeValues(ro.sync.ecss.extensions.api.link.Attr[] atts, java.lang.String attrName)`
 
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
 - `attrName` (`java.lang.String`)
+
+**Returns:** `java.util.Set<java.lang.String>`
 

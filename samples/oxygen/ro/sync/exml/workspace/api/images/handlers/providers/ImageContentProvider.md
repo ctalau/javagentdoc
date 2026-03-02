@@ -28,9 +28,9 @@
 
 ### `getUrl()`
 
-**Returns:** `java.net.URL`
-
 If the image is embedded, this returns `null`.
+
+**Returns:** `java.net.URL`
 
 ### `getInputStream()`
 

@@ -16,24 +16,22 @@ The actions will be mounted on the contextual menu when right clicking a review 
 
 ### `customizeContextualMenuActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[] selectedHighlights, java.lang.Object popupMenu)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The Author access.
 - `selectedHighlights` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](../highlights/AuthorPersistentHighlight.md)): The list of selected highlights
 - `popupMenu` (`java.lang.Object`): The popup menu with default actions. (implementation of JPopupMenu on Swing or MenuManager on Eclipse).
 
-### `performCustomActionOnDelete(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[] selectedHighlights)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `performCustomActionOnDelete(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[] selectedHighlights)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The Author access.
 - `selectedHighlights` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](../highlights/AuthorPersistentHighlight.md)): The list of selected highlights
 
-### `customizeHoverActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight authorPersistentHighlight, java.util.List actions)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `customizeHoverActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight authorPersistentHighlight, java.util.List actions)`
 
 The actions are either Swing actions or SWT actions.
  For Swing actions you can use the API "ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace.getOxygenActionID(Action)" to query each action's ID.
@@ -42,5 +40,7 @@ The actions are either Swing actions or SWT actions.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The author access.
 - `authorPersistentHighlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The current highlight.
 - `actions` (`java.util.List`): The list of hover actions which appear by default when hovering a change/comment in the Review panel. 
- You can add more actions to it, wrap existing actions or remove actions.
+   You can add more actions to it, wrap existing actions or remove actions.
+
+**Returns:** `void`
 

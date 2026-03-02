@@ -12,9 +12,9 @@ Gets notified when another project is loaded.
 
 ### `projectChanged(java.net.URL oldProjectURL, java.net.URL newProjectURL)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `oldProjectURL` (`java.net.URL`): The URL of the old project.
 - `newProjectURL` (`java.net.URL`): The URL of the new project.
+
+**Returns:** `void`
 

@@ -45,7 +45,7 @@ Specifies the fixed and relative width
 
 **Parameters:**
 - `widthRepresentation` ([`ro.sync.ecss.extensions.api.WidthRepresentation`](../../WidthRepresentation.md)): The column width representation that specifies 
- the fixed and relative width determined from the column specification.
+   the fixed and relative width determined from the column specification.
 
 ## Methods
 

@@ -61,8 +61,8 @@
 
 ### `radioSelectionChanged(org.eclipse.swt.widgets.Button arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Button`)
+
+**Returns:** `void`
 

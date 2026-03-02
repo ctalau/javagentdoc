@@ -24,14 +24,12 @@ The `AuthorDnDListener` interface
 
 ### `authorDragOver(java.awt.dnd.DropTargetDragEvent event)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `event` (`java.awt.dnd.DropTargetDragEvent`): The DropTargetDropEvent event.
 
-### `authorDrop(java.awt.datatransfer.Transferable transferable, java.awt.dnd.DropTargetDropEvent event)`
-
 **Returns:** `boolean`
+
+### `authorDrop(java.awt.datatransfer.Transferable transferable, java.awt.dnd.DropTargetDropEvent event)`
 
 This method is responsible for undertaking
  the transfer of the data associated with the
@@ -44,33 +42,35 @@ This method is responsible for undertaking
 - `transferable` (`java.awt.datatransfer.Transferable`): The Transferable object.
 - `event` (`java.awt.dnd.DropTargetDropEvent`): The DropTargetDragEvent event.
 
-### `authorSupportsFlavor(java.awt.datatransfer.DataFlavor flavor)`
-
 **Returns:** `boolean`
+
+### `authorSupportsFlavor(java.awt.datatransfer.DataFlavor flavor)`
 
 **Parameters:**
 - `flavor` (`java.awt.datatransfer.DataFlavor`): The DataFlavor flavor.
 
-### `authorDragExit(java.awt.dnd.DropTargetEvent event)`
-
 **Returns:** `boolean`
+
+### `authorDragExit(java.awt.dnd.DropTargetEvent event)`
 
 **Parameters:**
 - `event` (`java.awt.dnd.DropTargetEvent`): The DropTargetEvent event.
 
-### `authorDragEnter(java.awt.dnd.DropTargetDragEvent event)`
-
 **Returns:** `boolean`
+
+### `authorDragEnter(java.awt.dnd.DropTargetDragEvent event)`
 
 **Parameters:**
 - `event` (`java.awt.dnd.DropTargetDragEvent`): The DropTargetDragEvent event.
 
-### `init(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `init(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../ecss/extensions/api/AuthorAccess.md)): The AuthorAccess providing access to 
- specific components corresponding to editor, document, workspace, 
- tables, change tracking and utility informations and actions.
+   specific components corresponding to editor, document, workspace, 
+   tables, change tracking and utility informations and actions.
+
+**Returns:** `void`
 

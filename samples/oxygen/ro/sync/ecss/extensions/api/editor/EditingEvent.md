@@ -60,10 +60,10 @@ This will ensure
 **Parameters:**
 - `toInvoke` (`java.lang.Runnable`): The action to be invoked as a result for the edit event.
 - `requestFocus` (`boolean`): `true` if the focus should be requested inside the author component.
- Depending on how the editing was stopped it might be necessary to skip requesting
- focus inside the author component. For example if the cause of the stop editing
- was a focus lost event, we should skip requesting focus since the focus has already 
- a destination.
+   Depending on how the editing was stopped it might be necessary to skip requesting
+   focus inside the author component. For example if the cause of the stop editing
+   was a focus lost event, we should skip requesting focus since the focus has already 
+   a destination.
 
 ### `<init>(ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction toInvoke)`
 
@@ -75,10 +75,10 @@ This will ensure
 **Parameters:**
 - `value` (`java.lang.String`): The value that the user accepted when the editing stopped.
 - `requestFocus` (`boolean`): `true` if the focus should be requested inside the author component.
- Depending on how the editing was stopped it might be necessary to skip requesting
- focus inside the author component. For example if the cause of the stop editing
- was a focus lost event, we should skip requesting focus since the focus has already 
- a destination.
+   Depending on how the editing was stopped it might be necessary to skip requesting
+   focus inside the author component. For example if the cause of the stop editing
+   was a focus lost event, we should skip requesting focus since the focus has already 
+   a destination.
 
 ### `<init>(java.lang.Runnable customEdit, ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction toInvoke, java.lang.String value, boolean requestFocus)`
 

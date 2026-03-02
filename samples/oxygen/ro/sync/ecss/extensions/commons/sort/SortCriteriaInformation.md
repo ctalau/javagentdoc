@@ -22,9 +22,9 @@
 
 **Parameters:**
 - `info` ([`ro.sync.ecss.extensions.commons.sort.CriterionInformation[]`](./CriterionInformation.md)): Array containing the CriterionInformation
-                              objects which will be used to sort the element.
+                                objects which will be used to sort the element.
 - `onlySelectedEntries` (`boolean`): `true` if the scope of the sort is 
-                              "Selected elements", `false` for "All elements".
+                                "Selected elements", `false` for "All elements".
 
 ## Methods
 

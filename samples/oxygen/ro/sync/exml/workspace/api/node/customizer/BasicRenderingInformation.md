@@ -30,26 +30,24 @@ If `null` the default text value will be used for rendering.
 
 ### `setRenderedText(java.lang.String renderedText)`
 
-**Returns:** `void`
-
 If the rendered text is `null` then the default node rendering will be used.
 
 **Parameters:**
 - `renderedText` (`java.lang.String`): The rendered text, usually the node name. If `null` the default text will be used for rendering.
 
-### `setTooltipText(java.lang.String tooltipText)`
-
 **Returns:** `void`
+
+### `setTooltipText(java.lang.String tooltipText)`
 
 If the tooltip text is `null` then the default tooltip text will be used for the node.
 
 **Parameters:**
 - `tooltipText` (`java.lang.String`): The tooltip text which will appear in the tooltip associated with the node.
- If `null` the default tooltip text will be used for the node.
-
-### `setIconPath(java.lang.String iconPath)`
+   If `null` the default tooltip text will be used for the node.
 
 **Returns:** `void`
+
+### `setIconPath(java.lang.String iconPath)`
 
 The path can be an icon file path, the string representation of an icon URL 
  or can contain editor variables as defined in the EditorVariables class.
@@ -75,6 +73,8 @@ The path can be an icon file path, the string representation of an icon URL
 **Parameters:**
 - `iconPath` (`java.lang.String`): The path of the icon. If `null` the default icon will be used for the node.
 
+**Returns:** `void`
+
 ### `getRenderedText()`
 
 **Returns:** `java.lang.String`
@@ -85,9 +85,9 @@ The path can be an icon file path, the string representation of an icon URL
 
 ### `getIconPath()`
 
-**Returns:** `java.lang.String`
-
 The path can be an icon file path, the string representation of an icon URL 
  or can contain editor variables as defined in the EditorVariables class.
  The editor variables will be expanded at runtime.
+
+**Returns:** `java.lang.String`
 

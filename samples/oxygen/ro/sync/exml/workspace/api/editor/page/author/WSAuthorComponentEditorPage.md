@@ -12,34 +12,34 @@
 
 ### `createExtensionActionsToolbars()`
 
-**Returns:** `java.util.List<javax.swing.JToolBar>`
-
 The toolbars will look almost identical with the ones which appear when the XML is opened in an Oxygen standalone version.
 
-### `setBreadCrumbPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer popUpCustomizer)`
+**Returns:** `java.util.List<javax.swing.JToolBar>`
 
-**Returns:** `void`
+### `setBreadCrumbPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer popUpCustomizer)`
 
 If everything is removed then the menu will not be shown.
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](../../../../../../ecss/extensions/api/component/PopupMenuCustomizer.md)): The pop Up Customizer.
 
-### `showBreadCrumb(boolean showBreadCrumb)`
-
 **Returns:** `void`
+
+### `showBreadCrumb(boolean showBreadCrumb)`
 
 **Parameters:**
 - `showBreadCrumb` (`boolean`): `true` to show the Bread Crumb.
 
-### `setOutlinerPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer popUpCustomizer)`
-
 **Returns:** `void`
+
+### `setOutlinerPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer popUpCustomizer)`
 
 If everything is removed then the menu will not be shown.
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](../../../../../../ecss/extensions/api/component/PopupMenuCustomizer.md)): The pop Up Customizer.
+
+**Returns:** `void`
 
 ### `createReviewToolbar()`
 
@@ -55,19 +55,19 @@ If everything is removed then the menu will not be shown.
 
 ### `showRangeRuler(boolean showRangeRuler)`
 
-**Returns:** `void`
-
 By default the validation stripe is shown.
 
 **Parameters:**
 - `showRangeRuler` (`boolean`): `true` to show the validation stripe, `false` to hide it.
 
-### `showValidationStatusBar(boolean showValidationStatus)`
-
 **Returns:** `void`
+
+### `showValidationStatusBar(boolean showValidationStatus)`
 
 By default it is shown.
 
 **Parameters:**
 - `showValidationStatus` (`boolean`): `true` to show the validation status bar. `false` to always hide it.
+
+**Returns:** `void`
 

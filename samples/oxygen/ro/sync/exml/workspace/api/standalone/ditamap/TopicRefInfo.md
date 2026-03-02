@@ -46,39 +46,36 @@ Either empty string or something like "ks1.ks2".
 
 ### `getProperty(java.lang.String propertyName)`
 
-**Returns:** `java.lang.Object`
-
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:
- 
+   
+  
+    - #ABSOLUTE_URL
+  
+    - #ID_PATH
+  
+    - #HREF_VALUE
+  
+   
+  
+   
+   For example if a DITA Map with the URL "cms://test/file.ditamap" references a topic using the #HREF_VALUE **task.dita#task**
+   then the #ABSOLUTE_URL of the topic reference will be **cms://test/task.dita** and the #ID_PATH will be **task**
 
-  - #ABSOLUTE_URL
-
-  - #ID_PATH
-
-  - #HREF_VALUE
-
- 
-
- 
- For example if a DITA Map with the URL "cms://test/file.ditamap" references a topic using the #HREF_VALUE **task.dita#task**
- then the #ABSOLUTE_URL of the topic reference will be **cms://test/task.dita** and the #ID_PATH will be **task**
+**Returns:** `java.lang.Object`
 
 ### `setProperty(java.lang.String propertyName, java.lang.Object propertyValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:
- 
-
-  - #ABSOLUTE_URL
-
-  - #ID_PATH
-
-  - #HREF_VALUE
-
- 
-
+   
+  
+    - #ABSOLUTE_URL
+  
+    - #ID_PATH
+  
+    - #HREF_VALUE
 - `propertyValue` (`java.lang.Object`): The value of the property.
+
+**Returns:** `void`
 

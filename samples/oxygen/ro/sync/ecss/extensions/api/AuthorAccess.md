@@ -19,16 +19,16 @@ Provides access to specific components corresponding to editor, document, worksp
 
 ### `getDocumentController()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md)
-
 It has methods for changing the document model.
+
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md)
 
 ### `getWorkspaceAccess()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess`](access/AuthorWorkspaceAccess.md)
-
 Provides methods for obtaining workspace related 
  informations and performing workspace specific actions.
+
+**Returns:** [`ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess`](access/AuthorWorkspaceAccess.md)
 
 ### `getUtilAccess()`
 
@@ -48,10 +48,10 @@ Provides methods for obtaining workspace related
 
 ### `getOptionsStorage()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.OptionsStorage`](./OptionsStorage.md)
-
 This is also responsible for adding and removing listeners that are notified
  about the option changes.
+
+**Returns:** [`ro.sync.ecss.extensions.api.OptionsStorage`](./OptionsStorage.md)
 
 ### `getOutlineAccess()`
 
@@ -63,23 +63,21 @@ This is also responsible for adding and removing listeners that are notified
 
 ### `getAuthorResourceBundle()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](./AuthorResourceBundle.md)
-
 It works as a map in which any message is 
  accessed by a key defined in the ExtensionTags interface.
 
-### `getElementByAnchor(java.lang.String anchor)`
+**Returns:** [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](./AuthorResourceBundle.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
+### `getElementByAnchor(java.lang.String anchor)`
 
 The syntax of the anchor is interpreted by the ElementLocatorProvider provided by the framework.
 
 **Parameters:**
 - `anchor` (`java.lang.String`): The anchor.
 
-### `getCaretOffsetByAnchor(java.lang.String anchor)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-**Returns:** `int`
+### `getCaretOffsetByAnchor(java.lang.String anchor)`
 
 The syntax of the anchor is interpreted by the ElementLocatorProvider provided by the framework or:
  
@@ -89,4 +87,6 @@ The syntax of the anchor is interpreted by the ElementLocatorProvider provided b
 
 **Parameters:**
 - `anchor` (`java.lang.String`): The anchor.
+
+**Returns:** `int`
 

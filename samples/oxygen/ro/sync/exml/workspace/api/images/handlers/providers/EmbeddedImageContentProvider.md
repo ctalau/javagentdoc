@@ -33,9 +33,9 @@ Not `null` when the image is embedded in the content...
 
 ### `getImageSerializedContent()`
 
-**Returns:** `java.lang.String`
-
 Not `null` when the image is embedded in the document (SVG, MathML, etc).
+
+**Returns:** `java.lang.String`
 
 ### `getDoctype()`
 

@@ -151,7 +151,7 @@ The table model can be CALS or HTML.
 - `hasFooter` (`boolean`): `true` if this table has a footer.
 - `hasFrameAttribute` (`boolean`): `true` if this table has a frame attribute.
 - `showModelChooser` (`boolean`): `true` to show the dialog panel for choosing the table
-                              model, one of CALS or HTML.
+                                model, one of CALS or HTML.
 - `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): Author resource bundle.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
@@ -163,15 +163,15 @@ The table model can be CALS or HTML.
 - `hasFooter` (`boolean`): `true` if this table has a footer.
 - `hasFrameAttribute` (`boolean`): `true` if the table has a frame attribute.
 - `showModelChooser` (`boolean`): `true` to show the dialog panel for choosing the table
-                                    model, one of CALS or HTML.
+                                      model, one of CALS or HTML.
 - `showSimpleModel` (`boolean`): `true` to use the simple table model radio button instead of the HTML model.
 - `innerCallsTable` (`boolean`): `true` if this is an inner CALLS table.
 - `hasRowsepAttribute` (`boolean`): `true` if the table has a row separator attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `hasColsepAttribute` (`boolean`): `true` if the table has a column separator attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `hasAlignAttribute` (`boolean`): `true` if the table has an align attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): Author resource bundle.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
@@ -183,16 +183,16 @@ The table model can be CALS or HTML.
 - `hasFooter` (`boolean`): `true` if this table has a footer.
 - `hasFrameAttribute` (`boolean`): `true` if the table has a frame attribute.
 - `showModelChooser` (`boolean`): `true` to show the dialog panel for choosing the table
-                                    model, one of CALS or HTML.
+                                      model, one of CALS or HTML.
 - `showSimpleModel` (`boolean`): `true` to use the simple table model radio button instead of the HTML model.
 - `choiceTableModel` (`boolean`): `true` to use the choice table model.
 - `innerCallsTable` (`boolean`): `true` if this is an inner CALLS table.
 - `hasRowsepAttribute` (`boolean`): `true` if the table has a row separator attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `hasColsepAttribute` (`boolean`): `true` if the table has a column separator attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `hasAlignAttribute` (`boolean`): `true` if the table has an align attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): Author resource bundle.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
@@ -204,17 +204,17 @@ The table model can be CALS or HTML.
 - `hasFooter` (`boolean`): `true` if this table has a footer.
 - `hasFrameAttribute` (`boolean`): `true` if the table has a frame attribute.
 - `showModelChooser` (`boolean`): `true` to show the dialog panel for choosing the table
-                                    model, one of CALS or HTML.
+                                      model, one of CALS or HTML.
 - `showSimpleModel` (`boolean`): `true` to use the simple table model radio button instead of the HTML model.
 - `choiceTableModel` (`boolean`): `true` to show the dialog for choice table.
 - `isCalsTable` (`boolean`): `true` if the table model is CALS.
 - `innerCallsTable` (`boolean`): `true` if this is an inner CALLS table.
 - `hasRowsepAttribute` (`boolean`): `true` if the table has a row separator attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `hasColsepAttribute` (`boolean`): `true` if the table has a column separator attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `hasAlignAttribute` (`boolean`): `true` if the table has an align attribute.
-                                    Flag used to add a corresponding combo box in the dialog.
+                                      Flag used to add a corresponding combo box in the dialog.
 - `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): Author resource bundle.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
@@ -226,7 +226,7 @@ The table model can be CALS or HTML.
 - `hasFooter` (`boolean`): `true` if this table has a footer.
 - `hasFrameAttribute` (`boolean`): `true` if the table has a frame attribute.
 - `showModelChooser` (`boolean`): `true` to show the dialog panel for choosing the table
-                                      model, one of CALS or HTML.
+                                        model, one of CALS or HTML.
 - `showSimpleModel` (`boolean`): `true` to use the simple table model radio instead of the HTML model.
 - `choiceTableModel` (`boolean`): `true` to show the dialog for choice table.
 - `isCalsTable` (`boolean`): `true` if the table model is CALS.
@@ -235,11 +235,11 @@ The table model can be CALS or HTML.
 - `isPropertiesTable` (`boolean`): `true` if the current table has a properties table model.
 - `innerCallsTable` (`boolean`): `true` if this is an inner CALLS table.
 - `hasRowsepAttribute` (`boolean`): `true` if the table has a row separator attribute.
-                                      Flag used to add a corresponding combo box in the dialog.
+                                        Flag used to add a corresponding combo box in the dialog.
 - `hasColsepAttribute` (`boolean`): `true` if the table has a column separator attribute.
-                                      Flag used to add a corresponding combo box in the dialog.
+                                        Flag used to add a corresponding combo box in the dialog.
 - `hasAlignAttribute` (`boolean`): `true` if the table has an align attribute. 
-                                      Flag used to add a corresponding combo box in the dialog.
+                                        Flag used to add a corresponding combo box in the dialog.
 - `authorResourceBundle` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md)): Author resource bundle.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
@@ -248,121 +248,121 @@ The table model can be CALS or HTML.
 
 ### `updateColumnsWidthsCombo(ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[] columnsWidthsSpecifications)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `columnsWidthsSpecifications` (`ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`): The column widths specifications.
 
-### `updateTitleState(boolean enabled)`
-
 **Returns:** `void`
+
+### `updateTitleState(boolean enabled)`
 
 **Parameters:**
 - `enabled` (`boolean`): `true` if the title is enabled.
 
-### `updateElementsState(boolean enabled)`
-
 **Returns:** `void`
+
+### `updateElementsState(boolean enabled)`
 
 **Parameters:**
 - `enabled` (`boolean`): `true` if the combos will be enabled.
 
-### `updateAlignState(boolean enabled)`
-
 **Returns:** `void`
+
+### `updateAlignState(boolean enabled)`
 
 **Parameters:**
 - `enabled` (`boolean`): `true` if the align combo is enabled.
 
-### `getFrameValues(int tableModelType)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String[]`
+### `getFrameValues(int tableModelType)`
 
 **Parameters:**
 - `tableModelType` (`int`): The table model type. 
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultFrameValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String`
 
 ### `getRowsepValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultRowsepValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String`
 
 ### `getColsepValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String[]`
 
 ### `getAlignValues(int tableModelType)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String[]`
 
 ### `getDefaultColsepValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String`
 
 ### `getDefaultAlignValue(int tableModelType)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `java.lang.String`
 
 ### `getColumnWidthsSpecifications(int tableModelType)`
 
-**Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
- One of the constants: 
- TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
- TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+   One of the constants: 
+   TableInfo#TABLE_MODEL_CALS, TableInfo#TABLE_MODEL_CUSTOM,
+   TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML.
+
+**Returns:** `ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`
 
 ### `createTitleCheckbox()`
 
@@ -370,38 +370,38 @@ The table model can be CALS or HTML.
 
 ### `addValuesToFrameCombo(int tableModelType)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
+
+**Returns:** `void`
 
 ### `addValuesToRowsepCombo(int tableModelType)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
+
+**Returns:** `void`
 
 ### `addValuesToColsepCombo(int tableModelType)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
+
+**Returns:** `void`
 
 ### `addValuesToAlignCombo(int tableModelType)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `tableModelType` (`int`): The table model type.
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableInfo previousTableInfo)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
+### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableInfo previousTableInfo)`
 
 **Parameters:**
 - `previousTableInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)): Table info to be used for initializing the controls.
+
+**Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
 ### `getTableModelType()`
 
@@ -409,11 +409,11 @@ The table model can be CALS or HTML.
 
 ### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableInfo previousTableInfo)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `previousTableInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)): If `null` defaults will be used. Otherwise, the controls
- will be initialized with values from this info.
+   will be initialized with values from this info.
+
+**Returns:** `void`
 
 ### `getPropertiesModelRadio()`
 

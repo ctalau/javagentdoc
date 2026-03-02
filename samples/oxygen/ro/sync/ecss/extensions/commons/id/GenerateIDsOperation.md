@@ -22,23 +22,23 @@
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `generateIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.UniqueAttributesRecognizer attrsAssigner, int startSel, int endSel)`
-
 **Returns:** `void`
+
+### `generateIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.UniqueAttributesRecognizer attrsAssigner, int startSel, int endSel)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
-                      Provides access to specific informations and actions for 
-                      editor, document, workspace, tables, change tracking, utility a.s.o.
+                        Provides access to specific informations and actions for 
+                        editor, document, workspace, tables, change tracking, utility a.s.o.
 - `attrsAssigner` ([`ro.sync.ecss.extensions.api.UniqueAttributesRecognizer`](../../api/UniqueAttributesRecognizer.md)): The unique attributes handler.
 - `startSel` (`int`): The selection start.
 - `endSel` (`int`): The selection end.
+
+**Returns:** `void`
 
 ### `getUniqueAttributesRecognizer()`
 

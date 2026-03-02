@@ -24,37 +24,37 @@
 
 ### `minimizeAuthorCollection(java.util.Collection<? extends ro.sync.ecss.extensions.api.node.AuthorNode> collection)`
 
-**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
-
 **Parameters:**
 - `collection` (`java.util.Collection<? extends ro.sync.ecss.extensions.api.node.AuthorNode>`): A collection of nodes.
 
-### `getFirstLeaf(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
+**Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
+### `getFirstLeaf(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment)`
 
 **Parameters:**
 - `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](./AuthorDocumentFragment.md)): The document fragment.
 
-### `getPossibleLeaf(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> children)`
-
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
+
+### `getPossibleLeaf(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> children)`
 
 **Parameters:**
 - `children` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`): The children
 
-### `getFirstChildElement(ro.sync.ecss.extensions.api.node.AuthorParentNode parentNode)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](./AuthorElement.md)
+### `getFirstChildElement(ro.sync.ecss.extensions.api.node.AuthorParentNode parentNode)`
 
 **Parameters:**
 - `parentNode` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](./AuthorParentNode.md)): The parent element.
 
-### `getChildIndex(int offset, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> children)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](./AuthorElement.md)
 
-**Returns:** `int`
+### `getChildIndex(int offset, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> children)`
 
 **Parameters:**
 - `offset` (`int`): Searched offset.
 - `children` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`): The list of children.
+
+**Returns:** `int`
 

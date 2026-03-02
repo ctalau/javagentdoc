@@ -10,15 +10,15 @@
 
 ### `getAllComponents(java.net.URL editorUrl)`
 
-**Returns:** `java.util.List<ro.sync.exml.workspace.api.componentscollector.IComponentInfo>`
-
 **Parameters:**
 - `editorUrl` (`java.net.URL`): The editor URL.
+
+**Returns:** `java.util.List<ro.sync.exml.workspace.api.componentscollector.IComponentInfo>`
 
 ### `getAllNamespaces(java.net.URL editorUrl)`
 
-**Returns:** `java.util.List<ro.sync.exml.workspace.api.componentscollector.INamespaceInfo>`
-
 **Parameters:**
 - `editorUrl` (`java.net.URL`): The editor URL.
+
+**Returns:** `java.util.List<ro.sync.exml.workspace.api.componentscollector.INamespaceInfo>`
 

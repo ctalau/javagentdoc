@@ -142,10 +142,10 @@
 
 ### `setAlgorithm(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `getMaxNumberOfDiffs()`
 
@@ -153,10 +153,10 @@
 
 ### `setMaxNumberOfDiffs(int arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`int`)
+
+**Returns:** `void`
 
 ### `isIgnoreWhitespaces()`
 
@@ -164,10 +164,10 @@
 
 ### `setIgnoreWhitespaces(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnorePI()`
 
@@ -175,10 +175,10 @@
 
 ### `setIgnorePI(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreComments()`
 
@@ -186,10 +186,10 @@
 
 ### `setIgnoreComments(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreCDATA()`
 
@@ -197,10 +197,10 @@
 
 ### `setIgnoreCDATA(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreDOCTYPE()`
 
@@ -208,10 +208,10 @@
 
 ### `setIgnoreDOCTYPE(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreText()`
 
@@ -219,10 +219,10 @@
 
 ### `setIgnoreText(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreAttributesOrder()`
 
@@ -230,10 +230,10 @@
 
 ### `setIgnoreAttributesOrder(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnorePrefixes()`
 
@@ -241,10 +241,10 @@
 
 ### `setIgnorePrefixes(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreNamespaces()`
 
@@ -252,10 +252,10 @@
 
 ### `setIgnoreNamespaces(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreNamespaceDeclarations()`
 
@@ -263,10 +263,10 @@
 
 ### `setIgnoreNamespaceDeclarations(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreEntities()`
 
@@ -274,10 +274,10 @@
 
 ### `setIgnoreEntities(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreStateOfEmptyElements()`
 
@@ -285,10 +285,10 @@
 
 ### `setIgnoreStateOfEmptyElements(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isMergeAdjacentDifferences()`
 
@@ -296,10 +296,10 @@
 
 ### `setMergeAdjacentDifferences(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isMarkEndTagsAsDifferent()`
 
@@ -307,10 +307,10 @@
 
 ### `setMarkEndTagsAsDifferent(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isIgnoreNodesByXPath()`
 
@@ -318,10 +318,10 @@
 
 ### `setIgnoreNodesByXPath(boolean arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `getDefaultXPath()`
 
@@ -329,17 +329,17 @@
 
 ### `setDefaultXPath(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `setEnableHierarchicalDiff(boolean arg0)`
-
 **Returns:** `void`
+
+### `setEnableHierarchicalDiff(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `void`
 
 ### `isEnableHierarchicalDiff()`
 

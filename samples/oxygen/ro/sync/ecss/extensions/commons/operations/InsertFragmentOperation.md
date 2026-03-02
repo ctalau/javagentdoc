@@ -75,15 +75,13 @@ It can be either
 
 ### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md))
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object fragment, java.lang.Object xpathLocation, java.lang.Object relativeLocation, boolean goToFirstEditablePosition, java.lang.Object schemaAwareArgumentValue)`
-
 **Returns:** `void`
+
+### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object fragment, java.lang.Object xpathLocation, java.lang.Object relativeLocation, boolean goToFirstEditablePosition, java.lang.Object schemaAwareArgumentValue)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access used to access the document.
@@ -91,22 +89,24 @@ It can be either
 - `xpathLocation` (`java.lang.Object`): The XPath location where the insertion takes place. If null, insert at caret position.
 - `relativeLocation` (`java.lang.Object`): The location of the insertion relative to the node selected by the XPath.
 - `goToFirstEditablePosition` (`boolean`): `true` if we should go to the first editable 
-  position in the fragment after insertion.
+    position in the fragment after insertion.
 - `schemaAwareArgumentValue` (`java.lang.Object`): `true` if the insertion should be schema aware.
+
+**Returns:** `void`
 
 ### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object fragment, java.lang.Object xpathLocation, java.lang.Object relativeLocation, boolean goToFirstEditablePosition, java.lang.Object schemaAwareArgumentValue, boolean isInsertEvenIfInvalid)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access used to access the document.
 - `fragment` (`java.lang.Object`): The fragment to be inserted.
 - `xpathLocation` (`java.lang.Object`): The XPath location where the insertion takes place. If null, insert at caret position.
 - `relativeLocation` (`java.lang.Object`): The location of the insertion relative to the node selected by the XPath.
 - `goToFirstEditablePosition` (`boolean`): `true` if we should go to the first editable 
-  position in the fragment after insertion.
+    position in the fragment after insertion.
 - `schemaAwareArgumentValue` (`java.lang.Object`): `true` if the insertion should be schema aware.
 - `isInsertEvenIfInvalid` (`boolean`): `true` to insert the fragment even if it would make the document invalid.
+
+**Returns:** `void`
 
 ### `getArguments()`
 

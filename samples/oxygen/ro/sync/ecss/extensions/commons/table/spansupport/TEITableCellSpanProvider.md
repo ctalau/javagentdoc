@@ -16,21 +16,19 @@
 
 ### `getColSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
-**Returns:** `java.lang.Integer`
-
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `java.lang.Integer`
 
 ### `getRowSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
 
-**Returns:** `java.lang.Integer`
-
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
-### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+**Returns:** `java.lang.Integer`
 
-**Returns:** `void`
+### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
 Cell spanning information in a TEI table is given through the
  attributes of the cell element.
@@ -38,14 +36,16 @@ Cell spanning information in a TEI table is given through the
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
+**Returns:** `void`
+
 ### `getDescription()`
 
 **Returns:** `java.lang.String`
 
 ### `hasColumnSpecifications(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
+
+**Returns:** `boolean`
 

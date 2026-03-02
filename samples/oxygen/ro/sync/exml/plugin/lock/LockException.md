@@ -37,10 +37,10 @@
 
 ### `setOwnerName(java.lang.String arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `getOwnerName()`
 
@@ -60,8 +60,8 @@
 
 ### `getOpenErrorMessage(boolean arg0)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `arg0` (`boolean`)
+
+**Returns:** `java.lang.String`
 

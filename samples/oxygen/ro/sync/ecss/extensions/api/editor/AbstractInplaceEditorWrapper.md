@@ -29,19 +29,19 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 ### `createEditor(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.editor.InplaceEditor`](./InplaceEditor.md)
-
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): Editing context.
 
-### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseInvocationLocation)`
+**Returns:** [`ro.sync.ecss.extensions.api.editor.InplaceEditor`](./InplaceEditor.md)
 
-**Returns:** `java.lang.Object`
+### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseInvocationLocation)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 - `allocation` (`ro.sync.exml.view.graphics.Rectangle`)
 - `mouseInvocationLocation` (`ro.sync.exml.view.graphics.Point`)
+
+**Returns:** `java.lang.Object`
 
 ### `getScrollRectangle()`
 
@@ -49,10 +49,10 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 ### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
+
+**Returns:** `void`
 
 ### `requestFocus()`
 
@@ -76,22 +76,22 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 ### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
-
 **Returns:** `void`
+
+### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
-### `insertContent(java.lang.String xmlContent)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `insertContent(java.lang.String xmlContent)`
 
 **Parameters:**
 - `xmlContent` (`java.lang.String`)
+
+**Returns:** `boolean`
 

@@ -8,8 +8,8 @@
 
 ### `extract(ro.sync.ecss.dom.p arg0)`
 
-**Returns:** `java.util.Optional<ro.sync.exml.workspace.api.references.Reference>`
-
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dom.p`)
+
+**Returns:** `java.util.Optional<ro.sync.exml.workspace.api.references.Reference>`
 

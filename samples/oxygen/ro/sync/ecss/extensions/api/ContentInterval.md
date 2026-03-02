@@ -40,17 +40,17 @@
 
 ### `contains(int offset)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `offset` (`int`): An offset.
 
-### `equals(java.lang.Object obj)`
-
 **Returns:** `boolean`
+
+### `equals(java.lang.Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

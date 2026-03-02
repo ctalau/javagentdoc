@@ -20,8 +20,6 @@ It differs from one variant of the document to another,
 
 ### `getXMLFragmentForContentProfiling(int startOffset, int endOffset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
 
-**Returns:** `java.lang.String`
-
 The returned XML fragment is used to wrap the content included in the
  given offset interval. 
  
@@ -34,13 +32,15 @@ The returned XML fragment is used to wrap the content included in the
 - `endOffset` (`int`): The end offset of the document content that must be profiled.
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access class to the author functions.
 
-### `shouldAddProfilingDirectlyOnElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `shouldAddProfilingDirectlyOnElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
 
 If this method returns `false`, the selected contetn will be wrapped 
  in an XML fragment given by #getXMLFragmentForContentProfiling(int, int, AuthorAccess).
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element to be analyzed.
+
+**Returns:** `boolean`
 

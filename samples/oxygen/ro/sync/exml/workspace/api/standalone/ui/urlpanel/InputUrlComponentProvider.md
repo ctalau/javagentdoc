@@ -16,43 +16,43 @@ The component can be added to Swing-based panels.
 
 ### `setUrl(java.net.URL url)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `url` (`java.net.URL`): The `URL` to be presented.
 
-### `getUrlText()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getUrlText()`
 
 It will return the exact value of the combobox,
  without expanding any editor variable.
 
-### `setUrlText(java.lang.String newURL)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `setUrlText(java.lang.String newURL)`
 
 Can contain unexpanded editor variables.
 
 **Parameters:**
 - `newURL` (`java.lang.String`): The new URL.
 
-### `setEnabled(boolean enabled)`
-
 **Returns:** `void`
+
+### `setEnabled(boolean enabled)`
 
 **Parameters:**
 - `enabled` (`boolean`): `true` to enable.
 
-### `setUrlLabel(java.lang.String urlPresenterLabelText)`
-
 **Returns:** `void`
+
+### `setUrlLabel(java.lang.String urlPresenterLabelText)`
 
 By default the presented label is `URL`
 
 **Parameters:**
 - `urlPresenterLabelText` (`java.lang.String`): A new text for the label associated with the URL presenter component.
-                              If `null`, the label will be hidden.
+                                If `null`, the label will be hidden.
+
+**Returns:** `void`
 
 ### `getJComponent()`
 
@@ -60,15 +60,15 @@ By default the presented label is `URL`
 
 ### `addChangeListener(ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener listener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener`](./InputUrlComponentChangeListener.md)): The listener that notifies when the url is changed.
+
+**Returns:** `void`
 
 ### `removeChangeListener(ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener listener)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener`](./InputUrlComponentChangeListener.md)): The listener that notifies when the url is changed.
+
+**Returns:** `void`
 

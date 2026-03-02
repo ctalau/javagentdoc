@@ -36,33 +36,33 @@
 
 ### `addURL(java.lang.String arg0, java.lang.String arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `removeURL(java.lang.String arg0, java.lang.String arg1)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
+**Returns:** `void`
+
 ### `clearURLs(java.lang.String arg0)`
+
+**Parameters:**
+- `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-**Parameters:**
-- `arg0` (`java.lang.String`)
-
 ### `getURLs(java.lang.String arg0)`
 
-**Returns:** `java.lang.String[]`
-
 **Parameters:**
 - `arg0` (`java.lang.String`)
+
+**Returns:** `java.lang.String[]`
 
 ### `getNotPersistentFieldNames()`
 

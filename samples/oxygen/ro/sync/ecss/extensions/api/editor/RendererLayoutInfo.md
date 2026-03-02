@@ -33,10 +33,10 @@ The baseline is measured from the top of the component.
 
 ### `getBaseline()`
 
-**Returns:** `int`
-
 The baseline is measured from the top of the component. 
  This method is primarily meant for the layout manager to align components along their baseline.
+
+**Returns:** `int`
 
 ### `getSize()`
 

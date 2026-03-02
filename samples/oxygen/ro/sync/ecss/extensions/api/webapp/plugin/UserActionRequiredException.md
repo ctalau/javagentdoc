@@ -29,9 +29,9 @@
 
 ### `getUserMessage(java.net.URL url)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.UserActionRequiredMessage`](./UserActionRequiredMessage.md)
-
 **Parameters:**
 - `url` (`java.net.URL`): The URL of the resource for which the user action required exception 
- is thrown.
+   is thrown.
+
+**Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.UserActionRequiredMessage`](./UserActionRequiredMessage.md)
 

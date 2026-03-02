@@ -16,12 +16,12 @@
 
 ### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, org.xml.sax.Attributes rootAttributes)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `systemID` (`java.lang.String`)
 - `rootNamespace` (`java.lang.String`)
 - `rootLocalName` (`java.lang.String`)
 - `doctypePublicID` (`java.lang.String`)
 - `rootAttributes` (`org.xml.sax.Attributes`)
+
+**Returns:** `boolean`
 

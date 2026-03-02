@@ -14,29 +14,29 @@ The CSS is used to mark nodes as foldable:
 
 ### `isFoldable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../../ecss/extensions/api/node/AuthorNode.md)): The Author Node.
+
+**Returns:** `boolean`
 
 ### `isFolded(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../../ecss/extensions/api/node/AuthorNode.md)): The Author Node.
+
+**Returns:** `boolean`
 
 ### `expandFold(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../../ecss/extensions/api/node/AuthorNode.md)): The Author Node.
+
+**Returns:** `void`
 
 ### `collapseFold(ro.sync.ecss.extensions.api.node.AuthorNode node)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../../../../ecss/extensions/api/node/AuthorNode.md)): The Author Node.
+
+**Returns:** `void`
 

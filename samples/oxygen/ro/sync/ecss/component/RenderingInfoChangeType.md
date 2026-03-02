@@ -18,8 +18,8 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.ecss.component.RenderingInfoChangeType`](./RenderingInfoChangeType.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.component.RenderingInfoChangeType`](./RenderingInfoChangeType.md)
 

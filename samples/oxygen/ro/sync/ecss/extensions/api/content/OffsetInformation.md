@@ -38,19 +38,19 @@ If the offset is on a marker character the returned result will also contain the
 
 ### `getNodeForMarkerOffset()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)
-
 Example on the situations when this method returns a node:
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)
 
 ### `getNodeForOffset()`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)
-
 Never `null`.
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)
 
 ### `getPositionType()`
 
-**Returns:** `int`
-
 It returns one of the constants: #IN_CONTENT or #ON_START_MARKER or #ON_END_MARKER
+
+**Returns:** `int`
 

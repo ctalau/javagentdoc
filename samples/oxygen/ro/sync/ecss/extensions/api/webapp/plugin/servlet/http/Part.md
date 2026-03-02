@@ -30,25 +30,23 @@
 
 ### `write(java.lang.String fileName)`
 
-**Returns:** `void`
-
 This method is not guaranteed to succeed if called more than once for the same part. This allows a particular
  implementation to use, for example, file renaming, where possible, rather than copying all of the underlying data,
  thus gaining a significant performance benefit.
 
 **Parameters:**
 - `fileName` (`java.lang.String`): The location into which the uploaded part should be stored. Relative paths are relative to
- MultipartConfigElement#getLocation(). Absolute paths are used as provided. Note: that this is
- a system dependent string and URI notation may not be acceptable on all systems. For portability, this string should
- be generated with the File or Path APIs.
+   MultipartConfigElement#getLocation(). Absolute paths are used as provided. Note: that this is
+   a system dependent string and URI notation may not be acceptable on all systems. For portability, this string should
+   be generated with the File or Path APIs.
+
+**Returns:** `void`
 
 ### `delete()`
 
 **Returns:** `void`
 
 ### `getHeader(java.lang.String name)`
-
-**Returns:** `java.lang.String`
 
 If the Part did not include a header of the
  specified name, this method returns `null`. If there are multiple headers with the same name, this method
@@ -58,9 +56,9 @@ If the Part did not include a header of the
 **Parameters:**
 - `name` (`java.lang.String`): a `String` specifying the header name
 
-### `getHeaders(java.lang.String name)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Collection<java.lang.String>`
+### `getHeaders(java.lang.String name)`
 
 Any changes to the returned `Collection` must not affect this `Part`.
 
@@ -71,9 +69,9 @@ Any changes to the returned `Collection` must not affect this `Part`.
 **Parameters:**
 - `name` (`java.lang.String`): the header name whose values to return
 
-### `getHeaderNames()`
-
 **Returns:** `java.util.Collection<java.lang.String>`
+
+### `getHeaderNames()`
 
 Some servlet containers do not allow servlets to access headers using this method, in which case this method returns
  `null`
@@ -81,4 +79,6 @@ Some servlet containers do not allow servlets to access headers using this metho
  
 
  Any changes to the returned `Collection` must not affect this `Part`.
+
+**Returns:** `java.util.Collection<java.lang.String>`
 

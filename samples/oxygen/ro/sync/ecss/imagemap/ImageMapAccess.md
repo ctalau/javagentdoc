@@ -26,14 +26,12 @@
 
 ### `setInstance(ro.sync.ecss.imagemap.ImageMapAccess arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.imagemap.ImageMapAccess`](./ImageMapAccess.md))
 
-### `editMap(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.imagemap.SupportedFrameworks arg1, java.net.URL arg2, java.util.Map arg3, int arg4, java.lang.String[] arg5)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String[]`
+### `editMap(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.imagemap.SupportedFrameworks arg1, java.net.URL arg2, java.util.Map arg3, int arg4, java.lang.String[] arg5)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -43,9 +41,9 @@
 - `arg4` (`int`)
 - `arg5` (`java.lang.String[]`)
 
-### `paintImageMapAreas(ro.sync.exml.view.graphics.Graphics arg0, int arg1, int arg2, int arg3, int arg4, double arg5, ro.sync.ecss.extensions.api.AuthorAccess arg6, ro.sync.ecss.imagemap.IImageMapWrapper<ro.sync.ecss.imagemap.IImageMap> arg7, ro.sync.ecss.imagemap.SupportedFrameworks arg8, int arg9, boolean arg10)`
+**Returns:** `java.lang.String[]`
 
-**Returns:** `void`
+### `paintImageMapAreas(ro.sync.exml.view.graphics.Graphics arg0, int arg1, int arg2, int arg3, int arg4, double arg5, ro.sync.ecss.extensions.api.AuthorAccess arg6, ro.sync.ecss.imagemap.IImageMapWrapper<ro.sync.ecss.imagemap.IImageMap> arg7, ro.sync.ecss.imagemap.SupportedFrameworks arg8, int arg9, boolean arg10)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Graphics`)
@@ -59,4 +57,6 @@
 - `arg8` ([`ro.sync.ecss.imagemap.SupportedFrameworks`](./SupportedFrameworks.md))
 - `arg9` (`int`)
 - `arg10` (`boolean`)
+
+**Returns:** `void`
 

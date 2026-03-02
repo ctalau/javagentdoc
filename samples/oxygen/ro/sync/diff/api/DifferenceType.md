@@ -27,10 +27,10 @@
 
 ### `valueOf(java.lang.String name)`
 
-**Returns:** [`ro.sync.diff.api.DifferenceType`](./DifferenceType.md)
-
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`ro.sync.diff.api.DifferenceType`](./DifferenceType.md)
 
 ### `toString()`
 

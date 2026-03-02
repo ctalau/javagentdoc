@@ -10,26 +10,26 @@
 
 ### `createDocumentFragmentRaw(int arg0, int arg1)`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
-
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`int`)
 
-### `setCanEditReadOnlyContext(boolean arg0)`
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](node/AuthorDocumentFragment.md)
 
-**Returns:** `boolean`
+### `setCanEditReadOnlyContext(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `createContentReferenceNode(java.lang.String arg0, java.lang.String arg1)`
+**Returns:** `boolean`
 
-**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorReferenceNode`](node/AuthorReferenceNode.md)
+### `createContentReferenceNode(java.lang.String arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
+
+**Returns:** [`ro.sync.ecss.extensions.api.node.AuthorReferenceNode`](node/AuthorReferenceNode.md)
 
 ### `createErrorNode()`
 
@@ -37,22 +37,20 @@
 
 ### `unwrapRaw(ro.sync.ecss.extensions.api.node.AuthorParentNode arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](node/AuthorParentNode.md))
 
-### `setCommentIdRaw(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight arg0, java.lang.String arg1)`
-
 **Returns:** `void`
+
+### `setCommentIdRaw(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight arg0, java.lang.String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md))
 - `arg1` (`java.lang.String`)
 
-### `addChangeMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType arg0, int arg1, int arg2, java.util.LinkedHashMap<java.lang.String,java.lang.String> arg3)`
+**Returns:** `void`
 
-**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)
+### `addChangeMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType arg0, int arg1, int arg2, java.util.LinkedHashMap<java.lang.String,java.lang.String> arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType`)
@@ -60,33 +58,35 @@
 - `arg2` (`int`)
 - `arg3` (`java.util.LinkedHashMap<java.lang.String,java.lang.String>`)
 
-### `addSelectionMarkListener(ro.sync.ecss.extensions.api.SelectionMarkListener arg0)`
+**Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)
 
-**Returns:** `void`
+### `addSelectionMarkListener(ro.sync.ecss.extensions.api.SelectionMarkListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.SelectionMarkListener`](./SelectionMarkListener.md))
+
+**Returns:** `void`
 
 ### `removeSelectionMarkListener(ro.sync.ecss.extensions.api.SelectionMarkListener arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.SelectionMarkListener`](./SelectionMarkListener.md))
 
-### `setReportAtomicChangesOnMultipleEdits(boolean arg0)`
-
 **Returns:** `void`
+
+### `setReportAtomicChangesOnMultipleEdits(boolean arg0)`
 
 **Parameters:**
 - `arg0` (`boolean`)
 
-### `setMarkerSerializationHandler(ro.sync.ecss.extensions.api.MarkerSerializationHandler arg0)`
-
 **Returns:** `void`
+
+### `setMarkerSerializationHandler(ro.sync.ecss.extensions.api.MarkerSerializationHandler arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.MarkerSerializationHandler`](./MarkerSerializationHandler.md))
+
+**Returns:** `void`
 
 ### `getUndoManager()`
 
@@ -94,10 +94,10 @@
 
 ### `setFinalDocumentFilter(ro.sync.ecss.extensions.api.AuthorDocumentFilter arg0)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentFilter`](./AuthorDocumentFilter.md))
+
+**Returns:** `void`
 
 ### `getFinalDocumentFilter()`
 
