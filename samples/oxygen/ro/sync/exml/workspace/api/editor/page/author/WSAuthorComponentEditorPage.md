@@ -16,7 +16,7 @@ The toolbars will look almost identical with the ones which appear when the XML 
 
 **Returns:** `java.util.List<javax.swing.JToolBar>`
 
-### `setBreadCrumbPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer popUpCustomizer)`
+### `setBreadCrumbPopUpCustomizer(PopupMenuCustomizer popUpCustomizer)`
 
 If everything is removed then the menu will not be shown.
 
@@ -32,7 +32,7 @@ If everything is removed then the menu will not be shown.
 
 **Returns:** `void`
 
-### `setOutlinerPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer popUpCustomizer)`
+### `setOutlinerPopUpCustomizer(PopupMenuCustomizer popUpCustomizer)`
 
 If everything is removed then the menu will not be shown.
 

@@ -41,12 +41,12 @@ For example:
 
 **Returns:** `int`
 
-### `equals(java.lang.Object o)`
-
-**Returns:** `boolean`
+### `equals(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `toString()`
 

@@ -52,7 +52,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0, ro.sync.exml.view.graphics.Rectangle arg1, ro.sync.exml.view.graphics.Point arg2)`
+### `getEditorComponent(AuthorInplaceContext arg0, Rectangle arg1, Point arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
@@ -92,14 +92,14 @@
 
 **Returns:** `void`
 
-### `prepareComponents(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
+### `prepareComponents(AuthorInplaceContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
 
 **Returns:** `void`
 
-### `setInitialValue(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
+### `setInitialValue(AuthorInplaceContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))
@@ -124,7 +124,7 @@
 
 **Returns:** `void`
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
+### `refresh(AuthorInplaceContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../api/editor/AuthorInplaceContext.md))

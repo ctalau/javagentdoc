@@ -10,21 +10,19 @@
 
 ### `putByte(byte b)`
 
-**Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
-
 **Parameters:**
 - `b` (`byte`): a byte
 
-### `putBytes(byte[] bytes)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putBytes(byte[] bytes)`
 
 **Parameters:**
 - `bytes` (`byte[]`): a byte array
 
-### `putBytes(byte[] bytes, int off, int len)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putBytes(byte[] bytes, int off, int len)`
 
 bytes[off] is the first byte written,
  bytes[off + len - 1] is the last.
@@ -34,9 +32,9 @@ bytes[off] is the first byte written,
 - `off` (`int`): the start offset in the array
 - `len` (`int`): the number of bytes to write
 
-### `putBytes(java.nio.ByteBuffer bytes)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putBytes(ByteBuffer bytes)`
 
 bytes.position() is the first
  byte written, bytes.limit() - 1 is the last. The position of the buffer will be equal
@@ -45,58 +43,58 @@ bytes.position() is the first
 **Parameters:**
 - `bytes` (`java.nio.ByteBuffer`): a byte buffer
 
-### `putShort(short s)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putShort(short s)`
 
 **Parameters:**
 - `s` (`short`)
 
-### `putInt(int i)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putInt(int i)`
 
 **Parameters:**
 - `i` (`int`)
 
-### `putLong(long l)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putLong(long l)`
 
 **Parameters:**
 - `l` (`long`)
 
-### `putFloat(float f)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putFloat(float f)`
 
 **Parameters:**
 - `f` (`float`)
 
-### `putDouble(double d)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putDouble(double d)`
 
 **Parameters:**
 - `d` (`double`)
 
-### `putBoolean(boolean b)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putBoolean(boolean b)`
 
 **Parameters:**
 - `b` (`boolean`)
 
-### `putChar(char c)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putChar(char c)`
 
 **Parameters:**
 - `c` (`char`)
 
-### `putUnencodedChars(java.lang.CharSequence charSequence)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putUnencodedChars(CharSequence charSequence)`
 
 **Warning:** This method will produce different output than most other languages do when
  running on the equivalent input. For cross-language compatibility, use #putString,
@@ -105,9 +103,9 @@ bytes.position() is the first
 **Parameters:**
 - `charSequence` (`java.lang.CharSequence`)
 
-### `putString(java.lang.CharSequence charSequence, java.nio.charset.Charset charset)`
-
 **Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
+
+### `putString(CharSequence charSequence, Charset charset)`
 
 **Warning:** This method, which reencodes the input before processing it, is useful only
  for cross-language compatibility. For other use cases, prefer #putUnencodedChars, which
@@ -117,4 +115,6 @@ bytes.position() is the first
 **Parameters:**
 - `charSequence` (`java.lang.CharSequence`)
 - `charset` (`java.nio.charset.Charset`)
+
+**Returns:** [`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md)
 

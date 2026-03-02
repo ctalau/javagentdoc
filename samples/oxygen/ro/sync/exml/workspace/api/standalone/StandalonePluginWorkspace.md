@@ -31,7 +31,7 @@ Each opened editor contains one or more pages.
 
 ## Methods
 
-### `addToolbarComponentsCustomizer(ro.sync.exml.workspace.api.standalone.ToolbarComponentsCustomizer componentsCustomizer)`
+### `addToolbarComponentsCustomizer(ToolbarComponentsCustomizer componentsCustomizer)`
 
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
  
@@ -48,7 +48,7 @@ Each opened editor contains one or more pages.
 
 **Returns:** `void`
 
-### `addViewComponentCustomizer(ro.sync.exml.workspace.api.standalone.ViewComponentCustomizer viewComponentCustomizer)`
+### `addViewComponentCustomizer(ViewComponentCustomizer viewComponentCustomizer)`
 
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
 
@@ -57,7 +57,7 @@ Each opened editor contains one or more pages.
 
 **Returns:** `void`
 
-### `addMenuBarCustomizer(ro.sync.exml.workspace.api.standalone.MenuBarCustomizer menuBarCustomizer)`
+### `addMenuBarCustomizer(MenuBarCustomizer menuBarCustomizer)`
 
 **IMPORTANT** This customizer must be set early, when the plugin extension's **applicationStarted** method gets called.
 
@@ -66,7 +66,7 @@ Each opened editor contains one or more pages.
 
 **Returns:** `void`
 
-### `addTopicRefTargetInfoProvider(java.lang.String protocol, ro.sync.exml.workspace.api.standalone.ditamap.TopicRefTargetInfoProvider targetInfoProvider)`
+### `addTopicRefTargetInfoProvider(String protocol, TopicRefTargetInfoProvider targetInfoProvider)`
 
 This method can be used by a CMS implementor to take control over the way Oxygen is gathering information about each topic reference.
  The protocol is the protocol of the URL of the opened DITA Map.
@@ -80,7 +80,7 @@ This method can be used by a CMS implementor to take control over the way Oxygen
 
 **Returns:** `void`
 
-### `showView(java.lang.String viewID, boolean requestFocus)`
+### `showView(String viewID, boolean requestFocus)`
 
 If the view is hidden, this method brings 
  it to front. If the view is in auto-hide state, this 
@@ -92,35 +92,35 @@ If the view is hidden, this method brings
 
 **Returns:** `void`
 
-### `hideView(java.lang.String viewID)`
+### `hideView(String viewID)`
 
 **Parameters:**
 - `viewID` (`java.lang.String`): The view ID.
 
 **Returns:** `void`
 
-### `isViewShowing(java.lang.String viewID)`
+### `isViewShowing(String viewID)`
 
 **Parameters:**
 - `viewID` (`java.lang.String`): The view ID.
 
 **Returns:** `boolean`
 
-### `isViewAvailable(java.lang.String viewID)`
+### `isViewAvailable(String viewID)`
 
 **Parameters:**
 - `viewID` (`java.lang.String`): The view ID.
 
 **Returns:** `boolean`
 
-### `hideToolbar(java.lang.String toolbarID)`
+### `hideToolbar(String toolbarID)`
 
 **Parameters:**
 - `toolbarID` (`java.lang.String`): The toolbar ID.
 
 **Returns:** `void`
 
-### `showToolbar(java.lang.String toolbarID)`
+### `showToolbar(String toolbarID)`
 
 If the toolbar is hidden, this method shows it.
 
@@ -129,14 +129,14 @@ If the toolbar is hidden, this method shows it.
 
 **Returns:** `void`
 
-### `isToolbarShowing(java.lang.String toolbarID)`
+### `isToolbarShowing(String toolbarID)`
 
 **Parameters:**
 - `toolbarID` (`java.lang.String`): The toolbar ID.
 
 **Returns:** `boolean`
 
-### `getOxygenActionID(javax.swing.Action action)`
+### `getOxygenActionID(Action action)`
 
 If the action appears on a contextual menu but is not installed on a main menu it will pe prefixed with the constant "ACTION_WITH_NO_SHORTCUT/"
 
@@ -151,7 +151,7 @@ It might be `null` when called in certain contexts (for example from the webapp 
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.actions.ActionsProvider`](actions/ActionsProvider.md)
 
-### `addMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
+### `addMenusAndToolbarsContributorCustomizer(MenusAndToolbarsContributorCustomizer customizer)`
 
 It will be notified to customize various menus and toolbars.
 
@@ -160,14 +160,14 @@ It will be notified to customize various menus and toolbars.
 
 **Returns:** `void`
 
-### `removeMenusAndToolbarsContributorCustomizer(ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer customizer)`
+### `removeMenusAndToolbarsContributorCustomizer(MenusAndToolbarsContributorCustomizer customizer)`
 
 **Parameters:**
 - `customizer` ([`ro.sync.exml.workspace.api.standalone.actions.MenusAndToolbarsContributorCustomizer`](actions/MenusAndToolbarsContributorCustomizer.md)): The customizer to remove.
 
 **Returns:** `void`
 
-### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage)`
+### `createEditorComponentProvider(String[] allowedPages, String initialPage)`
 
 Such a component is a small XML editing container which can have
   all editing modes and can be added to a custom Swing-based dialog created
@@ -180,7 +180,7 @@ Such a component is a small XML editing container which can have
 
 **Returns:** [`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](../../../../ecss/extensions/api/component/EditorComponentProvider.md)
 
-### `createEditorComponentProvider(java.lang.String[] allowedPages, java.lang.String initialPage, java.lang.String contentType)`
+### `createEditorComponentProvider(String[] allowedPages, String initialPage, String contentType)`
 
 Such a component is a small editing container which can have
   all editing modes and can be added to a custom Swing-based dialog created
@@ -245,7 +245,7 @@ It works as a map in which any message is accessed by a specific key.
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.project.ProjectController`](project/ProjectController.md)
 
-### `addPluginExtension(java.lang.String extensionType, ro.sync.exml.plugin.PluginExtension pluginExtension)`
+### `addPluginExtension(String extensionType, PluginExtension pluginExtension)`
 
 **Parameters:**
 - `extensionType` (`java.lang.String`): The type of the plugin extension; can be a constant from {@linkro.sync.exml.plugin.PluginDescriptor }.

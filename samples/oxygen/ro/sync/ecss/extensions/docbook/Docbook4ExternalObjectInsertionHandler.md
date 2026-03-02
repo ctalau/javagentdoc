@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
+### `insertURLs(AuthorAccess authorAccess, List<URL> urls, int source)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -29,7 +29,7 @@
 
 **Returns:** `void`
 
-### `getImporterStylesheetFileName(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getImporterStylesheetFileName(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))

@@ -12,7 +12,7 @@ It is used on standalone implementation.
 
 ## Constructors
 
-### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
+### `<init>(Frame parentFrame, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent JFrame.

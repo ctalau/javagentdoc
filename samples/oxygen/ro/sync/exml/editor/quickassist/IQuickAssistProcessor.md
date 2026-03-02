@@ -36,14 +36,14 @@ The processors are requested depending on this priority,
 
 **Returns:** `short`
 
-### `canAssist(ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext invocationContext)`
+### `canAssist(IQuickAssistInvocationContext invocationContext)`
 
 **Parameters:**
 - `invocationContext` ([`ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext`](./IQuickAssistInvocationContext.md)): the invocation context
 
 **Returns:** `boolean`
 
-### `computeQuickAssistProposals(ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext invocationContext)`
+### `computeQuickAssistProposals(IQuickAssistInvocationContext invocationContext)`
 
 **Parameters:**
 - `invocationContext` ([`ro.sync.exml.editor.quickassist.IQuickAssistInvocationContext`](./IQuickAssistInvocationContext.md)): the invocation context

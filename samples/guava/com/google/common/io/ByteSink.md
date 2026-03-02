@@ -28,16 +28,14 @@ ByteSink provides two kinds of methods:
 
 ## Methods
 
-### `asCharSink(java.nio.charset.Charset charset)`
-
-**Returns:** [`com.google.common.io.CharSink`](./CharSink.md)
+### `asCharSink(Charset charset)`
 
 **Parameters:**
 - `charset` (`java.nio.charset.Charset`)
 
-### `openStream()`
+**Returns:** [`com.google.common.io.CharSink`](./CharSink.md)
 
-**Returns:** `java.io.OutputStream`
+### `openStream()`
 
 This method returns a new,
  independent stream each time it is called.
@@ -45,9 +43,9 @@ This method returns a new,
  
 The caller is responsible for ensuring that the returned stream is closed.
 
-### `openBufferedStream()`
-
 **Returns:** `java.io.OutputStream`
+
+### `openBufferedStream()`
 
 The returned stream is not
  required to be a BufferedOutputStream in order to allow implementations to simply
@@ -58,20 +56,22 @@ The returned stream is not
  
 The caller is responsible for ensuring that the returned stream is closed.
 
-### `write(byte[] bytes)`
+**Returns:** `java.io.OutputStream`
 
-**Returns:** `void`
+### `write(byte[] bytes)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `writeFrom(java.io.InputStream input)`
+**Returns:** `void`
 
-**Returns:** `long`
+### `writeFrom(InputStream input)`
 
 Does not close 
  input.
 
 **Parameters:**
 - `input` (`java.io.InputStream`)
+
+**Returns:** `long`
 

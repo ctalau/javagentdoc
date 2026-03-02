@@ -19,23 +19,23 @@ This class is thread-safe
 
 ## Constructors
 
-### `<init>(java.lang.String patternStr)`
+### `<init>(String patternStr)`
 
 **Parameters:**
 - `patternStr` (`java.lang.String`): the pattern string on which to filter file names
 
-### `<init>(java.util.regex.Pattern pattern)`
+### `<init>(Pattern pattern)`
 
 **Parameters:**
 - `pattern` (`java.util.regex.Pattern`): the pattern on which to filter file names
 
 ## Methods
 
-### `accept(java.io.File dir, java.lang.String fileName)`
-
-**Returns:** `boolean`
+### `accept(File dir, String fileName)`
 
 **Parameters:**
 - `dir` (`java.io.File`)
 - `fileName` (`java.lang.String`)
+
+**Returns:** `boolean`
 

@@ -34,7 +34,7 @@ The value is `insertMultipleColumns`
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper documentTypeHelper)`
+### `<init>(AuthorTableHelper documentTypeHelper)`
 
 **Parameters:**
 - `documentTypeHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Document type helper, has methods specific to a 
@@ -42,7 +42,7 @@ The value is `insertMultipleColumns`
 
 ## Methods
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -50,7 +50,7 @@ The value is `insertMultipleColumns`
 
 **Returns:** `void`
 
-### `performInsertColumn(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String namespace, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, boolean cellsFragments, ro.sync.ecss.extensions.commons.table.operations.InsertRowOperationBase insertRowOperation, ro.sync.ecss.extensions.commons.table.operations.InsertTableOperationBase insertTableOperation)`
+### `performInsertColumn(AuthorAccess authorAccess, String namespace, AuthorDocumentFragment[] fragments, TableColumnSpecificationInformation columnSpecification, boolean cellsFragments, InsertRowOperationBase insertRowOperation, InsertTableOperationBase insertTableOperation)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -66,7 +66,7 @@ The value is `insertMultipleColumns`
 
 **Returns:** `void`
 
-### `performInsertColumns(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String namespace, java.lang.String insertPosition, boolean customColumnInsertion, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, boolean cellsFragments, ro.sync.ecss.extensions.commons.table.operations.InsertRowOperationBase insertRowOperation, ro.sync.ecss.extensions.commons.table.operations.InsertTableOperationBase insertTableOperation)`
+### `performInsertColumns(AuthorAccess authorAccess, String namespace, String insertPosition, boolean customColumnInsertion, AuthorDocumentFragment[] fragments, TableColumnSpecificationInformation columnSpecification, boolean cellsFragments, InsertRowOperationBase insertRowOperation, InsertTableOperationBase insertTableOperation)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -84,7 +84,7 @@ The value is `insertMultipleColumns`
 
 **Returns:** `void`
 
-### `insertColumns(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.lang.String namespace, java.lang.String insertPosition, int caretOffset, int noOfColumnsToBeInserted)`
+### `insertColumns(AuthorAccess authorAccess, AuthorElement tableElement, String namespace, String insertPosition, int caretOffset, int noOfColumnsToBeInserted)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -97,7 +97,7 @@ The value is `insertMultipleColumns`
 
 **Returns:** `void`
 
-### `insertColumns(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String namespace, java.lang.String insertPosition, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, boolean cellsFragments, ro.sync.ecss.extensions.commons.table.operations.InsertRowOperationBase insertRowOperation, int caretOffset, int noOfColumnsToBeInserted, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `insertColumns(AuthorAccess authorAccess, String namespace, String insertPosition, AuthorDocumentFragment[] fragments, TableColumnSpecificationInformation columnSpecification, boolean cellsFragments, InsertRowOperationBase insertRowOperation, int caretOffset, int noOfColumnsToBeInserted, AuthorElement tableElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -115,7 +115,7 @@ The value is `insertMultipleColumns`
 
 **Returns:** `void`
 
-### `updateColumnCellsSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement tableElem, int newColumnIndex, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, java.lang.String namespace, int noOfColumnsToBeInserted)`
+### `updateColumnCellsSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSupport, AuthorElement tableElem, int newColumnIndex, TableColumnSpecificationInformation columnSpecification, String namespace, int noOfColumnsToBeInserted)`
 
 A cell intersects the column to insert if its start column index is less than
  the new column index and the end column index of the cell is greater or equal
@@ -134,7 +134,7 @@ A cell intersects the column to insert if its start column index is less than
 
 **Returns:** `void`
 
-### `insertNewColumnsCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int newColumnIndex, java.lang.String namespace, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, boolean cellsFragment, ro.sync.ecss.extensions.commons.table.operations.InsertRowOperationBase insertRowOperation, int noOfColumnsToBeInserted, int initialNumberOfColumns)`
+### `insertNewColumnsCells(AuthorAccess authorAccess, AuthorElement tableElement, int newColumnIndex, String namespace, AuthorDocumentFragment[] fragments, boolean cellsFragment, InsertRowOperationBase insertRowOperation, int noOfColumnsToBeInserted, int initialNumberOfColumns)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -154,7 +154,7 @@ A cell intersects the column to insert if its start column index is less than
 
 **Returns:** `void`
 
-### `checkForCompatibility(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, int rowIndex)`
+### `checkForCompatibility(AuthorAccess authorAccess, AuthorDocumentFragment[] fragments, int rowIndex)`
 
 If there are fragments for which there is no corresponding new cell, an exception 
  is thrown.
@@ -166,7 +166,7 @@ If there are fragments for which there is no corresponding new cell, an exceptio
 
 **Returns:** `boolean`
 
-### `findColumnIndex(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int offset)`
+### `findColumnIndex(AuthorAccess authorAccess, int offset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -184,7 +184,7 @@ If there are fragments for which there is no corresponding new cell, an exceptio
 
 **Returns:** `java.lang.String`
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
+### `getCellElementName(AuthorElement rowElement, int newColumnIndex)`
 
 **Parameters:**
 - `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The row element where the new cell will be inserted.
@@ -196,7 +196,7 @@ If there are fragments for which there is no corresponding new cell, an exceptio
 
 **Returns:** `java.lang.String`
 
-### `removeMultipleInsertionDescriptor(ro.sync.ecss.extensions.api.ArgumentDescriptor[] superArguments)`
+### `removeMultipleInsertionDescriptor(ArgumentDescriptor[] superArguments)`
 
 **Parameters:**
 - `superArguments` ([`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)): The input arguments list.

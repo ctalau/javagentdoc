@@ -50,13 +50,13 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, java.lang.String arg1)`
+### `<init>(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6, boolean arg7)`
+### `<init>(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, boolean arg7)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

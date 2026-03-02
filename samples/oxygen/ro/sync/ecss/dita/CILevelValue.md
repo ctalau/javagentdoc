@@ -22,13 +22,13 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, int arg1)`
+### `<init>(String arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`int`)
 
-### `<init>(java.lang.String arg0, int arg1, java.lang.String[] arg2)`
+### `<init>(String arg0, int arg1, String[] arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -37,7 +37,7 @@
 
 ## Methods
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -56,7 +56,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setPresentationName(java.lang.String arg0)`
+### `setPresentationName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

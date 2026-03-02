@@ -14,7 +14,7 @@ It does not allow custom insertion of multiple rows, and thus is webapp-compatib
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper helper)`
+### `<init>(AuthorTableHelper helper)`
 
 **Parameters:**
 - `helper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../AuthorTableHelper.md)): Table helper

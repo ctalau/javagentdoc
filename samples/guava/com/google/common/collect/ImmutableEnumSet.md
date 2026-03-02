@@ -24,19 +24,19 @@
 
 ## Constructors
 
-### `<init>(java.util.EnumSet<E> delegate)`
+### `<init>(EnumSet<E> delegate)`
 
 **Parameters:**
 - `delegate` (`java.util.EnumSet<E>`)
 
 ## Methods
 
-### `asImmutable(java.util.EnumSet<E> set)`
-
-**Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+### `asImmutable(EnumSet<E> set)`
 
 **Parameters:**
 - `set` (`java.util.EnumSet<E>`)
+
+**Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
 
 ### `isPartialView()`
 
@@ -50,41 +50,41 @@
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(java.util.function.Consumer<? super E> action)`
-
-**Returns:** `void`
+### `forEach(Consumer<? super E> action)`
 
 **Parameters:**
 - `action` (`java.util.function.Consumer<? super E>`)
+
+**Returns:** `void`
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `containsAll(java.util.Collection<?> collection)`
-
 **Returns:** `boolean`
+
+### `containsAll(Collection<?> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
+
+**Returns:** `boolean`
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `isHashCodeFast()`
 
@@ -102,10 +102,10 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

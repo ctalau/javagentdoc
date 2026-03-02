@@ -21,21 +21,21 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `java.lang.String`
 
-### `getRendererComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getRendererComponent(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
 **Returns:** `java.lang.Object`
 
-### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getRenderingInfo(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
 
-### `getTooltipText(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
+### `getTooltipText(AuthorInplaceContext context, int x, int y)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
@@ -44,7 +44,7 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `java.lang.String`
 
-### `getCursorType(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
+### `getCursorType(AuthorInplaceContext context, int x, int y)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))

@@ -26,7 +26,7 @@ The value is `mediaUrl`.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -34,7 +34,7 @@ The value is `mediaUrl`.
 
 **Returns:** `void`
 
-### `createMediaContentToInsert(java.lang.String ref)`
+### `createMediaContentToInsert(String ref)`
 
 **Parameters:**
 - `ref` (`java.lang.String`): Relative reference of the media file.

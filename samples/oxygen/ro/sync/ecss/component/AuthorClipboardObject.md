@@ -46,14 +46,14 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[] arg1, ro.sync.ecss.dom.z arg2)`
+### `<init>(String arg0, AuthorDocumentFragmentClipboardObject[] arg1, z arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` ([`ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[]`](./AuthorDocumentFragmentClipboardObject.md))
 - `arg2` (`ro.sync.ecss.dom.z`)
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[] arg2, ro.sync.ecss.component.AuthorContentMetadata arg3, ro.sync.ecss.dom.z arg4, ro.sync.ecss.extensions.api.SelectionInterpretationMode arg5)`
+### `<init>(String arg0, String arg1, AuthorDocumentFragmentClipboardObject[] arg2, AuthorContentMetadata arg3, z arg4, SelectionInterpretationMode arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -77,7 +77,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setTextContent(java.lang.String arg0)`
+### `setTextContent(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -88,14 +88,14 @@
 
 **Returns:** `java.lang.String`
 
-### `writeObject(java.io.ObjectOutputStream arg0)`
+### `writeObject(ObjectOutputStream arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.ObjectOutputStream`)
 
 **Returns:** `void`
 
-### `readObject(java.io.ObjectInputStream arg0)`
+### `readObject(ObjectInputStream arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.ObjectInputStream`)

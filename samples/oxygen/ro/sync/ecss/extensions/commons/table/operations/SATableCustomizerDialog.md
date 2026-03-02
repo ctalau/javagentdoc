@@ -144,7 +144,7 @@ The table model can be CALS or HTML.
 
 ## Constructors
 
-### `<init>(java.awt.Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
+### `<init>(Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent JFrame of the dialog.
@@ -156,7 +156,7 @@ The table model can be CALS or HTML.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
 
-### `<init>(java.awt.Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
+### `<init>(Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent JFrame of the dialog.
@@ -176,7 +176,7 @@ The table model can be CALS or HTML.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
 
-### `<init>(java.awt.Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean choiceTableModel, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
+### `<init>(Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean choiceTableModel, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent JFrame of the dialog.
@@ -197,7 +197,7 @@ The table model can be CALS or HTML.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
 
-### `<init>(java.awt.Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean choiceTableModel, boolean isCalsTable, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
+### `<init>(Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean choiceTableModel, boolean isCalsTable, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent JFrame of the dialog.
@@ -219,7 +219,7 @@ The table model can be CALS or HTML.
 - `predefinedRowsCount` (`int`): The predefined number of rows.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
 
-### `<init>(java.awt.Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean choiceTableModel, boolean isCalsTable, boolean isSimpleOrHtmlTable, boolean isPropertiesTableAccepted, boolean isPropertiesTable, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
+### `<init>(Frame parentFrame, boolean hasFooter, boolean hasFrameAttribute, boolean showModelChooser, boolean showSimpleModel, boolean choiceTableModel, boolean isCalsTable, boolean isSimpleOrHtmlTable, boolean isPropertiesTableAccepted, boolean isPropertiesTable, boolean innerCallsTable, boolean hasRowsepAttribute, boolean hasColsepAttribute, boolean hasAlignAttribute, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent JFrame of the dialog.
@@ -246,7 +246,7 @@ The table model can be CALS or HTML.
 
 ## Methods
 
-### `updateColumnsWidthsCombo(ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[] columnsWidthsSpecifications)`
+### `updateColumnsWidthsCombo(TableCustomizerConstants.ColumnWidthsType[] columnsWidthsSpecifications)`
 
 **Parameters:**
 - `columnsWidthsSpecifications` (`ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType[]`): The column widths specifications.
@@ -396,7 +396,7 @@ The table model can be CALS or HTML.
 
 **Returns:** `void`
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableInfo previousTableInfo)`
+### `showDialog(TableInfo previousTableInfo)`
 
 **Parameters:**
 - `previousTableInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)): Table info to be used for initializing the controls.
@@ -407,7 +407,7 @@ The table model can be CALS or HTML.
 
 **Returns:** `int`
 
-### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableInfo previousTableInfo)`
+### `initialize(TableInfo previousTableInfo)`
 
 **Parameters:**
 - `previousTableInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)): If `null` defaults will be used. Otherwise, the controls

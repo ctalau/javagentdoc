@@ -8,28 +8,28 @@
 
 ## Methods
 
-### `getTableCellAbove(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableCellAbove(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)): The table cell element.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)
 
-### `getTableCellBelow(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableCellBelow(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)): The table cell element.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)
 
-### `getTableCellIndex(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableCellIndex(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)): The table cell element.
 
 **Returns:** `int[]`
 
-### `getTableCellAt(int row, int column, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableCellAt(int row, int column, AuthorElement tableElement)`
 
 **Parameters:**
 - `row` (`int`): The row, 0 based.
@@ -38,7 +38,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)
 
-### `getTableRow(int index, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableRow(int index, AuthorElement tableElement)`
 
 **Parameters:**
 - `index` (`int`): The index of the row to find the element for, 0 based.
@@ -46,21 +46,21 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)
 
-### `getTableRowCount(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableRowCount(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)): The table element.
 
 **Returns:** `int`
 
-### `getTableNumberOfColumns(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableNumberOfColumns(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../node/AuthorElement.md)): The table element.
 
 **Returns:** `int`
 
-### `getTableColSpanIndices(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableColSpanIndices(AuthorElement cellElement)`
 
 The indices are 0 based.
 
@@ -69,7 +69,7 @@ The indices are 0 based.
 
 **Returns:** `int[]`
 
-### `getTableRowSpanIndices(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableRowSpanIndices(AuthorElement cellElement)`
 
 The indices are 0 based.
 

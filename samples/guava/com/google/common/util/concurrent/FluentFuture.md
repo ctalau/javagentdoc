@@ -64,9 +64,7 @@ Users of CompletableFuture will likely want to continue using
 
 ## Methods
 
-### `from(com.google.common.util.concurrent.ListenableFuture<V> future)`
-
-**Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
+### `from(ListenableFuture<V> future)`
 
 If the given ListenableFuture is already a FluentFuture, it is returned
  directly. If not, it is wrapped in a FluentFuture that delegates all calls to the
@@ -75,16 +73,16 @@ If the given ListenableFuture is already a FluentFuture, it is returned
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md))
 
-### `from(com.google.common.util.concurrent.FluentFuture<V> future)`
-
 **Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
+
+### `from(FluentFuture<V> future)`
 
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md))
 
-### `catching(java.lang.Class<X> exceptionType, com.google.common.base.Function<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
+
+### `catching(Class<X> exceptionType, Function<? super X,? extends V> fallback, Executor executor)`
 
 Function#apply is not invoked until the primary input has failed, so if the
  primary input succeeds, it is never invoked. If, during the invocation of fallback, an
@@ -117,20 +115,20 @@ This method is similar to java.util.concurrent.CompletableFuture#exceptionally. 
 
 **Parameters:**
 - `exceptionType` (`java.lang.Class<X>`): the exception type that triggers use of fallback. The exception
-     type is matched against the input's exception. "The input's exception" means the cause of
-     the ExecutionException thrown by input.get() or, if get() throws a
-     different kind of exception, that exception itself. To avoid hiding bugs and other
-     unrecoverable errors, callers should prefer more specific types, avoiding 
-     Throwable.class in particular.
+       type is matched against the input's exception. "The input's exception" means the cause of
+       the ExecutionException thrown by input.get() or, if get() throws a
+       different kind of exception, that exception itself. To avoid hiding bugs and other
+       unrecoverable errors, callers should prefer more specific types, avoiding 
+       Throwable.class in particular.
 - `fallback` ([`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md)): the Function to be called if the input fails with the expected
-     exception type. The function's argument is the input's exception. "The input's exception"
-     means the cause of the ExecutionException thrown by this.get() or, if
-     get() throws a different kind of exception, that exception itself.
+       exception type. The function's argument is the input's exception. "The input's exception"
+       means the cause of the ExecutionException thrown by this.get() or, if
+       get() throws a different kind of exception, that exception itself.
 - `executor` (`java.util.concurrent.Executor`): the executor that runs fallback if the input fails
 
-### `catchingAsync(java.lang.Class<X> exceptionType, com.google.common.util.concurrent.AsyncFunction<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
+
+### `catchingAsync(Class<X> exceptionType, AsyncFunction<? super X,? extends V> fallback, Executor executor)`
 
 AsyncFunction#apply is not invoked until the primary input has failed, so if
  the primary input succeeds, it is never invoked. If, during the invocation of fallback,
@@ -190,20 +188,20 @@ This method is similar to java.util.concurrent.CompletableFuture#exceptionally. 
 
 **Parameters:**
 - `exceptionType` (`java.lang.Class<X>`): the exception type that triggers use of fallback. The exception
-     type is matched against the input's exception. "The input's exception" means the cause of
-     the ExecutionException thrown by this.get() or, if get() throws a
-     different kind of exception, that exception itself. To avoid hiding bugs and other
-     unrecoverable errors, callers should prefer more specific types, avoiding 
-     Throwable.class in particular.
+       type is matched against the input's exception. "The input's exception" means the cause of
+       the ExecutionException thrown by this.get() or, if get() throws a
+       different kind of exception, that exception itself. To avoid hiding bugs and other
+       unrecoverable errors, callers should prefer more specific types, avoiding 
+       Throwable.class in particular.
 - `fallback` ([`com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>`](./AsyncFunction.md)): the AsyncFunction to be called if the input fails with the expected
-     exception type. The function's argument is the input's exception. "The input's exception"
-     means the cause of the ExecutionException thrown by input.get() or, if
-     get() throws a different kind of exception, that exception itself.
+       exception type. The function's argument is the input's exception. "The input's exception"
+       means the cause of the ExecutionException thrown by input.get() or, if
+       get() throws a different kind of exception, that exception itself.
 - `executor` (`java.util.concurrent.Executor`): the executor that runs fallback if the input fails
 
-### `withTimeout(java.time.Duration timeout, java.util.concurrent.ScheduledExecutorService scheduledExecutor)`
-
 **Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
+
+### `withTimeout(Duration timeout, ScheduledExecutorService scheduledExecutor)`
 
 If the timeout expires, not only will the output future finish, but also the input future
  (this) will be cancelled and interrupted.
@@ -212,9 +210,9 @@ If the timeout expires, not only will the output future finish, but also the inp
 - `timeout` (`java.time.Duration`): when to time out the future
 - `scheduledExecutor` (`java.util.concurrent.ScheduledExecutorService`): The executor service to enforce the timeout.
 
-### `withTimeout(long timeout, java.util.concurrent.TimeUnit unit, java.util.concurrent.ScheduledExecutorService scheduledExecutor)`
-
 **Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
+
+### `withTimeout(long timeout, TimeUnit unit, ScheduledExecutorService scheduledExecutor)`
 
 If the timeout expires, not only will the output future finish, but also the input future
  (this) will be cancelled and interrupted.
@@ -224,9 +222,9 @@ If the timeout expires, not only will the output future finish, but also the inp
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the time parameter
 - `scheduledExecutor` (`java.util.concurrent.ScheduledExecutorService`): The executor service to enforce the timeout.
 
-### `transformAsync(com.google.common.util.concurrent.AsyncFunction<? super V,T> function, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.FluentFuture<T>`](./FluentFuture.md)
+### `transformAsync(AsyncFunction<? super V,T> function, Executor executor)`
 
 If the input Future fails, the returned Future fails with the
  same exception (and the function is not invoked).
@@ -269,12 +267,12 @@ This method is similar to java.util.concurrent.CompletableFuture#thenCompose and
 
 **Parameters:**
 - `function` ([`com.google.common.util.concurrent.AsyncFunction<? super V,T>`](./AsyncFunction.md)): A function to transform the result of this future to the result of the output
-     future
+       future
 - `executor` (`java.util.concurrent.Executor`): Executor to run the function in.
 
-### `transform(com.google.common.base.Function<? super V,T> function, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.FluentFuture<T>`](./FluentFuture.md)
+
+### `transform(Function<? super V,T> function, Executor executor)`
 
 If
  this input Future fails, the returned Future fails with the same exception (and
@@ -312,12 +310,12 @@ This method is similar to java.util.concurrent.CompletableFuture#thenApply and
 
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super V,T>`](../../base/Function.md)): A Function to transform the results of this future to the results of the
-     returned future.
+       returned future.
 - `executor` (`java.util.concurrent.Executor`): Executor to run the function in.
 
-### `addCallback(com.google.common.util.concurrent.FutureCallback<? super V> callback, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.FluentFuture<T>`](./FluentFuture.md)
 
-**Returns:** `void`
+### `addCallback(FutureCallback<? super V> callback, Executor executor)`
 
 The callback is run on executor. There is no guaranteed ordering of execution of
  callbacks, but any callback added through this method is guaranteed to be called once the
@@ -359,4 +357,6 @@ This method is similar to java.util.concurrent.CompletableFuture#whenComplete an
 **Parameters:**
 - `callback` ([`com.google.common.util.concurrent.FutureCallback<? super V>`](./FutureCallback.md)): The callback to invoke when this Future is completed.
 - `executor` (`java.util.concurrent.Executor`): The executor to run callback when the future completes.
+
+**Returns:** `void`
 

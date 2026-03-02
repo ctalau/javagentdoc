@@ -135,33 +135,33 @@ Note
 
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-### `create(java.util.Collection<? extends E> collection)`
-
-**Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
+### `create(Collection<? extends E> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<? extends E>`): the elements that the set should contain
 
-### `create(E[] elements)`
-
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
+
+### `create(E[] elements)`
 
 **Parameters:**
 - `elements` (`E[]`): the elements that the set should contain
 
-### `createWithExpectedSize(int expectedSize)`
-
 **Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
+
+### `createWithExpectedSize(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `init(int expectedSize)`
+**Returns:** [`com.google.common.collect.CompactHashSet<E>`](./CompactHashSet.md)
 
-**Returns:** `void`
+### `init(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `void`
 
 ### `needsAllocArrays()`
 
@@ -177,10 +177,10 @@ Note
 
 ### `createHashFloodingResistantDelegate(int tableSize)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `tableSize` (`int`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `convertToHashFloodingResistantImplementation()`
 
@@ -192,10 +192,10 @@ Note
 
 ### `setHashTableMask(int mask)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `mask` (`int`)
+
+**Returns:** `void`
 
 ### `hashTableMask()`
 
@@ -207,14 +207,12 @@ Note
 
 ### `add(E object)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `object` (`E`)
 
-### `insertEntry(int entryIndex, E object, int hash, int mask)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `insertEntry(int entryIndex, E object, int hash, int mask)`
 
 **Parameters:**
 - `entryIndex` (`int`)
@@ -222,23 +220,23 @@ Note
 - `hash` (`int`)
 - `mask` (`int`)
 
-### `resizeMeMaybe(int newSize)`
-
 **Returns:** `void`
+
+### `resizeMeMaybe(int newSize)`
 
 **Parameters:**
 - `newSize` (`int`)
 
-### `resizeEntries(int newCapacity)`
-
 **Returns:** `void`
+
+### `resizeEntries(int newCapacity)`
 
 **Parameters:**
 - `newCapacity` (`int`)
 
-### `resizeTable(int oldMask, int newCapacity, int targetHash, int targetEntryIndex)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `resizeTable(int oldMask, int newCapacity, int targetHash, int targetEntryIndex)`
 
 **Parameters:**
 - `oldMask` (`int`)
@@ -246,27 +244,29 @@ Note
 - `targetHash` (`int`)
 - `targetEntryIndex` (`int`)
 
-### `contains(java.lang.Object object)`
+**Returns:** `int`
+
+### `contains(Object object)`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 **Returns:** `boolean`
+
+### `remove(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `remove(java.lang.Object object)`
-
 **Returns:** `boolean`
-
-**Parameters:**
-- `object` (`java.lang.Object`)
 
 ### `moveLastEntry(int dstIndex, int mask)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `dstIndex` (`int`)
 - `mask` (`int`)
+
+**Returns:** `void`
 
 ### `firstEntryIndex()`
 
@@ -274,18 +274,18 @@ Note
 
 ### `getSuccessor(int entryIndex)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `entryIndex` (`int`)
 
-### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
-
 **Returns:** `int`
+
+### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
 
 **Parameters:**
 - `indexBeforeRemove` (`int`)
 - `indexRemoved` (`int`)
+
+**Returns:** `int`
 
 ### `iterator()`
 
@@ -295,12 +295,12 @@ Note
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(java.util.function.Consumer<? super E> action)`
-
-**Returns:** `void`
+### `forEach(Consumer<? super E> action)`
 
 **Parameters:**
 - `action` (`java.util.function.Consumer<? super E>`)
+
+**Returns:** `void`
 
 ### `size()`
 
@@ -316,10 +316,10 @@ Note
 
 ### `toArray(T[] a)`
 
-**Returns:** `T[]`
-
 **Parameters:**
 - `a` (`T[]`)
+
+**Returns:** `T[]`
 
 ### `trimToSize()`
 
@@ -329,19 +329,19 @@ Note
 
 **Returns:** `void`
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 
 ### `requireTable()`
 
@@ -357,31 +357,31 @@ Note
 
 ### `element(int i)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `i` (`int`)
+
+**Returns:** `E`
 
 ### `entry(int i)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `i` (`int`)
 
-### `setElement(int i, E value)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `setElement(int i, E value)`
 
 **Parameters:**
 - `i` (`int`)
 - `value` (`E`)
 
-### `setEntry(int i, int value)`
-
 **Returns:** `void`
+
+### `setEntry(int i, int value)`
 
 **Parameters:**
 - `i` (`int`)
 - `value` (`int`)
+
+**Returns:** `void`
 

@@ -112,12 +112,12 @@ See the Guava User Guide article on [Splitter](https://github.com/google/guava/w
 
 ## Constructors
 
-### `<init>(com.google.common.base.Splitter.Strategy strategy)`
+### `<init>(Splitter.Strategy strategy)`
 
 **Parameters:**
 - `strategy` (`com.google.common.base.Splitter.Strategy`)
 
-### `<init>(com.google.common.base.Splitter.Strategy strategy, boolean omitEmptyStrings, com.google.common.base.CharMatcher trimmer, int limit)`
+### `<init>(Splitter.Strategy strategy, boolean omitEmptyStrings, CharMatcher trimmer, int limit)`
 
 **Parameters:**
 - `strategy` (`com.google.common.base.Splitter.Strategy`)
@@ -129,17 +129,15 @@ See the Guava User Guide article on [Splitter](https://github.com/google/guava/w
 
 ### `on(char separator)`
 
-**Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
-
 For example, 
  Splitter.on(',').split("foo,,bar") returns an iterable containing ["foo", "", "bar"].
 
 **Parameters:**
 - `separator` (`char`): the character to recognize as a separator
 
-### `on(com.google.common.base.CharMatcher separatorMatcher)`
-
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `on(CharMatcher separatorMatcher)`
 
 For example, 
  Splitter.on(CharMatcher.anyOf(";,")).split("foo,;bar,quux") returns an iterable containing
@@ -147,11 +145,11 @@ For example,
 
 **Parameters:**
 - `separatorMatcher` ([`com.google.common.base.CharMatcher`](./CharMatcher.md)): a CharMatcher that determines whether a character is a
-     separator
-
-### `on(java.lang.String separator)`
+       separator
 
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `on(String separator)`
 
 For example, 
  Splitter.on(", ").split("foo, bar,baz") returns an iterable containing ["foo",
@@ -160,27 +158,27 @@ For example,
 **Parameters:**
 - `separator` (`java.lang.String`): the literal, nonempty string to recognize as a separator
 
-### `on(java.util.regex.Pattern separatorPattern)`
-
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `on(Pattern separatorPattern)`
 
 For example, Splitter.on(Pattern.compile("\r?\n")).split(entireFile) splits a string
  into lines whether it uses DOS-style or UNIX-style line terminators.
 
 **Parameters:**
 - `separatorPattern` (`java.util.regex.Pattern`): the pattern that determines whether a subsequence is a separator. This
-     pattern may not match the empty string.
-
-### `onPatternInternal(com.google.common.base.CommonPattern separatorPattern)`
+       pattern may not match the empty string.
 
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `onPatternInternal(CommonPattern separatorPattern)`
 
 **Parameters:**
 - `separatorPattern` ([`com.google.common.base.CommonPattern`](./CommonPattern.md))
 
-### `onPattern(java.lang.String separatorPattern)`
-
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `onPattern(String separatorPattern)`
 
 For example, Splitter.onPattern("\r?\n").split(entireFile) splits a
  string into lines whether it uses DOS-style or UNIX-style line terminators. This is equivalent
@@ -188,11 +186,11 @@ For example, Splitter.onPattern("\r?\n").split(entireFile) splits a
 
 **Parameters:**
 - `separatorPattern` (`java.lang.String`): the pattern that determines whether a subsequence is a separator. This
-     pattern may not match the empty string.
-
-### `fixedLength(int length)`
+       pattern may not match the empty string.
 
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `fixedLength(int length)`
 
 For example, 
  Splitter.fixedLength(2).split("abcde") returns an iterable containing ["ab", "cd",
@@ -212,9 +210,9 @@ For example,
 **Parameters:**
 - `length` (`int`): the desired length of pieces after splitting, a positive integer
 
-### `omitEmptyStrings()`
-
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `omitEmptyStrings()`
 
 For example, 
  Splitter.on(',').omitEmptyStrings().split(",a,,,b,c,,") returns an iterable containing only
@@ -230,9 +228,9 @@ Note that it is ordinarily not possible for #split(CharSequence) to return an em
  iterable, but when using this option, it can (if the input sequence consists of nothing but
  separators).
 
-### `limit(int maxItems)`
-
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `limit(int maxItems)`
 
 The limit defines the maximum number of items returned by the iterator,
  or the maximum size of the list returned by #splitToList.
@@ -248,17 +246,17 @@ For example, Splitter.on(',').limit(3).split("a,b,c,d") returns an iterable
 **Parameters:**
 - `maxItems` (`int`): the maximum number of items returned
 
-### `trimResults()`
-
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `trimResults()`
 
 For example, 
  Splitter.on(',').trimResults().split(" a, b ,c ") returns an iterable containing ["a",
  "b", "c"].
 
-### `trimResults(com.google.common.base.CharMatcher trimmer)`
-
 **Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
+
+### `trimResults(CharMatcher trimmer)`
 
 For
  example, Splitter.on(',').trimResults(CharMatcher.is('_')).split("_a ,_b_ ,c__")
@@ -266,11 +264,11 @@ For
 
 **Parameters:**
 - `trimmer` ([`com.google.common.base.CharMatcher`](./CharMatcher.md)): a CharMatcher that determines whether a character should be removed from
-     the beginning/end of a subsequence
+       the beginning/end of a subsequence
 
-### `split(java.lang.CharSequence sequence)`
+**Returns:** [`com.google.common.base.Splitter`](./Splitter.md)
 
-**Returns:** `java.lang.Iterable<java.lang.String>`
+### `split(CharSequence sequence)`
 
 If you want an eagerly computed List, use
  #splitToList(CharSequence). Java 8 users may prefer #splitToStream instead.
@@ -278,16 +276,16 @@ If you want an eagerly computed List, use
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the sequence of characters to split
 
-### `splittingIterator(java.lang.CharSequence sequence)`
+**Returns:** `java.lang.Iterable<java.lang.String>`
 
-**Returns:** `java.util.Iterator<java.lang.String>`
+### `splittingIterator(CharSequence sequence)`
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `splitToList(java.lang.CharSequence sequence)`
+**Returns:** `java.util.Iterator<java.lang.String>`
 
-**Returns:** `java.util.List<java.lang.String>`
+### `splitToList(CharSequence sequence)`
 
 If you
  want an Iterable which may be lazily evaluated, use #split(CharSequence).
@@ -295,9 +293,9 @@ If you
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the sequence of characters to split
 
-### `splitToStream(java.lang.CharSequence sequence)`
+**Returns:** `java.util.List<java.lang.String>`
 
-**Returns:** `java.util.stream.Stream<java.lang.String>`
+### `splitToStream(CharSequence sequence)`
 
 If you want an eagerly computed List, use
  #splitToList(CharSequence).
@@ -305,23 +303,23 @@ If you want an eagerly computed List, use
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the sequence of characters to split
 
-### `withKeyValueSeparator(java.lang.String separator)`
+**Returns:** `java.util.stream.Stream<java.lang.String>`
 
-**Returns:** `com.google.common.base.Splitter.MapSplitter`
+### `withKeyValueSeparator(String separator)`
 
 **Parameters:**
 - `separator` (`java.lang.String`)
 
-### `withKeyValueSeparator(char separator)`
-
 **Returns:** `com.google.common.base.Splitter.MapSplitter`
+
+### `withKeyValueSeparator(char separator)`
 
 **Parameters:**
 - `separator` (`char`)
 
-### `withKeyValueSeparator(com.google.common.base.Splitter keyValueSplitter)`
-
 **Returns:** `com.google.common.base.Splitter.MapSplitter`
+
+### `withKeyValueSeparator(Splitter keyValueSplitter)`
 
 Note: Any configuration option configured on this splitter, such as #trimResults,
  does not change the behavior of the keyValueSplitter.
@@ -343,4 +341,6 @@ Example:
 
 **Parameters:**
 - `keyValueSplitter` ([`com.google.common.base.Splitter`](./Splitter.md))
+
+**Returns:** `com.google.common.base.Splitter.MapSplitter`
 

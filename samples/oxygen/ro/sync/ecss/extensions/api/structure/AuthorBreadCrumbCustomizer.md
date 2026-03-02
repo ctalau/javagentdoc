@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `customizeRenderingInformation(ro.sync.ecss.extensions.api.structure.RenderingInformation renderInfo)`
+### `customizeRenderingInformation(RenderingInformation renderInfo)`
 
 The breadcrumb cannot assign a certain icon for a rendered node.
  
@@ -39,7 +39,7 @@ The breadcrumb cannot assign a certain icon for a rendered node.
 
 **Returns:** `void`
 
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizePopUpMenu(Object popUp, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `popUp` (`java.lang.Object`)
@@ -47,7 +47,7 @@ The breadcrumb cannot assign a certain icon for a rendered node.
 
 **Returns:** `void`
 
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode clickedNode)`
+### `customizePopUpMenu(Object popUp, AuthorAccess authorAccess, AuthorNode clickedNode)`
 
 If everything is removed then the menu will not be shown.
 

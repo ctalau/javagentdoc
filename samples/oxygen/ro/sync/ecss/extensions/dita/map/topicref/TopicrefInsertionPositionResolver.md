@@ -18,28 +18,28 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `<init>(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to Author API.
 
 ## Methods
 
-### `moveCaretToPosition(java.lang.String insertionLocation)`
+### `moveCaretToPosition(String insertionLocation)`
 
 **Parameters:**
 - `insertionLocation` (`java.lang.String`): The insertion location.
 
 **Returns:** `void`
 
-### `getFirstPositionInNodeWhereTopicrefCanBeInserted(ro.sync.ecss.extensions.api.node.AuthorNode currentNode)`
+### `getFirstPositionInNodeWhereTopicrefCanBeInserted(AuthorNode currentNode)`
 
 **Parameters:**
 - `currentNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The current node.
 
 **Returns:** `int`
 
-### `canTopicRefBeInsertedAtPosition(int caretOffset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment topicrefFrag)`
+### `canTopicRefBeInsertedAtPosition(int caretOffset, AuthorDocumentFragment topicrefFrag)`
 
 **Parameters:**
 - `caretOffset` (`int`): The offset.
@@ -55,14 +55,14 @@
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.AuthorSchemaManager>`
 
-### `getElementChildren(ro.sync.ecss.extensions.api.node.AuthorNode context)`
+### `getElementChildren(AuthorNode context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node.
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-### `getInsertionPositionsInNode(ro.sync.ecss.extensions.api.node.AuthorNode context)`
+### `getInsertionPositionsInNode(AuthorNode context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The context node.

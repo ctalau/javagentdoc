@@ -44,7 +44,7 @@ Either empty string or something like "ks1.ks2".
 
 ## Methods
 
-### `getProperty(java.lang.String propertyName)`
+### `getProperty(String propertyName)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:
@@ -64,7 +64,7 @@ Either empty string or something like "ks1.ks2".
 
 **Returns:** `java.lang.Object`
 
-### `setProperty(java.lang.String propertyName, java.lang.Object propertyValue)`
+### `setProperty(String propertyName, Object propertyValue)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:

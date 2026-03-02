@@ -34,7 +34,7 @@
 
 **Returns:** `void`
 
-### `doFilter(javax.servlet.ServletRequest arg0, javax.servlet.ServletResponse arg1, javax.servlet.FilterChain arg2)`
+### `doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.ServletRequest`)
@@ -43,7 +43,7 @@
 
 **Returns:** `void`
 
-### `init(javax.servlet.FilterConfig arg0)`
+### `init(FilterConfig arg0)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.FilterConfig`)

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> criteriaInformation, boolean hasSelectedSortableElements, boolean cannotSortAllElements)`
+### `getSortInformation(List<CriterionInformation> criteriaInformation, boolean hasSelectedSortableElements, boolean cannotSortAllElements)`
 
 **Parameters:**
 - `criteriaInformation` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`): The information about the available sorting criteria.

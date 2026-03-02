@@ -25,7 +25,7 @@ It's a wrapper around AbstractMapBasedMultimap that converts the returned collec
 
 ## Constructors
 
-### `<init>(java.util.Map<K,java.util.Collection<V>> map)`
+### `<init>(Map<K,Collection<V>> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
@@ -40,24 +40,22 @@ It's a wrapper around AbstractMapBasedMultimap that converts the returned collec
 
 **Returns:** `java.util.SortedSet<V>`
 
-### `unmodifiableCollectionSubclass(java.util.Collection<E> collection)`
-
-**Returns:** `java.util.SortedSet<E>`
+### `unmodifiableCollectionSubclass(Collection<E> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<E>`)
 
-### `wrapCollection(K key, java.util.Collection<V> collection)`
+**Returns:** `java.util.SortedSet<E>`
 
-**Returns:** `java.util.Collection<V>`
+### `wrapCollection(K key, Collection<V> collection)`
 
 **Parameters:**
 - `key` (`K`)
 - `collection` (`java.util.Collection<V>`)
 
-### `get(K key)`
+**Returns:** `java.util.Collection<V>`
 
-**Returns:** `java.util.SortedSet<V>`
+### `get(K key)`
 
 If no mappings in the multimap
  have the provided key, an empty collection is returned.
@@ -72,9 +70,9 @@ Because a SortedSetMultimap has unique sorted values for a given key, this metho
 **Parameters:**
 - `key` (`K`)
 
-### `removeAll(java.lang.Object key)`
-
 **Returns:** `java.util.SortedSet<V>`
+
+### `removeAll(Object key)`
 
 The returned collection is immutable.
 
@@ -85,9 +83,9 @@ Because a SortedSetMultimap has unique sorted values for a given key, this metho
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `java.util.SortedSet<V>`
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 The returned collection is immutable.
 
@@ -102,9 +100,9 @@ Any duplicates in values will be stored in the multimap once.
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `asMap()`
+**Returns:** `java.util.SortedSet<V>`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap()`
 
 Changes to the returned map, such as element removal, will update the underlying multimap. The
  map does not support setValue on its entries, put, or putAll.
@@ -117,10 +115,12 @@ When passed a key that is present in the map, asMap().get(Object) has the same
  
 Though the method signature doesn't say so explicitly, the returned map has SortedSet values.
 
-### `values()`
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-**Returns:** `java.util.Collection<V>`
+### `values()`
 
 Consequently, the values do not follow their natural ordering or the ordering of the value
  comparator.
+
+**Returns:** `java.util.Collection<V>`
 

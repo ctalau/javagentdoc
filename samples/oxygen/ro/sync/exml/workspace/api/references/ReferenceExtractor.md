@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `extract(ro.sync.ecss.dom.p arg0)`
+### `extract(p arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dom.p`)

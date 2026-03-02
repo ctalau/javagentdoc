@@ -12,17 +12,17 @@
 
 ## Methods
 
-### `getElementOrThrow(com.google.common.collect.Multiset.Entry<E> entry)`
-
-**Returns:** `E`
+### `getElementOrThrow(Multiset.Entry<E> entry)`
 
 **Parameters:**
 - `entry` (`com.google.common.collect.Multiset.Entry<E>`)
 
-### `getElementOrNull(com.google.common.collect.Multiset.Entry<E> entry)`
-
 **Returns:** `E`
+
+### `getElementOrNull(Multiset.Entry<E> entry)`
 
 **Parameters:**
 - `entry` (`com.google.common.collect.Multiset.Entry<E>`)
+
+**Returns:** `E`
 

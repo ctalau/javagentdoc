@@ -23,7 +23,7 @@ The baseline is measured from the top of the component.
 
 ## Constructors
 
-### `<init>(int baseline, ro.sync.exml.view.graphics.Dimension size)`
+### `<init>(int baseline, Dimension size)`
 
 **Parameters:**
 - `baseline` (`int`): The baseline of the rendering component.

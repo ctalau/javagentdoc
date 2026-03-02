@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `computeFragmentMoveInsideHeader(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
+### `computeFragmentMoveInsideHeader(List<AuthorDocumentFragment> fragments, List<Position> offsets, TabInfo tabInfo, List<AuthorElement> nodesToModify, AuthorElement currentNode)`
 
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
@@ -25,7 +25,7 @@
 
 **Returns:** `boolean`
 
-### `computeFragmentsToMoveInsideBody(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
+### `computeFragmentsToMoveInsideBody(List<AuthorDocumentFragment> fragments, List<Position> offsets, TabInfo tabInfo, List<AuthorElement> nodesToModify, AuthorElement currentNode)`
 
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)

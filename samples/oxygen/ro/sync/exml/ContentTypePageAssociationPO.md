@@ -22,7 +22,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, java.lang.String arg1)`
+### `<init>(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -44,7 +44,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -59,7 +59,7 @@
 
 **Returns:** `java.lang.String`
 
-### `compareTo(ro.sync.exml.ContentTypePageAssociationPO arg0)`
+### `compareTo(ContentTypePageAssociationPO arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.ContentTypePageAssociationPO`](./ContentTypePageAssociationPO.md))

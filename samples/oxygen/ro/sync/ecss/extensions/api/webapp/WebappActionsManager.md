@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `invokeOperation(java.lang.String operationClassName, java.util.Map<java.lang.String,java.lang.Object> args, int imposedOffset)`
+### `invokeOperation(String operationClassName, Map<String,Object> args, int imposedOffset)`
 
 **Parameters:**
 - `operationClassName` (`java.lang.String`): The name of the class that implements the operation.

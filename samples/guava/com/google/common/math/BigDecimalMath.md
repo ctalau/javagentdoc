@@ -12,9 +12,7 @@
 
 ## Methods
 
-### `roundToDouble(java.math.BigDecimal x, java.math.RoundingMode mode)`
-
-**Returns:** `double`
+### `roundToDouble(BigDecimal x, RoundingMode mode)`
 
 If x
  is precisely representable as a double, its double value will be returned;
@@ -37,4 +35,6 @@ For the case of RoundingMode#HALF_EVEN, this implementation uses the IEEE 754
 **Parameters:**
 - `x` (`java.math.BigDecimal`)
 - `mode` (`java.math.RoundingMode`)
+
+**Returns:** `double`
 

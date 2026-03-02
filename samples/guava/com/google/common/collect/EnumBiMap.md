@@ -35,7 +35,7 @@ See the Guava User Guide article on [BiMap](https://github.com/google/guava/wiki
 
 ## Constructors
 
-### `<init>(java.lang.Class<K> keyTypeOrObjectUnderJ2cl, java.lang.Class<V> valueTypeOrObjectUnderJ2cl)`
+### `<init>(Class<K> keyTypeOrObjectUnderJ2cl, Class<V> valueTypeOrObjectUnderJ2cl)`
 
 **Parameters:**
 - `keyTypeOrObjectUnderJ2cl` (`java.lang.Class<K>`)
@@ -43,17 +43,15 @@ See the Guava User Guide article on [BiMap](https://github.com/google/guava/wiki
 
 ## Methods
 
-### `create(java.lang.Class<K> keyType, java.lang.Class<V> valueType)`
-
-**Returns:** [`com.google.common.collect.EnumBiMap<K,V>`](./EnumBiMap.md)
+### `create(Class<K> keyType, Class<V> valueType)`
 
 **Parameters:**
 - `keyType` (`java.lang.Class<K>`): the key type
 - `valueType` (`java.lang.Class<V>`): the value type
 
-### `create(java.util.Map<K,V> map)`
-
 **Returns:** [`com.google.common.collect.EnumBiMap<K,V>`](./EnumBiMap.md)
+
+### `create(Map<K,V> map)`
 
 If the specified map is an
  EnumBiMap, the new bimap has the same types as the provided map. Otherwise, the
@@ -62,19 +60,21 @@ If the specified map is an
 **Parameters:**
 - `map` (`java.util.Map<K,V>`): the map whose mappings are to be placed in this map
 
-### `inferKeyTypeOrObjectUnderJ2cl(java.util.Map<K,?> map)`
+**Returns:** [`com.google.common.collect.EnumBiMap<K,V>`](./EnumBiMap.md)
 
-**Returns:** `java.lang.Class<K>`
+### `inferKeyTypeOrObjectUnderJ2cl(Map<K,?> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<K,?>`)
 
-### `inferValueTypeOrObjectUnderJ2cl(java.util.Map<?,V> map)`
+**Returns:** `java.lang.Class<K>`
 
-**Returns:** `java.lang.Class<V>`
+### `inferValueTypeOrObjectUnderJ2cl(Map<?,V> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<?,V>`)
+
+**Returns:** `java.lang.Class<V>`
 
 ### `keyType()`
 
@@ -86,29 +86,29 @@ If the specified map is an
 
 ### `checkKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
 
-### `checkValue(V value)`
+**Returns:** `K`
 
-**Returns:** `V`
+### `checkValue(V value)`
 
 **Parameters:**
 - `value` (`V`)
 
-### `writeObject(java.io.ObjectOutputStream stream)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

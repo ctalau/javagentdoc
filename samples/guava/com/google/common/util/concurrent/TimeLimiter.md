@@ -8,9 +8,7 @@
 
 ## Methods
 
-### `newProxy(T target, java.lang.Class<T> interfaceType, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
-**Returns:** `T`
+### `newProxy(T target, Class<T> interfaceType, long timeoutDuration, TimeUnit timeoutUnit)`
 
 This time-limited delegation
  is also performed for calls to Object#equals, Object#hashCode, and Object#toString.
@@ -50,13 +48,13 @@ For example, to return the value of target.someMethod(), but substitute
 - `target` (`T`): the object to proxy
 - `interfaceType` (`java.lang.Class<T>`): the interface you wish the returned proxy to implement
 - `timeoutDuration` (`long`): with timeoutUnit, the maximum length of time that callers are willing to
-     wait on each method call to the proxy
+       wait on each method call to the proxy
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`): with timeoutDuration, the maximum length of time that callers are willing to
-     wait on each method call to the proxy
-
-### `newProxy(T target, java.lang.Class<T> interfaceType, java.time.Duration timeout)`
+       wait on each method call to the proxy
 
 **Returns:** `T`
+
+### `newProxy(T target, Class<T> interfaceType, Duration timeout)`
 
 This time-limited delegation
  is also performed for calls to Object#equals, Object#hashCode, and Object#toString.
@@ -95,11 +93,11 @@ For example, to return the value of target.someMethod(), but substitute
 - `target` (`T`): the object to proxy
 - `interfaceType` (`java.lang.Class<T>`): the interface you wish the returned proxy to implement
 - `timeout` (`java.time.Duration`): the maximum length of time that callers are willing to wait on each method call
-     to the proxy
-
-### `callWithTimeout(java.util.concurrent.Callable<T> callable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
+       to the proxy
 
 **Returns:** `T`
+
+### `callWithTimeout(Callable<T> callable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 If the target method
  call finishes before the limit is reached, the return value or a wrapped exception is
@@ -111,9 +109,9 @@ If the target method
 - `timeoutDuration` (`long`): with timeoutUnit, the maximum length of time to wait
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`): with timeoutDuration, the maximum length of time to wait
 
-### `callWithTimeout(java.util.concurrent.Callable<T> callable, java.time.Duration timeout)`
-
 **Returns:** `T`
+
+### `callWithTimeout(Callable<T> callable, Duration timeout)`
 
 If the target method
  call finishes before the limit is reached, the return value or a wrapped exception is
@@ -124,9 +122,9 @@ If the target method
 - `callable` (`java.util.concurrent.Callable<T>`): the Callable to execute
 - `timeout` (`java.time.Duration`): the maximum length of time to wait
 
-### `callUninterruptiblyWithTimeout(java.util.concurrent.Callable<T> callable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
 **Returns:** `T`
+
+### `callUninterruptiblyWithTimeout(Callable<T> callable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 If the target method
  call finishes before the limit is reached, the return value or a wrapped exception is
@@ -142,9 +140,9 @@ The difference with #callWithTimeout(Callable, long, TimeUnit) is that this meth
 - `timeoutDuration` (`long`): with timeoutUnit, the maximum length of time to wait
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`): with timeoutDuration, the maximum length of time to wait
 
-### `callUninterruptiblyWithTimeout(java.util.concurrent.Callable<T> callable, java.time.Duration timeout)`
-
 **Returns:** `T`
+
+### `callUninterruptiblyWithTimeout(Callable<T> callable, Duration timeout)`
 
 If the target method
  call finishes before the limit is reached, the return value or a wrapped exception is
@@ -159,9 +157,9 @@ The difference with #callWithTimeout(Callable, Duration) is that this method wil
 - `callable` (`java.util.concurrent.Callable<T>`): the Callable to execute
 - `timeout` (`java.time.Duration`): the maximum length of time to wait
 
-### `runWithTimeout(java.lang.Runnable runnable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
+**Returns:** `T`
 
-**Returns:** `void`
+### `runWithTimeout(Runnable runnable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 If the target method
  run finishes before the limit is reached, this method returns or a wrapped exception is
@@ -173,9 +171,9 @@ If the target method
 - `timeoutDuration` (`long`): with timeoutUnit, the maximum length of time to wait
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`): with timeoutDuration, the maximum length of time to wait
 
-### `runWithTimeout(java.lang.Runnable runnable, java.time.Duration timeout)`
-
 **Returns:** `void`
+
+### `runWithTimeout(Runnable runnable, Duration timeout)`
 
 If the target method
  run finishes before the limit is reached, this method returns or a wrapped exception is
@@ -186,9 +184,9 @@ If the target method
 - `runnable` (`java.lang.Runnable`): the Runnable to execute
 - `timeout` (`java.time.Duration`): the maximum length of time to wait
 
-### `runUninterruptiblyWithTimeout(java.lang.Runnable runnable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
 **Returns:** `void`
+
+### `runUninterruptiblyWithTimeout(Runnable runnable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 If the target method
  run finishes before the limit is reached, this method returns or a wrapped exception is
@@ -204,9 +202,9 @@ The difference with #runWithTimeout(Runnable, long, TimeUnit) is that this metho
 - `timeoutDuration` (`long`): with timeoutUnit, the maximum length of time to wait
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`): with timeoutDuration, the maximum length of time to wait
 
-### `runUninterruptiblyWithTimeout(java.lang.Runnable runnable, java.time.Duration timeout)`
-
 **Returns:** `void`
+
+### `runUninterruptiblyWithTimeout(Runnable runnable, Duration timeout)`
 
 If the target method
  run finishes before the limit is reached, this method returns or a wrapped exception is
@@ -220,4 +218,6 @@ The difference with #runWithTimeout(Runnable, Duration) is that this method will
 **Parameters:**
 - `runnable` (`java.lang.Runnable`): the Runnable to execute
 - `timeout` (`java.time.Duration`): the maximum length of time to wait
+
+**Returns:** `void`
 

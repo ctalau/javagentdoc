@@ -6,14 +6,14 @@
 
 ## Methods
 
-### `addProgressMonitor(ro.sync.exml.workspace.api.standalone.project.ProjectIndexerProgressMonitor arg0)`
+### `addProgressMonitor(ProjectIndexerProgressMonitor arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.project.ProjectIndexerProgressMonitor`](./ProjectIndexerProgressMonitor.md))
 
 **Returns:** `void`
 
-### `removeProgressMonitor(ro.sync.exml.workspace.api.standalone.project.ProjectIndexerProgressMonitor arg0)`
+### `removeProgressMonitor(ProjectIndexerProgressMonitor arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.project.ProjectIndexerProgressMonitor`](./ProjectIndexerProgressMonitor.md))
@@ -39,7 +39,7 @@
 
 **Returns:** `boolean`
 
-### `search(java.lang.String arg0, int arg1)`
+### `search(String arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -47,7 +47,7 @@
 
 **Returns:** `java.util.List<java.net.URL>`
 
-### `search(ro.sync.exml.workspace.api.standalone.project.SearchOptions arg0, java.util.function.Predicate<java.lang.String> arg1)`
+### `search(SearchOptions arg0, Predicate<String> arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.project.SearchOptions`](./SearchOptions.md))
@@ -55,7 +55,7 @@
 
 **Returns:** `java.lang.String`
 
-### `searchInReusableComponents(java.lang.String arg0, int arg1)`
+### `searchInReusableComponents(String arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -67,7 +67,7 @@
 
 **Returns:** `boolean`
 
-### `runAsync(java.lang.Runnable arg0)`
+### `runAsync(Runnable arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Runnable`)

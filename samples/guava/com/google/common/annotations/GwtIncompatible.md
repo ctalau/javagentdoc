@@ -15,8 +15,6 @@ This annotation behaves identically to [the
 
 ### `value()`
 
-**Returns:** `java.lang.String`
-
 Since this is generally due to a
  dependence on a type/method which GWT doesn't support, it is sufficient to simply reference the
  unsupported type/method. E.g. "Class.isInstance".
@@ -24,4 +22,6 @@ Since this is generally due to a
  
 As of Guava 20.0, this value is optional. We encourage authors who wish to describe why an
  API is @GwtIncompatible to instead leave an implementation comment.
+
+**Returns:** `java.lang.String`
 

@@ -27,7 +27,7 @@ Like StringReader,
 
 ## Constructors
 
-### `<init>(java.lang.CharSequence seq)`
+### `<init>(CharSequence seq)`
 
 **Parameters:**
 - `seq` (`java.lang.CharSequence`)
@@ -46,12 +46,12 @@ Like StringReader,
 
 **Returns:** `int`
 
-### `read(java.nio.CharBuffer target)`
-
-**Returns:** `int`
+### `read(CharBuffer target)`
 
 **Parameters:**
 - `target` (`java.nio.CharBuffer`)
+
+**Returns:** `int`
 
 ### `read()`
 
@@ -59,19 +59,19 @@ Like StringReader,
 
 ### `read(char[] cbuf, int off, int len)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `cbuf` (`char[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `skip(long n)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `skip(long n)`
 
 **Parameters:**
 - `n` (`long`)
+
+**Returns:** `long`
 
 ### `ready()`
 
@@ -83,10 +83,10 @@ Like StringReader,
 
 ### `mark(int readAheadLimit)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `readAheadLimit` (`int`)
+
+**Returns:** `void`
 
 ### `reset()`
 

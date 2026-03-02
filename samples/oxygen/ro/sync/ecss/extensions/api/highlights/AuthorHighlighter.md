@@ -11,7 +11,7 @@ To have access to this highlighter use the following method:
 
 ## Methods
 
-### `addHighlight(int startOffset, int endOffset, ro.sync.ecss.extensions.api.highlights.HighlightPainter painter, java.lang.Object additionalData)`
+### `addHighlight(int startOffset, int endOffset, HighlightPainter painter, Object additionalData)`
 
 Returns a tag that can be used
  to refer to the highlight.
@@ -27,14 +27,14 @@ Returns a tag that can be used
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.Highlight`](./Highlight.md)
 
-### `removeHighlight(ro.sync.ecss.extensions.api.highlights.Highlight highlight)`
+### `removeHighlight(Highlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.Highlight`](./Highlight.md)): which highlight to remove
 
 **Returns:** `void`
 
-### `removeHighlights(ro.sync.ecss.extensions.api.highlights.Highlight[] highlights)`
+### `removeHighlights(Highlight[] highlights)`
 
 **Parameters:**
 - `highlights` ([`ro.sync.ecss.extensions.api.highlights.Highlight[]`](./Highlight.md)): which highlights to be removed
@@ -57,7 +57,7 @@ Returns a tag that can be used
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.Highlight[]`](./Highlight.md)
 
-### `addListener(ro.sync.ecss.extensions.api.highlights.AuthorHighlighterListener listener)`
+### `addListener(AuthorHighlighterListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.highlights.AuthorHighlighterListener`](./AuthorHighlighterListener.md)): The listener

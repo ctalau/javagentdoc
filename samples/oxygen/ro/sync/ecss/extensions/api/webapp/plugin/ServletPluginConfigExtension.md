@@ -59,7 +59,7 @@ The path should be unique among other webapp servlet plugins paths and not an em
 
 **Returns:** `void`
 
-### `doGet(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `doGet(HttpServletRequest req, HttpServletResponse resp)`
 
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): The HTTP request
@@ -67,7 +67,7 @@ The path should be unique among other webapp servlet plugins paths and not an em
 
 **Returns:** `void`
 
-### `doPut(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `doPut(HttpServletRequest req, HttpServletResponse resp)`
 
 Derived methods should use setOption in this method. And afterwards call saveOptions().
 
@@ -77,7 +77,7 @@ Derived methods should use setOption in this method. And afterwards call saveOpt
 
 **Returns:** `void`
 
-### `doDelete(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `doDelete(HttpServletRequest req, HttpServletResponse resp)`
 
 It sets the options back to their defaults and saves them on disk.
  
@@ -92,7 +92,7 @@ In derived classes return your plugin to the default options and call the super 
 
 **Returns:** `void`
 
-### `getOption(java.lang.String key, java.lang.String defaultValue)`
+### `getOption(String key, String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key for the option to return
@@ -100,7 +100,7 @@ In derived classes return your plugin to the default options and call the super 
 
 **Returns:** `java.lang.String`
 
-### `getSecretOption(java.lang.String key, java.lang.String defaultValue)`
+### `getSecretOption(String key, String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`)
@@ -108,7 +108,7 @@ In derived classes return your plugin to the default options and call the super 
 
 **Returns:** `java.lang.String`
 
-### `getOrMigrateSecretOption(java.lang.String key, java.lang.String defaultValue)`
+### `getOrMigrateSecretOption(String key, String defaultValue)`
 
 If no encrypted option is found,
  it falls back to a non-encrypted value, encrypts it, saves it securely, and removes 
@@ -120,7 +120,7 @@ If no encrypted option is found,
 
 **Returns:** `java.lang.String`
 
-### `setOption(java.lang.String key, java.lang.String value)`
+### `setOption(String key, String value)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option to set
@@ -128,7 +128,7 @@ If no encrypted option is found,
 
 **Returns:** `void`
 
-### `setSecretOption(java.lang.String key, java.lang.String value)`
+### `setSecretOption(String key, String value)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option to set
@@ -144,7 +144,7 @@ If no encrypted option is found,
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `setDefaultOptions(java.util.Map<java.lang.String,java.lang.String> defaultOptions)`
+### `setDefaultOptions(Map<String,String> defaultOptions)`
 
 If you want the default values for your options to be empty/null make 
  sure to set them as empty/null, don't leave them out of the defaultOptions map.
@@ -171,7 +171,7 @@ These options will be available for all type of users so you should
 
 **Returns:** `boolean`
 
-### `serializeMapToJSON(java.util.Map<java.lang.String,java.lang.Object> map)`
+### `serializeMapToJSON(Map<String,Object> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<java.lang.String,java.lang.Object>`): the map to serialize to JSON string.

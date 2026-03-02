@@ -10,7 +10,7 @@ Persistent highlights get serialized as processing instructions in the XML conte
 
 ## Methods
 
-### `getHighlightPainter(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `getHighlightPainter(AuthorPersistentHighlight highlight)`
 
 If a `null` value is returned the default highlight 
  painter will be used.
@@ -23,7 +23,7 @@ If a `null` value is returned the default highlight
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.HighlightPainter`](./HighlightPainter.md)
 
-### `getTooltip(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `getTooltip(AuthorPersistentHighlight highlight)`
 
 If a `null` value is returned the default tooltip text will be used.
 

@@ -27,9 +27,7 @@
 
 ## Methods
 
-### `toImmutableBiMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
-
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableBiMap<K,V>>`
+### `toImmutableBiMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction)`
 
 Entries appear in the result ImmutableBiMap in encounter order.
 
@@ -41,23 +39,23 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `of()`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableBiMap<K,V>>`
 
-**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+### `of()`
 
 **Performance note:** the instance returned is a singleton.
 
-### `of(K k1, V v1)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1)`
 
 **Parameters:**
 - `k1` (`K`)
 - `v1` (`V`)
 
-### `of(K k1, V v1, K k2, V v2)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -65,9 +63,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k2` (`K`)
 - `v2` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -77,9 +75,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k3` (`K`)
 - `v3` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -91,9 +89,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k4` (`K`)
 - `v4` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -107,9 +105,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k5` (`K`)
 - `v5` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -125,9 +123,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k6` (`K`)
 - `v6` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -145,9 +143,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k7` (`K`)
 - `v7` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -167,9 +165,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k8` (`K`)
 - `v8` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -191,9 +189,9 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k9` (`K`)
 - `v9` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -217,22 +215,22 @@ If the mapped keys or values contain duplicates (according to Object#equals(Obje
 - `k10` (`K`)
 - `v10` (`V`)
 
-### `ofEntries(java.util.Map.Entry<? extends K,? extends V>[] entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `ofEntries(Map.Entry<? extends K,? extends V>[] entries)`
 
 **Parameters:**
 - `entries` (`java.util.Map.Entry<? extends K,? extends V>[]`)
 
-### `builder()`
+**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
-**Returns:** `com.google.common.collect.ImmutableBiMap.Builder<K,V>`
+### `builder()`
 
 The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `builderWithExpectedSize(int expectedSize)`
-
 **Returns:** `com.google.common.collect.ImmutableBiMap.Builder<K,V>`
+
+### `builderWithExpectedSize(int expectedSize)`
 
 If expectedSize is exactly the number of entries added to the builder before Builder#build is called, the builder is likely to perform better than an unsized #builder() would have.
 
@@ -243,9 +241,9 @@ It is not specified if any performance benefits apply if expectedSize is close t
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `copyOf(java.util.Map<? extends K,? extends V> map)`
+**Returns:** `com.google.common.collect.ImmutableBiMap.Builder<K,V>`
 
-**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+### `copyOf(Map<? extends K,? extends V> map)`
 
 If map somehow
  contains entries with duplicate keys (for example, if it is a SortedMap whose
@@ -263,9 +261,9 @@ Despite the method name, this method attempts to avoid actually copying the data
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `copyOf(java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>> entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `copyOf(Iterable<? extends Map.Entry<? extends K,? extends V>> entries)`
 
 The returned bimap iterates over
  entries in the same order as the original iterable.
@@ -273,11 +271,13 @@ The returned bimap iterates over
 **Parameters:**
 - `entries` (`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>`)
 
+**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
 ### `inverse()`
 
-**Returns:** [`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md)
-
 The inverse of an ImmutableBiMap is another ImmutableBiMap.
+
+**Returns:** [`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md)
 
 ### `values()`
 
@@ -289,26 +289,24 @@ The inverse of an ImmutableBiMap is another ImmutableBiMap.
 
 ### `forcePut(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
 
-### `toImmutableMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
+**Returns:** `void`
 
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+### `toImmutableMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction)`
 
 Use #toImmutableBiMap instead. This method exists only to hide ImmutableMap#toImmutableMap(Function, Function) from consumers of ImmutableBiMap.
 
@@ -316,9 +314,9 @@ Use #toImmutableBiMap instead. This method exists only to hide ImmutableMap#toIm
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `toImmutableMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.BinaryOperator<V> mergeFunction)`
-
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+
+### `toImmutableMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction, BinaryOperator<V> mergeFunction)`
 
 This method does not make sense for BiMap. This method exists only to
  hide ImmutableMap#toImmutableMap(Function, Function, BinaryOperator) from consumers of
@@ -328,4 +326,6 @@ This method does not make sense for BiMap. This method exists only to
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `mergeFunction` (`java.util.function.BinaryOperator<V>`)
+
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 

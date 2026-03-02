@@ -38,7 +38,7 @@ The editor might have multiple editor pages.
 
 ## Methods
 
-### `showLocation(java.net.URL url, java.io.Reader reader)`
+### `showLocation(URL url, Reader reader)`
 
 If the document pointed by this URL is different than the document currently 
  loaded in the editor page, this URL will be used to set the content to edit, 
@@ -56,14 +56,14 @@ If the document pointed by this URL is different than the document currently
 
 **Returns:** `void`
 
-### `addAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener listener)`
+### `addAuthorComponentListener(AuthorComponentListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md)): The listener.
 
 **Returns:** `void`
 
-### `removeAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener listener)`
+### `removeAuthorComponentListener(AuthorComponentListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md)): The listener.

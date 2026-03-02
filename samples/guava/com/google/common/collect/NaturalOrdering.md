@@ -34,13 +34,13 @@
 
 ## Methods
 
-### `compare(java.lang.Comparable<?> left, java.lang.Comparable<?> right)`
-
-**Returns:** `int`
+### `compare(Comparable<?> left, Comparable<?> right)`
 
 **Parameters:**
 - `left` (`java.lang.Comparable<?>`)
 - `right` (`java.lang.Comparable<?>`)
+
+**Returns:** `int`
 
 ### `nullsFirst()`
 

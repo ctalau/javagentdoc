@@ -13,21 +13,21 @@ Please use instead the
 
 ## Methods
 
-### `beforeContentDelete(ro.sync.ecss.extensions.api.DocumentContentDeletedEvent e)`
+### `beforeContentDelete(DocumentContentDeletedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.DocumentContentDeletedEvent`](./DocumentContentDeletedEvent.md)): The DocumentContentDeletedEvent.
 
 **Returns:** `void`
 
-### `beforeAttributeChange(ro.sync.ecss.extensions.api.AttributeChangedEvent e)`
+### `beforeAttributeChange(AttributeChangedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AttributeChangedEvent`](./AttributeChangedEvent.md)): The AttributeChangedEvent.
 
 **Returns:** `void`
 
-### `beforeContentInsert(ro.sync.ecss.extensions.api.DocumentContentInsertedEvent e)`
+### `beforeContentInsert(DocumentContentInsertedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.DocumentContentInsertedEvent`](./DocumentContentInsertedEvent.md)): The DocumentContentInsertedEvent.
@@ -38,14 +38,14 @@ Please use instead the
 
 **Returns:** `void`
 
-### `beforeAuthorNodeStructureChange(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+### `beforeAuthorNodeStructureChange(AuthorNode authorNode)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The AuthorNode that contains the modification.
 
 **Returns:** `void`
 
-### `beforeAuthorNodeNameChange(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+### `beforeAuthorNodeNameChange(AuthorNode authorNode)`
 
 *The `authorNode` is a reference to the actual node in the 
  AuthorDocument so its name will be changed after the name change 
@@ -60,21 +60,21 @@ Please use instead the
 
 **Returns:** `void`
 
-### `attributeChanged(ro.sync.ecss.extensions.api.AttributeChangedEvent e)`
+### `attributeChanged(AttributeChangedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AttributeChangedEvent`](./AttributeChangedEvent.md)): The AttributeChangedEvent.
 
 **Returns:** `void`
 
-### `authorNodeNameChanged(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `authorNodeNameChanged(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The AuthorNode that was renamed.
 
 **Returns:** `void`
 
-### `authorNodeStructureChanged(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `authorNodeStructureChanged(AuthorNode node)`
 
 An insert or delete operation 
  has been made and affected the children of the node.
@@ -84,7 +84,7 @@ An insert or delete operation
 
 **Returns:** `void`
 
-### `documentChanged(ro.sync.ecss.extensions.api.node.AuthorDocument oldDocument, ro.sync.ecss.extensions.api.node.AuthorDocument newDocument)`
+### `documentChanged(AuthorDocument oldDocument, AuthorDocument newDocument)`
 
 **Parameters:**
 - `oldDocument` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md)): The old Author document
@@ -92,14 +92,14 @@ An insert or delete operation
 
 **Returns:** `void`
 
-### `contentDeleted(ro.sync.ecss.extensions.api.DocumentContentDeletedEvent e)`
+### `contentDeleted(DocumentContentDeletedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.DocumentContentDeletedEvent`](./DocumentContentDeletedEvent.md)): The DocumentContentDeletedEvent.
 
 **Returns:** `void`
 
-### `contentInserted(ro.sync.ecss.extensions.api.DocumentContentInsertedEvent e)`
+### `contentInserted(DocumentContentInsertedEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.DocumentContentInsertedEvent`](./DocumentContentInsertedEvent.md)): The DocumentContentInsertedEvent.

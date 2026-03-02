@@ -30,7 +30,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `addGuessElement(ro.sync.contentcompletion.xml.CIElement arg0)`
+### `addGuessElement(CIElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md))
@@ -78,21 +78,21 @@
 
 **Returns:** `boolean`
 
-### `setName(java.lang.String arg0)`
+### `setName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setPrefix(java.lang.String arg0)`
+### `setPrefix(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setNamespace(java.lang.String arg0)`
+### `setNamespace(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -111,7 +111,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `setAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0)`
+### `setAttributes(List<CIAttribute> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
@@ -126,7 +126,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setAnnotation(java.lang.String arg0)`
+### `setAnnotation(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -137,7 +137,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setTypeDescription(java.lang.String arg0)`
+### `setTypeDescription(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

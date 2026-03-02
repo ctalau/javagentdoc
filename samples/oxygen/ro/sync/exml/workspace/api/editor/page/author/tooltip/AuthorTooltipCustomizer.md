@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `customizeTooltip(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.exml.workspace.api.editor.page.author.tooltip.TooltipInformation tooltipInformation)`
+### `customizeTooltip(AuthorAccess authorAccess, TooltipInformation tooltipInformation)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../../../../ecss/extensions/api/AuthorAccess.md)): Access to the author API.

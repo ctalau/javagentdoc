@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String toolbarID, javax.swing.JComponent[] components, java.lang.String title)`
+### `<init>(String toolbarID, JComponent[] components, String title)`
 
 **Parameters:**
 - `toolbarID` (`java.lang.String`): The unique toolbar ID
@@ -47,14 +47,14 @@
 
 **Returns:** `java.lang.String`
 
-### `setComponents(javax.swing.JComponent[] components)`
+### `setComponents(JComponent[] components)`
 
 **Parameters:**
 - `components` (`javax.swing.JComponent[]`): The components to set.
 
 **Returns:** `void`
 
-### `setTitle(java.lang.String title)`
+### `setTitle(String title)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The title to set.

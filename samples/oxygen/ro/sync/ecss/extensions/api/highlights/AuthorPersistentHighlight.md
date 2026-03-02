@@ -97,7 +97,7 @@ The properties can contain
 
 **Returns:** `boolean`
 
-### `clone(ro.sync.ecss.extensions.api.Content content)`
+### `clone(Content content)`
 
 **Parameters:**
 - `content` ([`ro.sync.ecss.extensions.api.Content`](../Content.md)): The new content in which to clone the current highlight.
@@ -108,7 +108,7 @@ The properties can contain
 
 **Returns:** `java.util.Iterator<java.util.Map.Entry<java.lang.String,java.lang.String>>`
 
-### `getProperty(java.lang.String key)`
+### `getProperty(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The property key.

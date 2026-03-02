@@ -88,7 +88,7 @@ An exception that is suppressed is not thrown. The method of suppression used de
 
 ## Constructors
 
-### `<init>(com.google.common.io.Closer.Suppressor suppressor)`
+### `<init>(Closer.Suppressor suppressor)`
 
 **Parameters:**
 - `suppressor` (`com.google.common.io.Closer.Suppressor`)
@@ -101,14 +101,12 @@ An exception that is suppressed is not thrown. The method of suppression used de
 
 ### `register(C closeable)`
 
-**Returns:** `C`
-
 **Parameters:**
 - `closeable` (`C`)
 
-### `rethrow(java.lang.Throwable e)`
+**Returns:** `C`
 
-**Returns:** `java.lang.RuntimeException`
+### `rethrow(Throwable e)`
 
 It will be rethrown as is if it is an 
  IOException, RuntimeException or Error. Otherwise, it will be rethrown wrapped
@@ -123,9 +121,9 @@ This method always throws, and as such should be called as throw closer.rethrow(
 **Parameters:**
 - `e` (`java.lang.Throwable`)
 
-### `rethrow(java.lang.Throwable e, java.lang.Class<X> declaredType)`
-
 **Returns:** `java.lang.RuntimeException`
+
+### `rethrow(Throwable e, Class<X> declaredType)`
 
 It will be rethrown as is if it is an 
  IOException, RuntimeException, Error or a checked exception of the given type.
@@ -141,9 +139,9 @@ This method always throws, and as such should be called as throw closer.rethrow(
 - `e` (`java.lang.Throwable`)
 - `declaredType` (`java.lang.Class<X>`)
 
-### `rethrow(java.lang.Throwable e, java.lang.Class<X1> declaredType1, java.lang.Class<X2> declaredType2)`
-
 **Returns:** `java.lang.RuntimeException`
+
+### `rethrow(Throwable e, Class<X1> declaredType1, Class<X2> declaredType2)`
 
 It will be rethrown as is if it is an 
  IOException, RuntimeException, Error or a checked exception of either of the
@@ -160,13 +158,15 @@ This method always throws, and as such should be called as throw closer.rethrow(
 - `declaredType1` (`java.lang.Class<X1>`)
 - `declaredType2` (`java.lang.Class<X2>`)
 
-### `close()`
+**Returns:** `java.lang.RuntimeException`
 
-**Returns:** `void`
+### `close()`
 
 If an
  exception was thrown in the try block and passed to one of the exceptionThrown methods,
  any exceptions thrown when attempting to close a closeable will be suppressed. Otherwise, the
  *first* exception to be thrown from an attempt to close a closeable will be thrown and any
  additional exceptions that are thrown after that will be suppressed.
+
+**Returns:** `void`
 

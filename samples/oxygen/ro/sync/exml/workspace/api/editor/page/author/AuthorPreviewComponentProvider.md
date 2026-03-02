@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `load(java.net.URL url, java.io.Reader reader)`
+### `load(URL url, Reader reader)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The system id of the resource. If `null`, the reader must be provided 

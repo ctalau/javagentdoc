@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `updateTableColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider spanProvider, ro.sync.ecss.extensions.api.node.AuthorElement cell, int colStartIndex, int colEndIndex)`
+### `updateTableColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider spanProvider, AuthorElement cell, int colStartIndex, int colEndIndex)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -27,7 +27,7 @@
 
 **Returns:** `void`
 
-### `updateAppliableColWidthsNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElem, int deletedColumnIndex)`
+### `updateAppliableColWidthsNumber(AuthorAccess authorAccess, AuthorElement tableElem, int deletedColumnIndex)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))

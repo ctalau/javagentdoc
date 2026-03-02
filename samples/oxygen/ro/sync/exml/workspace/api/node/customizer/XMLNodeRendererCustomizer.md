@@ -17,7 +17,7 @@ A node represents an entry from Author outline, Author bread crumb,
 
 ## Methods
 
-### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+### `getRenderingInformation(NodeRendererCustomizerContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](./NodeRendererCustomizerContext.md)): The node context(contains information like node name, namespace and attributes).

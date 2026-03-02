@@ -14,7 +14,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0)`
+### `<init>(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -25,7 +25,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `setSchemas(java.lang.String[] arg0)`
+### `setSchemas(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
@@ -44,7 +44,7 @@
 
 **Returns:** `java.lang.String`
 
-### `b(ro.sync.document.OperationDescription arg0)`
+### `b(OperationDescription arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))

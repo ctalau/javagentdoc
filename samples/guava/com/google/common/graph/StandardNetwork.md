@@ -56,12 +56,12 @@ The time complexity of all collection-returning accessors is O(1), since views a
 
 ## Constructors
 
-### `<init>(com.google.common.graph.NetworkBuilder<? super N,? super E> builder)`
+### `<init>(NetworkBuilder<? super N,? super E> builder)`
 
 **Parameters:**
 - `builder` ([`com.google.common.graph.NetworkBuilder<? super N,? super E>`](./NetworkBuilder.md))
 
-### `<init>(com.google.common.graph.NetworkBuilder<? super N,? super E> builder, java.util.Map<N,com.google.common.graph.NetworkConnections<N,E>> nodeConnections, java.util.Map<E,N> edgeToReferenceNode)`
+### `<init>(NetworkBuilder<? super N,? super E> builder, Map<N,NetworkConnections<N,E>> nodeConnections, Map<E,N> edgeToReferenceNode)`
 
 **Parameters:**
 - `builder` ([`com.google.common.graph.NetworkBuilder<? super N,? super E>`](./NetworkBuilder.md))
@@ -100,86 +100,86 @@ The time complexity of all collection-returning accessors is O(1), since views a
 
 ### `incidentEdges(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
 
-### `incidentNodes(E edge)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
+### `incidentNodes(E edge)`
 
 **Parameters:**
 - `edge` (`E`)
 
-### `adjacentNodes(N node)`
+**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
-**Returns:** `java.util.Set<N>`
+### `adjacentNodes(N node)`
 
 **Parameters:**
 - `node` (`N`)
 
-### `edgesConnecting(N nodeU, N nodeV)`
+**Returns:** `java.util.Set<N>`
 
-**Returns:** `java.util.Set<E>`
+### `edgesConnecting(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `inEdges(N node)`
-
 **Returns:** `java.util.Set<E>`
+
+### `inEdges(N node)`
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `outEdges(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `predecessors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `successors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `checkedConnections(N node)`
 
-**Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
 
 ### `checkedReferenceNode(E edge)`
 
-**Returns:** `N`
-
 **Parameters:**
 - `edge` (`E`)
 
-### `containsNode(N node)`
+**Returns:** `N`
 
-**Returns:** `boolean`
+### `containsNode(N node)`
 
 **Parameters:**
 - `node` (`N`)
 
-### `containsEdge(E edge)`
-
 **Returns:** `boolean`
+
+### `containsEdge(E edge)`
 
 **Parameters:**
 - `edge` (`E`)
+
+**Returns:** `boolean`
 

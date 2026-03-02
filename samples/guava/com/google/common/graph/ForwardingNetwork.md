@@ -56,138 +56,138 @@ This is not
 
 ### `adjacentNodes(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `predecessors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `successors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `incidentEdges(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `inEdges(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `outEdges(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `incidentNodes(E edge)`
 
-**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
-
 **Parameters:**
 - `edge` (`E`)
+
+**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
 ### `adjacentEdges(E edge)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `edge` (`E`)
 
-### `degree(N node)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `int`
+### `degree(N node)`
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `inDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `outDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
 
-### `edgesConnecting(N nodeU, N nodeV)`
+**Returns:** `int`
 
-**Returns:** `java.util.Set<E>`
+### `edgesConnecting(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgesConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Set<E>`
+
+### `edgesConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `java.util.Set<E>`
 
 ### `edgeConnecting(N nodeU, N nodeV)`
 
-**Returns:** `java.util.Optional<E>`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Optional<E>`
+
+### `edgeConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `java.util.Optional<E>`
 
 ### `edgeConnectingOrNull(N nodeU, N nodeV)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeConnectingOrNull(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `E`
+
+### `edgeConnectingOrNull(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `E`
 
 ### `hasEdgeConnecting(N nodeU, N nodeV)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `boolean`
 

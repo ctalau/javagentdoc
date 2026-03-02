@@ -53,9 +53,7 @@ This class is *not* thread safe.
 
 ## Methods
 
-### `visit(java.lang.reflect.@org.checkerframework.checker.nullness.qual.Nullable Type[] types)`
-
-**Returns:** `void`
+### `visit(reflect@Nullable Type[] types)`
 
 Null types are ignored. This allows subclasses to call 
  visit(parameterizedType.getOwnerType()) safely without having to check nulls.
@@ -63,38 +61,40 @@ Null types are ignored. This allows subclasses to call
 **Parameters:**
 - `types` (`java.lang.reflect.@org.checkerframework.checker.nullness.qual.Nullable Type[]`)
 
-### `visitClass(java.lang.Class<?> t)`
-
 **Returns:** `void`
+
+### `visitClass(Class<?> t)`
 
 **Parameters:**
 - `t` (`java.lang.Class<?>`)
 
-### `visitGenericArrayType(java.lang.reflect.GenericArrayType t)`
-
 **Returns:** `void`
+
+### `visitGenericArrayType(GenericArrayType t)`
 
 **Parameters:**
 - `t` (`java.lang.reflect.GenericArrayType`)
 
-### `visitParameterizedType(java.lang.reflect.ParameterizedType t)`
-
 **Returns:** `void`
+
+### `visitParameterizedType(ParameterizedType t)`
 
 **Parameters:**
 - `t` (`java.lang.reflect.ParameterizedType`)
 
-### `visitTypeVariable(java.lang.reflect.TypeVariable<?> t)`
-
 **Returns:** `void`
+
+### `visitTypeVariable(TypeVariable<?> t)`
 
 **Parameters:**
 - `t` (`java.lang.reflect.TypeVariable<?>`)
 
-### `visitWildcardType(java.lang.reflect.WildcardType t)`
-
 **Returns:** `void`
+
+### `visitWildcardType(WildcardType t)`
 
 **Parameters:**
 - `t` (`java.lang.reflect.WildcardType`)
+
+**Returns:** `void`
 

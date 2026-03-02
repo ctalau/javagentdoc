@@ -47,9 +47,7 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Methods
 
-### `toImmutableMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
-
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+### `toImmutableMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction)`
 
 Entries appear in the result ImmutableMap in encounter order.
 
@@ -63,9 +61,9 @@ If the mapped keys contain duplicates (according to Object#equals(Object), an
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `toImmutableMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.BinaryOperator<V> mergeFunction)`
-
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+
+### `toImmutableMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction, BinaryOperator<V> mergeFunction)`
 
 If the mapped keys contain duplicates (according to Object#equals(Object)), the
  values are merged using the specified merging function. If the merging function returns 
@@ -80,9 +78,9 @@ Entries will appear in the encounter order of the first occurrence of the key.
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `mergeFunction` (`java.util.function.BinaryOperator<V>`)
 
-### `of()`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+### `of()`
 
 This map behaves and performs comparably to Collections#emptyMap, and is preferable mainly for consistency and maintainability of your
  code.
@@ -90,9 +88,9 @@ This map behaves and performs comparably to Collections#emptyMap, and is prefera
  
 **Performance note:** the instance returned is a singleton.
 
-### `of(K k1, V v1)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1)`
 
 This map behaves and performs comparably to
  Collections#singletonMap but will not accept a null key or value. It is preferable
@@ -102,9 +100,9 @@ This map behaves and performs comparably to
 - `k1` (`K`)
 - `v1` (`V`)
 
-### `of(K k1, V v1, K k2, V v2)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -112,9 +110,9 @@ This map behaves and performs comparably to
 - `k2` (`K`)
 - `v2` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -124,9 +122,9 @@ This map behaves and performs comparably to
 - `k3` (`K`)
 - `v3` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -138,9 +136,9 @@ This map behaves and performs comparably to
 - `k4` (`K`)
 - `v4` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -154,9 +152,9 @@ This map behaves and performs comparably to
 - `k5` (`K`)
 - `v5` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -172,9 +170,9 @@ This map behaves and performs comparably to
 - `k6` (`K`)
 - `v6` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -192,9 +190,9 @@ This map behaves and performs comparably to
 - `k7` (`K`)
 - `v7` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -214,9 +212,9 @@ This map behaves and performs comparably to
 - `k8` (`K`)
 - `v8` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -238,9 +236,9 @@ This map behaves and performs comparably to
 - `k9` (`K`)
 - `v9` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -264,16 +262,16 @@ This map behaves and performs comparably to
 - `k10` (`K`)
 - `v10` (`V`)
 
-### `ofEntries(java.util.Map.Entry<? extends K,? extends V>[] entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `ofEntries(Map.Entry<? extends K,? extends V>[] entries)`
 
 **Parameters:**
 - `entries` (`java.util.Map.Entry<? extends K,? extends V>[]`)
 
-### `entryOf(K key, V value)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `entryOf(K key, V value)`
 
 A call to Entry#setValue on the returned entry will always throw UnsupportedOperationException.
 
@@ -281,15 +279,15 @@ A call to Entry#setValue on the returned entry will always throw UnsupportedOper
 - `key` (`K`)
 - `value` (`V`)
 
-### `builder()`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `com.google.common.collect.ImmutableMap.Builder<K,V>`
+### `builder()`
 
 The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `builderWithExpectedSize(int expectedSize)`
-
 **Returns:** `com.google.common.collect.ImmutableMap.Builder<K,V>`
+
+### `builderWithExpectedSize(int expectedSize)`
 
 If expectedSize is exactly the number of entries added to the builder before Builder#build is called, the builder is likely to perform better than an unsized #builder() would have.
 
@@ -300,9 +298,9 @@ It is not specified if any performance benefits apply if expectedSize is close t
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `checkNoConflict(boolean safe, java.lang.String conflictDescription, java.lang.Object entry1, java.lang.Object entry2)`
+**Returns:** `com.google.common.collect.ImmutableMap.Builder<K,V>`
 
-**Returns:** `void`
+### `checkNoConflict(boolean safe, String conflictDescription, Object entry1, Object entry2)`
 
 **Parameters:**
 - `safe` (`boolean`)
@@ -310,18 +308,18 @@ It is not specified if any performance benefits apply if expectedSize is close t
 - `entry1` (`java.lang.Object`)
 - `entry2` (`java.lang.Object`)
 
-### `conflictException(java.lang.String conflictDescription, java.lang.Object entry1, java.lang.Object entry2)`
+**Returns:** `void`
 
-**Returns:** `java.lang.IllegalArgumentException`
+### `conflictException(String conflictDescription, Object entry1, Object entry2)`
 
 **Parameters:**
 - `conflictDescription` (`java.lang.String`)
 - `entry1` (`java.lang.Object`)
 - `entry2` (`java.lang.Object`)
 
-### `copyOf(java.util.Map<? extends K,? extends V> map)`
+**Returns:** `java.lang.IllegalArgumentException`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+### `copyOf(Map<? extends K,? extends V> map)`
 
 The returned map iterates
  over entries in the same order as the entrySet of the original map. If map
@@ -336,9 +334,9 @@ Despite the method name, this method attempts to avoid actually copying the data
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `copyOf(java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>> entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `copyOf(Iterable<? extends Map.Entry<? extends K,? extends V>> entries)`
 
 The returned map iterates over
  entries in the same order as the original iterable.
@@ -346,107 +344,109 @@ The returned map iterates over
 **Parameters:**
 - `entries` (`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>`)
 
-### `copyOfEnumMap(java.util.EnumMap<?,? extends V> original)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,? extends V>`](./ImmutableMap.md)
+### `copyOfEnumMap(EnumMap<?,? extends V> original)`
 
 **Parameters:**
 - `original` (`java.util.EnumMap<?,? extends V>`)
 
-### `put(K k, V v)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,? extends V>`](./ImmutableMap.md)
 
-**Returns:** `V`
+### `put(K k, V v)`
 
 **Parameters:**
 - `k` (`K`)
 - `v` (`V`)
 
-### `putIfAbsent(K key, V value)`
-
 **Returns:** `V`
+
+### `putIfAbsent(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `replace(K key, V oldValue, V newValue)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `replace(K key, V oldValue, V newValue)`
 
 **Parameters:**
 - `key` (`K`)
 - `oldValue` (`V`)
 - `newValue` (`V`)
 
-### `replace(K key, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `replace(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `computeIfAbsent(K key, java.util.function.Function<? super K,? extends V> mappingFunction)`
-
 **Returns:** `V`
+
+### `computeIfAbsent(K key, Function<? super K,? extends V> mappingFunction)`
 
 **Parameters:**
 - `key` (`K`)
 - `mappingFunction` (`java.util.function.Function<? super K,? extends V>`)
 
-### `computeIfPresent(K key, java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> remappingFunction)`
-
 **Returns:** `V`
+
+### `computeIfPresent(K key, BiFunction<? super K,? super V,? extends @Nullable V> remappingFunction)`
 
 **Parameters:**
 - `key` (`K`)
 - `remappingFunction` (`java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
-### `compute(K key, java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> remappingFunction)`
-
 **Returns:** `V`
+
+### `compute(K key, BiFunction<? super K,? super @Nullable V,? extends @Nullable V> remappingFunction)`
 
 **Parameters:**
 - `key` (`K`)
 - `remappingFunction` (`java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
-### `merge(K key, V value, java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> function)`
-
 **Returns:** `V`
+
+### `merge(K key, V value, BiFunction<? super V,? super V,? extends @Nullable V> function)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 - `function` (`java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
-### `putAll(java.util.Map<? extends K,? extends V> map)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Map<? extends K,? extends V> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `replaceAll(java.util.function.BiFunction<? super K,? super V,? extends V> function)`
-
 **Returns:** `void`
+
+### `replaceAll(BiFunction<? super K,? super V,? extends V> function)`
 
 **Parameters:**
 - `function` (`java.util.function.BiFunction<? super K,? super V,? extends V>`)
 
-### `remove(java.lang.Object o)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `remove(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
 
-### `remove(java.lang.Object key, java.lang.Object value)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `remove(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `clear()`
 
@@ -456,41 +456,41 @@ The returned map iterates over
 
 **Returns:** `boolean`
 
-### `containsKey(java.lang.Object key)`
-
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `get(java.lang.Object key)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `getOrDefault(java.lang.Object key, V defaultValue)`
-
 **Returns:** `V`
+
+### `getOrDefault(Object key, V defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `defaultValue` (`V`)
 
-### `entrySet()`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet.md)
+### `entrySet()`
 
 The iteration order is specified by the
  method used to create this map. Typically, this is insertion order.
+
+**Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet.md)
 
 ### `createEntrySet()`
 
@@ -524,12 +524,12 @@ The iteration order is specified by the
 
 **Returns:** [`com.google.common.collect.ImmutableSetMultimap<K,V>`](./ImmutableSetMultimap.md)
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `isPartialView()`
 
@@ -549,16 +549,16 @@ The iteration order is specified by the
 
 ### `writeReplace()`
 
-**Returns:** `java.lang.Object`
-
 Non-public subclasses should not override this
  method. Publicly-accessible subclasses must override this method and should return a subclass
  of SerializedForm whose readResolve() method returns objects of the subclass type.
 
-### `readObject(java.io.ObjectInputStream stream)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

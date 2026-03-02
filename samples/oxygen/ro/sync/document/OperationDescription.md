@@ -36,7 +36,7 @@
 
 ## Constructors
 
-### `<init>(byte arg0, java.lang.String arg1)`
+### `<init>(byte arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`byte`)
@@ -52,7 +52,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setScenarioName(java.lang.String arg0)`
+### `setScenarioName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -63,7 +63,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setDocTypeName(java.lang.String arg0)`
+### `setDocTypeName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -90,14 +90,14 @@
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
 
 **Returns:** `boolean`
 
-### `b(ro.sync.document.OperationDescription arg0)`
+### `b(OperationDescription arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))

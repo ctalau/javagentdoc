@@ -33,14 +33,14 @@ The value is `Split name`.
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `<init>(AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Document type specific table information helper.
 
 ## Methods
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -56,7 +56,7 @@ The value is `Split name`.
 
 **Returns:** `java.lang.String`
 
-### `decreaseColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement cell, boolean left)`
+### `decreaseColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSupport, AuthorElement cell, boolean left)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to author functionality.

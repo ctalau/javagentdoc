@@ -22,7 +22,7 @@ The listener will be notified about the value changes
 IMPORTANT, this default constructor is mostly intended to facilitate creating such objects from Javascript Rhino code.
  You must set a an option key using the "setKey" method after you are using this implicit constructor.
 
-### `<init>(java.lang.String key)`
+### `<init>(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option whose value modification
@@ -30,7 +30,7 @@ IMPORTANT, this default constructor is mostly intended to facilitate creating su
 
 ## Methods
 
-### `optionValueChanged(ro.sync.ecss.extensions.api.OptionChangedEvent event)`
+### `optionValueChanged(OptionChangedEvent event)`
 
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.OptionChangedEvent`](./OptionChangedEvent.md)): An OptionChangedEvent which indicates that the value 
@@ -38,7 +38,7 @@ IMPORTANT, this default constructor is mostly intended to facilitate creating su
 
 **Returns:** `void`
 
-### `setKey(java.lang.String key)`
+### `setKey(String key)`
 
 The key must be set before the listener is added.
 

@@ -15,7 +15,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<E,N> inEdgeMap, java.util.Map<E,N> outEdgeMap, int selfLoopCount)`
+### `<init>(Map<E,N> inEdgeMap, Map<E,N> outEdgeMap, int selfLoopCount)`
 
 **Parameters:**
 - `inEdgeMap` (`java.util.Map<E,N>`)
@@ -28,14 +28,14 @@
 
 **Returns:** [`com.google.common.graph.DirectedNetworkConnections<N,E>`](./DirectedNetworkConnections.md)
 
-### `ofImmutable(java.util.Map<E,N> inEdges, java.util.Map<E,N> outEdges, int selfLoopCount)`
-
-**Returns:** [`com.google.common.graph.DirectedNetworkConnections<N,E>`](./DirectedNetworkConnections.md)
+### `ofImmutable(Map<E,N> inEdges, Map<E,N> outEdges, int selfLoopCount)`
 
 **Parameters:**
 - `inEdges` (`java.util.Map<E,N>`)
 - `outEdges` (`java.util.Map<E,N>`)
 - `selfLoopCount` (`int`)
+
+**Returns:** [`com.google.common.graph.DirectedNetworkConnections<N,E>`](./DirectedNetworkConnections.md)
 
 ### `predecessors()`
 
@@ -47,8 +47,8 @@
 
 ### `edgesConnecting(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 

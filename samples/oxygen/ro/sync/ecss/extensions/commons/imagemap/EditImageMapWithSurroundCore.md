@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `getNodesOfInterest(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode interestNode, boolean doSurroundIfMissing)`
+### `getNodesOfInterest(AuthorAccess authorAccess, AuthorNode interestNode, boolean doSurroundIfMissing)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
@@ -24,14 +24,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../../api/node/AuthorNode.md)
 
-### `needComplexSurround(ro.sync.ecss.extensions.api.node.AuthorNode nodeToEdit)`
+### `needComplexSurround(AuthorNode nodeToEdit)`
 
 **Parameters:**
 - `nodeToEdit` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to edit.
 
 **Returns:** `boolean`
 
-### `getNodesOfInterestCriteria(java.lang.String namespace)`
+### `getNodesOfInterestCriteria(String namespace)`
 
 **Parameters:**
 - `namespace` (`java.lang.String`): The namespace of the document.

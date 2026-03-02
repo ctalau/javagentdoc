@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setAttribute(java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue value, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `setAttribute(String attributeName, AttrValue value, AuthorElement element)`
 
 Attributes set in this manner (as opposed to calling 
  AuthorElement#setAttribute(String, AttrValue) directly) 

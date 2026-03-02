@@ -22,7 +22,7 @@
 
 ## Methods
 
-### `slugify(java.lang.String input)`
+### `slugify(String input)`
 
 **Parameters:**
 - `input` (`java.lang.String`): The text.

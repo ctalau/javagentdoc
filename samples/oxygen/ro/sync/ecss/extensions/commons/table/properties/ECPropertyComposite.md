@@ -32,7 +32,7 @@
 
 ## Constructors
 
-### `<init>(org.eclipse.swt.widgets.Composite arg0, ro.sync.ecss.extensions.commons.table.properties.TableProperty arg1, ro.sync.ecss.extensions.api.AuthorResourceBundle arg2, ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController arg3, boolean arg4)`
+### `<init>(Composite arg0, TableProperty arg1, AuthorResourceBundle arg2, PropertySelectionController arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
@@ -59,7 +59,7 @@
 
 **Returns:** `void`
 
-### `radioSelectionChanged(org.eclipse.swt.widgets.Button arg0)`
+### `radioSelectionChanged(Button arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Button`)

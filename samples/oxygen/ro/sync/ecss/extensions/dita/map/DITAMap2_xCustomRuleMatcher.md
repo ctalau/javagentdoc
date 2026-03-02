@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, org.xml.sax.Attributes rootAttributes)`
+### `matches(String systemID, String rootNamespace, String rootLocalName, String doctypePublicID, Attributes rootAttributes)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)

@@ -149,8 +149,6 @@ See the Guava User Guide article on [Ordering](https://github.com/google/guava/w
 
 ### `natural()`
 
-**Returns:** [`com.google.common.collect.Ordering<C>`](./Ordering.md)
-
 The ordering throws
  a NullPointerException when passed a null parameter.
 
@@ -161,9 +159,9 @@ The type specification is <C extends Comparable>, instead of the technically cor
  
 **Java 8 users:** use Comparator#naturalOrder instead.
 
-### `from(java.util.Comparator<T> comparator)`
+**Returns:** [`com.google.common.collect.Ordering<C>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
+### `from(Comparator<T> comparator)`
 
 Note that it is
  unnecessary to create a *new* anonymous inner class implementing Comparator just
@@ -180,16 +178,16 @@ The returned object is serializable if comparator is serializable.
 **Parameters:**
 - `comparator` (`java.util.Comparator<T>`): the comparator that defines the order
 
-### `from(com.google.common.collect.Ordering<T> ordering)`
-
 **Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
+
+### `from(Ordering<T> ordering)`
 
 **Parameters:**
 - `ordering` ([`com.google.common.collect.Ordering<T>`](./Ordering.md))
 
-### `explicit(java.util.List<T> valuesInOrder)`
-
 **Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
+
+### `explicit(List<T> valuesInOrder)`
 
 Only objects present in the list (according to Object#equals) may be
  compared. This comparator imposes a "partial ordering" over the type T. Subsequent
@@ -205,11 +203,11 @@ The generated comparator is serializable if all the provided values are serializ
 
 **Parameters:**
 - `valuesInOrder` (`java.util.List<T>`): the values that the returned comparator will be able to compare, in the
-     order the comparator should induce
-
-### `explicit(T leastValue, T[] remainingValuesInOrder)`
+       order the comparator should induce
 
 **Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
+
+### `explicit(T leastValue, T[] remainingValuesInOrder)`
 
 Only objects present in the argument list (according to Object#equals) may
  be compared. This comparator imposes a "partial ordering" over the type T. Null values
@@ -224,13 +222,13 @@ The generated comparator is serializable if all the provided values are serializ
 
 **Parameters:**
 - `leastValue` (`T`): the value which the returned comparator should consider the "least" of all
-     values
+       values
 - `remainingValuesInOrder` (`T[]`): the rest of the values that the returned comparator will be able
-     to compare, in the order the comparator should follow
+       to compare, in the order the comparator should follow
+
+**Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
 
 ### `allEqual()`
-
-**Returns:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](./Ordering.md)
 
 Note especially that #sortedCopy and #immutableSortedCopy are stable, and in
  the returned instance these are implemented by simply copying the source list.
@@ -264,9 +262,9 @@ The returned comparator is serializable.
 **Java 8 users:** Use the lambda expression (a, b) -> 0 instead (in certain cases
  you may need to cast that to Comparator<YourType>).
 
-### `usingToString()`
+**Returns:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<java.lang.Object>`](./Ordering.md)
+### `usingToString()`
 
 It does not support null values.
 
@@ -276,9 +274,9 @@ The comparator is serializable.
  
 **Java 8 users:** Use Comparator.comparing(Object::toString) instead.
 
-### `arbitrary()`
+**Returns:** [`com.google.common.collect.Ordering<java.lang.Object>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](./Ordering.md)
+### `arbitrary()`
 
 There is no meaning whatsoever to the order imposed, but it
  is constant for the life of the VM.
@@ -290,33 +288,33 @@ Because the ordering is identity-based, it is not "consistent with Object#equals
  
 This ordering is not serializable, as its implementation relies on System#identityHashCode(Object), so its behavior cannot be preserved across serialization.
 
-### `reverse()`
+**Returns:** [`com.google.common.collect.Ordering<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<S>`](./Ordering.md)
+### `reverse()`
 
 **Java 8 users:** Use thisComparator.reversed() instead.
 
-### `nullsFirst()`
+**Returns:** [`com.google.common.collect.Ordering<S>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<@org.checkerframework.checker.nullness.qual.Nullable S>`](./Ordering.md)
+### `nullsFirst()`
 
 The returned object is serializable if this object is serializable.
 
  
 **Java 8 users:** Use Comparator.nullsFirst(thisComparator) instead.
 
-### `nullsLast()`
-
 **Returns:** [`com.google.common.collect.Ordering<@org.checkerframework.checker.nullness.qual.Nullable S>`](./Ordering.md)
+
+### `nullsLast()`
 
 The returned object is serializable if this object is serializable.
 
  
 **Java 8 users:** Use Comparator.nullsLast(thisComparator) instead.
 
-### `onResultOf(com.google.common.base.Function<F,? extends T> function)`
+**Returns:** [`com.google.common.collect.Ordering<@org.checkerframework.checker.nullness.qual.Nullable S>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<F>`](./Ordering.md)
+### `onResultOf(Function<F,? extends T> function)`
 
 For example, to compare objects by their
  string forms, in a case-insensitive manner, use:
@@ -338,13 +336,13 @@ For example, to compare objects by their
 **Parameters:**
 - `function` ([`com.google.common.base.Function<F,? extends T>`](../base/Function.md))
 
+**Returns:** [`com.google.common.collect.Ordering<F>`](./Ordering.md)
+
 ### `onKeys()`
 
 **Returns:** [`com.google.common.collect.Ordering<java.util.Map.Entry<T2,?>>`](./Ordering.md)
 
-### `compound(java.util.Comparator<? super U> secondaryComparator)`
-
-**Returns:** [`com.google.common.collect.Ordering<U>`](./Ordering.md)
+### `compound(Comparator<? super U> secondaryComparator)`
 
 For example, to sort a bug list first by
  status and second by priority, you might use byStatus.compound(byPriority). For a
@@ -366,9 +364,9 @@ The returned object is serializable if this object and secondaryComparator are b
 **Parameters:**
 - `secondaryComparator` (`java.util.Comparator<? super U>`)
 
-### `compound(java.lang.Iterable<? extends java.util.Comparator<? super T>> comparators)`
+**Returns:** [`com.google.common.collect.Ordering<U>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
+### `compound(Iterable<? extends Comparator<? super T>> comparators)`
 
 The
  returned ordering is based on the state of the comparators iterable at the time it was
@@ -393,9 +391,9 @@ The returned object is serializable if each of the comparators is serializable.
 **Parameters:**
 - `comparators` (`java.lang.Iterable<? extends java.util.Comparator<? super T>>`): the comparators to try in order
 
-### `lexicographical()`
+**Returns:** [`com.google.common.collect.Ordering<T>`](./Ordering.md)
 
-**Returns:** [`com.google.common.collect.Ordering<java.lang.Iterable<S>>`](./Ordering.md)
+### `lexicographical()`
 
 If the end of one iterable is reached,
  but not the other, the shorter iterable is considered to be less than the longer one. For
@@ -410,17 +408,17 @@ Note that ordering.lexicographical().reverse() is not equivalent to
  
 **Java 8 users:** Use Comparators#lexicographical(Comparator) instead.
 
-### `compare(T left, T right)`
+**Returns:** [`com.google.common.collect.Ordering<java.lang.Iterable<S>>`](./Ordering.md)
 
-**Returns:** `int`
+### `compare(T left, T right)`
 
 **Parameters:**
 - `left` (`T`)
 - `right` (`T`)
 
-### `min(java.util.Iterator<E> iterator)`
+**Returns:** `int`
 
-**Returns:** `E`
+### `min(Iterator<E> iterator)`
 
 If there are multiple
  least values, the first of those is returned. The iterator will be left exhausted: its 
@@ -433,9 +431,9 @@ If there are multiple
 **Parameters:**
 - `iterator` (`java.util.Iterator<E>`): the iterator whose minimum element is to be determined
 
-### `min(java.lang.Iterable<E> iterable)`
-
 **Returns:** `E`
+
+### `min(Iterable<E> iterable)`
 
 If there are multiple
  least values, the first of those is returned.
@@ -449,9 +447,9 @@ If there are multiple
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`): the iterable whose minimum element is to be determined
 
-### `min(E a, E b)`
-
 **Returns:** `E`
+
+### `min(E a, E b)`
 
 If the values compare as 0,
  the first is returned.
@@ -468,9 +466,9 @@ If the values compare as 0,
 - `a` (`E`): value to compare, returned if less than or equal to b.
 - `b` (`E`): value to compare.
 
-### `min(E a, E b, E c, E[] rest)`
-
 **Returns:** `E`
+
+### `min(E a, E b, E c, E[] rest)`
 
 If there are multiple
  least values, the first of those is returned.
@@ -485,9 +483,9 @@ If there are multiple
 - `c` (`E`): value to compare
 - `rest` (`E[]`): values to compare
 
-### `max(java.util.Iterator<E> iterator)`
-
 **Returns:** `E`
+
+### `max(Iterator<E> iterator)`
 
 If there are multiple
  greatest values, the first of those is returned. The iterator will be left exhausted: its
@@ -500,9 +498,9 @@ If there are multiple
 **Parameters:**
 - `iterator` (`java.util.Iterator<E>`): the iterator whose maximum element is to be determined
 
-### `max(java.lang.Iterable<E> iterable)`
-
 **Returns:** `E`
+
+### `max(Iterable<E> iterable)`
 
 If there are multiple
  greatest values, the first of those is returned.
@@ -516,9 +514,9 @@ If there are multiple
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`): the iterable whose maximum element is to be determined
 
-### `max(E a, E b)`
-
 **Returns:** `E`
+
+### `max(E a, E b)`
 
 If the values compare as 0,
  the first is returned.
@@ -535,9 +533,9 @@ If the values compare as 0,
 - `a` (`E`): value to compare, returned if greater than or equal to b.
 - `b` (`E`): value to compare.
 
-### `max(E a, E b, E c, E[] rest)`
-
 **Returns:** `E`
+
+### `max(E a, E b, E c, E[] rest)`
 
 If there are multiple
  greatest values, the first of those is returned.
@@ -552,9 +550,9 @@ If there are multiple
 - `c` (`E`): value to compare
 - `rest` (`E[]`): values to compare
 
-### `leastOf(java.lang.Iterable<E> iterable, int k)`
+**Returns:** `E`
 
-**Returns:** `java.util.List<E>`
+### `leastOf(Iterable<E> iterable, int k)`
 
 If there are fewer than k elements present, all will be
  included.
@@ -571,9 +569,9 @@ The implementation does not necessarily use a *stable* sorting algorithm; when m
 - `iterable` (`java.lang.Iterable<E>`)
 - `k` (`int`)
 
-### `leastOf(java.util.Iterator<E> iterator, int k)`
-
 **Returns:** `java.util.List<E>`
+
+### `leastOf(Iterator<E> iterator, int k)`
 
 If there are fewer than k elements present, all will be
  included.
@@ -590,9 +588,9 @@ The implementation does not necessarily use a *stable* sorting algorithm; when m
 - `iterator` (`java.util.Iterator<E>`)
 - `k` (`int`)
 
-### `greatestOf(java.lang.Iterable<E> iterable, int k)`
-
 **Returns:** `java.util.List<E>`
+
+### `greatestOf(Iterable<E> iterable, int k)`
 
 If there are fewer than k elements present, all will be
  included.
@@ -609,9 +607,9 @@ The implementation does not necessarily use a *stable* sorting algorithm; when m
 - `iterable` (`java.lang.Iterable<E>`)
 - `k` (`int`)
 
-### `greatestOf(java.util.Iterator<E> iterator, int k)`
-
 **Returns:** `java.util.List<E>`
+
+### `greatestOf(Iterator<E> iterator, int k)`
 
 If there are fewer than k elements present, all will be
  included.
@@ -628,9 +626,9 @@ The implementation does not necessarily use a *stable* sorting algorithm; when m
 - `iterator` (`java.util.Iterator<E>`)
 - `k` (`int`)
 
-### `sortedCopy(java.lang.Iterable<E> elements)`
-
 **Returns:** `java.util.List<E>`
+
+### `sortedCopy(Iterable<E> elements)`
 
 The
  input is not modified. The returned list is serializable and has random access.
@@ -650,9 +648,9 @@ Unlike Sets#newTreeSet(Iterable), this method does not discard elements that are
 **Parameters:**
 - `elements` (`java.lang.Iterable<E>`)
 
-### `immutableSortedCopy(java.lang.Iterable<E> elements)`
+**Returns:** `java.util.List<E>`
 
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+### `immutableSortedCopy(Iterable<E> elements)`
 
 The input
  is not modified.
@@ -670,9 +668,9 @@ Unlike Sets#newTreeSet(Iterable), this method does not discard elements that are
 **Parameters:**
 - `elements` (`java.lang.Iterable<E>`)
 
-### `isOrdered(java.lang.Iterable<? extends T> iterable)`
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
-**Returns:** `boolean`
+### `isOrdered(Iterable<? extends T> iterable)`
 
 Note that this is always
  true when the iterable has fewer than two elements.
@@ -685,9 +683,9 @@ Note that this is always
 **Parameters:**
 - `iterable` (`java.lang.Iterable<? extends T>`)
 
-### `isStrictlyOrdered(java.lang.Iterable<? extends T> iterable)`
-
 **Returns:** `boolean`
+
+### `isStrictlyOrdered(Iterable<? extends T> iterable)`
 
 Note that this is always
  true when the iterable has fewer than two elements.
@@ -700,13 +698,15 @@ Note that this is always
 **Parameters:**
 - `iterable` (`java.lang.Iterable<? extends T>`)
 
-### `binarySearch(java.util.List<? extends T> sortedList, T key)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `binarySearch(List<? extends T> sortedList, T key)`
 
 The list must be sorted using this ordering.
 
 **Parameters:**
 - `sortedList` (`java.util.List<? extends T>`): the list to be searched
 - `key` (`T`): the key to be searched for
+
+**Returns:** `int`
 

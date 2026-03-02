@@ -20,14 +20,14 @@
 
 **Returns:** `void`
 
-### `installProtocols(java.net.URLStreamHandlerFactory arg0)`
+### `installProtocols(URLStreamHandlerFactory arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URLStreamHandlerFactory`)
 
 **Returns:** `void`
 
-### `b(java.net.URLStreamHandlerFactory arg0)`
+### `b(URLStreamHandlerFactory arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URLStreamHandlerFactory`)
@@ -42,7 +42,7 @@
 
 **Returns:** `boolean`
 
-### `isBuiltInProtocol(java.lang.String arg0)`
+### `isBuiltInProtocol(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

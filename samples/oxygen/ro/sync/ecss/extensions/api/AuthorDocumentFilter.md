@@ -62,7 +62,7 @@ If you are working with plugin level API you can add an AuthorDocumentFilter in 
 
 ## Methods
 
-### `insertText(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, int offset, java.lang.String toInsert)`
+### `insertText(AuthorDocumentFilterBypass filterBypass, int offset, String toInsert)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -77,7 +77,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `insertFragment(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment frag)`
+### `insertFragment(AuthorDocumentFilterBypass filterBypass, int offset, AuthorDocumentFragment frag)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -92,7 +92,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `insertNode(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, int offset, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `insertNode(AuthorDocumentFilterBypass filterBypass, int offset, AuthorNode node)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -107,7 +107,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `boolean`
 
-### `insertMultipleElements(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String[] elementNames, int[] offsets, java.lang.String namespace)`
+### `insertMultipleElements(AuthorDocumentFilterBypass filterBypass, AuthorElement parentElement, String[] elementNames, int[] offsets, String namespace)`
 
 Note: *The offsets and elements are in document order and this rule must also be followed
  by the filter processing.*
@@ -128,7 +128,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `insertMultipleFragments(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorElement parentElement, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, int[] offsets)`
+### `insertMultipleFragments(AuthorDocumentFilterBypass filterBypass, AuthorElement parentElement, AuthorDocumentFragment[] fragments, int[] offsets)`
 
 Note: *The offsets and fragments are in document order and this rule must also be followed
  by the filter processing.*
@@ -148,7 +148,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `boolean`
 
-### `delete(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, int startOffset, int endOffset, boolean withBackspace)`
+### `delete(AuthorDocumentFilterBypass filterBypass, int startOffset, int endOffset, boolean withBackspace)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -164,7 +164,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `boolean`
 
-### `deleteNode(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `deleteNode(AuthorDocumentFilterBypass filterBypass, AuthorNode node)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -178,7 +178,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `boolean`
 
-### `multipleDelete(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
+### `multipleDelete(AuthorDocumentFilterBypass filterBypass, AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
 
 Note: *The offsets must be in document order and the intervals must not 
  intersect with each other. This rule must also be followed by the filter processing.*
@@ -199,7 +199,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `renameElement(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String newName, java.lang.Object infoProvider)`
+### `renameElement(AuthorDocumentFilterBypass filterBypass, AuthorElement element, String newName, Object infoProvider)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -216,7 +216,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `setAttribute(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue value, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `setAttribute(AuthorDocumentFilterBypass filterBypass, String attributeName, AttrValue value, AuthorElement element)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -233,7 +233,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `removeAttribute(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `removeAttribute(AuthorDocumentFilterBypass filterBypass, String attributeName, AuthorElement element)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -248,7 +248,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `split(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorNode toSplit, int splitOffset)`
+### `split(AuthorDocumentFilterBypass filterBypass, AuthorNode toSplit, int splitOffset)`
 
 The node to split is the first ancestor block level node containing the
  `splitOffset`.
@@ -269,7 +269,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `boolean`
 
-### `surroundWithNode(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorNode node, int startOffset, int endOffset, boolean leftToRight)`
+### `surroundWithNode(AuthorDocumentFilterBypass filterBypass, AuthorNode node, int startOffset, int endOffset, boolean leftToRight)`
 
 The fragment between the start and end offsets will become the node actual content.
  
@@ -289,7 +289,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `surroundInFragment(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, java.lang.String xmlFragment, int startOffset, int endOffset)`
+### `surroundInFragment(AuthorDocumentFilterBypass filterBypass, String xmlFragment, int startOffset, int endOffset)`
 
 If `endOffset < startOffset` the `xmlFragment` 
  will be inserted at `startOffset`.
@@ -309,7 +309,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `surroundInFragment(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment xmlFragment, int startOffset, int endOffset)`
+### `surroundInFragment(AuthorDocumentFilterBypass filterBypass, AuthorDocumentFragment xmlFragment, int startOffset, int endOffset)`
 
 If `endOffset < startOffset` the `xmlFragment` 
  will be inserted at `startOffset`.
@@ -329,7 +329,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `surroundInText(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, java.lang.String header, java.lang.String footer, int startOffset, int endOffset)`
+### `surroundInText(AuthorDocumentFilterBypass filterBypass, String header, String footer, int startOffset, int endOffset)`
 
 The method inserts the `header` at `startOffset` and 
  the `footer` at `endOffset`.
@@ -349,7 +349,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `setDoctype(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.AuthorDocumentType docType)`
+### `setDoctype(AuthorDocumentFilterBypass filterBypass, AuthorDocumentType docType)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -363,7 +363,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `setMultipleDistinctAttributes(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, int parentElementStartOffset, int[] elementOffsets, java.util.List<java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>> attributes)`
+### `setMultipleDistinctAttributes(AuthorDocumentFilterBypass filterBypass, int parentElementStartOffset, int[] elementOffsets, List<Map<String,AttrValue>> attributes)`
 
 Attributes set in this manner will be subject to undo/redo.
  
@@ -383,7 +383,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `setMultipleAttributes(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, int parentElementStartOffset, int[] elementOffsets, java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue> attributes)`
+### `setMultipleAttributes(AuthorDocumentFilterBypass filterBypass, int parentElementStartOffset, int[] elementOffsets, Map<String,AttrValue> attributes)`
 
 Attributes set in this manner will be subject to undo/redo.
  
@@ -403,7 +403,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `void`
 
-### `removeMarker(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight marker)`
+### `removeMarker(AuthorDocumentFilterBypass filterBypass, AuthorPersistentHighlight marker)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -417,7 +417,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** `boolean`
 
-### `addCommentMarker(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, int startOffset, int endOffset, java.lang.String comment, java.lang.String parentID)`
+### `addCommentMarker(AuthorDocumentFilterBypass filterBypass, int startOffset, int endOffset, String comment, String parentID)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as
@@ -434,7 +434,7 @@ Subclasses that want to conditionally modify the default processing
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)
 
-### `addPersistentMarker(ro.sync.ecss.extensions.api.AuthorDocumentFilterBypass filterBypass, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, java.util.Map<java.lang.String,java.lang.String> properties)`
+### `addPersistentMarker(AuthorDocumentFilterBypass filterBypass, AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, Map<String,String> properties)`
 
 Subclasses that want to conditionally modify the default processing
  should override this and only call super implementation as

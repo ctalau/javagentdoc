@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setSelectionInterpretationMode(ro.sync.ecss.extensions.api.SelectionInterpretationMode interpretationMode)`
+### `setSelectionInterpretationMode(SelectionInterpretationMode interpretationMode)`
 
 See SelectionInterpretationMode for more details about the interpretation
  of selection in Author mode.
@@ -151,7 +151,7 @@ The caret will remain in the same position.
 
 **Returns:** `void`
 
-### `setSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals, boolean scrollToVisible)`
+### `setSelectionIntervals(List<ContentInterval> intervals, boolean scrollToVisible)`
 
 Each ContentInterval contains the **inclusive** 
  start selection offset and the **exclusive** end selection offset.
@@ -168,7 +168,7 @@ Each ContentInterval contains the **inclusive**
 
 **Returns:** `void`
 
-### `addSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals, boolean scrollToVisible)`
+### `addSelectionIntervals(List<ContentInterval> intervals, boolean scrollToVisible)`
 
 Each ContentInterval contains the **inclusive** 
  start selection offset and the **exclusive** end selection offset.

@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.Throwable cause)`
+### `<init>(Throwable cause)`
 
 **Parameters:**
 - `cause` (`java.lang.Throwable`)

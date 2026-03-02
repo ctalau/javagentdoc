@@ -20,8 +20,8 @@
 
 ### `iterator()`
 
-**Returns:** `java.util.Iterator<T>`
-
 The elements are returned in nondecreasing
  order according to the associated #comparator.
+
+**Returns:** `java.util.Iterator<T>`
 

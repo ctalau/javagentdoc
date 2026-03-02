@@ -29,45 +29,45 @@ Subclasses
 
 **Returns:** `java.util.concurrent.ExecutorService`
 
-### `awaitTermination(long timeout, java.util.concurrent.TimeUnit unit)`
+### `awaitTermination(long timeout, TimeUnit unit)`
+
+**Parameters:**
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `timeout` (`long`)
-- `unit` (`java.util.concurrent.TimeUnit`)
+### `invokeAll(Collection<? extends Callable<T>> tasks)`
 
-### `invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks)`
+**Parameters:**
+- `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
 
 **Returns:** `java.util.List<java.util.concurrent.Future<T>>`
 
+### `invokeAll(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit unit)`
+
 **Parameters:**
 - `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
-
-### `invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, long timeout, java.util.concurrent.TimeUnit unit)`
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
 **Returns:** `java.util.List<java.util.concurrent.Future<T>>`
 
+### `invokeAny(Collection<? extends Callable<T>> tasks)`
+
+**Parameters:**
+- `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
+
+**Returns:** `T`
+
+### `invokeAny(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit unit)`
+
 **Parameters:**
 - `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `invokeAny(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks)`
-
 **Returns:** `T`
-
-**Parameters:**
-- `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
-
-### `invokeAny(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, long timeout, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `T`
-
-**Parameters:**
-- `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
-- `timeout` (`long`)
-- `unit` (`java.util.concurrent.TimeUnit`)
 
 ### `isShutdown()`
 
@@ -85,32 +85,32 @@ Subclasses
 
 **Returns:** `java.util.List<java.lang.Runnable>`
 
-### `execute(java.lang.Runnable command)`
-
-**Returns:** `void`
+### `execute(Runnable command)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
 
-### `submit(java.util.concurrent.Callable<T> task)`
+**Returns:** `void`
 
-**Returns:** `java.util.concurrent.Future<T>`
+### `submit(Callable<T> task)`
 
 **Parameters:**
 - `task` (`java.util.concurrent.Callable<T>`)
 
-### `submit(java.lang.Runnable task)`
+**Returns:** `java.util.concurrent.Future<T>`
 
-**Returns:** `java.util.concurrent.Future<?>`
+### `submit(Runnable task)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 
-### `submit(java.lang.Runnable task, T result)`
+**Returns:** `java.util.concurrent.Future<?>`
 
-**Returns:** `java.util.concurrent.Future<T>`
+### `submit(Runnable task, T result)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 - `result` (`T`)
+
+**Returns:** `java.util.concurrent.Future<T>`
 

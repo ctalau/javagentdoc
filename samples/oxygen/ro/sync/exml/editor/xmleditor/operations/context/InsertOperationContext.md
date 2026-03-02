@@ -16,7 +16,7 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.exml.editor.xmleditor.operations.context.ContextNodeInfo arg0, java.lang.String arg1, ro.sync.exml.editor.xmleditor.operations.context.RelativeInsertPosition arg2)`
+### `<init>(ContextNodeInfo arg0, String arg1, RelativeInsertPosition arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.xmleditor.operations.context.ContextNodeInfo`](./ContextNodeInfo.md))

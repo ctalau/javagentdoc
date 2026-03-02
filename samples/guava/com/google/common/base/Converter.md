@@ -129,17 +129,15 @@ An alternative using Java 8:
 
 ### `doForward(A a)`
 
-**Returns:** `B`
-
 If a cannot be
  converted, an unchecked exception (such as IllegalArgumentException) should be thrown.
 
 **Parameters:**
 - `a` (`A`): the instance to convert; will never be null
 
-### `doBackward(B b)`
+**Returns:** `B`
 
-**Returns:** `A`
+### `doBackward(B b)`
 
 If b cannot be
  converted, an unchecked exception (such as IllegalArgumentException) should be thrown.
@@ -147,44 +145,44 @@ If b cannot be
 **Parameters:**
 - `b` (`B`): the instance to convert; will never be null
 
-### `convert(A a)`
+**Returns:** `A`
 
-**Returns:** `B`
+### `convert(A a)`
 
 **Parameters:**
 - `a` (`A`)
+
+**Returns:** `B`
 
 ### `correctedDoForward(A a)`
 
-**Returns:** `B`
-
 **Parameters:**
 - `a` (`A`)
+
+**Returns:** `B`
 
 ### `correctedDoBackward(B b)`
 
-**Returns:** `A`
-
 **Parameters:**
 - `b` (`B`)
 
-### `unsafeDoForward(A a)`
+**Returns:** `A`
 
-**Returns:** `B`
+### `unsafeDoForward(A a)`
 
 **Parameters:**
 - `a` (`A`)
 
-### `unsafeDoBackward(B b)`
+**Returns:** `B`
 
-**Returns:** `A`
+### `unsafeDoBackward(B b)`
 
 **Parameters:**
 - `b` (`B`)
 
-### `convertAll(java.lang.Iterable<? extends A> fromIterable)`
+**Returns:** `A`
 
-**Returns:** `java.lang.Iterable<B>`
+### `convertAll(Iterable<? extends A> fromIterable)`
 
 The
  conversion is done lazily.
@@ -197,18 +195,18 @@ The returned iterable's iterator supports remove() if the input iterator does. A
 **Parameters:**
 - `fromIterable` (`java.lang.Iterable<? extends A>`)
 
-### `reverse()`
+**Returns:** `java.lang.Iterable<B>`
 
-**Returns:** [`com.google.common.base.Converter<B,A>`](./Converter.md)
+### `reverse()`
 
 The returned converter is serializable if this converter is.
 
  
 **Note:** you should not override this method. It is non-final for legacy reasons.
 
-### `andThen(com.google.common.base.Converter<B,C> secondConverter)`
+**Returns:** [`com.google.common.base.Converter<B,A>`](./Converter.md)
 
-**Returns:** [`com.google.common.base.Converter<A,C>`](./Converter.md)
+### `andThen(Converter<B,C> secondConverter)`
 
 Its reverse method applies the converters in reverse order.
 
@@ -219,23 +217,23 @@ The returned converter is serializable if this converter and secondConverter
 **Parameters:**
 - `secondConverter` ([`com.google.common.base.Converter<B,C>`](./Converter.md))
 
-### `doAndThen(com.google.common.base.Converter<B,C> secondConverter)`
-
 **Returns:** [`com.google.common.base.Converter<A,C>`](./Converter.md)
+
+### `doAndThen(Converter<B,C> secondConverter)`
 
 **Parameters:**
 - `secondConverter` ([`com.google.common.base.Converter<B,C>`](./Converter.md))
 
-### `apply(A a)`
+**Returns:** [`com.google.common.base.Converter<A,C>`](./Converter.md)
 
-**Returns:** `B`
+### `apply(A a)`
 
 **Parameters:**
 - `a` (`A`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `B`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 Most implementations will have no reason to override the behavior of Object#equals.
  However, an implementation may also choose to return true whenever object is a
@@ -248,9 +246,9 @@ Most implementations will have no reason to override the behavior of Object#equa
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `from(com.google.common.base.Function<? super A,? extends B> forwardFunction, com.google.common.base.Function<? super B,? extends A> backwardFunction)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.base.Converter<A,B>`](./Converter.md)
+### `from(Function<? super A,? extends B> forwardFunction, Function<? super B,? extends A> backwardFunction)`
 
 This is useful if the
  function instances already exist, or so that you can supply lambda expressions. If those
@@ -268,6 +266,8 @@ The returned converter is serializable if both provided functions are.
 **Parameters:**
 - `forwardFunction` ([`com.google.common.base.Function<? super A,? extends B>`](./Function.md))
 - `backwardFunction` ([`com.google.common.base.Function<? super B,? extends A>`](./Function.md))
+
+**Returns:** [`com.google.common.base.Converter<A,B>`](./Converter.md)
 
 ### `identity()`
 

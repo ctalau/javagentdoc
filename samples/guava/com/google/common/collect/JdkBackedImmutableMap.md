@@ -25,7 +25,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<K,V> delegateMap, com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>> entries)`
+### `<init>(Map<K,V> delegateMap, ImmutableList<Map.Entry<K,V>> entries)`
 
 **Parameters:**
 - `delegateMap` (`java.util.Map<K,V>`)
@@ -33,9 +33,7 @@
 
 ## Methods
 
-### `create(int n, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray, boolean throwIfDuplicateKeys)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+### `create(int n, Map@Nullable Entry<K,V>[] entryArray, boolean throwIfDuplicateKeys)`
 
 Used when probable hash flooding is
  detected. This implementation may replace the entries in entryArray with its own entry objects
@@ -46,27 +44,29 @@ Used when probable hash flooding is
 - `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
 - `throwIfDuplicateKeys` (`boolean`)
 
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
 ### `size()`
 
 **Returns:** `int`
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `createEntrySet()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>`](./ImmutableSet.md)
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+**Returns:** `void`
 
 ### `createKeySet()`
 

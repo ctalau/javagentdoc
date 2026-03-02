@@ -67,7 +67,7 @@ It is recommended to extend the adapter class InplaceEditorRendererAdapter
 
 ## Methods
 
-### `getRendererComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getRendererComponent(AuthorInplaceContext context)`
 
 It's up to the caller to use the renderer to paint.
 
@@ -76,7 +76,7 @@ It's up to the caller to use the renderer to paint.
 
 **Returns:** `java.lang.Object`
 
-### `getCursorType(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
+### `getCursorType(AuthorInplaceContext context, int x, int y)`
 
 For a more complex renderer, the given X,Y coordinates can be used to decide
  what cursor to return.
@@ -106,7 +106,7 @@ For a more complex renderer, the given X,Y coordinates can be used to decide
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType`](../CursorType.md)
 
-### `getTooltipText(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
+### `getTooltipText(AuthorInplaceContext context, int x, int y)`
 
 **Because a renderer is reused, when this 
  called is received, the renderer must re-initialize itself from the given context.**
@@ -118,7 +118,7 @@ For a more complex renderer, the given X,Y coordinates can be used to decide
 
 **Returns:** `java.lang.String`
 
-### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getRenderingInfo(AuthorInplaceContext context)`
 
 This contains information about the baseline
  and the size in a certain context. The baseline is measured from the top of 

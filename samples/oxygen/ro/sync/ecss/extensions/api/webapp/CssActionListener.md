@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `actionRegistered(java.util.Map<java.lang.String,java.lang.Object> arg0)`
+### `actionRegistered(Map<String,Object> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,java.lang.Object>`)

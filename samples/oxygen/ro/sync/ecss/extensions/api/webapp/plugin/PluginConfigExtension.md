@@ -30,7 +30,7 @@
 
 **Returns:** `void`
 
-### `doGet(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `doGet(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)
@@ -38,7 +38,7 @@
 
 **Returns:** `void`
 
-### `doPut(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `doPut(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)
@@ -46,7 +46,7 @@
 
 **Returns:** `void`
 
-### `doDelete(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `doDelete(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)
@@ -54,7 +54,7 @@
 
 **Returns:** `void`
 
-### `getOption(java.lang.String arg0, java.lang.String arg1)`
+### `getOption(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -62,7 +62,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setOption(java.lang.String arg0, java.lang.String arg1)`
+### `setOption(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -78,7 +78,7 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `setDefaultOptions(java.util.Map<java.lang.String,java.lang.String> arg0)`
+### `setDefaultOptions(Map<String,String> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,java.lang.String>`)
@@ -97,7 +97,7 @@
 
 **Returns:** `boolean`
 
-### `serializeMapToJSON(java.util.Map<java.lang.String,java.lang.Object> arg0)`
+### `serializeMapToJSON(Map<String,Object> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,java.lang.Object>`)

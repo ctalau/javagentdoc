@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `hasIDType(java.lang.String elementName, java.lang.String elementNs, java.lang.String attrName, java.lang.String attrNs)`
+### `hasIDType(String elementName, String elementNs, String attrName, String attrNs)`
 
 **Parameters:**
 - `elementName` (`java.lang.String`): The local name of the attribute parent element.

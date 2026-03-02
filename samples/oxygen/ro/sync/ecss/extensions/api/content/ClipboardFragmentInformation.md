@@ -61,7 +61,7 @@ If the fragment was pasted from outside of Oxygen, the original location is null
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../node/AuthorDocumentFragment.md)
 
-### `setFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment newFragment)`
+### `setFragment(AuthorDocumentFragment newFragment)`
 
 **Parameters:**
 - `newFragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../node/AuthorDocumentFragment.md)): The fragment which will be pasted/dropped.

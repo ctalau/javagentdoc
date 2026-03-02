@@ -33,44 +33,44 @@ Subclasses should override one or more methods to modify the behavior of the bac
 
 **Returns:** `java.util.concurrent.BlockingQueue<E>`
 
-### `drainTo(java.util.Collection<? super E> c, int maxElements)`
-
-**Returns:** `int`
+### `drainTo(Collection<? super E> c, int maxElements)`
 
 **Parameters:**
 - `c` (`java.util.Collection<? super E>`)
 - `maxElements` (`int`)
 
-### `drainTo(java.util.Collection<? super E> c)`
-
 **Returns:** `int`
+
+### `drainTo(Collection<? super E> c)`
 
 **Parameters:**
 - `c` (`java.util.Collection<? super E>`)
 
-### `offer(E e, long timeout, java.util.concurrent.TimeUnit unit)`
+**Returns:** `int`
+
+### `offer(E e, long timeout, TimeUnit unit)`
+
+**Parameters:**
+- `e` (`E`)
+- `timeout` (`long`)
+- `unit` (`java.util.concurrent.TimeUnit`)
 
 **Returns:** `boolean`
 
+### `poll(long timeout, TimeUnit unit)`
+
 **Parameters:**
-- `e` (`E`)
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
-
-### `poll(long timeout, java.util.concurrent.TimeUnit unit)`
 
 **Returns:** `E`
 
-**Parameters:**
-- `timeout` (`long`)
-- `unit` (`java.util.concurrent.TimeUnit`)
-
 ### `put(E e)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `void`
 
 ### `remainingCapacity()`
 

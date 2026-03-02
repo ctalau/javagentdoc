@@ -20,7 +20,7 @@ The rows that must be deleted are all the rows that intersects the given content
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> contentIntervals)`
+### `<init>(AuthorAccess authorAccess, List<ContentInterval> contentIntervals)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.

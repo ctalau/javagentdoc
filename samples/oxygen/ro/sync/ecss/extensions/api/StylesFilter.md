@@ -136,7 +136,7 @@ If your StylesFilter implementation also implements the AuthorExtensionStateList
 
 ## Methods
 
-### `filter(ro.sync.ecss.css.Styles styles, ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+### `filter(Styles styles, AuthorNode authorNode)`
 
 A common use-case is to change only some of the CSS properties from the original styles and keep the others.
  To this end, one should use Styles#setProperty(int, Object) on the original styles and return them.

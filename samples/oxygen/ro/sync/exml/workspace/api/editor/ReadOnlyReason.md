@@ -21,14 +21,14 @@ It
 
 ## Constructors
 
-### `<init>(java.lang.String message, java.lang.String code)`
+### `<init>(String message, String code)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message that explains why the editor is read-only.
 - `code` (`java.lang.String`): The code of the cause for which the editor is read-only. It 
    will be only accessible through the API.
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message that explains why the editor is read-only.

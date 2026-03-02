@@ -24,7 +24,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.graph.BaseGraph<N> graph, N node)`
+### `<init>(BaseGraph<N> graph, N node)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md))
@@ -32,21 +32,21 @@
 
 ## Methods
 
-### `remove(java.lang.Object o)`
-
-**Returns:** `boolean`
+### `remove(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `contains(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

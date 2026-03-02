@@ -23,53 +23,53 @@ All
 
 ### `newHasher(int expectedInputSize)`
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
-
 **Parameters:**
 - `expectedInputSize` (`int`)
 
-### `hashInt(int input)`
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+### `hashInt(int input)`
 
 **Parameters:**
 - `input` (`int`)
 
-### `hashLong(long input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashLong(long input)`
 
 **Parameters:**
 - `input` (`long`)
 
-### `hashUnencodedChars(java.lang.CharSequence input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashUnencodedChars(CharSequence input)`
 
 **Parameters:**
 - `input` (`java.lang.CharSequence`)
 
-### `hashString(java.lang.CharSequence input, java.nio.charset.Charset charset)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashString(CharSequence input, Charset charset)`
 
 **Parameters:**
 - `input` (`java.lang.CharSequence`)
 - `charset` (`java.nio.charset.Charset`)
 
-### `hashBytes(byte[] input, int off, int len)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashBytes(byte[] input, int off, int len)`
 
 **Parameters:**
 - `input` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `hashBytes(java.nio.ByteBuffer input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashBytes(ByteBuffer input)`
 
 **Parameters:**
 - `input` (`java.nio.ByteBuffer`)
+
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 

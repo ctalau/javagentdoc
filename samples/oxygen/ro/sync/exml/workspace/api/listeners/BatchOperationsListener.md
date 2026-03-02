@@ -14,21 +14,21 @@ For example a CMS may automatically check out resources if Oxygen wants to modif
 
 ## Methods
 
-### `operationAboutToStart(ro.sync.exml.workspace.api.listeners.BatchOperationInfo batchOperationInfo)`
+### `operationAboutToStart(BatchOperationInfo batchOperationInfo)`
 
 **Parameters:**
 - `batchOperationInfo` ([`ro.sync.exml.workspace.api.listeners.BatchOperationInfo`](./BatchOperationInfo.md)): Information about the operation that will start.
 
 **Returns:** `void`
 
-### `operationFinished(ro.sync.exml.workspace.api.listeners.BatchOperationInfo batchOperationInfo)`
+### `operationFinished(BatchOperationInfo batchOperationInfo)`
 
 **Parameters:**
 - `batchOperationInfo` ([`ro.sync.exml.workspace.api.listeners.BatchOperationInfo`](./BatchOperationInfo.md)): Information about the operation that was finished.
 
 **Returns:** `void`
 
-### `aboutToModifyResource(ro.sync.exml.workspace.api.listeners.BatchOperationInfo batchOperationInfo, java.net.URL url)`
+### `aboutToModifyResource(BatchOperationInfo batchOperationInfo, URL url)`
 
 This is called after the content from the URL has been read and before it is saved back.
 
@@ -38,7 +38,7 @@ This is called after the content from the URL has been read and before it is sav
 
 **Returns:** `void`
 
-### `resourceModified(ro.sync.exml.workspace.api.listeners.BatchOperationInfo batchOperationInfo, java.net.URL url)`
+### `resourceModified(BatchOperationInfo batchOperationInfo, URL url)`
 
 **Parameters:**
 - `batchOperationInfo` ([`ro.sync.exml.workspace.api.listeners.BatchOperationInfo`](./BatchOperationInfo.md)): Information about the current operation.

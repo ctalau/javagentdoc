@@ -31,7 +31,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T> function, com.google.common.base.Equivalence<T> resultEquivalence)`
+### `<init>(Function<? super F,? extends @Nullable T> function, Equivalence<T> resultEquivalence)`
 
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T>`](./Function.md))
@@ -41,25 +41,25 @@
 
 ### `doEquivalent(F a, F b)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `a` (`F`)
 - `b` (`F`)
 
-### `doHash(F a)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `doHash(F a)`
 
 **Parameters:**
 - `a` (`F`)
 
-### `equals(java.lang.Object obj)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

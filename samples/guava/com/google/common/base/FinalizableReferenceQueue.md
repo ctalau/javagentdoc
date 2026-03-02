@@ -103,22 +103,22 @@ As an example of how this is used, imagine you have a class MyServer that create
 
 ### `cleanUp()`
 
-**Returns:** `void`
-
 This method is a
  no-op if the background thread was created successfully.
 
-### `loadFinalizer(com.google.common.base.FinalizableReferenceQueue.FinalizerLoader[] loaders)`
+**Returns:** `void`
 
-**Returns:** `java.lang.Class<?>`
+### `loadFinalizer(FinalizableReferenceQueue.FinalizerLoader[] loaders)`
 
 **Parameters:**
 - `loaders` (`com.google.common.base.FinalizableReferenceQueue.FinalizerLoader[]`)
 
-### `getStartFinalizer(java.lang.Class<?> finalizer)`
+**Returns:** `java.lang.Class<?>`
 
-**Returns:** `java.lang.reflect.Method`
+### `getStartFinalizer(Class<?> finalizer)`
 
 **Parameters:**
 - `finalizer` (`java.lang.Class<?>`)
+
+**Returns:** `java.lang.reflect.Method`
 

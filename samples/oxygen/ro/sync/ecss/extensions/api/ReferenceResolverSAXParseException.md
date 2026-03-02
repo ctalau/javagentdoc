@@ -10,12 +10,12 @@
 
 ## Constructors
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error or warning message.
 
-### `<init>(java.lang.String message, org.xml.sax.Locator locator)`
+### `<init>(String message, Locator locator)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error or warning message.

@@ -18,7 +18,7 @@ For example the XML Diff algorithms cannot handle not well formed documents.
 
 ## Constructors
 
-### `<init>(java.lang.String message, java.lang.String systemId)`
+### `<init>(String message, String systemId)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message.

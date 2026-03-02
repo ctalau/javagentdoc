@@ -86,9 +86,7 @@ Examples of use:
 
 **Returns:** [`com.google.common.graph.NetworkBuilder<java.lang.Object,java.lang.Object>`](./NetworkBuilder.md)
 
-### `from(com.google.common.graph.Network<N,E> network)`
-
-**Returns:** [`com.google.common.graph.NetworkBuilder<N,E>`](./NetworkBuilder.md)
+### `from(Network<N,E> network)`
 
 The "queryable" properties are those that are exposed through the Network interface,
  such as Network#isDirected(). Other properties, such as #expectedNodeCount(int), are not set in the new builder.
@@ -96,15 +94,15 @@ The "queryable" properties are those that are exposed through the Network interf
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
-### `immutable()`
+**Returns:** [`com.google.common.graph.NetworkBuilder<N,E>`](./NetworkBuilder.md)
 
-**Returns:** `com.google.common.graph.ImmutableNetwork.Builder<N1,E1>`
+### `immutable()`
 
 The returned builder can be used for populating an ImmutableNetwork.
 
-### `allowsParallelEdges(boolean allowsParallelEdges)`
+**Returns:** `com.google.common.graph.ImmutableNetwork.Builder<N1,E1>`
 
-**Returns:** [`com.google.common.graph.NetworkBuilder<N,E>`](./NetworkBuilder.md)
+### `allowsParallelEdges(boolean allowsParallelEdges)`
 
 Attempting to add a parallel edge to a
  network that does not allow them will throw an UnsupportedOperationException.
@@ -115,9 +113,9 @@ The default value is false.
 **Parameters:**
 - `allowsParallelEdges` (`boolean`)
 
-### `allowsSelfLoops(boolean allowsSelfLoops)`
-
 **Returns:** [`com.google.common.graph.NetworkBuilder<N,E>`](./NetworkBuilder.md)
+
+### `allowsSelfLoops(boolean allowsSelfLoops)`
 
 Attempting to add a self-loop to a network that does not allow them will throw an UnsupportedOperationException.
 
@@ -127,37 +125,39 @@ The default value is false.
 **Parameters:**
 - `allowsSelfLoops` (`boolean`)
 
-### `expectedNodeCount(int expectedNodeCount)`
-
 **Returns:** [`com.google.common.graph.NetworkBuilder<N,E>`](./NetworkBuilder.md)
+
+### `expectedNodeCount(int expectedNodeCount)`
 
 **Parameters:**
 - `expectedNodeCount` (`int`)
 
-### `expectedEdgeCount(int expectedEdgeCount)`
-
 **Returns:** [`com.google.common.graph.NetworkBuilder<N,E>`](./NetworkBuilder.md)
+
+### `expectedEdgeCount(int expectedEdgeCount)`
 
 **Parameters:**
 - `expectedEdgeCount` (`int`)
 
-### `nodeOrder(com.google.common.graph.ElementOrder<N1> nodeOrder)`
+**Returns:** [`com.google.common.graph.NetworkBuilder<N,E>`](./NetworkBuilder.md)
 
-**Returns:** [`com.google.common.graph.NetworkBuilder<N1,E>`](./NetworkBuilder.md)
+### `nodeOrder(ElementOrder<N1> nodeOrder)`
 
 The default value is insertion order.
 
 **Parameters:**
 - `nodeOrder` ([`com.google.common.graph.ElementOrder<N1>`](./ElementOrder.md))
 
-### `edgeOrder(com.google.common.graph.ElementOrder<E1> edgeOrder)`
+**Returns:** [`com.google.common.graph.NetworkBuilder<N1,E>`](./NetworkBuilder.md)
 
-**Returns:** [`com.google.common.graph.NetworkBuilder<N,E1>`](./NetworkBuilder.md)
+### `edgeOrder(ElementOrder<E1> edgeOrder)`
 
 The default value is insertion order.
 
 **Parameters:**
 - `edgeOrder` ([`com.google.common.graph.ElementOrder<E1>`](./ElementOrder.md))
+
+**Returns:** [`com.google.common.graph.NetworkBuilder<N,E1>`](./NetworkBuilder.md)
 
 ### `build()`
 

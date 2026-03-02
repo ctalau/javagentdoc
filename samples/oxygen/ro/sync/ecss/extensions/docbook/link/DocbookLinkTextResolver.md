@@ -41,14 +41,14 @@ It uses weak references to avoid a memory leak.
 
 ## Methods
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `resolveReference(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `java.lang.String`
 
-### `resolveXrefReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String linkendOrHrefAttrValue)`
+### `resolveXrefReference(AuthorNode node, String linkendOrHrefAttrValue)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): Author node that contains the xref.
@@ -64,7 +64,7 @@ It uses weak references to avoid a memory leak.
 
 **Returns:** `void`
 
-### `findElementWithId(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String id)`
+### `findElementWithId(AuthorNode node, String id)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node in whose children (including the node itself)
@@ -73,7 +73,7 @@ It uses weak references to avoid a memory leak.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-### `getIDAttribute(ro.sync.ecss.extensions.api.node.AuthorElement elem, java.lang.String id)`
+### `getIDAttribute(AuthorElement elem, String id)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The current element.
@@ -81,28 +81,28 @@ It uses weak references to avoid a memory leak.
 
 **Returns:** `java.lang.String`
 
-### `getTitleValue(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
+### `getTitleValue(AuthorElement elem)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The current element.
 
 **Returns:** `java.lang.String`
 
-### `getFirstChildElement(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
+### `getFirstChildElement(AuthorElement elem)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `activated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `deactivated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))

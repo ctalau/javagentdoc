@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setComment(java.lang.String purpose)`
+### `setComment(String purpose)`
 
 The comment is useful if the browser presents the cookie to
  the user. Comments are not supported by Netscape Version 0 cookies.
@@ -22,7 +22,7 @@ The comment is useful if the browser presents the cookie to
 
 **Returns:** `java.lang.String`
 
-### `setDomain(java.lang.String domain)`
+### `setDomain(String domain)`
 
 The form of the domain name is specified by RFC 2109. A domain name begins with a dot (`.foo.com`) and
  means that the cookie is visible to servers in a specified Domain Name System (DNS) zone (for example,
@@ -62,7 +62,7 @@ By default, `-1` is returned, which indicates that the cookie will persist until
 
 **Returns:** `int`
 
-### `setPath(java.lang.String uri)`
+### `setPath(String uri)`
 
 The cookie is visible to all the pages in the directory you specify, and all the pages in that directory's
  subdirectories. A cookie's path must include the servlet that set the cookie, for example, */catalog*, which
@@ -104,7 +104,7 @@ The name cannot be changed after creation.
 
 **Returns:** `java.lang.String`
 
-### `setValue(java.lang.String newValue)`
+### `setValue(String newValue)`
 
 If you use a binary value, you may want to use BASE64 encoding.
 

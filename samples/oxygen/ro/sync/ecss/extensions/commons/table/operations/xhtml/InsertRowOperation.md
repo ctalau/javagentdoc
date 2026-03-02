@@ -40,7 +40,7 @@ In this case we will insert 'th' elements.
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `<init>(AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../AuthorTableHelper.md)): Table helper
@@ -51,7 +51,7 @@ In this case we will insert 'th' elements.
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../../api/ArgumentDescriptor.md)
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -59,7 +59,7 @@ In this case we will insert 'th' elements.
 
 **Returns:** `void`
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
+### `getCellElementName(AuthorElement tableElement, int columnIndex)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
@@ -67,7 +67,7 @@ In this case we will insert 'th' elements.
 
 **Returns:** `java.lang.String`
 
-### `getRowElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getRowElementName(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))

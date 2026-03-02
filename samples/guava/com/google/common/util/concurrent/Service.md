@@ -39,9 +39,9 @@ Implementors of this interface are strongly encouraged to extend one of the abst
 
 ### `startAsync()`
 
-**Returns:** [`com.google.common.util.concurrent.Service`](./Service.md)
-
 A stopped service may not be restarted.
+
+**Returns:** [`com.google.common.util.concurrent.Service`](./Service.md)
 
 ### `isRunning()`
 
@@ -53,57 +53,55 @@ A stopped service may not be restarted.
 
 ### `stopAsync()`
 
-**Returns:** [`com.google.common.util.concurrent.Service`](./Service.md)
-
 If the service is new, it is terminated without having been started nor
  stopped. If the service has already been stopped, this method returns immediately without
  taking action.
+
+**Returns:** [`com.google.common.util.concurrent.Service`](./Service.md)
 
 ### `awaitRunning()`
 
 **Returns:** `void`
 
-### `awaitRunning(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitRunning(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`): the maximum time to wait
 
-### `awaitRunning(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitRunning(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`): the maximum time to wait
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the timeout argument
+
+**Returns:** `void`
 
 ### `awaitTerminated()`
 
 **Returns:** `void`
 
-### `awaitTerminated(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitTerminated(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`): the maximum time to wait
 
-### `awaitTerminated(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitTerminated(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`): the maximum time to wait
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the timeout argument
 
+**Returns:** `void`
+
 ### `failureCause()`
 
 **Returns:** `java.lang.Throwable`
 
-### `addListener(com.google.common.util.concurrent.Service.Listener listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Service.Listener listener, Executor executor)`
 
 The listener will have the corresponding transition method called whenever the
  service changes state. The listener will not have previous state changes replayed, so it is
@@ -125,5 +123,7 @@ RuntimeExceptions thrown by a listener will be caught and logged. Any exception 
 **Parameters:**
 - `listener` (`com.google.common.util.concurrent.Service.Listener`): the listener to run when the service changes state is complete
 - `executor` (`java.util.concurrent.Executor`): the executor in which the listeners callback methods will be run. For fast,
-     lightweight listeners that would be safe to execute in any thread, consider MoreExecutors#directExecutor.
+       lightweight listeners that would be safe to execute in any thread, consider MoreExecutors#directExecutor.
+
+**Returns:** `void`
 

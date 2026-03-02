@@ -52,22 +52,22 @@ Without this counter,
 
 ## Constructors
 
-### `<init>(java.util.concurrent.Executor executor)`
+### `<init>(Executor executor)`
 
 **Parameters:**
 - `executor` (`java.util.concurrent.Executor`)
 
 ## Methods
 
-### `execute(java.lang.Runnable task)`
-
-**Returns:** `void`
+### `execute(Runnable task)`
 
 If this method throws, e.g. a RejectedExecutionException from the delegate executor,
  execution of tasks will stop until a call to this method is made.
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
+
+**Returns:** `void`
 
 ### `toString()`
 

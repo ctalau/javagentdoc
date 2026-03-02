@@ -54,7 +54,7 @@ Set in endElement().
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.link.IDTypeVerifier idVerifier, java.lang.String link)`
+### `<init>(IDTypeVerifier idVerifier, String link)`
 
 **Parameters:**
 - `idVerifier` ([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md)): Verifies if an given attribute has the type ID.
@@ -62,7 +62,7 @@ Set in endElement().
 
 ## Methods
 
-### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
+### `endElement(String uri, String localName, String name)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -71,7 +71,7 @@ Set in endElement().
 
 **Returns:** `void`
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `startElement(String uri, String localName, String name, Attr[] atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)

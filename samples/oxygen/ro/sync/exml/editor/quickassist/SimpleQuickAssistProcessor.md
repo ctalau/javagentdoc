@@ -15,7 +15,7 @@ A processor can provide just quick fixes, just quick assists
 
 ## Methods
 
-### `canAssist(ro.sync.exml.workspace.api.editor.page.WSEditorPage editorPage, int offset)`
+### `canAssist(WSEditorPage editorPage, int offset)`
 
 **Parameters:**
 - `editorPage` ([`ro.sync.exml.workspace.api.editor.page.WSEditorPage`](../../workspace/api/editor/page/WSEditorPage.md)): The current editor page. Can be `null` if the editor page cannot be determined.
@@ -23,7 +23,7 @@ A processor can provide just quick fixes, just quick assists
 
 **Returns:** `boolean`
 
-### `computeQuickAssistProposals(ro.sync.exml.workspace.api.editor.page.WSEditorPage editorPage, int offset)`
+### `computeQuickAssistProposals(WSEditorPage editorPage, int offset)`
 
 **Parameters:**
 - `editorPage` ([`ro.sync.exml.workspace.api.editor.page.WSEditorPage`](../../workspace/api/editor/page/WSEditorPage.md)): The current editor page. Can be `null` if the editor page cannot be determined.

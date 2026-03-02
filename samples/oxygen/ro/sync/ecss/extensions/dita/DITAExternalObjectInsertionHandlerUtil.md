@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `getReferenceAttributeNameAndValue(ro.sync.ecss.dita.ContextKeyManagerProvider keysManagerProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.net.URL base, java.net.URL url, ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+### `getReferenceAttributeNameAndValue(ContextKeyManagerProvider keysManagerProvider, AuthorAccess authorAccess, URL base, URL url, AuthorNode contextNode)`
 
 **Parameters:**
 - `keysManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../dita/ContextKeyManagerProvider.md)): The keys manager provider.
@@ -29,7 +29,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `getMediaReferenceAttributeNameAndValue(ro.sync.ecss.dita.ContextKeyManagerProvider keysManagerProvider, java.net.URL editorLocation, java.net.URL base, java.net.URL url, ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+### `getMediaReferenceAttributeNameAndValue(ContextKeyManagerProvider keysManagerProvider, URL editorLocation, URL base, URL url, AuthorNode contextNode)`
 
 **Parameters:**
 - `keysManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../dita/ContextKeyManagerProvider.md)): The keys manager provider.
@@ -40,7 +40,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `getReferenceAttributeNameAndValueInternal(ro.sync.ecss.dita.ContextKeyManagerProvider keysManagerProvider, java.net.URL editorLocation, java.net.URL base, java.net.URL url, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean isMediaElement)`
+### `getReferenceAttributeNameAndValueInternal(ContextKeyManagerProvider keysManagerProvider, URL editorLocation, URL base, URL url, AuthorNode contextNode, boolean isMediaElement)`
 
 **Parameters:**
 - `keysManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../dita/ContextKeyManagerProvider.md)): The keys manager provider.
@@ -52,7 +52,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `insertContentReference(ro.sync.ecss.dita.ContextKeyManagerProvider keysManagerProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.net.URL url)`
+### `insertContentReference(ContextKeyManagerProvider keysManagerProvider, AuthorAccess authorAccess, URL url)`
 
 **Parameters:**
 - `keysManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../dita/ContextKeyManagerProvider.md)): The keys manager provider.
@@ -61,7 +61,7 @@
 
 **Returns:** `void`
 
-### `clearInternalQueryParamsFromExtractedRefAttrVal(java.net.URL base, java.lang.String refAttrValue)`
+### `clearInternalQueryParamsFromExtractedRefAttrVal(URL base, String refAttrValue)`
 
 **Parameters:**
 - `base` (`java.net.URL`): The original base URL of the relative value.
@@ -69,7 +69,7 @@
 
 **Returns:** `java.lang.String`
 
-### `detectKeyInfo(java.net.URL urlToDrop, java.net.URL originatorURL)`
+### `detectKeyInfo(URL urlToDrop, URL originatorURL)`
 
 **Parameters:**
 - `urlToDrop` (`java.net.URL`): The dropped URL

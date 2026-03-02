@@ -16,9 +16,7 @@ In this documentation, the terms *greatest*, *greater*, *least*, and
 
 ## Methods
 
-### `binarySearch(java.util.List<? extends E> list, E e, com.google.common.collect.SortedLists.KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists.KeyAbsentBehavior absentBehavior)`
-
-**Returns:** `int`
+### `binarySearch(List<? extends E> list, E e, SortedLists.KeyPresentBehavior presentBehavior, SortedLists.KeyAbsentBehavior absentBehavior)`
 
 Equivalent to #binarySearch(List, Function, Object, Comparator, KeyPresentBehavior,
  KeyAbsentBehavior) using Ordering#natural.
@@ -29,9 +27,9 @@ Equivalent to #binarySearch(List, Function, Object, Comparator, KeyPresentBehavi
 - `presentBehavior` (`com.google.common.collect.SortedLists.KeyPresentBehavior`)
 - `absentBehavior` (`com.google.common.collect.SortedLists.KeyAbsentBehavior`)
 
-### `binarySearch(java.util.List<E> list, com.google.common.base.Function<? super E,K> keyFunction, K key, com.google.common.collect.SortedLists.KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists.KeyAbsentBehavior absentBehavior)`
-
 **Returns:** `int`
+
+### `binarySearch(List<E> list, Function<? super E,K> keyFunction, K key, SortedLists.KeyPresentBehavior presentBehavior, SortedLists.KeyAbsentBehavior absentBehavior)`
 
 Equivalent to #binarySearch(List, Function, Object, Comparator, KeyPresentBehavior,
  KeyAbsentBehavior) using Ordering#natural.
@@ -43,9 +41,9 @@ Equivalent to #binarySearch(List, Function, Object, Comparator, KeyPresentBehavi
 - `presentBehavior` (`com.google.common.collect.SortedLists.KeyPresentBehavior`)
 - `absentBehavior` (`com.google.common.collect.SortedLists.KeyAbsentBehavior`)
 
-### `binarySearch(java.util.List<E> list, com.google.common.base.Function<? super E,K> keyFunction, K key, java.util.Comparator<? super K> keyComparator, com.google.common.collect.SortedLists.KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists.KeyAbsentBehavior absentBehavior)`
-
 **Returns:** `int`
+
+### `binarySearch(List<E> list, Function<? super E,K> keyFunction, K key, Comparator<? super K> keyComparator, SortedLists.KeyPresentBehavior presentBehavior, SortedLists.KeyAbsentBehavior absentBehavior)`
 
 Equivalent to #binarySearch(List, Object, Comparator, KeyPresentBehavior,
  KeyAbsentBehavior) using Lists.transform(list,
@@ -59,9 +57,9 @@ Equivalent to #binarySearch(List, Object, Comparator, KeyPresentBehavior,
 - `presentBehavior` (`com.google.common.collect.SortedLists.KeyPresentBehavior`)
 - `absentBehavior` (`com.google.common.collect.SortedLists.KeyAbsentBehavior`)
 
-### `binarySearch(java.util.List<? extends E> list, E key, java.util.Comparator<? super E> comparator, com.google.common.collect.SortedLists.KeyPresentBehavior presentBehavior, com.google.common.collect.SortedLists.KeyAbsentBehavior absentBehavior)`
-
 **Returns:** `int`
+
+### `binarySearch(List<? extends E> list, E key, Comparator<? super E> comparator, SortedLists.KeyPresentBehavior presentBehavior, SortedLists.KeyAbsentBehavior absentBehavior)`
 
 The
  list must be sorted into ascending order according to the specified comparator (as by the
@@ -81,7 +79,9 @@ This method runs in log(n) time on random-access lists, which offer near-constan
 - `key` (`E`): the value to be searched for.
 - `comparator` (`java.util.Comparator<? super E>`): the comparator by which the list is ordered.
 - `presentBehavior` (`com.google.common.collect.SortedLists.KeyPresentBehavior`): the specification for what to do if at least one element of the list
-     compares as equal to the key.
+       compares as equal to the key.
 - `absentBehavior` (`com.google.common.collect.SortedLists.KeyAbsentBehavior`): the specification for what to do if no elements of the list compare as
-     equal to the key.
+       equal to the key.
+
+**Returns:** `int`
 

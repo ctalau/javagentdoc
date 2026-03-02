@@ -20,17 +20,15 @@
 
 ### `load64(byte[] input, int offset)`
 
-**Returns:** `long`
-
 The array must have at least 8 bytes from offset (inclusive).
 
 **Parameters:**
 - `input` (`byte[]`): the input bytes
 - `offset` (`int`): the offset into the array at which to start
 
-### `load64Safely(byte[] input, int offset, int length)`
-
 **Returns:** `long`
+
+### `load64Safely(byte[] input, int offset, int length)`
 
 This
  has to explicitly reverse the order of the bytes as it packs them into the result which makes
@@ -41,27 +39,29 @@ This
 - `offset` (`int`): the offset into the array at which to start reading
 - `length` (`int`): the number of bytes from the input to read
 
-### `store64(byte[] sink, int offset, long value)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `store64(byte[] sink, int offset, long value)`
 
 **Parameters:**
 - `sink` (`byte[]`): the output byte array
 - `offset` (`int`): the offset into the array at which to start writing
 - `value` (`long`): the value to write
 
-### `load32(byte[] source, int offset)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `load32(byte[] source, int offset)`
 
 **Parameters:**
 - `source` (`byte[]`): the input bytes
 - `offset` (`int`): the offset into the array at which to start
 
-### `usingUnsafe()`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `usingUnsafe()`
 
 May be useful for calling code to fall back on an alternative implementation
  that is slower than Unsafe.get/store but faster than the pure-Java mask-and-shift.
+
+**Returns:** `boolean`
 

@@ -8,7 +8,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess arg0, org.eclipse.swt.widgets.Shell arg1, ro.sync.ecss.extensions.api.AuthorResourceBundle arg2, int arg3, int arg4)`
+### `<init>(AuthorAccess arg0, Shell arg1, AuthorResourceBundle arg2, int arg3, int arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -33,7 +33,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`
 
-### `createTitleCheckbox(org.eclipse.swt.widgets.Composite arg0)`
+### `createTitleCheckbox(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)

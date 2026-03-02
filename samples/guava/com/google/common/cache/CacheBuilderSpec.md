@@ -128,19 +128,19 @@ A new CacheBuilder can be instantiated from a CacheBuilderSpec using CacheBuilde
 
 ## Constructors
 
-### `<init>(java.lang.String specification)`
+### `<init>(String specification)`
 
 **Parameters:**
 - `specification` (`java.lang.String`)
 
 ## Methods
 
-### `parse(java.lang.String cacheBuilderSpecification)`
-
-**Returns:** [`com.google.common.cache.CacheBuilderSpec`](./CacheBuilderSpec.md)
+### `parse(String cacheBuilderSpecification)`
 
 **Parameters:**
 - `cacheBuilderSpecification` (`java.lang.String`): the string form
+
+**Returns:** [`com.google.common.cache.CacheBuilderSpec`](./CacheBuilderSpec.md)
 
 ### `disableCaching()`
 
@@ -152,33 +152,31 @@ A new CacheBuilder can be instantiated from a CacheBuilderSpec using CacheBuilde
 
 ### `toParsableString()`
 
-**Returns:** `java.lang.String`
-
 The order
  and form of this representation is not guaranteed, except that reparsing its output will
  produce a CacheBuilderSpec equal to this instance.
 
-### `toString()`
-
 **Returns:** `java.lang.String`
+
+### `toString()`
 
 The form of this
  representation is not guaranteed.
+
+**Returns:** `java.lang.String`
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `durationInNanos(long duration, java.util.concurrent.TimeUnit unit)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.Long`
+### `durationInNanos(long duration, TimeUnit unit)`
 
 Uses
  nanos to match CacheBuilder implementation.
@@ -187,11 +185,13 @@ Uses
 - `duration` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `format(java.lang.String format, java.lang.Object[] args)`
+**Returns:** `java.lang.Long`
 
-**Returns:** `java.lang.String`
+### `format(String format, Object[] args)`
 
 **Parameters:**
 - `format` (`java.lang.String`)
 - `args` (`java.lang.Object[]`)
+
+**Returns:** `java.lang.String`
 

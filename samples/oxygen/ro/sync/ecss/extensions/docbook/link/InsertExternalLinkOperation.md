@@ -28,7 +28,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -44,7 +44,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../api/ArgumentDescriptor.md)
 
-### `insertExternalLink(java.lang.String url, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean schemaAware)`
+### `insertExternalLink(String url, AuthorAccess authorAccess, boolean schemaAware)`
 
 **Parameters:**
 - `url` (`java.lang.String`): The URL to insert as external link.

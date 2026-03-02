@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `problemsOccured(ro.sync.document.DocumentPositionedInfo[] problems)`
+### `problemsOccured(DocumentPositionedInfo[] problems)`
 
 May be called multiple times, usually for each validated file 
  if problems are detected inside it.

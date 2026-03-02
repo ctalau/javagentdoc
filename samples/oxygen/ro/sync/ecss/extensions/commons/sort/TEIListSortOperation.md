@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `getSortParent(int offset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getSortParent(int offset, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -22,21 +22,21 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-### `isIgnored(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isIgnored(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `checkValidForSorting(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `checkValidForSorting(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to check.
 
 **Returns:** `void`
 
-### `canBeSorted(ro.sync.ecss.extensions.api.node.AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
+### `canBeSorted(AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
@@ -44,7 +44,7 @@
 
 **Returns:** `void`
 
-### `getSortKeysValues(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation sortInfo)`
+### `getSortKeysValues(AuthorNode node, SortCriteriaInformation sortInfo)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
@@ -52,7 +52,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `getSortCriteria(ro.sync.ecss.extensions.api.node.AuthorElement parent)`
+### `getSortCriteria(AuthorElement parent)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))

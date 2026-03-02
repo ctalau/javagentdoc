@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableMap<java.lang.Class<? extends B>,B> delegate)`
+### `<init>(ImmutableMap<Class<? extends B>,B> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ImmutableMap<java.lang.Class<? extends B>,B>`](./ImmutableMap.md))
@@ -35,27 +35,25 @@
 
 ### `of()`
 
-**Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
-
 **Performance note:** the instance returned is a singleton.
 
-### `of(java.lang.Class<T> type, T value)`
-
 **Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
+
+### `of(Class<T> type, T value)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 - `value` (`T`)
 
-### `builder()`
+**Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
 
-**Returns:** `com.google.common.collect.ImmutableClassToInstanceMap.Builder<B>`
+### `builder()`
 
 The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `copyOf(java.util.Map<? extends java.lang.Class<? extends S>,? extends S> map)`
+**Returns:** `com.google.common.collect.ImmutableClassToInstanceMap.Builder<B>`
 
-**Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
+### `copyOf(Map<? extends Class<? extends S>,? extends S> map)`
 
 If map somehow
  contains entries with duplicate keys (for example, if it is a SortedMap whose
@@ -68,24 +66,26 @@ If map somehow
 **Parameters:**
 - `map` (`java.util.Map<? extends java.lang.Class<? extends S>,? extends S>`)
 
+**Returns:** [`com.google.common.collect.ImmutableClassToInstanceMap<B>`](./ImmutableClassToInstanceMap.md)
+
 ### `delegate()`
 
 **Returns:** `java.util.Map<java.lang.Class<? extends B>,B>`
 
-### `getInstance(java.lang.Class<T> type)`
-
-**Returns:** `T`
+### `getInstance(Class<T> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `putInstance(java.lang.Class<T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(Class<T> type, T value)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 - `value` (`T`)
+
+**Returns:** `T`
 
 ### `readResolve()`
 

@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.hash.HashFunction hashFunction, java.io.OutputStream out)`
+### `<init>(HashFunction hashFunction, OutputStream out)`
 
 The OutputStream should not be written to before or after the hand-off.
 
@@ -28,26 +28,26 @@ The OutputStream should not be written to before or after the hand-off.
 
 ### `write(int b)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `b` (`int`)
 
-### `write(byte[] bytes, int off, int len)`
-
 **Returns:** `void`
+
+### `write(byte[] bytes, int off, int len)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `hash()`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+### `hash()`
 
 The result is
  unspecified if this method is called more than once on the same instance.
+
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
 ### `close()`
 

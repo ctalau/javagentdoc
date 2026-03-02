@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType eventType, boolean showContentCompletionWindowOnEnter)`
+### `<init>(AuthorActionEventHandler.AuthorActionEventType eventType, boolean showContentCompletionWindowOnEnter)`
 
 **Parameters:**
 - `eventType` (`ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType`): the event type.

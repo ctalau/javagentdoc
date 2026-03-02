@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorReferenceResolver wrappedResolver)`
+### `<init>(AuthorReferenceResolver wrappedResolver)`
 
 **Parameters:**
 - `wrappedResolver` ([`ro.sync.ecss.extensions.api.AuthorReferenceResolver`](../../extensions/api/AuthorReferenceResolver.md)): The wrapped resolver.
@@ -27,14 +27,14 @@
 
 **Returns:** `java.lang.String`
 
-### `hasReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `hasReferences(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
+### `isReferenceChanged(AuthorNode node, String attributeName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
@@ -42,7 +42,7 @@
 
 **Returns:** `boolean`
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+### `resolveReference(AuthorNode node, String systemID, AuthorAccess authorAccess, EntityResolver entityResolver)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
@@ -52,21 +52,21 @@
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getDisplayName(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
 **Returns:** `java.lang.String`
 
-### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getReferenceUniqueID(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
 **Returns:** `java.lang.String`
 
-### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getReferenceSystemID(AuthorNode node, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
@@ -78,7 +78,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorReferenceResolver`](../../extensions/api/AuthorReferenceResolver.md)
 
-### `hasEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
+### `hasEditableReference(String systemID, AuthorNode referenceNodeParent)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -86,7 +86,7 @@
 
 **Returns:** `boolean`
 
-### `allowsValidatationForEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
+### `allowsValidatationForEditableReference(String systemID, AuthorNode referenceNodeParent)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -94,7 +94,7 @@
 
 **Returns:** `boolean`
 
-### `replaceReference(ro.sync.ecss.extensions.api.node.AuthorDocumentProvider targetProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorReferenceNode referenceNode)`
+### `replaceReference(AuthorDocumentProvider targetProvider, AuthorAccess authorAccess, AuthorReferenceNode referenceNode)`
 
 **Parameters:**
 - `targetProvider` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../../extensions/api/node/AuthorDocumentProvider.md))

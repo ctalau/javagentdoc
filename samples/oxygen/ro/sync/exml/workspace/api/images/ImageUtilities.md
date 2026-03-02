@@ -14,14 +14,14 @@
 
 **Returns:** `void`
 
-### `getImageHandlerFor(java.lang.String extension)`
+### `getImageHandlerFor(String extension)`
 
 **Parameters:**
 - `extension` (`java.lang.String`): The extension of the image file which should be supported by the handler.
 
 **Returns:** [`ro.sync.exml.workspace.api.images.handlers.ImageHandler`](handlers/ImageHandler.md)
 
-### `addImageHandler(ro.sync.exml.workspace.api.images.handlers.ImageHandler imageHandler)`
+### `addImageHandler(ImageHandler imageHandler)`
 
 It will have more priority than the builtin handlers.
 
@@ -30,7 +30,7 @@ It will have more priority than the builtin handlers.
 
 **Returns:** `void`
 
-### `removeImageHandler(ro.sync.exml.workspace.api.images.handlers.ImageHandler imageHandler)`
+### `removeImageHandler(ImageHandler imageHandler)`
 
 **Parameters:**
 - `imageHandler` ([`ro.sync.exml.workspace.api.images.handlers.ImageHandler`](handlers/ImageHandler.md)): The image handler to remove.

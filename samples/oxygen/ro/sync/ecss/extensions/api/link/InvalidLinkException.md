@@ -26,12 +26,12 @@
 
 ## Constructors
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): Error message.
 
-### `<init>(java.lang.String message, ro.sync.ecss.extensions.api.link.Severity severity, boolean presentInplace)`
+### `<init>(String message, Severity severity, boolean presentInplace)`
 
 **Parameters:**
 - `message` (`java.lang.String`): Error message.
@@ -49,7 +49,7 @@
 
 **Returns:** `boolean`
 
-### `setShortMessage(java.lang.String shortMessage)`
+### `setShortMessage(String shortMessage)`
 
 **Parameters:**
 - `shortMessage` (`java.lang.String`): The short message.

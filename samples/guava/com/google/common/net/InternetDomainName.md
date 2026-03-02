@@ -137,7 +137,7 @@ Since this field isn't volatile, if an instance of this class is shared across
 
 ## Constructors
 
-### `<init>(java.lang.String name)`
+### `<init>(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -146,25 +146,23 @@ Since this field isn't volatile, if an instance of this class is shared across
 
 ### `publicSuffixIndex()`
 
-**Returns:** `int`
-
 For example, for the
  domain name myblog.blogspot.co.uk, the value would be 1 (the index of the 
  blogspot part). The value is negative (specifically, #NO_SUFFIX_FOUND) if no public
  suffix was found.
 
-### `registrySuffixIndex()`
-
 **Returns:** `int`
+
+### `registrySuffixIndex()`
 
 For example, for
  the domain name myblog.blogspot.co.uk, the value would be 2 (the index of the 
  co part). The value is negative (specifically, #NO_SUFFIX_FOUND) if no registry suffix
  was found.
 
-### `findSuffixOfType(com.google.common.base.Optional<com.google.thirdparty.publicsuffix.PublicSuffixType> desiredType)`
-
 **Returns:** `int`
+
+### `findSuffixOfType(Optional<PublicSuffixType> desiredType)`
 
 Note that the value
  defined as a suffix may not produce true results from #isPublicSuffix() or
@@ -178,9 +176,9 @@ If a desiredType is specified, this method only finds suffixes of the given type
 **Parameters:**
 - `desiredType` ([`com.google.common.base.Optional<com.google.thirdparty.publicsuffix.PublicSuffixType>`](../base/Optional.md))
 
-### `from(java.lang.String domain)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
+### `from(String domain)`
 
 Specifically,
  validation against [RFC 3490](http://www.ietf.org/rfc/rfc3490.txt)
@@ -195,16 +193,16 @@ Specifically,
 **Parameters:**
 - `domain` (`java.lang.String`): A domain name (not IP address)
 
-### `validateSyntax(java.util.List<java.lang.String> parts)`
+**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
 
-**Returns:** `boolean`
+### `validateSyntax(List<String> parts)`
 
 **Parameters:**
 - `parts` (`java.util.List<java.lang.String>`)
 
-### `validatePart(java.lang.String part, boolean isFinalPart)`
-
 **Returns:** `boolean`
+
+### `validatePart(String part, boolean isFinalPart)`
 
 Validates that one part of a domain name is
  valid.
@@ -213,17 +211,17 @@ Validates that one part of a domain name is
 - `part` (`java.lang.String`): The domain name part to be validated
 - `isFinalPart` (`boolean`): Is this the final (rightmost) domain part?
 
-### `parts()`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.collect.ImmutableList<java.lang.String>`](../collect/ImmutableList.md)
+### `parts()`
 
 For
  example, for the domain name mail.google.com, this method returns the list 
  ["mail", "google", "com"].
 
-### `isPublicSuffix()`
+**Returns:** [`com.google.common.collect.ImmutableList<java.lang.String>`](../collect/ImmutableList.md)
 
-**Returns:** `boolean`
+### `isPublicSuffix()`
 
 A public suffix
  is one under which Internet users can directly register names, such as com, 
@@ -241,9 +239,9 @@ Public suffixes are a proper superset of registry suffixes.
 For considerations on whether the public suffix or registry suffix designation is more
  suitable for your application, see [this article](https://github.com/google/guava/wiki/InternetDomainNameExplained).
 
-### `hasPublicSuffix()`
-
 **Returns:** `boolean`
+
+### `hasPublicSuffix()`
 
 For example, returns true for 
  www.google.com, foo.co.uk and com, but not for invalid or 
@@ -254,13 +252,13 @@ For example, returns true for
 Note that this method is equivalent to #hasRegistrySuffix() because all registry
  suffixes are public suffixes *and* all public suffixes have registry suffixes.
 
+**Returns:** `boolean`
+
 ### `publicSuffix()`
 
 **Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
 
 ### `isUnderPublicSuffix()`
-
-**Returns:** `boolean`
 
 For example, returns true for 
  www.google.com, foo.co.uk and myblog.blogspot.com, but not for com,
@@ -271,9 +269,9 @@ This method can be used to determine whether it will probably be possible to set
  the domain, though even that depends on individual browsers' implementations of cookie
  controls. See [RFC 2109](http://www.ietf.org/rfc/rfc2109.txt) for details.
 
-### `isTopPrivateDomain()`
-
 **Returns:** `boolean`
+
+### `isTopPrivateDomain()`
 
 For example, returns true for 
  google.com foo.co.uk, and myblog.blogspot.com, but not for 
@@ -284,9 +282,9 @@ This method can be used to determine whether a domain is probably the highest le
  which cookies may be set, though even that depends on individual browsers' implementations of
  cookie controls. See [RFC 2109](http://www.ietf.org/rfc/rfc2109.txt) for details.
 
-### `topPrivateDomain()`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
+### `topPrivateDomain()`
 
 For example, for x.adwords.google.co.uk it returns
  google.co.uk, since co.uk is a public suffix. Similarly, for 
@@ -301,9 +299,9 @@ This method can be used to determine the probable highest level parent domain fo
  cookies may be set, though even that depends on individual browsers' implementations of cookie
  controls.
 
-### `isRegistrySuffix()`
+**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
 
-**Returns:** `boolean`
+### `isRegistrySuffix()`
 
 A
  registry suffix is one under which Internet users can directly register names via a domain name
@@ -323,9 +321,9 @@ Registry suffixes are a proper subset of public suffixes. The
 For considerations on whether the public suffix or registry suffix designation is more
  suitable for your application, see [this article](https://github.com/google/guava/wiki/InternetDomainNameExplained).
 
-### `hasRegistrySuffix()`
-
 **Returns:** `boolean`
+
+### `hasRegistrySuffix()`
 
 For example, returns true for 
  www.google.com, foo.co.uk and com, but not for invalid or 
@@ -335,21 +333,21 @@ For example, returns true for
 Note that this method is equivalent to #hasPublicSuffix() because all registry
  suffixes are public suffixes *and* all public suffixes have registry suffixes.
 
+**Returns:** `boolean`
+
 ### `registrySuffix()`
 
 **Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
 
 ### `isUnderRegistrySuffix()`
 
-**Returns:** `boolean`
-
 For example, returns true for 
  www.google.com, foo.co.uk and blogspot.com, but not for com, 
  co.uk, or google.invalid.
 
-### `isTopDomainUnderRegistrySuffix()`
-
 **Returns:** `boolean`
+
+### `isTopDomainUnderRegistrySuffix()`
 
 For example, returns true for 
  google.com, foo.co.uk, and blogspot.com, but not for www.google.com,
@@ -359,9 +357,9 @@ For example, returns true for
 **Warning:** This method should not be used to determine the probable highest level
  parent domain for which cookies may be set. Use #topPrivateDomain() for that purpose.
 
-### `topDomainUnderRegistrySuffix()`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
+### `topDomainUnderRegistrySuffix()`
 
 For example, for x.adwords.google.co.uk it
  returns google.co.uk, since co.uk is a registry suffix. Similarly, for 
@@ -375,20 +373,20 @@ If #isTopDomainUnderRegistrySuffix() is true, the current domain name instance i
 **Warning:** This method should not be used to determine whether a domain is probably the
  highest level for which cookies may be set. Use #isTopPrivateDomain() for that purpose.
 
+**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
+
 ### `hasParent()`
 
 **Returns:** `boolean`
 
 ### `parent()`
 
-**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
-
 For example, the parent of 
  www.google.com is google.com.
 
-### `ancestor(int levels)`
-
 **Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
+
+### `ancestor(int levels)`
 
 The number of levels must be non-negative, and less than N-1,
  where N is the number of parts in the domain.
@@ -399,9 +397,9 @@ TODO: Reasonable candidate for addition to public API.
 **Parameters:**
 - `levels` (`int`)
 
-### `child(java.lang.String leftParts)`
-
 **Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
+
+### `child(String leftParts)`
 
 For example, InternetDomainName.from("foo.com").child("www.bar")
  returns a new InternetDomainName with the value www.bar.foo.com. Only lenient
@@ -410,9 +408,9 @@ For example, InternetDomainName.from("foo.com").child("www.bar")
 **Parameters:**
 - `leftParts` (`java.lang.String`)
 
-### `isValid(java.lang.String name)`
+**Returns:** [`com.google.common.net.InternetDomainName`](./InternetDomainName.md)
 
-**Returns:** `boolean`
+### `isValid(String name)`
 
 Specifically, validation against [RFC 3490](http://www.ietf.org/rfc/rfc3490.txt)
  ("Internationalizing Domain Names in Applications") is skipped.
@@ -446,9 +444,9 @@ The following two code snippets are equivalent:
 **Parameters:**
 - `name` (`java.lang.String`)
 
-### `matchesType(com.google.common.base.Optional<com.google.thirdparty.publicsuffix.PublicSuffixType> desiredType, com.google.common.base.Optional<com.google.thirdparty.publicsuffix.PublicSuffixType> actualType)`
-
 **Returns:** `boolean`
+
+### `matchesType(Optional<PublicSuffixType> desiredType, Optional<PublicSuffixType> actualType)`
 
 Otherwise, returns true as long as actualType is present.
 
@@ -456,19 +454,21 @@ Otherwise, returns true as long as actualType is present.
 - `desiredType` ([`com.google.common.base.Optional<com.google.thirdparty.publicsuffix.PublicSuffixType>`](../base/Optional.md))
 - `actualType` ([`com.google.common.base.Optional<com.google.thirdparty.publicsuffix.PublicSuffixType>`](../base/Optional.md))
 
+**Returns:** `boolean`
+
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 For example, a non-ASCII Unicode domain name and the Punycode
  version of the same domain name would not be considered equal.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

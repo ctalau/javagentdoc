@@ -30,7 +30,7 @@ If selected, the row(s) will be inserted below the current location.
 
 ## Constructors
 
-### `<init>(javax.swing.JFrame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle resourceBundle)`
+### `<init>(JFrame parentFrame, AuthorResourceBundle resourceBundle)`
 
 **Parameters:**
 - `parentFrame` (`javax.swing.JFrame`): the parent frame
@@ -38,14 +38,14 @@ If selected, the row(s) will be inserted below the current location.
 
 ## Methods
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo previousTableRowsInfo)`
+### `showDialog(TableRowsInfo previousTableRowsInfo)`
 
 **Parameters:**
 - `previousTableRowsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)): the previous row information
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)
 
-### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo previousTableRowsInfo)`
+### `initialize(TableRowsInfo previousTableRowsInfo)`
 
 **Parameters:**
 - `previousTableRowsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)): If `null`, defaults will be used. Otherwise, the controls

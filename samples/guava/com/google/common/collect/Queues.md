@@ -17,32 +17,32 @@ Also see this
 
 ### `newArrayBlockingQueue(int capacity)`
 
-**Returns:** `java.util.concurrent.ArrayBlockingQueue<E>`
-
 **Parameters:**
 - `capacity` (`int`)
+
+**Returns:** `java.util.concurrent.ArrayBlockingQueue<E>`
 
 ### `newArrayDeque()`
 
 **Returns:** `java.util.ArrayDeque<E>`
 
-### `newArrayDeque(java.lang.Iterable<? extends E> elements)`
-
-**Returns:** `java.util.ArrayDeque<E>`
+### `newArrayDeque(Iterable<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
+
+**Returns:** `java.util.ArrayDeque<E>`
 
 ### `newConcurrentLinkedQueue()`
 
 **Returns:** `java.util.concurrent.ConcurrentLinkedQueue<E>`
 
-### `newConcurrentLinkedQueue(java.lang.Iterable<? extends E> elements)`
-
-**Returns:** `java.util.concurrent.ConcurrentLinkedQueue<E>`
+### `newConcurrentLinkedQueue(Iterable<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
+
+**Returns:** `java.util.concurrent.ConcurrentLinkedQueue<E>`
 
 ### `newLinkedBlockingDeque()`
 
@@ -50,17 +50,17 @@ Also see this
 
 ### `newLinkedBlockingDeque(int capacity)`
 
-**Returns:** `java.util.concurrent.LinkedBlockingDeque<E>`
-
 **Parameters:**
 - `capacity` (`int`)
 
-### `newLinkedBlockingDeque(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.concurrent.LinkedBlockingDeque<E>`
+
+### `newLinkedBlockingDeque(Iterable<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
+
+**Returns:** `java.util.concurrent.LinkedBlockingDeque<E>`
 
 ### `newLinkedBlockingQueue()`
 
@@ -68,39 +68,37 @@ Also see this
 
 ### `newLinkedBlockingQueue(int capacity)`
 
-**Returns:** `java.util.concurrent.LinkedBlockingQueue<E>`
-
 **Parameters:**
 - `capacity` (`int`)
 
-### `newLinkedBlockingQueue(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.concurrent.LinkedBlockingQueue<E>`
+
+### `newLinkedBlockingQueue(Iterable<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the queue should contain, in order
+
+**Returns:** `java.util.concurrent.LinkedBlockingQueue<E>`
 
 ### `newPriorityBlockingQueue()`
 
 **Returns:** `java.util.concurrent.PriorityBlockingQueue<E>`
 
-### `newPriorityBlockingQueue(java.lang.Iterable<? extends E> elements)`
-
-**Returns:** `java.util.concurrent.PriorityBlockingQueue<E>`
+### `newPriorityBlockingQueue(Iterable<? extends E> elements)`
 
 **Note:** If the specified iterable is a SortedSet or a PriorityQueue,
  this priority queue will be ordered according to the same ordering.
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
+
+**Returns:** `java.util.concurrent.PriorityBlockingQueue<E>`
 
 ### `newPriorityQueue()`
 
 **Returns:** `java.util.PriorityQueue<E>`
 
-### `newPriorityQueue(java.lang.Iterable<? extends E> elements)`
-
-**Returns:** `java.util.PriorityQueue<E>`
+### `newPriorityQueue(Iterable<? extends E> elements)`
 
 **Note:** If the specified iterable is a SortedSet or a PriorityQueue,
  this priority queue will be ordered according to the same ordering.
@@ -108,13 +106,13 @@ Also see this
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
+**Returns:** `java.util.PriorityQueue<E>`
+
 ### `newSynchronousQueue()`
 
 **Returns:** `java.util.concurrent.SynchronousQueue<E>`
 
-### `drain(java.util.concurrent.BlockingQueue<E> q, java.util.Collection<? super E> buffer, int numElements, java.time.Duration timeout)`
-
-**Returns:** `int`
+### `drain(BlockingQueue<E> q, Collection<? super E> buffer, int numElements, Duration timeout)`
 
 **Parameters:**
 - `q` (`java.util.concurrent.BlockingQueue<E>`): the blocking queue to be drained
@@ -122,9 +120,9 @@ Also see this
 - `numElements` (`int`): the number of elements to be waited for
 - `timeout` (`java.time.Duration`): how long to wait before giving up
 
-### `drain(java.util.concurrent.BlockingQueue<E> q, java.util.Collection<? super E> buffer, int numElements, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `int`
+
+### `drain(BlockingQueue<E> q, Collection<? super E> buffer, int numElements, long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `q` (`java.util.concurrent.BlockingQueue<E>`): the blocking queue to be drained
@@ -133,9 +131,9 @@ Also see this
 - `timeout` (`long`): how long to wait before giving up, in units of unit
 - `unit` (`java.util.concurrent.TimeUnit`): a TimeUnit determining how to interpret the timeout parameter
 
-### `drainUninterruptibly(java.util.concurrent.BlockingQueue<E> q, java.util.Collection<? super E> buffer, int numElements, java.time.Duration timeout)`
-
 **Returns:** `int`
+
+### `drainUninterruptibly(BlockingQueue<E> q, Collection<? super E> buffer, int numElements, Duration timeout)`
 
 In that case, the operation will
  continue as usual, and in the end the thread's interruption status will be set (no 
@@ -147,9 +145,9 @@ In that case, the operation will
 - `numElements` (`int`): the number of elements to be waited for
 - `timeout` (`java.time.Duration`): how long to wait before giving up
 
-### `drainUninterruptibly(java.util.concurrent.BlockingQueue<E> q, java.util.Collection<? super E> buffer, int numElements, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `int`
+
+### `drainUninterruptibly(BlockingQueue<E> q, Collection<? super E> buffer, int numElements, long timeout, TimeUnit unit)`
 
 In that case, the operation
  will continue as usual, and in the end the thread's interruption status will be set (no 
@@ -162,9 +160,9 @@ In that case, the operation
 - `timeout` (`long`): how long to wait before giving up, in units of unit
 - `unit` (`java.util.concurrent.TimeUnit`): a TimeUnit determining how to interpret the timeout parameter
 
-### `synchronizedQueue(java.util.Queue<E> queue)`
+**Returns:** `int`
 
-**Returns:** `java.util.Queue<E>`
+### `synchronizedQueue(Queue<E> queue)`
 
 In order to guarantee
  serial access, it is critical that **all** access to the backing queue is accomplished
@@ -201,9 +199,9 @@ The returned queue will be serializable if the specified queue is serializable.
 **Parameters:**
 - `queue` (`java.util.Queue<E>`): the queue to be wrapped in a synchronized view
 
-### `synchronizedDeque(java.util.Deque<E> deque)`
+**Returns:** `java.util.Queue<E>`
 
-**Returns:** `java.util.Deque<E>`
+### `synchronizedDeque(Deque<E> deque)`
 
 In order to guarantee
  serial access, it is critical that **all** access to the backing deque is accomplished
@@ -239,4 +237,6 @@ The returned deque will be serializable if the specified deque is serializable.
 
 **Parameters:**
 - `deque` (`java.util.Deque<E>`): the deque to be wrapped in a synchronized view
+
+**Returns:** `java.util.Deque<E>`
 

@@ -23,8 +23,6 @@ Two examples of equivalences are the
 
 ### `equivalent(T a, T b)`
 
-**Returns:** `boolean`
-
 This method describes an *equivalence relation* on object references, meaning that for
  all references x, y, and z (any of which may be null):
 
@@ -46,17 +44,17 @@ Note that all calls to equivalent(x, y) are expected to return the same result a
 - `a` (`T`)
 - `b` (`T`)
 
-### `test(T t, T u)`
-
 **Returns:** `boolean`
+
+### `test(T t, T u)`
 
 **Parameters:**
 - `t` (`T`)
 - `u` (`T`)
 
-### `doEquivalent(T a, T b)`
-
 **Returns:** `boolean`
+
+### `doEquivalent(T a, T b)`
 
 This method should not be called except by #equivalent. When #equivalent
  calls this method, a and b are guaranteed to be distinct, non-null instances.
@@ -65,9 +63,9 @@ This method should not be called except by #equivalent. When #equivalent
 - `a` (`T`)
 - `b` (`T`)
 
-### `hash(T t)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hash(T t)`
 
 The hash has the following properties:
 
@@ -86,9 +84,9 @@ The hash has the following properties:
 **Parameters:**
 - `t` (`T`)
 
-### `doHash(T t)`
-
 **Returns:** `int`
+
+### `doHash(T t)`
 
 This method should not be called except by #hash. When #hash calls this
  method, t is guaranteed to be non-null.
@@ -96,9 +94,9 @@ This method should not be called except by #hash. When #hash calls this
 **Parameters:**
 - `t` (`T`)
 
-### `onResultOf(com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T> function)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.base.Equivalence<F>`](./Equivalence.md)
+### `onResultOf(Function<? super F,? extends @Nullable T> function)`
 
 That is, for any pair of
  non-null objects x and y, equivalence.onResultOf(function).equivalent(a,
@@ -130,9 +128,9 @@ Note that function must be consistent according to this equivalence
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super F,? extends @org.checkerframework.checker.nullness.qual.Nullable T>`](./Function.md))
 
-### `wrap(S reference)`
+**Returns:** [`com.google.common.base.Equivalence<F>`](./Equivalence.md)
 
-**Returns:** `com.google.common.base.Equivalence.Wrapper<S>`
+### `wrap(S reference)`
 
 The returned object is serializable if both this Equivalence and reference
  are serializable (including when reference is null).
@@ -140,9 +138,9 @@ The returned object is serializable if both this Equivalence and reference
 **Parameters:**
 - `reference` (`S`)
 
-### `pairwise()`
+**Returns:** `com.google.common.base.Equivalence.Wrapper<S>`
 
-**Returns:** [`com.google.common.base.Equivalence<java.lang.Iterable<S>>`](./Equivalence.md)
+### `pairwise()`
 
 More
  specifically, two iterables are considered equivalent if they both contain the same number of
@@ -155,25 +153,27 @@ Note that this method performs a similar function for equivalences as com.google
  
 The returned object is serializable if this object is serializable.
 
-### `equivalentTo(T target)`
+**Returns:** [`com.google.common.base.Equivalence<java.lang.Iterable<S>>`](./Equivalence.md)
 
-**Returns:** [`com.google.common.base.Predicate<@org.checkerframework.checker.nullness.qual.Nullable T>`](./Predicate.md)
+### `equivalentTo(T target)`
 
 **Parameters:**
 - `target` (`T`)
 
-### `equals()`
+**Returns:** [`com.google.common.base.Predicate<@org.checkerframework.checker.nullness.qual.Nullable T>`](./Predicate.md)
 
-**Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](./Equivalence.md)
+### `equals()`
 
 Equivalence#equivalent returns true if both values are null, or if neither
  value is null and Object#equals returns true. Equivalence#hash returns
  0 if passed a null value.
 
-### `identity()`
-
 **Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](./Equivalence.md)
+
+### `identity()`
 
 Equivalence#equivalent
  returns true if a == b, including in the case that a and b are both null.
+
+**Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](./Equivalence.md)
 

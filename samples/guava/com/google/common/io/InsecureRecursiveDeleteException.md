@@ -13,7 +13,7 @@ RecursiveDeleteOption#ALLOW_INSECURE can be used to force the recursive delete m
 
 ## Constructors
 
-### `<init>(java.lang.String file)`
+### `<init>(String file)`
 
 **Parameters:**
 - `file` (`java.lang.String`)

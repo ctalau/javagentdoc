@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `toggleMarkAsDone(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `toggleMarkAsDone(AuthorPersistentHighlight highlight)`
 
 This state is also applied 
  to all its replies.
@@ -32,7 +32,7 @@ This state is also applied
 
 **Returns:** `void`
 
-### `addReply(java.lang.String replyComment, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight parentHighlight)`
+### `addReply(String replyComment, AuthorPersistentHighlight parentHighlight)`
 
 If the highlight is the last child of its parent, 
  the reply is added to the parent highlight instead.
@@ -62,7 +62,7 @@ If the highlight is the last child of its parent,
 
 **Returns:** `void`
 
-### `addReply(java.util.Map<java.lang.String,java.lang.String> properties, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight parentHighlight)`
+### `addReply(Map<String,String> properties, AuthorPersistentHighlight parentHighlight)`
 
 The parent highlight can one of the following types: 
  
@@ -94,7 +94,7 @@ The parent highlight can one of the following types:
 
 **Returns:** `void`
 
-### `addComment(int startOffset, int endOffset, java.lang.String comment)`
+### `addComment(int startOffset, int endOffset, String comment)`
 
 An error message is reported if the 
  comment cannot be added.
@@ -106,7 +106,7 @@ An error message is reported if the
 
 **Returns:** `void`
 
-### `addCommentOnSelection(int startOffset, int endOffset, java.lang.String comment)`
+### `addCommentOnSelection(int startOffset, int endOffset, String comment)`
 
 It returns `false` if the comment 
  cannot be added.
@@ -118,7 +118,7 @@ It returns `false` if the comment
 
 **Returns:** `boolean`
 
-### `addPersistentMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, java.util.Map<java.lang.String,java.lang.String> properties)`
+### `addPersistentMarker(AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, Map<String,String> properties)`
 
 It returns `false` if the comment 
  cannot be added.
@@ -133,14 +133,14 @@ It returns `false` if the comment
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)
 
-### `removeComment(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `removeComment(AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)): The comment marker.
 
 **Returns:** `void`
 
-### `editComment(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.lang.String newComment)`
+### `editComment(AuthorPersistentHighlight highlight, String newComment)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../../highlights/AuthorPersistentHighlight.md)): The marker.
@@ -152,7 +152,7 @@ It returns `false` if the comment
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`
 
-### `getAuthorNumber(java.lang.String author)`
+### `getAuthorNumber(String author)`
 
 **Parameters:**
 - `author` (`java.lang.String`): The name of the author.

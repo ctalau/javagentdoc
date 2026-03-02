@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String name, java.lang.String shortDescription)`
+### `<init>(String name, String shortDescription)`
 
 **Parameters:**
 - `name` (`java.lang.String`): The editor variable name. Must not be `null`.

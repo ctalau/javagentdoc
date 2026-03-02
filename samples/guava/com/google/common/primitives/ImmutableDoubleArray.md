@@ -101,31 +101,29 @@ Disadvantages compared to ImmutableList<Double>:
 
 ### `of(double e0)`
 
-**Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
-
 **Parameters:**
 - `e0` (`double`)
 
-### `of(double e0, double e1)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `of(double e0, double e1)`
 
 **Parameters:**
 - `e0` (`double`)
 - `e1` (`double`)
 
-### `of(double e0, double e1, double e2)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `of(double e0, double e1, double e2)`
 
 **Parameters:**
 - `e0` (`double`)
 - `e1` (`double`)
 - `e2` (`double`)
 
-### `of(double e0, double e1, double e2, double e3)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `of(double e0, double e1, double e2, double e3)`
 
 **Parameters:**
 - `e0` (`double`)
@@ -133,9 +131,9 @@ Disadvantages compared to ImmutableList<Double>:
 - `e2` (`double`)
 - `e3` (`double`)
 
-### `of(double e0, double e1, double e2, double e3, double e4)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `of(double e0, double e1, double e2, double e3, double e4)`
 
 **Parameters:**
 - `e0` (`double`)
@@ -144,9 +142,9 @@ Disadvantages compared to ImmutableList<Double>:
 - `e3` (`double`)
 - `e4` (`double`)
 
-### `of(double e0, double e1, double e2, double e3, double e4, double e5)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `of(double e0, double e1, double e2, double e3, double e4, double e5)`
 
 **Parameters:**
 - `e0` (`double`)
@@ -156,9 +154,9 @@ Disadvantages compared to ImmutableList<Double>:
 - `e4` (`double`)
 - `e5` (`double`)
 
-### `of(double first, double[] rest)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `of(double first, double[] rest)`
 
 The array rest must not be longer than Integer.MAX_VALUE - 1.
 
@@ -166,23 +164,23 @@ The array rest must not be longer than Integer.MAX_VALUE - 1.
 - `first` (`double`)
 - `rest` (`double[]`)
 
-### `copyOf(double[] values)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `copyOf(double[] values)`
 
 **Parameters:**
 - `values` (`double[]`)
 
-### `copyOf(java.util.Collection<java.lang.Double> values)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `copyOf(Collection<Double> values)`
 
 **Parameters:**
 - `values` (`java.util.Collection<java.lang.Double>`)
 
-### `copyOf(java.lang.Iterable<java.lang.Double> values)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `copyOf(Iterable<Double> values)`
 
 **Performance note:** this method delegates to #copyOf(Collection) if 
  values is a Collection. Otherwise it creates a #builder and uses Builder#addAll(Iterable), with all the performance implications associated with that.
@@ -190,16 +188,16 @@ The array rest must not be longer than Integer.MAX_VALUE - 1.
 **Parameters:**
 - `values` (`java.lang.Iterable<java.lang.Double>`)
 
-### `copyOf(java.util.stream.DoubleStream stream)`
-
 **Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
+### `copyOf(DoubleStream stream)`
 
 **Parameters:**
 - `stream` (`java.util.stream.DoubleStream`)
 
-### `builder(int initialCapacity)`
+**Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
 
-**Returns:** `com.google.common.primitives.ImmutableDoubleArray.Builder`
+### `builder(int initialCapacity)`
 
 The returned builder is not thread-safe.
 
@@ -212,9 +210,9 @@ The returned builder is not thread-safe.
 **Parameters:**
 - `initialCapacity` (`int`)
 
-### `builder()`
-
 **Returns:** `com.google.common.primitives.ImmutableDoubleArray.Builder`
+
+### `builder()`
 
 The returned builder is not thread-safe.
 
@@ -222,6 +220,8 @@ The returned builder is not thread-safe.
 **Performance note:** The ImmutableDoubleArray that is built will very likely
  occupy more memory than necessary; to trim memory usage, build using 
  builder.build().trimmed().
+
+**Returns:** `com.google.common.primitives.ImmutableDoubleArray.Builder`
 
 ### `length()`
 
@@ -233,14 +233,12 @@ The returned builder is not thread-safe.
 
 ### `get(int index)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `index` (`int`)
 
-### `indexOf(double target)`
+**Returns:** `double`
 
-**Returns:** `int`
+### `indexOf(double target)`
 
 Values are compared as if by Double#equals. Equivalent to 
  asList().indexOf(target).
@@ -248,9 +246,9 @@ Values are compared as if by Double#equals. Equivalent to
 **Parameters:**
 - `target` (`double`)
 
-### `lastIndexOf(double target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(double target)`
 
 Values are compared as if by Double#equals. Equivalent to 
  asList().lastIndexOf(target).
@@ -258,9 +256,9 @@ Values are compared as if by Double#equals. Equivalent to
 **Parameters:**
 - `target` (`double`)
 
-### `contains(double target)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `contains(double target)`
 
 Values are
  compared as if by Double#equals. Equivalent to asList().contains(target).
@@ -268,12 +266,14 @@ Values are
 **Parameters:**
 - `target` (`double`)
 
-### `forEach(java.util.function.DoubleConsumer consumer)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `forEach(DoubleConsumer consumer)`
 
 **Parameters:**
 - `consumer` (`java.util.function.DoubleConsumer`)
+
+**Returns:** `void`
 
 ### `stream()`
 
@@ -285,8 +285,6 @@ Values are
 
 ### `subArray(int startIndex, int endIndex)`
 
-**Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
-
 **Performance note:** The returned array has the same full memory footprint as this one
  does (no actual copying is performed). To reduce memory usage, use subArray(start,
  end).trimmed().
@@ -295,33 +293,35 @@ Values are
 - `startIndex` (`int`)
 - `endIndex` (`int`)
 
+**Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
+
 ### `spliterator()`
 
 **Returns:** `java.util.Spliterator.OfDouble`
 
 ### `asList()`
 
-**Returns:** `java.util.List<java.lang.Double>`
-
 The returned list should be used once and discarded. For any usages beyond that, pass the
  returned list to ImmutableList.copyOf and use that list instead.
 
-### `equals(java.lang.Object object)`
+**Returns:** `java.util.List<java.lang.Double>`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 Values are compared as if by Double#equals.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `areEqual(double a, double b)`
-
 **Returns:** `boolean`
+
+### `areEqual(double a, double b)`
 
 **Parameters:**
 - `a` (`double`)
 - `b` (`double`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -333,12 +333,12 @@ Values are compared as if by Double#equals.
 
 ### `trimmed()`
 
-**Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
-
 This is logically
  a no-op, and in some circumstances this itself is returned. However, if this instance
  is a #subArray view of a larger array, this method will copy only the appropriate range
  of values, resulting in an equivalent array with a smaller memory footprint.
+
+**Returns:** [`com.google.common.primitives.ImmutableDoubleArray`](./ImmutableDoubleArray.md)
 
 ### `isPartialView()`
 

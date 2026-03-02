@@ -55,7 +55,7 @@ Experimentally determined.
 
 ## Constructors
 
-### `<init>(java.util.Map.Entry<K,V>[] entries, com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[] table, int mask)`
+### `<init>(Map.Entry<K,V>[] entries, collect@Nullable ImmutableMapEntry<K,V>[] table, int mask)`
 
 **Parameters:**
 - `entries` (`java.util.Map.Entry<K,V>[]`)
@@ -64,16 +64,14 @@ Experimentally determined.
 
 ## Methods
 
-### `fromEntries(java.util.Map.Entry<K,V>[] entries)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+### `fromEntries(Map.Entry<K,V>[] entries)`
 
 **Parameters:**
 - `entries` (`java.util.Map.Entry<K,V>[]`)
 
-### `fromEntryArray(int n, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray, boolean throwIfDuplicateKeys)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `fromEntryArray(int n, Map@Nullable Entry<K,V>[] entryArray, boolean throwIfDuplicateKeys)`
 
 This implementation may replace
  the entries in entryArray with its own entry objects (though they will have the same key/value
@@ -84,18 +82,18 @@ This implementation may replace
 - `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
 - `throwIfDuplicateKeys` (`boolean`)
 
-### `fromEntryArrayCheckingBucketOverflow(int n, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray, boolean throwIfDuplicateKeys)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `fromEntryArrayCheckingBucketOverflow(int n, Map@Nullable Entry<K,V>[] entryArray, boolean throwIfDuplicateKeys)`
 
 **Parameters:**
 - `n` (`int`)
 - `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
 - `throwIfDuplicateKeys` (`boolean`)
 
-### `removeDuplicates(java.util.Map.Entry<K,V>[] entries, int n, int newN, java.util.IdentityHashMap<java.util.Map.Entry<K,V>,java.lang.Boolean> duplicates)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-**Returns:** `java.util.Map.Entry<K,V>[]`
+### `removeDuplicates(Map.Entry<K,V>[] entries, int n, int newN, IdentityHashMap<Map.Entry<K,V>,Boolean> duplicates)`
 
 The duplicates map is modified.
 
@@ -104,28 +102,28 @@ The duplicates map is modified.
 - `n` (`int`): the number of valid entries in entries
 - `newN` (`int`): the expected number of entries once duplicates are removed
 - `duplicates` (`java.util.IdentityHashMap<java.util.Map.Entry<K,V>,java.lang.Boolean>`): a map of canonical Entry objects for each duplicate key. This map
-     will be updated by the method, setting each value to false as soon as the Entry has
-     been included in the new entry array.
+       will be updated by the method, setting each value to false as soon as the Entry has
+       been included in the new entry array.
 
-### `makeImmutable(java.util.Map.Entry<K,V> entry, K key, V value)`
+**Returns:** `java.util.Map.Entry<K,V>[]`
 
-**Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md)
+### `makeImmutable(Map.Entry<K,V> entry, K key, V value)`
 
 **Parameters:**
 - `entry` (`java.util.Map.Entry<K,V>`)
 - `key` (`K`)
 - `value` (`V`)
 
-### `makeImmutable(java.util.Map.Entry<K,V> entry)`
-
 **Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md)
+
+### `makeImmutable(Map.Entry<K,V> entry)`
 
 **Parameters:**
 - `entry` (`java.util.Map.Entry<K,V>`)
 
-### `checkNoConflictInKeyBucket(java.lang.Object key, java.lang.Object newValue, com.google.common.collect.ImmutableMapEntry<K,V> keyBucketHead, boolean throwIfDuplicateKeys)`
-
 **Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md)
+
+### `checkNoConflictInKeyBucket(Object key, Object newValue, ImmutableMapEntry<K,V> keyBucketHead, boolean throwIfDuplicateKeys)`
 
 If
  it does not, then null is returned. If it does, then if throwIfDuplicateKeys is true an
@@ -138,28 +136,30 @@ If
 - `keyBucketHead` ([`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md))
 - `throwIfDuplicateKeys` (`boolean`)
 
-### `get(java.lang.Object key)`
+**Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md)
 
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `get(java.lang.Object key, com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<?,V>[] keyTable, int mask)`
-
 **Returns:** `V`
+
+### `get(Object key, collect@Nullable ImmutableMapEntry<?,V>[] keyTable, int mask)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `keyTable` (`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<?,V>[]`)
 - `mask` (`int`)
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+**Returns:** `void`
 
 ### `size()`
 

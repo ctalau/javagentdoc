@@ -12,7 +12,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message of the exception.

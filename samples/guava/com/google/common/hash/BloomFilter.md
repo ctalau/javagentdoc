@@ -60,7 +60,7 @@ As of Guava 23.0, this class is thread-safe and lock-free. It internally uses at
 
 ## Constructors
 
-### `<init>(com.google.common.hash.BloomFilterStrategies.LockFreeBitArray bits, int numHashFunctions, com.google.common.hash.Funnel<? super T> funnel, com.google.common.hash.BloomFilter.Strategy strategy)`
+### `<init>(BloomFilterStrategies.LockFreeBitArray bits, int numHashFunctions, Funnel<? super T> funnel, BloomFilter.Strategy strategy)`
 
 **Parameters:**
 - `bits` (`com.google.common.hash.BloomFilterStrategies.LockFreeBitArray`)
@@ -72,56 +72,54 @@ As of Guava 23.0, this class is thread-safe and lock-free. It internally uses at
 
 ### `copy()`
 
-**Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
-
 The new instance is equal to
  this instance but shares no mutable state.
 
-### `mightContain(T object)`
+**Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
 
-**Returns:** `boolean`
+### `mightContain(T object)`
 
 **Parameters:**
 - `object` (`T`)
 
-### `apply(T input)`
-
 **Returns:** `boolean`
+
+### `apply(T input)`
 
 **Parameters:**
 - `input` (`T`)
 
-### `put(T object)`
-
 **Returns:** `boolean`
+
+### `put(T object)`
 
 Ensures that subsequent invocations of #mightContain(Object) with the same element will always return true.
 
 **Parameters:**
 - `object` (`T`)
 
-### `expectedFpp()`
+**Returns:** `boolean`
 
-**Returns:** `double`
+### `expectedFpp()`
 
 Ideally, this number should be close to the fpp parameter passed in #create(Funnel, int, double), or smaller. If it is significantly higher, it is usually the
  case that too many elements (more than expected) have been put in the BloomFilter,
  degenerating it.
 
-### `approximateElementCount()`
+**Returns:** `double`
 
-**Returns:** `long`
+### `approximateElementCount()`
 
 This approximation is reasonably accurate if it does not exceed the value of
  expectedInsertions that was used when constructing the filter.
+
+**Returns:** `long`
 
 ### `bitSize()`
 
 **Returns:** `long`
 
-### `isCompatible(com.google.common.hash.BloomFilter<T> that)`
-
-**Returns:** `boolean`
+### `isCompatible(BloomFilter<T> that)`
 
 For two Bloom
  filters to be compatible, they must:
@@ -137,9 +135,9 @@ For two Bloom
 **Parameters:**
 - `that` ([`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)): The Bloom filter to check for compatibility.
 
-### `putAll(com.google.common.hash.BloomFilter<T> that)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `putAll(BloomFilter<T> that)`
 
 The mutations happen to **this** instance. Callers must ensure the Bloom
  filters are appropriately sized to avoid saturating them.
@@ -147,20 +145,20 @@ The mutations happen to **this** instance. Callers must ensure the Bloom
 **Parameters:**
 - `that` ([`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)): The Bloom filter to combine this Bloom filter with. It is not mutated.
 
-### `equals(java.lang.Object object)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `toBloomFilter(com.google.common.hash.Funnel<? super T> funnel, long expectedInsertions)`
-
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.hash.BloomFilter<T>>`
+### `toBloomFilter(Funnel<? super T> funnel, long expectedInsertions)`
 
 Note that if the Collector receives significantly more elements than specified, the
  resulting BloomFilter will suffer a sharp deterioration of its false positive
@@ -178,11 +176,11 @@ It is recommended that the funnel be implemented as a Java enum. This has the be
 **Parameters:**
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md)): the funnel of T's that the constructed BloomFilter will use
 - `expectedInsertions` (`long`): the number of expected insertions to the constructed 
-     BloomFilter; must be positive
-
-### `toBloomFilter(com.google.common.hash.Funnel<? super T> funnel, long expectedInsertions, double fpp)`
+       BloomFilter; must be positive
 
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.hash.BloomFilter<T>>`
+
+### `toBloomFilter(Funnel<? super T> funnel, long expectedInsertions, double fpp)`
 
 Note that if the Collector receives significantly more elements than specified, the
  resulting BloomFilter will suffer a sharp deterioration of its false positive
@@ -200,12 +198,12 @@ It is recommended that the funnel be implemented as a Java enum. This has the be
 **Parameters:**
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md)): the funnel of T's that the constructed BloomFilter will use
 - `expectedInsertions` (`long`): the number of expected insertions to the constructed 
-     BloomFilter; must be positive
+       BloomFilter; must be positive
 - `fpp` (`double`): the desired false positive probability (must be positive and less than 1.0)
 
-### `create(com.google.common.hash.Funnel<? super T> funnel, int expectedInsertions, double fpp)`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.hash.BloomFilter<T>>`
 
-**Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
+### `create(Funnel<? super T> funnel, int expectedInsertions, double fpp)`
 
 Note that overflowing a BloomFilter with significantly more elements than specified,
  will result in its saturation, and a sharp deterioration of its false positive probability.
@@ -222,12 +220,12 @@ It is recommended that the funnel be implemented as a Java enum. This has the be
 **Parameters:**
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md)): the funnel of T's that the constructed BloomFilter will use
 - `expectedInsertions` (`int`): the number of expected insertions to the constructed 
-     BloomFilter; must be positive
+       BloomFilter; must be positive
 - `fpp` (`double`): the desired false positive probability (must be positive and less than 1.0)
 
-### `create(com.google.common.hash.Funnel<? super T> funnel, long expectedInsertions, double fpp)`
-
 **Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
+
+### `create(Funnel<? super T> funnel, long expectedInsertions, double fpp)`
 
 Note that overflowing a BloomFilter with significantly more elements than specified,
  will result in its saturation, and a sharp deterioration of its false positive probability.
@@ -244,12 +242,12 @@ It is recommended that the funnel be implemented as a Java enum. This has the be
 **Parameters:**
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md)): the funnel of T's that the constructed BloomFilter will use
 - `expectedInsertions` (`long`): the number of expected insertions to the constructed 
-     BloomFilter; must be positive
+       BloomFilter; must be positive
 - `fpp` (`double`): the desired false positive probability (must be positive and less than 1.0)
 
-### `create(com.google.common.hash.Funnel<? super T> funnel, long expectedInsertions, double fpp, com.google.common.hash.BloomFilter.Strategy strategy)`
-
 **Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
+
+### `create(Funnel<? super T> funnel, long expectedInsertions, double fpp, BloomFilter.Strategy strategy)`
 
 **Parameters:**
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md))
@@ -257,9 +255,9 @@ It is recommended that the funnel be implemented as a Java enum. This has the be
 - `fpp` (`double`)
 - `strategy` (`com.google.common.hash.BloomFilter.Strategy`)
 
-### `create(com.google.common.hash.Funnel<? super T> funnel, int expectedInsertions)`
-
 **Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
+
+### `create(Funnel<? super T> funnel, int expectedInsertions)`
 
 Note that overflowing a BloomFilter with significantly more elements than specified,
  will result in its saturation, and a sharp deterioration of its false positive probability.
@@ -276,11 +274,11 @@ It is recommended that the funnel be implemented as a Java enum. This has the be
 **Parameters:**
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md)): the funnel of T's that the constructed BloomFilter will use
 - `expectedInsertions` (`int`): the number of expected insertions to the constructed 
-     BloomFilter; must be positive
-
-### `create(com.google.common.hash.Funnel<? super T> funnel, long expectedInsertions)`
+       BloomFilter; must be positive
 
 **Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
+
+### `create(Funnel<? super T> funnel, long expectedInsertions)`
 
 Note that overflowing a BloomFilter with significantly more elements than specified,
  will result in its saturation, and a sharp deterioration of its false positive probability.
@@ -297,11 +295,11 @@ It is recommended that the funnel be implemented as a Java enum. This has the be
 **Parameters:**
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md)): the funnel of T's that the constructed BloomFilter will use
 - `expectedInsertions` (`long`): the number of expected insertions to the constructed 
-     BloomFilter; must be positive
+       BloomFilter; must be positive
+
+**Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
 
 ### `optimalNumOfHashFunctions(long n, long m)`
-
-**Returns:** `int`
 
 See http://en.wikipedia.org/wiki/File:Bloom_filter_fp_probability.svg for the formula.
 
@@ -309,9 +307,9 @@ See http://en.wikipedia.org/wiki/File:Bloom_filter_fp_probability.svg for the fo
 - `n` (`long`): expected insertions (must be positive)
 - `m` (`long`): total number of bits in Bloom filter (must be positive)
 
-### `optimalNumOfBits(long n, double p)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `optimalNumOfBits(long n, double p)`
 
 See http://en.wikipedia.org/wiki/Bloom_filter#Probability_of_false_positives for the
  formula.
@@ -320,20 +318,20 @@ See http://en.wikipedia.org/wiki/Bloom_filter#Probability_of_false_positives for
 - `n` (`long`): expected insertions (must be positive)
 - `p` (`double`): false positive rate (must be 0 < p < 1)
 
+**Returns:** `long`
+
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
 
-### `writeTo(java.io.OutputStream out)`
-
 **Returns:** `void`
+
+### `writeTo(OutputStream out)`
 
 This has been measured to save at least 400 bytes compared to regular
  serialization.
@@ -344,9 +342,9 @@ Use #readFrom(InputStream, Funnel) to reconstruct the written BloomFilter.
 **Parameters:**
 - `out` (`java.io.OutputStream`)
 
-### `readFrom(java.io.InputStream in, com.google.common.hash.Funnel<? super T> funnel)`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
+### `readFrom(InputStream in, Funnel<? super T> funnel)`
 
 The Funnel to be used is not encoded in the stream, so it must be provided here.
  **Warning:** the funnel provided **must** behave identically to the one used to populate
@@ -355,4 +353,6 @@ The Funnel to be used is not encoded in the stream, so it must be provided here.
 **Parameters:**
 - `in` (`java.io.InputStream`)
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md))
+
+**Returns:** [`com.google.common.hash.BloomFilter<T>`](./BloomFilter.md)
 

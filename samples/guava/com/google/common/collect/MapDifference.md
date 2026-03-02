@@ -33,9 +33,7 @@
 
 **Returns:** `java.util.Map<K,com.google.common.collect.MapDifference.ValueDifference<V>>`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 Returns true if the
  given object is also a MapDifference and the values returned by the #entriesOnlyOnLeft(), #entriesOnlyOnRight(), #entriesInCommon() and #entriesDiffering() of the two instances are equal.
@@ -43,9 +41,9 @@ Returns true if the
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 This is defined as the hash code of
 
@@ -57,4 +55,6 @@ This is defined as the hash code of
      entriesInCommon(), entriesDiffering())
  
 ```
+
+**Returns:** `int`
 

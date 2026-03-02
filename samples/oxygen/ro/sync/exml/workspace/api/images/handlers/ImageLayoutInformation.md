@@ -52,7 +52,7 @@ No base line information is given.
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

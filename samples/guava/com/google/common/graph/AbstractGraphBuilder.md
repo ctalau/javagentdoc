@@ -38,5 +38,5 @@
 
 **Parameters:**
 - `directed` (`boolean`): if true, creates an instance for graphs whose edges are each directed; if
-     false, creates an instance for graphs whose edges are each undirected.
+       false, creates an instance for graphs whose edges are each undirected.
 

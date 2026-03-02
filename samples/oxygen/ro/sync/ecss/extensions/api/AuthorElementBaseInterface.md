@@ -26,14 +26,14 @@ The element is mapped into the content
 
 **Returns:** `java.lang.String`
 
-### `hasPseudoClass(java.lang.String name)`
+### `hasPseudoClass(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`): The name of the pseudo class. Let say :hover, :active, etc..
 
 **Returns:** `boolean`
 
-### `setPseudoClass(java.lang.String name)`
+### `setPseudoClass(String name)`
 
 **Warning:** Use this only when the element is from an AuthorDocumentFragment and not from 
  the current AuthorDocument content.
@@ -47,7 +47,7 @@ The element is mapped into the content
 
 **Returns:** `void`
 
-### `removePseudoClass(java.lang.String name)`
+### `removePseudoClass(String name)`
 
 **Warning:** Use this only when the element is from an AuthorDocumentFragment and not from 
  the current AuthorDocument content.

@@ -86,28 +86,28 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0)`
+### `<init>(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 ## Methods
 
-### `getTemplateType(java.io.File arg0)`
+### `getTemplateType(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 
 **Returns:** `int`
 
-### `getTemplateType(java.lang.String arg0)`
+### `getTemplateType(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `int`
 
-### `setMainProperties(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5)`
+### `setMainProperties(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -171,7 +171,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setLongDescriptionProvider(ro.sync.template.e arg0, ro.sync.template.BaseAbstractTemplate arg1)`
+### `setLongDescriptionProvider(e arg0, BaseAbstractTemplate arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.template.e`)

@@ -57,17 +57,15 @@ Only needs forwardMultiset() and
 
 **Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-### `headMultiset(E toElement, com.google.common.collect.BoundType boundType)`
-
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+### `headMultiset(E toElement, BoundType boundType)`
 
 **Parameters:**
 - `toElement` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `subMultiset(E fromElement, com.google.common.collect.BoundType fromBoundType, E toElement, com.google.common.collect.BoundType toBoundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `subMultiset(E fromElement, BoundType fromBoundType, E toElement, BoundType toBoundType)`
 
 **Parameters:**
 - `fromElement` (`E`)
@@ -75,13 +73,15 @@ Only needs forwardMultiset() and
 - `toElement` (`E`)
 - `toBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `tailMultiset(E fromElement, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `tailMultiset(E fromElement, BoundType boundType)`
 
 **Parameters:**
 - `fromElement` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
 ### `delegate()`
 
@@ -121,10 +121,10 @@ Only needs forwardMultiset() and
 
 ### `toArray(T[] array)`
 
-**Returns:** `T[]`
-
 **Parameters:**
 - `array` (`T[]`)
+
+**Returns:** `T[]`
 
 ### `toString()`
 

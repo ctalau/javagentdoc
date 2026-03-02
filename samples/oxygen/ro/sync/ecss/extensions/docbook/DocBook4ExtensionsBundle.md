@@ -68,7 +68,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.table.operations.AuthorTableOperationsHandler`](../api/table/operations/AuthorTableOperationsHandler.md)
 
-### `getHelpPageID(java.lang.String currentEditorPage)`
+### `getHelpPageID(String currentEditorPage)`
 
 **Parameters:**
 - `currentEditorPage` (`java.lang.String`)

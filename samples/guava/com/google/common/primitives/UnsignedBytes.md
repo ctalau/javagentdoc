@@ -33,8 +33,6 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `toInt(byte value)`
 
-**Returns:** `int`
-
 That is, returns
  value + 256 if value is negative; value itself otherwise.
 
@@ -44,23 +42,23 @@ That is, returns
 **Parameters:**
 - `value` (`byte`)
 
-### `checkedCast(long value)`
+**Returns:** `int`
 
-**Returns:** `byte`
+### `checkedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): a value between 0 and 255 inclusive
 
-### `saturatedCast(long value)`
-
 **Returns:** `byte`
+
+### `saturatedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any long value
 
-### `compare(byte a, byte b)`
+**Returns:** `byte`
 
-**Returns:** `int`
+### `compare(byte a, byte b)`
 
 For example, (byte) -127 is considered greater than (byte) 127
  because it is seen as having the value of positive 129.
@@ -69,65 +67,65 @@ For example, (byte) -127 is considered greater than (byte) 127
 - `a` (`byte`): the first byte to compare
 - `b` (`byte`): the second byte to compare
 
-### `min(byte[] array)`
+**Returns:** `int`
 
-**Returns:** `byte`
+### `min(byte[] array)`
 
 **Parameters:**
 - `array` (`byte[]`): a *nonempty* array of byte values
+
+**Returns:** `byte`
 
 ### `max(byte[] array)`
 
-**Returns:** `byte`
-
 **Parameters:**
 - `array` (`byte[]`): a *nonempty* array of byte values
 
-### `toString(byte x)`
+**Returns:** `byte`
 
-**Returns:** `java.lang.String`
+### `toString(byte x)`
 
 **Parameters:**
 - `x` (`byte`)
 
-### `toString(byte x, int radix)`
-
 **Returns:** `java.lang.String`
+
+### `toString(byte x, int radix)`
 
 **Parameters:**
 - `x` (`byte`): the value to convert to a string.
 - `radix` (`int`): the radix to use while working with x
 
-### `parseUnsignedByte(java.lang.String string)`
+**Returns:** `java.lang.String`
 
-**Returns:** `byte`
+### `parseUnsignedByte(String string)`
 
 **Parameters:**
 - `string` (`java.lang.String`)
 
-### `parseUnsignedByte(java.lang.String string, int radix)`
-
 **Returns:** `byte`
+
+### `parseUnsignedByte(String string, int radix)`
 
 **Parameters:**
 - `string` (`java.lang.String`): the string containing the unsigned byte representation to be parsed.
 - `radix` (`int`): the radix to use while parsing string
 
-### `join(java.lang.String separator, byte[] array)`
+**Returns:** `byte`
 
-**Returns:** `java.lang.String`
+### `join(String separator, byte[] array)`
 
 For example, join(":", (byte) 1, (byte) 2, (byte) 255) returns the string 
  "1:2:255".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`byte[]`): an array of byte values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<byte[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(byte, byte)), the first pair of values that follow any common
@@ -139,46 +137,48 @@ That is, it
 The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with java.util.Arrays#equals(byte[], byte[]).
 
+**Returns:** `java.util.Comparator<byte[]>`
+
 ### `lexicographicalComparatorJavaImpl()`
 
 **Returns:** `java.util.Comparator<byte[]>`
 
 ### `flip(byte b)`
 
-**Returns:** `byte`
-
 **Parameters:**
 - `b` (`byte`)
 
-### `sort(byte[] array)`
+**Returns:** `byte`
 
-**Returns:** `void`
+### `sort(byte[] array)`
 
 **Parameters:**
 - `array` (`byte[]`)
+
+**Returns:** `void`
 
 ### `sort(byte[] array, int fromIndex, int toIndex)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `array` (`byte[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
+
+**Returns:** `void`
 
 ### `sortDescending(byte[] array)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `array` (`byte[]`)
 
-### `sortDescending(byte[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(byte[] array, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `array` (`byte[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
+
+**Returns:** `void`
 

@@ -41,82 +41,82 @@ The #count and #size implementations all iterate across the set returned by
 
 **Returns:** `boolean`
 
-### `contains(java.lang.Object element)`
-
-**Returns:** `boolean`
+### `contains(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `add(E element)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `boolean`
 
 ### `add(E element, int occurrences)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `element` (`E`)
 - `occurrences` (`int`)
 
-### `remove(java.lang.Object element)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `remove(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `remove(java.lang.Object element, int occurrences)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `remove(Object element, int occurrences)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 - `occurrences` (`int`)
 
-### `setCount(E element, int count)`
-
 **Returns:** `int`
+
+### `setCount(E element, int count)`
 
 **Parameters:**
 - `element` (`E`)
 - `count` (`int`)
 
-### `setCount(E element, int oldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `setCount(E element, int oldCount, int newCount)`
 
 **Parameters:**
 - `element` (`E`)
 - `oldCount` (`int`)
 - `newCount` (`int`)
 
-### `addAll(java.util.Collection<? extends E> elementsToAdd)`
-
 **Returns:** `boolean`
+
+### `addAll(Collection<? extends E> elementsToAdd)`
 
 This implementation is highly efficient when elementsToAdd is itself a Multiset.
 
 **Parameters:**
 - `elementsToAdd` (`java.util.Collection<? extends E>`)
 
-### `removeAll(java.util.Collection<?> elementsToRemove)`
-
 **Returns:** `boolean`
+
+### `removeAll(Collection<?> elementsToRemove)`
 
 **Parameters:**
 - `elementsToRemove` (`java.util.Collection<?>`)
 
-### `retainAll(java.util.Collection<?> elementsToRetain)`
-
 **Returns:** `boolean`
+
+### `retainAll(Collection<?> elementsToRetain)`
 
 **Parameters:**
 - `elementsToRetain` (`java.util.Collection<?>`)
+
+**Returns:** `boolean`
 
 ### `clear()`
 
@@ -150,9 +150,7 @@ This implementation is highly efficient when elementsToAdd is itself a Multiset.
 
 **Returns:** `int`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 This implementation returns true if object is a multiset of the same size
  and if, for each element, the two multisets have the same count.
@@ -160,15 +158,17 @@ This implementation returns true if object is a multiset of the same size
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 This implementation returns the hash code of Multiset#entrySet().
 
+**Returns:** `int`
+
 ### `toString()`
 
-**Returns:** `java.lang.String`
-
 This implementation returns the result of invoking toString on Multiset#entrySet().
+
+**Returns:** `java.lang.String`
 

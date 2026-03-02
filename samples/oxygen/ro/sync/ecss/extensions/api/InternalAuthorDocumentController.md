@@ -23,7 +23,7 @@
 
 **Returns:** `boolean`
 
-### `createContentReferenceNode(java.lang.String arg0, java.lang.String arg1)`
+### `createContentReferenceNode(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -35,14 +35,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorReferenceNode`](node/AuthorReferenceNode.md)
 
-### `unwrapRaw(ro.sync.ecss.extensions.api.node.AuthorParentNode arg0)`
+### `unwrapRaw(AuthorParentNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](node/AuthorParentNode.md))
 
 **Returns:** `void`
 
-### `setCommentIdRaw(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight arg0, java.lang.String arg1)`
+### `setCommentIdRaw(AuthorPersistentHighlight arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md))
@@ -50,7 +50,7 @@
 
 **Returns:** `void`
 
-### `addChangeMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType arg0, int arg1, int arg2, java.util.LinkedHashMap<java.lang.String,java.lang.String> arg3)`
+### `addChangeMarker(AuthorPersistentHighlight.PersistentHighlightType arg0, int arg1, int arg2, LinkedHashMap<String,String> arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType`)
@@ -60,14 +60,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)
 
-### `addSelectionMarkListener(ro.sync.ecss.extensions.api.SelectionMarkListener arg0)`
+### `addSelectionMarkListener(SelectionMarkListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.SelectionMarkListener`](./SelectionMarkListener.md))
 
 **Returns:** `void`
 
-### `removeSelectionMarkListener(ro.sync.ecss.extensions.api.SelectionMarkListener arg0)`
+### `removeSelectionMarkListener(SelectionMarkListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.SelectionMarkListener`](./SelectionMarkListener.md))
@@ -81,7 +81,7 @@
 
 **Returns:** `void`
 
-### `setMarkerSerializationHandler(ro.sync.ecss.extensions.api.MarkerSerializationHandler arg0)`
+### `setMarkerSerializationHandler(MarkerSerializationHandler arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.MarkerSerializationHandler`](./MarkerSerializationHandler.md))
@@ -92,7 +92,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorUndoManager`](./AuthorUndoManager.md)
 
-### `setFinalDocumentFilter(ro.sync.ecss.extensions.api.AuthorDocumentFilter arg0)`
+### `setFinalDocumentFilter(AuthorDocumentFilter arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentFilter`](./AuthorDocumentFilter.md))

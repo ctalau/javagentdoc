@@ -40,7 +40,7 @@ For example for "Row(s)"
 
 ## Constructors
 
-### `<init>(java.lang.String key, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes)`
+### `<init>(String key, List<TableProperty> properties, List<AuthorElement> nodes)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The tab key name. If no translation for the tab, then it represents the name
@@ -48,7 +48,7 @@ For example for "Row(s)"
 - `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The list with the properties which will be presented in the current tab.
 - `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The nodes whose properties will be edited.
 
-### `<init>(java.lang.String key, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes, java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragmentsToInsert, javax.swing.text.Position[] offsets)`
+### `<init>(String key, List<TableProperty> properties, List<AuthorElement> nodes, List<AuthorDocumentFragment> fragmentsToInsert, Position[] offsets)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The tab key name. If no translation for the tab, then it represents the name
@@ -58,7 +58,7 @@ For example for "Row(s)"
 - `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The list of AuthorDocumentFragments to be inserted.
 - `offsets` (`javax.swing.text.Position[]`): The offsets where the new fragments will be inserted.
 
-### `<init>(java.lang.String key, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes, java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragmentsToInsert, javax.swing.text.Position[] offsets, java.lang.String contextInfo)`
+### `<init>(String key, List<TableProperty> properties, List<AuthorElement> nodes, List<AuthorDocumentFragment> fragmentsToInsert, Position[] offsets, String contextInfo)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The tab key name. If no translation for the tab, 
@@ -78,7 +78,7 @@ If no translation for the tab, then it represents the name
 
 **Returns:** `java.lang.String`
 
-### `setTabKey(java.lang.String tabKey)`
+### `setTabKey(String tabKey)`
 
 If no translation for the tab, then it represents the name
  of the tab.
@@ -92,7 +92,7 @@ If no translation for the tab, then it represents the name
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`
 
-### `setProperties(java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty> properties)`
+### `setProperties(List<TableProperty> properties)`
 
 **Parameters:**
 - `properties` (`java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`): The new properties to set.
@@ -103,7 +103,7 @@ If no translation for the tab, then it represents the name
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `setNodes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodes)`
+### `setNodes(List<AuthorElement> nodes)`
 
 **Parameters:**
 - `nodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`): The new list of nodes to set.
@@ -114,7 +114,7 @@ If no translation for the tab, then it represents the name
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`
 
-### `setFragmentsToInsert(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragmentsToInsert)`
+### `setFragmentsToInsert(List<AuthorDocumentFragment> fragmentsToInsert)`
 
 **Parameters:**
 - `fragmentsToInsert` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`): The fragments which will be inserted in the document.
@@ -125,7 +125,7 @@ If no translation for the tab, then it represents the name
 
 **Returns:** `javax.swing.text.Position[]`
 
-### `setInsertOffsets(javax.swing.text.Position[] positions)`
+### `setInsertOffsets(Position[] positions)`
 
 **Parameters:**
 - `positions` (`javax.swing.text.Position[]`): The position where the fragments will be inserted.
@@ -136,7 +136,7 @@ If no translation for the tab, then it represents the name
 
 **Returns:** `java.lang.String`
 
-### `setContextInfo(java.lang.String contextInfo)`
+### `setContextInfo(String contextInfo)`
 
 **Parameters:**
 - `contextInfo` (`java.lang.String`): The context information to set.

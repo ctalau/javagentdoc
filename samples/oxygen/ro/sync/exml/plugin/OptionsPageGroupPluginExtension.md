@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `addOptionPagePluginExtension(ro.sync.exml.plugin.option.OptionPagePluginExtension optionPageExtension)`
+### `addOptionPagePluginExtension(OptionPagePluginExtension optionPageExtension)`
 
 **Parameters:**
 - `optionPageExtension` ([`ro.sync.exml.plugin.option.OptionPagePluginExtension`](option/OptionPagePluginExtension.md)): The option page plugin extension to be added in the group.

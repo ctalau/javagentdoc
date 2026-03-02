@@ -14,21 +14,21 @@
 
 ## Methods
 
-### `isInlineNodeTransparentForSpellChecking(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isInlineNodeTransparentForSpellChecking(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `isUiControlInsideMenuCascade(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
+### `isUiControlInsideMenuCascade(AuthorElement elem)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The element.
 
 **Returns:** `boolean`
 
-### `isInsideProdInfo(ro.sync.ecss.extensions.api.node.AuthorElement elem)`
+### `isInsideProdInfo(AuthorElement elem)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The element.

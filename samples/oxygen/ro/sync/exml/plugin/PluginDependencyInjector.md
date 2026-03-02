@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `injectDependencies(java.lang.Object arg0, ro.sync.exml.plugin.PluginDescriptor arg1)`
+### `injectDependencies(Object arg0, PluginDescriptor arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -24,7 +24,7 @@
 
 **Returns:** `void`
 
-### `c(java.lang.Object arg0, ro.sync.exml.plugin.PluginDescriptor arg1, java.lang.reflect.Field arg2)`
+### `c(Object arg0, PluginDescriptor arg1, Field arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)

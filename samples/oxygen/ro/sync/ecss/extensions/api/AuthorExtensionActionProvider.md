@@ -6,14 +6,14 @@
 
 ## Methods
 
-### `getExtensionAction(java.lang.String arg0)`
+### `getExtensionAction(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](editor/IAuthorExtensionAction.md)
 
-### `getExtensionAction(ro.sync.ecss.css.functions.lc arg0)`
+### `getExtensionAction(lc arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.css.functions.lc`)

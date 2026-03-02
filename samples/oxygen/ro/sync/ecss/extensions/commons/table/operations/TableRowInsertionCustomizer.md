@@ -22,7 +22,7 @@ Session level persistence.
 
 ## Methods
 
-### `customizeTableRowInsertion(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizeTableRowInsertion(AuthorAccess authorAccess)`
 
 A table row insertion customizer dialog is shown, giving the possibility to choose the 
  properties of the new row(s) to be inserted in the document. An object containing 
@@ -33,7 +33,7 @@ A table row insertion customizer dialog is shown, giving the possibility to choo
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md)
 
-### `showCustomTableRowInsertionDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `showCustomTableRowInsertionDialog(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The Author access.

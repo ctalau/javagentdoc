@@ -22,12 +22,12 @@
 
 **Returns:** [`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md)
 
-### `contains(java.lang.Object target)`
-
-**Returns:** `boolean`
+### `contains(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `size()`
 
@@ -41,12 +41,12 @@
 
 **Returns:** `boolean`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 
 ### `writeReplace()`
 

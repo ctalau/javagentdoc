@@ -30,7 +30,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.hash.ImmutableSupplier<? extends java.util.zip.Checksum> checksumSupplier, int bits, java.lang.String toString)`
+### `<init>(ImmutableSupplier<? extends Checksum> checksumSupplier, int bits, String toString)`
 
 **Parameters:**
 - `checksumSupplier` ([`com.google.common.hash.ImmutableSupplier<? extends java.util.zip.Checksum>`](./ImmutableSupplier.md))

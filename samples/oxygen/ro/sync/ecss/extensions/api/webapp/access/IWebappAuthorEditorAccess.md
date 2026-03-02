@@ -21,7 +21,7 @@ If the modified status was set to true during a "compound edit" AuthorDocumentCo
 
 **Returns:** `boolean`
 
-### `changeActiveCssGroups(java.util.Set<java.lang.String> titles)`
+### `changeActiveCssGroups(Set<String> titles)`
 
 Each CSS file have a title associated with it.
  

@@ -34,7 +34,7 @@
 
 ## Methods
 
-### `init(javax.servlet.ServletConfig arg0)`
+### `init(ServletConfig arg0)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.ServletConfig`)
@@ -45,7 +45,7 @@
 
 **Returns:** `void`
 
-### `service(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `service(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)
@@ -53,7 +53,7 @@
 
 **Returns:** `void`
 
-### `doGet(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `doGet(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)
@@ -61,7 +61,7 @@
 
 **Returns:** `void`
 
-### `doPost(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `doPost(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)
@@ -69,7 +69,7 @@
 
 **Returns:** `void`
 
-### `doPut(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `doPut(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)
@@ -77,7 +77,7 @@
 
 **Returns:** `void`
 
-### `doDelete(javax.servlet.http.HttpServletRequest arg0, javax.servlet.http.HttpServletResponse arg1)`
+### `doDelete(HttpServletRequest arg0, HttpServletResponse arg1)`
 
 **Parameters:**
 - `arg0` (`javax.servlet.http.HttpServletRequest`)

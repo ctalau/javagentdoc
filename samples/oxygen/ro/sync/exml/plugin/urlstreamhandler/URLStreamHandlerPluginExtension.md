@@ -22,7 +22,7 @@ This plugin extension can provide URL stream handlers for multiple protocols, ot
 
 ## Methods
 
-### `getURLStreamHandler(java.lang.String protocol)`
+### `getURLStreamHandler(String protocol)`
 
 **Parameters:**
 - `protocol` (`java.lang.String`): The name of the protocol.

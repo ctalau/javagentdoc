@@ -14,7 +14,7 @@
 
 ## Constructors
 
-### `<init>(java.io.Writer arg0, java.util.Map<java.lang.String,java.lang.String> arg1)`
+### `<init>(Writer arg0, Map<String,String> arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
@@ -22,7 +22,7 @@
 
 ## Methods
 
-### `startPrefixMapping(java.lang.String arg0, java.lang.String arg1)`
+### `startPrefixMapping(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -30,7 +30,7 @@
 
 **Returns:** `void`
 
-### `startElement(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, org.xml.sax.Attributes arg3)`
+### `startElement(String arg0, String arg1, String arg2, Attributes arg3)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -40,7 +40,7 @@
 
 **Returns:** `void`
 
-### `endElement(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+### `endElement(String arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -49,7 +49,7 @@
 
 **Returns:** `void`
 
-### `b(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+### `b(String arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

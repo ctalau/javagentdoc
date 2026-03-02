@@ -44,50 +44,50 @@
 
 ### `nextDown(double d)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `d` (`double`)
+
+**Returns:** `double`
 
 ### `getSignificand(double d)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `d` (`double`)
+
+**Returns:** `long`
 
 ### `isFinite(double d)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `d` (`double`)
+
+**Returns:** `boolean`
 
 ### `isNormal(double d)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `d` (`double`)
 
-### `scaleNormalize(double x)`
+**Returns:** `boolean`
 
-**Returns:** `double`
+### `scaleNormalize(double x)`
 
 **Parameters:**
 - `x` (`double`)
 
-### `bigToDouble(java.math.BigInteger x)`
-
 **Returns:** `double`
+
+### `bigToDouble(BigInteger x)`
 
 **Parameters:**
 - `x` (`java.math.BigInteger`)
 
-### `ensureNonNegative(double value)`
-
 **Returns:** `double`
+
+### `ensureNonNegative(double value)`
 
 **Parameters:**
 - `value` (`double`)
+
+**Returns:** `double`
 

@@ -66,7 +66,7 @@ The `PrintWriter`
 
 **Returns:** `java.io.PrintWriter`
 
-### `setCharacterEncoding(java.lang.String encoding)`
+### `setCharacterEncoding(String encoding)`
 
 If the
  response character encoding has already been set by ServletContext#setResponseCharacterEncoding, the
@@ -107,7 +107,7 @@ If the
 
 **Returns:** `void`
 
-### `setCharacterEncoding(java.nio.charset.Charset encoding)`
+### `setCharacterEncoding(Charset encoding)`
 
 If the
  response character encoding has already been set by ServletContext#setResponseCharacterEncoding, the
@@ -163,7 +163,7 @@ This method may be called repeatedly to change the content length. This method h
 
 **Returns:** `void`
 
-### `setContentType(java.lang.String type)`
+### `setContentType(String type)`
 
 The given
  content type may include a character encoding specification, for example, `text/html;charset=UTF-8`. The
@@ -259,7 +259,7 @@ The state of calling
 
 **Returns:** `void`
 
-### `setLocale(java.util.Locale loc)`
+### `setLocale(Locale loc)`
 
 It also sets the response's character
  encoding appropriately for the locale, if the character encoding has not been explicitly set using

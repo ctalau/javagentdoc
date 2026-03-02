@@ -50,8 +50,6 @@ Popular escapers are defined as constants in classes like com.google.common.html
 
 ### `escape(int cp)`
 
-**Returns:** `char[]`
-
 When called as part of an escaping operation, the given code point
  is guaranteed to be in the range 0 <= cp <= Character#MAX_CODE_POINT.
 
@@ -72,9 +70,9 @@ If the implementation of this method cannot correctly handle a particular code p
 **Parameters:**
 - `cp` (`int`): the Unicode code point to escape if necessary
 
-### `escape(java.lang.String string)`
+**Returns:** `char[]`
 
-**Returns:** `java.lang.String`
+### `escape(String string)`
 
 If you are escaping input in arbitrary successive chunks, then it is not generally safe to
  use this method. If an input string ends with an unmatched high surrogate character, then this
@@ -89,9 +87,9 @@ If you are escaping input in arbitrary successive chunks, then it is not general
 **Parameters:**
 - `string` (`java.lang.String`): the literal string to be escaped
 
-### `nextEscapeIndex(java.lang.CharSequence csq, int start, int end)`
+**Returns:** `java.lang.String`
 
-**Returns:** `int`
+### `nextEscapeIndex(CharSequence csq, int start, int end)`
 
 **Note:** When implementing an escaper, it is a good idea to override this method for
  efficiency. The base class implementation determines successive Unicode code points and invokes
@@ -112,9 +110,9 @@ See com.google.common.net.PercentEscaper for an example.
 - `start` (`int`): the index of the first character to be scanned
 - `end` (`int`): the index immediately after the last character to be scanned
 
-### `escapeSlow(java.lang.String s, int index)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `escapeSlow(String s, int index)`
 
 This method is
  called by the #escape(String) method when it discovers that escaping is required. It is
@@ -128,9 +126,9 @@ This method is not reentrant and may only be invoked by the top level #escape(St
 - `s` (`java.lang.String`): the literal string to be escaped
 - `index` (`int`): the index to start escaping from
 
-### `codePointAt(java.lang.CharSequence seq, int index, int end)`
+**Returns:** `java.lang.String`
 
-**Returns:** `int`
+### `codePointAt(CharSequence seq, int index, int end)`
 
 Unlike Character#codePointAt(CharSequence, int) or String#codePointAt(int)
  this method will never fail silently when encountering an invalid surrogate pair.
@@ -161,9 +159,9 @@ The behaviour of this method is as follows:
 - `index` (`int`): the index of the first character to decode
 - `end` (`int`): the index beyond the last valid character to decode
 
-### `growBuffer(char[] dest, int index, int size)`
+**Returns:** `int`
 
-**Returns:** `char[]`
+### `growBuffer(char[] dest, int index, int size)`
 
 If the index passed in is 0 then no copying will be done.
 
@@ -171,4 +169,6 @@ If the index passed in is 0 then no copying will be done.
 - `dest` (`char[]`)
 - `index` (`int`)
 - `size` (`int`)
+
+**Returns:** `char[]`
 

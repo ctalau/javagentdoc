@@ -36,7 +36,7 @@
 
 **Returns:** `void`
 
-### `setObjectProperty(java.lang.String arg0, java.lang.Object arg1)`
+### `setObjectProperty(String arg0, Object arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -44,7 +44,7 @@
 
 **Returns:** `void`
 
-### `createEditorComponentProvider(java.lang.String[] arg0, java.lang.String arg1, java.lang.String arg2)`
+### `createEditorComponentProvider(String[] arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
@@ -61,21 +61,21 @@
 
 **Returns:** `void`
 
-### `disposeEditorComponentProvider(ro.sync.ecss.extensions.api.component.EditorComponentProvider arg0)`
+### `disposeEditorComponentProvider(EditorComponentProvider arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.EditorComponentProvider`](./EditorComponentProvider.md))
 
 **Returns:** `void`
 
-### `setOpenURLHandler(ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler arg0)`
+### `setOpenURLHandler(OpenURLHandler arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.OpenURLHandler`](listeners/OpenURLHandler.md))
 
 **Returns:** `void`
 
-### `goToReference(java.net.URL arg0)`
+### `goToReference(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)

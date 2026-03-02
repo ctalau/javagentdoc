@@ -46,7 +46,7 @@ The value is `insertPosition`.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -54,14 +54,14 @@ The value is `insertPosition`.
 
 **Returns:** `void`
 
-### `getFrameworkFolder(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getFrameworkFolder(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
 
 **Returns:** `java.io.File`
 
-### `createTopicAndInsertReference(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments arguments)`
+### `createTopicAndInsertReference(AuthorAccess authorAccess, CreateAndInsertTopicRef.Arguments arguments)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access of the map.
@@ -69,7 +69,7 @@ The value is `insertPosition`.
 
 **Returns:** `void`
 
-### `createTopic(java.net.URL folderUrl, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+### `createTopic(URL folderUrl, CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `folderUrl` (`java.net.URL`): The URL where to create the topic.
@@ -77,35 +77,35 @@ The value is `insertPosition`.
 
 **Returns:** `java.net.URL`
 
-### `getContentForNewTopic(ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+### `getContentForNewTopic(CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `args` (`ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments`): The operation arguments.
 
 **Returns:** `java.lang.String`
 
-### `proposeFolderUrl(ro.sync.ecss.extensions.api.AuthorAccess access)`
+### `proposeFolderUrl(AuthorAccess access)`
 
 **Parameters:**
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
 
 **Returns:** `java.net.URL`
 
-### `getFolderOfMap(ro.sync.ecss.extensions.api.AuthorAccess access)`
+### `getFolderOfMap(AuthorAccess access)`
 
 **Parameters:**
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access for the map.
 
 **Returns:** `java.net.URL`
 
-### `getReferenceNodeOfInsertionPosition(ro.sync.ecss.extensions.api.AuthorAccess access)`
+### `getReferenceNodeOfInsertionPosition(AuthorAccess access)`
 
 **Parameters:**
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)
 
-### `getTopicUrl(java.net.URL folderUrl, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+### `getTopicUrl(URL folderUrl, CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `folderUrl` (`java.net.URL`): The folder URL.
@@ -113,7 +113,7 @@ The value is `insertPosition`.
 
 **Returns:** `java.net.URL`
 
-### `getFolderUrl(java.net.URL editorLocation, ro.sync.ecss.extensions.dita.map.topicref.CreateAndInsertTopicRef.Arguments args)`
+### `getFolderUrl(URL editorLocation, CreateAndInsertTopicRef.Arguments args)`
 
 **Parameters:**
 - `editorLocation` (`java.net.URL`): The editor location.
@@ -121,7 +121,7 @@ The value is `insertPosition`.
 
 **Returns:** `java.util.Optional<java.net.URL>`
 
-### `resolveRelativeUrl(java.net.URL baseUrl, java.lang.String relative)`
+### `resolveRelativeUrl(URL baseUrl, String relative)`
 
 **Parameters:**
 - `baseUrl` (`java.net.URL`): The base URL.

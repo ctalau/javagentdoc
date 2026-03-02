@@ -116,14 +116,14 @@
 
 ## Methods
 
-### `setKeyNameGenerator(ro.sync.ecss.dita.DITAKeyNameGenerator arg0)`
+### `setKeyNameGenerator(DITAKeyNameGenerator arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dita.DITAKeyNameGenerator`](./DITAKeyNameGenerator.md))
 
 **Returns:** `void`
 
-### `getKeysAttributeValueBasedOnFilename(java.net.URL arg0)`
+### `getKeysAttributeValueBasedOnFilename(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -134,14 +134,14 @@
 
 **Returns:** `java.lang.Object`
 
-### `searchReferences(java.net.URL arg0)`
+### `searchReferences(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `searchReferences(java.net.URL arg0, java.lang.Object arg1)`
+### `searchReferences(URL arg0, Object arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -149,7 +149,7 @@
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `p(boolean arg0, ro.sync.ecss.dita.reference.i arg1, java.lang.Object arg2, boolean arg3, ro.sync.ecss.dita.reference.g arg4, java.net.URL arg5, boolean arg6, java.lang.String arg7, ro.sync.ecss.dita.topic.ref.b arg8, ro.sync.contentcompletion.z arg9, ro.sync.ecss.extensions.api.AuthorDocumentController arg10)`
+### `p(boolean arg0, i arg1, Object arg2, boolean arg3, g arg4, URL arg5, boolean arg6, String arg7, b arg8, z arg9, AuthorDocumentController arg10)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -166,14 +166,14 @@
 
 **Returns:** `void`
 
-### `insertTopicref(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `insertTopicref(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `handleTopicRefInsertUrl(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.net.URL arg1)`
+### `handleTopicRefInsertUrl(AuthorAccess arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -181,14 +181,14 @@
 
 **Returns:** `void`
 
-### `insertTopicgroup(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `insertTopicgroup(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `getTopicRefInfo(java.net.URL arg0, java.lang.Object arg1, ro.sync.ecss.contentcompletion.c arg2, ro.sync.ecss.g.j arg3, int arg4, ro.sync.ecss.dita.topic.ref.f arg5, ro.sync.ecss.dita.topic.ref.c arg6)`
+### `getTopicRefInfo(URL arg0, Object arg1, c arg2, j arg3, int arg4, f arg5, c arg6)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -201,7 +201,7 @@
 
 **Returns:** `void`
 
-### `getInsertTopicref(java.net.URL arg0, java.lang.Object arg1, ro.sync.ecss.contentcompletion.c arg2, ro.sync.ecss.extensions.api.AuthorDocumentController arg3, int arg4, java.lang.String arg5, ro.sync.ecss.dita.topic.ref.c arg6, java.lang.String arg7, boolean arg8)`
+### `getInsertTopicref(URL arg0, Object arg1, c arg2, AuthorDocumentController arg3, int arg4, String arg5, c arg6, String arg7, boolean arg8)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -216,7 +216,7 @@
 
 **Returns:** `void`
 
-### `insertKeydefWithKeyword(java.lang.Object arg0, ro.sync.ecss.contentcompletion.c arg1, ro.sync.ecss.extensions.api.AuthorDocumentController arg2, int arg3, ro.sync.ecss.dita.topic.ref.c arg4, boolean arg5)`
+### `insertKeydefWithKeyword(Object arg0, c arg1, AuthorDocumentController arg2, int arg3, c arg4, boolean arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -228,7 +228,7 @@
 
 **Returns:** `void`
 
-### `insertKeydefWithKeyword(java.lang.Object arg0, ro.sync.ecss.contentcompletion.c arg1, ro.sync.ecss.extensions.api.AuthorDocumentController arg2, int arg3, ro.sync.ecss.dita.topic.ref.c arg4, ro.sync.ecss.dita.DITATopicInsertionPosition arg5)`
+### `insertKeydefWithKeyword(Object arg0, c arg1, AuthorDocumentController arg2, int arg3, c arg4, DITATopicInsertionPosition arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -240,21 +240,21 @@
 
 **Returns:** `void`
 
-### `insertKeydefWithKeyword(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `insertKeydefWithKeyword(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `insertTopichead(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `insertTopichead(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `setDitaAccessCustomizer(ro.sync.ecss.dita.k arg0)`
+### `setDitaAccessCustomizer(k arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.k`)
@@ -273,7 +273,7 @@
 
 **Returns:** `java.lang.String`
 
-### `editProperties(java.net.URL arg0, ro.sync.ecss.contentcompletion.c arg1, ro.sync.ecss.g.j arg2, ro.sync.ecss.extensions.api.node.AuthorElement[] arg3, ro.sync.ecss.dita.topic.ref.c arg4, java.lang.Object arg5, boolean arg6)`
+### `editProperties(URL arg0, c arg1, j arg2, AuthorElement[] arg3, c arg4, Object arg5, boolean arg6)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -286,14 +286,14 @@
 
 **Returns:** `void`
 
-### `editProperties(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `editProperties(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `e(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> arg1, int arg2, int arg3)`
+### `e(AuthorAccess arg0, List<AuthorElement> arg1, int arg2, int arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -303,7 +303,7 @@
 
 **Returns:** `void`
 
-### `insertHref(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, boolean arg5, java.net.URL arg6, boolean arg7)`
+### `insertHref(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, boolean arg5, URL arg6, boolean arg7)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -317,7 +317,7 @@
 
 **Returns:** `void`
 
-### `g(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, java.lang.String arg5)`
+### `g(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, String arg5)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -329,7 +329,7 @@
 
 **Returns:** `void`
 
-### `d(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, java.net.URL arg5, boolean arg6)`
+### `d(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, URL arg5, boolean arg6)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -342,7 +342,7 @@
 
 **Returns:** `void`
 
-### `insertHref(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, boolean arg5)`
+### `insertHref(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, boolean arg5)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -354,7 +354,7 @@
 
 **Returns:** `void`
 
-### `insertContentKeyReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1)`
+### `insertContentKeyReference(AuthorAccess arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -362,7 +362,7 @@
 
 **Returns:** `void`
 
-### `insertContentReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.net.URL arg1, boolean arg2)`
+### `insertContentReference(AuthorAccess arg0, URL arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -371,7 +371,7 @@
 
 **Returns:** `void`
 
-### `insertTopicref(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.net.URL arg1, boolean arg2)`
+### `insertTopicref(AuthorAccess arg0, URL arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -380,7 +380,7 @@
 
 **Returns:** `void`
 
-### `insertTopicref(ro.sync.exml.workspace.api.editor.page.ditamap.WSDITAMapEditorPage arg0, java.net.URL arg1, java.lang.String arg2, boolean arg3, boolean arg4)`
+### `insertTopicref(WSDITAMapEditorPage arg0, URL arg1, String arg2, boolean arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.page.ditamap.WSDITAMapEditorPage`](../../exml/workspace/api/editor/page/ditamap/WSDITAMapEditorPage.md))
@@ -391,7 +391,7 @@
 
 **Returns:** `void`
 
-### `insertTopicref(ro.sync.exml.workspace.api.editor.page.ditamap.WSDITAMapEditorPage arg0, java.net.URL arg1, java.lang.String arg2, ro.sync.ecss.dita.DITATopicInsertionPosition arg3, boolean arg4)`
+### `insertTopicref(WSDITAMapEditorPage arg0, URL arg1, String arg2, DITATopicInsertionPosition arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.page.ditamap.WSDITAMapEditorPage`](../../exml/workspace/api/editor/page/ditamap/WSDITAMapEditorPage.md))
@@ -402,7 +402,7 @@
 
 **Returns:** `void`
 
-### `insertReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1)`
+### `insertReference(AuthorAccess arg0, int arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -410,7 +410,7 @@
 
 **Returns:** `void`
 
-### `showInsertReferenceDialog(ro.sync.ecss.contentcompletion.c arg0, ro.sync.ecss.g.j arg1, int arg2, java.lang.Object arg3, int arg4, boolean arg5, ro.sync.ecss.dita.topic.ref.b arg6)`
+### `showInsertReferenceDialog(c arg0, j arg1, int arg2, Object arg3, int arg4, boolean arg5, b arg6)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.contentcompletion.c`)
@@ -423,7 +423,7 @@
 
 **Returns:** `void`
 
-### `showInsertReferenceDialog(ro.sync.ecss.contentcompletion.c arg0, ro.sync.ecss.g.j arg1, int arg2, java.lang.Object arg3, int arg4, boolean arg5, ro.sync.ecss.dita.topic.ref.b arg6, ro.sync.ecss.dita.IKeyInfoFilter arg7, boolean arg8)`
+### `showInsertReferenceDialog(c arg0, j arg1, int arg2, Object arg3, int arg4, boolean arg5, b arg6, IKeyInfoFilter arg7, boolean arg8)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.contentcompletion.c`)
@@ -438,7 +438,7 @@
 
 **Returns:** `void`
 
-### `insertReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
+### `insertReference(AuthorAccess arg0, String arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -448,7 +448,7 @@
 
 **Returns:** `void`
 
-### `insertReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, int arg2, java.lang.String arg3, java.lang.String arg4)`
+### `insertReference(AuthorAccess arg0, String arg1, int arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -459,7 +459,7 @@
 
 **Returns:** `void`
 
-### `insertReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1, ro.sync.ecss.component.z arg2, ro.sync.ecss.contentcompletion.c arg3, ro.sync.ecss.dita.reference.j arg4)`
+### `insertReference(AuthorAccess arg0, int arg1, z arg2, c arg3, j arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -474,14 +474,14 @@
 
 **Returns:** `java.net.URL`
 
-### `resolveKeyRef(java.lang.String arg0)`
+### `resolveKeyRef(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.net.URL`
 
-### `resolveKeyRef(java.lang.String arg0, boolean arg1)`
+### `resolveKeyRef(String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -489,7 +489,7 @@
 
 **Returns:** `java.net.URL`
 
-### `resolveKeyRef(java.net.URL arg0, java.lang.String arg1, boolean arg2)`
+### `resolveKeyRef(URL arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -498,14 +498,14 @@
 
 **Returns:** `java.net.URL`
 
-### `checkValidKeyRef(java.lang.String arg0)`
+### `checkValidKeyRef(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
-### `resolveKeyRef(java.net.URL arg0, java.lang.String arg1, ro.sync.ecss.dita.ContextKeyManager arg2, boolean arg3)`
+### `resolveKeyRef(URL arg0, String arg1, ContextKeyManager arg2, boolean arg3)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -515,7 +515,7 @@
 
 **Returns:** `java.net.URL`
 
-### `resolveKeyRefToHref(java.net.URL arg0, java.lang.String arg1, ro.sync.ecss.dita.ContextKeyManager arg2, boolean arg3)`
+### `resolveKeyRefToHref(URL arg0, String arg1, ContextKeyManager arg2, boolean arg3)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -525,7 +525,7 @@
 
 **Returns:** `java.lang.String`
 
-### `createReusableComponent(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.DITAUniqueIDAssigner arg1)`
+### `createReusableComponent(AuthorAccess arg0, DITAUniqueIDAssigner arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -533,28 +533,28 @@
 
 **Returns:** `void`
 
-### `insertReusableComponent(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `insertReusableComponent(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `replaceAllConrefs(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `replaceAllConrefs(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `replaceConref(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `replaceConref(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `expandAllKeyrefs(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.link.LinkTextResolver arg1)`
+### `expandAllKeyrefs(AuthorAccess arg0, LinkTextResolver arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -562,21 +562,21 @@
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `removeReference(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `removeReference(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `addEditReference(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `addEditReference(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `isGeneralizationOf(java.lang.String arg0, java.lang.String arg1)`
+### `isGeneralizationOf(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -584,7 +584,7 @@
 
 **Returns:** `boolean`
 
-### `getInheritanceType(java.lang.String arg0, java.lang.String arg1)`
+### `getInheritanceType(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -592,7 +592,7 @@
 
 **Returns:** `int`
 
-### `parseDITAHref(java.lang.String arg0, java.lang.String arg1)`
+### `parseDITAHref(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -600,7 +600,7 @@
 
 **Returns:** [`ro.sync.ecss.dita.Reference`](./Reference.md)
 
-### `parseDITAHref(java.lang.String arg0, java.lang.String arg1, boolean arg2)`
+### `parseDITAHref(String arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -609,14 +609,14 @@
 
 **Returns:** [`ro.sync.ecss.dita.Reference`](./Reference.md)
 
-### `parseDITAKeyRef(java.lang.String arg0)`
+### `parseDITAKeyRef(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** [`ro.sync.ecss.dita.Reference`](./Reference.md)
 
-### `parseDITAKeyRef(java.net.URL arg0, java.lang.String arg1)`
+### `parseDITAKeyRef(URL arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -624,7 +624,7 @@
 
 **Returns:** [`ro.sync.ecss.dita.Reference`](./Reference.md)
 
-### `parseDITAKeyRef(java.net.URL arg0, ro.sync.ecss.dita.ContextKeyManager arg1, java.lang.String arg2)`
+### `parseDITAKeyRef(URL arg0, ContextKeyManager arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -633,7 +633,7 @@
 
 **Returns:** [`ro.sync.ecss.dita.Reference`](./Reference.md)
 
-### `parseDITAKeyRef(java.lang.String arg0, ro.sync.ecss.dita.reference.keyref.s arg1)`
+### `parseDITAKeyRef(String arg0, s arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -641,7 +641,7 @@
 
 **Returns:** [`ro.sync.ecss.dita.Reference`](./Reference.md)
 
-### `getAutoInsertTopicRefElementName(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1)`
+### `getAutoInsertTopicRefElementName(AuthorAccess arg0, int arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -649,7 +649,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getAutoInsertTopicRefElementName(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, int arg1)`
+### `getAutoInsertTopicRefElementName(AuthorDocumentController arg0, int arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../extensions/api/AuthorDocumentController.md))
@@ -657,7 +657,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getAutoInsertRefElementName(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1)`
+### `getAutoInsertRefElementName(AuthorAccess arg0, int arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -665,7 +665,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getAutoInsertImageRefElementName(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1)`
+### `getAutoInsertImageRefElementName(AuthorAccess arg0, int arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -673,7 +673,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getPossibleElements(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, int arg1, java.lang.String arg2, java.lang.String[] arg3)`
+### `getPossibleElements(AuthorDocumentController arg0, int arg1, String arg2, String[] arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../extensions/api/AuthorDocumentController.md))
@@ -683,7 +683,7 @@
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIElement[]`](../../contentcompletion/xml/CIElement.md)
 
-### `getEquivalentChildCIElement(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1, java.lang.String arg2)`
+### `getEquivalentChildCIElement(AuthorAccess arg0, int arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -696,21 +696,21 @@
 
 **Returns:** `java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo>`
 
-### `getKeys(java.net.URL arg0)`
+### `getKeys(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo>`
 
-### `getKeysForInsertion(java.net.URL arg0)`
+### `getKeysForInsertion(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.util.List<ro.sync.ecss.dita.reference.keyref.KeyInfo>`
 
-### `getKeys(java.net.URL arg0, ro.sync.ecss.dita.ContextKeyManager arg1)`
+### `getKeys(URL arg0, ContextKeyManager arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -718,7 +718,7 @@
 
 **Returns:** `java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo>`
 
-### `getURLKeyScopeContexts(java.net.URL arg0, ro.sync.ecss.dita.ContextKeyManager arg1)`
+### `getURLKeyScopeContexts(URL arg0, ContextKeyManager arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -726,7 +726,7 @@
 
 **Returns:** `java.util.LinkedHashMap<java.net.URL,java.util.List<java.util.Stack<java.util.Set<java.lang.String>>>>`
 
-### `computeFormatForURLPasteAndDnD(ro.sync.exml.workspace.api.util.UtilAccess arg0, java.net.URL arg1, ro.sync.ecss.extensions.api.ReferenceType arg2)`
+### `computeFormatForURLPasteAndDnD(UtilAccess arg0, URL arg1, ReferenceType arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.util.UtilAccess`](../../exml/workspace/api/util/UtilAccess.md))
@@ -735,7 +735,7 @@
 
 **Returns:** `java.lang.String`
 
-### `computeLinkScope(java.net.URL arg0, java.net.URL arg1)`
+### `computeLinkScope(URL arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -743,7 +743,7 @@
 
 **Returns:** `java.lang.String`
 
-### `pasteAsReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, boolean arg1)`
+### `pasteAsReference(AuthorAccess arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -751,7 +751,7 @@
 
 **Returns:** `java.lang.String`
 
-### `pasteAsReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.DITAAccess.PasteInfo arg1)`
+### `pasteAsReference(AuthorAccess arg0, DITAAccess.PasteInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -759,7 +759,7 @@
 
 **Returns:** `java.lang.String`
 
-### `pasteClipboardFragmentsAsReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.DITAAccess.PasteInfo arg1, ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[] arg2)`
+### `pasteClipboardFragmentsAsReference(AuthorAccess arg0, DITAAccess.PasteInfo arg1, AuthorDocumentFragmentClipboardObject[] arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -768,7 +768,7 @@
 
 **Returns:** `boolean`
 
-### `pasteClipboardFragmentsAsReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.DITAAccess.PasteInfo arg1, ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[] arg2, ro.sync.ecss.extensions.api.SelectionInterpretationMode arg3)`
+### `pasteClipboardFragmentsAsReference(AuthorAccess arg0, DITAAccess.PasteInfo arg1, AuthorDocumentFragmentClipboardObject[] arg2, SelectionInterpretationMode arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -778,7 +778,7 @@
 
 **Returns:** `boolean`
 
-### `i(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.strictediting.ContentDescription arg1, ro.sync.ecss.dita.DITAAccess.PasteInfo arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, boolean arg6, boolean arg7)`
+### `i(AuthorAccess arg0, ContentDescription arg1, DITAAccess.PasteInfo arg2, String arg3, String arg4, String arg5, boolean arg6, boolean arg7)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -792,7 +792,7 @@
 
 **Returns:** `boolean`
 
-### `filterAttributeValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1, java.lang.String arg2)`
+### `filterAttributeValues(List<CIValue> arg0, WhatPossibleValuesHasAttributeContext arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -801,7 +801,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `filterAttributeValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1, java.lang.String arg2, ro.sync.ecss.extensions.api.AuthorAccess arg3)`
+### `filterAttributeValues(List<CIValue> arg0, WhatPossibleValuesHasAttributeContext arg1, String arg2, AuthorAccess arg3)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -811,7 +811,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `filterAttributeValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1, ro.sync.ecss.dita.ContextKeyManager arg2, java.lang.String arg3, ro.sync.ecss.extensions.api.AuthorAccess arg4)`
+### `filterAttributeValues(List<CIValue> arg0, WhatPossibleValuesHasAttributeContext arg1, ContextKeyManager arg2, String arg3, AuthorAccess arg4)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -822,7 +822,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `t(java.util.List<ro.sync.contentcompletion.xml.CIValue> arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1, java.net.URL arg2, java.lang.String arg3, boolean arg4)`
+### `t(List<CIValue> arg0, WhatPossibleValuesHasAttributeContext arg1, URL arg2, String arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -833,7 +833,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `b(java.util.List<ro.sync.contentcompletion.xml.CIValue> arg0, java.lang.String arg1, boolean arg2, java.util.List<ro.sync.contentcompletion.xml.CIValue> arg3)`
+### `b(List<CIValue> arg0, String arg1, boolean arg2, List<CIValue> arg3)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -843,7 +843,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `l(java.util.List<ro.sync.contentcompletion.xml.CIValue> arg0, java.lang.String arg1)`
+### `l(List<CIValue> arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -851,7 +851,7 @@
 
 **Returns:** `void`
 
-### `j(java.net.URL arg0, java.net.URL arg1, java.lang.String arg2, ro.sync.ecss.dita.DITAAccess._b arg3)`
+### `j(URL arg0, URL arg1, String arg2, DITAAccess._b arg3)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -861,14 +861,14 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `computeElementClazz(ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg0)`
+### `computeElementClazz(WhatPossibleValuesHasAttributeContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md))
 
 **Returns:** `java.lang.String`
 
-### `insertImage(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1)`
+### `insertImage(AuthorAccess arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -876,7 +876,7 @@
 
 **Returns:** `void`
 
-### `insertMedia(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.MediaInfo arg1)`
+### `insertMedia(AuthorAccess arg0, MediaInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -884,14 +884,14 @@
 
 **Returns:** `void`
 
-### `chooseMediaReference(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `chooseMediaReference(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** [`ro.sync.ecss.dita.MediaInfo`](./MediaInfo.md)
 
-### `insertMediaSchemaAware(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.MediaInfo arg1)`
+### `insertMediaSchemaAware(AuthorAccess arg0, MediaInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -899,7 +899,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../extensions/api/schemaaware/SchemaAwareHandlerResult.md)
 
-### `computeMediaReferenceXMLToInsert(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.MediaInfo arg1)`
+### `computeMediaReferenceXMLToInsert(AuthorAccess arg0, MediaInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -907,7 +907,7 @@
 
 **Returns:** `java.lang.String`
 
-### `u(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.util.Map<java.lang.String,java.lang.String> arg1, java.lang.String arg2, java.lang.StringBuilder arg3)`
+### `u(AuthorAccess arg0, Map<String,String> arg1, String arg2, StringBuilder arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -917,7 +917,7 @@
 
 **Returns:** `void`
 
-### `h(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.g.j arg1, java.util.Map<java.lang.String,java.lang.String> arg2, java.lang.String arg3, java.lang.StringBuilder arg4)`
+### `h(AuthorAccess arg0, j arg1, Map<String,String> arg2, String arg3, StringBuilder arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -928,7 +928,7 @@
 
 **Returns:** `void`
 
-### `insertImage(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.ImageInfo arg1)`
+### `insertImage(AuthorAccess arg0, ImageInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -936,14 +936,14 @@
 
 **Returns:** `void`
 
-### `chooseImageReference(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `chooseImageReference(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** [`ro.sync.ecss.dita.ImageInfo`](./ImageInfo.md)
 
-### `insertImageSchemaAware(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1)`
+### `insertImageSchemaAware(AuthorAccess arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -951,7 +951,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../extensions/api/schemaaware/SchemaAwareHandlerResult.md)
 
-### `insertImageSchemaAware(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2)`
+### `insertImageSchemaAware(AuthorAccess arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -960,7 +960,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../extensions/api/schemaaware/SchemaAwareHandlerResult.md)
 
-### `insertImageSchemaAware(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.dita.ImageInfo arg1)`
+### `insertImageSchemaAware(AuthorAccess arg0, ImageInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -968,21 +968,21 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.schemaaware.SchemaAwareHandlerResult`](../extensions/api/schemaaware/SchemaAwareHandlerResult.md)
 
-### `c(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `c(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `m(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `m(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../extensions/api/node/AuthorElement.md))
 
 **Returns:** `int`
 
-### `computeImageReferenceXMLToInsert(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2)`
+### `computeImageReferenceXMLToInsert(AuthorAccess arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -991,7 +991,7 @@
 
 **Returns:** `java.lang.String`
 
-### `buildFigureHrefImageXMLToInsert(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2)`
+### `buildFigureHrefImageXMLToInsert(AuthorAccess arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1000,7 +1000,7 @@
 
 **Returns:** `java.lang.String`
 
-### `buildFigureKeyrefImageXMLToInsert(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2)`
+### `buildFigureKeyrefImageXMLToInsert(AuthorAccess arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1009,7 +1009,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getPossibleElementQName(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, java.lang.String arg1, java.lang.String arg2)`
+### `getPossibleElementQName(AuthorDocumentController arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../extensions/api/AuthorDocumentController.md))
@@ -1018,14 +1018,14 @@
 
 **Returns:** `java.lang.String`
 
-### `searchReferences(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `searchReferences(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `computeLinkText(java.lang.String arg0, java.lang.String arg1)`
+### `computeLinkText(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -1033,7 +1033,7 @@
 
 **Returns:** `java.lang.String`
 
-### `computeLinkText(ro.sync.ecss.extensions.api.node.AuthorNode arg0, java.lang.String arg1, java.lang.String arg2)`
+### `computeLinkText(AuthorNode arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -1042,7 +1042,7 @@
 
 **Returns:** `java.lang.String`
 
-### `computeLinkText(ro.sync.ecss.extensions.api.node.AuthorNode arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
+### `computeLinkText(AuthorNode arg0, String arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -1052,7 +1052,7 @@
 
 **Returns:** `java.lang.String`
 
-### `computeLinkText(ro.sync.ecss.extensions.api.node.AuthorNode arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, ro.sync.ecss.dita.KeysManagerBase arg4)`
+### `computeLinkText(AuthorNode arg0, String arg1, String arg2, String arg3, KeysManagerBase arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -1063,7 +1063,7 @@
 
 **Returns:** `java.lang.String`
 
-### `filterElements(java.util.List<ro.sync.contentcompletion.xml.CIElement> arg0, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext arg1)`
+### `filterElements(List<CIElement> arg0, WhatElementsCanGoHereContext arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIElement>`)
@@ -1071,7 +1071,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `filterElements(java.util.List<ro.sync.contentcompletion.xml.CIElement> arg0, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext arg1, java.lang.String arg2)`
+### `filterElements(List<CIElement> arg0, WhatElementsCanGoHereContext arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIElement>`)
@@ -1080,7 +1080,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `resolveKeyNotFoundError(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1)`
+### `resolveKeyNotFoundError(AuthorAccess arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1088,7 +1088,7 @@
 
 **Returns:** `void`
 
-### `filterDITAVALAttributeValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1)`
+### `filterDITAVALAttributeValues(List<CIValue> arg0, WhatPossibleValuesHasAttributeContext arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -1096,14 +1096,14 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `createNewTopicReference(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `createNewTopicReference(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `k(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, ro.sync.ecss.extensions.api.access.AuthorEditorAccess arg1)`
+### `k(AuthorDocumentController arg0, AuthorEditorAccess arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../extensions/api/AuthorDocumentController.md))
@@ -1111,35 +1111,35 @@
 
 **Returns:** `void`
 
-### `pushElement(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `pushElement(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `isDITA(org.xml.sax.Attributes arg0)`
+### `isDITA(Attributes arg0)`
 
 **Parameters:**
 - `arg0` (`org.xml.sax.Attributes`)
 
 **Returns:** `boolean`
 
-### `isDITA1_3OrNewer(org.xml.sax.Attributes arg0)`
+### `isDITA1_3OrNewer(Attributes arg0)`
 
 **Parameters:**
 - `arg0` (`org.xml.sax.Attributes`)
 
 **Returns:** `boolean`
 
-### `isDITA1_3OrNewer(java.lang.String arg0)`
+### `isDITA1_3OrNewer(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `insertLinkReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, java.lang.String arg5, java.net.URL arg6, boolean arg7)`
+### `insertLinkReference(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, String arg5, URL arg6, boolean arg7)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1153,7 +1153,7 @@
 
 **Returns:** `void`
 
-### `insertLinkReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, java.lang.String arg5, java.lang.String arg6, java.net.URL arg7, boolean arg8)`
+### `insertLinkReference(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, String arg5, String arg6, URL arg7, boolean arg8)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1168,7 +1168,7 @@
 
 **Returns:** `void`
 
-### `insertLinkReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, java.lang.String arg5, java.net.URL arg6, boolean arg7, ro.sync.ecss.dita.DITAAccess._c arg8)`
+### `insertLinkReference(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, String arg5, URL arg6, boolean arg7, DITAAccess._c arg8)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1183,7 +1183,7 @@
 
 **Returns:** `void`
 
-### `insertLinkReference(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, java.lang.String arg5, java.lang.String arg6, java.net.URL arg7, boolean arg8, ro.sync.ecss.dita.DITAAccess._c arg9)`
+### `insertLinkReference(AuthorAccess arg0, String arg1, String arg2, String arg3, boolean arg4, String arg5, String arg6, URL arg7, boolean arg8, DITAAccess._c arg9)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1199,7 +1199,7 @@
 
 **Returns:** `void`
 
-### `insertLinkReference(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, ro.sync.ecss.extensions.api.AuthorAccess arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6, boolean arg7, java.lang.String arg8)`
+### `insertLinkReference(String arg0, String arg1, String arg2, AuthorAccess arg3, String arg4, String arg5, String arg6, boolean arg7, String arg8)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -1214,7 +1214,7 @@
 
 **Returns:** `void`
 
-### `insertLinkReference(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, ro.sync.ecss.extensions.api.AuthorAccess arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6, boolean arg7, boolean arg8, java.lang.String arg9)`
+### `insertLinkReference(String arg0, String arg1, String arg2, AuthorAccess arg3, String arg4, String arg5, String arg6, boolean arg7, boolean arg8, String arg9)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -1230,7 +1230,7 @@
 
 **Returns:** `void`
 
-### `rewriteKeyref(java.util.LinkedHashMap<java.net.URL,java.util.List<java.util.Stack<java.util.Set<java.lang.String>>>> arg0, java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo> arg1, ro.sync.ecss.extensions.api.node.AuthorNode arg2, java.lang.String arg3)`
+### `rewriteKeyref(LinkedHashMap<URL,List<Stack<Set<String>>>> arg0, LinkedHashMap<String,KeyInfo> arg1, AuthorNode arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`java.util.LinkedHashMap<java.net.URL,java.util.List<java.util.Stack<java.util.Set<java.lang.String>>>>`)
@@ -1240,14 +1240,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getURLKeyScopeContexts(java.net.URL arg0)`
+### `getURLKeyScopeContexts(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.util.LinkedHashMap<java.net.URL,java.util.List<java.util.Stack<java.util.Set<java.lang.String>>>>`
 
-### `editTopicref(ro.sync.ecss.extensions.api.node.AuthorElement[] arg0, ro.sync.ecss.extensions.api.AuthorAccess arg1)`
+### `editTopicref(AuthorElement[] arg0, AuthorAccess arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../extensions/api/node/AuthorElement.md))
@@ -1255,7 +1255,7 @@
 
 **Returns:** `void`
 
-### `getDitaReferenceTargets(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.net.URL arg1)`
+### `getDitaReferenceTargets(AuthorAccess arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1263,7 +1263,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.dita.DitaReferenceTargetDescriptor>`
 
-### `getDitaReferenceTargets(java.net.URL arg0, java.net.URL arg1)`
+### `getDitaReferenceTargets(URL arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -1271,7 +1271,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.dita.DitaReferenceTargetDescriptor>`
 
-### `getFormat(java.lang.String arg0, java.lang.String arg1, boolean arg2)`
+### `getFormat(String arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -1280,7 +1280,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getFormatForLinkCreatedFromGUI(java.lang.String arg0, java.lang.String arg1, boolean arg2)`
+### `getFormatForLinkCreatedFromGUI(String arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -1289,21 +1289,21 @@
 
 **Returns:** `java.lang.String`
 
-### `checkValidKeyName(java.lang.String arg0)`
+### `checkValidKeyName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
-### `getHrefInformation(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `getHrefInformation(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
 
 **Returns:** [`ro.sync.ecss.dita.HrefInfo`](./HrefInfo.md)
 
-### `getHrefInformation(ro.sync.ecss.dita.KeysManagerBase arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1)`
+### `getHrefInformation(KeysManagerBase arg0, AuthorNode arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dita.KeysManagerBase`](./KeysManagerBase.md))
@@ -1311,7 +1311,7 @@
 
 **Returns:** [`ro.sync.ecss.dita.HrefInfo`](./HrefInfo.md)
 
-### `exportDITAMap(java.net.URL arg0, java.io.File arg1, boolean arg2, java.lang.String arg3, ro.sync.ecss.dita.mapeditor.actions.export.helper.ExportProgressUpdater arg4)`
+### `exportDITAMap(URL arg0, File arg1, boolean arg2, String arg3, ExportProgressUpdater arg4)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -1322,7 +1322,7 @@
 
 **Returns:** `void`
 
-### `attachKeyScopeInformation(java.net.URL arg0, java.lang.String arg1, java.lang.String arg2)`
+### `attachKeyScopeInformation(URL arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -1331,7 +1331,7 @@
 
 **Returns:** `java.net.URL`
 
-### `attachKeyScopeInformation(java.net.URL arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
+### `attachKeyScopeInformation(URL arg0, String arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -1341,7 +1341,7 @@
 
 **Returns:** `java.net.URL`
 
-### `attachKeyScopeInformation(java.net.URL arg0, java.util.Stack<java.util.Set<java.lang.String>> arg1, java.lang.String arg2)`
+### `attachKeyScopeInformation(URL arg0, Stack<Set<String>> arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -1350,14 +1350,14 @@
 
 **Returns:** `java.net.URL`
 
-### `computeVariableKeyrefElementName(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `computeVariableKeyrefElementName(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `java.lang.String`
 
-### `computeVariableKeyrefElementName(ro.sync.ecss.extensions.api.AuthorAccess arg0, boolean arg1)`
+### `computeVariableKeyrefElementName(AuthorAccess arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1365,7 +1365,7 @@
 
 **Returns:** `java.lang.String`
 
-### `computeKeyScopeStack(ro.sync.ecss.extensions.api.node.AuthorNode arg0, java.util.LinkedHashMap<java.net.URL,java.util.List<java.util.Stack<java.util.Set<java.lang.String>>>> arg1)`
+### `computeKeyScopeStack(AuthorNode arg0, LinkedHashMap<URL,List<Stack<Set<String>>>> arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -1373,7 +1373,7 @@
 
 **Returns:** `java.util.Stack<java.util.Set<java.lang.String>>`
 
-### `computeKeyScopeStack(ro.sync.ecss.extensions.api.node.AuthorNode arg0, java.util.LinkedHashMap<java.net.URL,java.util.List<java.util.Stack<java.util.Set<java.lang.String>>>> arg1, java.util.Map<ro.sync.ecss.extensions.api.node.AuthorNode,java.util.Set<java.lang.String>> arg2)`
+### `computeKeyScopeStack(AuthorNode arg0, LinkedHashMap<URL,List<Stack<Set<String>>>> arg1, Map<AuthorNode,Set<String>> arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -1382,7 +1382,7 @@
 
 **Returns:** `java.util.Stack<java.util.Set<java.lang.String>>`
 
-### `getKeyForUrl(ro.sync.ecss.dita.KeysManagerBase arg0, java.net.URL arg1, java.net.URL arg2)`
+### `getKeyForUrl(KeysManagerBase arg0, URL arg1, URL arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dita.KeysManagerBase`](./KeysManagerBase.md))
@@ -1391,7 +1391,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getKeyForUrl(ro.sync.ecss.dita.KeysManagerBase arg0, java.net.URL arg1, java.net.URL arg2, ro.sync.ecss.extensions.api.node.AuthorNode arg3)`
+### `getKeyForUrl(KeysManagerBase arg0, URL arg1, URL arg2, AuthorNode arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dita.KeysManagerBase`](./KeysManagerBase.md))
@@ -1401,7 +1401,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getKeyForUrl(java.net.URL arg0, java.net.URL arg1)`
+### `getKeyForUrl(URL arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -1409,7 +1409,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getKeyRefValueForUrl(ro.sync.ecss.dita.KeysManagerBase arg0, java.net.URL arg1, java.net.URL arg2)`
+### `getKeyRefValueForUrl(KeysManagerBase arg0, URL arg1, URL arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dita.KeysManagerBase`](./KeysManagerBase.md))
@@ -1418,7 +1418,7 @@
 
 **Returns:** `java.lang.String`
 
-### `r(java.net.URL arg0, java.lang.String arg1)`
+### `r(URL arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -1426,7 +1426,7 @@
 
 **Returns:** `java.lang.String`
 
-### `checkConsecutiveInsertionWarning(int arg0, int arg1, int arg2, ro.sync.ecss.dita.reference.j arg3, ro.sync.ecss.dita.reference.j arg4)`
+### `checkConsecutiveInsertionWarning(int arg0, int arg1, int arg2, j arg3, j arg4)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -1437,28 +1437,28 @@
 
 **Returns:** `int`
 
-### `isKeyReferenceToImage(ro.sync.ecss.dita.reference.keyref.KeyInfo arg0)`
+### `isKeyReferenceToImage(KeyInfo arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.reference.keyref.KeyInfo`)
 
 **Returns:** `boolean`
 
-### `isGenericMediaContent(ro.sync.ecss.dita.reference.keyref.KeyInfo arg0)`
+### `isGenericMediaContent(KeyInfo arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.reference.keyref.KeyInfo`)
 
 **Returns:** `boolean`
 
-### `detectMediaObjectOutputclass(ro.sync.ecss.dita.reference.keyref.KeyInfo arg0)`
+### `detectMediaObjectOutputclass(KeyInfo arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.reference.keyref.KeyInfo`)
 
 **Returns:** `java.lang.String`
 
-### `isReferenceToDITAResource(ro.sync.ecss.extensions.api.node.AuthorNode arg0, ro.sync.ecss.dita.reference.keyref.KeyInfo arg1)`
+### `isReferenceToDITAResource(AuthorNode arg0, KeyInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -1466,7 +1466,7 @@
 
 **Returns:** `boolean`
 
-### `isReferenceToDITACompatibleResource(ro.sync.ecss.extensions.api.node.AuthorNode arg0, ro.sync.ecss.dita.reference.keyref.KeyInfo arg1)`
+### `isReferenceToDITACompatibleResource(AuthorNode arg0, KeyInfo arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -1474,21 +1474,21 @@
 
 **Returns:** `boolean`
 
-### `getConverterFormatForDITACompatibleResource(java.lang.String arg0)`
+### `getConverterFormatForDITACompatibleResource(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
-### `isDITACompatileFormat(java.lang.String arg0)`
+### `isDITACompatileFormat(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `convertDitaCompatibleResource(java.io.Reader arg0, java.lang.String arg1, java.lang.String arg2)`
+### `convertDitaCompatibleResource(Reader arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.io.Reader`)
@@ -1497,21 +1497,21 @@
 
 **Returns:** `java.lang.String`
 
-### `isKeyDefToDITAResource(ro.sync.ecss.dita.reference.keyref.KeyInfo arg0)`
+### `isKeyDefToDITAResource(KeyInfo arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.reference.keyref.KeyInfo`)
 
 **Returns:** `boolean`
 
-### `annotateAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0)`
+### `annotateAttributes(List<CIAttribute> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `getFragWithMostSuitableTopicrefs(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment arg1, int arg2)`
+### `getFragWithMostSuitableTopicrefs(AuthorDocumentController arg0, AuthorDocumentFragment arg1, int arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../extensions/api/AuthorDocumentController.md))
@@ -1520,7 +1520,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../extensions/api/node/AuthorDocumentFragment.md)
 
-### `getFragWithMostSuitableTopicrefs(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1, int arg2)`
+### `getFragWithMostSuitableTopicrefs(AuthorDocumentController arg0, AuthorNode arg1, int arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../extensions/api/AuthorDocumentController.md))
@@ -1529,21 +1529,21 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../extensions/api/node/AuthorDocumentFragment.md)
 
-### `findSimilarTopics(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `findSimilarTopics(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `getRelatedLinksFromReltable(java.net.URL arg0)`
+### `getRelatedLinksFromReltable(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.util.List<ro.sync.ecss.dita.reference.reltable.RelLink>`
 
-### `n(ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg0, boolean arg1, boolean arg2, ro.sync.ecss.dita.DitaReferenceTargetDescriptor arg3)`
+### `n(WhatPossibleValuesHasAttributeContext arg0, boolean arg1, boolean arg2, DitaReferenceTargetDescriptor arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md))
@@ -1553,21 +1553,21 @@
 
 **Returns:** `boolean`
 
-### `proposeFolderUrlForChildTopicref(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `proposeFolderUrlForChildTopicref(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../extensions/api/node/AuthorElement.md))
 
 **Returns:** `java.net.URL`
 
-### `detectInsertionType(java.net.URL arg0)`
+### `detectInsertionType(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** [`ro.sync.ecss.dita.DITAImposedReferenceType`](./DITAImposedReferenceType.md)
 
-### `computeQualifiedKeyNames(java.lang.String arg0, java.util.Stack<java.util.Set<java.lang.String>> arg1)`
+### `computeQualifiedKeyNames(String arg0, Stack<Set<String>> arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -1575,14 +1575,14 @@
 
 **Returns:** `java.util.List<java.lang.String>`
 
-### `preferAddingKeyrefToAlreadyReferencedResource(java.net.URL arg0)`
+### `preferAddingKeyrefToAlreadyReferencedResource(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `boolean`
 
-### `showNewFileDialog(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1)`
+### `showNewFileDialog(AuthorAccess arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -1590,7 +1590,7 @@
 
 **Returns:** `java.net.URL`
 
-### `showKeysAndReusableComponents(ro.sync.ecss.extensions.api.AuthorAccess arg0, boolean arg1, boolean arg2)`
+### `showKeysAndReusableComponents(AuthorAccess arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))

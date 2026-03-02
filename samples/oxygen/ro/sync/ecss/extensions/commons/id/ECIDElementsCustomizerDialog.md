@@ -48,7 +48,7 @@
 
 ## Constructors
 
-### `<init>(org.eclipse.swt.widgets.Shell arg0, java.lang.String arg1, ro.sync.ecss.extensions.api.AuthorResourceBundle arg2, boolean arg3)`
+### `<init>(Shell arg0, String arg1, AuthorResourceBundle arg2, boolean arg3)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
@@ -58,14 +58,14 @@
 
 ## Methods
 
-### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
+### `configureShell(Shell arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
 **Returns:** `void`
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+### `createDialogArea(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
@@ -92,7 +92,7 @@
 
 **Returns:** `void`
 
-### `showDialog(ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo arg0)`
+### `showDialog(GenerateIDElementsInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md))

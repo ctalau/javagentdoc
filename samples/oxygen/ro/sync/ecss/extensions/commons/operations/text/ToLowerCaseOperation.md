@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `processText(java.lang.String text)`
+### `processText(String text)`
 
 **Parameters:**
 - `text` (`java.lang.String`)

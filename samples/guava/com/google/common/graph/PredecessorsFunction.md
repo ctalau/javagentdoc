@@ -87,8 +87,6 @@ See the Guava User Guide for the common.graph package (["Graphs Explained"](http
 
 ### `predecessors(N node)`
 
-**Returns:** `java.lang.Iterable<? extends N>`
-
 Some algorithms that operate on a PredecessorsFunction may produce undesired results
  if the returned Iterable contains duplicate elements. Implementations of such
  algorithms should document their behavior in the presence of duplicates.
@@ -104,4 +102,6 @@ The elements of the returned Iterable must each be:
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.lang.Iterable<? extends N>`
 

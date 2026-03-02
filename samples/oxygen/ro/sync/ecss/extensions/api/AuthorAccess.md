@@ -68,7 +68,7 @@ It works as a map in which any message is
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorResourceBundle`](./AuthorResourceBundle.md)
 
-### `getElementByAnchor(java.lang.String anchor)`
+### `getElementByAnchor(String anchor)`
 
 The syntax of the anchor is interpreted by the ElementLocatorProvider provided by the framework.
 
@@ -77,7 +77,7 @@ The syntax of the anchor is interpreted by the ElementLocatorProvider provided b
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-### `getCaretOffsetByAnchor(java.lang.String anchor)`
+### `getCaretOffsetByAnchor(String anchor)`
 
 The syntax of the anchor is interpreted by the ElementLocatorProvider provided by the framework or:
  

@@ -120,40 +120,38 @@ When calling ScaleAndIndex#compute (in either
 
 ### `median()`
 
-**Returns:** `com.google.common.math.Quantiles.ScaleAndIndex`
-
 the 1st 2-quantile).
+
+**Returns:** `com.google.common.math.Quantiles.ScaleAndIndex`
 
 ### `quartiles()`
 
-**Returns:** `com.google.common.math.Quantiles.Scale`
-
 4-quantiles).
+
+**Returns:** `com.google.common.math.Quantiles.Scale`
 
 ### `percentiles()`
 
-**Returns:** `com.google.common.math.Quantiles.Scale`
-
 100-quantiles).
+
+**Returns:** `com.google.common.math.Quantiles.Scale`
 
 ### `scale(int scale)`
 
-**Returns:** `com.google.common.math.Quantiles.Scale`
-
 **Parameters:**
 - `scale` (`int`): the scale for the quantiles to be calculated, i.e. the q of the q-quantiles, which
-     must be positive
+       must be positive
+
+**Returns:** `com.google.common.math.Quantiles.Scale`
 
 ### `containsNaN(double[] dataset)`
-
-**Returns:** `boolean`
 
 **Parameters:**
 - `dataset` (`double[]`)
 
-### `interpolate(double lower, double upper, double remainder, double scale)`
+**Returns:** `boolean`
 
-**Returns:** `double`
+### `interpolate(double lower, double upper, double remainder, double scale)`
 
 Assumes that lower <= upper. Correctly handles infinities (but not
  NaN).
@@ -164,31 +162,31 @@ Assumes that lower <= upper. Correctly handles infinities (but not
 - `remainder` (`double`)
 - `scale` (`double`)
 
-### `checkIndex(int index, int scale)`
+**Returns:** `double`
 
-**Returns:** `void`
+### `checkIndex(int index, int scale)`
 
 **Parameters:**
 - `index` (`int`)
 - `scale` (`int`)
 
-### `longsToDoubles(long[] longs)`
+**Returns:** `void`
 
-**Returns:** `double[]`
+### `longsToDoubles(long[] longs)`
 
 **Parameters:**
 - `longs` (`long[]`)
 
-### `intsToDoubles(int[] ints)`
-
 **Returns:** `double[]`
+
+### `intsToDoubles(int[] ints)`
 
 **Parameters:**
 - `ints` (`int[]`)
 
-### `selectInPlace(int required, double[] array, int from, int to)`
+**Returns:** `double[]`
 
-**Returns:** `void`
+### `selectInPlace(int required, double[] array, int from, int to)`
 
 The following preconditions should hold:
 
@@ -216,9 +214,9 @@ The following preconditions should hold:
 - `from` (`int`)
 - `to` (`int`)
 
-### `partition(double[] array, int from, int to)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `partition(double[] array, int from, int to)`
 
 Uses the median of from, to, and the midpoint between them
  as a pivot. Returns the index which the slice is partitioned around, i.e. if it returns 
@@ -231,9 +229,9 @@ Uses the median of from, to, and the midpoint between them
 - `from` (`int`)
 - `to` (`int`)
 
-### `movePivotToStartOfSlice(double[] array, int from, int to)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `movePivotToStartOfSlice(double[] array, int from, int to)`
 
 at from.
  Expects that from is strictly less than to.
@@ -243,9 +241,9 @@ at from.
 - `from` (`int`)
 - `to` (`int`)
 
-### `selectAllInPlace(int[] allRequired, int requiredFrom, int requiredTo, double[] array, int from, int to)`
-
 **Returns:** `void`
+
+### `selectAllInPlace(int[] allRequired, int requiredFrom, int requiredTo, double[] array, int from, int to)`
 
 These
  indexes must be sorted in the array and must all be in the range [from, to].
@@ -258,9 +256,9 @@ These
 - `from` (`int`)
 - `to` (`int`)
 
-### `chooseNextSelection(int[] allRequired, int requiredFrom, int requiredTo, int from, int to)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `chooseNextSelection(int[] allRequired, int requiredFrom, int requiredTo, int from, int to)`
 
 It is required that the array
  allRequired is sorted and that allRequired[i] are in the range [from,
@@ -277,12 +275,14 @@ It is required that the array
 - `from` (`int`)
 - `to` (`int`)
 
-### `swap(double[] array, int i, int j)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `swap(double[] array, int i, int j)`
 
 **Parameters:**
 - `array` (`double[]`)
 - `i` (`int`)
 - `j` (`int`)
+
+**Returns:** `void`
 

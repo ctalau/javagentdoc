@@ -68,7 +68,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.LinkTextResolver`](../api/link/LinkTextResolver.md)
 
-### `resolveCustomHref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `resolveCustomHref(URL currentEditorURL, AuthorNode contextNode, String linkHref, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `currentEditorURL` (`java.net.URL`)

@@ -22,7 +22,7 @@
 
 ## Methods
 
-### `makeUrlRelative(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String url)`
+### `makeUrlRelative(AuthorAccess authorAccess, String url)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access of the XML document.
@@ -30,7 +30,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getBaseURL(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getBaseURL(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access of the XML document.

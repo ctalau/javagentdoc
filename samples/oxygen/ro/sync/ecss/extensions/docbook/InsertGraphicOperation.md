@@ -30,7 +30,7 @@ The value is `imageUrl`.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -38,7 +38,7 @@ The value is `imageUrl`.
 
 **Returns:** `void`
 
-### `insertImageRef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.docbook.DocBookImageInfo imageInfo, boolean isInlineGraphicAccepted)`
+### `insertImageRef(AuthorAccess authorAccess, DocBookImageInfo imageInfo, boolean isInlineGraphicAccepted)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access

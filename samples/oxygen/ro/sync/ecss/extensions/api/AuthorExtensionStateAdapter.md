@@ -14,14 +14,14 @@
 
 ## Methods
 
-### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `activated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
 **Returns:** `void`
 
-### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `deactivated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))

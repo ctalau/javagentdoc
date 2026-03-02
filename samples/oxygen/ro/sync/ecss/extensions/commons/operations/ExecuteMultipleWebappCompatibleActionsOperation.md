@@ -27,7 +27,7 @@ This class is also marked as webapp-compatible.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, java.util.List<java.lang.String> asksValues)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args, List<String> asksValues)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
@@ -36,7 +36,7 @@ This class is also marked as webapp-compatible.
 
 **Returns:** `void`
 
-### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.Map args)`
+### `getActions(AuthorAccess authorAccess, Map args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))

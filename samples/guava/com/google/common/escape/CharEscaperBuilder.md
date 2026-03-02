@@ -26,28 +26,28 @@ The array will be from 0 to the maximum index given. All non-set indexes will co
 
 ## Methods
 
-### `addEscape(char c, java.lang.String r)`
-
-**Returns:** [`com.google.common.escape.CharEscaperBuilder`](./CharEscaperBuilder.md)
+### `addEscape(char c, String r)`
 
 **Parameters:**
 - `c` (`char`)
 - `r` (`java.lang.String`)
 
-### `addEscapes(char[] cs, java.lang.String r)`
-
 **Returns:** [`com.google.common.escape.CharEscaperBuilder`](./CharEscaperBuilder.md)
+
+### `addEscapes(char[] cs, String r)`
 
 **Parameters:**
 - `cs` (`char[]`)
 - `r` (`java.lang.String`)
 
-### `toArray()`
+**Returns:** [`com.google.common.escape.CharEscaperBuilder`](./CharEscaperBuilder.md)
 
-**Returns:** `char[] @org.checkerframework.checker.nullness.qual.Nullable []`
+### `toArray()`
 
 The array will be sparse in the sense that any unseen
  index will default to null.
+
+**Returns:** `char[] @org.checkerframework.checker.nullness.qual.Nullable []`
 
 ### `toEscaper()`
 

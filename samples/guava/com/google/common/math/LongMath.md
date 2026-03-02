@@ -71,17 +71,15 @@ Similar functionality for int and for BigInteger can be found in IntMath and Big
 
 ### `ceilingPowerOfTwo(long x)`
 
-**Returns:** `long`
-
 This is equivalent to
  checkedPow(2, log2(x, CEILING)).
 
 **Parameters:**
 - `x` (`long`)
 
-### `floorPowerOfTwo(long x)`
-
 **Returns:** `long`
+
+### `floorPowerOfTwo(long x)`
 
 This is equivalent to 
  checkedPow(2, log2(x, FLOOR)).
@@ -89,9 +87,9 @@ This is equivalent to
 **Parameters:**
 - `x` (`long`)
 
-### `isPowerOfTwo(long x)`
+**Returns:** `long`
 
-**Returns:** `boolean`
+### `isPowerOfTwo(long x)`
 
 This differs from Long.bitCount(x) == 1, because 
  Long.bitCount(Long.MIN_VALUE) == 1, but Long#MIN_VALUE is not a power of two.
@@ -99,9 +97,9 @@ This differs from Long.bitCount(x) == 1, because
 **Parameters:**
 - `x` (`long`)
 
-### `lessThanBranchFree(long x, long y)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `lessThanBranchFree(long x, long y)`
 
 Assumes that x - y fits into a
  signed long. The implementation is branch-free, and benchmarks suggest it is measurably faster
@@ -111,32 +109,32 @@ Assumes that x - y fits into a
 - `x` (`long`)
 - `y` (`long`)
 
-### `log2(long x, java.math.RoundingMode mode)`
-
 **Returns:** `int`
+
+### `log2(long x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`long`)
 - `mode` (`java.math.RoundingMode`)
 
-### `log10(long x, java.math.RoundingMode mode)`
-
 **Returns:** `int`
+
+### `log10(long x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`long`)
 - `mode` (`java.math.RoundingMode`)
+
+**Returns:** `int`
 
 ### `log10Floor(long x)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `x` (`long`)
 
-### `pow(long b, int k)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `pow(long b, int k)`
 
 Even if the result overflows, it will be equal to
  BigInteger.valueOf(b).pow(k).longValue(). This implementation runs in O(log k)
@@ -146,26 +144,26 @@ Even if the result overflows, it will be equal to
 - `b` (`long`)
 - `k` (`int`)
 
-### `sqrt(long x, java.math.RoundingMode mode)`
-
 **Returns:** `long`
+
+### `sqrt(long x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`long`)
 - `mode` (`java.math.RoundingMode`)
 
-### `divide(long p, long q, java.math.RoundingMode mode)`
-
 **Returns:** `long`
+
+### `divide(long p, long q, RoundingMode mode)`
 
 **Parameters:**
 - `p` (`long`)
 - `q` (`long`)
 - `mode` (`java.math.RoundingMode`)
 
-### `mod(long x, int m)`
+**Returns:** `long`
 
-**Returns:** `int`
+### `mod(long x, int m)`
 
 This differs from x %
  m, which might be negative.
@@ -189,9 +187,9 @@ For example:
 - `x` (`long`)
 - `m` (`int`)
 
-### `mod(long x, long m)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `mod(long x, long m)`
 
 This differs from x %
  m, which might be negative.
@@ -215,9 +213,9 @@ For example:
 - `x` (`long`)
 - `m` (`long`)
 
-### `gcd(long a, long b)`
-
 **Returns:** `long`
+
+### `gcd(long a, long b)`
 
 Returns 0 if a == 0 && b ==
  0.
@@ -226,104 +224,104 @@ Returns 0 if a == 0 && b ==
 - `a` (`long`)
 - `b` (`long`)
 
-### `checkedAdd(long a, long b)`
-
 **Returns:** `long`
+
+### `checkedAdd(long a, long b)`
 
 **Parameters:**
 - `a` (`long`)
 - `b` (`long`)
+
+**Returns:** `long`
 
 ### `checkedSubtract(long a, long b)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `a` (`long`)
 - `b` (`long`)
+
+**Returns:** `long`
 
 ### `checkedMultiply(long a, long b)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `a` (`long`)
 - `b` (`long`)
+
+**Returns:** `long`
 
 ### `checkedPow(long b, int k)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `b` (`long`)
 - `k` (`int`)
+
+**Returns:** `long`
 
 ### `saturatedAdd(long a, long b)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `a` (`long`)
 - `b` (`long`)
+
+**Returns:** `long`
 
 ### `saturatedSubtract(long a, long b)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `a` (`long`)
 - `b` (`long`)
+
+**Returns:** `long`
 
 ### `saturatedMultiply(long a, long b)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `a` (`long`)
 - `b` (`long`)
 
-### `saturatedPow(long b, int k)`
-
 **Returns:** `long`
+
+### `saturatedPow(long b, int k)`
 
 **Parameters:**
 - `b` (`long`)
 - `k` (`int`)
 
-### `factorial(int n)`
-
 **Returns:** `long`
+
+### `factorial(int n)`
 
 **Parameters:**
 - `n` (`int`)
 
-### `binomial(int n, int k)`
-
 **Returns:** `long`
+
+### `binomial(int n, int k)`
 
 **Parameters:**
 - `n` (`int`)
 - `k` (`int`)
 
-### `multiplyFraction(long x, long numerator, long denominator)`
-
 **Returns:** `long`
+
+### `multiplyFraction(long x, long numerator, long denominator)`
 
 **Parameters:**
 - `x` (`long`)
 - `numerator` (`long`)
 - `denominator` (`long`)
 
-### `fitsInInt(long x)`
+**Returns:** `long`
 
-**Returns:** `boolean`
+### `fitsInInt(long x)`
 
 **Parameters:**
 - `x` (`long`)
 
-### `mean(long x, long y)`
+**Returns:** `boolean`
 
-**Returns:** `long`
+### `mean(long x, long y)`
 
 This
  method is resilient to overflow.
@@ -332,9 +330,9 @@ This
 - `x` (`long`)
 - `y` (`long`)
 
-### `isPrime(long n)`
+**Returns:** `long`
 
-**Returns:** `boolean`
+### `isPrime(long n)`
 
 Returns false if n is zero, one, or a composite number (one which *can* be
  factored into smaller positive integers).
@@ -345,9 +343,9 @@ To test larger numbers, use BigInteger#isProbablePrime.
 **Parameters:**
 - `n` (`long`)
 
-### `roundToDouble(long x, java.math.RoundingMode mode)`
+**Returns:** `boolean`
 
-**Returns:** `double`
+### `roundToDouble(long x, RoundingMode mode)`
 
 If x
  is precisely representable as a double, its double value will be returned;
@@ -364,4 +362,6 @@ For the case of RoundingMode#HALF_EVEN, this implementation uses the IEEE 754
 **Parameters:**
 - `x` (`long`)
 - `mode` (`java.math.RoundingMode`)
+
+**Returns:** `double`
 

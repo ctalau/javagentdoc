@@ -29,29 +29,29 @@ To implement a cache, the programmer needs only to extend this class and provide
 
 ### `getUnchecked(K key)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 
-### `getAll(java.lang.Iterable<? extends K> keys)`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
+### `getAll(Iterable<? extends K> keys)`
 
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends K>`)
 
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
+
 ### `apply(K key)`
+
+**Parameters:**
+- `key` (`K`)
 
 **Returns:** `V`
 
-**Parameters:**
-- `key` (`K`)
-
 ### `refresh(K key)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `void`
 

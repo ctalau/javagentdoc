@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String rawValue, int radix)`
+### `<init>(String rawValue, int radix)`
 
 **Parameters:**
 - `rawValue` (`java.lang.String`)
@@ -26,10 +26,10 @@
 
 ## Methods
 
-### `fromString(java.lang.String stringValue)`
-
-**Returns:** [`com.google.common.primitives.ParseRequest`](./ParseRequest.md)
+### `fromString(String stringValue)`
 
 **Parameters:**
 - `stringValue` (`java.lang.String`)
+
+**Returns:** [`com.google.common.primitives.ParseRequest`](./ParseRequest.md)
 

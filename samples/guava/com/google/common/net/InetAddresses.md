@@ -107,14 +107,12 @@ For added safety, it is common for IPv6 network operators to filter all packets 
 
 ### `getInet4Address(byte[] bytes)`
 
-**Returns:** `java.net.Inet4Address`
-
 **Parameters:**
 - `bytes` (`byte[]`): byte array representing an IPv4 address (should be of length 4)
 
-### `forString(java.lang.String ipString)`
+**Returns:** `java.net.Inet4Address`
 
-**Returns:** `java.net.InetAddress`
+### `forString(String ipString)`
 
 This deliberately avoids all nameservice lookups (e.g. no DNS).
 
@@ -129,11 +127,11 @@ This method accepts non-ASCII digits, for example "１９２.１６８.０.１" 
 
 **Parameters:**
 - `ipString` (`java.lang.String`): String containing an IPv4 or IPv6 string literal, e.g. 
-     "192.168.0.1" or "2001:db8::1"
+       "192.168.0.1" or "2001:db8::1"
 
-### `isInetAddress(java.lang.String ipString)`
+**Returns:** `java.net.InetAddress`
 
-**Returns:** `boolean`
+### `isInetAddress(String ipString)`
 
 This method accepts non-ASCII digits, for example "１９２.１６８.０.１" (those are fullwidth
  characters). That is consistent with InetAddress, but not with various RFCs. If you
@@ -143,55 +141,55 @@ This method accepts non-ASCII digits, for example "１９２.１６８.０.１" 
 **Parameters:**
 - `ipString` (`java.lang.String`): String to evaluated as an IP string literal
 
-### `ipStringToBytes(java.lang.String ipStringParam)`
+**Returns:** `boolean`
 
-**Returns:** `byte[]`
+### `ipStringToBytes(String ipStringParam)`
 
 **Parameters:**
 - `ipStringParam` (`java.lang.String`)
 
-### `textToNumericFormatV4(java.lang.String ipString)`
-
 **Returns:** `byte[]`
+
+### `textToNumericFormatV4(String ipString)`
 
 **Parameters:**
 - `ipString` (`java.lang.String`)
 
-### `textToNumericFormatV6(java.lang.String ipString)`
-
 **Returns:** `byte[]`
+
+### `textToNumericFormatV6(String ipString)`
 
 **Parameters:**
 - `ipString` (`java.lang.String`)
 
-### `convertDottedQuadToHex(java.lang.String ipString)`
+**Returns:** `byte[]`
+
+### `convertDottedQuadToHex(String ipString)`
+
+**Parameters:**
+- `ipString` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
+### `parseOctet(String ipString, int start, int end)`
+
 **Parameters:**
 - `ipString` (`java.lang.String`)
-
-### `parseOctet(java.lang.String ipString, int start, int end)`
+- `start` (`int`)
+- `end` (`int`)
 
 **Returns:** `byte`
 
+### `parseHextet(String ipString, int start, int end)`
+
 **Parameters:**
 - `ipString` (`java.lang.String`)
 - `start` (`int`)
 - `end` (`int`)
-
-### `parseHextet(java.lang.String ipString, int start, int end)`
 
 **Returns:** `short`
 
-**Parameters:**
-- `ipString` (`java.lang.String`)
-- `start` (`int`)
-- `end` (`int`)
-
 ### `bytesToInetAddress(byte[] addr)`
-
-**Returns:** `java.net.InetAddress`
 
 InetAddress#getByAddress is documented as throwing a checked exception "if IP
  address is of illegal length." We replace it with an unchecked exception, for use by callers
@@ -200,9 +198,9 @@ InetAddress#getByAddress is documented as throwing a checked exception "if IP
 **Parameters:**
 - `addr` (`byte[]`): the raw 4-byte or 16-byte IP address in big-endian order
 
-### `toAddrString(java.net.InetAddress ip)`
+**Returns:** `java.net.InetAddress`
 
-**Returns:** `java.lang.String`
+### `toAddrString(InetAddress ip)`
 
 For IPv4 addresses, this is identical to InetAddress#getHostAddress(), but for IPv6
  addresses, the output follows [RFC 5952](http://tools.ietf.org/html/rfc5952) section
@@ -216,9 +214,9 @@ This method uses hexadecimal for all IPv6 addresses, including IPv4-mapped IPv6 
 **Parameters:**
 - `ip` (`java.net.InetAddress`): InetAddress to be converted to an address string
 
-### `compressLongestRunOfZeroes(int[] hextets)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `compressLongestRunOfZeroes(int[] hextets)`
 
 Only runs of two or more hextets are considered. In case of a tie, the leftmost run wins. If
  a qualifying run is found, its hextets are replaced by the sentinel value -1.
@@ -226,9 +224,9 @@ Only runs of two or more hextets are considered. In case of a tie, the leftmost 
 **Parameters:**
 - `hextets` (`int[]`): int[] mutable array of eight 16-bit hextets
 
-### `hextetsToIPv6String(int[] hextets)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `hextetsToIPv6String(int[] hextets)`
 
 In order for "::" compression to work, the input should contain negative sentinel values in
  place of the elided zeroes.
@@ -236,9 +234,9 @@ In order for "::" compression to work, the input should contain negative sentine
 **Parameters:**
 - `hextets` (`int[]`): int[] array of eight 16-bit hextets, or -1s
 
-### `toUriString(java.net.InetAddress ip)`
-
 **Returns:** `java.lang.String`
+
+### `toUriString(InetAddress ip)`
 
 For IPv4 addresses, this is identical to InetAddress#getHostAddress(), but for IPv6
  addresses it compresses zeroes and surrounds the text with square brackets; for example 
@@ -257,9 +255,9 @@ Use of either InetAddresses#toAddrString, InetAddress#getHostAddress(), or
 **Parameters:**
 - `ip` (`java.net.InetAddress`): InetAddress to be converted to URI string literal
 
-### `forUriString(java.lang.String hostAddr)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.net.InetAddress`
+### `forUriString(String hostAddr)`
 
 This method is similar to InetAddresses#forString(String), however, it requires that
  IPv6 addresses are surrounded by square brackets.
@@ -276,16 +274,16 @@ This method accepts non-ASCII digits, for example "１９２.１６８.０.１" 
 **Parameters:**
 - `hostAddr` (`java.lang.String`): an RFC 3986 section 3.2.2 encoded IPv4 or IPv6 address
 
-### `forUriStringNoThrow(java.lang.String hostAddr)`
-
 **Returns:** `java.net.InetAddress`
+
+### `forUriStringNoThrow(String hostAddr)`
 
 **Parameters:**
 - `hostAddr` (`java.lang.String`)
 
-### `isUriInetAddress(java.lang.String ipString)`
+**Returns:** `java.net.InetAddress`
 
-**Returns:** `boolean`
+### `isUriInetAddress(String ipString)`
 
 This method accepts non-ASCII digits, for example "１９２.１６８.０.１" (those are fullwidth
  characters). That is consistent with InetAddress, but not with various RFCs. If you
@@ -295,9 +293,9 @@ This method accepts non-ASCII digits, for example "１９２.１６８.０.１" 
 **Parameters:**
 - `ipString` (`java.lang.String`): String to evaluated as an IP URI host string literal
 
-### `isCompatIPv4Address(java.net.Inet6Address ip)`
-
 **Returns:** `boolean`
+
+### `isCompatIPv4Address(Inet6Address ip)`
 
 An "IPv4 compatible", or "compat", address is one with 96 leading bits of zero, with the
  remaining 32 bits interpreted as an IPv4 address. These are conventionally represented in
@@ -315,16 +313,16 @@ NOTE: This method is different from Inet6Address#isIPv4CompatibleAddress in that
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for embedded IPv4 compatible address format
 
-### `getCompatIPv4Address(java.net.Inet6Address ip)`
+**Returns:** `boolean`
 
-**Returns:** `java.net.Inet4Address`
+### `getCompatIPv4Address(Inet6Address ip)`
 
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for an embedded IPv4 address
 
-### `is6to4Address(java.net.Inet6Address ip)`
+**Returns:** `java.net.Inet4Address`
 
-**Returns:** `boolean`
+### `is6to4Address(Inet6Address ip)`
 
 6to4 addresses begin with the "2002::/16" prefix. The next 32 bits are the IPv4
  address of the host to which IPv6-in-IPv4 tunneled packets should be routed.
@@ -335,32 +333,32 @@ For more on 6to4 addresses see section 2 of [RFC 3056](http://tools.ietf.org/htm
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for 6to4 address format
 
-### `get6to4IPv4Address(java.net.Inet6Address ip)`
+**Returns:** `boolean`
 
-**Returns:** `java.net.Inet4Address`
+### `get6to4IPv4Address(Inet6Address ip)`
 
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for embedded IPv4 in 6to4 address
 
-### `isTeredoAddress(java.net.Inet6Address ip)`
+**Returns:** `java.net.Inet4Address`
 
-**Returns:** `boolean`
+### `isTeredoAddress(Inet6Address ip)`
 
 Teredo addresses begin with the "2001::/32" prefix.
 
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for Teredo address format
 
-### `getTeredoInfo(java.net.Inet6Address ip)`
+**Returns:** `boolean`
 
-**Returns:** `com.google.common.net.InetAddresses.TeredoInfo`
+### `getTeredoInfo(Inet6Address ip)`
 
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for embedded Teredo information
 
-### `isIsatapAddress(java.net.Inet6Address ip)`
+**Returns:** `com.google.common.net.InetAddresses.TeredoInfo`
 
-**Returns:** `boolean`
+### `isIsatapAddress(Inet6Address ip)`
 
 From RFC 5214: "ISATAP interface identifiers are constructed in Modified EUI-64 format [...]
  by concatenating the 24-bit IANA OUI (00-00-5E), the 8-bit hexadecimal value 0xFE, and a 32-bit
@@ -372,16 +370,16 @@ For more on ISATAP addresses see section 6.1 of [RFC 5214](http://tools.ietf.org
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for ISATAP address format
 
-### `getIsatapIPv4Address(java.net.Inet6Address ip)`
+**Returns:** `boolean`
 
-**Returns:** `java.net.Inet4Address`
+### `getIsatapIPv4Address(Inet6Address ip)`
 
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for embedded IPv4 in ISATAP address
 
-### `hasEmbeddedIPv4ClientAddress(java.net.Inet6Address ip)`
+**Returns:** `java.net.Inet4Address`
 
-**Returns:** `boolean`
+### `hasEmbeddedIPv4ClientAddress(Inet6Address ip)`
 
 NOTE: ISATAP addresses are explicitly excluded from this method due to their trivial
  spoofability. With other transition addresses spoofing involves (at least) infection of one's
@@ -390,20 +388,20 @@ NOTE: ISATAP addresses are explicitly excluded from this method due to their tri
 **Parameters:**
 - `ip` (`java.net.Inet6Address`): Inet6Address to be examined for embedded IPv4 client address
 
-### `getEmbeddedIPv4ClientAddress(java.net.Inet6Address ip)`
+**Returns:** `boolean`
+
+### `getEmbeddedIPv4ClientAddress(Inet6Address ip)`
+
+NOTE: ISATAP addresses are explicitly excluded from this method due to their trivial
+ spoofability. With other transition addresses spoofing involves (at least) infection of one's
+ BGP routing table.
+
+**Parameters:**
+- `ip` (`java.net.Inet6Address`): Inet6Address to be examined for embedded IPv4 client address
 
 **Returns:** `java.net.Inet4Address`
 
-NOTE: ISATAP addresses are explicitly excluded from this method due to their trivial
- spoofability. With other transition addresses spoofing involves (at least) infection of one's
- BGP routing table.
-
-**Parameters:**
-- `ip` (`java.net.Inet6Address`): Inet6Address to be examined for embedded IPv4 client address
-
-### `isMappedIPv4Address(java.lang.String ipString)`
-
-**Returns:** `boolean`
+### `isMappedIPv4Address(String ipString)`
 
 An "IPv4 mapped" address is anything in the range ::ffff:0:0/96 (sometimes written as
  ::ffff:0.0.0.0/96), with the last 32 bits interpreted as an IPv4 address.
@@ -425,9 +423,9 @@ This method accepts non-ASCII digits. That is consistent with InetAddress, but n
 **Parameters:**
 - `ipString` (`java.lang.String`): String to be examined for embedded IPv4-mapped IPv6 address format
 
-### `getCoercedIPv4Address(java.net.InetAddress ip)`
+**Returns:** `boolean`
 
-**Returns:** `java.net.Inet4Address`
+### `getCoercedIPv4Address(InetAddress ip)`
 
 HACK: As long as applications continue to use IPv4 addresses for indexing into tables,
  accounting, et cetera, it may be necessary to **coerce** IPv6 addresses into IPv4 addresses.
@@ -452,9 +450,9 @@ NOTE: This method is failsafe for security purposes: ALL IPv6 addresses (except 
 **Parameters:**
 - `ip` (`java.net.InetAddress`): InetAddress to "coerce"
 
-### `coerceToInteger(java.net.InetAddress ip)`
+**Returns:** `java.net.Inet4Address`
 
-**Returns:** `int`
+### `coerceToInteger(InetAddress ip)`
 
 IPv6 addresses are **coerced** to IPv4 addresses before being converted to integers.
 
@@ -471,39 +469,39 @@ NOTE: an IPv6 address coerced to an IPv4 address can only be used for such purpo
 **Parameters:**
 - `ip` (`java.net.InetAddress`): InetAddress to convert
 
-### `toBigInteger(java.net.InetAddress address)`
+**Returns:** `int`
 
-**Returns:** `java.math.BigInteger`
+### `toBigInteger(InetAddress address)`
 
 Unlike coerceToInteger, IPv6 addresses are not coerced to IPv4 addresses.
 
 **Parameters:**
 - `address` (`java.net.InetAddress`): InetAddress to convert
 
-### `fromInteger(int address)`
+**Returns:** `java.math.BigInteger`
 
-**Returns:** `java.net.Inet4Address`
+### `fromInteger(int address)`
 
 **Parameters:**
 - `address` (`int`): int, the 32bit integer address to be converted
 
-### `fromIPv4BigInteger(java.math.BigInteger address)`
-
 **Returns:** `java.net.Inet4Address`
+
+### `fromIPv4BigInteger(BigInteger address)`
 
 **Parameters:**
 - `address` (`java.math.BigInteger`): BigInteger representing the IPv4 address
 
-### `fromIPv6BigInteger(java.math.BigInteger address)`
+**Returns:** `java.net.Inet4Address`
 
-**Returns:** `java.net.Inet6Address`
+### `fromIPv6BigInteger(BigInteger address)`
 
 **Parameters:**
 - `address` (`java.math.BigInteger`): BigInteger representing the IPv6 address
 
-### `fromBigInteger(java.math.BigInteger address, boolean isIpv6)`
+**Returns:** `java.net.Inet6Address`
 
-**Returns:** `java.net.InetAddress`
+### `fromBigInteger(BigInteger address, boolean isIpv6)`
 
 If the IP is IPv4, it must be
  constrained to 32 bits, otherwise it is constrained to 128 bits.
@@ -512,18 +510,18 @@ If the IP is IPv4, it must be
 - `address` (`java.math.BigInteger`): the address represented as a big integer
 - `isIpv6` (`boolean`): whether the created address should be IPv4 or IPv6
 
-### `fromLittleEndianByteArray(byte[] addr)`
-
 **Returns:** `java.net.InetAddress`
+
+### `fromLittleEndianByteArray(byte[] addr)`
 
 IPv4 address byte array must be 4 bytes long and IPv6 byte array must be 16 bytes long.
 
 **Parameters:**
 - `addr` (`byte[]`): the raw IP address in little-endian byte order
 
-### `decrement(java.net.InetAddress address)`
-
 **Returns:** `java.net.InetAddress`
+
+### `decrement(InetAddress address)`
 
 This method works for
  both IPv4 and IPv6 addresses.
@@ -531,9 +529,9 @@ This method works for
 **Parameters:**
 - `address` (`java.net.InetAddress`): the InetAddress to decrement
 
-### `increment(java.net.InetAddress address)`
-
 **Returns:** `java.net.InetAddress`
+
+### `increment(InetAddress address)`
 
 This method works for
  both IPv4 and IPv6 addresses.
@@ -541,18 +539,20 @@ This method works for
 **Parameters:**
 - `address` (`java.net.InetAddress`): the InetAddress to increment
 
-### `isMaximum(java.net.InetAddress address)`
+**Returns:** `java.net.InetAddress`
 
-**Returns:** `boolean`
+### `isMaximum(InetAddress address)`
 
 **Parameters:**
 - `address` (`java.net.InetAddress`)
 
-### `formatIllegalArgumentException(java.lang.String format, java.lang.Object[] args)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.IllegalArgumentException`
+### `formatIllegalArgumentException(String format, Object[] args)`
 
 **Parameters:**
 - `format` (`java.lang.String`)
 - `args` (`java.lang.Object[]`)
+
+**Returns:** `java.lang.IllegalArgumentException`
 

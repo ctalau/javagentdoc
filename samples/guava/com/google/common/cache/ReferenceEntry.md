@@ -38,12 +38,12 @@ Invalid:
 
 **Returns:** `com.google.common.cache.LocalCache.ValueReference<K,V>`
 
-### `setValueReference(com.google.common.cache.LocalCache.ValueReference<K,V> valueReference)`
-
-**Returns:** `void`
+### `setValueReference(LocalCache.ValueReference<K,V> valueReference)`
 
 **Parameters:**
 - `valueReference` (`com.google.common.cache.LocalCache.ValueReference<K,V>`)
+
+**Returns:** `void`
 
 ### `getNext()`
 
@@ -63,32 +63,32 @@ Invalid:
 
 ### `setAccessTime(long time)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `time` (`long`)
+
+**Returns:** `void`
 
 ### `getNextInAccessQueue()`
 
 **Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-### `setNextInAccessQueue(com.google.common.cache.ReferenceEntry<K,V> next)`
-
-**Returns:** `void`
+### `setNextInAccessQueue(ReferenceEntry<K,V> next)`
 
 **Parameters:**
 - `next` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+
+**Returns:** `void`
 
 ### `getPreviousInAccessQueue()`
 
 **Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-### `setPreviousInAccessQueue(com.google.common.cache.ReferenceEntry<K,V> previous)`
-
-**Returns:** `void`
+### `setPreviousInAccessQueue(ReferenceEntry<K,V> previous)`
 
 **Parameters:**
 - `previous` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+
+**Returns:** `void`
 
 ### `getWriteTime()`
 
@@ -96,30 +96,30 @@ Invalid:
 
 ### `setWriteTime(long time)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `time` (`long`)
+
+**Returns:** `void`
 
 ### `getNextInWriteQueue()`
 
 **Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-### `setNextInWriteQueue(com.google.common.cache.ReferenceEntry<K,V> next)`
-
-**Returns:** `void`
+### `setNextInWriteQueue(ReferenceEntry<K,V> next)`
 
 **Parameters:**
 - `next` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+
+**Returns:** `void`
 
 ### `getPreviousInWriteQueue()`
 
 **Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-### `setPreviousInWriteQueue(com.google.common.cache.ReferenceEntry<K,V> previous)`
-
-**Returns:** `void`
+### `setPreviousInWriteQueue(ReferenceEntry<K,V> previous)`
 
 **Parameters:**
 - `previous` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+
+**Returns:** `void`
 

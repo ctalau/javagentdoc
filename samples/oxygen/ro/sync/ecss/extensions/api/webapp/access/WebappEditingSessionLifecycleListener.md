@@ -23,7 +23,7 @@ The lifecycle is influenced by the fact that we cannot safely detect when
 
 ## Methods
 
-### `editingSessionAboutToBeStarted(java.lang.String editingSessionId, java.lang.String licenseeId, java.net.URL systemId, java.util.Map<java.lang.String,java.lang.Object> options)`
+### `editingSessionAboutToBeStarted(String editingSessionId, String licenseeId, URL systemId, Map<String,Object> options)`
 
 If it throws a EditingSessionOpenVetoException, the details in the exception
  will be presented to the user.
@@ -46,7 +46,7 @@ If it throws a EditingSessionOpenVetoException, the details in the exception
 
 **Returns:** `void`
 
-### `editingSessionFailedToStart(java.lang.String editingSessionId, java.lang.String licenseeId, java.net.URL systemId, java.util.Map<java.lang.String,java.lang.Object> options)`
+### `editingSessionFailedToStart(String editingSessionId, String licenseeId, URL systemId, Map<String,Object> options)`
 
 **Parameters:**
 - `editingSessionId` (`java.lang.String`): The id of the editing session in which the editing was supposed to happen.
@@ -56,7 +56,7 @@ If it throws a EditingSessionOpenVetoException, the details in the exception
 
 **Returns:** `void`
 
-### `editingSessionStarted(java.lang.String editingSessionId, ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel documentModel)`
+### `editingSessionStarted(String editingSessionId, AuthorDocumentModel documentModel)`
 
 **Parameters:**
 - `editingSessionId` (`java.lang.String`): The if of the editing session.
@@ -71,7 +71,7 @@ If it throws a EditingSessionOpenVetoException, the details in the exception
 
 **Returns:** `void`
 
-### `editingSessionClosed(java.lang.String editingSessionId, ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel documentModel)`
+### `editingSessionClosed(String editingSessionId, AuthorDocumentModel documentModel)`
 
 Note that on some platforms, the user may close the browser without triggering
  this event.
@@ -82,7 +82,7 @@ Note that on some platforms, the user may close the browser without triggering
 
 **Returns:** `void`
 
-### `editingSessionAboutToBeSerialized(java.lang.String editingSessionId, ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel documentModel)`
+### `editingSessionAboutToBeSerialized(String editingSessionId, AuthorDocumentModel documentModel)`
 
 After this method is called, the document model given as a parameter cannot 
  be used anymore.
@@ -93,7 +93,7 @@ After this method is called, the document model given as a parameter cannot
 
 **Returns:** `void`
 
-### `editingSessionDeserialized(java.lang.String editingSessionId, ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel documentModel)`
+### `editingSessionDeserialized(String editingSessionId, AuthorDocumentModel documentModel)`
 
 **Parameters:**
 - `editingSessionId` (`java.lang.String`): The id of the editing session.

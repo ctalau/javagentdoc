@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String value, boolean isDeclaration)`
+### `<init>(String value, boolean isDeclaration)`
 
 **Parameters:**
 - `value` (`java.lang.String`): The ID value.

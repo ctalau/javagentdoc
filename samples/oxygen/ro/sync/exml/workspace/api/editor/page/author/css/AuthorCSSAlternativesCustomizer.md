@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `customizeAvailableCSSGroups(ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage authorPage, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> availableCSSGroups)`
+### `customizeAvailableCSSGroups(WSAuthorEditorPage authorPage, List<CSSGroup> availableCSSGroups)`
 
 The groups are presented by the application in the Styles drop-down chooser.
  Each CSS group has a title and a set of CSS documents which can be applied.
@@ -25,7 +25,7 @@ The groups are presented by the application in the Styles drop-down chooser.
 
 **Returns:** `void`
 
-### `customizeCSSGroupsToApply(ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage authorPage, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> proposedCSSGroupsToApply, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> allAvailableCSSGroups)`
+### `customizeCSSGroupsToApply(WSAuthorEditorPage authorPage, List<CSSGroup> proposedCSSGroupsToApply, List<CSSGroup> allAvailableCSSGroups)`
 
 **Parameters:**
 - `authorPage` ([`ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage`](../WSAuthorEditorPage.md)): The page for which we request the CSS groups.
@@ -34,7 +34,7 @@ The groups are presented by the application in the Styles drop-down chooser.
 
 **Returns:** `void`
 
-### `cssGroupsAboutToBeChanged(ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage authorPage, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> proposedCSSGroupsToApply, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> allAvailableCSSGroups)`
+### `cssGroupsAboutToBeChanged(WSAuthorEditorPage authorPage, List<CSSGroup> proposedCSSGroupsToApply, List<CSSGroup> allAvailableCSSGroups)`
 
 **Parameters:**
 - `authorPage` ([`ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage`](../WSAuthorEditorPage.md)): The page for which we request the CSS groups.

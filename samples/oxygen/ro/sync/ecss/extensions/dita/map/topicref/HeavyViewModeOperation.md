@@ -32,7 +32,7 @@ Heavy means that the operation require to open all topic references.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -40,7 +40,7 @@ Heavy means that the operation require to open all topic references.
 
 **Returns:** `void`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean enable)`
+### `doOperation(AuthorAccess authorAccess, boolean enable)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Author access.
@@ -48,7 +48,7 @@ Heavy means that the operation require to open all topic references.
 
 **Returns:** `void`
 
-### `setPseudoclass(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean enable)`
+### `setPseudoclass(AuthorAccess authorAccess, boolean enable)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to author.
@@ -60,7 +60,7 @@ Heavy means that the operation require to open all topic references.
 
 **Returns:** `java.lang.String`
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean enable)`
+### `doOperationInternal(AuthorAccess authorAccess, boolean enable)`
 
 Called only if references threshold isn't reached.
 
@@ -70,7 +70,7 @@ Called only if references threshold isn't reached.
 
 **Returns:** `void`
 
-### `showError(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int refsFound, int refsLimit)`
+### `showError(AuthorAccess authorAccess, int refsFound, int refsLimit)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Author access.

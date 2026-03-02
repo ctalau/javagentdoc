@@ -26,16 +26,14 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `hashCode(float value)`
 
-**Returns:** `int`
-
 **Java 8 users:** use Float#hashCode(float) instead.
 
 **Parameters:**
 - `value` (`float`): a primitive float value
 
-### `compare(float a, float b)`
-
 **Returns:** `int`
+
+### `compare(float a, float b)`
 
 You
  may prefer to invoke that method directly; this method exists only for consistency with the
@@ -50,9 +48,9 @@ You
 - `a` (`float`): the first float to compare
 - `b` (`float`): the second float to compare
 
-### `isFinite(float value)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `isFinite(float value)`
 
 This is equivalent to, but not
  necessarily implemented as, !(Float.isInfinite(value) || Float.isNaN(value)).
@@ -63,9 +61,9 @@ This is equivalent to, but not
 **Parameters:**
 - `value` (`float`)
 
-### `contains(float[] array, float target)`
-
 **Returns:** `boolean`
+
+### `contains(float[] array, float target)`
 
 Note
  that this always returns false when target is NaN.
@@ -74,9 +72,9 @@ Note
 - `array` (`float[]`): an array of float values, possibly empty
 - `target` (`float`): a primitive float value
 
-### `indexOf(float[] array, float target)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `indexOf(float[] array, float target)`
 
 Note
  that this always returns -1 when target is NaN.
@@ -85,9 +83,9 @@ Note
 - `array` (`float[]`): an array of float values, possibly empty
 - `target` (`float`): a primitive float value
 
-### `indexOf(float[] array, float target, int start, int end)`
-
 **Returns:** `int`
+
+### `indexOf(float[] array, float target, int start, int end)`
 
 **Parameters:**
 - `array` (`float[]`)
@@ -95,9 +93,9 @@ Note
 - `start` (`int`)
 - `end` (`int`)
 
-### `indexOf(float[] array, float[] target)`
-
 **Returns:** `int`
+
+### `indexOf(float[] array, float[] target)`
 
 More formally, returns the lowest index i such that Arrays.copyOfRange(array,
  i, i + target.length) contains exactly the same elements as target.
@@ -109,9 +107,9 @@ Note that this always returns -1 when target contains NaN.
 - `array` (`float[]`): the array to search for the sequence target
 - `target` (`float[]`): the array to search for as a sub-sequence of array
 
-### `lastIndexOf(float[] array, float target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(float[] array, float target)`
 
 Note
  that this always returns -1 when target is NaN.
@@ -120,9 +118,9 @@ Note
 - `array` (`float[]`): an array of float values, possibly empty
 - `target` (`float`): a primitive float value
 
-### `lastIndexOf(float[] array, float target, int start, int end)`
-
 **Returns:** `int`
+
+### `lastIndexOf(float[] array, float target, int start, int end)`
 
 **Parameters:**
 - `array` (`float[]`)
@@ -130,23 +128,23 @@ Note
 - `start` (`int`)
 - `end` (`int`)
 
-### `min(float[] array)`
+**Returns:** `int`
 
-**Returns:** `float`
+### `min(float[] array)`
 
 **Parameters:**
 - `array` (`float[]`): a *nonempty* array of float values
+
+**Returns:** `float`
 
 ### `max(float[] array)`
 
-**Returns:** `float`
-
 **Parameters:**
 - `array` (`float[]`): a *nonempty* array of float values
 
-### `constrainToRange(float value, float min, float max)`
-
 **Returns:** `float`
+
+### `constrainToRange(float value, float min, float max)`
 
 If value is within the range [min..max], value is returned
  unchanged. If value is less than min, min is returned, and if 
@@ -157,9 +155,9 @@ If value is within the range [min..max], value is returned
 - `min` (`float`): the lower bound (inclusive) of the range to constrain value to
 - `max` (`float`): the upper bound (inclusive) of the range to constrain value to
 
-### `concat(float[][] arrays)`
+**Returns:** `float`
 
-**Returns:** `float[]`
+### `concat(float[][] arrays)`
 
 For example, 
  concat(new float[] {a, b}, new float[] {}, new float[] {c} returns the array {a, b,
@@ -168,13 +166,13 @@ For example,
 **Parameters:**
 - `arrays` (`float[][]`): zero or more float arrays
 
+**Returns:** `float[]`
+
 ### `stringConverter()`
 
 **Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Float>`](../base/Converter.md)
 
 ### `ensureCapacity(float[] array, int minLength, int padding)`
-
-**Returns:** `float[]`
 
 If array already has a length of at least minLength,
  it is returned directly. Otherwise, a new array of size minLength + padding is
@@ -185,9 +183,9 @@ If array already has a length of at least minLength,
 - `minLength` (`int`): the minimum length the returned array must guarantee
 - `padding` (`int`): an extra amount to "grow" the array by if growth is necessary
 
-### `join(java.lang.String separator, float[] array)`
+**Returns:** `float[]`
 
-**Returns:** `java.lang.String`
+### `join(String separator, float[] array)`
 
 For example,
  join("-", 1.0f, 2.0f, 3.0f) returns the string "1.0-2.0-3.0".
@@ -198,12 +196,12 @@ Note that Float#toString(float) formats float differently in GWT. In the
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`float[]`): an array of float values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<float[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(float, float)), the first pair of values that follow any
@@ -215,9 +213,9 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(float[],
  float[]).
 
-### `sortDescending(float[] array)`
+**Returns:** `java.util.Comparator<float[]>`
 
-**Returns:** `void`
+### `sortDescending(float[] array)`
 
 Note that this method uses the total order imposed by Float#compare, which treats
  all NaN values as equal and 0.0 as greater than -0.0.
@@ -225,9 +223,9 @@ Note that this method uses the total order imposed by Float#compare, which treat
 **Parameters:**
 - `array` (`float[]`)
 
-### `sortDescending(float[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(float[] array, int fromIndex, int toIndex)`
 
 Note that this method uses the total order imposed by Float#compare, which treats
  all NaN values as equal and 0.0 as greater than -0.0.
@@ -237,9 +235,9 @@ Note that this method uses the total order imposed by Float#compare, which treat
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `reverse(float[] array)`
-
 **Returns:** `void`
+
+### `reverse(float[] array)`
 
 This is equivalent to 
  Collections.reverse(Floats.asList(array)), but is likely to be more efficient.
@@ -247,9 +245,9 @@ This is equivalent to
 **Parameters:**
 - `array` (`float[]`)
 
-### `reverse(float[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `reverse(float[] array, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.reverse(Floats.asList(array).subList(fromIndex, toIndex)), but is likely to be
@@ -260,9 +258,9 @@ This is equivalent to
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `rotate(float[] array, int distance)`
-
 **Returns:** `void`
+
+### `rotate(float[] array, int distance)`
 
 This is equivalent to Collections.rotate(Floats.asList(array),
  distance), but is considerably faster and avoids allocation and garbage collection.
@@ -274,9 +272,9 @@ The provided "distance" may be negative, which will rotate left.
 - `array` (`float[]`)
 - `distance` (`int`)
 
-### `rotate(float[] array, int distance, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `rotate(float[] array, int distance, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.rotate(Floats.asList(array).subList(fromIndex, toIndex), distance), but is
@@ -291,9 +289,9 @@ The provided "distance" may be negative, which will rotate left.
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `toArray(java.util.Collection<? extends java.lang.Number> collection)`
+**Returns:** `void`
 
-**Returns:** `float[]`
+### `toArray(Collection<? extends Number> collection)`
 
 Elements are copied from the argument collection as if by collection.toArray().
  Calling this method is as thread-safe as calling that method.
@@ -301,9 +299,9 @@ Elements are copied from the argument collection as if by collection.toArray().
 **Parameters:**
 - `collection` (`java.util.Collection<? extends java.lang.Number>`): a collection of Number instances
 
-### `asList(float[] backingArray)`
+**Returns:** `float[]`
 
-**Returns:** `java.util.List<java.lang.Float>`
+### `asList(float[] backingArray)`
 
 The list supports List#set(int, Object), but any attempt to
  set a value to null will result in a NullPointerException.
@@ -323,9 +321,9 @@ The returned list is serializable.
 **Parameters:**
 - `backingArray` (`float[]`): the array to back the list
 
-### `tryParse(java.lang.String string)`
+**Returns:** `java.util.List<java.lang.Float>`
 
-**Returns:** `java.lang.Float`
+### `tryParse(String string)`
 
 The ASCII character
  '-' (`'&#92;u002D'`) is recognized as the minus sign.
@@ -340,4 +338,6 @@ This implementation is likely to be faster than Float.parseFloat if many failure
 
 **Parameters:**
 - `string` (`java.lang.String`): the string representation of a float value
+
+**Returns:** `java.lang.Float`
 

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `shouldFilterNode(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+### `shouldFilterNode(AuthorNode authorNode)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The Author node.

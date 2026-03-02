@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `isElement(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String elemLocalName)`
+### `isElement(AuthorNode node, String elemLocalName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The AuthorNode to be checked.
@@ -22,28 +22,28 @@
 
 **Returns:** `boolean`
 
-### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableCell(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTable(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableRow(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `getTableElementForDeletion(ro.sync.ecss.extensions.api.node.AuthorNode element)`
+### `getTableElementForDeletion(AuthorNode element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -66,7 +66,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isContentReference(AuthorNode node)`
 
 This is used in the tables to replace conreffed table rows entirely
 
@@ -75,7 +75,7 @@ This is used in the tables to replace conreffed table rows entirely
 
 **Returns:** `boolean`
 
-### `isColspec(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isColspec(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node.

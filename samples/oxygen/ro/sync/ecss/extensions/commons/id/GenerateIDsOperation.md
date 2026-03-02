@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -28,7 +28,7 @@
 
 **Returns:** `void`
 
-### `generateIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.UniqueAttributesRecognizer attrsAssigner, int startSel, int endSel)`
+### `generateIDs(AuthorAccess authorAccess, UniqueAttributesRecognizer attrsAssigner, int startSel, int endSel)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.

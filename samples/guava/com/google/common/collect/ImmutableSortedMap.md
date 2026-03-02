@@ -51,13 +51,13 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Constructors
 
-### `<init>(com.google.common.collect.RegularImmutableSortedSet<K> keySet, com.google.common.collect.ImmutableList<V> valueList)`
+### `<init>(RegularImmutableSortedSet<K> keySet, ImmutableList<V> valueList)`
 
 **Parameters:**
 - `keySet` ([`com.google.common.collect.RegularImmutableSortedSet<K>`](./RegularImmutableSortedSet.md))
 - `valueList` ([`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md))
 
-### `<init>(com.google.common.collect.RegularImmutableSortedSet<K> keySet, com.google.common.collect.ImmutableList<V> valueList, com.google.common.collect.ImmutableSortedMap<K,V> descendingMap)`
+### `<init>(RegularImmutableSortedSet<K> keySet, ImmutableList<V> valueList, ImmutableSortedMap<K,V> descendingMap)`
 
 **Parameters:**
 - `keySet` ([`com.google.common.collect.RegularImmutableSortedSet<K>`](./RegularImmutableSortedSet.md))
@@ -66,9 +66,7 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Methods
 
-### `toImmutableSortedMap(java.util.Comparator<? super K> comparator, java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
-
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableSortedMap<K,V>>`
+### `toImmutableSortedMap(Comparator<? super K> comparator, Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction)`
 
 The generated map is sorted by the specified comparator.
 
@@ -83,9 +81,9 @@ If the mapped keys contain duplicates (according to the specified comparator), a
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `toImmutableSortedMap(java.util.Comparator<? super K> comparator, java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.BinaryOperator<V> mergeFunction)`
-
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableSortedMap<K,V>>`
+
+### `toImmutableSortedMap(Comparator<? super K> comparator, Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction, BinaryOperator<V> mergeFunction)`
 
 If the mapped keys contain duplicates (according to the comparator), the values are merged
  using the specified merging function. Entries will appear in the encounter order of the first
@@ -97,39 +95,39 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `mergeFunction` (`java.util.function.BinaryOperator<V>`)
 
-### `emptyMap(java.util.Comparator<? super K> comparator)`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableSortedMap<K,V>>`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+### `emptyMap(Comparator<? super K> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super K>`)
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
 
 ### `of()`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
-
 **Performance note:** the instance returned is a singleton.
 
-### `of(K k1, V v1)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1)`
 
 **Parameters:**
 - `k1` (`K`)
 - `v1` (`V`)
 
-### `of(java.util.Comparator<? super K> comparator, K k1, V v1)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(Comparator<? super K> comparator, K k1, V v1)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super K>`)
 - `k1` (`K`)
 - `v1` (`V`)
 
-### `of(K k1, V v1, K k2, V v2)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -137,9 +135,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k2` (`K`)
 - `v2` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -149,9 +147,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k3` (`K`)
 - `v3` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -163,9 +161,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k4` (`K`)
 - `v4` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -179,9 +177,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k5` (`K`)
 - `v5` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -197,9 +195,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k6` (`K`)
 - `v6` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -217,9 +215,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k7` (`K`)
 - `v7` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -239,9 +237,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k8` (`K`)
 - `v8` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -263,9 +261,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k9` (`K`)
 - `v9` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -289,9 +287,9 @@ If the mapped keys contain duplicates (according to the comparator), the values 
 - `k10` (`K`)
 - `v10` (`V`)
 
-### `copyOf(java.util.Map<? extends K,? extends V> map)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `copyOf(Map<? extends K,? extends V> map)`
 
 Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
@@ -304,9 +302,9 @@ This method is not type-safe, as it may be called on a map with keys that are no
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `copyOf(java.util.Map<? extends K,? extends V> map, java.util.Comparator<? super K> comparator)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `copyOf(Map<? extends K,? extends V> map, Comparator<? super K> comparator)`
 
 Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
@@ -316,9 +314,9 @@ Despite the method name, this method attempts to avoid actually copying the data
 - `map` (`java.util.Map<? extends K,? extends V>`)
 - `comparator` (`java.util.Comparator<? super K>`)
 
-### `copyOf(java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>> entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `copyOf(Iterable<? extends Map.Entry<? extends K,? extends V>> entries)`
 
 This method is not type-safe, as it may be called on a map with keys that are not mutually
  comparable.
@@ -326,17 +324,17 @@ This method is not type-safe, as it may be called on a map with keys that are no
 **Parameters:**
 - `entries` (`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>`)
 
-### `copyOf(java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>> entries, java.util.Comparator<? super K> comparator)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `copyOf(Iterable<? extends Map.Entry<? extends K,? extends V>> entries, Comparator<? super K> comparator)`
 
 **Parameters:**
 - `entries` (`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>`)
 - `comparator` (`java.util.Comparator<? super K>`)
 
-### `copyOfSorted(java.util.SortedMap<K,? extends V> map)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `copyOfSorted(SortedMap<K,? extends V> map)`
 
 Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
@@ -345,24 +343,24 @@ Despite the method name, this method attempts to avoid actually copying the data
 **Parameters:**
 - `map` (`java.util.SortedMap<K,? extends V>`)
 
-### `copyOfInternal(java.util.Map<? extends K,? extends V> map, java.util.Comparator<? super K> comparator)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `copyOfInternal(Map<? extends K,? extends V> map, Comparator<? super K> comparator)`
 
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 - `comparator` (`java.util.Comparator<? super K>`)
 
-### `fromEntries(java.util.Map.Entry<K,V>[] entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `fromEntries(Map.Entry<K,V>[] entries)`
 
 **Parameters:**
 - `entries` (`java.util.Map.Entry<K,V>[]`)
 
-### `fromEntries(java.util.Comparator<? super K> comparator, boolean sameComparator, java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>> entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `fromEntries(Comparator<? super K> comparator, boolean sameComparator, Iterable<? extends Map.Entry<? extends K,? extends V>> entries)`
 
 If sameComparator, then it is assumed
  that they do not need to be sorted or checked for dupes.
@@ -372,9 +370,9 @@ If sameComparator, then it is assumed
 - `sameComparator` (`boolean`)
 - `entries` (`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>`)
 
-### `fromEntries(java.util.Comparator<? super K> comparator, boolean sameComparator, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray, int size)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `fromEntries(Comparator<? super K> comparator, boolean sameComparator, Map@Nullable Entry<K,V>[] entryArray, int size)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super K>`)
@@ -382,15 +380,15 @@ If sameComparator, then it is assumed
 - `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
 - `size` (`int`)
 
-### `naturalOrder()`
+**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
 
-**Returns:** `com.google.common.collect.ImmutableSortedMap.Builder<K,V>`
+### `naturalOrder()`
 
 The sorted maps use Ordering#natural() as the comparator.
 
-### `orderedBy(java.util.Comparator<K> comparator)`
-
 **Returns:** `com.google.common.collect.ImmutableSortedMap.Builder<K,V>`
+
+### `orderedBy(Comparator<K> comparator)`
 
 If the
  comparator has a more general type than the map's keys, such as creating a 
@@ -400,6 +398,8 @@ If the
 **Parameters:**
 - `comparator` (`java.util.Comparator<K>`)
 
+**Returns:** `com.google.common.collect.ImmutableSortedMap.Builder<K,V>`
+
 ### `reverseOrder()`
 
 **Returns:** `com.google.common.collect.ImmutableSortedMap.Builder<K,V>`
@@ -408,19 +408,19 @@ If the
 
 **Returns:** `int`
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
 
-### `get(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `isPartialView()`
 
@@ -452,9 +452,9 @@ If the
 
 ### `comparator()`
 
-**Returns:** `java.util.Comparator<? super K>`
-
 Note that its behavior is not consistent with TreeMap#comparator(), which returns null to indicate natural ordering.
+
+**Returns:** `java.util.Comparator<? super K>`
 
 ### `firstKey()`
 
@@ -466,15 +466,13 @@ Note that its behavior is not consistent with TreeMap#comparator(), which return
 
 ### `getSubMap(int fromIndex, int toIndex)`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
-
 **Parameters:**
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `headMap(K toKey)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `headMap(K toKey)`
 
 The SortedMap#headMap documentation states that a submap of a submap throws an
  IllegalArgumentException if passed a toKey greater than an earlier 
@@ -484,9 +482,9 @@ The SortedMap#headMap documentation states that a submap of a submap throws an
 **Parameters:**
 - `toKey` (`K`)
 
-### `headMap(K toKey, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `headMap(K toKey, boolean inclusive)`
 
 The SortedMap#headMap documentation states that a submap of a submap throws an
  IllegalArgumentException if passed a toKey greater than an earlier 
@@ -497,9 +495,9 @@ The SortedMap#headMap documentation states that a submap of a submap throws an
 - `toKey` (`K`)
 - `inclusive` (`boolean`)
 
-### `subMap(K fromKey, K toKey)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `subMap(K fromKey, K toKey)`
 
 The SortedMap#subMap documentation states that a submap of a submap throws an IllegalArgumentException if passed a fromKey less than an earlier fromKey.
  However, this method doesn't throw an exception in that situation, but instead keeps the
@@ -510,9 +508,9 @@ The SortedMap#subMap documentation states that a submap of a submap throws an Il
 - `fromKey` (`K`)
 - `toKey` (`K`)
 
-### `subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)`
 
 The SortedMap#subMap documentation states that a submap of a submap throws an IllegalArgumentException if passed a fromKey less than an earlier fromKey.
  However, this method doesn't throw an exception in that situation, but instead keeps the
@@ -525,9 +523,9 @@ The SortedMap#subMap documentation states that a submap of a submap throws an Il
 - `toKey` (`K`)
 - `toInclusive` (`boolean`)
 
-### `tailMap(K fromKey)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `tailMap(K fromKey)`
 
 The SortedMap#tailMap documentation states that a submap of a submap throws an
  IllegalArgumentException if passed a fromKey less than an earlier 
@@ -537,9 +535,9 @@ The SortedMap#tailMap documentation states that a submap of a submap throws an
 **Parameters:**
 - `fromKey` (`K`)
 
-### `tailMap(K fromKey, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `tailMap(K fromKey, boolean inclusive)`
 
 The SortedMap#tailMap documentation states that a submap of a submap throws an
  IllegalArgumentException if passed a fromKey less than an earlier 
@@ -550,61 +548,63 @@ The SortedMap#tailMap documentation states that a submap of a submap throws an
 - `fromKey` (`K`)
 - `inclusive` (`boolean`)
 
-### `lowerEntry(K key)`
+**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `lowerEntry(K key)`
 
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `lowerKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `floorEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `floorKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `ceilingEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `ceilingKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `higherEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `higherKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `firstEntry()`
 
@@ -638,16 +638,14 @@ The SortedMap#tailMap documentation states that a submap of a submap throws an
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
 
-### `toImmutableMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
+**Returns:** `void`
 
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+### `toImmutableMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction)`
 
 Use #toImmutableSortedMap, which offers better type-safety, instead.
  This method exists only to hide ImmutableMap#toImmutableMap from consumers of 
@@ -657,9 +655,9 @@ Use #toImmutableSortedMap, which offers better type-safety, instead.
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `toImmutableMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.BinaryOperator<V> mergeFunction)`
-
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+
+### `toImmutableMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction, BinaryOperator<V> mergeFunction)`
 
 Use #toImmutableSortedMap, which offers better type-safety, instead.
  This method exists only to hide ImmutableMap#toImmutableMap from consumers of 
@@ -670,23 +668,23 @@ Use #toImmutableSortedMap, which offers better type-safety, instead.
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `mergeFunction` (`java.util.function.BinaryOperator<V>`)
 
-### `builder()`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 
-**Returns:** `com.google.common.collect.ImmutableSortedMap.Builder<K,V>`
+### `builder()`
 
 Use #naturalOrder, which offers better type-safety, instead. This method
  exists only to hide ImmutableMap#builder from consumers of ImmutableSortedMap.
 
-### `builderWithExpectedSize(int expectedSize)`
-
 **Returns:** `com.google.common.collect.ImmutableSortedMap.Builder<K,V>`
+
+### `builderWithExpectedSize(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `of(K k1, V v1)`
+**Returns:** `com.google.common.collect.ImmutableSortedMap.Builder<K,V>`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+### `of(K k1, V v1)`
 
 **You are attempting to create a map that may contain a non-Comparable
  key.** Proper calls will resolve to the version in ImmutableSortedMap, not this dummy
@@ -696,9 +694,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k1` (`K`)
 - `v1` (`V`)
 
-### `of(K k1, V v1, K k2, V v2)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -710,9 +708,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k2` (`K`)
 - `v2` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls to will resolve to the version in ImmutableSortedMap, not this
@@ -726,9 +724,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k3` (`K`)
 - `v3` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -744,9 +742,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k4` (`K`)
 - `v4` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -764,9 +762,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k5` (`K`)
 - `v5` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -786,9 +784,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k6` (`K`)
 - `v6` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -810,9 +808,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k7` (`K`)
 - `v7` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -836,9 +834,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k8` (`K`)
 - `v8` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -864,9 +862,9 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k9` (`K`)
 - `v9` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5, K k6, V v6, K k7, V v7, K k8, V v8, K k9, V v9, K k10, V v10)`
 
 **You are attempting to create a map that may contain non-Comparable
  keys.** Proper calls will resolve to the version in ImmutableSortedMap, not this
@@ -894,12 +892,14 @@ Use #naturalOrder, which offers better type-safety, instead. This method
 - `k10` (`K`)
 - `v10` (`V`)
 
-### `ofEntries(java.util.Map.Entry<? extends K,? extends V>[] entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
+
+### `ofEntries(Map.Entry<? extends K,? extends V>[] entries)`
 
 Use ImmutableSortedMap.copyOf(ImmutableMap.ofEntries(...)).
 
 **Parameters:**
 - `entries` (`java.util.Map.Entry<? extends K,? extends V>[]`)
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMap<K,V>`](./ImmutableSortedMap.md)
 

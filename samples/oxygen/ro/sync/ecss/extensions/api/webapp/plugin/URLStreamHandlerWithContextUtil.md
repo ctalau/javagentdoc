@@ -37,7 +37,7 @@ The context ID is typically added when the user asks the webapp to open an URL
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.URLStreamHandlerWithContextUtil`](./URLStreamHandlerWithContextUtil.md)
 
-### `setUserContext(ro.sync.ecss.extensions.api.webapp.plugin.UserContext context, java.net.URL url)`
+### `setUserContext(UserContext context, URL url)`
 
 If the URL handler for this URL
  is an URLStreamHandlerWithContext, it is used to set the context for the URL,
@@ -51,7 +51,7 @@ If the URL handler for this URL
 
 **Returns:** `void`
 
-### `copyContextId(java.net.URL source, java.net.URL target)`
+### `copyContextId(URL source, URL target)`
 
 If the two URLs have different protocols, this method does nothing.
 
@@ -61,21 +61,21 @@ If the two URLs have different protocols, this method does nothing.
 
 **Returns:** `void`
 
-### `toStrippedExternalForm(java.net.URL url)`
+### `toStrippedExternalForm(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL with the context id.
 
 **Returns:** `java.lang.String`
 
-### `getUrlContextId(java.net.URL url)`
+### `getUrlContextId(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL with the context id.
 
 **Returns:** `java.lang.String`
 
-### `getUrlHandler(java.net.URL u)`
+### `getUrlHandler(URL u)`
 
 **Parameters:**
 - `u` (`java.net.URL`): The URL.

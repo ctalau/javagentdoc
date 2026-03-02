@@ -57,59 +57,57 @@ See the Guava User Guide article on [Joiner](https://github.com/google/guava/wik
 
 ## Constructors
 
-### `<init>(java.lang.String separator)`
+### `<init>(String separator)`
 
 **Parameters:**
 - `separator` (`java.lang.String`)
 
-### `<init>(com.google.common.base.Joiner prototype)`
+### `<init>(Joiner prototype)`
 
 **Parameters:**
 - `prototype` ([`com.google.common.base.Joiner`](./Joiner.md))
 
 ## Methods
 
-### `on(java.lang.String separator)`
-
-**Returns:** [`com.google.common.base.Joiner`](./Joiner.md)
+### `on(String separator)`
 
 **Parameters:**
 - `separator` (`java.lang.String`)
 
-### `on(char separator)`
-
 **Returns:** [`com.google.common.base.Joiner`](./Joiner.md)
+
+### `on(char separator)`
 
 **Parameters:**
 - `separator` (`char`)
 
-### `appendTo(A appendable, java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object> parts)`
+**Returns:** [`com.google.common.base.Joiner`](./Joiner.md)
 
-**Returns:** `A`
+### `appendTo(A appendable, Iterable<? extends lang@Nullable Object> parts)`
 
 **Parameters:**
 - `appendable` (`A`)
 - `parts` (`java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`)
 
-### `appendTo(A appendable, java.util.Iterator<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object> parts)`
-
 **Returns:** `A`
+
+### `appendTo(A appendable, Iterator<? extends lang@Nullable Object> parts)`
 
 **Parameters:**
 - `appendable` (`A`)
 - `parts` (`java.util.Iterator<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`)
 
-### `appendTo(A appendable, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] parts)`
-
 **Returns:** `A`
+
+### `appendTo(A appendable, lang@Nullable Object[] parts)`
 
 **Parameters:**
 - `appendable` (`A`)
 - `parts` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `appendTo(A appendable, java.lang.Object first, java.lang.Object second, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] rest)`
-
 **Returns:** `A`
+
+### `appendTo(A appendable, Object first, Object second, lang@Nullable Object[] rest)`
 
 **Parameters:**
 - `appendable` (`A`)
@@ -117,9 +115,9 @@ See the Guava User Guide article on [Joiner](https://github.com/google/guava/wik
 - `second` (`java.lang.Object`)
 - `rest` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `appendTo(java.lang.StringBuilder builder, java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object> parts)`
+**Returns:** `A`
 
-**Returns:** `java.lang.StringBuilder`
+### `appendTo(StringBuilder builder, Iterable<? extends lang@Nullable Object> parts)`
 
 Identical to #appendTo(Appendable,
  Iterable), except that it does not throw IOException.
@@ -128,9 +126,9 @@ Identical to #appendTo(Appendable,
 - `builder` (`java.lang.StringBuilder`)
 - `parts` (`java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`)
 
-### `appendTo(java.lang.StringBuilder builder, java.util.Iterator<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object> parts)`
-
 **Returns:** `java.lang.StringBuilder`
+
+### `appendTo(StringBuilder builder, Iterator<? extends lang@Nullable Object> parts)`
 
 Identical to #appendTo(Appendable,
  Iterable), except that it does not throw IOException.
@@ -139,9 +137,9 @@ Identical to #appendTo(Appendable,
 - `builder` (`java.lang.StringBuilder`)
 - `parts` (`java.util.Iterator<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`)
 
-### `appendTo(java.lang.StringBuilder builder, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] parts)`
-
 **Returns:** `java.lang.StringBuilder`
+
+### `appendTo(StringBuilder builder, lang@Nullable Object[] parts)`
 
 Identical to #appendTo(Appendable,
  Iterable), except that it does not throw IOException.
@@ -150,9 +148,9 @@ Identical to #appendTo(Appendable,
 - `builder` (`java.lang.StringBuilder`)
 - `parts` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `appendTo(java.lang.StringBuilder builder, java.lang.Object first, java.lang.Object second, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] rest)`
-
 **Returns:** `java.lang.StringBuilder`
+
+### `appendTo(StringBuilder builder, Object first, Object second, lang@Nullable Object[] rest)`
 
 Identical to #appendTo(Appendable, Object, Object, Object...), except that it does not
  throw IOException.
@@ -163,42 +161,44 @@ Identical to #appendTo(Appendable, Object, Object, Object...), except that it do
 - `second` (`java.lang.Object`)
 - `rest` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `join(java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object> parts)`
+**Returns:** `java.lang.StringBuilder`
 
-**Returns:** `java.lang.String`
+### `join(Iterable<? extends lang@Nullable Object> parts)`
 
 **Parameters:**
 - `parts` (`java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`)
 
-### `join(java.util.Iterator<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object> parts)`
-
 **Returns:** `java.lang.String`
+
+### `join(Iterator<? extends lang@Nullable Object> parts)`
 
 **Parameters:**
 - `parts` (`java.util.Iterator<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`)
 
-### `join(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] parts)`
-
 **Returns:** `java.lang.String`
+
+### `join(lang@Nullable Object[] parts)`
 
 **Parameters:**
 - `parts` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `join(java.lang.Object first, java.lang.Object second, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] rest)`
-
 **Returns:** `java.lang.String`
+
+### `join(Object first, Object second, lang@Nullable Object[] rest)`
 
 **Parameters:**
 - `first` (`java.lang.Object`)
 - `second` (`java.lang.Object`)
 - `rest` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `useForNull(java.lang.String nullText)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`com.google.common.base.Joiner`](./Joiner.md)
+### `useForNull(String nullText)`
 
 **Parameters:**
 - `nullText` (`java.lang.String`)
+
+**Returns:** [`com.google.common.base.Joiner`](./Joiner.md)
 
 ### `skipNulls()`
 
@@ -206,31 +206,31 @@ Identical to #appendTo(Appendable, Object, Object, Object...), except that it do
 
 ### `withKeyValueSeparator(char keyValueSeparator)`
 
-**Returns:** `com.google.common.base.Joiner.MapJoiner`
-
 **Parameters:**
 - `keyValueSeparator` (`char`)
 
-### `withKeyValueSeparator(java.lang.String keyValueSeparator)`
-
 **Returns:** `com.google.common.base.Joiner.MapJoiner`
+
+### `withKeyValueSeparator(String keyValueSeparator)`
 
 **Parameters:**
 - `keyValueSeparator` (`java.lang.String`)
 
-### `toString(java.lang.Object part)`
+**Returns:** `com.google.common.base.Joiner.MapJoiner`
 
-**Returns:** `java.lang.CharSequence`
+### `toString(Object part)`
 
 **Parameters:**
 - `part` (`java.lang.Object`)
 
-### `iterable(java.lang.Object first, java.lang.Object second, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] rest)`
+**Returns:** `java.lang.CharSequence`
 
-**Returns:** `java.lang.Iterable<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`
+### `iterable(Object first, Object second, lang@Nullable Object[] rest)`
 
 **Parameters:**
 - `first` (`java.lang.Object`)
 - `second` (`java.lang.Object`)
 - `rest` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+
+**Returns:** `java.lang.Iterable<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`
 

@@ -20,10 +20,10 @@ Much like java.util.concurrent.Callable, but returning a ListenableFuture
 
 ### `call()`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
-
 The output Future need not be done, making AsyncCallable suitable for asynchronous derivations.
 
  
 Throwing an exception from this method is equivalent to returning a failing ListenableFuture.
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 

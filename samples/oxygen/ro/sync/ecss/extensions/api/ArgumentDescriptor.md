@@ -70,7 +70,7 @@ This Map
 
 ## Constructors
 
-### `<init>(java.lang.String name, int type, java.lang.String description)`
+### `<init>(String name, int type, String description)`
 
 **Parameters:**
 - `name` (`java.lang.String`): The name of the argument.
@@ -82,7 +82,7 @@ This Map
    ArgumentDescriptor#TYPE_CONSTANT_LIST,
 - `description` (`java.lang.String`): The description of the argument.
 
-### `<init>(java.lang.String name, int type, java.lang.String description, java.lang.String defaultValue)`
+### `<init>(String name, int type, String description, String defaultValue)`
 
 **Parameters:**
 - `name` (`java.lang.String`): The name of the argument.
@@ -95,7 +95,7 @@ This Map
 - `description` (`java.lang.String`): The description of the argument.
 - `defaultValue` (`java.lang.String`): The default value of the argument.
 
-### `<init>(java.lang.String name, int type, java.lang.String description, java.lang.String[] allowedValues, java.lang.String defaultValue)`
+### `<init>(String name, int type, String description, String[] allowedValues, String defaultValue)`
 
 **Parameters:**
 - `name` (`java.lang.String`): The name of the argument.

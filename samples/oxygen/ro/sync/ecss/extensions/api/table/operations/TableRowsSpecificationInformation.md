@@ -39,7 +39,7 @@ It can be extended to provide specific table rows properties for different
 
 ## Methods
 
-### `addSpanningCellIndexes(java.util.List<java.lang.Integer> indexes)`
+### `addSpanningCellIndexes(List<Integer> indexes)`
 
 **Parameters:**
 - `indexes` (`java.util.List<java.lang.Integer>`): Spanning cell indexes (starts with 0)

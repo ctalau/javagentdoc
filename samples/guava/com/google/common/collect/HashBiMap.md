@@ -81,14 +81,12 @@ See the Guava User Guide article on [BiMap ](https://github.com/google/guava/wik
 
 ### `create(int expectedSize)`
 
-**Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
-
 **Parameters:**
 - `expectedSize` (`int`): the expected number of entries
 
-### `create(java.util.Map<? extends K,? extends V> map)`
-
 **Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
+
+### `create(Map<? extends K,? extends V> map)`
 
 The bimap is created with an
  initial capacity sufficient to hold the mappings in the specified map.
@@ -96,54 +94,54 @@ The bimap is created with an
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `init(int expectedSize)`
+**Returns:** [`com.google.common.collect.HashBiMap<K,V>`](./HashBiMap.md)
 
-**Returns:** `void`
+### `init(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `delete(com.google.common.collect.HashBiMap.BiEntry<K,V> entry)`
-
 **Returns:** `void`
+
+### `delete(HashBiMap.BiEntry<K,V> entry)`
 
 **Parameters:**
 - `entry` (`com.google.common.collect.HashBiMap.BiEntry<K,V>`)
 
-### `insert(com.google.common.collect.HashBiMap.BiEntry<K,V> entry, com.google.common.collect.HashBiMap.BiEntry<K,V> oldEntryForKey)`
-
 **Returns:** `void`
+
+### `insert(HashBiMap.BiEntry<K,V> entry, HashBiMap.BiEntry<K,V> oldEntryForKey)`
 
 **Parameters:**
 - `entry` (`com.google.common.collect.HashBiMap.BiEntry<K,V>`)
 - `oldEntryForKey` (`com.google.common.collect.HashBiMap.BiEntry<K,V>`)
 
-### `seekByKey(java.lang.Object key, int keyHash)`
+**Returns:** `void`
 
-**Returns:** `com.google.common.collect.HashBiMap.BiEntry<K,V>`
+### `seekByKey(Object key, int keyHash)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `keyHash` (`int`)
 
-### `seekByValue(java.lang.Object value, int valueHash)`
-
 **Returns:** `com.google.common.collect.HashBiMap.BiEntry<K,V>`
+
+### `seekByValue(Object value, int valueHash)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 - `valueHash` (`int`)
 
-### `containsKey(java.lang.Object key)`
+**Returns:** `com.google.common.collect.HashBiMap.BiEntry<K,V>`
 
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 Due to the property that values in a BiMap are unique, this will tend to execute in
  faster-than-linear time.
@@ -151,46 +149,48 @@ Due to the property that values in a BiMap are unique, this will tend to execute
 **Parameters:**
 - `value` (`java.lang.Object`): the object to search for in the values of this BiMap
 
-### `get(java.lang.Object key)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `put(K key, V value)`
-
 **Returns:** `V`
+
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `put(K key, V value, boolean force)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 - `force` (`boolean`)
+
+**Returns:** `V`
 
 ### `forcePut(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putInverse(V value, K key, boolean force)`
+**Returns:** `V`
 
-**Returns:** `K`
+### `putInverse(V value, K key, boolean force)`
 
 **Parameters:**
 - `value` (`V`)
 - `key` (`K`)
 - `force` (`boolean`)
+
+**Returns:** `K`
 
 ### `rehashIfNecessary()`
 
@@ -198,17 +198,17 @@ Due to the property that values in a BiMap are unique, this will tend to execute
 
 ### `createTable(int length)`
 
-**Returns:** `com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`
-
 **Parameters:**
 - `length` (`int`)
 
-### `remove(java.lang.Object key)`
+**Returns:** `com.google.common.collect.HashBiMap.@org.checkerframework.checker.nullness.qual.Nullable BiEntry<K,V>[]`
 
-**Returns:** `V`
+### `remove(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `clear()`
 
@@ -230,35 +230,35 @@ Due to the property that values in a BiMap are unique, this will tend to execute
 
 **Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
 
-### `replaceAll(java.util.function.BiFunction<? super K,? super V,? extends V> function)`
-
 **Returns:** `void`
+
+### `replaceAll(BiFunction<? super K,? super V,? extends V> function)`
 
 **Parameters:**
 - `function` (`java.util.function.BiFunction<? super K,? super V,? extends V>`)
+
+**Returns:** `void`
 
 ### `inverse()`
 
 **Returns:** [`com.google.common.collect.BiMap<V,K>`](./BiMap.md)
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

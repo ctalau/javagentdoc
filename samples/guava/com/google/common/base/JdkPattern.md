@@ -22,19 +22,19 @@
 
 ## Constructors
 
-### `<init>(java.util.regex.Pattern pattern)`
+### `<init>(Pattern pattern)`
 
 **Parameters:**
 - `pattern` (`java.util.regex.Pattern`)
 
 ## Methods
 
-### `matcher(java.lang.CharSequence t)`
-
-**Returns:** [`com.google.common.base.CommonMatcher`](./CommonMatcher.md)
+### `matcher(CharSequence t)`
 
 **Parameters:**
 - `t` (`java.lang.CharSequence`)
+
+**Returns:** [`com.google.common.base.CommonMatcher`](./CommonMatcher.md)
 
 ### `pattern()`
 

@@ -32,7 +32,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
 
-### `isDelimiterBeforeTextNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int contentOffset)`
+### `isDelimiterBeforeTextNode(AuthorAccess authorAccess, int contentOffset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -47,7 +47,7 @@
 
 **Returns:** `boolean`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap arguments)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap arguments)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -55,7 +55,7 @@
 
 **Returns:** `void`
 
-### `processContentRange(ro.sync.ecss.extensions.api.AuthorDocumentController documentController, int selStart, int selEnd)`
+### `processContentRange(AuthorDocumentController documentController, int selStart, int selEnd)`
 
 **Parameters:**
 - `documentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): The document controller.

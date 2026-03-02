@@ -30,19 +30,19 @@
 
 ## Methods
 
-### `containsRow(java.lang.Object rowKey)`
-
-**Returns:** `boolean`
+### `containsRow(Object rowKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 
-### `containsColumn(java.lang.Object columnKey)`
-
 **Returns:** `boolean`
+
+### `containsColumn(Object columnKey)`
 
 **Parameters:**
 - `columnKey` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `rowKeySet()`
 
@@ -52,28 +52,28 @@
 
 **Returns:** `java.util.Set<C>`
 
-### `containsValue(java.lang.Object value)`
-
-**Returns:** `boolean`
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `boolean`
+
+### `contains(Object rowKey, Object columnKey)`
+
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
 
 **Returns:** `boolean`
 
+### `get(Object rowKey, Object columnKey)`
+
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
-
-### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
 
 **Returns:** `V`
-
-**Parameters:**
-- `rowKey` (`java.lang.Object`)
-- `columnKey` (`java.lang.Object`)
 
 ### `isEmpty()`
 
@@ -83,29 +83,29 @@
 
 **Returns:** `void`
 
-### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
-
-**Returns:** `V`
+### `remove(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `put(R rowKey, C columnKey, V value)`
-
 **Returns:** `V`
+
+### `put(R rowKey, C columnKey, V value)`
 
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `value` (`V`)
 
-### `putAll(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Table<? extends R,? extends C,? extends V> table)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md))
+
+**Returns:** `void`
 
 ### `cellSet()`
 
@@ -139,12 +139,12 @@
 
 **Returns:** `java.util.Spliterator<V>`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

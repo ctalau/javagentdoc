@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.Ordering<? super T> ordering)`
+### `<init>(Ordering<? super T> ordering)`
 
 **Parameters:**
 - `ordering` ([`com.google.common.collect.Ordering<? super T>`](./Ordering.md))
@@ -35,11 +35,11 @@
 
 ### `compare(T left, T right)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `left` (`T`)
 - `right` (`T`)
+
+**Returns:** `int`
 
 ### `reverse()`
 
@@ -53,12 +53,12 @@
 
 **Returns:** [`com.google.common.collect.Ordering<@org.checkerframework.checker.nullness.qual.Nullable S>`](./Ordering.md)
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

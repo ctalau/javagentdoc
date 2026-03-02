@@ -49,35 +49,35 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 ### `putFirst(E e)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `void`
 
 ### `putLast(E e)`
 
+**Parameters:**
+- `e` (`E`)
+
 **Returns:** `void`
 
-**Parameters:**
-- `e` (`E`)
-
-### `offerFirst(E e, long timeout, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `boolean`
+### `offerFirst(E e, long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `e` (`E`)
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `offerLast(E e, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `offerLast(E e, long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `e` (`E`)
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `boolean`
 
 ### `takeFirst()`
 
@@ -87,62 +87,62 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 **Returns:** `E`
 
-### `pollFirst(long timeout, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `E`
+### `pollFirst(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `pollLast(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `E`
+
+### `pollLast(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `E`
 
 ### `put(E e)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `e` (`E`)
 
-### `offer(E e, long timeout, java.util.concurrent.TimeUnit unit)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `offer(E e, long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `e` (`E`)
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `boolean`
 
 ### `take()`
 
 **Returns:** `E`
 
-### `poll(long timeout, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `E`
+### `poll(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `drainTo(java.util.Collection<? super E> c)`
+**Returns:** `E`
 
-**Returns:** `int`
+### `drainTo(Collection<? super E> c)`
 
 **Parameters:**
 - `c` (`java.util.Collection<? super E>`)
 
-### `drainTo(java.util.Collection<? super E> c, int maxElements)`
-
 **Returns:** `int`
+
+### `drainTo(Collection<? super E> c, int maxElements)`
 
 **Parameters:**
 - `c` (`java.util.Collection<? super E>`)
 - `maxElements` (`int`)
+
+**Returns:** `int`
 

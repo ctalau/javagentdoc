@@ -68,14 +68,14 @@
 
 ## Methods
 
-### `setTableOpener(ro.sync.db.h arg0)`
+### `setTableOpener(h arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.db.h`)
 
 **Returns:** `void`
 
-### `updateResults(java.lang.String arg0, ro.sync.db.fb arg1)`
+### `updateResults(String arg0, fb arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -87,7 +87,7 @@
 
 **Returns:** `ro.sync.exml.td`
 
-### `createTransformationHelper(ro.sync.exml.editor.xmleditor.c arg0, java.lang.String arg1)`
+### `createTransformationHelper(c arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.xmleditor.c`)
@@ -95,7 +95,7 @@
 
 **Returns:** `ro.sync.exml.editor.xmleditor.transform.jb`
 
-### `showDockableView(java.lang.String arg0, boolean arg1)`
+### `showDockableView(String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -103,14 +103,14 @@
 
 **Returns:** `void`
 
-### `setDockingManager(ro.sync.exml.docking.f arg0)`
+### `setDockingManager(f arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.docking.f`)
 
 **Returns:** `void`
 
-### `showHierarchyOrDependences(java.lang.String arg0, boolean arg1, java.lang.String arg2)`
+### `showHierarchyOrDependences(String arg0, boolean arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -119,14 +119,14 @@
 
 **Returns:** `void`
 
-### `setHierarchyPanel(ro.sync.exml.modules.hierarchy.l arg0)`
+### `setHierarchyPanel(l arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.modules.hierarchy.l`)
 
 **Returns:** `void`
 
-### `showComponentDependencies(ro.sync.exml.editor.hb.g arg0, ro.sync.exml.modules.b.i[] arg1)`
+### `showComponentDependencies(g arg0, i[] arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.hb.g`)
@@ -134,28 +134,28 @@
 
 **Returns:** `void`
 
-### `setComponentDependenciesPanel(ro.sync.exml.editor.finders.b.h arg0)`
+### `setComponentDependenciesPanel(h arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.finders.b.h`)
 
 **Returns:** `void`
 
-### `setFindResourcePanel(ro.sync.k.b.b arg0)`
+### `setFindResourcePanel(b arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.k.b.b`)
 
 **Returns:** `void`
 
-### `setWatchPanel(ro.sync.f.f.nb arg0)`
+### `setWatchPanel(nb arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.f.f.nb`)
 
 **Returns:** `void`
 
-### `addWatchExpression(java.lang.String arg0)`
+### `addWatchExpression(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -170,7 +170,7 @@
 
 **Returns:** `ro.sync.exml.editor.e`
 
-### `initializeForTests(ro.sync.exml.SAIDEAccess arg0)`
+### `initializeForTests(SAIDEAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.SAIDEAccess`](./SAIDEAccess.md))
@@ -185,14 +185,14 @@
 
 **Returns:** `ro.sync.diff.ui.t`
 
-### `setDiffFilePresenter(ro.sync.diff.ui.t arg0)`
+### `setDiffFilePresenter(t arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.ui.t`)
 
 **Returns:** `void`
 
-### `setWorkspaceController(ro.sync.exml.project.o arg0)`
+### `setWorkspaceController(o arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.project.o`)
@@ -211,7 +211,7 @@
 
 **Returns:** `ro.sync.ecss.dita.mapeditor.q`
 
-### `doBrowseRemote(java.net.URL arg0)`
+### `doBrowseRemote(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -230,21 +230,21 @@
 
 **Returns:** `ro.sync.exml.masterfiles.w`
 
-### `refreshFilesInProject(ro.sync.exml.project.wb arg0)`
+### `refreshFilesInProject(wb arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.project.wb`)
 
 **Returns:** `void`
 
-### `refreshDMMResourcesWithSysIDs(java.util.List<java.lang.String> arg0)`
+### `refreshDMMResourcesWithSysIDs(List<String> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
 
 **Returns:** `void`
 
-### `bd(java.util.List<java.lang.String> arg0, ro.sync.exml.editor.rc arg1)`
+### `bd(List<String> arg0, rc arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
@@ -252,14 +252,14 @@
 
 **Returns:** `void`
 
-### `ad(ro.sync.ecss.dita.mapeditor.c arg0)`
+### `ad(c arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.mapeditor.c`)
 
 **Returns:** `void`
 
-### `doBrowseRemote(java.net.URL arg0, boolean arg1)`
+### `doBrowseRemote(URL arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -267,7 +267,7 @@
 
 **Returns:** `java.net.URL`
 
-### `doMoveResource(java.io.File arg0, java.io.File arg1, boolean arg2)`
+### `doMoveResource(File arg0, File arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -276,21 +276,21 @@
 
 **Returns:** `void`
 
-### `setSvnAccess(ro.sync.exml.zb arg0)`
+### `setSvnAccess(zb arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.zb`)
 
 **Returns:** `void`
 
-### `disableOpen(java.lang.String arg0)`
+### `disableOpen(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `showOpenFindResource(java.lang.String arg0, boolean arg1, boolean arg2)`
+### `showOpenFindResource(String arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

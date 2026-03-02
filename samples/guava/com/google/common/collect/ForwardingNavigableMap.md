@@ -52,14 +52,12 @@ The standard methods and the collection views they return are not guaranteed to 
 
 ### `lowerEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
 
-### `standardLowerEntry(K key)`
-
 **Returns:** `java.util.Map.Entry<K,V>`
+
+### `standardLowerEntry(K key)`
 
 If you override headMap, you may wish to override 
  lowerEntry to forward to this implementation.
@@ -67,16 +65,16 @@ If you override headMap, you may wish to override
 **Parameters:**
 - `key` (`K`)
 
-### `lowerKey(K key)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `K`
+### `lowerKey(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `standardLowerKey(K key)`
-
 **Returns:** `K`
+
+### `standardLowerKey(K key)`
 
 If you override
  #lowerEntry, you may wish to override lowerKey to forward to this
@@ -85,16 +83,16 @@ If you override
 **Parameters:**
 - `key` (`K`)
 
-### `floorEntry(K key)`
+**Returns:** `K`
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `floorEntry(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `standardFloorEntry(K key)`
-
 **Returns:** `java.util.Map.Entry<K,V>`
+
+### `standardFloorEntry(K key)`
 
 If you override headMap, you may wish to override 
  floorEntry to forward to this implementation.
@@ -102,16 +100,16 @@ If you override headMap, you may wish to override
 **Parameters:**
 - `key` (`K`)
 
-### `floorKey(K key)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `K`
+### `floorKey(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `standardFloorKey(K key)`
-
 **Returns:** `K`
+
+### `standardFloorKey(K key)`
 
 If you override
  floorEntry, you may wish to override floorKey to forward to this
@@ -120,16 +118,16 @@ If you override
 **Parameters:**
 - `key` (`K`)
 
-### `ceilingEntry(K key)`
+**Returns:** `K`
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `ceilingEntry(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `standardCeilingEntry(K key)`
-
 **Returns:** `java.util.Map.Entry<K,V>`
+
+### `standardCeilingEntry(K key)`
 
 If you override tailMap, you may wish to override 
  ceilingEntry to forward to this implementation.
@@ -137,16 +135,16 @@ If you override tailMap, you may wish to override
 **Parameters:**
 - `key` (`K`)
 
-### `ceilingKey(K key)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `K`
+### `ceilingKey(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `standardCeilingKey(K key)`
-
 **Returns:** `K`
+
+### `standardCeilingKey(K key)`
 
 If you override
  ceilingEntry, you may wish to override ceilingKey to forward to this
@@ -155,16 +153,16 @@ If you override
 **Parameters:**
 - `key` (`K`)
 
-### `higherEntry(K key)`
+**Returns:** `K`
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `higherEntry(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `standardHigherEntry(K key)`
-
 **Returns:** `java.util.Map.Entry<K,V>`
+
+### `standardHigherEntry(K key)`
 
 If you override tailMap, you may wish to override 
  higherEntry to forward to this implementation.
@@ -172,16 +170,16 @@ If you override tailMap, you may wish to override
 **Parameters:**
 - `key` (`K`)
 
-### `higherKey(K key)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `K`
+### `higherKey(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `standardHigherKey(K key)`
-
 **Returns:** `K`
+
+### `standardHigherKey(K key)`
 
 If you override
  higherEntry, you may wish to override higherKey to forward to this
@@ -190,24 +188,26 @@ If you override
 **Parameters:**
 - `key` (`K`)
 
+**Returns:** `K`
+
 ### `firstEntry()`
 
 **Returns:** `java.util.Map.Entry<K,V>`
 
 ### `standardFirstEntry()`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 If you override entrySet, you may wish to override firstEntry to
  forward to this implementation.
 
-### `standardFirstKey()`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `K`
+### `standardFirstKey()`
 
 If you override
  firstEntry, you may wish to override firstKey to forward to this
  implementation.
+
+**Returns:** `K`
 
 ### `lastEntry()`
 
@@ -215,17 +215,17 @@ If you override
 
 ### `standardLastEntry()`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 If you override descendingMap, you may wish to
  override lastEntry to forward to this implementation.
 
-### `standardLastKey()`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `K`
+### `standardLastKey()`
 
 If you override 
  lastEntry, you may wish to override lastKey to forward to this implementation.
+
+**Returns:** `K`
 
 ### `pollFirstEntry()`
 
@@ -233,10 +233,10 @@ If you override
 
 ### `standardPollFirstEntry()`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 If you override entrySet, you may wish to override pollFirstEntry to
  forward to this implementation.
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `pollLastEntry()`
 
@@ -244,10 +244,10 @@ If you override entrySet, you may wish to override pollFirstEntry to
 
 ### `standardPollLastEntry()`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 If you override descendingMap, you may wish to
  override pollFirstEntry to forward to this implementation.
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `descendingMap()`
 
@@ -263,16 +263,14 @@ If you override descendingMap, you may wish to
 
 ### `standardDescendingKeySet()`
 
-**Returns:** `java.util.NavigableSet<K>`
-
 (The StandardDescendingMap implementation implements 
  navigableKeySet on its own, so as not to cause an infinite loop.) If you override 
  descendingMap, you may wish to override descendingKeySet to forward to this
  implementation.
 
-### `standardSubMap(K fromKey, K toKey)`
+**Returns:** `java.util.NavigableSet<K>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `standardSubMap(K fromKey, K toKey)`
 
 If you override subMap(K, boolean, K, boolean), you may
  wish to override subMap to forward to this implementation.
@@ -281,9 +279,9 @@ If you override subMap(K, boolean, K, boolean), you may
 - `fromKey` (`K`)
 - `toKey` (`K`)
 
-### `subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)`
 
 **Parameters:**
 - `fromKey` (`K`)
@@ -291,25 +289,25 @@ If you override subMap(K, boolean, K, boolean), you may
 - `toKey` (`K`)
 - `toInclusive` (`boolean`)
 
-### `headMap(K toKey, boolean inclusive)`
-
 **Returns:** `java.util.NavigableMap<K,V>`
+
+### `headMap(K toKey, boolean inclusive)`
 
 **Parameters:**
 - `toKey` (`K`)
 - `inclusive` (`boolean`)
 
-### `tailMap(K fromKey, boolean inclusive)`
-
 **Returns:** `java.util.NavigableMap<K,V>`
+
+### `tailMap(K fromKey, boolean inclusive)`
 
 **Parameters:**
 - `fromKey` (`K`)
 - `inclusive` (`boolean`)
 
-### `standardHeadMap(K toKey)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `standardHeadMap(K toKey)`
 
 If you override headMap(K, boolean), you may wish to override 
  headMap to forward to this implementation.
@@ -317,13 +315,15 @@ If you override headMap(K, boolean), you may wish to override
 **Parameters:**
 - `toKey` (`K`)
 
-### `standardTailMap(K fromKey)`
-
 **Returns:** `java.util.SortedMap<K,V>`
+
+### `standardTailMap(K fromKey)`
 
 If you override tailMap(K, boolean), you may wish to override 
  tailMap to forward to this implementation.
 
 **Parameters:**
 - `fromKey` (`K`)
+
+**Returns:** `java.util.SortedMap<K,V>`
 

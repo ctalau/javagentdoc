@@ -102,9 +102,7 @@ new MapMaker().weakKeys().makeMap() is a recommended replacement for java.util.W
 
 ## Methods
 
-### `keyEquivalence(com.google.common.base.Equivalence<java.lang.Object> equivalence)`
-
-**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
+### `keyEquivalence(Equivalence<Object> equivalence)`
 
 By default, the map uses Equivalence#identity to determine key equality when #weakKeys is specified, and Equivalence#equals() otherwise. The only place this is
  used is in Interners.WeakInterner.
@@ -112,13 +110,13 @@ By default, the map uses Equivalence#identity to determine key equality when #we
 **Parameters:**
 - `equivalence` ([`com.google.common.base.Equivalence<java.lang.Object>`](../base/Equivalence.md))
 
+**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
+
 ### `getKeyEquivalence()`
 
 **Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](../base/Equivalence.md)
 
 ### `initialCapacity(int initialCapacity)`
-
-**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
 
 For example, if the initial capacity
  is 60, and the concurrency level is 8, then eight segments are created, each
@@ -129,13 +127,13 @@ For example, if the initial capacity
 **Parameters:**
 - `initialCapacity` (`int`)
 
+**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
+
 ### `getInitialCapacity()`
 
 **Returns:** `int`
 
 ### `concurrencyLevel(int concurrencyLevel)`
-
-**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
 
 Used as a hint for internal sizing. The
  table is internally partitioned to try to permit the indicated number of concurrent updates
@@ -156,32 +154,32 @@ Used as a hint for internal sizing. The
 **Parameters:**
 - `concurrencyLevel` (`int`)
 
+**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
+
 ### `getConcurrencyLevel()`
 
 **Returns:** `int`
 
 ### `weakKeys()`
 
-**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
-
 **Warning:** when this method is used, the resulting map will use identity (==)
  comparison to determine equality of keys, which is a technical violation of the Map
  specification, and may not be what you expect.
 
-### `setKeyStrength(com.google.common.collect.MapMakerInternalMap.Strength strength)`
-
 **Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
+
+### `setKeyStrength(MapMakerInternalMap.Strength strength)`
 
 **Parameters:**
 - `strength` (`com.google.common.collect.MapMakerInternalMap.Strength`)
+
+**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
 
 ### `getKeyStrength()`
 
 **Returns:** `com.google.common.collect.MapMakerInternalMap.Strength`
 
 ### `weakValues()`
-
-**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
 
 Weak values will be garbage collected once they are weakly reachable. This makes them a poor
  candidate for caching.
@@ -192,20 +190,20 @@ Weak values will be garbage collected once they are weakly reachable. This makes
  methods containsValue, remove(Object, Object) and replace(K, V,
  V), and may not be what you expect.
 
-### `setValueStrength(com.google.common.collect.MapMakerInternalMap.Strength strength)`
-
 **Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
+
+### `setValueStrength(MapMakerInternalMap.Strength strength)`
 
 **Parameters:**
 - `strength` (`com.google.common.collect.MapMakerInternalMap.Strength`)
+
+**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
 
 ### `getValueStrength()`
 
 **Returns:** `com.google.common.collect.MapMakerInternalMap.Strength`
 
 ### `makeMap()`
-
-**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
 This method does not alter the state of this MapMaker
  instance, so it can be invoked again to create multiple independent maps.
@@ -216,10 +214,12 @@ The bulk operations putAll, equals, and clear are not guaranteed to
  containsValue are implemented as bulk read operations, and thus may fail to observe concurrent
  writes.
 
-### `toString()`
+**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
-**Returns:** `java.lang.String`
+### `toString()`
 
 The exact form of the returned
  string is not specified.
+
+**Returns:** `java.lang.String`
 

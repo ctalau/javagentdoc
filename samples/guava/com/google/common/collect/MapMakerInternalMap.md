@@ -105,7 +105,7 @@ Helps prevent entries that end up in the same segment
 
 ## Constructors
 
-### `<init>(com.google.common.collect.MapMaker builder, com.google.common.collect.MapMakerInternalMap.InternalEntryHelper<K,V,E,S> entryHelper)`
+### `<init>(MapMaker builder, MapMakerInternalMap.InternalEntryHelper<K,V,E,S> entryHelper)`
 
 **Parameters:**
 - `builder` ([`com.google.common.collect.MapMaker`](./MapMaker.md))
@@ -113,16 +113,14 @@ Helps prevent entries that end up in the same segment
 
 ## Methods
 
-### `create(com.google.common.collect.MapMaker builder)`
-
-**Returns:** [`com.google.common.collect.MapMakerInternalMap<K,V,? extends com.google.common.collect.MapMakerInternalMap.InternalEntry<K,V,?>,?>`](./MapMakerInternalMap.md)
+### `create(MapMaker builder)`
 
 **Parameters:**
 - `builder` ([`com.google.common.collect.MapMaker`](./MapMaker.md))
 
-### `createWithDummyValues(com.google.common.collect.MapMaker builder)`
+**Returns:** [`com.google.common.collect.MapMakerInternalMap<K,V,? extends com.google.common.collect.MapMakerInternalMap.InternalEntry<K,V,?>,?>`](./MapMakerInternalMap.md)
 
-**Returns:** [`com.google.common.collect.MapMakerInternalMap<K,com.google.common.collect.MapMaker.Dummy,? extends com.google.common.collect.MapMakerInternalMap.InternalEntry<K,com.google.common.collect.MapMaker.Dummy,?>,?>`](./MapMakerInternalMap.md)
+### `createWithDummyValues(MapMaker builder)`
 
 The returned MapMakerInternalMap will be
  optimized to saved memory. Since MapMaker.Dummy is a singleton, we don't need to store
@@ -136,13 +134,13 @@ This method is intended to only be used by the internal implementation of Intern
 **Parameters:**
 - `builder` ([`com.google.common.collect.MapMaker`](./MapMaker.md))
 
+**Returns:** [`com.google.common.collect.MapMakerInternalMap<K,com.google.common.collect.MapMaker.Dummy,? extends com.google.common.collect.MapMakerInternalMap.InternalEntry<K,com.google.common.collect.MapMaker.Dummy,?>,?>`](./MapMakerInternalMap.md)
+
 ### `unsetWeakValueReference()`
 
 **Returns:** `com.google.common.collect.MapMakerInternalMap.WeakValueReference<K,V,E>`
 
 ### `rehash(int h)`
-
-**Returns:** `int`
 
 This is critical when the concurrent hash map uses power-of-two length hash
  tables, that otherwise encounter collisions for hash codes that do not differ in lower or upper
@@ -151,9 +149,9 @@ This is critical when the concurrent hash map uses power-of-two length hash
 **Parameters:**
 - `h` (`int`): hash code
 
-### `copyEntry(E original, E newNext)`
+**Returns:** `int`
 
-**Returns:** `E`
+### `copyEntry(E original, E newNext)`
 
 Code should call Segment#copyEntry directly.
 
@@ -161,30 +159,30 @@ Code should call Segment#copyEntry directly.
 - `original` (`E`)
 - `newNext` (`E`)
 
-### `hash(java.lang.Object key)`
+**Returns:** `E`
 
-**Returns:** `int`
+### `hash(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `reclaimValue(com.google.common.collect.MapMakerInternalMap.WeakValueReference<K,V,E> valueReference)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `reclaimValue(MapMakerInternalMap.WeakValueReference<K,V,E> valueReference)`
 
 **Parameters:**
 - `valueReference` (`com.google.common.collect.MapMakerInternalMap.WeakValueReference<K,V,E>`)
 
-### `reclaimKey(E entry)`
-
 **Returns:** `void`
+
+### `reclaimKey(E entry)`
 
 **Parameters:**
 - `entry` (`E`)
 
-### `isLiveForTesting(com.google.common.collect.MapMakerInternalMap.InternalEntry<K,V,?> entry)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isLiveForTesting(MapMakerInternalMap.InternalEntry<K,V,?> entry)`
 
 Code should call Segment#getLiveValue
  instead.
@@ -192,23 +190,23 @@ Code should call Segment#getLiveValue
 **Parameters:**
 - `entry` (`com.google.common.collect.MapMakerInternalMap.InternalEntry<K,V,?>`)
 
-### `segmentFor(int hash)`
+**Returns:** `boolean`
 
-**Returns:** `com.google.common.collect.MapMakerInternalMap.Segment<K,V,E,S>`
+### `segmentFor(int hash)`
 
 **Parameters:**
 - `hash` (`int`): the hash code for the key
 
-### `createSegment(int initialCapacity)`
-
 **Returns:** `com.google.common.collect.MapMakerInternalMap.Segment<K,V,E,S>`
+
+### `createSegment(int initialCapacity)`
 
 **Parameters:**
 - `initialCapacity` (`int`)
 
-### `getLiveValue(E entry)`
+**Returns:** `com.google.common.collect.MapMakerInternalMap.Segment<K,V,E,S>`
 
-**Returns:** `V`
+### `getLiveValue(E entry)`
 
 Returns null if the entry is invalid, partially-collected
  or computing.
@@ -216,12 +214,14 @@ Returns null if the entry is invalid, partially-collected
 **Parameters:**
 - `entry` (`E`)
 
-### `newSegmentArray(int ssize)`
+**Returns:** `V`
 
-**Returns:** `com.google.common.collect.MapMakerInternalMap.Segment<K,V,E,S>[]`
+### `newSegmentArray(int ssize)`
 
 **Parameters:**
 - `ssize` (`int`)
+
+**Returns:** `com.google.common.collect.MapMakerInternalMap.Segment<K,V,E,S>[]`
 
 ### `keyStrength()`
 
@@ -243,16 +243,14 @@ Returns null if the entry is invalid, partially-collected
 
 **Returns:** `int`
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `getEntry(java.lang.Object key)`
+**Returns:** `V`
 
-**Returns:** `E`
+### `getEntry(Object key)`
 
 The entry may be computing or partially
  collected. Does not impact recency ordering.
@@ -260,74 +258,76 @@ The entry may be computing or partially
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsKey(java.lang.Object key)`
+**Returns:** `E`
 
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `put(K key, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `putIfAbsent(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putAll(java.util.Map<? extends K,? extends V> m)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Map<? extends K,? extends V> m)`
 
 **Parameters:**
 - `m` (`java.util.Map<? extends K,? extends V>`)
 
-### `remove(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `remove(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `remove(java.lang.Object key, java.lang.Object value)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `remove(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `replace(K key, V oldValue, V newValue)`
-
 **Returns:** `boolean`
+
+### `replace(K key, V oldValue, V newValue)`
 
 **Parameters:**
 - `key` (`K`)
 - `oldValue` (`V`)
 - `newValue` (`V`)
 
-### `replace(K key, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `replace(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `clear()`
 
@@ -345,21 +345,21 @@ The entry may be computing or partially
 
 **Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-### `toArrayList(java.util.Collection<E> c)`
-
-**Returns:** `java.util.ArrayList<E>`
+### `toArrayList(Collection<E> c)`
 
 **Parameters:**
 - `c` (`java.util.Collection<E>`)
+
+**Returns:** `java.util.ArrayList<E>`
 
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream in)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream in)`
 
 **Parameters:**
 - `in` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

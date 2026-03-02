@@ -39,10 +39,10 @@ Represents a unique
 
 ### `isLessThan(C value)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `value` (`C`)
+
+**Returns:** `boolean`
 
 ### `typeAsLowerBound()`
 
@@ -52,74 +52,74 @@ Represents a unique
 
 **Returns:** [`com.google.common.collect.BoundType`](./BoundType.md)
 
-### `withLowerBoundType(com.google.common.collect.BoundType boundType, com.google.common.collect.DiscreteDomain<C> domain)`
-
-**Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
+### `withLowerBoundType(BoundType boundType, DiscreteDomain<C> domain)`
 
 **Parameters:**
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `withUpperBoundType(com.google.common.collect.BoundType boundType, com.google.common.collect.DiscreteDomain<C> domain)`
-
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
+
+### `withUpperBoundType(BoundType boundType, DiscreteDomain<C> domain)`
 
 **Parameters:**
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `describeAsLowerBound(java.lang.StringBuilder sb)`
+**Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-**Returns:** `void`
-
-**Parameters:**
-- `sb` (`java.lang.StringBuilder`)
-
-### `describeAsUpperBound(java.lang.StringBuilder sb)`
-
-**Returns:** `void`
+### `describeAsLowerBound(StringBuilder sb)`
 
 **Parameters:**
 - `sb` (`java.lang.StringBuilder`)
 
-### `leastValueAbove(com.google.common.collect.DiscreteDomain<C> domain)`
+**Returns:** `void`
 
-**Returns:** `C`
+### `describeAsUpperBound(StringBuilder sb)`
+
+**Parameters:**
+- `sb` (`java.lang.StringBuilder`)
+
+**Returns:** `void`
+
+### `leastValueAbove(DiscreteDomain<C> domain)`
 
 **Parameters:**
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `greatestValueBelow(com.google.common.collect.DiscreteDomain<C> domain)`
-
 **Returns:** `C`
+
+### `greatestValueBelow(DiscreteDomain<C> domain)`
 
 **Parameters:**
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `canonical(com.google.common.collect.DiscreteDomain<C> domain)`
+**Returns:** `C`
+
+### `canonical(DiscreteDomain<C> domain)`
+
+**Parameters:**
+- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
 **Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
-**Parameters:**
-- `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
-
-### `compareTo(com.google.common.collect.Cut<C> that)`
-
-**Returns:** `int`
+### `compareTo(Cut<C> that)`
 
 **Parameters:**
 - `that` ([`com.google.common.collect.Cut<C>`](./Cut.md))
+
+**Returns:** `int`
 
 ### `endpoint()`
 
 **Returns:** `C`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -135,15 +135,15 @@ Represents a unique
 
 ### `belowValue(C endpoint)`
 
-**Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
-
 **Parameters:**
 - `endpoint` (`C`)
+
+**Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 
 ### `aboveValue(C endpoint)`
 
-**Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
-
 **Parameters:**
 - `endpoint` (`C`)
+
+**Returns:** [`com.google.common.collect.Cut<C>`](./Cut.md)
 

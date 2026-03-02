@@ -28,7 +28,7 @@ If `null` the default text value will be used for rendering.
 
 ## Methods
 
-### `setRenderedText(java.lang.String renderedText)`
+### `setRenderedText(String renderedText)`
 
 If the rendered text is `null` then the default node rendering will be used.
 
@@ -37,7 +37,7 @@ If the rendered text is `null` then the default node rendering will be used.
 
 **Returns:** `void`
 
-### `setTooltipText(java.lang.String tooltipText)`
+### `setTooltipText(String tooltipText)`
 
 If the tooltip text is `null` then the default tooltip text will be used for the node.
 
@@ -47,7 +47,7 @@ If the tooltip text is `null` then the default tooltip text will be used for the
 
 **Returns:** `void`
 
-### `setIconPath(java.lang.String iconPath)`
+### `setIconPath(String iconPath)`
 
 The path can be an icon file path, the string representation of an icon URL 
  or can contain editor variables as defined in the EditorVariables class.

@@ -36,10 +36,10 @@ Subclasses should
 
 ### `add(E element)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `void`
 
 ### `hasPrevious()`
 
@@ -59,8 +59,8 @@ Subclasses should
 
 ### `set(E element)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `void`
 

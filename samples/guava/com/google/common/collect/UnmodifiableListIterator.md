@@ -22,15 +22,15 @@
 
 ### `add(E e)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `void`
 
 ### `set(E e)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `void`
 

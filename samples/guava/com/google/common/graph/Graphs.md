@@ -12,9 +12,7 @@
 
 ## Methods
 
-### `hasCycle(com.google.common.graph.Graph<N> graph)`
-
-**Returns:** `boolean`
+### `hasCycle(Graph<N> graph)`
 
 A cycle is defined as a non-empty subset
  of edges in a graph arranged to form a path (a sequence of adjacent outgoing edges) starting
@@ -26,9 +24,9 @@ This method will detect any non-empty cycle, including self-loops (a cycle of le
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `hasCycle(com.google.common.graph.Network<?,?> network)`
-
 **Returns:** `boolean`
+
+### `hasCycle(Network<?,?> network)`
 
 A cycle is defined as a non-empty
  subset of edges in a graph arranged to form a path (a sequence of adjacent outgoing edges)
@@ -40,9 +38,9 @@ This method will detect any non-empty cycle, including self-loops (a cycle of le
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<?,?>`](./Network.md))
 
-### `subgraphHasCycle(com.google.common.graph.Graph<N> graph, java.util.Map<java.lang.Object,com.google.common.graph.Graphs.NodeVisitState> visitedNodes, N node, N previousNode)`
-
 **Returns:** `boolean`
+
+### `subgraphHasCycle(Graph<N> graph, Map<Object,Graphs.NodeVisitState> visitedNodes, N node, N previousNode)`
 
 If we ever reach a node we've
  already visited (following only outgoing edges and without reusing edges), we know there's a
@@ -54,9 +52,9 @@ If we ever reach a node we've
 - `node` (`N`)
 - `previousNode` (`N`)
 
-### `canTraverseWithoutReusingEdge(com.google.common.graph.Graph<?> graph, java.lang.Object nextNode, java.lang.Object previousNode)`
-
 **Returns:** `boolean`
+
+### `canTraverseWithoutReusingEdge(Graph<?> graph, Object nextNode, Object previousNode)`
 
 In the directed case a cycle
  is always detected before reusing an edge, so no special logic is required. In the undirected
@@ -68,9 +66,9 @@ In the directed case a cycle
 - `nextNode` (`java.lang.Object`)
 - `previousNode` (`java.lang.Object`)
 
-### `transitiveClosure(com.google.common.graph.Graph<N> graph)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
+### `transitiveClosure(Graph<N> graph)`
 
 The transitive closure of a graph is another
  graph with an edge connecting node A to node B if node B is reachable from node A.
@@ -83,9 +81,9 @@ This is a "snapshot" based on the current topology of graph, rather than a live 
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `reachableNodes(com.google.common.graph.Graph<N> graph, N node)`
+**Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
 
-**Returns:** `java.util.Set<N>`
+### `reachableNodes(Graph<N> graph, N node)`
 
 Node B is defined as reachable
  from node A if there exists a path (a sequence of adjacent outgoing edges) starting at node A
@@ -100,9 +98,9 @@ This is a "snapshot" based on the current topology of graph, rather than a live 
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 - `node` (`N`)
 
-### `transpose(com.google.common.graph.Graph<N> graph)`
+**Returns:** `java.util.Set<N>`
 
-**Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
+### `transpose(Graph<N> graph)`
 
 All other
  properties remain intact, and further updates to graph will be reflected in the view.
@@ -110,9 +108,9 @@ All other
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `transpose(com.google.common.graph.ValueGraph<N,V> graph)`
+**Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
 
-**Returns:** [`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md)
+### `transpose(ValueGraph<N,V> graph)`
 
 All other
  properties remain intact, and further updates to graph will be reflected in the view.
@@ -120,9 +118,9 @@ All other
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
-### `transpose(com.google.common.graph.Network<N,E> network)`
+**Returns:** [`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md)
 
-**Returns:** [`com.google.common.graph.Network<N,E>`](./Network.md)
+### `transpose(Network<N,E> network)`
 
 All other
  properties remain intact, and further updates to network will be reflected in the view.
@@ -130,16 +128,16 @@ All other
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
-### `transpose(com.google.common.graph.EndpointPair<N> endpoints)`
+**Returns:** [`com.google.common.graph.Network<N,E>`](./Network.md)
 
-**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
+### `transpose(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `inducedSubgraph(com.google.common.graph.Graph<N> graph, java.lang.Iterable<? extends N> nodes)`
+**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
-**Returns:** [`com.google.common.graph.MutableGraph<N>`](./MutableGraph.md)
+### `inducedSubgraph(Graph<N> graph, Iterable<? extends N> nodes)`
 
 This subgraph is a new graph
  that contains all of the nodes in nodes, and all of the edges
@@ -149,9 +147,9 @@ This subgraph is a new graph
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 - `nodes` (`java.lang.Iterable<? extends N>`)
 
-### `inducedSubgraph(com.google.common.graph.ValueGraph<N,V> graph, java.lang.Iterable<? extends N> nodes)`
+**Returns:** [`com.google.common.graph.MutableGraph<N>`](./MutableGraph.md)
 
-**Returns:** [`com.google.common.graph.MutableValueGraph<N,V>`](./MutableValueGraph.md)
+### `inducedSubgraph(ValueGraph<N,V> graph, Iterable<? extends N> nodes)`
 
 This subgraph is a new graph
  that contains all of the nodes in nodes, and all of the edges
@@ -162,9 +160,9 @@ This subgraph is a new graph
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 - `nodes` (`java.lang.Iterable<? extends N>`)
 
-### `inducedSubgraph(com.google.common.graph.Network<N,E> network, java.lang.Iterable<? extends N> nodes)`
+**Returns:** [`com.google.common.graph.MutableValueGraph<N,V>`](./MutableValueGraph.md)
 
-**Returns:** [`com.google.common.graph.MutableNetwork<N,E>`](./MutableNetwork.md)
+### `inducedSubgraph(Network<N,E> network, Iterable<? extends N> nodes)`
 
 This subgraph is a new graph
  that contains all of the nodes in nodes, and all of the edges
@@ -175,52 +173,54 @@ This subgraph is a new graph
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 - `nodes` (`java.lang.Iterable<? extends N>`)
 
-### `copyOf(com.google.common.graph.Graph<N> graph)`
+**Returns:** [`com.google.common.graph.MutableNetwork<N,E>`](./MutableNetwork.md)
 
-**Returns:** [`com.google.common.graph.MutableGraph<N>`](./MutableGraph.md)
+### `copyOf(Graph<N> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `copyOf(com.google.common.graph.ValueGraph<N,V> graph)`
+**Returns:** [`com.google.common.graph.MutableGraph<N>`](./MutableGraph.md)
 
-**Returns:** [`com.google.common.graph.MutableValueGraph<N,V>`](./MutableValueGraph.md)
+### `copyOf(ValueGraph<N,V> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
-### `copyOf(com.google.common.graph.Network<N,E> network)`
+**Returns:** [`com.google.common.graph.MutableValueGraph<N,V>`](./MutableValueGraph.md)
 
-**Returns:** [`com.google.common.graph.MutableNetwork<N,E>`](./MutableNetwork.md)
+### `copyOf(Network<N,E> network)`
 
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
-### `checkNonNegative(int value)`
+**Returns:** [`com.google.common.graph.MutableNetwork<N,E>`](./MutableNetwork.md)
 
-**Returns:** `int`
+### `checkNonNegative(int value)`
 
 **Parameters:**
 - `value` (`int`)
+
+**Returns:** `int`
 
 ### `checkNonNegative(long value)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `value` (`long`)
 
-### `checkPositive(int value)`
+**Returns:** `long`
 
-**Returns:** `int`
+### `checkPositive(int value)`
 
 **Parameters:**
 - `value` (`int`)
 
-### `checkPositive(long value)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `checkPositive(long value)`
 
 **Parameters:**
 - `value` (`long`)
+
+**Returns:** `long`
 

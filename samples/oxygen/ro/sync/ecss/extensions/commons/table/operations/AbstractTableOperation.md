@@ -55,12 +55,12 @@ For complex
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper authorTableHelper)`
+### `<init>(AuthorTableHelper authorTableHelper)`
 
 **Parameters:**
 - `authorTableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Table helper, has methods specific to each document type.
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper authorTableHelper, boolean markAsChange)`
+### `<init>(AuthorTableHelper authorTableHelper, boolean markAsChange)`
 
 **Parameters:**
 - `authorTableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Table helper, has methods specific to each document type.
@@ -68,7 +68,7 @@ For complex
 
 ## Methods
 
-### `getElementAncestor(ro.sync.ecss.extensions.api.node.AuthorNode node, int type)`
+### `getElementAncestor(AuthorNode node, int type)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The starting node.
@@ -76,7 +76,7 @@ For complex
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `isElement(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String elemLocalName)`
+### `isElement(AuthorNode node, String elemLocalName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The AuthorNode to be checked.
@@ -84,7 +84,7 @@ For complex
 
 **Returns:** `boolean`
 
-### `isTableElement(ro.sync.ecss.extensions.api.node.AuthorNode node, int type)`
+### `isTableElement(AuthorNode node, int type)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node to be checked.
@@ -92,7 +92,7 @@ For complex
 
 **Returns:** `boolean`
 
-### `findCellInsertionOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int row, int column)`
+### `findCellInsertionOffset(AuthorAccess authorAccess, AuthorElement tableElement, int row, int column)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -105,7 +105,7 @@ For complex
 
 **Returns:** `int`
 
-### `findPreviousCellInRow(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int column, ro.sync.ecss.extensions.api.node.AuthorElement row)`
+### `findPreviousCellInRow(AuthorAccess authorAccess, int column, AuthorElement row)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -114,7 +114,7 @@ For complex
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `createEmptyCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cell, java.lang.String[] skippedAttributes)`
+### `createEmptyCell(AuthorAccess authorAccess, AuthorElement cell, String[] skippedAttributes)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -125,7 +125,7 @@ For complex
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../../api/node/AuthorDocumentFragment.md)
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -133,7 +133,7 @@ For complex
 
 **Returns:** `void`
 
-### `getChangeTrackingBehavior(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `getChangeTrackingBehavior(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access object.
@@ -141,7 +141,7 @@ For complex
 
 **Returns:** `java.lang.String`
 
-### `doOperationWithoutChangeTracking(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationWithoutChangeTracking(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -149,7 +149,7 @@ For complex
 
 **Returns:** `void`
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.

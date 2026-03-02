@@ -40,7 +40,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.Object arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, int arg2, int arg3, java.lang.String arg4)`
+### `<init>(Object arg0, AuthorResourceBundle arg1, int arg2, int arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -51,14 +51,14 @@
 
 ## Methods
 
-### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
+### `configureShell(Shell arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
 **Returns:** `void`
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+### `createDialogArea(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)

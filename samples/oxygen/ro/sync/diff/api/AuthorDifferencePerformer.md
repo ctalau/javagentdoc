@@ -10,7 +10,7 @@ The result of the diff is a list with the differences between the resources.
 
 ## Methods
 
-### `setBaseDocument(ro.sync.ecss.extensions.api.AuthorAccess baseAuthorAccess)`
+### `setBaseDocument(AuthorAccess baseAuthorAccess)`
 
 It can be `null`.
 
@@ -19,7 +19,7 @@ It can be `null`.
 
 **Returns:** `void`
 
-### `setDocumentsToCompare(ro.sync.ecss.extensions.api.AuthorAccess leftAuthorAccess, ro.sync.ecss.extensions.api.AuthorAccess rightAuthorAccess)`
+### `setDocumentsToCompare(AuthorAccess leftAuthorAccess, AuthorAccess rightAuthorAccess)`
 
 **Parameters:**
 - `leftAuthorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../ecss/extensions/api/AuthorAccess.md)): The access to the left Author document.
@@ -27,7 +27,7 @@ It can be `null`.
 
 **Returns:** `void`
 
-### `setOptions(ro.sync.diff.api.DiffOptions diffOptions)`
+### `setOptions(DiffOptions diffOptions)`
 
 It can be `null` meaning a default set of options will be used.
 
@@ -36,7 +36,7 @@ It can be `null` meaning a default set of options will be used.
 
 **Returns:** `void`
 
-### `performDiff(ro.sync.diff.api.DiffProgressListener diffProgressListener)`
+### `performDiff(DiffProgressListener diffProgressListener)`
 
 **Parameters:**
 - `diffProgressListener` ([`ro.sync.diff.api.DiffProgressListener`](./DiffProgressListener.md)): The DiffProgressListener notified about the progress of the diff.

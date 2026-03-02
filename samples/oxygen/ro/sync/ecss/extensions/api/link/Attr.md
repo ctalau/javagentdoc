@@ -22,7 +22,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String attrQName, java.lang.String attrNamespace, java.lang.String attrValue)`
+### `<init>(String attrQName, String attrNamespace, String attrValue)`
 
 **Parameters:**
 - `attrQName` (`java.lang.String`): Attribute qualified name.

@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `refreshNodes(ro.sync.ecss.extensions.api.node.AuthorNode[] nodes)`
+### `refreshNodes(AuthorNode[] nodes)`
 
 If the developer sets an AuthorOutlineCustomizer or an AuthorBreadCrumbCustomizer which uses as render text
  for a node the information available in another node, if the second node changes, the Outline/Bread Crumb components

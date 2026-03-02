@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `convert(java.lang.String systemID, java.lang.String originalSourceSystemID, java.io.InputStream is, java.io.OutputStream os, java.util.LinkedHashMap<java.lang.String,java.lang.String> properties)`
+### `convert(String systemID, String originalSourceSystemID, InputStream is, OutputStream os, LinkedHashMap<String,String> properties)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): The entire URL string.

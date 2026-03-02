@@ -20,19 +20,19 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableSortedSet<E> forward)`
+### `<init>(ImmutableSortedSet<E> forward)`
 
 **Parameters:**
 - `forward` ([`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md))
 
 ## Methods
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `size()`
 
@@ -44,15 +44,13 @@
 
 ### `headSetImpl(E toElement, boolean inclusive)`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
-
 **Parameters:**
 - `toElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
@@ -60,13 +58,15 @@
 - `toElement` (`E`)
 - `toInclusive` (`boolean`)
 
-### `tailSetImpl(E fromElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `tailSetImpl(E fromElement, boolean inclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
 - `inclusive` (`boolean`)
+
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 ### `descendingSet()`
 
@@ -82,38 +82,38 @@
 
 ### `lower(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `E`
 
 ### `floor(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `E`
 
 ### `ceiling(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `E`
 
 ### `higher(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
 
-### `indexOf(java.lang.Object target)`
+**Returns:** `E`
 
-**Returns:** `int`
+### `indexOf(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `isPartialView()`
 

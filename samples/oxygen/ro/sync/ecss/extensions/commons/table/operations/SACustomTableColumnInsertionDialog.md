@@ -30,7 +30,7 @@ If selected, the column(s) will be inserted after the current location.
 
 ## Constructors
 
-### `<init>(javax.swing.JFrame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle resourceBundle)`
+### `<init>(JFrame parentFrame, AuthorResourceBundle resourceBundle)`
 
 **Parameters:**
 - `parentFrame` (`javax.swing.JFrame`): the parent frame.
@@ -38,14 +38,14 @@ If selected, the column(s) will be inserted after the current location.
 
 ## Methods
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo previousTableColumnsInfo)`
+### `showDialog(TableColumnsInfo previousTableColumnsInfo)`
 
 **Parameters:**
 - `previousTableColumnsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)): the previous columns information
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)
 
-### `initialize(ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo previousTableColumnsInfo)`
+### `initialize(TableColumnsInfo previousTableColumnsInfo)`
 
 **Parameters:**
 - `previousTableColumnsInfo` ([`ro.sync.ecss.extensions.commons.table.operations.TableColumnsInfo`](./TableColumnsInfo.md)): If `null`, defaults will be used. Otherwise, the controls

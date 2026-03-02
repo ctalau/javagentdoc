@@ -26,12 +26,12 @@
 
 ## Constructors
 
-### `<init>(java.util.List<T> valuesInOrder)`
+### `<init>(List<T> valuesInOrder)`
 
 **Parameters:**
 - `valuesInOrder` (`java.util.List<T>`)
 
-### `<init>(com.google.common.collect.ImmutableMap<T,java.lang.Integer> rankMap)`
+### `<init>(ImmutableMap<T,Integer> rankMap)`
 
 **Parameters:**
 - `rankMap` ([`com.google.common.collect.ImmutableMap<T,java.lang.Integer>`](./ImmutableMap.md))
@@ -40,25 +40,25 @@
 
 ### `compare(T left, T right)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `left` (`T`)
 - `right` (`T`)
 
-### `rank(T value)`
-
 **Returns:** `int`
+
+### `rank(T value)`
 
 **Parameters:**
 - `value` (`T`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

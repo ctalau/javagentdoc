@@ -22,32 +22,32 @@
 
 ## Methods
 
-### `getChecked(java.util.concurrent.Future<V> future, java.lang.Class<X> exceptionClass)`
-
-**Returns:** `V`
+### `getChecked(Future<V> future, Class<X> exceptionClass)`
 
 **Parameters:**
 - `future` (`java.util.concurrent.Future<V>`)
 - `exceptionClass` (`java.lang.Class<X>`)
 
-### `getChecked(com.google.common.util.concurrent.FuturesGetChecked.GetCheckedTypeValidator validator, java.util.concurrent.Future<V> future, java.lang.Class<X> exceptionClass)`
-
 **Returns:** `V`
+
+### `getChecked(FuturesGetChecked.GetCheckedTypeValidator validator, Future<V> future, Class<X> exceptionClass)`
 
 **Parameters:**
 - `validator` (`com.google.common.util.concurrent.FuturesGetChecked.GetCheckedTypeValidator`)
 - `future` (`java.util.concurrent.Future<V>`)
 - `exceptionClass` (`java.lang.Class<X>`)
 
-### `getChecked(java.util.concurrent.Future<V> future, java.lang.Class<X> exceptionClass, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `V`
+
+### `getChecked(Future<V> future, Class<X> exceptionClass, long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `future` (`java.util.concurrent.Future<V>`)
 - `exceptionClass` (`java.lang.Class<X>`)
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `V`
 
 ### `bestGetCheckedTypeValidator()`
 
@@ -61,55 +61,55 @@
 
 **Returns:** `com.google.common.util.concurrent.FuturesGetChecked.GetCheckedTypeValidator`
 
-### `wrapAndThrowExceptionOrError(java.lang.Throwable cause, java.lang.Class<X> exceptionClass)`
-
-**Returns:** `void`
+### `wrapAndThrowExceptionOrError(Throwable cause, Class<X> exceptionClass)`
 
 **Parameters:**
 - `cause` (`java.lang.Throwable`)
 - `exceptionClass` (`java.lang.Class<X>`)
 
-### `hasConstructorUsableByGetChecked(java.lang.Class<? extends java.lang.Exception> exceptionClass)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `hasConstructorUsableByGetChecked(Class<? extends Exception> exceptionClass)`
 
 **Parameters:**
 - `exceptionClass` (`java.lang.Class<? extends java.lang.Exception>`)
 
-### `newWithCause(java.lang.Class<X> exceptionClass, java.lang.Throwable cause)`
+**Returns:** `boolean`
 
-**Returns:** `X`
+### `newWithCause(Class<X> exceptionClass, Throwable cause)`
 
 **Parameters:**
 - `exceptionClass` (`java.lang.Class<X>`)
 - `cause` (`java.lang.Throwable`)
 
-### `preferringStringsThenThrowables(java.util.List<java.lang.reflect.Constructor<X>> constructors)`
+**Returns:** `X`
 
-**Returns:** `java.util.List<java.lang.reflect.Constructor<X>>`
+### `preferringStringsThenThrowables(List<Constructor<X>> constructors)`
 
 **Parameters:**
 - `constructors` (`java.util.List<java.lang.reflect.Constructor<X>>`)
 
-### `newFromConstructor(java.lang.reflect.Constructor<X> constructor, java.lang.Throwable cause)`
+**Returns:** `java.util.List<java.lang.reflect.Constructor<X>>`
 
-**Returns:** `X`
+### `newFromConstructor(Constructor<X> constructor, Throwable cause)`
 
 **Parameters:**
 - `constructor` (`java.lang.reflect.Constructor<X>`)
 - `cause` (`java.lang.Throwable`)
 
-### `isCheckedException(java.lang.Class<? extends java.lang.Exception> type)`
+**Returns:** `X`
 
-**Returns:** `boolean`
+### `isCheckedException(Class<? extends Exception> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<? extends java.lang.Exception>`)
 
-### `checkExceptionClassValidity(java.lang.Class<? extends java.lang.Exception> exceptionClass)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `checkExceptionClassValidity(Class<? extends Exception> exceptionClass)`
 
 **Parameters:**
 - `exceptionClass` (`java.lang.Class<? extends java.lang.Exception>`)
+
+**Returns:** `void`
 

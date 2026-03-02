@@ -32,7 +32,7 @@
 
 ### `<init>()`
 
-### `<init>(boolean arg0, boolean arg1, java.lang.String arg2, java.lang.String arg3)`
+### `<init>(boolean arg0, boolean arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`boolean`)

@@ -175,7 +175,7 @@ If this returns `null` you will not be able to add
 
 **Returns:** `java.lang.String`
 
-### `resolveCustomAttributeValue(ro.sync.ecss.extensions.api.CustomAttributeValueContext attributeValueEditingContext)`
+### `resolveCustomAttributeValue(CustomAttributeValueContext attributeValueEditingContext)`
 
 This method is called when the "Open File at Cursor" action is called in the Text editor page.
 
@@ -184,14 +184,14 @@ This method is called when the "Open File at Cursor" action is called in the Tex
 
 **Returns:** `java.net.URL`
 
-### `resolveCustomHref(java.lang.String linkHref)`
+### `resolveCustomHref(String linkHref)`
 
 **Parameters:**
 - `linkHref` (`java.lang.String`): The link href as derrived from the CSS
 
 **Returns:** `java.net.URL`
 
-### `resolveCustomHref(java.net.URL currentEditorURL, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `resolveCustomHref(URL currentEditorURL, String linkHref, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `currentEditorURL` (`java.net.URL`): The URL of the current editor.
@@ -200,7 +200,7 @@ This method is called when the "Open File at Cursor" action is called in the Tex
 
 **Returns:** `java.net.URL`
 
-### `resolveCustomHref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `resolveCustomHref(URL currentEditorURL, AuthorNode contextNode, String linkHref, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `currentEditorURL` (`java.net.URL`): The URL of the current editor.
@@ -210,7 +210,7 @@ This method is called when the "Open File at Cursor" action is called in the Tex
 
 **Returns:** `java.net.URL`
 
-### `customizeLinkTooltipDescription(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
+### `customizeLinkTooltipDescription(URL currentEditorURL, AuthorNode contextNode, String linkHref, AuthorAccess authorAccess, String computedDescription)`
 
 **Parameters:**
 - `currentEditorURL` (`java.net.URL`): The current document URL
@@ -222,7 +222,7 @@ This method is called when the "Open File at Cursor" action is called in the Tex
 
 **Returns:** `java.lang.String`
 
-### `customizeImageTooltipDescription(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
+### `customizeImageTooltipDescription(AuthorNode contextNode, AuthorAccess authorAccess, String computedDescription)`
 
 **Parameters:**
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The context node
@@ -267,7 +267,7 @@ You can use it in your extensions bundle to see the name of the document type wh
 
 **Returns:** `java.lang.String`
 
-### `setDocumentTypeName(java.lang.String documentTypeName)`
+### `setDocumentTypeName(String documentTypeName)`
 
 This must not get called by the user code, it is set internal.
 
@@ -276,7 +276,7 @@ This must not get called by the user code, it is set internal.
 
 **Returns:** `void`
 
-### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isContentReference(AuthorNode node)`
 
 This is used in the tables to replace conreffed table rows entirely
 
@@ -326,7 +326,7 @@ Permits decoration of the images that
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorImageDecorator`](./AuthorImageDecorator.md)
 
-### `getHelpPageID(java.lang.String currentEditorPage)`
+### `getHelpPageID(String currentEditorPage)`
 
 If the returned help page ID is an URL, a web browser will be opened pointing to that URL when the user presses F1 in the dialog or when using the Help button.
  If the returned help page ID is an identifier, when help is invoked, the application will open the Oxygen User's Manual and locate this identifier inside it.

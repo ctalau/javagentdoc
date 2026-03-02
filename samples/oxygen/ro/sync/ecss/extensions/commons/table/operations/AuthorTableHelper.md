@@ -25,28 +25,28 @@ It contains methods that are specific to a document type and are used to obtain
 
 ## Methods
 
-### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableCell(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The AuthorNode to be checked.
 
 **Returns:** `boolean`
 
-### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableRow(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The AuthorNode to be checked.
 
 **Returns:** `boolean`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTable(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The AuthorNode to be checked.
 
 **Returns:** `boolean`
 
-### `getTableCellSpanProvider(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableCellSpanProvider(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The element rendered as a table. Its 'display' CSS property
@@ -54,7 +54,7 @@ It contains methods that are specific to a document type and are used to obtain
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../api/AuthorTableCellSpanProvider.md)
 
-### `checkTableColSpanIsDefined(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableCellSpanProvider, ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `checkTableColSpanIsDefined(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableCellSpanProvider, AuthorElement cellElement)`
 
 I.E. for DocBook the column span is defined by the 'colspec' element. 
  If it is missing then the column span is not defined.
@@ -68,7 +68,7 @@ I.E. for DocBook the column span is defined by the 'colspec' element.
 
 **Returns:** `void`
 
-### `updateTableColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableCellSpanProvider, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int startCol, int endCol)`
+### `updateTableColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableCellSpanProvider, AuthorElement cellElem, int startCol, int endCol)`
 
 For example, for the DocBook CALS tables  the `namest` and `nameend` 
  attributes will be set according to the `startCol` and `endCol` supplied values.
@@ -85,7 +85,7 @@ For example, for the DocBook CALS tables  the `namest` and `nameend`
 
 **Returns:** `void`
 
-### `updateTableRowSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int rowSpan)`
+### `updateTableRowSpan(AuthorAccess authorAccess, AuthorElement cellElem, int rowSpan)`
 
 For example, for the DocBook CALS tables the `morerows` attribute 
  value will be updated.
@@ -99,7 +99,7 @@ For example, for the DocBook CALS tables the `morerows` attribute
 
 **Returns:** `void`
 
-### `updateTableColumnNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int colNum)`
+### `updateTableColumnNumber(AuthorAccess authorAccess, AuthorElement tableElement, int colNum)`
 
 For example, for the DocBook CALS tables the `cols` attribute 
  value will be updated.
@@ -114,7 +114,7 @@ For example, for the DocBook CALS tables the `cols` attribute
 
 **Returns:** `void`
 
-### `updateTableRowNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int relativeValue)`
+### `updateTableRowNumber(AuthorAccess authorAccess, AuthorElement tableElement, int relativeValue)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access. 
@@ -139,7 +139,7 @@ For example, for the DocBook CALS tables the `cols` attribute
 
 **Returns:** `java.lang.String[]`
 
-### `getTableElementForDeletion(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getTableElementForDeletion(AuthorNode node)`
 
 OBS: For CALS tables we don't want to delete
  only the "tgroup", but the parent table element itself.
@@ -149,7 +149,7 @@ OBS: For CALS tables we don't want to delete
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)
 
-### `isColspec(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isColspec(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): The node.

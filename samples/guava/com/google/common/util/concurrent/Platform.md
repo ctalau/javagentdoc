@@ -12,18 +12,18 @@
 
 ## Methods
 
-### `isInstanceOfThrowableClass(java.lang.Throwable t, java.lang.Class<? extends java.lang.Throwable> expectedClass)`
-
-**Returns:** `boolean`
+### `isInstanceOfThrowableClass(Throwable t, Class<? extends Throwable> expectedClass)`
 
 **Parameters:**
 - `t` (`java.lang.Throwable`)
 - `expectedClass` (`java.lang.Class<? extends java.lang.Throwable>`)
 
-### `restoreInterruptIfIsInterruptedException(java.lang.Throwable t)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `restoreInterruptIfIsInterruptedException(Throwable t)`
 
 **Parameters:**
 - `t` (`java.lang.Throwable`)
+
+**Returns:** `void`
 

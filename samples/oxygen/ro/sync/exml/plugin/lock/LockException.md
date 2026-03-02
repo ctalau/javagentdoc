@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, boolean arg1, java.lang.String arg2)`
+### `<init>(String arg0, boolean arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -35,7 +35,7 @@
 
 ## Methods
 
-### `setOwnerName(java.lang.String arg0)`
+### `setOwnerName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

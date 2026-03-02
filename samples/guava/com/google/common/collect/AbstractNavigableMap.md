@@ -21,12 +21,12 @@
 
 ## Methods
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `firstEntry()`
 
@@ -54,59 +54,59 @@
 
 ### `lowerEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `floorEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `ceilingEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `higherEntry(K key)`
 
-**Returns:** `java.util.Map.Entry<K,V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<K,V>`
 
 ### `lowerKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `floorKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `ceilingKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `higherKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `K`
 
 ### `descendingEntryIterator()`
 
@@ -114,25 +114,25 @@
 
 ### `subMap(K fromKey, K toKey)`
 
-**Returns:** `java.util.SortedMap<K,V>`
-
 **Parameters:**
 - `fromKey` (`K`)
 - `toKey` (`K`)
+
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `headMap(K toKey)`
 
-**Returns:** `java.util.SortedMap<K,V>`
-
 **Parameters:**
 - `toKey` (`K`)
 
-### `tailMap(K fromKey)`
-
 **Returns:** `java.util.SortedMap<K,V>`
+
+### `tailMap(K fromKey)`
 
 **Parameters:**
 - `fromKey` (`K`)
+
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `navigableKeySet()`
 

@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.properties.TablePropertiesHelper helper)`
+### `<init>(TablePropertiesHelper helper)`
 
 **Parameters:**
 - `helper` ([`ro.sync.ecss.extensions.commons.table.properties.TablePropertiesHelper`](../../../commons/table/properties/TablePropertiesHelper.md)): The table helper.
@@ -39,7 +39,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`
 
-### `processFragment(ro.sync.ecss.extensions.api.node.AuthorElement currentNode, java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, boolean moveToHeader)`
+### `processFragment(AuthorElement currentNode, List<AuthorDocumentFragment> fragments, boolean moveToHeader)`
 
 **Parameters:**
 - `currentNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -52,14 +52,14 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`
 
-### `getColSpecs(java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>> map)`
+### `getColSpecs(Map<AuthorElement,Set<Integer>> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<ro.sync.ecss.extensions.api.node.AuthorElement,java.util.Set<java.lang.Integer>>`)
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `getCellIndexes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
+### `getCellIndexes(List<AuthorElement> cells)`
 
 **Parameters:**
 - `cells` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)

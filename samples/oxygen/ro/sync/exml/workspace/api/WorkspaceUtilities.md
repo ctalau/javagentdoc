@@ -14,7 +14,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, boolean openForSave)`
+### `chooseFile(String title, String[] allowedExtensions, String filterDescr, boolean openForSave)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
@@ -26,7 +26,7 @@
 
 **Returns:** `java.io.File`
 
-### `chooseFile(java.io.File currentFileContext, java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, boolean usedForSave)`
+### `chooseFile(File currentFileContext, String title, String[] allowedExtensions, String filterDescr, boolean usedForSave)`
 
 **Parameters:**
 - `currentFileContext` (`java.io.File`): The file which will be selected in the file chooser.
@@ -43,7 +43,7 @@
 
 **Returns:** `java.io.File`
 
-### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
+### `chooseFile(String title, String[] allowedExtensions, String filterDescr)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
@@ -53,7 +53,7 @@
 
 **Returns:** `java.io.File`
 
-### `chooseFiles(java.io.File currentFileContext, java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
+### `chooseFiles(File currentFileContext, String title, String[] allowedExtensions, String filterDescr)`
 
 **Parameters:**
 - `currentFileContext` (`java.io.File`): The file which will be selected in the file chooser.
@@ -72,7 +72,7 @@
 
 **Returns:** `java.io.File`
 
-### `chooseDirectory(java.io.File startingDir)`
+### `chooseDirectory(File startingDir)`
 
 Available for the stand-alone oXygen and the Eclipse plugin.
 
@@ -81,7 +81,7 @@ Available for the stand-alone oXygen and the Eclipse plugin.
 
 **Returns:** `java.io.File`
 
-### `chooseURL(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
+### `chooseURL(String title, String[] allowedExtensions, String filterDescr)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The chooser dialog title.
@@ -90,7 +90,7 @@ Available for the stand-alone oXygen and the Eclipse plugin.
 
 **Returns:** `java.net.URL`
 
-### `chooseURL(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, java.lang.String initialURL)`
+### `chooseURL(String title, String[] allowedExtensions, String filterDescr, String initialURL)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The chooser dialog title.
@@ -100,7 +100,7 @@ Available for the stand-alone oXygen and the Eclipse plugin.
 
 **Returns:** `java.net.URL`
 
-### `chooseURL(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, java.lang.String initialURL, java.lang.String urlLabel, java.lang.String okLabel)`
+### `chooseURL(String title, String[] allowedExtensions, String filterDescr, String initialURL, String urlLabel, String okLabel)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The chooser dialog title.
@@ -112,7 +112,7 @@ Available for the stand-alone oXygen and the Eclipse plugin.
 
 **Returns:** `java.net.URL`
 
-### `chooseURLPath(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
+### `chooseURLPath(String title, String[] allowedExtensions, String filterDescr)`
 
 If the user sets a 
  relative path in the chooser, that path will be returned.
@@ -124,7 +124,7 @@ If the user sets a
 
 **Returns:** `java.lang.String`
 
-### `chooseURLPath(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, java.lang.String initialURL)`
+### `chooseURLPath(String title, String[] allowedExtensions, String filterDescr, String initialURL)`
 
 If the user sets a 
  relative path in the chooser, that path will be returned.
@@ -137,7 +137,7 @@ If the user sets a
 
 **Returns:** `java.lang.String`
 
-### `showWarningDialog(java.lang.String title, java.lang.String message, java.lang.String[] buttonNames, int[] buttonIds)`
+### `showWarningDialog(String title, String message, String[] buttonNames, int[] buttonIds)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The dialog title.
@@ -148,30 +148,7 @@ If the user sets a
 
 **Returns:** `int`
 
-### `showWarningDialog(java.lang.String title, java.lang.String message, java.lang.String[] buttonNames, int[] buttonIds, int initialSelectedIndex)`
-
-**Parameters:**
-- `title` (`java.lang.String`): The dialog title.
-- `message` (`java.lang.String`): The message to be presented to the user.
-- `buttonNames` (`java.lang.String[]`): The names of the buttons representing the choices in the dialog.
-- `buttonIds` (`int[]`): The id for each button. Used to identify which button was pressed.
-- `initialSelectedIndex` (`int`): The index of the initial selected button. 0 based.
-   All Ids must be greater or equal to 0.
-
-**Returns:** `int`
-
-### `showConfirmDialog(java.lang.String title, java.lang.String message, java.lang.String[] buttonNames, int[] buttonIds)`
-
-**Parameters:**
-- `title` (`java.lang.String`): The dialog title.
-- `message` (`java.lang.String`): The message to be presented to the user.
-- `buttonNames` (`java.lang.String[]`): The names of the buttons representing the choices in the dialog.
-- `buttonIds` (`int[]`): The id for each button. Used to identify which button was pressed.
-   All Ids must be greater or equal to 0.
-
-**Returns:** `int`
-
-### `showConfirmDialog(java.lang.String title, java.lang.String message, java.lang.String[] buttonNames, int[] buttonIds, int initialSelectedIndex)`
+### `showWarningDialog(String title, String message, String[] buttonNames, int[] buttonIds, int initialSelectedIndex)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The dialog title.
@@ -183,14 +160,37 @@ If the user sets a
 
 **Returns:** `int`
 
-### `showErrorMessage(java.lang.String message)`
+### `showConfirmDialog(String title, String message, String[] buttonNames, int[] buttonIds)`
+
+**Parameters:**
+- `title` (`java.lang.String`): The dialog title.
+- `message` (`java.lang.String`): The message to be presented to the user.
+- `buttonNames` (`java.lang.String[]`): The names of the buttons representing the choices in the dialog.
+- `buttonIds` (`int[]`): The id for each button. Used to identify which button was pressed.
+   All Ids must be greater or equal to 0.
+
+**Returns:** `int`
+
+### `showConfirmDialog(String title, String message, String[] buttonNames, int[] buttonIds, int initialSelectedIndex)`
+
+**Parameters:**
+- `title` (`java.lang.String`): The dialog title.
+- `message` (`java.lang.String`): The message to be presented to the user.
+- `buttonNames` (`java.lang.String[]`): The names of the buttons representing the choices in the dialog.
+- `buttonIds` (`int[]`): The id for each button. Used to identify which button was pressed.
+- `initialSelectedIndex` (`int`): The index of the initial selected button. 0 based.
+   All Ids must be greater or equal to 0.
+
+**Returns:** `int`
+
+### `showErrorMessage(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message.
 
 **Returns:** `void`
 
-### `showErrorMessage(java.lang.String message, java.lang.Throwable exception)`
+### `showErrorMessage(String message, Throwable exception)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message.
@@ -199,28 +199,28 @@ If the user sets a
 
 **Returns:** `void`
 
-### `showWarningMessage(java.lang.String message)`
+### `showWarningMessage(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The warning message.
 
 **Returns:** `void`
 
-### `showInformationMessage(java.lang.String message)`
+### `showInformationMessage(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The information message.
 
 **Returns:** `void`
 
-### `showStatusMessage(java.lang.String statusMessage)`
+### `showStatusMessage(String statusMessage)`
 
 **Parameters:**
 - `statusMessage` (`java.lang.String`): The status message
 
 **Returns:** `void`
 
-### `showStatusMessage(java.lang.String statusMessage, ro.sync.exml.workspace.api.OperationStatus status)`
+### `showStatusMessage(String statusMessage, OperationStatus status)`
 
 **Parameters:**
 - `statusMessage` (`java.lang.String`): The message.
@@ -228,7 +228,7 @@ If the user sets a
 
 **Returns:** `void`
 
-### `openInExternalApplication(java.net.URL url, boolean preferAssociatedApplication)`
+### `openInExternalApplication(URL url, boolean preferAssociatedApplication)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to open.
@@ -237,7 +237,7 @@ If the user sets a
 
 **Returns:** `void`
 
-### `openInExternalApplication(java.net.URL url, boolean preferAssociatedApplication, java.lang.String mediaType)`
+### `openInExternalApplication(URL url, boolean preferAssociatedApplication, String mediaType)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to open.
@@ -247,7 +247,7 @@ If the user sets a
 
 **Returns:** `void`
 
-### `openInExternalApplication(java.lang.String url, boolean preferAssociatedApplication, java.lang.String mediaType)`
+### `openInExternalApplication(String url, boolean preferAssociatedApplication, String mediaType)`
 
 **Parameters:**
 - `url` (`java.lang.String`): The URL to open.
@@ -258,7 +258,7 @@ If the user sets a
 
 **Returns:** `void`
 
-### `createJavaProcess(java.lang.String additionalJavaArguments, java.lang.String[] classpath, java.lang.String mainClass, java.lang.String additionalArguments, java.util.Map<java.lang.String,java.lang.String> environmentalVariables, java.io.File startDirectory, ro.sync.exml.workspace.api.process.ProcessListener processListener)`
+### `createJavaProcess(String additionalJavaArguments, String[] classpath, String mainClass, String additionalArguments, Map<String,String> environmentalVariables, File startDirectory, ProcessListener processListener)`
 
 It also sets on the Java process the Oxygen HTTP proxy configuration.
 
@@ -273,7 +273,7 @@ It also sets on the Java process the Oxygen HTTP proxy configuration.
 
 **Returns:** [`ro.sync.exml.workspace.api.process.ProcessController`](process/ProcessController.md)
 
-### `startProcess(java.lang.String name, java.io.File workingDirectory, java.lang.String cmdLine, boolean showConsole)`
+### `startProcess(String name, File workingDirectory, String cmdLine, boolean showConsole)`
 
 If the process is already running, it will not be started again.
  **Does not wait for the process to finish.**
@@ -286,7 +286,7 @@ If the process is already running, it will not be started again.
 
 **Returns:** `void`
 
-### `createProcess(ro.sync.exml.workspace.api.process.ProcessListener processListener, java.lang.String name, java.io.File workingDirectory, java.lang.String cmdLine, boolean showConsole)`
+### `createProcess(ProcessListener processListener, String name, File workingDirectory, String cmdLine, boolean showConsole)`
 
 **Parameters:**
 - `processListener` ([`ro.sync.exml.workspace.api.process.ProcessListener`](process/ProcessListener.md)): The process handler

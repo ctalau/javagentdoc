@@ -27,7 +27,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.Multimap<K,V> unfiltered, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> predicate)`
+### `<init>(Multimap<K,V> unfiltered, Predicate<? super Map.Entry<K,V>> predicate)`
 
 **Parameters:**
 - `unfiltered` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
@@ -49,33 +49,33 @@
 
 ### `satisfies(K key, V value)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `filterCollection(java.util.Collection<E> collection, com.google.common.base.Predicate<? super E> predicate)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Collection<E>`
+### `filterCollection(Collection<E> collection, Predicate<? super E> predicate)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<E>`)
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `containsKey(java.lang.Object key)`
+**Returns:** `java.util.Collection<E>`
+
+### `containsKey(Object key)`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 **Returns:** `boolean`
 
+### `removeAll(Object key)`
+
 **Parameters:**
 - `key` (`java.lang.Object`)
-
-### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.Collection<V>`
-
-**Parameters:**
-- `key` (`java.lang.Object`)
 
 ### `unmodifiableEmptyCollection()`
 
@@ -87,10 +87,10 @@
 
 ### `get(K key)`
 
-**Returns:** `java.util.Collection<V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Collection<V>`
 
 ### `createEntries()`
 
@@ -112,12 +112,12 @@
 
 **Returns:** `java.util.Set<K>`
 
-### `removeEntriesIf(com.google.common.base.Predicate<? super java.util.Map.Entry<K,java.util.Collection<V>>> predicate)`
-
-**Returns:** `boolean`
+### `removeEntriesIf(Predicate<? super Map.Entry<K,Collection<V>>> predicate)`
 
 **Parameters:**
 - `predicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,java.util.Collection<V>>>`](../base/Predicate.md))
+
+**Returns:** `boolean`
 
 ### `createKeys()`
 

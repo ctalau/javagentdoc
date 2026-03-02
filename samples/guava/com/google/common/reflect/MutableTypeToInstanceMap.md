@@ -28,39 +28,37 @@ See also ImmutableTypeToInstanceMap.
 
 ## Methods
 
-### `getInstance(java.lang.Class<T> type)`
-
-**Returns:** `T`
+### `getInstance(Class<T> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `getInstance(com.google.common.reflect.TypeToken<T> type)`
-
 **Returns:** `T`
+
+### `getInstance(TypeToken<T> type)`
 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
 
-### `putInstance(java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(Class<@NonNull T> type, T value)`
 
 **Parameters:**
 - `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>`)
 - `value` (`T`)
 
-### `putInstance(com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(TypeToken<@NonNull T> type, T value)`
 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md))
 - `value` (`T`)
 
-### `put(com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B> key, B value)`
+**Returns:** `T`
 
-**Returns:** `B`
+### `put(TypeToken<? extends @NonNull B> key, B value)`
 
 Use #putInstance instead.
 
@@ -68,14 +66,16 @@ Use #putInstance instead.
 - `key` ([`com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>`](./TypeToken.md))
 - `value` (`B`)
 
-### `putAll(java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B> map)`
+**Returns:** `B`
 
-**Returns:** `void`
+### `putAll(Map<? extends TypeToken<? extends @NonNull B>,? extends B> map)`
 
 Use #putInstance instead.
 
 **Parameters:**
 - `map` (`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B>`)
+
+**Returns:** `void`
 
 ### `entrySet()`
 
@@ -85,18 +85,18 @@ Use #putInstance instead.
 
 **Returns:** `java.util.Map<com.google.common.reflect.TypeToken<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`
 
-### `trustedPut(com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
-
-**Returns:** `T`
+### `trustedPut(TypeToken<@NonNull T> type, T value)`
 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md))
 - `value` (`T`)
 
-### `trustedGet(com.google.common.reflect.TypeToken<T> type)`
-
 **Returns:** `T`
+
+### `trustedGet(TypeToken<T> type)`
 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
+
+**Returns:** `T`
 

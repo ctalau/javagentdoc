@@ -18,19 +18,19 @@
 
 **Returns:** [`com.google.common.util.concurrent.DirectExecutor[]`](./DirectExecutor.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.util.concurrent.DirectExecutor`](./DirectExecutor.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
-### `execute(java.lang.Runnable command)`
+**Returns:** [`com.google.common.util.concurrent.DirectExecutor`](./DirectExecutor.md)
 
-**Returns:** `void`
+### `execute(Runnable command)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
+
+**Returns:** `void`
 
 ### `toString()`
 

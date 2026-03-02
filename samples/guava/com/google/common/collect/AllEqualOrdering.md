@@ -26,27 +26,27 @@
 
 ## Methods
 
-### `compare(java.lang.Object left, java.lang.Object right)`
-
-**Returns:** `int`
+### `compare(Object left, Object right)`
 
 **Parameters:**
 - `left` (`java.lang.Object`)
 - `right` (`java.lang.Object`)
 
-### `sortedCopy(java.lang.Iterable<E> iterable)`
+**Returns:** `int`
+
+### `sortedCopy(Iterable<E> iterable)`
+
+**Parameters:**
+- `iterable` (`java.lang.Iterable<E>`)
 
 **Returns:** `java.util.List<E>`
 
+### `immutableSortedCopy(Iterable<E> iterable)`
+
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`)
-
-### `immutableSortedCopy(java.lang.Iterable<E> iterable)`
 
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
-
-**Parameters:**
-- `iterable` (`java.lang.Iterable<E>`)
 
 ### `reverse()`
 

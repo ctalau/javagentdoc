@@ -14,7 +14,7 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.Object>`
 
-### `registerAction(java.lang.String actionID, java.lang.Object action, java.lang.String defaultKeyStroke)`
+### `registerAction(String actionID, Object action, String defaultKeyStroke)`
 
 The action shortcut will be visible in the Oxygen menu shortcut keys table.
  If the action uses a shortcut which is not used by other Oxygen actions, the shortcut will work even if you do not add the action to an existing menu.
@@ -37,7 +37,7 @@ The action shortcut will be visible in the Oxygen menu shortcut keys table.
 
 **Returns:** `void`
 
-### `unregisterAction(java.lang.String actionID)`
+### `unregisterAction(String actionID)`
 
 **Parameters:**
 - `actionID` (`java.lang.String`): The action ID.

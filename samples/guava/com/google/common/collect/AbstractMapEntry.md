@@ -29,17 +29,17 @@
 
 ### `setValue(V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `value` (`V`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

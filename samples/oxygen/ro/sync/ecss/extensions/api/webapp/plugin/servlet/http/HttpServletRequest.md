@@ -17,7 +17,7 @@ This method
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Cookie[]`](./Cookie.md)
 
-### `getDateHeader(java.lang.String name)`
+### `getDateHeader(String name)`
 
 Use this method with headers that contain dates, such as `If-Modified-Since`.
 
@@ -36,7 +36,7 @@ Use this method with headers that contain dates, such as `If-Modified-Since`.
 
 **Returns:** `long`
 
-### `getHeader(java.lang.String name)`
+### `getHeader(String name)`
 
 If the request did not include a header
  of the specified name, this method returns `null`. If there are multiple headers with the same name, this
@@ -48,7 +48,7 @@ If the request did not include a header
 
 **Returns:** `java.lang.String`
 
-### `getHeaders(java.lang.String name)`
+### `getHeaders(String name)`
 
 Some headers, such as `Accept-Language` can be sent by clients as several headers each with a different
  value rather than sending the header as a comma separated list.
@@ -75,7 +75,7 @@ If the request has no headers, this method
 
 **Returns:** `java.util.Enumeration<java.lang.String>`
 
-### `getIntHeader(java.lang.String name)`
+### `getIntHeader(String name)`
 
 If the request does not have a header of
  the specified name, this method returns -1. If there are multiple headers with the same name, this method returns the
@@ -228,7 +228,7 @@ If this request is of type `multipart/form-data`, but does not contain any `Part
 
 **Returns:** `java.util.Collection<ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Part>`
 
-### `getPart(java.lang.String name)`
+### `getPart(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`): the name of the requested `Part`

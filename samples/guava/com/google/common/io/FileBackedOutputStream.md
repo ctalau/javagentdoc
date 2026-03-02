@@ -85,32 +85,32 @@ This class is thread-safe.
 
 ### `reset()`
 
-**Returns:** `void`
-
 If data was buffered to a file, it will be deleted.
 
-### `write(int b)`
-
 **Returns:** `void`
+
+### `write(int b)`
 
 **Parameters:**
 - `b` (`int`)
 
-### `write(byte[] b)`
-
 **Returns:** `void`
+
+### `write(byte[] b)`
 
 **Parameters:**
 - `b` (`byte[]`)
 
-### `write(byte[] b, int off, int len)`
-
 **Returns:** `void`
+
+### `write(byte[] b, int off, int len)`
 
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
+
+**Returns:** `void`
 
 ### `close()`
 
@@ -122,8 +122,8 @@ If data was buffered to a file, it will be deleted.
 
 ### `update(int len)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `len` (`int`)
+
+**Returns:** `void`
 

@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, org.xml.sax.Attributes rootAttributes)`
+### `matches(String systemID, String rootNamespace, String rootLocalName, String doctypePublicID, Attributes rootAttributes)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -25,7 +25,7 @@
 
 **Returns:** `boolean`
 
-### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, org.xml.sax.Attributes rootAttributes, java.io.Reader contentReader)`
+### `matches(String systemID, String rootNamespace, String rootLocalName, String doctypePublicID, Attributes rootAttributes, Reader contentReader)`
 
 This method receives a reader over the entire content.
 
@@ -42,7 +42,7 @@ This method receives a reader over the entire content.
 
 **Returns:** `boolean`
 
-### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, java.lang.String doctypeSystemID, org.xml.sax.Attributes rootAttributes, java.util.Map<java.lang.String,java.lang.String> queryParameters, java.io.Reader contentReader)`
+### `matches(String systemID, String rootNamespace, String rootLocalName, String doctypePublicID, String doctypeSystemID, Attributes rootAttributes, Map<String,String> queryParameters, Reader contentReader)`
 
 This method receives a reader over the entire content.
 

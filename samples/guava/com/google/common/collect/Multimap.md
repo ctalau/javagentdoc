@@ -167,44 +167,42 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 
 ### `size()`
 
-**Returns:** `int`
-
 **Note:** this method does not return the number of *distinct keys* in the multimap,
  which is given by keySet().size() or asMap().size(). See the opening section of
  the Multimap class documentation for clarification.
 
-### `isEmpty()`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `isEmpty()`
 
 Equivalent to size()
  == 0, but can in some cases be more efficient.
 
-### `containsKey(java.lang.Object key)`
-
 **Returns:** `boolean`
+
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `containsEntry(java.lang.Object key, java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsEntry(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `put(K key, V value)`
-
-**Returns:** `boolean`
 
 Some multimap implementations allow duplicate key-value pairs, in which case put
  always adds a new key-value pair and increases the multimap size by 1. Other implementations
@@ -214,9 +212,9 @@ Some multimap implementations allow duplicate key-value pairs, in which case put
 - `key` (`K`)
 - `value` (`V`)
 
-### `remove(java.lang.Object key, java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `remove(Object key, Object value)`
 
 If multiple key-value pairs in the multimap fit this description,
  which one is removed is unspecified.
@@ -225,9 +223,9 @@ If multiple key-value pairs in the multimap fit this description,
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `putAll(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `boolean`
+
+### `putAll(K key, Iterable<? extends V> values)`
 
 Equivalent to (but expected to be more efficient than):
 
@@ -249,16 +247,16 @@ In particular, this is a no-op if values is empty.
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `putAll(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
-
 **Returns:** `boolean`
+
+### `putAll(Multimap<? extends K,? extends V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Collection<V>`
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 If values is empty, this is equivalent to removeAll(key).
 
@@ -266,9 +264,9 @@ If values is empty, this is equivalent to removeAll(key).
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `removeAll(java.lang.Object key)`
-
 **Returns:** `java.util.Collection<V>`
+
+### `removeAll(Object key)`
 
 Once this method returns, key will not be mapped to any values, so it will not
  appear in #keySet(), #asMap(), or any other views.
@@ -276,13 +274,13 @@ Once this method returns, key will not be mapped to any values, so it will not
 **Parameters:**
 - `key` (`java.lang.Object`)
 
+**Returns:** `java.util.Collection<V>`
+
 ### `clear()`
 
 **Returns:** `void`
 
 ### `get(K key)`
-
-**Returns:** `java.util.Collection<V>`
 
 Note that when containsKey(key) is false, this returns an empty collection, not 
  null.
@@ -293,9 +291,9 @@ Changes to the returned collection will update the underlying multimap, and vice
 **Parameters:**
 - `key` (`K`)
 
-### `keySet()`
+**Returns:** `java.util.Collection<V>`
 
-**Returns:** `java.util.Set<K>`
+### `keySet()`
 
 Note that the
  key set contains a key if and only if this multimap maps that key to at least one value.
@@ -304,9 +302,9 @@ Note that the
 Changes to the returned set will update the underlying multimap, and vice versa. However,
  *adding* to the returned set is not possible.
 
-### `keys()`
+**Returns:** `java.util.Set<K>`
 
-**Returns:** [`com.google.common.collect.Multiset<K>`](./Multiset.md)
+### `keys()`
 
 This collection has the same size as this multimap, and
  keys().count(k) == get(k).size() for all k.
@@ -315,23 +313,23 @@ This collection has the same size as this multimap, and
 Changes to the returned multiset will update the underlying multimap, and vice versa.
  However, *adding* to the returned collection is not possible.
 
-### `values()`
+**Returns:** [`com.google.common.collect.Multiset<K>`](./Multiset.md)
 
-**Returns:** `java.util.Collection<V>`
+### `values()`
 
 Changes to the returned collection will update the underlying multimap, and vice versa.
  However, *adding* to the returned collection is not possible.
 
-### `entries()`
+**Returns:** `java.util.Collection<V>`
 
-**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
+### `entries()`
 
 Changes to the returned collection or the entries it contains will update the underlying
  multimap, and vice versa. However, *adding* to the returned collection is not possible.
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
+**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 If an ordering is
  specified by the Multimap implementation, actions will be performed in the order of
@@ -344,9 +342,9 @@ To loop over all keys and their associated value collections, write
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
 
-### `asMap()`
+**Returns:** `void`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap()`
 
 Note that this.asMap().get(k) is equivalent
  to this.get(k) only when k is a key contained in the multimap; otherwise it
@@ -357,9 +355,9 @@ Changes to the returned map or the collections that serve as its values will upd
  underlying multimap, and vice versa. The map does not support put or putAll,
  nor do its entries support setValue.
 
-### `equals(java.lang.Object obj)`
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 Two multimaps are equal when
  their map views, as returned by #asMap, are also equal.
@@ -378,9 +376,9 @@ A non-empty SetMultimap cannot be equal to a non-empty ListMultimap, since
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 The hash code of a multimap is defined as the hash code of the map view, as returned by
  Multimap#asMap.
@@ -390,4 +388,6 @@ In general, two multimaps with identical key-value mappings may or may not have 
  hash codes, depending on the implementation. For example, two SetMultimap instances
  with the same key-value mappings will have the same hashCode, but the hashCode
  of ListMultimap instances depends on the ordering of the values for each key.
+
+**Returns:** `int`
 

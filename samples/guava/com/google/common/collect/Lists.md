@@ -20,8 +20,6 @@ See the Guava User Guide article on [Lists](https://github.com/google/guava/wiki
 
 ### `newArrayList()`
 
-**Returns:** `java.util.ArrayList<E>`
-
 **Note:** if mutability is not required, use ImmutableList#of() instead.
 
  
@@ -29,9 +27,9 @@ See the Guava User Guide article on [Lists](https://github.com/google/guava/wiki
  use the ArrayList constructor directly, taking
  advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newArrayList(E[] elements)`
-
 **Returns:** `java.util.ArrayList<E>`
+
+### `newArrayList(E[] elements)`
 
 **Note:** essentially the only reason to use this method is when you will need to add or
  remove elements later. Otherwise, for non-null elements use ImmutableList#of() (for
@@ -47,9 +45,9 @@ Note that even when you do need the ability to add or remove, this method provid
 **Parameters:**
 - `elements` (`E[]`)
 
-### `newArrayList(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.ArrayList<E>`
+
+### `newArrayList(Iterable<? extends E> elements)`
 
 **Note:** if mutability is not required and the elements are non-null, use ImmutableList#copyOf(Iterable) instead. (Or, change elements to be a FluentIterable and call elements.toList().)
 
@@ -61,25 +59,25 @@ Note that even when you do need the ability to add or remove, this method provid
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `newArrayList(java.util.Iterator<? extends E> elements)`
-
 **Returns:** `java.util.ArrayList<E>`
+
+### `newArrayList(Iterator<? extends E> elements)`
 
 **Note:** if mutability is not required and the elements are non-null, use ImmutableList#copyOf(Iterator) instead.
 
 **Parameters:**
 - `elements` (`java.util.Iterator<? extends E>`)
 
-### `computeArrayListCapacity(int arraySize)`
+**Returns:** `java.util.ArrayList<E>`
 
-**Returns:** `int`
+### `computeArrayListCapacity(int arraySize)`
 
 **Parameters:**
 - `arraySize` (`int`)
 
-### `newArrayListWithCapacity(int initialArraySize)`
+**Returns:** `int`
 
-**Returns:** `java.util.ArrayList<E>`
+### `newArrayListWithCapacity(int initialArraySize)`
 
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use new ArrayList<>(int) directly, taking
@@ -89,11 +87,11 @@ Note that even when you do need the ability to add or remove, this method provid
 
 **Parameters:**
 - `initialArraySize` (`int`): the exact size of the initial backing array for the returned array list
-     (ArrayList documentation calls this value the "capacity")
-
-### `newArrayListWithExpectedSize(int estimatedSize)`
+       (ArrayList documentation calls this value the "capacity")
 
 **Returns:** `java.util.ArrayList<E>`
+
+### `newArrayListWithExpectedSize(int estimatedSize)`
 
 **Note:** This method will soon be deprecated. Even in the rare case that you do want
  some amount of padding, it's best if you choose your desired amount explicitly.
@@ -101,9 +99,9 @@ Note that even when you do need the ability to add or remove, this method provid
 **Parameters:**
 - `estimatedSize` (`int`): an estimate of the eventual List#size() of the new list
 
-### `newLinkedList()`
+**Returns:** `java.util.ArrayList<E>`
 
-**Returns:** `java.util.LinkedList<E>`
+### `newLinkedList()`
 
 **Note:** if you won't be adding any elements to the list, use ImmutableList#of()
  instead.
@@ -118,9 +116,9 @@ Note that even when you do need the ability to add or remove, this method provid
  use the LinkedList constructor directly, taking
  advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newLinkedList(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.LinkedList<E>`
+
+### `newLinkedList(Iterable<? extends E> elements)`
 
 **Note:** if mutability is not required and the elements are non-null, use ImmutableList#copyOf(Iterable) instead. (Or, change elements to be a FluentIterable and call elements.toList().)
 
@@ -137,23 +135,23 @@ Note that even when you do need the ability to add or remove, this method provid
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `newCopyOnWriteArrayList()`
+**Returns:** `java.util.LinkedList<E>`
 
-**Returns:** `java.util.concurrent.CopyOnWriteArrayList<E>`
+### `newCopyOnWriteArrayList()`
 
 **Note:** if you need an immutable empty List, use Collections#emptyList
  instead.
 
-### `newCopyOnWriteArrayList(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.concurrent.CopyOnWriteArrayList<E>`
+
+### `newCopyOnWriteArrayList(Iterable<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the list should contain, in order
 
-### `asList(E first, E[] rest)`
+**Returns:** `java.util.concurrent.CopyOnWriteArrayList<E>`
 
-**Returns:** `java.util.List<E>`
+### `asList(E first, E[] rest)`
 
 Changes to the rest array will be reflected in the
  returned list. Unlike Arrays#asList, the returned list is unmodifiable.
@@ -169,9 +167,9 @@ The returned list is serializable and implements RandomAccess.
 - `first` (`E`): the first element
 - `rest` (`E[]`): an array of additional elements, possibly empty
 
-### `asList(E first, E second, E[] rest)`
-
 **Returns:** `java.util.List<E>`
+
+### `asList(E first, E second, E[] rest)`
 
 Changes to the rest array will be reflected
  in the returned list. Unlike Arrays#asList, the returned list is unmodifiable.
@@ -189,9 +187,9 @@ The returned list is serializable and implements RandomAccess.
 - `second` (`E`): the second element
 - `rest` (`E[]`): an array of additional elements, possibly empty
 
-### `cartesianProduct(java.util.List<? extends java.util.List<? extends B>> lists)`
+**Returns:** `java.util.List<E>`
 
-**Returns:** `java.util.List<java.util.List<B>>`
+### `cartesianProduct(List<? extends List<? extends B>> lists)`
 
 For example:
 
@@ -252,11 +250,11 @@ Note that if any input list is empty, the Cartesian product will also be empty. 
 
 **Parameters:**
 - `lists` (`java.util.List<? extends java.util.List<? extends B>>`): the lists to choose elements from, in the order that the elements chosen from
-     those lists should appear in the resulting lists
-
-### `cartesianProduct(java.util.List<? extends B>[] lists)`
+       those lists should appear in the resulting lists
 
 **Returns:** `java.util.List<java.util.List<B>>`
+
+### `cartesianProduct(List<? extends B>[] lists)`
 
 For example:
 
@@ -317,11 +315,11 @@ Note that if any input list is empty, the Cartesian product will also be empty. 
 
 **Parameters:**
 - `lists` (`java.util.List<? extends B>[]`): the lists to choose elements from, in the order that the elements chosen from
-     those lists should appear in the resulting lists
+       those lists should appear in the resulting lists
 
-### `transform(java.util.List<F> fromList, com.google.common.base.Function<? super F,? extends T> function)`
+**Returns:** `java.util.List<java.util.List<B>>`
 
-**Returns:** `java.util.List<T>`
+### `transform(List<F> fromList, Function<? super F,? extends T> function)`
 
 The returned
  list is a transformed view of fromList; changes to fromList will be reflected
@@ -362,9 +360,9 @@ If only a Collection or Iterable input is available, use Collections2#transform 
 - `fromList` (`java.util.List<F>`)
 - `function` ([`com.google.common.base.Function<? super F,? extends T>`](../base/Function.md))
 
-### `partition(java.util.List<T> list, int size)`
+**Returns:** `java.util.List<T>`
 
-**Returns:** `java.util.List<java.util.List<T>>`
+### `partition(List<T> list, int size)`
 
 For example, partitioning a list containing [a, b,
  c, d, e] with a partition size of 3 yields [[a, b, c], [d, e]] -- an outer list
@@ -379,16 +377,16 @@ The outer list is unmodifiable, but reflects the latest state of the source list
 - `list` (`java.util.List<T>`): the list to return consecutive sublists of
 - `size` (`int`): the desired size of each sublist (the last may be smaller)
 
-### `charactersOf(java.lang.String string)`
+**Returns:** `java.util.List<java.util.List<T>>`
 
-**Returns:** [`com.google.common.collect.ImmutableList<java.lang.Character>`](./ImmutableList.md)
+### `charactersOf(String string)`
 
 **Parameters:**
 - `string` (`java.lang.String`)
 
-### `charactersOf(java.lang.CharSequence sequence)`
+**Returns:** [`com.google.common.collect.ImmutableList<java.lang.Character>`](./ImmutableList.md)
 
-**Returns:** `java.util.List<java.lang.Character>`
+### `charactersOf(CharSequence sequence)`
 
 The view does not support any
  modification operations, but reflects any changes to the underlying character sequence.
@@ -396,9 +394,9 @@ The view does not support any
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to view as a List of characters
 
-### `reverse(java.util.List<T> list)`
+**Returns:** `java.util.List<java.lang.Character>`
 
-**Returns:** `java.util.List<T>`
+### `reverse(List<T> list)`
 
 For example, 
  Lists.reverse(Arrays.asList(1, 2, 3)) returns a list containing 3, 2, 1. The returned
@@ -412,83 +410,85 @@ The returned list is random-access if the specified list is random access.
 **Parameters:**
 - `list` (`java.util.List<T>`)
 
-### `hashCodeImpl(java.util.List<?> list)`
+**Returns:** `java.util.List<T>`
 
-**Returns:** `int`
+### `hashCodeImpl(List<?> list)`
 
 **Parameters:**
 - `list` (`java.util.List<?>`)
 
-### `equalsImpl(java.util.List<?> thisList, java.lang.Object other)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equalsImpl(List<?> thisList, Object other)`
 
 **Parameters:**
 - `thisList` (`java.util.List<?>`)
 - `other` (`java.lang.Object`)
 
-### `addAllImpl(java.util.List<E> list, int index, java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `boolean`
+
+### `addAllImpl(List<E> list, int index, Iterable<? extends E> elements)`
 
 **Parameters:**
 - `list` (`java.util.List<E>`)
 - `index` (`int`)
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `indexOfImpl(java.util.List<?> list, java.lang.Object element)`
+**Returns:** `boolean`
 
-**Returns:** `int`
-
-**Parameters:**
-- `list` (`java.util.List<?>`)
-- `element` (`java.lang.Object`)
-
-### `indexOfRandomAccess(java.util.List<?> list, java.lang.Object element)`
-
-**Returns:** `int`
+### `indexOfImpl(List<?> list, Object element)`
 
 **Parameters:**
 - `list` (`java.util.List<?>`)
 - `element` (`java.lang.Object`)
 
-### `lastIndexOfImpl(java.util.List<?> list, java.lang.Object element)`
-
 **Returns:** `int`
+
+### `indexOfRandomAccess(List<?> list, Object element)`
 
 **Parameters:**
 - `list` (`java.util.List<?>`)
 - `element` (`java.lang.Object`)
 
-### `lastIndexOfRandomAccess(java.util.List<?> list, java.lang.Object element)`
-
 **Returns:** `int`
+
+### `lastIndexOfImpl(List<?> list, Object element)`
 
 **Parameters:**
 - `list` (`java.util.List<?>`)
 - `element` (`java.lang.Object`)
 
-### `listIteratorImpl(java.util.List<E> list, int index)`
+**Returns:** `int`
 
-**Returns:** `java.util.ListIterator<E>`
+### `lastIndexOfRandomAccess(List<?> list, Object element)`
+
+**Parameters:**
+- `list` (`java.util.List<?>`)
+- `element` (`java.lang.Object`)
+
+**Returns:** `int`
+
+### `listIteratorImpl(List<E> list, int index)`
 
 **Parameters:**
 - `list` (`java.util.List<E>`)
 - `index` (`int`)
 
-### `subListImpl(java.util.List<E> list, int fromIndex, int toIndex)`
+**Returns:** `java.util.ListIterator<E>`
 
-**Returns:** `java.util.List<E>`
+### `subListImpl(List<E> list, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `list` (`java.util.List<E>`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `cast(java.lang.Iterable<T> iterable)`
+**Returns:** `java.util.List<E>`
 
-**Returns:** `java.util.List<T>`
+### `cast(Iterable<T> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
+
+**Returns:** `java.util.List<T>`
 

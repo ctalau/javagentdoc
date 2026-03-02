@@ -33,7 +33,7 @@ Like other Entry instances associated with CacheBuilder, this class holds
 
 ## Constructors
 
-### `<init>(K key, V value, com.google.common.cache.RemovalCause cause)`
+### `<init>(K key, V value, RemovalCause cause)`
 
 **Parameters:**
 - `key` (`K`)
@@ -42,9 +42,7 @@ Like other Entry instances associated with CacheBuilder, this class holds
 
 ## Methods
 
-### `create(K key, V value, com.google.common.cache.RemovalCause cause)`
-
-**Returns:** [`com.google.common.cache.RemovalNotification<K,V>`](./RemovalNotification.md)
+### `create(K key, V value, RemovalCause cause)`
 
 The key and/or value may be 
  null if they were already garbage collected.
@@ -53,6 +51,8 @@ The key and/or value may be
 - `key` (`K`)
 - `value` (`V`)
 - `cause` ([`com.google.common.cache.RemovalCause`](./RemovalCause.md))
+
+**Returns:** [`com.google.common.cache.RemovalNotification<K,V>`](./RemovalNotification.md)
 
 ### `getCause()`
 

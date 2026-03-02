@@ -20,9 +20,7 @@ The variant of UTF-8 implemented by this class is the restricted definition of U
 
 ## Methods
 
-### `encodedLength(java.lang.CharSequence sequence)`
-
-**Returns:** `int`
+### `encodedLength(CharSequence sequence)`
 
 For a string, this
  method is equivalent to string.getBytes(UTF_8).length, but is more efficient in both
@@ -31,17 +29,17 @@ For a string, this
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `encodedLengthGeneral(java.lang.CharSequence sequence, int start)`
-
 **Returns:** `int`
+
+### `encodedLengthGeneral(CharSequence sequence, int start)`
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 - `start` (`int`)
 
-### `isWellFormed(byte[] bytes)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `isWellFormed(byte[] bytes)`
 
 Note that this is a stronger criterion than simply whether the bytes can be
  decoded. For example, some versions of the JDK decoder will accept "non-shortest form" byte
@@ -55,9 +53,9 @@ This method returns true if and only if Arrays.equals(bytes, new
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `isWellFormed(byte[] bytes, int off, int len)`
-
 **Returns:** `boolean`
+
+### `isWellFormed(byte[] bytes, int off, int len)`
 
 Note that this can be false even when 
  isWellFormed(bytes) is true.
@@ -67,19 +65,21 @@ Note that this can be false even when
 - `off` (`int`): the offset in the buffer of the first byte to read
 - `len` (`int`): the number of bytes to read from the buffer
 
-### `isWellFormedSlowPath(byte[] bytes, int off, int end)`
-
 **Returns:** `boolean`
+
+### `isWellFormedSlowPath(byte[] bytes, int off, int end)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `end` (`int`)
 
-### `unpairedSurrogateMsg(int i)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `unpairedSurrogateMsg(int i)`
 
 **Parameters:**
 - `i` (`int`)
+
+**Returns:** `java.lang.String`
 

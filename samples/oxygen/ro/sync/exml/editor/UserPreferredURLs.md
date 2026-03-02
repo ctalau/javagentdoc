@@ -34,7 +34,7 @@
 
 **Returns:** `void`
 
-### `addURL(java.lang.String arg0, java.lang.String arg1)`
+### `addURL(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -42,7 +42,7 @@
 
 **Returns:** `void`
 
-### `removeURL(java.lang.String arg0, java.lang.String arg1)`
+### `removeURL(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -50,14 +50,14 @@
 
 **Returns:** `void`
 
-### `clearURLs(java.lang.String arg0)`
+### `clearURLs(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `getURLs(java.lang.String arg0)`
+### `getURLs(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

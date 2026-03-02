@@ -18,7 +18,7 @@ If selection exists, the cell at start selection offset determines the destinati
 
 ## Methods
 
-### `generateColumnSpecifications(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSpanSupport, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `generateColumnSpecifications(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSpanSupport, AuthorElement tableElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))

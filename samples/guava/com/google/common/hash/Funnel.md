@@ -37,9 +37,7 @@ Note that serialization of bloom filters requires the proper
 
 ## Methods
 
-### `funnel(T from, com.google.common.hash.PrimitiveSink into)`
-
-**Returns:** `void`
+### `funnel(T from, PrimitiveSink into)`
 
 There is no
  requirement that this data be complete enough to fully reconstitute the object later.
@@ -47,4 +45,6 @@ There is no
 **Parameters:**
 - `from` (`T`)
 - `into` ([`com.google.common.hash.PrimitiveSink`](./PrimitiveSink.md))
+
+**Returns:** `void`
 

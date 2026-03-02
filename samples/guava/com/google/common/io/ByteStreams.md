@@ -61,9 +61,7 @@ Requires that both the input channel and the output
 
 **Returns:** `byte[]`
 
-### `copy(java.io.InputStream from, java.io.OutputStream to)`
-
-**Returns:** `long`
+### `copy(InputStream from, OutputStream to)`
 
 Does not close or flush either
  stream.
@@ -76,9 +74,9 @@ Does not close or flush either
 - `from` (`java.io.InputStream`): the input stream to read from
 - `to` (`java.io.OutputStream`): the output stream to write to
 
-### `copy(java.nio.channels.ReadableByteChannel from, java.nio.channels.WritableByteChannel to)`
-
 **Returns:** `long`
+
+### `copy(ReadableByteChannel from, WritableByteChannel to)`
 
 Does not close or flush
  either channel.
@@ -87,35 +85,35 @@ Does not close or flush
 - `from` (`java.nio.channels.ReadableByteChannel`): the readable channel to read from
 - `to` (`java.nio.channels.WritableByteChannel`): the writable channel to write to
 
-### `toByteArrayInternal(java.io.InputStream in, java.util.Queue<byte[]> bufs, int totalLen)`
+**Returns:** `long`
 
-**Returns:** `byte[]`
+### `toByteArrayInternal(InputStream in, Queue<byte[]> bufs, int totalLen)`
 
 **Parameters:**
 - `in` (`java.io.InputStream`)
 - `bufs` (`java.util.Queue<byte[]>`)
 - `totalLen` (`int`)
 
-### `combineBuffers(java.util.Queue<byte[]> bufs, int totalLen)`
-
 **Returns:** `byte[]`
+
+### `combineBuffers(Queue<byte[]> bufs, int totalLen)`
 
 **Parameters:**
 - `bufs` (`java.util.Queue<byte[]>`)
 - `totalLen` (`int`)
 
-### `toByteArray(java.io.InputStream in)`
-
 **Returns:** `byte[]`
+
+### `toByteArray(InputStream in)`
 
 Does not close the stream.
 
 **Parameters:**
 - `in` (`java.io.InputStream`): the input stream to read from
 
-### `toByteArray(java.io.InputStream in, long expectedSize)`
-
 **Returns:** `byte[]`
+
+### `toByteArray(InputStream in, long expectedSize)`
 
 The given expected size is used to
  create an initial byte array, but if the actual number of bytes read from the stream differs,
@@ -125,33 +123,33 @@ The given expected size is used to
 - `in` (`java.io.InputStream`)
 - `expectedSize` (`long`)
 
-### `exhaust(java.io.InputStream in)`
+**Returns:** `byte[]`
 
-**Returns:** `long`
+### `exhaust(InputStream in)`
 
 Returns the total number of bytes read. Does not close the stream.
 
 **Parameters:**
 - `in` (`java.io.InputStream`)
 
-### `newDataInput(byte[] bytes)`
+**Returns:** `long`
 
-**Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
+### `newDataInput(byte[] bytes)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `newDataInput(byte[] bytes, int start)`
-
 **Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
+
+### `newDataInput(byte[] bytes, int start)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `start` (`int`)
 
-### `newDataInput(java.io.ByteArrayInputStream byteArrayInputStream)`
-
 **Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
+
+### `newDataInput(ByteArrayInputStream byteArrayInputStream)`
 
 The given input stream is not reset before being read from by the
  returned ByteArrayDataInput.
@@ -159,20 +157,20 @@ The given input stream is not reset before being read from by the
 **Parameters:**
 - `byteArrayInputStream` (`java.io.ByteArrayInputStream`)
 
+**Returns:** [`com.google.common.io.ByteArrayDataInput`](./ByteArrayDataInput.md)
+
 ### `newDataOutput()`
 
 **Returns:** [`com.google.common.io.ByteArrayDataOutput`](./ByteArrayDataOutput.md)
 
 ### `newDataOutput(int size)`
 
-**Returns:** [`com.google.common.io.ByteArrayDataOutput`](./ByteArrayDataOutput.md)
-
 **Parameters:**
 - `size` (`int`)
 
-### `newDataOutput(java.io.ByteArrayOutputStream byteArrayOutputStream)`
-
 **Returns:** [`com.google.common.io.ByteArrayDataOutput`](./ByteArrayDataOutput.md)
+
+### `newDataOutput(ByteArrayOutputStream byteArrayOutputStream)`
 
 The given output stream is not reset before being written to by the
  returned ByteArrayDataOutput and new data will be appended to any existing content.
@@ -186,21 +184,21 @@ Note that if the given output stream was not empty or is modified after the
 **Parameters:**
 - `byteArrayOutputStream` (`java.io.ByteArrayOutputStream`)
 
+**Returns:** [`com.google.common.io.ByteArrayDataOutput`](./ByteArrayDataOutput.md)
+
 ### `nullOutputStream()`
 
 **Returns:** `java.io.OutputStream`
 
-### `limit(java.io.InputStream in, long limit)`
-
-**Returns:** `java.io.InputStream`
+### `limit(InputStream in, long limit)`
 
 **Parameters:**
 - `in` (`java.io.InputStream`): the input stream to be wrapped
 - `limit` (`long`): the maximum number of bytes to be read
 
-### `readFully(java.io.InputStream in, byte[] b)`
+**Returns:** `java.io.InputStream`
 
-**Returns:** `void`
+### `readFully(InputStream in, byte[] b)`
 
 Does not close the stream.
 
@@ -208,9 +206,9 @@ Does not close the stream.
 - `in` (`java.io.InputStream`): the input stream to read from.
 - `b` (`byte[]`): the buffer into which the data is read.
 
-### `readFully(java.io.InputStream in, byte[] b, int off, int len)`
-
 **Returns:** `void`
+
+### `readFully(InputStream in, byte[] b, int off, int len)`
 
 Does not close
  the stream.
@@ -221,9 +219,9 @@ Does not close
 - `off` (`int`): an int specifying the offset into the data.
 - `len` (`int`): an int specifying the number of bytes to read.
 
-### `skipFully(java.io.InputStream in, long n)`
-
 **Returns:** `void`
+
+### `skipFully(InputStream in, long n)`
 
 This method will block until the full
  amount has been skipped. Does not close the stream.
@@ -232,9 +230,9 @@ This method will block until the full
 - `in` (`java.io.InputStream`): the input stream to read from
 - `n` (`long`): the number of bytes to skip
 
-### `skipUpTo(java.io.InputStream in, long n)`
+**Returns:** `void`
 
-**Returns:** `long`
+### `skipUpTo(InputStream in, long n)`
 
 This method will block until
  either the full amount has been skipped or until the end of the stream is reached, whichever
@@ -244,9 +242,9 @@ This method will block until
 - `in` (`java.io.InputStream`)
 - `n` (`long`)
 
-### `skipSafely(java.io.InputStream in, long n)`
-
 **Returns:** `long`
+
+### `skipSafely(InputStream in, long n)`
 
 This prevents FileInputStream from skipping more bytes than
  actually remain in the file, something that it specifies it can do in its Javadoc despite the fact that it is violating the contract of
@@ -256,17 +254,17 @@ This prevents FileInputStream from skipping more bytes than
 - `in` (`java.io.InputStream`)
 - `n` (`long`)
 
-### `readBytes(java.io.InputStream input, com.google.common.io.ByteProcessor<T> processor)`
+**Returns:** `long`
 
-**Returns:** `T`
+### `readBytes(InputStream input, ByteProcessor<T> processor)`
 
 **Parameters:**
 - `input` (`java.io.InputStream`): the input stream to process
 - `processor` ([`com.google.common.io.ByteProcessor<T>`](./ByteProcessor.md)): the object to which to pass the bytes of the stream
 
-### `read(java.io.InputStream in, byte[] b, int off, int len)`
+**Returns:** `T`
 
-**Returns:** `int`
+### `read(InputStream in, byte[] b, int off, int len)`
 
 This
  method blocks until len bytes of input data have been read into the array, or end of
@@ -289,4 +287,6 @@ If b is null, a NullPointerException is thrown. If off is negative,
 - `b` (`byte[]`): the buffer into which the data is read
 - `off` (`int`): an int specifying the offset into the data
 - `len` (`int`): an int specifying the number of bytes to read
+
+**Returns:** `int`
 

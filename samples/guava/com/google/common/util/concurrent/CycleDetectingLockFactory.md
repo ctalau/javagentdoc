@@ -172,30 +172,28 @@ As such, the CycleDetectingLockFactory may not be suitable for performance-criti
 
 ## Constructors
 
-### `<init>(com.google.common.util.concurrent.CycleDetectingLockFactory.Policy policy)`
+### `<init>(CycleDetectingLockFactory.Policy policy)`
 
 **Parameters:**
 - `policy` (`com.google.common.util.concurrent.CycleDetectingLockFactory.Policy`)
 
 ## Methods
 
-### `newInstance(com.google.common.util.concurrent.CycleDetectingLockFactory.Policy policy)`
-
-**Returns:** [`com.google.common.util.concurrent.CycleDetectingLockFactory`](./CycleDetectingLockFactory.md)
+### `newInstance(CycleDetectingLockFactory.Policy policy)`
 
 **Parameters:**
 - `policy` (`com.google.common.util.concurrent.CycleDetectingLockFactory.Policy`)
 
-### `newReentrantLock(java.lang.String lockName)`
+**Returns:** [`com.google.common.util.concurrent.CycleDetectingLockFactory`](./CycleDetectingLockFactory.md)
 
-**Returns:** `java.util.concurrent.locks.ReentrantLock`
+### `newReentrantLock(String lockName)`
 
 **Parameters:**
 - `lockName` (`java.lang.String`)
 
-### `newReentrantLock(java.lang.String lockName, boolean fair)`
-
 **Returns:** `java.util.concurrent.locks.ReentrantLock`
+
+### `newReentrantLock(String lockName, boolean fair)`
 
 The lockName is used in
  the warning or exception output to help identify the locks involved in the detected deadlock.
@@ -204,16 +202,16 @@ The lockName is used in
 - `lockName` (`java.lang.String`)
 - `fair` (`boolean`)
 
-### `newReentrantReadWriteLock(java.lang.String lockName)`
+**Returns:** `java.util.concurrent.locks.ReentrantLock`
 
-**Returns:** `java.util.concurrent.locks.ReentrantReadWriteLock`
+### `newReentrantReadWriteLock(String lockName)`
 
 **Parameters:**
 - `lockName` (`java.lang.String`)
 
-### `newReentrantReadWriteLock(java.lang.String lockName, boolean fair)`
-
 **Returns:** `java.util.concurrent.locks.ReentrantReadWriteLock`
+
+### `newReentrantReadWriteLock(String lockName, boolean fair)`
 
 The lockName
  is used in the warning or exception output to help identify the locks involved in the detected
@@ -223,49 +221,51 @@ The lockName
 - `lockName` (`java.lang.String`)
 - `fair` (`boolean`)
 
-### `newInstanceWithExplicitOrdering(java.lang.Class<E> enumClass, com.google.common.util.concurrent.CycleDetectingLockFactory.Policy policy)`
+**Returns:** `java.util.concurrent.locks.ReentrantReadWriteLock`
 
-**Returns:** `com.google.common.util.concurrent.CycleDetectingLockFactory.WithExplicitOrdering<E>`
+### `newInstanceWithExplicitOrdering(Class<E> enumClass, CycleDetectingLockFactory.Policy policy)`
 
 **Parameters:**
 - `enumClass` (`java.lang.Class<E>`)
 - `policy` (`com.google.common.util.concurrent.CycleDetectingLockFactory.Policy`)
 
-### `getOrCreateNodes(java.lang.Class<E> clazz)`
+**Returns:** `com.google.common.util.concurrent.CycleDetectingLockFactory.WithExplicitOrdering<E>`
+
+### `getOrCreateNodes(Class<E> clazz)`
+
+**Parameters:**
+- `clazz` (`java.lang.Class<E>`)
 
 **Returns:** `java.util.Map<? extends E,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>`
 
+### `createNodes(Class<E> clazz)`
+
 **Parameters:**
 - `clazz` (`java.lang.Class<E>`)
-
-### `createNodes(java.lang.Class<E> clazz)`
 
 **Returns:** `java.util.Map<E,com.google.common.util.concurrent.CycleDetectingLockFactory.LockGraphNode>`
 
-**Parameters:**
-- `clazz` (`java.lang.Class<E>`)
-
-### `getLockName(java.lang.Enum<?> rank)`
-
-**Returns:** `java.lang.String`
+### `getLockName(Enum<?> rank)`
 
 **Parameters:**
 - `rank` (`java.lang.Enum<?>`)
 
-### `aboutToAcquire(com.google.common.util.concurrent.CycleDetectingLockFactory.CycleDetectingLock lock)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `aboutToAcquire(CycleDetectingLockFactory.CycleDetectingLock lock)`
 
 **Parameters:**
 - `lock` (`com.google.common.util.concurrent.CycleDetectingLockFactory.CycleDetectingLock`)
 
-### `lockStateChanged(com.google.common.util.concurrent.CycleDetectingLockFactory.CycleDetectingLock lock)`
-
 **Returns:** `void`
+
+### `lockStateChanged(CycleDetectingLockFactory.CycleDetectingLock lock)`
 
 Failure to do so can
  result in corrupting the acquireLocks set.
 
 **Parameters:**
 - `lock` (`com.google.common.util.concurrent.CycleDetectingLockFactory.CycleDetectingLock`)
+
+**Returns:** `void`
 

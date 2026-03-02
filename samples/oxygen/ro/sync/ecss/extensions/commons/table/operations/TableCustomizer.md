@@ -30,7 +30,7 @@ Session level persistence.
 
 ## Methods
 
-### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizeTable(AuthorAccess authorAccess)`
 
 A table customizer dialog is shown, giving the possibility to choose the 
  properties of a new table to be inserted in the document. An object containing 
@@ -41,7 +41,7 @@ A table customizer dialog is shown, giving the possibility to choose the
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
-### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount)`
+### `customizeTable(AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount)`
 
 A table customizer dialog is shown, giving the possibility to choose the 
  properties of a new table to be inserted in the document. An object containing 
@@ -59,7 +59,7 @@ A table customizer dialog is shown, giving the possibility to choose the
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
-### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
+### `showCustomizeTableDialog(AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The Author access.
@@ -69,7 +69,7 @@ A table customizer dialog is shown, giving the possibility to choose the
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
-### `customizeTable(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
+### `customizeTable(AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 A table customizer dialog is shown, giving the possibility to choose the 
  properties of a new table to be inserted in the document. An object containing 
@@ -88,7 +88,7 @@ A table customizer dialog is shown, giving the possibility to choose the
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md)
 
-### `getTableInfoObject(java.lang.String tableCustomizerOptions)`
+### `getTableInfoObject(String tableCustomizerOptions)`
 
 **Parameters:**
 - `tableCustomizerOptions` (`java.lang.String`): the options serialization to be deserialized.

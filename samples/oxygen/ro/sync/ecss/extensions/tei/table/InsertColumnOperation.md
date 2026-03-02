@@ -14,14 +14,14 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `<init>(AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../../commons/table/operations/AuthorTableHelper.md)): The table helper.
 
 ## Methods
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
+### `getCellElementName(AuthorElement rowElement, int newColumnIndex)`
 
 **Parameters:**
 - `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))

@@ -15,7 +15,7 @@ The listener will be triggered before an action is performed (and will be able t
 
 ## Methods
 
-### `beforeActionPerformed(java.lang.Object actionEvent)`
+### `beforeActionPerformed(Object actionEvent)`
 
 If the callback rejects, the other added listeners will also not get called.
 
@@ -25,7 +25,7 @@ If the callback rejects, the other added listeners will also not get called.
 
 **Returns:** `boolean`
 
-### `afterActionPerformed(java.lang.Object actionEvent)`
+### `afterActionPerformed(Object actionEvent)`
 
 **Parameters:**
 - `actionEvent` (`java.lang.Object`): The action event. For Swing it is an instance of java.awt.event.ActionEvent. 

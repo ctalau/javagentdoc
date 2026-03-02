@@ -24,13 +24,13 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableCollection<E> delegate, com.google.common.collect.ImmutableList<? extends E> delegateList)`
+### `<init>(ImmutableCollection<E> delegate, ImmutableList<? extends E> delegateList)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md))
 - `delegateList` ([`com.google.common.collect.ImmutableList<? extends E>`](./ImmutableList.md))
 
-### `<init>(com.google.common.collect.ImmutableCollection<E> delegate, java.lang.Object[] array)`
+### `<init>(ImmutableCollection<E> delegate, Object[] array)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md))
@@ -48,25 +48,25 @@
 
 ### `listIterator(int index)`
 
-**Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
-
 **Parameters:**
 - `index` (`int`)
 
-### `forEach(java.util.function.Consumer<? super E> action)`
+**Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
 
-**Returns:** `void`
+### `forEach(Consumer<? super E> action)`
 
 **Parameters:**
 - `action` (`java.util.function.Consumer<? super E>`)
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
+
+**Returns:** `int`
 
 ### `internalArray()`
 
@@ -82,10 +82,10 @@
 
 ### `get(int index)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `E`
 
 ### `writeReplace()`
 

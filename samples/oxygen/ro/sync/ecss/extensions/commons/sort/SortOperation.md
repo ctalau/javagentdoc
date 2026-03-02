@@ -38,7 +38,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, java.lang.String arg1)`
+### `<init>(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -50,7 +50,7 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.ArgumentsMap arg1)`
+### `doOperation(AuthorAccess arg0, ArgumentsMap arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -58,7 +58,7 @@
 
 **Returns:** `void`
 
-### `getSortInformation(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1, java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg2, int[] arg3)`
+### `getSortInformation(AuthorAccess arg0, AuthorElement arg1, List<CriterionInformation> arg2, int[] arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -68,7 +68,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
 
-### `createNodesComparator(java.util.Locale arg0, ro.sync.ecss.extensions.api.AuthorOperationException[] arg1)`
+### `createNodesComparator(Locale arg0, AuthorOperationException[] arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.Locale`)
@@ -76,14 +76,14 @@
 
 **Returns:** `java.util.Comparator<ro.sync.ecss.extensions.commons.sort.SortOperation.SortableFragment>`
 
-### `createLocale(java.lang.String arg0)`
+### `createLocale(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.util.Locale`
 
-### `canBeSorted(ro.sync.ecss.extensions.api.node.AuthorElement arg0, int[] arg1)`
+### `canBeSorted(AuthorElement arg0, int[] arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
@@ -91,7 +91,7 @@
 
 **Returns:** `void`
 
-### `getSelectedNonIgnoredChildrenInterval(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `getSelectedNonIgnoredChildrenInterval(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
@@ -102,7 +102,7 @@
 
 **Returns:** `boolean`
 
-### `getSelectionElementsIndices(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0, int arg1, int arg2)`
+### `getSelectionElementsIndices(List<AuthorNode> arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -111,14 +111,14 @@
 
 **Returns:** `int[]`
 
-### `getNonIgnoredChildren(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `getNonIgnoredChildren(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-### `getSortParent(int arg0, ro.sync.ecss.extensions.api.AuthorAccess arg1)`
+### `getSortParent(int arg0, AuthorAccess arg1)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -126,14 +126,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)
 
-### `isIgnored(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `isIgnored(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `getSortKeysValues(ro.sync.ecss.extensions.api.node.AuthorNode arg0, ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation arg1)`
+### `getSortKeysValues(AuthorNode arg0, SortCriteriaInformation arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
@@ -141,7 +141,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `getSortCriteria(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `getSortCriteria(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
@@ -152,7 +152,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../api/ArgumentDescriptor.md)
 
-### `getTextContentToSort(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `getTextContentToSort(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))

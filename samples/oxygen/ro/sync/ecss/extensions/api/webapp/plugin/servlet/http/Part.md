@@ -28,7 +28,7 @@
 
 **Returns:** `long`
 
-### `write(java.lang.String fileName)`
+### `write(String fileName)`
 
 This method is not guaranteed to succeed if called more than once for the same part. This allows a particular
  implementation to use, for example, file renaming, where possible, rather than copying all of the underlying data,
@@ -46,7 +46,7 @@ This method is not guaranteed to succeed if called more than once for the same p
 
 **Returns:** `void`
 
-### `getHeader(java.lang.String name)`
+### `getHeader(String name)`
 
 If the Part did not include a header of the
  specified name, this method returns `null`. If there are multiple headers with the same name, this method
@@ -58,7 +58,7 @@ If the Part did not include a header of the
 
 **Returns:** `java.lang.String`
 
-### `getHeaders(java.lang.String name)`
+### `getHeaders(String name)`
 
 Any changes to the returned `Collection` must not affect this `Part`.
 

@@ -11,7 +11,7 @@ The invalidate method will be called when a session expires. Users of this inter
 
 ## Methods
 
-### `get(java.lang.String sessionId, java.lang.String key)`
+### `get(String sessionId, String key)`
 
 If the value is not an instance of the requested type T a ClassCastException will be thrown.
 
@@ -21,7 +21,7 @@ If the value is not an instance of the requested type T a ClassCastException wil
 
 **Returns:** `T`
 
-### `getAndDel(java.lang.String sessionId, java.lang.String key)`
+### `getAndDel(String sessionId, String key)`
 
 Deletes the mapped value before returning.
  
@@ -33,7 +33,7 @@ Deletes the mapped value before returning.
 
 **Returns:** `T`
 
-### `computeIfAbsent(java.lang.String sessionId, java.lang.String key, java.util.function.Supplier<T> supplier)`
+### `computeIfAbsent(String sessionId, String key, Supplier<T> supplier)`
 
 If the computed value is not an instance of the requested type T a ClassCastException will be thrown.
  
@@ -46,7 +46,7 @@ If the computed value is not an instance of the requested type T a ClassCastExce
 
 **Returns:** `T`
 
-### `computeIfAbsentWithoutSessionCookieRefresh(java.lang.String sessionId, java.lang.String key, java.util.function.Supplier<T> supplier)`
+### `computeIfAbsentWithoutSessionCookieRefresh(String sessionId, String key, Supplier<T> supplier)`
 
 If the computed value is not an instance of the requested type T a ClassCastException will be thrown.
  
@@ -59,7 +59,7 @@ If the computed value is not an instance of the requested type T a ClassCastExce
 
 **Returns:** `T`
 
-### `putIfAbsent(java.lang.String sessionId, java.lang.String key, T value)`
+### `putIfAbsent(String sessionId, String key, T value)`
 
 If the value is not an instance of the requested type T a ClassCastException will be thrown.
  
@@ -72,7 +72,7 @@ If the value is not an instance of the requested type T a ClassCastException wil
 
 **Returns:** `T`
 
-### `putIfAbsentWithoutSessionCookieRefresh(java.lang.String sessionId, java.lang.String key, T value)`
+### `putIfAbsentWithoutSessionCookieRefresh(String sessionId, String key, T value)`
 
 If the value is not an instance of the requested type T a ClassCastException will be thrown.
  
@@ -85,7 +85,7 @@ If the value is not an instance of the requested type T a ClassCastException wil
 
 **Returns:** `T`
 
-### `put(java.lang.String sessionId, java.lang.String key, T value)`
+### `put(String sessionId, String key, T value)`
 
 If the store previously contained a mapping for the sessionId and key,
  the old value is replaced by the specified value.
@@ -100,7 +100,7 @@ If the store previously contained a mapping for the sessionId and key,
 
 **Returns:** `void`
 
-### `putWithoutSessionCookieRefresh(java.lang.String sessionId, java.lang.String key, T value)`
+### `putWithoutSessionCookieRefresh(String sessionId, String key, T value)`
 
 If the store previously contained a mapping for the sessionId and key,
  the old value is replaced by the specified value.
@@ -115,7 +115,7 @@ If the store previously contained a mapping for the sessionId and key,
 
 **Returns:** `void`
 
-### `remove(java.lang.String sessionId, java.lang.String key)`
+### `remove(String sessionId, String key)`
 
 **Parameters:**
 - `sessionId` (`java.lang.String`): The session id for which to remove the associated value.
@@ -123,14 +123,14 @@ If the store previously contained a mapping for the sessionId and key,
 
 **Returns:** `void`
 
-### `invalidate(java.lang.String sessionId)`
+### `invalidate(String sessionId)`
 
 **Parameters:**
 - `sessionId` (`java.lang.String`): The session id for which to invalidate all keys.
 
 **Returns:** `void`
 
-### `refreshSessionCookie(java.lang.String sessionId)`
+### `refreshSessionCookie(String sessionId)`
 
 If you refresh the session cookie on a HTTP request, all concurrent requests will fail with
  status code 400. To limit this impact it is recommended to call this method only on HTTP requests 

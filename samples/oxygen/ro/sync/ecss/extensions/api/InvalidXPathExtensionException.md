@@ -14,14 +14,14 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.Exception arg2)`
+### `<init>(String arg0, String arg1, Exception arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.Exception`)
 
-### `<init>(java.lang.String arg0, java.lang.String arg1)`
+### `<init>(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

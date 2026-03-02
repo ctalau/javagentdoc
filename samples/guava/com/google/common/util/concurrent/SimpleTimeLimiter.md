@@ -19,16 +19,14 @@ If the
 
 ## Constructors
 
-### `<init>(java.util.concurrent.ExecutorService executor)`
+### `<init>(ExecutorService executor)`
 
 **Parameters:**
 - `executor` (`java.util.concurrent.ExecutorService`)
 
 ## Methods
 
-### `create(java.util.concurrent.ExecutorService executor)`
-
-**Returns:** [`com.google.common.util.concurrent.SimpleTimeLimiter`](./SimpleTimeLimiter.md)
+### `create(ExecutorService executor)`
 
 **Warning:** using a bounded executor may be counterproductive! If the thread pool fills
  up, any time callers spend waiting for a thread may count toward their time limit, and in this
@@ -36,11 +34,11 @@ If the
 
 **Parameters:**
 - `executor` (`java.util.concurrent.ExecutorService`): the ExecutorService that will execute the method calls on the target objects;
-     for example, a Executors#newCachedThreadPool().
+       for example, a Executors#newCachedThreadPool().
 
-### `newProxy(T target, java.lang.Class<T> interfaceType, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
+**Returns:** [`com.google.common.util.concurrent.SimpleTimeLimiter`](./SimpleTimeLimiter.md)
 
-**Returns:** `T`
+### `newProxy(T target, Class<T> interfaceType, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `target` (`T`)
@@ -48,17 +46,17 @@ If the
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `newProxy(java.lang.Class<T> interfaceType, java.lang.reflect.InvocationHandler handler)`
-
 **Returns:** `T`
+
+### `newProxy(Class<T> interfaceType, InvocationHandler handler)`
 
 **Parameters:**
 - `interfaceType` (`java.lang.Class<T>`)
 - `handler` (`java.lang.reflect.InvocationHandler`)
 
-### `callWithTimeout(java.util.concurrent.Callable<T> callable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit, boolean amInterruptible)`
-
 **Returns:** `T`
+
+### `callWithTimeout(Callable<T> callable, long timeoutDuration, TimeUnit timeoutUnit, boolean amInterruptible)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<T>`)
@@ -66,82 +64,84 @@ If the
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 - `amInterruptible` (`boolean`)
 
-### `callWithTimeout(java.util.concurrent.Callable<T> callable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
 **Returns:** `T`
+
+### `callWithTimeout(Callable<T> callable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<T>`)
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `callUninterruptiblyWithTimeout(java.util.concurrent.Callable<T> callable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
 **Returns:** `T`
+
+### `callUninterruptiblyWithTimeout(Callable<T> callable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<T>`)
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `runWithTimeout(java.lang.Runnable runnable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
+**Returns:** `T`
 
-**Returns:** `void`
-
-**Parameters:**
-- `runnable` (`java.lang.Runnable`)
-- `timeoutDuration` (`long`)
-- `timeoutUnit` (`java.util.concurrent.TimeUnit`)
-
-### `runUninterruptiblyWithTimeout(java.lang.Runnable runnable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
-**Returns:** `void`
+### `runWithTimeout(Runnable runnable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `runnable` (`java.lang.Runnable`)
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `throwCause(java.lang.Exception e, boolean combineStackTraces)`
+**Returns:** `void`
 
-**Returns:** `java.lang.Exception`
+### `runUninterruptiblyWithTimeout(Runnable runnable, long timeoutDuration, TimeUnit timeoutUnit)`
+
+**Parameters:**
+- `runnable` (`java.lang.Runnable`)
+- `timeoutDuration` (`long`)
+- `timeoutUnit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `void`
+
+### `throwCause(Exception e, boolean combineStackTraces)`
 
 **Parameters:**
 - `e` (`java.lang.Exception`)
 - `combineStackTraces` (`boolean`)
 
-### `findInterruptibleMethods(java.lang.Class<?> interfaceType)`
+**Returns:** `java.lang.Exception`
 
-**Returns:** `java.util.Set<java.lang.reflect.Method>`
+### `findInterruptibleMethods(Class<?> interfaceType)`
 
 **Parameters:**
 - `interfaceType` (`java.lang.Class<?>`)
 
-### `declaresInterruptedEx(java.lang.reflect.Method method)`
+**Returns:** `java.util.Set<java.lang.reflect.Method>`
 
-**Returns:** `boolean`
+### `declaresInterruptedEx(Method method)`
 
 **Parameters:**
 - `method` (`java.lang.reflect.Method`)
 
-### `wrapAndThrowExecutionExceptionOrError(java.lang.Throwable cause)`
+**Returns:** `boolean`
+
+### `wrapAndThrowExecutionExceptionOrError(Throwable cause)`
+
+**Parameters:**
+- `cause` (`java.lang.Throwable`)
 
 **Returns:** `void`
+
+### `wrapAndThrowRuntimeExecutionExceptionOrError(Throwable cause)`
 
 **Parameters:**
 - `cause` (`java.lang.Throwable`)
 
-### `wrapAndThrowRuntimeExecutionExceptionOrError(java.lang.Throwable cause)`
-
 **Returns:** `void`
-
-**Parameters:**
-- `cause` (`java.lang.Throwable`)
 
 ### `checkPositiveTimeout(long timeoutDuration)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `timeoutDuration` (`long`)
+
+**Returns:** `void`
 

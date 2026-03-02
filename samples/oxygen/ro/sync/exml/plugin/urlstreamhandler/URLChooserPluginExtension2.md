@@ -16,7 +16,7 @@ Allows the user to browse a repository of resources
 
 ## Methods
 
-### `chooseURLs(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace workspaceAccess)`
+### `chooseURLs(StandalonePluginWorkspace workspaceAccess)`
 
 **Parameters:**
 - `workspaceAccess` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../../workspace/api/standalone/StandalonePluginWorkspace.md)): Access to the Oxygen workspace.

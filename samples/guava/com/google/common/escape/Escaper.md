@@ -51,9 +51,7 @@ Popular escapers are defined as constants in classes like com.google.common.html
 
 ## Methods
 
-### `escape(java.lang.String string)`
-
-**Returns:** `java.lang.String`
+### `escape(String string)`
 
 Note that this method may treat input characters differently depending on the specific
  escaper implementation.
@@ -69,6 +67,8 @@ Note that this method may treat input characters differently depending on the sp
 
 **Parameters:**
 - `string` (`java.lang.String`): the literal string to be escaped
+
+**Returns:** `java.lang.String`
 
 ### `asFunction()`
 

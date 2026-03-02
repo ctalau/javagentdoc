@@ -26,7 +26,7 @@ It is used on standalone implementation.
 
 ## Constructors
 
-### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable)`
+### `<init>(Frame parentFrame, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent frame.
@@ -35,7 +35,7 @@ It is used on standalone implementation.
 - `predefinedColumnsCount` (`int`): The predefined number of columns.
 - `insertChoiceTable` (`boolean`): `true` to show dialog for a DITA choice table.
 
-### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable, int defaultTableModel)`
+### `<init>(Frame parentFrame, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable, int defaultTableModel)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent frame.
@@ -45,7 +45,7 @@ It is used on standalone implementation.
 - `insertChoiceTable` (`boolean`): `true` to show dialog for a DITA choice table.
 - `defaultTableModel` (`int`): The default model of the table that will be inserted.
 
-### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable, boolean isPropertiesTableAccepted, int defaultTableModel)`
+### `<init>(Frame parentFrame, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, boolean insertChoiceTable, boolean isPropertiesTableAccepted, int defaultTableModel)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent frame.

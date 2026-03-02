@@ -8,7 +8,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.exml.workspace.b.i.f arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3)`
+### `<init>(f arg0, Frame arg1, String[] arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.f`)
@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `createEditor(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
+### `createEditor(j arg0, Frame arg1, String[] arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)
@@ -29,14 +29,14 @@
 
 **Returns:** `ro.sync.exml.editor.dd`
 
-### `setEditorPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer arg0)`
+### `setEditorPopUpCustomizer(PopupMenuCustomizer arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md))
 
 **Returns:** `void`
 
-### `setOutlinerPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer arg0)`
+### `setOutlinerPopUpCustomizer(PopupMenuCustomizer arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md))
@@ -50,7 +50,7 @@
 
 **Returns:** `void`
 
-### `setBreadCrumbPopUpCustomizer(ro.sync.ecss.extensions.api.component.PopupMenuCustomizer arg0)`
+### `setBreadCrumbPopUpCustomizer(PopupMenuCustomizer arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.PopupMenuCustomizer`](./PopupMenuCustomizer.md))

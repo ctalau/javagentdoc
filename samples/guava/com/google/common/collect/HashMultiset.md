@@ -35,31 +35,31 @@
 
 ### `create(int distinctElements)`
 
-**Returns:** [`com.google.common.collect.HashMultiset<E>`](./HashMultiset.md)
-
 **Parameters:**
 - `distinctElements` (`int`): the expected number of distinct elements
 
-### `create(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.HashMultiset<E>`](./HashMultiset.md)
+
+### `create(Iterable<? extends E> elements)`
 
 This implementation is highly efficient when elements is itself a Multiset.
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the multiset should contain
 
-### `writeObject(java.io.ObjectOutputStream stream)`
+**Returns:** [`com.google.common.collect.HashMultiset<E>`](./HashMultiset.md)
 
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

@@ -98,7 +98,7 @@ Will stop the parsing
 
 ## Constructors
 
-### `<init>(java.lang.String[] topicPath, java.lang.String[] endRangePath, java.lang.String sourceClass, boolean isKeyReference)`
+### `<init>(String[] topicPath, String[] endRangePath, String sourceClass, boolean isKeyReference)`
 
 **Parameters:**
 - `topicPath` (`java.lang.String[]`): The topic IDs path. If null, the first encountered topic will be used.
@@ -108,21 +108,21 @@ Will stop the parsing
 
 ## Methods
 
-### `createInvalidRangeException(java.lang.String situation)`
+### `createInvalidRangeException(String situation)`
 
 **Parameters:**
 - `situation` (`java.lang.String`): The particular situation
 
 **Returns:** `org.xml.sax.SAXException`
 
-### `setContentHandler(org.xml.sax.ContentHandler contentHandler)`
+### `setContentHandler(ContentHandler contentHandler)`
 
 **Parameters:**
 - `contentHandler` (`org.xml.sax.ContentHandler`): The contentHandler to set.
 
 **Returns:** `void`
 
-### `setLexicalHandler(org.xml.sax.ext.LexicalHandler lexicalHandler)`
+### `setLexicalHandler(LexicalHandler lexicalHandler)`
 
 **Parameters:**
 - `lexicalHandler` (`org.xml.sax.ext.LexicalHandler`): The lexicalHandler to set.
@@ -142,7 +142,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `createConrefDescr(java.lang.String[] topicPath, boolean createFullPath)`
+### `createConrefDescr(String[] topicPath, boolean createFullPath)`
 
 **Parameters:**
 - `topicPath` (`java.lang.String[]`): The topic path array.
@@ -150,7 +150,7 @@ Will stop the parsing
 
 **Returns:** `java.lang.String`
 
-### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
+### `endElement(String uri, String localName, String name)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -159,7 +159,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `endPrefixMapping(java.lang.String prefix)`
+### `endPrefixMapping(String prefix)`
 
 **Parameters:**
 - `prefix` (`java.lang.String`)
@@ -175,7 +175,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `processingInstruction(java.lang.String target, java.lang.String data)`
+### `processingInstruction(String target, String data)`
 
 **Parameters:**
 - `target` (`java.lang.String`)
@@ -183,14 +183,14 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `setDocumentLocator(org.xml.sax.Locator locator)`
+### `setDocumentLocator(Locator locator)`
 
 **Parameters:**
 - `locator` (`org.xml.sax.Locator`)
 
 **Returns:** `void`
 
-### `skippedEntity(java.lang.String name)`
+### `skippedEntity(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -201,7 +201,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, org.xml.sax.Attributes atts)`
+### `startElement(String uri, String localName, String name, Attributes atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -211,7 +211,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `startPrefixMapping(java.lang.String prefix, java.lang.String uri)`
+### `startPrefixMapping(String prefix, String uri)`
 
 **Parameters:**
 - `prefix` (`java.lang.String`)
@@ -236,7 +236,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `endEntity(java.lang.String name)`
+### `endEntity(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -247,7 +247,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `startDTD(java.lang.String name, java.lang.String publicId, java.lang.String systemId)`
+### `startDTD(String name, String publicId, String systemId)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -256,7 +256,7 @@ Will stop the parsing
 
 **Returns:** `void`
 
-### `startEntity(java.lang.String name)`
+### `startEntity(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

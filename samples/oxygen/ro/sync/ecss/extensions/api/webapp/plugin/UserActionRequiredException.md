@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.webapp.WebappMessage webappMessage)`
+### `<init>(WebappMessage webappMessage)`
 
 **Parameters:**
 - `webappMessage` ([`ro.sync.ecss.extensions.api.webapp.WebappMessage`](../WebappMessage.md)): The webapp message.
@@ -27,7 +27,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.WebappMessage`](../WebappMessage.md)
 
-### `getUserMessage(java.net.URL url)`
+### `getUserMessage(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL of the resource for which the user action required exception 

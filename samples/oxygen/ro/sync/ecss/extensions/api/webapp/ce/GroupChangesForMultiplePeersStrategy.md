@@ -14,7 +14,7 @@ Used to write a single snapshot of the document with changes made from the last 
 
 ## Methods
 
-### `openConnection(java.net.URL documentUrl, ro.sync.ecss.extensions.api.webapp.ce.PeerContext committer, java.util.List<ro.sync.ecss.extensions.api.webapp.ce.PeerContext> authors)`
+### `openConnection(URL documentUrl, PeerContext committer, List<PeerContext> authors)`
 
 Called a single time for each document, allowing a minimum number of writes to the file server.
  It facilitates storing a revision for all peers together, writing only once per save to the file server.

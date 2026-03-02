@@ -18,28 +18,28 @@
 
 ## Methods
 
-### `addEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
+### `addEditingSessionLifecycleListener(WebappEditingSessionLifecycleListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
 
 **Returns:** `void`
 
-### `addDITAMapEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
+### `addDITAMapEditingSessionLifecycleListener(WebappEditingSessionLifecycleListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
 
 **Returns:** `void`
 
-### `removeEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
+### `removeEditingSessionLifecycleListener(WebappEditingSessionLifecycleListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
 
 **Returns:** `void`
 
-### `removeDITAMapEditingSessionLifecycleListener(ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener arg0)`
+### `removeDITAMapEditingSessionLifecycleListener(WebappEditingSessionLifecycleListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.access.WebappEditingSessionLifecycleListener`](./WebappEditingSessionLifecycleListener.md))
@@ -62,7 +62,7 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `setDITAKeyDefinitionManagerProvider(ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManagerProvider arg0)`
+### `setDITAKeyDefinitionManagerProvider(KeyDefinitionManagerProvider arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManagerProvider`](../../../../../exml/workspace/api/editor/page/ditamap/keys/KeyDefinitionManagerProvider.md))

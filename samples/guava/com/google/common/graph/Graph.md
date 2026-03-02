@@ -107,17 +107,17 @@ See the Guava User Guide for the common.graph package (["Graphs Explained"](http
 
 ### `isDirected()`
 
-**Returns:** `boolean`
-
 Directed edges connect a source node to a target node, while
  undirected edges connect a pair of nodes to each other.
 
-### `allowsSelfLoops()`
-
 **Returns:** `boolean`
+
+### `allowsSelfLoops()`
 
 Attempting
  to add a self-loop to a graph that does not allow them will throw an IllegalArgumentException.
+
+**Returns:** `boolean`
 
 ### `nodeOrder()`
 
@@ -129,25 +129,23 @@ Attempting
 
 ### `adjacentNodes(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 This is equal to the union of #predecessors(Object) and #successors(Object).
 
 **Parameters:**
 - `node` (`N`)
 
-### `predecessors(N node)`
-
 **Returns:** `java.util.Set<N>`
+
+### `predecessors(N node)`
 
 In an undirected graph, this is equivalent to #adjacentNodes(Object).
 
 **Parameters:**
 - `node` (`N`)
 
-### `successors(N node)`
-
 **Returns:** `java.util.Set<N>`
+
+### `successors(N node)`
 
 In an undirected graph, this is equivalent to #adjacentNodes(Object).
 
@@ -158,18 +156,18 @@ This is *not* the same as "all nodes reachable from node by following outgoing
 **Parameters:**
 - `node` (`N`)
 
-### `incidentEdges(N node)`
+**Returns:** `java.util.Set<N>`
 
-**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
+### `incidentEdges(N node)`
 
 This is equal to the union of incoming and outgoing edges.
 
 **Parameters:**
 - `node` (`N`)
 
-### `degree(N node)`
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-**Returns:** `int`
+### `degree(N node)`
 
 For directed graphs, this is equal to inDegree(node) + outDegree(node).
 
@@ -183,9 +181,9 @@ If the count is greater than Integer.MAX_VALUE, returns Integer.MAX_VALUE.
 **Parameters:**
 - `node` (`N`)
 
-### `inDegree(N node)`
-
 **Returns:** `int`
+
+### `inDegree(N node)`
 
 In an undirected graph, returns the #degree(Object).
 
@@ -194,11 +192,11 @@ If the count is greater than Integer.MAX_VALUE, returns Integer.MAX_VALUE.
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `outDegree(N node)`
 
-**Returns:** `int`
-
 In an undirected graph, returns the #degree(Object).
 
  
@@ -207,9 +205,9 @@ If the count is greater than Integer.MAX_VALUE, returns Integer.MAX_VALUE.
 **Parameters:**
 - `node` (`N`)
 
-### `hasEdgeConnecting(N nodeU, N nodeV)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 This is
  equivalent to nodes().contains(nodeU) && successors(nodeU).contains(nodeV).
@@ -221,9 +219,9 @@ In an undirected graph, this is equal to hasEdgeConnecting(nodeV, nodeU).
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnecting(EndpointPair<N> endpoints)`
 
 This is equivalent to 
  edges().contains(endpoints).
@@ -238,9 +236,9 @@ Unlike the other EndpointPair-accepting methods, this method does not throw if t
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `equals(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `equals(Object object)`
 
 Thus, two graphs A and B are equal if **all** of the following are true:
 
@@ -264,13 +262,15 @@ A reference implementation of this is provided by AbstractGraph#equals(Object).
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 The hash code of a graph is defined as the hash code of
  the set returned by #edges().
 
  
 A reference implementation of this is provided by AbstractGraph#hashCode().
+
+**Returns:** `int`
 

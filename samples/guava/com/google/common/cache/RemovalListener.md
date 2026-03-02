@@ -22,13 +22,13 @@ An instance may be called concurrently by multiple threads to process different 
 
 ## Methods
 
-### `onRemoval(com.google.common.cache.RemovalNotification<K,V> notification)`
-
-**Returns:** `void`
+### `onRemoval(RemovalNotification<K,V> notification)`
 
 This does not always signify that the key is now absent from the cache, as it may have
  already been re-added.
 
 **Parameters:**
 - `notification` ([`com.google.common.cache.RemovalNotification<K,V>`](./RemovalNotification.md))
+
+**Returns:** `void`
 

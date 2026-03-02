@@ -20,34 +20,32 @@ Note that task wrapping may occur even if the task is never executed.
 
 ## Constructors
 
-### `<init>(java.util.concurrent.ScheduledExecutorService delegate)`
+### `<init>(ScheduledExecutorService delegate)`
 
 **Parameters:**
 - `delegate` (`java.util.concurrent.ScheduledExecutorService`)
 
 ## Methods
 
-### `schedule(java.lang.Runnable command, long delay, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `java.util.concurrent.ScheduledFuture<?>`
+### `schedule(Runnable command, long delay, TimeUnit unit)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
 - `delay` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `schedule(java.util.concurrent.Callable<V> task, long delay, java.util.concurrent.TimeUnit unit)`
+**Returns:** `java.util.concurrent.ScheduledFuture<?>`
 
-**Returns:** `java.util.concurrent.ScheduledFuture<V>`
+### `schedule(Callable<V> task, long delay, TimeUnit unit)`
 
 **Parameters:**
 - `task` (`java.util.concurrent.Callable<V>`)
 - `delay` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `scheduleAtFixedRate(java.lang.Runnable command, long initialDelay, long period, java.util.concurrent.TimeUnit unit)`
+**Returns:** `java.util.concurrent.ScheduledFuture<V>`
 
-**Returns:** `java.util.concurrent.ScheduledFuture<?>`
+### `scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
@@ -55,13 +53,15 @@ Note that task wrapping may occur even if the task is never executed.
 - `period` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `scheduleWithFixedDelay(java.lang.Runnable command, long initialDelay, long delay, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `java.util.concurrent.ScheduledFuture<?>`
+
+### `scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
 - `initialDelay` (`long`)
 - `delay` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `java.util.concurrent.ScheduledFuture<?>`
 

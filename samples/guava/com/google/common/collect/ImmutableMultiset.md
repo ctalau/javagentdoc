@@ -43,14 +43,12 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ### `toImmutableMultiset()`
 
-**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableMultiset<E>>`
-
 Elements iterate in order by the *first* appearance of that element in
  encounter order.
 
-### `toImmutableMultiset(java.util.function.Function<? super T,? extends E> elementFunction, java.util.function.ToIntFunction<? super T> countFunction)`
+**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableMultiset<E>>`
 
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMultiset<E>>`
+### `toImmutableMultiset(Function<? super T,? extends E> elementFunction, ToIntFunction<? super T> countFunction)`
 
 If the mapped elements contain duplicates (according to Object#equals), the first
  occurrence in encounter order appears in the resulting multiset, with count equal to the sum of
@@ -60,39 +58,39 @@ If the mapped elements contain duplicates (according to Object#equals), the firs
 - `elementFunction` (`java.util.function.Function<? super T,? extends E>`)
 - `countFunction` (`java.util.function.ToIntFunction<? super T>`)
 
-### `of()`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMultiset<E>>`
 
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+### `of()`
 
 **Performance note:** the instance returned is a singleton.
 
-### `of(E element)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `of(E element)`
 
 **Parameters:**
 - `element` (`E`)
 
-### `of(E e1, E e2)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `of(E e1, E e2)`
 
 **Parameters:**
 - `e1` (`E`)
 - `e2` (`E`)
 
-### `of(E e1, E e2, E e3)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `of(E e1, E e2, E e3)`
 
 **Parameters:**
 - `e1` (`E`)
 - `e2` (`E`)
 - `e3` (`E`)
 
-### `of(E e1, E e2, E e3, E e4)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `of(E e1, E e2, E e3, E e4)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -100,9 +98,9 @@ If the mapped elements contain duplicates (according to Object#equals), the firs
 - `e3` (`E`)
 - `e4` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -111,9 +109,9 @@ If the mapped elements contain duplicates (according to Object#equals), the firs
 - `e4` (`E`)
 - `e5` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] others)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] others)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -124,40 +122,42 @@ If the mapped elements contain duplicates (according to Object#equals), the firs
 - `e6` (`E`)
 - `others` (`E[]`)
 
-### `copyOf(E[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `copyOf(E[] elements)`
 
 **Parameters:**
 - `elements` (`E[]`)
 
-### `copyOf(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `copyOf(Iterable<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `copyOf(java.util.Iterator<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `copyOf(Iterator<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.util.Iterator<? extends E>`)
 
-### `copyFromElements(E[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `copyFromElements(E[] elements)`
 
 **Parameters:**
 - `elements` (`E[]`)
 
-### `copyFromEntries(java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>> entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+
+### `copyFromEntries(Collection<? extends Multiset.Entry<? extends E>> entries)`
 
 **Parameters:**
 - `entries` (`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`)
+
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
 ### `iterator()`
 
@@ -167,60 +167,60 @@ If the mapped elements contain duplicates (according to Object#equals), the firs
 
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `add(E element, int occurrences)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `add(E element, int occurrences)`
 
 **Parameters:**
 - `element` (`E`)
 - `occurrences` (`int`)
 
-### `remove(java.lang.Object element, int occurrences)`
-
 **Returns:** `int`
+
+### `remove(Object element, int occurrences)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 - `occurrences` (`int`)
 
-### `setCount(E element, int count)`
-
 **Returns:** `int`
+
+### `setCount(E element, int count)`
 
 **Parameters:**
 - `element` (`E`)
 - `count` (`int`)
 
-### `setCount(E element, int oldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `setCount(E element, int oldCount, int newCount)`
 
 **Parameters:**
 - `element` (`E`)
 - `oldCount` (`int`)
 - `newCount` (`int`)
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -244,25 +244,25 @@ If the mapped elements contain duplicates (according to Object#equals), the firs
 
 ### `getEntry(int index)`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
 
+**Returns:** `void`
+
 ### `builder()`
 
-**Returns:** `com.google.common.collect.ImmutableMultiset.Builder<E>`
-
 The generated builder is equivalent to the builder created by the Builder constructor.
+
+**Returns:** `com.google.common.collect.ImmutableMultiset.Builder<E>`
 

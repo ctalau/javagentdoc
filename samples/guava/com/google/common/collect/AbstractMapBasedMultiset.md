@@ -33,29 +33,29 @@ For serialization to work, the subclass must specify explicit readObject and
 
 ## Constructors
 
-### `<init>(java.util.Map<E,com.google.common.collect.Count> backingMap)`
+### `<init>(Map<E,Count> backingMap)`
 
 **Parameters:**
 - `backingMap` (`java.util.Map<E,com.google.common.collect.Count>`)
 
 ## Methods
 
-### `setBackingMap(java.util.Map<E,com.google.common.collect.Count> backingMap)`
-
-**Returns:** `void`
+### `setBackingMap(Map<E,Count> backingMap)`
 
 The backing map must be empty.
 
 **Parameters:**
 - `backingMap` (`java.util.Map<E,com.google.common.collect.Count>`)
 
-### `entrySet()`
+**Returns:** `void`
 
-**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
+### `entrySet()`
 
 Invoking Multiset.Entry#getCount on an entry in the returned set always returns the
  current count of that element in the multiset, as opposed to the count at the time the entry
  was retrieved.
+
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
 ### `elementIterator()`
 
@@ -65,12 +65,12 @@ Invoking Multiset.Entry#getCount on an entry in the returned set always returns 
 
 **Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
-### `forEachEntry(java.util.function.ObjIntConsumer<? super E> action)`
-
-**Returns:** `void`
+### `forEachEntry(ObjIntConsumer<? super E> action)`
 
 **Parameters:**
 - `action` (`java.util.function.ObjIntConsumer<? super E>`)
+
+**Returns:** `void`
 
 ### `clear()`
 
@@ -88,44 +88,44 @@ Invoking Multiset.Entry#getCount on an entry in the returned set always returns 
 
 **Returns:** `java.util.Iterator<E>`
 
-### `count(java.lang.Object element)`
-
-**Returns:** `int`
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `add(E element, int occurrences)`
-
 **Returns:** `int`
+
+### `add(E element, int occurrences)`
 
 **Parameters:**
 - `element` (`E`)
 - `occurrences` (`int`)
 
-### `remove(java.lang.Object element, int occurrences)`
-
 **Returns:** `int`
+
+### `remove(Object element, int occurrences)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 - `occurrences` (`int`)
 
-### `setCount(E element, int count)`
-
 **Returns:** `int`
+
+### `setCount(E element, int count)`
 
 **Parameters:**
 - `element` (`E`)
 - `count` (`int`)
 
-### `getAndSet(com.google.common.collect.Count i, int count)`
-
 **Returns:** `int`
+
+### `getAndSet(Count i, int count)`
 
 **Parameters:**
 - `i` ([`com.google.common.collect.Count`](./Count.md))
 - `count` (`int`)
+
+**Returns:** `int`
 
 ### `readObjectNoData()`
 

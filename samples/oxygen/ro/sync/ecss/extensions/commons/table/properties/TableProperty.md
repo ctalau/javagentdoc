@@ -60,7 +60,7 @@ If the property current value was never modified,
 
 ## Constructors
 
-### `<init>(java.lang.String propertyName, java.lang.String propertyRenderString, java.util.List<java.lang.String> propertyValues, java.lang.String currentValue)`
+### `<init>(String propertyName, String propertyRenderString, List<String> propertyValues, String currentValue)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
@@ -69,7 +69,7 @@ If the property current value was never modified,
 - `propertyValues` (`java.util.List<java.lang.String>`): The list with the attribute's possible values.
 - `currentValue` (`java.lang.String`): The current of the attribute.
 
-### `<init>(java.lang.String propertyName, java.lang.String propertyRenderString, java.util.List<java.lang.String> propertyValues, java.lang.String currentValue, boolean isAttribute)`
+### `<init>(String propertyName, String propertyRenderString, List<String> propertyValues, String currentValue, boolean isAttribute)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
@@ -79,7 +79,7 @@ If the property current value was never modified,
 - `currentValue` (`java.lang.String`): The current of the attribute.
 - `isAttribute` (`boolean`): `true` if the current property represents an attribute.
 
-### `<init>(java.lang.String propertyName, java.lang.String propertyRenderString, java.util.List<java.lang.String> propertyValues, java.lang.String currentValue, boolean isAttribute, boolean isActive)`
+### `<init>(String propertyName, String propertyRenderString, List<String> propertyValues, String currentValue, boolean isAttribute, boolean isActive)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
@@ -91,7 +91,7 @@ If the property current value was never modified,
 - `isActive` (`boolean`): `true` if the combobox corresponding to the current property is enabled,
                                 `false` otherwise.
 
-### `<init>(java.lang.String propertyName, java.lang.String propertyRenderString, java.util.List<java.lang.String> propertyValues, java.lang.String currentValue, java.lang.String parentGroup, ro.sync.ecss.extensions.commons.table.properties.GuiElements guiType, java.util.Map<java.lang.String,java.lang.String> icons, boolean isAttribute, boolean isActive)`
+### `<init>(String propertyName, String propertyRenderString, List<String> propertyValues, String currentValue, String parentGroup, GuiElements guiType, Map<String,String> icons, boolean isAttribute, boolean isActive)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The qName of the current attribute.
@@ -127,7 +127,7 @@ If the property current value was never modified,
 
 **Returns:** `java.lang.String`
 
-### `setCurrentValue(java.lang.String currentValue)`
+### `setCurrentValue(String currentValue)`
 
 **Parameters:**
 - `currentValue` (`java.lang.String`): The new value to set.
@@ -138,7 +138,7 @@ If the property current value was never modified,
 
 **Returns:** `java.lang.String`
 
-### `setParentGroup(java.lang.String parentGroup)`
+### `setParentGroup(String parentGroup)`
 
 **Parameters:**
 - `parentGroup` (`java.lang.String`): The group that includes the current property.
@@ -149,7 +149,7 @@ If the property current value was never modified,
 
 **Returns:** `boolean`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
@@ -164,7 +164,7 @@ If the property current value was never modified,
 
 **Returns:** `java.lang.String`
 
-### `setOldValue(java.lang.String oldValue)`
+### `setOldValue(String oldValue)`
 
 It should be correlated with setting 
  a new  value.
@@ -182,14 +182,14 @@ It should be correlated with setting
 
 **Returns:** `int`
 
-### `setValues(java.util.List<java.lang.String> values)`
+### `setValues(List<String> values)`
 
 **Parameters:**
 - `values` (`java.util.List<java.lang.String>`): Values for the current property.
 
 **Returns:** `void`
 
-### `setGuiType(ro.sync.ecss.extensions.commons.table.properties.GuiElements guiType)`
+### `setGuiType(GuiElements guiType)`
 
 **Parameters:**
 - `guiType` ([`ro.sync.ecss.extensions.commons.table.properties.GuiElements`](./GuiElements.md)): The new type GUI elements which will be used to present the values 
@@ -208,7 +208,7 @@ If the list contains null objects,
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `setIcons(java.util.Map<java.lang.String,java.lang.String> icons)`
+### `setIcons(Map<String,String> icons)`
 
 **Parameters:**
 - `icons` (`java.util.Map<java.lang.String,java.lang.String>`): The icons to set.

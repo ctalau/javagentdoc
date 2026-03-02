@@ -55,7 +55,7 @@ If
 
 ## Constructors
 
-### `<init>(java.util.Comparator<? super T> comparator, int k)`
+### `<init>(Comparator<? super T> comparator, int k)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super T>`)
@@ -65,37 +65,35 @@ If
 
 ### `least(int k)`
 
-**Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
-
 **Parameters:**
 - `k` (`int`)
 
-### `least(int k, java.util.Comparator<? super T> comparator)`
-
 **Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
+
+### `least(int k, Comparator<? super T> comparator)`
 
 **Parameters:**
 - `k` (`int`)
 - `comparator` (`java.util.Comparator<? super T>`)
+
+**Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
 
 ### `greatest(int k)`
 
-**Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
-
 **Parameters:**
 - `k` (`int`)
 
-### `greatest(int k, java.util.Comparator<? super T> comparator)`
-
 **Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
+
+### `greatest(int k, Comparator<? super T> comparator)`
 
 **Parameters:**
 - `k` (`int`)
 - `comparator` (`java.util.Comparator<? super T>`)
 
-### `offer(T elem)`
+**Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
 
-**Returns:** `void`
+### `offer(T elem)`
 
 This operation takes amortized
  O(1) time.
@@ -103,16 +101,16 @@ This operation takes amortized
 **Parameters:**
 - `elem` (`T`)
 
-### `trim()`
-
 **Returns:** `void`
+
+### `trim()`
 
 O(k) expected time, O(k log
  k) worst case.
 
-### `partition(int left, int right, int pivotIndex)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `partition(int left, int right, int pivotIndex)`
 
 Returns the new index of the pivot element,
  pivotNewIndex, so that everything in [left, pivotNewIndex] is ≤ pivotValue and everything in
@@ -123,24 +121,24 @@ Returns the new index of the pivot element,
 - `right` (`int`)
 - `pivotIndex` (`int`)
 
-### `swap(int i, int j)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `swap(int i, int j)`
 
 **Parameters:**
 - `i` (`int`)
 - `j` (`int`)
 
-### `combine(com.google.common.collect.TopKSelector<T> other)`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
+### `combine(TopKSelector<T> other)`
 
 **Parameters:**
 - `other` ([`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md))
 
-### `offerAll(java.lang.Iterable<? extends T> elements)`
+**Returns:** [`com.google.common.collect.TopKSelector<T>`](./TopKSelector.md)
 
-**Returns:** `void`
+### `offerAll(Iterable<? extends T> elements)`
 
 This
  operation takes amortized linear time in the length of elements.
@@ -152,9 +150,9 @@ If all input data to this TopKSelector is in a single Iterable, prefer
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends T>`)
 
-### `offerAll(java.util.Iterator<? extends T> elements)`
-
 **Returns:** `void`
+
+### `offerAll(Iterator<? extends T> elements)`
 
 This
  operation takes amortized linear time in the length of elements. The iterator is
@@ -167,10 +165,12 @@ If all input data to this TopKSelector is in a single Iterator, prefer
 **Parameters:**
 - `elements` (`java.util.Iterator<? extends T>`)
 
-### `topK()`
+**Returns:** `void`
 
-**Returns:** `java.util.List<T>`
+### `topK()`
 
 The returned list is an unmodifiable copy and will not be affected by further changes to
  this TopKSelector. This method returns in O(k log k) time.
+
+**Returns:** `java.util.List<T>`
 

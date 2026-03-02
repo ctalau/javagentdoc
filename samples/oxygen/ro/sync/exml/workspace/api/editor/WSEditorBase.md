@@ -22,7 +22,7 @@
 
 **Returns:** `void`
 
-### `saveAs(java.net.URL location)`
+### `saveAs(URL location)`
 
 This method is not implemented in the Oxygen Eclipse plugin.
 
@@ -81,7 +81,7 @@ The unsaved changes are included. If for the Author page change tracking highlig
 
 **Returns:** `java.io.InputStream`
 
-### `reloadContent(java.io.Reader reader)`
+### `reloadContent(Reader reader)`
 
 This will lose undo history and any modifications the editor may have.
 
@@ -90,7 +90,7 @@ This will lose undo history and any modifications the editor may have.
 
 **Returns:** `void`
 
-### `reloadContent(java.io.Reader reader, boolean discardUndoableEdits)`
+### `reloadContent(Reader reader, boolean discardUndoableEdits)`
 
 This will lose any modifications the editor may have unless discardUndoableEdits
  is `false` in which case you will be able to UNDO the editor
@@ -102,7 +102,7 @@ This will lose any modifications the editor may have unless discardUndoableEdits
 
 **Returns:** `void`
 
-### `setEditorTabText(java.lang.String tabText)`
+### `setEditorTabText(String tabText)`
 
 Set it with the value NULL to reset the tab title to the default value (the loaded file name).
 
@@ -112,7 +112,7 @@ Set it with the value NULL to reset the tab title to the default value (the load
 
 **Returns:** `void`
 
-### `setEditorTabTooltipText(java.lang.String tabTooltip)`
+### `setEditorTabTooltipText(String tabTooltip)`
 
 Set it with the value NULL to reset the tab title to the default value (the loaded file path).
 

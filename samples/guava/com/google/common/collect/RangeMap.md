@@ -21,28 +21,26 @@ In contrast to RangeSet, no "coalescing" is done of connected ranges, even if th
 
 ### `get(K key)`
 
-**Returns:** `V`
-
 Specifically, if any range in this range map contains the specified key, the value
  associated with that range is returned.
 
 **Parameters:**
 - `key` (`K`)
 
-### `getEntry(K key)`
+**Returns:** `V`
 
-**Returns:** `java.util.Map.Entry<com.google.common.collect.Range<K>,V>`
+### `getEntry(K key)`
 
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Map.Entry<com.google.common.collect.Range<K>,V>`
 
 ### `span()`
 
 **Returns:** [`com.google.common.collect.Range<K>`](./Range.md)
 
-### `put(com.google.common.collect.Range<K> range, V value)`
-
-**Returns:** `void`
+### `put(Range<K> range, V value)`
 
 Specifically, after a call to put(range, value), if range.contains(k), then get(k) will return
  value.
@@ -54,9 +52,9 @@ If range is empty, then this is a no-op.
 - `range` ([`com.google.common.collect.Range<K>`](./Range.md))
 - `value` (`V`)
 
-### `putCoalescing(com.google.common.collect.Range<K> range, V value)`
-
 **Returns:** `void`
+
+### `putCoalescing(Range<K> range, V value)`
 
 The behavior of get(k) after calling this method is identical to
  the behavior described in put(range, value), however the ranges
@@ -76,20 +74,20 @@ Even if the input range is empty, if it is connected on both sides by ranges map
 - `range` ([`com.google.common.collect.Range<K>`](./Range.md))
 - `value` (`V`)
 
-### `putAll(com.google.common.collect.RangeMap<K,? extends V> rangeMap)`
-
 **Returns:** `void`
+
+### `putAll(RangeMap<K,? extends V> rangeMap)`
 
 **Parameters:**
 - `rangeMap` ([`com.google.common.collect.RangeMap<K,? extends V>`](./RangeMap.md))
+
+**Returns:** `void`
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `remove(com.google.common.collect.Range<K> range)`
-
-**Returns:** `void`
+### `remove(Range<K> range)`
 
 If !range.contains(k), get(k) will return the same result
  before and after a call to remove(range). If range.contains(k), then after a
@@ -98,9 +96,9 @@ If !range.contains(k), get(k) will return the same result
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<K>`](./Range.md))
 
-### `merge(com.google.common.collect.Range<K> range, V value, java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> remappingFunction)`
-
 **Returns:** `void`
+
+### `merge(Range<K> range, V value, BiFunction<? super V,? super @Nullable V,? extends @Nullable V> remappingFunction)`
 
 If any parts of the range are already present in this map, those parts are mapped to new
  values by applying the remapping function. The remapping function accepts the map's existing
@@ -122,9 +120,9 @@ Any existing entry spanning either range boundary may be split at the boundary, 
 - `value` (`V`)
 - `remappingFunction` (`java.util.function.BiFunction<? super V,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
-### `asMapOfRanges()`
+**Returns:** `void`
 
-**Returns:** `java.util.Map<com.google.common.collect.Range<K>,V>`
+### `asMapOfRanges()`
 
 Modifications to
  this range map are guaranteed to read through to the returned Map.
@@ -136,9 +134,9 @@ The returned Map iterates over entries in ascending order of the bounds of the
  
 It is guaranteed that no empty ranges will be in the returned Map.
 
-### `asDescendingMapOfRanges()`
-
 **Returns:** `java.util.Map<com.google.common.collect.Range<K>,V>`
+
+### `asDescendingMapOfRanges()`
 
 Modifications to
  this range map are guaranteed to read through to the returned Map.
@@ -150,9 +148,9 @@ The returned Map iterates over entries in descending order of the bounds of the
  
 It is guaranteed that no empty ranges will be in the returned Map.
 
-### `subRangeMap(com.google.common.collect.Range<K> range)`
+**Returns:** `java.util.Map<com.google.common.collect.Range<K>,V>`
 
-**Returns:** [`com.google.common.collect.RangeMap<K,V>`](./RangeMap.md)
+### `subRangeMap(Range<K> range)`
 
 For example, if rangeMap had the entries [1, 5] => "foo", (6, 8) => "bar",
  (10, ∞) => "baz" then rangeMap.subRangeMap(Range.open(3, 12)) would return a range map
@@ -169,12 +167,14 @@ The returned range map will throw an IllegalArgumentException on an attempt to
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<K>`](./Range.md))
 
-### `equals(java.lang.Object o)`
+**Returns:** [`com.google.common.collect.RangeMap<K,V>`](./RangeMap.md)
 
-**Returns:** `boolean`
+### `equals(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

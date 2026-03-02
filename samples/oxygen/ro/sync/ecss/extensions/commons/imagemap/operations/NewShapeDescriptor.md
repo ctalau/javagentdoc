@@ -12,7 +12,7 @@
 
 **Returns:** `java.util.Optional<java.lang.String>`
 
-### `mergeIntoOriginalShape(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.node.AuthorElement shapeElement)`
+### `mergeIntoOriginalShape(AuthorDocumentController controller, AuthorElement shapeElement)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): The document controller.

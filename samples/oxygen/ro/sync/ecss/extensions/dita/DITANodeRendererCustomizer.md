@@ -27,28 +27,28 @@ A node represents an entry from Author outline, Author bread crumb,
 
 ## Methods
 
-### `getImageURL(java.lang.String path)`
+### `getImageURL(String path)`
 
 **Parameters:**
 - `path` (`java.lang.String`): The image path to search for.
 
 **Returns:** `java.lang.String`
 
-### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+### `getRenderingInformation(NodeRendererCustomizerContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md))
 
 **Returns:** [`ro.sync.exml.workspace.api.node.customizer.BasicRenderingInformation`](../../../exml/workspace/api/node/customizer/BasicRenderingInformation.md)
 
-### `getDITAClass(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+### `getDITAClass(NodeRendererCustomizerContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md)): The context to determine the dita class for.
 
 **Returns:** `ro.sync.ecss.extensions.dita.DITANodeRendererCustomizer.DitaClass`
 
-### `getDitaClassForClassValue(java.lang.String classValue)`
+### `getDitaClassForClassValue(String classValue)`
 
 **Parameters:**
 - `classValue` (`java.lang.String`): The class attribute value.

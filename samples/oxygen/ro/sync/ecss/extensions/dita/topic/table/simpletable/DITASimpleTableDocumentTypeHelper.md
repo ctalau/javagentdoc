@@ -20,7 +20,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableCell(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))
@@ -31,7 +31,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableRow(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))
@@ -42,14 +42,14 @@
 
 **Returns:** `java.lang.String[]`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTable(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `checkTableColSpanIsDefined(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSpanSupport, ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `checkTableColSpanIsDefined(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSpanSupport, AuthorElement cellElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -58,7 +58,7 @@
 
 **Returns:** `void`
 
-### `updateTableColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int startCol, int endCol)`
+### `updateTableColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSupport, AuthorElement cellElem, int startCol, int endCol)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -69,14 +69,14 @@
 
 **Returns:** `void`
 
-### `getTableCellSpanProvider(ro.sync.ecss.extensions.api.node.AuthorElement tgroupElement)`
+### `getTableCellSpanProvider(AuthorElement tgroupElement)`
 
 **Parameters:**
 - `tgroupElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../../api/AuthorTableCellSpanProvider.md)
 
-### `updateTableRowSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int rowSpan)`
+### `updateTableRowSpan(AuthorAccess authorAccess, AuthorElement cellElem, int rowSpan)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -85,7 +85,7 @@
 
 **Returns:** `void`
 
-### `updateTableColumnNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int colsNumber)`
+### `updateTableColumnNumber(AuthorAccess authorAccess, AuthorElement tableElement, int colsNumber)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -94,7 +94,7 @@
 
 **Returns:** `void`
 
-### `updateTableRowNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int rowsNumber)`
+### `updateTableRowNumber(AuthorAccess authorAccess, AuthorElement tableElement, int rowsNumber)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -115,7 +115,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isContentReference(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))

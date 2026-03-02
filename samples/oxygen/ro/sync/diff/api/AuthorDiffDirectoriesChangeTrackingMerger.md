@@ -32,7 +32,7 @@ The base directory is backed up either if the output directory is not specified 
 
 ## Methods
 
-### `mergeDirectoriesWithChangeTrackingHighlights(java.net.URL baseDirectoryURL, java.net.URL directoryToMergeWithURL, java.net.URL outputDirectoryURL, ro.sync.diff.api.DiffOptions diffOptions, boolean addFilesOnlyPresentInDirectoryToMergeWith, boolean createChangeTrackingMarkersForAddedXMLFiles, boolean deleteFilesOnlyPresentInBaseDirectory, boolean updateNonXMLFilesFromBaseDirectoryToFileVersionsFromDirectoryToMergeWith)`
+### `mergeDirectoriesWithChangeTrackingHighlights(URL baseDirectoryURL, URL directoryToMergeWithURL, URL outputDirectoryURL, DiffOptions diffOptions, boolean addFilesOnlyPresentInDirectoryToMergeWith, boolean createChangeTrackingMarkersForAddedXMLFiles, boolean deleteFilesOnlyPresentInBaseDirectory, boolean updateNonXMLFilesFromBaseDirectoryToFileVersionsFromDirectoryToMergeWith)`
 
 Only "file" protocol is supported for all 3 URLs provided. 
  All pairs of modified XML files involved in the process are merged by saving the Author mode 

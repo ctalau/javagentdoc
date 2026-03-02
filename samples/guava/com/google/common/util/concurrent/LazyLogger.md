@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.Class<?> ownerOfLogger)`
+### `<init>(Class<?> ownerOfLogger)`
 
 **Parameters:**
 - `ownerOfLogger` (`java.lang.Class<?>`)

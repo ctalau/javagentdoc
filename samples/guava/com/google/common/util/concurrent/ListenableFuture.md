@@ -99,9 +99,7 @@ Occasionally, an API will return a plain Future and it will be impossible to cha
 
 ## Methods
 
-### `addListener(java.lang.Runnable listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Runnable listener, Executor executor)`
 
 The listener will run when the Future's computation is complete or, if the computation is already complete, immediately.
 
@@ -135,4 +133,6 @@ Guava implementations of ListenableFuture promptly release references to listene
 **Parameters:**
 - `listener` (`java.lang.Runnable`): the listener to run when the computation is complete
 - `executor` (`java.util.concurrent.Executor`): the executor to run the listener in
+
+**Returns:** `void`
 

@@ -46,3 +46,4 @@ site/
 .classpath
 .project
 .settings/
+.cache/

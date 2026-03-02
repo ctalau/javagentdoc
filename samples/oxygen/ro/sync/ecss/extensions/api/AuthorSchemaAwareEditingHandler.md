@@ -61,7 +61,7 @@ The handler can either resolve a specific case, let the default implementation t
 
 ## Methods
 
-### `handleDelete(int offset, int deleteType, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean wordLevel)`
+### `handleDelete(int offset, int deleteType, AuthorAccess authorAccess, boolean wordLevel)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the delete event happened.
@@ -71,7 +71,7 @@ The handler can either resolve a specific case, let the default implementation t
 
 **Returns:** `boolean`
 
-### `handleDeleteNodes(ro.sync.ecss.extensions.api.node.AuthorNode[] nodes, int deleteType, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleDeleteNodes(AuthorNode[] nodes, int deleteType, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `nodes` ([`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)): The nodes to delete.
@@ -80,7 +80,7 @@ The handler can either resolve a specific case, let the default implementation t
 
 **Returns:** `boolean`
 
-### `handleDeleteSelection(int selectionStart, int selectionEnd, int generatedByActionId, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleDeleteSelection(int selectionStart, int selectionEnd, int generatedByActionId, AuthorAccess authorAccess)`
 
 The event is generated when a selection exists inside the document and one of following actions takes place:
  
@@ -102,7 +102,7 @@ The event is generated when a selection exists inside the document and one of fo
 
 **Returns:** `boolean`
 
-### `handlePasteFragment(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, int actionId, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handlePasteFragment(int offset, AuthorDocumentFragment[] fragmentsToInsert, int actionId, AuthorAccess authorAccess)`
 
 In this case, selection removal is handled before calling this method.
  
@@ -121,7 +121,7 @@ In this case, selection removal is handled before calling this method.
 
 **Returns:** `boolean`
 
-### `handleTyping(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTyping(int offset, char ch, AuthorAccess authorAccess)`
 
 If the event is not handled, the default implementation 
  of a handler will be given a chance to handle the event. If that fails to
@@ -135,7 +135,7 @@ If the event is not handled, the default implementation
 
 **Returns:** `boolean`
 
-### `handleCodePointTyping(int offset, int codePoint, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleCodePointTyping(int offset, int codePoint, AuthorAccess authorAccess)`
 
 If the event is not handled, the default implementation 
  of a handler will be given a chance to handle the event. If that fails to
@@ -149,7 +149,7 @@ If the event is not handled, the default implementation
 
 **Returns:** `boolean`
 
-### `handleTypingFallback(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTypingFallback(int offset, char ch, AuthorAccess authorAccess)`
 
 This call comes when this object's
  #handleTyping(int, char, AuthorAccess) method did not handle the 
@@ -166,7 +166,7 @@ As a fallback solution, a paragraph can be inserted at the given offset
 
 **Returns:** `boolean`
 
-### `handleCodePointTypingFallback(int offset, int codePoint, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleCodePointTypingFallback(int offset, int codePoint, AuthorAccess authorAccess)`
 
 This call comes when this object's
  #handleCodePointTyping(int, int, AuthorAccess) method did not handle the 
@@ -183,7 +183,7 @@ As a fallback solution, a paragraph can be inserted at the given offset
 
 **Returns:** `boolean`
 
-### `handleDeleteElementTags(ro.sync.ecss.extensions.api.node.AuthorNode nodeToUnwrap, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleDeleteElementTags(AuthorNode nodeToUnwrap, AuthorAccess authorAccess)`
 
 (Unwrapping)
 
@@ -193,7 +193,7 @@ As a fallback solution, a paragraph can be inserted at the given offset
 
 **Returns:** `boolean`
 
-### `handleJoinElements(ro.sync.ecss.extensions.api.node.AuthorNode targetNode, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> nodesToJoin, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleJoinElements(AuthorNode targetNode, List<AuthorNode> nodesToJoin, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `targetNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node where the content of the other nodes must migrate.
@@ -202,7 +202,7 @@ As a fallback solution, a paragraph can be inserted at the given offset
 
 **Returns:** `boolean`
 
-### `handleCreateDocumentFragment(int startOffset, int endOffset, int creationPurposeID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleCreateDocumentFragment(int startOffset, int endOffset, int creationPurposeID, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `startOffset` (`int`): Start offset of fragment

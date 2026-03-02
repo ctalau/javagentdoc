@@ -22,7 +22,7 @@ This class is not thread safe.
 
 ## Constructors
 
-### `<init>(java.util.Queue<T> queue)`
+### `<init>(Queue<T> queue)`
 
 **Parameters:**
 - `queue` (`java.util.Queue<T>`)

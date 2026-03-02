@@ -29,7 +29,7 @@ In Web Author, attributes can be added to the editing context by using:
 
 ## Methods
 
-### `setAttribute(java.lang.String attr, java.lang.Object value)`
+### `setAttribute(String attr, Object value)`
 
 If the attribute is already set it overrides the previous value.
 
@@ -39,7 +39,7 @@ If the attribute is already set it overrides the previous value.
 
 **Returns:** `void`
 
-### `getAttribute(java.lang.String attr)`
+### `getAttribute(String attr)`
 
 **Parameters:**
 - `attr` (`java.lang.String`): The attribute name.

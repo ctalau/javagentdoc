@@ -33,16 +33,14 @@ See the Guava User Guide article on [the use of Predicate](https://github.com/go
 
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
 
-### `not(com.google.common.base.Predicate<T> predicate)`
-
-**Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+### `not(Predicate<T> predicate)`
 
 **Parameters:**
 - `predicate` ([`com.google.common.base.Predicate<T>`](./Predicate.md))
 
-### `and(java.lang.Iterable<? extends com.google.common.base.Predicate<? super T>> components)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `and(Iterable<? extends Predicate<? super T>> components)`
 
 The components are evaluated in order, and evaluation will be "short-circuited"
  as soon as a false predicate is found. It defensively copies the iterable passed in, so future
@@ -52,9 +50,9 @@ The components are evaluated in order, and evaluation will be "short-circuited"
 **Parameters:**
 - `components` (`java.lang.Iterable<? extends com.google.common.base.Predicate<? super T>>`)
 
-### `and(com.google.common.base.Predicate<? super T>[] components)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `and(Predicate<? super T>[] components)`
 
 The components are evaluated in order, and evaluation will be "short-circuited"
  as soon as a false predicate is found. It defensively copies the array passed in, so future
@@ -64,9 +62,9 @@ The components are evaluated in order, and evaluation will be "short-circuited"
 **Parameters:**
 - `components` ([`com.google.common.base.Predicate<? super T>[]`](./Predicate.md))
 
-### `and(com.google.common.base.Predicate<? super T> first, com.google.common.base.Predicate<? super T> second)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `and(Predicate<? super T> first, Predicate<? super T> second)`
 
 The components are evaluated in order, and evaluation will be "short-circuited" as soon
  as a false predicate is found.
@@ -75,9 +73,9 @@ The components are evaluated in order, and evaluation will be "short-circuited" 
 - `first` ([`com.google.common.base.Predicate<? super T>`](./Predicate.md))
 - `second` ([`com.google.common.base.Predicate<? super T>`](./Predicate.md))
 
-### `or(java.lang.Iterable<? extends com.google.common.base.Predicate<? super T>> components)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `or(Iterable<? extends Predicate<? super T>> components)`
 
 The components are evaluated in order, and evaluation will be "short-circuited"
  as soon as a true predicate is found. It defensively copies the iterable passed in, so future
@@ -87,9 +85,9 @@ The components are evaluated in order, and evaluation will be "short-circuited"
 **Parameters:**
 - `components` (`java.lang.Iterable<? extends com.google.common.base.Predicate<? super T>>`)
 
-### `or(com.google.common.base.Predicate<? super T>[] components)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `or(Predicate<? super T>[] components)`
 
 The components are evaluated in order, and evaluation will be "short-circuited"
  as soon as a true predicate is found. It defensively copies the array passed in, so future
@@ -99,9 +97,9 @@ The components are evaluated in order, and evaluation will be "short-circuited"
 **Parameters:**
 - `components` ([`com.google.common.base.Predicate<? super T>[]`](./Predicate.md))
 
-### `or(com.google.common.base.Predicate<? super T> first, com.google.common.base.Predicate<? super T> second)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `or(Predicate<? super T> first, Predicate<? super T> second)`
 
 The components are evaluated in order, and evaluation will be "short-circuited"
  as soon as a true predicate is found.
@@ -110,16 +108,16 @@ The components are evaluated in order, and evaluation will be "short-circuited"
 - `first` ([`com.google.common.base.Predicate<? super T>`](./Predicate.md))
 - `second` ([`com.google.common.base.Predicate<? super T>`](./Predicate.md))
 
-### `equalTo(T target)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `equalTo(T target)`
 
 **Parameters:**
 - `target` (`T`)
 
-### `instanceOf(java.lang.Class<?> clazz)`
-
 **Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+
+### `instanceOf(Class<?> clazz)`
 
 If the object being tested is null this predicate evaluates to 
  false.
@@ -136,9 +134,9 @@ If you want to filter an Iterable to narrow its type, consider using com.google.
 **Parameters:**
 - `clazz` (`java.lang.Class<?>`)
 
-### `subtypeOf(java.lang.Class<?> clazz)`
+**Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
 
-**Returns:** [`com.google.common.base.Predicate<java.lang.Class<?>>`](./Predicate.md)
+### `subtypeOf(Class<?> clazz)`
 
 Example:
 
@@ -158,9 +156,9 @@ Example:
 **Parameters:**
 - `clazz` (`java.lang.Class<?>`)
 
-### `in(java.util.Collection<? extends T> target)`
+**Returns:** [`com.google.common.base.Predicate<java.lang.Class<?>>`](./Predicate.md)
 
-**Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
+### `in(Collection<? extends T> target)`
 
 It does not defensively copy the collection passed in, so
  future changes to it will alter the behavior of the predicate.
@@ -173,9 +171,9 @@ This method can technically accept any Collection<?>, but using a typed collecti
 **Parameters:**
 - `target` (`java.util.Collection<? extends T>`): the collection that may contain the function input
 
-### `compose(com.google.common.base.Predicate<B> predicate, com.google.common.base.Function<A,? extends B> function)`
+**Returns:** [`com.google.common.base.Predicate<T>`](./Predicate.md)
 
-**Returns:** [`com.google.common.base.Predicate<A>`](./Predicate.md)
+### `compose(Predicate<B> predicate, Function<A,? extends B> function)`
 
 For every x, the generated
  predicate returns predicate(function(x)).
@@ -184,9 +182,9 @@ For every x, the generated
 - `predicate` ([`com.google.common.base.Predicate<B>`](./Predicate.md))
 - `function` ([`com.google.common.base.Function<A,? extends B>`](./Function.md))
 
-### `containsPattern(java.lang.String pattern)`
+**Returns:** [`com.google.common.base.Predicate<A>`](./Predicate.md)
 
-**Returns:** [`com.google.common.base.Predicate<java.lang.CharSequence>`](./Predicate.md)
+### `containsPattern(String pattern)`
 
 The test used is equivalent to
  Pattern.compile(pattern).matcher(arg).find()
@@ -194,9 +192,9 @@ The test used is equivalent to
 **Parameters:**
 - `pattern` (`java.lang.String`)
 
-### `contains(java.util.regex.Pattern pattern)`
-
 **Returns:** [`com.google.common.base.Predicate<java.lang.CharSequence>`](./Predicate.md)
+
+### `contains(Pattern pattern)`
 
 The test used is equivalent to
  pattern.matcher(arg).find()
@@ -204,33 +202,35 @@ The test used is equivalent to
 **Parameters:**
 - `pattern` (`java.util.regex.Pattern`)
 
-### `toStringHelper(java.lang.String methodName, java.lang.Iterable<?> components)`
+**Returns:** [`com.google.common.base.Predicate<java.lang.CharSequence>`](./Predicate.md)
 
-**Returns:** `java.lang.String`
+### `toStringHelper(String methodName, Iterable<?> components)`
 
 **Parameters:**
 - `methodName` (`java.lang.String`)
 - `components` (`java.lang.Iterable<?>`)
 
-### `asList(com.google.common.base.Predicate<? super T> first, com.google.common.base.Predicate<? super T> second)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.List<com.google.common.base.Predicate<? super T>>`
+### `asList(Predicate<? super T> first, Predicate<? super T> second)`
 
 **Parameters:**
 - `first` ([`com.google.common.base.Predicate<? super T>`](./Predicate.md))
 - `second` ([`com.google.common.base.Predicate<? super T>`](./Predicate.md))
 
-### `defensiveCopy(T[] array)`
+**Returns:** `java.util.List<com.google.common.base.Predicate<? super T>>`
 
-**Returns:** `java.util.List<T>`
+### `defensiveCopy(T[] array)`
 
 **Parameters:**
 - `array` (`T[]`)
 
-### `defensiveCopy(java.lang.Iterable<T> iterable)`
-
 **Returns:** `java.util.List<T>`
+
+### `defensiveCopy(Iterable<T> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
+
+**Returns:** `java.util.List<T>`
 

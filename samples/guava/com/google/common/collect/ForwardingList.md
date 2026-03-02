@@ -49,40 +49,40 @@ The standard methods and any collection views they return are not guaranteed to 
 
 ### `add(int index, E element)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `index` (`int`)
 - `element` (`E`)
 
-### `addAll(int index, java.util.Collection<? extends E> elements)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `addAll(int index, Collection<? extends E> elements)`
 
 **Parameters:**
 - `index` (`int`)
 - `elements` (`java.util.Collection<? extends E>`)
 
-### `get(int index)`
+**Returns:** `boolean`
 
-**Returns:** `E`
+### `get(int index)`
 
 **Parameters:**
 - `index` (`int`)
 
-### `indexOf(java.lang.Object element)`
+**Returns:** `E`
+
+### `indexOf(Object element)`
+
+**Parameters:**
+- `element` (`java.lang.Object`)
 
 **Returns:** `int`
+
+### `lastIndexOf(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `lastIndexOf(java.lang.Object element)`
-
 **Returns:** `int`
-
-**Parameters:**
-- `element` (`java.lang.Object`)
 
 ### `listIterator()`
 
@@ -90,40 +90,40 @@ The standard methods and any collection views they return are not guaranteed to 
 
 ### `listIterator(int index)`
 
-**Returns:** `java.util.ListIterator<E>`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `java.util.ListIterator<E>`
 
 ### `remove(int index)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `index` (`int`)
 
-### `set(int index, E element)`
-
 **Returns:** `E`
+
+### `set(int index, E element)`
 
 **Parameters:**
 - `index` (`int`)
 - `element` (`E`)
 
-### `subList(int fromIndex, int toIndex)`
+**Returns:** `E`
 
-**Returns:** `java.util.List<E>`
+### `subList(int fromIndex, int toIndex)`
 
 **Parameters:**
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `java.util.List<E>`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -131,16 +131,14 @@ The standard methods and any collection views they return are not guaranteed to 
 
 ### `standardAdd(E element)`
 
-**Returns:** `boolean`
-
 If you override #add(int, Object), you may wish to override #add(Object) to forward to this implementation.
 
 **Parameters:**
 - `element` (`E`)
 
-### `standardAddAll(int index, java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `boolean`
+
+### `standardAddAll(int index, Iterable<? extends E> elements)`
 
 If you override #listIterator(int), you may
  wish to override #addAll(int, Collection) to forward to this implementation.
@@ -149,9 +147,9 @@ If you override #listIterator(int), you may
 - `index` (`int`)
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `standardIndexOf(java.lang.Object element)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `standardIndexOf(Object element)`
 
 If
  you override #listIterator(), you may wish to override #indexOf to forward to
@@ -160,9 +158,9 @@ If
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `standardLastIndexOf(java.lang.Object element)`
-
 **Returns:** `int`
+
+### `standardLastIndexOf(Object element)`
 
 If you override #listIterator(int), you may wish to override
  #lastIndexOf to forward to this implementation.
@@ -170,33 +168,33 @@ If you override #listIterator(int), you may wish to override
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `standardIterator()`
+**Returns:** `int`
 
-**Returns:** `java.util.Iterator<E>`
+### `standardIterator()`
 
 If
  you override #listIterator(), you may wish to override #iterator to forward to
  this implementation.
 
-### `standardListIterator()`
+**Returns:** `java.util.Iterator<E>`
 
-**Returns:** `java.util.ListIterator<E>`
+### `standardListIterator()`
 
 If you override #listIterator(int), you may wish to override
  #listIterator() to forward to this implementation.
 
-### `standardListIterator(int start)`
-
 **Returns:** `java.util.ListIterator<E>`
+
+### `standardListIterator(int start)`
 
 If you override any of these methods, you may wish to override #listIterator(int) to forward to this implementation.
 
 **Parameters:**
 - `start` (`int`)
 
-### `standardSubList(int fromIndex, int toIndex)`
+**Returns:** `java.util.ListIterator<E>`
 
-**Returns:** `java.util.List<E>`
+### `standardSubList(int fromIndex, int toIndex)`
 
 If you override any other
  methods, you may wish to override #subList(int, int) to forward to this implementation.
@@ -205,20 +203,22 @@ If you override any other
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `standardEquals(java.lang.Object object)`
+**Returns:** `java.util.List<E>`
 
-**Returns:** `boolean`
+### `standardEquals(Object object)`
 
 If you override either of those methods, you may wish to override #equals(Object) to forward to this implementation.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardHashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `standardHashCode()`
 
 If you override
  #iterator, you may wish to override #hashCode to forward to this
  implementation.
+
+**Returns:** `int`
 

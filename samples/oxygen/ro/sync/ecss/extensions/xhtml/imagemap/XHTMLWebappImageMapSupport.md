@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.node.AuthorElement map)`
+### `<init>(AuthorElement map)`
 
 **Parameters:**
 - `map` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The  element.
@@ -30,14 +30,14 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView>`
 
-### `computeAreas(ro.sync.ecss.extensions.api.node.AuthorElement map)`
+### `computeAreas(AuthorElement map)`
 
 **Parameters:**
 - `map` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The map element.
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView>`
 
-### `areaToAreaView(ro.sync.ecss.extensions.api.node.AuthorElement area, int originalLayer)`
+### `areaToAreaView(AuthorElement area, int originalLayer)`
 
 **Parameters:**
 - `area` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element.
@@ -45,7 +45,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView`](../../api/webapp/imagemap/WebappAreaView.md)
 
-### `createPolygon(java.util.List<java.lang.Integer> coords, int originalLayer)`
+### `createPolygon(List<Integer> coords, int originalLayer)`
 
 **Parameters:**
 - `coords` (`java.util.List<java.lang.Integer>`): The coordinates.
@@ -53,7 +53,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView`](../../api/webapp/imagemap/WebappAreaView.md)
 
-### `createRectangle(java.util.List<java.lang.Integer> coords, int originalLayer)`
+### `createRectangle(List<Integer> coords, int originalLayer)`
 
 **Parameters:**
 - `coords` (`java.util.List<java.lang.Integer>`): The coordinates.
@@ -61,7 +61,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView`](../../api/webapp/imagemap/WebappAreaView.md)
 
-### `createCircle(java.util.List<java.lang.Integer> coords, int originalLayer)`
+### `createCircle(List<Integer> coords, int originalLayer)`
 
 **Parameters:**
 - `coords` (`java.util.List<java.lang.Integer>`): The coordinates.
@@ -69,7 +69,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView`](../../api/webapp/imagemap/WebappAreaView.md)
 
-### `parseCoords(ro.sync.ecss.extensions.api.node.AuthorElement area)`
+### `parseCoords(AuthorElement area)`
 
 **Parameters:**
 - `area` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The area.

@@ -22,55 +22,55 @@
 
 ## Methods
 
-### `precomputeCharMatcher(com.google.common.base.CharMatcher matcher)`
-
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+### `precomputeCharMatcher(CharMatcher matcher)`
 
 **Parameters:**
 - `matcher` ([`com.google.common.base.CharMatcher`](./CharMatcher.md))
 
-### `getEnumIfPresent(java.lang.Class<T> enumClass, java.lang.String value)`
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
-**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
+### `getEnumIfPresent(Class<T> enumClass, String value)`
 
 **Parameters:**
 - `enumClass` (`java.lang.Class<T>`)
 - `value` (`java.lang.String`)
 
-### `formatCompact4Digits(double value)`
+**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
 
-**Returns:** `java.lang.String`
+### `formatCompact4Digits(double value)`
 
 **Parameters:**
 - `value` (`double`)
 
-### `stringIsNullOrEmpty(java.lang.String string)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `stringIsNullOrEmpty(String string)`
 
 **Parameters:**
 - `string` (`java.lang.String`)
 
-### `nullToEmpty(java.lang.String string)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
-
-**Parameters:**
-- `string` (`java.lang.String`): the string to test and possibly return
-
-### `emptyToNull(java.lang.String string)`
-
-**Returns:** `java.lang.String`
+### `nullToEmpty(String string)`
 
 **Parameters:**
 - `string` (`java.lang.String`): the string to test and possibly return
 
-### `compilePattern(java.lang.String pattern)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
+### `emptyToNull(String string)`
+
+**Parameters:**
+- `string` (`java.lang.String`): the string to test and possibly return
+
+**Returns:** `java.lang.String`
+
+### `compilePattern(String pattern)`
 
 **Parameters:**
 - `pattern` (`java.lang.String`)
+
+**Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
 
 ### `patternCompilerIsPcreLike()`
 
@@ -80,10 +80,10 @@
 
 **Returns:** [`com.google.common.base.PatternCompiler`](./PatternCompiler.md)
 
-### `logPatternCompilerError(java.util.ServiceConfigurationError e)`
-
-**Returns:** `void`
+### `logPatternCompilerError(ServiceConfigurationError e)`
 
 **Parameters:**
 - `e` (`java.util.ServiceConfigurationError`)
+
+**Returns:** `void`
 

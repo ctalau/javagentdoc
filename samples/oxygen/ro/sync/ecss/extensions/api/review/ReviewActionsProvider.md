@@ -14,7 +14,7 @@ The actions will be mounted on the contextual menu when right clicking a review 
 
 ## Methods
 
-### `customizeContextualMenuActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[] selectedHighlights, java.lang.Object popupMenu)`
+### `customizeContextualMenuActions(AuthorAccess authorAccess, AuthorPersistentHighlight[] selectedHighlights, Object popupMenu)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The Author access.
@@ -23,7 +23,7 @@ The actions will be mounted on the contextual menu when right clicking a review 
 
 **Returns:** `void`
 
-### `performCustomActionOnDelete(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[] selectedHighlights)`
+### `performCustomActionOnDelete(AuthorAccess authorAccess, AuthorPersistentHighlight[] selectedHighlights)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The Author access.
@@ -31,7 +31,7 @@ The actions will be mounted on the contextual menu when right clicking a review 
 
 **Returns:** `boolean`
 
-### `customizeHoverActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight authorPersistentHighlight, java.util.List actions)`
+### `customizeHoverActions(AuthorAccess authorAccess, AuthorPersistentHighlight authorPersistentHighlight, List actions)`
 
 The actions are either Swing actions or SWT actions.
  For Swing actions you can use the API "ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace.getOxygenActionID(Action)" to query each action's ID.

@@ -30,7 +30,7 @@
 
 ## Methods
 
-### `editingStopped(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
+### `editingStopped(EditingEvent event)`
 
 This will commit the value into the document **ONLY
  if the following conditions apply**:
@@ -69,7 +69,7 @@ OBS: THIS EVENT IS VERY IMPORTANT. If no #editingOccured() event
 
 **Returns:** `void`
 
-### `commitValue(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
+### `commitValue(EditingEvent event)`
 
 Will only commit if a new string value is provided and only if the value 
  that must be committed is different from the current value.

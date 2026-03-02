@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `getElementLocator(ro.sync.ecss.extensions.api.link.IDTypeVerifier idVerifier, java.lang.String link)`
+### `getElementLocator(IDTypeVerifier idVerifier, String link)`
 
 **Parameters:**
 - `idVerifier` ([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md))

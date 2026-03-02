@@ -58,7 +58,7 @@ The path should be unique among other webapp servlet plugins paths
 
 **Returns:** `java.lang.String`
 
-### `init(ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletConfig config)`
+### `init(ServletConfig config)`
 
 Consider overriding the #init() method instead. If you decide to override this one,
  call the super implementation.
@@ -72,7 +72,7 @@ Consider overriding the #init() method instead. If you decide to override this o
 
 **Returns:** `void`
 
-### `service(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `service(HttpServletRequest req, HttpServletResponse resp)`
 
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
@@ -80,7 +80,7 @@ Consider overriding the #init() method instead. If you decide to override this o
 
 **Returns:** `void`
 
-### `doGet(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `doGet(HttpServletRequest req, HttpServletResponse resp)`
 
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
@@ -88,7 +88,7 @@ Consider overriding the #init() method instead. If you decide to override this o
 
 **Returns:** `void`
 
-### `doPost(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `doPost(HttpServletRequest req, HttpServletResponse resp)`
 
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
@@ -96,7 +96,7 @@ Consider overriding the #init() method instead. If you decide to override this o
 
 **Returns:** `void`
 
-### `doPut(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `doPut(HttpServletRequest req, HttpServletResponse resp)`
 
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.
@@ -104,7 +104,7 @@ Consider overriding the #init() method instead. If you decide to override this o
 
 **Returns:** `void`
 
-### `doDelete(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest req, ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletResponse resp)`
+### `doDelete(HttpServletRequest req, HttpServletResponse resp)`
 
 **Parameters:**
 - `req` ([`ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.HttpServletRequest`](servlet/http/HttpServletRequest.md)): the request.

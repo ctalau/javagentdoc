@@ -64,7 +64,7 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 - `expectedKeys` (`int`)
 - `expectedValuesPerKey` (`int`)
 
-### `<init>(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
+### `<init>(Multimap<? extends K,? extends V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
@@ -73,14 +73,12 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 
 ### `create()`
 
-**Returns:** [`com.google.common.collect.ArrayListMultimap<K,V>`](./ArrayListMultimap.md)
-
 This method will soon be deprecated in favor of 
  MultimapBuilder.hashKeys().arrayListValues().build().
 
-### `create(int expectedKeys, int expectedValuesPerKey)`
-
 **Returns:** [`com.google.common.collect.ArrayListMultimap<K,V>`](./ArrayListMultimap.md)
+
+### `create(int expectedKeys, int expectedValuesPerKey)`
 
 This method will soon be deprecated in favor of 
  MultimapBuilder.hashKeys(expectedKeys).arrayListValues(expectedValuesPerKey).build().
@@ -89,15 +87,17 @@ This method will soon be deprecated in favor of
 - `expectedKeys` (`int`): the expected number of distinct keys
 - `expectedValuesPerKey` (`int`): the expected average number of values per key
 
-### `create(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
-
 **Returns:** [`com.google.common.collect.ArrayListMultimap<K,V>`](./ArrayListMultimap.md)
+
+### `create(Multimap<? extends K,? extends V> multimap)`
 
 This method will soon be deprecated in favor of 
  MultimapBuilder.hashKeys().arrayListValues().build(multimap).
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md)): the multimap whose contents are copied to this multimap
+
+**Returns:** [`com.google.common.collect.ArrayListMultimap<K,V>`](./ArrayListMultimap.md)
 
 ### `createCollection()`
 
@@ -107,17 +107,17 @@ This method will soon be deprecated in favor of
 
 **Returns:** `void`
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

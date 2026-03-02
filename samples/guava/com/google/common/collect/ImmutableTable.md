@@ -30,9 +30,7 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Methods
 
-### `toImmutableTable(java.util.function.Function<? super T,? extends R> rowFunction, java.util.function.Function<? super T,? extends C> columnFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
-
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableTable<R,C,V>>`
+### `toImmutableTable(Function<? super T,? extends R> rowFunction, Function<? super T,? extends C> columnFunction, Function<? super T,? extends V> valueFunction)`
 
 Each
  input element is mapped to one cell in the returned table, with the rows, columns, and values
@@ -47,9 +45,9 @@ The returned Collector will throw a NullPointerException at collection time
 - `columnFunction` (`java.util.function.Function<? super T,? extends C>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `toImmutableTable(java.util.function.Function<? super T,? extends R> rowFunction, java.util.function.Function<? super T,? extends C> columnFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.BinaryOperator<V> mergeFunction)`
-
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableTable<R,C,V>>`
+
+### `toImmutableTable(Function<? super T,? extends R> rowFunction, Function<? super T,? extends C> columnFunction, Function<? super T,? extends V> valueFunction, BinaryOperator<V> mergeFunction)`
 
 Each
  input element is mapped to one cell in the returned table, with the rows, columns, and values
@@ -66,24 +64,24 @@ The returned Collector will throw a NullPointerException at collection time
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `mergeFunction` (`java.util.function.BinaryOperator<V>`)
 
-### `of()`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableTable<R,C,V>>`
 
-**Returns:** [`com.google.common.collect.ImmutableTable<R,C,V>`](./ImmutableTable.md)
+### `of()`
 
 **Performance note:** the instance returned is a singleton.
 
-### `of(R rowKey, C columnKey, V value)`
-
 **Returns:** [`com.google.common.collect.ImmutableTable<R,C,V>`](./ImmutableTable.md)
+
+### `of(R rowKey, C columnKey, V value)`
 
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `value` (`V`)
 
-### `copyOf(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
-
 **Returns:** [`com.google.common.collect.ImmutableTable<R,C,V>`](./ImmutableTable.md)
+
+### `copyOf(Table<? extends R,? extends C,? extends V> table)`
 
 The Table#cellSet() iteration order of the provided table determines the iteration
  ordering of all views in the returned table. Note that some views of the original table and the
@@ -99,27 +97,29 @@ Despite the method name, this method attempts to avoid actually copying the data
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md))
 
-### `copyOf(java.lang.Iterable<? extends com.google.common.collect.Table.Cell<? extends R,? extends C,? extends V>> cells)`
-
 **Returns:** [`com.google.common.collect.ImmutableTable<R,C,V>`](./ImmutableTable.md)
+
+### `copyOf(Iterable<? extends Table.Cell<? extends R,? extends C,? extends V>> cells)`
 
 **Parameters:**
 - `cells` (`java.lang.Iterable<? extends com.google.common.collect.Table.Cell<? extends R,? extends C,? extends V>>`)
 
-### `builder()`
+**Returns:** [`com.google.common.collect.ImmutableTable<R,C,V>`](./ImmutableTable.md)
 
-**Returns:** `com.google.common.collect.ImmutableTable.Builder<R,C,V>`
+### `builder()`
 
 The generated builder is equivalent to the builder created by the ImmutableTable.Builder() constructor.
 
-### `cellOf(R rowKey, C columnKey, V value)`
+**Returns:** `com.google.common.collect.ImmutableTable.Builder<R,C,V>`
 
-**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
+### `cellOf(R rowKey, C columnKey, V value)`
 
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `value` (`V`)
+
+**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
 
 ### `cellSet()`
 
@@ -151,10 +151,10 @@ The generated builder is equivalent to the builder created by the ImmutableTable
 
 ### `column(C columnKey)`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<R,V>`](./ImmutableMap.md)
-
 **Parameters:**
 - `columnKey` (`C`)
+
+**Returns:** [`com.google.common.collect.ImmutableMap<R,V>`](./ImmutableMap.md)
 
 ### `columnKeySet()`
 
@@ -162,17 +162,17 @@ The generated builder is equivalent to the builder created by the ImmutableTable
 
 ### `columnMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap.md)
-
 The value Map<R, V> instances in the returned map are ImmutableMap instances
  as well.
 
-### `row(R rowKey)`
+**Returns:** [`com.google.common.collect.ImmutableMap<C,java.util.Map<R,V>>`](./ImmutableMap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMap<C,V>`](./ImmutableMap.md)
+### `row(R rowKey)`
 
 **Parameters:**
 - `rowKey` (`R`)
+
+**Returns:** [`com.google.common.collect.ImmutableMap<C,V>`](./ImmutableMap.md)
 
 ### `rowKeySet()`
 
@@ -180,25 +180,25 @@ The value Map<R, V> instances in the returned map are ImmutableMap instances
 
 ### `rowMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap.md)
-
 The value Map<C, V> instances in the returned map are ImmutableMap instances
  as well.
 
-### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** [`com.google.common.collect.ImmutableMap<R,java.util.Map<C,V>>`](./ImmutableMap.md)
 
-**Returns:** `boolean`
+### `contains(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `clear()`
 
@@ -206,36 +206,36 @@ The value Map<C, V> instances in the returned map are ImmutableMap instances
 
 ### `put(R rowKey, C columnKey, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `value` (`V`)
 
-### `putAll(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Table<? extends R,? extends C,? extends V> table)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md))
 
-### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `remove(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
+**Returns:** `V`
+
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

@@ -21,7 +21,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>> futures, boolean allMustSucceed)`
+### `<init>(ImmutableCollection<? extends ListenableFuture<? extends V>> futures, boolean allMustSucceed)`
 
 **Parameters:**
 - `futures` ([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>`](../../collect/ImmutableCollection.md))
@@ -31,27 +31,27 @@
 
 ### `collectOneValue(int index, V returnValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `index` (`int`)
 - `returnValue` (`V`)
+
+**Returns:** `void`
 
 ### `handleAllCompleted()`
 
 **Returns:** `void`
 
-### `releaseResources(com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason reason)`
-
-**Returns:** `void`
+### `releaseResources(AggregateFuture.ReleaseResourcesReason reason)`
 
 **Parameters:**
 - `reason` (`com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason`)
 
-### `combine(java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>> values)`
+**Returns:** `void`
 
-**Returns:** `C`
+### `combine(List<CollectionFuture@Nullable Present<V>> values)`
 
 **Parameters:**
 - `values` (`java.util.List<com.google.common.util.concurrent.CollectionFuture.@org.checkerframework.checker.nullness.qual.Nullable Present<V>>`)
+
+**Returns:** `C`
 

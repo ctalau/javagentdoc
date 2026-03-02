@@ -23,10 +23,10 @@ The methods implemented in this class should not be overridden unless the subcla
 
 ### `edgeCount()`
 
-**Returns:** `long`
-
 This implementation requires O(|N|) time. Classes extending this one may manually keep track of
  the number of edges as the graph is updated, and override this method for better performance.
+
+**Returns:** `long`
 
 ### `edges()`
 
@@ -38,58 +38,58 @@ This implementation requires O(|N|) time. Classes extending this one may manuall
 
 ### `incidentEdges(N node)`
 
-**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
 ### `degree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `inDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `outDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
 
-### `hasEdgeConnecting(N nodeU, N nodeV)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `validateEndpoints(com.google.common.graph.EndpointPair<?> endpoints)`
+**Returns:** `boolean`
+
+### `validateEndpoints(EndpointPair<?> endpoints)`
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
 
 **Returns:** `void`
 
+### `isOrderingCompatible(EndpointPair<?> endpoints)`
+
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
-
-### `isOrderingCompatible(com.google.common.graph.EndpointPair<?> endpoints)`
 
 **Returns:** `boolean`
-
-**Parameters:**
-- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
 

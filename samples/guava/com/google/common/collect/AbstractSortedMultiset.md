@@ -31,7 +31,7 @@ The #count and #size implementations all iterate across the set returned by
 
 ### `<init>()`
 
-### `<init>(java.util.Comparator<? super E> comparator)`
+### `<init>(Comparator<? super E> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`)
@@ -66,15 +66,15 @@ The #count and #size implementations all iterate across the set returned by
 
 **Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-### `subMultiset(E fromElement, com.google.common.collect.BoundType fromBoundType, E toElement, com.google.common.collect.BoundType toBoundType)`
-
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+### `subMultiset(E fromElement, BoundType fromBoundType, E toElement, BoundType toBoundType)`
 
 **Parameters:**
 - `fromElement` (`E`)
 - `fromBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 - `toElement` (`E`)
 - `toBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
 ### `descendingEntryIterator()`
 

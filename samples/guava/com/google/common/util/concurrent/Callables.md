@@ -14,14 +14,12 @@
 
 ### `returning(T value)`
 
-**Returns:** `java.util.concurrent.Callable<T>`
-
 **Parameters:**
 - `value` (`T`)
 
-### `asAsyncCallable(java.util.concurrent.Callable<T> callable, com.google.common.util.concurrent.ListeningExecutorService listeningExecutorService)`
+**Returns:** `java.util.concurrent.Callable<T>`
 
-**Returns:** [`com.google.common.util.concurrent.AsyncCallable<T>`](./AsyncCallable.md)
+### `asAsyncCallable(Callable<T> callable, ListeningExecutorService listeningExecutorService)`
 
 The AsyncCallable returns the ListenableFuture resulting from ListeningExecutorService#submit(Callable).
 
@@ -29,29 +27,31 @@ The AsyncCallable returns the ListenableFuture resulting from ListeningExecutorS
 - `callable` (`java.util.concurrent.Callable<T>`)
 - `listeningExecutorService` ([`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md))
 
-### `threadRenaming(java.util.concurrent.Callable<T> callable, com.google.common.base.Supplier<java.lang.String> nameSupplier)`
+**Returns:** [`com.google.common.util.concurrent.AsyncCallable<T>`](./AsyncCallable.md)
 
-**Returns:** `java.util.concurrent.Callable<T>`
+### `threadRenaming(Callable<T> callable, Supplier<String> nameSupplier)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<T>`): The callable to wrap
 - `nameSupplier` ([`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md)): The supplier of thread names, get will be called once
-     for each invocation of the wrapped callable.
+       for each invocation of the wrapped callable.
 
-### `threadRenaming(java.lang.Runnable task, com.google.common.base.Supplier<java.lang.String> nameSupplier)`
+**Returns:** `java.util.concurrent.Callable<T>`
 
-**Returns:** `java.lang.Runnable`
+### `threadRenaming(Runnable task, Supplier<String> nameSupplier)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`): The Runnable to wrap
 - `nameSupplier` ([`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md)): The supplier of thread names, get will be called once
-     for each invocation of the wrapped callable.
+       for each invocation of the wrapped callable.
 
-### `trySetName(java.lang.String threadName, java.lang.Thread currentThread)`
+**Returns:** `java.lang.Runnable`
 
-**Returns:** `boolean`
+### `trySetName(String threadName, Thread currentThread)`
 
 **Parameters:**
 - `threadName` (`java.lang.String`)
 - `currentThread` (`java.lang.Thread`)
+
+**Returns:** `boolean`
 

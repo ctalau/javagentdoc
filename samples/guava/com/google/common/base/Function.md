@@ -34,14 +34,12 @@ See the Guava User Guide article on [the use of Function](https://github.com/goo
 
 ### `apply(F input)`
 
-**Returns:** `T`
-
 **Parameters:**
 - `input` (`F`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `T`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Warning: do not depend** on the behavior of this method.
 
@@ -53,4 +51,6 @@ Historically, Function instances in this library have implemented this method to
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

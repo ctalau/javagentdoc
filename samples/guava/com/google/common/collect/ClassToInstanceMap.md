@@ -37,9 +37,7 @@ See the Guava User Guide article on [
 
 ## Methods
 
-### `getInstance(java.lang.Class<T> type)`
-
-**Returns:** `T`
+### `getInstance(Class<T> type)`
 
 This will only return a value that was bound to this specific class, not a value
  that may have been bound to a subtype.
@@ -47,9 +45,9 @@ This will only return a value that was bound to this specific class, not a value
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `putInstance(java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(Class<@NonNull T> type, T value)`
 
 Does *not* associate this value with any
  of the class's supertypes.
@@ -57,4 +55,6 @@ Does *not* associate this value with any
 **Parameters:**
 - `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>`)
 - `value` (`T`)
+
+**Returns:** `T`
 

@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `activated(AuthorAccess authorAccess)`
 
 This event is triggered when the Author extension where this listener is
  defined was activated in relation with a document opened in Author page.
@@ -23,7 +23,7 @@ This event is triggered when the Author extension where this listener is
 
 **Returns:** `void`
 
-### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `deactivated(AuthorAccess authorAccess)`
 
 This event is triggered when another Author extension corresponding to the 
  the current document opened in Author page was activated, 

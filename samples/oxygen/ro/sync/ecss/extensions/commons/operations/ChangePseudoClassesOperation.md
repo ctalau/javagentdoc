@@ -55,7 +55,7 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -63,7 +63,7 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 
 **Returns:** `void`
 
-### `setOrRemovePseudoClasses(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, java.lang.String xpathLocationKey, java.lang.String pseudoClassNamesKey, boolean setClasses)`
+### `setOrRemovePseudoClasses(AuthorAccess authorAccess, ArgumentsMap args, String xpathLocationKey, String pseudoClassNamesKey, boolean setClasses)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author APi Access.
@@ -74,7 +74,7 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 
 **Returns:** `void`
 
-### `getTargetElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object xpathLocations, java.lang.Object includeAllNodes)`
+### `getTargetElements(AuthorAccess authorAccess, Object xpathLocations, Object includeAllNodes)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to Author functionality.

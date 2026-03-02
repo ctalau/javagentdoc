@@ -84,8 +84,6 @@ Five parameters of the same type in a row is a bad thing, but this class is not 
 
 ### `requestCount()`
 
-**Returns:** `long`
-
 This is defined as hitCount + missCount.
 
  
@@ -93,29 +91,29 @@ This is defined as hitCount + missCount.
  guaranteed not to throw an exception). If you require specific handling, we recommend
  implementing your own stats collector.
 
+**Returns:** `long`
+
 ### `hitCount()`
 
 **Returns:** `long`
 
 ### `hitRate()`
 
-**Returns:** `double`
-
 This is defined as hitCount /
  requestCount, or 1.0 when requestCount == 0. Note that hitRate +
  missRate =~ 1.0.
 
-### `missCount()`
+**Returns:** `double`
 
-**Returns:** `long`
+### `missCount()`
 
 Multiple concurrent calls to Cache lookup methods on an absent
  value can result in multiple misses, all returning the results of a single cache load
  operation.
 
-### `missRate()`
+**Returns:** `long`
 
-**Returns:** `double`
+### `missRate()`
 
 This is defined as missCount /
  requestCount, or 0.0 when requestCount == 0. Note that hitRate +
@@ -125,9 +123,9 @@ This is defined as missCount /
  loadSuccessCount + loadExceptionCount. Multiple concurrent misses for the same key will result
  in a single load operation.
 
-### `loadCount()`
+**Returns:** `double`
 
-**Returns:** `long`
+### `loadCount()`
 
 This includes both successful load operations and those that threw exceptions. This is
  defined as loadSuccessCount + loadExceptionCount.
@@ -137,9 +135,9 @@ This includes both successful load operations and those that threw exceptions. T
  guaranteed not to throw an exception). If you require specific handling, we recommend
  implementing your own stats collector.
 
-### `loadSuccessCount()`
-
 **Returns:** `long`
+
+### `loadSuccessCount()`
 
 This is usually incremented in conjunction with #missCount, though missCount is
  also incremented when an exception is encountered during cache loading (see #loadExceptionCount). Multiple concurrent misses for the same key will result in a single load
@@ -147,9 +145,9 @@ This is usually incremented in conjunction with #missCount, though missCount is
  as a result of a refresh or if the cache loader returned more items than was requested. 
  missCount may also be incremented not in conjunction with this (nor #loadExceptionCount) on calls to getIfPresent.
 
-### `loadExceptionCount()`
-
 **Returns:** `long`
+
+### `loadExceptionCount()`
 
 This is usually incremented in conjunction with missCount, though 
  missCount is also incremented when cache loading completes successfully (see #loadSuccessCount). Multiple concurrent misses for the same key will result in a single load
@@ -158,9 +156,9 @@ This is usually incremented in conjunction with missCount, though
  missCount may also be incremented not in conjunction with this (nor #loadSuccessCount)
  on calls to getIfPresent.
 
-### `loadExceptionRate()`
+**Returns:** `long`
 
-**Returns:** `double`
+### `loadExceptionRate()`
 
 This is defined as 
  loadExceptionCount / (loadSuccessCount + loadExceptionCount), or 0.0 when 
@@ -171,17 +169,17 @@ This is defined as
  guaranteed not to throw an exception). If you require specific handling, we recommend
  implementing your own stats collector.
 
-### `totalLoadTime()`
+**Returns:** `double`
 
-**Returns:** `long`
+### `totalLoadTime()`
 
 This can be
  used to calculate the miss penalty. This value is increased every time loadSuccessCount
  or loadExceptionCount is incremented.
 
-### `averageLoadPenalty()`
+**Returns:** `long`
 
-**Returns:** `double`
+### `averageLoadPenalty()`
 
 This is defined as totalLoadTime /
  (loadSuccessCount + loadExceptionCount).
@@ -191,16 +189,16 @@ This is defined as totalLoadTime /
  guaranteed not to throw an exception). If you require specific handling, we recommend
  implementing your own stats collector.
 
-### `evictionCount()`
+**Returns:** `double`
 
-**Returns:** `long`
+### `evictionCount()`
 
 This count does not include manual
  invalidations.
 
-### `minus(com.google.common.cache.CacheStats other)`
+**Returns:** `long`
 
-**Returns:** [`com.google.common.cache.CacheStats`](./CacheStats.md)
+### `minus(CacheStats other)`
 
 Negative values, which aren't supported by CacheStats will be
  rounded up to zero.
@@ -208,9 +206,9 @@ Negative values, which aren't supported by CacheStats will be
 **Parameters:**
 - `other` ([`com.google.common.cache.CacheStats`](./CacheStats.md))
 
-### `plus(com.google.common.cache.CacheStats other)`
-
 **Returns:** [`com.google.common.cache.CacheStats`](./CacheStats.md)
+
+### `plus(CacheStats other)`
 
 **Note:** the values of the metrics are undefined in case of overflow (though it is
  guaranteed not to throw an exception). If you require specific handling, we recommend
@@ -219,16 +217,18 @@ Negative values, which aren't supported by CacheStats will be
 **Parameters:**
 - `other` ([`com.google.common.cache.CacheStats`](./CacheStats.md))
 
+**Returns:** [`com.google.common.cache.CacheStats`](./CacheStats.md)
+
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `toString()`
 

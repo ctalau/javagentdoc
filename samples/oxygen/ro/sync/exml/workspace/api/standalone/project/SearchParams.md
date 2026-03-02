@@ -34,7 +34,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String fileNameWildcard, java.lang.String searchString, java.lang.String xpathExpression, boolean caseSensitive, boolean regexp, int maxMatches)`
+### `<init>(String fileNameWildcard, String searchString, String xpathExpression, boolean caseSensitive, boolean regexp, int maxMatches)`
 
 **Parameters:**
 - `fileNameWildcard` (`java.lang.String`): The file name wildcard

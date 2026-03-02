@@ -22,13 +22,13 @@
 
 **Returns:** `void`
 
-### `await(long time, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `boolean`
+### `await(long time, TimeUnit unit)`
 
 **Parameters:**
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `boolean`
 
 ### `awaitUninterruptibly()`
 
@@ -36,17 +36,17 @@
 
 ### `awaitNanos(long nanosTimeout)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `nanosTimeout` (`long`)
 
-### `awaitUntil(java.util.Date deadline)`
+**Returns:** `long`
 
-**Returns:** `boolean`
+### `awaitUntil(Date deadline)`
 
 **Parameters:**
 - `deadline` (`java.util.Date`)
+
+**Returns:** `boolean`
 
 ### `signal()`
 

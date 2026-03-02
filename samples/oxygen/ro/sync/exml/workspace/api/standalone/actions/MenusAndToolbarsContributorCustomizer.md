@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `customizeAuthorPageExtensionMenu(javax.swing.JMenu extensionMenu, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizeAuthorPageExtensionMenu(JMenu extensionMenu, AuthorAccess authorAccess)`
 
 For example DITA, Docbook, etc...
 
@@ -28,7 +28,7 @@ For example DITA, Docbook, etc...
 
 **Returns:** `void`
 
-### `customizeAuthorPageExtensionToolbar(ro.sync.exml.workspace.api.standalone.ToolbarInfo toolbarInfo, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizeAuthorPageExtensionToolbar(ToolbarInfo toolbarInfo, AuthorAccess authorAccess)`
 
 The toolbar will be included in the Author-specific toolbar.
  
@@ -40,21 +40,21 @@ The toolbar will be included in the Author-specific toolbar.
 
 **Returns:** `void`
 
-### `customizeDITAMapsManagerExtendedToolbar(ro.sync.exml.workspace.api.standalone.ToolbarInfo toolbarInfo)`
+### `customizeDITAMapsManagerExtendedToolbar(ToolbarInfo toolbarInfo)`
 
 **Parameters:**
 - `toolbarInfo` ([`ro.sync.exml.workspace.api.standalone.ToolbarInfo`](../ToolbarInfo.md)): The toolbar information.
 
 **Returns:** `void`
 
-### `customizeDITAMapsManagerMainToolbar(ro.sync.exml.workspace.api.standalone.ToolbarInfo toolbarInfo)`
+### `customizeDITAMapsManagerMainToolbar(ToolbarInfo toolbarInfo)`
 
 **Parameters:**
 - `toolbarInfo` ([`ro.sync.exml.workspace.api.standalone.ToolbarInfo`](../ToolbarInfo.md)): The toolbar components information.
 
 **Returns:** `void`
 
-### `customizeAuthorPopUpMenu(javax.swing.JPopupMenu popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizeAuthorPopUpMenu(JPopupMenu popUp, AuthorAccess authorAccess)`
 
 By default this method gets called for both the contextual menu shown in the main editing area, 
  shown in the Outline view or shown in the Breadcrumb.
@@ -67,7 +67,7 @@ By default this method gets called for both the contextual menu shown in the mai
 
 **Returns:** `void`
 
-### `customizeAuthorOutlinePopUpMenu(javax.swing.JPopupMenu popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizeAuthorOutlinePopUpMenu(JPopupMenu popUp, AuthorAccess authorAccess)`
 
 If everything is removed then the menu will not be shown.
 
@@ -77,7 +77,7 @@ If everything is removed then the menu will not be shown.
 
 **Returns:** `void`
 
-### `customizeAuthorBreadcrumbPopUpMenu(javax.swing.JPopupMenu popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode currentNode)`
+### `customizeAuthorBreadcrumbPopUpMenu(JPopupMenu popUp, AuthorAccess authorAccess, AuthorNode currentNode)`
 
 If everything is removed then the menu will not be shown.
 
@@ -88,7 +88,7 @@ If everything is removed then the menu will not be shown.
 
 **Returns:** `void`
 
-### `customizeTextPopUpMenu(javax.swing.JPopupMenu popUp, ro.sync.exml.workspace.api.editor.page.text.WSTextEditorPage textPage)`
+### `customizeTextPopUpMenu(JPopupMenu popUp, WSTextEditorPage textPage)`
 
 If everything is removed then the menu will not be shown.
 
@@ -98,7 +98,7 @@ If everything is removed then the menu will not be shown.
 
 **Returns:** `void`
 
-### `customizeDITAMapPopUpMenu(javax.swing.JPopupMenu popUp, ro.sync.exml.workspace.api.editor.page.ditamap.WSDITAMapEditorPage ditaMapEditorPage)`
+### `customizeDITAMapPopUpMenu(JPopupMenu popUp, WSDITAMapEditorPage ditaMapEditorPage)`
 
 If everything is removed then the menu will not be shown.
 
@@ -108,7 +108,7 @@ If everything is removed then the menu will not be shown.
 
 **Returns:** `void`
 
-### `customizeEditorTabPopUpMenu(javax.swing.JPopupMenu popUpMenu, ro.sync.exml.workspace.api.editor.WSEditor editor)`
+### `customizeEditorTabPopUpMenu(JPopupMenu popUpMenu, WSEditor editor)`
 
 Editor tabs from both the main editing area and the DITA Maps Manager are taken into account.
 

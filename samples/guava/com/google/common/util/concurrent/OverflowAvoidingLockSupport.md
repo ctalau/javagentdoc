@@ -18,11 +18,11 @@
 
 ## Methods
 
-### `parkNanos(java.lang.Object blocker, long nanos)`
-
-**Returns:** `void`
+### `parkNanos(Object blocker, long nanos)`
 
 **Parameters:**
 - `blocker` (`java.lang.Object`)
 - `nanos` (`long`)
+
+**Returns:** `void`
 

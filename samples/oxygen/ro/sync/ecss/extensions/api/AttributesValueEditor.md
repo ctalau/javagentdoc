@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getAttributeValue(ro.sync.ecss.extensions.api.EditedAttribute attribute, java.lang.Object parentComponent)`
+### `getAttributeValue(EditedAttribute attribute, Object parentComponent)`
 
 **Parameters:**
 - `attribute` ([`ro.sync.ecss.extensions.api.EditedAttribute`](./EditedAttribute.md)): The attribute to be edited.

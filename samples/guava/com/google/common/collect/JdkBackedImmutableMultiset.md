@@ -35,7 +35,7 @@ Used to protect
 
 ## Constructors
 
-### `<init>(java.util.Map<E,java.lang.Integer> delegateMap, com.google.common.collect.ImmutableList<com.google.common.collect.Multiset.Entry<E>> entries, long size)`
+### `<init>(Map<E,Integer> delegateMap, ImmutableList<Multiset.Entry<E>> entries, long size)`
 
 **Parameters:**
 - `delegateMap` (`java.util.Map<E,java.lang.Integer>`)
@@ -44,19 +44,19 @@ Used to protect
 
 ## Methods
 
-### `create(java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>> entries)`
-
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+### `create(Collection<? extends Multiset.Entry<? extends E>> entries)`
 
 **Parameters:**
 - `entries` (`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`)
 
-### `count(java.lang.Object element)`
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-**Returns:** `int`
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `elementSet()`
 
@@ -64,10 +64,10 @@ Used to protect
 
 ### `getEntry(int index)`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `isPartialView()`
 

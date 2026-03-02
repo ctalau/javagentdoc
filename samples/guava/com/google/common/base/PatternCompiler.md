@@ -11,12 +11,12 @@ By default this package uses the
 
 ## Methods
 
-### `compile(java.lang.String pattern)`
-
-**Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
+### `compile(String pattern)`
 
 **Parameters:**
 - `pattern` (`java.lang.String`)
+
+**Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
 
 ### `isPcreLike()`
 

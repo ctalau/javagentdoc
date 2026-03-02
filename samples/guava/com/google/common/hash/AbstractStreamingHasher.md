@@ -31,7 +31,7 @@ This hasher instance will process chunks of the specified
 
 **Parameters:**
 - `chunkSize` (`int`): the number of bytes available per #process(ByteBuffer) invocation;
-     must be at least 4
+       must be at least 4
 
 ### `<init>(int chunkSize, int bufferSize)`
 
@@ -41,21 +41,19 @@ This hasher instance will process chunks of the specified
 
 **Parameters:**
 - `chunkSize` (`int`): the number of bytes available per #process(ByteBuffer) invocation;
-     must be at least 4
+       must be at least 4
 - `bufferSize` (`int`): the size of the internal buffer. Must be a multiple of chunkSize
 
 ## Methods
 
-### `process(java.nio.ByteBuffer bb)`
-
-**Returns:** `void`
+### `process(ByteBuffer bb)`
 
 **Parameters:**
 - `bb` (`java.nio.ByteBuffer`)
 
-### `processRemaining(java.nio.ByteBuffer bb)`
-
 **Returns:** `void`
+
+### `processRemaining(ByteBuffer bb)`
 
 The passed ByteBuffer is guaranteed to be non-empty.
 
@@ -65,63 +63,65 @@ This implementation simply pads with zeros and delegates to #process(ByteBuffer)
 **Parameters:**
 - `bb` (`java.nio.ByteBuffer`)
 
-### `putBytes(byte[] bytes, int off, int len)`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+### `putBytes(byte[] bytes, int off, int len)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `putBytes(java.nio.ByteBuffer readBuffer)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(ByteBuffer readBuffer)`
 
 **Parameters:**
 - `readBuffer` (`java.nio.ByteBuffer`)
 
-### `putBytesInternal(java.nio.ByteBuffer readBuffer)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytesInternal(ByteBuffer readBuffer)`
 
 **Parameters:**
 - `readBuffer` (`java.nio.ByteBuffer`)
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
 ### `putByte(byte b)`
-
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
 **Parameters:**
 - `b` (`byte`)
 
-### `putShort(short s)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putShort(short s)`
 
 **Parameters:**
 - `s` (`short`)
 
-### `putChar(char c)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putChar(char c)`
 
 **Parameters:**
 - `c` (`char`)
 
-### `putInt(int i)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putInt(int i)`
 
 **Parameters:**
 - `i` (`int`)
 
-### `putLong(long l)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putLong(long l)`
 
 **Parameters:**
 - `l` (`long`)
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
 ### `hash()`
 
@@ -129,11 +129,11 @@ This implementation simply pads with zeros and delegates to #process(ByteBuffer)
 
 ### `makeHash()`
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
-
 This is called
  after all chunks are handled with #process and any leftover bytes that did not make a
  complete chunk are handled with #processRemaining.
+
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
 ### `munchIfFull()`
 

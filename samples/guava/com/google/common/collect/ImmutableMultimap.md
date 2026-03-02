@@ -51,7 +51,7 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableMap<K,? extends com.google.common.collect.ImmutableCollection<V>> map, int size)`
+### `<init>(ImmutableMap<K,? extends ImmutableCollection<V>> map, int size)`
 
 **Parameters:**
 - `map` ([`com.google.common.collect.ImmutableMap<K,? extends com.google.common.collect.ImmutableCollection<V>>`](./ImmutableMap.md))
@@ -61,21 +61,19 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ### `of()`
 
-**Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
-
 **Performance note:** the instance returned is a singleton.
 
-### `of(K k1, V v1)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
+
+### `of(K k1, V v1)`
 
 **Parameters:**
 - `k1` (`K`)
 - `v1` (`V`)
 
-### `of(K k1, V v1, K k2, V v2)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -83,9 +81,9 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 - `k2` (`K`)
 - `v2` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -95,9 +93,9 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 - `k3` (`K`)
 - `v3` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -109,9 +107,9 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 - `k4` (`K`)
 - `v4` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -125,15 +123,15 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 - `k5` (`K`)
 - `v5` (`V`)
 
-### `builder()`
+**Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
 
-**Returns:** `com.google.common.collect.ImmutableMultimap.Builder<K,V>`
+### `builder()`
 
 The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `copyOf(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
+**Returns:** `com.google.common.collect.ImmutableMultimap.Builder<K,V>`
 
-**Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
+### `copyOf(Multimap<? extends K,? extends V> multimap)`
 
 Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
@@ -142,9 +140,9 @@ Despite the method name, this method attempts to avoid actually copying the data
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
 
-### `copyOf(java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>> entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
+
+### `copyOf(Iterable<? extends Map.Entry<? extends K,? extends V>> entries)`
 
 The returned multimap iterates
  over keys in the order they were first encountered in the input, and the values for each key
@@ -153,28 +151,28 @@ The returned multimap iterates
 **Parameters:**
 - `entries` (`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>`)
 
-### `removeAll(java.lang.Object key)`
+**Returns:** [`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
+### `removeAll(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 **Parameters:**
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
+
+**Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
 ### `clear()`
 
 **Returns:** `void`
 
 ### `get(K key)`
-
-**Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
 If no mappings in the multimap
  have the provided key, an empty immutable collection is returned. The values are in the same
@@ -183,65 +181,67 @@ If no mappings in the multimap
 **Parameters:**
 - `key` (`K`)
 
-### `inverse()`
+**Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMultimap<V,K>`](./ImmutableMultimap.md)
+### `inverse()`
 
 For every key-value mapping in
  the original, the result will have a mapping with key and value reversed.
 
-### `put(K key, V value)`
+**Returns:** [`com.google.common.collect.ImmutableMultimap<V,K>`](./ImmutableMultimap.md)
 
-**Returns:** `boolean`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putAll(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `boolean`
+
+### `putAll(K key, Iterable<? extends V> values)`
 
 **Parameters:**
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `putAll(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
-
 **Returns:** `boolean`
+
+### `putAll(Multimap<? extends K,? extends V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
 
-### `remove(java.lang.Object key, java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `remove(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `isPartialView()`
-
 **Returns:** `boolean`
+
+### `isPartialView()`
 
 This is generally used
  to determine whether copyOf implementations should make an explicit copy to avoid
  memory leaks.
 
-### `containsKey(java.lang.Object key)`
-
 **Returns:** `boolean`
+
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `size()`
 
@@ -257,9 +257,9 @@ This is generally used
 
 ### `asMap()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,java.util.Collection<V>>`](./ImmutableMap.md)
-
 Keys and values appear in the same order as in this multimap.
+
+**Returns:** [`com.google.common.collect.ImmutableMap<K,java.util.Collection<V>>`](./ImmutableMap.md)
 
 ### `createAsMap()`
 
@@ -281,12 +281,12 @@ Keys and values appear in the same order as in this multimap.
 
 **Returns:** `java.util.Spliterator<java.util.Map.Entry<K,V>>`
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+**Returns:** `void`
 
 ### `keys()`
 
@@ -298,10 +298,10 @@ Keys and values appear in the same order as in this multimap.
 
 ### `values()`
 
-**Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
-
 Its iterator traverses the
  values for the first key, the values for the second key, and so on.
+
+**Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
 ### `createValues()`
 

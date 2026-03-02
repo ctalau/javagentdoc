@@ -16,7 +16,7 @@ The same as a CALS one, but also knows about the simple table.
 
 ## Methods
 
-### `getColSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int columnIndex)`
+### `getColSep(AuthorElement cellElement, int columnIndex)`
 
 Always return `true` for them.
 
@@ -26,7 +26,7 @@ Always return `true` for them.
 
 **Returns:** `boolean`
 
-### `getRowSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int columnIndex)`
+### `getRowSep(AuthorElement cellElement, int columnIndex)`
 
 Always return `true` for them.
 

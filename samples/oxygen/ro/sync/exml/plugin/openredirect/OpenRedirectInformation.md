@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(java.net.URL url, java.lang.String contentType)`
+### `<init>(URL url, String contentType)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to open

@@ -40,14 +40,14 @@
 
 ## Methods
 
-### `createRoomFromDocument(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0)`
+### `createRoomFromDocument(AuthorDocumentModel arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md))
 
 **Returns:** `java.lang.String`
 
-### `createRoomFromDocument(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0, ro.sync.ecss.extensions.api.webapp.ce.SaveStrategy arg1)`
+### `createRoomFromDocument(AuthorDocumentModel arg0, SaveStrategy arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md))
@@ -55,14 +55,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getRoom(java.lang.String arg0)`
+### `getRoom(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.webapp.ce.Room>`
 
-### `getRoomTryCreateProxy(java.lang.String arg0)`
+### `getRoomTryCreateProxy(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -81,7 +81,7 @@
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.webapp.ce.RoomFactory>`
 
-### `getRoomFactory(ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription arg0)`
+### `getRoomFactory(PluginDescriptor.PluginExtensionDescription arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription`)
@@ -96,21 +96,21 @@
 
 **Returns:** `java.util.Optional<ro.sync.g.e.h>`
 
-### `addRoomCreatedListener(ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener arg0)`
+### `addRoomCreatedListener(RoomCreatedListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener`](./RoomCreatedListener.md))
 
 **Returns:** `void`
 
-### `removeRoomCreatedListener(ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener arg0)`
+### `removeRoomCreatedListener(RoomCreatedListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.ce.RoomCreatedListener`](./RoomCreatedListener.md))
 
 **Returns:** `void`
 
-### `callRoomCreatedListeners(java.lang.String arg0)`
+### `callRoomCreatedListeners(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

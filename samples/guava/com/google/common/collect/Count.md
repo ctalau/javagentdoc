@@ -29,42 +29,42 @@
 
 ### `add(int delta)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `delta` (`int`)
+
+**Returns:** `void`
 
 ### `addAndGet(int delta)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `delta` (`int`)
 
+**Returns:** `int`
+
 ### `set(int newValue)`
+
+**Parameters:**
+- `newValue` (`int`)
 
 **Returns:** `void`
 
-**Parameters:**
-- `newValue` (`int`)
-
 ### `getAndSet(int newValue)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `newValue` (`int`)
+
+**Returns:** `int`
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `toString()`
 

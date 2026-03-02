@@ -62,7 +62,7 @@ Pairs key=value separated by new line.
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -74,7 +74,7 @@ Pairs key=value separated by new line.
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../api/ArgumentDescriptor.md)
 
-### `findElementsByXPath(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, java.lang.String xpath)`
+### `findElementsByXPath(AuthorDocumentController ctrl, String xpath)`
 
 **Parameters:**
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): The document controller.
@@ -82,7 +82,7 @@ Pairs key=value separated by new line.
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `setPseudoClassToElements(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> elements, java.lang.String pseudoClass)`
+### `setPseudoClassToElements(AuthorDocumentController ctrl, List<AuthorElement> elements, String pseudoClass)`
 
 **Parameters:**
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md))
@@ -91,7 +91,7 @@ Pairs key=value separated by new line.
 
 **Returns:** `void`
 
-### `removePseudoClassToElements(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> elements, java.lang.String pseudoClass)`
+### `removePseudoClassToElements(AuthorDocumentController ctrl, List<AuthorElement> elements, String pseudoClass)`
 
 **Parameters:**
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md))

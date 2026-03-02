@@ -21,7 +21,7 @@ Can be null if the author page does not have an associated document type.
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.Object>`
 
-### `invokeAuthorExtensionActionInContext(java.lang.Object action, int offset)`
+### `invokeAuthorExtensionActionInContext(Object action, int offset)`
 
 If the action is not an extension action, the method runs it without a context offset.
  The action will be invoked only if it is enabled in the execution context offset.

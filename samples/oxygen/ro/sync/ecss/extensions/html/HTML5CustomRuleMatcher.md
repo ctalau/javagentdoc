@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `matches(java.lang.String systemID, java.lang.String rootNamespace, java.lang.String rootLocalName, java.lang.String doctypePublicID, java.lang.String doctypeSystemID, org.xml.sax.Attributes rootAttributes, java.util.Map<java.lang.String,java.lang.String> queryParams, java.io.Reader contentReader)`
+### `matches(String systemID, String rootNamespace, String rootLocalName, String doctypePublicID, String doctypeSystemID, Attributes rootAttributes, Map<String,String> queryParams, Reader contentReader)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)

@@ -13,7 +13,7 @@ It should be implemented when the author extension being developed offers
 
 ## Methods
 
-### `getColSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int columnIndex)`
+### `getColSep(AuthorElement cellElement, int columnIndex)`
 
 Note that if the cell is the last from its row, the separator is not painted even if this
  method returns `true`.
@@ -25,7 +25,7 @@ Note that if the cell is the last from its row, the separator is not painted eve
 
 **Returns:** `boolean`
 
-### `getRowSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int columnIndex)`
+### `getRowSep(AuthorElement cellElement, int columnIndex)`
 
 Note that if the cell is on the last row, the separator is not painted 
  even if this method returns `true`.
@@ -37,7 +37,7 @@ Note that if the cell is on the last row, the separator is not painted
 
 **Returns:** `boolean`
 
-### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `init(AuthorElement tableElement)`
 
 Its intended
  to extract information from the element representing the table only once, not on every 

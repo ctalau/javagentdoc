@@ -277,9 +277,7 @@ It is also a format
 
 ## Methods
 
-### `toLowerCase(java.lang.String string)`
-
-**Returns:** `java.lang.String`
+### `toLowerCase(String string)`
 
 All other characters are copied without
  modification.
@@ -287,28 +285,28 @@ All other characters are copied without
 **Parameters:**
 - `string` (`java.lang.String`)
 
-### `toLowerCase(java.lang.CharSequence chars)`
-
 **Returns:** `java.lang.String`
+
+### `toLowerCase(CharSequence chars)`
 
 All other characters are copied
  without modification.
 
 **Parameters:**
 - `chars` (`java.lang.CharSequence`)
+
+**Returns:** `java.lang.String`
 
 ### `toLowerCase(char c)`
 
-**Returns:** `char`
-
 Otherwise returns the argument.
 
 **Parameters:**
 - `c` (`char`)
 
-### `toUpperCase(java.lang.String string)`
+**Returns:** `char`
 
-**Returns:** `java.lang.String`
+### `toUpperCase(String string)`
 
 All other characters are copied without
  modification.
@@ -316,9 +314,9 @@ All other characters are copied without
 **Parameters:**
 - `string` (`java.lang.String`)
 
-### `toUpperCase(java.lang.CharSequence chars)`
-
 **Returns:** `java.lang.String`
+
+### `toUpperCase(CharSequence chars)`
 
 All other characters are copied
  without modification.
@@ -326,38 +324,38 @@ All other characters are copied
 **Parameters:**
 - `chars` (`java.lang.CharSequence`)
 
-### `toUpperCase(char c)`
+**Returns:** `java.lang.String`
 
-**Returns:** `char`
+### `toUpperCase(char c)`
 
 Otherwise returns the argument.
 
 **Parameters:**
 - `c` (`char`)
 
-### `isLowerCase(char c)`
+**Returns:** `char`
 
-**Returns:** `boolean`
+### `isLowerCase(char c)`
 
 All others (including non-ASCII characters)
  return false.
 
 **Parameters:**
 - `c` (`char`)
+
+**Returns:** `boolean`
 
 ### `isUpperCase(char c)`
 
-**Returns:** `boolean`
-
 All others (including non-ASCII characters)
  return false.
 
 **Parameters:**
 - `c` (`char`)
 
-### `truncate(java.lang.CharSequence seq, int maxLength, java.lang.String truncationIndicator)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `truncate(CharSequence seq, int maxLength, String truncationIndicator)`
 
 If the length of the
  sequence is greater than maxLength, the returned string will be exactly 
@@ -398,9 +396,9 @@ Examples:
 - `maxLength` (`int`)
 - `truncationIndicator` (`java.lang.String`)
 
-### `equalsIgnoreCase(java.lang.CharSequence s1, java.lang.CharSequence s2)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `equalsIgnoreCase(CharSequence s1, CharSequence s2)`
 
 This method is significantly faster than String#equalsIgnoreCase and should be used
  in preference if at least one of the parameters is known to contain only ASCII characters.
@@ -424,13 +422,15 @@ due to case-folding of some non-ASCII characters (which does not occur in String
 - `s1` (`java.lang.CharSequence`)
 - `s2` (`java.lang.CharSequence`)
 
-### `getAlphaIndex(char c)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `getAlphaIndex(char c)`
 
 Ie,
  'a'/'A' returns 0 and 'z'/'Z' returns 25. Non-alpha characters return a value of 26 or greater.
 
 **Parameters:**
 - `c` (`char`)
+
+**Returns:** `int`
 

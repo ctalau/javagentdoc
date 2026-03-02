@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getRealPath(java.lang.String path)`
+### `getRealPath(String path)`
 
 For example, the path "/index.html" returns the absolute file path on the server's filesystem would be served by a request for "http://host/contextPath/index.html", where contextPath is the context path of this ServletContext..
  The real path returned will be in a form appropriate to the computer and operating system on which the servlet container is running, including the proper path separators. This method returns null if the servlet container cannot translate the virtual path to a real path for any reason (such as when the content is being made available from a .war archive).
@@ -26,7 +26,7 @@ The context path is the portion of the request URI that is used to select the co
 
 **Returns:** `java.lang.String`
 
-### `getAttribute(java.lang.String name)`
+### `getAttribute(String name)`
 
 An attribute allows a servlet container to give the servlet additional information not already provided by this
  interface. See your server documentation for information about its attributes. A list of supported attributes can be
@@ -52,7 +52,7 @@ Use the #getAttribute method with an attribute name to get the value of an attri
 
 **Returns:** `java.util.Enumeration<java.lang.String>`
 
-### `setAttribute(java.lang.String name, java.lang.Object object)`
+### `setAttribute(String name, Object object)`
 
 If the name specified is already used for an
  attribute, this method will replace the attribute with the new to the new attribute.
@@ -74,7 +74,7 @@ If the name specified is already used for an
 
 **Returns:** `void`
 
-### `removeAttribute(java.lang.String name)`
+### `removeAttribute(String name)`
 
 After removal, subsequent calls to
  #getAttribute to retrieve the attribute's value will return `null`.

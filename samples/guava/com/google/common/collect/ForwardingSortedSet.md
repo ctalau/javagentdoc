@@ -60,10 +60,10 @@ The standard methods and the collection views they return are not guaranteed to 
 
 ### `headSet(E toElement)`
 
-**Returns:** `java.util.SortedSet<E>`
-
 **Parameters:**
 - `toElement` (`E`)
+
+**Returns:** `java.util.SortedSet<E>`
 
 ### `last()`
 
@@ -71,22 +71,20 @@ The standard methods and the collection views they return are not guaranteed to 
 
 ### `subSet(E fromElement, E toElement)`
 
-**Returns:** `java.util.SortedSet<E>`
-
 **Parameters:**
 - `fromElement` (`E`)
 - `toElement` (`E`)
 
-### `tailSet(E fromElement)`
-
 **Returns:** `java.util.SortedSet<E>`
+
+### `tailSet(E fromElement)`
 
 **Parameters:**
 - `fromElement` (`E`)
 
-### `standardContains(java.lang.Object object)`
+**Returns:** `java.util.SortedSet<E>`
 
-**Returns:** `boolean`
+### `standardContains(Object object)`
 
 If you override #tailSet, you may wish to override #contains to
  forward to this implementation.
@@ -94,9 +92,9 @@ If you override #tailSet, you may wish to override #contains to
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardRemove(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `standardRemove(Object object)`
 
 If you override #tailSet, you may wish to override #remove to
  forward to this implementation.
@@ -104,9 +102,9 @@ If you override #tailSet, you may wish to override #remove to
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardSubSet(E fromElement, E toElement)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.SortedSet<E>`
+### `standardSubSet(E fromElement, E toElement)`
 
 In some situations, you may wish to override
  #subSet(Object, Object) to forward to this implementation.
@@ -114,4 +112,6 @@ In some situations, you may wish to override
 **Parameters:**
 - `fromElement` (`E`)
 - `toElement` (`E`)
+
+**Returns:** `java.util.SortedSet<E>`
 

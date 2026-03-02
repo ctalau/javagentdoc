@@ -14,7 +14,7 @@ The document plugin can be called from the contextual menu.
 
 ## Methods
 
-### `process(ro.sync.exml.plugin.document.DocumentPluginContext context)`
+### `process(DocumentPluginContext context)`
 
 It receives the current context and it should
  return the processed content.

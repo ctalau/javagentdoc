@@ -22,13 +22,13 @@
 
 ## Constructors
 
-### `<init>(ro.sync.merge.MergeResult.ResultType resultType, java.lang.String mergedString)`
+### `<init>(MergeResult.ResultType resultType, String mergedString)`
 
 **Parameters:**
 - `resultType` (`ro.sync.merge.MergeResult.ResultType`): The type of the merge result.
 - `mergedString` (`java.lang.String`): The merged string.
 
-### `<init>(ro.sync.merge.MergeResult.ResultType resultType, java.lang.String mergedString, java.lang.Boolean mergingOccurred)`
+### `<init>(MergeResult.ResultType resultType, String mergedString, Boolean mergingOccurred)`
 
 **Parameters:**
 - `resultType` (`ro.sync.merge.MergeResult.ResultType`): The type of the merge result.
@@ -48,7 +48,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setMergedString(java.lang.String mergedString)`
+### `setMergedString(String mergedString)`
 
 **Parameters:**
 - `mergedString` (`java.lang.String`): The new merged string.
@@ -59,7 +59,7 @@
 
 **Returns:** `ro.sync.merge.MergeResult.ResultType`
 
-### `setResultType(ro.sync.merge.MergeResult.ResultType result)`
+### `setResultType(MergeResult.ResultType result)`
 
 **Parameters:**
 - `result` (`ro.sync.merge.MergeResult.ResultType`): The new value of the result type.

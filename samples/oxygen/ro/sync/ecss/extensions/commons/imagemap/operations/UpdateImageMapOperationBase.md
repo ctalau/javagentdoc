@@ -32,7 +32,7 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -40,28 +40,28 @@
 
 **Returns:** `void`
 
-### `getImageMapElement(ro.sync.ecss.extensions.api.node.AuthorElement currentElement)`
+### `getImageMapElement(AuthorElement currentElement)`
 
 **Parameters:**
 - `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The current element.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `getNewShapesList(java.lang.String svgText)`
+### `getNewShapesList(String svgText)`
 
 **Parameters:**
 - `svgText` (`java.lang.String`): The SVG text.
 
 **Returns:** `java.util.List<? extends ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor>`
 
-### `getExistingShapesList(ro.sync.ecss.extensions.api.node.AuthorElement existingImageMap)`
+### `getExistingShapesList(AuthorElement existingImageMap)`
 
 **Parameters:**
 - `existingImageMap` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The existing Image Map.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../../api/node/AuthorElement.md)
 
-### `mergeImageMaps(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.node.AuthorElement currentImageMap, java.util.List<? extends ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor> newShapeElements)`
+### `mergeImageMaps(AuthorDocumentController controller, AuthorElement currentImageMap, List<? extends NewShapeDescriptor> newShapeElements)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): The document controller.
@@ -70,7 +70,7 @@
 
 **Returns:** `void`
 
-### `getXmlForNewShape(ro.sync.ecss.extensions.api.AuthorDocumentController controller, java.util.Map<java.lang.Integer,ro.sync.ecss.extensions.api.node.AuthorElement> shapeElements, ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor newShapeElement)`
+### `getXmlForNewShape(AuthorDocumentController controller, Map<Integer,AuthorElement> shapeElements, NewShapeDescriptor newShapeElement)`
 
 It tries to inherit some XML attributes (for example the links) from the current document.
 
@@ -81,14 +81,14 @@ It tries to inherit some XML attributes (for example the links) from the current
 
 **Returns:** `java.lang.String`
 
-### `getShapesMap(ro.sync.ecss.extensions.api.node.AuthorElement[] imageMapElements)`
+### `getShapesMap(AuthorElement[] imageMapElements)`
 
 **Parameters:**
 - `imageMapElements` ([`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../../api/node/AuthorElement.md)): The image map elements.
 
 **Returns:** `java.util.Map<java.lang.Integer,ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `getNodeToReplace(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.access.AuthorEditorAccess editorAccess, int caretOffset)`
+### `getNodeToReplace(AuthorDocumentController controller, AuthorEditorAccess editorAccess, int caretOffset)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): The document controller.

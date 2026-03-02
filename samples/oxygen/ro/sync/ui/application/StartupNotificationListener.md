@@ -18,14 +18,14 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ui.application.b arg0)`
+### `<init>(b arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ui.application.b`)
 
 ## Methods
 
-### `startupPerformed(java.lang.String arg0)`
+### `startupPerformed(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

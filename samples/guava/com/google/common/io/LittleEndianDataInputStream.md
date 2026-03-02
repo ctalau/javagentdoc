@@ -15,7 +15,7 @@
 
 ## Constructors
 
-### `<init>(java.io.InputStream in)`
+### `<init>(InputStream in)`
 
 **Parameters:**
 - `in` (`java.io.InputStream`): the stream to delegate to
@@ -28,26 +28,26 @@
 
 ### `readFully(byte[] b)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `b` (`byte[]`)
 
-### `readFully(byte[] b, int off, int len)`
-
 **Returns:** `void`
+
+### `readFully(byte[] b, int off, int len)`
 
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `skipBytes(int n)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `skipBytes(int n)`
 
 **Parameters:**
 - `n` (`int`)
+
+**Returns:** `int`
 
 ### `readUnsignedByte()`
 

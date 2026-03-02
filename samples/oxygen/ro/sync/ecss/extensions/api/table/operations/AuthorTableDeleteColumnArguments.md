@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> columnCellsIntervals)`
+### `<init>(AuthorAccess authorAccess, List<ContentInterval> columnCellsIntervals)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.

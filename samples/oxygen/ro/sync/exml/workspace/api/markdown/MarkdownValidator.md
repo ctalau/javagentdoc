@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `validate(java.lang.String systemID, java.io.Reader documentReader)`
+### `validate(String systemID, Reader documentReader)`
 
 Note: The validator may check the existence of external resources (e.g. images) 
  referred in the document with relative URLs. The given system ID in this case 

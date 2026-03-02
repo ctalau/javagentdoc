@@ -21,7 +21,7 @@ Behavior is undefined for
 
 ## Constructors
 
-### `<init>(com.google.common.base.CharMatcher wordBoundary, java.lang.String wordSeparator)`
+### `<init>(CharMatcher wordBoundary, String wordSeparator)`
 
 **Parameters:**
 - `wordBoundary` ([`com.google.common.base.CharMatcher`](./CharMatcher.md))
@@ -33,16 +33,14 @@ Behavior is undefined for
 
 **Returns:** [`com.google.common.base.CaseFormat[]`](./CaseFormat.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.base.CaseFormat`](./CaseFormat.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
-### `to(com.google.common.base.CaseFormat format, java.lang.String str)`
+**Returns:** [`com.google.common.base.CaseFormat`](./CaseFormat.md)
 
-**Returns:** `java.lang.String`
+### `to(CaseFormat format, String str)`
 
 A
  "best effort" approach is taken; if str does not conform to the assumed format, then
@@ -52,39 +50,41 @@ A
 - `format` ([`com.google.common.base.CaseFormat`](./CaseFormat.md))
 - `str` (`java.lang.String`)
 
-### `convert(com.google.common.base.CaseFormat format, java.lang.String s)`
-
 **Returns:** `java.lang.String`
+
+### `convert(CaseFormat format, String s)`
 
 **Parameters:**
 - `format` ([`com.google.common.base.CaseFormat`](./CaseFormat.md))
 - `s` (`java.lang.String`)
 
-### `converterTo(com.google.common.base.CaseFormat targetFormat)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.String>`](./Converter.md)
+### `converterTo(CaseFormat targetFormat)`
 
 **Parameters:**
 - `targetFormat` ([`com.google.common.base.CaseFormat`](./CaseFormat.md))
 
-### `normalizeWord(java.lang.String word)`
+**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.String>`](./Converter.md)
 
-**Returns:** `java.lang.String`
-
-**Parameters:**
-- `word` (`java.lang.String`)
-
-### `normalizeFirstWord(java.lang.String word)`
-
-**Returns:** `java.lang.String`
+### `normalizeWord(String word)`
 
 **Parameters:**
 - `word` (`java.lang.String`)
 
-### `firstCharOnlyToUpper(java.lang.String word)`
-
 **Returns:** `java.lang.String`
+
+### `normalizeFirstWord(String word)`
 
 **Parameters:**
 - `word` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
+
+### `firstCharOnlyToUpper(String word)`
+
+**Parameters:**
+- `word` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 

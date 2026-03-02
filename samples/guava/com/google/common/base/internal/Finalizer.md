@@ -60,7 +60,7 @@ com.google.common.base.FinalizableReferenceQueue loads this class in its own cla
 
 ## Constructors
 
-### `<init>(java.lang.Class<?> finalizableReferenceClass, java.lang.ref.ReferenceQueue<java.lang.Object> queue, java.lang.ref.PhantomReference<java.lang.Object> frqReference)`
+### `<init>(Class<?> finalizableReferenceClass, ReferenceQueue<Object> queue, PhantomReference<Object> frqReference)`
 
 **Parameters:**
 - `finalizableReferenceClass` (`java.lang.Class<?>`)
@@ -69,9 +69,7 @@ com.google.common.base.FinalizableReferenceQueue loads this class in its own cla
 
 ## Methods
 
-### `startFinalizer(java.lang.Class<?> finalizableReferenceClass, java.lang.ref.ReferenceQueue<java.lang.Object> queue, java.lang.ref.PhantomReference<java.lang.Object> frqReference)`
-
-**Returns:** `void`
+### `startFinalizer(Class<?> finalizableReferenceClass, ReferenceQueue<Object> queue, PhantomReference<Object> frqReference)`
 
 FinalizableReferenceQueue calls this method reflectively.
 
@@ -79,16 +77,16 @@ FinalizableReferenceQueue calls this method reflectively.
 - `finalizableReferenceClass` (`java.lang.Class<?>`): FinalizableReference.class.
 - `queue` (`java.lang.ref.ReferenceQueue<java.lang.Object>`): a reference queue that the thread will poll.
 - `frqReference` (`java.lang.ref.PhantomReference<java.lang.Object>`): a phantom reference to the FinalizableReferenceQueue, which will be queued
-     either when the FinalizableReferenceQueue is no longer referenced anywhere, or when its
-     close() method is called.
+       either when the FinalizableReferenceQueue is no longer referenced anywhere, or when its
+       close() method is called.
+
+**Returns:** `void`
 
 ### `run()`
 
 **Returns:** `void`
 
-### `cleanUp(java.lang.ref.Reference<?> firstReference)`
-
-**Returns:** `boolean`
+### `cleanUp(Reference<?> firstReference)`
 
 Catches and logs
  all throwables.
@@ -96,15 +94,17 @@ Catches and logs
 **Parameters:**
 - `firstReference` (`java.lang.ref.Reference<?>`)
 
-### `finalizeReference(java.lang.ref.Reference<?> reference, java.lang.reflect.Method finalizeReferentMethod)`
-
 **Returns:** `boolean`
+
+### `finalizeReference(Reference<?> reference, Method finalizeReferentMethod)`
 
 Catches and logs all throwables.
 
 **Parameters:**
 - `reference` (`java.lang.ref.Reference<?>`)
 - `finalizeReferentMethod` (`java.lang.reflect.Method`)
+
+**Returns:** `boolean`
 
 ### `getFinalizeReferentMethod()`
 

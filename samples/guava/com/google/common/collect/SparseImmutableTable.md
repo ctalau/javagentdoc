@@ -38,7 +38,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>> cellList, com.google.common.collect.ImmutableSet<R> rowSpace, com.google.common.collect.ImmutableSet<C> columnSpace)`
+### `<init>(ImmutableList<Table.Cell<R,C,V>> cellList, ImmutableSet<R> rowSpace, ImmutableSet<C> columnSpace)`
 
 **Parameters:**
 - `cellList` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList.md))
@@ -61,17 +61,17 @@
 
 ### `getCell(int index)`
 
-**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
 
 ### `getValue(int index)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `V`
 
 ### `writeReplace()`
 

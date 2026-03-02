@@ -26,14 +26,14 @@ May be prefixed with key scopes.
 
 ## Constructors
 
-### `<init>(java.lang.String link)`
+### `<init>(String link)`
 
 **Parameters:**
 - `link` (`java.lang.String`): The link used to identify the element.
 
 ## Methods
 
-### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
+### `endElement(String uri, String localName, String name)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -42,7 +42,7 @@ May be prefixed with key scopes.
 
 **Returns:** `void`
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `startElement(String uri, String localName, String name, Attr[] atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -52,7 +52,7 @@ May be prefixed with key scopes.
 
 **Returns:** `boolean`
 
-### `getAttributeValues(ro.sync.ecss.extensions.api.link.Attr[] atts, java.lang.String attrName)`
+### `getAttributeValues(Attr[] atts, String attrName)`
 
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.

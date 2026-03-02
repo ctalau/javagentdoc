@@ -34,17 +34,15 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ### `of()`
 
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
-
 This list behaves and performs comparably to Collections#emptyList, and is preferable mainly for consistency and maintainability of your
  code.
 
  
 **Performance note:** the instance returned is a singleton.
 
-### `of(E element)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E element)`
 
 This list behaves and performs
  comparably to Collections#singletonList, but will not accept a null element. It is
@@ -53,26 +51,26 @@ This list behaves and performs
 **Parameters:**
 - `element` (`E`)
 
-### `of(E e1, E e2)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2)`
 
 **Parameters:**
 - `e1` (`E`)
 - `e2` (`E`)
 
-### `of(E e1, E e2, E e3)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3)`
 
 **Parameters:**
 - `e1` (`E`)
 - `e2` (`E`)
 - `e3` (`E`)
 
-### `of(E e1, E e2, E e3, E e4)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -80,9 +78,9 @@ This list behaves and performs
 - `e3` (`E`)
 - `e4` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -91,9 +89,9 @@ This list behaves and performs
 - `e4` (`E`)
 - `e5` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -103,9 +101,9 @@ This list behaves and performs
 - `e5` (`E`)
 - `e6` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -116,9 +114,9 @@ This list behaves and performs
 - `e6` (`E`)
 - `e7` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -130,9 +128,9 @@ This list behaves and performs
 - `e7` (`E`)
 - `e8` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -145,9 +143,9 @@ This list behaves and performs
 - `e8` (`E`)
 - `e9` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -161,9 +159,9 @@ This list behaves and performs
 - `e9` (`E`)
 - `e10` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11)`
 
 **Parameters:**
 - `e1` (`E`)
@@ -178,9 +176,9 @@ This list behaves and performs
 - `e10` (`E`)
 - `e11` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11, E e12, E[] others)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E e7, E e8, E e9, E e10, E e11, E e12, E[] others)`
 
 The array others must not be longer than Integer.MAX_VALUE - 12.
 
@@ -199,9 +197,9 @@ The array others must not be longer than Integer.MAX_VALUE - 12.
 - `e12` (`E`)
 - `others` (`E[]`)
 
-### `copyOf(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `copyOf(Iterable<? extends E> elements)`
 
 If elements is a
  Collection, this method behaves exactly as #copyOf(Collection); otherwise, it
@@ -210,9 +208,9 @@ If elements is a
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `copyOf(java.util.Collection<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `copyOf(Collection<? extends E> elements)`
 
 Despite the method name, this method attempts to avoid actually copying the data when it is
  safe to do so. The exact circumstances under which a copy will or will not be performed are
@@ -231,23 +229,23 @@ This method is safe to use even when elements is a synchronized or concurrent
 **Parameters:**
 - `elements` (`java.util.Collection<? extends E>`)
 
-### `copyOf(java.util.Iterator<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `copyOf(Iterator<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.util.Iterator<? extends E>`)
 
-### `copyOf(E[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `copyOf(E[] elements)`
 
 **Parameters:**
 - `elements` (`E[]`)
 
-### `sortedCopyOf(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `sortedCopyOf(Iterable<? extends E> elements)`
 
 The sorting algorithm used is stable, so elements that compare as equal will stay in the
  order in which they appear in the input.
@@ -264,9 +262,9 @@ If your data has no duplicates, or you wish to deduplicate elements, use
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `sortedCopyOf(java.util.Comparator<? super E> comparator, java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `sortedCopyOf(Comparator<? super E> comparator, Iterable<? extends E> elements)`
 
 The sorting algorithm used is stable, so elements that compare as equal
  will stay in the order in which they appear in the input.
@@ -284,18 +282,18 @@ If your data has no duplicates, or you wish to deduplicate elements, use
 - `comparator` (`java.util.Comparator<? super E>`)
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `construct(java.lang.Object[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `construct(Object[] elements)`
 
 Checks for nulls; does not copy.
 
 **Parameters:**
 - `elements` (`java.lang.Object[]`)
 
-### `asImmutableList(java.lang.Object[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `asImmutableList(Object[] elements)`
 
 Does not check for nulls; does not copy.
 
@@ -305,9 +303,9 @@ The array must be internally created.
 **Parameters:**
 - `elements` (`java.lang.Object[]`)
 
-### `asImmutableList(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] elements, int length)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `asImmutableList(lang@Nullable Object[] elements, int length)`
 
 Copies if the specified range does not cover the complete
  array. Does not check for nulls.
@@ -315,6 +313,8 @@ Copies if the specified range does not cover the complete
 **Parameters:**
 - `elements` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `length` (`int`)
+
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
 ### `iterator()`
 
@@ -326,42 +326,40 @@ Copies if the specified range does not cover the complete
 
 ### `listIterator(int index)`
 
-**Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
-
 **Parameters:**
 - `index` (`int`)
 
-### `forEach(java.util.function.Consumer<? super E> consumer)`
+**Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
 
-**Returns:** `void`
+### `forEach(Consumer<? super E> consumer)`
 
 **Parameters:**
 - `consumer` (`java.util.function.Consumer<? super E>`)
 
-### `indexOf(java.lang.Object object)`
+**Returns:** `void`
 
-**Returns:** `int`
-
-**Parameters:**
-- `object` (`java.lang.Object`)
-
-### `lastIndexOf(java.lang.Object object)`
-
-**Returns:** `int`
+### `indexOf(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `contains(java.lang.Object object)`
+**Returns:** `int`
+
+### `lastIndexOf(Object object)`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
+
+**Returns:** `int`
+
+### `contains(Object object)`
+
+**Parameters:**
+- `object` (`java.lang.Object`)
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `object` (`java.lang.Object`)
-
 ### `subList(int fromIndex, int toIndex)`
-
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
 (If fromIndex and toIndex are equal, the empty
  immutable list is returned.)
@@ -377,58 +375,60 @@ Copies if the specified range does not cover the complete
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `subListUnchecked(int fromIndex, int toIndex)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+
+### `subListUnchecked(int fromIndex, int toIndex)`
 
 **Parameters:**
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `addAll(int index, java.util.Collection<? extends E> newElements)`
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
-**Returns:** `boolean`
+### `addAll(int index, Collection<? extends E> newElements)`
 
 **Parameters:**
 - `index` (`int`)
 - `newElements` (`java.util.Collection<? extends E>`)
 
-### `set(int index, E element)`
+**Returns:** `boolean`
 
-**Returns:** `E`
+### `set(int index, E element)`
 
 **Parameters:**
 - `index` (`int`)
 - `element` (`E`)
+
+**Returns:** `E`
 
 ### `add(int index, E element)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `index` (`int`)
 - `element` (`E`)
 
-### `remove(int index)`
+**Returns:** `void`
 
-**Returns:** `E`
+### `remove(int index)`
 
 **Parameters:**
 - `index` (`int`)
 
-### `replaceAll(java.util.function.UnaryOperator<E> operator)`
+**Returns:** `E`
 
-**Returns:** `void`
+### `replaceAll(UnaryOperator<E> operator)`
 
 **Parameters:**
 - `operator` (`java.util.function.UnaryOperator<E>`)
 
-### `sort(java.util.@org.checkerframework.checker.nullness.qual.Nullable Comparator<? super E> c)`
-
 **Returns:** `void`
+
+### `sort(util@Nullable Comparator<? super E> c)`
 
 **Parameters:**
 - `c` (`java.util.@org.checkerframework.checker.nullness.qual.Nullable Comparator<? super E>`)
+
+**Returns:** `void`
 
 ### `asList()`
 
@@ -438,38 +438,38 @@ Copies if the specified range does not cover the complete
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
-
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
 
-### `reverse()`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
+### `reverse()`
 
 For example, ImmutableList.of(1,
  2, 3).reverse() is equivalent to ImmutableList.of(3, 2, 1).
 
-### `equals(java.lang.Object obj)`
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 
 ### `writeReplace()`
 
@@ -477,13 +477,11 @@ For example, ImmutableList.of(1,
 
 ### `builder()`
 
-**Returns:** `com.google.common.collect.ImmutableList.Builder<E>`
-
 The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `builderWithExpectedSize(int expectedSize)`
-
 **Returns:** `com.google.common.collect.ImmutableList.Builder<E>`
+
+### `builderWithExpectedSize(int expectedSize)`
 
 If expectedSize is exactly the number of elements added to the builder before Builder#build is called, the builder is likely to perform better than an unsized #builder() would have.
 
@@ -493,4 +491,6 @@ It is not specified if any performance benefits apply if expectedSize is close t
 
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `com.google.common.collect.ImmutableList.Builder<E>`
 

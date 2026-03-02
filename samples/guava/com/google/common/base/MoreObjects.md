@@ -17,8 +17,6 @@ See the Guava User Guide on [writing Object
 
 ### `firstNonNull(T first, T second)`
 
-**Returns:** `T`
-
 To find the first non-null element in an iterable, use Iterables.find(iterable,
  Predicates.notNull()). For varargs, use Iterables.find(Arrays.asList(a, b, c, ...),
  Predicates.notNull()), static importing as necessary.
@@ -36,9 +34,9 @@ To find the first non-null element in an iterable, use Iterables.find(iterable,
 - `first` (`T`)
 - `second` (`T`)
 
-### `toStringHelper(java.lang.Object self)`
+**Returns:** `T`
 
-**Returns:** `com.google.common.base.MoreObjects.ToStringHelper`
+### `toStringHelper(Object self)`
 
 This is helpful for implementing Object#toString(). Specification by example:
 
@@ -81,21 +79,23 @@ Note that in GWT, class names are often obfuscated.
 
 **Parameters:**
 - `self` (`java.lang.Object`): the object to generate the string for (typically this), used only for its
-     class name
-
-### `toStringHelper(java.lang.Class<?> clazz)`
+       class name
 
 **Returns:** `com.google.common.base.MoreObjects.ToStringHelper`
+
+### `toStringHelper(Class<?> clazz)`
 
 Note that in GWT, class names are often obfuscated.
 
 **Parameters:**
 - `clazz` (`java.lang.Class<?>`): the Class of the instance
 
-### `toStringHelper(java.lang.String className)`
-
 **Returns:** `com.google.common.base.MoreObjects.ToStringHelper`
+
+### `toStringHelper(String className)`
 
 **Parameters:**
 - `className` (`java.lang.String`): the name of the instance type
+
+**Returns:** `com.google.common.base.MoreObjects.ToStringHelper`
 

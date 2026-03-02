@@ -645,7 +645,7 @@ This is not yet registered with the IANA, but it is specified
 
 ## Constructors
 
-### `<init>(java.lang.String type, java.lang.String subtype, com.google.common.collect.ImmutableListMultimap<java.lang.String,java.lang.String> parameters)`
+### `<init>(String type, String subtype, ImmutableListMultimap<String,String> parameters)`
 
 **Parameters:**
 - `type` (`java.lang.String`)
@@ -654,40 +654,40 @@ This is not yet registered with the IANA, but it is specified
 
 ## Methods
 
-### `createConstant(java.lang.String type, java.lang.String subtype)`
-
-**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+### `createConstant(String type, String subtype)`
 
 **Parameters:**
 - `type` (`java.lang.String`)
 - `subtype` (`java.lang.String`)
 
-### `createConstantUtf8(java.lang.String type, java.lang.String subtype)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `createConstantUtf8(String type, String subtype)`
 
 **Parameters:**
 - `type` (`java.lang.String`)
 - `subtype` (`java.lang.String`)
 
-### `addKnownType(com.google.common.net.MediaType mediaType)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `addKnownType(MediaType mediaType)`
 
 **Parameters:**
 - `mediaType` ([`com.google.common.net.MediaType`](./MediaType.md))
 
-### `type()`
+**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
 
-**Returns:** `java.lang.String`
+### `type()`
 
 For example, "text" in "text/plain".
 
-### `subtype()`
-
 **Returns:** `java.lang.String`
 
+### `subtype()`
+
 For example, "plain" in "text/plain".
+
+**Returns:** `java.lang.String`
 
 ### `parameters()`
 
@@ -705,16 +705,14 @@ For example, "plain" in "text/plain".
 
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
 
-### `withParameters(com.google.common.collect.Multimap<java.lang.String,java.lang.String> parameters)`
-
-**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+### `withParameters(Multimap<String,String> parameters)`
 
 **Parameters:**
 - `parameters` ([`com.google.common.collect.Multimap<java.lang.String,java.lang.String>`](../collect/Multimap.md))
 
-### `withParameters(java.lang.String attribute, java.lang.Iterable<java.lang.String> values)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `withParameters(String attribute, Iterable<String> values)`
 
 If there are no values, any existing parameters with the given attribute are removed.
 
@@ -722,9 +720,9 @@ If there are no values, any existing parameters with the given attribute are rem
 - `attribute` (`java.lang.String`)
 - `values` (`java.lang.Iterable<java.lang.String>`)
 
-### `withParameter(java.lang.String attribute, java.lang.String value)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `withParameter(String attribute, String value)`
 
 If multiple parameters with the same attributes are necessary use #withParameters(String, Iterable). Prefer #withCharset for setting the charset
  parameter when using a Charset object.
@@ -733,9 +731,9 @@ If multiple parameters with the same attributes are necessary use #withParameter
 - `attribute` (`java.lang.String`)
 - `value` (`java.lang.String`)
 
-### `withCharset(java.nio.charset.Charset charset)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `withCharset(Charset charset)`
 
 Only one 
  charset parameter will be present on the new instance regardless of the number set on this
@@ -748,13 +746,13 @@ If a charset must be specified that is not supported on this JVM (and thus is no
 **Parameters:**
 - `charset` (`java.nio.charset.Charset`)
 
+**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
 ### `hasWildcard()`
 
 **Returns:** `boolean`
 
-### `is(com.google.common.net.MediaType mediaTypeRange)`
-
-**Returns:** `boolean`
+### `is(MediaType mediaTypeRange)`
 
 - The subtype of the argument is the wildcard or equal to the subtype of this instance.
    - All of the parameters present in the argument are present in this instance.
@@ -789,101 +787,103 @@ Note that while it is possible to have the same parameter declared multiple time
 **Parameters:**
 - `mediaTypeRange` ([`com.google.common.net.MediaType`](./MediaType.md))
 
-### `create(java.lang.String type, java.lang.String subtype)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+### `create(String type, String subtype)`
 
 **Parameters:**
 - `type` (`java.lang.String`)
 - `subtype` (`java.lang.String`)
 
-### `create(java.lang.String type, java.lang.String subtype, com.google.common.collect.Multimap<java.lang.String,java.lang.String> parameters)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `create(String type, String subtype, Multimap<String,String> parameters)`
 
 **Parameters:**
 - `type` (`java.lang.String`)
 - `subtype` (`java.lang.String`)
 - `parameters` ([`com.google.common.collect.Multimap<java.lang.String,java.lang.String>`](../collect/Multimap.md))
 
-### `createApplicationType(java.lang.String subtype)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `createApplicationType(String subtype)`
 
 **Parameters:**
 - `subtype` (`java.lang.String`)
 
-### `createAudioType(java.lang.String subtype)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `createAudioType(String subtype)`
 
 **Parameters:**
 - `subtype` (`java.lang.String`)
 
-### `createFontType(java.lang.String subtype)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `createFontType(String subtype)`
 
 **Parameters:**
 - `subtype` (`java.lang.String`)
 
-### `createImageType(java.lang.String subtype)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `createImageType(String subtype)`
 
 **Parameters:**
 - `subtype` (`java.lang.String`)
 
-### `createTextType(java.lang.String subtype)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `createTextType(String subtype)`
 
 **Parameters:**
 - `subtype` (`java.lang.String`)
 
-### `createVideoType(java.lang.String subtype)`
-
 **Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+
+### `createVideoType(String subtype)`
 
 **Parameters:**
 - `subtype` (`java.lang.String`)
 
-### `normalizeToken(java.lang.String token)`
+**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
 
-**Returns:** `java.lang.String`
+### `normalizeToken(String token)`
 
 **Parameters:**
 - `token` (`java.lang.String`)
 
-### `normalizeParameterValue(java.lang.String attribute, java.lang.String value)`
-
 **Returns:** `java.lang.String`
+
+### `normalizeParameterValue(String attribute, String value)`
 
 **Parameters:**
 - `attribute` (`java.lang.String`)
 - `value` (`java.lang.String`)
 
-### `parse(java.lang.String input)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
+### `parse(String input)`
 
 **Parameters:**
 - `input` (`java.lang.String`)
 
-### `consumeSeparator(com.google.common.net.MediaType.Tokenizer tokenizer, char c)`
+**Returns:** [`com.google.common.net.MediaType`](./MediaType.md)
 
-**Returns:** `void`
+### `consumeSeparator(MediaType.Tokenizer tokenizer, char c)`
 
 **Parameters:**
 - `tokenizer` (`com.google.common.net.MediaType.Tokenizer`)
 - `c` (`char`)
 
-### `equals(java.lang.Object obj)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -897,10 +897,10 @@ Note that while it is possible to have the same parameter declared multiple time
 
 **Returns:** `java.lang.String`
 
-### `escapeAndQuote(java.lang.String value)`
-
-**Returns:** `java.lang.String`
+### `escapeAndQuote(String value)`
 
 **Parameters:**
 - `value` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 

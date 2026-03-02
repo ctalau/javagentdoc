@@ -13,7 +13,7 @@ It should be implemented when the author extension being developed offers
 
 ## Methods
 
-### `getColSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getColSpan(AuthorElement cellElement)`
 
 For example, for the DocBook CALS tables the number of columns the cell spans across
  is computed by looking at the `spanspec` attribute. In case the `spanspec` 
@@ -24,7 +24,7 @@ For example, for the DocBook CALS tables the number of columns the cell spans ac
 
 **Returns:** `java.lang.Integer`
 
-### `getRowSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getRowSpan(AuthorElement cellElement)`
 
 For example, for the DocBook CALS tables this value is computed
  by looking at the `morerows` attribute.
@@ -34,7 +34,7 @@ For example, for the DocBook CALS tables this value is computed
 
 **Returns:** `java.lang.Integer`
 
-### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `init(AuthorElement tableElement)`
 
 Its intended
  to extract information from the element representing the table only once, not on every 
@@ -50,7 +50,7 @@ Its intended
 
 **Returns:** `void`
 
-### `hasColumnSpecifications(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `hasColumnSpecifications(AuthorElement tableElement)`
 
 For example the 
  CALS table model requires `colspec` elements to be present.

@@ -26,11 +26,11 @@
 
 ## Constructors
 
-### `<init>(com.google.common.eventbus.EventBus eventBus, java.lang.Object event, java.lang.Object subscriber, java.lang.reflect.Method subscriberMethod)`
+### `<init>(EventBus eventBus, Object event, Object subscriber, Method subscriberMethod)`
 
 **Parameters:**
 - `eventBus` ([`com.google.common.eventbus.EventBus`](./EventBus.md)): The EventBus that handled the event and the subscriber. Useful for
-     broadcasting a new event based on the error.
+       broadcasting a new event based on the error.
 - `event` (`java.lang.Object`): The event object that caused the subscriber to throw.
 - `subscriber` (`java.lang.Object`): The source subscriber context.
 - `subscriberMethod` (`java.lang.reflect.Method`): the subscribed method.

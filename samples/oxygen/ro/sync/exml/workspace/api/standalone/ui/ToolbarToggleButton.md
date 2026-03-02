@@ -8,18 +8,18 @@
 
 ## Constructors
 
-### `<init>(javax.swing.Action arg0)`
+### `<init>(Action arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
 
-### `<init>(javax.swing.Action arg0, boolean arg1)`
+### `<init>(Action arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
 - `arg1` (`boolean`)
 
-### `<init>(javax.swing.Icon arg0)`
+### `<init>(Icon arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Icon`)

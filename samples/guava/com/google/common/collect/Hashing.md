@@ -28,32 +28,32 @@
 
 ### `smear(int hashCode)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `hashCode` (`int`)
 
-### `smearedHash(java.lang.Object o)`
-
 **Returns:** `int`
+
+### `smearedHash(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
 
-### `closedTableSize(int expectedEntries, double loadFactor)`
-
 **Returns:** `int`
+
+### `closedTableSize(int expectedEntries, double loadFactor)`
 
 **Parameters:**
 - `expectedEntries` (`int`)
 - `loadFactor` (`double`)
 
-### `needsResizing(int size, int tableSize, double loadFactor)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `needsResizing(int size, int tableSize, double loadFactor)`
 
 **Parameters:**
 - `size` (`int`)
 - `tableSize` (`int`)
 - `loadFactor` (`double`)
+
+**Returns:** `boolean`
 

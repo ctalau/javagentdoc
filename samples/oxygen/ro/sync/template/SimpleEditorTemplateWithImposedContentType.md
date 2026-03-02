@@ -18,7 +18,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4)`
+### `<init>(String arg0, String arg1, String arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

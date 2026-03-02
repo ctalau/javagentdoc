@@ -32,7 +32,7 @@
 
 ## Constructors
 
-### `<init>(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
+### `<init>(List<DocumentPositionedInfo> arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
@@ -40,7 +40,7 @@
 
 ## Methods
 
-### `addValidationProblems(ro.sync.exml.workspace.api.editor.validation.ValidationProblems arg0)`
+### `addValidationProblems(ValidationProblems arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblems`](./ValidationProblems.md))
@@ -51,7 +51,7 @@
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `setProblemsList(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
+### `setProblemsList(List<DocumentPositionedInfo> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)

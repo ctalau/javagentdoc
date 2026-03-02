@@ -22,9 +22,7 @@
 
 ## Methods
 
-### `add(java.util.Map<java.lang.Class<?>,java.lang.Class<?>> forward, java.util.Map<java.lang.Class<?>,java.lang.Class<?>> backward, java.lang.Class<?> key, java.lang.Class<?> value)`
-
-**Returns:** `void`
+### `add(Map<Class<?>,Class<?>> forward, Map<Class<?>,Class<?>> backward, Class<?> key, Class<?> value)`
 
 **Parameters:**
 - `forward` (`java.util.Map<java.lang.Class<?>,java.lang.Class<?>>`)
@@ -32,27 +30,27 @@
 - `key` (`java.lang.Class<?>`)
 - `value` (`java.lang.Class<?>`)
 
-### `allPrimitiveTypes()`
+**Returns:** `void`
 
-**Returns:** `java.util.Set<java.lang.Class<?>>`
+### `allPrimitiveTypes()`
 
 Note that a
  simpler way to test whether a Class instance is a member of this set is to call Class#isPrimitive.
+
+**Returns:** `java.util.Set<java.lang.Class<?>>`
 
 ### `allWrapperTypes()`
 
 **Returns:** `java.util.Set<java.lang.Class<?>>`
 
-### `isWrapperType(java.lang.Class<?> type)`
-
-**Returns:** `boolean`
+### `isWrapperType(Class<?> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<?>`)
 
-### `wrap(java.lang.Class<T> type)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.Class<T>`
+### `wrap(Class<T> type)`
 
 Idempotent.
 
@@ -69,9 +67,9 @@ Idempotent.
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `unwrap(java.lang.Class<T> type)`
-
 **Returns:** `java.lang.Class<T>`
+
+### `unwrap(Class<T> type)`
 
 Idempotent.
 
@@ -87,4 +85,6 @@ Idempotent.
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
+
+**Returns:** `java.lang.Class<T>`
 

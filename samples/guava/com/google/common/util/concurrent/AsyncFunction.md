@@ -18,8 +18,6 @@ For an example usage and more information, see
 
 ### `apply(I input)`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
-
 The output 
  Future need not be done, making AsyncFunction suitable for
  asynchronous derivations.
@@ -29,4 +27,6 @@ Throwing an exception from this method is equivalent to returning a failing Futu
 
 **Parameters:**
 - `input` (`I`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 

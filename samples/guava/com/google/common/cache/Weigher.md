@@ -15,12 +15,12 @@
 
 ### `weigh(K key, V value)`
 
-**Returns:** `int`
-
 There is no unit for entry weights; rather they are simply
  relative to each other.
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `int`
 

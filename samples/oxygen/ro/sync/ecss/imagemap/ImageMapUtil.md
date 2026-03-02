@@ -16,14 +16,14 @@
 
 ## Methods
 
-### `setLexicalUnitEvaluatorForTests(ro.sync.ecss.css.kb arg0)`
+### `setLexicalUnitEvaluatorForTests(kb arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.css.kb`)
 
 **Returns:** `void`
 
-### `convertLUToPixels(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1, int arg2, int arg3)`
+### `convertLUToPixels(AuthorAccess arg0, String arg1, int arg2, int arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -33,7 +33,7 @@
 
 **Returns:** `int`
 
-### `getFontOfNodeSize(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1)`
+### `getFontOfNodeSize(AuthorAccess arg0, AuthorNode arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))

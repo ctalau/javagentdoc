@@ -225,60 +225,58 @@ Equivalent to
 
 **Parameters:**
 - `fair` (`boolean`): whether this monitor should use a fair ordering policy rather than a non-fair (but
-     fast) one
+       fast) one
 
 ## Methods
 
-### `newGuard(java.util.function.BooleanSupplier isSatisfied)`
-
-**Returns:** `com.google.common.util.concurrent.Monitor.Guard`
+### `newGuard(BooleanSupplier isSatisfied)`
 
 **Parameters:**
 - `isSatisfied` (`java.util.function.BooleanSupplier`): the new guard's boolean condition (see isSatisfied())
 
-### `enter()`
+**Returns:** `com.google.common.util.concurrent.Monitor.Guard`
 
-**Returns:** `void`
+### `enter()`
 
 Blocks indefinitely.
 
-### `enter(java.time.Duration time)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `enter(Duration time)`
 
 Blocks at most the given time.
 
 **Parameters:**
 - `time` (`java.time.Duration`)
 
-### `enter(long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `enter(long time, TimeUnit unit)`
 
 Blocks at most the given time.
 
 **Parameters:**
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `boolean`
 
 ### `enterInterruptibly()`
 
-**Returns:** `void`
-
 Blocks indefinitely, but may be interrupted.
 
-### `enterInterruptibly(java.time.Duration time)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `enterInterruptibly(Duration time)`
 
 Blocks at most the given time, and may be interrupted.
 
 **Parameters:**
 - `time` (`java.time.Duration`)
 
-### `enterInterruptibly(long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `enterInterruptibly(long time, TimeUnit unit)`
 
 Blocks at most the given time, and may be interrupted.
 
@@ -286,27 +284,27 @@ Blocks at most the given time, and may be interrupted.
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `tryEnter()`
-
 **Returns:** `boolean`
+
+### `tryEnter()`
 
 Does not block.
 
  
 **Note:** This method disregards the fairness setting of this monitor.
 
-### `enterWhen(com.google.common.util.concurrent.Monitor.Guard guard)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `enterWhen(Monitor.Guard guard)`
 
 Blocks indefinitely, but may be interrupted.
 
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `enterWhen(com.google.common.util.concurrent.Monitor.Guard guard, java.time.Duration time)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `enterWhen(Monitor.Guard guard, Duration time)`
 
 Blocks at most the given time, including both
  the time to acquire the lock and the time to wait for the guard to be satisfied, and may be
@@ -316,9 +314,9 @@ Blocks at most the given time, including both
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `time` (`java.time.Duration`)
 
-### `enterWhen(com.google.common.util.concurrent.Monitor.Guard guard, long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `enterWhen(Monitor.Guard guard, long time, TimeUnit unit)`
 
 Blocks at most the given time, including both
  the time to acquire the lock and the time to wait for the guard to be satisfied, and may be
@@ -329,18 +327,18 @@ Blocks at most the given time, including both
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `enterWhenUninterruptibly(com.google.common.util.concurrent.Monitor.Guard guard)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `enterWhenUninterruptibly(Monitor.Guard guard)`
 
 Blocks indefinitely.
 
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `enterWhenUninterruptibly(com.google.common.util.concurrent.Monitor.Guard guard, java.time.Duration time)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `enterWhenUninterruptibly(Monitor.Guard guard, Duration time)`
 
 Blocks at most the given time, including both
  the time to acquire the lock and the time to wait for the guard to be satisfied.
@@ -349,9 +347,9 @@ Blocks at most the given time, including both
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `time` (`java.time.Duration`)
 
-### `enterWhenUninterruptibly(com.google.common.util.concurrent.Monitor.Guard guard, long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `enterWhenUninterruptibly(Monitor.Guard guard, long time, TimeUnit unit)`
 
 Blocks at most the given time, including both
  the time to acquire the lock and the time to wait for the guard to be satisfied.
@@ -361,9 +359,9 @@ Blocks at most the given time, including both
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `enterIf(com.google.common.util.concurrent.Monitor.Guard guard)`
-
 **Returns:** `boolean`
+
+### `enterIf(Monitor.Guard guard)`
 
 Blocks indefinitely acquiring the lock, but does
  not wait for the guard to be satisfied.
@@ -371,9 +369,9 @@ Blocks indefinitely acquiring the lock, but does
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `enterIf(com.google.common.util.concurrent.Monitor.Guard guard, java.time.Duration time)`
-
 **Returns:** `boolean`
+
+### `enterIf(Monitor.Guard guard, Duration time)`
 
 Blocks at most the given time acquiring the
  lock, but does not wait for the guard to be satisfied.
@@ -382,9 +380,9 @@ Blocks at most the given time acquiring the
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `time` (`java.time.Duration`)
 
-### `enterIf(com.google.common.util.concurrent.Monitor.Guard guard, long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `enterIf(Monitor.Guard guard, long time, TimeUnit unit)`
 
 Blocks at most the given time acquiring the
  lock, but does not wait for the guard to be satisfied.
@@ -394,9 +392,9 @@ Blocks at most the given time acquiring the
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `enterIfInterruptibly(com.google.common.util.concurrent.Monitor.Guard guard)`
-
 **Returns:** `boolean`
+
+### `enterIfInterruptibly(Monitor.Guard guard)`
 
 Blocks indefinitely acquiring the lock, but does
  not wait for the guard to be satisfied, and may be interrupted.
@@ -404,9 +402,9 @@ Blocks indefinitely acquiring the lock, but does
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `enterIfInterruptibly(com.google.common.util.concurrent.Monitor.Guard guard, java.time.Duration time)`
-
 **Returns:** `boolean`
+
+### `enterIfInterruptibly(Monitor.Guard guard, Duration time)`
 
 Blocks at most the given time acquiring the
  lock, but does not wait for the guard to be satisfied, and may be interrupted.
@@ -415,9 +413,9 @@ Blocks at most the given time acquiring the
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `time` (`java.time.Duration`)
 
-### `enterIfInterruptibly(com.google.common.util.concurrent.Monitor.Guard guard, long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `enterIfInterruptibly(Monitor.Guard guard, long time, TimeUnit unit)`
 
 Blocks at most the given time acquiring the
  lock, but does not wait for the guard to be satisfied, and may be interrupted.
@@ -427,9 +425,9 @@ Blocks at most the given time acquiring the
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `tryEnterIf(com.google.common.util.concurrent.Monitor.Guard guard)`
-
 **Returns:** `boolean`
+
+### `tryEnterIf(Monitor.Guard guard)`
 
 Does not
  block acquiring the lock and does not wait for the guard to be satisfied.
@@ -440,9 +438,9 @@ Does not
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `waitFor(com.google.common.util.concurrent.Monitor.Guard guard)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `waitFor(Monitor.Guard guard)`
 
 Waits indefinitely, but may be interrupted. May be called
  only by a thread currently occupying this monitor.
@@ -450,9 +448,9 @@ Waits indefinitely, but may be interrupted. May be called
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `waitFor(com.google.common.util.concurrent.Monitor.Guard guard, java.time.Duration time)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `waitFor(Monitor.Guard guard, Duration time)`
 
 Waits at most the given time, and may be interrupted. May
  be called only by a thread currently occupying this monitor.
@@ -461,9 +459,9 @@ Waits at most the given time, and may be interrupted. May
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `time` (`java.time.Duration`)
 
-### `waitFor(com.google.common.util.concurrent.Monitor.Guard guard, long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `waitFor(Monitor.Guard guard, long time, TimeUnit unit)`
 
 Waits at most the given time, and may be interrupted. May
  be called only by a thread currently occupying this monitor.
@@ -473,9 +471,9 @@ Waits at most the given time, and may be interrupted. May
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `waitForUninterruptibly(com.google.common.util.concurrent.Monitor.Guard guard)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `waitForUninterruptibly(Monitor.Guard guard)`
 
 Waits indefinitely. May be called only by a thread
  currently occupying this monitor.
@@ -483,9 +481,9 @@ Waits indefinitely. May be called only by a thread
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `waitForUninterruptibly(com.google.common.util.concurrent.Monitor.Guard guard, java.time.Duration time)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `waitForUninterruptibly(Monitor.Guard guard, Duration time)`
 
 Waits at most the given time. May be called only by a
  thread currently occupying this monitor.
@@ -494,9 +492,9 @@ Waits at most the given time. May be called only by a
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `time` (`java.time.Duration`)
 
-### `waitForUninterruptibly(com.google.common.util.concurrent.Monitor.Guard guard, long time, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `waitForUninterruptibly(Monitor.Guard guard, long time, TimeUnit unit)`
 
 Waits at most the given time. May be called only by a
  thread currently occupying this monitor.
@@ -506,11 +504,13 @@ Waits at most the given time. May be called only by a
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
+**Returns:** `boolean`
+
 ### `leave()`
 
-**Returns:** `void`
-
 May be called only by a thread currently occupying this monitor.
+
+**Returns:** `void`
 
 ### `isFair()`
 
@@ -518,10 +518,10 @@ May be called only by a thread currently occupying this monitor.
 
 ### `isOccupied()`
 
-**Returns:** `boolean`
-
 This method is designed for use in
  monitoring of the system state, not for synchronization control.
+
+**Returns:** `boolean`
 
 ### `isOccupiedByCurrentThread()`
 
@@ -529,31 +529,29 @@ This method is designed for use in
 
 ### `getOccupiedDepth()`
 
-**Returns:** `int`
-
 Returns 0 if the current thread is not occupying this monitor.
 
-### `getQueueLength()`
-
 **Returns:** `int`
+
+### `getQueueLength()`
 
 The value is only
  an estimate because the number of threads may change dynamically while this method traverses
  internal data structures. This method is designed for use in monitoring of the system state,
  not for synchronization control.
 
-### `hasQueuedThreads()`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `hasQueuedThreads()`
 
 Note that because cancellations
  may occur at any time, a true return does not guarantee that any other thread will ever
  enter this monitor. This method is designed primarily for use in monitoring of the system
  state.
 
-### `hasQueuedThread(java.lang.Thread thread)`
-
 **Returns:** `boolean`
+
+### `hasQueuedThread(Thread thread)`
 
 Note that because
  cancellations may occur at any time, a true return does not guarantee that this thread
@@ -563,9 +561,9 @@ Note that because
 **Parameters:**
 - `thread` (`java.lang.Thread`)
 
-### `hasWaiters(com.google.common.util.concurrent.Monitor.Guard guard)`
-
 **Returns:** `boolean`
+
+### `hasWaiters(Monitor.Guard guard)`
 
 Note that
  because timeouts and interrupts may occur at any time, a true return does not guarantee
@@ -575,9 +573,9 @@ Note that
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `getWaitQueueLength(com.google.common.util.concurrent.Monitor.Guard guard)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `getWaitQueueLength(Monitor.Guard guard)`
 
 Note that because timeouts and interrupts may occur at any time, the estimate serves only as an
  upper bound on the actual number of waiters. This method is designed for use in monitoring of
@@ -586,9 +584,9 @@ Note that because timeouts and interrupts may occur at any time, the estimate se
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `toSafeNanos(long time, java.util.concurrent.TimeUnit unit)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `toSafeNanos(long time, TimeUnit unit)`
 
 Actually waiting for more than 219 years is not supported!
 
@@ -596,9 +594,9 @@ Actually waiting for more than 219 years is not supported!
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `initNanoTime(long timeoutNanos)`
-
 **Returns:** `long`
+
+### `initNanoTime(long timeoutNanos)`
 
 Returns 0L if and only if the
  timeout has already elapsed.
@@ -606,9 +604,9 @@ Returns 0L if and only if the
 **Parameters:**
 - `timeoutNanos` (`long`)
 
-### `remainingNanos(long startTime, long timeoutNanos)`
-
 **Returns:** `long`
+
+### `remainingNanos(long startTime, long timeoutNanos)`
 
 Caller must have previously sanitized timeoutNanos using toSafeNanos.
 
@@ -616,9 +614,9 @@ Caller must have previously sanitized timeoutNanos using toSafeNanos.
 - `startTime` (`long`)
 - `timeoutNanos` (`long`)
 
-### `signalNextWaiter()`
+**Returns:** `long`
 
-**Returns:** `void`
+### `signalNextWaiter()`
 
 We manage calls to this method carefully, to signal only when necessary, but never losing a
  signal, which is the classic problem of this kind of concurrency construct. We must signal if
@@ -644,53 +642,55 @@ On the other hand, if a signalled thread wakes up to discover that its guard is 
 This method must not be called from within a beginWaitingFor/endWaitingFor block, or else
  the current thread's guard might be mistakenly signalled, leading to a lost signal.
 
-### `isSatisfied(com.google.common.util.concurrent.Monitor.Guard guard)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isSatisfied(Monitor.Guard guard)`
 
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
+
+**Returns:** `boolean`
 
 ### `signalAllWaiters()`
 
 **Returns:** `void`
 
-### `beginWaitingFor(com.google.common.util.concurrent.Monitor.Guard guard)`
-
-**Returns:** `void`
+### `beginWaitingFor(Monitor.Guard guard)`
 
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `endWaitingFor(com.google.common.util.concurrent.Monitor.Guard guard)`
-
 **Returns:** `void`
+
+### `endWaitingFor(Monitor.Guard guard)`
 
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 
-### `await(com.google.common.util.concurrent.Monitor.Guard guard, boolean signalBeforeWaiting)`
-
 **Returns:** `void`
 
-**Parameters:**
-- `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
-- `signalBeforeWaiting` (`boolean`)
-
-### `awaitUninterruptibly(com.google.common.util.concurrent.Monitor.Guard guard, boolean signalBeforeWaiting)`
-
-**Returns:** `void`
+### `await(Monitor.Guard guard, boolean signalBeforeWaiting)`
 
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `signalBeforeWaiting` (`boolean`)
 
-### `awaitNanos(com.google.common.util.concurrent.Monitor.Guard guard, long nanos, boolean signalBeforeWaiting)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `awaitUninterruptibly(Monitor.Guard guard, boolean signalBeforeWaiting)`
+
+**Parameters:**
+- `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
+- `signalBeforeWaiting` (`boolean`)
+
+**Returns:** `void`
+
+### `awaitNanos(Monitor.Guard guard, long nanos, boolean signalBeforeWaiting)`
 
 **Parameters:**
 - `guard` (`com.google.common.util.concurrent.Monitor.Guard`)
 - `nanos` (`long`)
 - `signalBeforeWaiting` (`boolean`)
+
+**Returns:** `boolean`
 

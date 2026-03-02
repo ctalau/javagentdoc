@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `getXQueryTransformer(javax.xml.transform.Source source, ro.sync.exml.editor.xmleditor.transform.advanced.XQuerySaxonHEAdvancedOptions advOptions, javax.xml.transform.URIResolver uriResolver, boolean validationOnly)`
+### `getXQueryTransformer(Source source, XQuerySaxonHEAdvancedOptions advOptions, URIResolver uriResolver, boolean validationOnly)`
 
 **Parameters:**
 - `source` (`javax.xml.transform.Source`): The XQuery source.

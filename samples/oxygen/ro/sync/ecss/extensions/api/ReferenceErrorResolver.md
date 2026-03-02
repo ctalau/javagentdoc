@@ -11,7 +11,7 @@ It will offer solutions for solving
 
 ## Methods
 
-### `resolveError(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `resolveError(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access to the author page.

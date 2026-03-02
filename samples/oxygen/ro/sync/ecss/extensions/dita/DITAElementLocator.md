@@ -27,14 +27,14 @@ So the link
 
 ## Constructors
 
-### `<init>(java.lang.String link)`
+### `<init>(String link)`
 
 **Parameters:**
 - `link` (`java.lang.String`): The link used to identify the element.
 
 ## Methods
 
-### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String name)`
+### `endElement(String uri, String localName, String name)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -43,7 +43,7 @@ So the link
 
 **Returns:** `void`
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `startElement(String uri, String localName, String name, Attr[] atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)
@@ -53,28 +53,28 @@ So the link
 
 **Returns:** `boolean`
 
-### `isTopic(ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `isTopic(Attr[] atts)`
 
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
 
 **Returns:** `boolean`
 
-### `hasConrefAttributes(ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `hasConrefAttributes(Attr[] atts)`
 
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
 
 **Returns:** `boolean`
 
-### `getIdValue(ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `getIdValue(Attr[] atts)`
 
 **Parameters:**
 - `atts` ([`ro.sync.ecss.extensions.api.link.Attr[]`](../api/link/Attr.md)): The attributes of the element.
 
 **Returns:** `java.lang.String`
 
-### `getLocalName(java.lang.String qName)`
+### `getLocalName(String qName)`
 
 **Parameters:**
 - `qName` (`java.lang.String`)

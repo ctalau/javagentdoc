@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String text, int caretPosition)`
+### `<init>(String text, int caretPosition)`
 
 **Parameters:**
 - `text` (`java.lang.String`): The text to display as ghost text

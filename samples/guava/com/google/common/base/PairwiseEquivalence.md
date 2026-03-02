@@ -25,34 +25,34 @@
 
 ## Constructors
 
-### `<init>(com.google.common.base.Equivalence<E> elementEquivalence)`
+### `<init>(Equivalence<E> elementEquivalence)`
 
 **Parameters:**
 - `elementEquivalence` ([`com.google.common.base.Equivalence<E>`](./Equivalence.md))
 
 ## Methods
 
-### `doEquivalent(java.lang.Iterable<T> iterableA, java.lang.Iterable<T> iterableB)`
-
-**Returns:** `boolean`
+### `doEquivalent(Iterable<T> iterableA, Iterable<T> iterableB)`
 
 **Parameters:**
 - `iterableA` (`java.lang.Iterable<T>`)
 - `iterableB` (`java.lang.Iterable<T>`)
 
-### `doHash(java.lang.Iterable<T> iterable)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `doHash(Iterable<T> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

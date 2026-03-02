@@ -22,8 +22,6 @@ A comparison of the various hash functions can be found [here](http://goo.gl/jS7
 
 ### `goodFastHash(int minimumBits)`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 The algorithm
  the returned function implements is unspecified and subject to change without notice.
 
@@ -40,26 +38,26 @@ Repeated calls to this method on the same loaded Hashing class, using the same v
 **Parameters:**
 - `minimumBits` (`int`): a positive integer. This can be arbitrarily large. The returned HashFunction instance may use memory proportional to this integer.
 
-### `murmur3_32(int seed)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `murmur3_32(int seed)`
 
 The C++ equivalent is the MurmurHash3_x86_32 function (Murmur3A), which however does not
  have the bug.
 
 **Parameters:**
 - `seed` (`int`)
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `murmur3_32()`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 The C++ equivalent is the MurmurHash3_x86_32 function (Murmur3A), which however does not
  have the bug.
 
-### `murmur3_32_fixed(int seed)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `murmur3_32_fixed(int seed)`
 
 The exact C++ equivalent is the MurmurHash3_x86_32 function (Murmur3A).
 
@@ -69,31 +67,33 @@ This method is called murmur3_32_fixed because it fixes a bug in the
 
 **Parameters:**
 - `seed` (`int`)
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `murmur3_32_fixed()`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 The exact C++ equivalent is the MurmurHash3_x86_32 function (Murmur3A).
 
  
 This method is called murmur3_32_fixed because it fixes a bug in the 
  HashFunction returned by the original murmur3_32 method.
 
-### `murmur3_128(int seed)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `murmur3_128(int seed)`
 
 The exact C++ equivalent is the MurmurHash3_x64_128 function (Murmur3F).
 
 **Parameters:**
 - `seed` (`int`)
 
-### `murmur3_128()`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
+### `murmur3_128()`
+
 The exact C++ equivalent is the MurmurHash3_x64_128 function (Murmur3F).
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `sipHash24()`
 
@@ -101,11 +101,11 @@ The exact C++ equivalent is the MurmurHash3_x64_128 function (Murmur3F).
 
 ### `sipHash24(long k0, long k1)`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 **Parameters:**
 - `k0` (`long`)
 - `k1` (`long`)
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `md5()`
 
@@ -127,99 +127,97 @@ The exact C++ equivalent is the MurmurHash3_x64_128 function (Murmur3F).
 
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
-### `hmacMd5(java.security.Key key)`
-
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+### `hmacMd5(Key key)`
 
 **Parameters:**
 - `key` (`java.security.Key`): the secret key
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `hmacMd5(byte[] key)`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 **Parameters:**
 - `key` (`byte[]`): the key material of the secret key
 
-### `hmacSha1(java.security.Key key)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `hmacSha1(Key key)`
 
 **Parameters:**
 - `key` (`java.security.Key`): the secret key
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `hmacSha1(byte[] key)`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 **Parameters:**
 - `key` (`byte[]`): the key material of the secret key
 
-### `hmacSha256(java.security.Key key)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `hmacSha256(Key key)`
 
 **Parameters:**
 - `key` (`java.security.Key`): the secret key
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `hmacSha256(byte[] key)`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 **Parameters:**
 - `key` (`byte[]`): the key material of the secret key
 
-### `hmacSha512(java.security.Key key)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `hmacSha512(Key key)`
 
 **Parameters:**
 - `key` (`java.security.Key`): the secret key
 
-### `hmacSha512(byte[] key)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `hmacSha512(byte[] key)`
 
 **Parameters:**
 - `key` (`byte[]`): the key material of the secret key
 
-### `hmacToString(java.lang.String methodName, java.security.Key key)`
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
-**Returns:** `java.lang.String`
+### `hmacToString(String methodName, Key key)`
 
 **Parameters:**
 - `methodName` (`java.lang.String`)
 - `key` (`java.security.Key`)
 
+**Returns:** `java.lang.String`
+
 ### `crc32c()`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 This function is best understood as a [checksum](https://en.wikipedia.org/wiki/Checksum) rather than a true [hash function](https://en.wikipedia.org/wiki/Hash_function).
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `crc32()`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 To get the long value equivalent to Checksum#getValue() for a 
  HashCode produced by this function, use HashCode#padToLong().
 
  
 This function is best understood as a [checksum](https://en.wikipedia.org/wiki/Checksum) rather than a true [hash function](https://en.wikipedia.org/wiki/Hash_function).
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
 ### `adler32()`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
-
 To get the long value equivalent to Checksum#getValue() for a 
  HashCode produced by this function, use HashCode#padToLong().
 
  
 This function is best understood as a [checksum](https://en.wikipedia.org/wiki/Checksum) rather than a true [hash function](https://en.wikipedia.org/wiki/Hash_function).
 
-### `farmHashFingerprint64()`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `farmHashFingerprint64()`
 
 This is designed for generating persistent fingerprints of strings. It isn't
  cryptographically secure, but it produces a high-quality hash with fewer collisions than some
@@ -234,9 +232,9 @@ FarmHash fingerprints are encoded by HashCode#asBytes in little-endian order. Th
 This function is best understood as a [fingerprint](https://en.wikipedia.org/wiki/Fingerprint_(computing)) rather than a true
  [hash function](https://en.wikipedia.org/wiki/Hash_function).
 
-### `fingerprint2011()`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `fingerprint2011()`
 
 This is designed for generating persistent fingerprints of strings. It isn't
  cryptographically secure, but it produces a high-quality hash with few collisions. Fingerprints
@@ -254,9 +252,9 @@ Fingerprint2011() is a form of Murmur2 on strings up to 32 bytes and a form of C
 This function is best understood as a [fingerprint](https://en.wikipedia.org/wiki/Fingerprint_(computing)) rather than a true
  [hash function](https://en.wikipedia.org/wiki/Hash_function).
 
-### `consistentHash(com.google.common.hash.HashCode hashCode, int buckets)`
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 
-**Returns:** `int`
+### `consistentHash(HashCode hashCode, int buckets)`
 
 That is, 
  consistentHash(h, n) equals:
@@ -296,9 +294,9 @@ See the [Wikipedia article on
 - `hashCode` ([`com.google.common.hash.HashCode`](./HashCode.md))
 - `buckets` (`int`)
 
-### `consistentHash(long input, int buckets)`
-
 **Returns:** `int`
+
+### `consistentHash(long input, int buckets)`
 
 That is, consistentHash(h,
  n) equals:
@@ -338,9 +336,9 @@ See the [Wikipedia article on
 - `input` (`long`)
 - `buckets` (`int`)
 
-### `combineOrdered(java.lang.Iterable<com.google.common.hash.HashCode> hashCodes)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+### `combineOrdered(Iterable<HashCode> hashCodes)`
 
 That is, whenever two equal hash
  codes are produced by two calls to this method, it is *as likely as possible* that each
@@ -349,9 +347,9 @@ That is, whenever two equal hash
 **Parameters:**
 - `hashCodes` (`java.lang.Iterable<com.google.common.hash.HashCode>`)
 
-### `combineUnordered(java.lang.Iterable<com.google.common.hash.HashCode> hashCodes)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `combineUnordered(Iterable<HashCode> hashCodes)`
 
 That is, whenever two equal hash
  codes are produced by two calls to this method, it is *as likely as possible* that each
@@ -360,16 +358,16 @@ That is, whenever two equal hash
 **Parameters:**
 - `hashCodes` (`java.lang.Iterable<com.google.common.hash.HashCode>`)
 
-### `checkPositiveAndMakeMultipleOf32(int bits)`
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-**Returns:** `int`
+### `checkPositiveAndMakeMultipleOf32(int bits)`
 
 **Parameters:**
 - `bits` (`int`)
 
-### `concatenating(com.google.common.hash.HashFunction first, com.google.common.hash.HashFunction second, com.google.common.hash.HashFunction[] rest)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+### `concatenating(HashFunction first, HashFunction second, HashFunction[] rest)`
 
 This can be useful if you need to generate hash codes of a
  specific length.
@@ -383,9 +381,9 @@ For example, if you need 1024-bit hash codes, you could join two Hashing#sha512 
 - `second` ([`com.google.common.hash.HashFunction`](./HashFunction.md))
 - `rest` ([`com.google.common.hash.HashFunction[]`](./HashFunction.md))
 
-### `concatenating(java.lang.Iterable<com.google.common.hash.HashFunction> hashFunctions)`
-
 **Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
+
+### `concatenating(Iterable<HashFunction> hashFunctions)`
 
 This can be useful if you need to generate hash codes of a
  specific length.
@@ -396,4 +394,6 @@ For example, if you need 1024-bit hash codes, you could join two Hashing#sha512 
 
 **Parameters:**
 - `hashFunctions` (`java.lang.Iterable<com.google.common.hash.HashFunction>`)
+
+**Returns:** [`com.google.common.hash.HashFunction`](./HashFunction.md)
 

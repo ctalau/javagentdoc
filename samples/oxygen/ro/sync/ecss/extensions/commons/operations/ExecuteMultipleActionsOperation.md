@@ -31,7 +31,7 @@ The actions must be defined by the corresponding framework, or one of the common
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -39,7 +39,7 @@ The actions must be defined by the corresponding framework, or one of the common
 
 **Returns:** `void`
 
-### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object actionIDs)`
+### `getActions(AuthorAccess authorAccess, Object actionIDs)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.

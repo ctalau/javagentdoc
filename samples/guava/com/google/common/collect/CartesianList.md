@@ -26,57 +26,57 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableList<java.util.List<E>> axes)`
+### `<init>(ImmutableList<List<E>> axes)`
 
 **Parameters:**
 - `axes` ([`com.google.common.collect.ImmutableList<java.util.List<E>>`](./ImmutableList.md))
 
 ## Methods
 
-### `create(java.util.List<? extends java.util.List<? extends E>> lists)`
-
-**Returns:** `java.util.List<java.util.List<E>>`
+### `create(List<? extends List<? extends E>> lists)`
 
 **Parameters:**
 - `lists` (`java.util.List<? extends java.util.List<? extends E>>`)
 
-### `getAxisIndexForProductIndex(int index, int axis)`
+**Returns:** `java.util.List<java.util.List<E>>`
 
-**Returns:** `int`
+### `getAxisIndexForProductIndex(int index, int axis)`
 
 **Parameters:**
 - `index` (`int`)
 - `axis` (`int`)
 
-### `indexOf(java.lang.Object o)`
-
 **Returns:** `int`
+
+### `indexOf(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
 
-### `lastIndexOf(java.lang.Object o)`
-
 **Returns:** `int`
+
+### `lastIndexOf(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `get(int index)`
 
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

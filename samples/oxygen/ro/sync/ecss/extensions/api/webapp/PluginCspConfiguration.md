@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<ro.sync.exml.plugin.workspace.security.CspDirective,java.util.List<java.lang.String>> arg0, java.lang.String arg1)`
+### `<init>(Map<CspDirective,List<String>> arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<ro.sync.exml.plugin.workspace.security.CspDirective,java.util.List<java.lang.String>>`)

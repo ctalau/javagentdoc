@@ -18,7 +18,7 @@ This is a simpler alternative to using a ReferenceQueue.
 
 ## Constructors
 
-### `<init>(T referent, com.google.common.base.FinalizableReferenceQueue queue)`
+### `<init>(T referent, FinalizableReferenceQueue queue)`
 
 **Parameters:**
 - `referent` (`T`): to softly reference

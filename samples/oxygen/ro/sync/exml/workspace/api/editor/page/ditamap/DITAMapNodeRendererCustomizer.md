@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `customizeComputedTopicrefTitle(ro.sync.ecss.extensions.api.node.AuthorNode topicref, ro.sync.ecss.extensions.api.node.AuthorNode targetTopicOrMap, java.lang.String defaultComputedTitle)`
+### `customizeComputedTopicrefTitle(AuthorNode topicref, AuthorNode targetTopicOrMap, String defaultComputedTitle)`
 
 After the API returns the modified title, the title will be cached for the current referenced topic. 
  So this method is called usually once for every individual referenced topic.
@@ -29,7 +29,7 @@ After the API returns the modified title, the title will be cached for the curre
 
 **Returns:** `java.lang.String`
 
-### `customizeRenderedTopicrefTitle(ro.sync.ecss.extensions.api.node.AuthorNode topicref, java.lang.String defaultRenderedTitle)`
+### `customizeRenderedTopicrefTitle(AuthorNode topicref, String defaultRenderedTitle)`
 
 This method is called very often, each time the tree or part of the tree is rendered.
  It is also called separately if there are multiple topicrefs pointing to the same topic.
@@ -42,7 +42,7 @@ This method is called very often, each time the tree or part of the tree is rend
 
 **Returns:** `java.lang.String`
 
-### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+### `getRenderingInformation(NodeRendererCustomizerContext context)`
 
 The context is an instance of DITAMapNodeRendererCustomizerContext which has more information about topicrefs.
 

@@ -63,28 +63,26 @@ Because small hash tables
 
 ### `tableSize(int expectedSize)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `createTable(int buckets)`
+**Returns:** `int`
 
-**Returns:** `java.lang.Object`
+### `createTable(int buckets)`
 
 **Parameters:**
 - `buckets` (`int`)
 
-### `tableClear(java.lang.Object table)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `void`
+### `tableClear(Object table)`
 
 **Parameters:**
 - `table` (`java.lang.Object`)
 
-### `tableGet(java.lang.Object table, int index)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `tableGet(Object table, int index)`
 
 When it is a byte[] or short[], the returned value
  is unsigned, so the range of possible returned values is 0–255 or 0–65535, respectively.
@@ -93,9 +91,9 @@ When it is a byte[] or short[], the returned value
 - `table` (`java.lang.Object`)
 - `index` (`int`)
 
-### `tableSet(java.lang.Object table, int index, int entry)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `tableSet(Object table, int index, int entry)`
 
 The value of entry should fit in the size of the
  assigned array element, when seen as an unsigned value. So if table is a byte[]
@@ -107,9 +105,9 @@ The value of entry should fit in the size of the
 - `index` (`int`)
 - `entry` (`int`)
 
-### `newCapacity(int mask)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `newCapacity(int mask)`
 
 For hashtable sizes less than or equal to 32, the returned power of 2 is 4x the current
  hashtable size to reduce expensive rehashing. Otherwise the returned power of 2 is 2x the
@@ -118,34 +116,34 @@ For hashtable sizes less than or equal to 32, the returned power of 2 is 4x the 
 **Parameters:**
 - `mask` (`int`)
 
-### `getHashPrefix(int value, int mask)`
-
 **Returns:** `int`
+
+### `getHashPrefix(int value, int mask)`
 
 **Parameters:**
 - `value` (`int`)
 - `mask` (`int`)
 
-### `getNext(int entry, int mask)`
-
 **Returns:** `int`
+
+### `getNext(int entry, int mask)`
 
 **Parameters:**
 - `entry` (`int`)
 - `mask` (`int`)
 
-### `maskCombine(int prefix, int suffix, int mask)`
-
 **Returns:** `int`
+
+### `maskCombine(int prefix, int suffix, int mask)`
 
 **Parameters:**
 - `prefix` (`int`)
 - `suffix` (`int`)
 - `mask` (`int`)
 
-### `remove(java.lang.Object key, java.lang.Object value, int mask, java.lang.Object table, int[] entries, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] keys, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] values)`
-
 **Returns:** `int`
+
+### `remove(Object key, Object value, int mask, Object table, int[] entries, lang@Nullable Object[] keys, lang@Nullable Object[] values)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
@@ -155,4 +153,6 @@ For hashtable sizes less than or equal to 32, the returned power of 2 is 4x the 
 - `entries` (`int[]`)
 - `keys` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `values` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+
+**Returns:** `int`
 

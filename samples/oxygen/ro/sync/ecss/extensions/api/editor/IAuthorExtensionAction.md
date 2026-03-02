@@ -37,7 +37,7 @@ can contain editor variables.
 
 ## Methods
 
-### `getValue(java.lang.String property)`
+### `getValue(String property)`
 
 **Parameters:**
 - `property` (`java.lang.String`): The property to get the value.

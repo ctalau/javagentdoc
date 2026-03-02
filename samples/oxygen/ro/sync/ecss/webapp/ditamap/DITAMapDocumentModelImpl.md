@@ -28,7 +28,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.g.j arg0, ro.sync.exml.editor.xmleditor.db arg1, ro.sync.exml.editor.k.d arg2, ro.sync.ecss.extensions.api.webapp.cc.ContentCompletionManager arg3, ro.sync.ecss.extensions.api.webapp.review.ReviewController arg4, ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> arg5, ro.sync.ecss.webapp.n<ro.sync.ecss.extensions.api.node.AuthorNode> arg6, ro.sync.ecss.extensions.api.AuthorSelectionAndCaretModel arg7, ro.sync.ecss.webapp.formcontrols.n arg8, ro.sync.ecss.extensions.api.webapp.WebappActionsManager arg9, ro.sync.ecss.webapp.t arg10, ro.sync.ecss.component.b.c arg11, ro.sync.ecss.extensions.api.AuthorAccess arg12, ro.sync.ecss.webapp.cb arg13, ro.sync.ecss.webapp.d.k arg14, ro.sync.ecss.webapp.c.b arg15, java.lang.String arg16, ro.sync.ecss.webapp.i.j arg17, ro.sync.ecss.webapp.v arg18, java.lang.String arg19, ro.sync.ecss.extensions.api.AuthorExtensionStateListener arg20)`
+### `<init>(j arg0, db arg1, d arg2, ContentCompletionManager arg3, ReviewController arg4, n<AuthorPersistentHighlight> arg5, n<AuthorNode> arg6, AuthorSelectionAndCaretModel arg7, n arg8, WebappActionsManager arg9, t arg10, c arg11, AuthorAccess arg12, cb arg13, k arg14, b arg15, String arg16, j arg17, v arg18, String arg19, AuthorExtensionStateListener arg20)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.g.j`)
@@ -59,21 +59,21 @@
 
 **Returns:** `void`
 
-### `fragmentContainsKeyRelatedAttributes(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment arg0)`
+### `fragmentContainsKeyRelatedAttributes(AuthorDocumentFragment arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../extensions/api/node/AuthorDocumentFragment.md))
 
 **Returns:** `boolean`
 
-### `containsKeyAttrs(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `containsKeyAttrs(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `nodeContainsKeyRelatedAttributes(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `nodeContainsKeyRelatedAttributes(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md))
@@ -84,7 +84,7 @@
 
 **Returns:** `void`
 
-### `createJSONRenderer(java.io.Writer arg0)`
+### `createJSONRenderer(Writer arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
@@ -95,7 +95,7 @@
 
 **Returns:** `ro.sync.ecss.webapp.c`
 
-### `createJSONRendererInternal(java.io.Writer arg0)`
+### `createJSONRendererInternal(Writer arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
@@ -106,14 +106,14 @@
 
 **Returns:** `void`
 
-### `createRenderer(java.io.Writer arg0)`
+### `createRenderer(Writer arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](../../extensions/api/webapp/AuthorNodesRenderer.md)
 
-### `createRenderer(java.io.Writer arg0, ro.sync.ecss.extensions.api.highlights.AuthorHighlighter arg1)`
+### `createRenderer(Writer arg0, AuthorHighlighter arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
@@ -125,7 +125,7 @@
 
 **Returns:** `ro.sync.ecss.webapp.dita.d`
 
-### `getDitamapEntryTitle(ro.sync.ecss.extensions.api.node.AuthorElement arg0, boolean arg1, boolean arg2)`
+### `getDitamapEntryTitle(AuthorElement arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md))
@@ -146,14 +146,14 @@
 
 **Returns:** `ro.sync.ecss.webapp.dita.d`
 
-### `createContextKeyManager(ro.sync.ecss.webapp.access.e arg0)`
+### `createContextKeyManager(e arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.webapp.access.e`)
 
 **Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](../../dita/ContextKeyManager.md)
 
-### `invalidateTitle(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `invalidateTitle(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../extensions/api/node/AuthorElement.md))

@@ -42,7 +42,7 @@
 
 ## Constructors
 
-### `<init>(int startOffset, int endOffset, int errorCode, java.lang.String lang, java.lang.String word)`
+### `<init>(int startOffset, int endOffset, int errorCode, String lang, String word)`
 
 **Parameters:**
 - `startOffset` (`int`): Word start position.
@@ -51,7 +51,7 @@
 - `lang` (`java.lang.String`): ISO Name for the language of the word.
 - `word` (`java.lang.String`): Word between the offsets.
 
-### `<init>(int startOffset, int endOffset, int errorCode, java.lang.String lang, java.lang.String word, java.util.List<java.lang.String> suggestions)`
+### `<init>(int startOffset, int endOffset, int errorCode, String lang, String word, List<String> suggestions)`
 
 **Parameters:**
 - `startOffset` (`int`): Word start position.
@@ -61,7 +61,7 @@
 - `word` (`java.lang.String`): Word between the offsets.
 - `suggestions` (`java.util.List<java.lang.String>`): The suggestions for the word.
 
-### `<init>(int startOffset, int endOffset, int errorCode, java.lang.String lang, java.lang.String word, java.util.List<java.lang.String> suggestions, ro.sync.ecss.extensions.api.webapp.WebAuthorSpellcheckErrorTypes errorType, java.lang.String errorMessage)`
+### `<init>(int startOffset, int endOffset, int errorCode, String lang, String word, List<String> suggestions, WebAuthorSpellcheckErrorTypes errorType, String errorMessage)`
 
 **Parameters:**
 - `startOffset` (`int`): Word start position.

@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.exml.view.graphics.Color fillColor)`
+### `<init>(Color fillColor)`
 
 **Parameters:**
 - `fillColor` (`ro.sync.exml.view.graphics.Color`): The fill color.
@@ -27,14 +27,14 @@
 
 **Returns:** `ro.sync.ecss.extensions.api.highlights.PrioritizableHighlightPainter.ZLayer`
 
-### `paint(ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo pi)`
+### `paint(HighlightPainterInfo pi)`
 
 **Parameters:**
 - `pi` ([`ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo`](./HighlightPainterInfo.md))
 
 **Returns:** `void`
 
-### `paintHighlight(ro.sync.exml.view.graphics.Graphics g, int x, int y, int width, int height)`
+### `paintHighlight(Graphics g, int x, int y, int width, int height)`
 
 **Parameters:**
 - `g` (`ro.sync.exml.view.graphics.Graphics`): The graphics used for paint.
@@ -45,7 +45,7 @@
 
 **Returns:** `void`
 
-### `setFillColor(ro.sync.exml.view.graphics.Color fillColor)`
+### `setFillColor(Color fillColor)`
 
 **Parameters:**
 - `fillColor` (`ro.sync.exml.view.graphics.Color`): The fill color to set.

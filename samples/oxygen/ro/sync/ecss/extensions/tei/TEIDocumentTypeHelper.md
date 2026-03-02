@@ -30,7 +30,7 @@
 
 ## Methods
 
-### `checkTableColSpanIsDefined(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableCellSpanProvider, ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `checkTableColSpanIsDefined(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableCellSpanProvider, AuthorElement cellElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -51,14 +51,14 @@
 
 **Returns:** `java.lang.String[]`
 
-### `getTableCellSpanProvider(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableCellSpanProvider(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../api/AuthorTableCellSpanProvider.md)
 
-### `updateTableColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableCellSpanProvider, ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int startCol, int endCol)`
+### `updateTableColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableCellSpanProvider, AuthorElement cellElement, int startCol, int endCol)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -69,7 +69,7 @@
 
 **Returns:** `void`
 
-### `updateTableRowSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int rowSpan)`
+### `updateTableRowSpan(AuthorAccess authorAccess, AuthorElement cellElement, int rowSpan)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -78,7 +78,7 @@
 
 **Returns:** `void`
 
-### `updateTableColumnNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int colNumber)`
+### `updateTableColumnNumber(AuthorAccess authorAccess, AuthorElement tableElement, int colNumber)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -87,7 +87,7 @@
 
 **Returns:** `void`
 
-### `updateTableRowNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int relativeValue)`
+### `updateTableRowNumber(AuthorAccess authorAccess, AuthorElement tableElement, int relativeValue)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))

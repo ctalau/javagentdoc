@@ -20,7 +20,7 @@ Can be href, conref and others.
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `<init>(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element to check for reference attributes.

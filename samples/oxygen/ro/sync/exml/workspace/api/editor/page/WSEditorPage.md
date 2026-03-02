@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setReadOnly(ro.sync.exml.workspace.api.editor.ReadOnlyReason reason)`
+### `setReadOnly(ReadOnlyReason reason)`
 
 **Parameters:**
 - `reason` ([`ro.sync.exml.workspace.api.editor.ReadOnlyReason`](../ReadOnlyReason.md)): The reason for making the document read-only. 
@@ -16,7 +16,7 @@
 
 **Returns:** `void`
 
-### `setReadOnly(java.lang.String reason)`
+### `setReadOnly(String reason)`
 
 **Parameters:**
 - `reason` (`java.lang.String`): The reason for making the document read-only. It will be displayed 

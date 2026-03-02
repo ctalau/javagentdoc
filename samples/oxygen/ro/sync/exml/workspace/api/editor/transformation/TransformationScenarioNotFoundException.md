@@ -10,7 +10,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String scenarioName)`
+### `<init>(String scenarioName)`
 
 **Parameters:**
 - `scenarioName` (`java.lang.String`): The transformation scenario name.

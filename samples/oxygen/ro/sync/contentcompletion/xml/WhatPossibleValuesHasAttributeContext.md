@@ -34,7 +34,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setAttributeName(java.lang.String arg0)`
+### `setAttributeName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -45,7 +45,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setAttributeValue(java.lang.String arg0)`
+### `setAttributeValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -68,7 +68,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getAncestorValues(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+### `getAncestorValues(String arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -81,7 +81,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setCurrentValuePrefix(java.lang.String arg0)`
+### `setCurrentValuePrefix(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -92,7 +92,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setCurrentValueBeforeActivationChar(java.lang.String arg0)`
+### `setCurrentValueBeforeActivationChar(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

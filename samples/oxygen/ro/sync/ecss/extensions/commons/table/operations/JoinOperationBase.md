@@ -28,14 +28,14 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `<init>(AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Table helper with methods specific to a document type.
 
 ## Methods
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -43,7 +43,7 @@
 
 **Returns:** `void`
 
-### `joinCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cellElements)`
+### `joinCells(AuthorAccess authorAccess, AuthorElement tableElement, List<AuthorElement> cellElements)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -52,7 +52,7 @@
 
 **Returns:** `void`
 
-### `populateJoinGroupStartingFrom(ro.sync.ecss.extensions.commons.table.operations.JoinOperationBase.JoinGroupInformation groupInformation, ro.sync.ecss.extensions.api.node.AuthorNode authorNode, java.lang.String cellRepresentation, java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AuthorNode> mapCellToNode)`
+### `populateJoinGroupStartingFrom(JoinOperationBase.JoinGroupInformation groupInformation, AuthorNode authorNode, String cellRepresentation, Map<String,AuthorNode> mapCellToNode)`
 
 **Parameters:**
 - `groupInformation` (`ro.sync.ecss.extensions.commons.table.operations.JoinOperationBase.JoinGroupInformation`): Information about group start and end row and column.
@@ -70,7 +70,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
 
-### `generateColumnSpecifications(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableCellSpanProvider, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `generateColumnSpecifications(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableCellSpanProvider, AuthorElement tableElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Author access. 

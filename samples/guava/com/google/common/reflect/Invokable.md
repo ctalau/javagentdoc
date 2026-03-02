@@ -61,33 +61,33 @@ In addition to convenience methods, TypeToken#method and TypeToken#constructor
 
 ## Methods
 
-### `from(java.lang.reflect.Method method)`
-
-**Returns:** [`com.google.common.reflect.Invokable<?,java.lang.Object>`](./Invokable.md)
+### `from(Method method)`
 
 **Parameters:**
 - `method` (`java.lang.reflect.Method`)
 
-### `from(java.lang.reflect.Constructor<T> constructor)`
+**Returns:** [`com.google.common.reflect.Invokable<?,java.lang.Object>`](./Invokable.md)
 
-**Returns:** [`com.google.common.reflect.Invokable<T,T>`](./Invokable.md)
+### `from(Constructor<T> constructor)`
 
 **Parameters:**
 - `constructor` (`java.lang.reflect.Constructor<T>`)
 
-### `isAnnotationPresent(java.lang.Class<? extends java.lang.annotation.Annotation> annotationClass)`
+**Returns:** [`com.google.common.reflect.Invokable<T,T>`](./Invokable.md)
 
-**Returns:** `boolean`
+### `isAnnotationPresent(Class<? extends Annotation> annotationClass)`
 
 **Parameters:**
 - `annotationClass` (`java.lang.Class<? extends java.lang.annotation.Annotation>`)
 
-### `getAnnotation(java.lang.Class<A> annotationClass)`
+**Returns:** `boolean`
 
-**Returns:** `A`
+### `getAnnotation(Class<A> annotationClass)`
 
 **Parameters:**
 - `annotationClass` (`java.lang.Class<A>`)
+
+**Returns:** `A`
 
 ### `getAnnotations()`
 
@@ -103,10 +103,10 @@ In addition to convenience methods, TypeToken#method and TypeToken#constructor
 
 ### `setAccessible(boolean flag)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `flag` (`boolean`)
+
+**Returns:** `void`
 
 ### `trySetAccessible()`
 
@@ -150,11 +150,11 @@ In addition to convenience methods, TypeToken#method and TypeToken#constructor
 
 ### `isFinal()`
 
-**Returns:** `boolean`
-
 Note that a method may still be effectively "final", or non-overridable when it has no
  final keyword. For example, it could be private, or it could be declared by a final
  class. To tell whether a method is overridable, use Invokable#isOverridable.
+
+**Returns:** `boolean`
 
 ### `isAbstract()`
 
@@ -176,12 +176,12 @@ Note that a method may still be effectively "final", or non-overridable when it 
 
 **Returns:** `boolean`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -193,22 +193,22 @@ Note that a method may still be effectively "final", or non-overridable when it 
 
 ### `isOverridable()`
 
-**Returns:** `boolean`
-
 Constructors, private, static or final
  methods, or methods declared by final classes are not overridable.
+
+**Returns:** `boolean`
 
 ### `isVarArgs()`
 
 **Returns:** `boolean`
 
-### `invoke(T receiver, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] args)`
-
-**Returns:** `R`
+### `invoke(T receiver, lang@Nullable Object[] args)`
 
 **Parameters:**
 - `receiver` (`T`)
 - `args` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+
+**Returns:** `R`
 
 ### `getReturnType()`
 
@@ -216,19 +216,17 @@ Constructors, private, static or final
 
 ### `getParameters()`
 
-**Returns:** [`com.google.common.collect.ImmutableList<com.google.common.reflect.Parameter>`](../collect/ImmutableList.md)
-
 Note that if this is a constructor
  of a non-static inner class, unlike Constructor#getParameterTypes, the hidden 
  this parameter of the enclosing class is excluded from the returned parameters.
+
+**Returns:** [`com.google.common.collect.ImmutableList<com.google.common.reflect.Parameter>`](../collect/ImmutableList.md)
 
 ### `getExceptionTypes()`
 
 **Returns:** [`com.google.common.collect.ImmutableList<com.google.common.reflect.TypeToken<? extends java.lang.Throwable>>`](../collect/ImmutableList.md)
 
-### `returning(java.lang.Class<R1> returnType)`
-
-**Returns:** [`com.google.common.reflect.Invokable<T,R1>`](./Invokable.md)
+### `returning(Class<R1> returnType)`
 
 For example:
 
@@ -244,12 +242,14 @@ For example:
 **Parameters:**
 - `returnType` (`java.lang.Class<R1>`)
 
-### `returning(com.google.common.reflect.TypeToken<R1> returnType)`
-
 **Returns:** [`com.google.common.reflect.Invokable<T,R1>`](./Invokable.md)
+
+### `returning(TypeToken<R1> returnType)`
 
 **Parameters:**
 - `returnType` ([`com.google.common.reflect.TypeToken<R1>`](./TypeToken.md))
+
+**Returns:** [`com.google.common.reflect.Invokable<T,R1>`](./Invokable.md)
 
 ### `getDeclaringClass()`
 
@@ -259,13 +259,13 @@ For example:
 
 **Returns:** [`com.google.common.reflect.TypeToken<T>`](./TypeToken.md)
 
-### `invokeInternal(java.lang.Object receiver, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] args)`
-
-**Returns:** `java.lang.Object`
+### `invokeInternal(Object receiver, lang@Nullable Object[] args)`
 
 **Parameters:**
 - `receiver` (`java.lang.Object`)
 - `args` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
+
+**Returns:** `java.lang.Object`
 
 ### `getGenericParameterTypes()`
 

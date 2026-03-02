@@ -107,7 +107,7 @@ This class is not thread-safe, and does not accept null elements.
 
 ## Constructors
 
-### `<init>(com.google.common.collect.MinMaxPriorityQueue.Builder<? super E> builder, int queueSize)`
+### `<init>(MinMaxPriorityQueue.Builder<? super E> builder, int queueSize)`
 
 **Parameters:**
 - `builder` (`com.google.common.collect.MinMaxPriorityQueue.Builder<? super E>`)
@@ -119,30 +119,28 @@ This class is not thread-safe, and does not accept null elements.
 
 **Returns:** [`com.google.common.collect.MinMaxPriorityQueue<E>`](./MinMaxPriorityQueue.md)
 
-### `create(java.lang.Iterable<? extends E> initialContents)`
-
-**Returns:** [`com.google.common.collect.MinMaxPriorityQueue<E>`](./MinMaxPriorityQueue.md)
+### `create(Iterable<? extends E> initialContents)`
 
 **Parameters:**
 - `initialContents` (`java.lang.Iterable<? extends E>`)
 
-### `orderedBy(java.util.Comparator<B> comparator)`
+**Returns:** [`com.google.common.collect.MinMaxPriorityQueue<E>`](./MinMaxPriorityQueue.md)
 
-**Returns:** `com.google.common.collect.MinMaxPriorityQueue.Builder<B>`
+### `orderedBy(Comparator<B> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<B>`)
 
-### `expectedSize(int expectedSize)`
+**Returns:** `com.google.common.collect.MinMaxPriorityQueue.Builder<B>`
 
-**Returns:** `com.google.common.collect.MinMaxPriorityQueue.Builder<java.lang.Comparable>`
+### `expectedSize(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `maximumSize(int maximumSize)`
-
 **Returns:** `com.google.common.collect.MinMaxPriorityQueue.Builder<java.lang.Comparable>`
+
+### `maximumSize(int maximumSize)`
 
 Each time a queue grows beyond this bound, it
  immediately removes its greatest element (according to its comparator), which might be the
@@ -151,14 +149,14 @@ Each time a queue grows beyond this bound, it
 **Parameters:**
 - `maximumSize` (`int`)
 
+**Returns:** `com.google.common.collect.MinMaxPriorityQueue.Builder<java.lang.Comparable>`
+
 ### `size()`
 
 **Returns:** `int`
 
 ### `add(E element)`
 
-**Returns:** `boolean`
-
 If this queue has a maximum size, after adding 
  element the queue will automatically evict its greatest element (according to its comparator),
  which may be element itself.
@@ -166,16 +164,16 @@ If this queue has a maximum size, after adding
 **Parameters:**
 - `element` (`E`)
 
-### `addAll(java.util.Collection<? extends E> newElements)`
-
 **Returns:** `boolean`
+
+### `addAll(Collection<? extends E> newElements)`
 
 **Parameters:**
 - `newElements` (`java.util.Collection<? extends E>`)
 
-### `offer(E element)`
-
 **Returns:** `boolean`
+
+### `offer(E element)`
 
 If this queue has a maximum size, after adding 
  element the queue will automatically evict its greatest element (according to its comparator),
@@ -183,6 +181,8 @@ If this queue has a maximum size, after adding
 
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `boolean`
 
 ### `poll()`
 
@@ -190,10 +190,10 @@ If this queue has a maximum size, after adding
 
 ### `elementData(int index)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `E`
 
 ### `peek()`
 
@@ -229,8 +229,6 @@ If this queue has a maximum size, after adding
 
 ### `removeAt(int index)`
 
-**Returns:** `com.google.common.collect.MinMaxPriorityQueue.MoveDesc<E>`
-
 Normally this method leaves the elements at up to index - 1, inclusive, untouched.
  Under these circumstances, it returns null.
 
@@ -245,47 +243,47 @@ Occasionally, in order to maintain the heap invariant, it must swap a later elem
 **Parameters:**
 - `index` (`int`)
 
-### `fillHole(int index, E toTrickle)`
-
 **Returns:** `com.google.common.collect.MinMaxPriorityQueue.MoveDesc<E>`
+
+### `fillHole(int index, E toTrickle)`
 
 **Parameters:**
 - `index` (`int`)
 - `toTrickle` (`E`)
 
-### `removeAndGet(int index)`
+**Returns:** `com.google.common.collect.MinMaxPriorityQueue.MoveDesc<E>`
 
-**Returns:** `E`
+### `removeAndGet(int index)`
 
 **Parameters:**
 - `index` (`int`)
 
-### `heapForIndex(int i)`
+**Returns:** `E`
 
-**Returns:** [`com.google.common.collect.MinMaxPriorityQueue<E>.Heap`](./MinMaxPriorityQueue.md)
+### `heapForIndex(int i)`
 
 **Parameters:**
 - `i` (`int`)
 
-### `isEvenLevel(int index)`
+**Returns:** [`com.google.common.collect.MinMaxPriorityQueue<E>.Heap`](./MinMaxPriorityQueue.md)
 
-**Returns:** `boolean`
+### `isEvenLevel(int index)`
 
 **Parameters:**
 - `index` (`int`)
 
-### `isIntact()`
-
 **Returns:** `boolean`
+
+### `isIntact()`
 
 This is only used in testing.
 
  
 TODO(kevinb): move to the test class?
 
-### `iterator()`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Iterator<E>`
+### `iterator()`
 
 The iterator is *fail-fast*: If the MinMaxPriorityQueue is modified at any time after
  the iterator is created, in any way except through the iterator's own remove method, the
@@ -301,6 +299,8 @@ Note that the fail-fast behavior of an iterator cannot be guaranteed as it is, g
  exception for its correctness: *the fail-fast behavior of iterators should be used only to
  detect bugs.*
 
+**Returns:** `java.util.Iterator<E>`
+
 ### `clear()`
 
 **Returns:** `void`
@@ -311,24 +311,24 @@ Note that the fail-fast behavior of an iterator cannot be guaranteed as it is, g
 
 ### `comparator()`
 
-**Returns:** `java.util.Comparator<? super E>`
-
 Obeys the general contract of
  PriorityQueue#comparator, but returns Ordering#natural instead of null
  to indicate natural ordering.
+
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `capacity()`
 
 **Returns:** `int`
 
-### `initialQueueSize(int configuredExpectedSize, int maximumSize, java.lang.Iterable<?> initialContents)`
-
-**Returns:** `int`
+### `initialQueueSize(int configuredExpectedSize, int maximumSize, Iterable<?> initialContents)`
 
 **Parameters:**
 - `configuredExpectedSize` (`int`)
 - `maximumSize` (`int`)
 - `initialContents` (`java.lang.Iterable<?>`)
+
+**Returns:** `int`
 
 ### `growIfNeeded()`
 
@@ -340,9 +340,9 @@ Obeys the general contract of
 
 ### `capAtMaximumSize(int queueSize, int maximumSize)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `queueSize` (`int`)
 - `maximumSize` (`int`)
+
+**Returns:** `int`
 

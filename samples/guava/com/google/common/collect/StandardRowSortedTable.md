@@ -39,7 +39,7 @@ See the StandardTable superclass for more information about the behavior of this
 
 ## Constructors
 
-### `<init>(java.util.SortedMap<R,java.util.Map<C,V>> backingMap, com.google.common.base.Supplier<? extends java.util.Map<C,V>> factory)`
+### `<init>(SortedMap<R,Map<C,V>> backingMap, Supplier<? extends Map<C,V>> factory)`
 
 **Parameters:**
 - `backingMap` (`java.util.SortedMap<R,java.util.Map<C,V>>`)
@@ -53,15 +53,15 @@ See the StandardTable superclass for more information about the behavior of this
 
 ### `rowKeySet()`
 
-**Returns:** `java.util.SortedSet<R>`
-
 This method returns a SortedSet, instead of the Set specified in the Table interface.
+
+**Returns:** `java.util.SortedSet<R>`
 
 ### `rowMap()`
 
-**Returns:** `java.util.SortedMap<R,java.util.Map<C,V>>`
-
 This method returns a SortedMap, instead of the Map specified in the Table interface.
+
+**Returns:** `java.util.SortedMap<R,java.util.Map<C,V>>`
 
 ### `createRowMap()`
 

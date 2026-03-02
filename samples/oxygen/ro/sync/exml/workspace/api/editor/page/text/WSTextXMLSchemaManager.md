@@ -36,7 +36,7 @@ Provides support for obtaining information about what elements, attributes can b
 
 **Returns:** [`ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext`](../../../../../../contentcompletion/xml/WhatPossibleValuesHasAttributeContext.md)
 
-### `whatAttributesCanGoHere(ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext whatAttributesCanGoHereContext)`
+### `whatAttributesCanGoHere(WhatAttributesCanGoHereContext whatAttributesCanGoHereContext)`
 
 **Parameters:**
 - `whatAttributesCanGoHereContext` ([`ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext`](../../../../../../contentcompletion/xml/WhatAttributesCanGoHereContext.md)): the context for the call. It must
@@ -54,7 +54,7 @@ Provides support for obtaining information about what elements, attributes can b
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `whatElementsCanGoHere(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext whatElementsCanGoHereContext)`
+### `whatElementsCanGoHere(WhatElementsCanGoHereContext whatElementsCanGoHereContext)`
 
 **Parameters:**
 - `whatElementsCanGoHereContext` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): the context for the call. It must have:
@@ -71,7 +71,7 @@ Provides support for obtaining information about what elements, attributes can b
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `whatPossibleValuesHasAttribute(ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext ctxt)`
+### `whatPossibleValuesHasAttribute(WhatPossibleValuesHasAttributeContext ctxt)`
 
 If the
  attribute type was an enumeration, then a list with the tokens of the
@@ -82,7 +82,7 @@ If the
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `whatPossibleValuesHasElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext ctxt)`
+### `whatPossibleValuesHasElement(WhatElementsCanGoHereContext ctxt)`
 
 If the element type was an enumeration,
  then a list with the tokens of the enumeration will be returned.
@@ -100,7 +100,7 @@ These URLs were set
 
 **Returns:** `java.net.URL[]`
 
-### `getAttributeDescription(ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext ctxt)`
+### `getAttributeDescription(WhatPossibleValuesHasAttributeContext ctxt)`
 
 This model must be human readable.
 
@@ -116,7 +116,7 @@ If the DOCTYPE declaration is not changed, the document should not be
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.NameValue>`
 
-### `getElementDescription(ro.sync.contentcompletion.xml.Context ctxt)`
+### `getElementDescription(Context ctxt)`
 
 This model must be human readable.
 
@@ -133,7 +133,7 @@ This model must be human readable.
 
 **Returns:** `boolean`
 
-### `getChildrenElements(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context)`
+### `getChildrenElements(WhatElementsCanGoHereContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): The element context.

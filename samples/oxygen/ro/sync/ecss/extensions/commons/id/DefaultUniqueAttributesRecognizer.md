@@ -30,14 +30,14 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String idAttrQname)`
+### `<init>(String idAttrQname)`
 
 **Parameters:**
 - `idAttrQname` (`java.lang.String`): The ID attribute qname
 
 ## Methods
 
-### `copyAttributeOnSplit(java.lang.String attrQName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `copyAttributeOnSplit(String attrQName, AuthorElement element)`
 
 **Parameters:**
 - `attrQName` (`java.lang.String`)
@@ -45,14 +45,14 @@
 
 **Returns:** `boolean`
 
-### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `activated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `deactivated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -71,7 +71,7 @@
 
 **Returns:** `boolean`
 
-### `getGenerateIDAttributeQName(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String[] elemsWithAutoGeneration, boolean forceGeneration)`
+### `getGenerateIDAttributeQName(AuthorElement element, String[] elemsWithAutoGeneration, boolean forceGeneration)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The current element.
@@ -80,7 +80,7 @@
 
 **Returns:** `java.lang.String`
 
-### `generateUniqueIDFor(java.lang.String idGenerationPattern, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `generateUniqueIDFor(String idGenerationPattern, AuthorElement element)`
 
 **Parameters:**
 - `idGenerationPattern` (`java.lang.String`): The pattern for id generation.
@@ -97,7 +97,7 @@
 
 **Returns:** `void`
 
-### `generateUniqueIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode currentNode, int startSel, int endSel, java.lang.String idGenerationPattern, java.lang.String[] elementsToGenerateFor, boolean forceGeneration, java.util.List<ro.sync.ecss.extensions.commons.id.DefaultUniqueAttributesRecognizer.AttributeSetInfo> attrsToGenerate)`
+### `generateUniqueIDs(AuthorAccess authorAccess, AuthorNode currentNode, int startSel, int endSel, String idGenerationPattern, String[] elementsToGenerateFor, boolean forceGeneration, List<DefaultUniqueAttributesRecognizer.AttributeSetInfo> attrsToGenerate)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -112,7 +112,7 @@
 
 **Returns:** `void`
 
-### `generateUniqueIdForNode(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String idGenerationPattern, java.lang.String[] elementsToGenerateFor, boolean forceGeneration)`
+### `generateUniqueIdForNode(AuthorNode node, String idGenerationPattern, String[] elementsToGenerateFor, boolean forceGeneration)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
@@ -123,7 +123,7 @@
 
 **Returns:** `ro.sync.ecss.extensions.commons.id.DefaultUniqueAttributesRecognizer.AttributeSetInfo`
 
-### `setIDs(java.util.List<ro.sync.ecss.extensions.commons.id.DefaultUniqueAttributesRecognizer.AttributeSetInfo> idsList)`
+### `setIDs(List<DefaultUniqueAttributesRecognizer.AttributeSetInfo> idsList)`
 
 **Parameters:**
 - `idsList` (`java.util.List<ro.sync.ecss.extensions.commons.id.DefaultUniqueAttributesRecognizer.AttributeSetInfo>`): The list with ID attributes to be set.
@@ -134,7 +134,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
 
-### `process(ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation fragmentInformation)`
+### `process(ClipboardFragmentInformation fragmentInformation)`
 
 **Parameters:**
 - `fragmentInformation` ([`ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation`](../../api/content/ClipboardFragmentInformation.md))
@@ -148,7 +148,7 @@
 
 **Returns:** `boolean`
 
-### `filterIDAttributes(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> contentNodes)`
+### `filterIDAttributes(List<AuthorNode> contentNodes)`
 
 **Parameters:**
 - `contentNodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`): The nodes.

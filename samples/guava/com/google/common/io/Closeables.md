@@ -18,9 +18,7 @@
 
 ## Methods
 
-### `close(java.io.Closeable closeable, boolean swallowIOException)`
-
-**Returns:** `void`
+### `close(Closeable closeable, boolean swallowIOException)`
 
 This is primarily useful in a finally block, where a thrown exception needs to be logged but
  not propagated (otherwise the original exception will be lost).
@@ -52,13 +50,13 @@ Example:
 
 **Parameters:**
 - `closeable` (`java.io.Closeable`): the Closeable object to be closed, or null, in which case this method
-     does nothing
+       does nothing
 - `swallowIOException` (`boolean`): if true, don't propagate IO exceptions thrown by the close
-     methods
-
-### `closeQuietly(java.io.InputStream inputStream)`
+       methods
 
 **Returns:** `void`
+
+### `closeQuietly(InputStream inputStream)`
 
 While it's not safe in the general case to ignore exceptions that are thrown when closing an
  I/O resource, it should generally be safe in the case of a resource that's being used only for
@@ -68,11 +66,11 @@ While it's not safe in the general case to ignore exceptions that are thrown whe
 
 **Parameters:**
 - `inputStream` (`java.io.InputStream`): the input stream to be closed, or null in which case this method
-     does nothing
-
-### `closeQuietly(java.io.Reader reader)`
+       does nothing
 
 **Returns:** `void`
+
+### `closeQuietly(Reader reader)`
 
 While it's not safe in the general case to ignore exceptions that are thrown when closing an
  I/O resource, it should generally be safe in the case of a resource that's being used only for
@@ -82,4 +80,6 @@ While it's not safe in the general case to ignore exceptions that are thrown whe
 
 **Parameters:**
 - `reader` (`java.io.Reader`): the reader to be closed, or null in which case this method does nothing
+
+**Returns:** `void`
 

@@ -22,7 +22,7 @@
 
 **Returns:** `boolean`
 
-### `getXQueryTransformer(javax.xml.transform.Source source, javax.xml.transform.URIResolver uriResolver, boolean validationOnly)`
+### `getXQueryTransformer(Source source, URIResolver uriResolver, boolean validationOnly)`
 
 **Parameters:**
 - `source` (`javax.xml.transform.Source`): The XQuery source.

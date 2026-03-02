@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `isLearned(java.lang.String lang, java.lang.String word)`
+### `isLearned(String lang, String word)`
 
 **Parameters:**
 - `lang` (`java.lang.String`): The language code, may be null. 
@@ -20,7 +20,7 @@
 
 **Returns:** `boolean`
 
-### `isForbidden(java.lang.String lang, java.lang.String word)`
+### `isForbidden(String lang, String word)`
 
 **Parameters:**
 - `lang` (`java.lang.String`): The language code, may be null. 
@@ -32,7 +32,7 @@
 
 **Returns:** `boolean`
 
-### `getSuggestions(java.lang.String lang, java.lang.String word)`
+### `getSuggestions(String lang, String word)`
 
 **Parameters:**
 - `lang` (`java.lang.String`): The language code, may be null. 

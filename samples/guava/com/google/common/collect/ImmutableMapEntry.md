@@ -28,7 +28,7 @@ This base implementation has no key or value pointers, so instances of Immutable
 - `key` (`K`)
 - `value` (`V`)
 
-### `<init>(com.google.common.collect.ImmutableMapEntry<K,V> contents)`
+### `<init>(ImmutableMapEntry<K,V> contents)`
 
 **Parameters:**
 - `contents` ([`com.google.common.collect.ImmutableMapEntry<K,V>`](./ImmutableMapEntry.md))
@@ -36,8 +36,6 @@ This base implementation has no key or value pointers, so instances of Immutable
 ## Methods
 
 ### `createEntryArray(int size)`
-
-**Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>[]`](./ImmutableMapEntry.md)
 
 The result must never
  be upcast back to ImmutableMapEntry[] (or Object[], etc.), or allowed to escape the class.
@@ -50,6 +48,8 @@ The returned array has all its elements set to their initial null values. Howeve
 
 **Parameters:**
 - `size` (`int`)
+
+**Returns:** [`com.google.common.collect.ImmutableMapEntry<K,V>[]`](./ImmutableMapEntry.md)
 
 ### `getNextInKeyBucket()`
 

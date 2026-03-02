@@ -14,7 +14,7 @@ Notified when an opened editor switches to another page.
 
 ## Methods
 
-### `editorPageAboutToBeChangedVeto(java.lang.String newPageID)`
+### `editorPageAboutToBeChangedVeto(String newPageID)`
 
 **Parameters:**
 - `newPageID` (`java.lang.String`): The ID of the page to which the user switched, one of the constant fields: 

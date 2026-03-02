@@ -30,30 +30,28 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `hashCode(int value)`
 
-**Returns:** `int`
-
 **Java 8 users:** use Integer#hashCode(int) instead.
 
 **Parameters:**
 - `value` (`int`): a primitive int value
 
-### `checkedCast(long value)`
-
 **Returns:** `int`
+
+### `checkedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any value in the range of the int type
 
-### `saturatedCast(long value)`
-
 **Returns:** `int`
+
+### `saturatedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any long value
 
-### `compare(int a, int b)`
-
 **Returns:** `int`
+
+### `compare(int a, int b)`
 
 The sign of the value returned is the same as
  that of ((Integer) a).compareTo(b).
@@ -66,25 +64,25 @@ The sign of the value returned is the same as
 - `a` (`int`): the first int to compare
 - `b` (`int`): the second int to compare
 
+**Returns:** `int`
+
 ### `contains(int[] array, int target)`
+
+**Parameters:**
+- `array` (`int[]`): an array of int values, possibly empty
+- `target` (`int`): a primitive int value
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `array` (`int[]`): an array of int values, possibly empty
-- `target` (`int`): a primitive int value
-
 ### `indexOf(int[] array, int target)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `array` (`int[]`): an array of int values, possibly empty
 - `target` (`int`): a primitive int value
 
-### `indexOf(int[] array, int target, int start, int end)`
-
 **Returns:** `int`
+
+### `indexOf(int[] array, int target, int start, int end)`
 
 **Parameters:**
 - `array` (`int[]`)
@@ -92,9 +90,9 @@ The sign of the value returned is the same as
 - `start` (`int`)
 - `end` (`int`)
 
-### `indexOf(int[] array, int[] target)`
-
 **Returns:** `int`
+
+### `indexOf(int[] array, int[] target)`
 
 More formally, returns the lowest index i such that Arrays.copyOfRange(array,
  i, i + target.length) contains exactly the same elements as target.
@@ -103,17 +101,17 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `array` (`int[]`): the array to search for the sequence target
 - `target` (`int[]`): the array to search for as a sub-sequence of array
 
-### `lastIndexOf(int[] array, int target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(int[] array, int target)`
 
 **Parameters:**
 - `array` (`int[]`): an array of int values, possibly empty
 - `target` (`int`): a primitive int value
 
-### `lastIndexOf(int[] array, int target, int start, int end)`
-
 **Returns:** `int`
+
+### `lastIndexOf(int[] array, int target, int start, int end)`
 
 **Parameters:**
 - `array` (`int[]`)
@@ -121,23 +119,23 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `start` (`int`)
 - `end` (`int`)
 
-### `min(int[] array)`
-
 **Returns:** `int`
+
+### `min(int[] array)`
 
 **Parameters:**
 - `array` (`int[]`): a *nonempty* array of int values
+
+**Returns:** `int`
 
 ### `max(int[] array)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `array` (`int[]`): a *nonempty* array of int values
 
-### `constrainToRange(int value, int min, int max)`
-
 **Returns:** `int`
+
+### `constrainToRange(int value, int min, int max)`
 
 If value is within the range [min..max], value is returned
  unchanged. If value is less than min, min is returned, and if 
@@ -148,9 +146,9 @@ If value is within the range [min..max], value is returned
 - `min` (`int`): the lower bound (inclusive) of the range to constrain value to
 - `max` (`int`): the upper bound (inclusive) of the range to constrain value to
 
-### `concat(int[][] arrays)`
+**Returns:** `int`
 
-**Returns:** `int[]`
+### `concat(int[][] arrays)`
 
 For example, 
  concat(new int[] {a, b}, new int[] {}, new int[] {c} returns the array {a, b, c}.
@@ -158,9 +156,9 @@ For example,
 **Parameters:**
 - `arrays` (`int[][]`): zero or more int arrays
 
-### `toByteArray(int value)`
+**Returns:** `int[]`
 
-**Returns:** `byte[]`
+### `toByteArray(int value)`
 
 For example, the input value 
  0x12131415 would yield the byte array {0x12, 0x13, 0x14, 0x15}.
@@ -172,9 +170,9 @@ If you need to convert and concatenate several values (possibly even of differen
 **Parameters:**
 - `value` (`int`)
 
-### `fromByteArray(byte[] bytes)`
+**Returns:** `byte[]`
 
-**Returns:** `int`
+### `fromByteArray(byte[] bytes)`
 
 For example, the input
  byte array {0x12, 0x13, 0x14, 0x15, 0x33} would yield the int value 
@@ -187,9 +185,9 @@ Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `fromBytes(byte b1, byte b2, byte b3, byte b4)`
-
 **Returns:** `int`
+
+### `fromBytes(byte b1, byte b2, byte b3, byte b4)`
 
 **Parameters:**
 - `b1` (`byte`)
@@ -197,9 +195,9 @@ Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much 
 - `b3` (`byte`)
 - `b4` (`byte`)
 
-### `stringConverter()`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Integer>`](../base/Converter.md)
+### `stringConverter()`
 
 The returned converter throws NumberFormatException if the input string is invalid.
 
@@ -208,9 +206,9 @@ The returned converter throws NumberFormatException if the input string is inval
  parsed. For example, the string "0123" is treated as *octal* and converted to the
  value 83.
 
-### `ensureCapacity(int[] array, int minLength, int padding)`
+**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Integer>`](../base/Converter.md)
 
-**Returns:** `int[]`
+### `ensureCapacity(int[] array, int minLength, int padding)`
 
 If array already has a length of at least minLength,
  it is returned directly. Otherwise, a new array of size minLength + padding is
@@ -221,21 +219,21 @@ If array already has a length of at least minLength,
 - `minLength` (`int`): the minimum length the returned array must guarantee
 - `padding` (`int`): an extra amount to "grow" the array by if growth is necessary
 
-### `join(java.lang.String separator, int[] array)`
+**Returns:** `int[]`
 
-**Returns:** `java.lang.String`
+### `join(String separator, int[] array)`
 
 For
  example, join("-", 1, 2, 3) returns the string "1-2-3".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`int[]`): an array of int values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<int[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(int, int)), the first pair of values that follow any common
@@ -246,25 +244,25 @@ That is, it
 The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(int[], int[]).
 
-### `sortDescending(int[] array)`
+**Returns:** `java.util.Comparator<int[]>`
 
-**Returns:** `void`
+### `sortDescending(int[] array)`
 
 **Parameters:**
 - `array` (`int[]`)
 
-### `sortDescending(int[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(int[] array, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `array` (`int[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `reverse(int[] array)`
-
 **Returns:** `void`
+
+### `reverse(int[] array)`
 
 This is equivalent to 
  Collections.reverse(Ints.asList(array)), but is likely to be more efficient.
@@ -272,9 +270,9 @@ This is equivalent to
 **Parameters:**
 - `array` (`int[]`)
 
-### `reverse(int[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `reverse(int[] array, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.reverse(Ints.asList(array).subList(fromIndex, toIndex)), but is likely to be more
@@ -285,9 +283,9 @@ This is equivalent to
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `rotate(int[] array, int distance)`
-
 **Returns:** `void`
+
+### `rotate(int[] array, int distance)`
 
 This is equivalent to Collections.rotate(Ints.asList(array),
  distance), but is considerably faster and avoids allocation and garbage collection.
@@ -299,9 +297,9 @@ The provided "distance" may be negative, which will rotate left.
 - `array` (`int[]`)
 - `distance` (`int`)
 
-### `rotate(int[] array, int distance, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `rotate(int[] array, int distance, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.rotate(Ints.asList(array).subList(fromIndex, toIndex), distance), but is
@@ -316,9 +314,9 @@ The provided "distance" may be negative, which will rotate left.
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `toArray(java.util.Collection<? extends java.lang.Number> collection)`
+**Returns:** `void`
 
-**Returns:** `int[]`
+### `toArray(Collection<? extends Number> collection)`
 
 Elements are copied from the argument collection as if by collection.toArray().
  Calling this method is as thread-safe as calling that method.
@@ -326,9 +324,9 @@ Elements are copied from the argument collection as if by collection.toArray().
 **Parameters:**
 - `collection` (`java.util.Collection<? extends java.lang.Number>`): a collection of Number instances
 
-### `asList(int[] backingArray)`
+**Returns:** `int[]`
 
-**Returns:** `java.util.List<java.lang.Integer>`
+### `asList(int[] backingArray)`
 
 The list supports List#set(int, Object), but any attempt to
  set a value to null will result in a NullPointerException.
@@ -348,9 +346,9 @@ The returned list is serializable.
 **Parameters:**
 - `backingArray` (`int[]`): the array to back the list
 
-### `tryParse(java.lang.String string)`
+**Returns:** `java.util.List<java.lang.Integer>`
 
-**Returns:** `java.lang.Integer`
+### `tryParse(String string)`
 
 The ASCII character '-'
  (`'&#92;u002D'`) is recognized as the minus sign.
@@ -367,9 +365,9 @@ Note that strings prefixed with ASCII '+' are rejected, even under JDK 7, despit
 **Parameters:**
 - `string` (`java.lang.String`): the string representation of an integer value
 
-### `tryParse(java.lang.String string, int radix)`
-
 **Returns:** `java.lang.Integer`
+
+### `tryParse(String string, int radix)`
 
 The ASCII
  character '-' (`'&#92;u002D'`) is recognized as the minus sign.
@@ -386,4 +384,6 @@ Note that strings prefixed with ASCII '+' are rejected, even under JDK 7, despit
 **Parameters:**
 - `string` (`java.lang.String`): the string representation of an integer value
 - `radix` (`int`): the radix to use when parsing
+
+**Returns:** `java.lang.Integer`
 

@@ -13,31 +13,29 @@ To create an instance
 
 ## Methods
 
-### `submit(java.util.concurrent.Callable<T> task)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+### `submit(Callable<T> task)`
 
 **Parameters:**
 - `task` (`java.util.concurrent.Callable<T>`)
 
-### `submit(java.lang.Runnable task)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
+### `submit(Runnable task)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 
-### `submit(java.lang.Runnable task, T result)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+### `submit(Runnable task, T result)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 - `result` (`T`)
 
-### `invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 
-**Returns:** `java.util.List<java.util.concurrent.Future<T>>`
+### `invokeAll(Collection<? extends Callable<T>> tasks)`
 
 All elements in the returned list must be ListenableFuture instances. The easiest
  way to obtain a List<ListenableFuture<T>> from this method is an unchecked (but safe)
@@ -55,9 +53,9 @@ All elements in the returned list must be ListenableFuture instances. The easies
 **Parameters:**
 - `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
 
-### `invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `java.util.List<java.util.concurrent.Future<T>>`
+
+### `invokeAll(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit unit)`
 
 All elements in the returned list must be ListenableFuture instances. The easiest
  way to obtain a List<ListenableFuture<T>> from this method is an unchecked (but safe)
@@ -77,26 +75,28 @@ All elements in the returned list must be ListenableFuture instances. The easies
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `invokeAll(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, java.time.Duration timeout)`
+**Returns:** `java.util.List<java.util.concurrent.Future<T>>`
+
+### `invokeAll(Collection<? extends Callable<T>> tasks, Duration timeout)`
+
+**Parameters:**
+- `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
+- `timeout` (`java.time.Duration`)
 
 **Returns:** `java.util.List<java.util.concurrent.Future<T>>`
 
+### `invokeAny(Collection<? extends Callable<T>> tasks, Duration timeout)`
+
 **Parameters:**
 - `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
 - `timeout` (`java.time.Duration`)
-
-### `invokeAny(java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, java.time.Duration timeout)`
 
 **Returns:** `T`
 
-**Parameters:**
-- `tasks` (`java.util.Collection<? extends java.util.concurrent.Callable<T>>`)
-- `timeout` (`java.time.Duration`)
+### `awaitTermination(Duration timeout)`
 
-### `awaitTermination(java.time.Duration timeout)`
+**Parameters:**
+- `timeout` (`java.time.Duration`)
 
 **Returns:** `boolean`
-
-**Parameters:**
-- `timeout` (`java.time.Duration`)
 

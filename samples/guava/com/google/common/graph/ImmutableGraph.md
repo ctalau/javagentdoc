@@ -28,45 +28,45 @@ See the Guava User's Guide's [discussion
 
 ## Constructors
 
-### `<init>(com.google.common.graph.BaseGraph<N> backingGraph)`
+### `<init>(BaseGraph<N> backingGraph)`
 
 **Parameters:**
 - `backingGraph` ([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md))
 
 ## Methods
 
-### `copyOf(com.google.common.graph.Graph<N> graph)`
-
-**Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
+### `copyOf(Graph<N> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `copyOf(com.google.common.graph.ImmutableGraph<N> graph)`
-
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
+
+### `copyOf(ImmutableGraph<N> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md))
+
+**Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
 ### `incidentEdgeOrder()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md)
 
-### `getNodeConnections(com.google.common.graph.Graph<N> graph)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>>`](../collect/ImmutableMap.md)
+### `getNodeConnections(Graph<N> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `connectionsOf(com.google.common.graph.Graph<N> graph, N node)`
+**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>>`](../collect/ImmutableMap.md)
 
-**Returns:** [`com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>`](./GraphConnections.md)
+### `connectionsOf(Graph<N> graph, N node)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 - `node` (`N`)
+
+**Returns:** [`com.google.common.graph.GraphConnections<N,com.google.common.graph.GraphConstants.Presence>`](./GraphConnections.md)
 
 ### `delegate()`
 

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `openDiffFilesApplication(java.lang.String leftLabelText, java.net.URL leftURL, java.lang.String rightLabelText, java.net.URL rightURL)`
+### `openDiffFilesApplication(String leftLabelText, URL leftURL, String rightLabelText, URL rightURL)`
 
 The comparison will begin automatically and the content types for the URLs will be auto-detected.
  
@@ -24,7 +24,7 @@ The comparison will begin automatically and the content types for the URLs will 
 
 **Returns:** `java.lang.Object`
 
-### `openDiffFilesApplication(java.net.URL leftURL, java.net.URL rightURL)`
+### `openDiffFilesApplication(URL leftURL, URL rightURL)`
 
 The comparison will begin automatically and the content types for the URLs will be auto-detected.
  
@@ -36,7 +36,7 @@ The comparison will begin automatically and the content types for the URLs will 
 
 **Returns:** `java.lang.Object`
 
-### `openDiffFilesApplication(java.net.URL leftURL, java.net.URL rightURL, java.net.URL ancestorURL)`
+### `openDiffFilesApplication(URL leftURL, URL rightURL, URL ancestorURL)`
 
 If the ancestor URL is specified the comparison will be performed in three-way mode. The left
  and right URLs will be compared relatively to the ancestor (base) URL.
@@ -53,7 +53,7 @@ If the ancestor URL is specified the comparison will be performed in three-way m
 
 **Returns:** `java.lang.Object`
 
-### `openDiffFilesApplication(java.lang.String leftLabelText, java.net.URL leftURL, java.lang.String rightLabelText, java.net.URL rightURL, java.net.URL ancestorURL, boolean showAncestorURLPanel)`
+### `openDiffFilesApplication(String leftLabelText, URL leftURL, String rightLabelText, URL rightURL, URL ancestorURL, boolean showAncestorURLPanel)`
 
 If the ancestor URL is specified the comparison will be performed in three-way mode. The left
  and right URLs will be compared relatively to the ancestor (base) URL.
@@ -75,7 +75,7 @@ If the ancestor URL is specified the comparison will be performed in three-way m
 
 **Returns:** `java.lang.Object`
 
-### `openMergeApplication(java.io.File baseDir, java.io.File personalModifiedFilesDir, java.io.File externalModifiedFilesDir, java.util.Map<java.lang.String,java.lang.String> mergeOptions)`
+### `openMergeApplication(File baseDir, File personalModifiedFilesDir, File externalModifiedFilesDir, Map<String,String> mergeOptions)`
 
 These differences are obtained as a result of a three-way 
  comparison between:
@@ -115,7 +115,7 @@ These differences are obtained as a result of a three-way
 
 **Returns:** `java.util.List<ro.sync.diff.merge.api.MergedFileState>`
 
-### `openPreviewDialog(java.lang.String title, java.lang.String previewButtonName, java.util.LinkedHashMap<java.net.URL,java.net.URL> resourcesMap)`
+### `openPreviewDialog(String title, String previewButtonName, LinkedHashMap<URL,URL> resourcesMap)`
 
 The resources are presented in the order in which they are placed in the map.
 
@@ -126,7 +126,7 @@ The resources are presented in the order in which they are placed in the map.
 
 **Returns:** `java.util.List<java.net.URL>`
 
-### `openPreviewDialog(java.lang.String title, java.lang.String previewButtonName, java.lang.String operationDescriptionLabelText, java.lang.String leftSideLabelText, java.lang.String rightSideLabelText, java.util.LinkedHashMap<java.net.URL,java.net.URL> resourcesMap)`
+### `openPreviewDialog(String title, String previewButtonName, String operationDescriptionLabelText, String leftSideLabelText, String rightSideLabelText, LinkedHashMap<URL,URL> resourcesMap)`
 
 The resources are presented in the order in which they are placed in the map.
 
@@ -143,7 +143,7 @@ The resources are presented in the order in which they are placed in the map.
 
 **Returns:** `java.util.List<java.net.URL>`
 
-### `openMergeApplication(java.lang.String dialogTitle, java.lang.String applyButtonText, boolean applyAllChangesInitialy, java.lang.String leftLabelText, java.net.URL leftURL, boolean leftURLEditable, boolean leftURLModified, java.lang.String rightLabelText, java.net.URL rightURL, boolean rightEditorEditable, boolean rightURLModified, java.net.URL ancestorURL)`
+### `openMergeApplication(String dialogTitle, String applyButtonText, boolean applyAllChangesInitialy, String leftLabelText, URL leftURL, boolean leftURLEditable, boolean leftURLModified, String rightLabelText, URL rightURL, boolean rightEditorEditable, boolean rightURLModified, URL ancestorURL)`
 
 The tool is presented in a modal dialog.
  The content in the right part is read only and can be merged to the left part.  

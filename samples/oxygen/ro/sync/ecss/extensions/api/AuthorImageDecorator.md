@@ -19,7 +19,7 @@ It receives the graphics device, the size and position of the underlying image.
 
 ## Methods
 
-### `paint(ro.sync.exml.view.graphics.Graphics g, int x, int y, int imageWidth, int imageHeight, ro.sync.exml.view.graphics.Rectangle originalSize, ro.sync.ecss.extensions.api.node.AuthorNode element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean wasAnnotated)`
+### `paint(Graphics g, int x, int y, int imageWidth, int imageHeight, Rectangle originalSize, AuthorNode element, AuthorAccess authorAccess, boolean wasAnnotated)`
 
 The image was already painted in the provided Graphics.
 

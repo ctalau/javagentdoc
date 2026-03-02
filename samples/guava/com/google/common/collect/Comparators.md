@@ -24,9 +24,7 @@ In light of the significant enhancements to Comparator in Java 8, the overwhelmi
 
 ## Methods
 
-### `lexicographical(java.util.Comparator<T> comparator)`
-
-**Returns:** `java.util.Comparator<java.lang.Iterable<S>>`
+### `lexicographical(Comparator<T> comparator)`
 
 For example, a lexicographical natural ordering over integers considers [] < [1] < [1,
  1] < [1, 2] < [2].
@@ -39,9 +37,9 @@ Note that Collections.reverseOrder(lexicographical(comparator)) is not equivalen
 **Parameters:**
 - `comparator` (`java.util.Comparator<T>`)
 
-### `isInOrder(java.lang.Iterable<? extends T> iterable, java.util.Comparator<T> comparator)`
+**Returns:** `java.util.Comparator<java.lang.Iterable<S>>`
 
-**Returns:** `boolean`
+### `isInOrder(Iterable<? extends T> iterable, Comparator<T> comparator)`
 
 Note that this is
  always true when the iterable has fewer than two elements.
@@ -50,9 +48,9 @@ Note that this is
 - `iterable` (`java.lang.Iterable<? extends T>`)
 - `comparator` (`java.util.Comparator<T>`)
 
-### `isInStrictOrder(java.lang.Iterable<? extends T> iterable, java.util.Comparator<T> comparator)`
-
 **Returns:** `boolean`
+
+### `isInStrictOrder(Iterable<? extends T> iterable, Comparator<T> comparator)`
 
 Note that
  this is always true when the iterable has fewer than two elements.
@@ -61,9 +59,9 @@ Note that
 - `iterable` (`java.lang.Iterable<? extends T>`)
 - `comparator` (`java.util.Comparator<T>`)
 
-### `least(int k, java.util.Comparator<? super T> comparator)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.stream.Collector<T,?,java.util.List<T>>`
+### `least(int k, Comparator<? super T> comparator)`
 
 Ties
  are broken arbitrarily.
@@ -91,9 +89,9 @@ This Collector uses O(k) memory and takes expected time O(n) (worst-case O(n log
 - `k` (`int`)
 - `comparator` (`java.util.Comparator<? super T>`)
 
-### `greatest(int k, java.util.Comparator<? super T> comparator)`
-
 **Returns:** `java.util.stream.Collector<T,?,java.util.List<T>>`
+
+### `greatest(int k, Comparator<? super T> comparator)`
 
 Ties
  are broken arbitrarily.
@@ -121,23 +119,23 @@ This Collector uses O(k) memory and takes expected time O(n) (worst-case O(n log
 - `k` (`int`)
 - `comparator` (`java.util.Comparator<? super T>`)
 
-### `emptiesFirst(java.util.Comparator<? super T> valueComparator)`
+**Returns:** `java.util.stream.Collector<T,?,java.util.List<T>>`
+
+### `emptiesFirst(Comparator<? super T> valueComparator)`
+
+**Parameters:**
+- `valueComparator` (`java.util.Comparator<? super T>`)
 
 **Returns:** `java.util.Comparator<java.util.Optional<T>>`
+
+### `emptiesLast(Comparator<? super T> valueComparator)`
 
 **Parameters:**
 - `valueComparator` (`java.util.Comparator<? super T>`)
 
-### `emptiesLast(java.util.Comparator<? super T> valueComparator)`
-
 **Returns:** `java.util.Comparator<java.util.Optional<T>>`
-
-**Parameters:**
-- `valueComparator` (`java.util.Comparator<? super T>`)
 
 ### `min(T a, T b)`
-
-**Returns:** `T`
 
 If the values compare as 0, the first is returned.
 
@@ -151,9 +149,9 @@ The recommended solution for finding the minimum of some values depends on the t
 - `a` (`T`): first value to compare, returned if less than or equal to b.
 - `b` (`T`): second value to compare.
 
-### `min(T a, T b, java.util.Comparator<T> comparator)`
-
 **Returns:** `T`
+
+### `min(T a, T b, Comparator<T> comparator)`
 
 If the values compare
  as equal, the first is returned.
@@ -169,9 +167,9 @@ The recommended solution for finding the minimum of some values depends on the t
 - `b` (`T`): second value to compare.
 - `comparator` (`java.util.Comparator<T>`)
 
-### `max(T a, T b)`
-
 **Returns:** `T`
+
+### `max(T a, T b)`
 
 If the values compare as 0, the first is returned.
 
@@ -185,9 +183,9 @@ The recommended solution for finding the maximum of some values depends on the t
 - `a` (`T`): first value to compare, returned if greater than or equal to b.
 - `b` (`T`): second value to compare.
 
-### `max(T a, T b, java.util.Comparator<T> comparator)`
-
 **Returns:** `T`
+
+### `max(T a, T b, Comparator<T> comparator)`
 
 If the values compare
  as equal, the first is returned.
@@ -202,4 +200,6 @@ The recommended solution for finding the maximum of some values depends on the t
 - `a` (`T`): first value to compare, returned if greater than or equal to b.
 - `b` (`T`): second value to compare.
 - `comparator` (`java.util.Comparator<T>`)
+
+**Returns:** `T`
 

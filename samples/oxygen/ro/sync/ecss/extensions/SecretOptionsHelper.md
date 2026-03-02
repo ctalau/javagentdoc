@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `getOrMigrateSecretOption(java.lang.String arg0, java.lang.String arg1, ro.sync.exml.workspace.api.options.WSOptionsStorage arg2)`
+### `getOrMigrateSecretOption(String arg0, String arg1, WSOptionsStorage arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

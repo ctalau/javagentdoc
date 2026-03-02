@@ -87,23 +87,21 @@ To update this field correctly the lock must be held to guarantee that the state
 
 ## Methods
 
-### `terminatedEvent(com.google.common.util.concurrent.Service.State from)`
-
-**Returns:** `com.google.common.util.concurrent.ListenerCallQueue.Event<com.google.common.util.concurrent.Service.Listener>`
+### `terminatedEvent(Service.State from)`
 
 **Parameters:**
 - `from` (`com.google.common.util.concurrent.Service.State`)
 
-### `stoppingEvent(com.google.common.util.concurrent.Service.State from)`
-
 **Returns:** `com.google.common.util.concurrent.ListenerCallQueue.Event<com.google.common.util.concurrent.Service.Listener>`
+
+### `stoppingEvent(Service.State from)`
 
 **Parameters:**
 - `from` (`com.google.common.util.concurrent.Service.State`)
+
+**Returns:** `com.google.common.util.concurrent.ListenerCallQueue.Event<com.google.common.util.concurrent.Service.Listener>`
 
 ### `doStart()`
-
-**Returns:** `void`
 
 The invocation of
  this method should cause a call to #notifyStarted(), either during this method's run,
@@ -114,9 +112,9 @@ This method should return promptly; prefer to do work on a different thread wher
  convenient. It is invoked exactly once on service startup, even when #startAsync is
  called multiple times.
 
-### `doStop()`
-
 **Returns:** `void`
+
+### `doStop()`
 
 The invocation of this method should
  cause a call to #notifyStopped(), either during this method's run, or after it has
@@ -131,9 +129,9 @@ This method should return promptly; prefer to do work on a different thread wher
 If #stopAsync is called on a State#STARTING service, this method is not
  invoked immediately. Instead, it will be deferred until after the service is State#RUNNING. Services that need to cancel startup work can override #doCancelStart.
 
-### `doCancelStart()`
-
 **Returns:** `void`
+
+### `doCancelStart()`
 
 #startAsync has been called but #notifyStarted has not). Subclasses can override the
  method to cancel pending work and then call #notifyStopped to stop the service.
@@ -147,6 +145,8 @@ This method should return promptly; prefer to do work on a different thread wher
 When this method is called #state() will return State#STOPPING, which is the
  external state observable by the caller of #stopAsync.
 
+**Returns:** `void`
+
 ### `startAsync()`
 
 **Returns:** [`com.google.common.util.concurrent.Service`](./Service.md)
@@ -159,64 +159,62 @@ When this method is called #state() will return State#STOPPING, which is the
 
 **Returns:** `void`
 
-### `awaitRunning(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitRunning(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitRunning(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitRunning(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `void`
 
 ### `awaitTerminated()`
 
 **Returns:** `void`
 
-### `awaitTerminated(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitTerminated(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitTerminated(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitTerminated(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `checkCurrentState(com.google.common.util.concurrent.Service.State expected)`
-
 **Returns:** `void`
+
+### `checkCurrentState(Service.State expected)`
 
 **Parameters:**
 - `expected` (`com.google.common.util.concurrent.Service.State`)
 
-### `notifyStarted()`
-
 **Returns:** `void`
+
+### `notifyStarted()`
 
 It will cause
  the service to transition from State#STARTING to State#RUNNING.
 
-### `notifyStopped()`
-
 **Returns:** `void`
+
+### `notifyStopped()`
 
 It will cause
  the service to transition from State#STARTING or State#STOPPING to State#TERMINATED.
 
-### `notifyFailed(java.lang.Throwable cause)`
-
 **Returns:** `void`
+
+### `notifyFailed(Throwable cause)`
 
 The service will
  **not be stopped** if it is running. Invoke this method when a service has failed critically
@@ -224,6 +222,8 @@ The service will
 
 **Parameters:**
 - `cause` (`java.lang.Throwable`)
+
+**Returns:** `void`
 
 ### `isRunning()`
 
@@ -237,13 +237,13 @@ The service will
 
 **Returns:** `java.lang.Throwable`
 
-### `addListener(com.google.common.util.concurrent.Service.Listener listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Service.Listener listener, Executor executor)`
 
 **Parameters:**
 - `listener` (`com.google.common.util.concurrent.Service.Listener`)
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** `void`
 
 ### `toString()`
 
@@ -261,25 +261,25 @@ The service will
 
 **Returns:** `void`
 
-### `enqueueStoppingEvent(com.google.common.util.concurrent.Service.State from)`
-
-**Returns:** `void`
+### `enqueueStoppingEvent(Service.State from)`
 
 **Parameters:**
 - `from` (`com.google.common.util.concurrent.Service.State`)
 
-### `enqueueTerminatedEvent(com.google.common.util.concurrent.Service.State from)`
-
 **Returns:** `void`
+
+### `enqueueTerminatedEvent(Service.State from)`
 
 **Parameters:**
 - `from` (`com.google.common.util.concurrent.Service.State`)
 
-### `enqueueFailedEvent(com.google.common.util.concurrent.Service.State from, java.lang.Throwable cause)`
-
 **Returns:** `void`
+
+### `enqueueFailedEvent(Service.State from, Throwable cause)`
 
 **Parameters:**
 - `from` (`com.google.common.util.concurrent.Service.State`)
 - `cause` (`java.lang.Throwable`)
+
+**Returns:** `void`
 

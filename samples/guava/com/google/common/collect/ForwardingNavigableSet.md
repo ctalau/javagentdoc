@@ -51,14 +51,12 @@ The standard methods and the collection views they return are not guaranteed to 
 
 ### `lower(E e)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `e` (`E`)
 
-### `standardLower(E e)`
-
 **Returns:** `E`
+
+### `standardLower(E e)`
 
 If you override #headSet(Object, boolean), you may
  wish to override #lower to forward to this implementation.
@@ -66,16 +64,16 @@ If you override #headSet(Object, boolean), you may
 **Parameters:**
 - `e` (`E`)
 
-### `floor(E e)`
-
 **Returns:** `E`
+
+### `floor(E e)`
 
 **Parameters:**
 - `e` (`E`)
 
-### `standardFloor(E e)`
-
 **Returns:** `E`
+
+### `standardFloor(E e)`
 
 If you override #headSet(Object, boolean), you may
  wish to override #floor to forward to this implementation.
@@ -83,16 +81,16 @@ If you override #headSet(Object, boolean), you may
 **Parameters:**
 - `e` (`E`)
 
-### `ceiling(E e)`
-
 **Returns:** `E`
+
+### `ceiling(E e)`
 
 **Parameters:**
 - `e` (`E`)
 
-### `standardCeiling(E e)`
-
 **Returns:** `E`
+
+### `standardCeiling(E e)`
 
 If you override #tailSet(Object, boolean), you may wish to
  override #ceiling to forward to this implementation.
@@ -100,16 +98,16 @@ If you override #tailSet(Object, boolean), you may wish to
 **Parameters:**
 - `e` (`E`)
 
-### `higher(E e)`
-
 **Returns:** `E`
+
+### `higher(E e)`
 
 **Parameters:**
 - `e` (`E`)
 
-### `standardHigher(E e)`
-
 **Returns:** `E`
+
+### `standardHigher(E e)`
 
 If you override #tailSet(Object, boolean), you may wish to
  override #higher to forward to this implementation.
@@ -117,17 +115,19 @@ If you override #tailSet(Object, boolean), you may wish to
 **Parameters:**
 - `e` (`E`)
 
+**Returns:** `E`
+
 ### `pollFirst()`
 
 **Returns:** `E`
 
 ### `standardPollFirst()`
 
-**Returns:** `E`
-
 If you
  override #iterator you may wish to override #pollFirst to forward to this
  implementation.
+
+**Returns:** `E`
 
 ### `pollLast()`
 
@@ -135,10 +135,10 @@ If you
 
 ### `standardPollLast()`
 
-**Returns:** `E`
-
 If you override #descendingIterator you may wish to override #pollLast to
  forward to this implementation.
+
+**Returns:** `E`
 
 ### `standardFirst()`
 
@@ -158,17 +158,15 @@ If you override #descendingIterator you may wish to override #pollLast to
 
 ### `subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
-**Returns:** `java.util.NavigableSet<E>`
-
 **Parameters:**
 - `fromElement` (`E`)
 - `fromInclusive` (`boolean`)
 - `toElement` (`E`)
 - `toInclusive` (`boolean`)
 
-### `standardSubSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
-
 **Returns:** `java.util.NavigableSet<E>`
+
+### `standardSubSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
 In many cases, you may wish to override #subSet(Object, boolean, Object, boolean) to forward to this implementation.
 
@@ -178,9 +176,9 @@ In many cases, you may wish to override #subSet(Object, boolean, Object, boolean
 - `toElement` (`E`)
 - `toInclusive` (`boolean`)
 
-### `standardSubSet(E fromElement, E toElement)`
+**Returns:** `java.util.NavigableSet<E>`
 
-**Returns:** `java.util.SortedSet<E>`
+### `standardSubSet(E fromElement, E toElement)`
 
 If you override #subSet(Object, boolean, Object,
  boolean), you may wish to override #subSet(Object, Object) to forward to this
@@ -190,17 +188,17 @@ If you override #subSet(Object, boolean, Object,
 - `fromElement` (`E`)
 - `toElement` (`E`)
 
-### `headSet(E toElement, boolean inclusive)`
+**Returns:** `java.util.SortedSet<E>`
 
-**Returns:** `java.util.NavigableSet<E>`
+### `headSet(E toElement, boolean inclusive)`
 
 **Parameters:**
 - `toElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `standardHeadSet(E toElement)`
+**Returns:** `java.util.NavigableSet<E>`
 
-**Returns:** `java.util.SortedSet<E>`
+### `standardHeadSet(E toElement)`
 
 If you override #headSet(Object, boolean), you may wish to override
  #headSet(Object) to forward to this implementation.
@@ -208,21 +206,23 @@ If you override #headSet(Object, boolean), you may wish to override
 **Parameters:**
 - `toElement` (`E`)
 
-### `tailSet(E fromElement, boolean inclusive)`
+**Returns:** `java.util.SortedSet<E>`
 
-**Returns:** `java.util.NavigableSet<E>`
+### `tailSet(E fromElement, boolean inclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `standardTailSet(E fromElement)`
+**Returns:** `java.util.NavigableSet<E>`
 
-**Returns:** `java.util.SortedSet<E>`
+### `standardTailSet(E fromElement)`
 
 If you override #tailSet(Object, boolean), you may wish to override
  #tailSet(Object) to forward to this implementation.
 
 **Parameters:**
 - `fromElement` (`E`)
+
+**Returns:** `java.util.SortedSet<E>`
 

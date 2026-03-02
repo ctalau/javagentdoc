@@ -16,7 +16,7 @@ This is intended to work as follows: the user makes a selection in the editor
 
 ## Methods
 
-### `process(ro.sync.exml.plugin.selection.SelectionPluginContext context)`
+### `process(SelectionPluginContext context)`
 
 It receives the current context and it should
  return the processed content.

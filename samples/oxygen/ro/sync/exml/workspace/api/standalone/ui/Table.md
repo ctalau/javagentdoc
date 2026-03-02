@@ -12,12 +12,12 @@
 
 ### `<init>()`
 
-### `<init>(javax.swing.table.TableModel tableModel)`
+### `<init>(TableModel tableModel)`
 
 **Parameters:**
 - `tableModel` (`javax.swing.table.TableModel`): the model of the table.
 
-### `<init>(java.util.Vector rowData, java.util.Vector columnNames)`
+### `<init>(Vector rowData, Vector columnNames)`
 
 The column names are given by `columnNames`. The
  `Vectors` contained in `rowData`

@@ -456,11 +456,67 @@ public final class SemanticXmlDoclet implements Doclet {
         List<? extends VariableElement> params = e.getParameters();
         for (int i = 0; i < params.size(); i++) {
             VariableElement p = params.get(i);
-            md.append(p.asType().toString()).append(" ").append(p.getSimpleName());
+            md.append(formatTypeForSectionTitle(p.asType().toString())).append(" ").append(p.getSimpleName());
             if (i < params.size() - 1) {
                 md.append(", ");
             }
         }
+    }
+
+    private String formatTypeForSectionTitle(String typeName) {
+        if (typeName == null || typeName.isEmpty()) {
+            return "";
+        }
+
+        StringBuilder result = new StringBuilder(typeName.length());
+        StringBuilder token = new StringBuilder();
+
+        for (int i = 0; i < typeName.length(); i++) {
+            char c = typeName.charAt(i);
+            if (Character.isJavaIdentifierPart(c) || c == '.' || c == '$') {
+                token.append(c);
+            } else {
+                if (token.length() > 0) {
+                    result.append(simplifyQualifiedTypeToken(token.toString()));
+                    token.setLength(0);
+                }
+                result.append(c);
+            }
+        }
+
+        if (token.length() > 0) {
+            result.append(simplifyQualifiedTypeToken(token.toString()));
+        }
+
+        return result.toString();
+    }
+
+    private String simplifyQualifiedTypeToken(String token) {
+        if (!token.contains(".")) {
+            return token.replace('$', '.');
+        }
+
+        String[] parts = token.split("\\.");
+        int classStart = -1;
+
+        for (int i = 0; i < parts.length; i++) {
+            String part = parts[i];
+            if (part.isEmpty()) {
+                continue;
+            }
+            char firstChar = part.charAt(0);
+            if (Character.isUpperCase(firstChar) || part.indexOf('$') >= 0) {
+                classStart = i;
+                break;
+            }
+        }
+
+        if (classStart < 0) {
+            return parts[parts.length - 1].replace('$', '.');
+        }
+
+        String joined = String.join(".", Arrays.copyOfRange(parts, classStart, parts.length));
+        return joined.replace('$', '.');
     }
 
     private void appendParameterDocumentation(StringBuilder md, ExecutableElement e,

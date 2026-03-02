@@ -48,7 +48,7 @@ The position offset is changed as the
 
 **Returns:** `java.lang.String`
 
-### `getChars(int where, int len, javax.swing.text.Segment chars)`
+### `getChars(int where, int len, Segment chars)`
 
 If the desired content spans the gap, we copy the content.  
  If the desired content does not span the gap, the actual store is returned to avoid the copy since

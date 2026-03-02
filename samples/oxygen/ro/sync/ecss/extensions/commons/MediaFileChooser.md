@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `chooseMediaFile(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `chooseMediaFile(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Access to some author utility methods.

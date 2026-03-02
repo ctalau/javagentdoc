@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `handlePasteFragment(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, int actionId, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handlePasteFragment(int offset, AuthorDocumentFragment[] fragmentsToInsert, int actionId, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -30,14 +30,14 @@
 
 **Returns:** `boolean`
 
-### `areTopicRefsPasted(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert)`
+### `areTopicRefsPasted(AuthorDocumentFragment[] fragmentsToInsert)`
 
 **Parameters:**
 - `fragmentsToInsert` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../../api/node/AuthorDocumentFragment.md)): Fragments to insert
 
 **Returns:** `boolean`
 
-### `insertFragmentsIfValid(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int insertionOffset, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `insertFragmentsIfValid(AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, int insertionOffset, AuthorSchemaManager authorSchemaManager)`
 
 **Parameters:**
 - `fragmentsToInsert` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../../api/node/AuthorDocumentFragment.md)): The fragmwnts to insert

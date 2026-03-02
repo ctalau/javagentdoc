@@ -10,12 +10,12 @@
 
 ## Constructors
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message of the exception.
 
-### `<init>(java.lang.String message, java.lang.Exception cause)`
+### `<init>(String message, Exception cause)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message of the exception.

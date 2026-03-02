@@ -167,17 +167,17 @@ For a new instance, where the arrays above have not yet been allocated, the valu
 
 ### `createWithExpectedSize(int expectedSize)`
 
-**Returns:** [`com.google.common.collect.CompactHashMap<K,V>`](./CompactHashMap.md)
-
 **Parameters:**
 - `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `init(int expectedSize)`
+**Returns:** [`com.google.common.collect.CompactHashMap<K,V>`](./CompactHashMap.md)
 
-**Returns:** `void`
+### `init(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `void`
 
 ### `needsAllocArrays()`
 
@@ -193,10 +193,10 @@ For a new instance, where the arrays above have not yet been allocated, the valu
 
 ### `createHashFloodingResistantDelegate(int tableSize)`
 
-**Returns:** `java.util.Map<K,V>`
-
 **Parameters:**
 - `tableSize` (`int`)
+
+**Returns:** `java.util.Map<K,V>`
 
 ### `convertToHashFloodingResistantImplementation()`
 
@@ -204,10 +204,10 @@ For a new instance, where the arrays above have not yet been allocated, the valu
 
 ### `setHashTableMask(int mask)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `mask` (`int`)
+
+**Returns:** `void`
 
 ### `hashTableMask()`
 
@@ -219,25 +219,23 @@ For a new instance, where the arrays above have not yet been allocated, the valu
 
 ### `accessEntry(int index)`
 
-**Returns:** `void`
-
 Used only in CompactLinkedHashMap for LRU
  ordering.
 
 **Parameters:**
 - `index` (`int`)
 
-### `put(K key, V value)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `insertEntry(int entryIndex, K key, V value, int hash, int mask)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `insertEntry(int entryIndex, K key, V value, int hash, int mask)`
 
 **Parameters:**
 - `entryIndex` (`int`)
@@ -246,23 +244,23 @@ Used only in CompactLinkedHashMap for LRU
 - `hash` (`int`)
 - `mask` (`int`)
 
-### `resizeMeMaybe(int newSize)`
-
 **Returns:** `void`
+
+### `resizeMeMaybe(int newSize)`
 
 **Parameters:**
 - `newSize` (`int`)
 
-### `resizeEntries(int newCapacity)`
-
 **Returns:** `void`
+
+### `resizeEntries(int newCapacity)`
 
 **Parameters:**
 - `newCapacity` (`int`)
 
-### `resizeTable(int oldMask, int newCapacity, int targetHash, int targetEntryIndex)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `resizeTable(int oldMask, int newCapacity, int targetHash, int targetEntryIndex)`
 
 **Parameters:**
 - `oldMask` (`int`)
@@ -270,48 +268,50 @@ Used only in CompactLinkedHashMap for LRU
 - `targetHash` (`int`)
 - `targetEntryIndex` (`int`)
 
-### `indexOf(java.lang.Object key)`
+**Returns:** `int`
+
+### `indexOf(Object key)`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 **Returns:** `int`
 
+### `containsKey(Object key)`
+
 **Parameters:**
 - `key` (`java.lang.Object`)
-
-### `containsKey(java.lang.Object key)`
 
 **Returns:** `boolean`
 
+### `get(Object key)`
+
 **Parameters:**
 - `key` (`java.lang.Object`)
-
-### `get(java.lang.Object key)`
 
 **Returns:** `V`
 
+### `remove(Object key)`
+
 **Parameters:**
 - `key` (`java.lang.Object`)
-
-### `remove(java.lang.Object key)`
 
 **Returns:** `V`
 
+### `removeHelper(Object key)`
+
 **Parameters:**
 - `key` (`java.lang.Object`)
-
-### `removeHelper(java.lang.Object key)`
 
 **Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object`
 
-**Parameters:**
-- `key` (`java.lang.Object`)
-
 ### `moveLastEntry(int dstIndex, int mask)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `dstIndex` (`int`)
 - `mask` (`int`)
+
+**Returns:** `void`
 
 ### `firstEntryIndex()`
 
@@ -319,25 +319,25 @@ Used only in CompactLinkedHashMap for LRU
 
 ### `getSuccessor(int entryIndex)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `entryIndex` (`int`)
 
-### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
-
 **Returns:** `int`
+
+### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
 
 **Parameters:**
 - `indexBeforeRemove` (`int`)
 - `indexRemoved` (`int`)
 
-### `replaceAll(java.util.function.BiFunction<? super K,? super V,? extends V> function)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `replaceAll(BiFunction<? super K,? super V,? extends V> function)`
 
 **Parameters:**
 - `function` (`java.util.function.BiFunction<? super K,? super V,? extends V>`)
+
+**Returns:** `void`
 
 ### `keySet()`
 
@@ -351,12 +351,12 @@ Used only in CompactLinkedHashMap for LRU
 
 **Returns:** `java.util.Iterator<K>`
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+**Returns:** `void`
 
 ### `entrySet()`
 
@@ -378,12 +378,12 @@ Used only in CompactLinkedHashMap for LRU
 
 **Returns:** `boolean`
 
-### `containsValue(java.lang.Object value)`
-
-**Returns:** `boolean`
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `values()`
 
@@ -405,19 +405,19 @@ Used only in CompactLinkedHashMap for LRU
 
 **Returns:** `void`
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 
 ### `requireTable()`
 
@@ -437,46 +437,46 @@ Used only in CompactLinkedHashMap for LRU
 
 ### `key(int i)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `i` (`int`)
+
+**Returns:** `K`
 
 ### `value(int i)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `i` (`int`)
+
+**Returns:** `V`
 
 ### `entry(int i)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `i` (`int`)
 
-### `setKey(int i, K key)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `setKey(int i, K key)`
 
 **Parameters:**
 - `i` (`int`)
 - `key` (`K`)
 
-### `setValue(int i, V value)`
-
 **Returns:** `void`
+
+### `setValue(int i, V value)`
 
 **Parameters:**
 - `i` (`int`)
 - `value` (`V`)
 
-### `setEntry(int i, int value)`
-
 **Returns:** `void`
+
+### `setEntry(int i, int value)`
 
 **Parameters:**
 - `i` (`int`)
 - `value` (`int`)
+
+**Returns:** `void`
 

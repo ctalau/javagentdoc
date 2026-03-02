@@ -41,8 +41,6 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 
 ### `get(K key)`
 
-**Returns:** `java.util.Set<V>`
-
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the java.util.Collection specified in the Multimap
  interface.
@@ -50,9 +48,9 @@ Because a SetMultimap has unique values for a given key, this method returns a
 **Parameters:**
 - `key` (`K`)
 
-### `removeAll(java.lang.Object key)`
-
 **Returns:** `java.util.Set<V>`
+
+### `removeAll(Object key)`
 
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the java.util.Collection specified in the Multimap
@@ -61,9 +59,9 @@ Because a SetMultimap has unique values for a given key, this method returns a
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `java.util.Set<V>`
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the java.util.Collection specified in the Multimap
@@ -76,24 +74,24 @@ Any duplicates in values will be stored in the multimap once.
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `entries()`
+**Returns:** `java.util.Set<V>`
 
-**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
+### `entries()`
 
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the java.util.Collection specified in the Multimap
  interface.
 
-### `asMap()`
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap()`
 
 **Note:** The returned map's values are guaranteed to be of type Set. To obtain
  this map with the more specific generic type Map<K, Set<V>>, call Multimaps#asMap(SetMultimap) instead.
 
-### `equals(java.lang.Object obj)`
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 Two SetMultimap instances are equal if, for each key, they contain the same values.
  Equality does not depend on the ordering of keys or values.
@@ -104,4 +102,6 @@ An empty SetMultimap is equal to any other empty Multimap, including an
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

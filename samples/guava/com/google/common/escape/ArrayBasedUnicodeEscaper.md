@@ -52,7 +52,7 @@ The size of the data structure used by ArrayBasedUnicodeEscaper is proportional 
 
 ## Constructors
 
-### `<init>(java.util.Map<java.lang.Character,java.lang.String> replacementMap, int safeMin, int safeMax, java.lang.@org.checkerframework.checker.nullness.qual.Nullable String unsafeReplacement)`
+### `<init>(Map<Character,String> replacementMap, int safeMin, int safeMax, lang@Nullable String unsafeReplacement)`
 
 If safeMax < safeMin then no code points are considered safe.
 
@@ -65,9 +65,9 @@ If a code point has no mapped replacement then it is checked against the safe ra
 - `safeMin` (`int`): the lowest character value in the safe range
 - `safeMax` (`int`): the highest character value in the safe range
 - `unsafeReplacement` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable String`): the default replacement for unsafe characters or null if no default
-     replacement is required
+       replacement is required
 
-### `<init>(com.google.common.escape.ArrayBasedEscaperMap escaperMap, int safeMin, int safeMax, java.lang.@org.checkerframework.checker.nullness.qual.Nullable String unsafeReplacement)`
+### `<init>(ArrayBasedEscaperMap escaperMap, int safeMin, int safeMax, lang@Nullable String unsafeReplacement)`
 
 If safeMax < safeMin then no code points are considered safe. This
  initializer is useful when explicit instances of ArrayBasedEscaperMap are used to allow the
@@ -82,20 +82,18 @@ If a code point has no mapped replacement then it is checked against the safe ra
 - `safeMin` (`int`): the lowest character value in the safe range
 - `safeMax` (`int`): the highest character value in the safe range
 - `unsafeReplacement` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable String`): the default replacement for unsafe characters or null if no default
-     replacement is required
+       replacement is required
 
 ## Methods
 
-### `escape(java.lang.String s)`
-
-**Returns:** `java.lang.String`
+### `escape(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
 
-### `escape(int cp)`
+**Returns:** `java.lang.String`
 
-**Returns:** `char[]`
+### `escape(int cp)`
 
 If the
  given character does not have an explicit replacement and lies outside the safe range then
@@ -104,18 +102,18 @@ If the
 **Parameters:**
 - `cp` (`int`)
 
-### `nextEscapeIndex(java.lang.CharSequence csq, int index, int end)`
+**Returns:** `char[]`
 
-**Returns:** `int`
+### `nextEscapeIndex(CharSequence csq, int index, int end)`
 
 **Parameters:**
 - `csq` (`java.lang.CharSequence`)
 - `index` (`int`)
 - `end` (`int`)
 
-### `escapeUnsafe(int cp)`
+**Returns:** `int`
 
-**Returns:** `char[]`
+### `escapeUnsafe(int cp)`
 
 Subclasses should override this method to provide generalized
  escaping for code points if required.
@@ -127,4 +125,6 @@ Note that arrays returned by this method must not be modified once they have bee
 
 **Parameters:**
 - `cp` (`int`): the Unicode code point to escape
+
+**Returns:** `char[]`
 

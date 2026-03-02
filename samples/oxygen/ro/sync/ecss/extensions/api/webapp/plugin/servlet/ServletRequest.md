@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getAttribute(java.lang.String name)`
+### `getAttribute(String name)`
 
 Attributes can be set two ways. The servlet container may set attributes to make available custom information about a
  request. For example, for requests made using HTTPS, the attribute
@@ -43,7 +43,7 @@ This method returns `null` if
 
 **Returns:** `java.lang.String`
 
-### `setCharacterEncoding(java.lang.String encoding)`
+### `setCharacterEncoding(String encoding)`
 
 This method must be called prior to
  reading request parameters or reading input using getReader(). Otherwise, it has no effect.
@@ -53,7 +53,7 @@ This method must be called prior to
 
 **Returns:** `void`
 
-### `setCharacterEncoding(java.nio.charset.Charset encoding)`
+### `setCharacterEncoding(Charset encoding)`
 
 This method must be called prior to reading
  request parameters or reading input using getReader(). Otherwise, it has no effect.
@@ -85,7 +85,7 @@ Either this method or
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletInputStream`](./ServletInputStream.md)
 
-### `getParameter(java.lang.String name)`
+### `getParameter(String name)`
 
 Request parameters are extra information sent with the request. For HTTP servlets, parameters are contained in
  the query string or posted form data.
@@ -116,7 +116,7 @@ If the request has no parameters, the method returns an empty `Enumeration`.
 
 **Returns:** `java.util.Enumeration<java.lang.String>`
 
-### `getParameterValues(java.lang.String name)`
+### `getParameterValues(String name)`
 
 If the parameter has a single value, the array has a length of 1.
 
@@ -183,7 +183,7 @@ If the engine cannot or chooses
 
 **Returns:** `java.lang.String`
 
-### `setAttribute(java.lang.String name, java.lang.Object o)`
+### `setAttribute(String name, Object o)`
 
 Attributes are reset between requests. This method is most often used in
  conjunction with RequestDispatcher.
@@ -203,7 +203,7 @@ Attributes are reset between requests. This method is most often used in
 
 **Returns:** `void`
 
-### `removeAttribute(java.lang.String name)`
+### `removeAttribute(String name)`
 
 This method is not generally needed as attributes only persist as long as the
  request is being handled.

@@ -13,7 +13,7 @@ If there is a selection in the table all the rows that intersect
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper documentTypeHelper)`
+### `<init>(AuthorTableHelper documentTypeHelper)`
 
 **Parameters:**
 - `documentTypeHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): The table helper specific to a document type. 
@@ -21,7 +21,7 @@ If there is a selection in the table all the rows that intersect
 
 ## Methods
 
-### `performDeleteRows(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> contentIntervals)`
+### `performDeleteRows(AuthorAccess authorAccess, List<ContentInterval> contentIntervals)`
 
 The rows that must be deleted are determined in the following order:
  
@@ -39,7 +39,7 @@ The rows that must be deleted are determined in the following order:
 
 **Returns:** `boolean`
 
-### `performDeleteRows(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int startRowOffset, int endRowOffset)`
+### `performDeleteRows(AuthorAccess authorAccess, int startRowOffset, int endRowOffset)`
 
 The row that must be deleted is determined in the following order:
  
@@ -57,7 +57,7 @@ The row that must be deleted is determined in the following order:
 
 **Returns:** `boolean`
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 For this operation the caret must be inside a table cell.
 

@@ -55,7 +55,7 @@ All message types larger than this one are not handled by default by the
 
 ## Constructors
 
-### `<init>(int type, java.lang.String title, java.lang.String message, boolean isUserGenerated)`
+### `<init>(int type, String title, String message, boolean isUserGenerated)`
 
 **Parameters:**
 - `type` (`int`): Message type.
@@ -82,7 +82,7 @@ All message types larger than this one are not handled by default by the
 
 **Returns:** `boolean`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

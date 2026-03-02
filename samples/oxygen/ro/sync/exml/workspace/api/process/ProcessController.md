@@ -22,7 +22,7 @@ Will also kill sub-processes.
 
 **Returns:** `void`
 
-### `sendMessage(java.lang.String message)`
+### `sendMessage(String message)`
 
 The message will be sent  "UTF-8" encoded via the java.lang.Process.getOutputStream().
 

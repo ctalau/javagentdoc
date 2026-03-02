@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getIconDecoration(java.net.URL resource)`
+### `getIconDecoration(URL resource)`
 
 For example if the URL ends in ".xml", this utility returns a small XML-symbol image.
  This is only implemented in the Swing-based application.
@@ -18,7 +18,7 @@ For example if the URL ends in ".xml", this utility returns a small XML-symbol i
 
 **Returns:** `java.lang.Object`
 
-### `loadIcon(java.net.URL resource)`
+### `loadIcon(URL resource)`
 
 When running on a retina or HiDPI display, the application will try to load a corresponding image for the current display.
  Also when running in a dark theme the dark icon will be loaded if available. 

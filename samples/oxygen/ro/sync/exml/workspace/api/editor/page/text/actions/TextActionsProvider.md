@@ -12,14 +12,14 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.Object>`
 
-### `invokeAction(java.lang.Object action)`
+### `invokeAction(Object action)`
 
 **Parameters:**
 - `action` (`java.lang.Object`): The action to invoke
 
 **Returns:** `void`
 
-### `getActionID(java.lang.Object action)`
+### `getActionID(Object action)`
 
 If the action appears on a contextual menu but is not installed on a main menu it will pe prefixed with the constant "ACTION_WITH_NO_SHORTCUT/"
 

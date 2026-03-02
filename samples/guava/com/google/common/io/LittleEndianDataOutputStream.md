@@ -15,7 +15,7 @@
 
 ## Constructors
 
-### `<init>(java.io.OutputStream out)`
+### `<init>(OutputStream out)`
 
 **Parameters:**
 - `out` (`java.io.OutputStream`): the stream to delegate to
@@ -24,89 +24,89 @@
 
 ### `write(byte[] b, int off, int len)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `writeBoolean(boolean v)`
-
 **Returns:** `void`
+
+### `writeBoolean(boolean v)`
 
 **Parameters:**
 - `v` (`boolean`)
 
-### `writeByte(int v)`
-
 **Returns:** `void`
+
+### `writeByte(int v)`
 
 **Parameters:**
 - `v` (`int`)
 
-### `writeBytes(java.lang.String s)`
-
 **Returns:** `void`
+
+### `writeBytes(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `writeChar(int v)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `v` (`int`)
 
-### `writeChars(java.lang.String s)`
-
 **Returns:** `void`
+
+### `writeChars(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
 
-### `writeDouble(double v)`
-
 **Returns:** `void`
+
+### `writeDouble(double v)`
 
 **Parameters:**
 - `v` (`double`)
 
-### `writeFloat(float v)`
-
 **Returns:** `void`
+
+### `writeFloat(float v)`
 
 **Parameters:**
 - `v` (`float`)
 
-### `writeInt(int v)`
-
 **Returns:** `void`
+
+### `writeInt(int v)`
 
 **Parameters:**
 - `v` (`int`)
 
-### `writeLong(long v)`
-
 **Returns:** `void`
+
+### `writeLong(long v)`
 
 **Parameters:**
 - `v` (`long`)
 
-### `writeShort(int v)`
-
 **Returns:** `void`
+
+### `writeShort(int v)`
 
 **Parameters:**
 - `v` (`int`)
 
-### `writeUTF(java.lang.String str)`
-
 **Returns:** `void`
+
+### `writeUTF(String str)`
 
 **Parameters:**
 - `str` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `close()`
 

@@ -37,7 +37,7 @@
 - `columnKey` (`C`)
 - `value` (`V`)
 
-### `<init>(com.google.common.collect.Table.Cell<R,C,V> cell)`
+### `<init>(Table.Cell<R,C,V> cell)`
 
 **Parameters:**
 - `cell` (`com.google.common.collect.Table.Cell<R,C,V>`)
@@ -46,10 +46,10 @@
 
 ### `column(C columnKey)`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<R,V>`](./ImmutableMap.md)
-
 **Parameters:**
 - `columnKey` (`C`)
+
+**Returns:** [`com.google.common.collect.ImmutableMap<R,V>`](./ImmutableMap.md)
 
 ### `columnMap()`
 

@@ -37,7 +37,7 @@ Provides the same functionality as java.io.BufferedReader#readLine() but for all
 
 ## Constructors
 
-### `<init>(java.lang.Readable readable)`
+### `<init>(Readable readable)`
 
 **Parameters:**
 - `readable` (`java.lang.Readable`)
@@ -46,9 +46,9 @@ Provides the same functionality as java.io.BufferedReader#readLine() but for all
 
 ### `readLine()`
 
-**Returns:** `java.lang.String`
-
 A line is considered to be terminated by any one of a line feed (
  '\n'), a carriage return ('\r'), or a carriage return followed immediately by a
  linefeed ("\r\n").
+
+**Returns:** `java.lang.String`
 

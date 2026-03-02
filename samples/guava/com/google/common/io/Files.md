@@ -21,20 +21,18 @@ java.nio.file.Path users will find similar utilities in MoreFiles and the
 
 ## Methods
 
-### `newReader(java.io.File file, java.nio.charset.Charset charset)`
-
-**Returns:** `java.io.BufferedReader`
+### `newReader(File file, Charset charset)`
 
 **java.nio.file.Path equivalent:** java.nio.file.Files#newBufferedReader(java.nio.file.Path, Charset).
 
 **Parameters:**
 - `file` (`java.io.File`): the file to read from
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 
-### `newWriter(java.io.File file, java.nio.charset.Charset charset)`
+**Returns:** `java.io.BufferedReader`
 
-**Returns:** `java.io.BufferedWriter`
+### `newWriter(File file, Charset charset)`
 
 **java.nio.file.Path equivalent:** java.nio.file.Files#newBufferedWriter(java.nio.file.Path, Charset,
  java.nio.file.OpenOption...).
@@ -42,18 +40,18 @@ java.nio.file.Path users will find similar utilities in MoreFiles and the
 **Parameters:**
 - `file` (`java.io.File`): the file to write to
 - `charset` (`java.nio.charset.Charset`): the charset used to encode the output stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 
-### `asByteSource(java.io.File file)`
+**Returns:** `java.io.BufferedWriter`
 
-**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+### `asByteSource(File file)`
 
 **Parameters:**
 - `file` (`java.io.File`)
 
-### `asByteSink(java.io.File file, com.google.common.io.FileWriteMode[] modes)`
+**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
-**Returns:** [`com.google.common.io.ByteSink`](./ByteSink.md)
+### `asByteSink(File file, FileWriteMode[] modes)`
 
 The given modes
  control how the file is opened for writing. When no mode is provided, the file will be
@@ -64,17 +62,17 @@ The given modes
 - `file` (`java.io.File`)
 - `modes` ([`com.google.common.io.FileWriteMode[]`](./FileWriteMode.md))
 
-### `asCharSource(java.io.File file, java.nio.charset.Charset charset)`
+**Returns:** [`com.google.common.io.ByteSink`](./ByteSink.md)
 
-**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+### `asCharSource(File file, Charset charset)`
 
 **Parameters:**
 - `file` (`java.io.File`)
 - `charset` (`java.nio.charset.Charset`)
 
-### `asCharSink(java.io.File file, java.nio.charset.Charset charset, com.google.common.io.FileWriteMode[] modes)`
+**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
 
-**Returns:** [`com.google.common.io.CharSink`](./CharSink.md)
+### `asCharSink(File file, Charset charset, FileWriteMode[] modes)`
 
 The given modes control how the file is opened for writing. When no mode
  is provided, the file will be truncated before writing. When the APPEND mode is provided, writes will append to the end of the file without truncating it.
@@ -84,27 +82,27 @@ The given modes control how the file is opened for writing. When no mode
 - `charset` (`java.nio.charset.Charset`)
 - `modes` ([`com.google.common.io.FileWriteMode[]`](./FileWriteMode.md))
 
-### `toByteArray(java.io.File file)`
+**Returns:** [`com.google.common.io.CharSink`](./CharSink.md)
 
-**Returns:** `byte[]`
+### `toByteArray(File file)`
 
 **java.nio.file.Path equivalent:** java.nio.file.Files#readAllBytes.
 
 **Parameters:**
 - `file` (`java.io.File`): the file to read from
 
-### `toString(java.io.File file, java.nio.charset.Charset charset)`
+**Returns:** `byte[]`
 
-**Returns:** `java.lang.String`
+### `toString(File file, Charset charset)`
 
 **Parameters:**
 - `file` (`java.io.File`): the file to read from
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 
-### `write(byte[] from, java.io.File to)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `write(byte[] from, File to)`
 
 **java.nio.file.Path equivalent:** java.nio.file.Files#write(java.nio.file.Path, byte[], java.nio.file.OpenOption...).
 
@@ -112,19 +110,19 @@ The given modes control how the file is opened for writing. When no mode
 - `from` (`byte[]`): the bytes to write
 - `to` (`java.io.File`): the destination file
 
-### `write(java.lang.CharSequence from, java.io.File to, java.nio.charset.Charset charset)`
-
 **Returns:** `void`
+
+### `write(CharSequence from, File to, Charset charset)`
 
 **Parameters:**
 - `from` (`java.lang.CharSequence`): the character sequence to write
 - `to` (`java.io.File`): the destination file
 - `charset` (`java.nio.charset.Charset`): the charset used to encode the output stream; see StandardCharsets for
-     helpful predefined constants
-
-### `copy(java.io.File from, java.io.OutputStream to)`
+       helpful predefined constants
 
 **Returns:** `void`
+
+### `copy(File from, OutputStream to)`
 
 **java.nio.file.Path equivalent:** java.nio.file.Files#copy(java.nio.file.Path, OutputStream).
 
@@ -132,9 +130,9 @@ The given modes control how the file is opened for writing. When no mode
 - `from` (`java.io.File`): the source file
 - `to` (`java.io.OutputStream`): the output stream
 
-### `copy(java.io.File from, java.io.File to)`
-
 **Returns:** `void`
+
+### `copy(File from, File to)`
 
 Copying is not an atomic operation - in the case of an I/O error, power loss, process
  termination, or other problems, to may not be a complete copy of from. If you
@@ -152,37 +150,37 @@ Copying is not an atomic operation - in the case of an I/O error, power loss, pr
 - `from` (`java.io.File`): the source file
 - `to` (`java.io.File`): the destination file
 
-### `copy(java.io.File from, java.nio.charset.Charset charset, java.lang.Appendable to)`
-
 **Returns:** `void`
+
+### `copy(File from, Charset charset, Appendable to)`
 
 **Parameters:**
 - `from` (`java.io.File`): the source file
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 - `to` (`java.lang.Appendable`): the appendable object
 
-### `append(java.lang.CharSequence from, java.io.File to, java.nio.charset.Charset charset)`
-
 **Returns:** `void`
+
+### `append(CharSequence from, File to, Charset charset)`
 
 **Parameters:**
 - `from` (`java.lang.CharSequence`): the character sequence to append
 - `to` (`java.io.File`): the destination file
 - `charset` (`java.nio.charset.Charset`): the charset used to encode the output stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 
-### `equal(java.io.File file1, java.io.File file2)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `equal(File file1, File file2)`
 
 **Parameters:**
 - `file1` (`java.io.File`)
 - `file2` (`java.io.File`)
 
-### `createTempDir()`
+**Returns:** `boolean`
 
-**Returns:** `java.io.File`
+### `createTempDir()`
 
 The temporary directory is created with permissions restricted to the current user or, in
  the case of Android, the current app. If that is not possible (as is the case under the very
@@ -204,16 +202,16 @@ This method assumes that the temporary volume is writable, has free inodes and f
  
 **java.nio.file.Path equivalent:** java.nio.file.Files#createTempDirectory.
 
-### `touch(java.io.File file)`
+**Returns:** `java.io.File`
 
-**Returns:** `void`
+### `touch(File file)`
 
 **Parameters:**
 - `file` (`java.io.File`): the file to create or update
 
-### `createParentDirs(java.io.File file)`
-
 **Returns:** `void`
+
+### `createParentDirs(File file)`
 
 Note that if
  this operation fails it may have succeeded in creating some (but not all) of the necessary
@@ -222,9 +220,9 @@ Note that if
 **Parameters:**
 - `file` (`java.io.File`)
 
-### `move(java.io.File from, java.io.File to)`
-
 **Returns:** `void`
+
+### `move(File from, File to)`
 
 This method can rename a file and/or move it to a
  different directory. In either case to must be the target path for the file itself; not
@@ -237,9 +235,9 @@ This method can rename a file and/or move it to a
 - `from` (`java.io.File`): the source file
 - `to` (`java.io.File`): the destination file
 
-### `readFirstLine(java.io.File file, java.nio.charset.Charset charset)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `readFirstLine(File file, Charset charset)`
 
 The line does not include line-termination characters, but
  does include other leading and trailing whitespace.
@@ -247,11 +245,11 @@ The line does not include line-termination characters, but
 **Parameters:**
 - `file` (`java.io.File`): the file to read from
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 
-### `readLines(java.io.File file, java.nio.charset.Charset charset)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.List<java.lang.String>`
+### `readLines(File file, Charset charset)`
 
 The lines do not include line-termination characters, but
  do include other leading and trailing whitespace.
@@ -266,21 +264,21 @@ This method returns a mutable List. For an ImmutableList, use
 **Parameters:**
 - `file` (`java.io.File`): the file to read from
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 
-### `readLines(java.io.File file, java.nio.charset.Charset charset, com.google.common.io.LineProcessor<T> callback)`
+**Returns:** `java.util.List<java.lang.String>`
 
-**Returns:** `T`
+### `readLines(File file, Charset charset, LineProcessor<T> callback)`
 
 **Parameters:**
 - `file` (`java.io.File`): the file to read from
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see StandardCharsets for
-     helpful predefined constants
+       helpful predefined constants
 - `callback` ([`com.google.common.io.LineProcessor<T>`](./LineProcessor.md)): the LineProcessor to use to handle the lines
 
-### `readBytes(java.io.File file, com.google.common.io.ByteProcessor<T> processor)`
-
 **Returns:** `T`
+
+### `readBytes(File file, ByteProcessor<T> processor)`
 
 (If this seems too complicated, maybe you're looking for #toByteArray.)
 
@@ -288,17 +286,17 @@ This method returns a mutable List. For an ImmutableList, use
 - `file` (`java.io.File`): the file to read
 - `processor` ([`com.google.common.io.ByteProcessor<T>`](./ByteProcessor.md)): the object to which the bytes of the file are passed.
 
-### `hash(java.io.File file, com.google.common.hash.HashFunction hashFunction)`
+**Returns:** `T`
 
-**Returns:** [`com.google.common.hash.HashCode`](../hash/HashCode.md)
+### `hash(File file, HashFunction hashFunction)`
 
 **Parameters:**
 - `file` (`java.io.File`): the file to read
 - `hashFunction` ([`com.google.common.hash.HashFunction`](../hash/HashFunction.md)): the hash function to use to hash the data
 
-### `map(java.io.File file)`
+**Returns:** [`com.google.common.hash.HashCode`](../hash/HashCode.md)
 
-**Returns:** `java.nio.MappedByteBuffer`
+### `map(File file)`
 
 Files are mapped from offset 0 to its length.
 
@@ -308,9 +306,9 @@ This only works for files ≤ Integer#MAX_VALUE bytes.
 **Parameters:**
 - `file` (`java.io.File`): the file to map
 
-### `map(java.io.File file, java.nio.channels.FileChannel.MapMode mode)`
-
 **Returns:** `java.nio.MappedByteBuffer`
+
+### `map(File file, FileChannel.MapMode mode)`
 
 Files are mapped from offset 0 to its length.
 
@@ -321,9 +319,9 @@ This only works for files ≤ Integer#MAX_VALUE bytes.
 - `file` (`java.io.File`): the file to map
 - `mode` (`java.nio.channels.FileChannel.MapMode`): the mode to use when mapping file
 
-### `map(java.io.File file, java.nio.channels.FileChannel.MapMode mode, long size)`
-
 **Returns:** `java.nio.MappedByteBuffer`
+
+### `map(File file, FileChannel.MapMode mode, long size)`
 
 Files are mapped from offset 0 to size.
 
@@ -340,18 +338,18 @@ This only works for files ≤ Integer#MAX_VALUE bytes.
 - `mode` (`java.nio.channels.FileChannel.MapMode`): the mode to use when mapping file
 - `size` (`long`)
 
-### `mapInternal(java.io.File file, java.nio.channels.FileChannel.MapMode mode, long size)`
-
 **Returns:** `java.nio.MappedByteBuffer`
+
+### `mapInternal(File file, FileChannel.MapMode mode, long size)`
 
 **Parameters:**
 - `file` (`java.io.File`)
 - `mode` (`java.nio.channels.FileChannel.MapMode`)
 - `size` (`long`)
 
-### `simplifyPath(java.lang.String pathname)`
+**Returns:** `java.nio.MappedByteBuffer`
 
-**Returns:** `java.lang.String`
+### `simplifyPath(String pathname)`
 
 The following heuristics are used:
 
@@ -375,9 +373,9 @@ These heuristics do not always match the behavior of the filesystem. In particul
 **Parameters:**
 - `pathname` (`java.lang.String`)
 
-### `getFileExtension(java.lang.String fullName)`
-
 **Returns:** `java.lang.String`
+
+### `getFileExtension(String fullName)`
 
 The result does not
  include the '.'.
@@ -393,20 +391,20 @@ The result does not
 **Parameters:**
 - `fullName` (`java.lang.String`)
 
-### `getNameWithoutExtension(java.lang.String file)`
-
 **Returns:** `java.lang.String`
+
+### `getNameWithoutExtension(String file)`
 
 This is
  similar to the basename unix command. The result does not include the '.'.
 
 **Parameters:**
 - `file` (`java.lang.String`): The name of the file to trim the extension from. This can be either a fully
-     qualified file name (including a path) or just a file name.
+       qualified file name (including a path) or just a file name.
+
+**Returns:** `java.lang.String`
 
 ### `fileTraverser()`
-
-**Returns:** [`com.google.common.graph.Traverser<java.io.File>`](../graph/Traverser.md)
 
 The returned traverser
  starts from a File and will return all files and directories it encounters.
@@ -430,6 +428,8 @@ If the File passed to one of the Traverser methods does not exist or is not
 Example: Files.fileTraverser().depthFirstPreOrder(new File("/")) may return files
  with the following paths: ["/", "/etc", "/etc/config.txt", "/etc/fonts", "/home",
  "/home/alice", ...]
+
+**Returns:** [`com.google.common.graph.Traverser<java.io.File>`](../graph/Traverser.md)
 
 ### `isDirectory()`
 

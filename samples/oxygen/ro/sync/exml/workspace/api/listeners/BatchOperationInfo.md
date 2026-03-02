@@ -14,7 +14,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.exml.workspace.api.listeners.BatchOperationInfo.Type type)`
+### `<init>(BatchOperationInfo.Type type)`
 
 **Parameters:**
 - `type` (`ro.sync.exml.workspace.api.listeners.BatchOperationInfo.Type`): The operation type.

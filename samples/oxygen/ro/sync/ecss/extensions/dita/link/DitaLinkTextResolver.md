@@ -87,26 +87,26 @@ So when they change we must also refresh.
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.dita.ContextKeyManager keyManager)`
+### `<init>(ContextKeyManager keyManager)`
 
 **Parameters:**
 - `keyManager` ([`ro.sync.ecss.dita.ContextKeyManager`](../../../dita/ContextKeyManager.md)): The context-aware key manager.
 
-### `<init>(ro.sync.ecss.dita.ContextKeyManagerProvider keyManagerProvider)`
+### `<init>(ContextKeyManagerProvider keyManagerProvider)`
 
 **Parameters:**
 - `keyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../../dita/ContextKeyManagerProvider.md)): The context-aware key manager provider.
 
 ## Methods
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `resolveReference(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): Author node.
 
 **Returns:** `java.lang.String`
 
-### `resolveTopicRefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.node.AttrValue classValue)`
+### `resolveTopicRefReference(AuthorElement element, AttrValue classValue)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element that contains the topicref reference.
@@ -114,21 +114,21 @@ So when they change we must also refresh.
 
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-### `extractNavTitle(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `extractNavTitle(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The topicref/topichead element.
 
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-### `findNavtitleInTopicmetaChildren(ro.sync.ecss.extensions.api.node.AuthorElement topicmeta)`
+### `findNavtitleInTopicmetaChildren(AuthorElement topicmeta)`
 
 **Parameters:**
 - `topicmeta` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The topicmeta element
 
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-### `resolveHrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String hrefValue)`
+### `resolveHrefReference(AuthorElement element, String hrefValue)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element that contains the href reference.
@@ -136,7 +136,7 @@ So when they change we must also refresh.
 
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-### `resolveKeyrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String keyref, java.lang.String classValue)`
+### `resolveKeyrefReference(AuthorElement element, String keyref, String classValue)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Author element that contains the keyref reference.
@@ -145,7 +145,7 @@ So when they change we must also refresh.
 
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-### `resolveKeyRefToKeydefMetadata(java.lang.String classValue, ro.sync.ecss.dita.reference.keyref.KeyInfo keyInfo)`
+### `resolveKeyRefToKeydefMetadata(String classValue, KeyInfo keyInfo)`
 
 **Parameters:**
 - `classValue` (`java.lang.String`): Class value.
@@ -153,7 +153,7 @@ So when they change we must also refresh.
 
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-### `getLocationForDisplay(java.lang.String absoluteLocation, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getLocationForDisplay(String absoluteLocation, AuthorNode node)`
 
 **Parameters:**
 - `absoluteLocation` (`java.lang.String`): The absolute location.
@@ -161,7 +161,7 @@ So when they change we must also refresh.
 
 **Returns:** `java.lang.String`
 
-### `getFileNotFoundInfo(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String hrefValue, java.io.FileNotFoundException e)`
+### `getFileNotFoundInfo(AuthorNode node, String hrefValue, FileNotFoundException e)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node being resolved.
@@ -170,7 +170,7 @@ So when they change we must also refresh.
 
 **Returns:** `ro.sync.ecss.extensions.dita.link.DitaLinkTextResolver.ResolvedLinkInfo`
 
-### `computeCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String hrefValue)`
+### `computeCacheKey(AuthorNode node, String hrefValue)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The current node
@@ -178,7 +178,7 @@ So when they change we must also refresh.
 
 **Returns:** `java.lang.String`
 
-### `getParentTopicID(ro.sync.ecss.extensions.api.node.AuthorNode element)`
+### `getParentTopicID(AuthorNode element)`
 
 If the element 
  is a topic element, this method will return the given element's ID. If 
@@ -190,35 +190,35 @@ If the element
 
 **Returns:** `java.lang.String`
 
-### `computeKeyScopesHash(ro.sync.ecss.extensions.api.node.AuthorNode elem)`
+### `computeKeyScopesHash(AuthorNode elem)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element.
 
 **Returns:** `java.lang.String`
 
-### `isLocalDITAReference(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isLocalDITAReference(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Reference element.
 
 **Returns:** `boolean`
 
-### `isLocalReference(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isLocalReference(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): Reference element.
 
 **Returns:** `boolean`
 
-### `update(java.util.Set<java.lang.String> modifiedURLs)`
+### `update(Set<String> modifiedURLs)`
 
 **Parameters:**
 - `modifiedURLs` (`java.util.Set<java.lang.String>`): The URLs that are modified.
 
 **Returns:** `void`
 
-### `isHrefElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isHrefElement(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
@@ -229,14 +229,14 @@ If the element
 
 **Returns:** `void`
 
-### `refreshNodeReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `refreshNodeReferences(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `void`
 
-### `buildKeyrefCacheKey(ro.sync.ecss.extensions.api.node.AuthorElement node, java.lang.String keyName, java.util.LinkedHashMap<java.lang.String,ro.sync.ecss.dita.reference.keyref.KeyInfo> keys)`
+### `buildKeyrefCacheKey(AuthorElement node, String keyName, LinkedHashMap<String,KeyInfo> keys)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The node on which the keyRef appears.
@@ -249,14 +249,14 @@ If the element
 
 **Returns:** `void`
 
-### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `activated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `deactivated(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))

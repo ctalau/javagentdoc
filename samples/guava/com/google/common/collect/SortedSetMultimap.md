@@ -34,8 +34,6 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 
 ### `get(K key)`
 
-**Returns:** `java.util.SortedSet<V>`
-
 If no mappings in the multimap
  have the provided key, an empty collection is returned.
 
@@ -50,9 +48,9 @@ Because a SortedSetMultimap has unique sorted values for a given key, this metho
 **Parameters:**
 - `key` (`K`)
 
-### `removeAll(java.lang.Object key)`
-
 **Returns:** `java.util.SortedSet<V>`
+
+### `removeAll(Object key)`
 
 Because a SortedSetMultimap has unique sorted values for a given key, this method
  returns a SortedSet, instead of the java.util.Collection specified in the
@@ -61,9 +59,9 @@ Because a SortedSetMultimap has unique sorted values for a given key, this metho
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `java.util.SortedSet<V>`
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 Because a SortedSetMultimap has unique sorted values for a given key, this method
  returns a SortedSet, instead of the java.util.Collection specified in the
@@ -76,9 +74,9 @@ Any duplicates in values will be stored in the multimap once.
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `asMap()`
+**Returns:** `java.util.SortedSet<V>`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap()`
 
 Changes to the returned map, such as element removal, will update the underlying multimap. The
  map does not support setValue() on its entries, put, or putAll.
@@ -94,6 +92,8 @@ When passed a key that is present in the map, asMap().get(Object) has the same
  not necessarily a SortedMap: A SortedSetMultimap must expose the *values*
  for a given key in sorted order, but it need not expose the *keys* in sorted order.
  Individual SortedSetMultimap implementations, like those built with MultimapBuilder#treeKeys(), may make additional guarantees.
+
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
 ### `valueComparator()`
 

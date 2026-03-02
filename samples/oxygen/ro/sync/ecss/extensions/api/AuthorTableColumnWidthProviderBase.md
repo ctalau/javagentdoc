@@ -21,14 +21,14 @@ It should be implemented when the author extension being developed offers
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener errorsListener)`
+### `<init>(TableLayoutErrorsListener errorsListener)`
 
 **Parameters:**
 - `errorsListener` ([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)): Table layout errors listener
 
 ## Methods
 
-### `setErrorsListener(ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener errorsListener)`
+### `setErrorsListener(TableLayoutErrorsListener errorsListener)`
 
 **Parameters:**
 - `errorsListener` ([`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)): The table layout errors listener.
@@ -46,7 +46,7 @@ If a colspec does not specify a width, it is supposed to be 1*.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener`](../commons/table/support/errorscanner/TableLayoutErrorsListener.md)
 
-### `isPreferPercentageColumnWidths(java.lang.String tableCellsTagName)`
+### `isPreferPercentageColumnWidths(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`): The cell tag name

@@ -18,14 +18,14 @@
 
 ## Methods
 
-### `detectXMLLangFrom(ro.sync.ecss.extensions.api.node.AuthorNode parent)`
+### `detectXMLLangFrom(AuthorNode parent)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The current node.
 
 **Returns:** `java.lang.String`
 
-### `parseXsdDatetime(ro.sync.ecss.extensions.api.AuthorOperationException[] error, java.lang.String dateString)`
+### `parseXsdDatetime(AuthorOperationException[] error, String dateString)`
 
 **Parameters:**
 - `error` ([`ro.sync.ecss.extensions.api.AuthorOperationException[]`](../../api/AuthorOperationException.md)): The errors array.
@@ -33,7 +33,7 @@
 
 **Returns:** `java.util.Date`
 
-### `parseDate(ro.sync.ecss.extensions.api.AuthorOperationException[] error, java.lang.String dateString, java.text.DateFormat dateTimeFormatter, java.text.DateFormat dateFormatter, java.text.DateFormat timeFormatter)`
+### `parseDate(AuthorOperationException[] error, String dateString, DateFormat dateTimeFormatter, DateFormat dateFormatter, DateFormat timeFormatter)`
 
 **Parameters:**
 - `error` ([`ro.sync.ecss.extensions.api.AuthorOperationException[]`](../../api/AuthorOperationException.md)): The errors array.
@@ -44,7 +44,7 @@
 
 **Returns:** `java.util.Date`
 
-### `parseNumber(ro.sync.ecss.extensions.api.AuthorOperationException[] error, java.lang.String number)`
+### `parseNumber(AuthorOperationException[] error, String number)`
 
 **Parameters:**
 - `error` ([`ro.sync.ecss.extensions.api.AuthorOperationException[]`](../../api/AuthorOperationException.md)): The errors array.

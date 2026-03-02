@@ -24,7 +24,7 @@ If there are selections
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper documentTypeHelper)`
+### `<init>(AuthorTableHelper documentTypeHelper)`
 
 **Parameters:**
 - `documentTypeHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): The table helper specific to a document type. 
@@ -32,7 +32,7 @@ If there are selections
 
 ## Methods
 
-### `performDeleteColumn(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> columnIntervals, boolean placeCaretInNextCell)`
+### `performDeleteColumn(AuthorAccess authorAccess, List<ContentInterval> columnIntervals, boolean placeCaretInNextCell)`
 
 The columns are detected in the following order:
  
@@ -51,7 +51,7 @@ The columns are detected in the following order:
 
 **Returns:** `boolean`
 
-### `computeCommonCols(java.util.List<java.lang.Integer> commonCols, int[] colSpanIndices)`
+### `computeCommonCols(List<Integer> commonCols, int[] colSpanIndices)`
 
 **Parameters:**
 - `commonCols` (`java.util.List<java.lang.Integer>`): the common columns computed until now.
@@ -59,7 +59,7 @@ The columns are detected in the following order:
 
 **Returns:** `java.util.List<java.lang.Integer>`
 
-### `updateColspec(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Integer deletedColumnIndex)`
+### `updateColspec(AuthorAccess authorAccess, Integer deletedColumnIndex)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The Author access.
@@ -67,7 +67,7 @@ The columns are detected in the following order:
 
 **Returns:** `void`
 
-### `updateAppliableColWidthsNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElem, int deletedColumnIndex)`
+### `updateAppliableColWidthsNumber(AuthorAccess authorAccess, AuthorElement tableElem, int deletedColumnIndex)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -76,7 +76,7 @@ The columns are detected in the following order:
 
 **Returns:** `void`
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 For this operation the caret must be inside a table cell.
 
@@ -86,7 +86,7 @@ For this operation the caret must be inside a table cell.
 
 **Returns:** `void`
 
-### `updateTableColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider spanProvider, ro.sync.ecss.extensions.api.node.AuthorElement cell, int colStartIndex, int colEndIndex)`
+### `updateTableColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider spanProvider, AuthorElement cell, int colStartIndex, int colEndIndex)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.

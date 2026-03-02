@@ -50,12 +50,12 @@ This will ensure
 
 ## Constructors
 
-### `<init>(java.lang.String val)`
+### `<init>(String val)`
 
 **Parameters:**
 - `val` (`java.lang.String`): The value that the user accepted when the editing stopped.
 
-### `<init>(java.lang.Runnable toInvoke, boolean requestFocus)`
+### `<init>(Runnable toInvoke, boolean requestFocus)`
 
 **Parameters:**
 - `toInvoke` (`java.lang.Runnable`): The action to be invoked as a result for the edit event.
@@ -65,12 +65,12 @@ This will ensure
    was a focus lost event, we should skip requesting focus since the focus has already 
    a destination.
 
-### `<init>(ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction toInvoke)`
+### `<init>(IAuthorExtensionAction toInvoke)`
 
 **Parameters:**
 - `toInvoke` ([`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](./IAuthorExtensionAction.md)): The action to be invoked as a result for the edit event.
 
-### `<init>(java.lang.String value, boolean requestFocus)`
+### `<init>(String value, boolean requestFocus)`
 
 **Parameters:**
 - `value` (`java.lang.String`): The value that the user accepted when the editing stopped.
@@ -80,7 +80,7 @@ This will ensure
    was a focus lost event, we should skip requesting focus since the focus has already 
    a destination.
 
-### `<init>(java.lang.Runnable customEdit, ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction toInvoke, java.lang.String value, boolean requestFocus)`
+### `<init>(Runnable customEdit, IAuthorExtensionAction toInvoke, String value, boolean requestFocus)`
 
 **Parameters:**
 - `customEdit` (`java.lang.Runnable`)

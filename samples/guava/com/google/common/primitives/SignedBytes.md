@@ -27,21 +27,19 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `checkedCast(long value)`
 
-**Returns:** `byte`
-
 **Parameters:**
 - `value` (`long`): any value in the range of the byte type
 
-### `saturatedCast(long value)`
-
 **Returns:** `byte`
+
+### `saturatedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any long value
 
-### `compare(byte a, byte b)`
+**Returns:** `byte`
 
-**Returns:** `int`
+### `compare(byte a, byte b)`
 
 The sign of the value returned is the same as
  that of ((Byte) a).compareTo(b).
@@ -53,34 +51,34 @@ The sign of the value returned is the same as
 - `a` (`byte`): the first byte to compare
 - `b` (`byte`): the second byte to compare
 
-### `min(byte[] array)`
+**Returns:** `int`
 
-**Returns:** `byte`
+### `min(byte[] array)`
 
 **Parameters:**
 - `array` (`byte[]`): a *nonempty* array of byte values
+
+**Returns:** `byte`
 
 ### `max(byte[] array)`
 
-**Returns:** `byte`
-
 **Parameters:**
 - `array` (`byte[]`): a *nonempty* array of byte values
 
-### `join(java.lang.String separator, byte[] array)`
+**Returns:** `byte`
 
-**Returns:** `java.lang.String`
+### `join(String separator, byte[] array)`
 
 For example, join(":", 0x01, 0x02, -0x01) returns the string "1:2:-1".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`byte[]`): an array of byte values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<byte[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(byte, byte)), the first pair of values that follow any common
@@ -92,19 +90,21 @@ That is, it
 The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with java.util.Arrays#equals(byte[], byte[]).
 
-### `sortDescending(byte[] array)`
+**Returns:** `java.util.Comparator<byte[]>`
 
-**Returns:** `void`
+### `sortDescending(byte[] array)`
 
 **Parameters:**
 - `array` (`byte[]`)
 
-### `sortDescending(byte[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(byte[] array, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `array` (`byte[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
+
+**Returns:** `void`
 

@@ -40,35 +40,35 @@
 
 ## Methods
 
-### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableRow(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `boolean`
 
-### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableFoot(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `boolean`
 
-### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableGroup(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `boolean`
 
-### `isTableColspec(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableColspec(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `boolean`
 
-### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableCell(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -89,7 +89,7 @@
 
 **Returns:** `java.lang.String`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTable(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))

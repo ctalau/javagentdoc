@@ -30,30 +30,28 @@ See the Guava User Guide article on [
 
 ## Methods
 
-### `unmodifiableIterable(java.lang.Iterable<? extends T> iterable)`
-
-**Returns:** `java.lang.Iterable<T>`
+### `unmodifiableIterable(Iterable<? extends T> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<? extends T>`)
 
-### `unmodifiableIterable(com.google.common.collect.ImmutableCollection<E> iterable)`
+**Returns:** `java.lang.Iterable<T>`
 
-**Returns:** `java.lang.Iterable<E>`
+### `unmodifiableIterable(ImmutableCollection<E> iterable)`
 
 **Parameters:**
 - `iterable` ([`com.google.common.collect.ImmutableCollection<E>`](./ImmutableCollection.md))
 
-### `size(java.lang.Iterable<?> iterable)`
+**Returns:** `java.lang.Iterable<E>`
 
-**Returns:** `int`
+### `size(Iterable<?> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<?>`)
 
-### `contains(java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object> iterable, java.lang.Object element)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `contains(Iterable<? extends lang@Nullable Object> iterable, Object element)`
 
 Otherwise returns false, even in
  cases where Collection#contains might throw NullPointerException or ClassCastException.
@@ -62,9 +60,9 @@ Otherwise returns false, even in
 - `iterable` (`java.lang.Iterable<? extends java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object>`)
 - `element` (`java.lang.Object`)
 
-### `removeAll(java.lang.Iterable<?> removeFrom, java.util.Collection<?> elementsToRemove)`
-
 **Returns:** `boolean`
+
+### `removeAll(Iterable<?> removeFrom, Collection<?> elementsToRemove)`
 
 This method calls Collection#removeAll if iterable is a collection, and
  Iterators#removeAll otherwise.
@@ -73,9 +71,9 @@ This method calls Collection#removeAll if iterable is a collection, and
 - `removeFrom` (`java.lang.Iterable<?>`): the iterable to (potentially) remove elements from
 - `elementsToRemove` (`java.util.Collection<?>`): the elements to remove
 
-### `retainAll(java.lang.Iterable<?> removeFrom, java.util.Collection<?> elementsToRetain)`
-
 **Returns:** `boolean`
+
+### `retainAll(Iterable<?> removeFrom, Collection<?> elementsToRetain)`
 
 This method calls Collection#retainAll if iterable is a collection, and
  Iterators#retainAll otherwise.
@@ -84,9 +82,9 @@ This method calls Collection#retainAll if iterable is a collection, and
 - `removeFrom` (`java.lang.Iterable<?>`): the iterable to (potentially) remove elements from
 - `elementsToRetain` (`java.util.Collection<?>`): the elements to retain
 
-### `removeIf(java.lang.Iterable<T> removeFrom, com.google.common.base.Predicate<? super T> predicate)`
-
 **Returns:** `boolean`
+
+### `removeIf(Iterable<T> removeFrom, Predicate<? super T> predicate)`
 
 Removals may or may not happen immediately as each element is tested against the predicate.
  The behavior of this method is not specified if predicate is dependent on 
@@ -100,17 +98,17 @@ Removals may or may not happen immediately as each element is tested against the
 - `removeFrom` (`java.lang.Iterable<T>`): the iterable to (potentially) remove elements from
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md)): a predicate that determines whether an element should be removed
 
-### `removeFirstMatching(java.lang.Iterable<T> removeFrom, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** `boolean`
 
-**Returns:** `T`
+### `removeFirstMatching(Iterable<T> removeFrom, Predicate<? super T> predicate)`
 
 **Parameters:**
 - `removeFrom` (`java.lang.Iterable<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `elementsEqual(java.lang.Iterable<?> iterable1, java.lang.Iterable<?> iterable2)`
+**Returns:** `T`
 
-**Returns:** `boolean`
+### `elementsEqual(Iterable<?> iterable1, Iterable<?> iterable2)`
 
 More specifically,
  this method returns true if iterable1 and iterable2 contain the same
@@ -121,9 +119,9 @@ More specifically,
 - `iterable1` (`java.lang.Iterable<?>`)
 - `iterable2` (`java.lang.Iterable<?>`)
 
-### `toString(java.lang.Iterable<?> iterable)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `toString(Iterable<?> iterable)`
 
 Note that for *most* implementations of Collection, collection.toString() also gives the same result, but that behavior is not
  generally guaranteed.
@@ -131,9 +129,9 @@ Note that for *most* implementations of Collection, collection.toString() also g
 **Parameters:**
 - `iterable` (`java.lang.Iterable<?>`)
 
-### `getOnlyElement(java.lang.Iterable<T> iterable)`
+**Returns:** `java.lang.String`
 
-**Returns:** `T`
+### `getOnlyElement(Iterable<T> iterable)`
 
 **Java 8 users:** the Stream equivalent to this method is 
  stream.collect(MoreCollectors.onlyElement()).
@@ -141,9 +139,9 @@ Note that for *most* implementations of Collection, collection.toString() also g
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
 
-### `getOnlyElement(java.lang.Iterable<? extends T> iterable, T defaultValue)`
-
 **Returns:** `T`
+
+### `getOnlyElement(Iterable<? extends T> iterable, T defaultValue)`
 
 **Java 8 users:** the Stream equivalent to this method is 
  stream.collect(MoreCollectors.toOptional()).orElse(defaultValue).
@@ -152,32 +150,32 @@ Note that for *most* implementations of Collection, collection.toString() also g
 - `iterable` (`java.lang.Iterable<? extends T>`)
 - `defaultValue` (`T`)
 
-### `toArray(java.lang.Iterable<? extends T> iterable, java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T> type)`
+**Returns:** `T`
 
-**Returns:** `T[]`
+### `toArray(Iterable<? extends T> iterable, Class<@NonNull T> type)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<? extends T>`): the iterable to copy
 - `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>`): the type of the elements
 
-### `toArray(java.lang.Iterable<? extends T> iterable, T[] array)`
-
 **Returns:** `T[]`
+
+### `toArray(Iterable<? extends T> iterable, T[] array)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<? extends T>`)
 - `array` (`T[]`)
 
-### `toArray(java.lang.Iterable<?> iterable)`
+**Returns:** `T[]`
 
-**Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
+### `toArray(Iterable<?> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<?>`): the iterable to copy
 
-### `castOrCopyToCollection(java.lang.Iterable<E> iterable)`
+**Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-**Returns:** `java.util.Collection<E>`
+### `castOrCopyToCollection(Iterable<E> iterable)`
 
 If the iterable is already a collection, it is
  returned. Otherwise, an java.util.ArrayList is created with the contents of the
@@ -186,17 +184,17 @@ If the iterable is already a collection, it is
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`)
 
-### `addAll(java.util.Collection<T> addTo, java.lang.Iterable<? extends T> elementsToAdd)`
+**Returns:** `java.util.Collection<E>`
 
-**Returns:** `boolean`
+### `addAll(Collection<T> addTo, Iterable<? extends T> elementsToAdd)`
 
 **Parameters:**
 - `addTo` (`java.util.Collection<T>`)
 - `elementsToAdd` (`java.lang.Iterable<? extends T>`)
 
-### `frequency(java.lang.Iterable<?> iterable, java.lang.Object element)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `frequency(Iterable<?> iterable, Object element)`
 
 This
  implementation avoids a full iteration when the iterable is a Multiset or Set.
@@ -210,9 +208,9 @@ This
 - `iterable` (`java.lang.Iterable<?>`)
 - `element` (`java.lang.Object`)
 
-### `cycle(java.lang.Iterable<T> iterable)`
+**Returns:** `int`
 
-**Returns:** `java.lang.Iterable<T>`
+### `cycle(Iterable<T> iterable)`
 
 That iterator supports remove() if iterable.iterator() does. After 
  remove() is called, subsequent cycles omit the removed element, which is no longer in 
@@ -235,9 +233,9 @@ To cycle over the iterable n times, use the following:
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
 
-### `cycle(T[] elements)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `cycle(T[] elements)`
 
 After remove is invoked on a generated iterator, the removed element will no longer
  appear in either that iterator or any other iterator created from the same source iterable.
@@ -262,9 +260,9 @@ To cycle over the elements n times, use the following:
 **Parameters:**
 - `elements` (`T[]`)
 
-### `concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `concat(Iterable<? extends T> a, Iterable<? extends T> b)`
 
 The returned iterable has an iterator that
  traverses the elements in a, followed by the elements in b. The source
@@ -282,9 +280,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 - `a` (`java.lang.Iterable<? extends T>`)
 - `b` (`java.lang.Iterable<? extends T>`)
 
-### `concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b, java.lang.Iterable<? extends T> c)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `concat(Iterable<? extends T> a, Iterable<? extends T> b, Iterable<? extends T> c)`
 
 The returned iterable has an iterator that
  traverses the elements in a, followed by the elements in b, followed by the
@@ -303,9 +301,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 - `b` (`java.lang.Iterable<? extends T>`)
 - `c` (`java.lang.Iterable<? extends T>`)
 
-### `concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b, java.lang.Iterable<? extends T> c, java.lang.Iterable<? extends T> d)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `concat(Iterable<? extends T> a, Iterable<? extends T> b, Iterable<? extends T> c, Iterable<? extends T> d)`
 
 The returned iterable has an iterator that
  traverses the elements in a, followed by the elements in b, followed by the
@@ -326,9 +324,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 - `c` (`java.lang.Iterable<? extends T>`)
 - `d` (`java.lang.Iterable<? extends T>`)
 
-### `concat(java.lang.Iterable<? extends T>[] inputs)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `concat(Iterable<? extends T>[] inputs)`
 
 The returned iterable has an iterator that
  traverses the elements of each iterable in inputs. The input iterators are not polled
@@ -345,9 +343,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 **Parameters:**
 - `inputs` (`java.lang.Iterable<? extends T>[]`)
 
-### `concat(java.lang.Iterable<? extends java.lang.Iterable<? extends T>> inputs)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `concat(Iterable<? extends Iterable<? extends T>> inputs)`
 
 The returned iterable has an iterator that
  traverses the elements of each iterable in inputs. The input iterators are not polled
@@ -365,9 +363,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 **Parameters:**
 - `inputs` (`java.lang.Iterable<? extends java.lang.Iterable<? extends T>>`)
 
-### `partition(java.lang.Iterable<T> iterable, int size)`
+**Returns:** `java.lang.Iterable<T>`
 
-**Returns:** `java.lang.Iterable<java.util.List<T>>`
+### `partition(Iterable<T> iterable, int size)`
 
 For example, partitioning an iterable containing [a, b, c, d, e] with a
  partition size of 3 yields [[a, b, c], [d, e]] -- an outer iterable containing two
@@ -389,9 +387,9 @@ Iterators returned by the returned iterable do not support the Iterator#remove()
 - `iterable` (`java.lang.Iterable<T>`): the iterable to return a partitioned view of
 - `size` (`int`): the desired size of each partition (the last may be smaller)
 
-### `paddedPartition(java.lang.Iterable<T> iterable, int size)`
+**Returns:** `java.lang.Iterable<java.util.List<T>>`
 
-**Returns:** `java.lang.Iterable<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable T>>`
+### `paddedPartition(Iterable<T> iterable, int size)`
 
 For example, partitioning an iterable containing [a, b,
  c, d, e] with a partition size of 3 yields [[a, b, c], [d, e, null]] -- an outer
@@ -405,9 +403,9 @@ Iterators returned by the returned iterable do not support the Iterator#remove()
 - `iterable` (`java.lang.Iterable<T>`): the iterable to return a partitioned view of
 - `size` (`int`): the desired size of each partition
 
-### `filter(java.lang.Iterable<T> unfiltered, com.google.common.base.Predicate<? super T> retainIfTrue)`
+**Returns:** `java.lang.Iterable<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable T>>`
 
-**Returns:** `java.lang.Iterable<T>`
+### `filter(Iterable<T> unfiltered, Predicate<? super T> retainIfTrue)`
 
 The returned iterable's iterator does not support remove().
 
@@ -418,9 +416,9 @@ The returned iterable's iterator does not support remove().
 - `unfiltered` (`java.lang.Iterable<T>`)
 - `retainIfTrue` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `filter(java.lang.Iterable<?> unfiltered, java.lang.Class<T> desiredType)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `filter(Iterable<?> unfiltered, Class<T> desiredType)`
 
 The returned iterable's iterator does not support remove().
 
@@ -443,9 +441,9 @@ The returned iterable's iterator does not support remove().
 - `unfiltered` (`java.lang.Iterable<?>`)
 - `desiredType` (`java.lang.Class<T>`)
 
-### `any(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** `java.lang.Iterable<T>`
 
-**Returns:** `boolean`
+### `any(Iterable<T> iterable, Predicate<? super T> predicate)`
 
 **Stream equivalent:** Stream#anyMatch.
 
@@ -453,9 +451,9 @@ The returned iterable's iterator does not support remove().
 - `iterable` (`java.lang.Iterable<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `all(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)`
-
 **Returns:** `boolean`
+
+### `all(Iterable<T> iterable, Predicate<? super T> predicate)`
 
 If 
  iterable is empty, true is returned.
@@ -467,9 +465,9 @@ If
 - `iterable` (`java.lang.Iterable<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `find(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** `boolean`
 
-**Returns:** `T`
+### `find(Iterable<T> iterable, Predicate<? super T> predicate)`
 
 If it is possible that *no* element
  will match, use #tryFind or #find(Iterable, Predicate, Object) instead.
@@ -481,9 +479,9 @@ If it is possible that *no* element
 - `iterable` (`java.lang.Iterable<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `find(java.lang.Iterable<? extends T> iterable, com.google.common.base.Predicate<? super T> predicate, T defaultValue)`
-
 **Returns:** `T`
+
+### `find(Iterable<? extends T> iterable, Predicate<? super T> predicate, T defaultValue)`
 
 Note that this can usually be handled more naturally using 
  tryFind(iterable, predicate).or(defaultValue).
@@ -497,9 +495,9 @@ Note that this can usually be handled more naturally using
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 - `defaultValue` (`T`)
 
-### `tryFind(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** `T`
 
-**Returns:** [`com.google.common.base.Optional<T>`](../base/Optional.md)
+### `tryFind(Iterable<T> iterable, Predicate<? super T> predicate)`
 
 **Warning:** avoid using a predicate that matches null. If null
  is matched in iterable, a NullPointerException will be thrown.
@@ -511,9 +509,9 @@ Note that this can usually be handled more naturally using
 - `iterable` (`java.lang.Iterable<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `indexOf(java.lang.Iterable<T> iterable, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** [`com.google.common.base.Optional<T>`](../base/Optional.md)
 
-**Returns:** `int`
+### `indexOf(Iterable<T> iterable, Predicate<? super T> predicate)`
 
 More formally, returns the lowest index i such that 
  predicate.apply(Iterables.get(iterable, i)) returns true, or -1 if there is no
@@ -523,9 +521,9 @@ More formally, returns the lowest index i such that
 - `iterable` (`java.lang.Iterable<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `transform(java.lang.Iterable<F> fromIterable, com.google.common.base.Function<? super F,? extends T> function)`
+**Returns:** `int`
 
-**Returns:** `java.lang.Iterable<T>`
+### `transform(Iterable<F> fromIterable, Function<? super F,? extends T> function)`
 
 The returned iterable's iterator supports remove() if fromIterable's
  iterator does. After a successful remove() call, fromIterable no longer
@@ -542,9 +540,9 @@ If the input Iterable is known to be a List or other Collection,
 - `fromIterable` (`java.lang.Iterable<F>`)
 - `function` ([`com.google.common.base.Function<? super F,? extends T>`](../base/Function.md))
 
-### `get(java.lang.Iterable<T> iterable, int position)`
+**Returns:** `java.lang.Iterable<T>`
 
-**Returns:** `T`
+### `get(Iterable<T> iterable, int position)`
 
 **Stream equivalent:** stream.skip(position).findFirst().get() (throws
  NoSuchElementException if out of bounds)
@@ -553,9 +551,9 @@ If the input Iterable is known to be a List or other Collection,
 - `iterable` (`java.lang.Iterable<T>`)
 - `position` (`int`): position of the element to return
 
-### `get(java.lang.Iterable<? extends T> iterable, int position, T defaultValue)`
-
 **Returns:** `T`
+
+### `get(Iterable<? extends T> iterable, int position, T defaultValue)`
 
 **Stream equivalent:** 
  stream.skip(position).findFirst().orElse(defaultValue) (returns the default value if the index
@@ -565,11 +563,11 @@ If the input Iterable is known to be a List or other Collection,
 - `iterable` (`java.lang.Iterable<? extends T>`)
 - `position` (`int`): position of the element to return
 - `defaultValue` (`T`): the default value to return if position is greater than or equal to
-     the size of the iterable
-
-### `getFirst(java.lang.Iterable<? extends T> iterable, T defaultValue)`
+       the size of the iterable
 
 **Returns:** `T`
+
+### `getFirst(Iterable<? extends T> iterable, T defaultValue)`
 
 The Iterators analog to this method is Iterators#getNext.
 
@@ -587,9 +585,9 @@ To get the only element in a single-element Iterable, consider using #getOnlyEle
 - `iterable` (`java.lang.Iterable<? extends T>`)
 - `defaultValue` (`T`): the default value to return if the iterable is empty
 
-### `getLast(java.lang.Iterable<T> iterable)`
-
 **Returns:** `T`
+
+### `getLast(Iterable<T> iterable)`
 
 If iterable is a List with RandomAccess support, then this operation is guaranteed to be O(1).
 
@@ -599,9 +597,9 @@ If iterable is a List with RandomAccess support, then this operation is guarante
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
 
-### `getLast(java.lang.Iterable<? extends T> iterable, T defaultValue)`
-
 **Returns:** `T`
+
+### `getLast(Iterable<? extends T> iterable, T defaultValue)`
 
 If iterable is a List with RandomAccess support, then this operation is
  guaranteed to be O(1).
@@ -613,16 +611,16 @@ If iterable is a List with RandomAccess support, then this operation is
 - `iterable` (`java.lang.Iterable<? extends T>`)
 - `defaultValue` (`T`): the value to return if iterable is empty
 
-### `getLastInNonemptyList(java.util.List<T> list)`
-
 **Returns:** `T`
+
+### `getLastInNonemptyList(List<T> list)`
 
 **Parameters:**
 - `list` (`java.util.List<T>`)
 
-### `skip(java.lang.Iterable<T> iterable, int numberToSkip)`
+**Returns:** `T`
 
-**Returns:** `java.lang.Iterable<T>`
+### `skip(Iterable<T> iterable, int numberToSkip)`
 
 If
  iterable contains fewer than numberToSkip elements, the returned iterable skips
@@ -646,9 +644,9 @@ The returned iterable's iterator supports remove() if the iterator of the underl
 - `iterable` (`java.lang.Iterable<T>`)
 - `numberToSkip` (`int`)
 
-### `limit(java.lang.Iterable<T> iterable, int limitSize)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `limit(Iterable<T> iterable, int limitSize)`
 
 If 
  iterable contains fewer than limitSize elements, the returned view contains all of its
@@ -662,9 +660,9 @@ If
 - `iterable` (`java.lang.Iterable<T>`): the iterable to limit
 - `limitSize` (`int`): the maximum number of elements in the returned iterable
 
-### `consumingIterable(java.lang.Iterable<T> iterable)`
-
 **Returns:** `java.lang.Iterable<T>`
+
+### `consumingIterable(Iterable<T> iterable)`
 
 Note: If iterable is a Queue, the returned iterable will instead use Queue#isEmpty and Queue#remove(), since Queue's iteration order is undefined.
  Calling Iterator#hasNext() on a generated iterator from the returned iterable may cause
@@ -677,9 +675,9 @@ Whether the input iterable is a Queue or not, the returned Iterable
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`): the iterable to wrap
 
-### `isEmpty(java.lang.Iterable<?> iterable)`
+**Returns:** `java.lang.Iterable<T>`
 
-**Returns:** `boolean`
+### `isEmpty(Iterable<?> iterable)`
 
 There is no precise Iterator equivalent to this method, since one can only ask an
  iterator whether it has any elements *remaining* (which one does using Iterator#hasNext).
@@ -690,9 +688,9 @@ There is no precise Iterator equivalent to this method, since one can only ask a
 **Parameters:**
 - `iterable` (`java.lang.Iterable<?>`)
 
-### `mergeSorted(java.lang.Iterable<? extends java.lang.Iterable<? extends T>> iterables, java.util.Comparator<? super T> comparator)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.Iterable<T>`
+### `mergeSorted(Iterable<? extends Iterable<? extends T>> iterables, Comparator<? super T> comparator)`
 
 Equivalent entries
  will not be de-duplicated.
@@ -708,4 +706,6 @@ For any equivalent elements across all iterables, it is undefined which element 
 **Parameters:**
 - `iterables` (`java.lang.Iterable<? extends java.lang.Iterable<? extends T>>`)
 - `comparator` (`java.util.Comparator<? super T>`)
+
+**Returns:** `java.lang.Iterable<T>`
 

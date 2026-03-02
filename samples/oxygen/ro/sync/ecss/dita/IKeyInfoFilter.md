@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `accept(ro.sync.ecss.dita.reference.keyref.KeyInfo arg0)`
+### `accept(KeyInfo arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dita.reference.keyref.KeyInfo`)

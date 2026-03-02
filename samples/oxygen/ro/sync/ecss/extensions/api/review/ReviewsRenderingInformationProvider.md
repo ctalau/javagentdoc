@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `getReviewRenderingInformation(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `getReviewRenderingInformation(AuthorPersistentHighlight highlight)`
 
 The review entries are representations of Track Changes insert and delete highlights and review comment highlights in Author mode.
 

@@ -30,7 +30,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String type, java.lang.String message, java.util.List<java.lang.String> values, java.util.List<java.lang.String> renderings, java.lang.String defaultValue)`
+### `<init>(String type, String message, List<String> values, List<String> renderings, String defaultValue)`
 
 **Parameters:**
 - `type` (`java.lang.String`): The ask type.

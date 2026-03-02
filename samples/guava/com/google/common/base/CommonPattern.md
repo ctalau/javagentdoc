@@ -15,12 +15,12 @@ For internal use only. Please refer to the Pattern
 
 ## Methods
 
-### `matcher(java.lang.CharSequence t)`
-
-**Returns:** [`com.google.common.base.CommonMatcher`](./CommonMatcher.md)
+### `matcher(CharSequence t)`
 
 **Parameters:**
 - `t` (`java.lang.CharSequence`)
+
+**Returns:** [`com.google.common.base.CommonMatcher`](./CommonMatcher.md)
 
 ### `pattern()`
 
@@ -34,12 +34,12 @@ For internal use only. Please refer to the Pattern
 
 **Returns:** `java.lang.String`
 
-### `compile(java.lang.String pattern)`
-
-**Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
+### `compile(String pattern)`
 
 **Parameters:**
 - `pattern` (`java.lang.String`)
+
+**Returns:** [`com.google.common.base.CommonPattern`](./CommonPattern.md)
 
 ### `isPcreLike()`
 

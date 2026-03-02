@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `add(E element, E table, ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem problem, java.lang.Object[] additionalMessageInfo)`
+### `add(E element, E table, TableLayoutProblem problem, Object[] additionalMessageInfo)`
 
 **Parameters:**
 - `element` (`E`): The element that generated the layout problem.
@@ -26,7 +26,7 @@
 
 **Returns:** `void`
 
-### `add(E element, E table, ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem problem)`
+### `add(E element, E table, TableLayoutProblem problem)`
 
 **Parameters:**
 - `element` (`E`): The element that generated the layout problem.

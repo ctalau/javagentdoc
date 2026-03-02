@@ -44,7 +44,7 @@
 
 **Returns:** `int`
 
-### `merge(java.lang.CharSequence arg0)`
+### `merge(CharSequence arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.CharSequence`)
@@ -58,14 +58,14 @@
 
 **Returns:** `java.lang.CharSequence`
 
-### `addLastNotifiedDocumentListener(javax.swing.event.DocumentListener arg0)`
+### `addLastNotifiedDocumentListener(DocumentListener arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.event.DocumentListener`)
 
 **Returns:** `void`
 
-### `removeLastNotifiedDocumentListener(javax.swing.event.DocumentListener arg0)`
+### `removeLastNotifiedDocumentListener(DocumentListener arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.event.DocumentListener`)

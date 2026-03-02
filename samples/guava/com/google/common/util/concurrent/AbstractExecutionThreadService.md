@@ -29,16 +29,14 @@ This class uses a single thread to execute the service; consider AbstractService
 
 ### `startUp()`
 
-**Returns:** `void`
-
 This method is invoked on the execution thread.
 
  
 By default this method does nothing.
 
-### `run()`
-
 **Returns:** `void`
+
+### `run()`
 
 This method is invoked on the execution thread. Implementations must respond
  to stop requests. You could poll for lifecycle changes in a work loop:
@@ -60,18 +58,18 @@ This method is invoked on the execution thread. Implementations must respond
 ...or you could respond to stop requests by implementing #triggerShutdown(), which
  should cause #run() to return.
 
-### `shutDown()`
-
 **Returns:** `void`
+
+### `shutDown()`
 
 This method is invoked on the execution thread.
 
  
 By default this method does nothing.
 
-### `triggerShutdown()`
-
 **Returns:** `void`
+
+### `triggerShutdown()`
 
 By default this method does nothing.
 
@@ -82,9 +80,9 @@ Currently, this method is invoked while holding a lock. If an implementation of 
  implementing stopping. Note, however, that stopping does not run at exactly the
  same times as triggerShutdown.
 
-### `executor()`
+**Returns:** `void`
 
-**Returns:** `java.util.concurrent.Executor`
+### `executor()`
 
 Subclasses may override
  this method to use a custom Executor, which may configure its worker thread with a
@@ -94,6 +92,8 @@ Subclasses may override
  
 The default implementation returns a new Executor that sets the name of its threads
  to the string returned by #serviceName
+
+**Returns:** `java.util.concurrent.Executor`
 
 ### `toString()`
 
@@ -107,13 +107,13 @@ The default implementation returns a new Executor that sets the name of its thre
 
 **Returns:** `com.google.common.util.concurrent.Service.State`
 
-### `addListener(com.google.common.util.concurrent.Service.Listener listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Service.Listener listener, Executor executor)`
 
 **Parameters:**
 - `listener` (`com.google.common.util.concurrent.Service.Listener`)
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** `void`
 
 ### `failureCause()`
 
@@ -131,47 +131,47 @@ The default implementation returns a new Executor that sets the name of its thre
 
 **Returns:** `void`
 
-### `awaitRunning(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitRunning(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitRunning(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitRunning(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `void`
 
 ### `awaitTerminated()`
 
 **Returns:** `void`
 
-### `awaitTerminated(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitTerminated(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitTerminated(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitTerminated(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `serviceName()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `serviceName()`
 
 AbstractExecutionThreadService may include the name
  in debugging output.
 
  
 Subclasses may override this method.
+
+**Returns:** `java.lang.String`
 

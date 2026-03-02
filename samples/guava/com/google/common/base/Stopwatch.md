@@ -100,7 +100,7 @@ When testing code that uses this class, use #createUnstarted(Ticker) or #createS
 
 ### `<init>()`
 
-### `<init>(com.google.common.base.Ticker ticker)`
+### `<init>(Ticker ticker)`
 
 **Parameters:**
 - `ticker` ([`com.google.common.base.Ticker`](./Ticker.md))
@@ -111,23 +111,23 @@ When testing code that uses this class, use #createUnstarted(Ticker) or #createS
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-### `createUnstarted(com.google.common.base.Ticker ticker)`
-
-**Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
+### `createUnstarted(Ticker ticker)`
 
 **Parameters:**
 - `ticker` ([`com.google.common.base.Ticker`](./Ticker.md))
+
+**Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
 ### `createStarted()`
 
 **Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
-### `createStarted(com.google.common.base.Ticker ticker)`
-
-**Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
+### `createStarted(Ticker ticker)`
 
 **Parameters:**
 - `ticker` ([`com.google.common.base.Ticker`](./Ticker.md))
+
+**Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
 ### `isRunning()`
 
@@ -139,10 +139,10 @@ When testing code that uses this class, use #createUnstarted(Ticker) or #createS
 
 ### `stop()`
 
-**Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
-
 Future reads will return the fixed duration that had elapsed up to this
  point.
+
+**Returns:** [`com.google.common.base.Stopwatch`](./Stopwatch.md)
 
 ### `reset()`
 
@@ -152,9 +152,7 @@ Future reads will return the fixed duration that had elapsed up to this
 
 **Returns:** `long`
 
-### `elapsed(java.util.concurrent.TimeUnit desiredUnit)`
-
-**Returns:** `long`
+### `elapsed(TimeUnit desiredUnit)`
 
 **Note:** the overhead of measurement can be more than a microsecond, so it is generally
  not useful to specify TimeUnit#NANOSECONDS precision here.
@@ -167,11 +165,13 @@ It is generally not a good idea to use an ambiguous, unitless long to represent
 **Parameters:**
 - `desiredUnit` (`java.util.concurrent.TimeUnit`)
 
+**Returns:** `long`
+
 ### `elapsed()`
 
-**Returns:** `java.time.Duration`
-
 Unlike #elapsed(TimeUnit), this method does not lose any precision due to rounding.
+
+**Returns:** `java.time.Duration`
 
 ### `toString()`
 
@@ -179,15 +179,15 @@ Unlike #elapsed(TimeUnit), this method does not lose any precision due to roundi
 
 ### `chooseUnit(long nanos)`
 
-**Returns:** `java.util.concurrent.TimeUnit`
-
 **Parameters:**
 - `nanos` (`long`)
 
-### `abbreviate(java.util.concurrent.TimeUnit unit)`
+**Returns:** `java.util.concurrent.TimeUnit`
 
-**Returns:** `java.lang.String`
+### `abbreviate(TimeUnit unit)`
 
 **Parameters:**
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `java.lang.String`
 

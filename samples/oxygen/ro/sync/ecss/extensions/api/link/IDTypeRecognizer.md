@@ -28,7 +28,7 @@ It is used to locate references.
 
 ## Methods
 
-### `detectIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, int offset)`
+### `detectIDType(String systemID, Context context, String attrName, String attrNs, String attributeValue, int offset)`
 
 The offset is relative to the attribute value.
 
@@ -44,7 +44,7 @@ The offset is relative to the attribute value.
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.link.IDTypeIdentifier>`
 
-### `locateIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, ro.sync.ecss.extensions.api.link.IDTypeIdentifier idIdentifier, short mode)`
+### `locateIDType(String systemID, Context context, String attrName, String attrNs, String attributeValue, IDTypeIdentifier idIdentifier, short mode)`
 
 If an attribute declaration or reference was identified then compute it's location relative to the attribute value.
  

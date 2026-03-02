@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement row, int newColumnIndex)`
+### `getCellElementName(AuthorElement row, int newColumnIndex)`
 
 **Parameters:**
 - `row` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))

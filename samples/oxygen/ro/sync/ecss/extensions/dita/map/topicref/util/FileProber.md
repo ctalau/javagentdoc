@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `exists(java.net.URL fileUrl)`
+### `exists(URL fileUrl)`
 
 **Parameters:**
 - `fileUrl` (`java.net.URL`): The file URL.

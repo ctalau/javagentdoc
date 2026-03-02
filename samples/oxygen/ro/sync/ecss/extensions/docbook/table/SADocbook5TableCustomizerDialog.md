@@ -12,7 +12,7 @@ It is used on standalone implementation.
 
 ## Constructors
 
-### `<init>(java.awt.Frame parentFrame, boolean innerTable, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
+### `<init>(Frame parentFrame, boolean innerTable, AuthorResourceBundle authorResourceBundle, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent frame.

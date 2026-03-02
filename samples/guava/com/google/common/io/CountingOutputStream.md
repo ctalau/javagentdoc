@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(java.io.OutputStream out)`
+### `<init>(OutputStream out)`
 
 **Parameters:**
 - `out` (`java.io.OutputStream`): the output stream to be wrapped
@@ -29,19 +29,19 @@
 
 ### `write(byte[] b, int off, int len)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `write(int b)`
-
 **Returns:** `void`
+
+### `write(int b)`
 
 **Parameters:**
 - `b` (`int`)
+
+**Returns:** `void`
 
 ### `close()`
 

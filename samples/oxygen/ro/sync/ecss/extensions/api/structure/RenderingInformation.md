@@ -34,7 +34,7 @@ This will be used only in the Outliner.
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String renderedText, java.lang.String additionalRenderedText, java.lang.String tooltipText)`
+### `<init>(AuthorNode node, String renderedText, String additionalRenderedText, String tooltipText)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The node to render
@@ -44,7 +44,7 @@ This will be used only in the Outliner.
    By default it shows some node text content.
 - `tooltipText` (`java.lang.String`): The tooltip text which will appear in the tooltip associated with the node
 
-### `<init>(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String renderedText, java.lang.String additionalRenderedText, java.lang.String additionalRenderedAttributeValue, java.lang.String tooltipText)`
+### `<init>(AuthorNode node, String renderedText, String additionalRenderedText, String additionalRenderedAttributeValue, String tooltipText)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The node to render
@@ -58,7 +58,7 @@ This will be used only in the Outliner.
 
 ## Methods
 
-### `setAdditionalRenderedText(java.lang.String additionalRenderedText)`
+### `setAdditionalRenderedText(String additionalRenderedText)`
 
 This will be used only in the Outliner.
  By default it shows some node text content.
@@ -69,7 +69,7 @@ This will be used only in the Outliner.
 
 **Returns:** `void`
 
-### `setAdditionalRenderedAttributeValue(java.lang.String additionalRenderedAttributeValue)`
+### `setAdditionalRenderedAttributeValue(String additionalRenderedAttributeValue)`
 
 This will be used only in the Outliner.
  By default it shows the value of the first attribute.

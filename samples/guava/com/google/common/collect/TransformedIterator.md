@@ -24,7 +24,7 @@ This avoids the object overhead
 
 ## Constructors
 
-### `<init>(java.util.Iterator<? extends F> backingIterator)`
+### `<init>(Iterator<? extends F> backingIterator)`
 
 **Parameters:**
 - `backingIterator` (`java.util.Iterator<? extends F>`)
@@ -33,10 +33,10 @@ This avoids the object overhead
 
 ### `transform(F from)`
 
-**Returns:** `T`
-
 **Parameters:**
 - `from` (`F`)
+
+**Returns:** `T`
 
 ### `hasNext()`
 

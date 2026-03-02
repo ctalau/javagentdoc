@@ -12,23 +12,21 @@
 
 ## Methods
 
-### `nullToEmpty(java.lang.String string)`
-
-**Returns:** `java.lang.String`
+### `nullToEmpty(String string)`
 
 **Parameters:**
 - `string` (`java.lang.String`): the string to test and possibly return
 
-### `emptyToNull(java.lang.String string)`
-
 **Returns:** `java.lang.String`
+
+### `emptyToNull(String string)`
 
 **Parameters:**
 - `string` (`java.lang.String`): the string to test and possibly return
 
-### `isNullOrEmpty(java.lang.String string)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isNullOrEmpty(String string)`
 
 Consider normalizing your string references with #nullToEmpty. If you do, you can
  use String#isEmpty() instead of this method, and you won't need special null-safe forms
@@ -38,9 +36,9 @@ Consider normalizing your string references with #nullToEmpty. If you do, you ca
 **Parameters:**
 - `string` (`java.lang.String`): a string reference to check
 
-### `padStart(java.lang.String string, int minLength, char padChar)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `padStart(String string, int minLength, char padChar)`
 
 For example,
 
@@ -57,13 +55,13 @@ See java.util.Formatter for a richer set of formatting capabilities.
 **Parameters:**
 - `string` (`java.lang.String`): the string which should appear at the end of the result
 - `minLength` (`int`): the minimum length the resulting string must have. Can be zero or negative, in
-     which case the input string is always returned.
+       which case the input string is always returned.
 - `padChar` (`char`): the character to insert at the beginning of the result until the minimum length
-     is reached
-
-### `padEnd(java.lang.String string, int minLength, char padChar)`
+       is reached
 
 **Returns:** `java.lang.String`
+
+### `padEnd(String string, int minLength, char padChar)`
 
 For example,
 
@@ -80,13 +78,13 @@ See java.util.Formatter for a richer set of formatting capabilities.
 **Parameters:**
 - `string` (`java.lang.String`): the string which should appear at the beginning of the result
 - `minLength` (`int`): the minimum length the resulting string must have. Can be zero or negative, in
-     which case the input string is always returned.
+       which case the input string is always returned.
 - `padChar` (`char`): the character to append to the end of the result until the minimum length is
-     reached
-
-### `repeat(java.lang.String string, int count)`
+       reached
 
 **Returns:** `java.lang.String`
+
+### `repeat(String string, int count)`
 
 For
  example, repeat("hey", 3) returns the string "heyheyhey".
@@ -98,9 +96,9 @@ For
 - `string` (`java.lang.String`): any non-null string
 - `count` (`int`): the number of times to repeat it; a nonnegative integer
 
-### `commonPrefix(java.lang.CharSequence a, java.lang.CharSequence b)`
-
 **Returns:** `java.lang.String`
+
+### `commonPrefix(CharSequence a, CharSequence b)`
 
 If a and
  b have no common prefix, returns the empty string.
@@ -109,9 +107,9 @@ If a and
 - `a` (`java.lang.CharSequence`)
 - `b` (`java.lang.CharSequence`)
 
-### `commonSuffix(java.lang.CharSequence a, java.lang.CharSequence b)`
-
 **Returns:** `java.lang.String`
+
+### `commonSuffix(CharSequence a, CharSequence b)`
 
 If a and
  b have no common suffix, returns the empty string.
@@ -120,9 +118,9 @@ If a and
 - `a` (`java.lang.CharSequence`)
 - `b` (`java.lang.CharSequence`)
 
-### `validSurrogatePairAt(java.lang.CharSequence string, int index)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `validSurrogatePairAt(CharSequence string, int index)`
 
 Out-of-range indexes return false.
 
@@ -130,9 +128,9 @@ Out-of-range indexes return false.
 - `string` (`java.lang.CharSequence`)
 - `index` (`int`)
 
-### `lenientFormat(java.lang.String template, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] args)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `lenientFormat(String template, lang@Nullable Object[] args)`
 
 Will not throw an exception under
  normal conditions.
@@ -157,16 +155,18 @@ In certain cases, such as outputting debugging information or constructing a mes
 
 **Parameters:**
 - `template` (`java.lang.String`): a string containing zero or more "%s" placeholder sequences. 
-     null is treated as the four-character string "null".
+       null is treated as the four-character string "null".
 - `args` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`): the arguments to be substituted into the message template. The first argument
-     specified is substituted for the first occurrence of "%s" in the template, and so
-     forth. A null argument is converted to the four-character string "null";
-     non-null values are converted to strings using Object#toString().
-
-### `lenientToString(java.lang.Object o)`
+       specified is substituted for the first occurrence of "%s" in the template, and so
+       forth. A null argument is converted to the four-character string "null";
+       non-null values are converted to strings using Object#toString().
 
 **Returns:** `java.lang.String`
 
+### `lenientToString(Object o)`
+
 **Parameters:**
 - `o` (`java.lang.Object`)
+
+**Returns:** `java.lang.String`
 

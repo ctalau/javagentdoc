@@ -141,7 +141,7 @@
 **Parameters:**
 - `arg0` (`int`)
 
-### `<init>(int arg0, java.lang.String arg1, java.lang.String arg2, int arg3, int arg4, int arg5)`
+### `<init>(int arg0, String arg1, String arg2, int arg3, int arg4, int arg5)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -151,7 +151,7 @@
 - `arg4` (`int`)
 - `arg5` (`int`)
 
-### `<init>(int arg0, java.lang.String arg1, java.lang.String arg2, int arg3, int arg4, int arg5, int arg6, java.net.URL arg7, boolean arg8)`
+### `<init>(int arg0, String arg1, String arg2, int arg3, int arg4, int arg5, int arg6, URL arg7, boolean arg8)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -164,7 +164,7 @@
 - `arg7` (`java.net.URL`)
 - `arg8` (`boolean`)
 
-### `<init>(int arg0, ro.sync.document.v arg1, java.lang.String arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, java.net.URL arg9, boolean arg10)`
+### `<init>(int arg0, v arg1, String arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, URL arg9, boolean arg10)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -179,7 +179,7 @@
 - `arg9` (`java.net.URL`)
 - `arg10` (`boolean`)
 
-### `<init>(int arg0, java.lang.String arg1, java.lang.String arg2, int arg3, int arg4)`
+### `<init>(int arg0, String arg1, String arg2, int arg3, int arg4)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -188,20 +188,20 @@
 - `arg3` (`int`)
 - `arg4` (`int`)
 
-### `<init>(int arg0, java.lang.String arg1, java.lang.String arg2)`
+### `<init>(int arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`java.lang.String`)
 
-### `<init>(int arg0, java.lang.String arg1)`
+### `<init>(int arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`int`)
 - `arg1` (`java.lang.String`)
 
-### `<init>(java.net.URL arg0)`
+### `<init>(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -215,7 +215,7 @@
 
 **Returns:** `int`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -247,7 +247,7 @@
 
 **Returns:** `void`
 
-### `setMessage(java.lang.String arg0)`
+### `setMessage(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -268,7 +268,7 @@
 
 **Returns:** `void`
 
-### `setSystemID(java.lang.String arg0)`
+### `setSystemID(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -372,7 +372,7 @@
 
 **Returns:** `java.net.URL`
 
-### `setAdditionalInfo(java.net.URL arg0)`
+### `setAdditionalInfo(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -412,7 +412,7 @@
 
 **Returns:** `void`
 
-### `setData(ro.sync.document.DPIData arg0)`
+### `setData(DPIData arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.DPIData`](./DPIData.md))
@@ -423,7 +423,7 @@
 
 **Returns:** [`ro.sync.document.DPIData`](./DPIData.md)
 
-### `setDetailedExceptionInfo(ro.sync.document.DetailedExceptionInfo arg0)`
+### `setDetailedExceptionInfo(DetailedExceptionInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.DetailedExceptionInfo`](./DetailedExceptionInfo.md))
@@ -434,7 +434,7 @@
 
 **Returns:** [`ro.sync.document.DetailedExceptionInfo`](./DetailedExceptionInfo.md)
 
-### `setEngineName(java.lang.String arg0)`
+### `setEngineName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -540,7 +540,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setImposedInitialPage(java.lang.String arg0)`
+### `setImposedInitialPage(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -551,7 +551,7 @@
 
 **Returns:** [`ro.sync.exml.editor.Anchor`](../exml/editor/Anchor.md)
 
-### `setAnchor(ro.sync.exml.editor.Anchor arg0)`
+### `setAnchor(Anchor arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.Anchor`](../exml/editor/Anchor.md))
@@ -580,7 +580,7 @@
 
 **Returns:** `void`
 
-### `setOperationDescription(ro.sync.document.OperationDescription arg0)`
+### `setOperationDescription(OperationDescription arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.OperationDescription`](./OperationDescription.md))
@@ -595,7 +595,7 @@
 
 **Returns:** `ro.sync.document.o`
 
-### `setDITAAdditionalInfo(ro.sync.document.o arg0)`
+### `setDITAAdditionalInfo(o arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.document.o`)
@@ -606,14 +606,14 @@
 
 **Returns:** `ro.sync.document.bc`
 
-### `setECAdditionalInfo(ro.sync.document.bc arg0)`
+### `setECAdditionalInfo(bc arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.document.bc`)
 
 **Returns:** `void`
 
-### `setTemporaryPositions(javax.swing.text.Position arg0, javax.swing.text.Position arg1, java.lang.String arg2)`
+### `setTemporaryPositions(Position arg0, Position arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.text.Position`)
@@ -622,14 +622,14 @@
 
 **Returns:** `void`
 
-### `getStartEndPositions(java.lang.String arg0)`
+### `getStartEndPositions(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `javax.swing.text.Position[]`
 
-### `setStartEndPositionsMap(java.util.Map<java.lang.String,javax.swing.text.Position[]> arg0)`
+### `setStartEndPositionsMap(Map<String,Position[]> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,javax.swing.text.Position[]>`)
@@ -683,14 +683,14 @@
 
 **Returns:** `java.lang.String`
 
-### `setHtmlMessageFragment(java.lang.String arg0)`
+### `setHtmlMessageFragment(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setErrorKey(java.lang.String arg0)`
+### `setErrorKey(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

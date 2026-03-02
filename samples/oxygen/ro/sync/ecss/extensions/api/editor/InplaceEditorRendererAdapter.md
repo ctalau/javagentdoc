@@ -21,21 +21,21 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `java.lang.String`
 
-### `getRendererComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getRendererComponent(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
 **Returns:** `java.lang.Object`
 
-### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getRenderingInfo(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
 
-### `getTooltipText(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
+### `getTooltipText(AuthorInplaceContext context, int x, int y)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
@@ -44,7 +44,7 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `java.lang.String`
 
-### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseLocation)`
+### `getEditorComponent(AuthorInplaceContext context, Rectangle allocation, Point mouseLocation)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
@@ -57,7 +57,7 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `addEditingListener(InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
@@ -80,14 +80,14 @@ By extending this adapter you are protected if any new methods are added
 
 **Returns:** `void`
 
-### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `removeEditingListener(InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
 **Returns:** `void`
 
-### `getCursorType(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, int x, int y)`
+### `getCursorType(AuthorInplaceContext context, int x, int y)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))

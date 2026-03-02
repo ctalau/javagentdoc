@@ -14,12 +14,12 @@
 
 ## Constructors
 
-### `<init>(java.net.URL[] arg0)`
+### `<init>(URL[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL[]`)
 
-### `<init>(java.net.URL[] arg0, java.lang.ClassLoader arg1)`
+### `<init>(URL[] arg0, ClassLoader arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL[]`)
@@ -31,7 +31,7 @@
 
 **Returns:** `void`
 
-### `delegateToParent(java.lang.String arg0)`
+### `delegateToParent(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

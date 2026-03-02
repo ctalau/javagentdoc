@@ -20,7 +20,7 @@ This method might be asked quite often so it could be cached on the implementor'
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionInfo>`
 
-### `getContextKeyDefinitions(java.net.URL originatorURL)`
+### `getContextKeyDefinitions(URL originatorURL)`
 
 This method might be asked quite often so it could be cached on the implementor's side.
 
@@ -29,7 +29,7 @@ This method might be asked quite often so it could be cached on the implementor'
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionInfo>`
 
-### `getContextKeyDefinitionsMap(java.net.URL originatorURL)`
+### `getContextKeyDefinitionsMap(URL originatorURL)`
 
 This method might be asked quite often so it could be cached on the implementor's side.
 
@@ -38,7 +38,7 @@ This method might be asked quite often so it could be cached on the implementor'
 
 **Returns:** `java.util.LinkedHashMap<java.lang.String,ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionInfo>`
 
-### `getEnumerationDefinitions(java.net.URL originatorURL)`
+### `getEnumerationDefinitions(URL originatorURL)`
 
 These are used to control the values allowed for certain attributes.
  The set can be `null`.
@@ -51,7 +51,7 @@ These are used to control the values allowed for certain attributes.
 
 **Returns:** `java.util.LinkedHashSet<ro.sync.exml.workspace.api.editor.page.ditamap.keys.EnumerationDefInfo>`
 
-### `getURLKeyScopeContexts(java.net.URL originatorURL)`
+### `getURLKeyScopeContexts(URL originatorURL)`
 
 A key scope context is a stack of collected key scope values. As a key scope set on a topicref 
  may have multiple values, the stack contains sets of keyscope values.
@@ -61,7 +61,7 @@ A key scope context is a stack of collected key scope values. As a key scope set
 
 **Returns:** `java.util.LinkedHashMap<java.net.URL,java.util.List<java.util.Stack<java.util.Set<java.lang.String>>>>`
 
-### `getKeyDefinitionForTarget(java.net.URL originatorURL, java.net.URL targetURL)`
+### `getKeyDefinitionForTarget(URL originatorURL, URL targetURL)`
 
 This method may be asked when Oxygen's "Paste as content key reference" action is used or 
  when dropping URLs in the editing area.
@@ -73,7 +73,7 @@ This method may be asked when Oxygen's "Paste as content key reference" action i
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionInfo`](./KeyDefinitionInfo.md)
 
-### `getKeyDefinitionForKeyName(java.net.URL originatorURL, java.lang.String keyName)`
+### `getKeyDefinitionForKeyName(URL originatorURL, String keyName)`
 
 If it returns `null`, Oxygen will ask for all keys using the "getContextKeyDefinitions" method and find the key itself.
 

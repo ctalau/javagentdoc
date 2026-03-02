@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `isSaveAllowed(java.net.URL arg0, int arg1)`
+### `isSaveAllowed(URL arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -26,7 +26,7 @@
 
 **Returns:** `boolean`
 
-### `isSaveAllowed(java.lang.String arg0, java.net.URL arg1, int arg2)`
+### `isSaveAllowed(String arg0, URL arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -35,14 +35,14 @@
 
 **Returns:** `boolean`
 
-### `unlock(java.net.URL arg0)`
+### `unlock(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `void`
 
-### `unlock(java.lang.String arg0, java.net.URL arg1)`
+### `unlock(String arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -50,7 +50,7 @@
 
 **Returns:** `void`
 
-### `updateLock(java.net.URL arg0, int arg1)`
+### `updateLock(URL arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -58,7 +58,7 @@
 
 **Returns:** `void`
 
-### `updateLock(java.lang.String arg0, java.net.URL arg1, int arg2)`
+### `updateLock(String arg0, URL arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -67,14 +67,14 @@
 
 **Returns:** `void`
 
-### `stripUrlContextId(java.net.URL arg0)`
+### `stripUrlContextId(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.net.URL`
 
-### `getUrlContextId(java.net.URL arg0)`
+### `getUrlContextId(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)

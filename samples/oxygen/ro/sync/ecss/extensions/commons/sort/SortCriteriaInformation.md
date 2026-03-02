@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.sort.CriterionInformation[] info, boolean onlySelectedEntries)`
+### `<init>(CriterionInformation[] info, boolean onlySelectedEntries)`
 
 **Parameters:**
 - `info` ([`ro.sync.ecss.extensions.commons.sort.CriterionInformation[]`](./CriterionInformation.md)): Array containing the CriterionInformation

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getProxyConnectionInfo(java.net.URL url)`
+### `getProxyConnectionInfo(URL url)`
 
 If the URL is `null` you might not get accurate information, for example the "no proxy for..." host names information will not be used.
 

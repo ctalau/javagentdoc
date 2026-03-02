@@ -23,40 +23,40 @@ In addition to #execute, subclasses must implement all methods related to shutdo
 
 ## Methods
 
-### `newTaskFor(java.lang.Runnable runnable, T value)`
-
-**Returns:** `java.util.concurrent.RunnableFuture<T>`
+### `newTaskFor(Runnable runnable, T value)`
 
 **Parameters:**
 - `runnable` (`java.lang.Runnable`)
 - `value` (`T`)
 
-### `newTaskFor(java.util.concurrent.Callable<T> callable)`
-
 **Returns:** `java.util.concurrent.RunnableFuture<T>`
+
+### `newTaskFor(Callable<T> callable)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<T>`)
 
-### `submit(java.lang.Runnable task)`
+**Returns:** `java.util.concurrent.RunnableFuture<T>`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
+### `submit(Runnable task)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 
-### `submit(java.lang.Runnable task, T result)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+### `submit(Runnable task, T result)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 - `result` (`T`)
 
-### `submit(java.util.concurrent.Callable<T> task)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+
+### `submit(Callable<T> task)`
 
 **Parameters:**
 - `task` (`java.util.concurrent.Callable<T>`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 

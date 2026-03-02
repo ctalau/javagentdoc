@@ -16,7 +16,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.access.UnsavedReferenceNodeDescriptor>`
 
-### `getUnsavedReferenceInputStream(java.net.URL referenceUrl)`
+### `getUnsavedReferenceInputStream(URL referenceUrl)`
 
 This input stream offers the entire content of the reference, with all the unsaved modifications
  applied.
@@ -26,7 +26,7 @@ This input stream offers the entire content of the reference, with all the unsav
 
 **Returns:** `java.io.InputStream`
 
-### `markReferenceAsSaved(java.net.URL referenceUrl)`
+### `markReferenceAsSaved(URL referenceUrl)`
 
 Signal to the application that the reference should now be considered as saved.
 

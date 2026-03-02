@@ -16,7 +16,7 @@ If the start character of a word is lower case, it will be changed to upper case
 
 ## Methods
 
-### `isDelimiterBeforeTextNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int contentOffset)`
+### `isDelimiterBeforeTextNode(AuthorAccess authorAccess, int contentOffset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))

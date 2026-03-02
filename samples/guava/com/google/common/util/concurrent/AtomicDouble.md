@@ -69,36 +69,34 @@ It is possible to write a more scalable updater, at the cost of giving up strict
 
 ### `set(double newValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `newValue` (`double`): the new value
+
+**Returns:** `void`
 
 ### `lazySet(double newValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `newValue` (`double`): the new value
+
+**Returns:** `void`
 
 ### `getAndSet(double newValue)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `newValue` (`double`): the new value
 
-### `compareAndSet(double expect, double update)`
+**Returns:** `double`
 
-**Returns:** `boolean`
+### `compareAndSet(double expect, double update)`
 
 **Parameters:**
 - `expect` (`double`): the expected value
 - `update` (`double`): the new value
 
-### `weakCompareAndSet(double expect, double update)`
-
 **Returns:** `boolean`
+
+### `weakCompareAndSet(double expect, double update)`
 
 May [
  fail spuriously](http://download.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/package-summary.html#Spurious) and does not provide ordering guarantees, so is only rarely an appropriate
@@ -108,49 +106,51 @@ May [
 - `expect` (`double`): the expected value
 - `update` (`double`): the new value
 
-### `getAndAdd(double delta)`
+**Returns:** `boolean`
 
-**Returns:** `double`
+### `getAndAdd(double delta)`
 
 **Parameters:**
 - `delta` (`double`): the value to add
+
+**Returns:** `double`
 
 ### `addAndGet(double delta)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `delta` (`double`): the value to add
 
-### `getAndAccumulate(double x, java.util.function.DoubleBinaryOperator accumulatorFunction)`
-
 **Returns:** `double`
+
+### `getAndAccumulate(double x, DoubleBinaryOperator accumulatorFunction)`
 
 **Parameters:**
 - `x` (`double`): the update value
 - `accumulatorFunction` (`java.util.function.DoubleBinaryOperator`): the accumulator function
 
-### `accumulateAndGet(double x, java.util.function.DoubleBinaryOperator accumulatorFunction)`
-
 **Returns:** `double`
+
+### `accumulateAndGet(double x, DoubleBinaryOperator accumulatorFunction)`
 
 **Parameters:**
 - `x` (`double`): the update value
 - `accumulatorFunction` (`java.util.function.DoubleBinaryOperator`): the accumulator function
 
-### `getAndUpdate(java.util.function.DoubleUnaryOperator updateFunction)`
-
 **Returns:** `double`
+
+### `getAndUpdate(DoubleUnaryOperator updateFunction)`
 
 **Parameters:**
 - `updateFunction` (`java.util.function.DoubleUnaryOperator`): the update function
 
-### `updateAndGet(java.util.function.DoubleUnaryOperator updateFunction)`
-
 **Returns:** `double`
+
+### `updateAndGet(DoubleUnaryOperator updateFunction)`
 
 **Parameters:**
 - `updateFunction` (`java.util.function.DoubleUnaryOperator`): the update function
+
+**Returns:** `double`
 
 ### `toString()`
 
@@ -172,17 +172,17 @@ May [
 
 **Returns:** `double`
 
-### `writeObject(java.io.ObjectOutputStream s)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream s)`
 
 **Parameters:**
 - `s` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream s)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream s)`
 
 **Parameters:**
 - `s` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

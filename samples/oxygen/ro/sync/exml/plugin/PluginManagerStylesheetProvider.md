@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `getStylesheets(ro.sync.ecss.j arg0)`
+### `getStylesheets(j arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.j`)

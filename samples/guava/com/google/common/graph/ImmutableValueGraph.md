@@ -23,26 +23,26 @@ See the Guava User's Guide's [discussion
 
 ## Constructors
 
-### `<init>(com.google.common.graph.ValueGraph<N,V> graph)`
+### `<init>(ValueGraph<N,V> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
 ## Methods
 
-### `copyOf(com.google.common.graph.ValueGraph<N,V> graph)`
-
-**Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
+### `copyOf(ValueGraph<N,V> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
-### `copyOf(com.google.common.graph.ImmutableValueGraph<N,V> graph)`
-
 **Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
+
+### `copyOf(ImmutableValueGraph<N,V> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md))
+
+**Returns:** [`com.google.common.graph.ImmutableValueGraph<N,V>`](./ImmutableValueGraph.md)
 
 ### `incidentEdgeOrder()`
 
@@ -52,18 +52,18 @@ See the Guava User's Guide's [discussion
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
-### `getNodeConnections(com.google.common.graph.ValueGraph<N,V> graph)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,V>>`](../collect/ImmutableMap.md)
+### `getNodeConnections(ValueGraph<N,V> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
-### `connectionsOf(com.google.common.graph.ValueGraph<N,V> graph, N node)`
+**Returns:** [`com.google.common.collect.ImmutableMap<N,com.google.common.graph.GraphConnections<N,V>>`](../collect/ImmutableMap.md)
 
-**Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
+### `connectionsOf(ValueGraph<N,V> graph, N node)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 - `node` (`N`)
+
+**Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
 

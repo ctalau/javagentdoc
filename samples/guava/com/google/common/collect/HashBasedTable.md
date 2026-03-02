@@ -43,7 +43,7 @@ See the Guava User Guide article on [Table](https://github.com/google/guava/wiki
 
 ## Constructors
 
-### `<init>(java.util.Map<R,java.util.Map<C,V>> backingMap, com.google.common.collect.HashBasedTable.Factory<C,V> factory)`
+### `<init>(Map<R,Map<C,V>> backingMap, HashBasedTable.Factory<C,V> factory)`
 
 **Parameters:**
 - `backingMap` (`java.util.Map<R,java.util.Map<C,V>>`)
@@ -57,16 +57,16 @@ See the Guava User Guide article on [Table](https://github.com/google/guava/wiki
 
 ### `create(int expectedRows, int expectedCellsPerRow)`
 
-**Returns:** [`com.google.common.collect.HashBasedTable<R,C,V>`](./HashBasedTable.md)
-
 **Parameters:**
 - `expectedRows` (`int`): the expected number of distinct row keys
 - `expectedCellsPerRow` (`int`): the expected number of column key / value mappings in each row
 
-### `create(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
-
 **Returns:** [`com.google.common.collect.HashBasedTable<R,C,V>`](./HashBasedTable.md)
+
+### `create(Table<? extends R,? extends C,? extends V> table)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md)): the table to copy
+
+**Returns:** [`com.google.common.collect.HashBasedTable<R,C,V>`](./HashBasedTable.md)
 

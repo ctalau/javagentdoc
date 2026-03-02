@@ -48,12 +48,12 @@ That is, the first call to #nextIndex() will return position, and the first
 
 ### `get(int index)`
 
-**Returns:** `E`
-
 This method is called by #next().
 
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `E`
 
 ### `hasNext()`
 

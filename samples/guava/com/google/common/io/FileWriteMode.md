@@ -19,10 +19,10 @@ The default when mode when none is specified is to truncate
 
 **Returns:** [`com.google.common.io.FileWriteMode[]`](./FileWriteMode.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.io.FileWriteMode`](./FileWriteMode.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`com.google.common.io.FileWriteMode`](./FileWriteMode.md)
 

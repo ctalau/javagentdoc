@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `customizeToolbar(ro.sync.exml.workspace.api.standalone.ToolbarInfo toolbarInfo)`
+### `customizeToolbar(ToolbarInfo toolbarInfo)`
 
 **NOTICE** You will also receive notification for the Author extension toolbars (which are 
  dynamically constructed based on the document type of the current selected XML file).

@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source xquerySrc)`
+### `createTransformer(AuthorAccess authorAccess, Source xquerySrc)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.

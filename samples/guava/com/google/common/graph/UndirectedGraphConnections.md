@@ -21,26 +21,26 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<N,V> adjacentNodeValues)`
+### `<init>(Map<N,V> adjacentNodeValues)`
 
 **Parameters:**
 - `adjacentNodeValues` (`java.util.Map<N,V>`)
 
 ## Methods
 
-### `of(com.google.common.graph.ElementOrder<N> incidentEdgeOrder)`
-
-**Returns:** [`com.google.common.graph.UndirectedGraphConnections<N,V>`](./UndirectedGraphConnections.md)
+### `of(ElementOrder<N> incidentEdgeOrder)`
 
 **Parameters:**
 - `incidentEdgeOrder` ([`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md))
 
-### `ofImmutable(java.util.Map<N,V> adjacentNodeValues)`
-
 **Returns:** [`com.google.common.graph.UndirectedGraphConnections<N,V>`](./UndirectedGraphConnections.md)
+
+### `ofImmutable(Map<N,V> adjacentNodeValues)`
 
 **Parameters:**
 - `adjacentNodeValues` (`java.util.Map<N,V>`)
+
+**Returns:** [`com.google.common.graph.UndirectedGraphConnections<N,V>`](./UndirectedGraphConnections.md)
 
 ### `adjacentNodes()`
 
@@ -56,45 +56,45 @@
 
 ### `incidentEdgeIterator(N thisNode)`
 
-**Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
-
 **Parameters:**
 - `thisNode` (`N`)
 
-### `value(N node)`
+**Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
 
-**Returns:** `V`
+### `value(N node)`
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `V`
 
 ### `removePredecessor(N node)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `void`
 
 ### `removeSuccessor(N node)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `V`
 
 ### `addPredecessor(N node, V value)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` (`N`)
 - `value` (`V`)
+
+**Returns:** `void`
 
 ### `addSuccessor(N node, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `node` (`N`)
 - `value` (`V`)
+
+**Returns:** `V`
 

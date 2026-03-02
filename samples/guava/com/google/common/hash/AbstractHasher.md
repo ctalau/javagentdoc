@@ -18,96 +18,96 @@ Subtypes may provide more efficient implementations, however.
 
 ### `putBoolean(boolean b)`
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
-
 **Parameters:**
 - `b` (`boolean`)
 
-### `putDouble(double d)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putDouble(double d)`
 
 **Parameters:**
 - `d` (`double`)
 
-### `putFloat(float f)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putFloat(float f)`
 
 **Parameters:**
 - `f` (`float`)
 
-### `putUnencodedChars(java.lang.CharSequence charSequence)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putUnencodedChars(CharSequence charSequence)`
 
 **Parameters:**
 - `charSequence` (`java.lang.CharSequence`)
 
-### `putString(java.lang.CharSequence charSequence, java.nio.charset.Charset charset)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putString(CharSequence charSequence, Charset charset)`
 
 **Parameters:**
 - `charSequence` (`java.lang.CharSequence`)
 - `charset` (`java.nio.charset.Charset`)
 
-### `putBytes(byte[] bytes)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(byte[] bytes)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `putBytes(byte[] bytes, int off, int len)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(byte[] bytes, int off, int len)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `putBytes(java.nio.ByteBuffer b)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(ByteBuffer b)`
 
 **Parameters:**
 - `b` (`java.nio.ByteBuffer`)
 
-### `putShort(short s)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putShort(short s)`
 
 **Parameters:**
 - `s` (`short`)
 
-### `putInt(int i)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putInt(int i)`
 
 **Parameters:**
 - `i` (`int`)
 
-### `putLong(long l)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putLong(long l)`
 
 **Parameters:**
 - `l` (`long`)
 
-### `putChar(char c)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putChar(char c)`
 
 **Parameters:**
 - `c` (`char`)
 
-### `putObject(T instance, com.google.common.hash.Funnel<? super T> funnel)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putObject(T instance, Funnel<? super T> funnel)`
 
 **Parameters:**
 - `instance` (`T`)
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md))
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 

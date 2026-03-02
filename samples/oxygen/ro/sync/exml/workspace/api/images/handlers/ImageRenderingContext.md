@@ -22,18 +22,18 @@
 
 ## Constructors
 
-### `<init>(ro.sync.exml.view.graphics.Font font)`
+### `<init>(Font font)`
 
 **Parameters:**
 - `font` (`ro.sync.exml.view.graphics.Font`): The font.
 
-### `<init>(ro.sync.exml.view.graphics.Font font, int dotsPerInch)`
+### `<init>(Font font, int dotsPerInch)`
 
 **Parameters:**
 - `font` (`ro.sync.exml.view.graphics.Font`): The font.
 - `dotsPerInch` (`int`): The current monitor DPI (Dots per Inch)
 
-### `<init>(ro.sync.exml.view.graphics.Font font, int dotsPerInch, ro.sync.exml.view.graphics.Rectangle imageInfo)`
+### `<init>(Font font, int dotsPerInch, Rectangle imageInfo)`
 
 **Parameters:**
 - `font` (`ro.sync.exml.view.graphics.Font`): The font.

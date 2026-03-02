@@ -15,9 +15,7 @@ See the Guava User Guide article on [
 
 ## Methods
 
-### `toMultiset(java.util.function.Function<? super T,E> elementFunction, java.util.function.ToIntFunction<? super T> countFunction, java.util.function.Supplier<M> multisetSupplier)`
-
-**Returns:** `java.util.stream.Collector<T,?,M>`
+### `toMultiset(Function<? super T,E> elementFunction, ToIntFunction<? super T> countFunction, Supplier<M> multisetSupplier)`
 
 Elements are added in encounter order.
 
@@ -37,9 +35,9 @@ To collect to an ImmutableMultiset, use ImmutableMultiset#toImmutableMultiset.
 - `countFunction` (`java.util.function.ToIntFunction<? super T>`)
 - `multisetSupplier` (`java.util.function.Supplier<M>`)
 
-### `unmodifiableMultiset(com.google.common.collect.Multiset<? extends E> multiset)`
+**Returns:** `java.util.stream.Collector<T,?,M>`
 
-**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+### `unmodifiableMultiset(Multiset<? extends E> multiset)`
 
 Query operations on the returned
  multiset "read through" to the specified multiset, and attempts to modify the returned multiset
@@ -51,16 +49,16 @@ The returned multiset will be serializable if the specified multiset is serializ
 **Parameters:**
 - `multiset` ([`com.google.common.collect.Multiset<? extends E>`](./Multiset.md)): the multiset for which an unmodifiable view is to be generated
 
-### `unmodifiableMultiset(com.google.common.collect.ImmutableMultiset<E> multiset)`
-
 **Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+
+### `unmodifiableMultiset(ImmutableMultiset<E> multiset)`
 
 **Parameters:**
 - `multiset` ([`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md))
 
-### `unmodifiableSortedMultiset(com.google.common.collect.SortedMultiset<E> sortedMultiset)`
+**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
 
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+### `unmodifiableSortedMultiset(SortedMultiset<E> sortedMultiset)`
 
 Query operations on the returned
  multiset "read through" to the specified multiset, and attempts to modify the returned multiset
@@ -72,9 +70,9 @@ The returned multiset will be serializable if the specified multiset is serializ
 **Parameters:**
 - `sortedMultiset` ([`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)): the sorted multiset for which an unmodifiable view is to be generated
 
-### `immutableEntry(E e, int n)`
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
+### `immutableEntry(E e, int n)`
 
 The entry will be
  serializable if e is.
@@ -83,9 +81,9 @@ The entry will be
 - `e` (`E`): the element to be associated with the returned entry
 - `n` (`int`): the count to be associated with the returned entry
 
-### `filter(com.google.common.collect.Multiset<E> unfiltered, com.google.common.base.Predicate<? super E> predicate)`
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+### `filter(Multiset<E> unfiltered, Predicate<? super E> predicate)`
 
 The returned
  multiset is a live view of unfiltered; changes to one affect the other.
@@ -116,9 +114,9 @@ Many of the filtered multiset's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `inferDistinctElements(java.lang.Iterable<?> elements)`
+**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
 
-**Returns:** `int`
+### `inferDistinctElements(Iterable<?> elements)`
 
 The number of
  distinct elements is only computed if elements is an instance of Multiset;
@@ -127,9 +125,9 @@ The number of
 **Parameters:**
 - `elements` (`java.lang.Iterable<?>`)
 
-### `union(com.google.common.collect.Multiset<? extends E> multiset1, com.google.common.collect.Multiset<? extends E> multiset2)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+### `union(Multiset<? extends E> multiset1, Multiset<? extends E> multiset2)`
 
 In the returned multiset, the count
  of each element is the *maximum* of its counts in the two backing multisets. The iteration
@@ -145,9 +143,9 @@ Results are undefined if multiset1 and multiset2 are based on different
 - `multiset1` ([`com.google.common.collect.Multiset<? extends E>`](./Multiset.md))
 - `multiset2` ([`com.google.common.collect.Multiset<? extends E>`](./Multiset.md))
 
-### `intersection(com.google.common.collect.Multiset<E> multiset1, com.google.common.collect.Multiset<?> multiset2)`
-
 **Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+
+### `intersection(Multiset<E> multiset1, Multiset<?> multiset2)`
 
 In the returned multiset,
  the count of each element is the *minimum* of its counts in the two backing multisets,
@@ -163,9 +161,9 @@ Results are undefined if multiset1 and multiset2 are based on different
 - `multiset1` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `multiset2` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 
-### `sum(com.google.common.collect.Multiset<? extends E> multiset1, com.google.common.collect.Multiset<? extends E> multiset2)`
-
 **Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+
+### `sum(Multiset<? extends E> multiset1, Multiset<? extends E> multiset2)`
 
 In the returned multiset, the count
  of each element is the *sum* of its counts in the two backing multisets. The iteration
@@ -181,9 +179,9 @@ Results are undefined if multiset1 and multiset2 are based on different
 - `multiset1` ([`com.google.common.collect.Multiset<? extends E>`](./Multiset.md))
 - `multiset2` ([`com.google.common.collect.Multiset<? extends E>`](./Multiset.md))
 
-### `difference(com.google.common.collect.Multiset<E> multiset1, com.google.common.collect.Multiset<?> multiset2)`
-
 **Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+
+### `difference(Multiset<E> multiset1, Multiset<?> multiset2)`
 
 In the returned multiset, the
  count of each element is the result of the *zero-truncated subtraction* of its count in
@@ -199,17 +197,17 @@ Results are undefined if multiset1 and multiset2 are based on different
 - `multiset1` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `multiset2` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 
-### `containsOccurrences(com.google.common.collect.Multiset<?> superMultiset, com.google.common.collect.Multiset<?> subMultiset)`
+**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
 
-**Returns:** `boolean`
+### `containsOccurrences(Multiset<?> superMultiset, Multiset<?> subMultiset)`
 
 **Parameters:**
 - `superMultiset` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 - `subMultiset` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 
-### `retainOccurrences(com.google.common.collect.Multiset<?> multisetToModify, com.google.common.collect.Multiset<?> multisetToRetain)`
-
 **Returns:** `boolean`
+
+### `retainOccurrences(Multiset<?> multisetToModify, Multiset<?> multisetToRetain)`
 
 To be precise, multisetToModify.count(e) is set to 
  Math.min(multisetToModify.count(e), multisetToRetain.count(e)). This is similar to intersection (multisetToModify, multisetToRetain),
@@ -224,17 +222,17 @@ In contrast, multisetToModify.retainAll(multisetToRetain) keeps all occurrences 
 - `multisetToModify` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 - `multisetToRetain` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 
-### `retainOccurrencesImpl(com.google.common.collect.Multiset<E> multisetToModify, com.google.common.collect.Multiset<?> occurrencesToRetain)`
-
 **Returns:** `boolean`
+
+### `retainOccurrencesImpl(Multiset<E> multisetToModify, Multiset<?> occurrencesToRetain)`
 
 **Parameters:**
 - `multisetToModify` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `occurrencesToRetain` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 
-### `removeOccurrences(com.google.common.collect.Multiset<?> multisetToModify, java.lang.Iterable<?> occurrencesToRemove)`
-
 **Returns:** `boolean`
+
+### `removeOccurrences(Multiset<?> multisetToModify, Iterable<?> occurrencesToRemove)`
 
 Equivalently, this method modifies multisetToModify so that 
  multisetToModify.count(e) is set to Math.max(0, multisetToModify.count(e) -
@@ -259,9 +257,9 @@ This is *not* the same as multisetToModify. removeAll(occurrencesToRemove), whic
 - `multisetToModify` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 - `occurrencesToRemove` (`java.lang.Iterable<?>`)
 
-### `removeOccurrences(com.google.common.collect.Multiset<?> multisetToModify, com.google.common.collect.Multiset<?> occurrencesToRemove)`
-
 **Returns:** `boolean`
+
+### `removeOccurrences(Multiset<?> multisetToModify, Multiset<?> occurrencesToRemove)`
 
 Equivalently, this method modifies multisetToModify so that 
  multisetToModify.count(e) is set to Math.max(0, multisetToModify.count(e) -
@@ -286,58 +284,58 @@ This is *not* the same as multisetToModify. removeAll(occurrencesToRemove), whic
 - `multisetToModify` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 - `occurrencesToRemove` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 
-### `equalsImpl(com.google.common.collect.Multiset<?> multiset, java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `equalsImpl(Multiset<?> multiset, Object object)`
 
 **Parameters:**
 - `multiset` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 - `object` (`java.lang.Object`)
 
-### `addAllImpl(com.google.common.collect.Multiset<E> self, java.util.Collection<? extends E> elements)`
-
 **Returns:** `boolean`
+
+### `addAllImpl(Multiset<E> self, Collection<? extends E> elements)`
 
 **Parameters:**
 - `self` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `elements` (`java.util.Collection<? extends E>`)
 
-### `addAllImpl(com.google.common.collect.Multiset<E> self, com.google.common.collect.Multiset<? extends E> elements)`
-
 **Returns:** `boolean`
+
+### `addAllImpl(Multiset<E> self, Multiset<? extends E> elements)`
 
 **Parameters:**
 - `self` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `elements` ([`com.google.common.collect.Multiset<? extends E>`](./Multiset.md))
 
-### `removeAllImpl(com.google.common.collect.Multiset<?> self, java.util.Collection<?> elementsToRemove)`
-
 **Returns:** `boolean`
+
+### `removeAllImpl(Multiset<?> self, Collection<?> elementsToRemove)`
 
 **Parameters:**
 - `self` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 - `elementsToRemove` (`java.util.Collection<?>`)
 
-### `retainAllImpl(com.google.common.collect.Multiset<?> self, java.util.Collection<?> elementsToRetain)`
-
 **Returns:** `boolean`
+
+### `retainAllImpl(Multiset<?> self, Collection<?> elementsToRetain)`
 
 **Parameters:**
 - `self` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 - `elementsToRetain` (`java.util.Collection<?>`)
 
-### `setCountImpl(com.google.common.collect.Multiset<E> self, E element, int count)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `setCountImpl(Multiset<E> self, E element, int count)`
 
 **Parameters:**
 - `self` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `element` (`E`)
 - `count` (`int`)
 
-### `setCountImpl(com.google.common.collect.Multiset<E> self, E element, int oldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `setCountImpl(Multiset<E> self, E element, int oldCount, int newCount)`
 
 **Parameters:**
 - `self` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
@@ -345,45 +343,47 @@ This is *not* the same as multisetToModify. removeAll(occurrencesToRemove), whic
 - `oldCount` (`int`)
 - `newCount` (`int`)
 
-### `elementIterator(java.util.Iterator<com.google.common.collect.Multiset.Entry<E>> entryIterator)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Iterator<E>`
+### `elementIterator(Iterator<Multiset.Entry<E>> entryIterator)`
 
 **Parameters:**
 - `entryIterator` (`java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`)
 
-### `iteratorImpl(com.google.common.collect.Multiset<E> multiset)`
+**Returns:** `java.util.Iterator<E>`
+
+### `iteratorImpl(Multiset<E> multiset)`
+
+**Parameters:**
+- `multiset` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 
 **Returns:** `java.util.Iterator<E>`
 
+### `spliteratorImpl(Multiset<E> multiset)`
+
 **Parameters:**
 - `multiset` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
-
-### `spliteratorImpl(com.google.common.collect.Multiset<E> multiset)`
 
 **Returns:** `java.util.Spliterator<E>`
 
-**Parameters:**
-- `multiset` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
-
-### `linearTimeSizeImpl(com.google.common.collect.Multiset<?> multiset)`
-
-**Returns:** `int`
+### `linearTimeSizeImpl(Multiset<?> multiset)`
 
 **Parameters:**
 - `multiset` ([`com.google.common.collect.Multiset<?>`](./Multiset.md))
 
-### `cast(java.lang.Iterable<T> iterable)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.collect.Multiset<T>`](./Multiset.md)
+### `cast(Iterable<T> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
 
-### `copyHighestCountFirst(com.google.common.collect.Multiset<E> multiset)`
+**Returns:** [`com.google.common.collect.Multiset<T>`](./Multiset.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+### `copyHighestCountFirst(Multiset<E> multiset)`
 
 **Parameters:**
 - `multiset` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
+
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 

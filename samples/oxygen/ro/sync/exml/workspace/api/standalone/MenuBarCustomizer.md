@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customizeMainMenu(javax.swing.JMenuBar mainMenu)`
+### `customizeMainMenu(JMenuBar mainMenu)`
 
 This callback may be received multiple times during the editing session and you need to avoid adding your actions multiple times,
  check if they have already been added and if they have avoid adding them again to the menu.

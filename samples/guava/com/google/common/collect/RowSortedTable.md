@@ -21,13 +21,13 @@ The #rowKeySet method returns a SortedSet and the #rowMap method
 
 ### `rowKeySet()`
 
-**Returns:** `java.util.SortedSet<R>`
-
 This method returns a SortedSet, instead of the Set specified in the Table interface.
+
+**Returns:** `java.util.SortedSet<R>`
 
 ### `rowMap()`
 
-**Returns:** `java.util.SortedMap<R,java.util.Map<C,V>>`
-
 This method returns a SortedMap, instead of the Map specified in the Table interface.
+
+**Returns:** `java.util.SortedMap<R,java.util.Map<C,V>>`
 

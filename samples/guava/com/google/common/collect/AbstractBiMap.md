@@ -46,13 +46,13 @@ Note that this class contains equals() calls that keep it from supporting
 
 ## Constructors
 
-### `<init>(java.util.Map<K,V> forward, java.util.Map<V,K> backward)`
+### `<init>(Map<K,V> forward, Map<V,K> backward)`
 
 **Parameters:**
 - `forward` (`java.util.Map<K,V>`)
 - `backward` (`java.util.Map<V,K>`)
 
-### `<init>(java.util.Map<K,V> backward, com.google.common.collect.AbstractBiMap<V,K> forward)`
+### `<init>(Map<K,V> backward, AbstractBiMap<V,K> forward)`
 
 **Parameters:**
 - `backward` (`java.util.Map<K,V>`)
@@ -66,21 +66,19 @@ Note that this class contains equals() calls that keep it from supporting
 
 ### `checkKey(K key)`
 
-**Returns:** `K`
-
 **Parameters:**
 - `key` (`K`)
 
-### `checkValue(V value)`
+**Returns:** `K`
 
-**Returns:** `V`
+### `checkValue(V value)`
 
 **Parameters:**
 - `value` (`V`)
 
-### `setDelegates(java.util.Map<K,V> forward, java.util.Map<V,K> backward)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `setDelegates(Map<K,V> forward, Map<V,K> backward)`
 
 Called by the constructor and by
  subclasses during deserialization.
@@ -89,55 +87,55 @@ Called by the constructor and by
 - `forward` (`java.util.Map<K,V>`)
 - `backward` (`java.util.Map<V,K>`)
 
-### `makeInverse(java.util.Map<V,K> backward)`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md)
+### `makeInverse(Map<V,K> backward)`
 
 **Parameters:**
 - `backward` (`java.util.Map<V,K>`)
 
-### `setInverse(com.google.common.collect.AbstractBiMap<V,K> inverse)`
+**Returns:** [`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md)
 
-**Returns:** `void`
+### `setInverse(AbstractBiMap<V,K> inverse)`
 
 **Parameters:**
 - `inverse` ([`com.google.common.collect.AbstractBiMap<V,K>`](./AbstractBiMap.md))
 
-### `containsValue(java.lang.Object value)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `put(K key, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `forcePut(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putInBothMaps(K key, V value, boolean force)`
-
 **Returns:** `V`
+
+### `putInBothMaps(K key, V value, boolean force)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 - `force` (`boolean`)
 
-### `updateInverseMap(K key, boolean containedKey, V oldValue, V newValue)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `updateInverseMap(K key, boolean containedKey, V oldValue, V newValue)`
 
 **Parameters:**
 - `key` (`K`)
@@ -145,40 +143,42 @@ Called by the constructor and by
 - `oldValue` (`V`)
 - `newValue` (`V`)
 
-### `remove(java.lang.Object key)`
+**Returns:** `void`
+
+### `remove(Object key)`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 **Returns:** `V`
+
+### `removeFromBothMaps(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `removeFromBothMaps(java.lang.Object key)`
-
 **Returns:** `V`
-
-**Parameters:**
-- `key` (`java.lang.Object`)
 
 ### `removeFromInverseMap(V oldValue)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `oldValue` (`V`)
 
-### `putAll(java.util.Map<? extends K,? extends V> map)`
-
 **Returns:** `void`
+
+### `putAll(Map<? extends K,? extends V> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `replaceAll(java.util.function.BiFunction<? super K,? super V,? extends V> function)`
-
 **Returns:** `void`
+
+### `replaceAll(BiFunction<? super K,? super V,? extends V> function)`
 
 **Parameters:**
 - `function` (`java.util.function.BiFunction<? super K,? super V,? extends V>`)
+
+**Returns:** `void`
 
 ### `clear()`
 

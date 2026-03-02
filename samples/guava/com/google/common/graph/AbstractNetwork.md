@@ -32,120 +32,120 @@ The methods implemented in this class should not be overridden unless the subcla
 
 ### `degree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `inDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `outDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
 
-### `adjacentEdges(E edge)`
+**Returns:** `int`
 
-**Returns:** `java.util.Set<E>`
+### `adjacentEdges(E edge)`
 
 **Parameters:**
 - `edge` (`E`)
 
-### `edgesConnecting(N nodeU, N nodeV)`
-
 **Returns:** `java.util.Set<E>`
+
+### `edgesConnecting(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgesConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Set<E>`
+
+### `edgesConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `connectedPredicate(N nodePresent, N nodeToCheck)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** [`com.google.common.base.Predicate<E>`](../base/Predicate.md)
+### `connectedPredicate(N nodePresent, N nodeToCheck)`
 
 **Parameters:**
 - `nodePresent` (`N`)
 - `nodeToCheck` (`N`)
 
-### `edgeConnecting(N nodeU, N nodeV)`
+**Returns:** [`com.google.common.base.Predicate<E>`](../base/Predicate.md)
 
-**Returns:** `java.util.Optional<E>`
+### `edgeConnecting(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Optional<E>`
+
+### `edgeConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `java.util.Optional<E>`
 
 ### `edgeConnectingOrNull(N nodeU, N nodeV)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeConnectingOrNull(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `E`
+
+### `edgeConnectingOrNull(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `E`
 
 ### `hasEdgeConnecting(N nodeU, N nodeV)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `validateEndpoints(com.google.common.graph.EndpointPair<?> endpoints)`
+**Returns:** `boolean`
+
+### `validateEndpoints(EndpointPair<?> endpoints)`
+
+**Parameters:**
+- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
 
 **Returns:** `void`
 
-**Parameters:**
-- `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
-
-### `isOrderingCompatible(com.google.common.graph.EndpointPair<?> endpoints)`
-
-**Returns:** `boolean`
+### `isOrderingCompatible(EndpointPair<?> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<?>`](./EndpointPair.md))
 
-### `equals(java.lang.Object obj)`
-
 **Returns:** `boolean`
+
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -155,10 +155,10 @@ The methods implemented in this class should not be overridden unless the subcla
 
 **Returns:** `java.lang.String`
 
-### `edgeIncidentNodesMap(com.google.common.graph.Network<N,E> network)`
-
-**Returns:** `java.util.Map<E,com.google.common.graph.EndpointPair<N>>`
+### `edgeIncidentNodesMap(Network<N,E> network)`
 
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+
+**Returns:** `java.util.Map<E,com.google.common.graph.EndpointPair<N>>`
 

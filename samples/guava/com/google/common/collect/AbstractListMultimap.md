@@ -25,7 +25,7 @@ It's a wrapper around AbstractMapBasedMultimap that converts the returned collec
 
 ## Constructors
 
-### `<init>(java.util.Map<K,java.util.Collection<V>> map)`
+### `<init>(Map<K,Collection<V>> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
@@ -40,24 +40,22 @@ It's a wrapper around AbstractMapBasedMultimap that converts the returned collec
 
 **Returns:** `java.util.List<V>`
 
-### `unmodifiableCollectionSubclass(java.util.Collection<E> collection)`
-
-**Returns:** `java.util.Collection<E>`
+### `unmodifiableCollectionSubclass(Collection<E> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<E>`)
 
-### `wrapCollection(K key, java.util.Collection<V> collection)`
+**Returns:** `java.util.Collection<E>`
 
-**Returns:** `java.util.Collection<V>`
+### `wrapCollection(K key, Collection<V> collection)`
 
 **Parameters:**
 - `key` (`K`)
 - `collection` (`java.util.Collection<V>`)
 
-### `get(K key)`
+**Returns:** `java.util.Collection<V>`
 
-**Returns:** `java.util.List<V>`
+### `get(K key)`
 
 Because the values for a given key may have duplicates and follow the insertion ordering,
  this method returns a List, instead of the Collection specified in the Multimap interface.
@@ -65,9 +63,9 @@ Because the values for a given key may have duplicates and follow the insertion 
 **Parameters:**
 - `key` (`K`)
 
-### `removeAll(java.lang.Object key)`
-
 **Returns:** `java.util.List<V>`
+
+### `removeAll(Object key)`
 
 Because the values for a given key may have duplicates and follow the insertion ordering,
  this method returns a List, instead of the Collection specified in the Multimap interface.
@@ -75,9 +73,9 @@ Because the values for a given key may have duplicates and follow the insertion 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `java.util.List<V>`
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 Because the values for a given key may have duplicates and follow the insertion ordering,
  this method returns a List, instead of the Collection specified in the Multimap interface.
@@ -86,28 +84,30 @@ Because the values for a given key may have duplicates and follow the insertion 
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `put(K key, V value)`
+**Returns:** `java.util.List<V>`
 
-**Returns:** `boolean`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`): key to store in the multimap
 - `value` (`V`): value to store in the multimap
 
-### `asMap()`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap()`
 
 Though the method signature doesn't say so explicitly, the returned map has List
  values.
 
-### `equals(java.lang.Object object)`
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 Two ListMultimap instances are equal if, for each key, they contain the same values
  in the same order. If the value orderings disagree, the multimaps will not be considered equal.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

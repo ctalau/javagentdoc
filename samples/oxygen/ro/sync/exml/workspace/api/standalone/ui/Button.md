@@ -10,23 +10,23 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0)`
+### `<init>(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `<init>(javax.swing.Icon arg0)`
+### `<init>(Icon arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Icon`)
 
-### `<init>(java.lang.String arg0, javax.swing.Icon arg1)`
+### `<init>(String arg0, Icon arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`javax.swing.Icon`)
 
-### `<init>(javax.swing.Action arg0)`
+### `<init>(Action arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)

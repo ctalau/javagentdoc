@@ -36,7 +36,7 @@
 
 ## Constructors
 
-### `<init>(org.eclipse.swt.widgets.Composite arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg2, ro.sync.ecss.extensions.commons.sort.CriterionInformation arg3, boolean arg4, ro.sync.ecss.extensions.commons.sort.KeysController arg5, java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg6)`
+### `<init>(Composite arg0, AuthorResourceBundle arg1, List<CriterionInformation> arg2, CriterionInformation arg3, boolean arg4, KeysController arg5, List<CriterionInformation> arg6)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)

@@ -47,42 +47,42 @@ See the Guava User Guide article on [Table](https://github.com/google/guava/wiki
 
 ## Methods
 
-### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
-
-**Returns:** `boolean`
+### `contains(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`): key of row to search for
 - `columnKey` (`java.lang.Object`): key of column to search for
 
-### `containsRow(java.lang.Object rowKey)`
-
 **Returns:** `boolean`
+
+### `containsRow(Object rowKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`): key of row to search for
 
-### `containsColumn(java.lang.Object columnKey)`
-
 **Returns:** `boolean`
+
+### `containsColumn(Object columnKey)`
 
 **Parameters:**
 - `columnKey` (`java.lang.Object`): key of column to search for
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`): value to search for
 
-### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `get(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`): key of row to search for
 - `columnKey` (`java.lang.Object`): key of column to search for
+
+**Returns:** `V`
 
 ### `isEmpty()`
 
@@ -92,9 +92,7 @@ See the Guava User Guide article on [Table](https://github.com/google/guava/wiki
 
 **Returns:** `int`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 Two tables are equal when their
  cell views, as returned by #cellSet, are equal.
@@ -102,20 +100,20 @@ Two tables are equal when their
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 The hash code of a table is defined as the hash code of
  its cell view, as returned by #cellSet.
+
+**Returns:** `int`
 
 ### `clear()`
 
 **Returns:** `void`
 
 ### `put(R rowKey, C columnKey, V value)`
-
-**Returns:** `V`
 
 If the table already contained a
  mapping for those keys, the old value is replaced with the specified value.
@@ -125,9 +123,9 @@ If the table already contained a
 - `columnKey` (`C`): column key that the value should be associated with
 - `value` (`V`): value to be associated with the specified keys
 
-### `putAll(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Table<? extends R,? extends C,? extends V> table)`
 
 The effect is equivalent to calling
  #put with each row key / column key / value mapping in table.
@@ -135,17 +133,17 @@ The effect is equivalent to calling
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md)): the table to add to this table
 
-### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `remove(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`): row key of mapping to be removed
 - `columnKey` (`java.lang.Object`): column key of mapping to be removed
 
-### `row(R rowKey)`
+**Returns:** `V`
 
-**Returns:** `java.util.Map<C,V>`
+### `row(R rowKey)`
 
 For each row key / column key /
  value mapping in the table with that row key, the returned map associates the column key with
@@ -157,9 +155,9 @@ Changes to the returned map will update the underlying table, and vice versa.
 **Parameters:**
 - `rowKey` (`R`): key of row to search for in the table
 
-### `column(C columnKey)`
+**Returns:** `java.util.Map<C,V>`
 
-**Returns:** `java.util.Map<R,V>`
+### `column(C columnKey)`
 
 For each row key / column key /
  value mapping in the table with that column key, the returned map associates the row key with
@@ -171,38 +169,38 @@ Changes to the returned map will update the underlying table, and vice versa.
 **Parameters:**
 - `columnKey` (`C`): key of column to search for in the table
 
-### `cellSet()`
+**Returns:** `java.util.Map<R,V>`
 
-**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
+### `cellSet()`
 
 Changes to the returned set will
  update the underlying table, and vice versa. The cell set does not support the add or
  addAll methods.
 
+**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
+
 ### `rowKeySet()`
+
+Changes to the set will
+ update the underlying table, and vice versa.
 
 **Returns:** `java.util.Set<R>`
 
+### `columnKeySet()`
+
 Changes to the set will
  update the underlying table, and vice versa.
-
-### `columnKeySet()`
 
 **Returns:** `java.util.Set<C>`
 
-Changes to the set will
- update the underlying table, and vice versa.
-
 ### `values()`
-
-**Returns:** `java.util.Collection<V>`
 
 Changes to the returned
  collection will update the underlying table, and vice versa.
 
-### `rowMap()`
+**Returns:** `java.util.Collection<V>`
 
-**Returns:** `java.util.Map<R,java.util.Map<C,V>>`
+### `rowMap()`
 
 Changes to the returned map will update this table. The returned map does not support
  put() or putAll(), or setValue() on its entries.
@@ -212,9 +210,9 @@ In contrast, the maps returned by rowMap().get() have the same behavior as those
  returned by #row. Those maps may support setValue(), put(), and 
  putAll().
 
-### `columnMap()`
+**Returns:** `java.util.Map<R,java.util.Map<C,V>>`
 
-**Returns:** `java.util.Map<C,java.util.Map<R,V>>`
+### `columnMap()`
 
 Changes to the returned map will update this table. The returned map does not support
  put() or putAll(), or setValue() on its entries.
@@ -223,4 +221,6 @@ Changes to the returned map will update this table. The returned map does not su
 In contrast, the maps returned by columnMap().get() have the same behavior as those
  returned by #column. Those maps may support setValue(), put(), and
  putAll().
+
+**Returns:** `java.util.Map<C,java.util.Map<R,V>>`
 

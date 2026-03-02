@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `writeTo(java.io.OutputStream out)`
+### `writeTo(OutputStream out)`
 
 This method does not close the output stream.
  

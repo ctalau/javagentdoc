@@ -15,42 +15,42 @@ You can register such a listener using
 
 ## Methods
 
-### `highlightAdded(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `highlightAdded(AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): Added highlight.
 
 **Returns:** `void`
 
-### `highlightsAdded(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> highlights)`
+### `highlightsAdded(List<AuthorPersistentHighlight> highlights)`
 
 **Parameters:**
 - `highlights` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`): Added highlights.
 
 **Returns:** `void`
 
-### `highlightRemoved(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `highlightRemoved(AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The removed highlight.
 
 **Returns:** `void`
 
-### `highlightsRemoved(java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight> highlights)`
+### `highlightsRemoved(List<AuthorPersistentHighlight> highlights)`
 
 **Parameters:**
 - `highlights` (`java.util.List<ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight>`): The list of highlights to be removed.
 
 **Returns:** `void`
 
-### `highlightUpdated(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `highlightUpdated(AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The updated highlight.
 
 **Returns:** `void`
 
-### `highlightRangeReconfiguredUpdated(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, int oldStartOffset, int oldEndOffset)`
+### `highlightRangeReconfiguredUpdated(AuthorPersistentHighlight highlight, int oldStartOffset, int oldEndOffset)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The updated highlight.

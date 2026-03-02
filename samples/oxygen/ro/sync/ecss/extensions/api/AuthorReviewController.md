@@ -30,7 +30,7 @@ Form: `yyyyMMdd'T'HHmmssZ`
 
 **Returns:** `java.lang.String`
 
-### `getReviewerAutoColor(java.lang.String reviewerAuthorName)`
+### `getReviewerAutoColor(String reviewerAuthorName)`
 
 It is used when in the Oxygen Preferences **Auto** coloring is set for the `Insert`, `Delete` or `Comment` reviews.
 
@@ -39,7 +39,7 @@ It is used when in the Oxygen Preferences **Auto** coloring is set for the `Inse
 
 **Returns:** `ro.sync.exml.view.graphics.Color`
 
-### `setReviewRenderer(ro.sync.ecss.extensions.api.highlights.PersistentHighlightRenderer renderer)`
+### `setReviewRenderer(PersistentHighlightRenderer renderer)`
 
 **Parameters:**
 - `renderer` ([`ro.sync.ecss.extensions.api.highlights.PersistentHighlightRenderer`](highlights/PersistentHighlightRenderer.md)): the renderer used to customize painting for the review highlights.
@@ -58,7 +58,7 @@ It is used when in the Oxygen Preferences **Auto** coloring is set for the `Inse
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](highlights/AuthorPersistentHighlight.md)
 
-### `setPersistentHighlightProperties(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.util.LinkedHashMap<java.lang.String,java.lang.String> properties)`
+### `setPersistentHighlightProperties(AuthorPersistentHighlight highlight, LinkedHashMap<String,String> properties)`
 
 A copy of the initial properties can be obtained from AuthorPersistentHighlight#getClonedProperties()
  Please note that this method allows setting the properties of all persistent highlights, 
@@ -81,7 +81,7 @@ A copy of the initial properties can be obtained from AuthorPersistentHighlight#
 
 **Returns:** `void`
 
-### `removePersistentHighlightProperties(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.util.List<java.lang.String> properties)`
+### `removePersistentHighlightProperties(AuthorPersistentHighlight highlight, List<String> properties)`
 
 A copy of the initial properties can be obtained from AuthorPersistentHighlight#getClonedProperties()
  Please note that the properties that are specific to Oxygen XML comments or track changes 
@@ -94,7 +94,7 @@ A copy of the initial properties can be obtained from AuthorPersistentHighlight#
 
 **Returns:** `void`
 
-### `addAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
+### `addAuthorPersistentHighlightListener(AuthorPersistentHighlightsListener listener)`
 
 In the persistent highlights are included:
  
@@ -108,14 +108,14 @@ In the persistent highlights are included:
 
 **Returns:** `void`
 
-### `removeAuthorPersistentHighlightListener(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener listener)`
+### `removeAuthorPersistentHighlightListener(AuthorPersistentHighlightsListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsListener`](highlights/AuthorPersistentHighlightsListener.md)): The listener to remove.
 
 **Returns:** `void`
 
-### `addPersistentHighlightsFilter(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightsFilter persistentHighlightsFilter)`
+### `addPersistentHighlightsFilter(AuthorPersistentHighlightsFilter persistentHighlightsFilter)`
 
 A filter capable of filtering the highlights by author is present by default.
 

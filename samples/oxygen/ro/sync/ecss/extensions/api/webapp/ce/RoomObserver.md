@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `sync(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.SyncListener listener)`
+### `sync(RoomObserver.SyncListener listener)`
 
 The observer synchronizes its state with changes from multiple users that 
  changed the document since the last sync. The observer tries to batch together
@@ -46,14 +46,14 @@ When it opens such connections,
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](../plugin/UserContext.md)
 
-### `addEditListener(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener listener)`
+### `addEditListener(RoomObserver.EditListener listener)`
 
 **Parameters:**
 - `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener`): The edit listener to register.
 
 **Returns:** `void`
 
-### `removeEditListener(ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener listener)`
+### `removeEditListener(RoomObserver.EditListener listener)`
 
 **Parameters:**
 - `listener` (`ro.sync.ecss.extensions.api.webapp.ce.RoomObserver.EditListener`): The edit listener to register.

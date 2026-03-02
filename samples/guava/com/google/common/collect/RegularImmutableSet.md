@@ -40,7 +40,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.Object[] elements, int hashCode, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] table, int mask)`
+### `<init>(Object[] elements, int hashCode, lang@Nullable Object[] table, int mask)`
 
 **Parameters:**
 - `elements` (`java.lang.Object[]`)
@@ -50,12 +50,12 @@
 
 ## Methods
 
-### `contains(java.lang.Object target)`
-
-**Returns:** `boolean`
+### `contains(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `size()`
 
@@ -81,13 +81,13 @@
 
 **Returns:** `int`
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
-
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
+
+**Returns:** `int`
 
 ### `createAsList()`
 

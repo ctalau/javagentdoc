@@ -44,7 +44,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3)`
+### `<init>(j arg0, Frame arg1, String[] arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)
@@ -52,7 +52,7 @@
 - `arg2` (`java.lang.String[]`)
 - `arg3` (`java.lang.String`)
 
-### `<init>(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
+### `<init>(j arg0, Frame arg1, String[] arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)
@@ -67,7 +67,7 @@
 
 **Returns:** `void`
 
-### `load(java.net.URL arg0, java.io.Reader arg1)`
+### `load(URL arg0, Reader arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -75,7 +75,7 @@
 
 **Returns:** `void`
 
-### `showLocation(java.net.URL arg0, java.io.Reader arg1)`
+### `showLocation(URL arg0, Reader arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -83,7 +83,7 @@
 
 **Returns:** `void`
 
-### `createEditor(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
+### `createEditor(j arg0, Frame arg1, String[] arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)
@@ -102,14 +102,14 @@
 
 **Returns:** `java.io.Reader`
 
-### `addAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener arg0)`
+### `addAuthorComponentListener(AuthorComponentListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md))
 
 **Returns:** `void`
 
-### `removeAuthorComponentListener(ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener arg0)`
+### `removeAuthorComponentListener(AuthorComponentListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.listeners.AuthorComponentListener`](listeners/AuthorComponentListener.md))
@@ -161,7 +161,7 @@
 
 **Returns:** `void`
 
-### `showLocation(java.net.URL arg0)`
+### `showLocation(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)

@@ -61,8 +61,8 @@ Note that a GwtCompatible type may have some GwtIncompatible methods.
 
 ### `emulated()`
 
-**Returns:** `boolean`
-
 The emulated source (also known as
  super-source) is different from the implementation used by the JVM.
+
+**Returns:** `boolean`
 

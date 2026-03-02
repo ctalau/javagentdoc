@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `checkExternalLicense(ro.sync.ecss.extensions.api.component.KeyGenerator arg0)`
+### `checkExternalLicense(KeyGenerator arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.component.KeyGenerator`](./KeyGenerator.md))
@@ -31,7 +31,7 @@
 
 **Returns:** `java.lang.String`
 
-### `checkIfSystemPropertyIsAccepted(java.lang.String arg0, ro.sync.ecss.extensions.api.component.KeyGenerator arg1)`
+### `checkIfSystemPropertyIsAccepted(String arg0, KeyGenerator arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -39,7 +39,7 @@
 
 **Returns:** `boolean`
 
-### `decodeSystemProperty(java.lang.String arg0, ro.sync.ecss.extensions.api.component.KeyGenerator arg1)`
+### `decodeSystemProperty(String arg0, KeyGenerator arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -47,7 +47,7 @@
 
 **Returns:** `java.lang.String`
 
-### `decryptData(java.lang.String arg0, ro.sync.ecss.extensions.api.component.KeyGenerator arg1)`
+### `decryptData(String arg0, KeyGenerator arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

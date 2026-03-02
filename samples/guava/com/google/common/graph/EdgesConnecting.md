@@ -27,7 +27,7 @@ The #nodeToOutEdge map means this class only works on networks without parallel 
 
 ## Constructors
 
-### `<init>(java.util.Map<?,E> nodeToEdgeMap, java.lang.Object targetNode)`
+### `<init>(Map<?,E> nodeToEdgeMap, Object targetNode)`
 
 **Parameters:**
 - `nodeToEdgeMap` (`java.util.Map<?,E>`)
@@ -43,12 +43,12 @@ The #nodeToOutEdge map means this class only works on networks without parallel 
 
 **Returns:** `int`
 
-### `contains(java.lang.Object edge)`
-
-**Returns:** `boolean`
+### `contains(Object edge)`
 
 **Parameters:**
 - `edge` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `getConnectingEdge()`
 

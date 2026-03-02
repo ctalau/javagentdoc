@@ -12,7 +12,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getAttribute(java.lang.String attributeName)`
+### `getAttribute(String attributeName)`
 
 Only attributes with a Serializable value can be retrieved.
 

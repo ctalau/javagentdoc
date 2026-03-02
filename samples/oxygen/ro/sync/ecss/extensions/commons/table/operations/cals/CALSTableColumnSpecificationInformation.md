@@ -27,7 +27,7 @@ Holds informations like
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.WidthRepresentation widthRepresentation, java.lang.String columnName)`
+### `<init>(WidthRepresentation widthRepresentation, String columnName)`
 
 **Parameters:**
 - `widthRepresentation` ([`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../../api/WidthRepresentation.md)): The column width representation that specifies 
@@ -40,7 +40,7 @@ Holds informations like
 
 **Returns:** `java.lang.String`
 
-### `setColumnName(java.lang.String colName)`
+### `setColumnName(String colName)`
 
 **Parameters:**
 - `colName` (`java.lang.String`): The new column name.

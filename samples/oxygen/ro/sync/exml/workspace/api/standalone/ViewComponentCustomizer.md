@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `customizeView(ro.sync.exml.workspace.api.standalone.ViewInfo viewInfo)`
+### `customizeView(ViewInfo viewInfo)`
 
 This callback may be called multiple times if the application
  views layout (perspective) changes or is reloaded so you should strive to create your Swing components for a certain view ID only once.

@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `getAttributes(ro.sync.ecss.extensions.api.node.AuthorNode node, boolean includeID)`
+### `getAttributes(AuthorNode node, boolean includeID)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node.
@@ -26,7 +26,7 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `serializeAttributes(java.util.Map<java.lang.String,java.lang.String> attributes, java.util.Collection<java.lang.String> attributesToSkip)`
+### `serializeAttributes(Map<String,String> attributes, Collection<String> attributesToSkip)`
 
 **Parameters:**
 - `attributes` (`java.util.Map<java.lang.String,java.lang.String>`): The attributes to serialize.
@@ -34,7 +34,7 @@
 
 **Returns:** `java.lang.String`
 
-### `createAuthorDocumentFragment(ro.sync.ecss.extensions.api.AuthorDocumentController controller, int start, int end, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper)`
+### `createAuthorDocumentFragment(AuthorDocumentController controller, int start, int end, CommonsOperationsUtil.ConversionElementHelper helper)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): Author document controller.
@@ -44,7 +44,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)
 
-### `unwrapTags(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode nodeToUnwrap)`
+### `unwrapTags(AuthorAccess authorAccess, AuthorNode nodeToUnwrap)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
@@ -52,7 +52,7 @@
 
 **Returns:** `void`
 
-### `surroundWithFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean schemaAware, java.lang.String xmlFragment)`
+### `surroundWithFragment(AuthorAccess authorAccess, boolean schemaAware, String xmlFragment)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -61,7 +61,7 @@
 
 **Returns:** `void`
 
-### `surroundWithFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xmlFragment, int start, int end)`
+### `surroundWithFragment(AuthorAccess authorAccess, String xmlFragment, int start, int end)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -71,7 +71,7 @@
 
 **Returns:** `int`
 
-### `setAttributeValue(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, ro.sync.ecss.extensions.api.node.AuthorElement targetElement, javax.xml.namespace.QName attributeQName, java.lang.String value, boolean removeIfEmpty)`
+### `setAttributeValue(AuthorDocumentController ctrl, AuthorElement targetElement, QName attributeQName, String value, boolean removeIfEmpty)`
 
 If the value is `null` the attribute will
  be removed from the element. If the value is the empty string and removeIfEmpty
@@ -87,7 +87,7 @@ If the value is `null` the attribute will
 
 **Returns:** `java.lang.String`
 
-### `setAttributeValue(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, ro.sync.ecss.extensions.api.node.AuthorElement targetElement, javax.xml.namespace.QName attributeQName, java.lang.String value, java.lang.String normalizedValue, boolean removeIfEmpty)`
+### `setAttributeValue(AuthorDocumentController ctrl, AuthorElement targetElement, QName attributeQName, String value, String normalizedValue, boolean removeIfEmpty)`
 
 If the value is `null` the attribute will
  be removed from the element. If the value is the empty string and removeIfEmpty
@@ -113,7 +113,7 @@ If the value is `null` the attribute will
 
 **Returns:** `java.lang.String`
 
-### `getAttributeQName(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attrLocalName, java.lang.String attrNSURI)`
+### `getAttributeQName(AuthorElement element, String attrLocalName, String attrNSURI)`
 
 Returns the QName used in the element for that attribute.
 
@@ -124,14 +124,14 @@ Returns the QName used in the element for that attribute.
 
 **Returns:** `java.lang.String`
 
-### `buildFreshPrefix(ro.sync.ecss.extensions.api.node.NamespaceContext namespaceContext)`
+### `buildFreshPrefix(NamespaceContext namespaceContext)`
 
 **Parameters:**
 - `namespaceContext` ([`ro.sync.ecss.extensions.api.node.NamespaceContext`](../../api/node/NamespaceContext.md)): Namespace context.
 
 **Returns:** `java.lang.String`
 
-### `locateResourceInClasspath(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String resourceFileName)`
+### `locateResourceInClasspath(AuthorAccess authorAccess, String resourceFileName)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -139,7 +139,7 @@ Returns the QName used in the element for that attribute.
 
 **Returns:** `java.net.URL`
 
-### `locateResourceInClasspathFolder(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String folderName, java.lang.String resourceFileName)`
+### `locateResourceInClasspathFolder(AuthorAccess authorAccess, String folderName, String resourceFileName)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -148,7 +148,7 @@ Returns the QName used in the element for that attribute.
 
 **Returns:** `java.net.URL`
 
-### `expandAndResolvePath(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String path)`
+### `expandAndResolvePath(AuthorAccess authorAccess, String path)`
 
 Editor variables are
  also accepted and expanded. The path is also passed through the catalog mappings.
@@ -161,21 +161,21 @@ Editor variables are
 
 **Returns:** `java.net.URL`
 
-### `getPrefix(java.lang.String qName)`
+### `getPrefix(String qName)`
 
 **Parameters:**
 - `qName` (`java.lang.String`): q name
 
 **Returns:** `java.lang.String`
 
-### `getLocalName(java.lang.String qName)`
+### `getLocalName(String qName)`
 
 **Parameters:**
 - `qName` (`java.lang.String`): q name
 
 **Returns:** `java.lang.String`
 
-### `removeUnwantedAttributes(java.lang.String[] skippedAttributes, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment, ro.sync.ecss.extensions.api.AuthorDocumentController controller)`
+### `removeUnwantedAttributes(String[] skippedAttributes, AuthorDocumentFragment fragment, AuthorDocumentController controller)`
 
 **Parameters:**
 - `skippedAttributes` (`java.lang.String[]`): The attributes to be deleted.
@@ -184,14 +184,14 @@ Editor variables are
 
 **Returns:** `void`
 
-### `removeCurrentSelection(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `removeCurrentSelection(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
 
 **Returns:** `java.util.List<javax.swing.text.Position>`
 
-### `removeIntervals(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> selectionIntervals)`
+### `removeIntervals(AuthorAccess authorAccess, List<ContentInterval> selectionIntervals)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -199,7 +199,7 @@ Editor variables are
 
 **Returns:** `java.util.List<javax.swing.text.Position>`
 
-### `getSelectedFragmentsForConversions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper)`
+### `getSelectedFragmentsForConversions(AuthorAccess authorAccess, CommonsOperationsUtil.ConversionElementHelper helper)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -208,7 +208,7 @@ Editor variables are
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`
 
-### `getFragmentsForConversions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
+### `getFragmentsForConversions(AuthorAccess authorAccess, CommonsOperationsUtil.ConversionElementHelper helper, List<ContentInterval> intervals)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -218,7 +218,7 @@ Editor variables are
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`
 
-### `getFragmentsForConversions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper, ro.sync.ecss.extensions.api.ContentInterval contentInterval)`
+### `getFragmentsForConversions(AuthorAccess authorAccess, CommonsOperationsUtil.ConversionElementHelper helper, ContentInterval contentInterval)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -228,7 +228,7 @@ Editor variables are
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`
 
-### `getFragmentForNode(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper, ro.sync.ecss.extensions.api.AuthorDocumentController controller)`
+### `getFragmentForNode(AuthorNode node, CommonsOperationsUtil.ConversionElementHelper helper, AuthorDocumentController controller)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to be converted.
@@ -238,7 +238,7 @@ Editor variables are
 
 **Returns:** `ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo`
 
-### `finishCurrentFragment(int startInterval, int currentOffset, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper, ro.sync.ecss.extensions.api.AuthorDocumentController controller)`
+### `finishCurrentFragment(int startInterval, int currentOffset, CommonsOperationsUtil.ConversionElementHelper helper, AuthorDocumentController controller)`
 
 **Parameters:**
 - `startInterval` (`int`): The start of the interval.
@@ -249,7 +249,7 @@ Editor variables are
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`
 
-### `removeEmptyElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.Collection<javax.swing.text.Position> emptyElementsPositions)`
+### `removeEmptyElements(AuthorAccess authorAccess, Collection<Position> emptyElementsPositions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
@@ -257,7 +257,7 @@ Editor variables are
 
 **Returns:** `void`
 
-### `isAllowedElement(java.lang.String elementLocalName, int offset, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `isAllowedElement(String elementLocalName, int offset, AuthorSchemaManager authorSchemaManager)`
 
 **Parameters:**
 - `elementLocalName` (`java.lang.String`): the local name of the element whose allowance we check.

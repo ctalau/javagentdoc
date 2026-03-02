@@ -37,34 +37,34 @@ Subclasses should
 
 ### `putIfAbsent(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `remove(java.lang.Object key, java.lang.Object value)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `remove(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `replace(K key, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `replace(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `replace(K key, V oldValue, V newValue)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `replace(K key, V oldValue, V newValue)`
 
 **Parameters:**
 - `key` (`K`)
 - `oldValue` (`V`)
 - `newValue` (`V`)
+
+**Returns:** `boolean`
 

@@ -51,28 +51,28 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setSystemId(java.net.URL arg0)`
+### `setSystemId(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setSessionAttributes(java.util.Map<java.lang.String,?> arg0)`
+### `setSessionAttributes(Map<String,?> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,?>`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setContent(java.io.Reader arg0)`
+### `setContent(Reader arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.Reader`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setContent(java.io.Reader arg0, java.util.List<java.lang.Byte> arg1)`
+### `setContent(Reader arg0, List<Byte> arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.Reader`)
@@ -80,7 +80,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase`](./InternalDocumentBuilderBase.md)
 
-### `setContentEtag(ro.sync.ecss.dom.ETagDataRecord arg0)`
+### `setContentEtag(ETagDataRecord arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dom.ETagDataRecord`)
@@ -99,7 +99,7 @@
 
 **Returns:** `ro.sync.ecss.webapp.c`
 
-### `checkUserLicense(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0, ro.sync.ecss.webapp.d.t arg1)`
+### `checkUserLicense(AuthorDocumentModel arg0, t arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md))

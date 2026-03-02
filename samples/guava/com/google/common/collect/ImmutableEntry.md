@@ -49,8 +49,8 @@
 
 ### `setValue(V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `value` (`V`)
+
+**Returns:** `V`
 

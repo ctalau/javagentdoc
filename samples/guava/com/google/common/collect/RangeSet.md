@@ -41,21 +41,19 @@ See the Guava User Guide article on [RangeSets](https://github.com/google/guava/
 
 ### `contains(C value)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `value` (`C`)
+
+**Returns:** `boolean`
 
 ### `rangeContaining(C value)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `value` (`C`)
 
-### `intersects(com.google.common.collect.Range<C> otherRange)`
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-**Returns:** `boolean`
+### `intersects(Range<C> otherRange)`
 
 This is equivalent to calling 
  subRangeSet(otherRange) and testing whether the resulting range set is non-empty.
@@ -63,16 +61,16 @@ This is equivalent to calling
 **Parameters:**
 - `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `encloses(com.google.common.collect.Range<C> otherRange)`
-
 **Returns:** `boolean`
+
+### `encloses(Range<C> otherRange)`
 
 **Parameters:**
 - `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `enclosesAll(com.google.common.collect.RangeSet<C> other)`
-
 **Returns:** `boolean`
+
+### `enclosesAll(RangeSet<C> other)`
 
 It follows that 
  this.contains(value) whenever other.contains(value). Returns true if 
@@ -85,9 +83,9 @@ This is equivalent to checking if this range set #encloses each of the ranges in
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `enclosesAll(java.lang.Iterable<com.google.common.collect.Range<C>> other)`
-
 **Returns:** `boolean`
+
+### `enclosesAll(Iterable<Range<C>> other)`
 
 Returns true if other
  is empty.
@@ -99,6 +97,8 @@ This is equivalent to checking if this range set #encloses each range in
 **Parameters:**
 - `other` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
 
+**Returns:** `boolean`
+
 ### `isEmpty()`
 
 **Returns:** `boolean`
@@ -109,28 +109,26 @@ This is equivalent to checking if this range set #encloses each range in
 
 ### `asRanges()`
 
-**Returns:** `java.util.Set<com.google.common.collect.Range<C>>`
-
 The returned set may be empty. The iterators returned by its Iterable#iterator method return the ranges in increasing order of lower bound (equivalently,
  of upper bound).
 
-### `asDescendingSetOfRanges()`
-
 **Returns:** `java.util.Set<com.google.common.collect.Range<C>>`
+
+### `asDescendingSetOfRanges()`
 
 The returned set may be empty. The iterators returned by its Iterable#iterator method return the ranges in decreasing order of lower bound (equivalently,
  of upper bound).
 
-### `complement()`
+**Returns:** `java.util.Set<com.google.common.collect.Range<C>>`
 
-**Returns:** [`com.google.common.collect.RangeSet<C>`](./RangeSet.md)
+### `complement()`
 
 The returned view supports the #add operation if this RangeSet supports
  #remove, and vice versa.
 
-### `subRangeSet(com.google.common.collect.Range<C> view)`
-
 **Returns:** [`com.google.common.collect.RangeSet<C>`](./RangeSet.md)
+
+### `subRangeSet(Range<C> view)`
 
 The returned view supports all optional operations supported by this RangeSet, with
  the caveat that an IllegalArgumentException is thrown on an attempt to add any range not enclosed by view.
@@ -138,9 +136,9 @@ The returned view supports all optional operations supported by this RangeSet, w
 **Parameters:**
 - `view` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `add(com.google.common.collect.Range<C> range)`
+**Returns:** [`com.google.common.collect.RangeSet<C>`](./RangeSet.md)
 
-**Returns:** `void`
+### `add(Range<C> range)`
 
 That is, for equal
  range sets a and b, the result of a.add(range) is that a will be the minimal
@@ -154,9 +152,9 @@ Note that range will be coalesced with any ranges in
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `remove(com.google.common.collect.Range<C> range)`
-
 **Returns:** `void`
+
+### `remove(Range<C> range)`
 
 After this
  operation, if range.contains(c), this.contains(c) will return false.
@@ -167,9 +165,9 @@ If range is empty, this is a no-op.
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `clear()`
-
 **Returns:** `void`
+
+### `clear()`
 
 After this operation,
  this.contains(c) will return false for all c.
@@ -177,9 +175,9 @@ After this operation,
  
 This is equivalent to remove(Range.all()).
 
-### `addAll(com.google.common.collect.RangeSet<C> other)`
-
 **Returns:** `void`
+
+### `addAll(RangeSet<C> other)`
 
 After this operation, this range set is the minimal range set that encloses both the original range set and other.
 
@@ -189,9 +187,9 @@ This is equivalent to calling #add on each of the ranges in other in turn.
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `addAll(java.lang.Iterable<com.google.common.collect.Range<C>> ranges)`
-
 **Returns:** `void`
+
+### `addAll(Iterable<Range<C>> ranges)`
 
 After this operation,
  this range set is the minimal range set that encloses both
@@ -203,9 +201,9 @@ This is equivalent to calling #add on each of the ranges in other in turn.
 **Parameters:**
 - `ranges` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
 
-### `removeAll(com.google.common.collect.RangeSet<C> other)`
-
 **Returns:** `void`
+
+### `removeAll(RangeSet<C> other)`
 
 After this operation, if other.contains(c), this.contains(c) will
  return false.
@@ -217,9 +215,9 @@ This is equivalent to calling #remove on each of the ranges in other in
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `removeAll(java.lang.Iterable<com.google.common.collect.Range<C>> ranges)`
-
 **Returns:** `void`
+
+### `removeAll(Iterable<Range<C>> ranges)`
 
 This is equivalent to calling #remove on each of the ranges in other in
  turn.
@@ -227,12 +225,14 @@ This is equivalent to calling #remove on each of the ranges in other in
 **Parameters:**
 - `ranges` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
 
-### `equals(java.lang.Object obj)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -240,9 +240,9 @@ This is equivalent to calling #remove on each of the ranges in other in
 
 ### `toString()`
 
-**Returns:** `java.lang.String`
-
 For example, if this 
  RangeSet consisted of Range.closed(1, 3) and Range.greaterThan(4), this might
  return " [1..3](4..+∞)"}.
+
+**Returns:** `java.lang.String`
 

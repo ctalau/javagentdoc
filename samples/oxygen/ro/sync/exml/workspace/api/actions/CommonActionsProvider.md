@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `invokeAction(java.lang.Object action)`
+### `invokeAction(Object action)`
 
 The action will be invoked only if it is enabled in the current context.
 
@@ -17,7 +17,7 @@ The action will be invoked only if it is enabled in the current context.
 
 **Returns:** `void`
 
-### `getActionID(java.lang.Object actionOrUIObject)`
+### `getActionID(Object actionOrUIObject)`
 
 If the action appears on a contextual menu but is not installed on a main menu it will be prefixed with the constant "ACTION_WITH_NO_SHORTCUT/"
 
@@ -26,7 +26,7 @@ If the action appears on a contextual menu but is not installed on a main menu i
 
 **Returns:** `java.lang.String`
 
-### `addActionPerformedListener(java.lang.Object action, ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener listener)`
+### `addActionPerformedListener(Object action, ActionPerformedListener listener)`
 
 **Parameters:**
 - `action` (`java.lang.Object`): The action on which to add the listener.
@@ -34,7 +34,7 @@ If the action appears on a contextual menu but is not installed on a main menu i
 
 **Returns:** `void`
 
-### `removeActionPerformedListener(java.lang.Object action, ro.sync.exml.workspace.api.editor.page.author.actions.ActionPerformedListener listener)`
+### `removeActionPerformedListener(Object action, ActionPerformedListener listener)`
 
 **Parameters:**
 - `action` (`java.lang.Object`): The action.

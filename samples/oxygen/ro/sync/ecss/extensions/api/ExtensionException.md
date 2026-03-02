@@ -8,12 +8,12 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0)`
+### `<init>(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
-### `<init>(java.lang.String arg0, java.lang.Throwable arg1)`
+### `<init>(String arg0, Throwable arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

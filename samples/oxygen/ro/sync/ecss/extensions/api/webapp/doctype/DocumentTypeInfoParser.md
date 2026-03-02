@@ -10,14 +10,14 @@
 
 ## Methods
 
-### `parseFrameworkFile(java.io.File arg0)`
+### `parseFrameworkFile(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfo`](./DocumentTypeInfo.md)
 
-### `parseExfFile(java.io.File arg0)`
+### `parseExfFile(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)

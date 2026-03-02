@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `documentAboutToBeLoaded(ro.sync.ecss.extensions.api.node.AuthorDocument arg0, ro.sync.ecss.extensions.api.access.EditingSessionContext arg1, ro.sync.ecss.extensions.api.AuthorPseudoClassController arg2)`
+### `documentAboutToBeLoaded(AuthorDocument arg0, EditingSessionContext arg1, AuthorPseudoClassController arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../node/AuthorDocument.md))

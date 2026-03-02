@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customizeBrowseActions(java.util.List<javax.swing.Action> existingBrowseActions, ro.sync.exml.workspace.api.standalone.InputURLChooser chooser)`
+### `customizeBrowseActions(List<Action> existingBrowseActions, InputURLChooser chooser)`
 
 **Parameters:**
 - `existingBrowseActions` (`java.util.List<javax.swing.Action>`): The existing list of actions. 

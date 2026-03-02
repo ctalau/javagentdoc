@@ -12,7 +12,7 @@ You can set such a provider by using the
 
 ## Methods
 
-### `getActions(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `getActions(AuthorPersistentHighlight highlight)`
 
 This method is called only for the highlights that have a a callout associated.
  
@@ -36,7 +36,7 @@ This method is called only for the highlights that have a a callout associated.
 
 **Returns:** `java.util.List<javax.swing.AbstractAction>`
 
-### `getDefaultAction(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `getDefaultAction(AuthorPersistentHighlight highlight)`
 
 Is not necessary that this action to 
  be included in the ones returned by #getActions(AuthorPersistentHighlight).

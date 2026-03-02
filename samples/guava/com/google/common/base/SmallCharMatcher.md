@@ -40,7 +40,7 @@
 
 ## Constructors
 
-### `<init>(char[] table, long filter, boolean containsZero, java.lang.String description)`
+### `<init>(char[] table, long filter, boolean containsZero, String description)`
 
 **Parameters:**
 - `table` (`char[]`)
@@ -52,21 +52,19 @@
 
 ### `smear(int hashCode)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `hashCode` (`int`)
 
-### `checkFilter(int c)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `checkFilter(int c)`
 
 **Parameters:**
 - `c` (`int`)
 
-### `chooseTableSize(int setSize)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `chooseTableSize(int setSize)`
 
 The returned size is the smallest power of two that
  can hold setSize elements with the desired load factor.
@@ -74,25 +72,27 @@ The returned size is the smallest power of two that
 **Parameters:**
 - `setSize` (`int`)
 
-### `from(java.util.BitSet chars, java.lang.String description)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+### `from(BitSet chars, String description)`
 
 **Parameters:**
 - `chars` (`java.util.BitSet`)
 - `description` (`java.lang.String`)
 
-### `matches(char c)`
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
-**Returns:** `boolean`
+### `matches(char c)`
 
 **Parameters:**
 - `c` (`char`)
 
-### `setBits(java.util.BitSet table)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `setBits(BitSet table)`
 
 **Parameters:**
 - `table` (`java.util.BitSet`)
+
+**Returns:** `void`
 

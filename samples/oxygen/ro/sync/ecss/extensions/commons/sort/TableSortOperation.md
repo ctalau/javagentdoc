@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `canBeSorted(ro.sync.ecss.extensions.api.node.AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
+### `canBeSorted(AuthorElement parent, int[] selectedNonIgnoredChildrenInterval)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
@@ -22,7 +22,7 @@
 
 **Returns:** `void`
 
-### `getRowIndexForTableBody(ro.sync.ecss.extensions.api.node.AuthorNode table)`
+### `getRowIndexForTableBody(AuthorNode table)`
 
 **Parameters:**
 - `table` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))

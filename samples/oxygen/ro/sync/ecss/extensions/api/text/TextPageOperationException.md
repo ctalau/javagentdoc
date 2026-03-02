@@ -16,24 +16,24 @@
 
 ## Constructors
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message.
 
-### `<init>(java.lang.String message, boolean error)`
+### `<init>(String message, boolean error)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message.
 - `error` (`boolean`): `true` if the message is an error message.
 
-### `<init>(java.lang.String message, java.lang.Throwable cause)`
+### `<init>(String message, Throwable cause)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message.
 - `cause` (`java.lang.Throwable`): The cause of the exception.
 
-### `<init>(java.lang.String message, java.lang.Throwable cause, boolean error)`
+### `<init>(String message, Throwable cause, boolean error)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message.

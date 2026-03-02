@@ -27,14 +27,14 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 **Returns:** `java.lang.String`
 
-### `createEditor(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `createEditor(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): Editing context.
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.InplaceEditor`](./InplaceEditor.md)
 
-### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseInvocationLocation)`
+### `getEditorComponent(AuthorInplaceContext context, Rectangle allocation, Point mouseInvocationLocation)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
@@ -47,7 +47,7 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `addEditingListener(InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
@@ -74,21 +74,21 @@ For example if in the CSS oxy_editor() function we have a **test** parameter wit
 
 **Returns:** `void`
 
-### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `removeEditingListener(InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
 **Returns:** `void`
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `refresh(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
 **Returns:** `void`
 
-### `insertContent(java.lang.String xmlContent)`
+### `insertContent(String xmlContent)`
 
 **Parameters:**
 - `xmlContent` (`java.lang.String`)

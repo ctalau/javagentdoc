@@ -62,7 +62,7 @@ Experimentally determined.
 
 ## Constructors
 
-### `<init>(com.google.common.collect.Multisets.ImmutableEntry<E>[] entries, com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[] hashTable, int size, int hashCode, com.google.common.collect.ImmutableSet<E> elementSet)`
+### `<init>(Multisets.ImmutableEntry<E>[] entries, Multisets@Nullable ImmutableEntry<?>[] hashTable, int size, int hashCode, ImmutableSet<E> elementSet)`
 
 **Parameters:**
 - `entries` (`com.google.common.collect.Multisets.ImmutableEntry<E>[]`)
@@ -73,30 +73,30 @@ Experimentally determined.
 
 ## Methods
 
-### `create(java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>> entries)`
-
-**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
+### `create(Collection<? extends Multiset.Entry<? extends E>> entries)`
 
 **Parameters:**
 - `entries` (`java.util.Collection<? extends com.google.common.collect.Multiset.Entry<? extends E>>`)
 
-### `hashFloodingDetected(com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[] hashTable)`
+**Returns:** [`com.google.common.collect.ImmutableMultiset<E>`](./ImmutableMultiset.md)
 
-**Returns:** `boolean`
+### `hashFloodingDetected(Multisets@Nullable ImmutableEntry<?>[] hashTable)`
 
 **Parameters:**
 - `hashTable` (`com.google.common.collect.Multisets.@org.checkerframework.checker.nullness.qual.Nullable ImmutableEntry<?>[]`)
+
+**Returns:** `boolean`
 
 ### `isPartialView()`
 
 **Returns:** `boolean`
 
-### `count(java.lang.Object element)`
-
-**Returns:** `int`
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `size()`
 
@@ -108,10 +108,10 @@ Experimentally determined.
 
 ### `getEntry(int index)`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `hashCode()`
 

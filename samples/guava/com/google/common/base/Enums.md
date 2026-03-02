@@ -18,9 +18,7 @@
 
 ## Methods
 
-### `getField(java.lang.Enum<?> enumValue)`
-
-**Returns:** `java.lang.reflect.Field`
+### `getField(Enum<?> enumValue)`
 
 For example, to get the 
  Description annotation on the GOLF constant of enum Sport, use 
@@ -29,9 +27,9 @@ For example, to get the
 **Parameters:**
 - `enumValue` (`java.lang.Enum<?>`)
 
-### `getIfPresent(java.lang.Class<T> enumClass, java.lang.String value)`
+**Returns:** `java.lang.reflect.Field`
 
-**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
+### `getIfPresent(Class<T> enumClass, String value)`
 
 If the
  constant does not exist, Optional#absent is returned. A common use case is for parsing
@@ -42,23 +40,23 @@ If the
 - `enumClass` (`java.lang.Class<T>`)
 - `value` (`java.lang.String`)
 
-### `populateCache(java.lang.Class<T> enumClass)`
+**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
 
-**Returns:** `java.util.Map<java.lang.String,java.lang.ref.WeakReference<? extends java.lang.Enum<?>>>`
-
-**Parameters:**
-- `enumClass` (`java.lang.Class<T>`)
-
-### `getEnumConstants(java.lang.Class<T> enumClass)`
-
-**Returns:** `java.util.Map<java.lang.String,java.lang.ref.WeakReference<? extends java.lang.Enum<?>>>`
+### `populateCache(Class<T> enumClass)`
 
 **Parameters:**
 - `enumClass` (`java.lang.Class<T>`)
 
-### `stringConverter(java.lang.Class<T> enumClass)`
+**Returns:** `java.util.Map<java.lang.String,java.lang.ref.WeakReference<? extends java.lang.Enum<?>>>`
 
-**Returns:** [`com.google.common.base.Converter<java.lang.String,T>`](./Converter.md)
+### `getEnumConstants(Class<T> enumClass)`
+
+**Parameters:**
+- `enumClass` (`java.lang.Class<T>`)
+
+**Returns:** `java.util.Map<java.lang.String,java.lang.ref.WeakReference<? extends java.lang.Enum<?>>>`
+
+### `stringConverter(Class<T> enumClass)`
 
 The
  converter will throw an IllegalArgumentException if the argument is not the name of any
@@ -66,4 +64,6 @@ The
 
 **Parameters:**
 - `enumClass` (`java.lang.Class<T>`)
+
+**Returns:** [`com.google.common.base.Converter<java.lang.String,T>`](./Converter.md)
 

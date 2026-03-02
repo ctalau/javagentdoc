@@ -20,12 +20,12 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity severity)`
+### `<init>(TableLayoutProblem.Severity severity)`
 
 **Parameters:**
 - `severity` (`ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity`): The problem severity, one of Severity constants.
 
-### `<init>(java.lang.String message, ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutProblem.Severity severity)`
+### `<init>(String message, TableLayoutProblem.Severity severity)`
 
 **Parameters:**
 - `message` (`java.lang.String`)
@@ -37,7 +37,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.errorscanner.CALSAndHTMLTableLayoutProblem[]`](./CALSAndHTMLTableLayoutProblem.md)
 
-### `valueOf(java.lang.String name)`
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

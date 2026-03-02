@@ -30,14 +30,14 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.dita.ContextKeyManagerProvider contextKeyManagerProvider)`
+### `<init>(ContextKeyManagerProvider contextKeyManagerProvider)`
 
 **Parameters:**
 - `contextKeyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../dita/ContextKeyManagerProvider.md)): The context key manager provider
 
 ## Methods
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, java.util.List<ro.sync.ecss.extensions.api.ReferenceType> types, int source)`
+### `insertURLs(AuthorAccess authorAccess, List<URL> urls, List<ReferenceType> types, int source)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -47,7 +47,7 @@
 
 **Returns:** `void`
 
-### `addFormatAndScopeToLink(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.StringBuilder contentToInsert, java.lang.String referenceTag, java.net.URL url, ro.sync.ecss.extensions.api.ReferenceType type)`
+### `addFormatAndScopeToLink(AuthorAccess authorAccess, StringBuilder contentToInsert, String referenceTag, URL url, ReferenceType type)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Access to the Author API.
@@ -58,7 +58,7 @@
 
 **Returns:** `void`
 
-### `buildMediaReferenceFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.net.URL base, java.net.URL keyHrefLocation, ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+### `buildMediaReferenceFragment(AuthorAccess authorAccess, URL base, URL keyHrefLocation, AuthorNode contextNode)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Access class to the author functions.
@@ -68,7 +68,7 @@
 
 **Returns:** `java.lang.String`
 
-### `buildMediaReferenceFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.net.URL base, ro.sync.ecss.dita.reference.keyref.KeyInfo key, ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+### `buildMediaReferenceFragment(AuthorAccess authorAccess, URL base, KeyInfo key, AuthorNode contextNode)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Access class to the author functions.
@@ -78,7 +78,7 @@
 
 **Returns:** `java.lang.String`
 
-### `buildMediaFragmentInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.net.URL base, java.lang.String outputClass, java.net.URL keyHrefLocation, ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+### `buildMediaFragmentInternal(AuthorAccess authorAccess, URL base, String outputClass, URL keyHrefLocation, AuthorNode contextNode)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Access class to the author functions.
@@ -89,21 +89,21 @@
 
 **Returns:** `java.lang.String`
 
-### `createRelatedLinksSectionIfNeeded(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `createRelatedLinksSectionIfNeeded(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Author access.
 
 **Returns:** `void`
 
-### `shouldCreateRelatedLinksElement(ro.sync.ecss.extensions.api.node.AuthorElement rootElement)`
+### `shouldCreateRelatedLinksElement(AuthorElement rootElement)`
 
 **Parameters:**
 - `rootElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The root element of the document.
 
 **Returns:** `boolean`
 
-### `isImageReference(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ReferenceType type, java.net.URL url)`
+### `isImageReference(AuthorAccess authorAccess, ReferenceType type, URL url)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
@@ -112,7 +112,7 @@
 
 **Returns:** `boolean`
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
+### `insertURLs(AuthorAccess authorAccess, List<URL> urls, int source)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -121,14 +121,14 @@
 
 **Returns:** `void`
 
-### `getImporterStylesheetFileName(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getImporterStylesheetFileName(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
 
 **Returns:** `java.lang.String`
 
-### `getOnlyTextContentStylesheet(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getOnlyTextContentStylesheet(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access
@@ -139,7 +139,7 @@
 
 **Returns:** `javax.xml.transform.stream.StreamSource`
 
-### `insertAsReferenceWithUpdatedCaretOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.net.URL referenceURL, ro.sync.ecss.extensions.api.ReferenceType refType, java.lang.StringBuilder contentToInsert, java.lang.String[] refData)`
+### `insertAsReferenceWithUpdatedCaretOffset(AuthorAccess authorAccess, URL referenceURL, ReferenceType refType, StringBuilder contentToInsert, String[] refData)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -150,14 +150,14 @@
 
 **Returns:** `int`
 
-### `removeOxyCustomQueryParams(java.net.URL url)`
+### `removeOxyCustomQueryParams(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The provided URL.
 
 **Returns:** `java.net.URL`
 
-### `buildKeyrefFragment(java.lang.String elementName, java.lang.String keyName)`
+### `buildKeyrefFragment(String elementName, String keyName)`
 
 **Parameters:**
 - `elementName` (`java.lang.String`): The name of the element that will be referred as keyref.

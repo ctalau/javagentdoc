@@ -20,14 +20,14 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `<init>(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 ## Methods
 
-### `d(ro.sync.ecss.common.AuthorBlockMover._b arg0, ro.sync.ecss.css.db arg1)`
+### `d(AuthorBlockMover._b arg0, db arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.common.AuthorBlockMover._b`)
@@ -35,7 +35,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-### `b(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0)`
+### `b(List<AuthorNode> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -50,7 +50,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md)
 
-### `i(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0, ro.sync.ecss.common.AuthorBlockMover._b arg1)`
+### `i(List<AuthorNode> arg0, AuthorBlockMover._b arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -58,7 +58,7 @@
 
 **Returns:** `int`
 
-### `h(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0, ro.sync.contentcompletion.xml.ContextElement arg1)`
+### `h(List<AuthorNode> arg0, ContextElement arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -77,14 +77,14 @@
 
 **Returns:** `void`
 
-### `moveBlock(ro.sync.ecss.common.AuthorBlockMover._b arg0)`
+### `moveBlock(AuthorBlockMover._b arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.common.AuthorBlockMover._b`)
 
 **Returns:** `void`
 
-### `f(int arg0, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] arg1)`
+### `f(int arg0, AuthorDocumentFragment[] arg1)`
 
 **Parameters:**
 - `arg0` (`int`)

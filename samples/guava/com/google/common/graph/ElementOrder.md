@@ -33,7 +33,7 @@ Example usage:
 
 ## Constructors
 
-### `<init>(com.google.common.graph.ElementOrder.Type type, java.util.Comparator<T> comparator)`
+### `<init>(ElementOrder.Type type, Comparator<T> comparator)`
 
 **Parameters:**
 - `type` (`com.google.common.graph.ElementOrder.Type`)
@@ -46,8 +46,6 @@ Example usage:
 **Returns:** [`com.google.common.graph.ElementOrder<S>`](./ElementOrder.md)
 
 ### `stable()`
-
-**Returns:** [`com.google.common.graph.ElementOrder<S>`](./ElementOrder.md)
 
 Some methods may have stronger guarantees.
 
@@ -85,6 +83,8 @@ incidentEdgeOrder(ElementOrder.stable()) guarantees the ordering of the returned
          - adjacentEdges(edge): Stable order
          - edgesConnecting(nodeU, nodeV): Edge insertion order
 
+**Returns:** [`com.google.common.graph.ElementOrder<S>`](./ElementOrder.md)
+
 ### `insertion()`
 
 **Returns:** [`com.google.common.graph.ElementOrder<S>`](./ElementOrder.md)
@@ -93,12 +93,12 @@ incidentEdgeOrder(ElementOrder.stable()) guarantees the ordering of the returned
 
 **Returns:** [`com.google.common.graph.ElementOrder<S>`](./ElementOrder.md)
 
-### `sorted(java.util.Comparator<S> comparator)`
-
-**Returns:** [`com.google.common.graph.ElementOrder<S>`](./ElementOrder.md)
+### `sorted(Comparator<S> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<S>`)
+
+**Returns:** [`com.google.common.graph.ElementOrder<S>`](./ElementOrder.md)
 
 ### `type()`
 
@@ -108,12 +108,12 @@ incidentEdgeOrder(ElementOrder.stable()) guarantees the ordering of the returned
 
 **Returns:** `java.util.Comparator<T>`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -125,10 +125,10 @@ incidentEdgeOrder(ElementOrder.stable()) guarantees the ordering of the returned
 
 ### `createMap(int expectedSize)`
 
-**Returns:** `java.util.Map<K,V>`
-
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `java.util.Map<K,V>`
 
 ### `cast()`
 

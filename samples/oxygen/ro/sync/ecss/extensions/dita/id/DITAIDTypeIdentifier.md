@@ -34,7 +34,7 @@ Only filled if the identifier is for a subtopic element.
 
 ## Constructors
 
-### `<init>(java.lang.String location, java.lang.String topicID, java.lang.String elementID, boolean topicIsFirstInFile, boolean isDeclaration)`
+### `<init>(String location, String topicID, String elementID, boolean topicIsFirstInFile, boolean isDeclaration)`
 
 **Parameters:**
 - `location` (`java.lang.String`): The location

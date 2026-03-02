@@ -78,20 +78,20 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
+### `<init>(AuthorAccess authorAccess, GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
 - `defaultOptions` ([`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)): The default options.
 
-### `<init>(boolean autoGenerateIds, java.lang.String idGenerationPattern, java.lang.String[] elementsWithIDGeneration)`
+### `<init>(boolean autoGenerateIds, String idGenerationPattern, String[] elementsWithIDGeneration)`
 
 **Parameters:**
 - `autoGenerateIds` (`boolean`): `true` to auto generate IDs.
 - `idGenerationPattern` (`java.lang.String`): The pattern for id generation.
 - `elementsWithIDGeneration` (`java.lang.String[]`): List of elements for which to generate IDs.
 
-### `<init>(boolean autoGenerateIds, java.lang.String idGenerationPattern, java.lang.String[] elementsWithIDGeneration, boolean filterIDsOnCopy)`
+### `<init>(boolean autoGenerateIds, String idGenerationPattern, String[] elementsWithIDGeneration, boolean filterIDsOnCopy)`
 
 **Parameters:**
 - `autoGenerateIds` (`boolean`): `true` to auto generate IDs.
@@ -101,7 +101,7 @@
 
 ## Methods
 
-### `getIDGenerationElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
+### `getIDGenerationElements(AuthorAccess authorAccess, GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access
@@ -109,7 +109,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `getIdGenerationPattern(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
+### `getIdGenerationPattern(AuthorAccess authorAccess, GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
@@ -117,7 +117,7 @@
 
 **Returns:** `java.lang.String`
 
-### `isAutoGenerateIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
+### `isAutoGenerateIDs(AuthorAccess authorAccess, GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
@@ -125,7 +125,7 @@
 
 **Returns:** `boolean`
 
-### `isFilterIDs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo defaultOptions)`
+### `isFilterIDs(AuthorAccess authorAccess, GenerateIDElementsInfo defaultOptions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
@@ -133,7 +133,7 @@
 
 **Returns:** `boolean`
 
-### `splitStrings(java.lang.String optionsString)`
+### `splitStrings(String optionsString)`
 
 **Parameters:**
 - `optionsString` (`java.lang.String`): String read from options with comma separated values
@@ -156,7 +156,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `saveToOptions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `saveToOptions(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access
@@ -167,7 +167,7 @@
 
 **Returns:** `java.lang.String`
 
-### `generateID(java.lang.String idGenerationPattern, java.lang.String elementLocalName)`
+### `generateID(String idGenerationPattern, String elementLocalName)`
 
 **Parameters:**
 - `idGenerationPattern` (`java.lang.String`): The pattern.
@@ -175,7 +175,7 @@
 
 **Returns:** `java.lang.String`
 
-### `generateID(java.lang.String idGenerationPattern, java.lang.String elementLocalName, java.lang.String editorLocation)`
+### `generateID(String idGenerationPattern, String elementLocalName, String editorLocation)`
 
 **Parameters:**
 - `idGenerationPattern` (`java.lang.String`): The pattern.
@@ -184,7 +184,7 @@
 
 **Returns:** `java.lang.String`
 
-### `replaceAll(java.lang.String original, java.lang.String match, java.lang.String toReplaceWith)`
+### `replaceAll(String original, String match, String toReplaceWith)`
 
 **Parameters:**
 - `original` (`java.lang.String`): The original string.
@@ -200,7 +200,7 @@
 
 **Returns:** `void`
 
-### `setElementsWithIDGeneration(java.lang.String[] elementsWithIDGeneration)`
+### `setElementsWithIDGeneration(String[] elementsWithIDGeneration)`
 
 **Parameters:**
 - `elementsWithIDGeneration` (`java.lang.String[]`): a list of elements with ID generation
@@ -214,7 +214,7 @@
 
 **Returns:** `void`
 
-### `setIdGenerationPattern(java.lang.String idGenerationPattern)`
+### `setIdGenerationPattern(String idGenerationPattern)`
 
 **Parameters:**
 - `idGenerationPattern` (`java.lang.String`): The idGeneration pattern.
@@ -227,14 +227,14 @@ Can be overwritten to provide another tooltip.
 
 **Returns:** `java.lang.String`
 
-### `setPatternTooltip(java.lang.String patternTooltip)`
+### `setPatternTooltip(String patternTooltip)`
 
 **Parameters:**
 - `patternTooltip` (`java.lang.String`): the pattern tooltip which will be shown in the configuration dialog.
 
 **Returns:** `void`
 
-### `loadDefaultsFromConfiguration(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String proposedXMLResourceName)`
+### `loadDefaultsFromConfiguration(AuthorAccess authorAccess, String proposedXMLResourceName)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access

@@ -34,12 +34,12 @@ The toString method is forwarded to the delegate. Although this class does not
 
 ### `delegate()`
 
-**Returns:** `java.lang.Object`
-
 Abstract subclasses
  generally override this method with an abstract method that has a more specific return type,
  such as ForwardingSet#delegate. Concrete subclasses override this method to supply the
  instance being decorated.
+
+**Returns:** `java.lang.Object`
 
 ### `toString()`
 

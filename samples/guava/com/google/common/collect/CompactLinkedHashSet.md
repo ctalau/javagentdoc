@@ -75,33 +75,33 @@ ENDPOINT indicates a node is the last
 
 **Returns:** [`com.google.common.collect.CompactLinkedHashSet<E>`](./CompactLinkedHashSet.md)
 
-### `create(java.util.Collection<? extends E> collection)`
-
-**Returns:** [`com.google.common.collect.CompactLinkedHashSet<E>`](./CompactLinkedHashSet.md)
+### `create(Collection<? extends E> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<? extends E>`): the elements that the set should contain
 
-### `create(E[] elements)`
-
 **Returns:** [`com.google.common.collect.CompactLinkedHashSet<E>`](./CompactLinkedHashSet.md)
+
+### `create(E[] elements)`
 
 **Parameters:**
 - `elements` (`E[]`): the elements that the set should contain
 
-### `createWithExpectedSize(int expectedSize)`
-
 **Returns:** [`com.google.common.collect.CompactLinkedHashSet<E>`](./CompactLinkedHashSet.md)
+
+### `createWithExpectedSize(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `init(int expectedSize)`
+**Returns:** [`com.google.common.collect.CompactLinkedHashSet<E>`](./CompactLinkedHashSet.md)
 
-**Returns:** `void`
+### `init(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `void`
 
 ### `allocArrays()`
 
@@ -113,45 +113,43 @@ ENDPOINT indicates a node is the last
 
 ### `getPredecessor(int entry)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `entry` (`int`)
+
+**Returns:** `int`
 
 ### `getSuccessor(int entry)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `entry` (`int`)
+
+**Returns:** `int`
 
 ### `setSuccessor(int entry, int succ)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `entry` (`int`)
 - `succ` (`int`)
+
+**Returns:** `void`
 
 ### `setPredecessor(int entry, int pred)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `entry` (`int`)
 - `pred` (`int`)
 
-### `setSucceeds(int pred, int succ)`
-
 **Returns:** `void`
+
+### `setSucceeds(int pred, int succ)`
 
 **Parameters:**
 - `pred` (`int`)
 - `succ` (`int`)
 
-### `insertEntry(int entryIndex, E object, int hash, int mask)`
-
 **Returns:** `void`
+
+### `insertEntry(int entryIndex, E object, int hash, int mask)`
 
 **Parameters:**
 - `entryIndex` (`int`)
@@ -159,20 +157,22 @@ ENDPOINT indicates a node is the last
 - `hash` (`int`)
 - `mask` (`int`)
 
-### `moveLastEntry(int dstIndex, int mask)`
-
 **Returns:** `void`
+
+### `moveLastEntry(int dstIndex, int mask)`
 
 **Parameters:**
 - `dstIndex` (`int`)
 - `mask` (`int`)
 
-### `resizeEntries(int newCapacity)`
-
 **Returns:** `void`
+
+### `resizeEntries(int newCapacity)`
 
 **Parameters:**
 - `newCapacity` (`int`)
+
+**Returns:** `void`
 
 ### `firstEntryIndex()`
 
@@ -180,11 +180,11 @@ ENDPOINT indicates a node is the last
 
 ### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `indexBeforeRemove` (`int`)
 - `indexRemoved` (`int`)
+
+**Returns:** `int`
 
 ### `toArray()`
 
@@ -192,10 +192,10 @@ ENDPOINT indicates a node is the last
 
 ### `toArray(T[] a)`
 
-**Returns:** `T[]`
-
 **Parameters:**
 - `a` (`T[]`)
+
+**Returns:** `T[]`
 
 ### `spliterator()`
 

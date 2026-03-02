@@ -36,7 +36,7 @@
 
 ## Constructors
 
-### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1)`
+### `<init>(Shell arg0, AuthorResourceBundle arg1)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
@@ -44,21 +44,21 @@
 
 ## Methods
 
-### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
+### `configureShell(Shell arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
 **Returns:** `void`
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+### `createDialogArea(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
 
 **Returns:** `org.eclipse.swt.widgets.Control`
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo arg0)`
+### `showDialog(TableRowsInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.operations.TableRowsInfo`](./TableRowsInfo.md))
@@ -69,7 +69,7 @@
 
 **Returns:** `void`
 
-### `createButtonsForButtonBar(org.eclipse.swt.widgets.Composite arg0)`
+### `createButtonsForButtonBar(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)

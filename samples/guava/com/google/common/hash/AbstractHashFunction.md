@@ -16,70 +16,70 @@ TODO(lowasser): make public
 
 ## Methods
 
-### `hashObject(T instance, com.google.common.hash.Funnel<? super T> funnel)`
-
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+### `hashObject(T instance, Funnel<? super T> funnel)`
 
 **Parameters:**
 - `instance` (`T`)
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md))
 
-### `hashUnencodedChars(java.lang.CharSequence input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashUnencodedChars(CharSequence input)`
 
 **Parameters:**
 - `input` (`java.lang.CharSequence`)
 
-### `hashString(java.lang.CharSequence input, java.nio.charset.Charset charset)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashString(CharSequence input, Charset charset)`
 
 **Parameters:**
 - `input` (`java.lang.CharSequence`)
 - `charset` (`java.nio.charset.Charset`)
 
-### `hashInt(int input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashInt(int input)`
 
 **Parameters:**
 - `input` (`int`)
 
-### `hashLong(long input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashLong(long input)`
 
 **Parameters:**
 - `input` (`long`)
 
-### `hashBytes(byte[] input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashBytes(byte[] input)`
 
 **Parameters:**
 - `input` (`byte[]`)
 
-### `hashBytes(byte[] input, int off, int len)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashBytes(byte[] input, int off, int len)`
 
 **Parameters:**
 - `input` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `hashBytes(java.nio.ByteBuffer input)`
-
 **Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
+### `hashBytes(ByteBuffer input)`
 
 **Parameters:**
 - `input` (`java.nio.ByteBuffer`)
 
-### `newHasher(int expectedInputSize)`
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+### `newHasher(int expectedInputSize)`
 
 **Parameters:**
 - `expectedInputSize` (`int`)
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 

@@ -22,177 +22,177 @@ This class should be used by other collection classes only.
 
 ## Methods
 
-### `collection(java.util.Collection<E> collection, java.lang.Object mutex)`
-
-**Returns:** `java.util.Collection<E>`
+### `collection(Collection<E> collection, Object mutex)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `set(java.util.Set<E> set, java.lang.Object mutex)`
+**Returns:** `java.util.Collection<E>`
 
-**Returns:** `java.util.Set<E>`
+### `set(Set<E> set, Object mutex)`
 
 **Parameters:**
 - `set` (`java.util.Set<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `sortedSet(java.util.SortedSet<E> set, java.lang.Object mutex)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.SortedSet<E>`
+### `sortedSet(SortedSet<E> set, Object mutex)`
 
 **Parameters:**
 - `set` (`java.util.SortedSet<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `list(java.util.List<E> list, java.lang.Object mutex)`
+**Returns:** `java.util.SortedSet<E>`
 
-**Returns:** `java.util.List<E>`
+### `list(List<E> list, Object mutex)`
 
 **Parameters:**
 - `list` (`java.util.List<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `multiset(com.google.common.collect.Multiset<E> multiset, java.lang.Object mutex)`
+**Returns:** `java.util.List<E>`
 
-**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
+### `multiset(Multiset<E> multiset, Object mutex)`
 
 **Parameters:**
 - `multiset` ([`com.google.common.collect.Multiset<E>`](./Multiset.md))
 - `mutex` (`java.lang.Object`)
 
-### `multimap(com.google.common.collect.Multimap<K,V> multimap, java.lang.Object mutex)`
+**Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
 
-**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+### `multimap(Multimap<K,V> multimap, Object mutex)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
 - `mutex` (`java.lang.Object`)
 
-### `listMultimap(com.google.common.collect.ListMultimap<K,V> multimap, java.lang.Object mutex)`
+**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
+### `listMultimap(ListMultimap<K,V> multimap, Object mutex)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md))
 - `mutex` (`java.lang.Object`)
 
-### `setMultimap(com.google.common.collect.SetMultimap<K,V> multimap, java.lang.Object mutex)`
+**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `setMultimap(SetMultimap<K,V> multimap, Object mutex)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md))
 - `mutex` (`java.lang.Object`)
 
-### `sortedSetMultimap(com.google.common.collect.SortedSetMultimap<K,V> multimap, java.lang.Object mutex)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
+### `sortedSetMultimap(SortedSetMultimap<K,V> multimap, Object mutex)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md))
 - `mutex` (`java.lang.Object`)
 
-### `typePreservingCollection(java.util.Collection<E> collection, java.lang.Object mutex)`
+**Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-**Returns:** `java.util.Collection<E>`
+### `typePreservingCollection(Collection<E> collection, Object mutex)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `typePreservingSet(java.util.Set<E> set, java.lang.Object mutex)`
+**Returns:** `java.util.Collection<E>`
 
-**Returns:** `java.util.Set<E>`
+### `typePreservingSet(Set<E> set, Object mutex)`
 
 **Parameters:**
 - `set` (`java.util.Set<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `map(java.util.Map<K,V> map, java.lang.Object mutex)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.Map<K,V>`
+### `map(Map<K,V> map, Object mutex)`
 
 **Parameters:**
 - `map` (`java.util.Map<K,V>`)
 - `mutex` (`java.lang.Object`)
 
-### `sortedMap(java.util.SortedMap<K,V> sortedMap, java.lang.Object mutex)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `sortedMap(SortedMap<K,V> sortedMap, Object mutex)`
 
 **Parameters:**
 - `sortedMap` (`java.util.SortedMap<K,V>`)
 - `mutex` (`java.lang.Object`)
 
-### `biMap(com.google.common.collect.BiMap<K,V> bimap, java.lang.Object mutex)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
+### `biMap(BiMap<K,V> bimap, Object mutex)`
 
 **Parameters:**
 - `bimap` ([`com.google.common.collect.BiMap<K,V>`](./BiMap.md))
 - `mutex` (`java.lang.Object`)
 
-### `navigableSet(java.util.NavigableSet<E> navigableSet, java.lang.Object mutex)`
+**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
 
-**Returns:** `java.util.NavigableSet<E>`
+### `navigableSet(NavigableSet<E> navigableSet, Object mutex)`
 
 **Parameters:**
 - `navigableSet` (`java.util.NavigableSet<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `navigableSet(java.util.NavigableSet<E> navigableSet)`
-
 **Returns:** `java.util.NavigableSet<E>`
+
+### `navigableSet(NavigableSet<E> navigableSet)`
 
 **Parameters:**
 - `navigableSet` (`java.util.NavigableSet<E>`)
 
-### `navigableMap(java.util.NavigableMap<K,V> navigableMap)`
+**Returns:** `java.util.NavigableSet<E>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `navigableMap(NavigableMap<K,V> navigableMap)`
 
 **Parameters:**
 - `navigableMap` (`java.util.NavigableMap<K,V>`)
 
-### `navigableMap(java.util.NavigableMap<K,V> navigableMap, java.lang.Object mutex)`
-
 **Returns:** `java.util.NavigableMap<K,V>`
+
+### `navigableMap(NavigableMap<K,V> navigableMap, Object mutex)`
 
 **Parameters:**
 - `navigableMap` (`java.util.NavigableMap<K,V>`)
 - `mutex` (`java.lang.Object`)
 
-### `nullableSynchronizedEntry(java.util.Map.Entry<K,V> entry, java.lang.Object mutex)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `nullableSynchronizedEntry(Map.Entry<K,V> entry, Object mutex)`
 
 **Parameters:**
 - `entry` (`java.util.Map.Entry<K,V>`)
 - `mutex` (`java.lang.Object`)
 
-### `queue(java.util.Queue<E> queue, java.lang.Object mutex)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `java.util.Queue<E>`
+### `queue(Queue<E> queue, Object mutex)`
 
 **Parameters:**
 - `queue` (`java.util.Queue<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `deque(java.util.Deque<E> deque, java.lang.Object mutex)`
+**Returns:** `java.util.Queue<E>`
 
-**Returns:** `java.util.Deque<E>`
+### `deque(Deque<E> deque, Object mutex)`
 
 **Parameters:**
 - `deque` (`java.util.Deque<E>`)
 - `mutex` (`java.lang.Object`)
 
-### `table(com.google.common.collect.Table<R,C,V> table, java.lang.Object mutex)`
+**Returns:** `java.util.Deque<E>`
 
-**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
+### `table(Table<R,C,V> table, Object mutex)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<R,C,V>`](./Table.md))
 - `mutex` (`java.lang.Object`)
+
+**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
 

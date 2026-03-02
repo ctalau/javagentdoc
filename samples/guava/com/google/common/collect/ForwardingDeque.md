@@ -40,17 +40,17 @@ Subclasses should override one or
 
 ### `addFirst(E e)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `void`
 
 ### `addLast(E e)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `void`
 
 ### `descendingIterator()`
 
@@ -66,17 +66,17 @@ Subclasses should override one or
 
 ### `offerFirst(E e)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `boolean`
 
 ### `offerLast(E e)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `boolean`
 
 ### `peekFirst()`
 
@@ -100,10 +100,10 @@ Subclasses should override one or
 
 ### `push(E e)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `void`
 
 ### `removeFirst()`
 
@@ -113,17 +113,17 @@ Subclasses should override one or
 
 **Returns:** `E`
 
-### `removeFirstOccurrence(java.lang.Object o)`
-
-**Returns:** `boolean`
+### `removeFirstOccurrence(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
 
-### `removeLastOccurrence(java.lang.Object o)`
-
 **Returns:** `boolean`
+
+### `removeLastOccurrence(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

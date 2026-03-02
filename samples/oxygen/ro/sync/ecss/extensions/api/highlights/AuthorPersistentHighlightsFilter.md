@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `isFiltered(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight persistentHighlight)`
+### `isFiltered(AuthorPersistentHighlight persistentHighlight)`
 
 **Parameters:**
 - `persistentHighlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The AuthorPersistentHighlight to be checked.

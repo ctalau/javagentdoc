@@ -12,7 +12,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 The message can be written to the server log and/or
  displayed for the user.
@@ -20,14 +20,14 @@ The message can be written to the server log and/or
 **Parameters:**
 - `message` (`java.lang.String`): a `String` specifying the text of the exception message
 
-### `<init>(java.lang.String message, java.lang.Throwable rootCause)`
+### `<init>(String message, Throwable rootCause)`
 
 **Parameters:**
 - `message` (`java.lang.String`): a `String` containing the text of the exception message
 - `rootCause` (`java.lang.Throwable`): the `Throwable` exception that interfered with the servlet's normal operation, making
    this servlet exception necessary
 
-### `<init>(java.lang.Throwable rootCause)`
+### `<init>(Throwable rootCause)`
 
 The exception's message is based on the localized message
  of the underlying exception.

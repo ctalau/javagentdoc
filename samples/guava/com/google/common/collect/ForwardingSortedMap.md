@@ -59,10 +59,10 @@ The standard methods and the collection views they return are not guaranteed to 
 
 ### `headMap(K toKey)`
 
-**Returns:** `java.util.SortedMap<K,V>`
-
 **Parameters:**
 - `toKey` (`K`)
+
+**Returns:** `java.util.SortedMap<K,V>`
 
 ### `lastKey()`
 
@@ -70,40 +70,38 @@ The standard methods and the collection views they return are not guaranteed to 
 
 ### `subMap(K fromKey, K toKey)`
 
-**Returns:** `java.util.SortedMap<K,V>`
-
 **Parameters:**
 - `fromKey` (`K`)
 - `toKey` (`K`)
 
-### `tailMap(K fromKey)`
-
 **Returns:** `java.util.SortedMap<K,V>`
+
+### `tailMap(K fromKey)`
 
 **Parameters:**
 - `fromKey` (`K`)
 
-### `unsafeCompare(java.util.Comparator<?> comparator, java.lang.Object o1, java.lang.Object o2)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** `int`
+### `unsafeCompare(Comparator<?> comparator, Object o1, Object o2)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<?>`)
 - `o1` (`java.lang.Object`)
 - `o2` (`java.lang.Object`)
 
-### `standardContainsKey(java.lang.Object key)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `standardContainsKey(Object key)`
 
 If you override #tailMap, you may wish to override #containsKey to forward to this implementation.
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `standardSubMap(K fromKey, K toKey)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `standardSubMap(K fromKey, K toKey)`
 
 In some situations, you may wish to override
  #subMap(Object, Object) to forward to this implementation.
@@ -111,4 +109,6 @@ In some situations, you may wish to override
 **Parameters:**
 - `fromKey` (`K`)
 - `toKey` (`K`)
+
+**Returns:** `java.util.SortedMap<K,V>`
 

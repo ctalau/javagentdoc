@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `runTransformationScenarios(java.lang.String[] scenarioNames, ro.sync.exml.workspace.api.editor.transformation.TransformationFeedback transformationFeedback)`
+### `runTransformationScenarios(String[] scenarioNames, TransformationFeedback transformationFeedback)`
 
 A separate thread is started and runs each scenario sequentially. The method returns immediately.
 
@@ -18,7 +18,7 @@ A separate thread is started and runs each scenario sequentially. The method ret
 
 **Returns:** `void`
 
-### `runTransformationScenario(java.lang.String scenarioName, java.util.Map<java.lang.String,java.lang.String> scenarioParameters, ro.sync.exml.workspace.api.editor.transformation.TransformationFeedback transformationFeedback)`
+### `runTransformationScenario(String scenarioName, Map<String,String> scenarioParameters, TransformationFeedback transformationFeedback)`
 
 A separate thread is started and runs each scenario sequentially. The method returns immediately.
 

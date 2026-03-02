@@ -14,14 +14,14 @@ If there is a selection, the cell at selection start offset determines the desti
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `<init>(AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Table helper with methods specific to a document type.
 
 ## Methods
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -29,7 +29,7 @@ If there is a selection, the cell at selection start offset determines the desti
 
 **Returns:** `void`
 
-### `checkForSameRowSpan(ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement destinationCell, java.util.List sourceCells)`
+### `checkForSameRowSpan(AuthorTableCellSpanProvider tableSupport, AuthorElement destinationCell, List sourceCells)`
 
 **Parameters:**
 - `tableSupport` ([`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../api/AuthorTableCellSpanProvider.md)): The table support.
@@ -38,7 +38,7 @@ If there is a selection, the cell at selection start offset determines the desti
 
 **Returns:** `void`
 
-### `getCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int selectionOffset, boolean start)`
+### `getCell(AuthorAccess authorAccess, int selectionOffset, boolean start)`
 
 This is the last cell whose content will be moved in the destination cell.
 
@@ -57,7 +57,7 @@ This is the last cell whose content will be moved in the destination cell.
 
 **Returns:** `java.lang.String`
 
-### `getCellsBetweenOffsets(ro.sync.ecss.extensions.api.node.AuthorElement rowNode, int startOffset, int endOffset)`
+### `getCellsBetweenOffsets(AuthorElement rowNode, int startOffset, int endOffset)`
 
 **Parameters:**
 - `rowNode` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node representing the current row.
@@ -66,7 +66,7 @@ This is the last cell whose content will be moved in the destination cell.
 
 **Returns:** `java.util.List`
 
-### `updateColSpanForMergedCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableCellSpanProvider, ro.sync.ecss.extensions.api.node.AuthorElement destCellElement, java.util.List sourceCells)`
+### `updateColSpanForMergedCell(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableCellSpanProvider, AuthorElement destCellElement, List sourceCells)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -76,7 +76,7 @@ This is the last cell whose content will be moved in the destination cell.
 
 **Returns:** `void`
 
-### `generateColumnSpecifications(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableCellSpanProvider, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `generateColumnSpecifications(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableCellSpanProvider, AuthorElement tableElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Author access. 

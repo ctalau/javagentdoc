@@ -8,7 +8,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
+### `<init>(j arg0, Frame arg1, String[] arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)
@@ -19,7 +19,7 @@
 
 ## Methods
 
-### `createEditor(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String[] arg2, java.lang.String arg3, java.lang.String arg4)`
+### `createEditor(j arg0, Frame arg1, String[] arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)
@@ -30,7 +30,7 @@
 
 **Returns:** `ro.sync.exml.editor.dd`
 
-### `createEditorInternal(ro.sync.exml.workspace.b.i.j arg0, java.awt.Frame arg1, java.lang.String arg2, java.lang.String arg3)`
+### `createEditorInternal(j arg0, Frame arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.workspace.b.i.j`)

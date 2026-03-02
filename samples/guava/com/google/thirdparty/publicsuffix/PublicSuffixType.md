@@ -35,12 +35,12 @@ Specifies the type of a top-level domain definition.
 
 **Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType[]`](./PublicSuffixType.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType`](./PublicSuffixType.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType`](./PublicSuffixType.md)
 
 ### `getLeafNodeCode()`
 
@@ -52,8 +52,8 @@ Specifies the type of a top-level domain definition.
 
 ### `fromCode(char code)`
 
-**Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType`](./PublicSuffixType.md)
-
 **Parameters:**
 - `code` (`char`)
+
+**Returns:** [`com.google.thirdparty.publicsuffix.PublicSuffixType`](./PublicSuffixType.md)
 

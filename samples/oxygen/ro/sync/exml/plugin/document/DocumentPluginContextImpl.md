@@ -28,7 +28,7 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.exml.workspace.api.editor.page.text.WSTextEditorPage arg0, javax.swing.text.Document arg1, java.awt.Frame arg2, ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg3)`
+### `<init>(WSTextEditorPage arg0, Document arg1, Frame arg2, StandalonePluginWorkspace arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.page.text.WSTextEditorPage`](../../workspace/api/editor/page/text/WSTextEditorPage.md))
@@ -38,14 +38,14 @@
 
 ## Methods
 
-### `setDocument(javax.swing.text.Document arg0)`
+### `setDocument(Document arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.text.Document`)
 
 **Returns:** `void`
 
-### `setFrame(java.awt.Frame arg0)`
+### `setFrame(Frame arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)

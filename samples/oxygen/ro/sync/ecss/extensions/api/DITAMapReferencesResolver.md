@@ -35,7 +35,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `setGrammarCache(java.lang.Object grammarCache)`
+### `setGrammarCache(Object grammarCache)`
 
 **Parameters:**
 - `grammarCache` (`java.lang.Object`): The grammar cache to be used.

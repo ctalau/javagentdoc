@@ -42,24 +42,24 @@
 
 ### `or(T defaultValue)`
 
-**Returns:** `T`
-
 **Parameters:**
 - `defaultValue` (`T`)
 
-### `or(com.google.common.base.Optional<? extends T> secondChoice)`
+**Returns:** `T`
 
-**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
+### `or(Optional<? extends T> secondChoice)`
 
 **Parameters:**
 - `secondChoice` ([`com.google.common.base.Optional<? extends T>`](./Optional.md))
 
-### `or(com.google.common.base.Supplier<? extends T> supplier)`
+**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
 
-**Returns:** `T`
+### `or(Supplier<? extends T> supplier)`
 
 **Parameters:**
 - `supplier` ([`com.google.common.base.Supplier<? extends T>`](./Supplier.md))
+
+**Returns:** `T`
 
 ### `orNull()`
 
@@ -69,19 +69,19 @@
 
 **Returns:** `java.util.Set<T>`
 
-### `transform(com.google.common.base.Function<? super T,V> function)`
-
-**Returns:** [`com.google.common.base.Optional<V>`](./Optional.md)
+### `transform(Function<? super T,V> function)`
 
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super T,V>`](./Function.md))
 
-### `equals(java.lang.Object object)`
+**Returns:** [`com.google.common.base.Optional<V>`](./Optional.md)
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

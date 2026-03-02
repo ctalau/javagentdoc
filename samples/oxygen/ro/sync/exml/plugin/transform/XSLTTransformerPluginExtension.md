@@ -22,7 +22,7 @@
 
 **Returns:** `boolean`
 
-### `getXSLTTransformerFactory(ro.sync.exml.plugin.transform.XSLMessageListener messageListener)`
+### `getXSLTTransformerFactory(XSLMessageListener messageListener)`
 
 **Parameters:**
 - `messageListener` ([`ro.sync.exml.plugin.transform.XSLMessageListener`](./XSLMessageListener.md)): A listener that will receive events when an xsl:message 

@@ -19,14 +19,14 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `<init>(AuthorAccess authorAccess)`
 
 The XInclude references over XQuery are not transparent, by default.
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access of the author document.
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean transparentXqueryUpdateReferences)`
+### `<init>(AuthorAccess authorAccess, boolean transparentXqueryUpdateReferences)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access of the author document.
@@ -35,7 +35,7 @@ The XInclude references over XQuery are not transparent, by default.
 
 ## Methods
 
-### `setSystemId(java.lang.String systemId)`
+### `setSystemId(String systemId)`
 
 **Parameters:**
 - `systemId` (`java.lang.String`)

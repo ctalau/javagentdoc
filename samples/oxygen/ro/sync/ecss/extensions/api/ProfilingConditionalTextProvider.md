@@ -18,7 +18,7 @@ It differs from one variant of the document to another,
 
 ## Methods
 
-### `getXMLFragmentForContentProfiling(int startOffset, int endOffset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getXMLFragmentForContentProfiling(int startOffset, int endOffset, AuthorAccess authorAccess)`
 
 The returned XML fragment is used to wrap the content included in the
  given offset interval. 
@@ -34,7 +34,7 @@ The returned XML fragment is used to wrap the content included in the
 
 **Returns:** `java.lang.String`
 
-### `shouldAddProfilingDirectlyOnElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `shouldAddProfilingDirectlyOnElement(AuthorElement element)`
 
 If this method returns `false`, the selected contetn will be wrapped 
  in an XML fragment given by #getXMLFragmentForContentProfiling(int, int, AuthorAccess).

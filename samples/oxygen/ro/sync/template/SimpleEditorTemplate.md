@@ -32,7 +32,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3)`
+### `<init>(String arg0, String arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -40,13 +40,13 @@
 - `arg2` (`java.lang.String`)
 - `arg3` (`java.lang.String`)
 
-### `<init>(java.lang.String arg0, java.lang.String arg1)`
+### `<init>(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 - `arg1` (`java.lang.String`)
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+### `<init>(String arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -75,14 +75,14 @@
 
 **Returns:** `int`
 
-### `getContentInfo(java.lang.String arg0)`
+### `getContentInfo(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1)`
+### `getContentInfo(String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -90,7 +90,7 @@
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1, boolean arg2)`
+### `getContentInfo(String arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -99,7 +99,7 @@
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `setContent(java.lang.String arg0)`
+### `setContent(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -110,7 +110,7 @@
 
 **Returns:** `int`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)

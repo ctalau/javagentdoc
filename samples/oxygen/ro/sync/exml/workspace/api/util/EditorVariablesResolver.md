@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `resolveEditorVariables(java.lang.String contentWithEditorVariables, java.lang.String currentEditedFileURL)`
+### `resolveEditorVariables(String contentWithEditorVariables, String currentEditedFileURL)`
 
 **Parameters:**
 - `contentWithEditorVariables` (`java.lang.String`): The initial content which possibly contains unresolved editor variables.

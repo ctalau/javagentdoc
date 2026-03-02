@@ -48,7 +48,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.webapp.PluginCspConfiguration>`
 
-### `collectCspConfigurations(java.util.List<ro.sync.ecss.extensions.api.webapp.PluginCspConfiguration> arg0)`
+### `collectCspConfigurations(List<PluginCspConfiguration> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.webapp.PluginCspConfiguration>`)

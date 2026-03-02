@@ -12,42 +12,42 @@
 
 ## Methods
 
-### `checkEntryNotNull(java.lang.Object key, java.lang.Object value)`
-
-**Returns:** `void`
+### `checkEntryNotNull(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `checkNonnegative(int value, java.lang.String name)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `checkNonnegative(int value, String name)`
 
 **Parameters:**
 - `value` (`int`)
 - `name` (`java.lang.String`)
 
-### `checkNonnegative(long value, java.lang.String name)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `checkNonnegative(long value, String name)`
 
 **Parameters:**
 - `value` (`long`)
 - `name` (`java.lang.String`)
 
-### `checkPositive(int value, java.lang.String name)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `checkPositive(int value, String name)`
 
 **Parameters:**
 - `value` (`int`)
 - `name` (`java.lang.String`)
 
-### `checkRemove(boolean canRemove)`
-
 **Returns:** `void`
+
+### `checkRemove(boolean canRemove)`
 
 **Parameters:**
 - `canRemove` (`boolean`)
+
+**Returns:** `void`
 

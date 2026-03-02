@@ -54,7 +54,7 @@ Whenever possible, use Range instead, which is better supported.
 
 ## Constructors
 
-### `<init>(java.util.Comparator<? super T> comparator, boolean hasLowerBound, T lowerEndpoint, com.google.common.collect.BoundType lowerBoundType, boolean hasUpperBound, T upperEndpoint, com.google.common.collect.BoundType upperBoundType)`
+### `<init>(Comparator<? super T> comparator, boolean hasLowerBound, T lowerEndpoint, BoundType lowerBoundType, boolean hasUpperBound, T upperEndpoint, BoundType upperBoundType)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super T>`)
@@ -67,41 +67,39 @@ Whenever possible, use Range instead, which is better supported.
 
 ## Methods
 
-### `from(com.google.common.collect.Range<T> range)`
-
-**Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
+### `from(Range<T> range)`
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<T>`](./Range.md))
 
-### `all(java.util.Comparator<? super T> comparator)`
-
 **Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
+
+### `all(Comparator<? super T> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super T>`)
 
-### `downTo(java.util.Comparator<? super T> comparator, T endpoint, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
 
-**Parameters:**
-- `comparator` (`java.util.Comparator<? super T>`)
-- `endpoint` (`T`)
-- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
-
-### `upTo(java.util.Comparator<? super T> comparator, T endpoint, com.google.common.collect.BoundType boundType)`
-
-**Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
+### `downTo(Comparator<? super T> comparator, T endpoint, BoundType boundType)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super T>`)
 - `endpoint` (`T`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `range(java.util.Comparator<? super T> comparator, T lower, com.google.common.collect.BoundType lowerType, T upper, com.google.common.collect.BoundType upperType)`
+**Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
+
+### `upTo(Comparator<? super T> comparator, T endpoint, BoundType boundType)`
+
+**Parameters:**
+- `comparator` (`java.util.Comparator<? super T>`)
+- `endpoint` (`T`)
+- `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
 **Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
+
+### `range(Comparator<? super T> comparator, T lower, BoundType lowerType, T upper, BoundType upperType)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super T>`)
@@ -109,6 +107,8 @@ Whenever possible, use Range instead, which is better supported.
 - `lowerType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 - `upper` (`T`)
 - `upperType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
 
 ### `comparator()`
 
@@ -128,38 +128,38 @@ Whenever possible, use Range instead, which is better supported.
 
 ### `tooLow(T t)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `t` (`T`)
+
+**Returns:** `boolean`
 
 ### `tooHigh(T t)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `t` (`T`)
+
+**Returns:** `boolean`
 
 ### `contains(T t)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `t` (`T`)
 
-### `intersect(com.google.common.collect.GeneralRange<T> other)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
+### `intersect(GeneralRange<T> other)`
 
 **Parameters:**
 - `other` ([`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md))
 
-### `equals(java.lang.Object obj)`
+**Returns:** [`com.google.common.collect.GeneralRange<T>`](./GeneralRange.md)
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

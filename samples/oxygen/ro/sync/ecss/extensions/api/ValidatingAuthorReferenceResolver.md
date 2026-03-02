@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `checkTarget(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.node.AuthorDocument targetDocument)`
+### `checkTarget(AuthorNode node, AuthorDocument targetDocument)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The source node for which the target node was resolved.

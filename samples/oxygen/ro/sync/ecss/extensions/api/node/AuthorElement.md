@@ -23,7 +23,7 @@ The author content contains the entire XML document text and special marker char
 
 ## Methods
 
-### `getAttribute(java.lang.String name)`
+### `getAttribute(String name)`
 
 If no such
  attribute exists, returns `null`.
@@ -41,14 +41,14 @@ If no such
 
 **Returns:** `java.lang.String`
 
-### `getChild(java.lang.String childLocalName)`
+### `getChild(String childLocalName)`
 
 **Parameters:**
 - `childLocalName` (`java.lang.String`): The local name of the searched children.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](./AuthorNode.md)
 
-### `getElementsByLocalName(java.lang.String localName)`
+### `getElementsByLocalName(String localName)`
 
 **Parameters:**
 - `localName` (`java.lang.String`): The local name of the searched children.
@@ -66,7 +66,7 @@ If no such
 
 **Returns:** `java.lang.String`
 
-### `setAttribute(java.lang.String qName, ro.sync.ecss.extensions.api.node.AttrValue attributeValue)`
+### `setAttribute(String qName, AttrValue attributeValue)`
 
 If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
 
@@ -76,7 +76,7 @@ If the element is part of the edited document, an java.lang.UnsupportedOperation
 
 **Returns:** `void`
 
-### `setName(java.lang.String newName)`
+### `setName(String newName)`
 
 If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
 
@@ -85,7 +85,7 @@ If the element is part of the edited document, an java.lang.UnsupportedOperation
 
 **Returns:** `void`
 
-### `removeAttribute(java.lang.String qName)`
+### `removeAttribute(String qName)`
 
 If the element is part of the edited document, an java.lang.UnsupportedOperationException is thrown.
 
@@ -94,14 +94,14 @@ If the element is part of the edited document, an java.lang.UnsupportedOperation
 
 **Returns:** `void`
 
-### `getAttributeNamespace(java.lang.String attributePrefix)`
+### `getAttributeNamespace(String attributePrefix)`
 
 **Parameters:**
 - `attributePrefix` (`java.lang.String`): Prefix of attribute.
 
 **Returns:** `java.lang.String`
 
-### `setAttributesNoNSUpdate(java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue> attrs)`
+### `setAttributesNoNSUpdate(Map<String,AttrValue> attrs)`
 
 **Warning:** Use this only when the element is from an AuthorDocumentFragment and not from 
  the current AuthorDocument content.

@@ -84,7 +84,7 @@
 
 ### `<init>()`
 
-### `<init>(javax.swing.table.TableModel arg0)`
+### `<init>(TableModel arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.table.TableModel`)
@@ -100,13 +100,13 @@
 - `arg0` (`boolean`)
 - `arg1` (`boolean`)
 
-### `<init>(java.util.Vector arg0, java.util.Vector arg1)`
+### `<init>(Vector arg0, Vector arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.Vector`)
 - `arg1` (`java.util.Vector`)
 
-### `<init>(javax.swing.table.TableModel arg0, boolean arg1)`
+### `<init>(TableModel arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`javax.swing.table.TableModel`)
@@ -137,7 +137,7 @@
 
 **Returns:** `boolean`
 
-### `prepareRenderer(javax.swing.table.TableCellRenderer arg0, int arg1, int arg2)`
+### `prepareRenderer(TableCellRenderer arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.table.TableCellRenderer`)
@@ -150,7 +150,7 @@
 
 **Returns:** `boolean`
 
-### `prepareEditor(javax.swing.table.TableCellEditor arg0, int arg1, int arg2)`
+### `prepareEditor(TableCellEditor arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.table.TableCellEditor`)
@@ -159,7 +159,7 @@
 
 **Returns:** `java.awt.Component`
 
-### `setTableHeader(javax.swing.table.JTableHeader arg0)`
+### `setTableHeader(JTableHeader arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.table.JTableHeader`)
@@ -170,7 +170,7 @@
 
 **Returns:** `javax.swing.table.JTableHeader`
 
-### `setDefaultEditor(java.lang.Class<?> arg0, javax.swing.table.TableCellEditor arg1)`
+### `setDefaultEditor(Class<?> arg0, TableCellEditor arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.Class<?>`)
@@ -178,7 +178,7 @@
 
 **Returns:** `void`
 
-### `setDefaultRenderer(java.lang.Class<?> arg0, javax.swing.table.TableCellRenderer arg1)`
+### `setDefaultRenderer(Class<?> arg0, TableCellRenderer arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.Class<?>`)
@@ -186,7 +186,7 @@
 
 **Returns:** `void`
 
-### `setDefaultAction(javax.swing.Action arg0, boolean arg1, boolean arg2)`
+### `setDefaultAction(Action arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
@@ -205,28 +205,28 @@
 
 **Returns:** `void`
 
-### `scrollRectToVisible(java.awt.Rectangle arg0)`
+### `scrollRectToVisible(Rectangle arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Rectangle`)
 
 **Returns:** `void`
 
-### `setUI(javax.swing.plaf.TableUI arg0)`
+### `setUI(TableUI arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.plaf.TableUI`)
 
 **Returns:** `void`
 
-### `setColumnModel(javax.swing.table.TableColumnModel arg0)`
+### `setColumnModel(TableColumnModel arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.table.TableColumnModel`)
 
 **Returns:** `void`
 
-### `qqc(javax.swing.table.TableColumnModel arg0)`
+### `qqc(TableColumnModel arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.table.TableColumnModel`)
@@ -245,14 +245,14 @@
 
 **Returns:** `void`
 
-### `setSelectionBackground(java.awt.Color arg0)`
+### `setSelectionBackground(Color arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Color`)
 
 **Returns:** `void`
 
-### `setSelectionForeground(java.awt.Color arg0)`
+### `setSelectionForeground(Color arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Color`)
@@ -263,7 +263,7 @@
 
 **Returns:** `javax.swing.Action`
 
-### `setDeleteAction(javax.swing.Action arg0)`
+### `setDeleteAction(Action arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
@@ -274,7 +274,7 @@
 
 **Returns:** `javax.swing.Action`
 
-### `setRowSorter(javax.swing.RowSorter<? extends javax.swing.table.TableModel> arg0)`
+### `setRowSorter(RowSorter<? extends TableModel> arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.RowSorter<? extends javax.swing.table.TableModel>`)
@@ -285,14 +285,14 @@
 
 **Returns:** `void`
 
-### `getDefaultRenderer(java.lang.Class<?> arg0)`
+### `getDefaultRenderer(Class<?> arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Class<?>`)
 
 **Returns:** `javax.swing.table.TableCellRenderer`
 
-### `getDefaultEditor(java.lang.Class<?> arg0)`
+### `getDefaultEditor(Class<?> arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Class<?>`)

@@ -166,7 +166,7 @@ Indicates that the value hasn't been set yet.
 
 ## Constructors
 
-### `<init>(com.google.common.cache.CacheBuilder<? super K,? super V> builder, com.google.common.cache.CacheLoader<? super K,V> loader)`
+### `<init>(CacheBuilder<? super K,? super V> builder, CacheLoader<? super K,V> loader)`
 
 **Parameters:**
 - `builder` ([`com.google.common.cache.CacheBuilder<? super K,? super V>`](./CacheBuilder.md))
@@ -248,8 +248,6 @@ Indicates that the value hasn't been set yet.
 
 ### `rehash(int h)`
 
-**Returns:** `int`
-
 This is critical when the concurrent hash map uses power-of-two length hash
  tables, that otherwise encounter collisions for hash codes that do not differ in lower or upper
  bits.
@@ -257,9 +255,9 @@ This is critical when the concurrent hash map uses power-of-two length hash
 **Parameters:**
 - `h` (`int`): hash code
 
-### `newEntry(K key, int hash, com.google.common.cache.ReferenceEntry<K,V> next)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
+### `newEntry(K key, int hash, ReferenceEntry<K,V> next)`
 
 Code should call Segment#newEntry directly.
 
@@ -268,9 +266,9 @@ Code should call Segment#newEntry directly.
 - `hash` (`int`)
 - `next` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 
-### `copyEntry(com.google.common.cache.ReferenceEntry<K,V> original, com.google.common.cache.ReferenceEntry<K,V> newNext)`
-
 **Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
+
+### `copyEntry(ReferenceEntry<K,V> original, ReferenceEntry<K,V> newNext)`
 
 Code should call Segment#copyEntry directly.
 
@@ -278,9 +276,9 @@ Code should call Segment#copyEntry directly.
 - `original` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 - `newNext` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 
-### `newValueReference(com.google.common.cache.ReferenceEntry<K,V> entry, V value, int weight)`
+**Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-**Returns:** `com.google.common.cache.LocalCache.ValueReference<K,V>`
+### `newValueReference(ReferenceEntry<K,V> entry, V value, int weight)`
 
 Code should call Segment#setValue instead.
 
@@ -289,30 +287,30 @@ Code should call Segment#setValue instead.
 - `value` (`V`)
 - `weight` (`int`)
 
-### `hash(java.lang.Object key)`
+**Returns:** `com.google.common.cache.LocalCache.ValueReference<K,V>`
 
-**Returns:** `int`
+### `hash(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `reclaimValue(com.google.common.cache.LocalCache.ValueReference<K,V> valueReference)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `reclaimValue(LocalCache.ValueReference<K,V> valueReference)`
 
 **Parameters:**
 - `valueReference` (`com.google.common.cache.LocalCache.ValueReference<K,V>`)
 
-### `reclaimKey(com.google.common.cache.ReferenceEntry<K,V> entry)`
-
 **Returns:** `void`
+
+### `reclaimKey(ReferenceEntry<K,V> entry)`
 
 **Parameters:**
 - `entry` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 
-### `isLive(com.google.common.cache.ReferenceEntry<K,V> entry, long now)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isLive(ReferenceEntry<K,V> entry, long now)`
 
 Code should call Segment#getLiveValue
  instead.
@@ -321,25 +319,25 @@ Code should call Segment#getLiveValue
 - `entry` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 - `now` (`long`)
 
-### `segmentFor(int hash)`
+**Returns:** `boolean`
 
-**Returns:** `com.google.common.cache.LocalCache.Segment<K,V>`
+### `segmentFor(int hash)`
 
 **Parameters:**
 - `hash` (`int`): the hash code for the key
 
-### `createSegment(int initialCapacity, long maxSegmentWeight, com.google.common.cache.AbstractCache.StatsCounter statsCounter)`
-
 **Returns:** `com.google.common.cache.LocalCache.Segment<K,V>`
+
+### `createSegment(int initialCapacity, long maxSegmentWeight, AbstractCache.StatsCounter statsCounter)`
 
 **Parameters:**
 - `initialCapacity` (`int`)
 - `maxSegmentWeight` (`long`)
 - `statsCounter` (`com.google.common.cache.AbstractCache.StatsCounter`)
 
-### `getLiveValue(com.google.common.cache.ReferenceEntry<K,V> entry, long now)`
+**Returns:** `com.google.common.cache.LocalCache.Segment<K,V>`
 
-**Returns:** `V`
+### `getLiveValue(ReferenceEntry<K,V> entry, long now)`
 
 Returns null if the entry is invalid, partially-collected,
  loading, or expired. Unlike Segment#getLiveValue this method does not attempt to clean
@@ -350,57 +348,59 @@ Returns null if the entry is invalid, partially-collected,
 - `entry` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 - `now` (`long`)
 
-### `isExpired(com.google.common.cache.ReferenceEntry<K,V> entry, long now)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `isExpired(ReferenceEntry<K,V> entry, long now)`
 
 **Parameters:**
 - `entry` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 - `now` (`long`)
 
-### `connectAccessOrder(com.google.common.cache.ReferenceEntry<K,V> previous, com.google.common.cache.ReferenceEntry<K,V> next)`
+**Returns:** `boolean`
 
-**Returns:** `void`
-
-**Parameters:**
-- `previous` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
-- `next` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
-
-### `nullifyAccessOrder(com.google.common.cache.ReferenceEntry<K,V> nulled)`
-
-**Returns:** `void`
-
-**Parameters:**
-- `nulled` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
-
-### `connectWriteOrder(com.google.common.cache.ReferenceEntry<K,V> previous, com.google.common.cache.ReferenceEntry<K,V> next)`
-
-**Returns:** `void`
+### `connectAccessOrder(ReferenceEntry<K,V> previous, ReferenceEntry<K,V> next)`
 
 **Parameters:**
 - `previous` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 - `next` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
 
-### `nullifyWriteOrder(com.google.common.cache.ReferenceEntry<K,V> nulled)`
-
 **Returns:** `void`
+
+### `nullifyAccessOrder(ReferenceEntry<K,V> nulled)`
 
 **Parameters:**
 - `nulled` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+
+**Returns:** `void`
+
+### `connectWriteOrder(ReferenceEntry<K,V> previous, ReferenceEntry<K,V> next)`
+
+**Parameters:**
+- `previous` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+- `next` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+
+**Returns:** `void`
+
+### `nullifyWriteOrder(ReferenceEntry<K,V> nulled)`
+
+**Parameters:**
+- `nulled` ([`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md))
+
+**Returns:** `void`
 
 ### `processPendingNotifications()`
-
-**Returns:** `void`
 
 This should be called every time expireEntries or
  evictEntry is called (once the lock is released).
 
-### `newSegmentArray(int ssize)`
+**Returns:** `void`
 
-**Returns:** `com.google.common.cache.LocalCache.Segment<K,V>[]`
+### `newSegmentArray(int ssize)`
 
 **Parameters:**
 - `ssize` (`int`)
+
+**Returns:** `com.google.common.cache.LocalCache.Segment<K,V>[]`
 
 ### `cleanUp()`
 
@@ -418,68 +418,66 @@ This should be called every time expireEntries or
 
 **Returns:** `int`
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `get(K key, com.google.common.cache.CacheLoader<? super K,V> loader)`
-
 **Returns:** `V`
+
+### `get(K key, CacheLoader<? super K,V> loader)`
 
 **Parameters:**
 - `key` (`K`)
 - `loader` ([`com.google.common.cache.CacheLoader<? super K,V>`](./CacheLoader.md))
 
-### `getIfPresent(java.lang.Object key)`
-
 **Returns:** `V`
+
+### `getIfPresent(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `getOrDefault(java.lang.Object key, V defaultValue)`
-
 **Returns:** `V`
+
+### `getOrDefault(Object key, V defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `defaultValue` (`V`)
 
-### `getOrLoad(K key)`
-
 **Returns:** `V`
+
+### `getOrLoad(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `getAllPresent(java.lang.Iterable<?> keys)`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
+### `getAllPresent(Iterable<?> keys)`
 
 **Parameters:**
 - `keys` (`java.lang.Iterable<?>`)
 
-### `getAll(java.lang.Iterable<? extends K> keys)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
+
+### `getAll(Iterable<? extends K> keys)`
 
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends K>`)
 
-### `loadAll(java.util.Set<? extends K> keys, com.google.common.cache.CacheLoader<? super K,V> loader)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-**Returns:** `java.util.Map<K,V>`
+### `loadAll(Set<? extends K> keys, CacheLoader<? super K,V> loader)`
 
 **Parameters:**
 - `keys` (`java.util.Set<? extends K>`)
 - `loader` ([`com.google.common.cache.CacheLoader<? super K,V>`](./CacheLoader.md))
 
-### `getEntry(java.lang.Object key)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
+### `getEntry(Object key)`
 
 The entry may be loading, expired, or
  partially collected.
@@ -487,125 +485,127 @@ The entry may be loading, expired, or
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `refresh(K key)`
+**Returns:** [`com.google.common.cache.ReferenceEntry<K,V>`](./ReferenceEntry.md)
 
-**Returns:** `void`
+### `refresh(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `containsKey(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `put(K key, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `putIfAbsent(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `compute(K key, java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> function)`
-
 **Returns:** `V`
+
+### `compute(K key, BiFunction<? super K,? super @Nullable V,? extends @Nullable V> function)`
 
 **Parameters:**
 - `key` (`K`)
 - `function` (`java.util.function.BiFunction<? super K,? super @org.checkerframework.checker.nullness.qual.Nullable V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
-### `computeIfAbsent(K key, java.util.function.Function<? super K,? extends V> function)`
-
 **Returns:** `V`
+
+### `computeIfAbsent(K key, Function<? super K,? extends V> function)`
 
 **Parameters:**
 - `key` (`K`)
 - `function` (`java.util.function.Function<? super K,? extends V>`)
 
-### `computeIfPresent(K key, java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> function)`
-
 **Returns:** `V`
+
+### `computeIfPresent(K key, BiFunction<? super K,? super V,? extends @Nullable V> function)`
 
 **Parameters:**
 - `key` (`K`)
 - `function` (`java.util.function.BiFunction<? super K,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
-### `merge(K key, V newValue, java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V> function)`
-
 **Returns:** `V`
+
+### `merge(K key, V newValue, BiFunction<? super V,? super V,? extends @Nullable V> function)`
 
 **Parameters:**
 - `key` (`K`)
 - `newValue` (`V`)
 - `function` (`java.util.function.BiFunction<? super V,? super V,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`)
 
-### `putAll(java.util.Map<? extends K,? extends V> m)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Map<? extends K,? extends V> m)`
 
 **Parameters:**
 - `m` (`java.util.Map<? extends K,? extends V>`)
 
-### `remove(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `remove(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `remove(java.lang.Object key, java.lang.Object value)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `remove(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `replace(K key, V oldValue, V newValue)`
-
 **Returns:** `boolean`
+
+### `replace(K key, V oldValue, V newValue)`
 
 **Parameters:**
 - `key` (`K`)
 - `oldValue` (`V`)
 - `newValue` (`V`)
 
-### `replace(K key, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `replace(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
+**Returns:** `V`
+
 ### `clear()`
 
 **Returns:** `void`
 
-### `invalidateAll(java.lang.Iterable<?> keys)`
-
-**Returns:** `void`
+### `invalidateAll(Iterable<?> keys)`
 
 **Parameters:**
 - `keys` (`java.lang.Iterable<?>`)
+
+**Returns:** `void`
 
 ### `keySet()`
 
@@ -619,17 +619,17 @@ The entry may be loading, expired, or
 
 **Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-### `toArrayList(java.util.Collection<E> c)`
-
-**Returns:** `java.util.ArrayList<E>`
+### `toArrayList(Collection<E> c)`
 
 **Parameters:**
 - `c` (`java.util.Collection<E>`)
 
-### `removeIf(java.util.function.BiPredicate<? super K,? super V> filter)`
+**Returns:** `java.util.ArrayList<E>`
 
-**Returns:** `boolean`
+### `removeIf(BiPredicate<? super K,? super V> filter)`
 
 **Parameters:**
 - `filter` (`java.util.function.BiPredicate<? super K,? super V>`)
+
+**Returns:** `boolean`
 

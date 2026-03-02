@@ -52,7 +52,7 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -60,7 +60,7 @@ The value should be `true` in order to include comments, text and CDATA nodes,
 
 **Returns:** `void`
 
-### `execute(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String pseudoClassName, ro.sync.ecss.extensions.api.node.AuthorElement targetElement)`
+### `execute(AuthorAccess authorAccess, String pseudoClassName, AuthorElement targetElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The access.

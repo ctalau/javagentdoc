@@ -18,14 +18,14 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.node.AuthorDocument document)`
+### `<init>(AuthorDocument document)`
 
 **Parameters:**
 - `document` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](../../../extensions/api/node/AuthorDocument.md)): The document to collect nodes from.
 
 ## Methods
 
-### `collect(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `collect(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../extensions/api/node/AuthorNode.md))
@@ -36,7 +36,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-### `collectNodes(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `collectNodes(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access for the document.

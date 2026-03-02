@@ -29,10 +29,10 @@
 
 ### `get(int index)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `E`
 
 ### `iterator()`
 
@@ -48,11 +48,11 @@
 
 ### `subList(int fromIndex, int toIndex)`
 
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
-
 **Parameters:**
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
+
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
 ### `toString()`
 

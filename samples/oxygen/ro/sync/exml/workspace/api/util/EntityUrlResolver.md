@@ -13,7 +13,7 @@ This method can be more efficient than the
 
 ## Methods
 
-### `resolveEntityUrl(java.lang.String publicId, java.lang.String systemId)`
+### `resolveEntityUrl(String publicId, String systemId)`
 
 **Parameters:**
 - `publicId` (`java.lang.String`): The public identifier of the external entity

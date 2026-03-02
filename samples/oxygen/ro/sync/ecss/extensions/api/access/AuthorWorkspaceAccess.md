@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `open(java.io.File file)`
+### `open(File file)`
 
 **Parameters:**
 - `file` (`java.io.File`): The file to be opened.
@@ -21,7 +21,7 @@
 
 **Returns:** `java.net.URL[]`
 
-### `getEditorAccess(java.net.URL location)`
+### `getEditorAccess(URL location)`
 
 **Parameters:**
 - `location` (`java.net.URL`): The editor location

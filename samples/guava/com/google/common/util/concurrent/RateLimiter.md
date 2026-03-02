@@ -91,7 +91,7 @@ A separate
 
 ## Constructors
 
-### `<init>(com.google.common.util.concurrent.RateLimiter.SleepingStopwatch stopwatch)`
+### `<init>(RateLimiter.SleepingStopwatch stopwatch)`
 
 **Parameters:**
 - `stopwatch` (`com.google.common.util.concurrent.RateLimiter.SleepingStopwatch`)
@@ -99,8 +99,6 @@ A separate
 ## Methods
 
 ### `create(double permitsPerSecond)`
-
-**Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
 
 The returned RateLimiter ensures that on average no more than 
  permitsPerSecond are issued during any given second, with sustained requests being smoothly
@@ -111,19 +109,19 @@ The returned RateLimiter ensures that on average no more than
 
 **Parameters:**
 - `permitsPerSecond` (`double`): the rate of the returned RateLimiter, measured in how many
-     permits become available per second
-
-### `create(double permitsPerSecond, com.google.common.util.concurrent.RateLimiter.SleepingStopwatch stopwatch)`
+       permits become available per second
 
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
+
+### `create(double permitsPerSecond, RateLimiter.SleepingStopwatch stopwatch)`
 
 **Parameters:**
 - `permitsPerSecond` (`double`)
 - `stopwatch` (`com.google.common.util.concurrent.RateLimiter.SleepingStopwatch`)
 
-### `create(double permitsPerSecond, java.time.Duration warmupPeriod)`
-
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
+
+### `create(double permitsPerSecond, Duration warmupPeriod)`
 
 Similarly,
  if the RateLimiter is left *unused* for a duration of warmupPeriod, it
@@ -141,13 +139,13 @@ The returned RateLimiter starts in a "cold" state (i.e. the warmup period will
 
 **Parameters:**
 - `permitsPerSecond` (`double`): the rate of the returned RateLimiter, measured in how many
-     permits become available per second
+       permits become available per second
 - `warmupPeriod` (`java.time.Duration`): the duration of the period where the RateLimiter ramps up its rate,
-     before reaching its stable (maximum) rate
-
-### `create(double permitsPerSecond, long warmupPeriod, java.util.concurrent.TimeUnit unit)`
+       before reaching its stable (maximum) rate
 
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
+
+### `create(double permitsPerSecond, long warmupPeriod, TimeUnit unit)`
 
 Similarly,
  if the RateLimiter is left *unused* for a duration of warmupPeriod, it
@@ -165,14 +163,14 @@ The returned RateLimiter starts in a "cold" state (i.e. the warmup period will
 
 **Parameters:**
 - `permitsPerSecond` (`double`): the rate of the returned RateLimiter, measured in how many
-     permits become available per second
+       permits become available per second
 - `warmupPeriod` (`long`): the duration of the period where the RateLimiter ramps up its rate,
-     before reaching its stable (maximum) rate
+       before reaching its stable (maximum) rate
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the warmupPeriod argument
 
-### `create(double permitsPerSecond, long warmupPeriod, java.util.concurrent.TimeUnit unit, double coldFactor, com.google.common.util.concurrent.RateLimiter.SleepingStopwatch stopwatch)`
-
 **Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
+
+### `create(double permitsPerSecond, long warmupPeriod, TimeUnit unit, double coldFactor, RateLimiter.SleepingStopwatch stopwatch)`
 
 **Parameters:**
 - `permitsPerSecond` (`double`)
@@ -181,13 +179,13 @@ The returned RateLimiter starts in a "cold" state (i.e. the warmup period will
 - `coldFactor` (`double`)
 - `stopwatch` (`com.google.common.util.concurrent.RateLimiter.SleepingStopwatch`)
 
+**Returns:** [`com.google.common.util.concurrent.RateLimiter`](./RateLimiter.md)
+
 ### `mutex()`
 
 **Returns:** `java.lang.Object`
 
 ### `setRate(double permitsPerSecond)`
-
-**Returns:** `void`
 
 Currently
  throttled threads will **not** be awakened as a result of this invocation, thus they do not
@@ -207,21 +205,23 @@ The behavior of the RateLimiter is not modified in any other way, e.g. if the
 **Parameters:**
 - `permitsPerSecond` (`double`): the new stable rate of this RateLimiter
 
-### `doSetRate(double permitsPerSecond, long nowMicros)`
-
 **Returns:** `void`
+
+### `doSetRate(double permitsPerSecond, long nowMicros)`
 
 **Parameters:**
 - `permitsPerSecond` (`double`)
 - `nowMicros` (`long`)
 
-### `getRate()`
+**Returns:** `void`
 
-**Returns:** `double`
+### `getRate()`
 
 The initial value of this is the same as the permitsPerSecond argument
  passed in the factory method that produced this RateLimiter, and it is only updated
  after invocations to #setRate.
+
+**Returns:** `double`
 
 ### `doGetRate()`
 
@@ -229,41 +229,39 @@ The initial value of this is the same as the permitsPerSecond argument
 
 ### `acquire()`
 
-**Returns:** `double`
-
 Tells the amount of time slept, if any.
 
  
 This method is equivalent to acquire(1).
 
-### `acquire(int permits)`
-
 **Returns:** `double`
+
+### `acquire(int permits)`
 
 Tells the amount of time slept, if any.
 
 **Parameters:**
 - `permits` (`int`): the number of permits to acquire
 
-### `reserve(int permits)`
+**Returns:** `double`
 
-**Returns:** `long`
+### `reserve(int permits)`
 
 **Parameters:**
 - `permits` (`int`)
 
-### `tryAcquire(java.time.Duration timeout)`
+**Returns:** `long`
 
-**Returns:** `boolean`
+### `tryAcquire(Duration timeout)`
 
 This method is equivalent to tryAcquire(1, timeout).
 
 **Parameters:**
 - `timeout` (`java.time.Duration`): the maximum time to wait for the permit. Negative values are treated as zero.
 
-### `tryAcquire(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `tryAcquire(long timeout, TimeUnit unit)`
 
 This method is equivalent to tryAcquire(1, timeout, unit).
 
@@ -271,68 +269,70 @@ This method is equivalent to tryAcquire(1, timeout, unit).
 - `timeout` (`long`): the maximum time to wait for the permit. Negative values are treated as zero.
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the timeout argument
 
-### `tryAcquire(int permits)`
-
 **Returns:** `boolean`
+
+### `tryAcquire(int permits)`
 
 This method is equivalent to tryAcquire(permits, 0, anyUnit).
 
 **Parameters:**
 - `permits` (`int`): the number of permits to acquire
 
-### `tryAcquire()`
-
 **Returns:** `boolean`
+
+### `tryAcquire()`
 
 This method is equivalent to tryAcquire(1).
 
-### `tryAcquire(int permits, java.time.Duration timeout)`
-
 **Returns:** `boolean`
+
+### `tryAcquire(int permits, Duration timeout)`
 
 **Parameters:**
 - `permits` (`int`): the number of permits to acquire
 - `timeout` (`java.time.Duration`): the maximum time to wait for the permits. Negative values are treated as zero.
 
-### `tryAcquire(int permits, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `tryAcquire(int permits, long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `permits` (`int`): the number of permits to acquire
 - `timeout` (`long`): the maximum time to wait for the permits. Negative values are treated as zero.
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the timeout argument
 
-### `canAcquire(long nowMicros, long timeoutMicros)`
-
 **Returns:** `boolean`
+
+### `canAcquire(long nowMicros, long timeoutMicros)`
 
 **Parameters:**
 - `nowMicros` (`long`)
 - `timeoutMicros` (`long`)
 
-### `reserveAndGetWaitLength(int permits, long nowMicros)`
+**Returns:** `boolean`
 
-**Returns:** `long`
+### `reserveAndGetWaitLength(int permits, long nowMicros)`
 
 **Parameters:**
 - `permits` (`int`)
 - `nowMicros` (`long`)
+
+**Returns:** `long`
 
 ### `queryEarliestAvailable(long nowMicros)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `nowMicros` (`long`)
 
-### `reserveEarliestAvailable(int permits, long nowMicros)`
-
 **Returns:** `long`
+
+### `reserveEarliestAvailable(int permits, long nowMicros)`
 
 **Parameters:**
 - `permits` (`int`)
 - `nowMicros` (`long`)
+
+**Returns:** `long`
 
 ### `toString()`
 
@@ -340,8 +340,8 @@ This method is equivalent to tryAcquire(1).
 
 ### `checkPermits(int permits)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `permits` (`int`)
+
+**Returns:** `void`
 

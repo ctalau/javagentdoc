@@ -29,7 +29,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.util.concurrent.ListenableFuture<? extends I> inputFuture, F function)`
+### `<init>(ListenableFuture<? extends I> inputFuture, F function)`
 
 **Parameters:**
 - `inputFuture` ([`com.google.common.util.concurrent.ListenableFuture<? extends I>`](./ListenableFuture.md))
@@ -37,23 +37,23 @@
 
 ## Methods
 
-### `create(com.google.common.util.concurrent.ListenableFuture<I> input, com.google.common.util.concurrent.AsyncFunction<? super I,? extends O> function, java.util.concurrent.Executor executor)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+### `create(ListenableFuture<I> input, AsyncFunction<? super I,? extends O> function, Executor executor)`
 
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md))
 - `function` ([`com.google.common.util.concurrent.AsyncFunction<? super I,? extends O>`](./AsyncFunction.md))
 - `executor` (`java.util.concurrent.Executor`)
 
-### `create(com.google.common.util.concurrent.ListenableFuture<I> input, com.google.common.base.Function<? super I,? extends O> function, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+
+### `create(ListenableFuture<I> input, Function<? super I,? extends O> function, Executor executor)`
 
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md))
 - `function` ([`com.google.common.base.Function<? super I,? extends O>`](../../base/Function.md))
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
 ### `run()`
 
@@ -61,18 +61,18 @@
 
 ### `doTransform(F function, I result)`
 
-**Returns:** `T`
-
 **Parameters:**
 - `function` (`F`)
 - `result` (`I`)
 
-### `setResult(T result)`
+**Returns:** `T`
 
-**Returns:** `void`
+### `setResult(T result)`
 
 **Parameters:**
 - `result` (`T`)
+
+**Returns:** `void`
 
 ### `afterDone()`
 

@@ -38,7 +38,7 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.ArgumentsMap arg1)`
+### `doOperation(AuthorAccess arg0, ArgumentsMap arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -46,7 +46,7 @@
 
 **Returns:** `void`
 
-### `initSelectionContext(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.ArgumentsMap arg1)`
+### `initSelectionContext(AuthorAccess arg0, ArgumentsMap arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))

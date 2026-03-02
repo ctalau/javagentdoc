@@ -54,7 +54,7 @@
 
 ## Methods
 
-### `containsExtension(java.lang.String extension, java.lang.String[] allowedExtensions)`
+### `containsExtension(String extension, String[] allowedExtensions)`
 
 **Parameters:**
 - `extension` (`java.lang.String`): Searched extension.
@@ -62,7 +62,7 @@
 
 **Returns:** `boolean`
 
-### `detectOutputclass(java.lang.String href)`
+### `detectOutputclass(String href)`
 
 If an extension is not found, the selected type is iFrame.
 
@@ -71,28 +71,28 @@ If an extension is not found, the selected type is iFrame.
 
 **Returns:** `java.lang.String`
 
-### `isMediaReference(java.net.URL url)`
+### `isMediaReference(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): Resource's URL.
 
 **Returns:** `boolean`
 
-### `isEmbeddedContent(java.lang.String url)`
+### `isEmbeddedContent(String url)`
 
 **Parameters:**
 - `url` (`java.lang.String`): the referred resource.
 
 **Returns:** `boolean`
 
-### `isRecognizedAsMedia(java.lang.String hostURL)`
+### `isRecognizedAsMedia(String hostURL)`
 
 **Parameters:**
 - `hostURL` (`java.lang.String`): Video host (like YouTube or Vimeo)
 
 **Returns:** `boolean`
 
-### `correctMediaEmbeddedReference(java.lang.String url)`
+### `correctMediaEmbeddedReference(String url)`
 
 ```
 
@@ -106,28 +106,28 @@ If an extension is not found, the selected type is iFrame.
 
 **Returns:** `java.lang.String`
 
-### `isAudioReference(java.lang.String fileName)`
+### `isAudioReference(String fileName)`
 
 **Parameters:**
 - `fileName` (`java.lang.String`): The name of the file to check.
 
 **Returns:** `boolean`
 
-### `hasAudioFormat(java.lang.String format)`
+### `hasAudioFormat(String format)`
 
 **Parameters:**
 - `format` (`java.lang.String`): resource format.
 
 **Returns:** `boolean`
 
-### `isVideoReference(java.lang.String fileName)`
+### `isVideoReference(String fileName)`
 
 **Parameters:**
 - `fileName` (`java.lang.String`): The name of the file to check.
 
 **Returns:** `boolean`
 
-### `hasVideoFormat(java.lang.String format)`
+### `hasVideoFormat(String format)`
 
 **Parameters:**
 - `format` (`java.lang.String`): resource format.

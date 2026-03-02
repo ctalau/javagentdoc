@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `check(java.util.List<ro.sync.exml.workspace.api.util.TextChunkDescriptor> text)`
+### `check(List<TextChunkDescriptor> text)`
 
 **Parameters:**
 - `text` (`java.util.List<ro.sync.exml.workspace.api.util.TextChunkDescriptor>`): The list of text descriptors to check.

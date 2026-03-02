@@ -30,7 +30,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String viewID, javax.swing.JComponent component, java.lang.String title, javax.swing.Icon icon)`
+### `<init>(String viewID, JComponent component, String title, Icon icon)`
 
 **Parameters:**
 - `viewID` (`java.lang.String`): The unique view ID
@@ -52,14 +52,14 @@
 
 **Returns:** `java.lang.String`
 
-### `setComponent(javax.swing.JComponent component)`
+### `setComponent(JComponent component)`
 
 **Parameters:**
 - `component` (`javax.swing.JComponent`): The component to set.
 
 **Returns:** `void`
 
-### `setTitle(java.lang.String title)`
+### `setTitle(String title)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The title to set.
@@ -70,7 +70,7 @@
 
 **Returns:** `javax.swing.Icon`
 
-### `setIcon(javax.swing.Icon icon)`
+### `setIcon(Icon icon)`
 
 **Parameters:**
 - `icon` (`javax.swing.Icon`): The icon to set.

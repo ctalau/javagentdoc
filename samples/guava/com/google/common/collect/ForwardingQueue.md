@@ -45,10 +45,10 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 ### `offer(E o)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `o` (`E`)
+
+**Returns:** `boolean`
 
 ### `poll()`
 
@@ -68,23 +68,23 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 ### `standardOffer(E e)`
 
-**Returns:** `boolean`
-
 If you override #add,
  you may wish to override #offer to forward to this implementation.
 
 **Parameters:**
 - `e` (`E`)
 
-### `standardPeek()`
+**Returns:** `boolean`
 
-**Returns:** `E`
+### `standardPeek()`
 
 If you override #element, you may wish to override #peek to forward to this implementation.
 
-### `standardPoll()`
-
 **Returns:** `E`
 
+### `standardPoll()`
+
 If you override #remove, you may wish to override #poll to forward to this implementation.
+
+**Returns:** `E`
 

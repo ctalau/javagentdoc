@@ -18,7 +18,7 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -26,7 +26,7 @@
 
 **Returns:** `void`
 
-### `extractNewDocContent(ro.sync.ecss.extensions.api.AuthorDocumentController sourceCtrl, int selectionStart, int selectionEnd)`
+### `extractNewDocContent(AuthorDocumentController sourceCtrl, int selectionStart, int selectionEnd)`
 
 **Parameters:**
 - `sourceCtrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): The document controller over the current document (source)
@@ -39,14 +39,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../api/ArgumentDescriptor.md)
 
-### `isTitle(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTitle(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `openAndGetAuthorPage(ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess workspaceAccess, java.net.URL toOpen)`
+### `openAndGetAuthorPage(AuthorWorkspaceAccess workspaceAccess, URL toOpen)`
 
 **Parameters:**
 - `workspaceAccess` ([`ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess`](../../api/access/AuthorWorkspaceAccess.md)): Offers access to Author API.
@@ -54,7 +54,7 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage`](../../../../exml/workspace/api/editor/page/author/WSAuthorEditorPage.md)
 
-### `insertInTopicBody(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragmentToInsert)`
+### `insertInTopicBody(AuthorDocumentController controller, AuthorDocumentFragment fragmentToInsert)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): The document controller
@@ -62,7 +62,7 @@
 
 **Returns:** `void`
 
-### `getAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attrName)`
+### `getAttribute(AuthorElement element, String attrName)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element

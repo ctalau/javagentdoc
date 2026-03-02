@@ -16,14 +16,14 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore imageMapCore)`
+### `<init>(EditImageMapCore imageMapCore)`
 
 **Parameters:**
 - `imageMapCore` ([`ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore`](../imagemap/EditImageMapCore.md)): The image map core utilities.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -31,7 +31,7 @@
 
 **Returns:** `void`
 
-### `processArgumentsMap(ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `processArgumentsMap(ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The map with arguments for this operation.

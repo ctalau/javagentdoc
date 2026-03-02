@@ -15,47 +15,47 @@ See
 
 ## Methods
 
-### `clear(java.nio.Buffer b)`
-
-**Returns:** `void`
+### `clear(Buffer b)`
 
 **Parameters:**
 - `b` (`java.nio.Buffer`)
 
-### `flip(java.nio.Buffer b)`
-
 **Returns:** `void`
+
+### `flip(Buffer b)`
 
 **Parameters:**
 - `b` (`java.nio.Buffer`)
 
-### `limit(java.nio.Buffer b, int limit)`
-
 **Returns:** `void`
+
+### `limit(Buffer b, int limit)`
 
 **Parameters:**
 - `b` (`java.nio.Buffer`)
 - `limit` (`int`)
 
-### `mark(java.nio.Buffer b)`
-
 **Returns:** `void`
+
+### `mark(Buffer b)`
 
 **Parameters:**
 - `b` (`java.nio.Buffer`)
 
-### `position(java.nio.Buffer b, int position)`
-
 **Returns:** `void`
+
+### `position(Buffer b, int position)`
 
 **Parameters:**
 - `b` (`java.nio.Buffer`)
 - `position` (`int`)
 
-### `reset(java.nio.Buffer b)`
-
 **Returns:** `void`
+
+### `reset(Buffer b)`
 
 **Parameters:**
 - `b` (`java.nio.Buffer`)
+
+**Returns:** `void`
 

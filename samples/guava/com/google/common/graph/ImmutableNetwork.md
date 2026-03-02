@@ -23,72 +23,72 @@ See the Guava User's Guide's [discussion
 
 ## Constructors
 
-### `<init>(com.google.common.graph.Network<N,E> network)`
+### `<init>(Network<N,E> network)`
 
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
 ## Methods
 
-### `copyOf(com.google.common.graph.Network<N,E> network)`
-
-**Returns:** [`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md)
+### `copyOf(Network<N,E> network)`
 
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
-### `copyOf(com.google.common.graph.ImmutableNetwork<N,E> network)`
-
 **Returns:** [`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md)
+
+### `copyOf(ImmutableNetwork<N,E> network)`
 
 **Parameters:**
 - `network` ([`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md))
+
+**Returns:** [`com.google.common.graph.ImmutableNetwork<N,E>`](./ImmutableNetwork.md)
 
 ### `asGraph()`
 
 **Returns:** [`com.google.common.graph.ImmutableGraph<N>`](./ImmutableGraph.md)
 
-### `getNodeConnections(com.google.common.graph.Network<N,E> network)`
+### `getNodeConnections(Network<N,E> network)`
+
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 
 **Returns:** `java.util.Map<N,com.google.common.graph.NetworkConnections<N,E>>`
 
+### `getEdgeToReferenceNode(Network<N,E> network)`
+
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
-
-### `getEdgeToReferenceNode(com.google.common.graph.Network<N,E> network)`
 
 **Returns:** `java.util.Map<E,N>`
 
+### `connectionsOf(Network<N,E> network, N node)`
+
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
-
-### `connectionsOf(com.google.common.graph.Network<N,E> network, N node)`
+- `node` (`N`)
 
 **Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
 
+### `sourceNodeFn(Network<N,E> network)`
+
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+
+**Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
+
+### `targetNodeFn(Network<N,E> network)`
+
+**Parameters:**
+- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
+
+**Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
+
+### `adjacentNodeFn(Network<N,E> network, N node)`
+
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
 - `node` (`N`)
 
-### `sourceNodeFn(com.google.common.graph.Network<N,E> network)`
-
 **Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
-
-**Parameters:**
-- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
-
-### `targetNodeFn(com.google.common.graph.Network<N,E> network)`
-
-**Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
-
-**Parameters:**
-- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
-
-### `adjacentNodeFn(com.google.common.graph.Network<N,E> network, N node)`
-
-**Returns:** [`com.google.common.base.Function<E,N>`](../base/Function.md)
-
-**Parameters:**
-- `network` ([`com.google.common.graph.Network<N,E>`](./Network.md))
-- `node` (`N`)
 

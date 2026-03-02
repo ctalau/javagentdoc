@@ -18,12 +18,12 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `<init>(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The AuthorAccess.
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+### `<init>(AuthorAccess authorAccess, AuthorNode contextNode)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The AuthorAccess.
@@ -35,7 +35,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)
 
-### `setAuthorAccess(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `setAuthorAccess(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): The new author access.
@@ -46,7 +46,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
-### `setContextNode(ro.sync.ecss.extensions.api.node.AuthorNode contextNode)`
+### `setContextNode(AuthorNode contextNode)`
 
 **Parameters:**
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The error context node.

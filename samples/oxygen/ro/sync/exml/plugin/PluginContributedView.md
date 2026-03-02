@@ -8,7 +8,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.util.Map<java.lang.Integer,java.lang.String> arg4)`
+### `<init>(String arg0, String arg1, String arg2, String arg3, Map<Integer,String> arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

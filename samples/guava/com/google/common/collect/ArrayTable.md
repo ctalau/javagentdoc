@@ -101,35 +101,33 @@ See the Guava User Guide article on [Table](https://github.com/google/guava/wiki
 
 ## Constructors
 
-### `<init>(java.lang.Iterable<? extends R> rowKeys, java.lang.Iterable<? extends C> columnKeys)`
+### `<init>(Iterable<? extends R> rowKeys, Iterable<? extends C> columnKeys)`
 
 **Parameters:**
 - `rowKeys` (`java.lang.Iterable<? extends R>`)
 - `columnKeys` (`java.lang.Iterable<? extends C>`)
 
-### `<init>(com.google.common.collect.Table<R,C,? extends @org.checkerframework.checker.nullness.qual.Nullable V> table)`
+### `<init>(Table<R,C,? extends @Nullable V> table)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<R,C,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](./Table.md))
 
-### `<init>(com.google.common.collect.ArrayTable<R,C,V> table)`
+### `<init>(ArrayTable<R,C,V> table)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.ArrayTable<R,C,V>`](./ArrayTable.md))
 
 ## Methods
 
-### `create(java.lang.Iterable<? extends R> rowKeys, java.lang.Iterable<? extends C> columnKeys)`
-
-**Returns:** [`com.google.common.collect.ArrayTable<R,C,V>`](./ArrayTable.md)
+### `create(Iterable<? extends R> rowKeys, Iterable<? extends C> columnKeys)`
 
 **Parameters:**
 - `rowKeys` (`java.lang.Iterable<? extends R>`): row keys that may be stored in the generated table
 - `columnKeys` (`java.lang.Iterable<? extends C>`): column keys that may be stored in the generated table
 
-### `create(com.google.common.collect.Table<R,C,? extends @org.checkerframework.checker.nullness.qual.Nullable V> table)`
-
 **Returns:** [`com.google.common.collect.ArrayTable<R,C,V>`](./ArrayTable.md)
+
+### `create(Table<R,C,? extends @Nullable V> table)`
 
 If table includes a mapping with row key r and a separate mapping with
  column key c, the returned table contains a mapping with row key r and column
@@ -148,6 +146,8 @@ The ordering of table.rowKeySet() and table.columnKeySet() determines the
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<R,C,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](./Table.md))
 
+**Returns:** [`com.google.common.collect.ArrayTable<R,C,V>`](./ArrayTable.md)
+
 ### `rowKeyList()`
 
 **Returns:** [`com.google.common.collect.ImmutableList<R>`](./ImmutableList.md)
@@ -158,8 +158,6 @@ The ordering of table.rowKeySet() and table.columnKeySet() determines the
 
 ### `at(int rowIndex, int columnIndex)`
 
-**Returns:** `V`
-
 The same value is
  returned by get(rowKeyList().get(rowIndex), columnKeyList().get(columnIndex)), but this
  method runs more quickly.
@@ -168,9 +166,9 @@ The same value is
 - `rowIndex` (`int`): position of the row key in #rowKeyList()
 - `columnIndex` (`int`): position of the row key in #columnKeyList()
 
-### `set(int rowIndex, int columnIndex, V value)`
-
 **Returns:** `V`
+
+### `set(int rowIndex, int columnIndex, V value)`
 
 The logic 
  put(rowKeyList().get(rowIndex), columnKeyList().get(columnIndex), value) has the same
@@ -181,9 +179,9 @@ The logic
 - `columnIndex` (`int`): position of the row key in #columnKeyList()
 - `value` (`V`): value to store in the table
 
-### `toArray(java.lang.Class<V> valueClass)`
+**Returns:** `V`
 
-**Returns:** `@org.checkerframework.checker.nullness.qual.Nullable V[][]`
+### `toArray(Class<V> valueClass)`
 
 The row and column indices correspond
  to the positions of the row and column in the iterables provided during table construction. If
@@ -195,52 +193,54 @@ Subsequent table changes will not modify the array, and vice versa.
 **Parameters:**
 - `valueClass` (`java.lang.Class<V>`): class of values stored in the returned array
 
+**Returns:** `@org.checkerframework.checker.nullness.qual.Nullable V[][]`
+
 ### `clear()`
 
-**Returns:** `void`
-
 Use #eraseAll instead.
+
+**Returns:** `void`
 
 ### `eraseAll()`
 
 **Returns:** `void`
 
-### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
-
-**Returns:** `boolean`
+### `contains(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `containsColumn(java.lang.Object columnKey)`
-
 **Returns:** `boolean`
+
+### `containsColumn(Object columnKey)`
 
 **Parameters:**
 - `columnKey` (`java.lang.Object`)
 
-### `containsRow(java.lang.Object rowKey)`
-
 **Returns:** `boolean`
+
+### `containsRow(Object rowKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `get(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `isEmpty()`
 
@@ -248,16 +248,14 @@ Use #eraseAll instead.
 
 ### `put(R rowKey, C columnKey, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `value` (`V`)
 
-### `putAll(com.google.common.collect.Table<? extends R,? extends C,? extends @org.checkerframework.checker.nullness.qual.Nullable V> table)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Table<? extends R,? extends C,? extends @Nullable V> table)`
 
 If table is an ArrayTable, its null values will be stored in this table,
  possibly replacing values that were previously non-null.
@@ -265,9 +263,9 @@ If table is an ArrayTable, its null values will be stored in this table,
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends @org.checkerframework.checker.nullness.qual.Nullable V>`](./Table.md))
 
-### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `remove(Object rowKey, Object columnKey)`
 
 Use #erase instead.
 
@@ -275,9 +273,9 @@ Use #erase instead.
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `erase(java.lang.Object rowKey, java.lang.Object columnKey)`
-
 **Returns:** `V`
+
+### `erase(Object rowKey, Object columnKey)`
 
 If
  either key is null or isn't among the keys provided during construction, this method has no
@@ -291,13 +289,13 @@ This method is equivalent to put(rowKey, columnKey, null) when both provided key
 - `rowKey` (`java.lang.Object`): row key of mapping to be erased
 - `columnKey` (`java.lang.Object`): column key of mapping to be erased
 
+**Returns:** `V`
+
 ### `size()`
 
 **Returns:** `int`
 
 ### `cellSet()`
-
-**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,@org.checkerframework.checker.nullness.qual.Nullable V>>`
 
 Changes to the table
  will update the returned set.
@@ -309,6 +307,8 @@ The returned set's iterator traverses the mappings with the first row key, the m
  
 The value in the returned cells may change if the table subsequently changes.
 
+**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,@org.checkerframework.checker.nullness.qual.Nullable V>>`
+
 ### `cellIterator()`
 
 **Returns:** `java.util.Iterator<com.google.common.collect.Table.Cell<R,C,@org.checkerframework.checker.nullness.qual.Nullable V>>`
@@ -319,21 +319,19 @@ The value in the returned cells may change if the table subsequently changes.
 
 ### `getCell(int index)`
 
-**Returns:** `com.google.common.collect.Table.Cell<R,C,@org.checkerframework.checker.nullness.qual.Nullable V>`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `com.google.common.collect.Table.Cell<R,C,@org.checkerframework.checker.nullness.qual.Nullable V>`
 
 ### `getValue(int index)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `index` (`int`)
 
-### `column(C columnKey)`
+**Returns:** `V`
 
-**Returns:** `java.util.Map<R,@org.checkerframework.checker.nullness.qual.Nullable V>`
+### `column(C columnKey)`
 
 If the column key isn't in
  #columnKeySet(), an empty immutable map is returned.
@@ -346,6 +344,8 @@ Otherwise, for each row key in #rowKeySet(), the returned map associates the row
 **Parameters:**
 - `columnKey` (`C`): key of column to search for in the table
 
+**Returns:** `java.util.Map<R,@org.checkerframework.checker.nullness.qual.Nullable V>`
+
 ### `columnKeySet()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md)
@@ -355,8 +355,6 @@ Otherwise, for each row key in #rowKeySet(), the returned map associates the row
 **Returns:** `java.util.Map<C,java.util.Map<R,@org.checkerframework.checker.nullness.qual.Nullable V>>`
 
 ### `row(R rowKey)`
-
-**Returns:** `java.util.Map<C,@org.checkerframework.checker.nullness.qual.Nullable V>`
 
 If the row key isn't in #rowKeySet(), an empty immutable map is returned.
 
@@ -368,6 +366,8 @@ Otherwise, for each column key in #columnKeySet(), the returned map associates t
 **Parameters:**
 - `rowKey` (`R`): key of row to search for in the table
 
+**Returns:** `java.util.Map<C,@org.checkerframework.checker.nullness.qual.Nullable V>`
+
 ### `rowKeySet()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md)
@@ -378,14 +378,14 @@ Otherwise, for each column key in #columnKeySet(), the returned map associates t
 
 ### `values()`
 
-**Returns:** `java.util.Collection<@org.checkerframework.checker.nullness.qual.Nullable V>`
-
 Changes to the
  table will update the returned collection.
 
  
 The returned collection's iterator traverses the values of the first row key, the values of
  the second row key, and so on.
+
+**Returns:** `java.util.Collection<@org.checkerframework.checker.nullness.qual.Nullable V>`
 
 ### `valuesIterator()`
 

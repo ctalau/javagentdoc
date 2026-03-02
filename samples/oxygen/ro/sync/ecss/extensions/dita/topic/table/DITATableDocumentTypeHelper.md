@@ -20,14 +20,14 @@ Looks at class attribute values.
 
 **Returns:** `java.lang.String[]`
 
-### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableCell(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `isColspec(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isColspec(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
@@ -38,7 +38,7 @@ Looks at class attribute values.
 
 **Returns:** `java.lang.String[]`
 
-### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTableRow(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
@@ -49,28 +49,28 @@ Looks at class attribute values.
 
 **Returns:** `java.lang.String[]`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isTable(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isContentReference(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `isActuallyTableAndNotTgroup(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isActuallyTableAndNotTgroup(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): the node for which we perform the check.
 
 **Returns:** `boolean`
 
-### `getTableCellSpanProvider(ro.sync.ecss.extensions.api.node.AuthorElement tgroupElement)`
+### `getTableCellSpanProvider(AuthorElement tgroupElement)`
 
 **Parameters:**
 - `tgroupElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))

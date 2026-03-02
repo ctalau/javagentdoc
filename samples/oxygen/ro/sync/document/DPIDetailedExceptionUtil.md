@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `computeAndAttachDetailedMessageToDPI(java.lang.Throwable arg0, ro.sync.document.DocumentPositionedInfo arg1)`
+### `computeAndAttachDetailedMessageToDPI(Throwable arg0, DocumentPositionedInfo arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.Throwable`)
@@ -24,21 +24,21 @@
 
 **Returns:** `void`
 
-### `getDetailedExceptionData(java.lang.Throwable arg0)`
+### `getDetailedExceptionData(Throwable arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Throwable`)
 
 **Returns:** [`ro.sync.document.DetailedExceptionInfo`](./DetailedExceptionInfo.md)
 
-### `getDetailedExceptionStackTrace(java.lang.Throwable arg0)`
+### `getDetailedExceptionStackTrace(Throwable arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Throwable`)
 
 **Returns:** [`ro.sync.document.DetailedExceptionInfo`](./DetailedExceptionInfo.md)
 
-### `getDetailedExceptionData(ro.sync.document.DocumentPositionedInfo arg0)`
+### `getDetailedExceptionData(DocumentPositionedInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.DocumentPositionedInfo`](./DocumentPositionedInfo.md))

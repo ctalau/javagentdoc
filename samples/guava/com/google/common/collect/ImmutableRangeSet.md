@@ -34,12 +34,12 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableList<com.google.common.collect.Range<C>> ranges)`
+### `<init>(ImmutableList<Range<C>> ranges)`
 
 **Parameters:**
 - `ranges` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Range<C>>`](./ImmutableList.md))
 
-### `<init>(com.google.common.collect.ImmutableList<com.google.common.collect.Range<C>> ranges, com.google.common.collect.ImmutableRangeSet<C> complement)`
+### `<init>(ImmutableList<Range<C>> ranges, ImmutableRangeSet<C> complement)`
 
 **Parameters:**
 - `ranges` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Range<C>>`](./ImmutableList.md))
@@ -49,40 +49,38 @@
 
 ### `toImmutableRangeSet()`
 
-**Returns:** `java.util.stream.Collector<com.google.common.collect.Range<E>,?,com.google.common.collect.ImmutableRangeSet<E>>`
-
 As in Builder, overlapping ranges are not permitted and adjacent
  ranges will be merged.
 
-### `of()`
+**Returns:** `java.util.stream.Collector<com.google.common.collect.Range<E>,?,com.google.common.collect.ImmutableRangeSet<E>>`
 
-**Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+### `of()`
 
 **Performance note:** the instance returned is a singleton.
 
-### `of(com.google.common.collect.Range<C> range)`
-
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
+### `of(Range<C> range)`
 
 If range.isEmpty(), this is equivalent to ImmutableRangeSet#of().
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
+**Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
 ### `all()`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-### `copyOf(com.google.common.collect.RangeSet<C> rangeSet)`
-
-**Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+### `copyOf(RangeSet<C> rangeSet)`
 
 **Parameters:**
 - `rangeSet` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `copyOf(java.lang.Iterable<com.google.common.collect.Range<C>> ranges)`
-
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
+### `copyOf(Iterable<Range<C>> ranges)`
 
 Overlapping ranges and empty ranges are forbidden, though adjacent ranges are permitted and
  will be merged.
@@ -90,9 +88,9 @@ Overlapping ranges and empty ranges are forbidden, though adjacent ranges are pe
 **Parameters:**
 - `ranges` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
 
-### `unionOf(java.lang.Iterable<com.google.common.collect.Range<C>> ranges)`
-
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
+### `unionOf(Iterable<Range<C>> ranges)`
 
 This is the smallest RangeSet which encloses each of the specified ranges. Duplicate
  or connected ranges are permitted, and will be coalesced in the result.
@@ -100,26 +98,28 @@ This is the smallest RangeSet which encloses each of the specified ranges. Dupli
 **Parameters:**
 - `ranges` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
 
-### `intersects(com.google.common.collect.Range<C> otherRange)`
+**Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
+### `intersects(Range<C> otherRange)`
+
+**Parameters:**
+- `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
 **Returns:** `boolean`
+
+### `encloses(Range<C> otherRange)`
 
 **Parameters:**
 - `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `encloses(com.google.common.collect.Range<C> otherRange)`
-
 **Returns:** `boolean`
-
-**Parameters:**
-- `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
 ### `rangeContaining(C value)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `value` (`C`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `span()`
 
@@ -129,47 +129,47 @@ This is the smallest RangeSet which encloses each of the specified ranges. Dupli
 
 **Returns:** `boolean`
 
-### `add(com.google.common.collect.Range<C> range)`
-
-**Returns:** `void`
+### `add(Range<C> range)`
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `addAll(com.google.common.collect.RangeSet<C> other)`
-
 **Returns:** `void`
+
+### `addAll(RangeSet<C> other)`
 
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `addAll(java.lang.Iterable<com.google.common.collect.Range<C>> other)`
-
 **Returns:** `void`
+
+### `addAll(Iterable<Range<C>> other)`
 
 **Parameters:**
 - `other` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
 
-### `remove(com.google.common.collect.Range<C> range)`
-
 **Returns:** `void`
+
+### `remove(Range<C> range)`
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `removeAll(com.google.common.collect.RangeSet<C> other)`
-
 **Returns:** `void`
+
+### `removeAll(RangeSet<C> other)`
 
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `removeAll(java.lang.Iterable<com.google.common.collect.Range<C>> other)`
-
 **Returns:** `void`
+
+### `removeAll(Iterable<Range<C>> other)`
 
 **Parameters:**
 - `other` (`java.lang.Iterable<com.google.common.collect.Range<C>>`)
+
+**Returns:** `void`
 
 ### `asRanges()`
 
@@ -183,9 +183,7 @@ This is the smallest RangeSet which encloses each of the specified ranges. Dupli
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-### `union(com.google.common.collect.RangeSet<C> other)`
-
-**Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+### `union(RangeSet<C> other)`
 
 This is essentially the same as TreeRangeSet.create(this).addAll(other) except it
  returns an ImmutableRangeSet.
@@ -193,9 +191,9 @@ This is essentially the same as TreeRangeSet.create(this).addAll(other) except i
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `intersection(com.google.common.collect.RangeSet<C> other)`
-
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
+### `intersection(RangeSet<C> other)`
 
 This is essentially the same as 
  TreeRangeSet.create(this).removeAll(other.complement()) except it returns an 
@@ -204,9 +202,9 @@ This is essentially the same as
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `difference(com.google.common.collect.RangeSet<C> other)`
-
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
+### `difference(RangeSet<C> other)`
 
 This is essentially the same as TreeRangeSet.create(this).removeAll(other) except it
  returns an ImmutableRangeSet.
@@ -214,23 +212,23 @@ This is essentially the same as TreeRangeSet.create(this).removeAll(other) excep
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
-### `intersectRanges(com.google.common.collect.Range<C> range)`
+**Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
+
+### `intersectRanges(Range<C> range)`
+
+**Parameters:**
+- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
 **Returns:** [`com.google.common.collect.ImmutableList<com.google.common.collect.Range<C>>`](./ImmutableList.md)
 
+### `subRangeSet(Range<C> range)`
+
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
-
-### `subRangeSet(com.google.common.collect.Range<C> range)`
 
 **Returns:** [`com.google.common.collect.ImmutableRangeSet<C>`](./ImmutableRangeSet.md)
 
-**Parameters:**
-- `range` ([`com.google.common.collect.Range<C>`](./Range.md))
-
-### `asSet(com.google.common.collect.DiscreteDomain<C> domain)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<C>`](./ImmutableSortedSet.md)
+### `asSet(DiscreteDomain<C> domain)`
 
 **Note:** a.asSet(d).equals(b.asSet(d)) does not imply a.equals(b)! For
  example, a and b could be [2..4] and (1..5), or the empty
@@ -248,13 +246,15 @@ The returned set's Object#toString method returns a shorthand form of the set's
 **Parameters:**
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `isPartialView()`
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<C>`](./ImmutableSortedSet.md)
 
-**Returns:** `boolean`
+### `isPartialView()`
 
 This is generally
  used to determine whether copyOf implementations should make an explicit copy to avoid
  memory leaks.
+
+**Returns:** `boolean`
 
 ### `builder()`
 
@@ -264,10 +264,10 @@ This is generally
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

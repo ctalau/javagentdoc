@@ -51,14 +51,14 @@ Handles typing and paste events inside list (a item with a para will be
 
 ## Constructors
 
-### `<init>(java.lang.String documentNamespace)`
+### `<init>(String documentNamespace)`
 
 **Parameters:**
 - `documentNamespace` (`java.lang.String`): The document namespace, for different versions of TEI.
 
 ## Methods
 
-### `handleTyping(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTyping(int offset, char ch, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -67,7 +67,7 @@ Handles typing and paste events inside list (a item with a para will be
 
 **Returns:** `boolean`
 
-### `handleTypingFallback(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTypingFallback(int offset, char ch, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -76,7 +76,7 @@ Handles typing and paste events inside list (a item with a para will be
 
 **Returns:** `boolean`
 
-### `handlePasteFragment(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, int actionId, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handlePasteFragment(int offset, AuthorDocumentFragment[] fragmentsToInsert, int actionId, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -86,7 +86,7 @@ Handles typing and paste events inside list (a item with a para will be
 
 **Returns:** `boolean`
 
-### `handleInsertionEvent(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleInsertionEvent(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the insertion event occurred.
@@ -95,7 +95,7 @@ Handles typing and paste events inside list (a item with a para will be
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInLists(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInLists(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 The solution is to insert the `fragmentsToInsert` into a 'item' element if is possible.
 
@@ -107,7 +107,7 @@ The solution is to insert the `fragmentsToInsert` into a 'item' element if is po
 
 **Returns:** `boolean`
 
-### `pushContextElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementName)`
+### `pushContextElement(WhatElementsCanGoHereContext context, String elementName)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md))
@@ -115,7 +115,7 @@ The solution is to insert the `fragmentsToInsert` into a 'item' element if is po
 
 **Returns:** `void`
 
-### `isElementWithNameAndNamespace(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String elementLocalName)`
+### `isElementWithNameAndNamespace(AuthorNode node, String elementLocalName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -123,7 +123,7 @@ The solution is to insert the `fragmentsToInsert` into a 'item' element if is po
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInTable(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInTable(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 A row element will be inserted with a new cell in which the fragments will be inserted.
 
@@ -135,7 +135,7 @@ A row element will be inserted with a new cell in which the fragments will be in
 
 **Returns:** `boolean`
 
-### `changeElementsToMoveUpDown(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> selectedElements)`
+### `changeElementsToMoveUpDown(List<AuthorNode> selectedElements)`
 
 **Parameters:**
 - `selectedElements` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)

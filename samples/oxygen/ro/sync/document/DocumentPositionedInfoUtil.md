@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `getDpisOfSeverity(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
+### `getDpisOfSeverity(List<DocumentPositionedInfo> arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
@@ -28,7 +28,7 @@
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `getDpisOfMinimumSeverity(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
+### `getDpisOfMinimumSeverity(List<DocumentPositionedInfo> arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
@@ -36,35 +36,35 @@
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `hasFatalErrors(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
+### `hasFatalErrors(List<DocumentPositionedInfo> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 
 **Returns:** `boolean`
 
-### `hasErrorsOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
+### `hasErrorsOrHigher(List<DocumentPositionedInfo> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 
 **Returns:** `boolean`
 
-### `hasWarningsOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
+### `hasWarningsOrHigher(List<DocumentPositionedInfo> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 
 **Returns:** `boolean`
 
-### `hasInfosOrHigher(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0)`
+### `hasInfosOrHigher(List<DocumentPositionedInfo> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
 
 **Returns:** `boolean`
 
-### `b(java.util.List<ro.sync.document.DocumentPositionedInfo> arg0, int arg1)`
+### `b(List<DocumentPositionedInfo> arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`)
@@ -79,7 +79,7 @@
 
 **Returns:** `int`
 
-### `getMaskedAndCorrectedURL(java.lang.String arg0)`
+### `getMaskedAndCorrectedURL(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

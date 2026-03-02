@@ -120,37 +120,35 @@ See the Guava User Guide on [using
 
 ### `checkArgument(boolean expression)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `expression` (`boolean`): a boolean expression
 
-### `checkArgument(boolean expression, java.lang.Object errorMessage)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, Object errorMessage)`
 
 **Parameters:**
 - `expression` (`boolean`): a boolean expression
 - `errorMessage` (`java.lang.Object`): the exception message to use if the check fails; will be converted to a
-     string using String#valueOf(Object)
-
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] errorMessageArgs)`
+       string using String#valueOf(Object)
 
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, lang@Nullable Object[] errorMessageArgs)`
 
 **Parameters:**
 - `expression` (`boolean`): a boolean expression
 - `errorMessageTemplate` (`java.lang.String`): a template for the exception message should the check fail. The
-     message is formed by replacing each %s placeholder in the template with an
-     argument. These are matched by position - the first %s gets 
-     errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
-     square braces. Unmatched placeholders will be left as-is.
+       message is formed by replacing each %s placeholder in the template with an
+       argument. These are matched by position - the first %s gets 
+       errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
+       square braces. Unmatched placeholders will be left as-is.
 - `errorMessageArgs` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`): the arguments to be substituted into the message template. Arguments
-     are converted to strings using String#valueOf(Object).
-
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, char p1)`
+       are converted to strings using String#valueOf(Object).
 
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, char p1)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -159,9 +157,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`char`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, int p1)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, int p1)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -170,9 +168,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`int`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, long p1)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, long p1)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -181,9 +179,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`long`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, Object p1)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -192,9 +190,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`java.lang.Object`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, char p1, char p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, char p1, char p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -204,9 +202,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`char`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, char p1, int p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, char p1, int p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -216,9 +214,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`int`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, char p1, long p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, char p1, long p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -228,9 +226,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`long`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, char p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, char p1, Object p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -240,9 +238,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`java.lang.Object`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, int p1, char p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, int p1, char p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -252,9 +250,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`char`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, int p1, int p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, int p1, int p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -264,9 +262,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`int`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, int p1, long p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, int p1, long p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -276,9 +274,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`long`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, int p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, int p1, Object p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -288,9 +286,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`java.lang.Object`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, long p1, char p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, long p1, char p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -300,9 +298,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`char`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, long p1, int p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, long p1, int p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -312,9 +310,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`int`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, long p1, long p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, long p1, long p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -324,9 +322,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`long`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, long p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, long p1, Object p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -336,9 +334,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`java.lang.Object`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, char p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, Object p1, char p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -348,9 +346,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`char`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, int p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, Object p1, int p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -360,9 +358,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`int`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, long p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, Object p1, long p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -372,9 +370,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`long`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, Object p1, Object p2)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -384,9 +382,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`java.lang.Object`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, Object p1, Object p2, Object p3)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -397,9 +395,9 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p2` (`java.lang.Object`)
 - `p3` (`java.lang.Object`)
 
-### `checkArgument(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3, java.lang.Object p4)`
-
 **Returns:** `void`
+
+### `checkArgument(boolean expression, String errorMessageTemplate, Object p1, Object p2, Object p3, Object p4)`
 
 See #checkArgument(boolean, String, Object...) for details.
 
@@ -410,40 +408,40 @@ See #checkArgument(boolean, String, Object...) for details.
 - `p2` (`java.lang.Object`)
 - `p3` (`java.lang.Object`)
 - `p4` (`java.lang.Object`)
+
+**Returns:** `void`
 
 ### `checkState(boolean expression)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `expression` (`boolean`): a boolean expression
 
-### `checkState(boolean expression, java.lang.Object errorMessage)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, Object errorMessage)`
 
 **Parameters:**
 - `expression` (`boolean`): a boolean expression
 - `errorMessage` (`java.lang.Object`): the exception message to use if the check fails; will be converted to a
-     string using String#valueOf(Object)
-
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] errorMessageArgs)`
+       string using String#valueOf(Object)
 
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, lang@Nullable Object[] errorMessageArgs)`
 
 **Parameters:**
 - `expression` (`boolean`): a boolean expression
 - `errorMessageTemplate` (`java.lang.String`): a template for the exception message should the check fail. The
-     message is formed by replacing each %s placeholder in the template with an
-     argument. These are matched by position - the first %s gets 
-     errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
-     square braces. Unmatched placeholders will be left as-is.
+       message is formed by replacing each %s placeholder in the template with an
+       argument. These are matched by position - the first %s gets 
+       errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
+       square braces. Unmatched placeholders will be left as-is.
 - `errorMessageArgs` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`): the arguments to be substituted into the message template. Arguments
-     are converted to strings using String#valueOf(Object).
-
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, char p1)`
+       are converted to strings using String#valueOf(Object).
 
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, char p1)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -452,9 +450,9 @@ See #checkState(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`char`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, int p1)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, int p1)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -463,9 +461,9 @@ See #checkState(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`int`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, long p1)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, long p1)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -474,9 +472,9 @@ See #checkState(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`long`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, Object p1)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -485,9 +483,9 @@ See #checkState(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`java.lang.Object`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, char p1, char p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, char p1, char p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -497,9 +495,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`char`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, char p1, int p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, char p1, int p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -509,9 +507,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`int`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, char p1, long p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, char p1, long p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -521,9 +519,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`long`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, char p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, char p1, Object p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -533,9 +531,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`java.lang.Object`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, int p1, char p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, int p1, char p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -545,9 +543,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`char`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, int p1, int p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, int p1, int p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -557,9 +555,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`int`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, int p1, long p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, int p1, long p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -569,9 +567,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`long`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, int p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, int p1, Object p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -581,9 +579,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`java.lang.Object`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, long p1, char p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, long p1, char p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -593,9 +591,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`char`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, long p1, int p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, long p1, int p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -605,9 +603,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`int`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, long p1, long p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, long p1, long p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -617,9 +615,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`long`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, long p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, long p1, Object p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -629,9 +627,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`java.lang.Object`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, char p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, Object p1, char p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -641,9 +639,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`char`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, int p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, Object p1, int p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -653,9 +651,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`int`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, long p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, Object p1, long p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -665,9 +663,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`long`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, Object p1, Object p2)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -677,9 +675,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`java.lang.Object`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, Object p1, Object p2, Object p3)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -690,9 +688,9 @@ See #checkState(boolean, String, Object...) for details.
 - `p2` (`java.lang.Object`)
 - `p3` (`java.lang.Object`)
 
-### `checkState(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3, java.lang.Object p4)`
-
 **Returns:** `void`
+
+### `checkState(boolean expression, String errorMessageTemplate, Object p1, Object p2, Object p3, Object p4)`
 
 See #checkState(boolean, String, Object...) for details.
 
@@ -703,40 +701,40 @@ See #checkState(boolean, String, Object...) for details.
 - `p2` (`java.lang.Object`)
 - `p3` (`java.lang.Object`)
 - `p4` (`java.lang.Object`)
+
+**Returns:** `void`
 
 ### `checkNotNull(T reference)`
 
-**Returns:** `T`
-
 **Parameters:**
 - `reference` (`T`): an object reference
 
-### `checkNotNull(T reference, java.lang.Object errorMessage)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, Object errorMessage)`
 
 **Parameters:**
 - `reference` (`T`): an object reference
 - `errorMessage` (`java.lang.Object`): the exception message to use if the check fails; will be converted to a
-     string using String#valueOf(Object)
-
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] errorMessageArgs)`
+       string using String#valueOf(Object)
 
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, lang@Nullable Object[] errorMessageArgs)`
 
 **Parameters:**
 - `reference` (`T`): an object reference
 - `errorMessageTemplate` (`java.lang.String`): a template for the exception message should the check fail. The
-     message is formed by replacing each %s placeholder in the template with an
-     argument. These are matched by position - the first %s gets 
-     errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
-     square braces. Unmatched placeholders will be left as-is.
+       message is formed by replacing each %s placeholder in the template with an
+       argument. These are matched by position - the first %s gets 
+       errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
+       square braces. Unmatched placeholders will be left as-is.
 - `errorMessageArgs` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`): the arguments to be substituted into the message template. Arguments
-     are converted to strings using String#valueOf(Object).
-
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, char p1)`
+       are converted to strings using String#valueOf(Object).
 
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, char p1)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -745,9 +743,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`char`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, int p1)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, int p1)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -756,9 +754,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`int`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, long p1)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, long p1)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -767,9 +765,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`long`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.Object p1)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, Object p1)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -778,9 +776,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`java.lang.Object`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, char p1, char p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, char p1, char p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -790,9 +788,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`char`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, char p1, int p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, char p1, int p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -802,9 +800,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`int`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, char p1, long p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, char p1, long p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -814,9 +812,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`long`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, char p1, java.lang.Object p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, char p1, Object p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -826,9 +824,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`java.lang.Object`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, int p1, char p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, int p1, char p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -838,9 +836,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`char`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, int p1, int p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, int p1, int p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -850,9 +848,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`int`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, int p1, long p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, int p1, long p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -862,9 +860,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`long`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, int p1, java.lang.Object p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, int p1, Object p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -874,9 +872,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`java.lang.Object`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, long p1, char p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, long p1, char p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -886,9 +884,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`char`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, long p1, int p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, long p1, int p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -898,9 +896,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`int`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, long p1, long p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, long p1, long p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -910,9 +908,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`long`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, long p1, java.lang.Object p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, long p1, Object p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -922,9 +920,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`java.lang.Object`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.Object p1, char p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, Object p1, char p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -934,9 +932,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`char`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.Object p1, int p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, Object p1, int p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -946,9 +944,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`int`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.Object p1, long p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, Object p1, long p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -958,9 +956,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`long`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, Object p1, Object p2)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -970,9 +968,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`java.lang.Object`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, Object p1, Object p2, Object p3)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -983,9 +981,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p2` (`java.lang.Object`)
 - `p3` (`java.lang.Object`)
 
-### `checkNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3, java.lang.Object p4)`
-
 **Returns:** `T`
+
+### `checkNotNull(T reference, String errorMessageTemplate, Object p1, Object p2, Object p3, Object p4)`
 
 See #checkNotNull(Object, String, Object...) for details.
 
@@ -997,9 +995,9 @@ See #checkNotNull(Object, String, Object...) for details.
 - `p3` (`java.lang.Object`)
 - `p4` (`java.lang.Object`)
 
-### `checkElementIndex(int index, int size)`
+**Returns:** `T`
 
-**Returns:** `int`
+### `checkElementIndex(int index, int size)`
 
 An element index may range from zero, inclusive, to size, exclusive.
 
@@ -1007,9 +1005,9 @@ An element index may range from zero, inclusive, to size, exclusive.
 - `index` (`int`): a user-supplied index identifying an element of an array, list or string
 - `size` (`int`): the size of that array, list or string
 
-### `checkElementIndex(int index, int size, java.lang.String desc)`
-
 **Returns:** `int`
+
+### `checkElementIndex(int index, int size, String desc)`
 
 An element index may range from zero, inclusive, to size, exclusive.
 
@@ -1018,28 +1016,28 @@ An element index may range from zero, inclusive, to size, exclusive.
 - `size` (`int`): the size of that array, list or string
 - `desc` (`java.lang.String`): the text to use to describe this index in an error message
 
-### `badElementIndex(int index, int size, java.lang.String desc)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `badElementIndex(int index, int size, String desc)`
 
 **Parameters:**
 - `index` (`int`)
 - `size` (`int`)
 - `desc` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `checkPositionIndex(int index, int size)`
 
-**Returns:** `int`
-
 A position index may range from zero to size, inclusive.
 
 **Parameters:**
 - `index` (`int`): a user-supplied index identifying a position in an array, list or string
 - `size` (`int`): the size of that array, list or string
 
-### `checkPositionIndex(int index, int size, java.lang.String desc)`
-
 **Returns:** `int`
+
+### `checkPositionIndex(int index, int size, String desc)`
 
 A position index may range from zero to size, inclusive.
 
@@ -1048,18 +1046,18 @@ A position index may range from zero to size, inclusive.
 - `size` (`int`): the size of that array, list or string
 - `desc` (`java.lang.String`): the text to use to describe this index in an error message
 
-### `badPositionIndex(int index, int size, java.lang.String desc)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `badPositionIndex(int index, int size, String desc)`
 
 **Parameters:**
 - `index` (`int`)
 - `size` (`int`)
 - `desc` (`java.lang.String`)
 
-### `checkPositionIndexes(int start, int end, int size)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `checkPositionIndexes(int start, int end, int size)`
 
 A position index may range from zero to 
  size, inclusive.
@@ -1069,12 +1067,14 @@ A position index may range from zero to
 - `end` (`int`): a user-supplied index identifying an ending position in an array, list or string
 - `size` (`int`): the size of that array, list or string
 
-### `badPositionIndexes(int start, int end, int size)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `badPositionIndexes(int start, int end, int size)`
 
 **Parameters:**
 - `start` (`int`)
 - `end` (`int`)
 - `size` (`int`)
+
+**Returns:** `java.lang.String`
 

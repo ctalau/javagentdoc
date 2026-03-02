@@ -22,7 +22,7 @@ Unlike a normal phantom reference, this reference will be cleared automatically.
 
 ## Constructors
 
-### `<init>(T referent, com.google.common.base.FinalizableReferenceQueue queue)`
+### `<init>(T referent, FinalizableReferenceQueue queue)`
 
 **Parameters:**
 - `referent` (`T`): to phantom reference

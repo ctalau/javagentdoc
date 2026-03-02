@@ -10,7 +10,7 @@
 
 ### `<init>()`
 
-### `<init>(javax.swing.tree.TreeModel arg0)`
+### `<init>(TreeModel arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.tree.TreeModel`)

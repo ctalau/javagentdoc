@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorDocumentController ditaMapDocumentController)`
+### `customizePopUpMenu(Object popUp, AuthorDocumentController ditaMapDocumentController)`
 
 If everything is removed then the menu will not be shown.
 

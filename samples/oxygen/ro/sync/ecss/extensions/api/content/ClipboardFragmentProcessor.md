@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `process(ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation fragmentInformation)`
+### `process(ClipboardFragmentInformation fragmentInformation)`
 
 **Parameters:**
 - `fragmentInformation` ([`ro.sync.ecss.extensions.api.content.ClipboardFragmentInformation`](./ClipboardFragmentInformation.md)): Information about a fragment in the clipboard.

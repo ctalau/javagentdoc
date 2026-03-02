@@ -13,7 +13,7 @@ It should be implemented when the author extension being developed offers
 
 ## Methods
 
-### `getCellWidth(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int colNumberStart, int colSpan)`
+### `getCellWidth(AuthorElement cellElement, int colNumberStart, int colSpan)`
 
 For example for a CALS table cell the list with the width representations is obtained by 
  computing the column span and then determining the WidthRepresentation
@@ -26,7 +26,7 @@ For example for a CALS table cell the list with the width representations is obt
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
 
-### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `init(AuthorElement tableElement)`
 
 Its intended
  to extract information from the element representing the table only once, not on every 
@@ -45,7 +45,7 @@ Its intended
 
 **Returns:** `void`
 
-### `commitColumnWidthModifications(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, ro.sync.ecss.extensions.api.WidthRepresentation[] colWidths, java.lang.String tableCellsTagName)`
+### `commitColumnWidthModifications(AuthorDocumentController authorDocumentController, WidthRepresentation[] colWidths, String tableCellsTagName)`
 
 For example, for the DocBook CALS tables the method updates the columns 
  width specifications in the source document by setting the `colwidth` 
@@ -61,7 +61,7 @@ For example, for the DocBook CALS tables the method updates the columns
 
 **Returns:** `void`
 
-### `commitTableWidthModification(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, int newTableWidth, java.lang.String tableCellsTagName)`
+### `commitTableWidthModification(AuthorDocumentController authorDocumentController, int newTableWidth, String tableCellsTagName)`
 
 For example in the case of DocBook HTML tables sets the 
  `width` attribute value of the `table` element.
@@ -74,7 +74,7 @@ For example in the case of DocBook HTML tables sets the
 
 **Returns:** `void`
 
-### `isTableAcceptingWidth(java.lang.String tableCellsTagName)`
+### `isTableAcceptingWidth(String tableCellsTagName)`
 
 For example, for the DocBook CALS tables which do not accept 
  an `width` attribute the method will return `false`.
@@ -84,7 +84,7 @@ For example, for the DocBook CALS tables which do not accept
 
 **Returns:** `boolean`
 
-### `getTableWidth(java.lang.String tableCellsTagName)`
+### `getTableWidth(String tableCellsTagName)`
 
 For the DocBook HTML tables it returns the WidthRepresentation obtained by analyzing the
  `width` attribute value of the `table` element.
@@ -94,7 +94,7 @@ For the DocBook HTML tables it returns the WidthRepresentation obtained by analy
 
 **Returns:** [`ro.sync.ecss.extensions.api.WidthRepresentation`](./WidthRepresentation.md)
 
-### `isTableAndColumnsResizable(java.lang.String tableCellsTagName)`
+### `isTableAndColumnsResizable(String tableCellsTagName)`
 
 For example in the case of the DocBook CALS tables will return `true`
  only if the given table cells tag name is equal to `'entry'`.
@@ -104,7 +104,7 @@ For example in the case of the DocBook CALS tables will return `true`
 
 **Returns:** `boolean`
 
-### `isAcceptingFixedColumnWidths(java.lang.String tableCellsTagName)`
+### `isAcceptingFixedColumnWidths(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type
@@ -112,7 +112,7 @@ For example in the case of the DocBook CALS tables will return `true`
 
 **Returns:** `boolean`
 
-### `isAcceptingProportionalColumnWidths(java.lang.String tableCellsTagName)`
+### `isAcceptingProportionalColumnWidths(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type
@@ -120,7 +120,7 @@ For example in the case of the DocBook CALS tables will return `true`
 
 **Returns:** `boolean`
 
-### `isAcceptingPercentageColumnWidths(java.lang.String tableCellsTagName)`
+### `isAcceptingPercentageColumnWidths(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`): The cells tag name. Used to identify the table type

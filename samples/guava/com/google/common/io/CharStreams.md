@@ -26,9 +26,7 @@ Some of the methods in this class take arguments with a generic type of Readable
 
 **Returns:** `java.nio.CharBuffer`
 
-### `copy(java.lang.Readable from, java.lang.Appendable to)`
-
-**Returns:** `long`
+### `copy(Readable from, Appendable to)`
 
 Does not
  close or flush either object.
@@ -37,9 +35,9 @@ Does not
 - `from` (`java.lang.Readable`): the object to read from
 - `to` (`java.lang.Appendable`): the object to write to
 
-### `copyReaderToBuilder(java.io.Reader from, java.lang.StringBuilder to)`
-
 **Returns:** `long`
+
+### `copyReaderToBuilder(Reader from, StringBuilder to)`
 
 Does not
  close or flush the reader.
@@ -54,9 +52,9 @@ This is identical to #copy(Readable, Appendable) but optimized for these specifi
 - `from` (`java.io.Reader`): the object to read from
 - `to` (`java.lang.StringBuilder`): the object to write to
 
-### `copyReaderToWriter(java.io.Reader from, java.io.Writer to)`
-
 **Returns:** `long`
+
+### `copyReaderToWriter(Reader from, Writer to)`
 
 Does not close or
  flush the reader or writer.
@@ -71,9 +69,9 @@ This is identical to #copy(Readable, Appendable) but optimized for these specifi
 - `from` (`java.io.Reader`): the object to read from
 - `to` (`java.io.Writer`): the object to write to
 
-### `toString(java.lang.Readable r)`
+**Returns:** `long`
 
-**Returns:** `java.lang.String`
+### `toString(Readable r)`
 
 Does not close the
  Readable.
@@ -81,18 +79,18 @@ Does not close the
 **Parameters:**
 - `r` (`java.lang.Readable`): the object to read from
 
-### `toStringBuilder(java.lang.Readable r)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.StringBuilder`
+### `toStringBuilder(Readable r)`
 
 Does not close the Readable.
 
 **Parameters:**
 - `r` (`java.lang.Readable`): the object to read from
 
-### `readLines(java.lang.Readable r)`
+**Returns:** `java.lang.StringBuilder`
 
-**Returns:** `java.util.List<java.lang.String>`
+### `readLines(Readable r)`
 
 The lines do not include
  line-termination characters, but do include other leading and trailing whitespace.
@@ -103,9 +101,9 @@ Does not close the Readable. If reading files or resources you should use the Fi
 **Parameters:**
 - `r` (`java.lang.Readable`): the object to read from
 
-### `readLines(java.lang.Readable readable, com.google.common.io.LineProcessor<T> processor)`
+**Returns:** `java.util.List<java.lang.String>`
 
-**Returns:** `T`
+### `readLines(Readable readable, LineProcessor<T> processor)`
 
 Does not close
  readable. Note that this method may not fully consume the contents of readable
@@ -115,18 +113,18 @@ Does not close
 - `readable` (`java.lang.Readable`)
 - `processor` ([`com.google.common.io.LineProcessor<T>`](./LineProcessor.md))
 
-### `exhaust(java.lang.Readable readable)`
+**Returns:** `T`
 
-**Returns:** `long`
+### `exhaust(Readable readable)`
 
 Returns the total number of chars read. Does not close the stream.
 
 **Parameters:**
 - `readable` (`java.lang.Readable`)
 
-### `skipFully(java.io.Reader reader, long n)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `skipFully(Reader reader, long n)`
 
 This method will block until the full
  amount has been skipped. Does not close the reader.
@@ -135,13 +133,13 @@ This method will block until the full
 - `reader` (`java.io.Reader`): the reader to read from
 - `n` (`long`): the number of characters to skip
 
+**Returns:** `void`
+
 ### `nullWriter()`
 
 **Returns:** `java.io.Writer`
 
-### `asWriter(java.lang.Appendable target)`
-
-**Returns:** `java.io.Writer`
+### `asWriter(Appendable target)`
 
 Closing the
  writer will close the target if it is Closeable, and flushing the writer will flush the
@@ -149,4 +147,6 @@ Closing the
 
 **Parameters:**
 - `target` (`java.lang.Appendable`): the object to which output will be sent
+
+**Returns:** `java.io.Writer`
 

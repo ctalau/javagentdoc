@@ -20,7 +20,7 @@ Its value would be used to impose a phase with that name in any Schematron file 
 
 **Returns:** `java.util.concurrent.Callable<java.util.List<ro.sync.document.DocumentPositionedInfo>>`
 
-### `getDPILocations(java.util.List<ro.sync.document.DocumentPositionedInfo> dpInfo)`
+### `getDPILocations(List<DocumentPositionedInfo> dpInfo)`
 
 **Parameters:**
 - `dpInfo` (`java.util.List<ro.sync.document.DocumentPositionedInfo>`): The list of document position info.
@@ -31,14 +31,14 @@ Its value would be used to impose a phase with that name in any Schematron file 
 
 **Returns:** `java.util.List<ro.sync.exml.editor.scenario.BaseScenario>`
 
-### `getSchematronPhases(java.lang.String systemId)`
+### `getSchematronPhases(String systemId)`
 
 **Parameters:**
 - `systemId` (`java.lang.String`): The system ID of the Schematron file.
 
 **Returns:** `java.util.List<java.lang.String>`
 
-### `setSchematronPhaseChooser(ro.sync.ecss.extensions.api.webapp.WebappSchematronPhaseChooser phaseChooser)`
+### `setSchematronPhaseChooser(WebappSchematronPhaseChooser phaseChooser)`
 
 **Parameters:**
 - `phaseChooser` ([`ro.sync.ecss.extensions.api.webapp.WebappSchematronPhaseChooser`](./WebappSchematronPhaseChooser.md)): The phase chooser.

@@ -33,22 +33,22 @@ SettableFuture is the recommended ListenableFuture implementation when your
 
 ### `set(V value)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `value` (`V`)
 
-### `setException(java.lang.Throwable throwable)`
-
 **Returns:** `boolean`
+
+### `setException(Throwable throwable)`
 
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
-### `setFuture(com.google.common.util.concurrent.ListenableFuture<? extends V> future)`
-
 **Returns:** `boolean`
+
+### `setFuture(ListenableFuture<? extends V> future)`
 
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md))
+
+**Returns:** `boolean`
 

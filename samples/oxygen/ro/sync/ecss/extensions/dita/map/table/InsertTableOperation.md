@@ -24,7 +24,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -32,7 +32,7 @@
 
 **Returns:** `void`
 
-### `addRelTableBody(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, boolean cellsFragments, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String namespace, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `addRelTableBody(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorDocumentFragment[] fragments, boolean cellsFragments, AuthorAccess authorAccess, String namespace, AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer to append content.
@@ -45,7 +45,7 @@
 
 **Returns:** `void`
 
-### `addRelTableHeader(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo)`
+### `addRelTableHeader(StringBuilder tableXMLFragment, TableInfo tableInfo)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer representing the table XML fragment.
@@ -64,7 +64,7 @@ The operation will display a dialog for choosing the table attributes.
 
 **Returns:** `java.lang.String`
 
-### `insertTable(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, boolean cellsFragments, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String namespace, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo)`
+### `insertTable(AuthorDocumentFragment[] fragments, boolean cellsFragments, AuthorAccess authorAccess, String namespace, AuthorTableHelper tableHelper, TableInfo tableInfo)`
 
 **Parameters:**
 - `fragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../../../api/node/AuthorDocumentFragment.md))

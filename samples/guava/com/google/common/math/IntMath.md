@@ -59,17 +59,15 @@ Similar functionality for long and for BigInteger can be found in LongMath and B
 
 ### `ceilingPowerOfTwo(int x)`
 
-**Returns:** `int`
-
 This is equivalent to
  checkedPow(2, log2(x, CEILING)).
 
 **Parameters:**
 - `x` (`int`)
 
-### `floorPowerOfTwo(int x)`
-
 **Returns:** `int`
+
+### `floorPowerOfTwo(int x)`
 
 This is equivalent to 
  checkedPow(2, log2(x, FLOOR)).
@@ -77,9 +75,9 @@ This is equivalent to
 **Parameters:**
 - `x` (`int`)
 
-### `isPowerOfTwo(int x)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `isPowerOfTwo(int x)`
 
 This differs from Integer.bitCount(x) == 1, because 
  Integer.bitCount(Integer.MIN_VALUE) == 1, but Integer#MIN_VALUE is not a power of two.
@@ -87,9 +85,9 @@ This differs from Integer.bitCount(x) == 1, because
 **Parameters:**
 - `x` (`int`)
 
-### `lessThanBranchFree(int x, int y)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `lessThanBranchFree(int x, int y)`
 
 Assumes that x - y fits into
  a signed int. The implementation is branch-free, and benchmarks suggest it is measurably (if
@@ -99,32 +97,32 @@ Assumes that x - y fits into
 - `x` (`int`)
 - `y` (`int`)
 
-### `log2(int x, java.math.RoundingMode mode)`
-
 **Returns:** `int`
+
+### `log2(int x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`int`)
 - `mode` (`java.math.RoundingMode`)
 
-### `log10(int x, java.math.RoundingMode mode)`
-
 **Returns:** `int`
+
+### `log10(int x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`int`)
 - `mode` (`java.math.RoundingMode`)
+
+**Returns:** `int`
 
 ### `log10Floor(int x)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `x` (`int`)
 
-### `pow(int b, int k)`
-
 **Returns:** `int`
+
+### `pow(int b, int k)`
 
 Even if the result overflows, it will be equal to
  BigInteger.valueOf(b).pow(k).intValue(). This implementation runs in O(log k)
@@ -137,33 +135,33 @@ Compare #checkedPow, which throws an ArithmeticException upon overflow.
 - `b` (`int`)
 - `k` (`int`)
 
-### `sqrt(int x, java.math.RoundingMode mode)`
-
 **Returns:** `int`
+
+### `sqrt(int x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`int`)
 - `mode` (`java.math.RoundingMode`)
 
-### `sqrtFloor(int x)`
-
 **Returns:** `int`
+
+### `sqrtFloor(int x)`
 
 **Parameters:**
 - `x` (`int`)
 
-### `divide(int p, int q, java.math.RoundingMode mode)`
-
 **Returns:** `int`
+
+### `divide(int p, int q, RoundingMode mode)`
 
 **Parameters:**
 - `p` (`int`)
 - `q` (`int`)
 - `mode` (`java.math.RoundingMode`)
 
-### `mod(int x, int m)`
-
 **Returns:** `int`
+
+### `mod(int x, int m)`
 
 This differs from x %
  m, which might be negative.
@@ -187,9 +185,9 @@ For example:
 - `x` (`int`)
 - `m` (`int`)
 
-### `gcd(int a, int b)`
-
 **Returns:** `int`
+
+### `gcd(int a, int b)`
 
 Returns 0 if a == 0 && b ==
  0.
@@ -198,33 +196,33 @@ Returns 0 if a == 0 && b ==
 - `a` (`int`)
 - `b` (`int`)
 
-### `checkedAdd(int a, int b)`
-
 **Returns:** `int`
+
+### `checkedAdd(int a, int b)`
 
 **Parameters:**
 - `a` (`int`)
 - `b` (`int`)
+
+**Returns:** `int`
 
 ### `checkedSubtract(int a, int b)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `a` (`int`)
 - `b` (`int`)
+
+**Returns:** `int`
 
 ### `checkedMultiply(int a, int b)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `a` (`int`)
 - `b` (`int`)
 
-### `checkedPow(int b, int k)`
-
 **Returns:** `int`
+
+### `checkedPow(int b, int k)`
 
 #pow may be faster, but does not check for overflow.
 
@@ -232,56 +230,56 @@ Returns 0 if a == 0 && b ==
 - `b` (`int`)
 - `k` (`int`)
 
-### `saturatedAdd(int a, int b)`
-
 **Returns:** `int`
+
+### `saturatedAdd(int a, int b)`
 
 **Parameters:**
 - `a` (`int`)
 - `b` (`int`)
+
+**Returns:** `int`
 
 ### `saturatedSubtract(int a, int b)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `a` (`int`)
 - `b` (`int`)
+
+**Returns:** `int`
 
 ### `saturatedMultiply(int a, int b)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `a` (`int`)
 - `b` (`int`)
 
-### `saturatedPow(int b, int k)`
-
 **Returns:** `int`
+
+### `saturatedPow(int b, int k)`
 
 **Parameters:**
 - `b` (`int`)
 - `k` (`int`)
 
-### `factorial(int n)`
-
 **Returns:** `int`
+
+### `factorial(int n)`
 
 **Parameters:**
 - `n` (`int`)
 
-### `binomial(int n, int k)`
-
 **Returns:** `int`
+
+### `binomial(int n, int k)`
 
 **Parameters:**
 - `n` (`int`)
 - `k` (`int`)
 
-### `mean(int x, int y)`
-
 **Returns:** `int`
+
+### `mean(int x, int y)`
 
 This
  method is overflow resilient.
@@ -290,9 +288,9 @@ This
 - `x` (`int`)
 - `y` (`int`)
 
-### `isPrime(int n)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `isPrime(int n)`
 
 Returns false if n is zero, one, or a composite number (one which *can* be
  factored into smaller positive integers).
@@ -302,4 +300,6 @@ To test larger numbers, use LongMath#isPrime or BigInteger#isProbablePrime.
 
 **Parameters:**
 - `n` (`int`)
+
+**Returns:** `boolean`
 

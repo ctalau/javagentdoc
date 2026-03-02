@@ -12,7 +12,7 @@ Since 19.0 an AuthorActionEventHandlerBase extended API base has been added whic
 
 ## Methods
 
-### `handleEvent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType eventType)`
+### `handleEvent(AuthorAccess authorAccess, AuthorActionEventHandler.AuthorActionEventType eventType)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Author access.
@@ -20,7 +20,7 @@ Since 19.0 an AuthorActionEventHandlerBase extended API base has been added whic
 
 **Returns:** `boolean`
 
-### `canHandleEvent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType eventType)`
+### `canHandleEvent(AuthorAccess authorAccess, AuthorActionEventHandler.AuthorActionEventType eventType)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access to the Author API.
@@ -28,7 +28,7 @@ Since 19.0 an AuthorActionEventHandlerBase extended API base has been added whic
 
 **Returns:** `boolean`
 
-### `canHandleEvent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorActionEventDetails eventDetails)`
+### `canHandleEvent(AuthorAccess authorAccess, AuthorActionEventDetails eventDetails)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access to the Author API.
@@ -36,7 +36,7 @@ Since 19.0 an AuthorActionEventHandlerBase extended API base has been added whic
 
 **Returns:** `boolean`
 
-### `getListItemAncestorToSplit(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess access)`
+### `getListItemAncestorToSplit(AuthorNode node, AuthorAccess access)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node.

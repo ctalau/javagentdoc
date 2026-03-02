@@ -22,7 +22,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String displayString, java.lang.String iconPath, boolean isQuickFix)`
+### `<init>(String displayString, String iconPath, boolean isQuickFix)`
 
 **Parameters:**
 - `displayString` (`java.lang.String`): The display String for the group.
@@ -32,7 +32,7 @@
 
 ## Methods
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

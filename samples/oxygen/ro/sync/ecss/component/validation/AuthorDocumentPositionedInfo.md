@@ -26,13 +26,13 @@ Can be null
 
 ## Constructors
 
-### `<init>(ro.sync.document.DocumentPositionedInfo dpi, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `<init>(DocumentPositionedInfo dpi, AuthorNode node)`
 
 **Parameters:**
 - `dpi` ([`ro.sync.document.DocumentPositionedInfo`](../../../document/DocumentPositionedInfo.md)): The document positioned info to copy.
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md)): The author node. The node base URL will be used as a system ID location.
 
-### `<init>(int severity, java.lang.String message, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `<init>(int severity, String message, AuthorNode node)`
 
 **Parameters:**
 - `severity` (`int`): Severity. One of the severity constants from class DocumentPositionedInfo: 
@@ -40,7 +40,7 @@ Can be null
 - `message` (`java.lang.String`): Error message.
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md)): The author node. The node base URL will be used as a system ID location.
 
-### `<init>(int severity, java.lang.String message, java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `<init>(int severity, String message, String systemID, AuthorNode node)`
 
 **Parameters:**
 - `severity` (`int`): Severity. One of the severity constants from class DocumentPositionedInfo: 
@@ -49,7 +49,7 @@ Can be null
 - `systemID` (`java.lang.String`): System ID
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../extensions/api/node/AuthorNode.md)): The author node.
 
-### `<init>(int severity, java.lang.String message, java.lang.String systemID, int startOffset, int length)`
+### `<init>(int severity, String message, String systemID, int startOffset, int length)`
 
 **Parameters:**
 - `severity` (`int`): Severity. One of the severity constants from class DocumentPositionedInfo: 
@@ -61,7 +61,7 @@ Can be null
 
 ## Methods
 
-### `getSystemID(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getSystemID(String systemID, AuthorNode node)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): The proposed system ID, can be `null`

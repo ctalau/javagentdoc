@@ -24,7 +24,7 @@
 
 ## Constructors
 
-### `<init>(javax.swing.JPanel arg0, java.awt.GridBagConstraints arg1, ro.sync.ecss.extensions.commons.table.properties.TableProperty arg2, ro.sync.ecss.extensions.api.AuthorResourceBundle arg3, ro.sync.ecss.extensions.commons.table.properties.PropertySelectionController arg4, int arg5, boolean arg6)`
+### `<init>(JPanel arg0, GridBagConstraints arg1, TableProperty arg2, AuthorResourceBundle arg3, PropertySelectionController arg4, int arg5, boolean arg6)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JPanel`)

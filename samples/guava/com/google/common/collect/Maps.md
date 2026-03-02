@@ -26,23 +26,21 @@ See the Guava User Guide article on [Maps](https://github.com/google/guava/wiki/
 
 **Returns:** [`com.google.common.base.Function<java.util.Map.Entry<?,V>,V>`](../base/Function.md)
 
-### `keyIterator(java.util.Iterator<java.util.Map.Entry<K,V>> entryIterator)`
+### `keyIterator(Iterator<Map.Entry<K,V>> entryIterator)`
+
+**Parameters:**
+- `entryIterator` (`java.util.Iterator<java.util.Map.Entry<K,V>>`)
 
 **Returns:** `java.util.Iterator<K>`
 
+### `valueIterator(Iterator<Map.Entry<K,V>> entryIterator)`
+
 **Parameters:**
 - `entryIterator` (`java.util.Iterator<java.util.Map.Entry<K,V>>`)
-
-### `valueIterator(java.util.Iterator<java.util.Map.Entry<K,V>> entryIterator)`
 
 **Returns:** `java.util.Iterator<V>`
 
-**Parameters:**
-- `entryIterator` (`java.util.Iterator<java.util.Map.Entry<K,V>>`)
-
-### `immutableEnumMap(java.util.Map<K,? extends V> map)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+### `immutableEnumMap(Map<K,? extends V> map)`
 
 Internally, the returned map
  will be backed by an EnumMap.
@@ -54,9 +52,9 @@ The iteration order of the returned map follows the enum's iteration order, not 
 **Parameters:**
 - `map` (`java.util.Map<K,? extends V>`): the map to make an immutable copy of
 
-### `toImmutableEnumMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+### `toImmutableEnumMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction)`
 
 The
  resulting implementation is specialized for enum key types. The returned map and its views will
@@ -72,9 +70,9 @@ If the mapped keys contain duplicates, an IllegalArgumentException is thrown whe
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `toImmutableEnumMap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.BinaryOperator<V> mergeFunction)`
-
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
+
+### `toImmutableEnumMap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction, BinaryOperator<V> mergeFunction)`
 
 The
  resulting implementation is specialized for enum key types. The returned map and its views will
@@ -89,9 +87,9 @@ If the mapped keys contain duplicates, the values are merged using the specified
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `mergeFunction` (`java.util.function.BinaryOperator<V>`)
 
-### `newHashMap()`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>`
 
-**Returns:** `java.util.HashMap<K,V>`
+### `newHashMap()`
 
 **Note:** if mutability is not required, use ImmutableMap#of() instead.
 
@@ -102,9 +100,9 @@ If the mapped keys contain duplicates, the values are merged using the specified
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the HashMap constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newHashMap(java.util.Map<? extends K,? extends V> map)`
-
 **Returns:** `java.util.HashMap<K,V>`
+
+### `newHashMap(Map<? extends K,? extends V> map)`
 
 **Note:** if mutability is not required, use ImmutableMap#copyOf(Map) instead.
 
@@ -118,9 +116,9 @@ If the mapped keys contain duplicates, the values are merged using the specified
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`): the mappings to be placed in the new map
 
-### `newHashMapWithExpectedSize(int expectedSize)`
-
 **Returns:** `java.util.HashMap<K,V>`
+
+### `newHashMapWithExpectedSize(int expectedSize)`
 
 This behavior cannot be broadly guaranteed,
  but it is observed to be true for OpenJDK 1.7. It also can't be guaranteed that the method
@@ -129,16 +127,16 @@ This behavior cannot be broadly guaranteed,
 **Parameters:**
 - `expectedSize` (`int`): the number of entries you expect to add to the returned map
 
-### `capacity(int expectedSize)`
+**Returns:** `java.util.HashMap<K,V>`
 
-**Returns:** `int`
+### `capacity(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `newLinkedHashMap()`
+**Returns:** `int`
 
-**Returns:** `java.util.LinkedHashMap<K,V>`
+### `newLinkedHashMap()`
 
 **Note:** if mutability is not required, use ImmutableMap#of() instead.
 
@@ -146,9 +144,9 @@ This behavior cannot be broadly guaranteed,
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the LinkedHashMap constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newLinkedHashMap(java.util.Map<? extends K,? extends V> map)`
-
 **Returns:** `java.util.LinkedHashMap<K,V>`
+
+### `newLinkedHashMap(Map<? extends K,? extends V> map)`
 
 **Note:** if mutability is not required, use ImmutableMap#copyOf(Map) instead.
 
@@ -159,9 +157,9 @@ This behavior cannot be broadly guaranteed,
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`): the mappings to be placed in the new map
 
-### `newLinkedHashMapWithExpectedSize(int expectedSize)`
-
 **Returns:** `java.util.LinkedHashMap<K,V>`
+
+### `newLinkedHashMapWithExpectedSize(int expectedSize)`
 
 This behavior cannot be
  broadly guaranteed, but it is observed to be true for OpenJDK 1.7. It also can't be guaranteed
@@ -170,13 +168,13 @@ This behavior cannot be
 **Parameters:**
 - `expectedSize` (`int`): the number of entries you expect to add to the returned map
 
+**Returns:** `java.util.LinkedHashMap<K,V>`
+
 ### `newConcurrentMap()`
 
 **Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
 ### `newTreeMap()`
-
-**Returns:** `java.util.TreeMap<K,V>`
 
 **Note:** if mutability is not required, use ImmutableSortedMap#of() instead.
 
@@ -184,9 +182,9 @@ This behavior cannot be
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the TreeMap constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newTreeMap(java.util.SortedMap<K,? extends V> map)`
-
 **Returns:** `java.util.TreeMap<K,V>`
+
+### `newTreeMap(SortedMap<K,? extends V> map)`
 
 **Note:** if mutability is not required, use ImmutableSortedMap#copyOfSorted(SortedMap) instead.
 
@@ -196,11 +194,11 @@ This behavior cannot be
 
 **Parameters:**
 - `map` (`java.util.SortedMap<K,? extends V>`): the sorted map whose mappings are to be placed in the new map and whose comparator
-     is to be used to sort the new map
-
-### `newTreeMap(java.util.Comparator<C> comparator)`
+       is to be used to sort the new map
 
 **Returns:** `java.util.TreeMap<K,V>`
+
+### `newTreeMap(Comparator<C> comparator)`
 
 **Note:** if mutability is not required, use 
  ImmutableSortedMap.orderedBy(comparator).build() instead.
@@ -212,16 +210,16 @@ This behavior cannot be
 **Parameters:**
 - `comparator` (`java.util.Comparator<C>`): the comparator to sort the keys with
 
-### `newEnumMap(java.lang.Class<K> type)`
+**Returns:** `java.util.TreeMap<K,V>`
 
-**Returns:** `java.util.EnumMap<K,V>`
+### `newEnumMap(Class<K> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<K>`): the key type for this map
 
-### `newEnumMap(java.util.Map<K,? extends V> map)`
-
 **Returns:** `java.util.EnumMap<K,V>`
+
+### `newEnumMap(Map<K,? extends V> map)`
 
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the EnumMap constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
@@ -229,16 +227,16 @@ This behavior cannot be
 **Parameters:**
 - `map` (`java.util.Map<K,? extends V>`): the map from which to initialize this EnumMap
 
-### `newIdentityHashMap()`
+**Returns:** `java.util.EnumMap<K,V>`
 
-**Returns:** `java.util.IdentityHashMap<K,V>`
+### `newIdentityHashMap()`
 
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the IdentityHashMap constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `difference(java.util.Map<? extends K,? extends V> left, java.util.Map<? extends K,? extends V> right)`
+**Returns:** `java.util.IdentityHashMap<K,V>`
 
-**Returns:** [`com.google.common.collect.MapDifference<K,V>`](./MapDifference.md)
+### `difference(Map<? extends K,? extends V> left, Map<? extends K,? extends V> right)`
 
 This difference is an immutable snapshot of the state
  of the maps at the time this method is called. It will never change, even if the maps change at
@@ -256,9 +254,9 @@ Since this method uses HashMap instances internally, the keys of the supplied ma
 - `left` (`java.util.Map<? extends K,? extends V>`): the map to treat as the "left" map for purposes of comparison
 - `right` (`java.util.Map<? extends K,? extends V>`): the map to treat as the "right" map for purposes of comparison
 
-### `difference(java.util.Map<? extends K,? extends V> left, java.util.Map<? extends K,? extends V> right, com.google.common.base.Equivalence<? super @org.checkerframework.checker.nullness.qual.NonNull V> valueEquivalence)`
-
 **Returns:** [`com.google.common.collect.MapDifference<K,V>`](./MapDifference.md)
+
+### `difference(Map<? extends K,? extends V> left, Map<? extends K,? extends V> right, Equivalence<? super @NonNull V> valueEquivalence)`
 
 This difference is an immutable snapshot of the state
  of the maps at the time this method is called. It will never change, even if the maps change at
@@ -273,9 +271,9 @@ Since this method uses HashMap instances internally, the keys of the supplied ma
 - `right` (`java.util.Map<? extends K,? extends V>`): the map to treat as the "right" map for purposes of comparison
 - `valueEquivalence` ([`com.google.common.base.Equivalence<? super @org.checkerframework.checker.nullness.qual.NonNull V>`](../base/Equivalence.md)): the equivalence relationship to use to compare values
 
-### `difference(java.util.SortedMap<K,? extends V> left, java.util.Map<? extends K,? extends V> right)`
+**Returns:** [`com.google.common.collect.MapDifference<K,V>`](./MapDifference.md)
 
-**Returns:** [`com.google.common.collect.SortedMapDifference<K,V>`](./SortedMapDifference.md)
+### `difference(SortedMap<K,? extends V> left, Map<? extends K,? extends V> right)`
 
 This
  difference is an immutable snapshot of the state of the maps at the time this method is called.
@@ -293,9 +291,9 @@ Since this method uses TreeMap instances internally, the keys of the right map m
 - `left` (`java.util.SortedMap<K,? extends V>`): the map to treat as the "left" map for purposes of comparison
 - `right` (`java.util.Map<? extends K,? extends V>`): the map to treat as the "right" map for purposes of comparison
 
-### `doDifference(java.util.Map<? extends K,? extends V> left, java.util.Map<? extends K,? extends V> right, com.google.common.base.Equivalence<? super @org.checkerframework.checker.nullness.qual.NonNull V> valueEquivalence, java.util.Map<K,V> onlyOnLeft, java.util.Map<K,V> onlyOnRight, java.util.Map<K,V> onBoth, java.util.Map<K,com.google.common.collect.MapDifference.ValueDifference<V>> differences)`
+**Returns:** [`com.google.common.collect.SortedMapDifference<K,V>`](./SortedMapDifference.md)
 
-**Returns:** `void`
+### `doDifference(Map<? extends K,? extends V> left, Map<? extends K,? extends V> right, Equivalence<? super @NonNull V> valueEquivalence, Map<K,V> onlyOnLeft, Map<K,V> onlyOnRight, Map<K,V> onBoth, Map<K,MapDifference.ValueDifference<V>> differences)`
 
 **Parameters:**
 - `left` (`java.util.Map<? extends K,? extends V>`)
@@ -306,16 +304,16 @@ Since this method uses TreeMap instances internally, the keys of the right map m
 - `onBoth` (`java.util.Map<K,V>`)
 - `differences` (`java.util.Map<K,com.google.common.collect.MapDifference.ValueDifference<V>>`)
 
-### `unmodifiableMap(java.util.Map<K,? extends V> map)`
+**Returns:** `void`
 
-**Returns:** `java.util.Map<K,V>`
+### `unmodifiableMap(Map<K,? extends V> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<K,? extends V>`)
 
-### `orNaturalOrder(java.util.Comparator<? super E> comparator)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** `java.util.Comparator<? super E>`
+### `orNaturalOrder(Comparator<? super E> comparator)`
 
 This method is an abomination of generics; the only purpose of this method is to contain the
  ugly type-casting in one place.
@@ -323,9 +321,9 @@ This method is an abomination of generics; the only purpose of this method is to
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`)
 
-### `asMap(java.util.Set<K> set, com.google.common.base.Function<? super K,V> function)`
+**Returns:** `java.util.Comparator<? super E>`
 
-**Returns:** `java.util.Map<K,V>`
+### `asMap(Set<K> set, Function<? super K,V> function)`
 
 To get an immutable *copy* instead, use #toMap(Iterable, Function).
 
@@ -354,9 +352,9 @@ Modifications to the backing set are read through to the returned map. The retur
 - `set` (`java.util.Set<K>`)
 - `function` ([`com.google.common.base.Function<? super K,V>`](../base/Function.md))
 
-### `asMap(java.util.SortedSet<K> set, com.google.common.base.Function<? super K,V> function)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `asMap(SortedSet<K> set, Function<? super K,V> function)`
 
 Specifically, for each k in the backing set, the returned map has an entry mapping
  k to function.apply(k). The keySet, values, and 
@@ -382,9 +380,9 @@ Modifications to the backing set are read through to the returned map. The retur
 - `set` (`java.util.SortedSet<K>`)
 - `function` ([`com.google.common.base.Function<? super K,V>`](../base/Function.md))
 
-### `asMap(java.util.NavigableSet<K> set, com.google.common.base.Function<? super K,V> function)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `asMap(NavigableSet<K> set, Function<? super K,V> function)`
 
 Specifically, for each k in the backing set, the returned map has an entry mapping
  k to function.apply(k). The keySet, values, and 
@@ -410,38 +408,38 @@ Modifications to the backing set are read through to the returned map. The retur
 - `set` (`java.util.NavigableSet<K>`)
 - `function` ([`com.google.common.base.Function<? super K,V>`](../base/Function.md))
 
-### `asMapEntryIterator(java.util.Set<K> set, com.google.common.base.Function<? super K,V> function)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
+### `asMapEntryIterator(Set<K> set, Function<? super K,V> function)`
 
 **Parameters:**
 - `set` (`java.util.Set<K>`)
 - `function` ([`com.google.common.base.Function<? super K,V>`](../base/Function.md))
 
-### `removeOnlySet(java.util.Set<E> set)`
+**Returns:** `java.util.Iterator<java.util.Map.Entry<K,V>>`
 
-**Returns:** `java.util.Set<E>`
+### `removeOnlySet(Set<E> set)`
 
 **Parameters:**
 - `set` (`java.util.Set<E>`)
 
-### `removeOnlySortedSet(java.util.SortedSet<E> set)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.SortedSet<E>`
+### `removeOnlySortedSet(SortedSet<E> set)`
 
 **Parameters:**
 - `set` (`java.util.SortedSet<E>`)
 
-### `removeOnlyNavigableSet(java.util.NavigableSet<E> set)`
+**Returns:** `java.util.SortedSet<E>`
 
-**Returns:** `java.util.NavigableSet<E>`
+### `removeOnlyNavigableSet(NavigableSet<E> set)`
 
 **Parameters:**
 - `set` (`java.util.NavigableSet<E>`)
 
-### `toMap(java.lang.Iterable<K> keys, com.google.common.base.Function<? super K,V> valueFunction)`
+**Returns:** `java.util.NavigableSet<E>`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+### `toMap(Iterable<K> keys, Function<? super K,V> valueFunction)`
 
 The map's iteration order is the order of
  the first appearance of each key in keys.
@@ -458,9 +456,9 @@ If keys is a Set, a live view can be obtained instead of a copy using Maps#asMap
 - `keys` (`java.lang.Iterable<K>`)
 - `valueFunction` ([`com.google.common.base.Function<? super K,V>`](../base/Function.md))
 
-### `toMap(java.util.Iterator<K> keys, com.google.common.base.Function<? super K,V> valueFunction)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `toMap(Iterator<K> keys, Function<? super K,V> valueFunction)`
 
 The map's iteration order is the order of
  the first appearance of each key in keys.
@@ -474,9 +472,9 @@ When there are multiple instances of a key in keys, it is unspecified whether
 - `keys` (`java.util.Iterator<K>`)
 - `valueFunction` ([`com.google.common.base.Function<? super K,V>`](../base/Function.md))
 
-### `uniqueIndex(java.lang.Iterable<V> values, com.google.common.base.Function<? super V,K> keyFunction)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `uniqueIndex(Iterable<V> values, Function<? super V,K> keyFunction)`
 
 In
  other words, each input value produces an entry in the map whose key is the result of applying
@@ -524,9 +522,9 @@ Streams provide a more standard and flexible API and the lambdas make it clear w
 - `values` (`java.lang.Iterable<V>`): the values to use when constructing the Map
 - `keyFunction` ([`com.google.common.base.Function<? super V,K>`](../base/Function.md)): the function used to produce the key for each value
 
-### `uniqueIndex(java.util.Iterator<V> values, com.google.common.base.Function<? super V,K> keyFunction)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `uniqueIndex(Iterator<V> values, Function<? super V,K> keyFunction)`
 
 In
  other words, each input value produces an entry in the map whose key is the result of applying
@@ -555,18 +553,18 @@ If your index may associate multiple values with each key, use Multimaps.index.
 - `values` (`java.util.Iterator<V>`): the values to use when constructing the Map
 - `keyFunction` ([`com.google.common.base.Function<? super V,K>`](../base/Function.md)): the function used to produce the key for each value
 
-### `uniqueIndex(java.util.Iterator<V> values, com.google.common.base.Function<? super V,K> keyFunction, com.google.common.collect.ImmutableMap.Builder<K,V> builder)`
-
 **Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+
+### `uniqueIndex(Iterator<V> values, Function<? super V,K> keyFunction, ImmutableMap.Builder<K,V> builder)`
 
 **Parameters:**
 - `values` (`java.util.Iterator<V>`)
 - `keyFunction` ([`com.google.common.base.Function<? super V,K>`](../base/Function.md))
 - `builder` (`com.google.common.collect.ImmutableMap.Builder<K,V>`)
 
-### `fromProperties(java.util.Properties properties)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMap<java.lang.String,java.lang.String>`](./ImmutableMap.md)
+### `fromProperties(Properties properties)`
 
 Properties
  normally derive from Map<Object, Object>, but they typically contain strings, which is
@@ -575,9 +573,9 @@ Properties
 **Parameters:**
 - `properties` (`java.util.Properties`): a Properties object to be converted
 
-### `immutableEntry(K key, V value)`
+**Returns:** [`com.google.common.collect.ImmutableMap<java.lang.String,java.lang.String>`](./ImmutableMap.md)
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `immutableEntry(K key, V value)`
 
 The Entry#setValue
  operation throws an UnsupportedOperationException.
@@ -593,9 +591,9 @@ The returned entry is serializable.
 - `key` (`K`): the key to be associated with the returned entry
 - `value` (`V`): the value to be associated with the returned entry
 
-### `unmodifiableEntrySet(java.util.Set<java.util.Map.Entry<K,V>> entrySet)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
+### `unmodifiableEntrySet(Set<Map.Entry<K,V>> entrySet)`
 
 The Entry#setValue
  operation throws an UnsupportedOperationException, as do any operations that would
@@ -604,9 +602,9 @@ The Entry#setValue
 **Parameters:**
 - `entrySet` (`java.util.Set<java.util.Map.Entry<K,V>>`): the entries for which to return an unmodifiable view
 
-### `unmodifiableEntry(java.util.Map.Entry<? extends K,? extends V> entry)`
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `unmodifiableEntry(Map.Entry<? extends K,? extends V> entry)`
 
 The Entry#setValue operation
  throws an UnsupportedOperationException. This also has the side effect of redefining
@@ -616,25 +614,25 @@ The Entry#setValue operation
 **Parameters:**
 - `entry` (`java.util.Map.Entry<? extends K,? extends V>`): the entry for which to return an unmodifiable view
 
-### `unmodifiableEntryIterator(java.util.Iterator<java.util.Map.Entry<K,V>> entryIterator)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.Map.Entry<K,V>>`](./UnmodifiableIterator.md)
+### `unmodifiableEntryIterator(Iterator<Map.Entry<K,V>> entryIterator)`
 
 **Parameters:**
 - `entryIterator` (`java.util.Iterator<java.util.Map.Entry<K,V>>`)
 
-### `asConverter(com.google.common.collect.BiMap<A,B> bimap)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.Map.Entry<K,V>>`](./UnmodifiableIterator.md)
 
-**Returns:** [`com.google.common.base.Converter<A,B>`](../base/Converter.md)
+### `asConverter(BiMap<A,B> bimap)`
 
 To use a plain Map as a Function, see com.google.common.base.Functions#forMap(Map) or com.google.common.base.Functions#forMap(Map, Object).
 
 **Parameters:**
 - `bimap` ([`com.google.common.collect.BiMap<A,B>`](./BiMap.md))
 
-### `synchronizedBiMap(com.google.common.collect.BiMap<K,V> bimap)`
+**Returns:** [`com.google.common.base.Converter<A,B>`](../base/Converter.md)
 
-**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
+### `synchronizedBiMap(BiMap<K,V> bimap)`
 
 In order to guarantee
  serial access, it is critical that **all** access to the backing bimap is accomplished
@@ -672,9 +670,9 @@ The returned bimap will be serializable if the specified bimap is serializable.
 **Parameters:**
 - `bimap` ([`com.google.common.collect.BiMap<K,V>`](./BiMap.md)): the bimap to be wrapped in a synchronized view
 
-### `unmodifiableBiMap(com.google.common.collect.BiMap<? extends K,? extends V> bimap)`
-
 **Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
+
+### `unmodifiableBiMap(BiMap<? extends K,? extends V> bimap)`
 
 This method allows modules to provide
  users with "read-only" access to internal bimaps. Query operations on the returned bimap "read
@@ -687,9 +685,9 @@ The returned bimap will be serializable if the specified bimap is serializable.
 **Parameters:**
 - `bimap` ([`com.google.common.collect.BiMap<? extends K,? extends V>`](./BiMap.md)): the bimap for which an unmodifiable view is to be returned
 
-### `transformValues(java.util.Map<K,V1> fromMap, com.google.common.base.Function<? super V1,V2> function)`
+**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
 
-**Returns:** `java.util.Map<K,V2>`
+### `transformValues(Map<K,V1> fromMap, Function<? super V1,V2> function)`
 
 All other properties of
  the map, such as iteration order, are left intact. For example, the code:
@@ -736,9 +734,9 @@ The function is applied lazily, invoked when needed. This is necessary for the r
 - `fromMap` (`java.util.Map<K,V1>`)
 - `function` ([`com.google.common.base.Function<? super V1,V2>`](../base/Function.md))
 
-### `transformValues(java.util.SortedMap<K,V1> fromMap, com.google.common.base.Function<? super V1,V2> function)`
+**Returns:** `java.util.Map<K,V2>`
 
-**Returns:** `java.util.SortedMap<K,V2>`
+### `transformValues(SortedMap<K,V1> fromMap, Function<? super V1,V2> function)`
 
 All other
  properties of the map, such as iteration order, are left intact. For example, the code:
@@ -786,9 +784,9 @@ The function is applied lazily, invoked when needed. This is necessary for the r
 - `fromMap` (`java.util.SortedMap<K,V1>`)
 - `function` ([`com.google.common.base.Function<? super V1,V2>`](../base/Function.md))
 
-### `transformValues(java.util.NavigableMap<K,V1> fromMap, com.google.common.base.Function<? super V1,V2> function)`
+**Returns:** `java.util.SortedMap<K,V2>`
 
-**Returns:** `java.util.NavigableMap<K,V2>`
+### `transformValues(NavigableMap<K,V1> fromMap, Function<? super V1,V2> function)`
 
 All other
  properties of the map, such as iteration order, are left intact. For example, the code:
@@ -838,9 +836,9 @@ The function is applied lazily, invoked when needed. This is necessary for the r
 - `fromMap` (`java.util.NavigableMap<K,V1>`)
 - `function` ([`com.google.common.base.Function<? super V1,V2>`](../base/Function.md))
 
-### `transformEntries(java.util.Map<K,V1> fromMap, com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
+**Returns:** `java.util.NavigableMap<K,V2>`
 
-**Returns:** `java.util.Map<K,V2>`
+### `transformEntries(Map<K,V1> fromMap, Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
 
 In contrast
  to #transformValues, this method's entry-transformation logic may depend on the key as
@@ -901,9 +899,9 @@ The transformer is applied lazily, invoked when needed. This is necessary for th
 - `fromMap` (`java.util.Map<K,V1>`)
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 
-### `transformEntries(java.util.SortedMap<K,V1> fromMap, com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
+**Returns:** `java.util.Map<K,V2>`
 
-**Returns:** `java.util.SortedMap<K,V2>`
+### `transformEntries(SortedMap<K,V1> fromMap, Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
 
 In contrast to #transformValues, this method's entry-transformation logic may depend on
  the key as well as the value.
@@ -963,9 +961,9 @@ The transformer is applied lazily, invoked when needed. This is necessary for th
 - `fromMap` (`java.util.SortedMap<K,V1>`)
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 
-### `transformEntries(java.util.NavigableMap<K,V1> fromMap, com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
+**Returns:** `java.util.SortedMap<K,V2>`
 
-**Returns:** `java.util.NavigableMap<K,V2>`
+### `transformEntries(NavigableMap<K,V1> fromMap, Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
 
 In contrast to #transformValues, this method's entry-transformation logic may
  depend on the key as well as the value.
@@ -1026,60 +1024,60 @@ The transformer is applied lazily, invoked when needed. This is necessary for th
 - `fromMap` (`java.util.NavigableMap<K,V1>`)
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 
-### `asEntryTransformer(com.google.common.base.Function<? super V1,V2> function)`
+**Returns:** `java.util.NavigableMap<K,V2>`
 
-**Returns:** `com.google.common.collect.Maps.EntryTransformer<K,V1,V2>`
+### `asEntryTransformer(Function<? super V1,V2> function)`
 
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super V1,V2>`](../base/Function.md))
 
-### `asValueToValueFunction(com.google.common.collect.Maps.EntryTransformer<? super K,V1,V2> transformer, K key)`
+**Returns:** `com.google.common.collect.Maps.EntryTransformer<K,V1,V2>`
 
-**Returns:** [`com.google.common.base.Function<V1,V2>`](../base/Function.md)
+### `asValueToValueFunction(Maps.EntryTransformer<? super K,V1,V2> transformer, K key)`
 
 **Parameters:**
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,V1,V2>`)
 - `key` (`K`)
 
-### `asEntryToValueFunction(com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
+**Returns:** [`com.google.common.base.Function<V1,V2>`](../base/Function.md)
 
-**Returns:** [`com.google.common.base.Function<java.util.Map.Entry<K,V1>,V2>`](../base/Function.md)
+### `asEntryToValueFunction(Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
 
 **Parameters:**
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 
-### `transformEntry(com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer, java.util.Map.Entry<K,V1> entry)`
+**Returns:** [`com.google.common.base.Function<java.util.Map.Entry<K,V1>,V2>`](../base/Function.md)
 
-**Returns:** `java.util.Map.Entry<K,V2>`
+### `transformEntry(Maps.EntryTransformer<? super K,? super V1,V2> transformer, Map.Entry<K,V1> entry)`
 
 **Parameters:**
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 - `entry` (`java.util.Map.Entry<K,V1>`)
 
-### `asEntryToEntryFunction(com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
+**Returns:** `java.util.Map.Entry<K,V2>`
 
-**Returns:** [`com.google.common.base.Function<java.util.Map.Entry<K,V1>,java.util.Map.Entry<K,V2>>`](../base/Function.md)
+### `asEntryToEntryFunction(Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
 
 **Parameters:**
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 
-### `keyPredicateOnEntries(com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** [`com.google.common.base.Function<java.util.Map.Entry<K,V1>,java.util.Map.Entry<K,V2>>`](../base/Function.md)
 
-**Returns:** [`com.google.common.base.Predicate<java.util.Map.Entry<K,?>>`](../base/Predicate.md)
+### `keyPredicateOnEntries(Predicate<? super K> keyPredicate)`
 
 **Parameters:**
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `valuePredicateOnEntries(com.google.common.base.Predicate<? super V> valuePredicate)`
+**Returns:** [`com.google.common.base.Predicate<java.util.Map.Entry<K,?>>`](../base/Predicate.md)
 
-**Returns:** [`com.google.common.base.Predicate<java.util.Map.Entry<?,V>>`](../base/Predicate.md)
+### `valuePredicateOnEntries(Predicate<? super V> valuePredicate)`
 
 **Parameters:**
 - `valuePredicate` ([`com.google.common.base.Predicate<? super V>`](../base/Predicate.md))
 
-### `filterKeys(java.util.Map<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** [`com.google.common.base.Predicate<java.util.Map.Entry<?,V>>`](../base/Predicate.md)
 
-**Returns:** `java.util.Map<K,V>`
+### `filterKeys(Map<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 The
  returned map is a live view of unfiltered; changes to one affect the other.
@@ -1112,9 +1110,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.Map<K,V>`)
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `filterKeys(java.util.SortedMap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `filterKeys(SortedMap<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 The returned map is a live view of unfiltered; changes to one affect the
  other.
@@ -1147,9 +1145,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.SortedMap<K,V>`)
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `filterKeys(java.util.NavigableMap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `filterKeys(NavigableMap<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 The returned map is a live view of unfiltered; changes to one affect the
  other.
@@ -1182,9 +1180,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.NavigableMap<K,V>`)
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `filterKeys(com.google.common.collect.BiMap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
+### `filterKeys(BiMap<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 The returned bimap is a live view of unfiltered; changes to one affect the other.
 
@@ -1215,9 +1213,9 @@ Many of the filtered bimap's methods, such as size(), iterate across every key i
 - `unfiltered` ([`com.google.common.collect.BiMap<K,V>`](./BiMap.md))
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `filterValues(java.util.Map<K,V> unfiltered, com.google.common.base.Predicate<? super V> valuePredicate)`
+**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
 
-**Returns:** `java.util.Map<K,V>`
+### `filterValues(Map<K,V> unfiltered, Predicate<? super V> valuePredicate)`
 
 The returned map is a live view of unfiltered; changes to one affect the other.
 
@@ -1249,9 +1247,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.Map<K,V>`)
 - `valuePredicate` ([`com.google.common.base.Predicate<? super V>`](../base/Predicate.md))
 
-### `filterValues(java.util.SortedMap<K,V> unfiltered, com.google.common.base.Predicate<? super V> valuePredicate)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `filterValues(SortedMap<K,V> unfiltered, Predicate<? super V> valuePredicate)`
 
 The returned map is a live view of unfiltered; changes to one affect the
  other.
@@ -1284,9 +1282,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.SortedMap<K,V>`)
 - `valuePredicate` ([`com.google.common.base.Predicate<? super V>`](../base/Predicate.md))
 
-### `filterValues(java.util.NavigableMap<K,V> unfiltered, com.google.common.base.Predicate<? super V> valuePredicate)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `filterValues(NavigableMap<K,V> unfiltered, Predicate<? super V> valuePredicate)`
 
 The returned map is a live view of unfiltered; changes to one affect the
  other.
@@ -1319,9 +1317,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.NavigableMap<K,V>`)
 - `valuePredicate` ([`com.google.common.base.Predicate<? super V>`](../base/Predicate.md))
 
-### `filterValues(com.google.common.collect.BiMap<K,V> unfiltered, com.google.common.base.Predicate<? super V> valuePredicate)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
+### `filterValues(BiMap<K,V> unfiltered, Predicate<? super V> valuePredicate)`
 
 The returned bimap is a live view of unfiltered; changes to one affect the other.
 
@@ -1354,9 +1352,9 @@ Many of the filtered bimap's methods, such as size(), iterate across every value
 - `unfiltered` ([`com.google.common.collect.BiMap<K,V>`](./BiMap.md))
 - `valuePredicate` ([`com.google.common.base.Predicate<? super V>`](../base/Predicate.md))
 
-### `filterEntries(java.util.Map<K,V> unfiltered, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
 
-**Returns:** `java.util.Map<K,V>`
+### `filterEntries(Map<K,V> unfiltered, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 The
  returned map is a live view of unfiltered; changes to one affect the other.
@@ -1389,9 +1387,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.Map<K,V>`)
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterEntries(java.util.SortedMap<K,V> unfiltered, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `filterEntries(SortedMap<K,V> unfiltered, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 The returned map is a live view of unfiltered; changes to one affect the other.
 
@@ -1423,9 +1421,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.SortedMap<K,V>`)
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterEntries(java.util.NavigableMap<K,V> unfiltered, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `filterEntries(NavigableMap<K,V> unfiltered, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 The returned map is a live view of unfiltered; changes to one affect the other.
 
@@ -1457,9 +1455,9 @@ Many of the filtered map's methods, such as size(), iterate across every key/val
 - `unfiltered` (`java.util.NavigableMap<K,V>`)
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterEntries(com.google.common.collect.BiMap<K,V> unfiltered, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
+### `filterEntries(BiMap<K,V> unfiltered, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 The
  returned bimap is a live view of unfiltered; changes to one affect the other.
@@ -1493,41 +1491,41 @@ Many of the filtered bimap's methods, such as size(), iterate across every key/v
 - `unfiltered` ([`com.google.common.collect.BiMap<K,V>`](./BiMap.md))
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterFiltered(com.google.common.collect.Maps.AbstractFilteredMap<K,V> map, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
 
-**Returns:** `java.util.Map<K,V>`
+### `filterFiltered(Maps.AbstractFilteredMap<K,V> map, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 **Parameters:**
 - `map` (`com.google.common.collect.Maps.AbstractFilteredMap<K,V>`)
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterFiltered(com.google.common.collect.Maps.FilteredEntrySortedMap<K,V> map, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** `java.util.SortedMap<K,V>`
+### `filterFiltered(Maps.FilteredEntrySortedMap<K,V> map, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 **Parameters:**
 - `map` (`com.google.common.collect.Maps.FilteredEntrySortedMap<K,V>`)
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterFiltered(com.google.common.collect.Maps.FilteredEntryNavigableMap<K,V> map, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** `java.util.SortedMap<K,V>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `filterFiltered(Maps.FilteredEntryNavigableMap<K,V> map, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 **Parameters:**
 - `map` (`com.google.common.collect.Maps.FilteredEntryNavigableMap<K,V>`)
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterFiltered(com.google.common.collect.Maps.FilteredEntryBiMap<K,V> map, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
+### `filterFiltered(Maps.FilteredEntryBiMap<K,V> map, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 **Parameters:**
 - `map` (`com.google.common.collect.Maps.FilteredEntryBiMap<K,V>`)
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `unmodifiableNavigableMap(java.util.NavigableMap<K,? extends V> map)`
+**Returns:** [`com.google.common.collect.BiMap<K,V>`](./BiMap.md)
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `unmodifiableNavigableMap(NavigableMap<K,? extends V> map)`
 
 Query operations on the returned
  map read through to the specified map, and attempts to modify the returned map, whether direct
@@ -1547,16 +1545,16 @@ This method's signature will not permit you to convert a NavigableMap<? extends 
 **Parameters:**
 - `map` (`java.util.NavigableMap<K,? extends V>`): the navigable map for which an unmodifiable view is to be returned
 
-### `unmodifiableOrNull(java.util.Map.Entry<K,? extends V> entry)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** `java.util.Map.Entry<K,V>`
+### `unmodifiableOrNull(Map.Entry<K,? extends V> entry)`
 
 **Parameters:**
 - `entry` (`java.util.Map.Entry<K,? extends V>`)
 
-### `synchronizedNavigableMap(java.util.NavigableMap<K,V> navigableMap)`
+**Returns:** `java.util.Map.Entry<K,V>`
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `synchronizedNavigableMap(NavigableMap<K,V> navigableMap)`
 
 In
  order to guarantee serial access, it is critical that **all** access to the backing
@@ -1619,9 +1617,9 @@ The returned navigable map will be serializable if the specified navigable map i
 **Parameters:**
 - `navigableMap` (`java.util.NavigableMap<K,V>`): the navigable map to be "wrapped" in a synchronized navigable map.
 
-### `safeGet(java.util.Map<?,V> map, java.lang.Object key)`
+**Returns:** `java.util.NavigableMap<K,V>`
 
-**Returns:** `V`
+### `safeGet(Map<?,V> map, Object key)`
 
 Returns null on ClassCastException and 
  NullPointerException.
@@ -1630,9 +1628,9 @@ Returns null on ClassCastException and
 - `map` (`java.util.Map<?,V>`)
 - `key` (`java.lang.Object`)
 
-### `safeContainsKey(java.util.Map<?,?> map, java.lang.Object key)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `safeContainsKey(Map<?,?> map, Object key)`
 
 Returns false on ClassCastException and
  NullPointerException.
@@ -1641,9 +1639,9 @@ Returns false on ClassCastException and
 - `map` (`java.util.Map<?,?>`)
 - `key` (`java.lang.Object`)
 
-### `safeRemove(java.util.Map<?,V> map, java.lang.Object key)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `safeRemove(Map<?,V> map, Object key)`
 
 Returns null on ClassCastException and 
  NullPointerException.
@@ -1652,25 +1650,25 @@ Returns null on ClassCastException and
 - `map` (`java.util.Map<?,V>`)
 - `key` (`java.lang.Object`)
 
-### `containsKeyImpl(java.util.Map<?,?> map, java.lang.Object key)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `containsKeyImpl(Map<?,?> map, Object key)`
 
 **Parameters:**
 - `map` (`java.util.Map<?,?>`)
 - `key` (`java.lang.Object`)
 
-### `containsValueImpl(java.util.Map<?,?> map, java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValueImpl(Map<?,?> map, Object value)`
 
 **Parameters:**
 - `map` (`java.util.Map<?,?>`)
 - `value` (`java.lang.Object`)
 
-### `containsEntryImpl(java.util.Collection<java.util.Map.Entry<K,V>> c, java.lang.Object o)`
-
 **Returns:** `boolean`
+
+### `containsEntryImpl(Collection<Map.Entry<K,V>> c, Object o)`
 
 If
  o is an instance of Entry, it is wrapped using #unmodifiableEntry to
@@ -1684,9 +1682,9 @@ Note that c is the backing (delegate) collection, rather than the forwarding
 - `c` (`java.util.Collection<java.util.Map.Entry<K,V>>`): the delegate (unwrapped) collection of map entries
 - `o` (`java.lang.Object`): the object that might be contained in c
 
-### `removeEntryImpl(java.util.Collection<java.util.Map.Entry<K,V>> c, java.lang.Object o)`
-
 **Returns:** `boolean`
+
+### `removeEntryImpl(Collection<Map.Entry<K,V>> c, Object o)`
 
 If
  o is an instance of Entry, it is wrapped using #unmodifiableEntry to
@@ -1699,53 +1697,53 @@ Note that c is backing (delegate) collection, rather than the forwarding collect
 - `c` (`java.util.Collection<java.util.Map.Entry<K,V>>`): the delegate (unwrapped) collection of map entries
 - `o` (`java.lang.Object`): the object to remove from c
 
-### `equalsImpl(java.util.Map<?,?> map, java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `equalsImpl(Map<?,?> map, Object object)`
 
 **Parameters:**
 - `map` (`java.util.Map<?,?>`)
 - `object` (`java.lang.Object`)
 
-### `toStringImpl(java.util.Map<?,?> map)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `toStringImpl(Map<?,?> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<?,?>`)
 
-### `putAllImpl(java.util.Map<K,V> self, java.util.Map<? extends K,? extends V> map)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `putAllImpl(Map<K,V> self, Map<? extends K,? extends V> map)`
 
 **Parameters:**
 - `self` (`java.util.Map<K,V>`)
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `keyOrNull(java.util.Map.Entry<K,?> entry)`
+**Returns:** `void`
 
-**Returns:** `K`
+### `keyOrNull(Map.Entry<K,?> entry)`
 
 **Parameters:**
 - `entry` (`java.util.Map.Entry<K,?>`)
 
-### `valueOrNull(java.util.Map.Entry<?,V> entry)`
+**Returns:** `K`
 
-**Returns:** `V`
+### `valueOrNull(Map.Entry<?,V> entry)`
 
 **Parameters:**
 - `entry` (`java.util.Map.Entry<?,V>`)
 
-### `indexMap(java.util.Collection<E> list)`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<E,java.lang.Integer>`](./ImmutableMap.md)
+### `indexMap(Collection<E> list)`
 
 **Parameters:**
 - `list` (`java.util.Collection<E>`)
 
-### `subMap(java.util.NavigableMap<K,V> map, com.google.common.collect.Range<K> range)`
+**Returns:** [`com.google.common.collect.ImmutableMap<E,java.lang.Integer>`](./ImmutableMap.md)
 
-**Returns:** `java.util.NavigableMap<K,V>`
+### `subMap(NavigableMap<K,V> map, Range<K> range)`
 
 This method delegates to the appropriate methods of NavigableMap (namely subMap(), tailMap(), and headMap()) to actually construct the view. Consult these methods for a full
  description of the returned view's behavior.
@@ -1758,4 +1756,6 @@ This method delegates to the appropriate methods of NavigableMap (namely subMap(
 **Parameters:**
 - `map` (`java.util.NavigableMap<K,V>`)
 - `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+
+**Returns:** `java.util.NavigableMap<K,V>`
 

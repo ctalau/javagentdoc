@@ -8,7 +8,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, javax.swing.Icon arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5)`
+### `<init>(String arg0, Icon arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -20,21 +20,21 @@
 
 ## Methods
 
-### `setMenuActions(java.util.List arg0)`
+### `setMenuActions(List arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List`)
 
 **Returns:** `void`
 
-### `setCurrentAction(javax.swing.Action arg0)`
+### `setCurrentAction(Action arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
 
 **Returns:** `void`
 
-### `addActionToMenu(javax.swing.Action arg0, boolean arg1)`
+### `addActionToMenu(Action arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)
@@ -42,14 +42,14 @@
 
 **Returns:** `void`
 
-### `addActionsToMenu(java.util.List arg0)`
+### `addActionsToMenu(List arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List`)
 
 **Returns:** `void`
 
-### `insertAction(javax.swing.Action arg0, int arg1)`
+### `insertAction(Action arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`javax.swing.Action`)

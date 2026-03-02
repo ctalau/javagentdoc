@@ -19,7 +19,7 @@ It receives callbacks for
 
 ## Methods
 
-### `apply(ro.sync.exml.workspace.api.PluginWorkspace pluginWorkspace)`
+### `apply(PluginWorkspace pluginWorkspace)`
 
 All options associated with the option page must be saved on this method.
 
@@ -47,7 +47,7 @@ Can be overridden in order to pass the returned value
 
 **Returns:** `java.lang.String`
 
-### `init(ro.sync.exml.workspace.api.PluginWorkspace pluginWorkspace)`
+### `init(PluginWorkspace pluginWorkspace)`
 
 checkboxes) 
  from the option stored in the options storage. (ro.sync.exml.workspace.api.PluginWorkspace.getOptionsStorage()).

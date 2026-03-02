@@ -28,14 +28,14 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0)`
+### `<init>(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 ## Methods
 
-### `filterElements(java.util.List<ro.sync.contentcompletion.xml.CIElement> arg0, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext arg1)`
+### `filterElements(List<CIElement> arg0, WhatElementsCanGoHereContext arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIElement>`)
@@ -43,14 +43,14 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `getMappingFileLocation(ro.sync.contentcompletion.xml.Context arg0)`
+### `getMappingFileLocation(Context arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.Context`](./Context.md))
 
 **Returns:** `java.lang.String`
 
-### `mergeExistingAnnotation(java.lang.String arg0, ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation arg1)`
+### `mergeExistingAnnotation(String arg0, StyleGuideAnnotation arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -58,7 +58,7 @@
 
 **Returns:** `java.lang.String`
 
-### `filterAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> arg0, ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext arg1)`
+### `filterAttributes(List<CIAttribute> arg0, WhatAttributesCanGoHereContext arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
@@ -66,7 +66,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `getElementDescription(ro.sync.contentcompletion.xml.CIElement arg0, ro.sync.contentcompletion.xml.Context arg1)`
+### `getElementDescription(CIElement arg0, Context arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md))
@@ -74,7 +74,7 @@
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIElement`](./CIElement.md)
 
-### `getAttributeDescription(ro.sync.contentcompletion.xml.CIAttribute arg0, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext arg1)`
+### `getAttributeDescription(CIAttribute arg0, WhatPossibleValuesHasAttributeContext arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md))
@@ -82,7 +82,7 @@
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md)
 
-### `getHTMLDocumentation(java.lang.String arg0, java.lang.String arg1)`
+### `getHTMLDocumentation(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -90,14 +90,14 @@
 
 **Returns:** `ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation`
 
-### `getDocumentation(java.lang.String arg0)`
+### `getDocumentation(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.util.Map<java.lang.String,ro.sync.contentcompletion.xml.styleguide.StyleGuideAnnotation>`
 
-### `getHTMLDocumentationForAttribute(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)`
+### `getHTMLDocumentationForAttribute(String arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -110,7 +110,7 @@
 
 **Returns:** `void`
 
-### `parseStyleGuideConfigurationMap(java.lang.String arg0)`
+### `parseStyleGuideConfigurationMap(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

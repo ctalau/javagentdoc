@@ -18,14 +18,14 @@
 
 **Returns:** `void`
 
-### `renderNodeContentAndSentinels(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `renderNodeContentAndSentinels(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md))
 
 **Returns:** `void`
 
-### `getResolvedStylesDescriptor(ro.sync.ecss.extensions.api.node.AuthorParentNode arg0)`
+### `getResolvedStylesDescriptor(AuthorParentNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](../node/AuthorParentNode.md))

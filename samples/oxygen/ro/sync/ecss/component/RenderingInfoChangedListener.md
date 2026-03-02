@@ -14,7 +14,7 @@ The rendering info includes the style of the node, as computed from the
 
 ## Methods
 
-### `renderingInfoChanged(ro.sync.ecss.extensions.api.node.AuthorParentNode element, ro.sync.ecss.component.RenderingInfoChangeType type)`
+### `renderingInfoChanged(AuthorParentNode element, RenderingInfoChangeType type)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](../extensions/api/node/AuthorParentNode.md)): The element whose information was changed.

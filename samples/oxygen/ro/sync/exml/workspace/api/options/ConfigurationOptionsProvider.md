@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `getConfigurationResources(java.lang.String arg0, java.util.Map<java.lang.String,java.lang.Object> arg1)`
+### `getConfigurationResources(String arg0, Map<String,Object> arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

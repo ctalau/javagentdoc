@@ -22,7 +22,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] rowFragments, int insertOffset)`
+### `<init>(AuthorAccess authorAccess, AuthorDocumentFragment[] rowFragments, int insertOffset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.

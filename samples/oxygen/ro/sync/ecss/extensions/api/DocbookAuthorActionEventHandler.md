@@ -27,7 +27,7 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 ## Methods
 
-### `promoteSubListItems(ro.sync.ecss.extensions.api.AuthorDocumentController controller, ro.sync.ecss.extensions.api.node.AuthorNode theDemotedCandidate, ro.sync.ecss.extensions.api.node.AuthorNode listElement)`
+### `promoteSubListItems(AuthorDocumentController controller, AuthorNode theDemotedCandidate, AuthorNode listElement)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
@@ -36,7 +36,7 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 **Returns:** `void`
 
-### `getSubListToPromote(ro.sync.ecss.extensions.api.node.AuthorNode parent, int level, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> lastSubList)`
+### `getSubListToPromote(AuthorNode parent, int level, List<AuthorNode> lastSubList)`
 
 If there are more than 1 sublists,
  then we don't promote them anymore. We let them be demoted along
@@ -50,21 +50,21 @@ If there are more than 1 sublists,
 
 **Returns:** `void`
 
-### `isParagraph(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isParagraph(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): the node for which we perform the check.
 
 **Returns:** `boolean`
 
-### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isList(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode node1, ro.sync.ecss.extensions.api.node.AuthorNode node2)`
+### `areCompatibleLists(AuthorNode node1, AuthorNode node2)`
 
 **Parameters:**
 - `node1` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
@@ -72,14 +72,14 @@ If there are more than 1 sublists,
 
 **Returns:** `boolean`
 
-### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getParagraphElement(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
 **Returns:** `java.lang.String`
 
-### `getListItemAncestorToSplit(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess access)`
+### `getListItemAncestorToSplit(AuthorNode node, AuthorAccess access)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
@@ -87,7 +87,7 @@ If there are more than 1 sublists,
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-### `hasLocalName(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String localName)`
+### `hasLocalName(AuthorNode node, String localName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node to check.

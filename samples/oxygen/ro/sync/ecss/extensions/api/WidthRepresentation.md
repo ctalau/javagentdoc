@@ -47,7 +47,7 @@ This value can be relative to the parent width,
 
 ## Constructors
 
-### `<init>(float fixedWidthValue, ro.sync.ecss.extensions.api.WidthRepresentation.Unit fixedWidthUnit, float relativeWidth, boolean isRelativeToParent)`
+### `<init>(float fixedWidthValue, WidthRepresentation.Unit fixedWidthUnit, float relativeWidth, boolean isRelativeToParent)`
 
 **Parameters:**
 - `fixedWidthValue` (`float`): The fixed width value. Ex: 2.5
@@ -65,7 +65,7 @@ This value can be relative to the parent width,
           for example, have the values 1 for the first column and 2 for the second column
           then the second column will be twice as large as the first one.
 
-### `<init>(java.lang.String widthString, boolean acceptPercents)`
+### `<init>(String widthString, boolean acceptPercents)`
 
 Create a ColWidth corresponding to the given width representation.
 
@@ -107,7 +107,7 @@ Create a ColWidth corresponding to the given width representation.
 
 **Returns:** `java.lang.String`
 
-### `setAlign(java.lang.String align)`
+### `setAlign(String align)`
 
 **Parameters:**
 - `align` (`java.lang.String`): The align value.

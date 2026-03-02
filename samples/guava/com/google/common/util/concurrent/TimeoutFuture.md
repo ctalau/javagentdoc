@@ -28,22 +28,22 @@ Future that delegates to another but will finish early (via a TimeoutException w
 
 ## Constructors
 
-### `<init>(com.google.common.util.concurrent.ListenableFuture<V> delegate)`
+### `<init>(ListenableFuture<V> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md))
 
 ## Methods
 
-### `create(com.google.common.util.concurrent.ListenableFuture<V> delegate, long time, java.util.concurrent.TimeUnit unit, java.util.concurrent.ScheduledExecutorService scheduledExecutor)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+### `create(ListenableFuture<V> delegate, long time, TimeUnit unit, ScheduledExecutorService scheduledExecutor)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md))
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 - `scheduledExecutor` (`java.util.concurrent.ScheduledExecutorService`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
 ### `pendingToString()`
 

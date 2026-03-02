@@ -34,15 +34,13 @@ See the Guava User Guide article on [BiMap](https://github.com/google/guava/wiki
 
 ### `put(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `forcePut(K key, V value)`
-
 **Returns:** `V`
+
+### `forcePut(K key, V value)`
 
 If the bimap previously contained the
  provided key-value mapping, this method has no effect.
@@ -59,9 +57,9 @@ Note that a successful call to this method could cause the size of the bimap to 
 - `key` (`K`): the key with which the specified value is to be associated
 - `value` (`V`): the value to be associated with the specified key
 
-### `putAll(java.util.Map<? extends K,? extends V> map)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Map<? extends K,? extends V> map)`
 
 **Warning:** the results of calling this method may vary depending on the iteration order
  of map.
@@ -69,15 +67,15 @@ Note that a successful call to this method could cause the size of the bimap to 
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `values()`
+**Returns:** `void`
 
-**Returns:** `java.util.Set<V>`
+### `values()`
 
 Because a bimap has unique values, this method returns a Set, instead of the java.util.Collection specified in the Map interface.
 
-### `inverse()`
+**Returns:** `java.util.Set<V>`
 
-**Returns:** [`com.google.common.collect.BiMap<V,K>`](./BiMap.md)
+### `inverse()`
 
 The two bimaps are backed by the same data; any changes to one will appear in
  the other.
@@ -85,4 +83,6 @@ The two bimaps are backed by the same data; any changes to one will appear in
  
 **Note:**There is no guaranteed correspondence between the iteration order of a bimap and
  that of its inverse.
+
+**Returns:** [`com.google.common.collect.BiMap<V,K>`](./BiMap.md)
 

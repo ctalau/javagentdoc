@@ -44,15 +44,13 @@
 
 ### `toImmutableSet()`
 
-**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`
-
 Elements appear in the resulting set in the encounter order of the stream; if
  the stream contains duplicates (according to Object#equals(Object)), only the first
  duplicate in encounter order will appear in the result.
 
-### `of()`
+**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+### `of()`
 
 Preferred over Collections#emptySet for code
  consistency, and because the return type conveys the immutability guarantee.
@@ -60,9 +58,9 @@ Preferred over Collections#emptySet for code
  
 **Performance note:** the instance returned is a singleton.
 
-### `of(E element)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `of(E element)`
 
 Preferred over Collections#singleton for code consistency, null rejection, and because the return
  type conveys the immutability guarantee.
@@ -70,9 +68,9 @@ Preferred over Collections#singleton for code consistency, null rejection, and b
 **Parameters:**
 - `element` (`E`)
 
-### `of(E e1, E e2)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `of(E e1, E e2)`
 
 That is, if multiple elements are equal, all except
  the first are ignored.
@@ -81,9 +79,9 @@ That is, if multiple elements are equal, all except
 - `e1` (`E`)
 - `e2` (`E`)
 
-### `of(E e1, E e2, E e3)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `of(E e1, E e2, E e3)`
 
 That is, if multiple elements are equal, all except
  the first are ignored.
@@ -93,9 +91,9 @@ That is, if multiple elements are equal, all except
 - `e2` (`E`)
 - `e3` (`E`)
 
-### `of(E e1, E e2, E e3, E e4)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `of(E e1, E e2, E e3, E e4)`
 
 That is, if multiple elements are equal, all except
  the first are ignored.
@@ -106,9 +104,9 @@ That is, if multiple elements are equal, all except
 - `e3` (`E`)
 - `e4` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5)`
 
 That is, if multiple elements are equal, all except
  the first are ignored.
@@ -120,9 +118,9 @@ That is, if multiple elements are equal, all except
 - `e4` (`E`)
 - `e5` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] others)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] others)`
 
 That is, if multiple elements are equal, all except
  the first are ignored.
@@ -139,9 +137,9 @@ The array others must not be longer than Integer.MAX_VALUE - 6.
 - `e6` (`E`)
 - `others` (`E[]`)
 
-### `constructUnknownDuplication(int n, java.lang.Object[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `constructUnknownDuplication(int n, Object[] elements)`
 
 If k
  is the size of the returned ImmutableSet, then the unique elements of elements
@@ -160,9 +158,9 @@ elements may contain only values of type E.
 - `n` (`int`)
 - `elements` (`java.lang.Object[]`)
 
-### `construct(int n, int expectedSize, java.lang.Object[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `construct(int n, int expectedSize, Object[] elements)`
 
 If
  k is the size of the returned ImmutableSet, then the unique elements of 
@@ -182,9 +180,9 @@ elements may contain only values of type E.
 - `expectedSize` (`int`)
 - `elements` (`java.lang.Object[]`)
 
-### `copyOf(java.util.Collection<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `copyOf(Collection<? extends E> elements)`
 
 **Performance note:** This method will sometimes recognize that the actual copy operation
  is unnecessary; for example, copyOf(copyOf(anArrayList)) will copy the data only once.
@@ -194,9 +192,9 @@ elements may contain only values of type E.
 **Parameters:**
 - `elements` (`java.util.Collection<? extends E>`)
 
-### `copyOf(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `copyOf(Iterable<? extends E> elements)`
 
 This method iterates over elements only
  once.
@@ -210,37 +208,39 @@ This method iterates over elements only
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `copyOf(java.util.Iterator<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `copyOf(Iterator<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.util.Iterator<? extends E>`)
 
-### `copyOf(E[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `copyOf(E[] elements)`
 
 **Parameters:**
 - `elements` (`E[]`)
 
-### `copyOfEnumSet(java.util.EnumSet enumSet)`
+**Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSet`](./ImmutableSet.md)
+### `copyOfEnumSet(EnumSet enumSet)`
 
 **Parameters:**
 - `enumSet` (`java.util.EnumSet`)
+
+**Returns:** [`com.google.common.collect.ImmutableSet`](./ImmutableSet.md)
 
 ### `isHashCodeFast()`
 
 **Returns:** `boolean`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -254,22 +254,20 @@ This method iterates over elements only
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
 
-### `builder()`
+**Returns:** `void`
 
-**Returns:** `com.google.common.collect.ImmutableSet.Builder<E>`
+### `builder()`
 
 The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `builderWithExpectedSize(int expectedSize)`
-
 **Returns:** `com.google.common.collect.ImmutableSet.Builder<E>`
+
+### `builderWithExpectedSize(int expectedSize)`
 
 If expectedSize is exactly the number of distinct elements added to the builder
  before Builder#build is called, the builder is likely to perform better than an unsized
@@ -282,13 +280,15 @@ It is not specified if any performance benefits apply if expectedSize is close t
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `chooseTableSize(int setSize)`
+**Returns:** `com.google.common.collect.ImmutableSet.Builder<E>`
 
-**Returns:** `int`
+### `chooseTableSize(int setSize)`
 
 The returned size is the smallest power of two that
  can hold setSize elements with the desired load factor. Always returns at least setSize + 2.
 
 **Parameters:**
 - `setSize` (`int`)
+
+**Returns:** `int`
 

@@ -34,7 +34,7 @@ points on a plane). Build instances with PairedStatsAccumulator#snapshot.
 
 ## Constructors
 
-### `<init>(com.google.common.math.Stats xStats, com.google.common.math.Stats yStats, double sumOfProductsOfDeltas)`
+### `<init>(Stats xStats, Stats yStats, double sumOfProductsOfDeltas)`
 
 Users should use PairedStatsAccumulator#snapshot.
 
@@ -69,8 +69,6 @@ To ensure that the created instance obeys its contract, the parameters should sa
 
 ### `populationCovariance()`
 
-**Returns:** `double`
-
 The count must be non-zero.
 
  
@@ -83,9 +81,9 @@ This is guaranteed to return zero if the dataset contains a single pair of finit
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `sampleCovariance()`
-
 **Returns:** `double`
+
+### `sampleCovariance()`
 
 The count must be greater than one.
 
@@ -98,9 +96,9 @@ This is not guaranteed to return zero when the dataset consists of the same pair
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `pearsonsCorrelationCoefficient()`
-
 **Returns:** `double`
+
+### `pearsonsCorrelationCoefficient()`
 
 The count must greater than one, and
  the x and y values must both have non-zero population variance (i.e. 
@@ -113,9 +111,9 @@ The count must greater than one, and
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `leastSquaresFit()`
+**Returns:** `double`
 
-**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
+### `leastSquaresFit()`
 
 The count must be greater than one, and
  either the x or y data must have a non-zero population variance (i.e. 
@@ -143,9 +141,9 @@ The corresponding root-mean-square error in x as a function of y is a
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is LinearTransformation#forNaN().
 
-### `equals(java.lang.Object obj)`
+**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Note:** This tests exact equality of the calculated statistics, including the floating
  point values. Two instances are guaranteed to be considered equal if one is copied from the
@@ -162,12 +160,14 @@ If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 **Note:** This hash code is consistent with exact equality of the calculated statistics,
  including the floating point values. See the note on #equals for details.
+
+**Returns:** `int`
 
 ### `toString()`
 
@@ -179,32 +179,32 @@ If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#
 
 ### `ensurePositive(double value)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `value` (`double`)
+
+**Returns:** `double`
 
 ### `ensureInUnitRange(double value)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `value` (`double`)
 
-### `toByteArray()`
+**Returns:** `double`
 
-**Returns:** `byte[]`
+### `toByteArray()`
 
 **Note:** No guarantees are made regarding stability of the representation between
  versions.
 
-### `fromByteArray(byte[] byteArray)`
+**Returns:** `byte[]`
 
-**Returns:** [`com.google.common.math.PairedStats`](./PairedStats.md)
+### `fromByteArray(byte[] byteArray)`
 
 **Note:** No guarantees are made regarding stability of the representation between
  versions.
 
 **Parameters:**
 - `byteArray` (`byte[]`)
+
+**Returns:** [`com.google.common.math.PairedStats`](./PairedStats.md)
 

@@ -14,7 +14,7 @@ It is used on standalone implementation.
 
 ## Methods
 
-### `getAttributeValue(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getAttributeValue(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Provides access to author functionality.

@@ -16,7 +16,7 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.application.ApplicationType[]`](./ApplicationType.md)
 
-### `valueOf(java.lang.String name)`
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

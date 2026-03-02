@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `load(java.net.URL url, java.io.Reader reader)`
+### `load(URL url, Reader reader)`
 
 This does not guarantee that the set content has been interpreted, you should set an
  AuthorComponentListener and listen for `documentTypeChanged()` before using

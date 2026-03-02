@@ -6,21 +6,21 @@
 
 ## Methods
 
-### `getStart(ro.sync.diff.merge.api.IntervalsPair.Side arg0)`
+### `getStart(IntervalsPair.Side arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.IntervalsPair.Side`)
 
 **Returns:** `int`
 
-### `getEnd(ro.sync.diff.merge.api.IntervalsPair.Side arg0)`
+### `getEnd(IntervalsPair.Side arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.IntervalsPair.Side`)
 
 **Returns:** `int`
 
-### `getInterval(ro.sync.diff.merge.api.IntervalsPair.Side arg0)`
+### `getInterval(IntervalsPair.Side arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.IntervalsPair.Side`)

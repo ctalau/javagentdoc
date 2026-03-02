@@ -14,7 +14,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String value)`
+### `<init>(String value)`
 
 **Parameters:**
 - `value` (`java.lang.String`): The string value of the enum.
@@ -25,7 +25,7 @@
 
 **Returns:** [`ro.sync.diff.api.DifferenceType[]`](./DifferenceType.md)
 
-### `valueOf(java.lang.String name)`
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

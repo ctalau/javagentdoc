@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `getFullySelectedNode(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, int selStart, int selEnd, boolean hasSelection)`
+### `getFullySelectedNode(AuthorDocumentController ctrl, int selStart, int selEnd, boolean hasSelection)`
 
 **Parameters:**
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../api/AuthorDocumentController.md)): Author document controller.
@@ -28,7 +28,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
 
-### `findNodeOfInterest(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode interestNode, java.lang.String[] properties2Check)`
+### `findNodeOfInterest(AuthorAccess authorAccess, AuthorNode interestNode, String[] properties2Check)`
 
 It might be the node 
  name, an attribute value, etc.
@@ -41,7 +41,7 @@ It might be the node
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
 
-### `isNodeOfInterest(ro.sync.ecss.extensions.api.node.AuthorNode nodeToEdit, java.lang.String[] properties2Check)`
+### `isNodeOfInterest(AuthorNode nodeToEdit, String[] properties2Check)`
 
 **Parameters:**
 - `nodeToEdit` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to check.
@@ -49,7 +49,7 @@ It might be the node
 
 **Returns:** `boolean`
 
-### `isNodeOfInterest(ro.sync.ecss.extensions.api.node.AuthorNode nodeToEdit, java.lang.String property2Check)`
+### `isNodeOfInterest(AuthorNode nodeToEdit, String property2Check)`
 
 **Parameters:**
 - `nodeToEdit` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to edit candidate.
@@ -57,7 +57,7 @@ It might be the node
 
 **Returns:** `boolean`
 
-### `getNodesOfInterest(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode interestNode, boolean doSurroundIfMissing)`
+### `getNodesOfInterest(AuthorAccess authorAccess, AuthorNode interestNode, boolean doSurroundIfMissing)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
@@ -67,7 +67,7 @@ It might be the node
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](../../api/node/AuthorNode.md)
 
-### `getSupportedFramework(java.lang.String namespaceURI)`
+### `getSupportedFramework(String namespaceURI)`
 
 **Parameters:**
 - `namespaceURI` (`java.lang.String`): The namespace uri of the element.

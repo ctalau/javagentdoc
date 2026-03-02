@@ -62,10 +62,10 @@ The standard methods and any collection views they return are not guaranteed to 
 
 ### `standardFirstEntry()`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 If you override #entrySet(), you may wish to override #firstEntry() to
  forward to this implementation.
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `lastEntry()`
 
@@ -73,10 +73,10 @@ If you override #entrySet(), you may wish to override #firstEntry() to
 
 ### `standardLastEntry()`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 If you override #descendingMultiset or #entrySet(), you may wish to override
  #firstEntry() to forward to this implementation.
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `pollFirstEntry()`
 
@@ -84,10 +84,10 @@ If you override #descendingMultiset or #entrySet(), you may wish to override
 
 ### `standardPollFirstEntry()`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 If you override #entrySet(), you may wish to override #pollFirstEntry() to
  forward to this implementation.
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `pollLastEntry()`
 
@@ -95,22 +95,20 @@ If you override #entrySet(), you may wish to override #pollFirstEntry() to
 
 ### `standardPollLastEntry()`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 If you override #descendingMultiset() or #entrySet(), you may wish to
  override #pollLastEntry() to forward to this implementation.
 
-### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+### `headMultiset(E upperBound, BoundType boundType)`
 
 **Parameters:**
 - `upperBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `subMultiset(E lowerBound, com.google.common.collect.BoundType lowerBoundType, E upperBound, com.google.common.collect.BoundType upperBoundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `subMultiset(E lowerBound, BoundType lowerBoundType, E upperBound, BoundType upperBoundType)`
 
 **Parameters:**
 - `lowerBound` (`E`)
@@ -118,9 +116,9 @@ If you override #descendingMultiset() or #entrySet(), you may wish to
 - `upperBound` (`E`)
 - `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `standardSubMultiset(E lowerBound, com.google.common.collect.BoundType lowerBoundType, E upperBound, com.google.common.collect.BoundType upperBoundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `standardSubMultiset(E lowerBound, BoundType lowerBoundType, E upperBound, BoundType upperBoundType)`
 
 If you override either of these methods, you may wish to override #subMultiset(Object, BoundType, Object, BoundType) to forward to this implementation.
 
@@ -130,11 +128,13 @@ If you override either of these methods, you may wish to override #subMultiset(O
 - `upperBound` (`E`)
 - `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `tailMultiset(E lowerBound, BoundType boundType)`
 
 **Parameters:**
 - `lowerBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 

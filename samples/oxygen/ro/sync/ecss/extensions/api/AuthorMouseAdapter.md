@@ -14,35 +14,35 @@
 
 ## Methods
 
-### `mouseClicked(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseClicked(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md))
 
 **Returns:** `void`
 
-### `mouseDragged(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseDragged(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md))
 
 **Returns:** `void`
 
-### `mouseMoved(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseMoved(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md))
 
 **Returns:** `void`
 
-### `mousePressed(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mousePressed(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md))
 
 **Returns:** `void`
 
-### `mouseReleased(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseReleased(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md))

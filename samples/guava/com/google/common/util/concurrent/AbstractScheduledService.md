@@ -84,37 +84,35 @@ This class uses the life cycle methods to read in a list of starting URIs and sa
 
 ### `runOneIteration()`
 
-**Returns:** `void`
-
 If any invocation of this method throws an exception,
  the service will transition to the Service.State#FAILED state and this method will no
  longer be called.
 
-### `startUp()`
-
 **Returns:** `void`
+
+### `startUp()`
 
 By default this method does nothing.
 
-### `shutDown()`
-
 **Returns:** `void`
+
+### `shutDown()`
 
 This is guaranteed not to run concurrently with #runOneIteration.
 
  
 By default this method does nothing.
 
-### `scheduler()`
+**Returns:** `void`
 
-**Returns:** `com.google.common.util.concurrent.AbstractScheduledService.Scheduler`
+### `scheduler()`
 
 This method will only be
  called once.
 
-### `executor()`
+**Returns:** `com.google.common.util.concurrent.AbstractScheduledService.Scheduler`
 
-**Returns:** `java.util.concurrent.ScheduledExecutorService`
+### `executor()`
 
 If this method is overridden the
  executor will not be shutdown when this service
@@ -127,12 +125,14 @@ By default this returns a new ScheduledExecutorService with a single thread pool
  pool will be shut down when the service
  terminates or fails.
 
-### `serviceName()`
+**Returns:** `java.util.concurrent.ScheduledExecutorService`
 
-**Returns:** `java.lang.String`
+### `serviceName()`
 
 AbstractScheduledService may include the name in
  debugging output.
+
+**Returns:** `java.lang.String`
 
 ### `toString()`
 
@@ -146,13 +146,13 @@ AbstractScheduledService may include the name in
 
 **Returns:** `com.google.common.util.concurrent.Service.State`
 
-### `addListener(com.google.common.util.concurrent.Service.Listener listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Service.Listener listener, Executor executor)`
 
 **Parameters:**
 - `listener` (`com.google.common.util.concurrent.Service.Listener`)
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** `void`
 
 ### `failureCause()`
 
@@ -170,37 +170,37 @@ AbstractScheduledService may include the name in
 
 **Returns:** `void`
 
-### `awaitRunning(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitRunning(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitRunning(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitRunning(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `void`
 
 ### `awaitTerminated()`
 
 **Returns:** `void`
 
-### `awaitTerminated(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitTerminated(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitTerminated(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitTerminated(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `void`
 

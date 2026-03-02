@@ -13,7 +13,7 @@ The ElementLocator is capable
 
 ## Methods
 
-### `getElementLocator(ro.sync.ecss.extensions.api.link.IDTypeVerifier idVerifier, java.lang.String link)`
+### `getElementLocator(IDTypeVerifier idVerifier, String link)`
 
 **Parameters:**
 - `idVerifier` ([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](./IDTypeVerifier.md)): Verifies if a given attribute type is ID.

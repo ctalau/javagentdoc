@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setPseudoClass(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `setPseudoClass(String pseudoClass, AuthorElement element)`
 
 This change *IS NOT* subject to undo/redo.
  
@@ -54,7 +54,7 @@ Another example:
 
 **Returns:** `void`
 
-### `removePseudoClass(java.lang.String pseudoClass, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `removePseudoClass(String pseudoClass, AuthorElement element)`
 
 This change *IS NOT* subject to undo/redo.
 

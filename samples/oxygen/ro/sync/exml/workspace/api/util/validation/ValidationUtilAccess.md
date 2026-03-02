@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `validateResources(java.util.Iterator<java.net.URL> resourcesIterator, boolean validateOnlyXMLResources, ro.sync.exml.workspace.api.util.validation.ValidatorProblemCollector problemsCollector)`
+### `validateResources(Iterator<URL> resourcesIterator, boolean validateOnlyXMLResources, ValidatorProblemCollector problemsCollector)`
 
 **Parameters:**
 - `resourcesIterator` (`java.util.Iterator<java.net.URL>`): Iterator over the resources which need to be validated. Never `null`.
@@ -17,7 +17,7 @@
 
 **Returns:** `void`
 
-### `validateResources(java.util.Iterator<java.net.URL> resourcesIterator, java.util.function.Function<java.net.URL,java.lang.String> contentProvider, boolean validateOnlyXMLResources, ro.sync.exml.workspace.api.util.validation.ValidatorProblemCollector problemsCollector)`
+### `validateResources(Iterator<URL> resourcesIterator, Function<URL,String> contentProvider, boolean validateOnlyXMLResources, ValidatorProblemCollector problemsCollector)`
 
 **Parameters:**
 - `resourcesIterator` (`java.util.Iterator<java.net.URL>`): Iterator over the resources which need to be validated. Never `null`.

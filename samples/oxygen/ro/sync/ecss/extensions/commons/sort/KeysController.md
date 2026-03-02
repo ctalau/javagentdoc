@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `selectionChanged(java.lang.String newSelection, java.lang.String oldSelection)`
+### `selectionChanged(String newSelection, String oldSelection)`
 
 **Parameters:**
 - `newSelection` (`java.lang.String`): The new selected key.

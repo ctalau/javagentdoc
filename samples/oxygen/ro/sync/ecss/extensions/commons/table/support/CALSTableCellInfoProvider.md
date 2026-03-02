@@ -60,7 +60,7 @@ The default visibility for the rowsep and
  colsep. (i.e. if no `colsep` or `rowsep` attributes are present 
  in the table) is hidden.
 
-### `<init>(boolean colsepAndRowSepAreVisibleByDefault, ro.sync.ecss.extensions.commons.table.support.errorscanner.TableLayoutErrorsListener errorsListener)`
+### `<init>(boolean colsepAndRowSepAreVisibleByDefault, TableLayoutErrorsListener errorsListener)`
 
 **Parameters:**
 - `colsepAndRowSepAreVisibleByDefault` (`boolean`): The default visibility for the rowsep and 
@@ -70,7 +70,7 @@ The default visibility for the rowsep and
 
 ## Methods
 
-### `getColSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElem)`
+### `getColSpan(AuthorElement cellElem)`
 
 In case the 'spanspec' attribute is missing 
  then the column span is defined by the 'namest' and 'nameend' attribute.
@@ -80,7 +80,7 @@ In case the 'spanspec' attribute is missing
 
 **Returns:** `java.lang.Integer`
 
-### `getColSpanInterval(ro.sync.ecss.extensions.api.node.AuthorElement cellElem)`
+### `getColSpanInterval(AuthorElement cellElem)`
 
 In case the 'spanspec' attribute is missing 
  then the column span is defined by the 'namest' and 'nameend' attribute.
@@ -90,7 +90,7 @@ In case the 'spanspec' attribute is missing
 
 **Returns:** `int[]`
 
-### `getColSpan(java.lang.String namest, java.lang.String nameend, ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getColSpan(String namest, String nameend, AuthorElement cellElement)`
 
 **Parameters:**
 - `namest` (`java.lang.String`): The start span column name.
@@ -99,21 +99,21 @@ In case the 'spanspec' attribute is missing
 
 **Returns:** `int[]`
 
-### `getRowSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getRowSpan(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `java.lang.Integer`
 
-### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `init(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `void`
 
-### `reportInvalidFloat(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, ro.sync.ecss.extensions.api.node.AuthorElement child, java.lang.String value, java.lang.String originalValue)`
+### `reportInvalidFloat(AuthorElement tableElement, AuthorElement child, String value, String originalValue)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table.
@@ -123,7 +123,7 @@ In case the 'spanspec' attribute is missing
 
 **Returns:** `void`
 
-### `isColspec(ro.sync.ecss.extensions.api.node.AuthorElement child)`
+### `isColspec(AuthorElement child)`
 
 **Parameters:**
 - `child` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The child
@@ -134,14 +134,14 @@ In case the 'spanspec' attribute is missing
 
 **Returns:** `java.lang.String`
 
-### `getSpanSpec(java.lang.String spanSpecName)`
+### `getSpanSpec(String spanSpecName)`
 
 **Parameters:**
 - `spanSpecName` (`java.lang.String`): The name of the column span specification.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.CALSColSpanSpec`](./CALSColSpanSpec.md)
 
-### `getCellSpanSpec(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getCellSpanSpec(AuthorAccess authorAccess, AuthorElement cellElement)`
 
 If 'spanname' attribute is present the corresponding span specification will be returned.
  Otherwise a new span specification will be returned looking at the name of columns
@@ -153,7 +153,7 @@ If 'spanname' attribute is present the corresponding span specification will be 
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.CALSColSpanSpec`](./CALSColSpanSpec.md)
 
-### `getColumnSpec(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getColumnSpec(AuthorAccess authorAccess, AuthorElement cellElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The author access.
@@ -161,7 +161,7 @@ If 'spanname' attribute is present the corresponding span specification will be 
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.CALSColSpec`](./CALSColSpec.md)
 
-### `getColumnSpec(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int columnIndex)`
+### `getColumnSpec(AuthorElement cellElement, int columnIndex)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table cell element.
@@ -169,7 +169,7 @@ If 'spanname' attribute is present the corresponding span specification will be 
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.CALSColSpec`](./CALSColSpec.md)
 
-### `getColSpec(java.lang.String colSpecName)`
+### `getColSpec(String colSpecName)`
 
 **Parameters:**
 - `colSpecName` (`java.lang.String`): The name of column specification.
@@ -183,7 +183,7 @@ If 'spanname' attribute is present the corresponding span specification will be 
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.CALSColSpec`](./CALSColSpec.md)
 
-### `getColSpecElement(ro.sync.ecss.extensions.commons.table.support.CALSColSpec colspec)`
+### `getColSpecElement(CALSColSpec colspec)`
 
 **Parameters:**
 - `colspec` ([`ro.sync.ecss.extensions.commons.table.support.CALSColSpec`](./CALSColSpec.md)): The column specification.
@@ -196,14 +196,14 @@ The list is ordered ascending by the column specification index ('colnum' attrib
 
 **Returns:** `java.util.Set<ro.sync.ecss.extensions.commons.table.support.CALSColSpec>`
 
-### `hasColumnSpecifications(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `hasColumnSpecifications(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `boolean`
 
-### `getCellWidth(ro.sync.ecss.extensions.api.node.AuthorElement cellElement, int colNumberStart, int colSpan)`
+### `getCellWidth(AuthorElement cellElement, int colNumberStart, int colSpan)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -212,7 +212,7 @@ The list is ordered ascending by the column specification index ('colnum' attrib
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
 
-### `commitColumnWidthModifications(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, ro.sync.ecss.extensions.api.WidthRepresentation[] colWidths, java.lang.String tableCellsTagName)`
+### `commitColumnWidthModifications(AuthorDocumentController authorDocumentController, WidthRepresentation[] colWidths, String tableCellsTagName)`
 
 **Parameters:**
 - `authorDocumentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md))
@@ -221,7 +221,7 @@ The list is ordered ascending by the column specification index ('colnum' attrib
 
 **Returns:** `void`
 
-### `isTableCell(java.lang.String tableCellsTagName)`
+### `isTableCell(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`): The name of an element.
@@ -243,7 +243,7 @@ This method is used to find the `table` element
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `commitTableWidthModification(ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController, int newTableWidth, java.lang.String tableCellsTagName)`
+### `commitTableWidthModification(AuthorDocumentController authorDocumentController, int newTableWidth, String tableCellsTagName)`
 
 **Parameters:**
 - `authorDocumentController` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md))
@@ -252,14 +252,14 @@ This method is used to find the `table` element
 
 **Returns:** `void`
 
-### `getTableWidth(java.lang.String tableCellsTagName)`
+### `getTableWidth(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md)
 
-### `isTableAcceptingWidth(java.lang.String tableCellsTagName)`
+### `isTableAcceptingWidth(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
@@ -270,28 +270,28 @@ This method is used to find the `table` element
 
 **Returns:** [`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md)
 
-### `isTableAndColumnsResizable(java.lang.String tableCellsTagName)`
+### `isTableAndColumnsResizable(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `isAcceptingFixedColumnWidths(java.lang.String tableCellsTagName)`
+### `isAcceptingFixedColumnWidths(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `isAcceptingPercentageColumnWidths(java.lang.String tableCellsTagName)`
+### `isAcceptingPercentageColumnWidths(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `isAcceptingProportionalColumnWidths(java.lang.String tableCellsTagName)`
+### `isAcceptingProportionalColumnWidths(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
@@ -302,7 +302,7 @@ This method is used to find the `table` element
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.WidthRepresentation>`
 
-### `getColSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int columnIndex)`
+### `getColSep(AuthorElement cellElem, int columnIndex)`
 
 **Parameters:**
 - `cellElem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -310,7 +310,7 @@ This method is used to find the `table` element
 
 **Returns:** `boolean`
 
-### `getRowSep(ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int columnIndex)`
+### `getRowSep(AuthorElement cellElem, int columnIndex)`
 
 **Parameters:**
 - `cellElem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -318,7 +318,7 @@ This method is used to find the `table` element
 
 **Returns:** `boolean`
 
-### `getColSepOrRowSepFromAttributes(ro.sync.ecss.extensions.api.node.AuthorElement cellElem, boolean needingColSep)`
+### `getColSepOrRowSepFromAttributes(AuthorElement cellElem, boolean needingColSep)`
 
 **Parameters:**
 - `cellElem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The cell element.
@@ -327,21 +327,21 @@ This method is used to find the `table` element
 
 **Returns:** `java.lang.Boolean[]`
 
-### `isTableElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableElement(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The analyzed element.
 
 **Returns:** `boolean`
 
-### `isTgroupElement(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTgroupElement(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The analyzed element.
 
 **Returns:** `boolean`
 
-### `getAttributeValue(ro.sync.ecss.extensions.api.node.AuthorElement elem, java.lang.String attributeName)`
+### `getAttributeValue(AuthorElement elem, String attributeName)`
 
 For flexibility reasons also checks with the upper case attribute name.
 

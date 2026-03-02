@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `corectLineDelimiters(java.lang.String arg0)`
+### `corectLineDelimiters(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -56,7 +56,7 @@
 
 **Returns:** [`ro.sync.document.GhostTextProvider`](./GhostTextProvider.md)
 
-### `setGhostTextProvider(ro.sync.document.GhostTextProvider arg0)`
+### `setGhostTextProvider(GhostTextProvider arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.GhostTextProvider`](./GhostTextProvider.md))

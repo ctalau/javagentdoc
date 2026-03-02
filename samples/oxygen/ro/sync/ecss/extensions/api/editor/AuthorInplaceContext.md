@@ -48,7 +48,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<java.lang.String,java.lang.Object> arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1, ro.sync.ecss.css.Styles arg2, ro.sync.ecss.extensions.api.AuthorSchemaManager arg3, ro.sync.ecss.extensions.api.AuthorAccess arg4, java.lang.Object arg5, ro.sync.ecss.extensions.api.editor.DynamicPropertyEvaluator arg6)`
+### `<init>(Map<String,Object> arg0, AuthorElement arg1, Styles arg2, AuthorSchemaManager arg3, AuthorAccess arg4, Object arg5, DynamicPropertyEvaluator arg6)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,java.lang.Object>`)
@@ -59,7 +59,7 @@
 - `arg5` (`java.lang.Object`)
 - `arg6` ([`ro.sync.ecss.extensions.api.editor.DynamicPropertyEvaluator`](./DynamicPropertyEvaluator.md))
 
-### `<init>(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext arg0)`
+### `<init>(AuthorInplaceContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
@@ -82,7 +82,7 @@
 
 **Returns:** `javax.xml.namespace.QName`
 
-### `getAttributeToEdit(java.lang.String arg0)`
+### `getAttributeToEdit(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -105,7 +105,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `setErrorMessage(java.lang.String arg0)`
+### `setErrorMessage(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -120,7 +120,7 @@
 
 **Returns:** `ro.sync.ecss.css.Styles`
 
-### `setRelativeMousePosition(ro.sync.exml.view.graphics.Point arg0)`
+### `setRelativeMousePosition(Point arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Point`)
@@ -142,7 +142,7 @@
 
 **Returns:** `boolean`
 
-### `setParentHost(java.lang.Object arg0)`
+### `setParentHost(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)

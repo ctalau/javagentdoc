@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `copyAttributeOnSplit(java.lang.String attrQName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `copyAttributeOnSplit(String attrQName, AuthorElement element)`
 
 **Parameters:**
 - `attrQName` (`java.lang.String`): The attribute qualified name.

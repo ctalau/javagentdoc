@@ -32,7 +32,7 @@
 
 ## Constructors
 
-### `<init>(org.xml.sax.XMLReader xmlReader, java.lang.String[] topicPath, java.lang.String[] endTopicPath, java.lang.String sourceClass, boolean isKeyReference)`
+### `<init>(XMLReader xmlReader, String[] topicPath, String[] endTopicPath, String sourceClass, boolean isKeyReference)`
 
 **Parameters:**
 - `xmlReader` (`org.xml.sax.XMLReader`): The wrapped XML Reader.
@@ -59,70 +59,70 @@
 
 **Returns:** `org.xml.sax.ErrorHandler`
 
-### `getFeature(java.lang.String name)`
+### `getFeature(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `getProperty(java.lang.String name)`
+### `getProperty(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
 **Returns:** `java.lang.Object`
 
-### `parse(org.xml.sax.InputSource input)`
+### `parse(InputSource input)`
 
 **Parameters:**
 - `input` (`org.xml.sax.InputSource`)
 
 **Returns:** `void`
 
-### `processParserException(java.lang.Exception ex)`
+### `processParserException(Exception ex)`
 
 **Parameters:**
 - `ex` (`java.lang.Exception`): The exception.
 
 **Returns:** `void`
 
-### `parse(java.lang.String systemId)`
+### `parse(String systemId)`
 
 **Parameters:**
 - `systemId` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setContentHandler(org.xml.sax.ContentHandler handler)`
+### `setContentHandler(ContentHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.ContentHandler`)
 
 **Returns:** `void`
 
-### `setDTDHandler(org.xml.sax.DTDHandler handler)`
+### `setDTDHandler(DTDHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.DTDHandler`)
 
 **Returns:** `void`
 
-### `setEntityResolver(org.xml.sax.EntityResolver resolver)`
+### `setEntityResolver(EntityResolver resolver)`
 
 **Parameters:**
 - `resolver` (`org.xml.sax.EntityResolver`)
 
 **Returns:** `void`
 
-### `setErrorHandler(org.xml.sax.ErrorHandler handler)`
+### `setErrorHandler(ErrorHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.ErrorHandler`)
 
 **Returns:** `void`
 
-### `setFeature(java.lang.String name, boolean value)`
+### `setFeature(String name, boolean value)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -130,7 +130,7 @@
 
 **Returns:** `void`
 
-### `setProperty(java.lang.String name, java.lang.Object value)`
+### `setProperty(String name, Object value)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

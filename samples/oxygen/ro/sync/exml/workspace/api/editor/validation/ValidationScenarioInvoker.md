@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `runValidationScenarios(java.lang.String[] scenarioNames)`
+### `runValidationScenarios(String[] scenarioNames)`
 
 A separate thread is started and runs each scenario sequentially. The method returns immediately.
 

@@ -37,7 +37,7 @@ The field is declared with a type of Object to avoid
 
 ## Constructors
 
-### `<init>(com.google.common.reflect.Invokable<?,?> declaration, int position, com.google.common.reflect.TypeToken<?> type, java.lang.annotation.Annotation[] annotations, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object annotatedType)`
+### `<init>(Invokable<?,?> declaration, int position, TypeToken<?> type, Annotation[] annotations, lang@Nullable Object annotatedType)`
 
 **Parameters:**
 - `declaration` ([`com.google.common.reflect.Invokable<?,?>`](./Invokable.md))
@@ -56,59 +56,59 @@ The field is declared with a type of Object to avoid
 
 **Returns:** [`com.google.common.reflect.Invokable<?,?>`](./Invokable.md)
 
-### `isAnnotationPresent(java.lang.Class<? extends java.lang.annotation.Annotation> annotationType)`
-
-**Returns:** `boolean`
+### `isAnnotationPresent(Class<? extends Annotation> annotationType)`
 
 **Parameters:**
 - `annotationType` (`java.lang.Class<? extends java.lang.annotation.Annotation>`)
 
-### `getAnnotation(java.lang.Class<A> annotationType)`
+**Returns:** `boolean`
 
-**Returns:** `A`
+### `getAnnotation(Class<A> annotationType)`
 
 **Parameters:**
 - `annotationType` (`java.lang.Class<A>`)
+
+**Returns:** `A`
 
 ### `getAnnotations()`
 
 **Returns:** `java.lang.annotation.Annotation[]`
 
-### `getAnnotationsByType(java.lang.Class<A> annotationType)`
-
-**Returns:** `A[]`
+### `getAnnotationsByType(Class<A> annotationType)`
 
 **Parameters:**
 - `annotationType` (`java.lang.Class<A>`)
+
+**Returns:** `A[]`
 
 ### `getDeclaredAnnotations()`
 
 **Returns:** `java.lang.annotation.Annotation[]`
 
-### `getDeclaredAnnotation(java.lang.Class<A> annotationType)`
+### `getDeclaredAnnotation(Class<A> annotationType)`
+
+**Parameters:**
+- `annotationType` (`java.lang.Class<A>`)
 
 **Returns:** `A`
 
+### `getDeclaredAnnotationsByType(Class<A> annotationType)`
+
 **Parameters:**
 - `annotationType` (`java.lang.Class<A>`)
-
-### `getDeclaredAnnotationsByType(java.lang.Class<A> annotationType)`
 
 **Returns:** `A[]`
-
-**Parameters:**
-- `annotationType` (`java.lang.Class<A>`)
 
 ### `getAnnotatedType()`
 
 **Returns:** `java.lang.reflect.AnnotatedType`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

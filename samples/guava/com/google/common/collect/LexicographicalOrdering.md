@@ -26,27 +26,27 @@
 
 ## Constructors
 
-### `<init>(java.util.Comparator<? super T> elementOrder)`
+### `<init>(Comparator<? super T> elementOrder)`
 
 **Parameters:**
 - `elementOrder` (`java.util.Comparator<? super T>`)
 
 ## Methods
 
-### `compare(java.lang.Iterable<T> leftIterable, java.lang.Iterable<T> rightIterable)`
-
-**Returns:** `int`
+### `compare(Iterable<T> leftIterable, Iterable<T> rightIterable)`
 
 **Parameters:**
 - `leftIterable` (`java.lang.Iterable<T>`)
 - `rightIterable` (`java.lang.Iterable<T>`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

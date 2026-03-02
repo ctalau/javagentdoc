@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Iterator<? extends com.google.common.io.CharSource> readers)`
+### `<init>(Iterator<? extends CharSource> readers)`
 
 **Parameters:**
 - `readers` (`java.util.Iterator<? extends com.google.common.io.CharSource>`)
@@ -33,19 +33,19 @@
 
 ### `read(char[] cbuf, int off, int len)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `cbuf` (`char[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `skip(long n)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `skip(long n)`
 
 **Parameters:**
 - `n` (`long`)
+
+**Returns:** `long`
 
 ### `ready()`
 

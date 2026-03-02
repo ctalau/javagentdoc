@@ -49,7 +49,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[] keyTable, com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[] valueTable, java.util.Map.Entry<K,V>[] entries, int mask, int hashCode)`
+### `<init>(collect@Nullable ImmutableMapEntry<K,V>[] keyTable, collect@Nullable ImmutableMapEntry<K,V>[] valueTable, Map.Entry<K,V>[] entries, int mask, int hashCode)`
 
 **Parameters:**
 - `keyTable` (`com.google.common.collect.@org.checkerframework.checker.nullness.qual.Nullable ImmutableMapEntry<K,V>[]`)
@@ -60,36 +60,36 @@
 
 ## Methods
 
-### `fromEntries(java.util.Map.Entry<K,V>[] entries)`
-
-**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+### `fromEntries(Map.Entry<K,V>[] entries)`
 
 **Parameters:**
 - `entries` (`java.util.Map.Entry<K,V>[]`)
 
-### `fromEntryArray(int n, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray)`
-
 **Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+
+### `fromEntryArray(int n, Map@Nullable Entry<K,V>[] entryArray)`
 
 **Parameters:**
 - `n` (`int`)
 - `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
 
-### `checkNoConflictInValueBucket(java.lang.Object value, java.util.Map.Entry<?,?> entry, com.google.common.collect.ImmutableMapEntry<?,?> valueBucketHead)`
+**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
-**Returns:** `void`
+### `checkNoConflictInValueBucket(Object value, Map.Entry<?,?> entry, ImmutableMapEntry<?,?> valueBucketHead)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 - `entry` (`java.util.Map.Entry<?,?>`)
 - `valueBucketHead` ([`com.google.common.collect.ImmutableMapEntry<?,?>`](./ImmutableMapEntry.md))
 
-### `get(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `createEntrySet()`
 
@@ -99,12 +99,12 @@
 
 **Returns:** [`com.google.common.collect.ImmutableSet<K>`](./ImmutableSet.md)
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+**Returns:** `void`
 
 ### `isHashCodeFast()`
 

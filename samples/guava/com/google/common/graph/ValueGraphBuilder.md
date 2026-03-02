@@ -71,9 +71,7 @@ Examples of use:
 
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<java.lang.Object,java.lang.Object>`](./ValueGraphBuilder.md)
 
-### `from(com.google.common.graph.ValueGraph<N,V> graph)`
-
-**Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
+### `from(ValueGraph<N,V> graph)`
 
 The "queryable" properties are those that are exposed through the ValueGraph
  interface, such as ValueGraph#isDirected(). Other properties, such as #expectedNodeCount(int), are not set in the new builder.
@@ -81,18 +79,18 @@ The "queryable" properties are those that are exposed through the ValueGraph
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
 
-### `immutable()`
+**Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
 
-**Returns:** `com.google.common.graph.ImmutableValueGraph.Builder<N1,V1>`
+### `immutable()`
 
 The returned builder can be used for populating an ImmutableValueGraph.
 
  
 Note that the returned builder will always have #incidentEdgeOrder set to ElementOrder#stable(), regardless of the value that was set in this builder.
 
-### `allowsSelfLoops(boolean allowsSelfLoops)`
+**Returns:** `com.google.common.graph.ImmutableValueGraph.Builder<N1,V1>`
 
-**Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
+### `allowsSelfLoops(boolean allowsSelfLoops)`
 
 Attempting to add a self-loop to a graph that does not allow them will throw an UnsupportedOperationException.
 
@@ -102,31 +100,33 @@ The default value is false.
 **Parameters:**
 - `allowsSelfLoops` (`boolean`)
 
-### `expectedNodeCount(int expectedNodeCount)`
-
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
+
+### `expectedNodeCount(int expectedNodeCount)`
 
 **Parameters:**
 - `expectedNodeCount` (`int`)
 
-### `nodeOrder(com.google.common.graph.ElementOrder<N1> nodeOrder)`
+**Returns:** [`com.google.common.graph.ValueGraphBuilder<N,V>`](./ValueGraphBuilder.md)
 
-**Returns:** [`com.google.common.graph.ValueGraphBuilder<N1,V>`](./ValueGraphBuilder.md)
+### `nodeOrder(ElementOrder<N1> nodeOrder)`
 
 The default value is insertion order.
 
 **Parameters:**
 - `nodeOrder` ([`com.google.common.graph.ElementOrder<N1>`](./ElementOrder.md))
 
-### `incidentEdgeOrder(com.google.common.graph.ElementOrder<N1> incidentEdgeOrder)`
-
 **Returns:** [`com.google.common.graph.ValueGraphBuilder<N1,V>`](./ValueGraphBuilder.md)
+
+### `incidentEdgeOrder(ElementOrder<N1> incidentEdgeOrder)`
 
 The default value is unordered for mutable graphs. For
  immutable graphs, this value is ignored; they always have a stable order.
 
 **Parameters:**
 - `incidentEdgeOrder` ([`com.google.common.graph.ElementOrder<N1>`](./ElementOrder.md))
+
+**Returns:** [`com.google.common.graph.ValueGraphBuilder<N1,V>`](./ValueGraphBuilder.md)
 
 ### `build()`
 

@@ -21,7 +21,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableMap<K,V> map)`
+### `<init>(ImmutableMap<K,V> map)`
 
 **Parameters:**
 - `map` ([`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md))
@@ -40,26 +40,26 @@
 
 **Returns:** `java.util.Spliterator<K>`
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `get(int index)`
+**Returns:** `boolean`
 
-**Returns:** `K`
+### `get(int index)`
 
 **Parameters:**
 - `index` (`int`)
 
-### `forEach(java.util.function.Consumer<? super K> action)`
+**Returns:** `K`
 
-**Returns:** `void`
+### `forEach(Consumer<? super K> action)`
 
 **Parameters:**
 - `action` (`java.util.function.Consumer<? super K>`)
+
+**Returns:** `void`
 
 ### `isPartialView()`
 

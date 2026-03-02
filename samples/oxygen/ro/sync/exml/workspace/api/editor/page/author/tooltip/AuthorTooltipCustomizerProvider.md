@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `addTooltipCustomizer(ro.sync.exml.workspace.api.editor.page.author.tooltip.AuthorTooltipCustomizer tooltipCustomizer)`
+### `addTooltipCustomizer(AuthorTooltipCustomizer tooltipCustomizer)`
 
 The customizer can be used to customize the description shown when hovering the Author page.
 
@@ -17,7 +17,7 @@ The customizer can be used to customize the description shown when hovering the 
 
 **Returns:** `void`
 
-### `removeTooltipCustomizer(ro.sync.exml.workspace.api.editor.page.author.tooltip.AuthorTooltipCustomizer tooltipCustomizer)`
+### `removeTooltipCustomizer(AuthorTooltipCustomizer tooltipCustomizer)`
 
 **Parameters:**
 - `tooltipCustomizer` ([`ro.sync.exml.workspace.api.editor.page.author.tooltip.AuthorTooltipCustomizer`](./AuthorTooltipCustomizer.md)): The tooltip customizer.

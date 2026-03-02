@@ -48,7 +48,7 @@ For example after a document is opened, the application will re-configure the fr
 
 **Returns:** `void`
 
-### `editorAboutToBeClosedVeto(java.net.URL editorLocation)`
+### `editorAboutToBeClosedVeto(URL editorLocation)`
 
 Decide if the closing should proceed or not.
 
@@ -60,7 +60,7 @@ Decide if the closing should proceed or not.
 
 **Returns:** `boolean`
 
-### `editorReloaded(java.net.URL editorURL)`
+### `editorReloaded(URL editorURL)`
 
 Probably F5 was pressed.
 

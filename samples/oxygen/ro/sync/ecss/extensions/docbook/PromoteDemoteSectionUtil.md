@@ -34,7 +34,7 @@
 
 ## Methods
 
-### `processPromoteDemote(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.docbook.PromoteDemoteSectionUtil.PromoteDemote action)`
+### `processPromoteDemote(AuthorAccess authorAccess, PromoteDemoteSectionUtil.PromoteDemote action)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
@@ -42,14 +42,14 @@
 
 **Returns:** `void`
 
-### `getSectionNodeToProcess(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getSectionNodeToProcess(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)
 
-### `getInsertionOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement sectionNodeToProcess, ro.sync.ecss.extensions.docbook.PromoteDemoteSectionUtil.PromoteDemote action)`
+### `getInsertionOffset(AuthorAccess authorAccess, AuthorElement sectionNodeToProcess, PromoteDemoteSectionUtil.PromoteDemote action)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -58,7 +58,7 @@
 
 **Returns:** `int`
 
-### `getInsertionOffsetForPromote(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement sectionNodeToProcess)`
+### `getInsertionOffsetForPromote(AuthorAccess authorAccess, AuthorElement sectionNodeToProcess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): Author access.
@@ -66,14 +66,14 @@
 
 **Returns:** `int`
 
-### `getInsertionOffsetForDemote(ro.sync.ecss.extensions.api.node.AuthorElement sectionNodeToProcess)`
+### `getInsertionOffsetForDemote(AuthorElement sectionNodeToProcess)`
 
 **Parameters:**
 - `sectionNodeToProcess` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The section node that should be demoted.
 
 **Returns:** `int`
 
-### `changeSectNodeName(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement authorElement, ro.sync.ecss.extensions.docbook.PromoteDemoteSectionUtil.PromoteDemote action)`
+### `changeSectNodeName(AuthorAccess authorAccess, AuthorElement authorElement, PromoteDemoteSectionUtil.PromoteDemote action)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
@@ -82,7 +82,7 @@
 
 **Returns:** `void`
 
-### `nodeContainsSect5Element(ro.sync.ecss.extensions.api.AuthorElementBaseInterface sectionElement)`
+### `nodeContainsSect5Element(AuthorElementBaseInterface sectionElement)`
 
 **Parameters:**
 - `sectionElement` ([`ro.sync.ecss.extensions.api.AuthorElementBaseInterface`](../api/AuthorElementBaseInterface.md)): The sect node.

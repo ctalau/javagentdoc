@@ -39,8 +39,6 @@ If the resulting URLs are inserted into an HTML or XML document, they will requi
 
 ### `urlFormParameterEscaper()`
 
-**Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
-
 Escaping is performed
  with the UTF-8 character encoding. The caller is responsible for [replacing any unpaired carriage return or line feed characters
  with a CR+LF pair](https://goo.gl/9EfkM1) on any non-file inputs before escaping them with this escaper.
@@ -68,9 +66,9 @@ This escaper is suitable for escaping parameter names and values even when [usin
  
 **Note:** Unlike other escapers, URL escapers produce [uppercase](https://url.spec.whatwg.org/#percent-encode) hexadecimal sequences.
 
-### `urlPathSegmentEscaper()`
-
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
+
+### `urlPathSegmentEscaper()`
 
 The returned escaper escapes all non-ASCII
  characters, even though [many of these are accepted in modern
@@ -102,9 +100,9 @@ When escaping a String, the following rules apply:
  
 **Note:** Unlike other escapers, URL escapers produce [uppercase](https://url.spec.whatwg.org/#percent-encode) hexadecimal sequences.
 
-### `urlFragmentEscaper()`
-
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
+
+### `urlFragmentEscaper()`
 
 The returned escaper escapes all non-ASCII
  characters, even though [many of these are accepted in modern
@@ -131,4 +129,6 @@ When escaping a String, the following rules apply:
 
  
 **Note:** Unlike other escapers, URL escapers produce [uppercase](https://url.spec.whatwg.org/#percent-encode) hexadecimal sequences.
+
+**Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 

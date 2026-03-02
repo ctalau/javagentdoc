@@ -18,7 +18,7 @@ For example, the results
 
 ## Methods
 
-### `setResults(java.lang.String tabKey, java.util.List<? extends ro.sync.document.DocumentPositionedInfo> results, ro.sync.exml.workspace.api.results.ResultsManager.ResultType resultsType)`
+### `setResults(String tabKey, List<? extends DocumentPositionedInfo> results, ResultsManager.ResultType resultsType)`
 
 If a results view does not exist for the given key, a new one is created.
  The view is selected automatically when setting a list of results in it.
@@ -32,7 +32,7 @@ If a results view does not exist for the given key, a new one is created.
 
 **Returns:** `void`
 
-### `addResult(java.lang.String tabKey, ro.sync.document.DocumentPositionedInfo result, ro.sync.exml.workspace.api.results.ResultsManager.ResultType resultType, boolean selectTab, boolean selectResult)`
+### `addResult(String tabKey, DocumentPositionedInfo result, ResultsManager.ResultType resultType, boolean selectTab, boolean selectResult)`
 
 If a results view does not exist for the given key, a new one is created.
 
@@ -49,7 +49,7 @@ If a results view does not exist for the given key, a new one is created.
 
 **Returns:** `void`
 
-### `addResults(java.lang.String tabKey, java.util.List<? extends ro.sync.document.DocumentPositionedInfo> results, ro.sync.exml.workspace.api.results.ResultsManager.ResultType resultsType, boolean selectTab)`
+### `addResults(String tabKey, List<? extends DocumentPositionedInfo> results, ResultsManager.ResultType resultsType, boolean selectTab)`
 
 If a results view does not exist for the given key, a new one is created.
 
@@ -65,21 +65,21 @@ If a results view does not exist for the given key, a new one is created.
 
 **Returns:** `void`
 
-### `getAllResults(java.lang.String tabKey)`
+### `getAllResults(String tabKey)`
 
 **Parameters:**
 - `tabKey` (`java.lang.String`): The key identifying the tab from which the results are to be retrieved.
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `getSelectedResults(java.lang.String tabKey)`
+### `getSelectedResults(String tabKey)`
 
 **Parameters:**
 - `tabKey` (`java.lang.String`): The key identifying the tab from which the selected results are to be retrieved.
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `addEventHandler(java.lang.String tabKey, ro.sync.exml.workspace.api.results.ResultsTabEventHandler handler)`
+### `addEventHandler(String tabKey, ResultsTabEventHandler handler)`
 
 **Parameters:**
 - `tabKey` (`java.lang.String`): The key identifying the tab on which the handler is added.
@@ -87,7 +87,7 @@ If a results view does not exist for the given key, a new one is created.
 
 **Returns:** `void`
 
-### `removeEventHandler(java.lang.String tabKey, ro.sync.exml.workspace.api.results.ResultsTabEventHandler handler)`
+### `removeEventHandler(String tabKey, ResultsTabEventHandler handler)`
 
 **Parameters:**
 - `tabKey` (`java.lang.String`): The key identifying the tab from which the handler is removed.
@@ -95,7 +95,7 @@ If a results view does not exist for the given key, a new one is created.
 
 **Returns:** `void`
 
-### `selectResult(java.lang.String tabKey, ro.sync.document.DocumentPositionedInfo result)`
+### `selectResult(String tabKey, DocumentPositionedInfo result)`
 
 The tab is also selected.
 
@@ -105,7 +105,7 @@ The tab is also selected.
 
 **Returns:** `void`
 
-### `removeResult(java.lang.String tabKey, ro.sync.document.DocumentPositionedInfo result)`
+### `removeResult(String tabKey, DocumentPositionedInfo result)`
 
 **Parameters:**
 - `tabKey` (`java.lang.String`): The key identifying the tab.
@@ -113,7 +113,7 @@ The tab is also selected.
 
 **Returns:** `void`
 
-### `addPopUpMenuCustomizer(java.lang.String tabKey, ro.sync.exml.workspace.api.results.ResultsTabPopUpMenuCustomizer customizer)`
+### `addPopUpMenuCustomizer(String tabKey, ResultsTabPopUpMenuCustomizer customizer)`
 
 **Parameters:**
 - `tabKey` (`java.lang.String`): The key identifying the tab for which the menu customizer is added.
@@ -121,7 +121,7 @@ The tab is also selected.
 
 **Returns:** `void`
 
-### `removePopUpMenuCustomizer(java.lang.String tabKey, ro.sync.exml.workspace.api.results.ResultsTabPopUpMenuCustomizer customizer)`
+### `removePopUpMenuCustomizer(String tabKey, ResultsTabPopUpMenuCustomizer customizer)`
 
 **Parameters:**
 - `tabKey` (`java.lang.String`): The key identifying the tab from which the menu customizer is removed.

@@ -18,10 +18,10 @@
 
 ### `get(int index)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `E`
 
 ### `iterator()`
 
@@ -31,20 +31,20 @@
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(java.util.function.Consumer<? super E> consumer)`
-
-**Returns:** `void`
+### `forEach(Consumer<? super E> consumer)`
 
 **Parameters:**
 - `consumer` (`java.util.function.Consumer<? super E>`)
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
+
+**Returns:** `int`
 
 ### `createAsList()`
 

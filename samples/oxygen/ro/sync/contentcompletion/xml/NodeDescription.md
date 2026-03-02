@@ -58,84 +58,84 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetFractionDigitsValue(java.lang.String arg0)`
+### `setFacetFractionDigitsValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetMaxExclusiveValue(java.lang.String arg0)`
+### `setFacetMaxExclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetMaxInclusiveValue(java.lang.String arg0)`
+### `setFacetMaxInclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetMaxLengthValue(java.lang.String arg0)`
+### `setFacetMaxLengthValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetMinInclusiveValue(java.lang.String arg0)`
+### `setFacetMinInclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setPossiblesValues(java.util.List<java.lang.String> arg0)`
+### `setPossiblesValues(List<String> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
 
 **Returns:** `void`
 
-### `setFacetTotalDigitsValue(java.lang.String arg0)`
+### `setFacetTotalDigitsValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetWhitespaceValue(java.lang.String arg0)`
+### `setFacetWhitespaceValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setModelDescription(java.lang.String arg0)`
+### `setModelDescription(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetLengthValue(java.lang.String arg0)`
+### `setFacetLengthValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetMinLengthValue(java.lang.String arg0)`
+### `setFacetMinLengthValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFacetMinExclusiveValue(java.lang.String arg0)`
+### `setFacetMinExclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -146,7 +146,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetPattern(java.lang.String arg0)`
+### `setFacetPattern(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -157,7 +157,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setAssertions(java.lang.String arg0)`
+### `setAssertions(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -168,7 +168,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentMode(java.lang.String arg0)`
+### `setOpenContentMode(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -179,7 +179,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentWildcardDescription(java.lang.String arg0)`
+### `setOpenContentWildcardDescription(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

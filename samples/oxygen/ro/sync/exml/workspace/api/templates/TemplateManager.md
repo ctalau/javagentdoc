@@ -49,7 +49,7 @@
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.templates.TemplatesCategory>`
 
-### `getTemplatesFromConfigs(java.util.List<ro.sync.exml.workspace.api.options.ConfigResource> configs, int templateToShow)`
+### `getTemplatesFromConfigs(List<ConfigResource> configs, int templateToShow)`
 
 **Parameters:**
 - `configs` (`java.util.List<ro.sync.exml.workspace.api.options.ConfigResource>`): The config resources to convert to templates.

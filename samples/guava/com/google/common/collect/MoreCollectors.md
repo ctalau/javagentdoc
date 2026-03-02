@@ -32,9 +32,9 @@
 
 ### `onlyElement()`
 
-**Returns:** `java.util.stream.Collector<T,?,T>`
-
 The
  returned collector throws an IllegalArgumentException if the stream consists of two or
  more elements, and a NoSuchElementException if the stream is empty.
+
+**Returns:** `java.util.stream.Collector<T,?,T>`
 

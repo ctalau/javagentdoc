@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getActions(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The author access.

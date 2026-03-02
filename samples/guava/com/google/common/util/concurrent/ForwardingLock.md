@@ -30,13 +30,13 @@
 
 **Returns:** `boolean`
 
-### `tryLock(long time, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `boolean`
+### `tryLock(long time, TimeUnit unit)`
 
 **Parameters:**
 - `time` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `boolean`
 
 ### `unlock()`
 

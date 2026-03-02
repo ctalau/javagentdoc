@@ -28,30 +28,28 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `hashCode(char value)`
 
-**Returns:** `int`
-
 **Java 8 users:** use Character#hashCode(char) instead.
 
 **Parameters:**
 - `value` (`char`): a primitive char value
 
-### `checkedCast(long value)`
+**Returns:** `int`
 
-**Returns:** `char`
+### `checkedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any value in the range of the char type
 
-### `saturatedCast(long value)`
-
 **Returns:** `char`
+
+### `saturatedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any long value
 
-### `compare(char a, char b)`
+**Returns:** `char`
 
-**Returns:** `int`
+### `compare(char a, char b)`
 
 The sign of the value returned is the same as
  that of ((Character) a).compareTo(b).
@@ -64,25 +62,25 @@ The sign of the value returned is the same as
 - `a` (`char`): the first char to compare
 - `b` (`char`): the second char to compare
 
+**Returns:** `int`
+
 ### `contains(char[] array, char target)`
+
+**Parameters:**
+- `array` (`char[]`): an array of char values, possibly empty
+- `target` (`char`): a primitive char value
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `array` (`char[]`): an array of char values, possibly empty
-- `target` (`char`): a primitive char value
-
 ### `indexOf(char[] array, char target)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `array` (`char[]`): an array of char values, possibly empty
 - `target` (`char`): a primitive char value
 
-### `indexOf(char[] array, char target, int start, int end)`
-
 **Returns:** `int`
+
+### `indexOf(char[] array, char target, int start, int end)`
 
 **Parameters:**
 - `array` (`char[]`)
@@ -90,9 +88,9 @@ The sign of the value returned is the same as
 - `start` (`int`)
 - `end` (`int`)
 
-### `indexOf(char[] array, char[] target)`
-
 **Returns:** `int`
+
+### `indexOf(char[] array, char[] target)`
 
 More formally, returns the lowest index i such that Arrays.copyOfRange(array,
  i, i + target.length) contains exactly the same elements as target.
@@ -101,17 +99,17 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `array` (`char[]`): the array to search for the sequence target
 - `target` (`char[]`): the array to search for as a sub-sequence of array
 
-### `lastIndexOf(char[] array, char target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(char[] array, char target)`
 
 **Parameters:**
 - `array` (`char[]`): an array of char values, possibly empty
 - `target` (`char`): a primitive char value
 
-### `lastIndexOf(char[] array, char target, int start, int end)`
-
 **Returns:** `int`
+
+### `lastIndexOf(char[] array, char target, int start, int end)`
 
 **Parameters:**
 - `array` (`char[]`)
@@ -119,23 +117,23 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `start` (`int`)
 - `end` (`int`)
 
-### `min(char[] array)`
+**Returns:** `int`
 
-**Returns:** `char`
+### `min(char[] array)`
 
 **Parameters:**
 - `array` (`char[]`): a *nonempty* array of char values
+
+**Returns:** `char`
 
 ### `max(char[] array)`
 
-**Returns:** `char`
-
 **Parameters:**
 - `array` (`char[]`): a *nonempty* array of char values
 
-### `constrainToRange(char value, char min, char max)`
-
 **Returns:** `char`
+
+### `constrainToRange(char value, char min, char max)`
 
 If value is within the range [min..max], value is returned
  unchanged. If value is less than min, min is returned, and if 
@@ -146,9 +144,9 @@ If value is within the range [min..max], value is returned
 - `min` (`char`): the lower bound (inclusive) of the range to constrain value to
 - `max` (`char`): the upper bound (inclusive) of the range to constrain value to
 
-### `concat(char[][] arrays)`
+**Returns:** `char`
 
-**Returns:** `char[]`
+### `concat(char[][] arrays)`
 
 For example, 
  concat(new char[] {a, b}, new char[] {}, new char[] {c} returns the array {a, b, c}.
@@ -156,9 +154,9 @@ For example,
 **Parameters:**
 - `arrays` (`char[][]`): zero or more char arrays
 
-### `toByteArray(char value)`
+**Returns:** `char[]`
 
-**Returns:** `byte[]`
+### `toByteArray(char value)`
 
 For example, the input value 
  '\\u5432' would yield the byte array {0x54, 0x32}.
@@ -170,9 +168,9 @@ If you need to convert and concatenate several values (possibly even of differen
 **Parameters:**
 - `value` (`char`)
 
-### `fromByteArray(byte[] bytes)`
+**Returns:** `byte[]`
 
-**Returns:** `char`
+### `fromByteArray(byte[] bytes)`
 
 For example, the
  input byte array {0x54, 0x32} would yield the char value '\\u5432'.
@@ -184,17 +182,17 @@ Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `fromBytes(byte b1, byte b2)`
-
 **Returns:** `char`
+
+### `fromBytes(byte b1, byte b2)`
 
 **Parameters:**
 - `b1` (`byte`)
 - `b2` (`byte`)
 
-### `ensureCapacity(char[] array, int minLength, int padding)`
+**Returns:** `char`
 
-**Returns:** `char[]`
+### `ensureCapacity(char[] array, int minLength, int padding)`
 
 If array already has a length of at least minLength,
  it is returned directly. Otherwise, a new array of size minLength + padding is
@@ -205,20 +203,20 @@ If array already has a length of at least minLength,
 - `minLength` (`int`): the minimum length the returned array must guarantee
 - `padding` (`int`): an extra amount to "grow" the array by if growth is necessary
 
-### `join(java.lang.String separator, char[] array)`
+**Returns:** `char[]`
 
-**Returns:** `java.lang.String`
+### `join(String separator, char[] array)`
 
 For example, join("-", '1', '2', '3') returns the string "1-2-3".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`char[]`): an array of char values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<char[]>`
+### `lexicographicalComparator()`
 
 That is, it compares, using #compare(char, char)), the first pair of values
  that follow any common prefix, or when one array is a prefix of the other, treats the shorter
@@ -229,9 +227,9 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(char[],
  char[]).
 
-### `toArray(java.util.Collection<java.lang.Character> collection)`
+**Returns:** `java.util.Comparator<char[]>`
 
-**Returns:** `char[]`
+### `toArray(Collection<Character> collection)`
 
 Elements are copied from the argument collection as if by collection.toArray().
  Calling this method is as thread-safe as calling that method.
@@ -239,25 +237,25 @@ Elements are copied from the argument collection as if by collection.toArray().
 **Parameters:**
 - `collection` (`java.util.Collection<java.lang.Character>`): a collection of Character objects
 
-### `sortDescending(char[] array)`
+**Returns:** `char[]`
 
-**Returns:** `void`
+### `sortDescending(char[] array)`
 
 **Parameters:**
 - `array` (`char[]`)
 
-### `sortDescending(char[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(char[] array, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `array` (`char[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `reverse(char[] array)`
-
 **Returns:** `void`
+
+### `reverse(char[] array)`
 
 This is equivalent to 
  Collections.reverse(Chars.asList(array)), but is likely to be more efficient.
@@ -265,9 +263,9 @@ This is equivalent to
 **Parameters:**
 - `array` (`char[]`)
 
-### `reverse(char[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `reverse(char[] array, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.reverse(Chars.asList(array).subList(fromIndex, toIndex)), but is likely to be more
@@ -278,9 +276,9 @@ This is equivalent to
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `rotate(char[] array, int distance)`
-
 **Returns:** `void`
+
+### `rotate(char[] array, int distance)`
 
 This is equivalent to Collections.rotate(Chars.asList(array),
  distance), but is considerably faster and avoids allocation and garbage collection.
@@ -292,9 +290,9 @@ The provided "distance" may be negative, which will rotate left.
 - `array` (`char[]`)
 - `distance` (`int`)
 
-### `rotate(char[] array, int distance, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `rotate(char[] array, int distance, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.rotate(Chars.asList(array).subList(fromIndex, toIndex), distance), but is
@@ -309,9 +307,9 @@ The provided "distance" may be negative, which will rotate left.
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `asList(char[] backingArray)`
+**Returns:** `void`
 
-**Returns:** `java.util.List<java.lang.Character>`
+### `asList(char[] backingArray)`
 
 The list supports List#set(int, Object), but any attempt to
  set a value to null will result in a NullPointerException.
@@ -326,4 +324,6 @@ The returned list is serializable.
 
 **Parameters:**
 - `backingArray` (`char[]`): the array to back the list
+
+**Returns:** `java.util.List<java.lang.Character>`
 

@@ -8,14 +8,14 @@
 
 ## Methods
 
-### `addCssActionListener(ro.sync.ecss.extensions.api.webapp.CssActionListener arg0)`
+### `addCssActionListener(CssActionListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.CssActionListener`](./CssActionListener.md))
 
 **Returns:** `void`
 
-### `removeCssActionListener(ro.sync.ecss.extensions.api.webapp.CssActionListener arg0)`
+### `removeCssActionListener(CssActionListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.CssActionListener`](./CssActionListener.md))

@@ -25,7 +25,7 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.ui.urlpanel.LocalFileBrowseType[]`](./LocalFileBrowseType.md)
 
-### `valueOf(java.lang.String name)`
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

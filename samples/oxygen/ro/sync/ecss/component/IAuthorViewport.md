@@ -39,7 +39,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getCurrentSelectedNode(ro.sync.ecss.dom.p arg0)`
+### `getCurrentSelectedNode(p arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.dom.p`)
@@ -58,21 +58,21 @@
 
 **Returns:** `void`
 
-### `addCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener arg0)`
+### `addCaretListener(AuthorCaretListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md))
 
 **Returns:** `void`
 
-### `removeCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener arg0)`
+### `removeCaretListener(AuthorCaretListener arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../extensions/api/AuthorCaretListener.md))
 
 **Returns:** `void`
 
-### `setEditAttributesSupport(ro.sync.ecss.component.EditAttributesSupport arg0)`
+### `setEditAttributesSupport(EditAttributesSupport arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.component.EditAttributesSupport`](./EditAttributesSupport.md))
@@ -113,14 +113,14 @@
 
 **Returns:** `ro.sync.ecss.i.b.c.i`
 
-### `getSelectionMetadata(ro.sync.ecss.i.b.c.i arg0)`
+### `getSelectionMetadata(i arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.i.b.c.i`)
 
 **Returns:** [`ro.sync.ecss.component.AuthorContentMetadata`](./AuthorContentMetadata.md)
 
-### `edit(ro.sync.ecss.i.l arg0, ro.sync.exml.view.k arg1, ro.sync.exml.view.graphics.Point arg2)`
+### `edit(l arg0, k arg1, Point arg2)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.i.l`)
@@ -137,7 +137,7 @@
 
 **Returns:** `int[]`
 
-### `findEditorBox(ro.sync.ecss.component.editor.l arg0)`
+### `findEditorBox(l arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.component.editor.l`)
@@ -195,7 +195,7 @@
 
 **Returns:** `int`
 
-### `getCalloutInfo(java.lang.String arg0)`
+### `getCalloutInfo(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

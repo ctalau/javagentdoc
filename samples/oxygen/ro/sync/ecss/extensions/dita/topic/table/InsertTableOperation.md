@@ -60,7 +60,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -68,7 +68,7 @@
 
 **Returns:** `void`
 
-### `addTableBody(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, java.util.List<java.util.Map<java.lang.String,java.lang.String>> rowAttributes, boolean cellsFragments, java.lang.String namespace, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper, java.lang.String rowElName, java.lang.String entryElName)`
+### `addTableBody(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorDocumentFragment[] fragments, List<Map<String,String>> rowAttributes, boolean cellsFragments, String namespace, AuthorAccess authorAccess, AuthorTableHelper tableHelper, String rowElName, String entryElName)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer where to append content.
@@ -85,7 +85,7 @@
 
 **Returns:** `void`
 
-### `addTableHeader(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String rowElName, java.lang.String entryElName)`
+### `addTableHeader(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorAccess authorAccess, String rowElName, String entryElName)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The buffer where to append the XML fragment for the table header.
@@ -96,7 +96,7 @@
 
 **Returns:** `void`
 
-### `addSimpleTableBody(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, java.util.List<java.util.Map<java.lang.String,java.lang.String>> rowAttributes, boolean cellsFragments, java.lang.String namespace, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper, java.lang.String stentryElName)`
+### `addSimpleTableBody(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorDocumentFragment[] fragments, List<Map<String,String>> rowAttributes, boolean cellsFragments, String namespace, AuthorAccess authorAccess, AuthorTableHelper tableHelper, String stentryElName)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer to append content.
@@ -112,7 +112,7 @@
 
 **Returns:** `void`
 
-### `addChoiceTableBody(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, java.util.List<java.util.Map<java.lang.String,java.lang.String>> rowAttributes, boolean cellsFragments, java.lang.String namespace, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `addChoiceTableBody(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorDocumentFragment[] fragments, List<Map<String,String>> rowAttributes, boolean cellsFragments, String namespace, AuthorAccess authorAccess, AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer to append content.
@@ -127,7 +127,7 @@
 
 **Returns:** `void`
 
-### `addSimpleTableColWidths(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo)`
+### `addSimpleTableColWidths(StringBuilder tableXMLFragment, TableInfo tableInfo)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`)
@@ -135,7 +135,7 @@
 
 **Returns:** `void`
 
-### `addSimpleTableHeader(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String stentryElName)`
+### `addSimpleTableHeader(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorAccess authorAccess, String stentryElName)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The buffer where to append the XML fragment for the table header.
@@ -145,7 +145,7 @@
 
 **Returns:** `void`
 
-### `addChoiceTableHeader(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `addChoiceTableHeader(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer to append content.
@@ -154,7 +154,7 @@
 
 **Returns:** `void`
 
-### `addColSpecs(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.AuthorDocumentController authorDocumentController)`
+### `addColSpecs(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorDocumentController authorDocumentController)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The buffer where to append the XML fragment for the table header.
@@ -173,7 +173,7 @@ The operation will display a dialog for choosing the table attributes.
 
 **Returns:** `java.lang.String`
 
-### `insertTable(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, boolean cellsFragments, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String namespace, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo)`
+### `insertTable(AuthorDocumentFragment[] fragments, boolean cellsFragments, AuthorAccess authorAccess, String namespace, AuthorTableHelper tableHelper, TableInfo tableInfo)`
 
 **Parameters:**
 - `fragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../../../api/node/AuthorDocumentFragment.md))
@@ -185,7 +185,7 @@ The operation will display a dialog for choosing the table attributes.
 
 **Returns:** `void`
 
-### `insertTable(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, java.util.List<java.util.Map<java.lang.String,java.lang.String>> rowAttributes, boolean cellsFragments, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String namespace, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo)`
+### `insertTable(AuthorDocumentFragment[] fragments, List<Map<String,String>> rowAttributes, boolean cellsFragments, AuthorAccess authorAccess, String namespace, AuthorTableHelper tableHelper, TableInfo tableInfo)`
 
 Each fragments will correspond to a cell. The resulting table will have one column and as many rows as fragments length.
  
@@ -206,7 +206,7 @@ Each fragments will correspond to a cell. The resulting table will have one colu
 
 **Returns:** `void`
 
-### `addPropertiesTableBody(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, java.util.List<java.util.Map<java.lang.String,java.lang.String>> rowAttributes, boolean cellsFragments, java.lang.String namespace, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `addPropertiesTableBody(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorDocumentFragment[] fragments, List<Map<String,String>> rowAttributes, boolean cellsFragments, String namespace, AuthorAccess authorAccess, AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer to append content.
@@ -221,7 +221,7 @@ Each fragments will correspond to a cell. The resulting table will have one colu
 
 **Returns:** `void`
 
-### `addPropertiesTableHeader(java.lang.StringBuilder tableXMLFragment, ro.sync.ecss.extensions.commons.table.operations.TableInfo tableInfo, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `addPropertiesTableHeader(StringBuilder tableXMLFragment, TableInfo tableInfo, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `tableXMLFragment` (`java.lang.StringBuilder`): The string buffer to append content.
@@ -230,7 +230,7 @@ Each fragments will correspond to a cell. The resulting table will have one colu
 
 **Returns:** `void`
 
-### `createCell(java.lang.StringBuilder xmlFragment, java.lang.String elName)`
+### `createCell(StringBuilder xmlFragment, String elName)`
 
 **Parameters:**
 - `xmlFragment` (`java.lang.StringBuilder`): The XML fragment where the cell will be appended.

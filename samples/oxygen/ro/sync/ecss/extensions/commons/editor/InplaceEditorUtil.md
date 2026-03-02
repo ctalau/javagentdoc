@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `getPreferredSize(javax.swing.JPanel panel, ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getPreferredSize(JPanel panel, AuthorInplaceContext context)`
 
 **Parameters:**
 - `panel` (`javax.swing.JPanel`): A panel used as an editor.
@@ -26,7 +26,7 @@
 
 **Returns:** `ro.sync.exml.view.graphics.Dimension`
 
-### `getPreferredSize(javax.swing.JComboBox comboBox, ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getPreferredSize(JComboBox comboBox, AuthorInplaceContext context)`
 
 **Parameters:**
 - `comboBox` (`javax.swing.JComboBox`): A combo box used as an editor.
@@ -34,7 +34,7 @@
 
 **Returns:** `ro.sync.exml.view.graphics.Dimension`
 
-### `getPreferredSize(javax.swing.JTextField textField, ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getPreferredSize(JTextField textField, AuthorInplaceContext context)`
 
 **Parameters:**
 - `textField` (`javax.swing.JTextField`): A text field used as an editor.
@@ -42,7 +42,7 @@
 
 **Returns:** `ro.sync.exml.view.graphics.Dimension`
 
-### `relayout(javax.swing.JComboBox comboBox, ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `relayout(JComboBox comboBox, AuthorInplaceContext context)`
 
 The caret offset will also be scrolled to be visible.
 
@@ -52,7 +52,7 @@ The caret offset will also be scrolled to be visible.
 
 **Returns:** `void`
 
-### `relayout(javax.swing.JTextField textField, ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `relayout(JTextField textField, AuthorInplaceContext context)`
 
 The caret offset will also be scrolled to be visible.
 
@@ -62,7 +62,7 @@ The caret offset will also be scrolled to be visible.
 
 **Returns:** `void`
 
-### `setCaretAtEnd(javax.swing.text.JTextComponent textField, ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `setCaretAtEnd(JTextComponent textField, AuthorInplaceContext context)`
 
 **Parameters:**
 - `textField` (`javax.swing.text.JTextComponent`): Text field to be scrolled.
@@ -70,7 +70,7 @@ The caret offset will also be scrolled to be visible.
 
 **Returns:** `void`
 
-### `getApproximativeCharsWidth(int numberOfChars, java.awt.FontMetrics fontMetrics)`
+### `getApproximativeCharsWidth(int numberOfChars, FontMetrics fontMetrics)`
 
 **Parameters:**
 - `numberOfChars` (`int`): The number of characters.
@@ -78,7 +78,7 @@ The caret offset will also be scrolled to be visible.
 
 **Returns:** `int`
 
-### `getPreferredSize(java.awt.Component component, java.awt.Container parent)`
+### `getPreferredSize(Component component, Container parent)`
 
 **Parameters:**
 - `component` (`java.awt.Component`): The component.
@@ -86,7 +86,7 @@ The caret offset will also be scrolled to be visible.
 
 **Returns:** `java.awt.Dimension`
 
-### `addToParent(java.awt.Component component, java.awt.Container parent, java.util.function.Supplier<T> supplier)`
+### `addToParent(Component component, Container parent, Supplier<T> supplier)`
 
 **Parameters:**
 - `component` (`java.awt.Component`): The component.

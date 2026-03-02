@@ -17,7 +17,7 @@ The name of the engine is shown to the end user as a possible option
 
 **Returns:** `java.lang.String`
 
-### `allowsValidation(java.lang.String contentType)`
+### `allowsValidation(String contentType)`
 
 **Parameters:**
 - `contentType` (`java.lang.String`): Current document content type: ro.sync.basic.contenttypes.ContentTypes
@@ -31,7 +31,7 @@ If the validation engine is slow or it cannot validate content directly over the
 
 **Returns:** `boolean`
 
-### `validate(java.lang.String systemID, java.io.Reader documentReader, ro.sync.exml.plugin.validator.ValidationType validationType, ro.sync.exml.plugin.validator.ValidationMode mode)`
+### `validate(String systemID, Reader documentReader, ValidationType validationType, ValidationMode mode)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): The systemID of the document to be checked.
@@ -42,7 +42,7 @@ If the validation engine is slow or it cannot validate content directly over the
 
 **Returns:** `java.util.List<ro.sync.document.DocumentPositionedInfo>`
 
-### `setSchemaSystemID(java.lang.String schemaSystemID)`
+### `setSchemaSystemID(String schemaSystemID)`
 
 **Parameters:**
 - `schemaSystemID` (`java.lang.String`): The schema system ID

@@ -36,7 +36,7 @@ In such cases
 
 **Returns:** `java.net.URL[]`
 
-### `getEditorAccess(java.net.URL location, int editingArea)`
+### `getEditorAccess(URL location, int editingArea)`
 
 **Parameters:**
 - `location` (`java.net.URL`): The editor location
@@ -87,7 +87,7 @@ In such cases
 
 **Returns:** [`ro.sync.exml.workspace.api.results.ResultsManager`](results/ResultsManager.md)
 
-### `addEditorChangeListener(ro.sync.exml.workspace.api.listeners.WSEditorChangeListener editorListener, int editingArea)`
+### `addEditorChangeListener(WSEditorChangeListener editorListener, int editingArea)`
 
 **Parameters:**
 - `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorChangeListener`](listeners/WSEditorChangeListener.md)): The listener notified when an editor is added, removed or the editor page is changed.
@@ -101,7 +101,7 @@ In such cases
 
 **Returns:** `void`
 
-### `removeEditorChangeListener(ro.sync.exml.workspace.api.listeners.WSEditorChangeListener editorListener, int editingArea)`
+### `removeEditorChangeListener(WSEditorChangeListener editorListener, int editingArea)`
 
 **Parameters:**
 - `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorChangeListener`](listeners/WSEditorChangeListener.md)): The listener notified when an editor is added, removed or the editor page is changed.
@@ -136,7 +136,7 @@ It is also responsible for adding and removing listeners that are notified
 
 **Returns:** [`ro.sync.exml.workspace.api.options.WSOptionsStorage`](options/WSOptionsStorage.md)
 
-### `setDITAKeyDefinitionManager(ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager keyDefitionManager)`
+### `setDITAKeyDefinitionManager(KeyDefinitionManager keyDefitionManager)`
 
 This API can be used by the developer to take control over the key definitions which will be used to resolve keyrefs and conkeyrefs for
  topics opened in the Author page.
@@ -146,21 +146,21 @@ This API can be used by the developer to take control over the key definitions w
 
 **Returns:** `void`
 
-### `addAuthorCSSAlternativesCustomizer(ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer cssAlternativesCustomizer)`
+### `addAuthorCSSAlternativesCustomizer(AuthorCSSAlternativesCustomizer cssAlternativesCustomizer)`
 
 **Parameters:**
 - `cssAlternativesCustomizer` ([`ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer`](editor/page/author/css/AuthorCSSAlternativesCustomizer.md)): The CSS alternatives customizer.
 
 **Returns:** `void`
 
-### `removeAuthorCSSAlternativesCustomizer(ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer cssAlternativesCustomizer)`
+### `removeAuthorCSSAlternativesCustomizer(AuthorCSSAlternativesCustomizer cssAlternativesCustomizer)`
 
 **Parameters:**
 - `cssAlternativesCustomizer` ([`ro.sync.exml.workspace.api.editor.page.author.css.AuthorCSSAlternativesCustomizer`](editor/page/author/css/AuthorCSSAlternativesCustomizer.md)): The CSS alternatives customizer.
 
 **Returns:** `void`
 
-### `addBatchOperationsListener(ro.sync.exml.workspace.api.listeners.BatchOperationsListener listener)`
+### `addBatchOperationsListener(BatchOperationsListener listener)`
 
 The listener is only called with REPLACE_ALL events for the standalone version of Oxygen.
 
@@ -169,7 +169,7 @@ The listener is only called with REPLACE_ALL events for the standalone version o
 
 **Returns:** `void`
 
-### `removeBatchOperationsListener(ro.sync.exml.workspace.api.listeners.BatchOperationsListener listener)`
+### `removeBatchOperationsListener(BatchOperationsListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.listeners.BatchOperationsListener`](listeners/BatchOperationsListener.md)): The batch operations listener.
@@ -180,7 +180,7 @@ The listener is only called with REPLACE_ALL events for the standalone version o
 
 **Returns:** [`ro.sync.exml.workspace.api.listeners.BatchOperationsListener`](listeners/BatchOperationsListener.md)
 
-### `createAuthorDocumentProvider(java.net.URL systemId, java.io.Reader documentReader)`
+### `createAuthorDocumentProvider(URL systemId, Reader documentReader)`
 
 References are not expanded. 
  The provider creates a structure of AuthorNodes and allows it to be manipulated via an AuthorDocumentController.
@@ -198,7 +198,7 @@ The parsing of the XML content to Author Nodes is quite fast and may also be use
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../../../ecss/extensions/api/node/AuthorDocumentProvider.md)
 
-### `createAuthorDocumentProvider(java.net.URL systemId, java.io.Reader documentReader, boolean expandReferences)`
+### `createAuthorDocumentProvider(URL systemId, Reader documentReader, boolean expandReferences)`
 
 The provider creates a structure of AuthorNodes and allows it to be manipulated via an AuthorDocumentController.
  

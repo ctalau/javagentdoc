@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.awt.Frame arg0, ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg1)`
+### `<init>(Frame arg0, StandalonePluginWorkspace arg1)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)
@@ -26,7 +26,7 @@
 
 ## Methods
 
-### `setFrame(java.awt.Frame arg0)`
+### `setFrame(Frame arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)

@@ -23,7 +23,7 @@ At most one stream will be open at
 
 ## Constructors
 
-### `<init>(java.util.Iterator<? extends com.google.common.io.ByteSource> it)`
+### `<init>(Iterator<? extends ByteSource> it)`
 
 **Parameters:**
 - `it` (`java.util.Iterator<? extends com.google.common.io.ByteSource>`): an iterator of I/O suppliers that will provide each substream
@@ -52,17 +52,17 @@ At most one stream will be open at
 
 ### `read(byte[] b, int off, int len)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `skip(long n)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `skip(long n)`
 
 **Parameters:**
 - `n` (`long`)
+
+**Returns:** `long`
 

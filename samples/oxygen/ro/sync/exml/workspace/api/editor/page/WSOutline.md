@@ -18,7 +18,7 @@ The tree path contain arrays of AuthorNodes starting from the AuthorDocument and
 
 **Returns:** `javax.swing.tree.TreePath[]`
 
-### `setSelectionPaths(javax.swing.tree.TreePath[] treePath)`
+### `setSelectionPaths(TreePath[] treePath)`
 
 **Parameters:**
 - `treePath` (`javax.swing.tree.TreePath[]`): The path to select.

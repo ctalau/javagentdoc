@@ -52,90 +52,90 @@ This is
 
 ### `adjacentNodes(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `predecessors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `successors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `degree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `inDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `outDegree(N node)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `node` (`N`)
 
-### `hasEdgeConnecting(N nodeU, N nodeV)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `boolean`
 
 ### `edgeValue(N nodeU, N nodeV)`
 
-**Returns:** `java.util.Optional<V>`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeValue(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Optional<V>`
+
+### `edgeValue(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `java.util.Optional<V>`
 
 ### `edgeValueOrDefault(N nodeU, N nodeV, V defaultValue)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 - `defaultValue` (`V`)
 
-### `edgeValueOrDefault(com.google.common.graph.EndpointPair<N> endpoints, V defaultValue)`
-
 **Returns:** `V`
+
+### `edgeValueOrDefault(EndpointPair<N> endpoints, V defaultValue)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 - `defaultValue` (`V`)
+
+**Returns:** `V`
 

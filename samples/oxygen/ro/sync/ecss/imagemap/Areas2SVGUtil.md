@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `fromSVG(java.lang.String arg0, ro.sync.ecss.imagemap.SupportedFrameworks arg1)`
+### `fromSVG(String arg0, SupportedFrameworks arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

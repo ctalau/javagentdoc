@@ -69,9 +69,7 @@ Examples of use:
 
 **Returns:** [`com.google.common.graph.GraphBuilder<java.lang.Object>`](./GraphBuilder.md)
 
-### `from(com.google.common.graph.Graph<N> graph)`
-
-**Returns:** [`com.google.common.graph.GraphBuilder<N>`](./GraphBuilder.md)
+### `from(Graph<N> graph)`
 
 The "queryable" properties are those that are exposed through the Graph interface,
  such as Graph#isDirected(). Other properties, such as #expectedNodeCount(int),
@@ -80,18 +78,18 @@ The "queryable" properties are those that are exposed through the Graph interfac
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<N>`](./Graph.md))
 
-### `immutable()`
+**Returns:** [`com.google.common.graph.GraphBuilder<N>`](./GraphBuilder.md)
 
-**Returns:** `com.google.common.graph.ImmutableGraph.Builder<N1>`
+### `immutable()`
 
 The returned builder can be used for populating an ImmutableGraph.
 
  
 Note that the returned builder will always have #incidentEdgeOrder set to ElementOrder#stable(), regardless of the value that was set in this builder.
 
-### `allowsSelfLoops(boolean allowsSelfLoops)`
+**Returns:** `com.google.common.graph.ImmutableGraph.Builder<N1>`
 
-**Returns:** [`com.google.common.graph.GraphBuilder<N>`](./GraphBuilder.md)
+### `allowsSelfLoops(boolean allowsSelfLoops)`
 
 Attempting to add a self-loop to a graph that does not allow them will throw an UnsupportedOperationException.
 
@@ -101,31 +99,33 @@ The default value is false.
 **Parameters:**
 - `allowsSelfLoops` (`boolean`)
 
-### `expectedNodeCount(int expectedNodeCount)`
-
 **Returns:** [`com.google.common.graph.GraphBuilder<N>`](./GraphBuilder.md)
+
+### `expectedNodeCount(int expectedNodeCount)`
 
 **Parameters:**
 - `expectedNodeCount` (`int`)
 
-### `nodeOrder(com.google.common.graph.ElementOrder<N1> nodeOrder)`
+**Returns:** [`com.google.common.graph.GraphBuilder<N>`](./GraphBuilder.md)
 
-**Returns:** [`com.google.common.graph.GraphBuilder<N1>`](./GraphBuilder.md)
+### `nodeOrder(ElementOrder<N1> nodeOrder)`
 
 The default value is insertion order.
 
 **Parameters:**
 - `nodeOrder` ([`com.google.common.graph.ElementOrder<N1>`](./ElementOrder.md))
 
-### `incidentEdgeOrder(com.google.common.graph.ElementOrder<N1> incidentEdgeOrder)`
-
 **Returns:** [`com.google.common.graph.GraphBuilder<N1>`](./GraphBuilder.md)
+
+### `incidentEdgeOrder(ElementOrder<N1> incidentEdgeOrder)`
 
 The default value is unordered for mutable graphs. For
  immutable graphs, this value is ignored; they always have a stable order.
 
 **Parameters:**
 - `incidentEdgeOrder` ([`com.google.common.graph.ElementOrder<N1>`](./ElementOrder.md))
+
+**Returns:** [`com.google.common.graph.GraphBuilder<N1>`](./GraphBuilder.md)
 
 ### `build()`
 

@@ -99,8 +99,11 @@ public class MarkdownParameterDocumentationTest {
         );
 
         int processHeaderIndex = markdown.indexOf("### `process(");
+        int processDescriptionIndex = markdown.indexOf("Process input data.", processHeaderIndex);
         int paramsIndex = markdown.indexOf("**Parameters:**", processHeaderIndex);
         int returnsIndex = markdown.indexOf("**Returns:**", processHeaderIndex);
+        assertTrue(processDescriptionIndex > processHeaderIndex, "Expected description after method header");
+        assertTrue(paramsIndex > processDescriptionIndex, "Expected parameters section after description");
         assertTrue(paramsIndex > processHeaderIndex, "Expected parameters section after method header");
         assertTrue(returnsIndex > paramsIndex, "Expected returns section after parameters section");
     }
@@ -148,9 +151,16 @@ public class MarkdownParameterDocumentationTest {
             "Expected HTML list in @param to render as a nested markdown list"
         );
 
-        int renderHeaderIndex = markdown.indexOf("### `render(java.lang.String notes, java.lang.String config)`");
+        int renderHeaderIndex = markdown.indexOf("### `render(String notes, String config)`");
+        assertTrue(renderHeaderIndex >= 0, "Expected method header to use simple type names");
+        assertFalse(markdown.contains("### `render(java.lang.String notes, java.lang.String config)`"),
+            "Method header should not contain fully qualified type names");
+
+        int renderDescriptionIndex = markdown.indexOf("Renders a value.", renderHeaderIndex);
         int paramsIndex = markdown.indexOf("**Parameters:**", renderHeaderIndex);
         int returnsIndex = markdown.indexOf("**Returns:**", renderHeaderIndex);
+        assertTrue(renderDescriptionIndex > renderHeaderIndex, "Expected description after render method header");
+        assertTrue(paramsIndex > renderDescriptionIndex, "Expected parameters section after description for render");
         assertTrue(paramsIndex > renderHeaderIndex, "Expected parameters section after render method header");
         assertTrue(returnsIndex > paramsIndex, "Expected returns section after parameters section for render");
     }

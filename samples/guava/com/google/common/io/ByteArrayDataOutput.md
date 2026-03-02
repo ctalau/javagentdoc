@@ -12,103 +12,103 @@
 
 ### `write(int b)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `b` (`int`)
 
-### `write(byte[] b)`
-
 **Returns:** `void`
+
+### `write(byte[] b)`
 
 **Parameters:**
 - `b` (`byte[]`)
 
-### `write(byte[] b, int off, int len)`
-
 **Returns:** `void`
+
+### `write(byte[] b, int off, int len)`
 
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `writeBoolean(boolean v)`
-
 **Returns:** `void`
+
+### `writeBoolean(boolean v)`
 
 **Parameters:**
 - `v` (`boolean`)
 
-### `writeByte(int v)`
-
 **Returns:** `void`
+
+### `writeByte(int v)`
 
 **Parameters:**
 - `v` (`int`)
+
+**Returns:** `void`
 
 ### `writeShort(int v)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `v` (`int`)
+
+**Returns:** `void`
 
 ### `writeChar(int v)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `v` (`int`)
+
+**Returns:** `void`
 
 ### `writeInt(int v)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `v` (`int`)
 
-### `writeLong(long v)`
-
 **Returns:** `void`
+
+### `writeLong(long v)`
 
 **Parameters:**
 - `v` (`long`)
 
-### `writeFloat(float v)`
-
 **Returns:** `void`
+
+### `writeFloat(float v)`
 
 **Parameters:**
 - `v` (`float`)
 
-### `writeDouble(double v)`
-
 **Returns:** `void`
+
+### `writeDouble(double v)`
 
 **Parameters:**
 - `v` (`double`)
 
-### `writeChars(java.lang.String s)`
-
 **Returns:** `void`
+
+### `writeChars(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
 
-### `writeUTF(java.lang.String s)`
-
 **Returns:** `void`
+
+### `writeUTF(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
 
-### `writeBytes(java.lang.String s)`
-
 **Returns:** `void`
+
+### `writeBytes(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
+
+**Returns:** `void`
 
 ### `toByteArray()`
 

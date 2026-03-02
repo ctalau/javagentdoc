@@ -37,16 +37,14 @@ Popular escapers are defined as constants in classes like com.google.common.html
 
 ## Methods
 
-### `escape(java.lang.String string)`
-
-**Returns:** `java.lang.String`
+### `escape(String string)`
 
 **Parameters:**
 - `string` (`java.lang.String`): the literal string to be escaped
 
-### `escape(char c)`
+**Returns:** `java.lang.String`
 
-**Returns:** `char[]`
+### `escape(char c)`
 
 If an empty array is returned, this effectively strips the input character
  from the resulting text.
@@ -63,9 +61,9 @@ An escaper is expected to be able to deal with any char value, so this method sh
 **Parameters:**
 - `c` (`char`): the character to escape if necessary
 
-### `escapeSlow(java.lang.String s, int index)`
+**Returns:** `char[]`
 
-**Returns:** `java.lang.String`
+### `escapeSlow(String s, int index)`
 
 This method is
  called by the #escape(String) method when it discovers that escaping is required. It is
@@ -76,9 +74,9 @@ This method is
 - `s` (`java.lang.String`): the literal string to be escaped
 - `index` (`int`): the index to start escaping from
 
-### `growBuffer(char[] dest, int index, int size)`
+**Returns:** `java.lang.String`
 
-**Returns:** `char[]`
+### `growBuffer(char[] dest, int index, int size)`
 
 If the index passed in is 0 then no copying will be done.
 
@@ -86,4 +84,6 @@ If the index passed in is 0 then no copying will be done.
 - `dest` (`char[]`)
 - `index` (`int`)
 - `size` (`int`)
+
+**Returns:** `char[]`
 

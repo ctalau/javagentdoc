@@ -40,7 +40,7 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -48,7 +48,7 @@
 
 **Returns:** `void`
 
-### `isArgumentTrue(ro.sync.ecss.extensions.api.ArgumentsMap args, java.lang.String argumentName)`
+### `isArgumentTrue(ArgumentsMap args, String argumentName)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The arguments map.
@@ -56,7 +56,7 @@
 
 **Returns:** `boolean`
 
-### `reloadFromReaderIfModified(ro.sync.ecss.extensions.api.access.AuthorEditorAccess editorAccess, java.io.Reader contentReader)`
+### `reloadFromReaderIfModified(AuthorEditorAccess editorAccess, Reader contentReader)`
 
 **Parameters:**
 - `editorAccess` ([`ro.sync.ecss.extensions.api.access.AuthorEditorAccess`](../../api/access/AuthorEditorAccess.md)): The editor access.

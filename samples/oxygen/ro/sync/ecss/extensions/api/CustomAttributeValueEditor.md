@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `getAttributeValue(ro.sync.ecss.extensions.api.EditedAttribute attribute, java.lang.Object parentComponent)`
+### `getAttributeValue(EditedAttribute attribute, Object parentComponent)`
 
 **Parameters:**
 - `attribute` ([`ro.sync.ecss.extensions.api.EditedAttribute`](./EditedAttribute.md)): The attribute to be edited.
@@ -84,14 +84,14 @@
 
 **Returns:** `java.lang.String`
 
-### `shouldHandleAttribute(ro.sync.ecss.extensions.api.EditedAttribute attribute)`
+### `shouldHandleAttribute(EditedAttribute attribute)`
 
 **Parameters:**
 - `attribute` ([`ro.sync.ecss.extensions.api.EditedAttribute`](./EditedAttribute.md)): The attribute.
 
 **Returns:** `boolean`
 
-### `shouldHandleAttribute(ro.sync.ecss.extensions.api.EditedAttribute attribute, ro.sync.ecss.extensions.api.CustomAttributeValueEditingContext editContext)`
+### `shouldHandleAttribute(EditedAttribute attribute, CustomAttributeValueEditingContext editContext)`
 
 **Parameters:**
 - `attribute` ([`ro.sync.ecss.extensions.api.EditedAttribute`](./EditedAttribute.md)): The attribute.
@@ -101,7 +101,7 @@
 
 **Returns:** `boolean`
 
-### `getTooltipButtonInfo(ro.sync.ecss.extensions.api.EditedAttribute attribute)`
+### `getTooltipButtonInfo(EditedAttribute attribute)`
 
 **Parameters:**
 - `attribute` ([`ro.sync.ecss.extensions.api.EditedAttribute`](./EditedAttribute.md)): The attribute to be edited.

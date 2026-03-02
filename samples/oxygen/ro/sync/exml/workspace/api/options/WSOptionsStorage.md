@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setOptionsDoctypePrefix(java.lang.String optionsDoctypePrefix)`
+### `setOptionsDoctypePrefix(String optionsDoctypePrefix)`
 
 **Parameters:**
 - `optionsDoctypePrefix` (`java.lang.String`): The document type prefix used to build the options keys.
@@ -16,7 +16,7 @@
 
 **Returns:** `void`
 
-### `addOptionListener(ro.sync.exml.workspace.api.options.WSOptionListener listener)`
+### `addOptionListener(WSOptionListener listener)`
 
 The listener is notified when the value of its associated option changes.
 
@@ -25,14 +25,14 @@ The listener is notified when the value of its associated option changes.
 
 **Returns:** `void`
 
-### `removeOptionListener(ro.sync.exml.workspace.api.options.WSOptionListener listener)`
+### `removeOptionListener(WSOptionListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.options.WSOptionListener`](./WSOptionListener.md)): The OptionListener to be removed.
 
 **Returns:** `void`
 
-### `getOption(java.lang.String key, java.lang.String defaultValue)`
+### `getOption(String key, String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies an option.
@@ -40,7 +40,7 @@ The listener is notified when the value of its associated option changes.
 
 **Returns:** `java.lang.String`
 
-### `setOption(java.lang.String key, java.lang.String value)`
+### `setOption(String key, String value)`
 
 If the supplied value is `null`
  The option will be removed from storage.
@@ -52,7 +52,7 @@ If the supplied value is `null`
 
 **Returns:** `void`
 
-### `getSecretOption(java.lang.String key, java.lang.String defaultValue)`
+### `getSecretOption(String key, String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies an option.
@@ -60,7 +60,7 @@ If the supplied value is `null`
 
 **Returns:** `java.lang.String`
 
-### `setSecretOption(java.lang.String key, java.lang.String value)`
+### `setSecretOption(String key, String value)`
 
 If the supplied value is `null`
  The option will be removed from storage.
@@ -72,7 +72,7 @@ If the supplied value is `null`
 
 **Returns:** `void`
 
-### `setPersistentObjectOption(java.lang.String key, ro.sync.exml.workspace.api.options.ExternalPersistentObject persistentObject)`
+### `setPersistentObjectOption(String key, ExternalPersistentObject persistentObject)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key.
@@ -80,7 +80,7 @@ If the supplied value is `null`
 
 **Returns:** `void`
 
-### `getPersistentObjectOption(java.lang.String key, ro.sync.exml.workspace.api.options.ExternalPersistentObject defaultValue)`
+### `getPersistentObjectOption(String key, ExternalPersistentObject defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key.
@@ -88,7 +88,7 @@ If the supplied value is `null`
 
 **Returns:** [`ro.sync.exml.workspace.api.options.ExternalPersistentObject`](./ExternalPersistentObject.md)
 
-### `getStringArrayOption(java.lang.String key, java.lang.String[] defaultValues)`
+### `getStringArrayOption(String key, String[] defaultValues)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies the option.
@@ -96,7 +96,7 @@ If the supplied value is `null`
 
 **Returns:** `java.lang.String[]`
 
-### `setStringArrayOption(java.lang.String key, java.lang.String[] values)`
+### `setStringArrayOption(String key, String[] values)`
 
 If the provided value is `null`, the option will be removed from storage.
 

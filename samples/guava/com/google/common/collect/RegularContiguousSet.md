@@ -24,7 +24,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.Range<C> range, com.google.common.collect.DiscreteDomain<C> domain)`
+### `<init>(Range<C> range, DiscreteDomain<C> domain)`
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
@@ -32,24 +32,22 @@
 
 ## Methods
 
-### `intersectionInCurrentDomain(com.google.common.collect.Range<C> other)`
-
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+### `intersectionInCurrentDomain(Range<C> other)`
 
 **Parameters:**
 - `other` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `headSetImpl(C toElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `headSetImpl(C toElement, boolean inclusive)`
 
 **Parameters:**
 - `toElement` (`C`)
 - `inclusive` (`boolean`)
 
-### `subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
 
 **Parameters:**
 - `fromElement` (`C`)
@@ -57,20 +55,22 @@
 - `toElement` (`C`)
 - `toInclusive` (`boolean`)
 
-### `tailSetImpl(C fromElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `tailSetImpl(C fromElement, boolean inclusive)`
 
 **Parameters:**
 - `fromElement` (`C`)
 - `inclusive` (`boolean`)
 
-### `indexOf(java.lang.Object target)`
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-**Returns:** `int`
+### `indexOf(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `iterator()`
 
@@ -80,13 +80,13 @@
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<C>`](./UnmodifiableIterator.md)
 
-### `equalsOrThrow(java.lang.Comparable<?> left, java.lang.Comparable<?> right)`
-
-**Returns:** `boolean`
+### `equalsOrThrow(Comparable<?> left, Comparable<?> right)`
 
 **Parameters:**
 - `left` (`java.lang.Comparable<?>`)
 - `right` (`java.lang.Comparable<?>`)
+
+**Returns:** `boolean`
 
 ### `isPartialView()`
 
@@ -108,49 +108,49 @@
 
 **Returns:** `int`
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `containsAll(java.util.Collection<?> targets)`
-
 **Returns:** `boolean`
+
+### `containsAll(Collection<?> targets)`
 
 **Parameters:**
 - `targets` (`java.util.Collection<?>`)
+
+**Returns:** `boolean`
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `intersection(com.google.common.collect.ContiguousSet<C> other)`
-
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+### `intersection(ContiguousSet<C> other)`
 
 **Parameters:**
 - `other` ([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md))
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
 ### `range()`
 
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-### `range(com.google.common.collect.BoundType lowerBoundType, com.google.common.collect.BoundType upperBoundType)`
-
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+### `range(BoundType lowerBoundType, BoundType upperBoundType)`
 
 **Parameters:**
 - `lowerBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 - `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `equals(java.lang.Object object)`
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -160,10 +160,10 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

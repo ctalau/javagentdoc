@@ -94,7 +94,7 @@ The text does not contain XML tags for the Author page.
 
 **Returns:** `int`
 
-### `getStartEndOffsets(ro.sync.document.DocumentPositionedInfo dpInfo)`
+### `getStartEndOffsets(DocumentPositionedInfo dpInfo)`
 
 **Parameters:**
 - `dpInfo` ([`ro.sync.document.DocumentPositionedInfo`](../../../../../document/DocumentPositionedInfo.md)): The document position information.
@@ -114,7 +114,7 @@ The anchor can later be used in the current or in another editing mode to identi
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.Anchor`](./Anchor.md)
 
-### `getOffsetForAnchor(ro.sync.exml.workspace.api.editor.page.Anchor anchor)`
+### `getOffsetForAnchor(Anchor anchor)`
 
 **Parameters:**
 - `anchor` ([`ro.sync.exml.workspace.api.editor.page.Anchor`](./Anchor.md)): The anchor.

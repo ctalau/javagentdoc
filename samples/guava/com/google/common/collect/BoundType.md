@@ -28,17 +28,17 @@ If a range is unbounded on a side, it is neither open nor closed on that side; t
 
 **Returns:** [`com.google.common.collect.BoundType[]`](./BoundType.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.collect.BoundType`](./BoundType.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
-### `forBoolean(boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.BoundType`](./BoundType.md)
+
+### `forBoolean(boolean inclusive)`
 
 **Parameters:**
 - `inclusive` (`boolean`)
+
+**Returns:** [`com.google.common.collect.BoundType`](./BoundType.md)
 

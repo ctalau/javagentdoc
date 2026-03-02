@@ -22,14 +22,14 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.properties.TablePropertiesHelper arg0)`
+### `<init>(TablePropertiesHelper arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.TablePropertiesHelper`](./TablePropertiesHelper.md))
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.ArgumentsMap arg1)`
+### `doOperation(AuthorAccess arg0, ArgumentsMap arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -41,14 +41,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
 
-### `showTableProperties(ro.sync.ecss.extensions.api.ArgumentsMap arg0)`
+### `showTableProperties(ArgumentsMap arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md))
 
 **Returns:** `void`
 
-### `getTableInfoFromDescriptor(java.util.Map<java.lang.String,java.util.List> arg0, java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo> arg1)`
+### `getTableInfoFromDescriptor(Map<String,List> arg0, List<TabInfo> arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.Map<java.lang.String,java.util.List>`)
@@ -56,35 +56,35 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md)
 
-### `applyChanges(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo arg0)`
+### `applyChanges(EditedTablePropertiesInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md))
 
 **Returns:** `void`
 
-### `applyTabChanges(ro.sync.ecss.extensions.commons.table.properties.TabInfo arg0)`
+### `applyTabChanges(TabInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](./TabInfo.md))
 
 **Returns:** `void`
 
-### `sortInDocumentOrder(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> arg0)`
+### `sortInDocumentOrder(List<AuthorElement> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
 
 **Returns:** `void`
 
-### `applyAttributesChanges(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo arg0)`
+### `applyAttributesChanges(EditedTablePropertiesInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md))
 
 **Returns:** `void`
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo arg0)`
+### `showDialog(EditedTablePropertiesInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md))
@@ -95,14 +95,14 @@
 
 **Returns:** `java.util.List<java.lang.Integer[]>`
 
-### `getElementsWithModifiedAttributes(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo arg0)`
+### `getElementsWithModifiedAttributes(EditedTablePropertiesInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md))
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`
 
-### `checkRowSpans(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> arg0, int arg1)`
+### `checkRowSpans(List<AuthorElement> arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
@@ -114,21 +114,21 @@
 
 **Returns:** `java.lang.String`
 
-### `getFragmentsAndOffsetsToInsert(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo arg0)`
+### `getFragmentsAndOffsetsToInsert(EditedTablePropertiesInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md))
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`
 
-### `getTableInformation(java.util.List<java.lang.Integer[]> arg0)`
+### `getTableInformation(List<Integer[]> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.Integer[]>`)
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](./TabInfo.md)
 
-### `getAttrProperty(java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> arg0, java.lang.String arg1, ro.sync.ecss.extensions.commons.table.properties.TableProperty arg2)`
+### `getAttrProperty(List<AuthorElement> arg0, String arg1, TableProperty arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement>`)
@@ -137,7 +137,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.properties.TableProperty`](./TableProperty.md)
 
-### `getCommonValue(ro.sync.ecss.extensions.api.node.AuthorElement arg0, java.lang.String arg1, java.lang.String arg2)`
+### `getCommonValue(AuthorElement arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -146,14 +146,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getSelectedTab(java.util.List<java.lang.Integer[]> arg0)`
+### `getSelectedTab(List<Integer[]> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.Integer[]>`)
 
 **Returns:** `ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo.TAB_TYPE`
 
-### `checkForCellTab(ro.sync.ecss.extensions.api.node.AuthorElement arg0, int arg1, int arg2, ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo.TAB_TYPE arg3)`
+### `checkForCellTab(AuthorElement arg0, int arg1, int arg2, EditedTablePropertiesInfo.TAB_TYPE arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -163,14 +163,14 @@
 
 **Returns:** `ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo.TAB_TYPE`
 
-### `getTabType(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `getTabType(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo.TAB_TYPE`
 
-### `getCategoriesAndProperties(java.util.List<java.lang.Integer[]> arg0)`
+### `getCategoriesAndProperties(List<Integer[]> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.Integer[]>`)
@@ -181,7 +181,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TableProperty>`
 
-### `computeFragmentsToMoveInsideFooter(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> arg0, java.util.List<javax.swing.text.Position> arg1, ro.sync.ecss.extensions.commons.table.properties.TabInfo arg2, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> arg3, ro.sync.ecss.extensions.api.node.AuthorElement arg4)`
+### `computeFragmentsToMoveInsideFooter(List<AuthorDocumentFragment> arg0, List<Position> arg1, TabInfo arg2, List<AuthorElement> arg3, AuthorElement arg4)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
@@ -192,7 +192,7 @@
 
 **Returns:** `boolean`
 
-### `computeFragmentMoveInsideHeader(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> arg0, java.util.List<javax.swing.text.Position> arg1, ro.sync.ecss.extensions.commons.table.properties.TabInfo arg2, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> arg3, ro.sync.ecss.extensions.api.node.AuthorElement arg4)`
+### `computeFragmentMoveInsideHeader(List<AuthorDocumentFragment> arg0, List<Position> arg1, TabInfo arg2, List<AuthorElement> arg3, AuthorElement arg4)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
@@ -203,7 +203,7 @@
 
 **Returns:** `boolean`
 
-### `computeFragmentsToMoveInsideBody(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> arg0, java.util.List<javax.swing.text.Position> arg1, ro.sync.ecss.extensions.commons.table.properties.TabInfo arg2, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> arg3, ro.sync.ecss.extensions.api.node.AuthorElement arg4)`
+### `computeFragmentsToMoveInsideBody(List<AuthorDocumentFragment> arg0, List<Position> arg1, TabInfo arg2, List<AuthorElement> arg3, AuthorElement arg4)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)

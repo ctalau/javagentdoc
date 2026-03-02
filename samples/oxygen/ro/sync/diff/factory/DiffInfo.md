@@ -94,7 +94,7 @@
 
 ## Constructors
 
-### `<init>(int arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, ro.sync.diff.factory.DiffInfo._b arg15, boolean arg16, java.lang.String arg17)`
+### `<init>(int arg0, boolean arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, DiffInfo._b arg15, boolean arg16, String arg17)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -116,7 +116,7 @@
 - `arg16` (`boolean`)
 - `arg17` (`java.lang.String`)
 
-### `<init>(int arg0, int arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, boolean arg15, ro.sync.diff.factory.DiffInfo._b arg16, ro.sync.diff.factory.DiffInfo._b arg17, boolean arg18, java.lang.String arg19)`
+### `<init>(int arg0, int arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, boolean arg15, DiffInfo._b arg16, DiffInfo._b arg17, boolean arg18, String arg19)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -140,7 +140,7 @@
 - `arg18` (`boolean`)
 - `arg19` (`java.lang.String`)
 
-### `<init>(ro.sync.diff.api.DiffOptions arg0)`
+### `<init>(DiffOptions arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.diff.api.DiffOptions`](../api/DiffOptions.md))

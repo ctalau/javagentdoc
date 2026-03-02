@@ -30,7 +30,7 @@
 
 ## Methods
 
-### `createDITAMapDocumentInfo(java.net.URL arg0, java.io.Reader arg1, java.util.List arg2, java.util.Map<java.lang.String,?> arg3)`
+### `createDITAMapDocumentInfo(URL arg0, Reader arg1, List arg2, Map<String,?> arg3)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -40,7 +40,7 @@
 
 **Returns:** [`ro.sync.ecss.webapp.ditamap.DITAMapDocumentModel`](../../../webapp/ditamap/DITAMapDocumentModel.md)
 
-### `createAuthorDocumentInfo(java.net.URL arg0, java.io.Reader arg1, java.util.List arg2, java.util.Map<java.lang.String,?> arg3)`
+### `createAuthorDocumentInfo(URL arg0, Reader arg1, List arg2, Map<String,?> arg3)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -50,7 +50,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md)
 
-### `createAuthorDocumentInfoInternal(java.net.URL arg0, java.io.Reader arg1, ro.sync.ecss.dom.ETagDataRecord arg2, java.util.List arg3, java.util.Map<java.lang.String,?> arg4, ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase arg5)`
+### `createAuthorDocumentInfoInternal(URL arg0, Reader arg1, ETagDataRecord arg2, List arg3, Map<String,?> arg4, InternalDocumentBuilderBase arg5)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -62,7 +62,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md)
 
-### `createAuthorDocumentInfo(java.lang.String arg0, java.util.Map<java.lang.String,?> arg1)`
+### `createAuthorDocumentInfo(String arg0, Map<String,?> arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -70,7 +70,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md)
 
-### `createAuthorDocumentInfoInternal(java.lang.String arg0, java.util.Map<java.lang.String,?> arg1, ro.sync.ecss.extensions.api.webapp.InternalDocumentBuilderBase arg2)`
+### `createAuthorDocumentInfoInternal(String arg0, Map<String,?> arg1, InternalDocumentBuilderBase arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -79,14 +79,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md)
 
-### `getCmsUrl(java.net.URL arg0)`
+### `getCmsUrl(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.net.URL`
 
-### `applyReadOnlyStatus(java.lang.String arg0, ro.sync.exml.workspace.api.editor.ReadOnlyReason arg1, ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg2)`
+### `applyReadOnlyStatus(String arg0, ReadOnlyReason arg1, AuthorDocumentModel arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -95,7 +95,7 @@
 
 **Returns:** `void`
 
-### `createAuthorDocumentInfo(java.lang.String arg0, java.io.Reader arg1, java.util.Map<java.lang.String,?> arg2)`
+### `createAuthorDocumentInfo(String arg0, Reader arg1, Map<String,?> arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -104,7 +104,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md)
 
-### `setOptions(java.io.File arg0, java.lang.String arg1)`
+### `setOptions(File arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -116,28 +116,28 @@
 
 **Returns:** `java.util.List<ro.sync.options.d>`
 
-### `setFrameworks(java.io.File arg0)`
+### `setFrameworks(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 
 **Returns:** `void`
 
-### `setUserFrameworks(java.io.File arg0)`
+### `setUserFrameworks(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 
 **Returns:** `void`
 
-### `setPlugins(java.io.File arg0)`
+### `setPlugins(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 
 **Returns:** `void`
 
-### `setPlugins(java.io.File arg0, java.io.File arg1)`
+### `setPlugins(File arg0, File arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -193,7 +193,7 @@
 
 **Returns:** `void`
 
-### `createDITAMapDocumentInfo(java.lang.String arg0, java.io.Reader arg1, java.util.Map<java.lang.String,?> arg2)`
+### `createDITAMapDocumentInfo(String arg0, Reader arg1, Map<String,?> arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -202,7 +202,7 @@
 
 **Returns:** [`ro.sync.ecss.webapp.ditamap.DITAMapDocumentModel`](../../../webapp/ditamap/DITAMapDocumentModel.md)
 
-### `createDITAMapDocumentInfo(java.lang.String arg0, java.util.Map<java.lang.String,?> arg1)`
+### `createDITAMapDocumentInfo(String arg0, Map<String,?> arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

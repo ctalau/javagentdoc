@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `applicationStarted(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace pluginWorkspaceAccess)`
+### `applicationStarted(StandalonePluginWorkspace pluginWorkspaceAccess)`
 
 Notified when the application is started.
  

@@ -32,14 +32,14 @@
 
 ## Constructors
 
-### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, ro.sync.exml.workspace.api.util.ColorThemeUtilities arg2)`
+### `<init>(Shell arg0, AuthorResourceBundle arg1, ColorThemeUtilities arg2)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 - `arg1` ([`ro.sync.ecss.extensions.api.AuthorResourceBundle`](../../../api/AuthorResourceBundle.md))
 - `arg2` ([`ro.sync.exml.workspace.api.util.ColorThemeUtilities`](../../../../../exml/workspace/api/util/ColorThemeUtilities.md))
 
-### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, ro.sync.exml.workspace.api.util.ColorThemeUtilities arg2, java.lang.String arg3)`
+### `<init>(Shell arg0, AuthorResourceBundle arg1, ColorThemeUtilities arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
@@ -49,14 +49,14 @@
 
 ## Methods
 
-### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
+### `configureShell(Shell arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
 **Returns:** `void`
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+### `createDialogArea(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
@@ -67,7 +67,7 @@
 
 **Returns:** `void`
 
-### `getTablePropertiesInformation(ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo arg0)`
+### `getTablePropertiesInformation(EditedTablePropertiesInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.properties.EditedTablePropertiesInfo`](./EditedTablePropertiesInfo.md))

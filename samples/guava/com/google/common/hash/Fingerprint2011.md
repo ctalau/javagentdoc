@@ -55,12 +55,12 @@ Note to maintainers: This implementation relies on signed arithmetic being bit-w
 
 ### `hashBytes(byte[] input, int off, int len)`
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
-
 **Parameters:**
 - `input` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
+
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
 ### `bits()`
 
@@ -72,31 +72,29 @@ Note to maintainers: This implementation relies on signed arithmetic being bit-w
 
 ### `fingerprint(byte[] bytes, int offset, int length)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `bytes` (`byte[]`)
 - `offset` (`int`)
 - `length` (`int`)
 
-### `shiftMix(long val)`
-
 **Returns:** `long`
+
+### `shiftMix(long val)`
 
 **Parameters:**
 - `val` (`long`)
 
-### `hash128to64(long high, long low)`
-
 **Returns:** `long`
+
+### `hash128to64(long high, long low)`
 
 **Parameters:**
 - `high` (`long`)
 - `low` (`long`)
 
-### `weakHashLength32WithSeeds(byte[] bytes, int offset, long seedA, long seedB, long[] output)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `weakHashLength32WithSeeds(byte[] bytes, int offset, long seedA, long seedB, long[] output)`
 
 Results are
  returned in the output array - this is 12% faster than allocating new arrays every time.
@@ -108,31 +106,33 @@ Results are
 - `seedB` (`long`)
 - `output` (`long[]`)
 
-### `fullFingerprint(byte[] bytes, int offset, int length)`
+**Returns:** `void`
 
-**Returns:** `long`
+### `fullFingerprint(byte[] bytes, int offset, int length)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `offset` (`int`)
 - `length` (`int`)
+
+**Returns:** `long`
 
 ### `hashLength33To64(byte[] bytes, int offset, int length)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `bytes` (`byte[]`)
 - `offset` (`int`)
 - `length` (`int`)
 
-### `murmurHash64WithSeed(byte[] bytes, int offset, int length, long seed)`
-
 **Returns:** `long`
+
+### `murmurHash64WithSeed(byte[] bytes, int offset, int length, long seed)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `offset` (`int`)
 - `length` (`int`)
 - `seed` (`long`)
+
+**Returns:** `long`
 

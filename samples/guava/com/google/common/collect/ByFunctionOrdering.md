@@ -31,7 +31,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.base.Function<F,? extends T> function, com.google.common.collect.Ordering<T> ordering)`
+### `<init>(Function<F,? extends T> function, Ordering<T> ordering)`
 
 **Parameters:**
 - `function` ([`com.google.common.base.Function<F,? extends T>`](../base/Function.md))
@@ -41,18 +41,18 @@
 
 ### `compare(F left, F right)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `left` (`F`)
 - `right` (`F`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

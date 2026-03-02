@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, java.util.List<ro.sync.ecss.extensions.api.ReferenceType> types, int source)`
+### `insertURLs(AuthorAccess authorAccess, List<URL> urls, List<ReferenceType> types, int source)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -30,7 +30,7 @@
 
 **Returns:** `void`
 
-### `isImageReference(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ReferenceType type, java.net.URL url)`
+### `isImageReference(AuthorAccess authorAccess, ReferenceType type, URL url)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md)): The author access.
@@ -39,7 +39,7 @@
 
 **Returns:** `boolean`
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
+### `insertURLs(AuthorAccess authorAccess, List<URL> urls, int source)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))
@@ -48,7 +48,7 @@
 
 **Returns:** `void`
 
-### `getImporterStylesheetFileName(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getImporterStylesheetFileName(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))

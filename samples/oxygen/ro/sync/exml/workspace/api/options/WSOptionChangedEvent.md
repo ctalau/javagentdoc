@@ -22,7 +22,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String optionKey, java.lang.String oldValue, java.lang.String newValue)`
+### `<init>(String optionKey, String oldValue, String newValue)`
 
 **Parameters:**
 - `optionKey` (`java.lang.String`): The identification key of the option
@@ -33,7 +33,7 @@
    When the entire set of Oxygen preferences is reset by the end user, the reported old value will be equal to the new value as
    the global reset no longer retains the state of the value before the reset...
 
-### `<init>(java.lang.String optionKey, java.lang.Object oldValue, java.lang.Object newValue)`
+### `<init>(String optionKey, Object oldValue, Object newValue)`
 
 **Parameters:**
 - `optionKey` (`java.lang.String`): The identification key of the option

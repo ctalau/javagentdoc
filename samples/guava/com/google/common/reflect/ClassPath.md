@@ -59,16 +59,14 @@ In the case of directory classloaders, symlinks are supported but cycles are not
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ResourceInfo> resources)`
+### `<init>(ImmutableSet<ClassPath.ResourceInfo> resources)`
 
 **Parameters:**
 - `resources` ([`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ResourceInfo>`](../collect/ImmutableSet.md))
 
 ## Methods
 
-### `from(java.lang.ClassLoader classloader)`
-
-**Returns:** [`com.google.common.reflect.ClassPath`](./ClassPath.md)
+### `from(ClassLoader classloader)`
 
 **Warning:** ClassPath can find classes and resources only from:
 
@@ -82,6 +80,8 @@ In the case of directory classloaders, symlinks are supported but cycles are not
 **Parameters:**
 - `classloader` (`java.lang.ClassLoader`)
 
+**Returns:** [`com.google.common.reflect.ClassPath`](./ClassPath.md)
+
 ### `getResources()`
 
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ResourceInfo>`](../collect/ImmutableSet.md)
@@ -92,28 +92,26 @@ In the case of directory classloaders, symlinks are supported but cycles are not
 
 ### `getTopLevelClasses()`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
-
 Note that "top-level-ness"
  is determined heuristically by class name (see ClassInfo#isTopLevel).
 
-### `getTopLevelClasses(java.lang.String packageName)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
+
+### `getTopLevelClasses(String packageName)`
 
 **Parameters:**
 - `packageName` (`java.lang.String`)
 
-### `getTopLevelClassesRecursive(java.lang.String packageName)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
+
+### `getTopLevelClassesRecursive(String packageName)`
 
 **Parameters:**
 - `packageName` (`java.lang.String`)
 
-### `locationsFrom(java.lang.ClassLoader classloader)`
+**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>`](../collect/ImmutableSet.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.LocationInfo>`](../collect/ImmutableSet.md)
+### `locationsFrom(ClassLoader classloader)`
 
 Callers can scan individual locations selectively
  or even in parallel.
@@ -121,9 +119,9 @@ Callers can scan individual locations selectively
 **Parameters:**
 - `classloader` (`java.lang.ClassLoader`)
 
-### `getClassPathFromManifest(java.io.File jarFile, java.util.jar.Manifest manifest)`
+**Returns:** [`com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.LocationInfo>`](../collect/ImmutableSet.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSet<java.io.File>`](../collect/ImmutableSet.md)
+### `getClassPathFromManifest(File jarFile, Manifest manifest)`
 
 If manifest is null, it means the jar file has no manifest, and
  an empty set will be returned.
@@ -132,27 +130,27 @@ If manifest is null, it means the jar file has no manifest, and
 - `jarFile` (`java.io.File`)
 - `manifest` (`java.util.jar.Manifest`)
 
-### `getClassPathEntries(java.lang.ClassLoader classloader)`
+**Returns:** [`com.google.common.collect.ImmutableSet<java.io.File>`](../collect/ImmutableSet.md)
+
+### `getClassPathEntries(ClassLoader classloader)`
+
+**Parameters:**
+- `classloader` (`java.lang.ClassLoader`)
 
 **Returns:** [`com.google.common.collect.ImmutableMap<java.io.File,java.lang.ClassLoader>`](../collect/ImmutableMap.md)
 
+### `getClassLoaderUrls(ClassLoader classloader)`
+
 **Parameters:**
 - `classloader` (`java.lang.ClassLoader`)
-
-### `getClassLoaderUrls(java.lang.ClassLoader classloader)`
 
 **Returns:** [`com.google.common.collect.ImmutableList<java.net.URL>`](../collect/ImmutableList.md)
-
-**Parameters:**
-- `classloader` (`java.lang.ClassLoader`)
 
 ### `parseJavaClassPath()`
 
 **Returns:** [`com.google.common.collect.ImmutableList<java.net.URL>`](../collect/ImmutableList.md)
 
-### `getClassPathEntry(java.io.File jarFile, java.lang.String path)`
-
-**Returns:** `java.net.URL`
+### `getClassPathEntry(File jarFile, String path)`
 
 Even though the specification only talks about relative urls, absolute
  urls are actually supported too (for example, in Maven surefire plugin).
@@ -161,17 +159,19 @@ Even though the specification only talks about relative urls, absolute
 - `jarFile` (`java.io.File`)
 - `path` (`java.lang.String`)
 
-### `getClassName(java.lang.String filename)`
+**Returns:** `java.net.URL`
 
-**Returns:** `java.lang.String`
+### `getClassName(String filename)`
 
 **Parameters:**
 - `filename` (`java.lang.String`)
 
-### `toFile(java.net.URL url)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.io.File`
+### `toFile(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`)
+
+**Returns:** `java.io.File`
 

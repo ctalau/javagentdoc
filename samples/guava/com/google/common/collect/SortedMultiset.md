@@ -52,28 +52,26 @@ See the Guava User Guide article on [Multiset](https://github.com/google/guava/w
 
 ### `entrySet()`
 
-**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
-
 The entrySet's iterator returns entries in ascending element order according to this
  multiset's comparator.
 
-### `iterator()`
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
-**Returns:** `java.util.Iterator<E>`
+### `iterator()`
 
 The iterator returns the elements in ascending order according to this multiset's
  comparator.
 
-### `descendingMultiset()`
+**Returns:** `java.util.Iterator<E>`
 
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+### `descendingMultiset()`
 
 Modifications made to either map will be reflected
  in the other.
 
-### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `headMultiset(E upperBound, BoundType boundType)`
 
 The returned multiset is a view of this
  multiset, so changes to one will be reflected in the other. The returned multiset supports all
@@ -87,9 +85,9 @@ The returned multiset will throw an IllegalArgumentException on attempts to add
 - `upperBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `subMultiset(E lowerBound, com.google.common.collect.BoundType lowerBoundType, E upperBound, com.google.common.collect.BoundType upperBoundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `subMultiset(E lowerBound, BoundType lowerBoundType, E upperBound, BoundType upperBoundType)`
 
 The returned multiset is a view of this multiset, so changes to one will be
  reflected in the other. The returned multiset supports all operations that this multiset
@@ -109,9 +107,9 @@ This method is equivalent to tailMultiset(lowerBound,
 - `upperBound` (`E`)
 - `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `tailMultiset(E lowerBound, BoundType boundType)`
 
 The returned multiset is a view of this
  multiset, so changes to one will be reflected in the other. The returned multiset supports all
@@ -124,4 +122,6 @@ The returned multiset will throw an IllegalArgumentException on attempts to add
 **Parameters:**
 - `lowerBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 

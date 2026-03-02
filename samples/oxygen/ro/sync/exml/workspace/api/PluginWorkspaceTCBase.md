@@ -32,14 +32,14 @@
 
 ## Constructors
 
-### `<init>(java.io.File arg0, java.io.File arg1, java.lang.String arg2)`
+### `<init>(File arg0, File arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 - `arg1` (`java.io.File`)
 - `arg2` (`java.lang.String`)
 
-### `<init>(java.io.File arg0, java.io.File arg1, java.io.File arg2, java.io.File arg3, java.lang.String arg4)`
+### `<init>(File arg0, File arg1, File arg2, File arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -48,7 +48,7 @@
 - `arg3` (`java.io.File`)
 - `arg4` (`java.lang.String`)
 
-### `<init>(java.io.File arg0, java.io.File arg1, java.io.File arg2, java.io.File arg3, java.lang.String arg4, int arg5)`
+### `<init>(File arg0, File arg1, File arg2, File arg3, String arg4, int arg5)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -72,7 +72,7 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](standalone/StandalonePluginWorkspace.md)
 
-### `open(java.net.URL arg0)`
+### `open(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -87,14 +87,14 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.author.WSAuthorEditorPage`](editor/page/author/WSAuthorEditorPage.md)
 
-### `invokeAuthorExtensionActionForID(java.lang.String arg0)`
+### `invokeAuthorExtensionActionForID(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `moveCaretRelativeTo(java.lang.String arg0, int arg1, boolean arg2)`
+### `moveCaretRelativeTo(String arg0, int arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

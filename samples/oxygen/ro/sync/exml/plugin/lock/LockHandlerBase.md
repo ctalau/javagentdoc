@@ -18,7 +18,7 @@
 
 **Returns:** `boolean`
 
-### `isSaveAllowed(java.net.URL url, int timeoutSeconds)`
+### `isSaveAllowed(URL url, int timeoutSeconds)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL for which the check is performed.

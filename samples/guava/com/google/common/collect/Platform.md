@@ -14,24 +14,24 @@
 
 ### `newHashMapWithExpectedSize(int expectedSize)`
 
-**Returns:** `java.util.Map<K,V>`
-
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `java.util.Map<K,V>`
 
 ### `newLinkedHashMapWithExpectedSize(int expectedSize)`
 
-**Returns:** `java.util.Map<K,V>`
-
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `java.util.Map<K,V>`
 
 ### `newHashSetWithExpectedSize(int expectedSize)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `newConcurrentHashSet()`
 
@@ -39,10 +39,10 @@
 
 ### `newLinkedHashSetWithExpectedSize(int expectedSize)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `preservesInsertionOrderOnPutsMap()`
 
@@ -54,15 +54,13 @@
 
 ### `newArray(T[] reference, int length)`
 
-**Returns:** `T[]`
-
 **Parameters:**
 - `reference` (`T[]`): any array of the desired type
 - `length` (`int`): the length of the new array
 
-### `copy(java.lang.Object[] source, int from, int to, T[] arrayOfType)`
-
 **Returns:** `T[]`
+
+### `copy(Object[] source, int from, int to, T[] arrayOfType)`
 
 **Parameters:**
 - `source` (`java.lang.Object[]`)
@@ -70,9 +68,9 @@
 - `to` (`int`)
 - `arrayOfType` (`T[]`)
 
-### `tryWeakKeys(com.google.common.collect.MapMaker mapMaker)`
+**Returns:** `T[]`
 
-**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
+### `tryWeakKeys(MapMaker mapMaker)`
 
 This is sometimes acceptable, when only server-side code could generate enough volume
  that reclamation becomes important.
@@ -80,24 +78,26 @@ This is sometimes acceptable, when only server-side code could generate enough v
 **Parameters:**
 - `mapMaker` ([`com.google.common.collect.MapMaker`](./MapMaker.md))
 
-### `getDeclaringClassOrObjectForJ2cl(E e)`
+**Returns:** [`com.google.common.collect.MapMaker`](./MapMaker.md)
 
-**Returns:** `java.lang.Class<E>`
+### `getDeclaringClassOrObjectForJ2cl(E e)`
 
 **Parameters:**
 - `e` (`E`)
 
-### `reduceIterationsIfGwt(int iterations)`
+**Returns:** `java.lang.Class<E>`
 
-**Returns:** `int`
+### `reduceIterationsIfGwt(int iterations)`
 
 **Parameters:**
 - `iterations` (`int`)
 
-### `reduceExponentIfGwt(int exponent)`
-
 **Returns:** `int`
+
+### `reduceExponentIfGwt(int exponent)`
 
 **Parameters:**
 - `exponent` (`int`)
+
+**Returns:** `int`
 

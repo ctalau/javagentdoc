@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>> futures, boolean allMustSucceed, java.util.concurrent.Executor listenerExecutor, com.google.common.util.concurrent.AsyncCallable<V> callable)`
+### `<init>(ImmutableCollection<? extends ListenableFuture<?>> futures, boolean allMustSucceed, Executor listenerExecutor, AsyncCallable<V> callable)`
 
 **Parameters:**
 - `futures` ([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>>`](../../collect/ImmutableCollection.md))
@@ -28,7 +28,7 @@
 - `listenerExecutor` (`java.util.concurrent.Executor`)
 - `callable` ([`com.google.common.util.concurrent.AsyncCallable<V>`](./AsyncCallable.md))
 
-### `<init>(com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>> futures, boolean allMustSucceed, java.util.concurrent.Executor listenerExecutor, java.util.concurrent.Callable<V> callable)`
+### `<init>(ImmutableCollection<? extends ListenableFuture<?>> futures, boolean allMustSucceed, Executor listenerExecutor, Callable<V> callable)`
 
 **Parameters:**
 - `futures` ([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<?>>`](../../collect/ImmutableCollection.md))
@@ -38,24 +38,24 @@
 
 ## Methods
 
-### `collectOneValue(int index, java.lang.Object returnValue)`
-
-**Returns:** `void`
+### `collectOneValue(int index, Object returnValue)`
 
 **Parameters:**
 - `index` (`int`)
 - `returnValue` (`java.lang.Object`)
 
+**Returns:** `void`
+
 ### `handleAllCompleted()`
 
 **Returns:** `void`
 
-### `releaseResources(com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason reason)`
-
-**Returns:** `void`
+### `releaseResources(AggregateFuture.ReleaseResourcesReason reason)`
 
 **Parameters:**
 - `reason` (`com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason`)
+
+**Returns:** `void`
 
 ### `interruptTask()`
 

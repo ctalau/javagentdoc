@@ -24,7 +24,7 @@
 
 ### `<init>()`
 
-### `<init>(boolean arg0, java.lang.String arg1)`
+### `<init>(boolean arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -47,7 +47,7 @@
 
 **Returns:** `void`
 
-### `setSchematronPath(java.lang.String arg0)`
+### `setSchematronPath(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

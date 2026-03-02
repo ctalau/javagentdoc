@@ -30,7 +30,7 @@ The text does not contains XML tags.
 
 **Returns:** `int`
 
-### `insertText(java.lang.String text, int offset)`
+### `insertText(String text, int offset)`
 
 After the operation is performed the caret will be positioned at the end 
  of the inserted text.
@@ -41,7 +41,7 @@ After the operation is performed the caret will be positioned at the end
 
 **Returns:** `void`
 
-### `insertXMLFragment(java.lang.String xmlFragment, int offset)`
+### `insertXMLFragment(String xmlFragment, int offset)`
 
 After the operation is performed the caret will be positioned at the end of the inserted XML fragment.
 
@@ -51,7 +51,7 @@ After the operation is performed the caret will be positioned at the end of the 
 
 **Returns:** `void`
 
-### `insertXMLFragment(java.lang.String xmlFragment, java.lang.String xpathLocation, java.lang.String relativePosition)`
+### `insertXMLFragment(String xmlFragment, String xpathLocation, String relativePosition)`
 
 Note: if the `xpathLocation` is not specified then the XML fragment 
  will be inserted at the caret position(`relativePosition` is ignored). 
@@ -80,7 +80,7 @@ Note: if the `xpathLocation` is not specified then the XML fragment
 
 **Returns:** `void`
 
-### `surroundInFragment(java.lang.String xmlFragment, int startOffset, int endOffset)`
+### `surroundInFragment(String xmlFragment, int startOffset, int endOffset)`
 
 If endOffset < startOffset the `xmlFragment` will be inserted at `startOffset`.
 
@@ -92,7 +92,7 @@ If endOffset < startOffset the `xmlFragment` will be inserted at `startOffset`.
 
 **Returns:** `void`
 
-### `surroundInText(java.lang.String header, java.lang.String footer, int startOffset, int endOffset)`
+### `surroundInText(String header, String footer, int startOffset, int endOffset)`
 
 **Parameters:**
 - `header` (`java.lang.String`): The header to be inserted before the surrounded text.
@@ -125,7 +125,7 @@ If endOffset < startOffset the `xmlFragment` will be inserted at `startOffset`.
 
 **Returns:** `java.lang.Object`
 
-### `makeRelative(java.net.URL baseURL, java.net.URL childURL)`
+### `makeRelative(URL baseURL, URL childURL)`
 
 The child path is relatively expressed to the base file. If is
  not possible, the child URL is returned. 
@@ -143,7 +143,7 @@ The child path is relatively expressed to the base file. If is
 
 **Returns:** `java.lang.String`
 
-### `escapeAttributeValue(java.lang.String attributeValue)`
+### `escapeAttributeValue(String attributeValue)`
 
 **Parameters:**
 - `attributeValue` (`java.lang.String`): The attribute value.
@@ -154,14 +154,14 @@ The child path is relatively expressed to the base file. If is
 
 **Returns:** `java.net.URL`
 
-### `locateFile(java.net.URL url)`
+### `locateFile(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to be checked.
 
 **Returns:** `java.io.File`
 
-### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr, boolean openForSave)`
+### `chooseFile(String title, String[] allowedExtensions, String filterDescr, boolean openForSave)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
@@ -171,7 +171,7 @@ The child path is relatively expressed to the base file. If is
 
 **Returns:** `java.io.File`
 
-### `chooseFile(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
+### `chooseFile(String title, String[] allowedExtensions, String filterDescr)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
@@ -180,7 +180,7 @@ The child path is relatively expressed to the base file. If is
 
 **Returns:** `java.io.File`
 
-### `chooseURL(java.lang.String title, java.lang.String[] allowedExtensions, java.lang.String filterDescr)`
+### `chooseURL(String title, String[] allowedExtensions, String filterDescr)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The file chooser title.
@@ -189,28 +189,28 @@ The child path is relatively expressed to the base file. If is
 
 **Returns:** `java.net.URL`
 
-### `getTableCellAbove(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableCellAbove(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table cell element.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-### `getTableCellBelow(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableCellBelow(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table cell element.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-### `getTableCellIndex(ro.sync.ecss.extensions.api.node.AuthorElement authorElement)`
+### `getTableCellIndex(AuthorElement authorElement)`
 
 **Parameters:**
 - `authorElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The element.
 
 **Returns:** `int[]`
 
-### `getTableCellAt(int row, int column, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableCellAt(int row, int column, AuthorElement tableElement)`
 
 **Parameters:**
 - `row` (`int`): The row, 0 based.
@@ -219,7 +219,7 @@ The child path is relatively expressed to the base file. If is
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-### `getTableRow(int index, ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableRow(int index, AuthorElement tableElement)`
 
 **Parameters:**
 - `index` (`int`): The index of the row to find, 0 based.
@@ -227,21 +227,21 @@ The child path is relatively expressed to the base file. If is
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-### `getTableRowCount(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableRowCount(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table element.
 
 **Returns:** `int`
 
-### `getTableNumberOfColumns(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getTableNumberOfColumns(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)): The table element.
 
 **Returns:** `int`
 
-### `getTableColSpanIndices(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getTableColSpanIndices(AuthorElement cellElement)`
 
 The indices are 0 based.
 
@@ -265,7 +265,7 @@ For example a text paragraph determines an inline context,
 
 **Returns:** `boolean`
 
-### `insertMultipleElements(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String[] elementNames, int[] offsets, java.lang.String namespace)`
+### `insertMultipleElements(AuthorElement parentElement, String[] elementNames, int[] offsets, String namespace)`
 
 The offsets and elements must be in the document order.
 
@@ -277,7 +277,7 @@ The offsets and elements must be in the document order.
 
 **Returns:** `void`
 
-### `multipleDelete(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
+### `multipleDelete(AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
 
 The offsets must be in document order and the intervals 
  must not intersect with one another.
@@ -289,7 +289,7 @@ The offsets must be in document order and the intervals
 
 **Returns:** `void`
 
-### `removeClonedElementAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String attrName)`
+### `removeClonedElementAttribute(AuthorElement element, String attrName)`
 
 Warning: Use this only when the element is not from the existing content.
  All operations on nodes from the document model must be done through the AuthorDocumentController.
@@ -300,7 +300,7 @@ Warning: Use this only when the element is not from the existing content.
 
 **Returns:** `void`
 
-### `setClonedElementAttribute(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String name, ro.sync.ecss.extensions.api.node.AttrValue attributeValue)`
+### `setClonedElementAttribute(AuthorElement element, String name, AttrValue attributeValue)`
 
 Warning: Use this only when the element is not from the existing content.
  All operations on nodes from the document model must be done through the AuthorDocumentController.
@@ -312,7 +312,7 @@ Warning: Use this only when the element is not from the existing content.
 
 **Returns:** `void`
 
-### `showConfirmDialog(java.lang.String title, java.lang.String message, java.lang.String[] buttonNames, int[] buttonIds)`
+### `showConfirmDialog(String title, String message, String[] buttonNames, int[] buttonIds)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The dialog title.
@@ -327,21 +327,21 @@ Warning: Use this only when the element is not from the existing content.
 
 **Returns:** `org.xml.sax.XMLReader`
 
-### `correctURL(java.lang.String url)`
+### `correctURL(String url)`
 
 **Parameters:**
 - `url` (`java.lang.String`): The URL to be corrected.
 
 **Returns:** `java.lang.String`
 
-### `showErrorMessage(java.lang.String message)`
+### `showErrorMessage(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message to be presented.
 
 **Returns:** `void`
 
-### `resolvePath(java.net.URL baseURL, java.lang.String relativeLocation, boolean entityResolve, boolean uriResolve)`
+### `resolvePath(URL baseURL, String relativeLocation, boolean entityResolve, boolean uriResolve)`
 
 **Parameters:**
 - `baseURL` (`java.net.URL`): The URL of the current opened XML file.
@@ -351,7 +351,7 @@ Warning: Use this only when the element is not from the existing content.
 
 **Returns:** `java.net.URL`
 
-### `findNodesByXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
+### `findNodesByXPath(String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
 
 The result of this function is an array of AuthorNode's selected by the given XPath expression.
  Author text nodes, Author CDATA section nodes and Author comment nodes can be ignored for performance reasons.
@@ -378,7 +378,7 @@ The result of this function is an array of AuthorNode's selected by the given XP
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode[]`](node/AuthorNode.md)
 
-### `evaluateXPath(java.lang.String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
+### `evaluateXPath(String xpathExpression, boolean ignoreTexts, boolean ignoreCData, boolean ignoreComments)`
 
 This functions returns the result of the given XPath expression as an array of Object's.
  Author DOM text nodes, DOM CDATA sections and DOM comments wrappers can be ignored for performance reasons.
@@ -413,14 +413,14 @@ This functions returns the result of the given XPath expression as an array of O
 
 **Returns:** `java.lang.Object[]`
 
-### `addAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
+### `addAuthorListener(AuthorListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorListener`](./AuthorListener.md)): The listener to be added.
 
 **Returns:** `void`
 
-### `removeAuthorListener(ro.sync.ecss.extensions.api.AuthorListener listener)`
+### `removeAuthorListener(AuthorListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.AuthorListener`](./AuthorListener.md)): The listener to be removed.

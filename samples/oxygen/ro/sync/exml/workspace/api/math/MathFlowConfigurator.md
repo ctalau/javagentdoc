@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setMathFlowFixedLicenseKeyForEditor(java.lang.String fixedKey)`
+### `setMathFlowFixedLicenseKeyForEditor(String fixedKey)`
 
 **Parameters:**
 - `fixedKey` (`java.lang.String`): The fixed key. The key needs to be obtained from MathFlow:
@@ -23,7 +23,7 @@
 
 **Returns:** `void`
 
-### `setMathFlowFixedLicenseKeyForComposer(java.lang.String fixedKey)`
+### `setMathFlowFixedLicenseKeyForComposer(String fixedKey)`
 
 **Parameters:**
 - `fixedKey` (`java.lang.String`): The fixed key. The key needs to be obtained from MathFlow:
@@ -38,7 +38,7 @@
 
 **Returns:** `void`
 
-### `setMathFlowFixedLicenseFile(java.io.File licenseFile)`
+### `setMathFlowFixedLicenseFile(File licenseFile)`
 
 **Parameters:**
 - `licenseFile` (`java.io.File`): The path to the MathFlow license file.
@@ -47,7 +47,7 @@
 
 **Returns:** `void`
 
-### `setMathFlowInstallationFolder(java.io.File installationFolder)`
+### `setMathFlowInstallationFolder(File installationFolder)`
 
 **Parameters:**
 - `installationFolder` (`java.io.File`): The MathFlow installation folder

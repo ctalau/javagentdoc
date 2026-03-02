@@ -21,7 +21,7 @@ Registering a DeadEvent subscriber is useful for debugging or logging, as it can
 
 ## Constructors
 
-### `<init>(java.lang.Object source, java.lang.Object event)`
+### `<init>(Object source, Object event)`
 
 **Parameters:**
 - `source` (`java.lang.Object`): object broadcasting the DeadEvent (generally the EventBus).
@@ -31,9 +31,9 @@ Registering a DeadEvent subscriber is useful for debugging or logging, as it can
 
 ### `getSource()`
 
-**Returns:** `java.lang.Object`
-
 This is generally an EventBus.
+
+**Returns:** `java.lang.Object`
 
 ### `getEvent()`
 

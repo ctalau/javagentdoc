@@ -80,14 +80,12 @@ See the Guava User Guide article on [Multiset](https://github.com/google/guava/w
 
 ### `size()`
 
-**Returns:** `int`
-
 **Note:** this method does not return the number of *distinct elements* in the
  multiset, which is given by entrySet().size().
 
-### `count(java.lang.Object element)`
-
 **Returns:** `int`
+
+### `count(Object element)`
 
 Note that for an Object#equals-based multiset, this gives the same result as
  Collections#frequency (which would presumably perform more poorly).
@@ -100,9 +98,9 @@ Note that for an Object#equals-based multiset, this gives the same result as
 **Parameters:**
 - `element` (`java.lang.Object`): the element to count occurrences of
 
-### `add(E element, int occurrences)`
-
 **Returns:** `int`
+
+### `add(E element, int occurrences)`
 
 Note that if occurrences ==
  1, this method has the identical effect to #add(Object). This method is functionally
@@ -112,13 +110,13 @@ Note that if occurrences ==
 
 **Parameters:**
 - `element` (`E`): the element to add occurrences of; may be null only if explicitly allowed by the
-     implementation
+       implementation
 - `occurrences` (`int`): the number of occurrences of the element to add. May be zero, in which case
-     no change will be made.
+       no change will be made.
+
+**Returns:** `int`
 
 ### `add(E element)`
-
-**Returns:** `boolean`
 
 This method refines Collection#add, which only *ensures* the presence of the
  element, to further specify that a successful call must always increment the count of the
@@ -129,11 +127,11 @@ To both add the element and obtain the previous count of that element, use add(e
 
 **Parameters:**
 - `element` (`E`): the element to add one occurrence of; may be null only if explicitly allowed by
-     the implementation
+       the implementation
 
-### `remove(java.lang.Object element, int occurrences)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `remove(Object element, int occurrences)`
 
 If the multiset
  contains fewer than this number of occurrences to begin with, all occurrences will be removed.
@@ -143,11 +141,11 @@ If the multiset
 **Parameters:**
 - `element` (`java.lang.Object`): the element to conditionally remove occurrences of
 - `occurrences` (`int`): the number of occurrences of the element to remove. May be zero, in which
-     case no change will be made.
+       case no change will be made.
 
-### `remove(java.lang.Object element)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `remove(Object element)`
 
 This method refines Collection#remove to further specify that it **may not**
  throw an exception in response to element being null or of the wrong type.
@@ -158,31 +156,31 @@ To both remove the element and obtain the previous count of that element, use re
 **Parameters:**
 - `element` (`java.lang.Object`): the element to remove one occurrence of
 
-### `setCount(E element, int count)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `setCount(E element, int count)`
 
 **Parameters:**
 - `element` (`E`): the element to add or remove occurrences of; may be null only if explicitly
-     allowed by the implementation
+       allowed by the implementation
 - `count` (`int`): the desired count of the element in this multiset
 
-### `setCount(E element, int oldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `setCount(E element, int oldCount, int newCount)`
 
 If the
  current count is not oldCount, no change is made.
 
 **Parameters:**
 - `element` (`E`): the element to conditionally set the count of; may be null only if explicitly
-     allowed by the implementation
+       allowed by the implementation
 - `oldCount` (`int`): the expected present count of the element in this multiset
 - `newCount` (`int`): the desired count of the element in this multiset
 
-### `elementSet()`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Set<E>`
+### `elementSet()`
 
 The element set is backed by
  the same data as the multiset, so any change to either is immediately reflected in the other.
@@ -197,9 +195,9 @@ If the element set supports any removal operations, these necessarily cause **al
 A common use for the element set is to find the number of distinct elements in the multiset:
  elementSet().size().
 
-### `entrySet()`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
+### `entrySet()`
 
 This set contains
  exactly one entry for each distinct element in the multiset (thus it always has the same size
@@ -214,9 +212,9 @@ The entry set is backed by the same data as the multiset, so any change to eithe
  have methods for modification. See the specific implementation class for more details on how
  its entry set handles modifications.
 
-### `forEachEntry(java.util.function.ObjIntConsumer<? super E> action)`
+**Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
-**Returns:** `void`
+### `forEachEntry(ObjIntConsumer<? super E> action)`
 
 For some Multiset implementations, this may be more
  efficient than iterating over the #entrySet() either explicitly or with 
@@ -225,9 +223,9 @@ For some Multiset implementations, this may be more
 **Parameters:**
 - `action` (`java.util.function.ObjIntConsumer<? super E>`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 Returns true if the
  given object is also a multiset and contains equal elements with equal counts, regardless of
@@ -236,9 +234,9 @@ Returns true if the
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 This is defined as the sum of
 
@@ -255,24 +253,24 @@ This is defined as the sum of
 over all distinct elements in the multiset. It follows that a multiset and its entry set
  always have the same hash code.
 
-### `toString()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `toString()`
 
 It is recommended, though not mandatory, that this method return the result of invoking
  #toString on the #entrySet, yielding a result such as [a x 3, c, d x 2,
  e].
 
-### `iterator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Iterator<E>`
+### `iterator()`
 
 Elements that occur multiple times in the multiset will appear multiple times in this
  iterator, though not necessarily sequentially.
 
-### `contains(java.lang.Object element)`
+**Returns:** `java.util.Iterator<E>`
 
-**Returns:** `boolean`
+### `contains(Object element)`
 
 This method refines Collection#contains to further specify that it **may not**
  throw an exception in response to element being null or of the wrong type.
@@ -280,9 +278,9 @@ This method refines Collection#contains to further specify that it **may not**
 **Parameters:**
 - `element` (`java.lang.Object`): the element to check for
 
-### `containsAll(java.util.Collection<?> elements)`
-
 **Returns:** `boolean`
+
+### `containsAll(Collection<?> elements)`
 
 This method refines Collection#containsAll to further specify that it **may not**
  throw an exception in response to any of elements being null or of the wrong type.
@@ -296,9 +294,9 @@ This method refines Collection#containsAll to further specify that it **may not*
 **Parameters:**
 - `elements` (`java.util.Collection<?>`): the collection of elements to be checked for containment in this multiset
 
-### `removeAll(java.util.Collection<?> c)`
-
 **Returns:** `boolean`
+
+### `removeAll(Collection<?> c)`
 
 **Note:** This method ignores how often any element might appear in c, and only
  cares whether or not an element appears at all. If you wish to remove one occurrence in this
@@ -312,9 +310,9 @@ This method refines Collection#removeAll to further specify that it **may not**
 **Parameters:**
 - `c` (`java.util.Collection<?>`)
 
-### `retainAll(java.util.Collection<?> c)`
-
 **Returns:** `boolean`
+
+### `retainAll(Collection<?> c)`
 
 **Note:** This method ignores how often any element might appear in c, and only
  cares whether or not an element appears at all. If you wish to remove one occurrence in this
@@ -328,15 +326,17 @@ This method refines Collection#retainAll to further specify that it **may not**
 **Parameters:**
 - `c` (`java.util.Collection<?>`)
 
-### `forEach(java.util.function.Consumer<? super E> action)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `forEach(Consumer<? super E> action)`
 
 Elements that occur multiple times in the multiset will be passed to the Consumer
  correspondingly many times, though not necessarily sequentially.
 
 **Parameters:**
 - `action` (`java.util.function.Consumer<? super E>`)
+
+**Returns:** `void`
 
 ### `spliterator()`
 

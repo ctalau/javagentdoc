@@ -37,7 +37,7 @@ By default, the comments callouts visibility in Author mode is controlled from O
 
 **Returns:** `boolean`
 
-### `setShowCommentsCallouts(java.lang.Boolean showCommentsCallouts)`
+### `setShowCommentsCallouts(Boolean showCommentsCallouts)`
 
 This method can be used to override the default option from Oxygen Preferences 
  that controls if the callouts corresponding to review comments and Change Tracking
@@ -68,7 +68,7 @@ By default, the Change Tracking deletions callouts visibility in Author mode is 
 
 **Returns:** `boolean`
 
-### `setShowDeletionsCallouts(java.lang.Boolean showDeletionsCallouts)`
+### `setShowDeletionsCallouts(Boolean showDeletionsCallouts)`
 
 This method can be used to override the default option from Oxygen Preferences 
  that controls if the callouts corresponding to Change Tracking
@@ -98,7 +98,7 @@ By default, the Change Tracking insertions callouts visibility in Author mode is
 
 **Returns:** `boolean`
 
-### `setShowInsertionsCallouts(java.lang.Boolean showInsertionsCallouts)`
+### `setShowInsertionsCallouts(Boolean showInsertionsCallouts)`
 
 This method can be used to override the default option from Oxygen Preferences 
  that controls if the callouts corresponding to Change Tracking
@@ -117,7 +117,7 @@ This method can be used to override the default option from Oxygen Preferences
 
 **Returns:** `void`
 
-### `setCalloutsRenderingInformationProvider(ro.sync.ecss.extensions.api.callouts.CalloutsRenderingInformationProvider provider)`
+### `setCalloutsRenderingInformationProvider(CalloutsRenderingInformationProvider provider)`
 
 The callouts are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom review highlights in Author mode.
@@ -131,28 +131,28 @@ The callouts are representations of Track Changes insert and delete highlights,
 
 **Returns:** `void`
 
-### `getCalloutRectangle(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight persistentHighlight)`
+### `getCalloutRectangle(AuthorPersistentHighlight persistentHighlight)`
 
 **Parameters:**
 - `persistentHighlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](../highlights/AuthorPersistentHighlight.md)): The Author persistent highlight.
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addCalloutActionsProvider(ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider actionsProvider)`
+### `addCalloutActionsProvider(CalloutActionsProvider actionsProvider)`
 
 **Parameters:**
 - `actionsProvider` ([`ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider`](./CalloutActionsProvider.md)): The callout actions provider.
 
 **Returns:** `void`
 
-### `removeCalloutActionsProvider(ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider actionsProvider)`
+### `removeCalloutActionsProvider(CalloutActionsProvider actionsProvider)`
 
 **Parameters:**
 - `actionsProvider` ([`ro.sync.ecss.extensions.api.callouts.CalloutActionsProvider`](./CalloutActionsProvider.md)): The callout actions provider.
 
 **Returns:** `void`
 
-### `getDefaultAuthorCalloutRenderingInformation(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `getDefaultAuthorCalloutRenderingInformation(AuthorPersistentHighlight highlight)`
 
 You can change the rendering information for such highlights by setting a CalloutsRenderingInformationProvider 
  and overriding its method CalloutsRenderingInformationProvider#handlesAlsoDefaultHighlights() to return `true`. 

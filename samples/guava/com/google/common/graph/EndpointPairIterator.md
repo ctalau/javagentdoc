@@ -32,24 +32,24 @@
 
 ## Constructors
 
-### `<init>(com.google.common.graph.BaseGraph<N> graph)`
+### `<init>(BaseGraph<N> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md))
 
 ## Methods
 
-### `of(com.google.common.graph.BaseGraph<N> graph)`
-
-**Returns:** [`com.google.common.graph.EndpointPairIterator<N>`](./EndpointPairIterator.md)
+### `of(BaseGraph<N> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.BaseGraph<N>`](./BaseGraph.md))
 
-### `advance()`
+**Returns:** [`com.google.common.graph.EndpointPairIterator<N>`](./EndpointPairIterator.md)
 
-**Returns:** `boolean`
+### `advance()`
 
 Advances #node to the next node
  and updates #successorIterator to iterate through the successors of #node.
+
+**Returns:** `boolean`
 

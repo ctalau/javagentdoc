@@ -14,14 +14,14 @@
 
 ## Methods
 
-### `isTableCell(java.lang.String tableCellsTagName)`
+### `isTableCell(String tableCellsTagName)`
 
 **Parameters:**
 - `tableCellsTagName` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `isColspec(ro.sync.ecss.extensions.api.node.AuthorElement child)`
+### `isColspec(AuthorElement child)`
 
 **Parameters:**
 - `child` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))

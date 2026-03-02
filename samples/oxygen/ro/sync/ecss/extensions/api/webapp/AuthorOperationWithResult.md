@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel model, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorDocumentModel model, ArgumentsMap args)`
 
 **Parameters:**
 - `model` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](./AuthorDocumentModel.md)): The web author document model.

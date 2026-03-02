@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(java.awt.Frame parentFrame, ro.sync.ecss.extensions.api.AuthorResourceBundle authorResourceBundle, int maxColumns, int maxRows)`
+### `<init>(Frame parentFrame, AuthorResourceBundle authorResourceBundle, int maxColumns, int maxRows)`
 
 **Parameters:**
 - `parentFrame` (`java.awt.Frame`): The parent frame of the dialog.

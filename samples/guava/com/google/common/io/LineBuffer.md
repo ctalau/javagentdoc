@@ -31,8 +31,6 @@ Subclasses must implement #handleLine, call #add to pass character data, and
 
 ### `add(char[] cbuf, int off, int len)`
 
-**Returns:** `void`
-
 When a line separator is found the contents of
  the line and the line separator itself are passed to the abstract #handleLine method.
 
@@ -41,22 +39,24 @@ When a line separator is found the contents of
 - `off` (`int`): the offset into the buffer
 - `len` (`int`): the number of characters to process
 
-### `finishLine(boolean sawNewline)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `finishLine(boolean sawNewline)`
 
 **Parameters:**
 - `sawNewline` (`boolean`)
+
+**Returns:** `boolean`
 
 ### `finish()`
 
 **Returns:** `void`
 
-### `handleLine(java.lang.String line, java.lang.String end)`
-
-**Returns:** `void`
+### `handleLine(String line, String end)`
 
 **Parameters:**
 - `line` (`java.lang.String`): a line of text (possibly empty), without any line separators
 - `end` (`java.lang.String`): the line separator; one of "\r", "\n", "\r\n", or ""
+
+**Returns:** `void`
 

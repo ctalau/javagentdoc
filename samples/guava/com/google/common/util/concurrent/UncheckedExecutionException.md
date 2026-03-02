@@ -31,18 +31,18 @@ When wrapping an Error from another thread, prefer ExecutionError. When
 
 ### `<init>()`
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`)
 
-### `<init>(java.lang.String message, java.lang.Throwable cause)`
+### `<init>(String message, Throwable cause)`
 
 **Parameters:**
 - `message` (`java.lang.String`)
 - `cause` (`java.lang.Throwable`)
 
-### `<init>(java.lang.Throwable cause)`
+### `<init>(Throwable cause)`
 
 **Parameters:**
 - `cause` (`java.lang.Throwable`)

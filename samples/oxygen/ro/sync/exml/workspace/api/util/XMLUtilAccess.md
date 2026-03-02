@@ -38,7 +38,7 @@
 
 ## Methods
 
-### `createXSLTTransformer(javax.xml.transform.Source styleSource, java.net.URL[] extensionJars, int transformerType)`
+### `createXSLTTransformer(Source styleSource, URL[] extensionJars, int transformerType)`
 
 The options set in the oXygen preferences are used.
 
@@ -49,7 +49,7 @@ The options set in the oXygen preferences are used.
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createSaxon9XSLTTransformerWithExtensions(javax.xml.transform.Source styleSource, net.sf.saxon.lib.ExtensionFunctionDefinition[] extensionFunctions, int transformerType)`
+### `createSaxon9XSLTTransformerWithExtensions(Source styleSource, ExtensionFunctionDefinition[] extensionFunctions, int transformerType)`
 
 **Parameters:**
 - `styleSource` (`javax.xml.transform.Source`): The source XSL
@@ -58,7 +58,7 @@ The options set in the oXygen preferences are used.
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createXSLTTransformer(javax.xml.transform.Source styleSource, java.net.URL[] extensionJars, int transformerType, boolean useOxygenOptions)`
+### `createXSLTTransformer(Source styleSource, URL[] extensionJars, int transformerType, boolean useOxygenOptions)`
 
 **Parameters:**
 - `styleSource` (`javax.xml.transform.Source`): The source XSL
@@ -68,7 +68,7 @@ The options set in the oXygen preferences are used.
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createSaxon9HEXSLTTransformerWithExtensions(javax.xml.transform.Source styleSource, net.sf.saxon.lib.ExtensionFunctionDefinition[] saxonExtensions)`
+### `createSaxon9HEXSLTTransformerWithExtensions(Source styleSource, ExtensionFunctionDefinition[] saxonExtensions)`
 
 This is 
  necessary when the extension functions cannot be called by reflection because 
@@ -83,7 +83,7 @@ The Saxon 9 options set in the oXygen preferences are not used.
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createXQueryTransformer(javax.xml.transform.Source xquerySource, java.net.URL[] extensionJars, int transformerType)`
+### `createXQueryTransformer(Source xquerySource, URL[] extensionJars, int transformerType)`
 
 The options set in the oXygen preferences are used.
 
@@ -94,7 +94,7 @@ The options set in the oXygen preferences are used.
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createXQueryTransformer(javax.xml.transform.Source xquerySource, java.net.URL[] extensionJars, int transformerType, boolean useOxygenOptions)`
+### `createXQueryTransformer(Source xquerySource, URL[] extensionJars, int transformerType, boolean useOxygenOptions)`
 
 **Parameters:**
 - `xquerySource` (`javax.xml.transform.Source`): The source XQuery file
@@ -113,7 +113,7 @@ This way next time the catalogs are needed
 
 **Returns:** `void`
 
-### `resolvePathThroughCatalogs(java.net.URL baseURL, java.lang.String relativeLocation, boolean entityResolve, boolean uriResolve)`
+### `resolvePathThroughCatalogs(URL baseURL, String relativeLocation, boolean entityResolve, boolean uriResolve)`
 
 **Parameters:**
 - `baseURL` (`java.net.URL`): The URL of the current opened XML file.
@@ -123,28 +123,28 @@ This way next time the catalogs are needed
 
 **Returns:** `java.net.URL`
 
-### `escapeAttributeValue(java.lang.String attributeValue)`
+### `escapeAttributeValue(String attributeValue)`
 
 **Parameters:**
 - `attributeValue` (`java.lang.String`): The attribute value.
 
 **Returns:** `java.lang.String`
 
-### `escapeTextValue(java.lang.String textValue)`
+### `escapeTextValue(String textValue)`
 
 **Parameters:**
 - `textValue` (`java.lang.String`): The text value.
 
 **Returns:** `java.lang.String`
 
-### `unescapeAttributeValue(java.lang.String attributeValue)`
+### `unescapeAttributeValue(String attributeValue)`
 
 **Parameters:**
 - `attributeValue` (`java.lang.String`): The attribute value to be unescaped.
 
 **Returns:** `java.lang.String`
 
-### `prettyPrint(java.io.Reader reader, java.lang.String systemID)`
+### `prettyPrint(Reader reader, String systemID)`
 
 The oXygen pretty printing options are used.
 
@@ -159,7 +159,7 @@ The oXygen pretty printing options are used.
 
 **Returns:** `org.xml.sax.XMLReader`
 
-### `newNonValidatingXMLReader(java.lang.Object grammarCacheToken)`
+### `newNonValidatingXMLReader(Object grammarCacheToken)`
 
 If you are parsing XML fragments with DOCTYPE many times in your operation this method will be faster than
   the `newNonValidatingXMLReader()` method.
@@ -199,7 +199,7 @@ The resolver also looks at the additionally set priority URI resolvers.
 
 **Returns:** `javax.xml.transform.URIResolver`
 
-### `addPriorityEntityResolver(org.xml.sax.EntityResolver entityResolver)`
+### `addPriorityEntityResolver(EntityResolver entityResolver)`
 
 For performance reasons, when Oxygen only needs the URL of an entity, it does not call the EntityResolver#resolveEntity(String, String)
  method because it also fetches the content of the entity. To intercept also these cases, your EntityResolver should extend the 
@@ -211,7 +211,7 @@ For performance reasons, when Oxygen only needs the URL of an entity, it does no
 
 **Returns:** `void`
 
-### `removePriorityEntityResolver(org.xml.sax.EntityResolver entityResolver)`
+### `removePriorityEntityResolver(EntityResolver entityResolver)`
 
 **Parameters:**
 - `entityResolver` (`org.xml.sax.EntityResolver`): The entity resolver which will be called with priority before Oxygen calls the standard resolvers which are
@@ -219,7 +219,7 @@ For performance reasons, when Oxygen only needs the URL of an entity, it does no
 
 **Returns:** `void`
 
-### `addPriorityURIResolver(javax.xml.transform.URIResolver uriResolver)`
+### `addPriorityURIResolver(URIResolver uriResolver)`
 
 **Parameters:**
 - `uriResolver` (`javax.xml.transform.URIResolver`): The URI resolver which will be called with priority before Oxygen calls the standard resolvers which are
@@ -227,7 +227,7 @@ For performance reasons, when Oxygen only needs the URL of an entity, it does no
 
 **Returns:** `void`
 
-### `removePriorityURIResolver(javax.xml.transform.URIResolver uriResolver)`
+### `removePriorityURIResolver(URIResolver uriResolver)`
 
 **Parameters:**
 - `uriResolver` (`javax.xml.transform.URIResolver`): The URI resolver which will be called with priority before Oxygen calls the standard resolvers which are
@@ -235,7 +235,7 @@ For performance reasons, when Oxygen only needs the URL of an entity, it does no
 
 **Returns:** `void`
 
-### `threeWayAutoMerge(java.lang.String ancestor, java.lang.String left, java.lang.String right, ro.sync.merge.MergeConflictResolutionMethods conflictResolutionMethod)`
+### `threeWayAutoMerge(String ancestor, String left, String right, MergeConflictResolutionMethods conflictResolutionMethod)`
 
 **Parameters:**
 - `ancestor` (`java.lang.String`): The original file string which has been modified into left and right.
@@ -245,21 +245,21 @@ For performance reasons, when Oxygen only needs the URL of an entity, it does no
 
 **Returns:** [`ro.sync.merge.MergeResult`](../../../../merge/MergeResult.md)
 
-### `getXMLStructureAsDTD(java.io.Reader reader)`
+### `getXMLStructureAsDTD(Reader reader)`
 
 **Parameters:**
 - `reader` (`java.io.Reader`): The reader representing the XML document to get the learn structure for.
 
 **Returns:** `java.lang.String`
 
-### `getAssociatedTransformationScenarioInputURL(java.net.URL xsltOrXQueryLocation)`
+### `getAssociatedTransformationScenarioInputURL(URL xsltOrXQueryLocation)`
 
 **Parameters:**
 - `xsltOrXQueryLocation` (`java.net.URL`): XSLT or XQuery location.
 
 **Returns:** `java.net.URL`
 
-### `getAssociatedValidationScenarioInputURL(java.net.URL schemaLocation)`
+### `getAssociatedValidationScenarioInputURL(URL schemaLocation)`
 
 The first found scenario will be used.
 

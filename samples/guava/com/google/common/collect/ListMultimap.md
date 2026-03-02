@@ -27,8 +27,6 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 
 ### `get(K key)`
 
-**Returns:** `java.util.List<V>`
-
 Because the values for a given key may have duplicates and follow the insertion ordering,
  this method returns a List, instead of the java.util.Collection specified in
  the Multimap interface.
@@ -36,9 +34,9 @@ Because the values for a given key may have duplicates and follow the insertion 
 **Parameters:**
 - `key` (`K`)
 
-### `removeAll(java.lang.Object key)`
-
 **Returns:** `java.util.List<V>`
+
+### `removeAll(Object key)`
 
 Because the values for a given key may have duplicates and follow the insertion ordering,
  this method returns a List, instead of the java.util.Collection specified in
@@ -47,9 +45,9 @@ Because the values for a given key may have duplicates and follow the insertion 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `java.util.List<V>`
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 Because the values for a given key may have duplicates and follow the insertion ordering,
  this method returns a List, instead of the java.util.Collection specified in
@@ -59,16 +57,16 @@ Because the values for a given key may have duplicates and follow the insertion 
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `asMap()`
+**Returns:** `java.util.List<V>`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap()`
 
 **Note:** The returned map's values are guaranteed to be of type List. To obtain
  this map with the more specific generic type Map<K, List<V>>, call Multimaps#asMap(ListMultimap) instead.
 
-### `equals(java.lang.Object obj)`
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 Two ListMultimap instances are equal if, for each key, they contain the same values
  in the same order. If the value orderings disagree, the multimaps will not be considered equal.
@@ -79,4 +77,6 @@ An empty ListMultimap is equal to any other empty Multimap, including an
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

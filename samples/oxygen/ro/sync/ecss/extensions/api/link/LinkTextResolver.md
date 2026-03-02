@@ -15,7 +15,7 @@ This interface is used
 
 ## Methods
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `resolveReference(AuthorNode node)`
 
 This text will be used inside
  author page next to the the link element.
@@ -25,7 +25,7 @@ This text will be used inside
 
 **Returns:** `java.lang.String`
 
-### `update(java.util.Set<java.lang.String> modifiedURLs)`
+### `update(Set<String> modifiedURLs)`
 
 Update the cache of references if any of the 
  resolved links were loaded from one of these URL.
@@ -46,7 +46,7 @@ Any cache should be cleared in order to
 
 **Returns:** `void`
 
-### `activated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `activated(AuthorAccess authorAccess)`
 
 All kinds of listeners 
  can be added on this call (like AuthorMouseListener or AuthorListener).
@@ -57,7 +57,7 @@ All kinds of listeners
 
 **Returns:** `void`
 
-### `deactivated(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `deactivated(AuthorAccess authorAccess)`
 
 All listeners 
  should be removed on this call.
@@ -68,7 +68,7 @@ All listeners
 
 **Returns:** `void`
 
-### `refreshNodeReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `refreshNodeReferences(AuthorNode node)`
 
 After performing an internal refresh the resolver must get an editor access 
  using AuthorAccess#getEditorAccess() and call AuthorEditorAccess#refresh(AuthorNode)

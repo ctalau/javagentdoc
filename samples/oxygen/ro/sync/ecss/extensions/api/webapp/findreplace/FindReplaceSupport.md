@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getSearchHighlightsProvider(java.lang.String searchFor, boolean matchCase, boolean wholeWords)`
+### `getSearchHighlightsProvider(String searchFor, boolean matchCase, boolean wholeWords)`
 
 **Parameters:**
 - `searchFor` (`java.lang.String`): The string to search for.
@@ -17,7 +17,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../highlights/AuthorHighlighter.md)
 
-### `getSearchHighlightsProvider(java.lang.String searchFor, ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions options)`
+### `getSearchHighlightsProvider(String searchFor, WebappFindOptions options)`
 
 **Parameters:**
 - `searchFor` (`java.lang.String`): The string to search for.
@@ -25,7 +25,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorHighlighter`](../../highlights/AuthorHighlighter.md)
 
-### `replaceAll(java.lang.String textToFind, java.lang.String textToReplaceWith)`
+### `replaceAll(String textToFind, String textToReplaceWith)`
 
 **Parameters:**
 - `textToFind` (`java.lang.String`): The text to search for.
@@ -33,7 +33,7 @@
 
 **Returns:** `void`
 
-### `replaceAll(java.lang.String textToFind, java.lang.String textToReplaceWith, ro.sync.ecss.extensions.api.webapp.findreplace.WebappFindOptions options)`
+### `replaceAll(String textToFind, String textToReplaceWith, WebappFindOptions options)`
 
 Also considers the options.
 
@@ -44,7 +44,7 @@ Also considers the options.
 
 **Returns:** `void`
 
-### `replace(int[] selectionOffsets, java.lang.String textToReplaceWith)`
+### `replace(int[] selectionOffsets, String textToReplaceWith)`
 
 **Parameters:**
 - `selectionOffsets` (`int[]`): The offsets.
@@ -52,7 +52,7 @@ Also considers the options.
 
 **Returns:** `void`
 
-### `getSearchHighlightsProvider(java.lang.String searchFor)`
+### `getSearchHighlightsProvider(String searchFor)`
 
 **Parameters:**
 - `searchFor` (`java.lang.String`): The string to search for.

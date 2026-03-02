@@ -66,7 +66,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorExtensionStateListener`](../api/AuthorExtensionStateListener.md)
 
-### `createContextKeyManager(ro.sync.ecss.extensions.api.access.EditingSessionContext context)`
+### `createContextKeyManager(EditingSessionContext context)`
 
 The key manager may resolve keys depending on the editing session context.
  The current implementation checks the DITAAccess#DITA_ROOT_MAP_URL_ATTRIBUTE
@@ -114,7 +114,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** [`ro.sync.ecss.extensions.api.link.ElementLocatorProvider`](../api/link/ElementLocatorProvider.md)
 
-### `customizeLinkTooltipDescription(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
+### `customizeLinkTooltipDescription(URL currentEditorURL, AuthorNode contextNode, String linkHref, AuthorAccess authorAccess, String computedDescription)`
 
 **Parameters:**
 - `currentEditorURL` (`java.net.URL`)
@@ -125,7 +125,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** `java.lang.String`
 
-### `customizeImageTooltipDescription(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
+### `customizeImageTooltipDescription(AuthorNode contextNode, AuthorAccess authorAccess, String computedDescription)`
 
 **Parameters:**
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -134,7 +134,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** `java.lang.String`
 
-### `computeImageAltText(ro.sync.ecss.extensions.api.node.AuthorNode contextNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String computedDescription)`
+### `computeImageAltText(AuthorNode contextNode, AuthorAccess authorAccess, String computedDescription)`
 
 **Parameters:**
 - `contextNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): Context node.
@@ -143,7 +143,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** `java.lang.String`
 
-### `resolveCustomHref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `resolveCustomHref(URL currentEditorURL, AuthorNode contextNode, String linkHref, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `currentEditorURL` (`java.net.URL`)
@@ -153,7 +153,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** `java.net.URL`
 
-### `resolveCustomKeyref(java.net.URL currentEditorURL, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, java.lang.String linkHref)`
+### `resolveCustomKeyref(URL currentEditorURL, AuthorNode contextNode, String linkHref)`
 
 **Parameters:**
 - `currentEditorURL` (`java.net.URL`): The URL of the current editor.
@@ -162,7 +162,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** `java.net.URL`
 
-### `isImage(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isImage(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node to check.
@@ -189,7 +189,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** [`ro.sync.ecss.extensions.api.text.TextPageExternalObjectInsertionHandler`](../api/text/TextPageExternalObjectInsertionHandler.md)
 
-### `isContentReference(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isContentReference(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -232,7 +232,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** [`ro.sync.ecss.extensions.api.EditPropertiesHandler`](../api/EditPropertiesHandler.md)
 
-### `getHelpPageID(java.lang.String currentEditorPage)`
+### `getHelpPageID(String currentEditorPage)`
 
 **Parameters:**
 - `currentEditorPage` (`java.lang.String`)
@@ -243,7 +243,7 @@ The key manager may resolve keys depending on the editing session context.
 
 **Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](../../dita/ContextKeyManager.md)
 
-### `resolveCustomAttributeValue(ro.sync.ecss.extensions.api.CustomAttributeValueContext attributeValueEditingContext)`
+### `resolveCustomAttributeValue(CustomAttributeValueContext attributeValueEditingContext)`
 
 **Parameters:**
 - `attributeValueEditingContext` ([`ro.sync.ecss.extensions.api.CustomAttributeValueContext`](../api/CustomAttributeValueContext.md))

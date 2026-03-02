@@ -64,9 +64,7 @@ Null nodes are strictly forbidden.
 
 ## Methods
 
-### `using(com.google.common.base.Function<T,? extends java.lang.Iterable<T>> nodeToChildrenFunction)`
-
-**Returns:** [`com.google.common.collect.TreeTraverser<T>`](./TreeTraverser.md)
+### `using(Function<T,? extends Iterable<T>> nodeToChildrenFunction)`
 
 This is useful if the function instance already exists, or so that you can supply a lambda
  expressions. If those circumstances don't apply, you probably don't need to use this; subclass
@@ -75,18 +73,18 @@ This is useful if the function instance already exists, or so that you can suppl
 **Parameters:**
 - `nodeToChildrenFunction` ([`com.google.common.base.Function<T,? extends java.lang.Iterable<T>>`](../base/Function.md))
 
-### `children(T root)`
+**Returns:** [`com.google.common.collect.TreeTraverser<T>`](./TreeTraverser.md)
 
-**Returns:** `java.lang.Iterable<T>`
+### `children(T root)`
 
 Must not contain null.
 
 **Parameters:**
 - `root` (`T`)
 
-### `preOrderTraversal(T root)`
+**Returns:** `java.lang.Iterable<T>`
 
-**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+### `preOrderTraversal(T root)`
 
 That is, each node's subtrees are traversed after the node itself is returned.
 
@@ -97,16 +95,16 @@ No guarantees are made about the behavior of the traversal when nodes change whi
 **Parameters:**
 - `root` (`T`)
 
-### `preOrderIterator(T root)`
+**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+### `preOrderIterator(T root)`
 
 **Parameters:**
 - `root` (`T`)
 
-### `postOrderTraversal(T root)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
-**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+### `postOrderTraversal(T root)`
 
 That is, each node's subtrees are traversed before the node itself is returned.
 
@@ -117,16 +115,16 @@ No guarantees are made about the behavior of the traversal when nodes change whi
 **Parameters:**
 - `root` (`T`)
 
-### `postOrderIterator(T root)`
+**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+### `postOrderIterator(T root)`
 
 **Parameters:**
 - `root` (`T`)
 
-### `breadthFirstTraversal(T root)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
-**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+### `breadthFirstTraversal(T root)`
 
 That is, all the nodes of depth 0 are returned, then depth 1, then 2, and so on.
 
@@ -136,4 +134,6 @@ No guarantees are made about the behavior of the traversal when nodes change whi
 
 **Parameters:**
 - `root` (`T`)
+
+**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
 

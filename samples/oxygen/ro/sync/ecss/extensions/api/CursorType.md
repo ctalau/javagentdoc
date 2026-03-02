@@ -16,7 +16,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.CursorType[]`](./CursorType.md)
 
-### `valueOf(java.lang.String name)`
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

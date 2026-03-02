@@ -56,7 +56,7 @@ See the Guava User Guide article on [Table](https://github.com/google/guava/wiki
 
 ## Constructors
 
-### `<init>(java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)`
+### `<init>(Comparator<? super R> rowComparator, Comparator<? super C> columnComparator)`
 
 **Parameters:**
 - `rowComparator` (`java.util.Comparator<? super R>`)
@@ -66,43 +66,41 @@ See the Guava User Guide article on [Table](https://github.com/google/guava/wiki
 
 ### `create()`
 
-**Returns:** [`com.google.common.collect.TreeBasedTable<R,C,V>`](./TreeBasedTable.md)
-
 The method signature specifies R extends Comparable with a raw Comparable,
  instead of R extends Comparable<? super R>, and the same for C. That's
  necessary to support classes defined without generics.
 
-### `create(java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)`
-
 **Returns:** [`com.google.common.collect.TreeBasedTable<R,C,V>`](./TreeBasedTable.md)
+
+### `create(Comparator<? super R> rowComparator, Comparator<? super C> columnComparator)`
 
 **Parameters:**
 - `rowComparator` (`java.util.Comparator<? super R>`): the comparator that orders the row keys
 - `columnComparator` (`java.util.Comparator<? super C>`): the comparator that orders the column keys
 
-### `create(com.google.common.collect.TreeBasedTable<R,C,? extends V> table)`
-
 **Returns:** [`com.google.common.collect.TreeBasedTable<R,C,V>`](./TreeBasedTable.md)
+
+### `create(TreeBasedTable<R,C,? extends V> table)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.TreeBasedTable<R,C,? extends V>`](./TreeBasedTable.md))
 
-### `rowComparator()`
+**Returns:** [`com.google.common.collect.TreeBasedTable<R,C,V>`](./TreeBasedTable.md)
 
-**Returns:** `java.util.Comparator<? super R>`
+### `rowComparator()`
 
 With natural ordering, Ordering#natural()
  is returned.
 
-### `columnComparator()`
+**Returns:** `java.util.Comparator<? super R>`
 
-**Returns:** `java.util.Comparator<? super C>`
+### `columnComparator()`
 
 With natural ordering, Ordering#natural() is returned.
 
-### `row(R rowKey)`
+**Returns:** `java.util.Comparator<? super C>`
 
-**Returns:** `java.util.SortedMap<C,V>`
+### `row(R rowKey)`
 
 Because a TreeBasedTable has unique sorted values for a given row, this method
  returns a SortedMap, instead of the Map specified in the Table
@@ -110,6 +108,8 @@ Because a TreeBasedTable has unique sorted values for a given row, this method
 
 **Parameters:**
 - `rowKey` (`R`)
+
+**Returns:** `java.util.SortedMap<C,V>`
 
 ### `rowKeySet()`
 

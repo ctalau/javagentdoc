@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.link.IDTypeVerifier idVerifier, java.lang.String link, boolean locateOnlyByElementID)`
+### `<init>(IDTypeVerifier idVerifier, String link, boolean locateOnlyByElementID)`
 
 **Parameters:**
 - `idVerifier` ([`ro.sync.ecss.extensions.api.link.IDTypeVerifier`](../api/link/IDTypeVerifier.md)): Id type verifier
@@ -25,7 +25,7 @@
 
 ## Methods
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String name, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `startElement(String uri, String localName, String name, Attr[] atts)`
 
 **Parameters:**
 - `uri` (`java.lang.String`)

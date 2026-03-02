@@ -44,7 +44,7 @@
 
 ## Constructors
 
-### `<init>(java.awt.Frame arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.lang.String arg2, java.lang.String arg3)`
+### `<init>(Frame arg0, AuthorResourceBundle arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)
@@ -54,7 +54,7 @@
 
 ## Methods
 
-### `addSection(java.awt.GridBagConstraints arg0, java.lang.String arg1)`
+### `addSection(GridBagConstraints arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.awt.GridBagConstraints`)
@@ -62,7 +62,7 @@
 
 **Returns:** `void`
 
-### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
+### `getSortInformation(List<CriterionInformation> arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
@@ -71,7 +71,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation`](./SortCriteriaInformation.md)
 
-### `selectionChanged(java.lang.String arg0, java.lang.String arg1)`
+### `selectionChanged(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

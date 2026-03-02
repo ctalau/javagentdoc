@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(java.net.URL referenceURL, java.lang.String hrefValue, boolean isDITAMap, boolean isDITAReference)`
+### `<init>(URL referenceURL, String hrefValue, boolean isDITAMap, boolean isDITAReference)`
 
 **Parameters:**
 - `referenceURL` (`java.net.URL`): The refered URL.

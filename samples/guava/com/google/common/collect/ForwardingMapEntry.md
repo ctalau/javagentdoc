@@ -55,41 +55,41 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 ### `setValue(V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `value` (`V`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `standardEquals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `standardEquals(Object object)`
 
 If you override either of these methods, you may wish to override #equals(Object) to forward to this implementation.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardHashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `standardHashCode()`
 
 If you override either of these methods, you may wish to override #hashCode() to forward to this implementation.
 
-### `standardToString()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `standardToString()`
 
 If you override either of these methods, you may wish to override #equals to forward to
  this implementation.
+
+**Returns:** `java.lang.String`
 

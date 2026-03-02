@@ -20,9 +20,7 @@ See the Guava User Guide article on [Tables](https://github.com/google/guava/wik
 
 ## Methods
 
-### `toTable(java.util.function.Function<? super T,? extends R> rowFunction, java.util.function.Function<? super T,? extends C> columnFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.Supplier<I> tableSupplier)`
-
-**Returns:** `java.util.stream.Collector<T,?,I>`
+### `toTable(Function<? super T,? extends R> rowFunction, Function<? super T,? extends C> columnFunction, Function<? super T,? extends V> valueFunction, Supplier<I> tableSupplier)`
 
 Cells are inserted into the generated Table in encounter order.
 
@@ -39,9 +37,9 @@ To collect to an ImmutableTable, use ImmutableTable#toImmutableTable.
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `tableSupplier` (`java.util.function.Supplier<I>`)
 
-### `toTable(java.util.function.Function<? super T,? extends R> rowFunction, java.util.function.Function<? super T,? extends C> columnFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.BinaryOperator<V> mergeFunction, java.util.function.Supplier<I> tableSupplier)`
-
 **Returns:** `java.util.stream.Collector<T,?,I>`
+
+### `toTable(Function<? super T,? extends R> rowFunction, Function<? super T,? extends C> columnFunction, Function<? super T,? extends V> valueFunction, BinaryOperator<V> mergeFunction, Supplier<I> tableSupplier)`
 
 Cells are inserted into the generated Table in encounter order.
 
@@ -59,9 +57,9 @@ If multiple input elements map to the same row and column, the specified merging
 - `mergeFunction` (`java.util.function.BinaryOperator<V>`)
 - `tableSupplier` (`java.util.function.Supplier<I>`)
 
-### `immutableCell(R rowKey, C columnKey, V value)`
+**Returns:** `java.util.stream.Collector<T,?,I>`
 
-**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
+### `immutableCell(R rowKey, C columnKey, V value)`
 
 The returned cell is serializable.
 
@@ -70,9 +68,9 @@ The returned cell is serializable.
 - `columnKey` (`C`): the column key to be associated with the returned cell
 - `value` (`V`): the value to be associated with the returned cell
 
-### `transpose(com.google.common.collect.Table<R,C,V> table)`
+**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
 
-**Returns:** [`com.google.common.collect.Table<C,R,V>`](./Table.md)
+### `transpose(Table<R,C,V> table)`
 
 In other words,
  calling get(columnKey, rowKey) on the generated table always returns the same value as
@@ -89,9 +87,9 @@ The returned table supports update operations as long as the input table support
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<R,C,V>`](./Table.md))
 
-### `newCustomTable(java.util.Map<R,java.util.Map<C,V>> backingMap, com.google.common.base.Supplier<? extends java.util.Map<C,V>> factory)`
+**Returns:** [`com.google.common.collect.Table<C,R,V>`](./Table.md)
 
-**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
+### `newCustomTable(Map<R,Map<C,V>> backingMap, Supplier<? extends Map<C,V>> factory)`
 
 It can generate a table based
  on arbitrary Map classes.
@@ -130,13 +128,13 @@ Note: the table assumes complete ownership over of backingMap and the maps retur
 
 **Parameters:**
 - `backingMap` (`java.util.Map<R,java.util.Map<C,V>>`): place to store the mapping from each row key to its corresponding column key
-     / value map
+       / value map
 - `factory` ([`com.google.common.base.Supplier<? extends java.util.Map<C,V>>`](../base/Supplier.md)): supplier of new, empty maps that will each hold all column key / value mappings
-     for a given row key
+       for a given row key
 
-### `transformValues(com.google.common.collect.Table<R,C,V1> fromTable, com.google.common.base.Function<? super V1,V2> function)`
+**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
 
-**Returns:** [`com.google.common.collect.Table<R,C,V2>`](./Table.md)
+### `transformValues(Table<R,C,V1> fromTable, Function<? super V1,V2> function)`
 
 All other properties
  of the table, such as iteration order, are left intact.
@@ -164,9 +162,9 @@ The function is applied lazily, invoked when needed. This is necessary for the r
 - `fromTable` ([`com.google.common.collect.Table<R,C,V1>`](./Table.md))
 - `function` ([`com.google.common.base.Function<? super V1,V2>`](../base/Function.md))
 
-### `unmodifiableTable(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
+**Returns:** [`com.google.common.collect.Table<R,C,V2>`](./Table.md)
 
-**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
+### `unmodifiableTable(Table<? extends R,? extends C,? extends V> table)`
 
 This method allows modules to provide
  users with "read-only" access to internal tables. Query operations on the returned table "read
@@ -182,9 +180,9 @@ Consider using an ImmutableTable, which is guaranteed never to change.
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md))
 
-### `unmodifiableRowSortedTable(com.google.common.collect.RowSortedTable<R,? extends C,? extends V> table)`
+**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
 
-**Returns:** [`com.google.common.collect.RowSortedTable<R,C,V>`](./RowSortedTable.md)
+### `unmodifiableRowSortedTable(RowSortedTable<R,? extends C,? extends V> table)`
 
 This method allows modules to
  provide users with "read-only" access to internal tables. Query operations on the returned
@@ -197,13 +195,13 @@ The returned table will be serializable if the specified table is serializable.
 **Parameters:**
 - `table` ([`com.google.common.collect.RowSortedTable<R,? extends C,? extends V>`](./RowSortedTable.md)): the row-sorted table for which an unmodifiable view is to be returned
 
+**Returns:** [`com.google.common.collect.RowSortedTable<R,C,V>`](./RowSortedTable.md)
+
 ### `unmodifiableWrapper()`
 
 **Returns:** [`com.google.common.base.Function<java.util.Map<K,V>,java.util.Map<K,V>>`](../base/Function.md)
 
-### `synchronizedTable(com.google.common.collect.Table<R,C,V> table)`
-
-**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
+### `synchronizedTable(Table<R,C,V> table)`
 
 In order to guarantee
  serial access, it is critical that **all** access to the backing table is accomplished
@@ -240,11 +238,13 @@ The returned table will be serializable if the specified table is serializable.
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<R,C,V>`](./Table.md)): the table to be wrapped in a synchronized view
 
-### `equalsImpl(com.google.common.collect.Table<?,?,?> table, java.lang.Object obj)`
+**Returns:** [`com.google.common.collect.Table<R,C,V>`](./Table.md)
 
-**Returns:** `boolean`
+### `equalsImpl(Table<?,?,?> table, Object obj)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<?,?,?>`](./Table.md))
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

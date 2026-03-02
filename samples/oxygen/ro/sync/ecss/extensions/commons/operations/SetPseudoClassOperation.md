@@ -36,7 +36,7 @@ There is no constraint on pseudo-class name. Let's consider we
 
 ## Methods
 
-### `execute(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String pseudoClassName, ro.sync.ecss.extensions.api.node.AuthorElement targetElement)`
+### `execute(AuthorAccess authorAccess, String pseudoClassName, AuthorElement targetElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The access.

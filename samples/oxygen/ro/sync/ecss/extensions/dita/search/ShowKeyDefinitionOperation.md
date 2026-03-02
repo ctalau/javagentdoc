@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -22,7 +22,7 @@
 
 **Returns:** `void`
 
-### `showKeyDefinition(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String keyName, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `showKeyDefinition(AuthorAccess authorAccess, String keyName, AuthorNode node)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.

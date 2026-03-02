@@ -30,7 +30,7 @@ Empty/null for the current element.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -38,14 +38,14 @@ Empty/null for the current element.
 
 **Returns:** `void`
 
-### `getFragmentToInsert(ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `getFragmentToInsert(ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The arguments map of the operation.
 
 **Returns:** `java.lang.String`
 
-### `getNodeToReplaceContent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `getNodeToReplaceContent(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.

@@ -8,28 +8,28 @@
 
 ## Methods
 
-### `handleHtmlPaste(java.lang.String html)`
+### `handleHtmlPaste(String html)`
 
 **Parameters:**
 - `html` (`java.lang.String`): The HTML content.
 
 **Returns:** `void`
 
-### `handleXmlPaste(java.lang.String xml)`
+### `handleXmlPaste(String xml)`
 
 **Parameters:**
 - `xml` (`java.lang.String`): the XML content.
 
 **Returns:** `void`
 
-### `handleTextPaste(java.lang.String text)`
+### `handleTextPaste(String text)`
 
 **Parameters:**
 - `text` (`java.lang.String`): the text content.
 
 **Returns:** `void`
 
-### `handlePaste(ro.sync.ecss.component.AuthorClipboardObject toPaste, boolean removeSelection, boolean pasteAsXml)`
+### `handlePaste(AuthorClipboardObject toPaste, boolean removeSelection, boolean pasteAsXml)`
 
 **Parameters:**
 - `toPaste` ([`ro.sync.ecss.component.AuthorClipboardObject`](../../../component/AuthorClipboardObject.md)): The fragment to paste

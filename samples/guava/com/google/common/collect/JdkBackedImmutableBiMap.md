@@ -33,7 +33,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>> entries, java.util.Map<K,V> forwardDelegate, java.util.Map<V,K> backwardDelegate)`
+### `<init>(ImmutableList<Map.Entry<K,V>> entries, Map<K,V> forwardDelegate, Map<V,K> backwardDelegate)`
 
 **Parameters:**
 - `entries` ([`com.google.common.collect.ImmutableList<java.util.Map.Entry<K,V>>`](./ImmutableList.md))
@@ -42,13 +42,13 @@
 
 ## Methods
 
-### `create(int n, java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[] entryArray)`
-
-**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
+### `create(int n, Map@Nullable Entry<K,V>[] entryArray)`
 
 **Parameters:**
 - `n` (`int`)
 - `entryArray` (`java.util.Map.@org.checkerframework.checker.nullness.qual.Nullable Entry<K,V>[]`)
+
+**Returns:** [`com.google.common.collect.ImmutableBiMap<K,V>`](./ImmutableBiMap.md)
 
 ### `size()`
 
@@ -58,12 +58,12 @@
 
 **Returns:** [`com.google.common.collect.ImmutableBiMap<V,K>`](./ImmutableBiMap.md)
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `createEntrySet()`
 

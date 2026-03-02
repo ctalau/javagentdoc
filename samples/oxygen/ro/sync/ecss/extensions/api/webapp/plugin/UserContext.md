@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<java.lang.String,java.lang.String> headersMap, java.lang.String sessionId)`
+### `<init>(Map<String,String> headersMap, String sessionId)`
 
 **Parameters:**
 - `headersMap` (`java.util.Map<java.lang.String,java.lang.String>`): The cookies that are part of the context of this URL.

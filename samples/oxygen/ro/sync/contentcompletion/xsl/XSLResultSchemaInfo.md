@@ -32,7 +32,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, boolean arg2)`
+### `<init>(String arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -53,7 +53,7 @@
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)

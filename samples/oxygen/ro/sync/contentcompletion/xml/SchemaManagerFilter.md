@@ -14,7 +14,7 @@ This should be implemented if the
 
 ## Methods
 
-### `filterElements(java.util.List<ro.sync.contentcompletion.xml.CIElement> elements, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context)`
+### `filterElements(List<CIElement> elements, WhatElementsCanGoHereContext context)`
 
 The original list of elements is obtained by examining the current document
  schema and determining what possible elements can be inserted in the
@@ -66,7 +66,7 @@ The original list of elements is obtained by examining the current document
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `filterAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> attributes, ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext context)`
+### `filterAttributes(List<CIAttribute> attributes, WhatAttributesCanGoHereContext context)`
 
 The original list of attributes is obtained by examining the current document
  schema and determining what attributes can be inserted in the current element
@@ -79,7 +79,7 @@ The original list of attributes is obtained by examining the current document
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `filterAttributeValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> attributeValues, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext context)`
+### `filterAttributeValues(List<CIValue> attributeValues, WhatPossibleValuesHasAttributeContext context)`
 
 The original list of attribute values is obtained by examining the current 
  document schema and determining what values are permitted for the current attribute.
@@ -93,7 +93,7 @@ The original list of attribute values is obtained by examining the current
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `filterElementValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> elementValues, ro.sync.contentcompletion.xml.Context context)`
+### `filterElementValues(List<CIValue> elementValues, Context context)`
 
 The original list of element values is obtained by examining the current 
  document schema and determining what values are permitted for the current element.

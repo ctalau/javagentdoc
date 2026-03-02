@@ -19,7 +19,7 @@ It offers a possible solution
 
 ## Constructors
 
-### `<init>(java.lang.String errorMessage, ro.sync.ecss.extensions.api.ReferenceErrorResolver errorResolver)`
+### `<init>(String errorMessage, ReferenceErrorResolver errorResolver)`
 
 **Parameters:**
 - `errorMessage` (`java.lang.String`): The error message.

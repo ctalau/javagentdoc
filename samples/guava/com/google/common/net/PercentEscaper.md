@@ -60,7 +60,7 @@ If c >= safeOctets.length then it should be
 
 ## Constructors
 
-### `<init>(java.lang.String safeChars, boolean plusForSpace)`
+### `<init>(String safeChars, boolean plusForSpace)`
 
 Not that it is allowed, but not necessarily desirable to specify % as a safe
  character. This has the effect of creating an escaper which has no well-defined inverse but it
@@ -68,14 +68,12 @@ Not that it is allowed, but not necessarily desirable to specify % as a safe
 
 **Parameters:**
 - `safeChars` (`java.lang.String`): a non-null string specifying additional safe characters for this escaper (the
-     ranges 0..9, a..z and A..Z are always safe and should not be specified here)
+       ranges 0..9, a..z and A..Z are always safe and should not be specified here)
 - `plusForSpace` (`boolean`): true if ASCII space should be escaped to + rather than %20
 
 ## Methods
 
-### `createSafeOctets(java.lang.String safeChars)`
-
-**Returns:** `boolean[]`
+### `createSafeOctets(String safeChars)`
 
 The array is as small as is required to hold the given character
  information.
@@ -83,26 +81,28 @@ The array is as small as is required to hold the given character
 **Parameters:**
 - `safeChars` (`java.lang.String`)
 
-### `nextEscapeIndex(java.lang.CharSequence csq, int index, int end)`
+**Returns:** `boolean[]`
 
-**Returns:** `int`
+### `nextEscapeIndex(CharSequence csq, int index, int end)`
 
 **Parameters:**
 - `csq` (`java.lang.CharSequence`)
 - `index` (`int`)
 - `end` (`int`)
 
-### `escape(java.lang.String s)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `escape(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
 
-### `escape(int cp)`
+**Returns:** `java.lang.String`
 
-**Returns:** `char[]`
+### `escape(int cp)`
 
 **Parameters:**
 - `cp` (`int`)
+
+**Returns:** `char[]`
 

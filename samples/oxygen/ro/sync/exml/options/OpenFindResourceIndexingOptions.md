@@ -58,7 +58,7 @@
 
 ## Constructors
 
-### `<init>(boolean arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4, boolean arg5, int arg6, java.lang.String arg7)`
+### `<init>(boolean arg0, String arg1, String arg2, String arg3, boolean arg4, boolean arg5, int arg6, String arg7)`
 
 **Parameters:**
 - `arg0` (`boolean`)

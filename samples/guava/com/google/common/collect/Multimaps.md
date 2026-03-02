@@ -15,9 +15,7 @@ See the Guava User Guide article on [
 
 ## Methods
 
-### `toMultimap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction, java.util.function.Supplier<M> multimapSupplier)`
-
-**Returns:** `java.util.stream.Collector<T,?,M>`
+### `toMultimap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction, Supplier<M> multimapSupplier)`
 
 The keys and values of the entries are the result of applying the provided
  mapping functions to the input elements, accumulated in the encounter order of the stream.
@@ -61,9 +59,9 @@ To collect to an ImmutableMultimap, use either ImmutableSetMultimap#toImmutableS
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 - `multimapSupplier` (`java.util.function.Supplier<M>`)
 
-### `flatteningToMultimap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends java.util.stream.Stream<? extends V>> valueFunction, java.util.function.Supplier<M> multimapSupplier)`
-
 **Returns:** `java.util.stream.Collector<T,?,M>`
+
+### `flatteningToMultimap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends Stream<? extends V>> valueFunction, Supplier<M> multimapSupplier)`
 
 Each input element is mapped to a key and a stream of values, each of which
  are put into the resulting Multimap, in the encounter order of the stream and the
@@ -104,9 +102,9 @@ Example:
 - `valueFunction` (`java.util.function.Function<? super T,? extends java.util.stream.Stream<? extends V>>`)
 - `multimapSupplier` (`java.util.function.Supplier<M>`)
 
-### `newMultimap(java.util.Map<K,java.util.Collection<V>> map, com.google.common.base.Supplier<? extends java.util.Collection<V>> factory)`
+**Returns:** `java.util.stream.Collector<T,?,M>`
 
-**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+### `newMultimap(Map<K,Collection<V>> map, Supplier<? extends Collection<V>> factory)`
 
 **Warning: do not use** this method when the collections returned by factory
  implement either List or Set! Use the more specific method #newListMultimap, #newSetMultimap or #newSortedSetMultimap instead, to avoid
@@ -138,11 +136,11 @@ Note: the multimap assumes complete ownership over of map and the collections
 **Parameters:**
 - `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
 - `factory` ([`com.google.common.base.Supplier<? extends java.util.Collection<V>>`](../base/Supplier.md)): supplier of new, empty collections that will each hold all values for a given
-     key
+       key
 
-### `newListMultimap(java.util.Map<K,java.util.Collection<V>> map, com.google.common.base.Supplier<? extends java.util.List<V>> factory)`
+**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
+### `newListMultimap(Map<K,Collection<V>> map, Supplier<? extends List<V>> factory)`
 
 It can generate a
  multimap based on arbitrary Map and List classes.
@@ -176,9 +174,9 @@ Note: the multimap assumes complete ownership over of map and the lists returned
 - `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
 - `factory` ([`com.google.common.base.Supplier<? extends java.util.List<V>>`](../base/Supplier.md)): supplier of new, empty lists that will each hold all values for a given key
 
-### `newSetMultimap(java.util.Map<K,java.util.Collection<V>> map, com.google.common.base.Supplier<? extends java.util.Set<V>> factory)`
+**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `newSetMultimap(Map<K,Collection<V>> map, Supplier<? extends Set<V>> factory)`
 
 It can generate a
  multimap based on arbitrary Map and Set classes.
@@ -210,9 +208,9 @@ Note: the multimap assumes complete ownership over of map and the sets returned 
 - `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
 - `factory` ([`com.google.common.base.Supplier<? extends java.util.Set<V>>`](../base/Supplier.md)): supplier of new, empty sets that will each hold all values for a given key
 
-### `newSortedSetMultimap(java.util.Map<K,java.util.Collection<V>> map, com.google.common.base.Supplier<? extends java.util.SortedSet<V>> factory)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
+### `newSortedSetMultimap(Map<K,Collection<V>> map, Supplier<? extends SortedSet<V>> factory)`
 
 It can generate
  a multimap based on arbitrary Map and SortedSet classes.
@@ -243,11 +241,11 @@ Note: the multimap assumes complete ownership over of map and the sets returned 
 **Parameters:**
 - `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
 - `factory` ([`com.google.common.base.Supplier<? extends java.util.SortedSet<V>>`](../base/Supplier.md)): supplier of new, empty sorted sets that will each hold all values for a given
-     key
+       key
 
-### `invertFrom(com.google.common.collect.Multimap<? extends V,? extends K> source, M dest)`
+**Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-**Returns:** `M`
+### `invertFrom(Multimap<? extends V,? extends K> source, M dest)`
 
 If source is an ImmutableMultimap, consider using ImmutableMultimap#inverse instead.
 
@@ -255,9 +253,9 @@ If source is an ImmutableMultimap, consider using ImmutableMultimap#inverse inst
 - `source` ([`com.google.common.collect.Multimap<? extends V,? extends K>`](./Multimap.md)): any multimap
 - `dest` (`M`): the multimap to copy into; usually empty
 
-### `synchronizedMultimap(com.google.common.collect.Multimap<K,V> multimap)`
+**Returns:** `M`
 
-**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+### `synchronizedMultimap(Multimap<K,V> multimap)`
 
 In order to
  guarantee serial access, it is critical that **all** access to the backing multimap is
@@ -298,9 +296,9 @@ The returned multimap will be serializable if the specified multimap is serializ
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md)): the multimap to be wrapped in a synchronized view
 
-### `unmodifiableMultimap(com.google.common.collect.Multimap<K,V> delegate)`
-
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+
+### `unmodifiableMultimap(Multimap<K,V> delegate)`
 
 Query operations on the returned
  multimap "read through" to the specified multimap, and attempts to modify the returned
@@ -313,16 +311,16 @@ The returned multimap will be serializable if the specified multimap is serializ
 **Parameters:**
 - `delegate` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md)): the multimap for which an unmodifiable view is to be returned
 
-### `unmodifiableMultimap(com.google.common.collect.ImmutableMultimap<K,V> delegate)`
-
 **Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+
+### `unmodifiableMultimap(ImmutableMultimap<K,V> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ImmutableMultimap<K,V>`](./ImmutableMultimap.md))
 
-### `synchronizedSetMultimap(com.google.common.collect.SetMultimap<K,V> multimap)`
+**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `synchronizedSetMultimap(SetMultimap<K,V> multimap)`
 
 You must follow the warnings described in #synchronizedMultimap.
 
@@ -332,9 +330,9 @@ The returned multimap will be serializable if the specified multimap is serializ
 **Parameters:**
 - `multimap` ([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)): the multimap to be wrapped
 
-### `unmodifiableSetMultimap(com.google.common.collect.SetMultimap<K,V> delegate)`
-
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+
+### `unmodifiableSetMultimap(SetMultimap<K,V> delegate)`
 
 Query operations on the
  returned multimap "read through" to the specified multimap, and attempts to modify the returned
@@ -347,16 +345,16 @@ The returned multimap will be serializable if the specified multimap is serializ
 **Parameters:**
 - `delegate` ([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)): the multimap for which an unmodifiable view is to be returned
 
-### `unmodifiableSetMultimap(com.google.common.collect.ImmutableSetMultimap<K,V> delegate)`
-
 **Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+
+### `unmodifiableSetMultimap(ImmutableSetMultimap<K,V> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ImmutableSetMultimap<K,V>`](./ImmutableSetMultimap.md))
 
-### `synchronizedSortedSetMultimap(com.google.common.collect.SortedSetMultimap<K,V> multimap)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
+### `synchronizedSortedSetMultimap(SortedSetMultimap<K,V> multimap)`
 
 You must follow the warnings described in #synchronizedMultimap.
 
@@ -366,9 +364,9 @@ The returned multimap will be serializable if the specified multimap is serializ
 **Parameters:**
 - `multimap` ([`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)): the multimap to be wrapped
 
-### `unmodifiableSortedSetMultimap(com.google.common.collect.SortedSetMultimap<K,V> delegate)`
-
 **Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
+
+### `unmodifiableSortedSetMultimap(SortedSetMultimap<K,V> delegate)`
 
 Query operations on
  the returned multimap "read through" to the specified multimap, and attempts to modify the
@@ -381,18 +379,18 @@ The returned multimap will be serializable if the specified multimap is serializ
 **Parameters:**
 - `delegate` ([`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)): the multimap for which an unmodifiable view is to be returned
 
-### `synchronizedListMultimap(com.google.common.collect.ListMultimap<K,V> multimap)`
+**Returns:** [`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md)
 
-**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
+### `synchronizedListMultimap(ListMultimap<K,V> multimap)`
 
 You must follow the warnings described in #synchronizedMultimap.
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)): the multimap to be wrapped
 
-### `unmodifiableListMultimap(com.google.common.collect.ListMultimap<K,V> delegate)`
-
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
+
+### `unmodifiableListMultimap(ListMultimap<K,V> delegate)`
 
 Query operations on the
  returned multimap "read through" to the specified multimap, and attempts to modify the returned
@@ -405,23 +403,23 @@ The returned multimap will be serializable if the specified multimap is serializ
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)): the multimap for which an unmodifiable view is to be returned
 
-### `unmodifiableListMultimap(com.google.common.collect.ImmutableListMultimap<K,V> delegate)`
-
 **Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
+
+### `unmodifiableListMultimap(ImmutableListMultimap<K,V> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md))
 
-### `unmodifiableValueCollection(java.util.Collection<V> collection)`
+**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-**Returns:** `java.util.Collection<V>`
+### `unmodifiableValueCollection(Collection<V> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<V>`): the collection for which to return an unmodifiable view
 
-### `unmodifiableEntries(java.util.Collection<java.util.Map.Entry<K,V>> entries)`
+**Returns:** `java.util.Collection<V>`
 
-**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
+### `unmodifiableEntries(Collection<Map.Entry<K,V>> entries)`
 
 The Entry#setValue
  operation throws an UnsupportedOperationException. If the specified collection is a
@@ -430,30 +428,30 @@ The Entry#setValue
 **Parameters:**
 - `entries` (`java.util.Collection<java.util.Map.Entry<K,V>>`): the entries for which to return an unmodifiable view
 
-### `asMap(com.google.common.collect.ListMultimap<K,V> multimap)`
+**Returns:** `java.util.Collection<java.util.Map.Entry<K,V>>`
 
-**Returns:** `java.util.Map<K,java.util.List<V>>`
+### `asMap(ListMultimap<K,V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md))
 
-### `asMap(com.google.common.collect.SetMultimap<K,V> multimap)`
+**Returns:** `java.util.Map<K,java.util.List<V>>`
 
-**Returns:** `java.util.Map<K,java.util.Set<V>>`
+### `asMap(SetMultimap<K,V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md))
 
-### `asMap(com.google.common.collect.SortedSetMultimap<K,V> multimap)`
+**Returns:** `java.util.Map<K,java.util.Set<V>>`
 
-**Returns:** `java.util.Map<K,java.util.SortedSet<V>>`
+### `asMap(SortedSetMultimap<K,V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.SortedSetMultimap<K,V>`](./SortedSetMultimap.md))
 
-### `asMap(com.google.common.collect.Multimap<K,V> multimap)`
+**Returns:** `java.util.Map<K,java.util.SortedSet<V>>`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap(Multimap<K,V> multimap)`
 
 This is provided for parity with the other
  more strongly-typed asMap() implementations.
@@ -461,9 +459,9 @@ This is provided for parity with the other
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
 
-### `forMap(java.util.Map<K,V> map)`
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `forMap(Map<K,V> map)`
 
 The multimap is backed by the map, so changes to
  the map are reflected in the multimap, and vice versa. If the map is modified while an
@@ -482,9 +480,9 @@ The returned multimap will be serializable if the specified map is serializable.
 **Parameters:**
 - `map` (`java.util.Map<K,V>`): the backing map for the returned multimap view
 
-### `transformValues(com.google.common.collect.Multimap<K,V1> fromMultimap, com.google.common.base.Function<? super V1,V2> function)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** [`com.google.common.collect.Multimap<K,V2>`](./Multimap.md)
+### `transformValues(Multimap<K,V1> fromMultimap, Function<? super V1,V2> function)`
 
 All other
  properties of the multimap, such as iteration order, are left intact. For example, the code:
@@ -537,9 +535,9 @@ The function is applied lazily, invoked when needed. This is necessary for the r
 - `fromMultimap` ([`com.google.common.collect.Multimap<K,V1>`](./Multimap.md))
 - `function` ([`com.google.common.base.Function<? super V1,V2>`](../base/Function.md))
 
-### `transformValues(com.google.common.collect.ListMultimap<K,V1> fromMultimap, com.google.common.base.Function<? super V1,V2> function)`
+**Returns:** [`com.google.common.collect.Multimap<K,V2>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.ListMultimap<K,V2>`](./ListMultimap.md)
+### `transformValues(ListMultimap<K,V1> fromMultimap, Function<? super V1,V2> function)`
 
 All
  other properties of the multimap, such as iteration order, are left intact. For example, the
@@ -591,9 +589,9 @@ The function is applied lazily, invoked when needed. This is necessary for the r
 - `fromMultimap` ([`com.google.common.collect.ListMultimap<K,V1>`](./ListMultimap.md))
 - `function` ([`com.google.common.base.Function<? super V1,V2>`](../base/Function.md))
 
-### `transformEntries(com.google.common.collect.Multimap<K,V1> fromMap, com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
+**Returns:** [`com.google.common.collect.ListMultimap<K,V2>`](./ListMultimap.md)
 
-**Returns:** [`com.google.common.collect.Multimap<K,V2>`](./Multimap.md)
+### `transformEntries(Multimap<K,V1> fromMap, Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
 
 In
  contrast to #transformValues, this method's entry-transformation logic may depend on
@@ -658,9 +656,9 @@ The transformer is applied lazily, invoked when needed. This is necessary for th
 - `fromMap` ([`com.google.common.collect.Multimap<K,V1>`](./Multimap.md))
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 
-### `transformEntries(com.google.common.collect.ListMultimap<K,V1> fromMap, com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
+**Returns:** [`com.google.common.collect.Multimap<K,V2>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.ListMultimap<K,V2>`](./ListMultimap.md)
+### `transformEntries(ListMultimap<K,V1> fromMap, Maps.EntryTransformer<? super K,? super V1,V2> transformer)`
 
 In contrast to #transformValues(ListMultimap, Function), this method's
  entry-transformation logic may depend on the key as well as the value.
@@ -721,9 +719,9 @@ The transformer is applied lazily, invoked when needed. This is necessary for th
 - `fromMap` ([`com.google.common.collect.ListMultimap<K,V1>`](./ListMultimap.md))
 - `transformer` (`com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>`)
 
-### `index(java.lang.Iterable<V> values, com.google.common.base.Function<? super V,K> keyFunction)`
+**Returns:** [`com.google.common.collect.ListMultimap<K,V2>`](./ListMultimap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+### `index(Iterable<V> values, Function<? super V,K> keyFunction)`
 
 Each value will be stored as
  a value in the resulting multimap, yielding a multimap with the same size as the input
@@ -768,9 +766,9 @@ The returned multimap is serializable if its keys and values are all serializabl
 - `values` (`java.lang.Iterable<V>`): the values to use when constructing the ImmutableListMultimap
 - `keyFunction` ([`com.google.common.base.Function<? super V,K>`](../base/Function.md)): the function used to produce the key for each value
 
-### `index(java.util.Iterator<V> values, com.google.common.base.Function<? super V,K> keyFunction)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `index(Iterator<V> values, Function<? super V,K> keyFunction)`
 
 Each value will be stored as
  a value in the resulting multimap, yielding a multimap with the same size as the input
@@ -815,9 +813,9 @@ The returned multimap is serializable if its keys and values are all serializabl
 - `values` (`java.util.Iterator<V>`): the values to use when constructing the ImmutableListMultimap
 - `keyFunction` ([`com.google.common.base.Function<? super V,K>`](../base/Function.md)): the function used to produce the key for each value
 
-### `filterKeys(com.google.common.collect.Multimap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
 
-**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+### `filterKeys(Multimap<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 The returned multimap is a live view of unfiltered; changes to one affect
  the other.
@@ -851,9 +849,9 @@ Many of the filtered multimap's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `filterKeys(com.google.common.collect.SetMultimap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `filterKeys(SetMultimap<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 The returned multimap is a live view of unfiltered; changes to one affect
  the other.
@@ -887,9 +885,9 @@ Many of the filtered multimap's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md))
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `filterKeys(com.google.common.collect.ListMultimap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
+### `filterKeys(ListMultimap<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 The returned multimap is a live view of unfiltered; changes to one affect
  the other.
@@ -923,9 +921,9 @@ Many of the filtered multimap's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md))
 - `keyPredicate` ([`com.google.common.base.Predicate<? super K>`](../base/Predicate.md))
 
-### `filterValues(com.google.common.collect.Multimap<K,V> unfiltered, com.google.common.base.Predicate<? super V> valuePredicate)`
+**Returns:** [`com.google.common.collect.ListMultimap<K,V>`](./ListMultimap.md)
 
-**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+### `filterValues(Multimap<K,V> unfiltered, Predicate<? super V> valuePredicate)`
 
 The returned multimap is a live view of unfiltered; changes to one affect
  the other.
@@ -959,9 +957,9 @@ Many of the filtered multimap's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
 - `valuePredicate` ([`com.google.common.base.Predicate<? super V>`](../base/Predicate.md))
 
-### `filterValues(com.google.common.collect.SetMultimap<K,V> unfiltered, com.google.common.base.Predicate<? super V> valuePredicate)`
+**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `filterValues(SetMultimap<K,V> unfiltered, Predicate<? super V> valuePredicate)`
 
 The returned multimap is a live view of unfiltered; changes to one affect
  the other.
@@ -995,9 +993,9 @@ Many of the filtered multimap's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md))
 - `valuePredicate` ([`com.google.common.base.Predicate<? super V>`](../base/Predicate.md))
 
-### `filterEntries(com.google.common.collect.Multimap<K,V> unfiltered, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+### `filterEntries(Multimap<K,V> unfiltered, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 The
  returned multimap is a live view of unfiltered; changes to one affect the other.
@@ -1030,9 +1028,9 @@ Many of the filtered multimap's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterEntries(com.google.common.collect.SetMultimap<K,V> unfiltered, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `filterEntries(SetMultimap<K,V> unfiltered, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 The
  returned multimap is a live view of unfiltered; changes to one affect the other.
@@ -1065,9 +1063,9 @@ Many of the filtered multimap's methods, such as size(), iterate across every
 - `unfiltered` ([`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md))
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterFiltered(com.google.common.collect.FilteredMultimap<K,V> multimap, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
+### `filterFiltered(FilteredMultimap<K,V> multimap, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 Since a filtered multimap has
  iterators that don't support remove, passing one to the FilteredEntryMultimap constructor would
@@ -1078,9 +1076,9 @@ Since a filtered multimap has
 - `multimap` ([`com.google.common.collect.FilteredMultimap<K,V>`](./FilteredMultimap.md))
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `filterFiltered(com.google.common.collect.FilteredSetMultimap<K,V> multimap, com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>> entryPredicate)`
+**Returns:** [`com.google.common.collect.Multimap<K,V>`](./Multimap.md)
 
-**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
+### `filterFiltered(FilteredSetMultimap<K,V> multimap, Predicate<? super Map.Entry<K,V>> entryPredicate)`
 
 Since a filtered multimap has
  iterators that don't support remove, passing one to the FilteredEntryMultimap constructor would
@@ -1091,11 +1089,13 @@ Since a filtered multimap has
 - `multimap` ([`com.google.common.collect.FilteredSetMultimap<K,V>`](./FilteredSetMultimap.md))
 - `entryPredicate` ([`com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>`](../base/Predicate.md))
 
-### `equalsImpl(com.google.common.collect.Multimap<?,?> multimap, java.lang.Object object)`
+**Returns:** [`com.google.common.collect.SetMultimap<K,V>`](./SetMultimap.md)
 
-**Returns:** `boolean`
+### `equalsImpl(Multimap<?,?> multimap, Object object)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<?,?>`](./Multimap.md))
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

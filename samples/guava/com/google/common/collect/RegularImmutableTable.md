@@ -22,10 +22,10 @@
 
 ### `getCell(int iterationIndex)`
 
-**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
-
 **Parameters:**
 - `iterationIndex` (`int`)
+
+**Returns:** `com.google.common.collect.Table.Cell<R,C,V>`
 
 ### `createCellSet()`
 
@@ -33,58 +33,58 @@
 
 ### `getValue(int iterationIndex)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `iterationIndex` (`int`)
+
+**Returns:** `V`
 
 ### `createValues()`
 
 **Returns:** [`com.google.common.collect.ImmutableCollection<V>`](./ImmutableCollection.md)
 
-### `forCells(java.util.List<com.google.common.collect.Table.Cell<R,C,V>> cells, java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)`
-
-**Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
+### `forCells(List<Table.Cell<R,C,V>> cells, Comparator<? super R> rowComparator, Comparator<? super C> columnComparator)`
 
 **Parameters:**
 - `cells` (`java.util.List<com.google.common.collect.Table.Cell<R,C,V>>`)
 - `rowComparator` (`java.util.Comparator<? super R>`)
 - `columnComparator` (`java.util.Comparator<? super C>`)
 
-### `forCells(java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>> cells)`
-
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
+
+### `forCells(Iterable<Table.Cell<R,C,V>> cells)`
 
 **Parameters:**
 - `cells` (`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>`)
 
-### `forCellsInternal(java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>> cells, java.util.Comparator<? super R> rowComparator, java.util.Comparator<? super C> columnComparator)`
-
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
+
+### `forCellsInternal(Iterable<Table.Cell<R,C,V>> cells, Comparator<? super R> rowComparator, Comparator<? super C> columnComparator)`
 
 **Parameters:**
 - `cells` (`java.lang.Iterable<com.google.common.collect.Table.Cell<R,C,V>>`)
 - `rowComparator` (`java.util.Comparator<? super R>`)
 - `columnComparator` (`java.util.Comparator<? super C>`)
 
-### `forOrderedComponents(com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>> cellList, com.google.common.collect.ImmutableSet<R> rowSpace, com.google.common.collect.ImmutableSet<C> columnSpace)`
-
 **Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
+
+### `forOrderedComponents(ImmutableList<Table.Cell<R,C,V>> cellList, ImmutableSet<R> rowSpace, ImmutableSet<C> columnSpace)`
 
 **Parameters:**
 - `cellList` ([`com.google.common.collect.ImmutableList<com.google.common.collect.Table.Cell<R,C,V>>`](./ImmutableList.md))
 - `rowSpace` ([`com.google.common.collect.ImmutableSet<R>`](./ImmutableSet.md))
 - `columnSpace` ([`com.google.common.collect.ImmutableSet<C>`](./ImmutableSet.md))
 
-### `checkNoDuplicate(R rowKey, C columnKey, V existingValue, V newValue)`
+**Returns:** [`com.google.common.collect.RegularImmutableTable<R,C,V>`](./RegularImmutableTable.md)
 
-**Returns:** `void`
+### `checkNoDuplicate(R rowKey, C columnKey, V existingValue, V newValue)`
 
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `existingValue` (`V`)
 - `newValue` (`V`)
+
+**Returns:** `void`
 
 ### `writeReplace()`
 

@@ -45,7 +45,7 @@
 
 **Returns:** `boolean`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

@@ -89,28 +89,26 @@ As with Preconditions, Verify uses Strings#lenientFormat to format
 
 ### `verify(boolean expression)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `expression` (`boolean`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] errorMessageArgs)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, lang@Nullable Object[] errorMessageArgs)`
 
 **Parameters:**
 - `expression` (`boolean`): a boolean expression
 - `errorMessageTemplate` (`java.lang.String`): a template for the exception message should the check fail. The
-     message is formed by replacing each %s placeholder in the template with an
-     argument. These are matched by position - the first %s gets 
-     errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
-     square braces. Unmatched placeholders will be left as-is.
+       message is formed by replacing each %s placeholder in the template with an
+       argument. These are matched by position - the first %s gets 
+       errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
+       square braces. Unmatched placeholders will be left as-is.
 - `errorMessageArgs` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`): the arguments to be substituted into the message template. Arguments
-     are converted to strings using String#valueOf(Object).
-
-### `verify(boolean expression, java.lang.String errorMessageTemplate, char p1)`
+       are converted to strings using String#valueOf(Object).
 
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, char p1)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -119,9 +117,9 @@ See #verify(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`char`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, int p1)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, int p1)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -130,9 +128,9 @@ See #verify(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`int`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, long p1)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, long p1)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -141,9 +139,9 @@ See #verify(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`long`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, Object p1)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -152,9 +150,9 @@ See #verify(boolean, String, Object...) for details.
 - `errorMessageTemplate` (`java.lang.String`)
 - `p1` (`java.lang.Object`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, char p1, char p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, char p1, char p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -164,9 +162,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`char`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, int p1, char p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, int p1, char p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -176,9 +174,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`char`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, long p1, char p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, long p1, char p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -188,9 +186,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`char`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, char p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, Object p1, char p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -200,9 +198,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`char`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, char p1, int p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, char p1, int p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -212,9 +210,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`int`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, int p1, int p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, int p1, int p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -224,9 +222,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`int`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, long p1, int p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, long p1, int p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -236,9 +234,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`int`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, int p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, Object p1, int p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -248,9 +246,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`int`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, char p1, long p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, char p1, long p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -260,9 +258,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`long`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, int p1, long p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, int p1, long p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -272,9 +270,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`long`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, long p1, long p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, long p1, long p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -284,9 +282,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`long`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, long p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, Object p1, long p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -296,9 +294,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`long`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, char p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, char p1, Object p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -308,9 +306,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`char`)
 - `p2` (`java.lang.Object`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, int p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, int p1, Object p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -320,9 +318,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`int`)
 - `p2` (`java.lang.Object`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, long p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, long p1, Object p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -332,9 +330,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`long`)
 - `p2` (`java.lang.Object`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, Object p1, Object p2)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -344,9 +342,9 @@ See #verify(boolean, String, Object...) for details.
 - `p1` (`java.lang.Object`)
 - `p2` (`java.lang.Object`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, Object p1, Object p2, Object p3)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -357,9 +355,9 @@ See #verify(boolean, String, Object...) for details.
 - `p2` (`java.lang.Object`)
 - `p3` (`java.lang.Object`)
 
-### `verify(boolean expression, java.lang.String errorMessageTemplate, java.lang.Object p1, java.lang.Object p2, java.lang.Object p3, java.lang.Object p4)`
-
 **Returns:** `void`
+
+### `verify(boolean expression, String errorMessageTemplate, Object p1, Object p2, Object p3, Object p4)`
 
 See #verify(boolean, String, Object...) for details.
 
@@ -371,24 +369,26 @@ See #verify(boolean, String, Object...) for details.
 - `p3` (`java.lang.Object`)
 - `p4` (`java.lang.Object`)
 
-### `verifyNotNull(T reference)`
+**Returns:** `void`
 
-**Returns:** `T`
+### `verifyNotNull(T reference)`
 
 **Parameters:**
 - `reference` (`T`)
 
-### `verifyNotNull(T reference, java.lang.String errorMessageTemplate, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] errorMessageArgs)`
-
 **Returns:** `T`
+
+### `verifyNotNull(T reference, String errorMessageTemplate, lang@Nullable Object[] errorMessageArgs)`
 
 **Parameters:**
 - `reference` (`T`)
 - `errorMessageTemplate` (`java.lang.String`): a template for the exception message should the check fail. The
-     message is formed by replacing each %s placeholder in the template with an
-     argument. These are matched by position - the first %s gets 
-     errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
-     square braces. Unmatched placeholders will be left as-is.
+       message is formed by replacing each %s placeholder in the template with an
+       argument. These are matched by position - the first %s gets 
+       errorMessageArgs[0], etc. Unmatched arguments will be appended to the formatted message in
+       square braces. Unmatched placeholders will be left as-is.
 - `errorMessageArgs` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`): the arguments to be substituted into the message template. Arguments
-     are converted to strings using String#valueOf(Object).
+       are converted to strings using String#valueOf(Object).
+
+**Returns:** `T`
 

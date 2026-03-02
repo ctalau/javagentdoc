@@ -36,12 +36,12 @@
 
 **Returns:** `void`
 
-### `waitForInterrupt(java.lang.Thread currentThread)`
-
-**Returns:** `void`
+### `waitForInterrupt(Thread currentThread)`
 
 **Parameters:**
 - `currentThread` (`java.lang.Thread`)
+
+**Returns:** `void`
 
 ### `isDone()`
 
@@ -53,28 +53,28 @@
 
 ### `afterRanInterruptiblySuccess(T result)`
 
-**Returns:** `void`
-
 Complete Futures here.
 
 **Parameters:**
 - `result` (`T`)
 
-### `afterRanInterruptiblyFailure(java.lang.Throwable error)`
-
 **Returns:** `void`
+
+### `afterRanInterruptiblyFailure(Throwable error)`
 
 Complete Futures here.
 
 **Parameters:**
 - `error` (`java.lang.Throwable`)
 
-### `interruptTask()`
-
 **Returns:** `void`
+
+### `interruptTask()`
 
 Because this internally calls Thread#interrupt() which can
  in turn invoke arbitrary code it is not safe to call while holding a lock.
+
+**Returns:** `void`
 
 ### `toString()`
 

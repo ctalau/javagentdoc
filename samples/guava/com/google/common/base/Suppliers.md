@@ -14,9 +14,7 @@ All methods return serializable suppliers as long as they're given serializable 
 
 ## Methods
 
-### `compose(com.google.common.base.Function<? super F,T> function, com.google.common.base.Supplier<F> supplier)`
-
-**Returns:** [`com.google.common.base.Supplier<T>`](./Supplier.md)
+### `compose(Function<? super F,T> function, Supplier<F> supplier)`
 
 In other
  words, the new supplier's value will be computed by retrieving the value from supplier,
@@ -27,9 +25,9 @@ In other
 - `function` ([`com.google.common.base.Function<? super F,T>`](./Function.md))
 - `supplier` ([`com.google.common.base.Supplier<F>`](./Supplier.md))
 
-### `memoize(com.google.common.base.Supplier<T> delegate)`
-
 **Returns:** [`com.google.common.base.Supplier<T>`](./Supplier.md)
+
+### `memoize(Supplier<T> delegate)`
 
 See: [memoization](http://en.wikipedia.org/wiki/Memoization)
 
@@ -50,9 +48,9 @@ If delegate is an instance created by an earlier call to memoize, it is
 **Parameters:**
 - `delegate` ([`com.google.common.base.Supplier<T>`](./Supplier.md))
 
-### `memoizeWithExpiration(com.google.common.base.Supplier<T> delegate, long duration, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** [`com.google.common.base.Supplier<T>`](./Supplier.md)
+
+### `memoizeWithExpiration(Supplier<T> delegate, long duration, TimeUnit unit)`
 
 Subsequent calls to get() return the cached
  value if the expiration time has not passed. After the expiration time, a new value is
@@ -71,26 +69,28 @@ When the underlying delegate throws an exception then this memoizing supplier wi
 **Parameters:**
 - `delegate` ([`com.google.common.base.Supplier<T>`](./Supplier.md))
 - `duration` (`long`): the length of time after a value is created that it should stop being returned
-     by subsequent get() calls
+       by subsequent get() calls
 - `unit` (`java.util.concurrent.TimeUnit`): the unit that duration is expressed in
 
-### `ofInstance(T instance)`
-
 **Returns:** [`com.google.common.base.Supplier<T>`](./Supplier.md)
+
+### `ofInstance(T instance)`
 
 **Parameters:**
 - `instance` (`T`)
 
-### `synchronizedSupplier(com.google.common.base.Supplier<T> delegate)`
-
 **Returns:** [`com.google.common.base.Supplier<T>`](./Supplier.md)
+
+### `synchronizedSupplier(Supplier<T> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.base.Supplier<T>`](./Supplier.md))
 
+**Returns:** [`com.google.common.base.Supplier<T>`](./Supplier.md)
+
 ### `supplierFunction()`
 
-**Returns:** [`com.google.common.base.Function<com.google.common.base.Supplier<T>,T>`](./Function.md)
-
 **Java 8 users:** use the method reference Supplier::get instead.
+
+**Returns:** [`com.google.common.base.Function<com.google.common.base.Supplier<T>,T>`](./Function.md)
 

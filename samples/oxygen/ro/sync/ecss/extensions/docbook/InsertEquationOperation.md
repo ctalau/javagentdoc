@@ -24,7 +24,7 @@
 
 ## Methods
 
-### `createDefaultFragmentToEdit(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager asm)`
+### `createDefaultFragmentToEdit(AuthorAccess authorAccess, AuthorSchemaManager asm)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))

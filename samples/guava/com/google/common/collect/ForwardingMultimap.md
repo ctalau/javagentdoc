@@ -41,27 +41,27 @@ Subclasses should override
 
 **Returns:** `void`
 
-### `containsEntry(java.lang.Object key, java.lang.Object value)`
-
-**Returns:** `boolean`
+### `containsEntry(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `containsKey(java.lang.Object key)`
-
 **Returns:** `boolean`
+
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `entries()`
 
@@ -69,10 +69,10 @@ Subclasses should override
 
 ### `get(K key)`
 
-**Returns:** `java.util.Collection<V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Collection<V>`
 
 ### `isEmpty()`
 
@@ -88,49 +88,49 @@ Subclasses should override
 
 ### `put(K key, V value)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putAll(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `boolean`
+
+### `putAll(K key, Iterable<? extends V> values)`
 
 **Parameters:**
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `putAll(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
-
 **Returns:** `boolean`
+
+### `putAll(Multimap<? extends K,? extends V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
 
-### `remove(java.lang.Object key, java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `remove(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `removeAll(java.lang.Object key)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Collection<V>`
+### `removeAll(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `java.util.Collection<V>`
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 **Parameters:**
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
+
+**Returns:** `java.util.Collection<V>`
 
 ### `size()`
 
@@ -140,12 +140,12 @@ Subclasses should override
 
 **Returns:** `java.util.Collection<V>`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

@@ -24,7 +24,7 @@ TODO(cpovirk): Consider applying this subclass approach to our other types.
 
 ## Constructors
 
-### `<init>(java.util.Map<K,java.util.Collection<V>> map)`
+### `<init>(Map<K,Collection<V>> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<K,java.util.Collection<V>>`)

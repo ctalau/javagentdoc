@@ -37,8 +37,6 @@ See the Guava User Guide article on [the use of Predicate](https://github.com/go
 
 ### `apply(T input)`
 
-**Returns:** `boolean`
-
 This method is *generally expected*, but not absolutely
  required, to have the following properties:
 
@@ -51,9 +49,9 @@ This method is *generally expected*, but not absolutely
 **Parameters:**
 - `input` (`T`)
 
-### `equals(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `equals(Object object)`
 
 Most implementations will have no reason to override the behavior of Object#equals.
  However, an implementation may also choose to return true whenever object is a
@@ -65,10 +63,12 @@ Most implementations will have no reason to override the behavior of Object#equa
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `test(T input)`
-
 **Returns:** `boolean`
+
+### `test(T input)`
 
 **Parameters:**
 - `input` (`T`)
+
+**Returns:** `boolean`
 

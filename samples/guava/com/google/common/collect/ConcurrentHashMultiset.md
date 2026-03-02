@@ -31,7 +31,7 @@ See the Guava User Guide article on [Multiset](https://github.com/google/guava/w
 
 ## Constructors
 
-### `<init>(java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger> countMap)`
+### `<init>(ConcurrentMap<E,AtomicInteger> countMap)`
 
 **Parameters:**
 - `countMap` (`java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger>`)
@@ -42,18 +42,16 @@ See the Guava User Guide article on [Multiset](https://github.com/google/guava/w
 
 **Returns:** [`com.google.common.collect.ConcurrentHashMultiset<E>`](./ConcurrentHashMultiset.md)
 
-### `create(java.lang.Iterable<? extends E> elements)`
-
-**Returns:** [`com.google.common.collect.ConcurrentHashMultiset<E>`](./ConcurrentHashMultiset.md)
+### `create(Iterable<? extends E> elements)`
 
 This implementation is highly efficient when elements is itself a Multiset.
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the multiset should contain
 
-### `create(java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger> countMap)`
-
 **Returns:** [`com.google.common.collect.ConcurrentHashMultiset<E>`](./ConcurrentHashMultiset.md)
+
+### `create(ConcurrentMap<E,AtomicInteger> countMap)`
 
 This instance will assume ownership of countMap, and other code should not maintain
  references to the map or modify it in any way.
@@ -63,21 +61,23 @@ The returned multiset is serializable if the input map is.
 
 **Parameters:**
 - `countMap` (`java.util.concurrent.ConcurrentMap<E,java.util.concurrent.atomic.AtomicInteger>`): backing map for storing the elements in the multiset and their counts. It must
-     be empty.
+       be empty.
 
-### `count(java.lang.Object element)`
+**Returns:** [`com.google.common.collect.ConcurrentHashMultiset<E>`](./ConcurrentHashMultiset.md)
 
-**Returns:** `int`
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`): the element to look for
 
-### `size()`
-
 **Returns:** `int`
+
+### `size()`
 
 If the data in the multiset is modified by any other threads during this method, it is
  undefined which (if any) of these modifications will be reflected in the result.
+
+**Returns:** `int`
 
 ### `toArray()`
 
@@ -85,10 +85,10 @@ If the data in the multiset is modified by any other threads during this method,
 
 ### `toArray(T[] array)`
 
-**Returns:** `T[]`
-
 **Parameters:**
 - `array` (`T[]`)
+
+**Returns:** `T[]`
 
 ### `snapshot()`
 
@@ -96,15 +96,13 @@ If the data in the multiset is modified by any other threads during this method,
 
 ### `add(E element, int occurrences)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `element` (`E`): the element to add
 - `occurrences` (`int`): the number of occurrences to add
 
-### `remove(java.lang.Object element, int occurrences)`
-
 **Returns:** `int`
+
+### `remove(Object element, int occurrences)`
 
 If the multiset
  contains fewer than this number of occurrences to begin with, all occurrences will be removed.
@@ -113,9 +111,9 @@ If the multiset
 - `element` (`java.lang.Object`): the element whose occurrences should be removed
 - `occurrences` (`int`): the number of occurrences of the element to remove
 
-### `removeExactly(java.lang.Object element, int occurrences)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `removeExactly(Object element, int occurrences)`
 
 This method, in contrast to #remove(Object, int), has no effect when the element
  count is smaller than occurrences.
@@ -124,17 +122,17 @@ This method, in contrast to #remove(Object, int), has no effect when the element
 - `element` (`java.lang.Object`): the element to remove
 - `occurrences` (`int`): the number of occurrences of element to remove
 
-### `setCount(E element, int count)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `setCount(E element, int count)`
 
 **Parameters:**
 - `element` (`E`)
 - `count` (`int`)
 
-### `setCount(E element, int expectedOldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `setCount(E element, int expectedOldCount, int newCount)`
 
 If element does not appear in the multiset exactly
  expectedOldCount times, no changes will be made.
@@ -143,6 +141,8 @@ If element does not appear in the multiset exactly
 - `element` (`E`)
 - `expectedOldCount` (`int`)
 - `newCount` (`int`)
+
+**Returns:** `boolean`
 
 ### `createElementSet()`
 
@@ -176,17 +176,17 @@ If element does not appear in the multiset exactly
 
 **Returns:** `void`
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

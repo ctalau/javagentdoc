@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source xslSrc, ro.sync.ecss.extensions.commons.operations.ElementLocationPath currentElementLocation)`
+### `createTransformer(AuthorAccess authorAccess, Source xslSrc, ElementLocationPath currentElementLocation)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author Access.
@@ -23,7 +23,7 @@
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source scriptSrc)`
+### `createTransformer(AuthorAccess authorAccess, Source scriptSrc)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -35,7 +35,7 @@
 
 **Returns:** `java.lang.String`
 
-### `canTreatAsScript(java.lang.String script)`
+### `canTreatAsScript(String script)`
 
 **Parameters:**
 - `script` (`java.lang.String`)

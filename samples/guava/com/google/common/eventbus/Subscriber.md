@@ -29,7 +29,7 @@ Two subscribers are equivalent when they refer to the same method on the same ob
 
 ## Constructors
 
-### `<init>(com.google.common.eventbus.EventBus bus, java.lang.Object target, java.lang.reflect.Method method)`
+### `<init>(EventBus bus, Object target, Method method)`
 
 **Parameters:**
 - `bus` ([`com.google.common.eventbus.EventBus`](./EventBus.md))
@@ -38,25 +38,23 @@ Two subscribers are equivalent when they refer to the same method on the same ob
 
 ## Methods
 
-### `create(com.google.common.eventbus.EventBus bus, java.lang.Object listener, java.lang.reflect.Method method)`
-
-**Returns:** [`com.google.common.eventbus.Subscriber`](./Subscriber.md)
+### `create(EventBus bus, Object listener, Method method)`
 
 **Parameters:**
 - `bus` ([`com.google.common.eventbus.EventBus`](./EventBus.md))
 - `listener` (`java.lang.Object`)
 - `method` (`java.lang.reflect.Method`)
 
-### `dispatchEvent(java.lang.Object event)`
+**Returns:** [`com.google.common.eventbus.Subscriber`](./Subscriber.md)
 
-**Returns:** `void`
+### `dispatchEvent(Object event)`
 
 **Parameters:**
 - `event` (`java.lang.Object`)
 
-### `invokeSubscriberMethod(java.lang.Object event)`
-
 **Returns:** `void`
+
+### `invokeSubscriberMethod(Object event)`
 
 This method can be overridden to make the invocation
  synchronized.
@@ -64,28 +62,30 @@ This method can be overridden to make the invocation
 **Parameters:**
 - `event` (`java.lang.Object`)
 
-### `context(java.lang.Object event)`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.eventbus.SubscriberExceptionContext`](./SubscriberExceptionContext.md)
+### `context(Object event)`
 
 **Parameters:**
 - `event` (`java.lang.Object`)
+
+**Returns:** [`com.google.common.eventbus.SubscriberExceptionContext`](./SubscriberExceptionContext.md)
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `isDeclaredThreadSafe(java.lang.reflect.Method method)`
-
 **Returns:** `boolean`
+
+### `isDeclaredThreadSafe(Method method)`
 
 **Parameters:**
 - `method` (`java.lang.reflect.Method`)
+
+**Returns:** `boolean`
 

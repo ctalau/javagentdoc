@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `insertText(int offset, java.lang.String text)`
+### `insertText(int offset, String text)`
 
 After the operation the caret will be 
  positioned at the end of the inserted text.
@@ -19,7 +19,7 @@ After the operation the caret will be
 
 **Returns:** `void`
 
-### `insertFragment(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment frag)`
+### `insertFragment(int offset, AuthorDocumentFragment frag)`
 
 **Parameters:**
 - `offset` (`int`): The offset where the fragment will be inserted, 0 based.
@@ -27,7 +27,7 @@ After the operation the caret will be
 
 **Returns:** `void`
 
-### `insertNode(int offset, ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `insertNode(int offset, AuthorNode node)`
 
 **Parameters:**
 - `offset` (`int`): The offset where the node will be inserted. 0 based.
@@ -35,7 +35,7 @@ After the operation the caret will be
 
 **Returns:** `boolean`
 
-### `insertMultipleElements(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String[] elementNames, int[] offsets, java.lang.String namespace)`
+### `insertMultipleElements(AuthorElement parentElement, String[] elementNames, int[] offsets, String namespace)`
 
 Note: *The offsets and elements must be in document order.*
 
@@ -48,7 +48,7 @@ Note: *The offsets and elements must be in document order.*
 
 **Returns:** `void`
 
-### `insertMultipleFragments(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments, int[] offsets)`
+### `insertMultipleFragments(AuthorElement parentElement, AuthorDocumentFragment[] fragments, int[] offsets)`
 
 Note: *The offsets and fragments must be in document order.*
 
@@ -69,14 +69,14 @@ Note: *The offsets and fragments must be in document order.*
 
 **Returns:** `boolean`
 
-### `deleteNode(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `deleteNode(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The AuthorNode to delete.
 
 **Returns:** `boolean`
 
-### `multipleDelete(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
+### `multipleDelete(AuthorElement parentElement, int[] startOffsets, int[] endOffsets)`
 
 Note: *The offsets must be in document order and the intervals must not 
  intersect with each other.*
@@ -90,7 +90,7 @@ Note: *The offsets must be in document order and the intervals must not
 
 **Returns:** `void`
 
-### `renameElement(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String newName, java.lang.Object infoProvider)`
+### `renameElement(AuthorElement element, String newName, Object infoProvider)`
 
 Any compound must be handled externally.
 
@@ -101,7 +101,7 @@ Any compound must be handled externally.
 
 **Returns:** `void`
 
-### `setAttribute(java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue value, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `setAttribute(String attributeName, AttrValue value, AuthorElement element)`
 
 Attributes set in this manner (as opposed to calling 
  AuthorElement#setAttribute(String, AttrValue) directly) 
@@ -115,7 +115,7 @@ Attributes set in this manner (as opposed to calling
 
 **Returns:** `void`
 
-### `removeAttribute(java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `removeAttribute(String attributeName, AuthorElement element)`
 
 Attributes removed in this manner (as opposed to calling 
  AuthorElement#setAttribute(String, AttrValue) directly) will 
@@ -127,7 +127,7 @@ Attributes removed in this manner (as opposed to calling
 
 **Returns:** `void`
 
-### `split(ro.sync.ecss.extensions.api.node.AuthorNode toSplit, int splitOffset)`
+### `split(AuthorNode toSplit, int splitOffset)`
 
 The attributes of the splitted node will also be copied excepting the 
  unique ones. The unique attributes are identified by the UniqueAttributesRecognizer.
@@ -139,7 +139,7 @@ The attributes of the splitted node will also be copied excepting the
 
 **Returns:** `boolean`
 
-### `surroundWithNode(ro.sync.ecss.extensions.api.node.AuthorNode node, int startOffset, int endOffset, boolean leftToRight)`
+### `surroundWithNode(AuthorNode node, int startOffset, int endOffset, boolean leftToRight)`
 
 The fragment between the start and end offsets will become the node actual content.
 
@@ -152,7 +152,7 @@ The fragment between the start and end offsets will become the node actual conte
 
 **Returns:** `void`
 
-### `surroundInFragment(java.lang.String xmlFragment, int startOffset, int endOffset)`
+### `surroundInFragment(String xmlFragment, int startOffset, int endOffset)`
 
 If `endOffset < startOffset` the `xmlFragment` 
  will be inserted at `startOffset`.
@@ -165,7 +165,7 @@ If `endOffset < startOffset` the `xmlFragment`
 
 **Returns:** `void`
 
-### `surroundInText(java.lang.String header, java.lang.String footer, int startOffset, int endOffset)`
+### `surroundInText(String header, String footer, int startOffset, int endOffset)`
 
 The method inserts the `header` at `startOffset` and 
  the `footer` at `endOffset`.
@@ -178,7 +178,7 @@ The method inserts the `header` at `startOffset` and
 
 **Returns:** `void`
 
-### `setDoctype(ro.sync.ecss.extensions.api.AuthorDocumentType docType)`
+### `setDoctype(AuthorDocumentType docType)`
 
 This is a good method to add new entities (regular or unparsed) to the internal document type of the document.
  
@@ -190,7 +190,7 @@ This is a good method to add new entities (regular or unparsed) to the internal 
 
 **Returns:** `void`
 
-### `surroundInFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment xmlFragment, int startOffset, int endOffset)`
+### `surroundInFragment(AuthorDocumentFragment xmlFragment, int startOffset, int endOffset)`
 
 If `endOffset < startOffset` the `xmlFragment` 
  will be inserted at `startOffset`.
@@ -203,7 +203,7 @@ If `endOffset < startOffset` the `xmlFragment`
 
 **Returns:** `void`
 
-### `setMultipleDistinctAttributes(int parentElementStartOffset, int[] elementOffsets, java.util.List<java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue>> attributes)`
+### `setMultipleDistinctAttributes(int parentElementStartOffset, int[] elementOffsets, List<Map<String,AttrValue>> attributes)`
 
 Attributes set in this manner will be subject to undo/redo.
 
@@ -216,7 +216,7 @@ Attributes set in this manner will be subject to undo/redo.
 
 **Returns:** `void`
 
-### `setMultipleAttributes(int parentElementStartOffset, int[] elementOffsets, java.util.Map<java.lang.String,ro.sync.ecss.extensions.api.node.AttrValue> attributes)`
+### `setMultipleAttributes(int parentElementStartOffset, int[] elementOffsets, Map<String,AttrValue> attributes)`
 
 Attributes set in this manner will be subject to undo/redo.
 
@@ -229,7 +229,7 @@ Attributes set in this manner will be subject to undo/redo.
 
 **Returns:** `void`
 
-### `addCommentMarker(int startOffset, int endOffset, java.lang.String comment, java.lang.String parentID)`
+### `addCommentMarker(int startOffset, int endOffset, String comment, String parentID)`
 
 **Parameters:**
 - `startOffset` (`int`): Start offset of marker
@@ -239,7 +239,7 @@ Attributes set in this manner will be subject to undo/redo.
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)
 
-### `addPersistentMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, java.util.Map<java.lang.String,java.lang.String> properties)`
+### `addPersistentMarker(AuthorPersistentHighlight.PersistentHighlightType type, int startOffset, int endOffset, Map<String,String> properties)`
 
 **Parameters:**
 - `type` (`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight.PersistentHighlightType`): The persistent marker type (comment or custom)
@@ -249,7 +249,7 @@ Attributes set in this manner will be subject to undo/redo.
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)
 
-### `removeMarker(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight marker)`
+### `removeMarker(AuthorPersistentHighlight marker)`
 
 **Parameters:**
 - `marker` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)): The marker

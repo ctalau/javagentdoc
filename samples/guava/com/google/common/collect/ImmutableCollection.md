@@ -182,10 +182,10 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ### `toArray(T[] other)`
 
-**Returns:** `T[]`
-
 **Parameters:**
 - `other` (`T[]`)
+
+**Returns:** `T[]`
 
 ### `internalArray()`
 
@@ -199,54 +199,54 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 **Returns:** `int`
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `add(E e)`
-
 **Returns:** `boolean`
+
+### `add(E e)`
 
 **Parameters:**
 - `e` (`E`)
 
-### `remove(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `remove(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `addAll(java.util.Collection<? extends E> newElements)`
-
 **Returns:** `boolean`
+
+### `addAll(Collection<? extends E> newElements)`
 
 **Parameters:**
 - `newElements` (`java.util.Collection<? extends E>`)
 
-### `removeAll(java.util.Collection<?> oldElements)`
-
 **Returns:** `boolean`
+
+### `removeAll(Collection<?> oldElements)`
 
 **Parameters:**
 - `oldElements` (`java.util.Collection<?>`)
 
-### `removeIf(java.util.function.Predicate<? super E> filter)`
-
 **Returns:** `boolean`
+
+### `removeIf(Predicate<? super E> filter)`
 
 **Parameters:**
 - `filter` (`java.util.function.Predicate<? super E>`)
 
-### `retainAll(java.util.Collection<?> elementsToKeep)`
-
 **Returns:** `boolean`
+
+### `retainAll(Collection<?> elementsToKeep)`
 
 **Parameters:**
 - `elementsToKeep` (`java.util.Collection<?>`)
+
+**Returns:** `boolean`
 
 ### `clear()`
 
@@ -254,23 +254,21 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ### `asList()`
 
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
-
 **Performance note:** in most cases this method can return quickly without actually
  copying anything. The exact circumstances under which the copy is performed are undefined and
  subject to change.
 
-### `isPartialView()`
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
-**Returns:** `boolean`
+### `isPartialView()`
 
 This is generally
  used to determine whether copyOf implementations should make an explicit copy to avoid
  memory leaks.
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 Returns offset + size().
 
@@ -278,14 +276,16 @@ Returns offset + size().
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
 
+**Returns:** `int`
+
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

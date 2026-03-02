@@ -14,7 +14,7 @@ The actions will be mounted on the contextual menu when right clicking a callout
 
 ## Methods
 
-### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.util.List<javax.swing.AbstractAction> defaultActionsList)`
+### `getActions(AuthorAccess authorAccess, AuthorPersistentHighlight highlight, List<AbstractAction> defaultActionsList)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The Author access.
@@ -24,7 +24,7 @@ The actions will be mounted on the contextual menu when right clicking a callout
 
 **Returns:** `java.util.List<javax.swing.AbstractAction>`
 
-### `getDefaultAction(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.util.List<javax.swing.AbstractAction> actionsList)`
+### `getDefaultAction(AuthorAccess authorAccess, AuthorPersistentHighlight highlight, List<AbstractAction> actionsList)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../AuthorAccess.md)): The Author access.

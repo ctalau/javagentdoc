@@ -39,7 +39,7 @@ The value is `'namespace'`.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 You can check if the operation was invoked from the oXygen standalone application 
  or from the oXygen plugin for Eclipse by using the method: 

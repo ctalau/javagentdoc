@@ -12,7 +12,7 @@ Subclasses can be given as a parameter to the WebappImageMapRenderer form contro
 
 ## Methods
 
-### `createImageMapSupport(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `createImageMapSupport(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../editor/AuthorInplaceContext.md)): The context.

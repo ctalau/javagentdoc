@@ -22,8 +22,6 @@ Note that String.intern() has some well-known performance limitations, and shoul
 
 ### `intern(E sample)`
 
-**Returns:** `E`
-
 If two equal inputs are given to this method,
  both calls will return the same instance. That is, intern(a).equals(a) always holds,
  and intern(a) == intern(b) if and only if a.equals(b). Note that 
@@ -35,4 +33,6 @@ If two equal inputs are given to this method,
 
 **Parameters:**
 - `sample` (`E`)
+
+**Returns:** `E`
 

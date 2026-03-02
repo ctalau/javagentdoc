@@ -23,7 +23,7 @@ If the target is Flushable
 
 ## Constructors
 
-### `<init>(java.lang.Appendable target)`
+### `<init>(Appendable target)`
 
 **Parameters:**
 - `target` (`java.lang.Appendable`): target to which to append output
@@ -32,35 +32,35 @@ If the target is Flushable
 
 ### `write(char[] cbuf, int off, int len)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `cbuf` (`char[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `write(int c)`
-
 **Returns:** `void`
+
+### `write(int c)`
 
 **Parameters:**
 - `c` (`int`)
 
-### `write(java.lang.String str)`
-
 **Returns:** `void`
+
+### `write(String str)`
 
 **Parameters:**
 - `str` (`java.lang.String`)
 
-### `write(java.lang.String str, int off, int len)`
-
 **Returns:** `void`
+
+### `write(String str, int off, int len)`
 
 **Parameters:**
 - `str` (`java.lang.String`)
 - `off` (`int`)
 - `len` (`int`)
+
+**Returns:** `void`
 
 ### `flush()`
 
@@ -72,26 +72,26 @@ If the target is Flushable
 
 ### `append(char c)`
 
-**Returns:** `java.io.Writer`
-
 **Parameters:**
 - `c` (`char`)
 
-### `append(java.lang.CharSequence charSeq)`
-
 **Returns:** `java.io.Writer`
+
+### `append(CharSequence charSeq)`
 
 **Parameters:**
 - `charSeq` (`java.lang.CharSequence`)
 
-### `append(java.lang.CharSequence charSeq, int start, int end)`
-
 **Returns:** `java.io.Writer`
+
+### `append(CharSequence charSeq, int start, int end)`
 
 **Parameters:**
 - `charSeq` (`java.lang.CharSequence`)
 - `start` (`int`)
 - `end` (`int`)
+
+**Returns:** `java.io.Writer`
 
 ### `checkNotClosed()`
 

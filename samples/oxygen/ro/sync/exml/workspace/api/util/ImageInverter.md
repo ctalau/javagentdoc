@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `loadImage(java.net.URL imageURL)`
+### `loadImage(URL imageURL)`
 
 Returns either a java.awt.image.BufferedImage for the standalone editor 
  or an org.eclipse.jface.resource.ImageDescriptor for the Oxygen plugin for Eclipse.
@@ -18,7 +18,7 @@ Returns either a java.awt.image.BufferedImage for the standalone editor
 
 **Returns:** `java.lang.Object`
 
-### `shouldInvertImage(java.lang.Object image)`
+### `shouldInvertImage(Object image)`
 
 **Parameters:**
 - `image` (`java.lang.Object`): Either a java.awt.image.BufferedImage for the standalone editor 
@@ -26,7 +26,7 @@ Returns either a java.awt.image.BufferedImage for the standalone editor
 
 **Returns:** `boolean`
 
-### `invertImage(java.lang.Object image)`
+### `invertImage(Object image)`
 
 In the standalone implementation the received image is inverted, in the Eclipse
  implementation a new ImageDescriptor instance is returned.

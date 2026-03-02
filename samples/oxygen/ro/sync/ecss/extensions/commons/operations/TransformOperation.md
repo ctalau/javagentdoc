@@ -152,7 +152,7 @@ Pairs key=value separated by comma or new line.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -160,14 +160,14 @@ Pairs key=value separated by comma or new line.
 
 **Returns:** `void`
 
-### `canTreatAsScript(java.lang.String script)`
+### `canTreatAsScript(String script)`
 
 **Parameters:**
 - `script` (`java.lang.String`): The value of the script parameter.
 
 **Returns:** `boolean`
 
-### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source scriptSrc)`
+### `createTransformer(AuthorAccess authorAccess, Source scriptSrc)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to different Author resources.
@@ -175,7 +175,7 @@ Pairs key=value separated by comma or new line.
 
 **Returns:** `javax.xml.transform.Transformer`
 
-### `createTransformer(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, javax.xml.transform.Source scriptSrc, ro.sync.ecss.extensions.commons.operations.ElementLocationPath location)`
+### `createTransformer(AuthorAccess authorAccess, Source scriptSrc, ElementLocationPath location)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to different Author resources.

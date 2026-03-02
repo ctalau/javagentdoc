@@ -26,12 +26,12 @@ If that is not possible (as is the case under the very
 
 **Returns:** `java.io.File`
 
-### `createTempFile(java.lang.String prefix)`
-
-**Returns:** `java.io.File`
+### `createTempFile(String prefix)`
 
 **Parameters:**
 - `prefix` (`java.lang.String`)
+
+**Returns:** `java.io.File`
 
 ### `pickSecureCreator()`
 
@@ -39,8 +39,8 @@ If that is not possible (as is the case under the very
 
 ### `testMakingUserPermissionsFromScratch()`
 
-**Returns:** `void`
-
 This lets us test the effects of different values of the user.name system property
  without needing a separate VM or classloader.
+
+**Returns:** `void`
 

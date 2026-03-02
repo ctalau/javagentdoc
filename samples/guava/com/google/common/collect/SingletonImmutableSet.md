@@ -31,12 +31,12 @@
 
 **Returns:** `int`
 
-### `contains(java.lang.Object target)`
-
-**Returns:** `boolean`
+### `contains(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `iterator()`
 
@@ -50,13 +50,13 @@
 
 **Returns:** `boolean`
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
-
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
+
+**Returns:** `int`
 
 ### `hashCode()`
 

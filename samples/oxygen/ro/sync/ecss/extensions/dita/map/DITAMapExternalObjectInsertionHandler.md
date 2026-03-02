@@ -26,14 +26,14 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.dita.ContextKeyManagerProvider keyManagerProvider)`
+### `<init>(ContextKeyManagerProvider keyManagerProvider)`
 
 **Parameters:**
 - `keyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../../dita/ContextKeyManagerProvider.md)): The key manager provider
 
 ## Methods
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, java.util.List<ro.sync.ecss.extensions.api.ReferenceType> types, int source)`
+### `insertURLs(AuthorAccess authorAccess, List<URL> urls, List<ReferenceType> types, int source)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -43,7 +43,7 @@
 
 **Returns:** `void`
 
-### `adjustCaretOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int cp)`
+### `adjustCaretOffset(AuthorAccess authorAccess, int cp)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access
@@ -51,7 +51,7 @@
 
 **Returns:** `int`
 
-### `addAttributesToTopicrefWithHref(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String topicrefName, ro.sync.ecss.extensions.api.ReferenceType refType, java.lang.StringBuilder stringBuilder, java.net.URL url)`
+### `addAttributesToTopicrefWithHref(AuthorAccess authorAccess, String topicrefName, ReferenceType refType, StringBuilder stringBuilder, URL url)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -62,7 +62,7 @@
 
 **Returns:** `void`
 
-### `computeTopicrefForDnDFromDitaReusableComponents(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.StringBuilder stringBuilder, java.lang.String tagName, java.net.URL url)`
+### `computeTopicrefForDnDFromDitaReusableComponents(AuthorAccess authorAccess, StringBuilder stringBuilder, String tagName, URL url)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author access.
@@ -72,7 +72,7 @@
 
 **Returns:** `void`
 
-### `insertURLs(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<java.net.URL> urls, int source)`
+### `insertURLs(AuthorAccess authorAccess, List<URL> urls, int source)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -81,7 +81,7 @@
 
 **Returns:** `void`
 
-### `isNodeAtOffsetOrItsAncestorTopic(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `isNodeAtOffsetOrItsAncestorTopic(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.

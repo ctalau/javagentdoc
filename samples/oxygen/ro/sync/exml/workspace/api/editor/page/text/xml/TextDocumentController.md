@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `insertXMLFragment(java.lang.String xmlFragment, java.lang.String xpathLocation, ro.sync.exml.editor.xmleditor.operations.context.RelativeInsertPosition relativePosition)`
+### `insertXMLFragment(String xmlFragment, String xpathLocation, RelativeInsertPosition relativePosition)`
 
 The inserted fragment is indented after being added to the document.
  
@@ -24,7 +24,7 @@ The inserted fragment is indented after being added to the document.
 
 **Returns:** `void`
 
-### `insertXMLFragment(java.lang.String xmlFragment, int caretOffset)`
+### `insertXMLFragment(String xmlFragment, int caretOffset)`
 
 When the caret offset is inside an element tag (start element, empty element or end element) tries to place the caret
  inside the element's contents. 

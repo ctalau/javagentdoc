@@ -25,17 +25,17 @@ For internal use only. Please refer to the Matcher
 
 ### `find(int index)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `index` (`int`)
 
-### `replaceAll(java.lang.String replacement)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `replaceAll(String replacement)`
 
 **Parameters:**
 - `replacement` (`java.lang.String`)
+
+**Returns:** `java.lang.String`
 
 ### `end()`
 

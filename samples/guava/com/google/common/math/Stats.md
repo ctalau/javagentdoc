@@ -84,50 +84,48 @@ To ensure that the created instance obeys its contract, the parameters should sa
 
 ## Methods
 
-### `of(java.lang.Iterable<? extends java.lang.Number> values)`
-
-**Returns:** [`com.google.common.math.Stats`](./Stats.md)
+### `of(Iterable<? extends Number> values)`
 
 **Parameters:**
 - `values` (`java.lang.Iterable<? extends java.lang.Number>`): a series of values, which will be converted to double values (this may
-     cause loss of precision)
-
-### `of(java.util.Iterator<? extends java.lang.Number> values)`
+       cause loss of precision)
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `of(Iterator<? extends Number> values)`
 
 The iterator will be completely
  consumed by this method.
 
 **Parameters:**
 - `values` (`java.util.Iterator<? extends java.lang.Number>`): a series of values, which will be converted to double values (this may
-     cause loss of precision)
-
-### `of(double[] values)`
+       cause loss of precision)
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `of(double[] values)`
 
 **Parameters:**
 - `values` (`double[]`): a series of values
 
-### `of(int[] values)`
-
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `of(int[] values)`
 
 **Parameters:**
 - `values` (`int[]`): a series of values
 
-### `of(long[] values)`
-
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `of(long[] values)`
 
 **Parameters:**
 - `values` (`long[]`): a series of values, which will be converted to double values (this may
-     cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
-
-### `of(java.util.stream.DoubleStream values)`
+       cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `of(DoubleStream values)`
 
 The stream will be completely
  consumed by this method.
@@ -139,9 +137,9 @@ If you have a Stream<Double> rather than a DoubleStream, you should collect
 **Parameters:**
 - `values` (`java.util.stream.DoubleStream`): a series of values
 
-### `of(java.util.stream.IntStream values)`
-
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `of(IntStream values)`
 
 The stream will be completely
  consumed by this method.
@@ -153,9 +151,9 @@ If you have a Stream<Integer> rather than an IntStream, you should collect
 **Parameters:**
 - `values` (`java.util.stream.IntStream`): a series of values
 
-### `of(java.util.stream.LongStream values)`
-
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `of(LongStream values)`
 
 The stream will be completely
  consumed by this method.
@@ -166,11 +164,11 @@ If you have a Stream<Long> rather than a LongStream, you should collect the
 
 **Parameters:**
 - `values` (`java.util.stream.LongStream`): a series of values, which will be converted to double values (this may
-     cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
+       cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
+
+**Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 ### `toStats()`
-
-**Returns:** `java.util.stream.Collector<java.lang.Number,com.google.common.math.StatsAccumulator,com.google.common.math.Stats>`
 
 Use by calling 
  boxedNumericStream.collect(toStats()). The numbers will be converted to double values
@@ -180,13 +178,13 @@ Use by calling
 If you have any of the primitive streams DoubleStream, IntStream, or 
  LongStream, you should use the factory method #of instead.
 
+**Returns:** `java.util.stream.Collector<java.lang.Number,com.google.common.math.StatsAccumulator,com.google.common.math.Stats>`
+
 ### `count()`
 
 **Returns:** `long`
 
 ### `mean()`
-
-**Returns:** `double`
 
 The count must be non-zero.
 
@@ -206,9 +204,9 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  
 If you only want to calculate the mean, use #meanOf instead of creating a Stats instance.
 
-### `sum()`
-
 **Returns:** `double`
+
+### `sum()`
 
 Non-finite values
 
@@ -219,9 +217,9 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  only or Double#POSITIVE_INFINITY only, the result is Double#POSITIVE_INFINITY.
  If it contains Double#NEGATIVE_INFINITY and finite values only or Double#NEGATIVE_INFINITY only, the result is Double#NEGATIVE_INFINITY.
 
-### `populationVariance()`
-
 **Returns:** `double`
+
+### `populationVariance()`
 
 The count must be non-zero.
 
@@ -234,11 +232,11 @@ This is guaranteed to return zero if the dataset contains only exactly one finit
 
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
+
+**Returns:** `double`
 
 ### `populationStandardDeviation()`
 
-**Returns:** `double`
-
 The count must be non-zero.
 
  
@@ -251,9 +249,9 @@ This is guaranteed to return zero if the dataset contains only exactly one finit
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `sampleVariance()`
-
 **Returns:** `double`
+
+### `sampleVariance()`
 
 If this dataset is a sample drawn from a population, this is an
  unbiased estimator of the population variance of the population. The count must be greater than
@@ -268,9 +266,9 @@ This is not guaranteed to return zero when the dataset consists of the same valu
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `sampleStandardDeviation()`
-
 **Returns:** `double`
+
+### `sampleStandardDeviation()`
 
 If this dataset is a sample drawn from a
  population, this is an estimator of the population standard deviation of the population which
@@ -286,9 +284,9 @@ This is not guaranteed to return zero when the dataset consists of the same valu
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `min()`
-
 **Returns:** `double`
+
+### `min()`
 
 The count must be non-zero.
 
@@ -299,9 +297,9 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  contains Double#NEGATIVE_INFINITY and not Double#NaN then the result is Double#NEGATIVE_INFINITY. If it contains Double#POSITIVE_INFINITY and finite values
  only then the result is the lowest finite value. If it contains Double#POSITIVE_INFINITY only then the result is Double#POSITIVE_INFINITY.
 
-### `max()`
-
 **Returns:** `double`
+
+### `max()`
 
 The count must be non-zero.
 
@@ -312,9 +310,9 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  contains Double#POSITIVE_INFINITY and not Double#NaN then the result is Double#POSITIVE_INFINITY. If it contains Double#NEGATIVE_INFINITY and finite values
  only then the result is the highest finite value. If it contains Double#NEGATIVE_INFINITY only then the result is Double#NEGATIVE_INFINITY.
 
-### `equals(java.lang.Object obj)`
+**Returns:** `double`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Note:** This tests exact equality of the calculated statistics, including the floating
  point values. Two instances are guaranteed to be considered equal if one is copied from the
@@ -331,12 +329,14 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 **Note:** This hash code is consistent with exact equality of the calculated statistics,
  including the floating point values. See the note on #equals for details.
+
+**Returns:** `int`
 
 ### `toString()`
 
@@ -346,9 +346,7 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
 
 **Returns:** `double`
 
-### `meanOf(java.lang.Iterable<? extends java.lang.Number> values)`
-
-**Returns:** `double`
+### `meanOf(Iterable<? extends Number> values)`
 
 The count must be non-zero.
 
@@ -357,11 +355,11 @@ The definition of the mean is the same as Stats#mean.
 
 **Parameters:**
 - `values` (`java.lang.Iterable<? extends java.lang.Number>`): a series of values, which will be converted to double values (this may
-     cause loss of precision)
-
-### `meanOf(java.util.Iterator<? extends java.lang.Number> values)`
+       cause loss of precision)
 
 **Returns:** `double`
+
+### `meanOf(Iterator<? extends Number> values)`
 
 The count must be non-zero.
 
@@ -370,11 +368,11 @@ The definition of the mean is the same as Stats#mean.
 
 **Parameters:**
 - `values` (`java.util.Iterator<? extends java.lang.Number>`): a series of values, which will be converted to double values (this may
-     cause loss of precision)
-
-### `meanOf(double[] values)`
+       cause loss of precision)
 
 **Returns:** `double`
+
+### `meanOf(double[] values)`
 
 The count must be non-zero.
 
@@ -384,9 +382,9 @@ The definition of the mean is the same as Stats#mean.
 **Parameters:**
 - `values` (`double[]`): a series of values
 
-### `meanOf(int[] values)`
-
 **Returns:** `double`
+
+### `meanOf(int[] values)`
 
 The count must be non-zero.
 
@@ -396,9 +394,9 @@ The definition of the mean is the same as Stats#mean.
 **Parameters:**
 - `values` (`int[]`): a series of values
 
-### `meanOf(long[] values)`
-
 **Returns:** `double`
+
+### `meanOf(long[] values)`
 
 The count must be non-zero.
 
@@ -407,30 +405,30 @@ The definition of the mean is the same as Stats#mean.
 
 **Parameters:**
 - `values` (`long[]`): a series of values, which will be converted to double values (this may
-     cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
+       cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
+
+**Returns:** `double`
 
 ### `toByteArray()`
-
-**Returns:** `byte[]`
 
 **Note:** No guarantees are made regarding stability of the representation between
  versions.
 
-### `writeTo(java.nio.ByteBuffer buffer)`
+**Returns:** `byte[]`
 
-**Returns:** `void`
+### `writeTo(ByteBuffer buffer)`
 
 **Note:** No guarantees are made regarding stability of the representation between
  versions.
 
 **Parameters:**
 - `buffer` (`java.nio.ByteBuffer`): A ByteBuffer with at least BYTES ByteBuffer#remaining, ordered as
-     ByteOrder#LITTLE_ENDIAN, to which a BYTES-long byte representation of this instance
-     is written. In the process increases the position of ByteBuffer by BYTES.
+       ByteOrder#LITTLE_ENDIAN, to which a BYTES-long byte representation of this instance
+       is written. In the process increases the position of ByteBuffer by BYTES.
+
+**Returns:** `void`
 
 ### `fromByteArray(byte[] byteArray)`
-
-**Returns:** [`com.google.common.math.Stats`](./Stats.md)
 
 **Note:** No guarantees are made regarding stability of the representation between
  versions.
@@ -438,15 +436,17 @@ The definition of the mean is the same as Stats#mean.
 **Parameters:**
 - `byteArray` (`byte[]`)
 
-### `readFrom(java.nio.ByteBuffer buffer)`
-
 **Returns:** [`com.google.common.math.Stats`](./Stats.md)
+
+### `readFrom(ByteBuffer buffer)`
 
 **Note:** No guarantees are made regarding stability of the representation between
  versions.
 
 **Parameters:**
 - `buffer` (`java.nio.ByteBuffer`): A ByteBuffer with at least BYTES ByteBuffer#remaining, ordered as
-     ByteOrder#LITTLE_ENDIAN, from which a BYTES-long byte representation of this
-     instance is read. In the process increases the position of ByteBuffer by BYTES.
+       ByteOrder#LITTLE_ENDIAN, from which a BYTES-long byte representation of this
+       instance is read. In the process increases the position of ByteBuffer by BYTES.
+
+**Returns:** [`com.google.common.math.Stats`](./Stats.md)
 

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customizePopUpMenu(java.lang.Object popUp)`
+### `customizePopUpMenu(Object popUp)`
 
 If everything is removed then the menu will not be shown.
 

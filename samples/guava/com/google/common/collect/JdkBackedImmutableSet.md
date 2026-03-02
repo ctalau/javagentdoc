@@ -27,7 +27,7 @@ This implementation is never used on the GWT client side, but it must be present
 
 ## Constructors
 
-### `<init>(java.util.Set<?> delegate, com.google.common.collect.ImmutableList<E> delegateList)`
+### `<init>(Set<?> delegate, ImmutableList<E> delegateList)`
 
 **Parameters:**
 - `delegate` (`java.util.Set<?>`)
@@ -37,17 +37,17 @@ This implementation is never used on the GWT client side, but it must be present
 
 ### `get(int index)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `index` (`int`)
 
-### `contains(java.lang.Object object)`
+**Returns:** `E`
 
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `isPartialView()`
 

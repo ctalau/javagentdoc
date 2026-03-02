@@ -20,8 +20,6 @@ Graphically, this is the specification of a straight line on a plane. The transf
 
 ### `mapping(double x1, double y1)`
 
-**Returns:** `com.google.common.math.LinearTransformation.LinearTransformationBuilder`
-
 Both arguments must be
  finite. Call either LinearTransformationBuilder#and or LinearTransformationBuilder#withSlope on the returned object to finish building the instance.
 
@@ -29,31 +27,33 @@ Both arguments must be
 - `x1` (`double`)
 - `y1` (`double`)
 
-### `vertical(double x)`
+**Returns:** `com.google.common.math.LinearTransformation.LinearTransformationBuilder`
 
-**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
+### `vertical(double x)`
 
 (The inverse of this will be a horizontal transformation.)
 
 **Parameters:**
 - `x` (`double`)
 
-### `horizontal(double y)`
-
 **Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
+
+### `horizontal(double y)`
 
 (The inverse of this will be a vertical transformation.)
 
 **Parameters:**
 - `y` (`double`)
 
-### `forNaN()`
-
 **Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
+
+### `forNaN()`
 
 The #isHorizontal
  and #isVertical methods return false and the #slope, and #transform methods all return Double#NaN. The #inverse method returns the same
  instance.
+
+**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
 ### `isVertical()`
 
@@ -65,14 +65,12 @@ The #isHorizontal
 
 ### `slope()`
 
-**Returns:** `double`
-
 the rate of change of y with respect to
  x. This must not be called on a vertical transformation (i.e. when #isVertical() is true).
 
-### `transform(double x)`
-
 **Returns:** `double`
+
+### `transform(double x)`
 
 This must not be called on a
  vertical transformation (i.e. when #isVertical() is true).
@@ -80,9 +78,9 @@ This must not be called on a
 **Parameters:**
 - `x` (`double`)
 
-### `inverse()`
+**Returns:** `double`
 
-**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
+### `inverse()`
 
 The inverse of a horizontal transformation is a
  vertical transformation, and vice versa. The inverse of the #forNaN transformation is
@@ -91,4 +89,6 @@ The inverse of a horizontal transformation is a
  numerical errors. Calling this method multiple times on the same instance will always return
  the same instance. Calling this method on the result of calling this method on an instance will
  always return that original instance.
+
+**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 

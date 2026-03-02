@@ -32,16 +32,14 @@ If you know that a given string represents a numeric IP address, use InetAddress
 
 ## Constructors
 
-### `<init>(java.lang.String canonicalForm)`
+### `<init>(String canonicalForm)`
 
 **Parameters:**
 - `canonicalForm` (`java.lang.String`)
 
 ## Methods
 
-### `fromValid(java.lang.String specifier)`
-
-**Returns:** [`com.google.common.net.HostSpecifier`](./HostSpecifier.md)
+### `fromValid(String specifier)`
 
 If the specifier might be invalid, use #from(String)
  instead.
@@ -59,9 +57,9 @@ The specifier must be in one of these formats:
 **Parameters:**
 - `specifier` (`java.lang.String`)
 
-### `from(java.lang.String specifier)`
-
 **Returns:** [`com.google.common.net.HostSpecifier`](./HostSpecifier.md)
+
+### `from(String specifier)`
 
 Always use this method in preference to #fromValid(String) for a
  specifier that is not already known to be valid.
@@ -69,19 +67,21 @@ Always use this method in preference to #fromValid(String) for a
 **Parameters:**
 - `specifier` (`java.lang.String`)
 
-### `isValid(java.lang.String specifier)`
+**Returns:** [`com.google.common.net.HostSpecifier`](./HostSpecifier.md)
 
-**Returns:** `boolean`
+### `isValid(String specifier)`
 
 **Parameters:**
 - `specifier` (`java.lang.String`)
 
-### `equals(java.lang.Object other)`
-
 **Returns:** `boolean`
+
+### `equals(Object other)`
 
 **Parameters:**
 - `other` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -89,10 +89,10 @@ Always use this method in preference to #fromValid(String) for a
 
 ### `toString()`
 
-**Returns:** `java.lang.String`
-
 If the
  host specifier is a domain name, the string will be normalized to all lower case. If the
  specifier was an IPv6 address without brackets, brackets are added so that the result will be
  usable in the host part of a URI.
+
+**Returns:** `java.lang.String`
 

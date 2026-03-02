@@ -24,7 +24,7 @@ See also MutableTypeToInstanceMap.
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableMap<com.google.common.reflect.TypeToken<? extends B>,B> delegate)`
+### `<init>(ImmutableMap<TypeToken<? extends B>,B> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.ImmutableMap<com.google.common.reflect.TypeToken<? extends B>,B>`](../collect/ImmutableMap.md))
@@ -39,59 +39,59 @@ See also MutableTypeToInstanceMap.
 
 **Returns:** `com.google.common.reflect.ImmutableTypeToInstanceMap.Builder<B>`
 
-### `getInstance(com.google.common.reflect.TypeToken<T> type)`
-
-**Returns:** `T`
+### `getInstance(TypeToken<T> type)`
 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
 
-### `getInstance(java.lang.Class<T> type)`
-
 **Returns:** `T`
+
+### `getInstance(Class<T> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `putInstance(com.google.common.reflect.TypeToken<T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(TypeToken<T> type, T value)`
 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
 - `value` (`T`)
 
-### `putInstance(java.lang.Class<T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(Class<T> type, T value)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 - `value` (`T`)
 
-### `put(com.google.common.reflect.TypeToken<? extends B> key, B value)`
+**Returns:** `T`
 
-**Returns:** `B`
+### `put(TypeToken<? extends B> key, B value)`
 
 **Parameters:**
 - `key` ([`com.google.common.reflect.TypeToken<? extends B>`](./TypeToken.md))
 - `value` (`B`)
 
-### `putAll(java.util.Map<? extends com.google.common.reflect.TypeToken<? extends B>,? extends B> map)`
+**Returns:** `B`
 
-**Returns:** `void`
+### `putAll(Map<? extends TypeToken<? extends B>,? extends B> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<? extends com.google.common.reflect.TypeToken<? extends B>,? extends B>`)
+
+**Returns:** `void`
 
 ### `delegate()`
 
 **Returns:** `java.util.Map<com.google.common.reflect.TypeToken<? extends B>,B>`
 
-### `trustedGet(com.google.common.reflect.TypeToken<T> type)`
-
-**Returns:** `T`
+### `trustedGet(TypeToken<T> type)`
 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
+
+**Returns:** `T`
 

@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `getDecorationIcon(java.io.File projectFile)`
+### `getDecorationIcon(File projectFile)`
 
 This callback comes very often, each time the Project Swing JTree is repainted, so the developers implementing it
  need to develop their own internal caches.
@@ -22,7 +22,7 @@ This callback comes very often, each time the Project Swing JTree is repainted, 
 
 **Returns:** `javax.swing.Icon`
 
-### `getTooltip(java.io.File projectFile, java.lang.String defaultTooltip)`
+### `getTooltip(File projectFile, String defaultTooltip)`
 
 This callback comes very often, each time the Project Swing JTree is repainted, so the developers implementing it
  need to develop their own internal caches.
@@ -33,7 +33,7 @@ This callback comes very often, each time the Project Swing JTree is repainted, 
 
 **Returns:** `java.lang.String`
 
-### `getName(java.io.File projectFile, java.lang.String defaultName)`
+### `getName(File projectFile, String defaultName)`
 
 This callback comes very often, each time the Project Swing JTree is repainted, so the developers implementing it
  need to develop their own internal caches.

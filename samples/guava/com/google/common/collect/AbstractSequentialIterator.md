@@ -48,13 +48,13 @@ Example:
 
 ### `computeNext(T previous)`
 
-**Returns:** `T`
-
 This method is invoked during each call to #next() in order to compute the
  result of a *future* call to next().
 
 **Parameters:**
 - `previous` (`T`)
+
+**Returns:** `T`
 
 ### `hasNext()`
 

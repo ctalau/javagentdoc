@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
+### `getCellElementName(AuthorElement tableElement, int columnIndex)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -24,7 +24,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getRowElementName(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `getRowElementName(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))

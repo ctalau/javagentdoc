@@ -37,7 +37,7 @@ It will resolve all
 
 **Returns:** `java.lang.String`
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+### `resolveReference(AuthorNode node, String systemID, AuthorAccess authorAccess, EntityResolver entityResolver)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -47,7 +47,7 @@ It will resolve all
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
+### `isReferenceChanged(AuthorNode node, String attributeName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -55,7 +55,7 @@ It will resolve all
 
 **Returns:** `boolean`
 
-### `hasReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `hasReferences(AuthorNode node)`
 
 The value of the HREF attribute should not be null.
 
@@ -64,14 +64,14 @@ The value of the HREF attribute should not be null.
 
 **Returns:** `boolean`
 
-### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getReferenceUniqueID(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 **Returns:** `java.lang.String`
 
-### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getReferenceSystemID(AuthorNode node, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -79,14 +79,14 @@ The value of the HREF attribute should not be null.
 
 **Returns:** `java.lang.String`
 
-### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getDisplayName(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 **Returns:** `java.lang.String`
 
-### `hasEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
+### `hasEditableReference(String systemID, AuthorNode referenceNodeParent)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -94,7 +94,7 @@ The value of the HREF attribute should not be null.
 
 **Returns:** `boolean`
 
-### `replaceReference(ro.sync.ecss.extensions.api.node.AuthorDocumentProvider targetProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorReferenceNode referenceNode)`
+### `replaceReference(AuthorDocumentProvider targetProvider, AuthorAccess authorAccess, AuthorReferenceNode referenceNode)`
 
 **Parameters:**
 - `targetProvider` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](../api/node/AuthorDocumentProvider.md))
@@ -103,7 +103,7 @@ The value of the HREF attribute should not be null.
 
 **Returns:** `void`
 
-### `allowsValidatationForEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
+### `allowsValidatationForEditableReference(String systemID, AuthorNode referenceNodeParent)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -111,7 +111,7 @@ The value of the HREF attribute should not be null.
 
 **Returns:** `boolean`
 
-### `extractHref(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `extractHref(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node with the href.

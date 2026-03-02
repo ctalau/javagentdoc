@@ -32,7 +32,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String documentTypeName, ro.sync.ecss.dita.ContextKeyManagerProvider contextKeyManagerProvider, java.util.function.Supplier<java.lang.String> userNameProvider)`
+### `<init>(String documentTypeName, ContextKeyManagerProvider contextKeyManagerProvider, Supplier<String> userNameProvider)`
 
 **Parameters:**
 - `documentTypeName` (`java.lang.String`): The document type name
@@ -42,7 +42,7 @@
 
 ## Methods
 
-### `filterAttributeValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> attributeValues, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext context)`
+### `filterAttributeValues(List<CIValue> attributeValues, WhatPossibleValuesHasAttributeContext context)`
 
 **Parameters:**
 - `attributeValues` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -50,7 +50,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `filterAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> attributes, ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext context)`
+### `filterAttributes(List<CIAttribute> attributes, WhatAttributesCanGoHereContext context)`
 
 **Parameters:**
 - `attributes` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
@@ -58,7 +58,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `filterElementValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> elementValues, ro.sync.contentcompletion.xml.Context context)`
+### `filterElementValues(List<CIValue> elementValues, Context context)`
 
 **Parameters:**
 - `elementValues` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -66,7 +66,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `filterElements(java.util.List<ro.sync.contentcompletion.xml.CIElement> elements, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context)`
+### `filterElements(List<CIElement> elements, WhatElementsCanGoHereContext context)`
 
 **Parameters:**
 - `elements` (`java.util.List<ro.sync.contentcompletion.xml.CIElement>`)
@@ -74,7 +74,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIElement>`
 
-### `disallowElementsBeforeTitle(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.util.List<ro.sync.contentcompletion.xml.CIElement> elems, java.util.Set<java.lang.String> parentNames)`
+### `disallowElementsBeforeTitle(WhatElementsCanGoHereContext context, List<CIElement> elems, Set<String> parentNames)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): The context.
@@ -83,7 +83,7 @@
 
 **Returns:** `void`
 
-### `disallowDuplicateTitlesInElements(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.util.List<ro.sync.contentcompletion.xml.CIElement> elems, java.util.Set<java.lang.String> parentNames)`
+### `disallowDuplicateTitlesInElements(WhatElementsCanGoHereContext context, List<CIElement> elems, Set<String> parentNames)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): The current context.

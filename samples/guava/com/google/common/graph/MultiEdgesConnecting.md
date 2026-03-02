@@ -27,7 +27,7 @@ The #outEdgeToNode map allows this class to work on networks with parallel edges
 
 ## Constructors
 
-### `<init>(java.util.Map<E,?> outEdgeToNode, java.lang.Object targetNode)`
+### `<init>(Map<E,?> outEdgeToNode, Object targetNode)`
 
 **Parameters:**
 - `outEdgeToNode` (`java.util.Map<E,?>`)
@@ -39,10 +39,10 @@ The #outEdgeToNode map allows this class to work on networks with parallel edges
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](../collect/UnmodifiableIterator.md)
 
-### `contains(java.lang.Object edge)`
-
-**Returns:** `boolean`
+### `contains(Object edge)`
 
 **Parameters:**
 - `edge` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

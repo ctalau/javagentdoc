@@ -19,22 +19,22 @@ See the Guava User Guide article on [
 
 ### `peek()`
 
-**Returns:** `E`
-
 Calls to peek() should not change the state of the iteration, except that it
  *may* prevent removal of the most recent element via #remove().
 
-### `next()`
-
 **Returns:** `E`
+
+### `next()`
 
 The objects returned by consecutive calls to #peek() then #next() are
  guaranteed to be equal to each other.
 
-### `remove()`
+**Returns:** `E`
 
-**Returns:** `void`
+### `remove()`
 
 Implementations may or may not support removal when a call to #peek() has occurred
  since the most recent call to #next().
+
+**Returns:** `void`
 

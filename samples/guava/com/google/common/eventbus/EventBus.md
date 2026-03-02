@@ -162,18 +162,18 @@ See the Guava User Guide article on [EventBus](https://github.com/google/guava/w
 
 ### `<init>()`
 
-### `<init>(java.lang.String identifier)`
+### `<init>(String identifier)`
 
 **Parameters:**
 - `identifier` (`java.lang.String`): a brief name for this bus, for logging purposes. Should be a valid Java
-     identifier.
+       identifier.
 
-### `<init>(com.google.common.eventbus.SubscriberExceptionHandler exceptionHandler)`
+### `<init>(SubscriberExceptionHandler exceptionHandler)`
 
 **Parameters:**
 - `exceptionHandler` ([`com.google.common.eventbus.SubscriberExceptionHandler`](./SubscriberExceptionHandler.md)): Handler for subscriber exceptions.
 
-### `<init>(java.lang.String identifier, java.util.concurrent.Executor executor, com.google.common.eventbus.Dispatcher dispatcher, com.google.common.eventbus.SubscriberExceptionHandler exceptionHandler)`
+### `<init>(String identifier, Executor executor, Dispatcher dispatcher, SubscriberExceptionHandler exceptionHandler)`
 
 **Parameters:**
 - `identifier` (`java.lang.String`)
@@ -191,31 +191,29 @@ See the Guava User Guide article on [EventBus](https://github.com/google/guava/w
 
 **Returns:** `java.util.concurrent.Executor`
 
-### `handleSubscriberException(java.lang.Throwable e, com.google.common.eventbus.SubscriberExceptionContext context)`
-
-**Returns:** `void`
+### `handleSubscriberException(Throwable e, SubscriberExceptionContext context)`
 
 **Parameters:**
 - `e` (`java.lang.Throwable`)
 - `context` ([`com.google.common.eventbus.SubscriberExceptionContext`](./SubscriberExceptionContext.md))
 
-### `register(java.lang.Object object)`
-
 **Returns:** `void`
+
+### `register(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`): object whose subscriber methods should be registered.
 
-### `unregister(java.lang.Object object)`
-
 **Returns:** `void`
+
+### `unregister(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`): object whose subscriber methods should be unregistered.
 
-### `post(java.lang.Object event)`
-
 **Returns:** `void`
+
+### `post(Object event)`
 
 This method will return successfully after the
  event has been posted to all subscribers, and regardless of any exceptions thrown by
@@ -227,6 +225,8 @@ If no subscribers have been subscribed for event's class, and event is not
 
 **Parameters:**
 - `event` (`java.lang.Object`): event to post.
+
+**Returns:** `void`
 
 ### `toString()`
 

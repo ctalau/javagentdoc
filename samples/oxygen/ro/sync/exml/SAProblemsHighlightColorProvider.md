@@ -34,7 +34,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `getHighlightColor(ro.sync.exml.editor.x.d.g arg0)`
+### `getHighlightColor(g arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.x.d.g`)

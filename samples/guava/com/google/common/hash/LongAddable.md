@@ -14,10 +14,10 @@
 
 ### `add(long x)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `x` (`long`)
+
+**Returns:** `void`
 
 ### `sum()`
 

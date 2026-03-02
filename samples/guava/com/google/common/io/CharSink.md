@@ -36,17 +36,15 @@ Any ByteSink may be viewed as a CharSink with a specific character encoding usin
 
 ### `openStream()`
 
-**Returns:** `java.io.Writer`
-
 This method returns a new, independent
  writer each time it is called.
 
  
 The caller is responsible for ensuring that the returned writer is closed.
 
-### `openBufferedStream()`
-
 **Returns:** `java.io.Writer`
+
+### `openBufferedStream()`
 
 The returned stream is not
  required to be a BufferedWriter in order to allow implementations to simply delegate to
@@ -56,16 +54,16 @@ The returned stream is not
  
 The caller is responsible for ensuring that the returned writer is closed.
 
-### `write(java.lang.CharSequence charSequence)`
+**Returns:** `java.io.Writer`
 
-**Returns:** `void`
+### `write(CharSequence charSequence)`
 
 **Parameters:**
 - `charSequence` (`java.lang.CharSequence`)
 
-### `writeLines(java.lang.Iterable<? extends java.lang.CharSequence> lines)`
-
 **Returns:** `void`
+
+### `writeLines(Iterable<? extends CharSequence> lines)`
 
 This method is equivalent to 
  writeLines(lines, System.getProperty("line.separator")).
@@ -73,17 +71,17 @@ This method is equivalent to
 **Parameters:**
 - `lines` (`java.lang.Iterable<? extends java.lang.CharSequence>`)
 
-### `writeLines(java.lang.Iterable<? extends java.lang.CharSequence> lines, java.lang.String lineSeparator)`
-
 **Returns:** `void`
+
+### `writeLines(Iterable<? extends CharSequence> lines, String lineSeparator)`
 
 **Parameters:**
 - `lines` (`java.lang.Iterable<? extends java.lang.CharSequence>`)
 - `lineSeparator` (`java.lang.String`)
 
-### `writeLines(java.util.stream.Stream<? extends java.lang.CharSequence> lines)`
-
 **Returns:** `void`
+
+### `writeLines(Stream<? extends CharSequence> lines)`
 
 This method is equivalent to 
  writeLines(lines, System.getProperty("line.separator")).
@@ -91,28 +89,30 @@ This method is equivalent to
 **Parameters:**
 - `lines` (`java.util.stream.Stream<? extends java.lang.CharSequence>`)
 
-### `writeLines(java.util.stream.Stream<? extends java.lang.CharSequence> lines, java.lang.String lineSeparator)`
-
 **Returns:** `void`
+
+### `writeLines(Stream<? extends CharSequence> lines, String lineSeparator)`
 
 **Parameters:**
 - `lines` (`java.util.stream.Stream<? extends java.lang.CharSequence>`)
 - `lineSeparator` (`java.lang.String`)
 
-### `writeLines(java.util.Iterator<? extends java.lang.CharSequence> lines, java.lang.String lineSeparator)`
-
 **Returns:** `void`
+
+### `writeLines(Iterator<? extends CharSequence> lines, String lineSeparator)`
 
 **Parameters:**
 - `lines` (`java.util.Iterator<? extends java.lang.CharSequence>`)
 - `lineSeparator` (`java.lang.String`)
 
-### `writeFrom(java.lang.Readable readable)`
+**Returns:** `void`
 
-**Returns:** `long`
+### `writeFrom(Readable readable)`
 
 Does not close readable if it is Closeable.
 
 **Parameters:**
 - `readable` (`java.lang.Readable`)
+
+**Returns:** `long`
 

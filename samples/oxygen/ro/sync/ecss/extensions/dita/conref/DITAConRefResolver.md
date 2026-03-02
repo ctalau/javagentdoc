@@ -81,42 +81,42 @@ False by default, when editing in the Author page
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.dita.ContextKeyManager keyManager)`
+### `<init>(ContextKeyManager keyManager)`
 
 **Parameters:**
 - `keyManager` ([`ro.sync.ecss.dita.ContextKeyManager`](../../../dita/ContextKeyManager.md)): The context-aware key manager.
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.dita.ContextKeyManagerProvider keyManagerProvider)`
+### `<init>(ContextKeyManagerProvider keyManagerProvider)`
 
 **Parameters:**
 - `keyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../../dita/ContextKeyManagerProvider.md)): The context-aware key manager provider.
 
 ## Methods
 
-### `hasReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `hasReferences(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `hasKeyrefReference(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `hasKeyrefReference(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element to be analyzed.
 
 **Returns:** `boolean`
 
-### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getDisplayName(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `java.lang.String`
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+### `resolveReference(AuthorNode node, String systemID, AuthorAccess authorAccess, EntityResolver entityResolver)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
@@ -126,7 +126,7 @@ False by default, when editing in the Author page
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `resolveConrefAndConkeyref(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.node.AttrValue classValue, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+### `resolveConrefAndConkeyref(AuthorElement element, AttrValue classValue, String systemID, AuthorAccess authorAccess, EntityResolver entityResolver)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element which has references.
@@ -139,7 +139,7 @@ False by default, when editing in the Author page
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `resolveConrefAndConkeyRefInternal(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver, ro.sync.ecss.dita.Reference conRef, boolean isConKeyRef, boolean isKeyrefToElementID)`
+### `resolveConrefAndConkeyRefInternal(AuthorElement element, String systemID, AuthorAccess authorAccess, EntityResolver entityResolver, Reference conRef, boolean isConKeyRef, boolean isKeyrefToElementID)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element that has references.
@@ -152,7 +152,7 @@ False by default, when editing in the Author page
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `computeTopicIdForSelfLink(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String[] topicPath)`
+### `computeTopicIdForSelfLink(AuthorElement element, String[] topicPath)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The element which does the conreffing
@@ -160,7 +160,7 @@ False by default, when editing in the Author page
 
 **Returns:** `void`
 
-### `treatKeyNotFound(ro.sync.ecss.dita.Reference conRef, java.lang.String keyrefValWithOutScope, java.lang.String keyrefValWithScope)`
+### `treatKeyNotFound(Reference conRef, String keyrefValWithOutScope, String keyrefValWithScope)`
 
 **Parameters:**
 - `conRef` ([`ro.sync.ecss.dita.Reference`](../../../dita/Reference.md)): Content reference.
@@ -169,7 +169,7 @@ False by default, when editing in the Author page
 
 **Returns:** `void`
 
-### `resolveCoderef(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver, ro.sync.ecss.dita.Reference conRef)`
+### `resolveCoderef(AuthorAccess authorAccess, EntityResolver entityResolver, Reference conRef)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to the Author API.
@@ -178,7 +178,7 @@ False by default, when editing in the Author page
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `getRangeEndPath(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String systemID, ro.sync.ecss.extensions.api.node.AttrValue conrefEndVal, boolean isConKeyRef)`
+### `getRangeEndPath(AuthorElement element, String systemID, AttrValue conrefEndVal, boolean isConKeyRef)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The source element which has the attribute
@@ -188,7 +188,7 @@ False by default, when editing in the Author page
 
 **Returns:** `java.lang.String[]`
 
-### `resolveHrefReference(java.lang.String hrefValue, ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+### `resolveHrefReference(String hrefValue, AuthorElement element, AuthorAccess authorAccess, EntityResolver entityResolver)`
 
 **Parameters:**
 - `hrefValue` (`java.lang.String`): The value of the href attribute
@@ -200,7 +200,7 @@ False by default, when editing in the Author page
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `resolveKeyrefReference(java.lang.String keyref, java.lang.String classValue, ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `resolveKeyrefReference(String keyref, String classValue, AuthorElement element, String systemID, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `keyref` (`java.lang.String`): The value of the keyref attribute
@@ -213,7 +213,7 @@ False by default, when editing in the Author page
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `parseReferencedTopic(java.lang.String systemID, ro.sync.ecss.dita.reference.keyref.KeyInfo keyInfo)`
+### `parseReferencedTopic(String systemID, KeyInfo keyInfo)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): The system ID of the topic.
@@ -221,7 +221,7 @@ False by default, when editing in the Author page
 
 **Returns:** `java.lang.String`
 
-### `getTopicPath(java.lang.String value)`
+### `getTopicPath(String value)`
 
 **Parameters:**
 - `value` (`java.lang.String`): The `conref` attribute value.
@@ -232,14 +232,14 @@ False by default, when editing in the Author page
 
 **Returns:** `java.lang.String`
 
-### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getReferenceUniqueID(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
 
 **Returns:** `java.lang.String`
 
-### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
+### `isReferenceChanged(AuthorNode node, String attributeName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
@@ -247,7 +247,7 @@ False by default, when editing in the Author page
 
 **Returns:** `boolean`
 
-### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getReferenceSystemID(AuthorNode node, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
@@ -255,21 +255,21 @@ False by default, when editing in the Author page
 
 **Returns:** `java.lang.String`
 
-### `getConrefReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `getConrefReferenceSystemID(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The reference element.
 
 **Returns:** `java.lang.String`
 
-### `getKeyrefRefereceSystenID(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `getKeyrefRefereceSystenID(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md)): The reference element.
 
 **Returns:** `java.lang.String`
 
-### `checkTarget(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.node.AuthorDocument targetDocument)`
+### `checkTarget(AuthorNode node, AuthorDocument targetDocument)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))
@@ -284,7 +284,7 @@ False by default, when editing in the Author page
 
 **Returns:** `void`
 
-### `getCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getCacheKey(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md))

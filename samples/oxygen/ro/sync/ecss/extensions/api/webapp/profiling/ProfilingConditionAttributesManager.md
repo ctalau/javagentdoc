@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getProfilingConditionAttributes(ro.sync.ecss.extensions.api.node.AuthorElement contextElement)`
+### `getProfilingConditionAttributes(AuthorElement contextElement)`
 
 The profiling attribute names and values should be defined either in a subject scheme 
  or in the corresponding options page.

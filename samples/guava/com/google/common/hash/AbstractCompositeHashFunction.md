@@ -24,16 +24,14 @@
 
 ## Constructors
 
-### `<init>(com.google.common.hash.HashFunction[] functions)`
+### `<init>(HashFunction[] functions)`
 
 **Parameters:**
 - `functions` ([`com.google.common.hash.HashFunction[]`](./HashFunction.md))
 
 ## Methods
 
-### `makeHash(com.google.common.hash.Hasher[] hashers)`
-
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+### `makeHash(Hasher[] hashers)`
 
 Each of them
  has consumed the entire input and they are ready to output a HashCode. The order of the
@@ -42,21 +40,23 @@ Each of them
 **Parameters:**
 - `hashers` ([`com.google.common.hash.Hasher[]`](./Hasher.md))
 
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+
 ### `newHasher()`
 
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
 ### `newHasher(int expectedInputSize)`
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
-
 **Parameters:**
 - `expectedInputSize` (`int`)
 
-### `fromHashers(com.google.common.hash.Hasher[] hashers)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `fromHashers(Hasher[] hashers)`
 
 **Parameters:**
 - `hashers` ([`com.google.common.hash.Hasher[]`](./Hasher.md))
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 

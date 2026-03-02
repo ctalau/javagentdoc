@@ -44,7 +44,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String attributeName, java.lang.String elementName)`
+### `<init>(String attributeName, String elementName)`
 
 **Parameters:**
 - `attributeName` (`java.lang.String`): The attribute name.
@@ -64,14 +64,14 @@
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
 **Returns:** `boolean`
 
-### `verifyKSEquals(java.util.Stack<java.util.Set<java.lang.String>> ks1, java.util.Stack<java.util.Set<java.lang.String>> ks2)`
+### `verifyKSEquals(Stack<Set<String>> ks1, Stack<Set<String>> ks2)`
 
 **Parameters:**
 - `ks1` (`java.util.Stack<java.util.Set<java.lang.String>>`): Key scope 1
@@ -87,14 +87,14 @@
 
 **Returns:** `java.util.LinkedHashSet<java.lang.String>`
 
-### `addReferencedKey(java.lang.String keyRef)`
+### `addReferencedKey(String keyRef)`
 
 **Parameters:**
 - `keyRef` (`java.lang.String`): The keyref.
 
 **Returns:** `void`
 
-### `setKeyScopes(java.util.Stack<java.util.Set<java.lang.String>> keyScopes)`
+### `setKeyScopes(Stack<Set<String>> keyScopes)`
 
 **Parameters:**
 - `keyScopes` (`java.util.Stack<java.util.Set<java.lang.String>>`): The keyScopes to set.
@@ -109,7 +109,7 @@
 
 **Returns:** `java.lang.Boolean`
 
-### `setSingleValue(java.lang.Boolean singleValue)`
+### `setSingleValue(Boolean singleValue)`
 
 **Parameters:**
 - `singleValue` (`java.lang.Boolean`): `null` if we do not have this information, 

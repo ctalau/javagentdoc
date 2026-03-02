@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.hash.HashFunction hashFunction, java.io.InputStream in)`
+### `<init>(HashFunction hashFunction, InputStream in)`
 
 The InputStream should not be read from before or after the hand-off.
 
@@ -32,12 +32,12 @@ The InputStream should not be read from before or after the hand-off.
 
 ### `read(byte[] bytes, int off, int len)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
+
+**Returns:** `int`
 
 ### `markSupported()`
 
@@ -45,10 +45,10 @@ The InputStream should not be read from before or after the hand-off.
 
 ### `mark(int readlimit)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `readlimit` (`int`)
+
+**Returns:** `void`
 
 ### `reset()`
 
@@ -56,8 +56,8 @@ The InputStream should not be read from before or after the hand-off.
 
 ### `hash()`
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
-
 The result is unspecified
  if this method is called more than once on the same instance.
+
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 

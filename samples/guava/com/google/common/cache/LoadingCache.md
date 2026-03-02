@@ -28,8 +28,6 @@ When evaluated as a Function, a cache yields the same result as invoking #getUnc
 
 ### `get(K key)`
 
-**Returns:** `V`
-
 No observable state associated with this cache is modified until loading completes.
 
  
@@ -51,9 +49,9 @@ If the cache loader associated with this cache is known not to throw checked exc
 **Parameters:**
 - `key` (`K`)
 
-### `getUnchecked(K key)`
-
 **Returns:** `V`
+
+### `getUnchecked(K key)`
 
 No observable state associated with this cache is modified until loading completes.
  Unlike #get, this method does not throw a checked exception, and thus should only be
@@ -79,9 +77,9 @@ Caches loaded by a CacheLoader will call CacheLoader#load to load new values
 **Parameters:**
 - `key` (`K`)
 
-### `getAll(java.lang.Iterable<? extends K> keys)`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
+### `getAll(Iterable<? extends K> keys)`
 
 The returned map contains entries that were already cached, combined with newly
  loaded entries; it will never contain null keys or values.
@@ -100,16 +98,16 @@ Note that duplicate elements in keys, as determined by Object#equals, will
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends K>`)
 
-### `apply(K key)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-**Returns:** `V`
+### `apply(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `refresh(K key)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `refresh(K key)`
 
 While the new value is loading the
  previous value (if any) will continue to be returned by get(key) unless it is evicted.
@@ -131,10 +129,12 @@ Returns without doing anything if another thread is currently loading the value 
 **Parameters:**
 - `key` (`K`)
 
-### `asMap()`
+**Returns:** `void`
 
-**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
+### `asMap()`
 
 **Note that although the view *is* modifiable, no method on the returned map will ever
  cause entries to be automatically loaded.**
+
+**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 

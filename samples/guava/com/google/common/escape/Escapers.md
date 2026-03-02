@@ -24,8 +24,6 @@
 
 ### `builder()`
 
-**Returns:** `com.google.common.escape.Escapers.Builder`
-
 A builder instance can be reused and each
  escaper that is created will be a snapshot of the current builder state. Builders are not
  thread safe.
@@ -46,9 +44,9 @@ The initial state of the builder is such that:
 For performance reasons escapers created by this builder are not Unicode aware and will not
  validate the well-formedness of their input.
 
-### `asUnicodeEscaper(com.google.common.escape.Escaper escaper)`
+**Returns:** `com.google.common.escape.Escapers.Builder`
 
-**Returns:** [`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md)
+### `asUnicodeEscaper(Escaper escaper)`
 
 If the escaper is
  already a UnicodeEscaper then it is simply returned, otherwise it is wrapped in a
@@ -61,9 +59,9 @@ When a CharEscaper escaper is wrapped by this method it acquires extra behavior 
 **Parameters:**
 - `escaper` ([`com.google.common.escape.Escaper`](./Escaper.md)): the instance to be wrapped
 
-### `computeReplacement(com.google.common.escape.CharEscaper escaper, char c)`
+**Returns:** [`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md)
 
-**Returns:** `java.lang.String`
+### `computeReplacement(CharEscaper escaper, char c)`
 
 This method is intended for use in tests through the
  EscaperAsserts class; production users of CharEscaper should limit themselves
@@ -73,9 +71,9 @@ This method is intended for use in tests through the
 - `escaper` ([`com.google.common.escape.CharEscaper`](./CharEscaper.md))
 - `c` (`char`): the character to escape if necessary
 
-### `computeReplacement(com.google.common.escape.UnicodeEscaper escaper, int cp)`
-
 **Returns:** `java.lang.String`
+
+### `computeReplacement(UnicodeEscaper escaper, int cp)`
 
 This method is intended for use in tests through the
  EscaperAsserts class; production users of UnicodeEscaper should limit
@@ -85,17 +83,19 @@ This method is intended for use in tests through the
 - `escaper` ([`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md))
 - `cp` (`int`): the Unicode code point to escape if necessary
 
-### `stringOrNull(char[] in)`
-
 **Returns:** `java.lang.String`
+
+### `stringOrNull(char[] in)`
 
 **Parameters:**
 - `in` (`char[]`)
 
-### `wrap(com.google.common.escape.CharEscaper escaper)`
+**Returns:** `java.lang.String`
 
-**Returns:** [`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md)
+### `wrap(CharEscaper escaper)`
 
 **Parameters:**
 - `escaper` ([`com.google.common.escape.CharEscaper`](./CharEscaper.md))
+
+**Returns:** [`com.google.common.escape.UnicodeEscaper`](./UnicodeEscaper.md)
 

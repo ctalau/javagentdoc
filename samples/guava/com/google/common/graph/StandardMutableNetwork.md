@@ -23,7 +23,7 @@ Time complexities for mutation methods are all O(1) except for removeNode(N node
 
 ## Constructors
 
-### `<init>(com.google.common.graph.NetworkBuilder<? super N,? super E> builder)`
+### `<init>(NetworkBuilder<? super N,? super E> builder)`
 
 **Parameters:**
 - `builder` ([`com.google.common.graph.NetworkBuilder<? super N,? super E>`](./NetworkBuilder.md))
@@ -32,48 +32,48 @@ Time complexities for mutation methods are all O(1) except for removeNode(N node
 
 ### `addNode(N node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `boolean`
 
 ### `addNodeInternal(N node)`
 
-**Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
-
 **Parameters:**
 - `node` (`N`)
 
-### `addEdge(N nodeU, N nodeV, E edge)`
+**Returns:** [`com.google.common.graph.NetworkConnections<N,E>`](./NetworkConnections.md)
 
-**Returns:** `boolean`
+### `addEdge(N nodeU, N nodeV, E edge)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 - `edge` (`E`)
 
-### `addEdge(com.google.common.graph.EndpointPair<N> endpoints, E edge)`
-
 **Returns:** `boolean`
+
+### `addEdge(EndpointPair<N> endpoints, E edge)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 - `edge` (`E`)
 
-### `removeNode(N node)`
-
 **Returns:** `boolean`
+
+### `removeNode(N node)`
 
 **Parameters:**
 - `node` (`N`)
 
-### `removeEdge(E edge)`
-
 **Returns:** `boolean`
+
+### `removeEdge(E edge)`
 
 **Parameters:**
 - `edge` (`E`)
+
+**Returns:** `boolean`
 
 ### `newConnections()`
 

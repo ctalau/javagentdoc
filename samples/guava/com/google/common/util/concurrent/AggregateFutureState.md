@@ -50,12 +50,12 @@ Namely:
 
 **Returns:** `java.util.Set<java.lang.Throwable>`
 
-### `addInitialException(java.util.Set<java.lang.Throwable> seen)`
-
-**Returns:** `void`
+### `addInitialException(Set<Throwable> seen)`
 
 **Parameters:**
 - `seen` (`java.util.Set<java.lang.Throwable>`)
+
+**Returns:** `void`
 
 ### `decrementRemainingAndGet()`
 

@@ -22,7 +22,7 @@
 
 ### `<init>()`
 
-### `<init>(java.io.File arg0, java.lang.String arg1, boolean arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6, java.lang.String arg7, java.lang.String arg8)`
+### `<init>(File arg0, String arg1, boolean arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -35,7 +35,7 @@
 - `arg7` (`java.lang.String`)
 - `arg8` (`java.lang.String`)
 
-### `<init>(java.io.File arg0, java.lang.String arg1, boolean arg2)`
+### `<init>(File arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -44,7 +44,7 @@
 
 ## Methods
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -59,7 +59,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `setOtherProperties(ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String> arg0)`
+### `setOtherProperties(SerializableLinkedHashMap<String,String> arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>`)
@@ -70,14 +70,14 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.lang.String>`
 
-### `getContentInfo(java.lang.String arg0)`
+### `getContentInfo(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1)`
+### `getContentInfo(String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -85,7 +85,7 @@
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(java.lang.String arg0, boolean arg1, boolean arg2)`
+### `getContentInfo(String arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

@@ -46,7 +46,7 @@ This URL stream handler plugin extension provides the possibility to impose
 
 ## Methods
 
-### `canHandleProtocol(java.lang.String protocol)`
+### `canHandleProtocol(String protocol)`
 
 If this method returns `true` for a specific protocol,
  the #getURLStreamHandler(URL) method will be called for each opened 
@@ -61,7 +61,7 @@ If this method returns `true` for a specific protocol,
 
 **Returns:** `boolean`
 
-### `getURLStreamHandler(java.net.URL url)`
+### `getURLStreamHandler(URL url)`
 
 This method is called for each opened connection of an URL with a protocol 
  for which the #canHandleProtocol(String) method returns `true`.

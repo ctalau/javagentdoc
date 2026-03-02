@@ -40,9 +40,7 @@ When this is null, use the slow way.
 
 ## Methods
 
-### `throwIfInstanceOf(java.lang.Throwable throwable, java.lang.Class<X> declaredType)`
-
-**Returns:** `void`
+### `throwIfInstanceOf(Throwable throwable, Class<X> declaredType)`
 
 Example usage:
 
@@ -69,9 +67,9 @@ Example usage:
 - `throwable` (`java.lang.Throwable`)
 - `declaredType` (`java.lang.Class<X>`)
 
-### `propagateIfInstanceOf(java.lang.Throwable throwable, java.lang.Class<X> declaredType)`
-
 **Returns:** `void`
+
+### `propagateIfInstanceOf(Throwable throwable, Class<X> declaredType)`
 
 Example usage:
 
@@ -95,9 +93,9 @@ Example usage:
 - `throwable` (`java.lang.Throwable`)
 - `declaredType` (`java.lang.Class<X>`)
 
-### `throwIfUnchecked(java.lang.Throwable throwable)`
-
 **Returns:** `void`
+
+### `throwIfUnchecked(Throwable throwable)`
 
 Example usage:
 
@@ -122,16 +120,16 @@ Example usage:
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
-### `propagateIfPossible(java.lang.Throwable throwable)`
-
 **Returns:** `void`
+
+### `propagateIfPossible(Throwable throwable)`
 
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
-### `propagateIfPossible(java.lang.Throwable throwable, java.lang.Class<X> declaredType)`
-
 **Returns:** `void`
+
+### `propagateIfPossible(Throwable throwable, Class<X> declaredType)`
 
 **Discouraged** in favor of calling #throwIfInstanceOf and #throwIfUnchecked.
 
@@ -139,9 +137,9 @@ Example usage:
 - `throwable` (`java.lang.Throwable`): the Throwable to possibly propagate
 - `declaredType` (`java.lang.Class<X>`): the single checked exception type declared by the calling method
 
-### `propagateIfPossible(java.lang.Throwable throwable, java.lang.Class<X1> declaredType1, java.lang.Class<X2> declaredType2)`
-
 **Returns:** `void`
+
+### `propagateIfPossible(Throwable throwable, Class<X1> declaredType1, Class<X2> declaredType2)`
 
 **Discouraged** in favor of calling #throwIfInstanceOf and #throwIfUnchecked.
 
@@ -150,9 +148,9 @@ Example usage:
 - `declaredType1` (`java.lang.Class<X1>`): any checked exception type declared by the calling method
 - `declaredType2` (`java.lang.Class<X2>`): any other checked exception type declared by the calling method
 
-### `propagate(java.lang.Throwable throwable)`
+**Returns:** `void`
 
-**Returns:** `java.lang.RuntimeException`
+### `propagate(Throwable throwable)`
 
 This method always throws an exception. The RuntimeException return type allows
  client code to signal to the compiler that statements after the call are unreachable. Example
@@ -177,9 +175,9 @@ This method always throws an exception. The RuntimeException return type allows
 **Parameters:**
 - `throwable` (`java.lang.Throwable`): the Throwable to propagate
 
-### `getRootCause(java.lang.Throwable throwable)`
+**Returns:** `java.lang.RuntimeException`
 
-**Returns:** `java.lang.Throwable`
+### `getRootCause(Throwable throwable)`
 
 The first throwable in a chain provides
  context from when the error or exception was initially detected. Example usage:
@@ -195,9 +193,9 @@ The first throwable in a chain provides
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
-### `getCausalChain(java.lang.Throwable throwable)`
+**Returns:** `java.lang.Throwable`
 
-**Returns:** `java.util.List<java.lang.Throwable>`
+### `getCausalChain(Throwable throwable)`
 
 The first entry in the list will be 
  throwable followed by its cause hierarchy. Note that this is a snapshot of the cause chain and
@@ -218,9 +216,9 @@ Here's an example of how it can be used to find specific types of exceptions in 
 **Parameters:**
 - `throwable` (`java.lang.Throwable`): the non-null Throwable to extract causes from
 
-### `getCauseAs(java.lang.Throwable throwable, java.lang.Class<X> expectedCauseType)`
+**Returns:** `java.util.List<java.lang.Throwable>`
 
-**Returns:** `X`
+### `getCauseAs(Throwable throwable, Class<X> expectedCauseType)`
 
 Prefer this method instead of manually casting an exception's cause. For example, 
  (IOException) e.getCause() throws a ClassCastException that discards the original
@@ -231,9 +229,9 @@ Prefer this method instead of manually casting an exception's cause. For example
 - `throwable` (`java.lang.Throwable`)
 - `expectedCauseType` (`java.lang.Class<X>`)
 
-### `getStackTraceAsString(java.lang.Throwable throwable)`
+**Returns:** `X`
 
-**Returns:** `java.lang.String`
+### `getStackTraceAsString(Throwable throwable)`
 
 Note that you probably should not be
  parsing the resulting string; if you need programmatic access to the stack frames, you can call
@@ -242,9 +240,9 @@ Note that you probably should not be
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
-### `lazyStackTrace(java.lang.Throwable throwable)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.List<java.lang.StackTraceElement>`
+### `lazyStackTrace(Throwable throwable)`
 
 Here, "slower" and "faster" are defined in
  comparison to the normal way to access the stack trace, throwable.getStackTrace(). Note, however, that this method's special implementation is not
@@ -274,40 +272,40 @@ Note: The special implementation does not respect calls to throwable.setStackTra
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
+**Returns:** `java.util.List<java.lang.StackTraceElement>`
+
 ### `lazyStackTraceIsLazy()`
 
 **Returns:** `boolean`
 
-### `jlaStackTrace(java.lang.Throwable t)`
-
-**Returns:** `java.util.List<java.lang.StackTraceElement>`
+### `jlaStackTrace(Throwable t)`
 
 **Parameters:**
 - `t` (`java.lang.Throwable`)
 
-### `invokeAccessibleNonThrowingMethod(java.lang.reflect.Method method, java.lang.Object receiver, java.lang.Object[] params)`
+**Returns:** `java.util.List<java.lang.StackTraceElement>`
 
-**Returns:** `java.lang.Object`
+### `invokeAccessibleNonThrowingMethod(Method method, Object receiver, Object[] params)`
 
 **Parameters:**
 - `method` (`java.lang.reflect.Method`)
 - `receiver` (`java.lang.Object`)
 - `params` (`java.lang.Object[]`)
 
-### `getJLA()`
-
 **Returns:** `java.lang.Object`
+
+### `getJLA()`
 
 It is not allowed in
  AppEngine, and not present in non-Sun JDKs.
+
+**Returns:** `java.lang.Object`
 
 ### `getGetMethod()`
 
 **Returns:** `java.lang.reflect.Method`
 
-### `getSizeMethod(java.lang.Object jla)`
-
-**Returns:** `java.lang.reflect.Method`
+### `getSizeMethod(Object jla)`
 
 Tries to test method getStackTraceDepth prior to return it
  (might fail some JDKs).
@@ -319,11 +317,13 @@ See [Throwables#lazyStackTrace throws
 **Parameters:**
 - `jla` (`java.lang.Object`)
 
-### `getJlaMethod(java.lang.String name, java.lang.Class<?>[] parameterTypes)`
-
 **Returns:** `java.lang.reflect.Method`
+
+### `getJlaMethod(String name, Class<?>[] parameterTypes)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 - `parameterTypes` (`java.lang.Class<?>[]`)
+
+**Returns:** `java.lang.reflect.Method`
 

@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(java.io.InputStream in)`
+### `<init>(InputStream in)`
 
 **Parameters:**
 - `in` (`java.io.InputStream`): the input stream to be wrapped
@@ -37,26 +37,26 @@
 
 ### `read(byte[] b, int off, int len)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `skip(long n)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `skip(long n)`
 
 **Parameters:**
 - `n` (`long`)
 
-### `mark(int readlimit)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `mark(int readlimit)`
 
 **Parameters:**
 - `readlimit` (`int`)
+
+**Returns:** `void`
 
 ### `reset()`
 

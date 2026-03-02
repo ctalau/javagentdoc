@@ -51,14 +51,12 @@ Since this example doesn't support reloading or bulk loading, it can also be spe
 
 ### `load(K key)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`): the non-null key whose value should be loaded
 
-### `reload(K key, V oldValue)`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](../util/concurrent/ListenableFuture.md)
+### `reload(K key, V oldValue)`
 
 This
  method is called when an existing cache entry is refreshed by CacheBuilder#refreshAfterWrite, or through a call to LoadingCache#refresh.
@@ -74,9 +72,9 @@ This implementation synchronously delegates to #load. It is recommended that it 
 - `key` (`K`): the non-null key whose value should be loaded
 - `oldValue` (`V`): the non-null old value corresponding to key
 
-### `loadAll(java.lang.Iterable<? extends K> keys)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](../util/concurrent/ListenableFuture.md)
 
-**Returns:** `java.util.Map<K,V>`
+### `loadAll(Iterable<? extends K> keys)`
 
 This method is called by LoadingCache#getAll.
 
@@ -94,9 +92,9 @@ This method should be overridden when bulk retrieval is significantly more effic
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends K>`): the unique, non-null keys whose values should be loaded
 
-### `from(com.google.common.base.Function<K,V> function)`
+**Returns:** `java.util.Map<K,V>`
 
-**Returns:** [`com.google.common.cache.CacheLoader<K,V>`](./CacheLoader.md)
+### `from(Function<K,V> function)`
 
 This allows creating a cache loader using a lambda expression.
 
@@ -106,9 +104,9 @@ The returned object is serializable if function is serializable.
 **Parameters:**
 - `function` ([`com.google.common.base.Function<K,V>`](../base/Function.md)): the function to be used for loading values; must never return null
 
-### `from(com.google.common.base.Supplier<V> supplier)`
+**Returns:** [`com.google.common.cache.CacheLoader<K,V>`](./CacheLoader.md)
 
-**Returns:** [`com.google.common.cache.CacheLoader<java.lang.Object,V>`](./CacheLoader.md)
+### `from(Supplier<V> supplier)`
 
 Note that there's no need
  to create a *new* supplier just to pass it in here; just subclass CacheLoader and
@@ -120,9 +118,9 @@ The returned object is serializable if supplier is serializable.
 **Parameters:**
 - `supplier` ([`com.google.common.base.Supplier<V>`](../base/Supplier.md)): the supplier to be used for loading values; must never return null
 
-### `asyncReloading(com.google.common.cache.CacheLoader<K,V> loader, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.cache.CacheLoader<java.lang.Object,V>`](./CacheLoader.md)
 
-**Returns:** [`com.google.common.cache.CacheLoader<K,V>`](./CacheLoader.md)
+### `asyncReloading(CacheLoader<K,V> loader, Executor executor)`
 
 This method is useful only when loader.reload has a synchronous implementation, such
  as the default implementation.
@@ -130,4 +128,6 @@ This method is useful only when loader.reload has a synchronous implementation, 
 **Parameters:**
 - `loader` ([`com.google.common.cache.CacheLoader<K,V>`](./CacheLoader.md))
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** [`com.google.common.cache.CacheLoader<K,V>`](./CacheLoader.md)
 

@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `createSchematronValidator(java.lang.String arg0)`
+### `createSchematronValidator(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

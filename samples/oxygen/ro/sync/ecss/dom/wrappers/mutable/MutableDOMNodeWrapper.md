@@ -24,7 +24,7 @@
 
 ## Constructors
 
-### `<init>(org.w3c.dom.Node arg0, ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg1, ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper arg2, int arg3)`
+### `<init>(Node arg0, DocumentWrapper arg1, DOMNodeWrapper arg2, int arg3)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
@@ -34,7 +34,7 @@
 
 ## Methods
 
-### `makeWrapper(org.w3c.dom.Node arg0, ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg1, ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper arg2, int arg3)`
+### `makeWrapper(Node arg0, DocumentWrapper arg1, DOMNodeWrapper arg2, int arg3)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
@@ -55,7 +55,7 @@
 
 **Returns:** `void`
 
-### `insertChildren(net.sf.saxon.om.NodeInfo[] arg0, boolean arg1, boolean arg2)`
+### `insertChildren(NodeInfo[] arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo[]`)
@@ -64,7 +64,7 @@
 
 **Returns:** `void`
 
-### `insertSiblings(net.sf.saxon.om.NodeInfo[] arg0, boolean arg1, boolean arg2)`
+### `insertSiblings(NodeInfo[] arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo[]`)
@@ -73,14 +73,14 @@
 
 **Returns:** `void`
 
-### `removeAttribute(net.sf.saxon.om.NodeInfo arg0)`
+### `removeAttribute(NodeInfo arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo`)
 
 **Returns:** `void`
 
-### `getAttributeIndex(net.sf.saxon.om.NodeInfo arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1)`
+### `getAttributeIndex(NodeInfo arg0, AuthorElement arg1)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo`)
@@ -88,14 +88,14 @@
 
 **Returns:** `int`
 
-### `setAttributes(net.sf.saxon.om.AttributeMap arg0)`
+### `setAttributes(AttributeMap arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.AttributeMap`)
 
 **Returns:** `void`
 
-### `addAttribute(net.sf.saxon.om.NodeName arg0, net.sf.saxon.type.SimpleType arg1, java.lang.String arg2, int arg3, boolean arg4)`
+### `addAttribute(NodeName arg0, SimpleType arg1, String arg2, int arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeName`)
@@ -118,7 +118,7 @@
 
 **Returns:** `boolean`
 
-### `replace(net.sf.saxon.om.NodeInfo[] arg0, boolean arg1)`
+### `replace(NodeInfo[] arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo[]`)
@@ -126,21 +126,21 @@
 
 **Returns:** `void`
 
-### `replaceStringValue(net.sf.saxon.str.UnicodeString arg0)`
+### `replaceStringValue(UnicodeString arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.str.UnicodeString`)
 
 **Returns:** `void`
 
-### `unescapeAMP(java.lang.CharSequence arg0)`
+### `unescapeAMP(CharSequence arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.CharSequence`)
 
 **Returns:** `java.lang.String`
 
-### `rename(net.sf.saxon.om.NodeName arg0, boolean arg1)`
+### `rename(NodeName arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeName`)
@@ -148,21 +148,21 @@
 
 **Returns:** `void`
 
-### `getRenameAwareAttributeName(org.w3c.dom.Attr arg0)`
+### `getRenameAwareAttributeName(Attr arg0)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Attr`)
 
 **Returns:** `java.lang.String`
 
-### `getQName(net.sf.saxon.om.NodeName arg0)`
+### `getQName(NodeName arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeName`)
 
 **Returns:** `java.lang.String`
 
-### `defineNamespace(net.sf.saxon.om.NodeName arg0, boolean arg1)`
+### `defineNamespace(NodeName arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeName`)
@@ -170,7 +170,7 @@
 
 **Returns:** `void`
 
-### `defineNamespace(boolean arg0, java.lang.String arg1, java.lang.String arg2)`
+### `defineNamespace(boolean arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`boolean`)
@@ -179,7 +179,7 @@
 
 **Returns:** `void`
 
-### `addNamespace(net.sf.saxon.om.NamespaceBinding arg0, boolean arg1)`
+### `addNamespace(NamespaceBinding arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NamespaceBinding`)
@@ -191,7 +191,7 @@
 
 **Returns:** `net.sf.saxon.event.Builder`
 
-### `serializeAsXML(net.sf.saxon.om.NodeInfo[] arg0)`
+### `serializeAsXML(NodeInfo[] arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo[]`)
@@ -206,7 +206,7 @@
 
 **Returns:** `int[]`
 
-### `getNamespaceForPrefix(java.lang.String arg0, boolean arg1)`
+### `getNamespaceForPrefix(String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -214,7 +214,7 @@
 
 **Returns:** `java.lang.String`
 
-### `addNamespaceMapping(java.lang.String arg0, java.lang.String arg1)`
+### `addNamespaceMapping(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -226,14 +226,14 @@
 
 **Returns:** `java.lang.String`
 
-### `setTypeAnnotation(net.sf.saxon.type.SchemaType arg0)`
+### `setTypeAnnotation(SchemaType arg0)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.type.SchemaType`)
 
 **Returns:** `void`
 
-### `setTreeInfo(ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg0)`
+### `setTreeInfo(DocumentWrapper arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper`](./DocumentWrapper.md))

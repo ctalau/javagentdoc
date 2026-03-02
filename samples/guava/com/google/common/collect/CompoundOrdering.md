@@ -26,13 +26,13 @@
 
 ## Constructors
 
-### `<init>(java.util.Comparator<? super T> primary, java.util.Comparator<? super T> secondary)`
+### `<init>(Comparator<? super T> primary, Comparator<? super T> secondary)`
 
 **Parameters:**
 - `primary` (`java.util.Comparator<? super T>`)
 - `secondary` (`java.util.Comparator<? super T>`)
 
-### `<init>(java.lang.Iterable<? extends java.util.Comparator<? super T>> comparators)`
+### `<init>(Iterable<? extends Comparator<? super T>> comparators)`
 
 **Parameters:**
 - `comparators` (`java.lang.Iterable<? extends java.util.Comparator<? super T>>`)
@@ -41,18 +41,18 @@
 
 ### `compare(T left, T right)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `left` (`T`)
 - `right` (`T`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

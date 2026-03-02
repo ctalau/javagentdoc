@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `fireEditingStopped(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
+### `fireEditingStopped(EditingEvent event)`
 
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Editing event.
@@ -43,28 +43,28 @@
 
 **Returns:** `void`
 
-### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `addEditingListener(InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
 **Returns:** `void`
 
-### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `removeEditingListener(InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md))
 
 **Returns:** `void`
 
-### `fireCommitValue(ro.sync.ecss.extensions.api.editor.EditingEvent event)`
+### `fireCommitValue(EditingEvent event)`
 
 **Parameters:**
 - `event` ([`ro.sync.ecss.extensions.api.editor.EditingEvent`](./EditingEvent.md)): Editing event.
 
 **Returns:** `void`
 
-### `getBoolean(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.lang.String key)`
+### `getBoolean(AuthorInplaceContext context, String key)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context.
@@ -72,14 +72,14 @@
 
 **Returns:** `java.lang.Boolean`
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `refresh(AuthorInplaceContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md))
 
 **Returns:** `void`
 
-### `insertContent(java.lang.String content)`
+### `insertContent(String content)`
 
 **Parameters:**
 - `content` (`java.lang.String`)

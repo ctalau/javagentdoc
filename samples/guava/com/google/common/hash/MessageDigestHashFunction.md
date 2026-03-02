@@ -30,13 +30,13 @@
 
 ## Constructors
 
-### `<init>(java.lang.String algorithmName, java.lang.String toString)`
+### `<init>(String algorithmName, String toString)`
 
 **Parameters:**
 - `algorithmName` (`java.lang.String`)
 - `toString` (`java.lang.String`)
 
-### `<init>(java.lang.String algorithmName, int bytes, java.lang.String toString)`
+### `<init>(String algorithmName, int bytes, String toString)`
 
 **Parameters:**
 - `algorithmName` (`java.lang.String`)
@@ -45,12 +45,12 @@
 
 ## Methods
 
-### `supportsClone(java.security.MessageDigest digest)`
-
-**Returns:** `boolean`
+### `supportsClone(MessageDigest digest)`
 
 **Parameters:**
 - `digest` (`java.security.MessageDigest`)
+
+**Returns:** `boolean`
 
 ### `bits()`
 
@@ -60,12 +60,12 @@
 
 **Returns:** `java.lang.String`
 
-### `getMessageDigest(java.lang.String algorithmName)`
-
-**Returns:** `java.security.MessageDigest`
+### `getMessageDigest(String algorithmName)`
 
 **Parameters:**
 - `algorithmName` (`java.lang.String`)
+
+**Returns:** `java.security.MessageDigest`
 
 ### `newHasher()`
 
@@ -75,10 +75,10 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

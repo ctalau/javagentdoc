@@ -24,14 +24,14 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `<init>(AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../AuthorTableHelper.md)): The table helper
 
 ## Methods
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -39,7 +39,7 @@
 
 **Returns:** `void`
 
-### `updateColumnCellsSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement tgroup, int newColumnIndex, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, java.lang.String namespace, int noOfColumnsToBeInserted)`
+### `updateColumnCellsSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSupport, AuthorElement tgroup, int newColumnIndex, TableColumnSpecificationInformation columnSpecification, String namespace, int noOfColumnsToBeInserted)`
 
 For CALS tables the column specifications must be updated.
 
@@ -60,7 +60,7 @@ Can be overwritten by an implementor.
 
 **Returns:** `java.lang.String`
 
-### `getUniqueColSpecName(java.util.Set<java.lang.String> colSpecNames, int colSpecIndex)`
+### `getUniqueColSpecName(Set<String> colSpecNames, int colSpecIndex)`
 
 **Parameters:**
 - `colSpecNames` (`java.util.Set<java.lang.String>`): The set of column specification names.
@@ -68,7 +68,7 @@ Can be overwritten by an implementor.
 
 **Returns:** `java.lang.String`
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement row, int newColumnIndex)`
+### `getCellElementName(AuthorElement row, int newColumnIndex)`
 
 **Parameters:**
 - `row` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))

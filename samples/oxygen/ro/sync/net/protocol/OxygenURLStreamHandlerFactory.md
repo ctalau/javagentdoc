@@ -20,7 +20,7 @@
 
 ### `<init>()`
 
-### `<init>(java.net.URLStreamHandlerFactory arg0)`
+### `<init>(URLStreamHandlerFactory arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URLStreamHandlerFactory`)
@@ -31,7 +31,7 @@
 
 **Returns:** `java.util.Set<java.lang.String>`
 
-### `createURLStreamHandler(java.lang.String arg0)`
+### `createURLStreamHandler(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

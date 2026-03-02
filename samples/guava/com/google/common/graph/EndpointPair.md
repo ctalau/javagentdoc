@@ -42,37 +42,37 @@ The edge is a self-loop if, and only if, the two endpoints are equal.
 
 ### `ordered(N source, N target)`
 
-**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
-
 **Parameters:**
 - `source` (`N`)
 - `target` (`N`)
 
-### `unordered(N nodeU, N nodeV)`
-
 **Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
+
+### `unordered(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `of(com.google.common.graph.Graph<?> graph, N nodeU, N nodeV)`
-
 **Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
+
+### `of(Graph<?> graph, N nodeU, N nodeV)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.Graph<?>`](./Graph.md))
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `of(com.google.common.graph.Network<?,?> network, N nodeU, N nodeV)`
-
 **Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
+
+### `of(Network<?,?> network, N nodeU, N nodeV)`
 
 **Parameters:**
 - `network` ([`com.google.common.graph.Network<?,?>`](./Network.md))
 - `nodeU` (`N`)
 - `nodeV` (`N`)
+
+**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
 ### `source()`
 
@@ -88,31 +88,29 @@ The edge is a self-loop if, and only if, the two endpoints are equal.
 
 ### `nodeV()`
 
-**Returns:** `N`
-
 If this EndpointPair #isOrdered(), this is equal to #target().
 
-### `adjacentNode(N node)`
-
 **Returns:** `N`
+
+### `adjacentNode(N node)`
 
 **Parameters:**
 - `node` (`N`)
 
-### `isOrdered()`
+**Returns:** `N`
 
-**Returns:** `boolean`
+### `isOrdered()`
 
 represents the
  endpoints of a directed edge).
+
+**Returns:** `boolean`
 
 ### `iterator()`
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<N>`](../collect/UnmodifiableIterator.md)
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 Two unordered EndpointPairs are equal if they contain the same nodes. An
  ordered EndpointPair is never equal to an unordered EndpointPair.
@@ -120,10 +118,12 @@ Two unordered EndpointPairs are equal if they contain the same nodes. An
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 The hashcode of an unordered EndpointPair is equal to 
  nodeU().hashCode() + nodeV().hashCode().
+
+**Returns:** `int`
 

@@ -20,16 +20,14 @@ When mutation is not required,
 
 ### `addNode(N node)`
 
-**Returns:** `boolean`
-
 **Nodes must be unique**, just as Map keys must be. They must also be non-null.
 
 **Parameters:**
 - `node` (`N`)
 
-### `addEdge(N nodeU, N nodeV, E edge)`
-
 **Returns:** `boolean`
+
+### `addEdge(N nodeU, N nodeV, E edge)`
 
 If the graph is directed, edge will be directed in this graph; otherwise, it will be
  undirected.
@@ -51,9 +49,9 @@ If edge already connects nodeU to nodeV (in the specified order if
 - `nodeV` (`N`)
 - `edge` (`E`)
 
-### `addEdge(com.google.common.graph.EndpointPair<N> endpoints, E edge)`
-
 **Returns:** `boolean`
+
+### `addEdge(EndpointPair<N> endpoints, E edge)`
 
 In an undirected network, edge will
  also connect nodeV to nodeU.
@@ -81,17 +79,19 @@ If edge already connects an endpoint pair equal to endpoints, then this
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 - `edge` (`E`)
 
-### `removeNode(N node)`
-
 **Returns:** `boolean`
+
+### `removeNode(N node)`
 
 **Parameters:**
 - `node` (`N`)
 
-### `removeEdge(E edge)`
-
 **Returns:** `boolean`
+
+### `removeEdge(E edge)`
 
 **Parameters:**
 - `edge` (`E`)
+
+**Returns:** `boolean`
 

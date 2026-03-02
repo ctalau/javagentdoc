@@ -194,7 +194,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess arg0, org.eclipse.swt.widgets.Shell arg1, boolean arg2, boolean arg3, boolean arg4, ro.sync.ecss.extensions.api.AuthorResourceBundle arg5, int arg6, int arg7)`
+### `<init>(AuthorAccess arg0, Shell arg1, boolean arg2, boolean arg3, boolean arg4, AuthorResourceBundle arg5, int arg6, int arg7)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -206,7 +206,7 @@
 - `arg6` (`int`)
 - `arg7` (`int`)
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess arg0, org.eclipse.swt.widgets.Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, ro.sync.ecss.extensions.api.AuthorResourceBundle arg10, int arg11, int arg12)`
+### `<init>(AuthorAccess arg0, Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, AuthorResourceBundle arg10, int arg11, int arg12)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -223,7 +223,7 @@
 - `arg11` (`int`)
 - `arg12` (`int`)
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess arg0, org.eclipse.swt.widgets.Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, ro.sync.ecss.extensions.api.AuthorResourceBundle arg11, int arg12, int arg13)`
+### `<init>(AuthorAccess arg0, Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, AuthorResourceBundle arg11, int arg12, int arg13)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -241,7 +241,7 @@
 - `arg12` (`int`)
 - `arg13` (`int`)
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess arg0, org.eclipse.swt.widgets.Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, ro.sync.ecss.extensions.api.AuthorResourceBundle arg12, int arg13, int arg14)`
+### `<init>(AuthorAccess arg0, Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, AuthorResourceBundle arg12, int arg13, int arg14)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -260,7 +260,7 @@
 - `arg13` (`int`)
 - `arg14` (`int`)
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess arg0, org.eclipse.swt.widgets.Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, ro.sync.ecss.extensions.api.AuthorResourceBundle arg15, int arg16, int arg17)`
+### `<init>(AuthorAccess arg0, Shell arg1, boolean arg2, boolean arg3, boolean arg4, boolean arg5, boolean arg6, boolean arg7, boolean arg8, boolean arg9, boolean arg10, boolean arg11, boolean arg12, boolean arg13, boolean arg14, AuthorResourceBundle arg15, int arg16, int arg17)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -284,14 +284,14 @@
 
 ## Methods
 
-### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
+### `configureShell(Shell arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
 **Returns:** `void`
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+### `createDialogArea(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
@@ -302,35 +302,35 @@
 
 **Returns:** `void`
 
-### `setFrameComboInput(java.lang.String[] arg0)`
+### `setFrameComboInput(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `void`
 
-### `setRowsepComboInput(java.lang.String[] arg0)`
+### `setRowsepComboInput(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `void`
 
-### `setColsepComboInput(java.lang.String[] arg0)`
+### `setColsepComboInput(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `void`
 
-### `setAlignComboInput(java.lang.String[] arg0)`
+### `setAlignComboInput(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `void`
 
-### `setColWidthsComboInput(java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType> arg0)`
+### `setColWidthsComboInput(List<TableCustomizerConstants.ColumnWidthsType> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`)
@@ -400,14 +400,14 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType>`
 
-### `createTitleCheckbox(org.eclipse.swt.widgets.Composite arg0)`
+### `createTitleCheckbox(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
 
 **Returns:** `org.eclipse.swt.widgets.Button`
 
-### `showDialog(ro.sync.ecss.extensions.commons.table.operations.TableInfo arg0)`
+### `showDialog(TableInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.commons.table.operations.TableInfo`](./TableInfo.md))
@@ -457,7 +457,7 @@
 
 **Returns:** `void`
 
-### `createButtonsForButtonBar(org.eclipse.swt.widgets.Composite arg0)`
+### `createButtonsForButtonBar(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)

@@ -64,7 +64,7 @@
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -72,7 +72,7 @@
 
 **Returns:** `void`
 
-### `open(java.lang.String toOpenVal, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `open(String toOpenVal, AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `toOpenVal` (`java.lang.String`): The resource to open.

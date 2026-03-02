@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `addHighlight(int startOffset, int endOffset, java.util.LinkedHashMap<java.lang.String,java.lang.String> properties)`
+### `addHighlight(int startOffset, int endOffset, LinkedHashMap<String,String> properties)`
 
 The name of the processing instruction markers corresponding to this type of highlight are
  `oxy_custom_start` and `oxy_custom_end`.
@@ -54,7 +54,7 @@ If one of these offsets correspond to a read-only context
 
 **Returns:** `boolean`
 
-### `removeHighlight(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `removeHighlight(AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): the highlight to remove
@@ -77,7 +77,7 @@ If one of these offsets correspond to a read-only context
 
 **Returns:** [`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight[]`](./AuthorPersistentHighlight.md)
 
-### `setProperties(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight, java.util.LinkedHashMap<java.lang.String,java.lang.String> newProperties)`
+### `setProperties(AuthorPersistentHighlight highlight, LinkedHashMap<String,String> newProperties)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](./AuthorPersistentHighlight.md)): The highlight for which the properties will be set.
@@ -92,14 +92,14 @@ If one of these offsets correspond to a read-only context
 
 **Returns:** `void`
 
-### `setHighlightRenderer(ro.sync.ecss.extensions.api.highlights.PersistentHighlightRenderer renderer)`
+### `setHighlightRenderer(PersistentHighlightRenderer renderer)`
 
 **Parameters:**
 - `renderer` ([`ro.sync.ecss.extensions.api.highlights.PersistentHighlightRenderer`](./PersistentHighlightRenderer.md)): The renderer defining the way in which the highlights are painted.
 
 **Returns:** `void`
 
-### `setHighlightsActionsProvider(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlightActionsProvider provider)`
+### `setHighlightsActionsProvider(AuthorPersistentHighlightActionsProvider provider)`
 
 The actions are currently displayed in the persistent highlights associated callouts popup menu,
  but in future could be also used as actions presented for a highlight in the contextual menu 

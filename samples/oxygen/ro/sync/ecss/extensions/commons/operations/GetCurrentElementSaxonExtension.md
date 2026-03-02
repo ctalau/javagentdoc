@@ -24,7 +24,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.operations.ElementLocationPath currentElementLocation)`
+### `<init>(ElementLocationPath currentElementLocation)`
 
 **Parameters:**
 - `currentElementLocation` ([`ro.sync.ecss.extensions.commons.operations.ElementLocationPath`](./ElementLocationPath.md)): the location of the element defined as a simple XPath.
@@ -39,7 +39,7 @@
 
 **Returns:** `net.sf.saxon.value.SequenceType[]`
 
-### `getResultType(net.sf.saxon.value.SequenceType[] suppliedArgumentTypes)`
+### `getResultType(SequenceType[] suppliedArgumentTypes)`
 
 **Parameters:**
 - `suppliedArgumentTypes` (`net.sf.saxon.value.SequenceType[]`)

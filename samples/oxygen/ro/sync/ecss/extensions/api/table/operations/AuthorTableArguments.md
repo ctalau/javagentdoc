@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int insertOffset, int rows, int columns)`
+### `<init>(AuthorAccess authorAccess, int insertOffset, int rows, int columns)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author access.

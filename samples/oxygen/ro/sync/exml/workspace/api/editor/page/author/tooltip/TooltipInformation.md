@@ -68,7 +68,7 @@ Can be `null`
 
 ## Constructors
 
-### `<init>(java.lang.String description, ro.sync.ecss.extensions.api.node.AuthorNode hoveredNode, java.lang.String tooltipOriginInformation, int mouseX, int mouseY)`
+### `<init>(String description, AuthorNode hoveredNode, String tooltipOriginInformation, int mouseX, int mouseY)`
 
 **Parameters:**
 - `description` (`java.lang.String`): Original tooltip description. Can be `null`
@@ -83,7 +83,7 @@ Can be `null`
 
 **Returns:** `java.lang.String`
 
-### `setDescription(java.lang.String description)`
+### `setDescription(String description)`
 
 The description can also be in HTML format.
 

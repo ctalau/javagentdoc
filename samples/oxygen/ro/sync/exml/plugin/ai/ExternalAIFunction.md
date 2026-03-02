@@ -61,7 +61,7 @@ Example:
 
 **Returns:** `java.lang.String`
 
-### `executeFunction(java.lang.String parameters, java.util.Map<java.lang.String,java.lang.Object> extraContext)`
+### `executeFunction(String parameters, Map<String,Object> extraContext)`
 
 This method allows the AI to execute the function, passing in the required parameters (which should 
  conform to the JSON schema returned by #getParameterDescriptions()) and any additional application context 

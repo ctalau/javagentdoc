@@ -8,14 +8,14 @@
 
 ## Methods
 
-### `getAllComponents(java.net.URL editorUrl)`
+### `getAllComponents(URL editorUrl)`
 
 **Parameters:**
 - `editorUrl` (`java.net.URL`): The editor URL.
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.componentscollector.IComponentInfo>`
 
-### `getAllNamespaces(java.net.URL editorUrl)`
+### `getAllNamespaces(URL editorUrl)`
 
 **Parameters:**
 - `editorUrl` (`java.net.URL`): The editor URL.

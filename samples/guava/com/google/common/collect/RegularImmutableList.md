@@ -24,7 +24,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.Object[] array)`
+### `<init>(Object[] array)`
 
 **Parameters:**
 - `array` (`java.lang.Object[]`)
@@ -51,27 +51,27 @@
 
 **Returns:** `int`
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int dstOff)`
-
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int dstOff)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `dstOff` (`int`)
 
+**Returns:** `int`
+
 ### `get(int index)`
+
+**Parameters:**
+- `index` (`int`)
 
 **Returns:** `E`
 
-**Parameters:**
-- `index` (`int`)
-
 ### `listIterator(int index)`
 
-**Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** [`com.google.common.collect.UnmodifiableListIterator<E>`](./UnmodifiableListIterator.md)
 
 ### `spliterator()`
 

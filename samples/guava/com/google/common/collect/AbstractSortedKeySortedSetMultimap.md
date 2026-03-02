@@ -18,7 +18,7 @@ This superclass allows TreeMultimap to override methods to return navigable set 
 
 ## Constructors
 
-### `<init>(java.util.SortedMap<K,java.util.Collection<V>> map)`
+### `<init>(SortedMap<K,Collection<V>> map)`
 
 **Parameters:**
 - `map` (`java.util.SortedMap<K,java.util.Collection<V>>`)

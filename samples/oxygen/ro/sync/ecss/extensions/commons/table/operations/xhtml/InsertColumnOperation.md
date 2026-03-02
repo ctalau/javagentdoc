@@ -32,14 +32,14 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper documentTypeHelper)`
+### `<init>(AuthorTableHelper documentTypeHelper)`
 
 **Parameters:**
 - `documentTypeHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](../AuthorTableHelper.md)): Document type helper, has methods specific to a document type.
 
 ## Methods
 
-### `getCellElementName(ro.sync.ecss.extensions.api.node.AuthorElement rowElement, int newColumnIndex)`
+### `getCellElementName(AuthorElement rowElement, int newColumnIndex)`
 
 **Parameters:**
 - `rowElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
@@ -47,14 +47,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getLocalName(java.lang.String qName)`
+### `getLocalName(String qName)`
 
 **Parameters:**
 - `qName` (`java.lang.String`): The name in a qualified form.
 
 **Returns:** `java.lang.String`
 
-### `updateColumnCellsSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement tableElem, int newColumnIndex, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification, java.lang.String namespace, int noOfColumnsToBeInserted)`
+### `updateColumnCellsSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSupport, AuthorElement tableElem, int newColumnIndex, TableColumnSpecificationInformation columnSpecification, String namespace, int noOfColumnsToBeInserted)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))

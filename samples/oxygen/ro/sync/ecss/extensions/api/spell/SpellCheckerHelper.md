@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `isInlineNodeTransparentForSpellChecking(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isInlineNodeTransparentForSpellChecking(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md)): The author node.

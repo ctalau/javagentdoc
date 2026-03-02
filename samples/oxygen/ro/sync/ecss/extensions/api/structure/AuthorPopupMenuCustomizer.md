@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `customizePopUpMenu(Object popUp, AuthorAccess authorAccess)`
 
 If everything is removed then the menu will not be shown.
 

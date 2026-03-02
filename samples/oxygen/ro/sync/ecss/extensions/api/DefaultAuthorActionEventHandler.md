@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `handleEvent(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType arg1)`
+### `handleEvent(AuthorAccess arg0, AuthorActionEventHandler.AuthorActionEventType arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -26,7 +26,7 @@
 
 **Returns:** `boolean`
 
-### `handlePromoteDemote(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg0, boolean arg1, ro.sync.ecss.extensions.api.AuthorAccess arg2)`
+### `handlePromoteDemote(List<AuthorNode> arg0, boolean arg1, AuthorAccess arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -35,35 +35,35 @@
 
 **Returns:** `boolean`
 
-### `getPreferredXMLElementContent(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `getPreferredXMLElementContent(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
 **Returns:** `java.lang.String`
 
-### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `getParagraphElement(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
 **Returns:** `java.lang.String`
 
-### `getCandidates(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `getCandidates(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-### `isCaretInProperPlace(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `isCaretInProperPlace(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)
 
-### `isMovableListItem(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1)`
+### `isMovableListItem(AuthorAccess arg0, AuthorNode arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -71,7 +71,7 @@
 
 **Returns:** `boolean`
 
-### `promote(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, int arg1, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg2, boolean arg3)`
+### `promote(AuthorDocumentController arg0, int arg1, List<AuthorNode> arg2, boolean arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
@@ -81,7 +81,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ContentInterval`](./ContentInterval.md)
 
-### `filterUniqueAttrs(ro.sync.ecss.extensions.api.UniqueAttributesProcessor arg0, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg1)`
+### `filterUniqueAttrs(UniqueAttributesProcessor arg0, List<AuthorNode> arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.UniqueAttributesProcessor`](./UniqueAttributesProcessor.md))
@@ -89,7 +89,7 @@
 
 **Returns:** `void`
 
-### `demote(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, int arg1, java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> arg2, boolean arg3)`
+### `demote(AuthorDocumentController arg0, int arg1, List<AuthorNode> arg2, boolean arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
@@ -99,7 +99,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ContentInterval`](./ContentInterval.md)
 
-### `insertElementIfPossible(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1, int arg2)`
+### `insertElementIfPossible(AuthorDocumentController arg0, AuthorElement arg1, int arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
@@ -108,7 +108,7 @@
 
 **Returns:** `boolean`
 
-### `deleteNodeChildren(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1)`
+### `deleteNodeChildren(AuthorDocumentController arg0, AuthorNode arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
@@ -116,7 +116,7 @@
 
 **Returns:** `void`
 
-### `getInsertableFormForElement(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1, int arg2)`
+### `getInsertableFormForElement(AuthorDocumentController arg0, AuthorElement arg1, int arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
@@ -125,7 +125,7 @@
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIElement`](../../../contentcompletion/xml/CIElement.md)
 
-### `promoteSubListItems(ro.sync.ecss.extensions.api.AuthorDocumentController arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1, ro.sync.ecss.extensions.api.node.AuthorNode arg2)`
+### `promoteSubListItems(AuthorDocumentController arg0, AuthorNode arg1, AuthorNode arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](./AuthorDocumentController.md))
@@ -134,14 +134,14 @@
 
 **Returns:** `void`
 
-### `isList(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `isList(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1)`
+### `areCompatibleLists(AuthorNode arg0, AuthorNode arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
@@ -149,14 +149,14 @@
 
 **Returns:** `boolean`
 
-### `isHealthySchemaManager(ro.sync.ecss.extensions.api.AuthorSchemaManager arg0)`
+### `isHealthySchemaManager(AuthorSchemaManager arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorSchemaManager`](./AuthorSchemaManager.md))
 
 **Returns:** `boolean`
 
-### `compensateForSplits(ro.sync.ecss.g.j arg0, ro.sync.ecss.changetracking.j arg1, javax.swing.text.Position arg2, int arg3)`
+### `compensateForSplits(j arg0, j arg1, Position arg2, int arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.g.j`)
@@ -166,7 +166,7 @@
 
 **Returns:** `void`
 
-### `removeSplitMarkers(ro.sync.ecss.g.j arg0, ro.sync.ecss.changetracking.j arg1, int arg2)`
+### `removeSplitMarkers(j arg0, j arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.g.j`)
@@ -175,7 +175,7 @@
 
 **Returns:** `void`
 
-### `canHandleEvent(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType arg1)`
+### `canHandleEvent(AuthorAccess arg0, AuthorActionEventHandler.AuthorActionEventType arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -183,7 +183,7 @@
 
 **Returns:** `boolean`
 
-### `canChangeCodeblockIndentation(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.AuthorActionEventHandler.AuthorActionEventType arg1)`
+### `canChangeCodeblockIndentation(AuthorAccess arg0, AuthorActionEventHandler.AuthorActionEventType arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -191,7 +191,7 @@
 
 **Returns:** `boolean`
 
-### `canMoveListItems(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `canMoveListItems(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -202,7 +202,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getContentCompletionActions(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1)`
+### `getContentCompletionActions(AuthorAccess arg0, int arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -210,7 +210,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction>`
 
-### `getConvertListItemToParaAction(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1)`
+### `getConvertListItemToParaAction(AuthorAccess arg0, AuthorElement arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -218,7 +218,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](editor/IAuthorExtensionAction.md)
 
-### `getUnindentListItemAction(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1)`
+### `getUnindentListItemAction(AuthorAccess arg0, AuthorElement arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -226,7 +226,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.IAuthorExtensionAction`](editor/IAuthorExtensionAction.md)
 
-### `isInsideNestedList(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1)`
+### `isInsideNestedList(AuthorAccess arg0, AuthorElement arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -234,7 +234,7 @@
 
 **Returns:** `boolean`
 
-### `getConvertToActionName(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1, java.lang.String arg2)`
+### `getConvertToActionName(AuthorAccess arg0, AuthorElement arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -243,7 +243,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getLastListItemToConvert(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1)`
+### `getLastListItemToConvert(AuthorAccess arg0, AuthorElement arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))
@@ -251,7 +251,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md)
 
-### `extractElementInternal(ro.sync.ecss.extensions.api.node.AuthorElement arg0)`
+### `extractElementInternal(AuthorElement arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](node/AuthorElement.md))

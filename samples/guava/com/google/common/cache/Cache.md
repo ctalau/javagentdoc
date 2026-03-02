@@ -20,16 +20,14 @@ Implementations of this interface are expected to be thread-safe, and can be saf
 
 ## Methods
 
-### `getIfPresent(java.lang.Object key)`
-
-**Returns:** `V`
+### `getIfPresent(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `get(K key, java.util.concurrent.Callable<? extends V> loader)`
-
 **Returns:** `V`
+
+### `get(K key, Callable<? extends V> loader)`
 
 The method improves upon the conventional "if cached, return; otherwise
  create, cache and return" pattern. For further improvements, use LoadingCache and its
@@ -80,9 +78,9 @@ No observable state associated with this cache is modified until loading complet
 - `key` (`K`)
 - `loader` (`java.util.concurrent.Callable<? extends V>`)
 
-### `getAllPresent(java.lang.Iterable<? extends java.lang.Object> keys)`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
+### `getAllPresent(Iterable<? extends Object> keys)`
 
 The returned map will
  only contain entries which are already present in the cache.
@@ -90,9 +88,9 @@ The returned map will
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
 
-### `put(K key, V value)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-**Returns:** `void`
+### `put(K key, V value)`
 
 If the cache previously contained a
  value associated with key, the old value is replaced by value.
@@ -105,9 +103,9 @@ Prefer #get(Object, Callable) when using the conventional "if cached, return;
 - `key` (`K`)
 - `value` (`V`)
 
-### `putAll(java.util.Map<? extends K,? extends V> m)`
-
 **Returns:** `void`
+
+### `putAll(Map<? extends K,? extends V> m)`
 
 The effect of this call is
  equivalent to that of calling put(k, v) on this map once for each mapping from key
@@ -117,19 +115,21 @@ The effect of this call is
 **Parameters:**
 - `m` (`java.util.Map<? extends K,? extends V>`)
 
-### `invalidate(java.lang.Object key)`
-
 **Returns:** `void`
+
+### `invalidate(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `invalidateAll(java.lang.Iterable<? extends java.lang.Object> keys)`
-
 **Returns:** `void`
+
+### `invalidateAll(Iterable<? extends Object> keys)`
 
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
+
+**Returns:** `void`
 
 ### `invalidateAll()`
 
@@ -141,8 +141,6 @@ The effect of this call is
 
 ### `stats()`
 
-**Returns:** [`com.google.common.cache.CacheStats`](./CacheStats.md)
-
 All statistics begin at zero and never decrease over the
  lifetime of the cache.
 
@@ -152,9 +150,9 @@ All statistics begin at zero and never decrease over the
  was called. If statistics are not being recorded, a CacheStats instance with zero for
  all values is returned.
 
-### `asMap()`
+**Returns:** [`com.google.common.cache.CacheStats`](./CacheStats.md)
 
-**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
+### `asMap()`
 
 Modifications made to
  the map directly affect the cache.
@@ -164,10 +162,12 @@ Iterators from the returned map are at least *weakly consistent*: they are safe 
  concurrent use, but if the cache is modified (including by eviction) after the iterator is
  created, it is undefined which of the changes (if any) will be reflected in that iterator.
 
-### `cleanUp()`
+**Returns:** `java.util.concurrent.ConcurrentMap<K,V>`
 
-**Returns:** `void`
+### `cleanUp()`
 
 Exactly which activities are
  performed -- if any -- is implementation-dependent.
+
+**Returns:** `void`
 

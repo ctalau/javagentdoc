@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `performDiff(java.io.Reader arg0, java.io.Reader arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, ro.sync.diff.api.DiffOptions arg5, ro.sync.diff.api.DiffProgressListener arg6)`
+### `performDiff(Reader arg0, Reader arg1, String arg2, String arg3, String arg4, DiffOptions arg5, DiffProgressListener arg6)`
 
 **Parameters:**
 - `arg0` (`java.io.Reader`)
@@ -19,7 +19,7 @@
 
 **Returns:** `java.util.List<ro.sync.diff.api.Difference>`
 
-### `performDiff(java.io.Reader arg0, java.io.Reader arg1, java.io.Reader arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6, ro.sync.diff.api.DiffOptions arg7, ro.sync.diff.api.DiffProgressListener arg8)`
+### `performDiff(Reader arg0, Reader arg1, Reader arg2, String arg3, String arg4, String arg5, String arg6, DiffOptions arg7, DiffProgressListener arg8)`
 
 **Parameters:**
 - `arg0` (`java.io.Reader`)

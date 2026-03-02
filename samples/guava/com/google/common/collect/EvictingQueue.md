@@ -51,13 +51,13 @@ This class is not thread-safe, and does not accept null elements.
 
 ### `create(int maxSize)`
 
-**Returns:** [`com.google.common.collect.EvictingQueue<E>`](./EvictingQueue.md)
-
 When maxSize is zero, elements will be evicted immediately after being added to the
  queue.
 
 **Parameters:**
 - `maxSize` (`int`)
+
+**Returns:** [`com.google.common.collect.EvictingQueue<E>`](./EvictingQueue.md)
 
 ### `remainingCapacity()`
 
@@ -69,30 +69,30 @@ When maxSize is zero, elements will be evicted immediately after being added to 
 
 ### `offer(E e)`
 
-**Returns:** `boolean`
-
 If the queue is currently full, the element at the head
  of the queue is evicted to make room.
 
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `boolean`
 
 ### `add(E e)`
 
-**Returns:** `boolean`
-
 If the queue is currently full, the element at the head
  of the queue is evicted to make room.
 
 **Parameters:**
 - `e` (`E`)
 
-### `addAll(java.util.Collection<? extends E> collection)`
-
 **Returns:** `boolean`
+
+### `addAll(Collection<? extends E> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<? extends E>`)
+
+**Returns:** `boolean`
 
 ### `toArray()`
 

@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `getSortParent(int offset, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getSortParent(int offset, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -28,21 +28,21 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)
 
-### `getBodyElement(ro.sync.ecss.extensions.api.node.AuthorNode currentElement)`
+### `getBodyElement(AuthorNode currentElement)`
 
 **Parameters:**
 - `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md)): The current author node.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)
 
-### `isIgnored(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isIgnored(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `getSortKeysValues(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.commons.sort.SortCriteriaInformation sortInfo)`
+### `getSortKeysValues(AuthorNode node, SortCriteriaInformation sortInfo)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))
@@ -50,7 +50,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `getSortCriteria(ro.sync.ecss.extensions.api.node.AuthorElement parent)`
+### `getSortCriteria(AuthorElement parent)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
@@ -61,7 +61,7 @@
 
 **Returns:** `boolean`
 
-### `isCaretInColumn(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int columnNumber)`
+### `isCaretInColumn(AuthorAccess authorAccess, int columnNumber)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md)): The author access.
@@ -69,49 +69,49 @@
 
 **Returns:** `boolean`
 
-### `getRowIndexForTableBody(ro.sync.ecss.extensions.api.node.AuthorNode parent)`
+### `getRowIndexForTableBody(AuthorNode parent)`
 
 **Parameters:**
 - `parent` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))
 
 **Returns:** `int`
 
-### `isTableBody(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableBody(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)): The element to be checked.
 
 **Returns:** `boolean`
 
-### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableRow(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)): The element to be checked.
 
 **Returns:** `boolean`
 
-### `isTableHead(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableHead(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)): The element to be checked.
 
 **Returns:** `boolean`
 
-### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableFoot(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)): The element to be checked.
 
 **Returns:** `boolean`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTable(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)): The element to be checked.
 
 **Returns:** `boolean`
 
-### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isTableGroup(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md)): The element to be checked.

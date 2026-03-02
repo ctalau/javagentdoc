@@ -70,7 +70,7 @@ The provider is useful in order for Oxygen to show the static text in place in t
 
 ## Methods
 
-### `getProperty(java.lang.String propertyName)`
+### `getProperty(String propertyName)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:
@@ -90,7 +90,7 @@ The provider is useful in order for Oxygen to show the static text in place in t
 
 **Returns:** `java.lang.Object`
 
-### `setProperty(java.lang.String propertyName, java.lang.Object propertyValue)`
+### `setProperty(String propertyName, Object propertyValue)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:
@@ -115,7 +115,7 @@ The provider is useful in order for Oxygen to show the static text in place in t
 
 **Returns:** `java.lang.String`
 
-### `setAttribute(java.lang.String attributeName, java.lang.String attributeValue)`
+### `setAttribute(String attributeName, String attributeValue)`
 
 For example the application may use the "format" attribute to hide when inserting key references, 
  key definitions which point to DITA resources.

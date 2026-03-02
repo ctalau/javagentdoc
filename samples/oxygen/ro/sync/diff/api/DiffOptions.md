@@ -327,7 +327,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setDefaultXPath(java.lang.String arg0)`
+### `setDefaultXPath(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

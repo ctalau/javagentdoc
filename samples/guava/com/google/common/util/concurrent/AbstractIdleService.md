@@ -37,12 +37,12 @@ Subclasses can implement #startUp and #shutDown methods, each which
 
 ### `executor()`
 
-**Returns:** `java.util.concurrent.Executor`
-
 Subclasses may override
  this method to use a custom Executor, which may configure its worker thread with a
  specific name, thread group or priority. The returned executor's execute() method is called when this service is started and
  stopped, and should return promptly.
+
+**Returns:** `java.util.concurrent.Executor`
 
 ### `toString()`
 
@@ -56,13 +56,13 @@ Subclasses may override
 
 **Returns:** `com.google.common.util.concurrent.Service.State`
 
-### `addListener(com.google.common.util.concurrent.Service.Listener listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Service.Listener listener, Executor executor)`
 
 **Parameters:**
 - `listener` (`com.google.common.util.concurrent.Service.Listener`)
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** `void`
 
 ### `failureCause()`
 
@@ -80,44 +80,44 @@ Subclasses may override
 
 **Returns:** `void`
 
-### `awaitRunning(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitRunning(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitRunning(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitRunning(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `void`
 
 ### `awaitTerminated()`
 
 **Returns:** `void`
 
-### `awaitTerminated(java.time.Duration timeout)`
-
-**Returns:** `void`
+### `awaitTerminated(Duration timeout)`
 
 **Parameters:**
 - `timeout` (`java.time.Duration`)
 
-### `awaitTerminated(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitTerminated(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `serviceName()`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `serviceName()`
 
 AbstractIdleService may include the name in debugging
  output.
+
+**Returns:** `java.lang.String`
 

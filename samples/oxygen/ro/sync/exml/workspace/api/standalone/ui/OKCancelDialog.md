@@ -52,14 +52,14 @@
 
 ## Constructors
 
-### `<init>(javax.swing.JFrame arg0, java.lang.String arg1, boolean arg2)`
+### `<init>(JFrame arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JFrame`)
 - `arg1` (`java.lang.String`)
 - `arg2` (`boolean`)
 
-### `<init>(java.awt.Frame arg0, java.lang.String arg1, boolean arg2)`
+### `<init>(Frame arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)
@@ -68,7 +68,7 @@
 
 ## Methods
 
-### `detectParentFrame(java.awt.Window arg0)`
+### `detectParentFrame(Window arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Window`)
@@ -91,14 +91,14 @@
 
 **Returns:** `int`
 
-### `setOkButtonText(java.lang.String arg0)`
+### `setOkButtonText(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setCancelButtonText(java.lang.String arg0)`
+### `setCancelButtonText(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -109,7 +109,7 @@
 
 **Returns:** `java.awt.Container`
 
-### `setButtonText(javax.swing.JButton arg0, java.lang.String arg1)`
+### `setButtonText(JButton arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JButton`)
@@ -136,7 +136,7 @@
 
 **Returns:** `void`
 
-### `getHiDPIAwareDimension(java.awt.Dimension arg0)`
+### `getHiDPIAwareDimension(Dimension arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Dimension`)

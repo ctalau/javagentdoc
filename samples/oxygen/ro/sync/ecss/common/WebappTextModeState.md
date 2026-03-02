@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String xmlContent, int caretOffset)`
+### `<init>(String xmlContent, int caretOffset)`
 
 **Parameters:**
 - `xmlContent` (`java.lang.String`): The text mode content.

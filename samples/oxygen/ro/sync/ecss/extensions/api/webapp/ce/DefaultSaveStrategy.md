@@ -16,7 +16,7 @@ Saves all changes at once, as the user who triggered the save.
 
 ## Methods
 
-### `openConnection(java.net.URL documentUrl, ro.sync.ecss.extensions.api.webapp.ce.PeerContext committer, java.util.List<ro.sync.ecss.extensions.api.webapp.ce.PeerContext> authors)`
+### `openConnection(URL documentUrl, PeerContext committer, List<PeerContext> authors)`
 
 **Parameters:**
 - `documentUrl` (`java.net.URL`)

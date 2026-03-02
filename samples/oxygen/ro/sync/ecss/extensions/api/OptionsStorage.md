@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setOptionsDoctypePrefix(java.lang.String optionsDoctypePrefix)`
+### `setOptionsDoctypePrefix(String optionsDoctypePrefix)`
 
 **Parameters:**
 - `optionsDoctypePrefix` (`java.lang.String`): The document type prefix used to build the options keys.
@@ -16,7 +16,7 @@
 
 **Returns:** `void`
 
-### `addOptionListener(ro.sync.ecss.extensions.api.OptionListener listener)`
+### `addOptionListener(OptionListener listener)`
 
 The listener is notified when the value of its associated option changes.
 
@@ -25,14 +25,14 @@ The listener is notified when the value of its associated option changes.
 
 **Returns:** `void`
 
-### `removeOptionListener(ro.sync.ecss.extensions.api.OptionListener listener)`
+### `removeOptionListener(OptionListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.OptionListener`](./OptionListener.md)): The OptionListener to be removed.
 
 **Returns:** `void`
 
-### `getOption(java.lang.String key, java.lang.String defaultValue)`
+### `getOption(String key, String defaultValue)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key that uniquely identifies an option.
@@ -40,7 +40,7 @@ The listener is notified when the value of its associated option changes.
 
 **Returns:** `java.lang.String`
 
-### `setOption(java.lang.String key, java.lang.String value)`
+### `setOption(String key, String value)`
 
 If the supplied value is `null`
  The option will be removed from storage.

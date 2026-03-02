@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `acceptDragOverURLs(java.util.List resourcesToRefer, ro.sync.ecss.extensions.api.node.AuthorNode contextNode, boolean asChild)`
+### `acceptDragOverURLs(List resourcesToRefer, AuthorNode contextNode, boolean asChild)`
 
 Use this method to accept or reject it.
 
@@ -24,7 +24,7 @@ Use this method to accept or reject it.
 
 **Returns:** `boolean`
 
-### `consumeDropURLs(java.util.List resourcesToRefer, ro.sync.ecss.extensions.api.node.AuthorNode destination, boolean asChild)`
+### `consumeDropURLs(List resourcesToRefer, AuthorNode destination, boolean asChild)`
 
 **Parameters:**
 - `resourcesToRefer` (`java.util.List`): The resources which will be dropped, usually URL or File objects.

@@ -18,7 +18,7 @@ This content will appear inline in the Author page for that particular keyref.
 
 ## Methods
 
-### `getContent(java.lang.String nodeClass)`
+### `getContent(String nodeClass)`
 
 For an XML like:
 
@@ -35,7 +35,7 @@ For an XML like:
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

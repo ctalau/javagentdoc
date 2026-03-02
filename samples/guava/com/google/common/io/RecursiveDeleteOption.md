@@ -16,10 +16,10 @@
 
 **Returns:** [`com.google.common.io.RecursiveDeleteOption[]`](./RecursiveDeleteOption.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.io.RecursiveDeleteOption`](./RecursiveDeleteOption.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`com.google.common.io.RecursiveDeleteOption`](./RecursiveDeleteOption.md)
 

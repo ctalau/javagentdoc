@@ -32,14 +32,14 @@ The value is `Split point`.
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper tableHelper)`
+### `<init>(AuthorTableHelper tableHelper)`
 
 **Parameters:**
 - `tableHelper` ([`ro.sync.ecss.extensions.commons.table.operations.AuthorTableHelper`](./AuthorTableHelper.md)): Document type specific table information helper.
 
 ## Methods
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperationInternal(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -47,7 +47,7 @@ The value is `Split point`.
 
 **Returns:** `void`
 
-### `splitCell(ro.sync.ecss.extensions.api.node.AuthorElement cell, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean above)`
+### `splitCell(AuthorElement cell, AuthorAccess authorAccess, boolean above)`
 
 **Parameters:**
 - `cell` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The table cell to split.
@@ -56,7 +56,7 @@ The value is `Split point`.
 
 **Returns:** `void`
 
-### `clearCell(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, java.lang.String[] removedAttributes)`
+### `clearCell(AuthorAccess authorAccess, AuthorElement cellElem, String[] removedAttributes)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): Access to author functionality.

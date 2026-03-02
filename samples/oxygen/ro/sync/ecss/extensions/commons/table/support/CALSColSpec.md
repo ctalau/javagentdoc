@@ -63,7 +63,7 @@ This can be `true` if the separator
 
 ## Constructors
 
-### `<init>(int indexInDocument, int colNumber, boolean colNumberSpecified, java.lang.String colName, java.lang.String colWidth, java.lang.Boolean colSep, java.lang.Boolean rowSep)`
+### `<init>(int indexInDocument, int colNumber, boolean colNumberSpecified, String colName, String colWidth, Boolean colSep, Boolean rowSep)`
 
 **Parameters:**
 - `indexInDocument` (`int`): Index in colspec elements list.
@@ -79,7 +79,7 @@ This can be `true` if the separator
      `false` if not, `null` if the framework default should apply. 
      For instance Docbook has the rowsep on true by default, while DITA on false.
 
-### `<init>(int indexInDocument, int colNumber, boolean colNumberSpecified, java.lang.String colName, ro.sync.ecss.extensions.api.WidthRepresentation colWidth)`
+### `<init>(int indexInDocument, int colNumber, boolean colNumberSpecified, String colName, WidthRepresentation colWidth)`
 
 The rowsep and colsep are set to null, i.e. the document type default.
 
@@ -124,7 +124,7 @@ The rowsep and colsep are set to null, i.e. the document type default.
 
 **Returns:** `java.lang.String`
 
-### `createXMLFragment(java.lang.String ns)`
+### `createXMLFragment(String ns)`
 
 The general format of the generated fragment is:
  
@@ -139,7 +139,7 @@ The general format of the generated fragment is:
 
 **Returns:** `java.lang.String`
 
-### `appendAttrWithValue(java.lang.StringBuilder buffer, java.lang.String attrName, java.lang.String attrValue, boolean allowEmptyValue)`
+### `appendAttrWithValue(StringBuilder buffer, String attrName, String attrValue, boolean allowEmptyValue)`
 
 **Parameters:**
 - `buffer` (`java.lang.StringBuilder`): The buffer where to append the attribute name and its value.
@@ -149,7 +149,7 @@ The general format of the generated fragment is:
 
 **Returns:** `void`
 
-### `setColWidth(ro.sync.ecss.extensions.api.WidthRepresentation colWidth)`
+### `setColWidth(WidthRepresentation colWidth)`
 
 **Parameters:**
 - `colWidth` ([`ro.sync.ecss.extensions.api.WidthRepresentation`](../../../api/WidthRepresentation.md)): The column width to be set.
@@ -160,7 +160,7 @@ The general format of the generated fragment is:
 
 **Returns:** `java.lang.String`
 
-### `setAlign(java.lang.String align)`
+### `setAlign(String align)`
 
 **Parameters:**
 - `align` (`java.lang.String`): The textAlign to set.

@@ -14,7 +14,7 @@ For example the InplaceEditorCSSConstants#PROPERTY_WIDTH can depend on the font
 
 ## Methods
 
-### `evaluateWidthProperty(java.util.Map<java.lang.String,java.lang.Object> arguments, int fontSize)`
+### `evaluateWidthProperty(Map<String,Object> arguments, int fontSize)`
 
 The value of this 
  property might depend on the font size so the form control must explicitly 
@@ -36,7 +36,7 @@ The value of this
 
 **Returns:** `int`
 
-### `evaluateHeightProperty(java.util.Map<java.lang.String,java.lang.Object> arguments, int fontSize)`
+### `evaluateHeightProperty(Map<String,Object> arguments, int fontSize)`
 
 The value of this 
  property might depend on the font size so the form control must explicitly 

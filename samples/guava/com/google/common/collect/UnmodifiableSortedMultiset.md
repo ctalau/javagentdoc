@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.SortedMultiset<E> delegate)`
+### `<init>(SortedMultiset<E> delegate)`
 
 **Parameters:**
 - `delegate` ([`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md))
@@ -69,17 +69,15 @@
 
 **Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
-### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
-
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+### `headMultiset(E upperBound, BoundType boundType)`
 
 **Parameters:**
 - `upperBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `subMultiset(E lowerBound, com.google.common.collect.BoundType lowerBoundType, E upperBound, com.google.common.collect.BoundType upperBoundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `subMultiset(E lowerBound, BoundType lowerBoundType, E upperBound, BoundType upperBoundType)`
 
 **Parameters:**
 - `lowerBound` (`E`)
@@ -87,11 +85,13 @@
 - `upperBound` (`E`)
 - `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `tailMultiset(E lowerBound, BoundType boundType)`
 
 **Parameters:**
 - `lowerBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 

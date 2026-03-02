@@ -58,47 +58,45 @@ See the java.util.concurrent.atomic package specification for description of the
 
 ### `get(int i)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `i` (`int`): the index
+
+**Returns:** `double`
 
 ### `set(int i, double newValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `i` (`int`): the index
 - `newValue` (`double`): the new value
+
+**Returns:** `void`
 
 ### `lazySet(int i, double newValue)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `i` (`int`): the index
 - `newValue` (`double`): the new value
+
+**Returns:** `void`
 
 ### `getAndSet(int i, double newValue)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `i` (`int`): the index
 - `newValue` (`double`): the new value
 
-### `compareAndSet(int i, double expect, double update)`
+**Returns:** `double`
 
-**Returns:** `boolean`
+### `compareAndSet(int i, double expect, double update)`
 
 **Parameters:**
 - `i` (`int`): the index
 - `expect` (`double`): the expected value
 - `update` (`double`): the new value
 
-### `weakCompareAndSet(int i, double expect, double update)`
-
 **Returns:** `boolean`
+
+### `weakCompareAndSet(int i, double expect, double update)`
 
 May [
  fail spuriously](http://download.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/package-summary.html#Spurious) and does not provide ordering guarantees, so is only rarely an appropriate
@@ -109,71 +107,73 @@ May [
 - `expect` (`double`): the expected value
 - `update` (`double`): the new value
 
-### `getAndAdd(int i, double delta)`
+**Returns:** `boolean`
 
-**Returns:** `double`
+### `getAndAdd(int i, double delta)`
 
 **Parameters:**
 - `i` (`int`): the index
 - `delta` (`double`): the value to add
+
+**Returns:** `double`
 
 ### `addAndGet(int i, double delta)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `i` (`int`): the index
 - `delta` (`double`): the value to add
 
-### `getAndAccumulate(int i, double x, java.util.function.DoubleBinaryOperator accumulatorFunction)`
-
 **Returns:** `double`
+
+### `getAndAccumulate(int i, double x, DoubleBinaryOperator accumulatorFunction)`
 
 **Parameters:**
 - `i` (`int`): the index to update
 - `x` (`double`): the update value
 - `accumulatorFunction` (`java.util.function.DoubleBinaryOperator`): the accumulator function
 
-### `accumulateAndGet(int i, double x, java.util.function.DoubleBinaryOperator accumulatorFunction)`
-
 **Returns:** `double`
+
+### `accumulateAndGet(int i, double x, DoubleBinaryOperator accumulatorFunction)`
 
 **Parameters:**
 - `i` (`int`): the index to update
 - `x` (`double`): the update value
 - `accumulatorFunction` (`java.util.function.DoubleBinaryOperator`): the accumulator function
 
-### `getAndUpdate(int i, java.util.function.DoubleUnaryOperator updaterFunction)`
-
 **Returns:** `double`
+
+### `getAndUpdate(int i, DoubleUnaryOperator updaterFunction)`
 
 **Parameters:**
 - `i` (`int`): the index to update
 - `updaterFunction` (`java.util.function.DoubleUnaryOperator`): the update function
 
-### `updateAndGet(int i, java.util.function.DoubleUnaryOperator updaterFunction)`
-
 **Returns:** `double`
+
+### `updateAndGet(int i, DoubleUnaryOperator updaterFunction)`
 
 **Parameters:**
 - `i` (`int`): the index to update
 - `updaterFunction` (`java.util.function.DoubleUnaryOperator`): the update function
+
+**Returns:** `double`
 
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
-### `writeObject(java.io.ObjectOutputStream s)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream s)`
 
 **Parameters:**
 - `s` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream s)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream s)`
 
 **Parameters:**
 - `s` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

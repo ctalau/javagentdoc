@@ -40,16 +40,14 @@ If your answers are:
 
 ## Constructors
 
-### `<init>(com.google.common.graph.SuccessorsFunction<N> successorFunction)`
+### `<init>(SuccessorsFunction<N> successorFunction)`
 
 **Parameters:**
 - `successorFunction` ([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md))
 
 ## Methods
 
-### `forGraph(com.google.common.graph.SuccessorsFunction<N> graph)`
-
-**Returns:** [`com.google.common.graph.Traverser<N>`](./Traverser.md)
+### `forGraph(SuccessorsFunction<N> graph)`
 
 Traversers created using this method are guaranteed to visit each node reachable from the
  start node(s) at most once.
@@ -74,9 +72,9 @@ If you know that no node in graph is reachable by more than one path from the st
 **Parameters:**
 - `graph` ([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md)): SuccessorsFunction representing a general graph that may have cycles.
 
-### `forTree(com.google.common.graph.SuccessorsFunction<N> tree)`
-
 **Returns:** [`com.google.common.graph.Traverser<N>`](./Traverser.md)
+
+### `forTree(SuccessorsFunction<N> tree)`
 
 forTree() is especially useful (versus forGraph()) in cases where the data
  structure being traversed is, in addition to being a tree/forest, also defined [recursively](https://github.com/google/guava/wiki/GraphsExplained#non-recursiveness).
@@ -170,11 +168,11 @@ This method can be used to traverse over a binary tree. Given methods
 
 **Parameters:**
 - `tree` ([`com.google.common.graph.SuccessorsFunction<N>`](./SuccessorsFunction.md)): SuccessorsFunction representing a directed acyclic graph that has at most
-     one path between any two nodes
+       one path between any two nodes
+
+**Returns:** [`com.google.common.graph.Traverser<N>`](./Traverser.md)
 
 ### `breadthFirst(N startNode)`
-
-**Returns:** `java.lang.Iterable<N>`
 
 That is, all the nodes of depth 0 are returned, then
  depth 1, then 2, and so on.
@@ -220,9 +218,9 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search) for more
 **Parameters:**
 - `startNode` (`N`)
 
-### `breadthFirst(java.lang.Iterable<? extends N> startNodes)`
-
 **Returns:** `java.lang.Iterable<N>`
+
+### `breadthFirst(Iterable<? extends N> startNodes)`
 
 This is equivalent to a breadth-first
  traversal of a graph with an additional root node whose successors are the listed 
@@ -231,9 +229,9 @@ This is equivalent to a breadth-first
 **Parameters:**
 - `startNodes` (`java.lang.Iterable<? extends N>`)
 
-### `depthFirstPreOrder(N startNode)`
-
 **Returns:** `java.lang.Iterable<N>`
+
+### `depthFirstPreOrder(N startNode)`
 
 "Pre-order" implies that nodes appear in the
  Iterable in the order in which they are first visited.
@@ -279,9 +277,9 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search) for more info.
 **Parameters:**
 - `startNode` (`N`)
 
-### `depthFirstPreOrder(java.lang.Iterable<? extends N> startNodes)`
-
 **Returns:** `java.lang.Iterable<N>`
+
+### `depthFirstPreOrder(Iterable<? extends N> startNodes)`
 
 This is equivalent to a
  depth-first pre-order traversal of a graph with an additional root node whose successors are
@@ -290,9 +288,9 @@ This is equivalent to a
 **Parameters:**
 - `startNodes` (`java.lang.Iterable<? extends N>`)
 
-### `depthFirstPostOrder(N startNode)`
-
 **Returns:** `java.lang.Iterable<N>`
+
+### `depthFirstPostOrder(N startNode)`
 
 "Post-order" implies that nodes appear in the
  Iterable in the order in which they are visited for the last time.
@@ -338,9 +336,9 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search) for more info.
 **Parameters:**
 - `startNode` (`N`)
 
-### `depthFirstPostOrder(java.lang.Iterable<? extends N> startNodes)`
-
 **Returns:** `java.lang.Iterable<N>`
+
+### `depthFirstPostOrder(Iterable<? extends N> startNodes)`
 
 This is equivalent to a
  depth-first post-order traversal of a graph with an additional root node whose successors are
@@ -349,14 +347,16 @@ This is equivalent to a
 **Parameters:**
 - `startNodes` (`java.lang.Iterable<? extends N>`)
 
+**Returns:** `java.lang.Iterable<N>`
+
 ### `newTraversal()`
 
 **Returns:** `com.google.common.graph.Traverser.Traversal<N>`
 
-### `validate(java.lang.Iterable<? extends N> startNodes)`
-
-**Returns:** [`com.google.common.collect.ImmutableSet<N>`](../collect/ImmutableSet.md)
+### `validate(Iterable<? extends N> startNodes)`
 
 **Parameters:**
 - `startNodes` (`java.lang.Iterable<? extends N>`)
+
+**Returns:** [`com.google.common.collect.ImmutableSet<N>`](../collect/ImmutableSet.md)
 

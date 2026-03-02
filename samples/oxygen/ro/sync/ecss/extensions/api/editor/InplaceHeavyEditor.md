@@ -14,7 +14,7 @@ It differs from the classic
 
 ## Methods
 
-### `getRenderingInfo(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `getRenderingInfo(AuthorInplaceContext context)`
 
 This contains information about the baseline
  and the size in a certain context. The baseline is measured from the top of 
@@ -28,7 +28,7 @@ This contains information about the baseline
 
 **Returns:** [`ro.sync.ecss.extensions.api.editor.RendererLayoutInfo`](./RendererLayoutInfo.md)
 
-### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation)`
+### `getEditorComponent(AuthorInplaceContext context, Rectangle allocation)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context where the editor will be used.

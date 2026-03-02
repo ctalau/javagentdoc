@@ -12,9 +12,7 @@
 
 ## Methods
 
-### `getPackageName(java.lang.Class<?> clazz)`
-
-**Returns:** `java.lang.String`
+### `getPackageName(Class<?> clazz)`
 
 Unlike Class#getPackage, this method only parses the class name, without
  attempting to define the Package and hence load files.
@@ -22,9 +20,9 @@ Unlike Class#getPackage, this method only parses the class name, without
 **Parameters:**
 - `clazz` (`java.lang.Class<?>`)
 
-### `getPackageName(java.lang.String classFullName)`
-
 **Returns:** `java.lang.String`
+
+### `getPackageName(String classFullName)`
 
 Unlike Class#getPackage, this method only parses the class name, without
  attempting to define the Package and hence load files.
@@ -32,9 +30,9 @@ Unlike Class#getPackage, this method only parses the class name, without
 **Parameters:**
 - `classFullName` (`java.lang.String`)
 
-### `initialize(java.lang.Class<?>[] classes)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `initialize(Class<?>[] classes)`
 
 WARNING: Normally it's a smell if a class needs to be explicitly initialized, because static
  state hurts system maintainability and testability. In cases when you have no choice while
@@ -43,9 +41,9 @@ WARNING: Normally it's a smell if a class needs to be explicitly initialized, be
 **Parameters:**
 - `classes` (`java.lang.Class<?>[]`)
 
-### `newProxy(java.lang.Class<T> interfaceType, java.lang.reflect.InvocationHandler handler)`
+**Returns:** `void`
 
-**Returns:** `T`
+### `newProxy(Class<T> interfaceType, InvocationHandler handler)`
 
 The class loader of interfaceType will be used to
  define the proxy class. To implement multiple interfaces or specify a class loader, use Proxy#newProxyInstance.
@@ -53,4 +51,6 @@ The class loader of interfaceType will be used to
 **Parameters:**
 - `interfaceType` (`java.lang.Class<T>`)
 - `handler` (`java.lang.reflect.InvocationHandler`)
+
+**Returns:** `T`
 

@@ -54,7 +54,7 @@
 
 **Returns:** `java.lang.String`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTable(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../../api/node/AuthorElement.md))

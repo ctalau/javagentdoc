@@ -27,7 +27,7 @@ TODO(jlevy): Consider separate class for a
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableList<E> elements, java.util.Comparator<? super E> comparator)`
+### `<init>(ImmutableList<E> elements, Comparator<? super E> comparator)`
 
 **Parameters:**
 - `elements` ([`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md))
@@ -59,56 +59,56 @@ TODO(jlevy): Consider separate class for a
 
 **Returns:** `java.util.Spliterator<E>`
 
-### `forEach(java.util.function.Consumer<? super E> action)`
-
-**Returns:** `void`
+### `forEach(Consumer<? super E> action)`
 
 **Parameters:**
 - `action` (`java.util.function.Consumer<? super E>`)
+
+**Returns:** `void`
 
 ### `size()`
 
 **Returns:** `int`
 
-### `contains(java.lang.Object o)`
-
-**Returns:** `boolean`
+### `contains(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
 
-### `containsAll(java.util.Collection<?> targets)`
-
 **Returns:** `boolean`
+
+### `containsAll(Collection<?> targets)`
 
 **Parameters:**
 - `targets` (`java.util.Collection<?>`)
 
-### `unsafeBinarySearch(java.lang.Object key)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `unsafeBinarySearch(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `isPartialView()`
 
 **Returns:** `boolean`
 
-### `copyIntoArray(java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] dst, int offset)`
-
-**Returns:** `int`
+### `copyIntoArray(lang@Nullable Object[] dst, int offset)`
 
 **Parameters:**
 - `dst` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 - `offset` (`int`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `first()`
 
@@ -120,51 +120,49 @@ TODO(jlevy): Consider separate class for a
 
 ### `lower(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `E`
 
 ### `floor(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `E`
 
 ### `ceiling(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
+
+**Returns:** `E`
 
 ### `higher(E element)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `element` (`E`)
 
-### `headSetImpl(E toElement, boolean inclusive)`
+**Returns:** `E`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+### `headSetImpl(E toElement, boolean inclusive)`
 
 **Parameters:**
 - `toElement` (`E`)
 - `inclusive` (`boolean`)
+
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 ### `headIndex(E toElement, boolean inclusive)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `toElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
@@ -172,21 +170,23 @@ TODO(jlevy): Consider separate class for a
 - `toElement` (`E`)
 - `toInclusive` (`boolean`)
 
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
 ### `tailSetImpl(E fromElement, boolean inclusive)`
+
+**Parameters:**
+- `fromElement` (`E`)
+- `inclusive` (`boolean`)
 
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-**Parameters:**
-- `fromElement` (`E`)
-- `inclusive` (`boolean`)
-
 ### `tailIndex(E fromElement, boolean inclusive)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `fromElement` (`E`)
 - `inclusive` (`boolean`)
+
+**Returns:** `int`
 
 ### `unsafeComparator()`
 
@@ -194,18 +194,18 @@ TODO(jlevy): Consider separate class for a
 
 ### `getSubSet(int newFromIndex, int newToIndex)`
 
-**Returns:** [`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md)
-
 **Parameters:**
 - `newFromIndex` (`int`)
 - `newToIndex` (`int`)
 
-### `indexOf(java.lang.Object target)`
+**Returns:** [`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md)
 
-**Returns:** `int`
+### `indexOf(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `createAsList()`
 

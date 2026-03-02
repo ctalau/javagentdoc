@@ -93,16 +93,14 @@ This is extracted into its own object so that ServiceListener could
 
 ## Constructors
 
-### `<init>(java.lang.Iterable<? extends com.google.common.util.concurrent.Service> services)`
+### `<init>(Iterable<? extends Service> services)`
 
 **Parameters:**
 - `services` (`java.lang.Iterable<? extends com.google.common.util.concurrent.Service>`): The services to manage
 
 ## Methods
 
-### `addListener(com.google.common.util.concurrent.ServiceManager.Listener listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(ServiceManager.Listener listener, Executor executor)`
 
 The listener will not have previous state changes replayed, so it is suggested that
  listeners are added before any of the managed services are started.
@@ -129,23 +127,23 @@ When selecting an executor, note that directExecutor is dangerous in some cases.
 - `listener` (`com.google.common.util.concurrent.ServiceManager.Listener`): the listener to run when the manager changes state
 - `executor` (`java.util.concurrent.Executor`): the executor in which the listeners callback methods will be run.
 
-### `startAsync()`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.util.concurrent.ServiceManager`](./ServiceManager.md)
+### `startAsync()`
 
 It
  is only valid to call this method if all of the services are new.
 
-### `awaitHealthy()`
+**Returns:** [`com.google.common.util.concurrent.ServiceManager`](./ServiceManager.md)
 
-**Returns:** `void`
+### `awaitHealthy()`
 
 The manager
  will become healthy after all the component services have reached the running state.
 
-### `awaitHealthy(java.time.Duration timeout)`
-
 **Returns:** `void`
+
+### `awaitHealthy(Duration timeout)`
 
 The manager will become healthy after all the component services have
  reached the running state.
@@ -153,9 +151,9 @@ The manager will become healthy after all the component services have
 **Parameters:**
 - `timeout` (`java.time.Duration`): the maximum time to wait
 
-### `awaitHealthy(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitHealthy(long timeout, TimeUnit unit)`
 
 The manager will become healthy after all the component services have
  reached the running state.
@@ -163,6 +161,8 @@ The manager will become healthy after all the component services have
 **Parameters:**
 - `timeout` (`long`): the maximum time to wait
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the timeout argument
+
+**Returns:** `void`
 
 ### `stopAsync()`
 
@@ -170,14 +170,12 @@ The manager will become healthy after all the component services have
 
 ### `awaitStopped()`
 
-**Returns:** `void`
-
 After this method returns all
  services will either be terminated or failed.
 
-### `awaitStopped(java.time.Duration timeout)`
-
 **Returns:** `void`
+
+### `awaitStopped(Duration timeout)`
 
 After
  this method returns all services will either be terminated or failed.
@@ -185,9 +183,9 @@ After
 **Parameters:**
 - `timeout` (`java.time.Duration`): the maximum time to wait
 
-### `awaitStopped(long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `void`
+
+### `awaitStopped(long timeout, TimeUnit unit)`
 
 After
  this method returns all services will either be terminated or failed.
@@ -196,33 +194,35 @@ After
 - `timeout` (`long`): the maximum time to wait
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the timeout argument
 
-### `isHealthy()`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isHealthy()`
 
 Users who want more detailed information should use the #servicesByState method to
  get detailed information about which services are not running.
 
-### `servicesByState()`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.collect.ImmutableSetMultimap<com.google.common.util.concurrent.Service.State,com.google.common.util.concurrent.Service>`](../../collect/ImmutableSetMultimap.md)
+### `servicesByState()`
 
 N.B. This snapshot is guaranteed to be consistent, i.e. the set of states returned will
  correspond to a point in time view of the services.
 
+**Returns:** [`com.google.common.collect.ImmutableSetMultimap<com.google.common.util.concurrent.Service.State,com.google.common.util.concurrent.Service>`](../../collect/ImmutableSetMultimap.md)
+
 ### `startupTimes()`
+
+This value will only return startup times for services that
+ have finished starting.
 
 **Returns:** [`com.google.common.collect.ImmutableMap<com.google.common.util.concurrent.Service,java.lang.Long>`](../../collect/ImmutableMap.md)
 
-This value will only return startup times for services that
- have finished starting.
-
 ### `startupDurations()`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<com.google.common.util.concurrent.Service,java.time.Duration>`](../../collect/ImmutableMap.md)
-
 This value will only return startup times for services that
  have finished starting.
+
+**Returns:** [`com.google.common.collect.ImmutableMap<com.google.common.util.concurrent.Service,java.time.Duration>`](../../collect/ImmutableMap.md)
 
 ### `toString()`
 

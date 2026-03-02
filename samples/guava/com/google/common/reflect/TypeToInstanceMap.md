@@ -30,9 +30,7 @@ Like any other Map<Class, Object>, this map may contain entries for primitive ty
 
 ## Methods
 
-### `getInstance(java.lang.Class<T> type)`
-
-**Returns:** `T`
+### `getInstance(Class<T> type)`
 
 This will only return a value that was bound to this specific class, not a value
  that may have been bound to a subtype.
@@ -44,9 +42,9 @@ getInstance(Foo.class) is equivalent to
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `getInstance(com.google.common.reflect.TypeToken<T> type)`
-
 **Returns:** `T`
+
+### `getInstance(TypeToken<T> type)`
 
 This will only return a value that was bound to this specific type, not a value that
  may have been bound to a subtype.
@@ -54,9 +52,9 @@ This will only return a value that was bound to this specific type, not a value 
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<T>`](./TypeToken.md))
 
-### `putInstance(java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(Class<@NonNull T> type, T value)`
 
 Does *not* associate this value with any
  of the class's supertypes.
@@ -69,9 +67,9 @@ putInstance(Foo.class, foo) is equivalent to
 - `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>`)
 - `value` (`T`)
 
-### `putInstance(com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
-
 **Returns:** `T`
+
+### `putInstance(TypeToken<@NonNull T> type, T value)`
 
 Does *not* associate this value with any
  of the type's supertypes.
@@ -79,4 +77,6 @@ Does *not* associate this value with any
 **Parameters:**
 - `type` ([`com.google.common.reflect.TypeToken<@org.checkerframework.checker.nullness.qual.NonNull T>`](./TypeToken.md))
 - `value` (`T`)
+
+**Returns:** `T`
 

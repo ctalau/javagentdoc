@@ -27,7 +27,7 @@ By default it only handles custom persistent highlights but you can override the
 
 ## Methods
 
-### `getCalloutRenderingInformation(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `getCalloutRenderingInformation(AuthorPersistentHighlight highlight)`
 
 For **custom highlights** the callout rendering information is requested only for that custom
  persistent highlights for which the #shouldRenderAsCallout(AuthorPersistentHighlight)
@@ -45,7 +45,7 @@ For **custom highlights** the callout rendering information is requested only fo
 
 **Returns:** [`ro.sync.ecss.extensions.api.callouts.AuthorCalloutRenderingInformation`](./AuthorCalloutRenderingInformation.md)
 
-### `shouldRenderAsCallout(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `shouldRenderAsCallout(AuthorPersistentHighlight highlight)`
 
 The callouts are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom persistent highlights in Author mode.

@@ -8,28 +8,28 @@
 
 ## Methods
 
-### `mouseClicked(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseClicked(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
 
 **Returns:** `void`
 
-### `mousePressed(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mousePressed(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
 
 **Returns:** `void`
 
-### `mouseReleased(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseReleased(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.
 
 **Returns:** `void`
 
-### `mouseDragged(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseDragged(AuthorMouseEvent e)`
 
 `MOUSE_DRAGGED` events will continue to be 
  delivered to the author page where the drag originated until the 
@@ -41,7 +41,7 @@
 
 **Returns:** `void`
 
-### `mouseMoved(ro.sync.ecss.extensions.api.AuthorMouseEvent e)`
+### `mouseMoved(AuthorMouseEvent e)`
 
 **Parameters:**
 - `e` ([`ro.sync.ecss.extensions.api.AuthorMouseEvent`](./AuthorMouseEvent.md)): The AuthorMouseEvent.

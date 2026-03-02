@@ -22,7 +22,7 @@ A custom implementation to handle editing properties for an author node. For exa
 
 **Returns:** `java.lang.String`
 
-### `editProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `editProperties(AuthorNode authorNode, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
@@ -30,7 +30,7 @@ A custom implementation to handle editing properties for an author node. For exa
 
 **Returns:** `void`
 
-### `canEditProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+### `canEditProperties(AuthorNode authorNode)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))

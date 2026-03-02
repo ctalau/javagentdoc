@@ -14,7 +14,7 @@ Used to write document snapshots with changes made from the last save,
 
 ## Methods
 
-### `openConnection(java.net.URL documentUrl, ro.sync.ecss.extensions.api.webapp.ce.PeerContext author)`
+### `openConnection(URL documentUrl, PeerContext author)`
 
 It facilitates storing revisions for each peer individually.
 

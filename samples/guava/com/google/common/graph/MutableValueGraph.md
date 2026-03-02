@@ -20,16 +20,14 @@ When mutation is not required,
 
 ### `addNode(N node)`
 
-**Returns:** `boolean`
-
 **Nodes must be unique**, just as Map keys must be. They must also be non-null.
 
 **Parameters:**
 - `node` (`N`)
 
-### `putEdgeValue(N nodeU, N nodeV, V value)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `putEdgeValue(N nodeU, N nodeV, V value)`
 
 If the graph is directed, the resultant edge will be directed; otherwise, it will be
  undirected.
@@ -46,9 +44,9 @@ If nodeU and nodeV are not already present in this graph, this method will
 - `nodeV` (`N`)
 - `value` (`V`)
 
-### `putEdgeValue(com.google.common.graph.EndpointPair<N> endpoints, V value)`
-
 **Returns:** `V`
+
+### `putEdgeValue(EndpointPair<N> endpoints, V value)`
 
 If the graph is directed, the resultant edge will be directed; otherwise, it will be
  undirected.
@@ -67,27 +65,29 @@ If either or both endpoints are not already present in this graph, this method w
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 - `value` (`V`)
 
-### `removeNode(N node)`
+**Returns:** `V`
 
-**Returns:** `boolean`
+### `removeNode(N node)`
 
 **Parameters:**
 - `node` (`N`)
 
-### `removeEdge(N nodeU, N nodeV)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `removeEdge(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `removeEdge(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `V`
+
+### `removeEdge(EndpointPair<N> endpoints)`
 
 If this graph is directed, endpoints must be ordered.
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `V`
 

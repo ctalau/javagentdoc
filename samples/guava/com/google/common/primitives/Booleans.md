@@ -16,30 +16,28 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `trueFirst()`
 
-**Returns:** `java.util.Comparator<java.lang.Boolean>`
-
 This is particularly useful in Java 8+ in combination with Comparators.comparing,
  e.g. Comparators.comparing(Foo::hasBar, trueFirst()).
 
-### `falseFirst()`
-
 **Returns:** `java.util.Comparator<java.lang.Boolean>`
+
+### `falseFirst()`
 
 This is particularly useful in Java 8+ in combination with Comparators.comparing,
  e.g. Comparators.comparing(Foo::hasBar, falseFirst()).
 
-### `hashCode(boolean value)`
+**Returns:** `java.util.Comparator<java.lang.Boolean>`
 
-**Returns:** `int`
+### `hashCode(boolean value)`
 
 **Java 8 users:** use Boolean#hashCode(boolean) instead.
 
 **Parameters:**
 - `value` (`boolean`): a primitive boolean value
 
-### `compare(boolean a, boolean b)`
-
 **Returns:** `int`
+
+### `compare(boolean a, boolean b)`
 
 The sign of the value returned is the same as that of
  ((Boolean) a).compareTo(b).
@@ -52,9 +50,9 @@ The sign of the value returned is the same as that of
 - `a` (`boolean`): the first boolean to compare
 - `b` (`boolean`): the second boolean to compare
 
-### `contains(boolean[] array, boolean target)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `contains(boolean[] array, boolean target)`
 
 **Note:** consider representing the array as a java.util.BitSet instead,
  replacing Booleans.contains(array, true) with !bitSet.isEmpty() and 
@@ -64,9 +62,9 @@ The sign of the value returned is the same as that of
 - `array` (`boolean[]`): an array of boolean values, possibly empty
 - `target` (`boolean`): a primitive boolean value
 
-### `indexOf(boolean[] array, boolean target)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `indexOf(boolean[] array, boolean target)`
 
 **Note:** consider representing the array as a java.util.BitSet instead, and
  using java.util.BitSet#nextSetBit(int) or java.util.BitSet#nextClearBit(int).
@@ -75,9 +73,9 @@ The sign of the value returned is the same as that of
 - `array` (`boolean[]`): an array of boolean values, possibly empty
 - `target` (`boolean`): a primitive boolean value
 
-### `indexOf(boolean[] array, boolean target, int start, int end)`
-
 **Returns:** `int`
+
+### `indexOf(boolean[] array, boolean target, int start, int end)`
 
 **Parameters:**
 - `array` (`boolean[]`)
@@ -85,9 +83,9 @@ The sign of the value returned is the same as that of
 - `start` (`int`)
 - `end` (`int`)
 
-### `indexOf(boolean[] array, boolean[] target)`
-
 **Returns:** `int`
+
+### `indexOf(boolean[] array, boolean[] target)`
 
 More formally, returns the lowest index i such that Arrays.copyOfRange(array,
  i, i + target.length) contains exactly the same elements as target.
@@ -96,17 +94,17 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `array` (`boolean[]`): the array to search for the sequence target
 - `target` (`boolean[]`): the array to search for as a sub-sequence of array
 
-### `lastIndexOf(boolean[] array, boolean target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(boolean[] array, boolean target)`
 
 **Parameters:**
 - `array` (`boolean[]`): an array of boolean values, possibly empty
 - `target` (`boolean`): a primitive boolean value
 
-### `lastIndexOf(boolean[] array, boolean target, int start, int end)`
-
 **Returns:** `int`
+
+### `lastIndexOf(boolean[] array, boolean target, int start, int end)`
 
 **Parameters:**
 - `array` (`boolean[]`)
@@ -114,9 +112,9 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `start` (`int`)
 - `end` (`int`)
 
-### `concat(boolean[][] arrays)`
+**Returns:** `int`
 
-**Returns:** `boolean[]`
+### `concat(boolean[][] arrays)`
 
 For example, 
  concat(new boolean[] {a, b}, new boolean[] {}, new boolean[] {c} returns the array {a,
@@ -125,9 +123,9 @@ For example,
 **Parameters:**
 - `arrays` (`boolean[][]`): zero or more boolean arrays
 
-### `ensureCapacity(boolean[] array, int minLength, int padding)`
-
 **Returns:** `boolean[]`
+
+### `ensureCapacity(boolean[] array, int minLength, int padding)`
 
 If array already has a length of at least minLength,
  it is returned directly. Otherwise, a new array of size minLength + padding is
@@ -138,21 +136,21 @@ If array already has a length of at least minLength,
 - `minLength` (`int`): the minimum length the returned array must guarantee
 - `padding` (`int`): an extra amount to "grow" the array by if growth is necessary
 
-### `join(java.lang.String separator, boolean[] array)`
+**Returns:** `boolean[]`
 
-**Returns:** `java.lang.String`
+### `join(String separator, boolean[] array)`
 
 For example, join("-", false, true, false) returns the string 
  "false-true-false".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`boolean[]`): an array of boolean values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<boolean[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(boolean, boolean)), the first pair of values that follow any
@@ -164,9 +162,9 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(boolean[],
  boolean[]).
 
-### `toArray(java.util.Collection<java.lang.Boolean> collection)`
+**Returns:** `java.util.Comparator<boolean[]>`
 
-**Returns:** `boolean[]`
+### `toArray(Collection<Boolean> collection)`
 
 Elements are copied from the argument collection as if by collection.toArray().
  Calling this method is as thread-safe as calling that method.
@@ -177,9 +175,9 @@ Elements are copied from the argument collection as if by collection.toArray().
 **Parameters:**
 - `collection` (`java.util.Collection<java.lang.Boolean>`): a collection of Boolean objects
 
-### `asList(boolean[] backingArray)`
+**Returns:** `boolean[]`
 
-**Returns:** `java.util.List<java.lang.Boolean>`
+### `asList(boolean[] backingArray)`
 
 The list supports List#set(int, Object), but any attempt to
  set a value to null will result in a NullPointerException.
@@ -194,16 +192,16 @@ The returned list is serializable.
 **Parameters:**
 - `backingArray` (`boolean[]`): the array to back the list
 
-### `countTrue(boolean[] values)`
+**Returns:** `java.util.List<java.lang.Boolean>`
 
-**Returns:** `int`
+### `countTrue(boolean[] values)`
 
 **Parameters:**
 - `values` (`boolean[]`)
 
-### `reverse(boolean[] array)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `reverse(boolean[] array)`
 
 This is equivalent to 
  Collections.reverse(Booleans.asList(array)), but is likely to be more efficient.
@@ -211,9 +209,9 @@ This is equivalent to
 **Parameters:**
 - `array` (`boolean[]`)
 
-### `reverse(boolean[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `reverse(boolean[] array, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.reverse(Booleans.asList(array).subList(fromIndex, toIndex)), but is likely to be
@@ -224,9 +222,9 @@ This is equivalent to
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `rotate(boolean[] array, int distance)`
-
 **Returns:** `void`
+
+### `rotate(boolean[] array, int distance)`
 
 This is equivalent to Collections.rotate(Booleans.asList(array),
  distance), but is somewhat faster.
@@ -238,9 +236,9 @@ The provided "distance" may be negative, which will rotate left.
 - `array` (`boolean[]`)
 - `distance` (`int`)
 
-### `rotate(boolean[] array, int distance, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `rotate(boolean[] array, int distance, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.rotate(Booleans.asList(array).subList(fromIndex, toIndex), distance), but is
@@ -254,4 +252,6 @@ The provided "distance" may be negative, which will rotate left.
 - `distance` (`int`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
+
+**Returns:** `void`
 

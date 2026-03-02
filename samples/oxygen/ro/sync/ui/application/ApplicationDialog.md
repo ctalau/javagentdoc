@@ -169,7 +169,7 @@
 
 ## Methods
 
-### `registerListeners(javax.swing.JDialog arg0)`
+### `registerListeners(JDialog arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JDialog`)
@@ -195,7 +195,7 @@
 
 **Returns:** `void`
 
-### `setFocusTraversalPolicy(java.awt.FocusTraversalPolicy arg0)`
+### `setFocusTraversalPolicy(FocusTraversalPolicy arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.FocusTraversalPolicy`)
@@ -234,7 +234,7 @@
 
 **Returns:** `boolean`
 
-### `shouldIgnoreParent(java.awt.Window arg0)`
+### `shouldIgnoreParent(Window arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Window`)
@@ -245,7 +245,7 @@
 
 **Returns:** `boolean`
 
-### `xh(java.awt.Component arg0)`
+### `xh(Component arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Component`)
@@ -280,7 +280,7 @@
 
 **Returns:** `void`
 
-### `setLocation(java.awt.Point arg0)`
+### `setLocation(Point arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Point`)
@@ -309,7 +309,7 @@
 
 **Returns:** `void`
 
-### `setSize(java.awt.Dimension arg0)`
+### `setSize(Dimension arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Dimension`)
@@ -320,14 +320,14 @@
 
 **Returns:** `java.awt.Dimension`
 
-### `setTitleTag(java.lang.String arg0)`
+### `setTitleTag(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setTitle(java.lang.String arg0, java.lang.String arg1)`
+### `setTitle(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -339,7 +339,7 @@
 
 **Returns:** `java.lang.String`
 
-### `th(java.lang.String arg0)`
+### `th(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -350,7 +350,7 @@
 
 **Returns:** `java.awt.Cursor`
 
-### `setCursor(java.awt.Cursor arg0)`
+### `setCursor(Cursor arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Cursor`)
@@ -369,42 +369,42 @@
 
 **Returns:** `java.awt.Window`
 
-### `addComponentListener(java.awt.event.ComponentListener arg0)`
+### `addComponentListener(ComponentListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.ComponentListener`)
 
 **Returns:** `void`
 
-### `removeComponentListener(java.awt.event.ComponentListener arg0)`
+### `removeComponentListener(ComponentListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.ComponentListener`)
 
 **Returns:** `void`
 
-### `addWindowListener(java.awt.event.WindowListener arg0)`
+### `addWindowListener(WindowListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.WindowListener`)
 
 **Returns:** `void`
 
-### `removeWindowListener(java.awt.event.WindowListener arg0)`
+### `removeWindowListener(WindowListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.WindowListener`)
 
 **Returns:** `void`
 
-### `addKeyListener(java.awt.event.KeyListener arg0)`
+### `addKeyListener(KeyListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.KeyListener`)
 
 **Returns:** `void`
 
-### `removeKeyListener(java.awt.event.KeyListener arg0)`
+### `removeKeyListener(KeyListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.KeyListener`)
@@ -429,7 +429,7 @@
 
 **Returns:** `int`
 
-### `setJMenuBar(javax.swing.JMenuBar arg0)`
+### `setJMenuBar(JMenuBar arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JMenuBar`)
@@ -481,7 +481,7 @@
 
 **Returns:** `void`
 
-### `setMinimumSize(java.awt.Dimension arg0)`
+### `setMinimumSize(Dimension arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Dimension`)
@@ -566,7 +566,7 @@
 
 **Returns:** `boolean`
 
-### `isPopupShownFromThisDialog(ro.sync.ui.application.qb arg0)`
+### `isPopupShownFromThisDialog(qb arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ui.application.qb`)
@@ -585,14 +585,14 @@
 
 **Returns:** `void`
 
-### `setDefaultFocusedComponent(javax.swing.JComponent arg0)`
+### `setDefaultFocusedComponent(JComponent arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JComponent`)
 
 **Returns:** `void`
 
-### `setModalExclusionType(java.awt.Dialog.ModalExclusionType arg0)`
+### `setModalExclusionType(Dialog.ModalExclusionType arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Dialog.ModalExclusionType`)

@@ -37,7 +37,7 @@
 
 **Returns:** [`ro.sync.document.SyntaxDocumentBase`](../../document/SyntaxDocumentBase.md)
 
-### `setDoc(ro.sync.document.SyntaxDocumentBase arg0)`
+### `setDoc(SyntaxDocumentBase arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.SyntaxDocumentBase`](../../document/SyntaxDocumentBase.md))
@@ -48,7 +48,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)

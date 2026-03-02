@@ -64,9 +64,7 @@ Prior to this class, one might be tempted to use Map<K, Lock>, where K
 
 ## Methods
 
-### `get(java.lang.Object key)`
-
-**Returns:** `L`
+### `get(Object key)`
 
 It is always guaranteed that if 
  key1.equals(key2), then get(key1) == get(key2).
@@ -74,9 +72,9 @@ It is always guaranteed that if
 **Parameters:**
 - `key` (`java.lang.Object`): an arbitrary, non-null key
 
-### `getAt(int index)`
-
 **Returns:** `L`
+
+### `getAt(int index)`
 
 Valid indexes are 0, inclusively, to size(),
  exclusively.
@@ -84,20 +82,20 @@ Valid indexes are 0, inclusively, to size(),
 **Parameters:**
 - `index` (`int`): the index of the stripe to return; must be in [0...size())
 
-### `indexFor(java.lang.Object key)`
+**Returns:** `L`
 
-**Returns:** `int`
+### `indexFor(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `size()`
 
 **Returns:** `int`
 
-### `bulkGet(java.lang.Iterable<? extends java.lang.Object> keys)`
-
-**Returns:** `java.lang.Iterable<L>`
+### `bulkGet(Iterable<? extends Object> keys)`
 
 Thus, threads that use the stripes in the order returned by this method
  are guaranteed to not deadlock each other.
@@ -115,9 +113,9 @@ It should be noted that using a Striped<L> with relatively few stripes, and
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends java.lang.Object>`): arbitrary non-null keys
 
-### `custom(int stripes, com.google.common.base.Supplier<L> supplier)`
+**Returns:** `java.lang.Iterable<L>`
 
-**Returns:** [`com.google.common.util.concurrent.Striped<L>`](./Striped.md)
+### `custom(int stripes, Supplier<L> supplier)`
 
 Every lock is
  obtained from the passed supplier.
@@ -126,9 +124,9 @@ Every lock is
 - `stripes` (`int`): the minimum number of stripes (locks) required
 - `supplier` ([`com.google.common.base.Supplier<L>`](../../base/Supplier.md)): a Supplier<L> object to obtain locks from
 
-### `lock(int stripes)`
+**Returns:** [`com.google.common.util.concurrent.Striped<L>`](./Striped.md)
 
-**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.locks.Lock>`](./Striped.md)
+### `lock(int stripes)`
 
 Every lock
  is reentrant.
@@ -136,9 +134,9 @@ Every lock
 **Parameters:**
 - `stripes` (`int`): the minimum number of stripes (locks) required
 
-### `lazyWeakLock(int stripes)`
-
 **Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.locks.Lock>`](./Striped.md)
+
+### `lazyWeakLock(int stripes)`
 
 Every lock is
  reentrant.
@@ -146,59 +144,61 @@ Every lock is
 **Parameters:**
 - `stripes` (`int`): the minimum number of stripes (locks) required
 
-### `lazy(int stripes, com.google.common.base.Supplier<L> supplier)`
+**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.locks.Lock>`](./Striped.md)
 
-**Returns:** [`com.google.common.util.concurrent.Striped<L>`](./Striped.md)
+### `lazy(int stripes, Supplier<L> supplier)`
 
 **Parameters:**
 - `stripes` (`int`)
 - `supplier` ([`com.google.common.base.Supplier<L>`](../../base/Supplier.md))
 
-### `semaphore(int stripes, int permits)`
+**Returns:** [`com.google.common.util.concurrent.Striped<L>`](./Striped.md)
 
-**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.Semaphore>`](./Striped.md)
+### `semaphore(int stripes, int permits)`
 
 **Parameters:**
 - `stripes` (`int`): the minimum number of stripes (semaphores) required
 - `permits` (`int`): the number of permits in each semaphore
+
+**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.Semaphore>`](./Striped.md)
 
 ### `lazyWeakSemaphore(int stripes, int permits)`
 
-**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.Semaphore>`](./Striped.md)
-
 **Parameters:**
 - `stripes` (`int`): the minimum number of stripes (semaphores) required
 - `permits` (`int`): the number of permits in each semaphore
 
-### `readWriteLock(int stripes)`
+**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.Semaphore>`](./Striped.md)
 
-**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.locks.ReadWriteLock>`](./Striped.md)
+### `readWriteLock(int stripes)`
 
 Every lock is reentrant.
 
 **Parameters:**
 - `stripes` (`int`): the minimum number of stripes (locks) required
+
+**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.locks.ReadWriteLock>`](./Striped.md)
 
 ### `lazyWeakReadWriteLock(int stripes)`
 
-**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.locks.ReadWriteLock>`](./Striped.md)
-
 Every lock is reentrant.
 
 **Parameters:**
 - `stripes` (`int`): the minimum number of stripes (locks) required
 
-### `ceilToPowerOfTwo(int x)`
+**Returns:** [`com.google.common.util.concurrent.Striped<java.util.concurrent.locks.ReadWriteLock>`](./Striped.md)
 
-**Returns:** `int`
+### `ceilToPowerOfTwo(int x)`
 
 **Parameters:**
 - `x` (`int`)
 
-### `smear(int hashCode)`
-
 **Returns:** `int`
+
+### `smear(int hashCode)`
 
 **Parameters:**
 - `hashCode` (`int`)
+
+**Returns:** `int`
 

@@ -18,14 +18,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorViewToModelInfo`](../../../../../../ecss/extensions/api/AuthorViewToModelInfo.md)
 
-### `setPopUpMenuCustomizer(ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer popUpCustomizer)`
+### `setPopUpMenuCustomizer(AuthorPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer`](../../../../../../ecss/extensions/api/structure/AuthorPopupMenuCustomizer.md)): the pop-up menu customizer.
 
 **Returns:** `void`
 
-### `addPopUpMenuCustomizer(ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer popUpCustomizer)`
+### `addPopUpMenuCustomizer(AuthorPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer`](../../../../../../ecss/extensions/api/structure/AuthorPopupMenuCustomizer.md)): the pop-up menu customizer.
@@ -33,42 +33,42 @@
 
 **Returns:** `void`
 
-### `removePopUpMenuCustomizer(ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer popUpCustomizer)`
+### `removePopUpMenuCustomizer(AuthorPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.ecss.extensions.api.structure.AuthorPopupMenuCustomizer`](../../../../../../ecss/extensions/api/structure/AuthorPopupMenuCustomizer.md)): the pop-up menu customizer.
 
 **Returns:** `void`
 
-### `addAuthorMouseListener(ro.sync.ecss.extensions.api.AuthorMouseListener mouseListener)`
+### `addAuthorMouseListener(AuthorMouseListener mouseListener)`
 
 **Parameters:**
 - `mouseListener` ([`ro.sync.ecss.extensions.api.AuthorMouseListener`](../../../../../../ecss/extensions/api/AuthorMouseListener.md)): The AuthorMouseListener to be added.
 
 **Returns:** `void`
 
-### `removeAuthorMouseListener(ro.sync.ecss.extensions.api.AuthorMouseListener mouseListener)`
+### `removeAuthorMouseListener(AuthorMouseListener mouseListener)`
 
 **Parameters:**
 - `mouseListener` ([`ro.sync.ecss.extensions.api.AuthorMouseListener`](../../../../../../ecss/extensions/api/AuthorMouseListener.md)): The AuthorMouseListener to be removed.
 
 **Returns:** `void`
 
-### `addAuthorCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener caretListener)`
+### `addAuthorCaretListener(AuthorCaretListener caretListener)`
 
 **Parameters:**
 - `caretListener` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../../../../../../ecss/extensions/api/AuthorCaretListener.md)): The AuthorCaretListener to be added.
 
 **Returns:** `void`
 
-### `removeAuthorCaretListener(ro.sync.ecss.extensions.api.AuthorCaretListener caretListener)`
+### `removeAuthorCaretListener(AuthorCaretListener caretListener)`
 
 **Parameters:**
 - `caretListener` ([`ro.sync.ecss.extensions.api.AuthorCaretListener`](../../../../../../ecss/extensions/api/AuthorCaretListener.md)): The AuthorCaretListener to be removed.
 
 **Returns:** `void`
 
-### `refresh(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+### `refresh(AuthorNode authorNode)`
 
 **Note:** This should be called on the AWT thread because it will generate a layout event.
 
@@ -148,7 +148,7 @@ Use of this method is discouraged but it may be useful in some cases like:
 
 **Returns:** `java.lang.Object`
 
-### `getStyles(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getStyles(AuthorNode node)`
 
 This method **MUST** only be used to query styles. If you want to modify styles please use the StylesFilter.
 
@@ -157,7 +157,7 @@ This method **MUST** only be used to query styles. If you want to modify styles 
 
 **Returns:** `ro.sync.ecss.css.Styles`
 
-### `getPseudoElementStyles(ro.sync.ecss.extensions.api.node.AuthorParentNode node)`
+### `getPseudoElementStyles(AuthorParentNode node)`
 
 This method **MUST** only be used to query styles. If you want to modify styles, use the StylesFilter.
 
@@ -166,14 +166,14 @@ This method **MUST** only be used to query styles. If you want to modify styles,
 
 **Returns:** `java.util.Map<ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor,ro.sync.ecss.css.Styles>`
 
-### `addAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
+### `addAuthorAttributesDisplayFilter(AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
 **Parameters:**
 - `attributesDisplayFilter` ([`ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter`](../../../../../../ecss/extensions/api/attributes/AuthorAttributesDisplayFilter.md)): The AuthorAttributesDisplayFilter to be added.
 
 **Returns:** `void`
 
-### `removeAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
+### `removeAuthorAttributesDisplayFilter(AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
 **Parameters:**
 - `attributesDisplayFilter` ([`ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter`](../../../../../../ecss/extensions/api/attributes/AuthorAttributesDisplayFilter.md)): The AuthorAttributesDisplayFilter to be added.
@@ -337,7 +337,7 @@ Depending on which is first, this can be:
 
 **Returns:** `void`
 
-### `editAttribute(ro.sync.ecss.extensions.api.node.AuthorElement targetElement, java.lang.String attributeName)`
+### `editAttribute(AuthorElement targetElement, String attributeName)`
 
 If such an editor is found it will activate
  the editor to start editing. 
@@ -355,7 +355,7 @@ If such an editor is found it will activate
 
 **Returns:** `void`
 
-### `scrollToRectangle(ro.sync.exml.view.graphics.Rectangle rectangle)`
+### `scrollToRectangle(Rectangle rectangle)`
 
 To find the rectangle 
  that corresponds to a specific offset in the Author document you can use the
@@ -370,7 +370,7 @@ To find the rectangle
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.author.fold.AuthorFoldManager`](fold/AuthorFoldManager.md)
 
-### `addDNDListener(java.lang.Object dndListener)`
+### `addDNDListener(Object dndListener)`
 
 **Parameters:**
 - `dndListener` (`java.lang.Object`): The drag and drop listener.
@@ -379,7 +379,7 @@ To find the rectangle
 
 **Returns:** `void`
 
-### `removeDNDListener(java.lang.Object dndListener)`
+### `removeDNDListener(Object dndListener)`
 
 **Parameters:**
 - `dndListener` (`java.lang.Object`): The drag and drop listener to remove.

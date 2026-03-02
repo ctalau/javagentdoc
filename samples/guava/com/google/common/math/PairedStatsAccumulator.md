@@ -31,18 +31,18 @@ points on a plane) and tracks some
 
 ### `add(double x, double y)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `x` (`double`)
 - `y` (`double`)
 
-### `addAll(com.google.common.math.PairedStats values)`
-
 **Returns:** `void`
+
+### `addAll(PairedStats values)`
 
 **Parameters:**
 - `values` ([`com.google.common.math.PairedStats`](./PairedStats.md))
+
+**Returns:** `void`
 
 ### `snapshot()`
 
@@ -62,8 +62,6 @@ points on a plane) and tracks some
 
 ### `populationCovariance()`
 
-**Returns:** `double`
-
 The count must be non-zero.
 
  
@@ -76,9 +74,9 @@ This is guaranteed to return zero if the dataset contains a single pair of finit
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `sampleCovariance()`
-
 **Returns:** `double`
+
+### `sampleCovariance()`
 
 The count must be greater than one.
 
@@ -91,9 +89,9 @@ This is not guaranteed to return zero when the dataset consists of the same pair
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `pearsonsCorrelationCoefficient()`
-
 **Returns:** `double`
+
+### `pearsonsCorrelationCoefficient()`
 
 The count must greater than one, and
  the x and y values must both have non-zero population variance (i.e. 
@@ -106,9 +104,9 @@ The count must greater than one, and
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `leastSquaresFit()`
+**Returns:** `double`
 
-**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
+### `leastSquaresFit()`
 
 The count must be greater than one, and
  either the x or y data must have a non-zero population variance (i.e. 
@@ -136,17 +134,19 @@ The corresponding root-mean-square error in x as a function of y is a
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is LinearTransformation#forNaN().
 
-### `ensurePositive(double value)`
+**Returns:** [`com.google.common.math.LinearTransformation`](./LinearTransformation.md)
 
-**Returns:** `double`
+### `ensurePositive(double value)`
 
 **Parameters:**
 - `value` (`double`)
+
+**Returns:** `double`
 
 ### `ensureInUnitRange(double value)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `value` (`double`)
+
+**Returns:** `double`
 

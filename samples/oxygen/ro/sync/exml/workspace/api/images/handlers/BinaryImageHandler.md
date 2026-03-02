@@ -16,7 +16,7 @@ The handler will receive an input stream for the image and it needs to state if 
 
 ## Methods
 
-### `canHandle(java.io.InputStream inputStream)`
+### `canHandle(InputStream inputStream)`
 
 Ideally will read only some metadata from the stream.
 

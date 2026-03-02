@@ -35,21 +35,21 @@ The size of the data structure used by ArrayBasedCharEscaper and ArrayBasedUnico
 
 ## Methods
 
-### `create(java.util.Map<java.lang.Character,java.lang.String> replacements)`
-
-**Returns:** [`com.google.common.escape.ArrayBasedEscaperMap`](./ArrayBasedEscaperMap.md)
+### `create(Map<Character,String> replacements)`
 
 **Parameters:**
 - `replacements` (`java.util.Map<java.lang.Character,java.lang.String>`): a map of characters to their escaped representations
+
+**Returns:** [`com.google.common.escape.ArrayBasedEscaperMap`](./ArrayBasedEscaperMap.md)
 
 ### `getReplacementArray()`
 
 **Returns:** `char[][]`
 
-### `createReplacementArray(java.util.Map<java.lang.Character,java.lang.String> map)`
-
-**Returns:** `char[][]`
+### `createReplacementArray(Map<Character,String> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<java.lang.Character,java.lang.String>`)
+
+**Returns:** `char[][]`
 

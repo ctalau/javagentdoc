@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `customizeIDElements(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo arg1, java.lang.String arg2)`
+### `customizeIDElements(AuthorAccess arg0, GenerateIDElementsInfo arg1, String arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -19,7 +19,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
 
-### `customizeIDElements(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo arg1, java.lang.String arg2, java.lang.String arg3)`
+### `customizeIDElements(AuthorAccess arg0, GenerateIDElementsInfo arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -29,7 +29,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
 
-### `customizeIDElements(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo arg1, java.lang.String arg2, java.lang.String arg3, boolean arg4)`
+### `customizeIDElements(AuthorAccess arg0, GenerateIDElementsInfo arg1, String arg2, String arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))

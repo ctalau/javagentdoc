@@ -155,7 +155,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 ## Methods
 
-### `handleTyping(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTyping(int offset, char ch, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -164,7 +164,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `handleTypingFallback(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTypingFallback(int offset, char ch, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -173,7 +173,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `handleInsertContent(int offset, java.lang.String content, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleInsertContent(int offset, String content, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`): Insertion offset.
@@ -182,7 +182,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `createFragment(java.util.Iterator<java.lang.String> iterator, java.lang.StringBuilder xmlFragment)`
+### `createFragment(Iterator<String> iterator, StringBuilder xmlFragment)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<java.lang.String>`): Iterator of list with the elements to insert.
@@ -190,7 +190,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `void`
 
-### `handlePasteFragment(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, int actionId, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handlePasteFragment(int offset, AuthorDocumentFragment[] fragmentsToInsert, int actionId, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -200,7 +200,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `convertXrefToLink(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment xrefsFragment, ro.sync.contentcompletion.xml.CIElement linkElement, ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, int offsetInsideRelatedLinks)`
+### `convertXrefToLink(AuthorDocumentFragment xrefsFragment, CIElement linkElement, AuthorDocumentController ctrl, int offsetInsideRelatedLinks)`
 
 **Parameters:**
 - `xrefsFragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../api/node/AuthorDocumentFragment.md)): A fragment containing one or more XREFs.
@@ -210,7 +210,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../api/node/AuthorDocumentFragment.md)
 
-### `acceptsAttr(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> acceptedAttrs, java.lang.String attributeName)`
+### `acceptsAttr(List<CIAttribute> acceptedAttrs, String attributeName)`
 
 **Parameters:**
 - `acceptedAttrs` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`): The list of accepted attributes.
@@ -218,7 +218,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `handleInsertionEvent(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean isTypingEvent)`
+### `handleInsertionEvent(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, boolean isTypingEvent)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the insertion event occurred.
@@ -228,7 +228,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `handleInsertionEventInRelatedLink(int offset, ro.sync.ecss.extensions.api.node.AuthorNode linkNode, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleInsertionEventInRelatedLink(int offset, AuthorNode linkNode, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the insertion event occurred.
@@ -238,7 +238,7 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `handleXrefsInsertionEvent(int offset, ro.sync.ecss.extensions.api.node.AuthorNode nodeAtInsertionOffset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleXrefsInsertionEvent(int offset, AuthorNode nodeAtInsertionOffset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the insertion event occurred.
@@ -248,28 +248,28 @@ Handles typing and paste events inside steps, steps-unordered (a
 
 **Returns:** `boolean`
 
-### `isRelatedLinkElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isRelatedLinkElement(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): Node to check.
 
 **Returns:** `boolean`
 
-### `isRelatedLinkText(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isRelatedLinkText(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): Node to check.
 
 **Returns:** `boolean`
 
-### `onlyXrefs(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragments)`
+### `onlyXrefs(AuthorDocumentFragment[] fragments)`
 
 **Parameters:**
 - `fragments` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../api/node/AuthorDocumentFragment.md)): the fragments.
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionInTitlealts(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionInTitlealts(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 The fallback is to insert the `fragmentsToInsert` into a `navtitle` element, if possible.
  If a `navtitle` already exists, try to insert the fragment into a `searchtitle`.
@@ -282,7 +282,7 @@ The fallback is to insert the `fragmentsToInsert` into a `navtitle` element, if 
 
 **Returns:** `boolean`
 
-### `tryInsertContentInElement(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementName)`
+### `tryInsertContentInElement(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager, WhatElementsCanGoHereContext context, String elementName)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the insertion event occurred.
@@ -294,7 +294,7 @@ The fallback is to insert the `fragmentsToInsert` into a `navtitle` element, if 
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInTopic(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInTopic(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 The fallback is to insert the `fragmentsToInsert` into a 'title' element if is possible.
 
@@ -306,7 +306,7 @@ The fallback is to insert the `fragmentsToInsert` into a 'title' element if is p
 
 **Returns:** `boolean`
 
-### `getElementName(ro.sync.ecss.extensions.api.AuthorSchemaManager schemaManager, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementClass, boolean isElementsSearchStrict)`
+### `getElementName(AuthorSchemaManager schemaManager, WhatElementsCanGoHereContext context, String elementClass, boolean isElementsSearchStrict)`
 
 **Parameters:**
 - `schemaManager` ([`ro.sync.ecss.extensions.api.AuthorSchemaManager`](../api/AuthorSchemaManager.md)): The schema manager.
@@ -318,7 +318,7 @@ The fallback is to insert the `fragmentsToInsert` into a 'title' element if is p
 
 **Returns:** `java.lang.String`
 
-### `getElement(ro.sync.ecss.extensions.api.AuthorSchemaManager schemaManager, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementClass, boolean isElementsSearchStrict)`
+### `getElement(AuthorSchemaManager schemaManager, WhatElementsCanGoHereContext context, String elementClass, boolean isElementsSearchStrict)`
 
 **Parameters:**
 - `schemaManager` ([`ro.sync.ecss.extensions.api.AuthorSchemaManager`](../api/AuthorSchemaManager.md)): The schema manager.
@@ -330,7 +330,7 @@ The fallback is to insert the `fragmentsToInsert` into a 'title' element if is p
 
 **Returns:** [`ro.sync.contentcompletion.xml.CIElement`](../../../contentcompletion/xml/CIElement.md)
 
-### `deriveContextWithElements(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager, java.lang.String[] elements, java.util.LinkedList<java.lang.String> elementsToAdd)`
+### `deriveContextWithElements(WhatElementsCanGoHereContext context, AuthorSchemaManager authorSchemaManager, String[] elements, LinkedList<String> elementsToAdd)`
 
 Context will be altered.
 
@@ -342,7 +342,7 @@ Context will be altered.
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInSteps(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInSteps(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 The fallback is to insert 
  the `fragmentsToInsert` into a 'steps/cmd' structure if is possible.
@@ -355,14 +355,14 @@ The fallback is to insert
 
 **Returns:** `boolean`
 
-### `isOnlyParas(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToAnalyze)`
+### `isOnlyParas(AuthorDocumentFragment[] fragmentsToAnalyze)`
 
 **Parameters:**
 - `fragmentsToAnalyze` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[]`](../api/node/AuthorDocumentFragment.md)): The given fragments to analyze
 
 **Returns:** `boolean`
 
-### `handleInsertElementsInternal(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.util.LinkedList<java.lang.String> elements)`
+### `handleInsertElementsInternal(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager, WhatElementsCanGoHereContext context, LinkedList<String> elements)`
 
 **Parameters:**
 - `offset` (`int`): Insertion offset.
@@ -374,7 +374,7 @@ The fallback is to insert
 
 **Returns:** `boolean`
 
-### `pushContextElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementName)`
+### `pushContextElement(WhatElementsCanGoHereContext context, String elementName)`
 
 **Note: ** The given context is altered.
 
@@ -384,7 +384,7 @@ The fallback is to insert
 
 **Returns:** `void`
 
-### `pushContextElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementName, java.util.LinkedList<java.lang.String> elements)`
+### `pushContextElement(WhatElementsCanGoHereContext context, String elementName, LinkedList<String> elements)`
 
 **Note: ** The given context is altered.
 
@@ -395,7 +395,7 @@ The fallback is to insert
 
 **Returns:** `void`
 
-### `isElementWithClassParticle(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String classParticle)`
+### `isElementWithClassParticle(AuthorNode node, String classParticle)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The node
@@ -403,7 +403,7 @@ The fallback is to insert
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInStep(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInStep(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 The fallback is to insert 
  the `fragmentsToInsert` into a 'para' element if is possible.
@@ -416,7 +416,7 @@ The fallback is to insert
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInTable(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInTable(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 A row element will
  be inserted (either 'row' or 'tr') with a new cell (either 'entry' or 'td') in which the fragments will be inserted.
@@ -429,7 +429,7 @@ A row element will
 
 **Returns:** `boolean`
 
-### `changeElementsToMoveUpDown(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> selectedElements)`
+### `changeElementsToMoveUpDown(List<AuthorNode> selectedElements)`
 
 **Parameters:**
 - `selectedElements` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -440,14 +440,14 @@ A row element will
 
 **Returns:** `ro.sync.ecss.extensions.api.AuthorSchemaAwareEditingHandlerAdapter.WrapInAncestorsOptions`
 
-### `canBeReplaced(ro.sync.ecss.extensions.api.node.AuthorNode nodeToReplace)`
+### `canBeReplaced(AuthorNode nodeToReplace)`
 
 **Parameters:**
 - `nodeToReplace` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `getPreferredElement(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, int offset)`
+### `getPreferredElement(AuthorDocumentController ctrl, int offset)`
 
 **Parameters:**
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../api/AuthorDocumentController.md))

@@ -38,7 +38,7 @@ After #init, this field is read only by #afterDone() (to
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends InputT>> futures, boolean allMustSucceed, boolean collectsValues)`
+### `<init>(ImmutableCollection<? extends ListenableFuture<? extends InputT>> futures, boolean allMustSucceed, boolean collectsValues)`
 
 **Parameters:**
 - `futures` ([`com.google.common.collect.ImmutableCollection<? extends com.google.common.util.concurrent.ListenableFuture<? extends InputT>>`](../../collect/ImmutableCollection.md))
@@ -57,16 +57,14 @@ After #init, this field is read only by #afterDone() (to
 
 ### `init()`
 
-**Returns:** `void`
-
 This method performs the "real"
  initialization; we can't put this in the constructor because, in the case where futures are
  already complete, we would not initialize the subclass before calling #collectValueFromNonCancelledFuture. As this is called after the subclass is constructed,
  we're guaranteed to have properly initialized the subclass.
 
-### `handleException(java.lang.Throwable throwable)`
-
 **Returns:** `void`
+
+### `handleException(Throwable throwable)`
 
 Also, logs the
  throwable if it is an Error or if #allMustSucceed is true, the
@@ -76,23 +74,23 @@ Also, logs the
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
-### `log(java.lang.Throwable throwable)`
-
 **Returns:** `void`
+
+### `log(Throwable throwable)`
 
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
-### `addInitialException(java.util.Set<java.lang.Throwable> seen)`
-
 **Returns:** `void`
+
+### `addInitialException(Set<Throwable> seen)`
 
 **Parameters:**
 - `seen` (`java.util.Set<java.lang.Throwable>`)
 
-### `collectValueFromNonCancelledFuture(int index, java.util.concurrent.Future<? extends InputT> future)`
-
 **Returns:** `void`
+
+### `collectValueFromNonCancelledFuture(int index, Future<? extends InputT> future)`
 
 The input must not have been
  cancelled. For details on when this is called, see #collectOneValue.
@@ -101,23 +99,23 @@ The input must not have been
 - `index` (`int`)
 - `future` (`java.util.concurrent.Future<? extends InputT>`)
 
-### `decrementCountAndMaybeComplete(com.google.common.collect.ImmutableCollection<? extends java.util.concurrent.Future<? extends InputT>> futuresIfNeedToCollectAtCompletion)`
-
 **Returns:** `void`
+
+### `decrementCountAndMaybeComplete(ImmutableCollection<? extends Future<? extends InputT>> futuresIfNeedToCollectAtCompletion)`
 
 **Parameters:**
 - `futuresIfNeedToCollectAtCompletion` ([`com.google.common.collect.ImmutableCollection<? extends java.util.concurrent.Future<? extends InputT>>`](../../collect/ImmutableCollection.md))
 
-### `processCompleted(com.google.common.collect.ImmutableCollection<? extends java.util.concurrent.Future<? extends InputT>> futuresIfNeedToCollectAtCompletion)`
-
 **Returns:** `void`
+
+### `processCompleted(ImmutableCollection<? extends Future<? extends InputT>> futuresIfNeedToCollectAtCompletion)`
 
 **Parameters:**
 - `futuresIfNeedToCollectAtCompletion` ([`com.google.common.collect.ImmutableCollection<? extends java.util.concurrent.Future<? extends InputT>>`](../../collect/ImmutableCollection.md))
 
-### `releaseResources(com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason reason)`
-
 **Returns:** `void`
+
+### `releaseResources(AggregateFuture.ReleaseResourcesReason reason)`
 
 Often called multiple times (that is, both when the inputs complete and when the output
  completes).
@@ -129,23 +127,25 @@ This is similar to our proposed afterCommit method but not quite the same. See t
 **Parameters:**
 - `reason` (`com.google.common.util.concurrent.AggregateFuture.ReleaseResourcesReason`)
 
-### `collectOneValue(int index, InputT returnValue)`
-
 **Returns:** `void`
+
+### `collectOneValue(int index, InputT returnValue)`
 
 **Parameters:**
 - `index` (`int`)
 - `returnValue` (`InputT`)
 
+**Returns:** `void`
+
 ### `handleAllCompleted()`
 
 **Returns:** `void`
 
-### `addCausalChain(java.util.Set<java.lang.Throwable> seen, java.lang.Throwable param)`
-
-**Returns:** `boolean`
+### `addCausalChain(Set<Throwable> seen, Throwable param)`
 
 **Parameters:**
 - `seen` (`java.util.Set<java.lang.Throwable>`)
 - `param` (`java.lang.Throwable`)
+
+**Returns:** `boolean`
 

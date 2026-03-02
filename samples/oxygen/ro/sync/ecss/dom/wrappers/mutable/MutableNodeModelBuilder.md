@@ -28,7 +28,7 @@
 
 ## Methods
 
-### `build(ro.sync.ecss.dom.wrappers.mutable.AuthorSource arg0, net.sf.saxon.Configuration arg1)`
+### `build(AuthorSource arg0, Configuration arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dom.wrappers.mutable.AuthorSource`](./AuthorSource.md))
@@ -36,7 +36,7 @@
 
 **Returns:** `net.sf.saxon.om.NodeInfo`
 
-### `makeWrapper(org.w3c.dom.Node arg0, ro.sync.ecss.dom.wrappers.mutable.DocumentWrapper arg1, ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper arg2, int arg3)`
+### `makeWrapper(Node arg0, DocumentWrapper arg1, DOMNodeWrapper arg2, int arg3)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
@@ -46,7 +46,7 @@
 
 **Returns:** [`ro.sync.ecss.dom.wrappers.mutable.DOMNodeWrapper`](./DOMNodeWrapper.md)
 
-### `setContextNode(ro.sync.ecss.extensions.api.AuthorAccess arg0, net.sf.saxon.om.NodeInfo arg1, net.sf.saxon.Configuration arg2, net.sf.saxon.query.DynamicQueryContext arg3)`
+### `setContextNode(AuthorAccess arg0, NodeInfo arg1, Configuration arg2, DynamicQueryContext arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md))
@@ -56,14 +56,14 @@
 
 **Returns:** `void`
 
-### `getLocationXpathExpression(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `getLocationXpathExpression(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md))
 
 **Returns:** `java.lang.String`
 
-### `getNodesByXPath(net.sf.saxon.om.NodeInfo arg0, net.sf.saxon.Configuration arg1, java.lang.String arg2, ro.sync.ecss.extensions.api.node.NamespaceContext arg3)`
+### `getNodesByXPath(NodeInfo arg0, Configuration arg1, String arg2, NamespaceContext arg3)`
 
 **Parameters:**
 - `arg0` (`net.sf.saxon.om.NodeInfo`)
@@ -73,7 +73,7 @@
 
 **Returns:** `net.sf.saxon.om.NodeInfo`
 
-### `setSelectionContext(ro.sync.ecss.extensions.api.AuthorAccess arg0, net.sf.saxon.om.NodeInfo arg1, net.sf.saxon.Configuration arg2, net.sf.saxon.query.DynamicQueryContext arg3)`
+### `setSelectionContext(AuthorAccess arg0, NodeInfo arg1, Configuration arg2, DynamicQueryContext arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md))
@@ -83,7 +83,7 @@
 
 **Returns:** `void`
 
-### `initializeQueryContext(ro.sync.ecss.dom.wrappers.mutable.AuthorSource arg0, net.sf.saxon.Configuration arg1, net.sf.saxon.query.DynamicQueryContext arg2)`
+### `initializeQueryContext(AuthorSource arg0, Configuration arg1, DynamicQueryContext arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.dom.wrappers.mutable.AuthorSource`](./AuthorSource.md))

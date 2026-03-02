@@ -104,7 +104,7 @@ Here is an example that accepts a list from a database call, filters it based on
 
 ### `<init>()`
 
-### `<init>(java.lang.Iterable<E> iterable)`
+### `<init>(Iterable<E> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`)
@@ -115,18 +115,16 @@ Here is an example that accepts a list from a database call, filters it based on
 
 **Returns:** `java.lang.Iterable<E>`
 
-### `from(java.lang.Iterable<E> iterable)`
-
-**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+### `from(Iterable<E> iterable)`
 
 **Stream equivalent:** Collection#stream if iterable is a Collection; Streams#stream(Iterable) otherwise.
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`)
 
-### `from(E[] elements)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+
+### `from(E[] elements)`
 
 The returned iterable is an unmodifiable view of the input array.
 
@@ -136,9 +134,9 @@ The returned iterable is an unmodifiable view of the input array.
 **Parameters:**
 - `elements` (`E[]`)
 
-### `from(com.google.common.collect.FluentIterable<E> iterable)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+
+### `from(FluentIterable<E> iterable)`
 
 This is obviously never necessary,
  but is intended to help call out cases where one migration from Iterable to 
@@ -147,9 +145,9 @@ This is obviously never necessary,
 **Parameters:**
 - `iterable` ([`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md))
 
-### `concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b)`
+**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
 
-**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+### `concat(Iterable<? extends T> a, Iterable<? extends T> b)`
 
 The returned iterable has an iterator
  that traverses the elements in a, followed by the elements in b. The source
@@ -166,9 +164,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 - `a` (`java.lang.Iterable<? extends T>`)
 - `b` (`java.lang.Iterable<? extends T>`)
 
-### `concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b, java.lang.Iterable<? extends T> c)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+
+### `concat(Iterable<? extends T> a, Iterable<? extends T> b, Iterable<? extends T> c)`
 
 The returned iterable has an iterator
  that traverses the elements in a, followed by the elements in b, followed by
@@ -187,9 +185,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 - `b` (`java.lang.Iterable<? extends T>`)
 - `c` (`java.lang.Iterable<? extends T>`)
 
-### `concat(java.lang.Iterable<? extends T> a, java.lang.Iterable<? extends T> b, java.lang.Iterable<? extends T> c, java.lang.Iterable<? extends T> d)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+
+### `concat(Iterable<? extends T> a, Iterable<? extends T> b, Iterable<? extends T> c, Iterable<? extends T> d)`
 
 The returned iterable has an iterator
  that traverses the elements in a, followed by the elements in b, followed by
@@ -210,9 +208,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 - `c` (`java.lang.Iterable<? extends T>`)
 - `d` (`java.lang.Iterable<? extends T>`)
 
-### `concat(java.lang.Iterable<? extends T>[] inputs)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+
+### `concat(Iterable<? extends T>[] inputs)`
 
 The returned iterable has an
  iterator that traverses the elements of each iterable in inputs. The input iterators
@@ -230,9 +228,9 @@ The returned iterable's iterator supports remove() when the corresponding input
 **Parameters:**
 - `inputs` (`java.lang.Iterable<? extends T>[]`)
 
-### `concat(java.lang.Iterable<? extends java.lang.Iterable<? extends T>> inputs)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+
+### `concat(Iterable<? extends Iterable<? extends T>> inputs)`
 
 The returned iterable has an
  iterator that traverses the elements of each iterable in inputs. The input iterators
@@ -250,22 +248,22 @@ The returned iterable's iterator supports remove() when the corresponding input
 **Parameters:**
 - `inputs` (`java.lang.Iterable<? extends java.lang.Iterable<? extends T>>`)
 
-### `concatNoDefensiveCopy(java.lang.Iterable<? extends T>[] inputs)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+
+### `concatNoDefensiveCopy(Iterable<? extends T>[] inputs)`
 
 **Parameters:**
 - `inputs` (`java.lang.Iterable<? extends T>[]`)
 
-### `of()`
+**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
 
-**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+### `of()`
 
 **Stream equivalent:** Stream#empty.
 
-### `of(E element, E[] elements)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+
+### `of(E element, E[] elements)`
 
 **Stream equivalent:** Stream.of(T...).
 
@@ -273,31 +271,31 @@ The returned iterable's iterator supports remove() when the corresponding input
 - `element` (`E`)
 - `elements` (`E[]`)
 
-### `toString()`
+**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
 
-**Returns:** `java.lang.String`
+### `toString()`
 
 **Stream equivalent:** stream.collect(Collectors.joining(", ", "[", "]"))
  or (less efficiently) stream.collect(Collectors.toList()).toString().
 
-### `size()`
+**Returns:** `java.lang.String`
 
-**Returns:** `int`
+### `size()`
 
 **Stream equivalent:** Stream#count.
 
-### `contains(java.lang.Object target)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `contains(Object target)`
 
 **Stream equivalent:** stream.anyMatch(Predicate.isEqual(target)).
 
 **Parameters:**
 - `target` (`java.lang.Object`)
 
-### `cycle()`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+### `cycle()`
 
 That iterator supports remove() if iterable.iterator() does. After 
  remove() is called, subsequent cycles omit the removed element, which is no longer in this
@@ -314,9 +312,9 @@ That iterator supports remove() if iterable.iterator() does. After
  e, use Stream.generate(() -> e). Otherwise, collect your stream into a collection and
  use Stream.generate(() -> collection).flatMap(Collection::stream).
 
-### `append(java.lang.Iterable<? extends E> other)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+
+### `append(Iterable<? extends E> other)`
 
 The iterators are not polled until necessary.
 
@@ -330,18 +328,18 @@ The returned iterable's Iterator supports remove() when the corresponding
 **Parameters:**
 - `other` (`java.lang.Iterable<? extends E>`)
 
-### `append(E[] elements)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+
+### `append(E[] elements)`
 
 **Stream equivalent:** Stream.concat(thisStream, Stream.of(elements)).
 
 **Parameters:**
 - `elements` (`E[]`)
 
-### `filter(com.google.common.base.Predicate<? super E> predicate)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+
+### `filter(Predicate<? super E> predicate)`
 
 The resulting fluent
  iterable's iterator does not support remove().
@@ -352,9 +350,9 @@ The resulting fluent
 **Parameters:**
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `filter(java.lang.Class<T> type)`
+**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
 
-**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+### `filter(Class<T> type)`
 
 **Stream equivalent:** stream.filter(type::isInstance).map(type::cast).
  This does perform a little more work than necessary, so another option is to insert an
@@ -373,18 +371,18 @@ The resulting fluent
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `anyMatch(com.google.common.base.Predicate<? super E> predicate)`
+**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
 
-**Returns:** `boolean`
+### `anyMatch(Predicate<? super E> predicate)`
 
 **Stream equivalent:** Stream#anyMatch (same).
 
 **Parameters:**
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `allMatch(com.google.common.base.Predicate<? super E> predicate)`
-
 **Returns:** `boolean`
+
+### `allMatch(Predicate<? super E> predicate)`
 
 If this
  fluent iterable is empty, true is returned.
@@ -395,9 +393,9 @@ If this
 **Parameters:**
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `firstMatch(com.google.common.base.Predicate<? super E> predicate)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.base.Optional<@org.checkerframework.checker.nullness.qual.NonNull E>`](../base/Optional.md)
+### `firstMatch(Predicate<? super E> predicate)`
 
 **Warning:** avoid using a predicate that matches null. If null
  is matched in this fluent iterable, a NullPointerException will be thrown.
@@ -408,9 +406,9 @@ If this
 **Parameters:**
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `transform(com.google.common.base.Function<? super E,T> function)`
+**Returns:** [`com.google.common.base.Optional<@org.checkerframework.checker.nullness.qual.NonNull E>`](../base/Optional.md)
 
-**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+### `transform(Function<? super E,T> function)`
 
 The returned fluent iterable's iterator supports remove() if this iterable's
  iterator does. After a successful remove() call, this fluent iterable no longer
@@ -422,9 +420,9 @@ The returned fluent iterable's iterator supports remove() if this iterable's
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super E,T>`](../base/Function.md))
 
-### `transformAndConcat(com.google.common.base.Function<? super E,? extends java.lang.Iterable<? extends T>> function)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
+
+### `transformAndConcat(Function<? super E,? extends Iterable<? extends T>> function)`
 
 function returns an Iterable of results.
 
@@ -440,9 +438,9 @@ The returned fluent iterable's iterator supports remove() if this function-retur
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super E,? extends java.lang.Iterable<? extends T>>`](../base/Function.md))
 
-### `first()`
+**Returns:** [`com.google.common.collect.FluentIterable<T>`](./FluentIterable.md)
 
-**Returns:** [`com.google.common.base.Optional<@org.checkerframework.checker.nullness.qual.NonNull E>`](../base/Optional.md)
+### `first()`
 
 If the
  iterable is empty, Optional.absent() is returned.
@@ -450,9 +448,9 @@ If the
  
 **Stream equivalent:** if the goal is to obtain any element, Stream#findAny; if it must specifically be the *first* element, Stream#findFirst.
 
-### `last()`
-
 **Returns:** [`com.google.common.base.Optional<@org.checkerframework.checker.nullness.qual.NonNull E>`](../base/Optional.md)
+
+### `last()`
 
 If the
  iterable is empty, Optional.absent() is returned. If the underlying iterable is
@@ -462,9 +460,9 @@ If the
  
 **Stream equivalent:** stream.reduce((a, b) -> b).
 
-### `skip(int numberToSkip)`
+**Returns:** [`com.google.common.base.Optional<@org.checkerframework.checker.nullness.qual.NonNull E>`](../base/Optional.md)
 
-**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+### `skip(int numberToSkip)`
 
 If
  this fluent iterable contains fewer than numberToSkip elements, the returned fluent
@@ -488,9 +486,9 @@ The returned fluent iterable's iterator supports remove() if the Iterator of
 **Parameters:**
 - `numberToSkip` (`int`)
 
-### `limit(int maxSize)`
-
 **Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
+
+### `limit(int maxSize)`
 
 If this
  fluent iterable does not contain that many elements, the returned fluent iterable will have the
@@ -503,22 +501,22 @@ If this
 **Parameters:**
 - `maxSize` (`int`): the maximum number of elements in the returned fluent iterable
 
-### `isEmpty()`
+**Returns:** [`com.google.common.collect.FluentIterable<E>`](./FluentIterable.md)
 
-**Returns:** `boolean`
+### `isEmpty()`
 
 **Stream equivalent:** !stream.findAny().isPresent().
 
-### `toList()`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.collect.ImmutableList<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableList.md)
+### `toList()`
 
 **Stream equivalent:** pass ImmutableList#toImmutableList to 
  stream.collect().
 
-### `toSortedList(java.util.Comparator<? super E> comparator)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableList.md)
+
+### `toSortedList(Comparator<? super E> comparator)`
 
 To produce an 
  ImmutableList sorted by its natural ordering, use toSortedList(Ordering.natural()).
@@ -530,16 +528,16 @@ To produce an
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`): the function by which to sort list elements
 
-### `toSet()`
+**Returns:** [`com.google.common.collect.ImmutableList<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableList.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSet<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableSet.md)
+### `toSet()`
 
 **Stream equivalent:** pass ImmutableSet#toImmutableSet to 
  stream.collect().
 
-### `toSortedSet(java.util.Comparator<? super E> comparator)`
+**Returns:** [`com.google.common.collect.ImmutableSet<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableSet.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableSortedSet.md)
+### `toSortedSet(Comparator<? super E> comparator)`
 
 To produce an ImmutableSortedSet sorted
  by its natural ordering, use toSortedSet(Ordering.natural()).
@@ -551,16 +549,16 @@ To produce an ImmutableSortedSet sorted
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`): the function by which to sort set elements
 
-### `toMultiset()`
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableSortedSet.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMultiset<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableMultiset.md)
+### `toMultiset()`
 
 **Stream equivalent:** pass ImmutableMultiset#toImmutableMultiset to
  stream.collect().
 
-### `toMap(com.google.common.base.Function<? super E,V> valueFunction)`
+**Returns:** [`com.google.common.collect.ImmutableMultiset<@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableMultiset.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMap<@org.checkerframework.checker.nullness.qual.NonNull E,V>`](./ImmutableMap.md)
+### `toMap(Function<? super E,V> valueFunction)`
 
 The map's iteration order
  is the order of the first appearance of each key in this iterable.
@@ -577,9 +575,9 @@ When there are multiple instances of a key in this iterable, it is unspecified w
 **Parameters:**
 - `valueFunction` ([`com.google.common.base.Function<? super E,V>`](../base/Function.md))
 
-### `index(com.google.common.base.Function<? super E,K> keyFunction)`
+**Returns:** [`com.google.common.collect.ImmutableMap<@org.checkerframework.checker.nullness.qual.NonNull E,V>`](./ImmutableMap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableListMultimap.md)
+### `index(Function<? super E,K> keyFunction)`
 
 Each element of this
  iterable will be stored as a value in the resulting multimap, yielding a multimap with the same
@@ -596,9 +594,9 @@ Each element of this
 **Parameters:**
 - `keyFunction` ([`com.google.common.base.Function<? super E,K>`](../base/Function.md)): the function used to produce the key for each value
 
-### `uniqueIndex(com.google.common.base.Function<? super E,K> keyFunction)`
+**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableListMultimap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableMap.md)
+### `uniqueIndex(Function<? super E,K> keyFunction)`
 
 In other words, each input value produces an entry in the
  map whose key is the result of applying keyFunction to that value. These entries appear
@@ -628,9 +626,9 @@ If your index may associate multiple values with each key, use index.
 **Parameters:**
 - `keyFunction` ([`com.google.common.base.Function<? super E,K>`](../base/Function.md)): the function used to produce the key for each value
 
-### `toArray(java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull E> type)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,@org.checkerframework.checker.nullness.qual.NonNull E>`](./ImmutableMap.md)
 
-**Returns:** `E[]`
+### `toArray(Class<@NonNull E> type)`
 
 **Stream equivalent:** if an object array is acceptable, use 
  stream.toArray(); if type is a class literal such as MyType.class, use 
@@ -640,9 +638,9 @@ If your index may associate multiple values with each key, use index.
 **Parameters:**
 - `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull E>`): the type of the elements
 
-### `copyInto(C collection)`
+**Returns:** `E[]`
 
-**Returns:** `C`
+### `copyInto(C collection)`
 
 This is equivalent to
  calling Iterables.addAll(collection, this).
@@ -654,9 +652,9 @@ This is equivalent to
 **Parameters:**
 - `collection` (`C`): the collection to copy elements to
 
-### `join(com.google.common.base.Joiner joiner)`
+**Returns:** `C`
 
-**Returns:** `java.lang.String`
+### `join(Joiner joiner)`
 
 **Stream equivalent:** joiner.join(stream.iterator()), or, if you are not
  using any optional Joiner features, 
@@ -665,9 +663,9 @@ This is equivalent to
 **Parameters:**
 - `joiner` ([`com.google.common.base.Joiner`](../base/Joiner.md))
 
-### `get(int position)`
+**Returns:** `java.lang.String`
 
-**Returns:** `E`
+### `get(int position)`
 
 **Stream equivalent:** stream.skip(position).findFirst().get() (but note
  that this throws different exception types, and throws an exception if null would be
@@ -676,11 +674,13 @@ This is equivalent to
 **Parameters:**
 - `position` (`int`): position of the element to return
 
-### `stream()`
+**Returns:** `E`
 
-**Returns:** `java.util.stream.Stream<E>`
+### `stream()`
 
 **Note:** the earlier in the chain you can switch to Stream usage (ideally not
  going through FluentIterable at all), the more performant and idiomatic your code will
  be. This method is a transitional aid, to be used only when really necessary.
+
+**Returns:** `java.util.stream.Stream<E>`
 

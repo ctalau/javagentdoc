@@ -22,7 +22,7 @@
 
 **Returns:** `java.io.File[]`
 
-### `getParentPluginDir(java.io.File arg0)`
+### `getParentPluginDir(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)

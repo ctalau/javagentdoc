@@ -10,42 +10,42 @@
 
 ## Methods
 
-### `isTableBody(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableBody(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
 
 **Returns:** `boolean`
 
-### `isTableHead(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableHead(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
 
 **Returns:** `boolean`
 
-### `isTableFoot(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableFoot(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
 
 **Returns:** `boolean`
 
-### `isTableRow(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableRow(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
 
 **Returns:** `boolean`
 
-### `isTableCell(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableCell(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
 
 **Returns:** `boolean`
 
-### `isTableColspec(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableColspec(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
@@ -56,7 +56,7 @@
 
 **Returns:** `boolean`
 
-### `getFirstChildOfTypeFromParentWithType(ro.sync.ecss.extensions.api.node.AuthorElement currentRow, int childType, int parentType)`
+### `getFirstChildOfTypeFromParentWithType(AuthorElement currentRow, int childType, int parentType)`
 
 The type could be one of
  TYPE_HEADED, TYPE_BODY, TYPE_FOOTER.
@@ -68,7 +68,7 @@ The type could be one of
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)
 
-### `getElementType(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `getElementType(AuthorElement node)`
 
 Type can be one of TablePropertiesConstants#TYPE_TABLE,
  TablePropertiesConstants#TYPE_GROUP, TablePropertiesConstants#TYPE_HEADER,

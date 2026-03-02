@@ -22,14 +22,14 @@ The `AuthorDnDListener` interface
 
 ## Methods
 
-### `authorDragOver(java.awt.dnd.DropTargetDragEvent event)`
+### `authorDragOver(DropTargetDragEvent event)`
 
 **Parameters:**
 - `event` (`java.awt.dnd.DropTargetDragEvent`): The DropTargetDropEvent event.
 
 **Returns:** `boolean`
 
-### `authorDrop(java.awt.datatransfer.Transferable transferable, java.awt.dnd.DropTargetDropEvent event)`
+### `authorDrop(Transferable transferable, DropTargetDropEvent event)`
 
 This method is responsible for undertaking
  the transfer of the data associated with the
@@ -44,28 +44,28 @@ This method is responsible for undertaking
 
 **Returns:** `boolean`
 
-### `authorSupportsFlavor(java.awt.datatransfer.DataFlavor flavor)`
+### `authorSupportsFlavor(DataFlavor flavor)`
 
 **Parameters:**
 - `flavor` (`java.awt.datatransfer.DataFlavor`): The DataFlavor flavor.
 
 **Returns:** `boolean`
 
-### `authorDragExit(java.awt.dnd.DropTargetEvent event)`
+### `authorDragExit(DropTargetEvent event)`
 
 **Parameters:**
 - `event` (`java.awt.dnd.DropTargetEvent`): The DropTargetEvent event.
 
 **Returns:** `boolean`
 
-### `authorDragEnter(java.awt.dnd.DropTargetDragEvent event)`
+### `authorDragEnter(DropTargetDragEvent event)`
 
 **Parameters:**
 - `event` (`java.awt.dnd.DropTargetDragEvent`): The DropTargetDragEvent event.
 
 **Returns:** `boolean`
 
-### `init(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `init(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../ecss/extensions/api/AuthorAccess.md)): The AuthorAccess providing access to 

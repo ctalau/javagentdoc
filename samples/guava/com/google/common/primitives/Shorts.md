@@ -30,30 +30,28 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `hashCode(short value)`
 
-**Returns:** `int`
-
 **Java 8 users:** use Short#hashCode(short) instead.
 
 **Parameters:**
 - `value` (`short`): a primitive short value
 
-### `checkedCast(long value)`
+**Returns:** `int`
 
-**Returns:** `short`
+### `checkedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any value in the range of the short type
 
-### `saturatedCast(long value)`
-
 **Returns:** `short`
+
+### `saturatedCast(long value)`
 
 **Parameters:**
 - `value` (`long`): any long value
 
-### `compare(short a, short b)`
+**Returns:** `short`
 
-**Returns:** `int`
+### `compare(short a, short b)`
 
 The sign of the value returned is the same as
  that of ((Short) a).compareTo(b).
@@ -66,25 +64,25 @@ The sign of the value returned is the same as
 - `a` (`short`): the first short to compare
 - `b` (`short`): the second short to compare
 
+**Returns:** `int`
+
 ### `contains(short[] array, short target)`
+
+**Parameters:**
+- `array` (`short[]`): an array of short values, possibly empty
+- `target` (`short`): a primitive short value
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `array` (`short[]`): an array of short values, possibly empty
-- `target` (`short`): a primitive short value
-
 ### `indexOf(short[] array, short target)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `array` (`short[]`): an array of short values, possibly empty
 - `target` (`short`): a primitive short value
 
-### `indexOf(short[] array, short target, int start, int end)`
-
 **Returns:** `int`
+
+### `indexOf(short[] array, short target, int start, int end)`
 
 **Parameters:**
 - `array` (`short[]`)
@@ -92,9 +90,9 @@ The sign of the value returned is the same as
 - `start` (`int`)
 - `end` (`int`)
 
-### `indexOf(short[] array, short[] target)`
-
 **Returns:** `int`
+
+### `indexOf(short[] array, short[] target)`
 
 More formally, returns the lowest index i such that Arrays.copyOfRange(array,
  i, i + target.length) contains exactly the same elements as target.
@@ -103,17 +101,17 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `array` (`short[]`): the array to search for the sequence target
 - `target` (`short[]`): the array to search for as a sub-sequence of array
 
-### `lastIndexOf(short[] array, short target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(short[] array, short target)`
 
 **Parameters:**
 - `array` (`short[]`): an array of short values, possibly empty
 - `target` (`short`): a primitive short value
 
-### `lastIndexOf(short[] array, short target, int start, int end)`
-
 **Returns:** `int`
+
+### `lastIndexOf(short[] array, short target, int start, int end)`
 
 **Parameters:**
 - `array` (`short[]`)
@@ -121,23 +119,23 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `start` (`int`)
 - `end` (`int`)
 
-### `min(short[] array)`
+**Returns:** `int`
 
-**Returns:** `short`
+### `min(short[] array)`
 
 **Parameters:**
 - `array` (`short[]`): a *nonempty* array of short values
+
+**Returns:** `short`
 
 ### `max(short[] array)`
 
-**Returns:** `short`
-
 **Parameters:**
 - `array` (`short[]`): a *nonempty* array of short values
 
-### `constrainToRange(short value, short min, short max)`
-
 **Returns:** `short`
+
+### `constrainToRange(short value, short min, short max)`
 
 If value is within the range [min..max], value is returned
  unchanged. If value is less than min, min is returned, and if 
@@ -148,9 +146,9 @@ If value is within the range [min..max], value is returned
 - `min` (`short`): the lower bound (inclusive) of the range to constrain value to
 - `max` (`short`): the upper bound (inclusive) of the range to constrain value to
 
-### `concat(short[][] arrays)`
+**Returns:** `short`
 
-**Returns:** `short[]`
+### `concat(short[][] arrays)`
 
 For example, 
  concat(new short[] {a, b}, new short[] {}, new short[] {c} returns the array {a, b,
@@ -159,9 +157,9 @@ For example,
 **Parameters:**
 - `arrays` (`short[][]`): zero or more short arrays
 
-### `toByteArray(short value)`
+**Returns:** `short[]`
 
-**Returns:** `byte[]`
+### `toByteArray(short value)`
 
 For example, the input value 
  (short) 0x1234 would yield the byte array {0x12, 0x34}.
@@ -173,9 +171,9 @@ If you need to convert and concatenate several values (possibly even of differen
 **Parameters:**
 - `value` (`short`)
 
-### `fromByteArray(byte[] bytes)`
+**Returns:** `byte[]`
 
-**Returns:** `short`
+### `fromByteArray(byte[] bytes)`
 
 For example, the
  input byte array {0x54, 0x32} would yield the short value 0x5432.
@@ -187,17 +185,17 @@ Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `fromBytes(byte b1, byte b2)`
-
 **Returns:** `short`
+
+### `fromBytes(byte b1, byte b2)`
 
 **Parameters:**
 - `b1` (`byte`)
 - `b2` (`byte`)
 
-### `stringConverter()`
+**Returns:** `short`
 
-**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Short>`](../base/Converter.md)
+### `stringConverter()`
 
 The returned converter throws NumberFormatException if the input string is invalid.
 
@@ -206,9 +204,9 @@ The returned converter throws NumberFormatException if the input string is inval
  parsed. For example, the string "0123" is treated as *octal* and converted to the
  value 83.
 
-### `ensureCapacity(short[] array, int minLength, int padding)`
+**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Short>`](../base/Converter.md)
 
-**Returns:** `short[]`
+### `ensureCapacity(short[] array, int minLength, int padding)`
 
 If array already has a length of at least minLength,
  it is returned directly. Otherwise, a new array of size minLength + padding is
@@ -219,21 +217,21 @@ If array already has a length of at least minLength,
 - `minLength` (`int`): the minimum length the returned array must guarantee
 - `padding` (`int`): an extra amount to "grow" the array by if growth is necessary
 
-### `join(java.lang.String separator, short[] array)`
+**Returns:** `short[]`
 
-**Returns:** `java.lang.String`
+### `join(String separator, short[] array)`
 
 For example, join("-", (short) 1, (short) 2, (short) 3) returns the string 
  "1-2-3".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`short[]`): an array of short values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<short[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(short, short)), the first pair of values that follow any
@@ -245,25 +243,25 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(short[],
  short[]).
 
-### `sortDescending(short[] array)`
+**Returns:** `java.util.Comparator<short[]>`
 
-**Returns:** `void`
+### `sortDescending(short[] array)`
 
 **Parameters:**
 - `array` (`short[]`)
 
-### `sortDescending(short[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(short[] array, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `array` (`short[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `reverse(short[] array)`
-
 **Returns:** `void`
+
+### `reverse(short[] array)`
 
 This is equivalent to 
  Collections.reverse(Shorts.asList(array)), but is likely to be more efficient.
@@ -271,9 +269,9 @@ This is equivalent to
 **Parameters:**
 - `array` (`short[]`)
 
-### `reverse(short[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `reverse(short[] array, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.reverse(Shorts.asList(array).subList(fromIndex, toIndex)), but is likely to be
@@ -284,9 +282,9 @@ This is equivalent to
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `rotate(short[] array, int distance)`
-
 **Returns:** `void`
+
+### `rotate(short[] array, int distance)`
 
 This is equivalent to Collections.rotate(Shorts.asList(array),
  distance), but is considerably faster and avoids allocation and garbage collection.
@@ -298,9 +296,9 @@ The provided "distance" may be negative, which will rotate left.
 - `array` (`short[]`)
 - `distance` (`int`)
 
-### `rotate(short[] array, int distance, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `rotate(short[] array, int distance, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.rotate(Shorts.asList(array).subList(fromIndex, toIndex), distance), but is
@@ -315,9 +313,9 @@ The provided "distance" may be negative, which will rotate left.
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `toArray(java.util.Collection<? extends java.lang.Number> collection)`
+**Returns:** `void`
 
-**Returns:** `short[]`
+### `toArray(Collection<? extends Number> collection)`
 
 Elements are copied from the argument collection as if by collection.toArray().
  Calling this method is as thread-safe as calling that method.
@@ -325,9 +323,9 @@ Elements are copied from the argument collection as if by collection.toArray().
 **Parameters:**
 - `collection` (`java.util.Collection<? extends java.lang.Number>`): a collection of Number instances
 
-### `asList(short[] backingArray)`
+**Returns:** `short[]`
 
-**Returns:** `java.util.List<java.lang.Short>`
+### `asList(short[] backingArray)`
 
 The list supports List#set(int, Object), but any attempt to
  set a value to null will result in a NullPointerException.
@@ -342,4 +340,6 @@ The returned list is serializable.
 
 **Parameters:**
 - `backingArray` (`short[]`): the array to back the list
+
+**Returns:** `java.util.List<java.lang.Short>`
 

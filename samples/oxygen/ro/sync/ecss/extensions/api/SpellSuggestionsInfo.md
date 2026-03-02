@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(int startOffset, int endOffset, java.lang.String word, java.lang.String[] suggestions)`
+### `<init>(int startOffset, int endOffset, String word, String[] suggestions)`
 
 **Parameters:**
 - `startOffset` (`int`): Start offset of the word.

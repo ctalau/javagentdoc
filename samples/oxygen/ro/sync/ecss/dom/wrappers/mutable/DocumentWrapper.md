@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(org.w3c.dom.Node arg0, java.lang.String arg1, net.sf.saxon.Configuration arg2)`
+### `<init>(Node arg0, String arg1, Configuration arg2)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
@@ -27,7 +27,7 @@
 
 ## Methods
 
-### `wrap(org.w3c.dom.Node arg0)`
+### `wrap(Node arg0)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Node`)
@@ -45,7 +45,7 @@
 
 **Returns:** `int`
 
-### `selectID(java.lang.String arg0, boolean arg1)`
+### `selectID(String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -57,14 +57,14 @@
 
 **Returns:** `java.util.Iterator<java.lang.String>`
 
-### `getUnparsedEntity(java.lang.String arg0)`
+### `getUnparsedEntity(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.lang.String[]`
 
-### `getUnparsedEntity(org.w3c.dom.Entity arg0)`
+### `getUnparsedEntity(Entity arg0)`
 
 **Parameters:**
 - `arg0` (`org.w3c.dom.Entity`)

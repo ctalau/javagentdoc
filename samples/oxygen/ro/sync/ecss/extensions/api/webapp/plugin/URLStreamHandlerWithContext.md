@@ -22,7 +22,7 @@
 
 ## Methods
 
-### `setUserContext(ro.sync.ecss.extensions.api.webapp.plugin.UserContext arg0, java.net.URL arg1)`
+### `setUserContext(UserContext arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](./UserContext.md))
@@ -30,7 +30,7 @@
 
 **Returns:** `void`
 
-### `setContextId(java.net.URL arg0, java.lang.String arg1)`
+### `setContextId(URL arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -38,35 +38,35 @@
 
 **Returns:** `void`
 
-### `getContextId(ro.sync.ecss.extensions.api.webapp.plugin.UserContext arg0)`
+### `getContextId(UserContext arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.plugin.UserContext`](./UserContext.md))
 
 **Returns:** `java.lang.String`
 
-### `stripUrlContextId(java.net.URL arg0)`
+### `stripUrlContextId(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.net.URL`
 
-### `stripUrl(java.net.URL arg0)`
+### `stripUrl(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.net.URL`
 
-### `getUrlContextId(java.net.URL arg0)`
+### `getUrlContextId(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.lang.String`
 
-### `openConnection(java.net.URL arg0, java.net.Proxy arg1)`
+### `openConnection(URL arg0, Proxy arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -74,14 +74,14 @@
 
 **Returns:** `java.net.URLConnection`
 
-### `openConnection(java.net.URL arg0)`
+### `openConnection(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `java.net.URLConnection`
 
-### `openConnectionInContext(java.lang.String arg0, java.net.URL arg1, java.net.Proxy arg2)`
+### `openConnectionInContext(String arg0, URL arg1, Proxy arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -90,14 +90,14 @@
 
 **Returns:** `java.net.URLConnection`
 
-### `hashCode(java.net.URL arg0)`
+### `hashCode(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
 
 **Returns:** `int`
 
-### `hostsEqual(java.net.URL arg0, java.net.URL arg1)`
+### `hostsEqual(URL arg0, URL arg1)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)

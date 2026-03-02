@@ -66,7 +66,7 @@ A SWT implementation should also implement org.eclipse.jface.text.ITextOperation
 
 ## Methods
 
-### `getEditorComponent(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, ro.sync.exml.view.graphics.Rectangle allocation, ro.sync.exml.view.graphics.Point mouseInvocationLocation)`
+### `getEditorComponent(AuthorInplaceContext context, Rectangle allocation, Point mouseInvocationLocation)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](./AuthorInplaceContext.md)): The context where the editor will be used.
@@ -113,7 +113,7 @@ The coordinate should be relative to the editor itself.
 
 **Returns:** `ro.sync.exml.view.graphics.Rectangle`
 
-### `addEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `addEditingListener(InplaceEditingListener editingListener)`
 
 - InplaceEditingListener#editingOccured() to signal modification in 
    the editor. This event marks the editor as dirty and it's value will be 
@@ -161,14 +161,14 @@ The editor should release
 
 **Returns:** `void`
 
-### `removeEditingListener(ro.sync.ecss.extensions.api.editor.InplaceEditingListener editingListener)`
+### `removeEditingListener(InplaceEditingListener editingListener)`
 
 **Parameters:**
 - `editingListener` ([`ro.sync.ecss.extensions.api.editor.InplaceEditingListener`](./InplaceEditingListener.md)): Editing listener.
 
 **Returns:** `void`
 
-### `refresh(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context)`
+### `refresh(AuthorInplaceContext context)`
 
 In this situation it might be good 
  for the editor to refresh the presented data.
@@ -189,7 +189,7 @@ In this situation it might be good
 
 **Returns:** `void`
 
-### `insertContent(java.lang.String content)`
+### `insertContent(String content)`
 
 The form control should insert this text as it sees fit. For example a text field
  might insert it at the caret position. An example when this event comes is when the user 

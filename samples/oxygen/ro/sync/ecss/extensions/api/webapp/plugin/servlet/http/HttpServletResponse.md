@@ -187,7 +187,7 @@ This condition *SHOULD* be considered permanent.
 
 ## Methods
 
-### `addCookie(ro.sync.ecss.extensions.api.webapp.plugin.servlet.http.Cookie cookie)`
+### `addCookie(Cookie cookie)`
 
 This method can be called multiple times to set more than one cookie.
 
@@ -196,14 +196,14 @@ This method can be called multiple times to set more than one cookie.
 
 **Returns:** `void`
 
-### `containsHeader(java.lang.String name)`
+### `containsHeader(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`): the header name
 
 **Returns:** `boolean`
 
-### `encodeURL(java.lang.String url)`
+### `encodeURL(String url)`
 
 The
  implementation of this method includes the logic to determine whether the session ID needs to be encoded in the URL.
@@ -223,7 +223,7 @@ The
 
 **Returns:** `java.lang.String`
 
-### `encodeRedirectURL(java.lang.String url)`
+### `encodeRedirectURL(String url)`
 
 The implementation of this method includes the logic to determine whether the session ID needs to be
  encoded in the URL. For example, if the browser supports cookies, or session tracking is turned off, URL encoding is
@@ -244,7 +244,7 @@ The implementation of this method includes the logic to determine whether the se
 
 **Returns:** `java.lang.String`
 
-### `sendError(int sc, java.lang.String msg)`
+### `sendError(int sc, String msg)`
 
 The server defaults to
  creating the response to look like an HTML-formatted server error page containing the specified message, setting the
@@ -289,7 +289,7 @@ The server will preserve cookies and may clear or update any headers needed to s
 
 **Returns:** `void`
 
-### `sendRedirect(java.lang.String location)`
+### `sendRedirect(String location)`
 
 The buffer will be replaced with the data set by this method. Calling this method sets the status code to
  #SC_FOUND 302 (Found). This method can accept relative URLs;the servlet container must convert the relative
@@ -309,7 +309,7 @@ The buffer will be replaced with the data set by this method. Calling this metho
 
 **Returns:** `void`
 
-### `setDateHeader(java.lang.String name, long date)`
+### `setDateHeader(String name, long date)`
 
 The date is specified in terms of milliseconds since the
  epoch. If the header had already been set, the new value overwrites the previous one. The `containsHeader`
@@ -321,7 +321,7 @@ The date is specified in terms of milliseconds since the
 
 **Returns:** `void`
 
-### `addDateHeader(java.lang.String name, long date)`
+### `addDateHeader(String name, long date)`
 
 The date is specified in terms of milliseconds since the
  epoch. This method allows response headers to have multiple values.
@@ -332,7 +332,7 @@ The date is specified in terms of milliseconds since the
 
 **Returns:** `void`
 
-### `setHeader(java.lang.String name, java.lang.String value)`
+### `setHeader(String name, String value)`
 
 If the header had already been set, the new value overwrites
  the previous one. The `containsHeader` method can be used to test for the presence of a header before
@@ -345,7 +345,7 @@ If the header had already been set, the new value overwrites
 
 **Returns:** `void`
 
-### `addHeader(java.lang.String name, java.lang.String value)`
+### `addHeader(String name, String value)`
 
 This method allows response headers to have multiple values.
 
@@ -356,7 +356,7 @@ This method allows response headers to have multiple values.
 
 **Returns:** `void`
 
-### `setIntHeader(java.lang.String name, int value)`
+### `setIntHeader(String name, int value)`
 
 If the header had already been set, the new value
  overwrites the previous one. The `containsHeader` method can be used to test for the presence of a header
@@ -368,7 +368,7 @@ If the header had already been set, the new value
 
 **Returns:** `void`
 
-### `addIntHeader(java.lang.String name, int value)`
+### `addIntHeader(String name, int value)`
 
 This method allows response headers to have multiple
  values.
@@ -408,7 +408,7 @@ This method is used to set the return status code when there is no error (for ex
 
 **Returns:** `int`
 
-### `getHeader(java.lang.String name)`
+### `getHeader(String name)`
 
 If a response header with the given name exists and contains multiple values, the value that was added first will be
  returned.
@@ -423,7 +423,7 @@ If a response header with the given name exists and contains multiple values, th
 
 **Returns:** `java.lang.String`
 
-### `getHeaders(java.lang.String name)`
+### `getHeaders(String name)`
 
 This method considers only response headers set or added via #setHeader, #addHeader,
  #setDateHeader, #addDateHeader, #setIntHeader, or #addIntHeader, respectively.

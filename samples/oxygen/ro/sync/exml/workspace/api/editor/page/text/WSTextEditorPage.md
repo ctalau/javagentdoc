@@ -101,7 +101,7 @@ This will
 
 **Returns:** `int`
 
-### `addPopUpMenuCustomizer(ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer popUpCustomizer)`
+### `addPopUpMenuCustomizer(TextPopupMenuCustomizer popUpCustomizer)`
 
 If the customizer is already added, it will not be added again.
 
@@ -110,7 +110,7 @@ If the customizer is already added, it will not be added again.
 
 **Returns:** `void`
 
-### `removePopUpMenuCustomizer(ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer popUpCustomizer)`
+### `removePopUpMenuCustomizer(TextPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.exml.workspace.api.editor.page.text.TextPopupMenuCustomizer`](./TextPopupMenuCustomizer.md)): the pop-up menu customizer.
@@ -121,7 +121,7 @@ If the customizer is already added, it will not be added again.
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.text.actions.TextActionsProvider`](actions/TextActionsProvider.md)
 
-### `addExternalContentCompletionProvider(ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider ccProvider)`
+### `addExternalContentCompletionProvider(ExternalContentCompletionProvider ccProvider)`
 
 Not implemented in the Oxygen Eclipse Plug-in.
 
@@ -130,7 +130,7 @@ Not implemented in the Oxygen Eclipse Plug-in.
 
 **Returns:** `void`
 
-### `removeExternalContentCompletionProvider(ro.sync.exml.workspace.api.editor.page.text.ExternalContentCompletionProvider ccProvider)`
+### `removeExternalContentCompletionProvider(ExternalContentCompletionProvider ccProvider)`
 
 Not implemented in the Oxygen Eclipse Plug-in.
 
@@ -139,7 +139,7 @@ Not implemented in the Oxygen Eclipse Plug-in.
 
 **Returns:** `void`
 
-### `addQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
+### `addQuickAssistProcessor(SimpleQuickAssistProcessor processor)`
 
 This allow you to provide quick custom quick assist 
  proposals in the current editor page quick assist menu.
@@ -149,7 +149,7 @@ This allow you to provide quick custom quick assist
 
 **Returns:** `void`
 
-### `removeQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
+### `removeQuickAssistProcessor(SimpleQuickAssistProcessor processor)`
 
 **Parameters:**
 - `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be unregistered.

@@ -24,14 +24,14 @@
 
 ## Methods
 
-### `setCommonAccessCustomizer(ro.sync.ecss.common.b arg0)`
+### `setCommonAccessCustomizer(b arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.common.b`)
 
 **Returns:** `void`
 
-### `insertXIncludeAtOffset(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1)`
+### `insertXIncludeAtOffset(AuthorAccess arg0, int arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -39,7 +39,7 @@
 
 **Returns:** `void`
 
-### `computeXIncludeStringForNodeAtOffset(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1, ro.sync.exml.j.c arg2)`
+### `computeXIncludeStringForNodeAtOffset(AuthorAccess arg0, int arg1, c arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -48,7 +48,7 @@
 
 **Returns:** `java.lang.String`
 
-### `insertXIncludeAtOffset(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1, ro.sync.exml.j.c arg2)`
+### `insertXIncludeAtOffset(AuthorAccess arg0, int arg1, c arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -57,35 +57,35 @@
 
 **Returns:** `void`
 
-### `insertXInclude(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `insertXInclude(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `pasteContentAsXInclude(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `pasteContentAsXInclude(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** `void`
 
-### `d(ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess arg0)`
+### `d(AuthorWorkspaceAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.access.AuthorWorkspaceAccess`](../extensions/api/access/AuthorWorkspaceAccess.md))
 
 **Returns:** `void`
 
-### `getAuthorActionEventHandler(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `getAuthorActionEventHandler(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorActionEventHandler`](../extensions/api/AuthorActionEventHandler.md)
 
-### `getContentReferencedNode(ro.sync.ecss.extensions.api.ExtensionsBundle arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1)`
+### `getContentReferencedNode(ExtensionsBundle arg0, AuthorNode arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.ExtensionsBundle`](../extensions/api/ExtensionsBundle.md))
@@ -93,7 +93,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md)
 
-### `toggleComment(ro.sync.ecss.extensions.api.AuthorAccess arg0, ro.sync.ecss.extensions.api.node.AuthorNode arg1, int arg2, int arg3)`
+### `toggleComment(AuthorAccess arg0, AuthorNode arg1, int arg2, int arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -103,7 +103,7 @@
 
 **Returns:** `void`
 
-### `isToggleCommentPossibleOnSelection(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1, int arg2)`
+### `isToggleCommentPossibleOnSelection(AuthorAccess arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../extensions/api/AuthorAccess.md))
@@ -112,7 +112,7 @@
 
 **Returns:** `boolean`
 
-### `isNodeCoveredBySimplePathExpression(ro.sync.ecss.extensions.api.node.AuthorNode arg0, java.util.List<java.lang.String> arg1)`
+### `isNodeCoveredBySimplePathExpression(AuthorNode arg0, List<String> arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../extensions/api/node/AuthorNode.md))
@@ -120,14 +120,14 @@
 
 **Returns:** `boolean`
 
-### `invokeLater(java.lang.Runnable arg0)`
+### `invokeLater(Runnable arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Runnable`)
 
 **Returns:** `void`
 
-### `createAuthorDocumentProvider(java.net.URL arg0, java.io.Reader arg1, boolean arg2)`
+### `createAuthorDocumentProvider(URL arg0, Reader arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)

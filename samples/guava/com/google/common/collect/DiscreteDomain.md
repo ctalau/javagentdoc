@@ -40,54 +40,52 @@ See the Guava User Guide section on [
 
 ### `integers()`
 
-**Returns:** [`com.google.common.collect.DiscreteDomain<java.lang.Integer>`](./DiscreteDomain.md)
-
 This method always returns the same object. That object is serializable; deserializing it
  results in the same object too.
+
+**Returns:** [`com.google.common.collect.DiscreteDomain<java.lang.Integer>`](./DiscreteDomain.md)
 
 ### `longs()`
 
-**Returns:** [`com.google.common.collect.DiscreteDomain<java.lang.Long>`](./DiscreteDomain.md)
-
 This method always returns the same object. That object is serializable; deserializing it
  results in the same object too.
+
+**Returns:** [`com.google.common.collect.DiscreteDomain<java.lang.Long>`](./DiscreteDomain.md)
 
 ### `bigIntegers()`
 
-**Returns:** [`com.google.common.collect.DiscreteDomain<java.math.BigInteger>`](./DiscreteDomain.md)
-
 This method always returns the same object. That object is serializable; deserializing it
  results in the same object too.
 
-### `offset(C origin, long distance)`
+**Returns:** [`com.google.common.collect.DiscreteDomain<java.math.BigInteger>`](./DiscreteDomain.md)
 
-**Returns:** `C`
+### `offset(C origin, long distance)`
 
 **Parameters:**
 - `origin` (`C`)
 - `distance` (`long`)
 
-### `next(C value)`
-
 **Returns:** `C`
+
+### `next(C value)`
 
 Inverse operation to #previous.
 
 **Parameters:**
 - `value` (`C`): any value of type C
 
-### `previous(C value)`
-
 **Returns:** `C`
+
+### `previous(C value)`
 
 Inverse operation to #next.
 
 **Parameters:**
 - `value` (`C`): any value of type C
 
-### `distance(C start, C end)`
+**Returns:** `C`
 
-**Returns:** `long`
+### `distance(C start, C end)`
 
 For example, if end = next(next(next(start))), then distance(start, end) == 3
  and distance(end, start) == -3. As well, distance(a, a) is always zero.
@@ -99,9 +97,9 @@ Note that this function is necessarily well-defined for any discrete type.
 - `start` (`C`)
 - `end` (`C`)
 
-### `minValue()`
+**Returns:** `long`
 
-**Returns:** `C`
+### `minValue()`
 
 The minimum value is the unique
  value for which Comparable#compareTo(Object) never returns a positive value for any
@@ -110,9 +108,9 @@ The minimum value is the unique
  
 The default implementation throws NoSuchElementException.
 
-### `maxValue()`
-
 **Returns:** `C`
+
+### `maxValue()`
 
 The maximum value is the unique
  value for which Comparable#compareTo(Object) never returns a negative value for any
@@ -120,4 +118,6 @@ The maximum value is the unique
 
  
 The default implementation throws NoSuchElementException.
+
+**Returns:** `C`
 

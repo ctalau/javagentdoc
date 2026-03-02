@@ -30,7 +30,7 @@ It is used on standalone implementation.
 
 **Returns:** `void`
 
-### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
+### `showCustomizeTableDialog(AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))

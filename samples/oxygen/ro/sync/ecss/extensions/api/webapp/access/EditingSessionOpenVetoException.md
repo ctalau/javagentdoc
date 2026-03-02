@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String htmlMessage)`
+### `<init>(String htmlMessage)`
 
 **Parameters:**
 - `htmlMessage` (`java.lang.String`): The HTML formatted message that will be presented

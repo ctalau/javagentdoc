@@ -16,7 +16,7 @@
 
 **Returns:** [`ro.sync.exml.plugin.validator.ValidationMode[]`](./ValidationMode.md)
 
-### `valueOf(java.lang.String name)`
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

@@ -21,19 +21,19 @@
 
 ## Constructors
 
-### `<init>(java.util.EnumMap<K,V> delegate)`
+### `<init>(EnumMap<K,V> delegate)`
 
 **Parameters:**
 - `delegate` (`java.util.EnumMap<K,V>`)
 
 ## Methods
 
-### `asImmutable(java.util.EnumMap<K,V> map)`
-
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
+### `asImmutable(EnumMap<K,V> map)`
 
 **Parameters:**
 - `map` (`java.util.EnumMap<K,V>`)
+
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](./ImmutableMap.md)
 
 ### `keyIterator()`
 
@@ -47,26 +47,26 @@
 
 **Returns:** `int`
 
-### `containsKey(java.lang.Object key)`
-
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `get(java.lang.Object key)`
+**Returns:** `boolean`
+
+### `get(Object key)`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 **Returns:** `V`
 
-**Parameters:**
-- `key` (`java.lang.Object`)
-
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `entryIterator()`
 
@@ -76,12 +76,12 @@
 
 **Returns:** `java.util.Spliterator<java.util.Map.Entry<K,V>>`
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
+
+**Returns:** `void`
 
 ### `isPartialView()`
 
@@ -91,10 +91,10 @@
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

@@ -18,39 +18,39 @@
 
 ### `roundToDoubleArbitrarily(X x)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `x` (`X`)
+
+**Returns:** `double`
 
 ### `sign(X x)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `x` (`X`)
 
-### `toX(double d, java.math.RoundingMode mode)`
+**Returns:** `int`
 
-**Returns:** `X`
+### `toX(double d, RoundingMode mode)`
 
 **Parameters:**
 - `d` (`double`)
 - `mode` (`java.math.RoundingMode`)
 
-### `minus(X a, X b)`
-
 **Returns:** `X`
+
+### `minus(X a, X b)`
 
 **Parameters:**
 - `a` (`X`)
 - `b` (`X`)
 
-### `roundToDouble(X x, java.math.RoundingMode mode)`
+**Returns:** `X`
 
-**Returns:** `double`
+### `roundToDouble(X x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`X`)
 - `mode` (`java.math.RoundingMode`)
+
+**Returns:** `double`
 

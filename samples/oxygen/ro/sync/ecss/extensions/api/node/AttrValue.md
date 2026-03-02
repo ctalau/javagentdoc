@@ -36,13 +36,13 @@ Usually the raw and normalized values point to the same string.
 
 ## Constructors
 
-### `<init>(java.lang.String specifiedValue)`
+### `<init>(String specifiedValue)`
 
 **Parameters:**
 - `specifiedValue` (`java.lang.String`): The simple attribute value which will be used both as
    raw value and normalized value.
 
-### `<init>(java.lang.String normalizedValue, java.lang.String rawValue, boolean isSpecified)`
+### `<init>(String normalizedValue, String rawValue, boolean isSpecified)`
 
 **Parameters:**
 - `normalizedValue` (`java.lang.String`): Attribute normalized value (with entities expanded 
@@ -69,7 +69,7 @@ Usually the raw and normalized values point to the same string.
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

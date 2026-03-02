@@ -10,7 +10,7 @@ Gets notified when another project is loaded.
 
 ## Methods
 
-### `projectChanged(java.net.URL oldProjectURL, java.net.URL newProjectURL)`
+### `projectChanged(URL oldProjectURL, URL newProjectURL)`
 
 **Parameters:**
 - `oldProjectURL` (`java.net.URL`): The URL of the old project.

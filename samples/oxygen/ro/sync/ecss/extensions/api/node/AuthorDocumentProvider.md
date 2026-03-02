@@ -27,7 +27,7 @@ You can use it to make changes to the structure of nodes, run XPath expressions 
 
 **Returns:** `void`
 
-### `getStyles(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getStyles(AuthorNode node)`
 
 This method **MUST** only be used to query styles.
 

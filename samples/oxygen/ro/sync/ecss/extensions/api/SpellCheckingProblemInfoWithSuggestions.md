@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(int startOffset, int endOffset, java.lang.String lang, java.lang.String word, java.util.List<java.lang.String> suggestions)`
+### `<init>(int startOffset, int endOffset, String lang, String word, List<String> suggestions)`
 
 **Parameters:**
 - `startOffset` (`int`): The start offset of the word.
@@ -25,7 +25,7 @@
 - `word` (`java.lang.String`): The word found at the offsets.
 - `suggestions` (`java.util.List<java.lang.String>`): List of suggestions, should not be null.
 
-### `<init>(int startOffset, int endOffset, java.lang.String lang, java.lang.String word, java.util.List<java.lang.String> suggestions, ro.sync.ecss.extensions.api.webapp.WebAuthorSpellcheckErrorTypes errorType, java.lang.String errorMessage)`
+### `<init>(int startOffset, int endOffset, String lang, String word, List<String> suggestions, WebAuthorSpellcheckErrorTypes errorType, String errorMessage)`
 
 **Parameters:**
 - `startOffset` (`int`): The start offset of the word.
@@ -38,7 +38,7 @@
 
 ## Methods
 
-### `checkNotNull(java.util.List<java.lang.String> suggestions)`
+### `checkNotNull(List<String> suggestions)`
 
 **Parameters:**
 - `suggestions` (`java.util.List<java.lang.String>`): The suggestions.

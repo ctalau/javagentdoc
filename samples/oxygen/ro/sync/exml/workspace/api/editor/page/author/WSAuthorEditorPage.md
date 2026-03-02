@@ -50,7 +50,7 @@ The WSAuthorEditorPage has most of the methods which can also be found in the Au
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../../../ecss/extensions/api/AuthorAccess.md)
 
-### `addQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
+### `addQuickAssistProcessor(SimpleQuickAssistProcessor processor)`
 
 This allow you to provide quick custom quick assist 
  proposals in the current editor page quick assist menu.
@@ -61,7 +61,7 @@ This allow you to provide quick custom quick assist
 
 **Returns:** `void`
 
-### `removeQuickAssistProcessor(ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor processor)`
+### `removeQuickAssistProcessor(SimpleQuickAssistProcessor processor)`
 
 **Parameters:**
 - `processor` ([`ro.sync.exml.editor.quickassist.SimpleQuickAssistProcessor`](../../../../../editor/quickassist/SimpleQuickAssistProcessor.md)): The processor to be unregistered.

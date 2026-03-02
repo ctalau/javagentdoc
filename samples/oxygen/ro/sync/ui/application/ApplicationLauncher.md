@@ -50,7 +50,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ui.application.ApplicationMainFrameDescriptor arg0)`
+### `<init>(ApplicationMainFrameDescriptor arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ui.application.ApplicationMainFrameDescriptor`](./ApplicationMainFrameDescriptor.md))
@@ -69,7 +69,7 @@
 
 **Returns:** `boolean`
 
-### `h(ro.sync.ui.application.ApplicationMainFrameDescriptor arg0)`
+### `h(ApplicationMainFrameDescriptor arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ui.application.ApplicationMainFrameDescriptor`](./ApplicationMainFrameDescriptor.md))
@@ -88,28 +88,28 @@
 
 **Returns:** `void`
 
-### `launch(java.lang.String[] arg0)`
+### `launch(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `void`
 
-### `f(ro.sync.exml.options.Options arg0)`
+### `f(Options arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.options.Options`](../../exml/options/Options.md))
 
 **Returns:** `void`
 
-### `j(java.lang.String[] arg0)`
+### `j(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `java.lang.String[]`
 
-### `preProcessArguments(java.lang.String[] arg0)`
+### `preProcessArguments(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
@@ -124,14 +124,14 @@
 
 **Returns:** `void`
 
-### `processArguments(java.lang.String[] arg0)`
+### `processArguments(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `void`
 
-### `c(ro.sync.exml.kb arg0, java.lang.String[] arg1)`
+### `c(kb arg0, String[] arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.kb`)
@@ -143,7 +143,7 @@
 
 **Returns:** `java.lang.reflect.Constructor`
 
-### `registerToMacOSX(ro.sync.util.mac.MacMenuHandler arg0)`
+### `registerToMacOSX(MacMenuHandler arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.util.mac.MacMenuHandler`)
@@ -154,7 +154,7 @@
 
 **Returns:** `void`
 
-### `cannotTransferParameters(java.lang.Throwable arg0)`
+### `cannotTransferParameters(Throwable arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Throwable`)

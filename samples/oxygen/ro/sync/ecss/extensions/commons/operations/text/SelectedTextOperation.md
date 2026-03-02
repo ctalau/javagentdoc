@@ -24,7 +24,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.ArgumentDescriptor[]`](../../../api/ArgumentDescriptor.md)
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap arguments)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap arguments)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -32,14 +32,14 @@
 
 **Returns:** `void`
 
-### `convertSelectionIntervals(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
+### `convertSelectionIntervals(List<ContentInterval> intervals)`
 
 **Parameters:**
 - `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): The list of ContentIntervals.
 
 **Returns:** `java.util.List<int[]>`
 
-### `processContentRange(ro.sync.ecss.extensions.api.AuthorDocumentController controller, int selStart, int selEnd)`
+### `processContentRange(AuthorDocumentController controller, int selStart, int selEnd)`
 
 **Parameters:**
 - `controller` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../../../api/AuthorDocumentController.md)): Document controller.
@@ -48,7 +48,7 @@
 
 **Returns:** `void`
 
-### `processText(java.lang.String text)`
+### `processText(String text)`
 
 **Parameters:**
 - `text` (`java.lang.String`): The text to be processed.

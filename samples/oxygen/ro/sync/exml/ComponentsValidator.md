@@ -20,35 +20,35 @@
 
 ## Methods
 
-### `validateMenuOrTaggedAction(java.lang.String[] arg0)`
+### `validateMenuOrTaggedAction(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `boolean`
 
-### `validateToolbarTaggedAction(java.lang.String[] arg0)`
+### `validateToolbarTaggedAction(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `boolean`
 
-### `validateToolbarComposite(java.lang.String arg0)`
+### `validateToolbarComposite(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateComponent(java.lang.String arg0)`
+### `validateComponent(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateAccelAction(java.lang.String arg0, java.lang.String arg1)`
+### `validateAccelAction(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -56,35 +56,35 @@
 
 **Returns:** `boolean`
 
-### `validateContentType(java.lang.String arg0)`
+### `validateContentType(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateOptionPane(java.lang.String arg0)`
+### `validateOptionPane(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateOption(java.lang.String arg0)`
+### `validateOption(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateLibrary(java.lang.String arg0)`
+### `validateLibrary(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateNewEditorTemplate(ro.sync.exml.editor.EditorTemplate arg0)`
+### `validateNewEditorTemplate(EditorTemplate arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.EditorTemplate`](editor/EditorTemplate.md))
@@ -95,28 +95,28 @@
 
 **Returns:** `boolean`
 
-### `isPerspectiveAllowed(java.lang.String arg0)`
+### `isPerspectiveAllowed(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateSHMarker(java.lang.String arg0)`
+### `validateSHMarker(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `validateEditorPage(java.lang.String arg0)`
+### `validateEditorPage(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `canonicalize(java.lang.String[] arg0)`
+### `canonicalize(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
@@ -127,7 +127,7 @@
 
 **Returns:** `boolean`
 
-### `validateScenario(java.lang.String arg0)`
+### `validateScenario(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

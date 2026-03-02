@@ -37,14 +37,12 @@ See the Guava User Guide article on [unsigned
 
 ### `flip(long a)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `a` (`long`)
 
-### `compare(long a, long b)`
+**Returns:** `long`
 
-**Returns:** `int`
+### `compare(long a, long b)`
 
 **Java 8 users:** use Long#compareUnsigned(long, long) instead.
 
@@ -52,34 +50,34 @@ See the Guava User Guide article on [unsigned
 - `a` (`long`): the first unsigned long to compare
 - `b` (`long`): the second unsigned long to compare
 
-### `min(long[] array)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `min(long[] array)`
 
 **Parameters:**
 - `array` (`long[]`): a *nonempty* array of unsigned long values
+
+**Returns:** `long`
 
 ### `max(long[] array)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `array` (`long[]`): a *nonempty* array of unsigned long values
 
-### `join(java.lang.String separator, long[] array)`
+**Returns:** `long`
 
-**Returns:** `java.lang.String`
+### `join(String separator, long[] array)`
 
 For example, join("-", 1, 2, 3) returns the string "1-2-3".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`long[]`): an array of unsigned long values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<long[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(long, long)), the first pair of values that follow any common
@@ -91,41 +89,41 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(long[],
  long[]).
 
-### `sort(long[] array)`
+**Returns:** `java.util.Comparator<long[]>`
 
-**Returns:** `void`
+### `sort(long[] array)`
 
 **Parameters:**
 - `array` (`long[]`)
+
+**Returns:** `void`
 
 ### `sort(long[] array, int fromIndex, int toIndex)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `array` (`long[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
+
+**Returns:** `void`
 
 ### `sortDescending(long[] array)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `array` (`long[]`)
 
-### `sortDescending(long[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(long[] array, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `array` (`long[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `divide(long dividend, long divisor)`
+**Returns:** `void`
 
-**Returns:** `long`
+### `divide(long dividend, long divisor)`
 
 **Java 8 users:** use Long#divideUnsigned(long, long) instead.
 
@@ -133,9 +131,9 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
 - `dividend` (`long`): the dividend (numerator)
 - `divisor` (`long`): the divisor (denominator)
 
-### `remainder(long dividend, long divisor)`
-
 **Returns:** `long`
+
+### `remainder(long dividend, long divisor)`
 
 **Java 8 users:** use Long#remainderUnsigned(long, long) instead.
 
@@ -143,18 +141,18 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
 - `dividend` (`long`): the dividend (numerator)
 - `divisor` (`long`): the divisor (denominator)
 
-### `parseUnsignedLong(java.lang.String string)`
-
 **Returns:** `long`
+
+### `parseUnsignedLong(String string)`
 
 **Java 8 users:** use Long#parseUnsignedLong(String) instead.
 
 **Parameters:**
 - `string` (`java.lang.String`)
 
-### `parseUnsignedLong(java.lang.String string, int radix)`
-
 **Returns:** `long`
+
+### `parseUnsignedLong(String string, int radix)`
 
 **Java 8 users:** use Long#parseUnsignedLong(String, int) instead.
 
@@ -162,9 +160,9 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
 - `string` (`java.lang.String`): the string containing the unsigned long representation to be parsed.
 - `radix` (`int`): the radix to use while parsing string
 
-### `decode(java.lang.String stringValue)`
-
 **Returns:** `long`
+
+### `decode(String stringValue)`
 
 Accepts a decimal, hexadecimal, or octal number given by specifying the following prefix:
 
@@ -178,22 +176,24 @@ Accepts a decimal, hexadecimal, or octal number given by specifying the followin
 **Parameters:**
 - `stringValue` (`java.lang.String`)
 
-### `toString(long x)`
+**Returns:** `long`
 
-**Returns:** `java.lang.String`
+### `toString(long x)`
 
 **Java 8 users:** use Long#toUnsignedString(long) instead.
 
 **Parameters:**
 - `x` (`long`)
 
-### `toString(long x, int radix)`
-
 **Returns:** `java.lang.String`
+
+### `toString(long x, int radix)`
 
 **Java 8 users:** use Long#toUnsignedString(long, int) instead.
 
 **Parameters:**
 - `x` (`long`): the value to convert to a string.
 - `radix` (`int`): the radix to use while working with x
+
+**Returns:** `java.lang.String`
 

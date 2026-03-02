@@ -116,7 +116,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0, boolean arg1, boolean arg2, java.lang.String arg3, java.util.List<java.lang.String> arg4)`
+### `<init>(String arg0, boolean arg1, boolean arg2, String arg3, List<String> arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -125,7 +125,7 @@
 - `arg3` (`java.lang.String`)
 - `arg4` (`java.util.List<java.lang.String>`)
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, boolean arg2, boolean arg3, java.lang.String arg4, java.util.List<java.lang.String> arg5)`
+### `<init>(String arg0, String arg1, boolean arg2, boolean arg3, String arg4, List<String> arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -141,7 +141,7 @@
 
 **Returns:** `ro.sync.contentcompletion.xml.CIAttribute.EditableState`
 
-### `setEditableState(ro.sync.contentcompletion.xml.CIAttribute.EditableState arg0)`
+### `setEditableState(CIAttribute.EditableState arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.contentcompletion.xml.CIAttribute.EditableState`)
@@ -156,7 +156,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setName(java.lang.String arg0)`
+### `setName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -183,7 +183,7 @@
 
 **Returns:** `java.util.List<java.lang.String>`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -198,7 +198,7 @@
 
 **Returns:** `java.lang.String`
 
-### `compareTo(ro.sync.contentcompletion.xml.CIAttribute arg0)`
+### `compareTo(CIAttribute arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.contentcompletion.xml.CIAttribute`](./CIAttribute.md))
@@ -209,7 +209,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetFractionDigitsValue(java.lang.String arg0)`
+### `setFacetFractionDigitsValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -220,7 +220,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetLengthValue(java.lang.String arg0)`
+### `setFacetLengthValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -231,7 +231,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetMaxExclusiveValue(java.lang.String arg0)`
+### `setFacetMaxExclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -242,7 +242,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetMaxInclusiveValue(java.lang.String arg0)`
+### `setFacetMaxInclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -253,7 +253,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetMaxLengthValue(java.lang.String arg0)`
+### `setFacetMaxLengthValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -264,7 +264,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetMinExclusiveValue(java.lang.String arg0)`
+### `setFacetMinExclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -275,7 +275,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetMinInclusiveValue(java.lang.String arg0)`
+### `setFacetMinInclusiveValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -286,7 +286,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetMinLengthValue(java.lang.String arg0)`
+### `setFacetMinLengthValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -297,7 +297,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetTotalDigitsValue(java.lang.String arg0)`
+### `setFacetTotalDigitsValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -308,7 +308,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetWhitespaceValue(java.lang.String arg0)`
+### `setFacetWhitespaceValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -319,7 +319,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setFacetPattern(java.lang.String arg0)`
+### `setFacetPattern(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -330,28 +330,28 @@
 
 **Returns:** `java.lang.String`
 
-### `setModelDescription(java.lang.String arg0)`
+### `setModelDescription(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setDefaultValue(java.lang.String arg0)`
+### `setDefaultValue(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setOverridingDefaultValueProvider(ro.sync.contentcompletion.xml.CIAttribute._b arg0)`
+### `setOverridingDefaultValueProvider(CIAttribute._b arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.contentcompletion.xml.CIAttribute._b`)
 
 **Returns:** `void`
 
-### `setPossiblesValues(java.util.List<java.lang.String> arg0)`
+### `setPossiblesValues(List<String> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.lang.String>`)
@@ -365,7 +365,7 @@
 
 **Returns:** `void`
 
-### `setNamespace(java.lang.String arg0)`
+### `setNamespace(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -383,7 +383,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setAnnotation(java.lang.String arg0)`
+### `setAnnotation(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -405,14 +405,14 @@
 
 **Returns:** `java.lang.String`
 
-### `setPrefix(java.lang.String arg0)`
+### `setPrefix(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setAssertions(java.lang.String arg0)`
+### `setAssertions(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -423,7 +423,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentMode(java.lang.String arg0)`
+### `setOpenContentMode(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -434,7 +434,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setOpenContentWildcardDescription(java.lang.String arg0)`
+### `setOpenContentWildcardDescription(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

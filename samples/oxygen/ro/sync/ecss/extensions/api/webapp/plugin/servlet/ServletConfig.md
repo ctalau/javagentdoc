@@ -20,7 +20,7 @@ The name may be provided via server administration, assigned in the web
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.plugin.servlet.ServletContext`](./ServletContext.md)
 
-### `getInitParameter(java.lang.String name)`
+### `getInitParameter(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`): the name of the initialization parameter whose value to get

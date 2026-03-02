@@ -22,13 +22,13 @@
 
 ## Methods
 
-### `defaultValue(java.lang.Class<T> type)`
-
-**Returns:** `T`
+### `defaultValue(Class<T> type)`
 
 For non-primitive types and
  void, null is returned.
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
+
+**Returns:** `T`
 

@@ -18,7 +18,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getRenderingInformation(ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext context)`
+### `getRenderingInformation(NodeRendererCustomizerContext context)`
 
 **Parameters:**
 - `context` ([`ro.sync.exml.workspace.api.node.customizer.NodeRendererCustomizerContext`](../../../exml/workspace/api/node/customizer/NodeRendererCustomizerContext.md))

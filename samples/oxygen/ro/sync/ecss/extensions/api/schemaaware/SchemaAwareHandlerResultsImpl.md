@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String operationID)`
+### `<init>(String operationID)`
 
 **Parameters:**
 - `operationID` (`java.lang.String`): One of #TYPE_HANDLE_INSERT_FRAGMENT_OPERATION for insert fragment operation or 
@@ -28,7 +28,7 @@
 
 ## Methods
 
-### `addResult(java.lang.String resultKey, java.lang.Object resultValue)`
+### `addResult(String resultKey, Object resultValue)`
 
 **Parameters:**
 - `resultKey` (`java.lang.String`): The result key. Constants are defined in SchemaAwareHandlerResult}.
@@ -36,7 +36,7 @@
 
 **Returns:** `void`
 
-### `getResult(java.lang.String resultId)`
+### `getResult(String resultId)`
 
 **Parameters:**
 - `resultId` (`java.lang.String`)

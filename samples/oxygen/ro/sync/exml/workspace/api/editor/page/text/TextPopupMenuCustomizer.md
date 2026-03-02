@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `customizePopUpMenu(java.lang.Object popUp, ro.sync.exml.workspace.api.editor.page.text.WSTextEditorPage textPage)`
+### `customizePopUpMenu(Object popUp, WSTextEditorPage textPage)`
 
 If everything is removed then the menu will not be shown.
 

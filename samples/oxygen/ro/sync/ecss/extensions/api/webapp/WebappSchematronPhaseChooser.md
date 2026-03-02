@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `choosePhase(java.lang.String schematronSystemId)`
+### `choosePhase(String schematronSystemId)`
 
 In order to obtain the available phases in that Schematron file, one can 
  use WebappDocumentValidator#getSchematronPhases(String). Note that

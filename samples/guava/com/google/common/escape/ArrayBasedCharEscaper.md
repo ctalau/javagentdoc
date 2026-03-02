@@ -44,7 +44,7 @@ The size of the data structure used by ArrayBasedCharEscaper is proportional to 
 
 ## Constructors
 
-### `<init>(java.util.Map<java.lang.Character,java.lang.String> replacementMap, char safeMin, char safeMax)`
+### `<init>(Map<Character,String> replacementMap, char safeMin, char safeMax)`
 
 If safeMax < safeMin then no characters are considered safe.
 
@@ -57,7 +57,7 @@ If a character has no mapped replacement then it is checked against the safe ran
 - `safeMin` (`char`): the lowest character value in the safe range
 - `safeMax` (`char`): the highest character value in the safe range
 
-### `<init>(com.google.common.escape.ArrayBasedEscaperMap escaperMap, char safeMin, char safeMax)`
+### `<init>(ArrayBasedEscaperMap escaperMap, char safeMin, char safeMax)`
 
 If safeMax < safeMin then no characters are considered safe. This initializer is
  useful when explicit instances of ArrayBasedEscaperMap are used to allow the sharing of large
@@ -74,16 +74,14 @@ If a character has no mapped replacement then it is checked against the safe ran
 
 ## Methods
 
-### `escape(java.lang.String s)`
-
-**Returns:** `java.lang.String`
+### `escape(String s)`
 
 **Parameters:**
 - `s` (`java.lang.String`)
 
-### `escape(char c)`
+**Returns:** `java.lang.String`
 
-**Returns:** `char[]`
+### `escape(char c)`
 
 If the given
  character does not have an explicit replacement and lies outside the safe range then #escapeUnsafe is called.
@@ -91,9 +89,9 @@ If the given
 **Parameters:**
 - `c` (`char`)
 
-### `escapeUnsafe(char c)`
-
 **Returns:** `char[]`
+
+### `escapeUnsafe(char c)`
 
 Subclasses should override this method to provide
  generalized escaping for characters.
@@ -105,4 +103,6 @@ Note that arrays returned by this method must not be modified once they have bee
 
 **Parameters:**
 - `c` (`char`): the character to escape
+
+**Returns:** `char[]`
 

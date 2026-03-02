@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `getImposedImageSize(ro.sync.exml.view.graphics.Rectangle size)`
+### `getImposedImageSize(Rectangle size)`
 
 **Parameters:**
 - `size` (`ro.sync.exml.view.graphics.Rectangle`): The real image size.

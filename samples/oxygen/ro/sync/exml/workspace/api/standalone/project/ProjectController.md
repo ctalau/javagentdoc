@@ -8,14 +8,14 @@
 
 ## Methods
 
-### `addProjectChangeListener(ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener projectChangeListener)`
+### `addProjectChangeListener(ProjectChangeListener projectChangeListener)`
 
 **Parameters:**
 - `projectChangeListener` ([`ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener`](./ProjectChangeListener.md)): The project listener to add.
 
 **Returns:** `void`
 
-### `removeProjectChangeListener(ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener projectChangeListener)`
+### `removeProjectChangeListener(ProjectChangeListener projectChangeListener)`
 
 **Parameters:**
 - `projectChangeListener` ([`ro.sync.exml.workspace.api.standalone.project.ProjectChangeListener`](./ProjectChangeListener.md)): The project listener to remove.
@@ -26,14 +26,14 @@
 
 **Returns:** `java.net.URL`
 
-### `addPopUpMenuCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer popUpCustomizer)`
+### `addPopUpMenuCustomizer(ProjectPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer`](./ProjectPopupMenuCustomizer.md)): the pop-up menu customizer to add.
 
 **Returns:** `void`
 
-### `removePopUpMenuCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer popUpCustomizer)`
+### `removePopUpMenuCustomizer(ProjectPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectPopupMenuCustomizer`](./ProjectPopupMenuCustomizer.md)): the pop-up menu customizer to remove.
@@ -46,35 +46,35 @@ If both parent and child files/folders are selected, they are all returned.
 
 **Returns:** `java.io.File[]`
 
-### `refreshFolders(java.io.File[] folders)`
+### `refreshFolders(File[] folders)`
 
 **Parameters:**
 - `folders` (`java.io.File[]`): An array of folders to refresh.
 
 **Returns:** `void`
 
-### `addLinksToFoldersInProjectRoot(java.io.File[] folders)`
+### `addLinksToFoldersInProjectRoot(File[] folders)`
 
 **Parameters:**
 - `folders` (`java.io.File[]`): The folders to refer. They should already be created on disk before calling this API which just links to it.
 
 **Returns:** `void`
 
-### `addRendererCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer rendererCustomizer)`
+### `addRendererCustomizer(ProjectRendererCustomizer rendererCustomizer)`
 
 **Parameters:**
 - `rendererCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer`](./ProjectRendererCustomizer.md)): the renderer customizer to add.
 
 **Returns:** `void`
 
-### `removeRendererCustomizer(ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer rendererCustomizer)`
+### `removeRendererCustomizer(ProjectRendererCustomizer rendererCustomizer)`
 
 **Parameters:**
 - `rendererCustomizer` ([`ro.sync.exml.workspace.api.standalone.project.ProjectRendererCustomizer`](./ProjectRendererCustomizer.md)): the renderer customizer to remove.
 
 **Returns:** `void`
 
-### `loadProject(java.io.File project)`
+### `loadProject(File project)`
 
 **Parameters:**
 - `project` (`java.io.File`): The project file.
@@ -91,7 +91,7 @@ If the "Main files" support is disabled, an empty iterator will be returned, eve
 
 **Returns:** `java.util.Iterator<java.net.URL>`
 
-### `findInFiles(ro.sync.exml.workspace.api.standalone.project.SearchParams findParams)`
+### `findInFiles(SearchParams findParams)`
 
 **Parameters:**
 - `findParams` ([`ro.sync.exml.workspace.api.standalone.project.SearchParams`](./SearchParams.md)): The find parameters.

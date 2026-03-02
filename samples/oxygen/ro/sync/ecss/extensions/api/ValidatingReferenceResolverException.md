@@ -19,12 +19,12 @@ Sometimes the message which will be presented first
 
 ## Constructors
 
-### `<init>(java.lang.String errorMessage)`
+### `<init>(String errorMessage)`
 
 **Parameters:**
 - `errorMessage` (`java.lang.String`): The error message
 
-### `<init>(java.lang.String shortMessage, java.lang.String errorMessage)`
+### `<init>(String shortMessage, String errorMessage)`
 
 **Parameters:**
 - `shortMessage` (`java.lang.String`): The short error message. Sometimes the message which will be presented first 

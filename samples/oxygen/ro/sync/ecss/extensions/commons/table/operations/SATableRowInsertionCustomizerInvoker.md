@@ -24,7 +24,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.TableRowInsertionCustomizer`](./TableRowInsertionCustomizer.md)
 
-### `setInstance(ro.sync.ecss.extensions.commons.table.operations.TableRowInsertionCustomizer anotherInstance)`
+### `setInstance(TableRowInsertionCustomizer anotherInstance)`
 
 Don't use it for other purposes.
 
@@ -33,7 +33,7 @@ Don't use it for other purposes.
 
 **Returns:** `void`
 
-### `showCustomTableRowInsertionDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `showCustomTableRowInsertionDialog(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))

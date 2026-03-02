@@ -69,7 +69,7 @@ The moved node will be inserted in the first leaf will be this fragment
 
 **Returns:** `java.lang.String`
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -77,7 +77,7 @@ The moved node will be inserted in the first leaf will be this fragment
 
 **Returns:** `void`
 
-### `moveNode(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode, ro.sync.ecss.extensions.api.node.AuthorNode toDeleteNode, boolean selectNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `moveNode(AuthorNode toMoveNode, AuthorNode toDeleteNode, boolean selectNode, AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `toMoveNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to be moved.
@@ -90,7 +90,7 @@ The moved node will be inserted in the first leaf will be this fragment
 
 **Returns:** `void`
 
-### `getFragmentToMove(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode, ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, boolean alwaysPreserveTrackedChanges, boolean moveOnlyContent)`
+### `getFragmentToMove(AuthorNode toMoveNode, AuthorDocumentController ctrl, boolean alwaysPreserveTrackedChanges, boolean moveOnlyContent)`
 
 **Parameters:**
 - `toMoveNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The context node.
@@ -100,7 +100,7 @@ The moved node will be inserted in the first leaf will be this fragment
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)
 
-### `moveFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragmentToMove, int insertionOffset, boolean selectNode, ro.sync.ecss.extensions.api.node.AuthorNode toDeleteNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `moveFragment(AuthorDocumentFragment fragmentToMove, int insertionOffset, boolean selectNode, AuthorNode toDeleteNode, AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `fragmentToMove` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)): The fragment to be moved.
@@ -114,14 +114,14 @@ The moved node will be inserted in the first leaf will be this fragment
 
 **Returns:** `void`
 
-### `isAlwaysPreserveTrackChangesTrue(ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `isAlwaysPreserveTrackChangesTrue(ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../api/ArgumentsMap.md)): The arguments.
 
 **Returns:** `boolean`
 
-### `executeLocationXPath(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String xPathExpression, boolean processTrackChanges)`
+### `executeLocationXPath(AuthorAccess authorAccess, String xPathExpression, boolean processTrackChanges)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Author Access.

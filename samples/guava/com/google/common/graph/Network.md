@@ -106,8 +106,6 @@ See the Guava User Guide for the common.graph package (["Graphs Explained"](http
 
 ### `asGraph()`
 
-**Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
-
 The resulting Graph will have
  an edge connecting node A to node B if this Network has an edge connecting A to B.
 
@@ -116,25 +114,27 @@ If this network allows parallel edges, parallel edges will be
  treated as if collapsed into a single edge. For example, the #degree(Object) of a node
  in the Graph view may be less than the degree of the same node in this Network.
 
-### `isDirected()`
+**Returns:** [`com.google.common.graph.Graph<N>`](./Graph.md)
 
-**Returns:** `boolean`
+### `isDirected()`
 
 Directed edges connect a source node to a target node, while
  undirected edges connect a pair of nodes to each other.
 
-### `allowsParallelEdges()`
-
 **Returns:** `boolean`
+
+### `allowsParallelEdges()`
 
 Attempting to add a parallel edge to a
  network that does not allow them will throw an IllegalArgumentException.
 
-### `allowsSelfLoops()`
-
 **Returns:** `boolean`
 
+### `allowsSelfLoops()`
+
 Attempting to add a self-loop to a network that does not allow them will throw an IllegalArgumentException.
+
+**Returns:** `boolean`
 
 ### `nodeOrder()`
 
@@ -146,25 +146,23 @@ Attempting to add a self-loop to a network that does not allow them will throw a
 
 ### `adjacentNodes(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 This is equal to the union of #predecessors(Object) and #successors(Object).
 
 **Parameters:**
 - `node` (`N`)
 
-### `predecessors(N node)`
-
 **Returns:** `java.util.Set<N>`
+
+### `predecessors(N node)`
 
 In an undirected network, this is equivalent to #adjacentNodes(Object).
 
 **Parameters:**
 - `node` (`N`)
 
-### `successors(N node)`
-
 **Returns:** `java.util.Set<N>`
+
+### `successors(N node)`
 
 In an undirected network, this is equivalent to #adjacentNodes(Object).
 
@@ -175,18 +173,18 @@ This is *not* the same as "all nodes reachable from node by following outgoing
 **Parameters:**
 - `node` (`N`)
 
-### `incidentEdges(N node)`
+**Returns:** `java.util.Set<N>`
 
-**Returns:** `java.util.Set<E>`
+### `incidentEdges(N node)`
 
 This is equal to the union of #inEdges(Object) and #outEdges(Object).
 
 **Parameters:**
 - `node` (`N`)
 
-### `inEdges(N node)`
-
 **Returns:** `java.util.Set<E>`
+
+### `inEdges(N node)`
 
 In a directed network, an incoming edge's EndpointPair#target() equals node.
 
@@ -196,9 +194,9 @@ In an undirected network, this is equivalent to #incidentEdges(Object).
 **Parameters:**
 - `node` (`N`)
 
-### `outEdges(N node)`
-
 **Returns:** `java.util.Set<E>`
+
+### `outEdges(N node)`
 
 In a directed network, an outgoing edge's EndpointPair#source() equals node.
 
@@ -208,9 +206,9 @@ In an undirected network, this is equivalent to #incidentEdges(Object).
 **Parameters:**
 - `node` (`N`)
 
-### `degree(N node)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `int`
+### `degree(N node)`
 
 For directed networks, this is equal to inDegree(node) + outDegree(node).
 
@@ -224,9 +222,9 @@ If the count is greater than Integer.MAX_VALUE, returns Integer.MAX_VALUE.
 **Parameters:**
 - `node` (`N`)
 
-### `inDegree(N node)`
-
 **Returns:** `int`
+
+### `inDegree(N node)`
 
 In an undirected network, returns the #degree(Object).
 
@@ -235,11 +233,11 @@ If the count is greater than Integer.MAX_VALUE, returns Integer.MAX_VALUE.
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `int`
 
 ### `outDegree(N node)`
 
-**Returns:** `int`
-
 In an undirected network, returns the #degree(Object).
 
  
@@ -248,25 +246,25 @@ If the count is greater than Integer.MAX_VALUE, returns Integer.MAX_VALUE.
 **Parameters:**
 - `node` (`N`)
 
-### `incidentNodes(E edge)`
+**Returns:** `int`
 
-**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
+### `incidentNodes(E edge)`
 
 **Parameters:**
 - `edge` (`E`)
 
-### `adjacentEdges(E edge)`
+**Returns:** [`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md)
 
-**Returns:** `java.util.Set<E>`
+### `adjacentEdges(E edge)`
 
 An edge is not considered adjacent to itself.
 
 **Parameters:**
 - `edge` (`E`)
 
-### `edgesConnecting(N nodeU, N nodeV)`
-
 **Returns:** `java.util.Set<E>`
+
+### `edgesConnecting(N nodeU, N nodeV)`
 
 In an undirected network, this is equal to edgesConnecting(nodeV, nodeU).
 
@@ -279,9 +277,9 @@ The resulting set of edges will be parallel (i.e. have equal #incidentNodes(Obje
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgesConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Set<E>`
+
+### `edgesConnecting(EndpointPair<N> endpoints)`
 
 The resulting set of edges will be parallel (i.e. have equal #incidentNodes(Object)). If this network does not allow parallel
  edges, the resulting set will contain at most one edge (equivalent to 
@@ -293,9 +291,9 @@ If this network is directed, endpoints must be ordered.
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `edgeConnecting(N nodeU, N nodeV)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.Optional<E>`
+### `edgeConnecting(N nodeU, N nodeV)`
 
 In an undirected network, this is equal to edgeConnecting(nodeV, nodeU).
 
@@ -303,18 +301,18 @@ In an undirected network, this is equal to edgeConnecting(nodeV, nodeU).
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Optional<E>`
+
+### `edgeConnecting(EndpointPair<N> endpoints)`
 
 If this graph is directed, the endpoints must be ordered.
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `edgeConnectingOrNull(N nodeU, N nodeV)`
+**Returns:** `java.util.Optional<E>`
 
-**Returns:** `E`
+### `edgeConnectingOrNull(N nodeU, N nodeV)`
 
 In an undirected network, this is equal to edgeConnectingOrNull(nodeV, nodeU).
 
@@ -322,18 +320,18 @@ In an undirected network, this is equal to edgeConnectingOrNull(nodeV, nodeU).
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeConnectingOrNull(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `E`
+
+### `edgeConnectingOrNull(EndpointPair<N> endpoints)`
 
 If this graph is directed, the endpoints must be ordered.
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `hasEdgeConnecting(N nodeU, N nodeV)`
+**Returns:** `E`
 
-**Returns:** `boolean`
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 This is
  equivalent to nodes().contains(nodeU) && successors(nodeU).contains(nodeV), and to
@@ -346,9 +344,9 @@ In an undirected graph, this is equal to hasEdgeConnecting(nodeV, nodeU).
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnecting(EndpointPair<N> endpoints)`
 
 Unlike the other EndpointPair-accepting methods, this method does not throw if the
  endpoints are unordered and the graph is directed; it simply returns false. This is for
@@ -357,9 +355,9 @@ Unlike the other EndpointPair-accepting methods, this method does not throw if t
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `equals(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `equals(Object object)`
 
 Thus, two networks A and B are equal if **all** of the following are true:
 
@@ -384,13 +382,15 @@ A reference implementation of this is provided by AbstractNetwork#equals(Object)
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 The hash code of a network is defined as the hash code
  of a map from each of its edges to their incident nodes.
 
  
 A reference implementation of this is provided by AbstractNetwork#hashCode().
+
+**Returns:** `int`
 

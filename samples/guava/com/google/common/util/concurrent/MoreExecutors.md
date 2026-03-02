@@ -12,9 +12,7 @@
 
 ## Methods
 
-### `getExitingExecutorService(java.util.concurrent.ThreadPoolExecutor executor, java.time.Duration terminationTimeout)`
-
-**Returns:** `java.util.concurrent.ExecutorService`
+### `getExitingExecutorService(ThreadPoolExecutor executor, Duration terminationTimeout)`
 
 It does so by using daemon threads and adding a shutdown hook to wait for their
  completion.
@@ -25,11 +23,11 @@ This is mainly for fixed thread pools. See Executors#newFixedThreadPool(int).
 **Parameters:**
 - `executor` (`java.util.concurrent.ThreadPoolExecutor`): the executor to modify to make sure it exits when the application is finished
 - `terminationTimeout` (`java.time.Duration`): how long to wait for the executor to finish before terminating the
-     JVM
-
-### `getExitingExecutorService(java.util.concurrent.ThreadPoolExecutor executor, long terminationTimeout, java.util.concurrent.TimeUnit timeUnit)`
+       JVM
 
 **Returns:** `java.util.concurrent.ExecutorService`
+
+### `getExitingExecutorService(ThreadPoolExecutor executor, long terminationTimeout, TimeUnit timeUnit)`
 
 It does so by using daemon threads and adding a shutdown hook to wait for their
  completion.
@@ -40,12 +38,12 @@ This is mainly for fixed thread pools. See Executors#newFixedThreadPool(int).
 **Parameters:**
 - `executor` (`java.util.concurrent.ThreadPoolExecutor`): the executor to modify to make sure it exits when the application is finished
 - `terminationTimeout` (`long`): how long to wait for the executor to finish before terminating the
-     JVM
+       JVM
 - `timeUnit` (`java.util.concurrent.TimeUnit`): unit of time for the time parameter
 
-### `getExitingExecutorService(java.util.concurrent.ThreadPoolExecutor executor)`
-
 **Returns:** `java.util.concurrent.ExecutorService`
+
+### `getExitingExecutorService(ThreadPoolExecutor executor)`
 
 It does so by using daemon threads and adding a shutdown hook to wait for their
  completion.
@@ -60,9 +58,9 @@ This is mainly for fixed thread pools. See Executors#newFixedThreadPool(int).
 **Parameters:**
 - `executor` (`java.util.concurrent.ThreadPoolExecutor`): the executor to modify to make sure it exits when the application is finished
 
-### `getExitingScheduledExecutorService(java.util.concurrent.ScheduledThreadPoolExecutor executor, java.time.Duration terminationTimeout)`
+**Returns:** `java.util.concurrent.ExecutorService`
 
-**Returns:** `java.util.concurrent.ScheduledExecutorService`
+### `getExitingScheduledExecutorService(ScheduledThreadPoolExecutor executor, Duration terminationTimeout)`
 
 It does so by using daemon threads and adding a shutdown hook to
  wait for their completion.
@@ -73,11 +71,11 @@ This is mainly for fixed thread pools. See Executors#newScheduledThreadPool(int)
 **Parameters:**
 - `executor` (`java.util.concurrent.ScheduledThreadPoolExecutor`): the executor to modify to make sure it exits when the application is finished
 - `terminationTimeout` (`java.time.Duration`): how long to wait for the executor to finish before terminating the
-     JVM
-
-### `getExitingScheduledExecutorService(java.util.concurrent.ScheduledThreadPoolExecutor executor, long terminationTimeout, java.util.concurrent.TimeUnit timeUnit)`
+       JVM
 
 **Returns:** `java.util.concurrent.ScheduledExecutorService`
+
+### `getExitingScheduledExecutorService(ScheduledThreadPoolExecutor executor, long terminationTimeout, TimeUnit timeUnit)`
 
 It does so by using daemon threads and adding a shutdown hook to
  wait for their completion.
@@ -88,12 +86,12 @@ This is mainly for fixed thread pools. See Executors#newScheduledThreadPool(int)
 **Parameters:**
 - `executor` (`java.util.concurrent.ScheduledThreadPoolExecutor`): the executor to modify to make sure it exits when the application is finished
 - `terminationTimeout` (`long`): how long to wait for the executor to finish before terminating the
-     JVM
+       JVM
 - `timeUnit` (`java.util.concurrent.TimeUnit`): unit of time for the time parameter
 
-### `getExitingScheduledExecutorService(java.util.concurrent.ScheduledThreadPoolExecutor executor)`
-
 **Returns:** `java.util.concurrent.ScheduledExecutorService`
+
+### `getExitingScheduledExecutorService(ScheduledThreadPoolExecutor executor)`
 
 It does so by using daemon threads and adding a shutdown hook to
  wait for their completion.
@@ -108,9 +106,9 @@ This is mainly for fixed thread pools. See Executors#newScheduledThreadPool(int)
 **Parameters:**
 - `executor` (`java.util.concurrent.ScheduledThreadPoolExecutor`): the executor to modify to make sure it exits when the application is finished
 
-### `addDelayedShutdownHook(java.util.concurrent.ExecutorService service, java.time.Duration terminationTimeout)`
+**Returns:** `java.util.concurrent.ScheduledExecutorService`
 
-**Returns:** `void`
+### `addDelayedShutdownHook(ExecutorService service, Duration terminationTimeout)`
 
 This is useful if the given service uses daemon threads, and we want to keep the JVM from
  exiting immediately on shutdown, instead giving these daemon threads a chance to terminate
@@ -119,11 +117,11 @@ This is useful if the given service uses daemon threads, and we want to keep the
 **Parameters:**
 - `service` (`java.util.concurrent.ExecutorService`): ExecutorService which uses daemon threads
 - `terminationTimeout` (`java.time.Duration`): how long to wait for the executor to finish before terminating the
-     JVM
-
-### `addDelayedShutdownHook(java.util.concurrent.ExecutorService service, long terminationTimeout, java.util.concurrent.TimeUnit timeUnit)`
+       JVM
 
 **Returns:** `void`
+
+### `addDelayedShutdownHook(ExecutorService service, long terminationTimeout, TimeUnit timeUnit)`
 
 This is useful if the given service uses daemon threads, and we want to keep the JVM from
  exiting immediately on shutdown, instead giving these daemon threads a chance to terminate
@@ -132,19 +130,19 @@ This is useful if the given service uses daemon threads, and we want to keep the
 **Parameters:**
 - `service` (`java.util.concurrent.ExecutorService`): ExecutorService which uses daemon threads
 - `terminationTimeout` (`long`): how long to wait for the executor to finish before terminating the
-     JVM
+       JVM
 - `timeUnit` (`java.util.concurrent.TimeUnit`): unit of time for the time parameter
 
-### `useDaemonThreadFactory(java.util.concurrent.ThreadPoolExecutor executor)`
-
 **Returns:** `void`
+
+### `useDaemonThreadFactory(ThreadPoolExecutor executor)`
 
 **Parameters:**
 - `executor` (`java.util.concurrent.ThreadPoolExecutor`)
 
-### `newDirectExecutorService()`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md)
+### `newDirectExecutorService()`
 
 This applies both to
  individually submitted tasks and to collections of tasks submitted via invokeAll or
@@ -170,9 +168,9 @@ The implementation deviates from the ExecutorService specification with regards 
  invokeAll/invokeAny throwing RejectedExecutionException, although a subset of the tasks may
  already have been executed.
 
-### `directExecutor()`
+**Returns:** [`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md)
 
-**Returns:** `java.util.concurrent.Executor`
+### `directExecutor()`
 
 This executor is appropriate for tasks that are lightweight and not deeply chained.
  Inappropriate directExecutor usage can cause problems, and these problems can be
@@ -239,9 +237,9 @@ This instance is equivalent to:
 This should be preferred to #newDirectExecutorService() because implementing the
  ExecutorService subinterface necessitates significant performance overhead.
 
-### `newSequentialExecutor(java.util.concurrent.Executor delegate)`
-
 **Returns:** `java.util.concurrent.Executor`
+
+### `newSequentialExecutor(Executor delegate)`
 
 executed tasks have a happens-before order as defined in the
  Java Language Specification. Tasks execute with the same happens-before order that the function
@@ -291,9 +289,9 @@ When an Error is thrown by an executed task, previously submitted tasks may neve
 **Parameters:**
 - `delegate` (`java.util.concurrent.Executor`)
 
-### `listeningDecorator(java.util.concurrent.ExecutorService delegate)`
+**Returns:** `java.util.concurrent.Executor`
 
-**Returns:** [`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md)
+### `listeningDecorator(ExecutorService delegate)`
 
 Those methods, as well
  as execute and invokeAny, are implemented in terms of calls to 
@@ -310,9 +308,9 @@ If the delegate executor was already an instance of ListeningExecutorService, it
 **Parameters:**
 - `delegate` (`java.util.concurrent.ExecutorService`)
 
-### `listeningDecorator(java.util.concurrent.ScheduledExecutorService delegate)`
+**Returns:** [`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListeningScheduledExecutorService`](./ListeningScheduledExecutorService.md)
+### `listeningDecorator(ScheduledExecutorService delegate)`
 
 Those methods, as
  well as execute and invokeAny, are implemented in terms of calls to 
@@ -330,9 +328,9 @@ If the delegate executor was already an instance of
 **Parameters:**
 - `delegate` (`java.util.concurrent.ScheduledExecutorService`)
 
-### `invokeAnyImpl(com.google.common.util.concurrent.ListeningExecutorService executorService, java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, boolean timed, java.time.Duration timeout)`
+**Returns:** [`com.google.common.util.concurrent.ListeningScheduledExecutorService`](./ListeningScheduledExecutorService.md)
 
-**Returns:** `T`
+### `invokeAnyImpl(ListeningExecutorService executorService, Collection<? extends Callable<T>> tasks, boolean timed, Duration timeout)`
 
 **Parameters:**
 - `executorService` ([`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md))
@@ -340,9 +338,9 @@ If the delegate executor was already an instance of
 - `timed` (`boolean`)
 - `timeout` (`java.time.Duration`)
 
-### `invokeAnyImpl(com.google.common.util.concurrent.ListeningExecutorService executorService, java.util.Collection<? extends java.util.concurrent.Callable<T>> tasks, boolean timed, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `T`
+
+### `invokeAnyImpl(ListeningExecutorService executorService, Collection<? extends Callable<T>> tasks, boolean timed, long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `executorService` ([`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md))
@@ -351,38 +349,38 @@ If the delegate executor was already an instance of
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `submitAndAddQueueListener(com.google.common.util.concurrent.ListeningExecutorService executorService, java.util.concurrent.Callable<T> task, java.util.concurrent.BlockingQueue<java.util.concurrent.Future<T>> queue)`
+**Returns:** `T`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+### `submitAndAddQueueListener(ListeningExecutorService executorService, Callable<T> task, BlockingQueue<Future<T>> queue)`
 
 **Parameters:**
 - `executorService` ([`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md))
 - `task` (`java.util.concurrent.Callable<T>`)
 - `queue` (`java.util.concurrent.BlockingQueue<java.util.concurrent.Future<T>>`)
 
-### `platformThreadFactory()`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 
-**Returns:** `java.util.concurrent.ThreadFactory`
+### `platformThreadFactory()`
 
 When running on AppEngine with access to [AppEngine legacy
  APIs](https://cloud.google.com/appengine/docs/standard/java/javadoc/), this method returns ThreadManager.currentRequestThreadFactory(). Otherwise,
  it returns Executors#defaultThreadFactory().
 
+**Returns:** `java.util.concurrent.ThreadFactory`
+
 ### `isAppEngineWithApiClasses()`
 
 **Returns:** `boolean`
 
-### `newThread(java.lang.String name, java.lang.Runnable runnable)`
-
-**Returns:** `java.lang.Thread`
+### `newThread(String name, Runnable runnable)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 - `runnable` (`java.lang.Runnable`)
 
-### `renamingDecorator(java.util.concurrent.Executor executor, com.google.common.base.Supplier<java.lang.String> nameSupplier)`
+**Returns:** `java.lang.Thread`
 
-**Returns:** `java.util.concurrent.Executor`
+### `renamingDecorator(Executor executor, Supplier<String> nameSupplier)`
 
 The names are retrieved from the nameSupplier on the thread that is being renamed
  right before each task is run. The renaming is best effort, if a SecurityManager
@@ -392,9 +390,9 @@ The names are retrieved from the nameSupplier on the thread that is being rename
 - `executor` (`java.util.concurrent.Executor`): The executor to decorate
 - `nameSupplier` ([`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md)): The source of names for each task
 
-### `renamingDecorator(java.util.concurrent.ExecutorService service, com.google.common.base.Supplier<java.lang.String> nameSupplier)`
+**Returns:** `java.util.concurrent.Executor`
 
-**Returns:** `java.util.concurrent.ExecutorService`
+### `renamingDecorator(ExecutorService service, Supplier<String> nameSupplier)`
 
 The names are retrieved from the nameSupplier on the thread that is being renamed
  right before each task is run. The renaming is best effort, if a SecurityManager
@@ -404,9 +402,9 @@ The names are retrieved from the nameSupplier on the thread that is being rename
 - `service` (`java.util.concurrent.ExecutorService`): The executor to decorate
 - `nameSupplier` ([`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md)): The source of names for each task
 
-### `renamingDecorator(java.util.concurrent.ScheduledExecutorService service, com.google.common.base.Supplier<java.lang.String> nameSupplier)`
+**Returns:** `java.util.concurrent.ExecutorService`
 
-**Returns:** `java.util.concurrent.ScheduledExecutorService`
+### `renamingDecorator(ScheduledExecutorService service, Supplier<String> nameSupplier)`
 
 The names are retrieved from the nameSupplier on the thread that is being renamed
  right before each task is run. The renaming is best effort, if a SecurityManager
@@ -416,9 +414,9 @@ The names are retrieved from the nameSupplier on the thread that is being rename
 - `service` (`java.util.concurrent.ScheduledExecutorService`): The executor to decorate
 - `nameSupplier` ([`com.google.common.base.Supplier<java.lang.String>`](../../base/Supplier.md)): The source of names for each task
 
-### `shutdownAndAwaitTermination(java.util.concurrent.ExecutorService service, java.time.Duration timeout)`
+**Returns:** `java.util.concurrent.ScheduledExecutorService`
 
-**Returns:** `boolean`
+### `shutdownAndAwaitTermination(ExecutorService service, Duration timeout)`
 
 The method takes the following steps:
 
@@ -439,9 +437,9 @@ If, at any step of the process, the calling thread is interrupted, the method ca
 - `service` (`java.util.concurrent.ExecutorService`): the ExecutorService to shut down
 - `timeout` (`java.time.Duration`): the maximum time to wait for the ExecutorService to terminate
 
-### `shutdownAndAwaitTermination(java.util.concurrent.ExecutorService service, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `boolean`
+
+### `shutdownAndAwaitTermination(ExecutorService service, long timeout, TimeUnit unit)`
 
 The method takes the following steps:
 
@@ -463,13 +461,15 @@ If, at any step of the process, the calling thread is interrupted, the method ca
 - `timeout` (`long`): the maximum time to wait for the ExecutorService to terminate
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the timeout argument
 
-### `rejectionPropagatingExecutor(java.util.concurrent.Executor delegate, com.google.common.util.concurrent.AbstractFuture<?> future)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.concurrent.Executor`
+### `rejectionPropagatingExecutor(Executor delegate, AbstractFuture<?> future)`
 
 Note, the returned executor can only be used once.
 
 **Parameters:**
 - `delegate` (`java.util.concurrent.Executor`)
 - `future` ([`com.google.common.util.concurrent.AbstractFuture<?>`](./AbstractFuture.md))
+
+**Returns:** `java.util.concurrent.Executor`
 

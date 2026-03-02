@@ -38,94 +38,92 @@ The values may be added singly or in groups. This class is not thread safe.
 
 ### `add(double value)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `value` (`double`)
 
-### `addAll(java.lang.Iterable<? extends java.lang.Number> values)`
-
 **Returns:** `void`
+
+### `addAll(Iterable<? extends Number> values)`
 
 **Parameters:**
 - `values` (`java.lang.Iterable<? extends java.lang.Number>`): a series of values, which will be converted to double values (this may
-     cause loss of precision)
-
-### `addAll(java.util.Iterator<? extends java.lang.Number> values)`
+       cause loss of precision)
 
 **Returns:** `void`
+
+### `addAll(Iterator<? extends Number> values)`
 
 **Parameters:**
 - `values` (`java.util.Iterator<? extends java.lang.Number>`): a series of values, which will be converted to double values (this may
-     cause loss of precision)
-
-### `addAll(double[] values)`
+       cause loss of precision)
 
 **Returns:** `void`
+
+### `addAll(double[] values)`
 
 **Parameters:**
 - `values` (`double[]`): a series of values
 
-### `addAll(int[] values)`
-
 **Returns:** `void`
+
+### `addAll(int[] values)`
 
 **Parameters:**
 - `values` (`int[]`): a series of values
 
-### `addAll(long[] values)`
-
 **Returns:** `void`
+
+### `addAll(long[] values)`
 
 **Parameters:**
 - `values` (`long[]`): a series of values, which will be converted to double values (this may
-     cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
-
-### `addAll(java.util.stream.DoubleStream values)`
+       cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 
 **Returns:** `void`
+
+### `addAll(DoubleStream values)`
 
 The stream will be completely consumed by this method.
 
 **Parameters:**
 - `values` (`java.util.stream.DoubleStream`): a series of values
 
-### `addAll(java.util.stream.IntStream values)`
-
 **Returns:** `void`
+
+### `addAll(IntStream values)`
 
 The stream will be completely consumed by this method.
 
 **Parameters:**
 - `values` (`java.util.stream.IntStream`): a series of values
 
-### `addAll(java.util.stream.LongStream values)`
-
 **Returns:** `void`
+
+### `addAll(LongStream values)`
 
 The stream will be completely consumed by this method.
 
 **Parameters:**
 - `values` (`java.util.stream.LongStream`): a series of values, which will be converted to double values (this may
-     cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
-
-### `addAll(com.google.common.math.Stats values)`
+       cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 
 **Returns:** `void`
+
+### `addAll(Stats values)`
 
 **Parameters:**
 - `values` ([`com.google.common.math.Stats`](./Stats.md))
 
-### `addAll(com.google.common.math.StatsAccumulator values)`
-
 **Returns:** `void`
+
+### `addAll(StatsAccumulator values)`
 
 **Parameters:**
 - `values` ([`com.google.common.math.StatsAccumulator`](./StatsAccumulator.md))
 
-### `merge(long otherCount, double otherMean, double otherSumOfSquaresOfDeltas, double otherMin, double otherMax)`
-
 **Returns:** `void`
+
+### `merge(long otherCount, double otherMean, double otherSumOfSquaresOfDeltas, double otherMin, double otherMax)`
 
 **Parameters:**
 - `otherCount` (`long`)
@@ -133,6 +131,8 @@ The stream will be completely consumed by this method.
 - `otherSumOfSquaresOfDeltas` (`double`)
 - `otherMin` (`double`)
 - `otherMax` (`double`)
+
+**Returns:** `void`
 
 ### `snapshot()`
 
@@ -143,8 +143,6 @@ The stream will be completely consumed by this method.
 **Returns:** `long`
 
 ### `mean()`
-
-**Returns:** `double`
 
 The count must be non-zero.
 
@@ -161,9 +159,9 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  only or Double#POSITIVE_INFINITY only, the result is Double#POSITIVE_INFINITY.
  If it contains Double#NEGATIVE_INFINITY and finite values only or Double#NEGATIVE_INFINITY only, the result is Double#NEGATIVE_INFINITY.
 
-### `sum()`
-
 **Returns:** `double`
+
+### `sum()`
 
 Non-finite values
 
@@ -174,9 +172,9 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  only or Double#POSITIVE_INFINITY only, the result is Double#POSITIVE_INFINITY.
  If it contains Double#NEGATIVE_INFINITY and finite values only or Double#NEGATIVE_INFINITY only, the result is Double#NEGATIVE_INFINITY.
 
-### `populationVariance()`
-
 **Returns:** `double`
+
+### `populationVariance()`
 
 The count must be non-zero.
 
@@ -189,11 +187,11 @@ This is guaranteed to return zero if the dataset contains only exactly one finit
 
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
+
+**Returns:** `double`
 
 ### `populationStandardDeviation()`
 
-**Returns:** `double`
-
 The count must be non-zero.
 
  
@@ -206,9 +204,9 @@ This is guaranteed to return zero if the dataset contains only exactly one finit
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `sampleVariance()`
-
 **Returns:** `double`
+
+### `sampleVariance()`
 
 If this dataset is a sample drawn from a population, this is an
  unbiased estimator of the population variance of the population. The count must be greater than
@@ -223,9 +221,9 @@ This is not guaranteed to return zero when the dataset consists of the same valu
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `sampleStandardDeviation()`
-
 **Returns:** `double`
+
+### `sampleStandardDeviation()`
 
 If this dataset is a sample drawn from a
  population, this is an estimator of the population standard deviation of the population which
@@ -241,9 +239,9 @@ This is not guaranteed to return zero when the dataset consists of the same valu
  
 If the dataset contains any non-finite values (Double#POSITIVE_INFINITY, Double#NEGATIVE_INFINITY, or Double#NaN) then the result is Double#NaN.
 
-### `min()`
-
 **Returns:** `double`
+
+### `min()`
 
 The count must be non-zero.
 
@@ -254,9 +252,9 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  contains Double#NEGATIVE_INFINITY and not Double#NaN then the result is Double#NEGATIVE_INFINITY. If it contains Double#POSITIVE_INFINITY and finite values
  only then the result is the lowest finite value. If it contains Double#POSITIVE_INFINITY only then the result is Double#POSITIVE_INFINITY.
 
-### `max()`
-
 **Returns:** `double`
+
+### `max()`
 
 The count must be non-zero.
 
@@ -267,15 +265,17 @@ If the dataset contains Double#NaN then the result is Double#NaN. If it
  contains Double#POSITIVE_INFINITY and not Double#NaN then the result is Double#POSITIVE_INFINITY. If it contains Double#NEGATIVE_INFINITY and finite values
  only then the result is the highest finite value. If it contains Double#NEGATIVE_INFINITY only then the result is Double#NEGATIVE_INFINITY.
 
+**Returns:** `double`
+
 ### `sumOfSquaresOfDeltas()`
 
 **Returns:** `double`
 
 ### `calculateNewMeanNonFinite(double previousMean, double value)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `previousMean` (`double`)
 - `value` (`double`)
+
+**Returns:** `double`
 

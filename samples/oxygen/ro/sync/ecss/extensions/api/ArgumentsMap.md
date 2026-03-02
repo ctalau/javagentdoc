@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getArgumentValue(java.lang.String argumentName)`
+### `getArgumentValue(String argumentName)`
 
 The argument name must be one of the arguments defined 
  in AuthorOperation#getArguments() method.

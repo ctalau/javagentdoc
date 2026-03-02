@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `refactorXMLResources(java.util.Iterator<java.net.URL> resourcesIterator, java.util.function.Function<java.net.URL,java.lang.String> contentProvider, java.util.function.BiConsumer<java.net.URL,java.lang.String> contentSaver, java.lang.String operationID, java.util.Map<java.lang.String,java.lang.String> parameters, ro.sync.exml.workspace.api.util.refactor.XMLRefactorProblemCollector problemsCollector)`
+### `refactorXMLResources(Iterator<URL> resourcesIterator, Function<URL,String> contentProvider, BiConsumer<URL,String> contentSaver, String operationID, Map<String,String> parameters, XMLRefactorProblemCollector problemsCollector)`
 
 **Parameters:**
 - `resourcesIterator` (`java.util.Iterator<java.net.URL>`): Iterator over the resources which need to be validated. Never `null`.
@@ -20,7 +20,7 @@
 
 **Returns:** `void`
 
-### `refactorXMLResources(java.util.Iterator<java.net.URL> resourcesIterator, java.util.function.Function<java.net.URL,java.lang.String> contentProvider, java.util.function.BiConsumer<java.net.URL,java.lang.String> contentSaver, java.lang.String xsltStylesheetContent, ro.sync.exml.workspace.api.util.refactor.XMLRefactorProblemCollector problemsCollector)`
+### `refactorXMLResources(Iterator<URL> resourcesIterator, Function<URL,String> contentProvider, BiConsumer<URL,String> contentSaver, String xsltStylesheetContent, XMLRefactorProblemCollector problemsCollector)`
 
 **Parameters:**
 - `resourcesIterator` (`java.util.Iterator<java.net.URL>`): Iterator over the resources which need to be validated. Never `null`.
@@ -35,7 +35,7 @@
 
 **Returns:** `java.lang.String`
 
-### `listOperationParameters(java.lang.String operationID)`
+### `listOperationParameters(String operationID)`
 
 **Parameters:**
 - `operationID` (`java.lang.String`): The operation ID

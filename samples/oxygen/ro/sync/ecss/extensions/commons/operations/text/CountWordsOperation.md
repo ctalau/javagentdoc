@@ -28,7 +28,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -44,7 +44,7 @@
 
 **Returns:** `java.lang.String`
 
-### `isWordStart(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int contentOffset)`
+### `isWordStart(AuthorAccess authorAccess, int contentOffset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md)): The Author access.

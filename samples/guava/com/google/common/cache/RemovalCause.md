@@ -16,12 +16,12 @@
 
 **Returns:** [`com.google.common.cache.RemovalCause[]`](./RemovalCause.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.cache.RemovalCause`](./RemovalCause.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`com.google.common.cache.RemovalCause`](./RemovalCause.md)
 
 ### `wasEvicted()`
 

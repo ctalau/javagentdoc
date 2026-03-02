@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `createFromDitaMapUrl(java.net.URL arg0, ro.sync.ecss.dita.map.checker.d.h arg1, ro.sync.ecss.dita.map.b.b arg2)`
+### `createFromDitaMapUrl(URL arg0, h arg1, b arg2)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)
@@ -21,7 +21,7 @@
 
 **Returns:** [`ro.sync.ecss.dita.ContextKeyManager`](./ContextKeyManager.md)
 
-### `createFromKeyDefinitionManager(ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager arg0)`
+### `createFromKeyDefinitionManager(KeyDefinitionManager arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.editor.page.ditamap.keys.KeyDefinitionManager`](../../exml/workspace/api/editor/page/ditamap/keys/KeyDefinitionManager.md))

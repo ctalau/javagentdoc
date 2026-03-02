@@ -16,21 +16,21 @@
 
 ## Constructors
 
-### `<init>(java.lang.String documentNamespace)`
+### `<init>(String documentNamespace)`
 
 **Parameters:**
 - `documentNamespace` (`java.lang.String`)
 
 ## Methods
 
-### `getInfoElementChildOfSect(java.lang.String sectElementName)`
+### `getInfoElementChildOfSect(String sectElementName)`
 
 **Parameters:**
 - `sectElementName` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
-### `changeElementsToMoveUpDown(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> selectedElements)`
+### `changeElementsToMoveUpDown(List<AuthorNode> selectedElements)`
 
 **Parameters:**
 - `selectedElements` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)

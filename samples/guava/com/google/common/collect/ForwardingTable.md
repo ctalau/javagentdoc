@@ -39,10 +39,10 @@ Subclasses should override one or
 
 ### `column(C columnKey)`
 
-**Returns:** `java.util.Map<R,V>`
-
 **Parameters:**
 - `columnKey` (`C`)
+
+**Returns:** `java.util.Map<R,V>`
 
 ### `columnKeySet()`
 
@@ -52,42 +52,42 @@ Subclasses should override one or
 
 **Returns:** `java.util.Map<C,java.util.Map<R,V>>`
 
-### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
-
-**Returns:** `boolean`
+### `contains(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `containsColumn(java.lang.Object columnKey)`
-
 **Returns:** `boolean`
+
+### `containsColumn(Object columnKey)`
 
 **Parameters:**
 - `columnKey` (`java.lang.Object`)
 
-### `containsRow(java.lang.Object rowKey)`
-
 **Returns:** `boolean`
+
+### `containsRow(Object rowKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `get(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `isEmpty()`
 
@@ -95,34 +95,34 @@ Subclasses should override one or
 
 ### `put(R rowKey, C columnKey, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `value` (`V`)
 
-### `putAll(com.google.common.collect.Table<? extends R,? extends C,? extends V> table)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Table<? extends R,? extends C,? extends V> table)`
 
 **Parameters:**
 - `table` ([`com.google.common.collect.Table<? extends R,? extends C,? extends V>`](./Table.md))
 
-### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `remove(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `row(R rowKey)`
+**Returns:** `V`
 
-**Returns:** `java.util.Map<C,V>`
+### `row(R rowKey)`
 
 **Parameters:**
 - `rowKey` (`R`)
+
+**Returns:** `java.util.Map<C,V>`
 
 ### `rowKeySet()`
 
@@ -140,12 +140,12 @@ Subclasses should override one or
 
 **Returns:** `java.util.Collection<V>`
 
-### `equals(java.lang.Object obj)`
-
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

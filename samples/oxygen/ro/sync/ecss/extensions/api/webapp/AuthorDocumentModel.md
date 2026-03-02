@@ -12,14 +12,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorDocumentController`](../AuthorDocumentController.md)
 
-### `createRenderer(java.io.Writer arg0)`
+### `createRenderer(Writer arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.AuthorNodesRenderer`](./AuthorNodesRenderer.md)
 
-### `createRenderer(java.io.Writer arg0, ro.sync.ecss.extensions.api.highlights.AuthorHighlighter arg1)`
+### `createRenderer(Writer arg0, AuthorHighlighter arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.Writer`)
@@ -107,7 +107,7 @@
 
 **Returns:** `ro.sync.exml.editor.xmleditor.db`
 
-### `getDPILocation(ro.sync.document.DocumentPositionedInfo arg0)`
+### `getDPILocation(DocumentPositionedInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.document.DocumentPositionedInfo`](../../../../document/DocumentPositionedInfo.md))
@@ -130,7 +130,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setUserId(java.lang.String arg0)`
+### `setUserId(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

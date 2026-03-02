@@ -26,7 +26,7 @@
 
 **Returns:** `java.lang.String`
 
-### `printCommandLineHelp(java.lang.String arg0)`
+### `printCommandLineHelp(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

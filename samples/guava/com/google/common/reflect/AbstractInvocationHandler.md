@@ -36,18 +36,16 @@ For example:
 
 ## Methods
 
-### `invoke(java.lang.Object proxy, java.lang.reflect.Method method, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] args)`
-
-**Returns:** `java.lang.Object`
+### `invoke(Object proxy, Method method, lang@Nullable Object[] args)`
 
 **Parameters:**
 - `proxy` (`java.lang.Object`)
 - `method` (`java.lang.reflect.Method`)
 - `args` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `handleInvocation(java.lang.Object proxy, java.lang.reflect.Method method, java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[] args)`
-
 **Returns:** `java.lang.Object`
+
+### `handleInvocation(Object proxy, Method method, lang@Nullable Object[] args)`
 
 The result
  will be returned as the proxied method's return value.
@@ -61,9 +59,9 @@ Unlike #invoke, args will never be null. When the method has no parameter,
 - `method` (`java.lang.reflect.Method`)
 - `args` (`java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`)
 
-### `equals(java.lang.Object obj)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 proxy.equals(argument) returns true if:
 
@@ -80,26 +78,28 @@ Subclasses can override this method to provide custom equality.
 **Parameters:**
 - `obj` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 The dynamic proxies' hashCode() will
  delegate to this method. Subclasses can override this method to provide custom equality.
 
-### `toString()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `toString()`
 
 The dynamic proxies' toString() will
  delegate to this method. Subclasses can override this method to provide custom string
  representation for the proxies.
 
-### `isProxyOfSameInterfaces(java.lang.Object arg, java.lang.Class<?> proxyClass)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `isProxyOfSameInterfaces(Object arg, Class<?> proxyClass)`
 
 **Parameters:**
 - `arg` (`java.lang.Object`)
 - `proxyClass` (`java.lang.Class<?>`)
+
+**Returns:** `boolean`
 

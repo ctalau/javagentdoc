@@ -36,7 +36,7 @@
 
 ## Methods
 
-### `normalizeAndCollapseWhitespace(java.lang.String arg0, boolean arg1)`
+### `normalizeAndCollapseWhitespace(String arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -44,14 +44,14 @@
 
 **Returns:** `java.lang.String`
 
-### `normalizeWhitespace(java.lang.StringBuilder arg0)`
+### `normalizeWhitespace(StringBuilder arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.StringBuilder`)
 
 **Returns:** `void`
 
-### `getColumnNumber(ro.sync.document.ob arg0, int arg1, int arg2)`
+### `getColumnNumber(ob arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`ro.sync.document.ob`)
@@ -60,7 +60,7 @@
 
 **Returns:** `int`
 
-### `getColumnNumber(ro.sync.document.ob arg0, int arg1, int arg2, boolean arg3)`
+### `getColumnNumber(ob arg0, int arg1, int arg2, boolean arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.document.ob`)
@@ -70,7 +70,7 @@
 
 **Returns:** `int`
 
-### `getSomeTextConsideringWordBounds(java.lang.String arg0, int arg1)`
+### `getSomeTextConsideringWordBounds(String arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -78,21 +78,21 @@
 
 **Returns:** `java.lang.String`
 
-### `getTextWithoutTags(java.lang.String arg0)`
+### `getTextWithoutTags(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
-### `normalizeAndCollapseWhitespace(java.lang.String arg0)`
+### `normalizeAndCollapseWhitespace(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
-### `computeChNumberAndOffset(int arg0, javax.swing.text.Document arg1, char arg2)`
+### `computeChNumberAndOffset(int arg0, Document arg1, char arg2)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -101,7 +101,7 @@
 
 **Returns:** `java.util.List`
 
-### `computeNonWSCharCount(javax.swing.text.Document arg0, int arg1, int arg2)`
+### `computeNonWSCharCount(Document arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.text.Document`)
@@ -110,7 +110,7 @@
 
 **Returns:** `int`
 
-### `getOffsetAfterChAndOffset(int arg0, int arg1, javax.swing.text.Document arg2, char arg3, boolean arg4)`
+### `getOffsetAfterChAndOffset(int arg0, int arg1, Document arg2, char arg3, boolean arg4)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -121,7 +121,7 @@
 
 **Returns:** `int`
 
-### `getOffsetAfterNonWSChars(int arg0, javax.swing.text.Document arg1, int arg2)`
+### `getOffsetAfterNonWSChars(int arg0, Document arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -130,14 +130,14 @@
 
 **Returns:** `int`
 
-### `eatBackUntilNonWhiteSpace(java.lang.StringBuilder arg0)`
+### `eatBackUntilNonWhiteSpace(StringBuilder arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.StringBuilder`)
 
 **Returns:** `void`
 
-### `replaceAll(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, ro.sync.syntaxhighlight.marker.TokenMarker arg3, byte arg4)`
+### `replaceAll(String arg0, String arg1, String arg2, TokenMarker arg3, byte arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

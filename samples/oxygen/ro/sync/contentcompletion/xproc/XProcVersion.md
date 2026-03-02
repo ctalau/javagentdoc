@@ -25,7 +25,7 @@
 
 **Returns:** [`ro.sync.contentcompletion.xproc.XProcVersion[]`](./XProcVersion.md)
 
-### `valueOf(java.lang.String name)`
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

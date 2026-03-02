@@ -30,7 +30,7 @@ The Styles drop down allows users to choose only one main source.
 
 ## Constructors
 
-### `<init>(java.lang.String title, boolean isMainSource)`
+### `<init>(String title, boolean isMainSource)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The merged css title.
@@ -42,7 +42,7 @@ The Styles drop down allows users to choose only one main source.
 
 ## Methods
 
-### `setTitle(java.lang.String title)`
+### `setTitle(String title)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The new title.
@@ -61,21 +61,21 @@ The Styles drop down allows users to choose only one main source.
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSResource>`
 
-### `addURLs(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource[] urlsList)`
+### `addURLs(CSSResource[] urlsList)`
 
 **Parameters:**
 - `urlsList` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource[]`](./CSSResource.md)): The CSSResource(s) to be added.
 
 **Returns:** `void`
 
-### `addURL(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource cssRes)`
+### `addURL(CSSResource cssRes)`
 
 **Parameters:**
 - `cssRes` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md)): The CSS resource to add.
 
 **Returns:** `void`
 
-### `removeURL(ro.sync.exml.workspace.api.editor.page.author.css.CSSResource cssRes)`
+### `removeURL(CSSResource cssRes)`
 
 **Parameters:**
 - `cssRes` ([`ro.sync.exml.workspace.api.editor.page.author.css.CSSResource`](./CSSResource.md)): The CSS resource to add.
@@ -93,7 +93,7 @@ The Styles drop down allows users to choose only one main source.
 
 **Returns:** `void`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

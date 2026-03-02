@@ -8,14 +8,14 @@
 
 ## Methods
 
-### `createRoom(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel model)`
+### `createRoom(AuthorDocumentModel model)`
 
 **Parameters:**
 - `model` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md)): The document model.
 
 **Returns:** `java.lang.String`
 
-### `createRoom(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel model, ro.sync.ecss.extensions.api.webapp.ce.SaveStrategy saveStrategy)`
+### `createRoom(AuthorDocumentModel model, SaveStrategy saveStrategy)`
 
 **Parameters:**
 - `model` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../AuthorDocumentModel.md)): The document model.
@@ -23,14 +23,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getRoom(java.lang.String roomId)`
+### `getRoom(String roomId)`
 
 **Parameters:**
 - `roomId` (`java.lang.String`): The ID of the room.
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.Room`](./Room.md)
 
-### `getRoomTryCreateProxy(java.lang.String roomId)`
+### `getRoomTryCreateProxy(String roomId)`
 
 Tries to create a proxy room if the room doesn't 
   exist on this server.
@@ -40,7 +40,7 @@ Tries to create a proxy room if the room doesn't
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.ce.Room`](./Room.md)
 
-### `addCommonEditingContextAttribute(java.lang.String attributeName)`
+### `addCommonEditingContextAttribute(String attributeName)`
 
 **Parameters:**
 - `attributeName` (`java.lang.String`): the common attribute name.

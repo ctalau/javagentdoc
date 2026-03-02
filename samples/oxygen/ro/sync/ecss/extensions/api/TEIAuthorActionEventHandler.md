@@ -17,14 +17,14 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 ## Methods
 
-### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isList(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
 
 **Returns:** `boolean`
 
-### `areCompatibleLists(ro.sync.ecss.extensions.api.node.AuthorNode node1, ro.sync.ecss.extensions.api.node.AuthorNode node2)`
+### `areCompatibleLists(AuthorNode node1, AuthorNode node2)`
 
 **Parameters:**
 - `node1` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md))
@@ -32,7 +32,7 @@ IMPORTANT, THIS CLASS SHOULD HAVE BEEN CREATED IN THE FRAMEWORK SPECIFIC PACKAGE
 
 **Returns:** `boolean`
 
-### `getParagraphElement(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getParagraphElement(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))

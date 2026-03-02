@@ -50,7 +50,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setCharToReplaceSpacesWith(java.lang.String arg0)`
+### `setCharToReplaceSpacesWith(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

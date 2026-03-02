@@ -48,7 +48,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -56,7 +56,7 @@
 
 **Returns:** `void`
 
-### `removeEmptyListElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<javax.swing.text.Position> positions)`
+### `removeEmptyListElements(AuthorAccess authorAccess, List<Position> positions)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -64,21 +64,21 @@
 
 **Returns:** `java.util.Optional<java.util.Map<java.lang.String,java.lang.String>>`
 
-### `getSelectedList(java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
+### `getSelectedList(List<ContentInterval> intervals)`
 
 **Parameters:**
 - `intervals` (`java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`): The intervals.
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `getSelectedList(ro.sync.ecss.extensions.api.ContentInterval interval)`
+### `getSelectedList(ContentInterval interval)`
 
 **Parameters:**
 - `interval` ([`ro.sync.ecss.extensions.api.ContentInterval`](../../api/ContentInterval.md)): The interval.
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorElement>`
 
-### `insertFragmentsInListAtOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert, int offset)`
+### `insertFragmentsInListAtOffset(AuthorAccess authorAccess, List<CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert, int offset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -87,14 +87,14 @@
 
 **Returns:** `void`
 
-### `deleteEmptyFragments(java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert)`
+### `deleteEmptyFragments(List<CommonsOperationsUtil.SelectedFragmentInfo> fragmentsToConvert)`
 
 **Parameters:**
 - `fragmentsToConvert` (`java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`): The fragments to convert.
 
 **Returns:** `void`
 
-### `shoudConvertElementAtCaret(java.lang.String convertElement, boolean isAtStart)`
+### `shoudConvertElementAtCaret(String convertElement, boolean isAtStart)`
 
 **Parameters:**
 - `convertElement` (`java.lang.String`)
@@ -102,7 +102,7 @@
 
 **Returns:** `boolean`
 
-### `getFragmentsToConvert(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.List<ro.sync.ecss.extensions.api.ContentInterval> intervals)`
+### `getFragmentsToConvert(AuthorAccess authorAccess, List<ContentInterval> intervals)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -110,7 +110,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo>`
 
-### `getIntervalsToConvert(java.lang.String convertElementAtCaretArgValue)`
+### `getIntervalsToConvert(String convertElementAtCaretArgValue)`
 
 **Parameters:**
 - `convertElementAtCaretArgValue` (`java.lang.String`): "true", "false" or "auto" controlling if the element at caret should be converted when 
@@ -118,7 +118,7 @@
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.ContentInterval>`
 
-### `containsOnlyStartSentinels(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int startOffset, int endOffset)`
+### `containsOnlyStartSentinels(AuthorAccess authorAccess, int startOffset, int endOffset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -127,7 +127,7 @@
 
 **Returns:** `boolean`
 
-### `getElementAtCaretToConvert(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper)`
+### `getElementAtCaretToConvert(AuthorAccess authorAccess, CommonsOperationsUtil.ConversionElementHelper helper)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -136,7 +136,7 @@
 
 **Returns:** `java.util.Optional<ro.sync.ecss.extensions.api.node.AuthorNode>`
 
-### `canBeConverted(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper helper, ro.sync.ecss.extensions.api.node.AuthorNode candidate)`
+### `canBeConverted(AuthorAccess authorAccess, CommonsOperationsUtil.ConversionElementHelper helper, AuthorNode candidate)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -146,28 +146,28 @@
 
 **Returns:** `boolean`
 
-### `isEmptyListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isEmptyListElement(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The node to check.
 
 **Returns:** `boolean`
 
-### `isListElement(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isListElement(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element to check.
 
 **Returns:** `boolean`
 
-### `isList(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isList(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The element to check.
 
 **Returns:** `boolean`
 
-### `insertAtCaret(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, boolean schemaAware)`
+### `insertAtCaret(AuthorAccess authorAccess, ArgumentsMap args, boolean schemaAware)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -176,7 +176,7 @@
 
 **Returns:** `void`
 
-### `getParentListType(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getParentListType(AuthorNode node)`
 
 Can be `null`.
 
@@ -189,7 +189,7 @@ Can be `null`.
 
 **Returns:** `ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.ConversionElementHelper`
 
-### `insertContent(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode listNode, java.util.List<ro.sync.ecss.extensions.commons.operations.CommonsOperationsUtil.SelectedFragmentInfo> selectedFragmentsInfos)`
+### `insertContent(AuthorAccess authorAccess, AuthorNode listNode, List<CommonsOperationsUtil.SelectedFragmentInfo> selectedFragmentsInfos)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -202,7 +202,7 @@ Can be `null`.
 
 **Returns:** `java.lang.String`
 
-### `getXMLFragment(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String listType, java.lang.String parentListType)`
+### `getXMLFragment(AuthorAccess authorAccess, String listType, String parentListType)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -211,7 +211,7 @@ Can be `null`.
 
 **Returns:** `java.lang.String`
 
-### `getListXMLFragment(java.lang.String listType, java.util.Map<java.lang.String,java.lang.String> listAttributes, int numberOfListItems, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getListXMLFragment(String listType, Map<String,String> listAttributes, int numberOfListItems, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `listType` (`java.lang.String`): The list type.
@@ -221,7 +221,7 @@ Can be `null`.
 
 **Returns:** `java.lang.StringBuilder`
 
-### `getListTypeDescription(java.lang.String listType)`
+### `getListTypeDescription(String listType)`
 
 **Parameters:**
 - `listType` (`java.lang.String`): The list type.

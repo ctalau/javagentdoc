@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `isNodeOfType(ro.sync.ecss.extensions.api.node.AuthorElement node, int type)`
+### `isNodeOfType(AuthorElement node, int type)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
@@ -16,14 +16,14 @@
 
 **Returns:** `boolean`
 
-### `isTable(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTable(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.
 
 **Returns:** `boolean`
 
-### `isTableGroup(ro.sync.ecss.extensions.api.node.AuthorElement node)`
+### `isTableGroup(AuthorElement node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md)): The node to be checked.

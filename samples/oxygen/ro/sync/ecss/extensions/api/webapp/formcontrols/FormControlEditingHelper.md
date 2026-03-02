@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `commitEditedValue(ro.sync.ecss.extensions.api.node.AuthorElement elem, java.lang.String toEdit, java.lang.String valueToCommit)`
+### `commitEditedValue(AuthorElement elem, String toEdit, String valueToCommit)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)): The element whose value to edit.
@@ -28,7 +28,7 @@
 
 **Returns:** `void`
 
-### `commitEditedValueForProcessingInstruction(ro.sync.ecss.extensions.api.node.AuthorParentNode elem, java.lang.String toEdit, java.lang.String valueToCommit)`
+### `commitEditedValueForProcessingInstruction(AuthorParentNode elem, String toEdit, String valueToCommit)`
 
 **Parameters:**
 - `elem` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](../../node/AuthorParentNode.md)): The processing instruction whose value to edit.

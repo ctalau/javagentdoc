@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `createRectangle(ro.sync.exml.view.graphics.Rectangle arg0, int arg1)`
+### `createRectangle(Rectangle arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Rectangle`)
@@ -14,7 +14,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView`](./WebappAreaView.md)
 
-### `createCircle(ro.sync.exml.view.graphics.Circle arg0, int arg1)`
+### `createCircle(Circle arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Circle`)
@@ -22,7 +22,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView`](./WebappAreaView.md)
 
-### `createPolygon(ro.sync.exml.view.graphics.Polygon arg0, int arg1)`
+### `createPolygon(Polygon arg0, int arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Polygon`)
@@ -30,7 +30,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.imagemap.WebappAreaView`](./WebappAreaView.md)
 
-### `createFromSvg(java.lang.String arg0)`
+### `createFromSvg(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

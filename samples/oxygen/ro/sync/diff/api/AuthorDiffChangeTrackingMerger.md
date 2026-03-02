@@ -10,7 +10,7 @@ Access to the resulting document is provided through a Reader for its content.
 
 ## Methods
 
-### `getMergeResultsReader(java.net.URL baseDocSysID, java.io.Reader baseDocReader, java.net.URL docToMergeWithSysID, java.io.Reader docToMergeWithReader, ro.sync.diff.api.DiffOptions diffOptions)`
+### `getMergeResultsReader(URL baseDocSysID, Reader baseDocReader, URL docToMergeWithSysID, Reader docToMergeWithReader, DiffOptions diffOptions)`
 
 **Parameters:**
 - `baseDocSysID` (`java.net.URL`): The system ID of the base document.
@@ -40,7 +40,7 @@ Access to the resulting document is provided through a Reader for its content.
 
 **Returns:** `java.io.Reader`
 
-### `setNameOfAuthorOfChangeTrackingMarkers(java.lang.String authorName)`
+### `setNameOfAuthorOfChangeTrackingMarkers(String authorName)`
 
 This name will be post-fixed with the " [Auto Merger]" construct, in order to make a clear 
  association between the author and an imposed/fixed color used for highlighting track changes 

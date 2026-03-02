@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `hasReferences(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `hasReferences(AuthorNode node)`
 
 For example the method should return `true` for 
  a DITA element that has `conref` attribute set.
@@ -20,7 +20,7 @@ For example the method should return `true` for
 
 **Returns:** `boolean`
 
-### `isReferenceChanged(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String attributeName)`
+### `isReferenceChanged(AuthorNode node, String attributeName)`
 
 For example the DITA implementation returns `true` 
  when the attribute name is equal to `'conref'`.
@@ -31,7 +31,7 @@ For example the DITA implementation returns `true`
 
 **Returns:** `boolean`
 
-### `resolveReference(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String systemID, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, org.xml.sax.EntityResolver entityResolver)`
+### `resolveReference(AuthorNode node, String systemID, AuthorAccess authorAccess, EntityResolver entityResolver)`
 
 The returning SAXSource will be used for creating the referred content 
  using the parser and the source inside it.
@@ -59,7 +59,7 @@ IMPORTANT: the SAXSource needs to have an XMLReader set to it.
 
 **Returns:** `javax.xml.transform.sax.SAXSource`
 
-### `getDisplayName(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getDisplayName(AuthorNode node)`
 
 For example the value of the `conref` attribute is returned
  by the DITA implementation.
@@ -69,7 +69,7 @@ For example the value of the `conref` attribute is returned
 
 **Returns:** `java.lang.String`
 
-### `getReferenceUniqueID(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `getReferenceUniqueID(AuthorNode node)`
 
 The unique identifier is used to avoid resolving the references recursively.
  
@@ -82,7 +82,7 @@ The unique identifier is used to avoid resolving the references recursively.
 
 **Returns:** `java.lang.String`
 
-### `getReferenceSystemID(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getReferenceSystemID(AuthorNode node, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The reference node.
@@ -92,7 +92,7 @@ The unique identifier is used to avoid resolving the references recursively.
 
 **Returns:** `java.lang.String`
 
-### `hasEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
+### `hasEditableReference(String systemID, AuthorNode referenceNodeParent)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): System ID of the document in which the current node is located.
@@ -100,7 +100,7 @@ The unique identifier is used to avoid resolving the references recursively.
 
 **Returns:** `boolean`
 
-### `allowsValidatationForEditableReference(java.lang.String systemID, ro.sync.ecss.extensions.api.node.AuthorNode referenceNodeParent)`
+### `allowsValidatationForEditableReference(String systemID, AuthorNode referenceNodeParent)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): System ID of the document in which the current node is located.
@@ -108,7 +108,7 @@ The unique identifier is used to avoid resolving the references recursively.
 
 **Returns:** `boolean`
 
-### `replaceReference(ro.sync.ecss.extensions.api.node.AuthorDocumentProvider targetProvider, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorReferenceNode referenceNode)`
+### `replaceReference(AuthorDocumentProvider targetProvider, AuthorAccess authorAccess, AuthorReferenceNode referenceNode)`
 
 **Parameters:**
 - `targetProvider` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentProvider`](node/AuthorDocumentProvider.md)): The provider to the target document.

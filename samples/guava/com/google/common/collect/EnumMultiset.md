@@ -44,32 +44,30 @@ See the Guava User Guide article on [Multiset](https://github.com/google/guava/w
 
 ## Constructors
 
-### `<init>(java.lang.Class<E> type)`
+### `<init>(Class<E> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<E>`)
 
 ## Methods
 
-### `create(java.lang.Class<E> type)`
-
-**Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
+### `create(Class<E> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<E>`)
 
-### `create(java.lang.Iterable<E> elements)`
-
 **Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
+
+### `create(Iterable<E> elements)`
 
 This implementation is highly efficient when elements is itself a Multiset.
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<E>`): the elements that the multiset should contain
 
-### `create(java.lang.Iterable<E> elements, java.lang.Class<E> type)`
-
 **Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
+
+### `create(Iterable<E> elements, Class<E> type)`
 
 Unlike EnumMultiset#create(Iterable), this method does not produce an exception on an empty iterable.
 
@@ -77,22 +75,24 @@ Unlike EnumMultiset#create(Iterable), this method does not produce an exception 
 - `elements` (`java.lang.Iterable<E>`)
 - `type` (`java.lang.Class<E>`)
 
-### `isActuallyE(java.lang.Object o)`
+**Returns:** [`com.google.common.collect.EnumMultiset<E>`](./EnumMultiset.md)
 
-**Returns:** `boolean`
+### `isActuallyE(Object o)`
 
 **Parameters:**
 - `o` (`java.lang.Object`)
 
-### `checkIsE(java.lang.Object element)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `checkIsE(Object element)`
 
 Otherwise, throws
  either a NullPointerException or a ClassCastException as appropriate.
 
 **Parameters:**
 - `element` (`java.lang.Object`)
+
+**Returns:** `void`
 
 ### `distinctElements()`
 
@@ -102,36 +102,36 @@ Otherwise, throws
 
 **Returns:** `int`
 
-### `count(java.lang.Object element)`
-
-**Returns:** `int`
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `add(E element, int occurrences)`
-
 **Returns:** `int`
+
+### `add(E element, int occurrences)`
 
 **Parameters:**
 - `element` (`E`)
 - `occurrences` (`int`)
 
-### `remove(java.lang.Object element, int occurrences)`
-
 **Returns:** `int`
+
+### `remove(Object element, int occurrences)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 - `occurrences` (`int`)
 
-### `setCount(E element, int count)`
-
 **Returns:** `int`
+
+### `setCount(E element, int count)`
 
 **Parameters:**
 - `element` (`E`)
 - `count` (`int`)
+
+**Returns:** `int`
 
 ### `clear()`
 
@@ -145,28 +145,28 @@ Otherwise, throws
 
 **Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
-### `forEachEntry(java.util.function.ObjIntConsumer<? super E> action)`
-
-**Returns:** `void`
+### `forEachEntry(ObjIntConsumer<? super E> action)`
 
 **Parameters:**
 - `action` (`java.util.function.ObjIntConsumer<? super E>`)
+
+**Returns:** `void`
 
 ### `iterator()`
 
 **Returns:** `java.util.Iterator<E>`
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

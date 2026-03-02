@@ -20,7 +20,7 @@ This avoids the object
 
 ## Constructors
 
-### `<init>(java.util.ListIterator<? extends F> backingIterator)`
+### `<init>(ListIterator<? extends F> backingIterator)`
 
 **Parameters:**
 - `backingIterator` (`java.util.ListIterator<? extends F>`)
@@ -49,15 +49,15 @@ This avoids the object
 
 ### `set(T element)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `element` (`T`)
+
+**Returns:** `void`
 
 ### `add(T element)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `element` (`T`)
+
+**Returns:** `void`
 

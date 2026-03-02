@@ -44,14 +44,14 @@ See the Guava User Guide article on [Multiset](https://github.com/google/guava/w
 
 ## Constructors
 
-### `<init>(com.google.common.collect.TreeMultiset.Reference<com.google.common.collect.TreeMultiset.AvlNode<E>> rootReference, com.google.common.collect.GeneralRange<E> range, com.google.common.collect.TreeMultiset.AvlNode<E> endLink)`
+### `<init>(TreeMultiset.Reference<TreeMultiset.AvlNode<E>> rootReference, GeneralRange<E> range, TreeMultiset.AvlNode<E> endLink)`
 
 **Parameters:**
 - `rootReference` (`com.google.common.collect.TreeMultiset.Reference<com.google.common.collect.TreeMultiset.AvlNode<E>>`)
 - `range` ([`com.google.common.collect.GeneralRange<E>`](./GeneralRange.md))
 - `endLink` (`com.google.common.collect.TreeMultiset.AvlNode<E>`)
 
-### `<init>(java.util.Comparator<? super E> comparator)`
+### `<init>(Comparator<? super E> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`)
@@ -59,8 +59,6 @@ See the Guava User Guide article on [Multiset](https://github.com/google/guava/w
 ## Methods
 
 ### `create()`
-
-**Returns:** [`com.google.common.collect.TreeMultiset<E>`](./TreeMultiset.md)
 
 All elements
  inserted into the multiset must implement the Comparable interface. Furthermore, all
@@ -74,9 +72,9 @@ All elements
 The type specification is <E extends Comparable>, instead of the more specific
  <E extends Comparable<? super E>>, to support classes defined without generics.
 
-### `create(java.util.Comparator<? super E> comparator)`
-
 **Returns:** [`com.google.common.collect.TreeMultiset<E>`](./TreeMultiset.md)
+
+### `create(Comparator<? super E> comparator)`
 
 All elements
  inserted into the multiset must be *mutually comparable* by the specified comparator:
@@ -87,11 +85,11 @@ All elements
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`): the comparator that will be used to sort this multiset. A null value
-     indicates that the elements' *natural ordering* should be used.
-
-### `create(java.lang.Iterable<? extends E> elements)`
+       indicates that the elements' *natural ordering* should be used.
 
 **Returns:** [`com.google.common.collect.TreeMultiset<E>`](./TreeMultiset.md)
+
+### `create(Iterable<? extends E> elements)`
 
 This implementation is highly efficient when elements is itself a Multiset.
 
@@ -102,28 +100,30 @@ The type specification is <E extends Comparable>, instead of the more specific
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `aggregateForEntries(com.google.common.collect.TreeMultiset.Aggregate aggr)`
+**Returns:** [`com.google.common.collect.TreeMultiset<E>`](./TreeMultiset.md)
 
-**Returns:** `long`
+### `aggregateForEntries(TreeMultiset.Aggregate aggr)`
 
 **Parameters:**
 - `aggr` (`com.google.common.collect.TreeMultiset.Aggregate`)
 
-### `aggregateBelowRange(com.google.common.collect.TreeMultiset.Aggregate aggr, com.google.common.collect.TreeMultiset.AvlNode<E> node)`
+**Returns:** `long`
+
+### `aggregateBelowRange(TreeMultiset.Aggregate aggr, TreeMultiset.AvlNode<E> node)`
+
+**Parameters:**
+- `aggr` (`com.google.common.collect.TreeMultiset.Aggregate`)
+- `node` (`com.google.common.collect.TreeMultiset.AvlNode<E>`)
 
 **Returns:** `long`
+
+### `aggregateAboveRange(TreeMultiset.Aggregate aggr, TreeMultiset.AvlNode<E> node)`
 
 **Parameters:**
 - `aggr` (`com.google.common.collect.TreeMultiset.Aggregate`)
 - `node` (`com.google.common.collect.TreeMultiset.AvlNode<E>`)
 
-### `aggregateAboveRange(com.google.common.collect.TreeMultiset.Aggregate aggr, com.google.common.collect.TreeMultiset.AvlNode<E> node)`
-
 **Returns:** `long`
-
-**Parameters:**
-- `aggr` (`com.google.common.collect.TreeMultiset.Aggregate`)
-- `node` (`com.google.common.collect.TreeMultiset.AvlNode<E>`)
 
 ### `size()`
 
@@ -133,63 +133,63 @@ The type specification is <E extends Comparable>, instead of the more specific
 
 **Returns:** `int`
 
-### `distinctElements(com.google.common.collect.TreeMultiset.AvlNode<?> node)`
-
-**Returns:** `int`
+### `distinctElements(TreeMultiset.AvlNode<?> node)`
 
 **Parameters:**
 - `node` (`com.google.common.collect.TreeMultiset.AvlNode<?>`)
 
-### `count(java.lang.Object element)`
-
 **Returns:** `int`
+
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `add(E element, int occurrences)`
-
 **Returns:** `int`
+
+### `add(E element, int occurrences)`
 
 **Parameters:**
 - `element` (`E`)
 - `occurrences` (`int`)
 
-### `remove(java.lang.Object element, int occurrences)`
-
 **Returns:** `int`
+
+### `remove(Object element, int occurrences)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 - `occurrences` (`int`)
 
-### `setCount(E element, int count)`
-
 **Returns:** `int`
+
+### `setCount(E element, int count)`
 
 **Parameters:**
 - `element` (`E`)
 - `count` (`int`)
 
-### `setCount(E element, int oldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `setCount(E element, int oldCount, int newCount)`
 
 **Parameters:**
 - `element` (`E`)
 - `oldCount` (`int`)
 - `newCount` (`int`)
 
+**Returns:** `boolean`
+
 ### `clear()`
 
 **Returns:** `void`
 
-### `wrapEntry(com.google.common.collect.TreeMultiset.AvlNode<E> baseEntry)`
-
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
+### `wrapEntry(TreeMultiset.AvlNode<E> baseEntry)`
 
 **Parameters:**
 - `baseEntry` (`com.google.common.collect.TreeMultiset.AvlNode<E>`)
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `firstNode()`
 
@@ -211,61 +211,61 @@ The type specification is <E extends Comparable>, instead of the more specific
 
 **Returns:** `java.util.Iterator<com.google.common.collect.Multiset.Entry<E>>`
 
-### `forEachEntry(java.util.function.ObjIntConsumer<? super E> action)`
-
-**Returns:** `void`
+### `forEachEntry(ObjIntConsumer<? super E> action)`
 
 **Parameters:**
 - `action` (`java.util.function.ObjIntConsumer<? super E>`)
+
+**Returns:** `void`
 
 ### `iterator()`
 
 **Returns:** `java.util.Iterator<E>`
 
-### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
-
-**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+### `headMultiset(E upperBound, BoundType boundType)`
 
 **Parameters:**
 - `upperBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
+
+### `tailMultiset(E lowerBound, BoundType boundType)`
 
 **Parameters:**
 - `lowerBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `successor(com.google.common.collect.TreeMultiset.AvlNode<T> a, com.google.common.collect.TreeMultiset.AvlNode<T> b)`
+**Returns:** [`com.google.common.collect.SortedMultiset<E>`](./SortedMultiset.md)
 
-**Returns:** `void`
+### `successor(TreeMultiset.AvlNode<T> a, TreeMultiset.AvlNode<T> b)`
 
 **Parameters:**
 - `a` (`com.google.common.collect.TreeMultiset.AvlNode<T>`)
 - `b` (`com.google.common.collect.TreeMultiset.AvlNode<T>`)
 
-### `successor(com.google.common.collect.TreeMultiset.AvlNode<T> a, com.google.common.collect.TreeMultiset.AvlNode<T> b, com.google.common.collect.TreeMultiset.AvlNode<T> c)`
-
 **Returns:** `void`
+
+### `successor(TreeMultiset.AvlNode<T> a, TreeMultiset.AvlNode<T> b, TreeMultiset.AvlNode<T> c)`
 
 **Parameters:**
 - `a` (`com.google.common.collect.TreeMultiset.AvlNode<T>`)
 - `b` (`com.google.common.collect.TreeMultiset.AvlNode<T>`)
 - `c` (`com.google.common.collect.TreeMultiset.AvlNode<T>`)
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
 **Returns:** `void`
+
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

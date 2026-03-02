@@ -18,7 +18,7 @@
 
 ## Methods
 
-### `correctFragmentReferences(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment, java.net.URL sourceURL, java.net.URL destinationURL)`
+### `correctFragmentReferences(AuthorDocumentFragment fragment, URL sourceURL, URL destinationURL)`
 
 **Parameters:**
 - `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../api/node/AuthorDocumentFragment.md)): The fragment to check for references and correct.
@@ -27,7 +27,7 @@
 
 **Returns:** `void`
 
-### `updateNodeHrefsBeforeInsert(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> contentNodes, java.lang.String sourceSystemID, java.net.URL destinationURL)`
+### `updateNodeHrefsBeforeInsert(List<AuthorNode> contentNodes, String sourceSystemID, URL destinationURL)`
 
 **Parameters:**
 - `contentNodes` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -36,7 +36,7 @@
 
 **Returns:** `void`
 
-### `targetAlreadyExists(java.net.URL destinationURL, java.lang.String initialRefVal)`
+### `targetAlreadyExists(URL destinationURL, String initialRefVal)`
 
 **Parameters:**
 - `destinationURL` (`java.net.URL`): New destination context.

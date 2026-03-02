@@ -16,14 +16,14 @@
 
 ## Methods
 
-### `getTextModeState(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0)`
+### `getTextModeState(AuthorDocumentModel arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../extensions/api/webapp/AuthorDocumentModel.md))
 
 **Returns:** [`ro.sync.ecss.common.WebappTextModeState`](./WebappTextModeState.md)
 
-### `setTextModeState(ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel arg0, ro.sync.ecss.common.WebappTextModeState arg1)`
+### `setTextModeState(AuthorDocumentModel arg0, WebappTextModeState arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.AuthorDocumentModel`](../extensions/api/webapp/AuthorDocumentModel.md))
@@ -31,14 +31,14 @@
 
 **Returns:** `void`
 
-### `disposeSession(java.lang.String arg0)`
+### `disposeSession(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `b(java.lang.String arg0)`
+### `b(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

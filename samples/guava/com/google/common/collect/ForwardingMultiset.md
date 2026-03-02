@@ -43,28 +43,28 @@ The standard methods and any collection views they return are not guaranteed to 
 
 **Returns:** [`com.google.common.collect.Multiset<E>`](./Multiset.md)
 
-### `count(java.lang.Object element)`
-
-**Returns:** `int`
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `add(E element, int occurrences)`
-
 **Returns:** `int`
+
+### `add(E element, int occurrences)`
 
 **Parameters:**
 - `element` (`E`)
 - `occurrences` (`int`)
 
-### `remove(java.lang.Object element, int occurrences)`
-
 **Returns:** `int`
+
+### `remove(Object element, int occurrences)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
 - `occurrences` (`int`)
+
+**Returns:** `int`
 
 ### `elementSet()`
 
@@ -74,12 +74,12 @@ The standard methods and any collection views they return are not guaranteed to 
 
 **Returns:** `java.util.Set<com.google.common.collect.Multiset.Entry<E>>`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -87,40 +87,38 @@ The standard methods and any collection views they return are not guaranteed to 
 
 ### `setCount(E element, int count)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `element` (`E`)
 - `count` (`int`)
 
-### `setCount(E element, int oldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `setCount(E element, int oldCount, int newCount)`
 
 **Parameters:**
 - `element` (`E`)
 - `oldCount` (`int`)
 - `newCount` (`int`)
 
-### `standardContains(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `standardContains(Object object)`
 
 If you override #count, you may wish to override #contains to forward to this implementation.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardClear()`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `standardClear()`
 
 If you override #entrySet, you may wish to override #clear to
  forward to this implementation.
 
-### `standardCount(java.lang.Object object)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `standardCount(Object object)`
 
 If
  you override #entrySet, you may wish to override #count to forward to this
@@ -129,9 +127,9 @@ If
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardAdd(E element)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `standardAdd(E element)`
 
 If you
  override #add(Object, int), you may wish to override #add(Object) to forward to
@@ -140,9 +138,9 @@ If you
 **Parameters:**
 - `element` (`E`)
 
-### `standardAddAll(java.util.Collection<? extends E> elementsToAdd)`
-
 **Returns:** `boolean`
+
+### `standardAddAll(Collection<? extends E> elementsToAdd)`
 
 If you override either of these methods, you may wish to override
  #addAll(Collection) to forward to this implementation.
@@ -150,9 +148,9 @@ If you override either of these methods, you may wish to override
 **Parameters:**
 - `elementsToAdd` (`java.util.Collection<? extends E>`)
 
-### `standardRemove(java.lang.Object element)`
-
 **Returns:** `boolean`
+
+### `standardRemove(Object element)`
 
 If
  you override #remove(Object, int), you may wish to override #remove(Object) to
@@ -161,9 +159,9 @@ If
 **Parameters:**
 - `element` (`java.lang.Object`)
 
-### `standardRemoveAll(java.util.Collection<?> elementsToRemove)`
-
 **Returns:** `boolean`
+
+### `standardRemoveAll(Collection<?> elementsToRemove)`
 
 If you override #elementSet, you may wish to override #removeAll
  to forward to this implementation.
@@ -171,9 +169,9 @@ If you override #elementSet, you may wish to override #removeAll
 **Parameters:**
 - `elementsToRemove` (`java.util.Collection<?>`)
 
-### `standardRetainAll(java.util.Collection<?> elementsToRetain)`
-
 **Returns:** `boolean`
+
+### `standardRetainAll(Collection<?> elementsToRetain)`
 
 If you override #elementSet, you may wish to override #retainAll
  to forward to this implementation.
@@ -181,9 +179,9 @@ If you override #elementSet, you may wish to override #retainAll
 **Parameters:**
 - `elementsToRetain` (`java.util.Collection<?>`)
 
-### `standardSetCount(E element, int count)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `standardSetCount(E element, int count)`
 
 #entrySet(). If you
  override any of these methods, you may wish to override #setCount(Object, int) to
@@ -193,9 +191,9 @@ If you override #elementSet, you may wish to override #retainAll
 - `element` (`E`)
 - `count` (`int`)
 
-### `standardSetCount(E element, int oldCount, int newCount)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `standardSetCount(E element, int oldCount, int newCount)`
 
 If you override either of these methods, you may wish to
  override #setCount(Object, int, int) to forward to this implementation.
@@ -205,23 +203,23 @@ If you override either of these methods, you may wish to
 - `oldCount` (`int`)
 - `newCount` (`int`)
 
-### `standardIterator()`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Iterator<E>`
+### `standardIterator()`
 
 If you override either of these methods, you may wish to override #iterator to forward to this implementation.
 
-### `standardSize()`
+**Returns:** `java.util.Iterator<E>`
 
-**Returns:** `int`
+### `standardSize()`
 
 If
  you override #entrySet, you may wish to override #size to forward to this
  implementation.
 
-### `standardEquals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `standardEquals(Object object)`
 
 If you override either of these methods, you may wish to
  override #equals to forward to this implementation.
@@ -229,19 +227,21 @@ If you override either of these methods, you may wish to
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardHashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `standardHashCode()`
 
 If you override
  #entrySet, you may wish to override #hashCode to forward to this
  implementation.
 
-### `standardToString()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `standardToString()`
 
 If you override
  #entrySet, you may wish to override #toString to forward to this
  implementation.
+
+**Returns:** `java.lang.String`
 

@@ -32,7 +32,7 @@ After granting a request,
 
 ## Constructors
 
-### `<init>(com.google.common.util.concurrent.RateLimiter.SleepingStopwatch stopwatch)`
+### `<init>(RateLimiter.SleepingStopwatch stopwatch)`
 
 **Parameters:**
 - `stopwatch` (`com.google.common.util.concurrent.RateLimiter.SleepingStopwatch`)
@@ -41,19 +41,19 @@ After granting a request,
 
 ### `doSetRate(double permitsPerSecond, long nowMicros)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `permitsPerSecond` (`double`)
 - `nowMicros` (`long`)
 
-### `doSetRate(double permitsPerSecond, double stableIntervalMicros)`
-
 **Returns:** `void`
+
+### `doSetRate(double permitsPerSecond, double stableIntervalMicros)`
 
 **Parameters:**
 - `permitsPerSecond` (`double`)
 - `stableIntervalMicros` (`double`)
+
+**Returns:** `void`
 
 ### `doGetRate()`
 
@@ -61,22 +61,20 @@ After granting a request,
 
 ### `queryEarliestAvailable(long nowMicros)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `nowMicros` (`long`)
 
-### `reserveEarliestAvailable(int requiredPermits, long nowMicros)`
-
 **Returns:** `long`
+
+### `reserveEarliestAvailable(int requiredPermits, long nowMicros)`
 
 **Parameters:**
 - `requiredPermits` (`int`)
 - `nowMicros` (`long`)
 
-### `storedPermitsToWaitTime(double storedPermits, double permitsToTake)`
-
 **Returns:** `long`
+
+### `storedPermitsToWaitTime(double storedPermits, double permitsToTake)`
 
 Conceptually, this evaluates the integral of the underlying function we
  use, for the range of [(storedPermits - permitsToTake), storedPermits].
@@ -88,14 +86,16 @@ This always holds: 0 <= permitsToTake <= storedPermits
 - `storedPermits` (`double`)
 - `permitsToTake` (`double`)
 
+**Returns:** `long`
+
 ### `coolDownIntervalMicros()`
 
 **Returns:** `double`
 
 ### `resync(long nowMicros)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `nowMicros` (`long`)
+
+**Returns:** `void`
 

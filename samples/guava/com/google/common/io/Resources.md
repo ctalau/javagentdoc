@@ -16,50 +16,48 @@ Note that even though these
 
 ## Methods
 
-### `asByteSource(java.net.URL url)`
-
-**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+### `asByteSource(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`)
 
-### `asCharSource(java.net.URL url, java.nio.charset.Charset charset)`
+**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
-**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+### `asCharSource(URL url, Charset charset)`
 
 **Parameters:**
 - `url` (`java.net.URL`)
 - `charset` (`java.nio.charset.Charset`)
 
-### `toByteArray(java.net.URL url)`
+**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+
+### `toByteArray(URL url)`
+
+**Parameters:**
+- `url` (`java.net.URL`): the URL to read from
 
 **Returns:** `byte[]`
 
+### `toString(URL url, Charset charset)`
+
 **Parameters:**
 - `url` (`java.net.URL`): the URL to read from
-
-### `toString(java.net.URL url, java.nio.charset.Charset charset)`
+- `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see Charsets for helpful
+       predefined constants
 
 **Returns:** `java.lang.String`
 
+### `readLines(URL url, Charset charset, LineProcessor<T> callback)`
+
 **Parameters:**
 - `url` (`java.net.URL`): the URL to read from
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see Charsets for helpful
-     predefined constants
-
-### `readLines(java.net.URL url, java.nio.charset.Charset charset, com.google.common.io.LineProcessor<T> callback)`
+       predefined constants
+- `callback` ([`com.google.common.io.LineProcessor<T>`](./LineProcessor.md)): the LineProcessor to use to handle the lines
 
 **Returns:** `T`
 
-**Parameters:**
-- `url` (`java.net.URL`): the URL to read from
-- `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see Charsets for helpful
-     predefined constants
-- `callback` ([`com.google.common.io.LineProcessor<T>`](./LineProcessor.md)): the LineProcessor to use to handle the lines
-
-### `readLines(java.net.URL url, java.nio.charset.Charset charset)`
-
-**Returns:** `java.util.List<java.lang.String>`
+### `readLines(URL url, Charset charset)`
 
 The lines do not include line-termination characters, but do
  include other leading and trailing whitespace.
@@ -71,19 +69,19 @@ This method returns a mutable List. For an ImmutableList, use
 **Parameters:**
 - `url` (`java.net.URL`): the URL to read from
 - `charset` (`java.nio.charset.Charset`): the charset used to decode the input stream; see Charsets for helpful
-     predefined constants
+       predefined constants
 
-### `copy(java.net.URL from, java.io.OutputStream to)`
+**Returns:** `java.util.List<java.lang.String>`
 
-**Returns:** `void`
+### `copy(URL from, OutputStream to)`
 
 **Parameters:**
 - `from` (`java.net.URL`): the URL to read from
 - `to` (`java.io.OutputStream`): the output stream
 
-### `getResource(java.lang.String resourceName)`
+**Returns:** `void`
 
-**Returns:** `java.net.URL`
+### `getResource(String resourceName)`
 
 In simple environments, the
  context class loader will find resources from the class path. In environments where different
@@ -97,11 +95,13 @@ In the unusual case where the context class loader is null, the class loader tha
 **Parameters:**
 - `resourceName` (`java.lang.String`)
 
-### `getResource(java.lang.Class<?> contextClass, java.lang.String resourceName)`
-
 **Returns:** `java.net.URL`
+
+### `getResource(Class<?> contextClass, String resourceName)`
 
 **Parameters:**
 - `contextClass` (`java.lang.Class<?>`)
 - `resourceName` (`java.lang.String`)
+
+**Returns:** `java.net.URL`
 

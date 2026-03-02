@@ -60,7 +60,7 @@ The difference from the "ro.sync.ecss.extensions.api.ChangeTrackingController.ac
 
 **Returns:** `void`
 
-### `accept(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `accept(AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)): The change tracking highlight to be accepted.
@@ -86,7 +86,7 @@ The difference from the "ro.sync.ecss.extensions.api.ChangeTrackingController.re
 
 **Returns:** `void`
 
-### `reject(ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight highlight)`
+### `reject(AuthorPersistentHighlight highlight)`
 
 **Parameters:**
 - `highlight` ([`ro.sync.ecss.extensions.api.highlights.AuthorPersistentHighlight`](highlights/AuthorPersistentHighlight.md)): The change tracking highlight to be accepted.

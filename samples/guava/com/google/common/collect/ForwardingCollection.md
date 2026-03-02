@@ -52,58 +52,58 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 **Returns:** `int`
 
-### `removeAll(java.util.Collection<?> collection)`
-
-**Returns:** `boolean`
+### `removeAll(Collection<?> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
+
+**Returns:** `boolean`
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `contains(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `contains(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `add(E element)`
-
 **Returns:** `boolean`
+
+### `add(E element)`
 
 **Parameters:**
 - `element` (`E`)
 
-### `remove(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `remove(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `containsAll(java.util.Collection<?> collection)`
-
 **Returns:** `boolean`
+
+### `containsAll(Collection<?> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
 
-### `addAll(java.util.Collection<? extends E> collection)`
-
 **Returns:** `boolean`
+
+### `addAll(Collection<? extends E> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<? extends E>`)
 
-### `retainAll(java.util.Collection<?> collection)`
-
 **Returns:** `boolean`
+
+### `retainAll(Collection<?> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
+
+**Returns:** `boolean`
 
 ### `clear()`
 
@@ -115,14 +115,12 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 ### `toArray(T[] array)`
 
-**Returns:** `T[]`
-
 **Parameters:**
 - `array` (`T[]`)
 
-### `standardContains(java.lang.Object object)`
+**Returns:** `T[]`
 
-**Returns:** `boolean`
+### `standardContains(Object object)`
 
 If you override
  #iterator, you may wish to override #contains to forward to this
@@ -131,9 +129,9 @@ If you override
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardContainsAll(java.util.Collection<?> collection)`
-
 **Returns:** `boolean`
+
+### `standardContainsAll(Collection<?> collection)`
 
 If you override
  #contains, you may wish to override #containsAll to forward to this
@@ -142,79 +140,81 @@ If you override
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
 
-### `standardAddAll(java.util.Collection<? extends E> collection)`
-
 **Returns:** `boolean`
+
+### `standardAddAll(Collection<? extends E> collection)`
 
 If you override #add, you may wish to override #addAll to forward to this implementation.
 
 **Parameters:**
 - `collection` (`java.util.Collection<? extends E>`)
 
-### `standardRemove(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `standardRemove(Object object)`
 
 If you override #iterator, you may wish to override #remove to forward to this implementation.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardRemoveAll(java.util.Collection<?> collection)`
-
 **Returns:** `boolean`
+
+### `standardRemoveAll(Collection<?> collection)`
 
 If you override #iterator, you may wish to override #removeAll to forward to this implementation.
 
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
 
-### `standardRetainAll(java.util.Collection<?> collection)`
-
 **Returns:** `boolean`
+
+### `standardRetainAll(Collection<?> collection)`
 
 If you override #iterator, you may wish to override #retainAll to forward to this implementation.
 
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
 
-### `standardClear()`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `standardClear()`
 
 If you override #iterator, you may wish to override #clear to forward to this implementation.
 
-### `standardIsEmpty()`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `standardIsEmpty()`
 
 If you override
  #isEmpty, you may wish to override #isEmpty to forward to this implementation.
  Alternately, it may be more efficient to implement isEmpty as size() == 0.
 
-### `standardToString()`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `standardToString()`
 
 If you override
  #iterator, you may wish to override #toString to forward to this
  implementation.
 
-### `standardToArray()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
+### `standardToArray()`
 
 If you
  override #toArray(Object[]), you may wish to override #toArray to forward to
  this implementation.
 
-### `standardToArray(T[] array)`
+**Returns:** `java.lang.@org.checkerframework.checker.nullness.qual.Nullable Object[]`
 
-**Returns:** `T[]`
+### `standardToArray(T[] array)`
 
 If you override either of these methods, you may wish to override #toArray
  to forward to this implementation.
 
 **Parameters:**
 - `array` (`T[]`)
+
+**Returns:** `T[]`
 

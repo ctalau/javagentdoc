@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `addGlobalOptionListener(ro.sync.ecss.extensions.api.OptionListener listener)`
+### `addGlobalOptionListener(OptionListener listener)`
 
 The listener is notified when the value of its associated option changes.
 
@@ -17,14 +17,14 @@ The listener is notified when the value of its associated option changes.
 
 **Returns:** `void`
 
-### `removeGlobalOptionListener(ro.sync.ecss.extensions.api.OptionListener listener)`
+### `removeGlobalOptionListener(OptionListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.ecss.extensions.api.OptionListener`](../../../../ecss/extensions/api/OptionListener.md)): The OptionListener to be removed.
 
 **Returns:** `void`
 
-### `getGlobalObjectProperty(java.lang.String key)`
+### `getGlobalObjectProperty(String key)`
 
 You can only get values for keys defined in the APIAccessibleOptionTags interface.
 
@@ -33,7 +33,7 @@ You can only get values for keys defined in the APIAccessibleOptionTags interfac
 
 **Returns:** `java.lang.Object`
 
-### `setGlobalObjectProperty(java.lang.String key, java.lang.Object value)`
+### `setGlobalObjectProperty(String key, Object value)`
 
 You can use such methods to overwrite some global preferences in Oxygen with your own values.
  To find the key and value types which needs to be overwritten you can export the application preferences to XML (Options -> Export Global Options).
@@ -44,7 +44,7 @@ You can use such methods to overwrite some global preferences in Oxygen with you
 
 **Returns:** `void`
 
-### `importGlobalOptions(java.io.File optionsFile)`
+### `importGlobalOptions(File optionsFile)`
 
 You can use such methods to overwrite some global preferences in Oxygen with your own values.
  Existing options with keys which are not present in the imported options file will be preserved.
@@ -54,7 +54,7 @@ You can use such methods to overwrite some global preferences in Oxygen with you
 
 **Returns:** `void`
 
-### `importGlobalOptions(java.io.File optionsFile, boolean preserveExistingOptionKeys)`
+### `importGlobalOptions(File optionsFile, boolean preserveExistingOptionKeys)`
 
 You can use such methods to overwrite some global preferences in Oxygen with your own values.
 
@@ -69,7 +69,7 @@ You can use such methods to overwrite some global preferences in Oxygen with you
 
 **Returns:** `void`
 
-### `showPreferencesPages(java.lang.String[] pagesToShowKeys, java.lang.String pageToSelectKey, boolean showChildrenOfPages)`
+### `showPreferencesPages(String[] pagesToShowKeys, String pageToSelectKey, boolean showChildrenOfPages)`
 
 For the stand-alone application each key corresponds to a `OptionPagePluginExtension` 
  key (returned via the *ro.sync.exml.plugin.option.OptionPagePluginExtension.getKey()* method). 
@@ -83,14 +83,14 @@ For the stand-alone application each key corresponds to a `OptionPagePluginExten
 
 **Returns:** `void`
 
-### `serializePersistentObject(java.lang.Object persistentObject)`
+### `serializePersistentObject(Object persistentObject)`
 
 **Parameters:**
 - `persistentObject` (`java.lang.Object`): The persistent object. It must be an instance of ro.sync.options.PersistentObject
 
 **Returns:** `java.lang.String`
 
-### `deserializePersistentObject(java.lang.String persistentObjectStringRepresentation)`
+### `deserializePersistentObject(String persistentObjectStringRepresentation)`
 
 **Parameters:**
 - `persistentObjectStringRepresentation` (`java.lang.String`): The XML representation of the object.

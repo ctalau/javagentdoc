@@ -120,7 +120,7 @@ See the Guava User Guide article on [Range](https://github.com/google/guava/wiki
 
 ## Constructors
 
-### `<init>(com.google.common.collect.Cut<C> lowerBound, com.google.common.collect.Cut<C> upperBound)`
+### `<init>(Cut<C> lowerBound, Cut<C> upperBound)`
 
 **Parameters:**
 - `lowerBound` ([`com.google.common.collect.Cut<C>`](./Cut.md))
@@ -140,49 +140,47 @@ See the Guava User Guide article on [Range](https://github.com/google/guava/wiki
 
 **Returns:** [`com.google.common.collect.Ordering<com.google.common.collect.Range<C>>`](./Ordering.md)
 
-### `create(com.google.common.collect.Cut<C> lowerBound, com.google.common.collect.Cut<C> upperBound)`
-
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+### `create(Cut<C> lowerBound, Cut<C> upperBound)`
 
 **Parameters:**
 - `lowerBound` ([`com.google.common.collect.Cut<C>`](./Cut.md))
 - `upperBound` ([`com.google.common.collect.Cut<C>`](./Cut.md))
 
-### `open(C lower, C upper)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `open(C lower, C upper)`
 
 **Parameters:**
 - `lower` (`C`)
 - `upper` (`C`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `closed(C lower, C upper)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `lower` (`C`)
 - `upper` (`C`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `closedOpen(C lower, C upper)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `lower` (`C`)
 - `upper` (`C`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `openClosed(C lower, C upper)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `lower` (`C`)
 - `upper` (`C`)
 
-### `range(C lower, com.google.common.collect.BoundType lowerType, C upper, com.google.common.collect.BoundType upperType)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `range(C lower, BoundType lowerType, C upper, BoundType upperType)`
 
 **Parameters:**
 - `lower` (`C`)
@@ -190,49 +188,51 @@ See the Guava User Guide article on [Range](https://github.com/google/guava/wiki
 - `upper` (`C`)
 - `upperType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `lessThan(C endpoint)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `lessThan(C endpoint)`
 
 **Parameters:**
 - `endpoint` (`C`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `atMost(C endpoint)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `endpoint` (`C`)
 
-### `upTo(C endpoint, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `upTo(C endpoint, BoundType boundType)`
 
 **Parameters:**
 - `endpoint` (`C`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `greaterThan(C endpoint)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `endpoint` (`C`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `atLeast(C endpoint)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `endpoint` (`C`)
 
-### `downTo(C endpoint, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `downTo(C endpoint, BoundType boundType)`
 
 **Parameters:**
 - `endpoint` (`C`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `all()`
 
@@ -240,22 +240,22 @@ See the Guava User Guide article on [Range](https://github.com/google/guava/wiki
 
 ### `singleton(C value)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 The
  returned range is closed on both ends.
 
 **Parameters:**
 - `value` (`C`)
 
-### `encloseAll(java.lang.Iterable<C> values)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `encloseAll(Iterable<C> values)`
 
 The returned range is closed on both ends.
 
 **Parameters:**
 - `values` (`java.lang.Iterable<C>`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `hasLowerBound()`
 
@@ -283,8 +283,6 @@ The returned range is closed on both ends.
 
 ### `isEmpty()`
 
-**Returns:** `boolean`
-
 (This does
  not encompass ranges of the form (v..v), because such ranges are *invalid* and
  can't be constructed at all.)
@@ -294,9 +292,9 @@ Note that certain discrete ranges such as the integer range (3..4) are **not**
  considered empty, even though they contain no actual values. In these cases, it may be helpful
  to preprocess ranges with #canonical(DiscreteDomain).
 
-### `contains(C value)`
-
 **Returns:** `boolean`
+
+### `contains(C value)`
 
 For example, on the
  range [0..2), contains(1) returns true, while contains(2)
@@ -305,23 +303,23 @@ For example, on the
 **Parameters:**
 - `value` (`C`)
 
-### `apply(C input)`
-
 **Returns:** `boolean`
+
+### `apply(C input)`
 
 **Parameters:**
 - `input` (`C`)
 
-### `containsAll(java.lang.Iterable<? extends C> values)`
-
 **Returns:** `boolean`
+
+### `containsAll(Iterable<? extends C> values)`
 
 **Parameters:**
 - `values` (`java.lang.Iterable<? extends C>`)
 
-### `encloses(com.google.common.collect.Range<C> other)`
-
 **Returns:** `boolean`
+
+### `encloses(Range<C> other)`
 
 Examples:
 
@@ -351,9 +349,9 @@ Being reflexive, antisymmetric and transitive, the encloses relation defines a
 **Parameters:**
 - `other` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `isConnected(com.google.common.collect.Range<C> other)`
-
 **Returns:** `boolean`
+
+### `isConnected(Range<C> other)`
 
 For example,
 
@@ -382,9 +380,9 @@ Note that certain discrete ranges are not considered connected, even though ther
 **Parameters:**
 - `other` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `intersection(com.google.common.collect.Range<C> connectedRange)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+### `intersection(Range<C> connectedRange)`
 
 For example, the intersection of [1..5] and (3..7) is (3..5]. The
  resulting range may be empty; for example, [1..5) intersected with [5..7)
@@ -400,9 +398,9 @@ The intersection operation is commutative, associative and idempotent, and its i
 **Parameters:**
 - `connectedRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `gap(com.google.common.collect.Range<C> otherRange)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `gap(Range<C> otherRange)`
 
 The resulting range may be empty if the two ranges are adjacent but non-overlapping.
 
@@ -421,9 +419,9 @@ The gap operation is commutative.
 **Parameters:**
 - `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `span(com.google.common.collect.Range<C> other)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `span(Range<C> other)`
 
 For example, the span of [1..3] and (5..7) is [1..7).
 
@@ -439,9 +437,9 @@ Like intersection, this operation is commutative, associative
 **Parameters:**
 - `other` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `canonical(com.google.common.collect.DiscreteDomain<C> domain)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `canonical(DiscreteDomain<C> domain)`
 
 The canonical form has the
  following properties:
@@ -472,9 +470,9 @@ Furthermore, this method guarantees that the range returned will be one of the f
 **Parameters:**
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `equals(java.lang.Object object)`
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 Note that discrete ranges such as (1..4) and [2..3] are **not**
  equal to one another, despite the fact that they each contain precisely the same set of values.
@@ -484,6 +482,8 @@ Note that discrete ranges such as (1..4) and [2..3] are **not**
 **Parameters:**
 - `object` (`java.lang.Object`)
 
+**Returns:** `boolean`
+
 ### `hashCode()`
 
 **Returns:** `int`
@@ -492,23 +492,23 @@ Note that discrete ranges such as (1..4) and [2..3] are **not**
 
 **Returns:** `java.lang.String`
 
-### `toString(com.google.common.collect.Cut<?> lowerBound, com.google.common.collect.Cut<?> upperBound)`
-
-**Returns:** `java.lang.String`
+### `toString(Cut<?> lowerBound, Cut<?> upperBound)`
 
 **Parameters:**
 - `lowerBound` ([`com.google.common.collect.Cut<?>`](./Cut.md))
 - `upperBound` ([`com.google.common.collect.Cut<?>`](./Cut.md))
 
+**Returns:** `java.lang.String`
+
 ### `readResolve()`
 
 **Returns:** `java.lang.Object`
 
-### `compareOrThrow(java.lang.Comparable left, java.lang.Comparable right)`
-
-**Returns:** `int`
+### `compareOrThrow(Comparable left, Comparable right)`
 
 **Parameters:**
 - `left` (`java.lang.Comparable`)
 - `right` (`java.lang.Comparable`)
+
+**Returns:** `int`
 

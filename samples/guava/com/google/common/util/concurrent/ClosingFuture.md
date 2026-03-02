@@ -167,18 +167,18 @@ Note that if you don't call closeAsync(), the captured objects will not be close
 
 ## Constructors
 
-### `<init>(com.google.common.util.concurrent.ListenableFuture<V> future)`
+### `<init>(ListenableFuture<V> future)`
 
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md))
 
-### `<init>(com.google.common.util.concurrent.ClosingFuture.ClosingCallable<V> callable, java.util.concurrent.Executor executor)`
+### `<init>(ClosingFuture.ClosingCallable<V> callable, Executor executor)`
 
 **Parameters:**
 - `callable` (`com.google.common.util.concurrent.ClosingFuture.ClosingCallable<V>`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `<init>(com.google.common.util.concurrent.ClosingFuture.AsyncClosingCallable<V> callable, java.util.concurrent.Executor executor)`
+### `<init>(ClosingFuture.AsyncClosingCallable<V> callable, Executor executor)`
 
 **Parameters:**
 - `callable` (`com.google.common.util.concurrent.ClosingFuture.AsyncClosingCallable<V>`)
@@ -186,25 +186,23 @@ Note that if you don't call closeAsync(), the captured objects will not be close
 
 ## Methods
 
-### `submit(com.google.common.util.concurrent.ClosingFuture.ClosingCallable<V> callable, java.util.concurrent.Executor executor)`
-
-**Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
+### `submit(ClosingFuture.ClosingCallable<V> callable, Executor executor)`
 
 **Parameters:**
 - `callable` (`com.google.common.util.concurrent.ClosingFuture.ClosingCallable<V>`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `submitAsync(com.google.common.util.concurrent.ClosingFuture.AsyncClosingCallable<V> callable, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
+
+### `submitAsync(ClosingFuture.AsyncClosingCallable<V> callable, Executor executor)`
 
 **Parameters:**
 - `callable` (`com.google.common.util.concurrent.ClosingFuture.AsyncClosingCallable<V>`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `from(com.google.common.util.concurrent.ListenableFuture<V> future)`
-
 **Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
+
+### `from(ListenableFuture<V> future)`
 
 future's value will not be closed when the pipeline is done even if V
  implements Closeable. In order to start a pipeline with a value that will be closed
@@ -213,9 +211,9 @@ future's value will not be closed when the pipeline is done even if V
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md))
 
-### `eventuallyClosing(com.google.common.util.concurrent.ListenableFuture<C> future, java.util.concurrent.Executor closingExecutor)`
+**Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ClosingFuture<C>`](./ClosingFuture.md)
+### `eventuallyClosing(ListenableFuture<C> future, Executor closingExecutor)`
 
 If future succeeds, its value will be closed (using closingExecutor)) when
  the pipeline is done, even if the pipeline is canceled or fails.
@@ -226,37 +224,37 @@ Cancelling the pipeline will not cancel future, so that the pipeline can access 
 
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<C>`](./ListenableFuture.md)): the future to create the ClosingFuture from. For discussion of the
-     future's result type C, see DeferredCloser#eventuallyClose(Object,
-     Executor).
+       future's result type C, see DeferredCloser#eventuallyClose(Object,
+       Executor).
 - `closingExecutor` (`java.util.concurrent.Executor`): the future's result will be closed on this executor
 
-### `whenAllComplete(java.lang.Iterable<? extends com.google.common.util.concurrent.ClosingFuture<?>> futures)`
+**Returns:** [`com.google.common.util.concurrent.ClosingFuture<C>`](./ClosingFuture.md)
 
-**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner`
+### `whenAllComplete(Iterable<? extends ClosingFuture<?>> futures)`
 
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ClosingFuture<?>>`)
 
-### `whenAllComplete(com.google.common.util.concurrent.ClosingFuture<?> future1, com.google.common.util.concurrent.ClosingFuture<?>[] moreFutures)`
-
 **Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner`
+
+### `whenAllComplete(ClosingFuture<?> future1, ClosingFuture<?>[] moreFutures)`
 
 **Parameters:**
 - `future1` ([`com.google.common.util.concurrent.ClosingFuture<?>`](./ClosingFuture.md))
 - `moreFutures` ([`com.google.common.util.concurrent.ClosingFuture<?>[]`](./ClosingFuture.md))
 
-### `whenAllSucceed(java.lang.Iterable<? extends com.google.common.util.concurrent.ClosingFuture<?>> futures)`
-
 **Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner`
+
+### `whenAllSucceed(Iterable<? extends ClosingFuture<?>> futures)`
 
 If any fail, the resulting pipeline will fail.
 
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ClosingFuture<?>>`)
 
-### `whenAllSucceed(com.google.common.util.concurrent.ClosingFuture<V1> future1, com.google.common.util.concurrent.ClosingFuture<V2> future2)`
+**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner`
 
-**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner2<V1,V2>`
+### `whenAllSucceed(ClosingFuture<V1> future1, ClosingFuture<V2> future2)`
 
 If any fail, the resulting pipeline will fail.
 
@@ -268,9 +266,9 @@ Calling this method allows you to use lambdas or method references typed with th
 - `future1` ([`com.google.common.util.concurrent.ClosingFuture<V1>`](./ClosingFuture.md))
 - `future2` ([`com.google.common.util.concurrent.ClosingFuture<V2>`](./ClosingFuture.md))
 
-### `whenAllSucceed(com.google.common.util.concurrent.ClosingFuture<V1> future1, com.google.common.util.concurrent.ClosingFuture<V2> future2, com.google.common.util.concurrent.ClosingFuture<V3> future3)`
+**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner2<V1,V2>`
 
-**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner3<V1,V2,V3>`
+### `whenAllSucceed(ClosingFuture<V1> future1, ClosingFuture<V2> future2, ClosingFuture<V3> future3)`
 
 If any fail, the resulting pipeline will fail.
 
@@ -283,9 +281,9 @@ Calling this method allows you to use lambdas or method references typed with th
 - `future2` ([`com.google.common.util.concurrent.ClosingFuture<V2>`](./ClosingFuture.md))
 - `future3` ([`com.google.common.util.concurrent.ClosingFuture<V3>`](./ClosingFuture.md))
 
-### `whenAllSucceed(com.google.common.util.concurrent.ClosingFuture<V1> future1, com.google.common.util.concurrent.ClosingFuture<V2> future2, com.google.common.util.concurrent.ClosingFuture<V3> future3, com.google.common.util.concurrent.ClosingFuture<V4> future4)`
+**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner3<V1,V2,V3>`
 
-**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner4<V1,V2,V3,V4>`
+### `whenAllSucceed(ClosingFuture<V1> future1, ClosingFuture<V2> future2, ClosingFuture<V3> future3, ClosingFuture<V4> future4)`
 
 If any fail, the resulting pipeline will fail.
 
@@ -299,9 +297,9 @@ Calling this method allows you to use lambdas or method references typed with th
 - `future3` ([`com.google.common.util.concurrent.ClosingFuture<V3>`](./ClosingFuture.md))
 - `future4` ([`com.google.common.util.concurrent.ClosingFuture<V4>`](./ClosingFuture.md))
 
-### `whenAllSucceed(com.google.common.util.concurrent.ClosingFuture<V1> future1, com.google.common.util.concurrent.ClosingFuture<V2> future2, com.google.common.util.concurrent.ClosingFuture<V3> future3, com.google.common.util.concurrent.ClosingFuture<V4> future4, com.google.common.util.concurrent.ClosingFuture<V5> future5)`
+**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner4<V1,V2,V3,V4>`
 
-**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner5<V1,V2,V3,V4,V5>`
+### `whenAllSucceed(ClosingFuture<V1> future1, ClosingFuture<V2> future2, ClosingFuture<V3> future3, ClosingFuture<V4> future4, ClosingFuture<V5> future5)`
 
 If any fail, the resulting pipeline will fail.
 
@@ -316,9 +314,9 @@ Calling this method allows you to use lambdas or method references typed with th
 - `future4` ([`com.google.common.util.concurrent.ClosingFuture<V4>`](./ClosingFuture.md))
 - `future5` ([`com.google.common.util.concurrent.ClosingFuture<V5>`](./ClosingFuture.md))
 
-### `whenAllSucceed(com.google.common.util.concurrent.ClosingFuture<?> future1, com.google.common.util.concurrent.ClosingFuture<?> future2, com.google.common.util.concurrent.ClosingFuture<?> future3, com.google.common.util.concurrent.ClosingFuture<?> future4, com.google.common.util.concurrent.ClosingFuture<?> future5, com.google.common.util.concurrent.ClosingFuture<?> future6, com.google.common.util.concurrent.ClosingFuture<?>[] moreFutures)`
+**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner5<V1,V2,V3,V4,V5>`
 
-**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner`
+### `whenAllSucceed(ClosingFuture<?> future1, ClosingFuture<?> future2, ClosingFuture<?> future3, ClosingFuture<?> future4, ClosingFuture<?> future5, ClosingFuture<?> future6, ClosingFuture<?>[] moreFutures)`
 
 If any fail, the resulting pipeline will fail.
 
@@ -331,9 +329,9 @@ If any fail, the resulting pipeline will fail.
 - `future6` ([`com.google.common.util.concurrent.ClosingFuture<?>`](./ClosingFuture.md))
 - `moreFutures` ([`com.google.common.util.concurrent.ClosingFuture<?>[]`](./ClosingFuture.md))
 
-### `statusFuture()`
+**Returns:** `com.google.common.util.concurrent.ClosingFuture.Combiner`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
+### `statusFuture()`
 
 Calling get() on the returned
  future returns null if the step is successful or throws the same exception that would
@@ -346,9 +344,9 @@ statusFuture differs from most methods on ClosingFuture: You can make calls
  a derivation method *on the same instance*. This is important because calling 
  statusFuture alone does not provide a way to close the pipeline.
 
-### `transform(com.google.common.util.concurrent.ClosingFuture.ClosingFunction<? super V,U> function, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ClosingFuture<U>`](./ClosingFuture.md)
+### `transform(ClosingFuture.ClosingFunction<? super V,U> function, Executor executor)`
 
 The function can use a DeferredCloser to capture objects to be closed
  when the pipeline is done.
@@ -387,9 +385,9 @@ After calling this method, you may not call #finishToFuture(), #finishToValueAnd
 - `function` (`com.google.common.util.concurrent.ClosingFuture.ClosingFunction<? super V,U>`): transforms the value of this step to the value of the derived step
 - `executor` (`java.util.concurrent.Executor`): executor to run the function in
 
-### `transformAsync(com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<? super V,U> function, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ClosingFuture<U>`](./ClosingFuture.md)
+
+### `transformAsync(ClosingFuture.AsyncClosingFunction<? super V,U> function, Executor executor)`
 
 The function can use a DeferredCloser to capture objects to be closed when the pipeline is done (other than those
  captured by the returned ClosingFuture).
@@ -470,12 +468,12 @@ After calling this method, you may not call #finishToFuture(), #finishToValueAnd
 
 **Parameters:**
 - `function` (`com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<? super V,U>`): transforms the value of this step to a ClosingFuture with the value of
-     the derived step
+       the derived step
 - `executor` (`java.util.concurrent.Executor`): executor to run the function in
 
-### `withoutCloser(com.google.common.util.concurrent.AsyncFunction<V,U> function)`
+**Returns:** [`com.google.common.util.concurrent.ClosingFuture<U>`](./ClosingFuture.md)
 
-**Returns:** `com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<V,U>`
+### `withoutCloser(AsyncFunction<V,U> function)`
 
 Use this method to pass a transformation to #transformAsync(AsyncClosingFunction,
  Executor) or to #catchingAsync(Class, AsyncClosingFunction, Executor) as long as it
@@ -504,9 +502,9 @@ Example usage:
 **Parameters:**
 - `function` ([`com.google.common.util.concurrent.AsyncFunction<V,U>`](./AsyncFunction.md)): transforms the value of a ClosingFuture step to a ListenableFuture with the value of a derived step
 
-### `catching(java.lang.Class<X> exceptionType, com.google.common.util.concurrent.ClosingFuture.ClosingFunction<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
+**Returns:** `com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<V,U>`
 
-**Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
+### `catching(Class<X> exceptionType, ClosingFuture.ClosingFunction<? super X,? extends V> fallback, Executor executor)`
 
 The function can use a DeferredCloser to capture objects to be closed when the pipeline is done.
 
@@ -544,30 +542,30 @@ After calling this method, you may not call #finishToFuture(), #finishToValueAnd
 
 **Parameters:**
 - `exceptionType` (`java.lang.Class<X>`): the exception type that triggers use of fallback. The exception
-     type is matched against this step's exception. "This step's exception" means the cause of
-     the ExecutionException thrown by Future#get() on the Future
-     underlying this step or, if get() throws a different kind of exception, that
-     exception itself. To avoid hiding bugs and other unrecoverable errors, callers should
-     prefer more specific types, avoiding Throwable.class in particular.
+       type is matched against this step's exception. "This step's exception" means the cause of
+       the ExecutionException thrown by Future#get() on the Future
+       underlying this step or, if get() throws a different kind of exception, that
+       exception itself. To avoid hiding bugs and other unrecoverable errors, callers should
+       prefer more specific types, avoiding Throwable.class in particular.
 - `fallback` (`com.google.common.util.concurrent.ClosingFuture.ClosingFunction<? super X,? extends V>`): the function to be called if this step fails with the expected exception type.
-     The function's argument is this step's exception. "This step's exception" means the cause
-     of the ExecutionException thrown by Future#get() on the Future
-     underlying this step or, if get() throws a different kind of exception, that
-     exception itself.
+       The function's argument is this step's exception. "This step's exception" means the cause
+       of the ExecutionException thrown by Future#get() on the Future
+       underlying this step or, if get() throws a different kind of exception, that
+       exception itself.
 - `executor` (`java.util.concurrent.Executor`): the executor that runs fallback if the input fails
 
-### `catchingMoreGeneric(java.lang.Class<X> exceptionType, com.google.common.util.concurrent.ClosingFuture.ClosingFunction<? super X,W> fallback, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
+
+### `catchingMoreGeneric(Class<X> exceptionType, ClosingFuture.ClosingFunction<? super X,W> fallback, Executor executor)`
 
 **Parameters:**
 - `exceptionType` (`java.lang.Class<X>`)
 - `fallback` (`com.google.common.util.concurrent.ClosingFuture.ClosingFunction<? super X,W>`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `catchingAsync(java.lang.Class<X> exceptionType, com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
+
+### `catchingAsync(Class<X> exceptionType, ClosingFuture.AsyncClosingFunction<? super X,? extends V> fallback, Executor executor)`
 
 The function can use a DeferredCloser to capture objects to be closed when the
  pipeline is done (other than those captured by the returned ClosingFuture).
@@ -636,30 +634,30 @@ After calling this method, you may not call #finishToFuture(), #finishToValueAnd
 
 **Parameters:**
 - `exceptionType` (`java.lang.Class<X>`): the exception type that triggers use of fallback. The exception
-     type is matched against this step's exception. "This step's exception" means the cause of
-     the ExecutionException thrown by Future#get() on the Future
-     underlying this step or, if get() throws a different kind of exception, that
-     exception itself. To avoid hiding bugs and other unrecoverable errors, callers should
-     prefer more specific types, avoiding Throwable.class in particular.
+       type is matched against this step's exception. "This step's exception" means the cause of
+       the ExecutionException thrown by Future#get() on the Future
+       underlying this step or, if get() throws a different kind of exception, that
+       exception itself. To avoid hiding bugs and other unrecoverable errors, callers should
+       prefer more specific types, avoiding Throwable.class in particular.
 - `fallback` (`com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<? super X,? extends V>`): the function to be called if this step fails with the expected exception type.
-     The function's argument is this step's exception. "This step's exception" means the cause
-     of the ExecutionException thrown by Future#get() on the Future
-     underlying this step or, if get() throws a different kind of exception, that
-     exception itself.
+       The function's argument is this step's exception. "This step's exception" means the cause
+       of the ExecutionException thrown by Future#get() on the Future
+       underlying this step or, if get() throws a different kind of exception, that
+       exception itself.
 - `executor` (`java.util.concurrent.Executor`): the executor that runs fallback if the input fails
 
-### `catchingAsyncMoreGeneric(java.lang.Class<X> exceptionType, com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<? super X,W> fallback, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
+
+### `catchingAsyncMoreGeneric(Class<X> exceptionType, ClosingFuture.AsyncClosingFunction<? super X,W> fallback, Executor executor)`
 
 **Parameters:**
 - `exceptionType` (`java.lang.Class<X>`)
 - `fallback` (`com.google.common.util.concurrent.ClosingFuture.AsyncClosingFunction<? super X,W>`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `finishToFuture()`
+**Returns:** [`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
+### `finishToFuture()`
 
 The returned Future is completed when the pipeline's computation completes, or when
  the pipeline is cancelled.
@@ -673,9 +671,9 @@ All objects the pipeline has captured for closing will begin to be closed asynch
 After calling this method, you may not call #finishToValueAndCloser(ValueAndCloserConsumer, Executor), this method, or any other
  derivation method on the original ClosingFuture instance.
 
-### `finishToValueAndCloser(com.google.common.util.concurrent.ClosingFuture.ValueAndCloserConsumer<? super V> consumer, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.FluentFuture<V>`](./FluentFuture.md)
 
-**Returns:** `void`
+### `finishToValueAndCloser(ClosingFuture.ValueAndCloserConsumer<? super V> consumer, Executor executor)`
 
 When this step is done,
  receiver will be called with an object that contains the result of the operation. The
@@ -687,20 +685,20 @@ After calling this method, you may not call #finishToFuture(), this method again
 
 **Parameters:**
 - `consumer` (`com.google.common.util.concurrent.ClosingFuture.ValueAndCloserConsumer<? super V>`): a callback whose method will be called (using executor) when this
-     operation is done
+       operation is done
 - `executor` (`java.util.concurrent.Executor`)
 
-### `provideValueAndCloser(com.google.common.util.concurrent.ClosingFuture.ValueAndCloserConsumer<C> consumer, com.google.common.util.concurrent.ClosingFuture<V> closingFuture)`
-
 **Returns:** `void`
+
+### `provideValueAndCloser(ClosingFuture.ValueAndCloserConsumer<C> consumer, ClosingFuture<V> closingFuture)`
 
 **Parameters:**
 - `consumer` (`com.google.common.util.concurrent.ClosingFuture.ValueAndCloserConsumer<C>`)
 - `closingFuture` ([`com.google.common.util.concurrent.ClosingFuture<V>`](./ClosingFuture.md))
 
-### `cancel(boolean mayInterruptIfRunning)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `cancel(boolean mayInterruptIfRunning)`
 
 This attempt will fail if the step has already
  completed, has already been cancelled, or could not be cancelled for some other reason. If
@@ -714,26 +712,28 @@ If successful, causes the objects captured by this step (if already started) and
 
 **Parameters:**
 - `mayInterruptIfRunning` (`boolean`): true if the thread executing this task should be
-     interrupted; otherwise, in-progress tasks are allowed to complete, but the step will be
-     cancelled regardless
+       interrupted; otherwise, in-progress tasks are allowed to complete, but the step will be
+       cancelled regardless
+
+**Returns:** `boolean`
 
 ### `close()`
 
 **Returns:** `void`
 
-### `derive(com.google.common.util.concurrent.FluentFuture<U> future)`
-
-**Returns:** [`com.google.common.util.concurrent.ClosingFuture<U>`](./ClosingFuture.md)
+### `derive(FluentFuture<U> future)`
 
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.FluentFuture<U>`](./FluentFuture.md))
 
-### `becomeSubsumedInto(com.google.common.util.concurrent.ClosingFuture.CloseableList otherCloseables)`
+**Returns:** [`com.google.common.util.concurrent.ClosingFuture<U>`](./ClosingFuture.md)
 
-**Returns:** `void`
+### `becomeSubsumedInto(ClosingFuture.CloseableList otherCloseables)`
 
 **Parameters:**
 - `otherCloseables` (`com.google.common.util.concurrent.ClosingFuture.CloseableList`)
+
+**Returns:** `void`
 
 ### `toString()`
 
@@ -743,29 +743,29 @@ If successful, causes the objects captured by this step (if already started) and
 
 **Returns:** `void`
 
-### `closeQuietly(java.lang.AutoCloseable closeable, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `closeQuietly(AutoCloseable closeable, Executor executor)`
 
 **Parameters:**
 - `closeable` (`java.lang.AutoCloseable`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `checkAndUpdateState(com.google.common.util.concurrent.ClosingFuture.State oldState, com.google.common.util.concurrent.ClosingFuture.State newState)`
+**Returns:** `void`
+
+### `checkAndUpdateState(ClosingFuture.State oldState, ClosingFuture.State newState)`
+
+**Parameters:**
+- `oldState` (`com.google.common.util.concurrent.ClosingFuture.State`)
+- `newState` (`com.google.common.util.concurrent.ClosingFuture.State`)
 
 **Returns:** `void`
 
+### `compareAndUpdateState(ClosingFuture.State oldState, ClosingFuture.State newState)`
+
 **Parameters:**
 - `oldState` (`com.google.common.util.concurrent.ClosingFuture.State`)
 - `newState` (`com.google.common.util.concurrent.ClosingFuture.State`)
-
-### `compareAndUpdateState(com.google.common.util.concurrent.ClosingFuture.State oldState, com.google.common.util.concurrent.ClosingFuture.State newState)`
 
 **Returns:** `boolean`
-
-**Parameters:**
-- `oldState` (`com.google.common.util.concurrent.ClosingFuture.State`)
-- `newState` (`com.google.common.util.concurrent.ClosingFuture.State`)
 
 ### `whenClosedCountDown()`
 

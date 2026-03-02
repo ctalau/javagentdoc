@@ -43,7 +43,7 @@ Can be null
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.dita.map.topicref.TopicrefMoveAction.Builder builder)`
+### `<init>(TopicrefMoveAction.Builder builder)`
 
 **Parameters:**
 - `builder` (`ro.sync.ecss.extensions.dita.map.topicref.TopicrefMoveAction.Builder`): the builder of this operation
@@ -54,7 +54,7 @@ Can be null
 
 **Returns:** `void`
 
-### `moveNode(ro.sync.ecss.extensions.api.node.AuthorNode toMoveNode)`
+### `moveNode(AuthorNode toMoveNode)`
 
 **Parameters:**
 - `toMoveNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../api/node/AuthorNode.md)): the node to move

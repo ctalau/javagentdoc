@@ -18,7 +18,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String selection)`
+### `<init>(String selection)`
 
 **Parameters:**
 - `selection` (`java.lang.String`): The processed selection.
@@ -27,7 +27,7 @@
 
 ## Methods
 
-### `setProcessedSelection(java.lang.String selection)`
+### `setProcessedSelection(String selection)`
 
 The string can also contain editor variables available also to Oxygen code templates like ${caret} to position the caret at a certain location
  or ${selection} to surround the current selection with the processed string.

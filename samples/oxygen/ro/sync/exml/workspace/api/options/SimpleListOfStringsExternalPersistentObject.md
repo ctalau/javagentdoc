@@ -30,7 +30,7 @@ Used as an example and for tests.
 
 **Returns:** `ro.sync.options.SerializableList<java.lang.String>`
 
-### `addItem(java.lang.String item)`
+### `addItem(String item)`
 
 **Parameters:**
 - `item` (`java.lang.String`): The item to add.

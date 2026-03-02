@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customizeRenderingInformation(ro.sync.ecss.extensions.api.structure.RenderingInformation renderInfo)`
+### `customizeRenderingInformation(RenderingInformation renderInfo)`
 
 By default a node is represented in the Outline by its tag name and a additional information obtained 
  from a specific attribute or text. You can set custom values for each rendered field.

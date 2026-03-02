@@ -42,16 +42,14 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Constructors
 
-### `<init>(java.util.Comparator<? super E> comparator)`
+### `<init>(Comparator<? super E> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`)
 
 ## Methods
 
-### `toImmutableSortedSet(java.util.Comparator<? super E> comparator)`
-
-**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSortedSet<E>>`
+### `toImmutableSortedSet(Comparator<? super E> comparator)`
 
 If the elements contain duplicates (according to the comparator), only the first duplicate
  in encounter order will appear in the result.
@@ -59,29 +57,29 @@ If the elements contain duplicates (according to the comparator), only the first
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`)
 
-### `emptySet(java.util.Comparator<? super E> comparator)`
+**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSortedSet<E>>`
 
-**Returns:** [`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md)
+### `emptySet(Comparator<? super E> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`)
 
-### `of()`
+**Returns:** [`com.google.common.collect.RegularImmutableSortedSet<E>`](./RegularImmutableSortedSet.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+### `of()`
 
 **Performance note:** the instance returned is a singleton.
 
-### `of(E element)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E element)`
 
 **Parameters:**
 - `element` (`E`)
 
-### `of(E e1, E e2)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2)`
 
 When multiple elements are equivalent according to Comparable#compareTo, only the first
  one specified is included.
@@ -90,9 +88,9 @@ When multiple elements are equivalent according to Comparable#compareTo, only th
 - `e1` (`E`)
 - `e2` (`E`)
 
-### `of(E e1, E e2, E e3)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3)`
 
 When multiple elements are equivalent according to Comparable#compareTo, only the first
  one specified is included.
@@ -102,9 +100,9 @@ When multiple elements are equivalent according to Comparable#compareTo, only th
 - `e2` (`E`)
 - `e3` (`E`)
 
-### `of(E e1, E e2, E e3, E e4)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3, E e4)`
 
 When multiple elements are equivalent according to Comparable#compareTo, only the first
  one specified is included.
@@ -115,9 +113,9 @@ When multiple elements are equivalent according to Comparable#compareTo, only th
 - `e3` (`E`)
 - `e4` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5)`
 
 When multiple elements are equivalent according to Comparable#compareTo, only the first
  one specified is included.
@@ -129,9 +127,9 @@ When multiple elements are equivalent according to Comparable#compareTo, only th
 - `e4` (`E`)
 - `e5` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] remaining)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] remaining)`
 
 When multiple elements are equivalent according to Comparable#compareTo, only the first
  one specified is included.
@@ -145,9 +143,9 @@ When multiple elements are equivalent according to Comparable#compareTo, only th
 - `e6` (`E`)
 - `remaining` (`E[]`)
 
-### `copyOf(E[] elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOf(E[] elements)`
 
 When multiple elements are equivalent according to Comparable#compareTo, only the first
  one specified is included.
@@ -155,9 +153,9 @@ When multiple elements are equivalent according to Comparable#compareTo, only th
 **Parameters:**
 - `elements` (`E[]`)
 
-### `copyOf(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOf(Iterable<? extends E> elements)`
 
 When multiple elements are equivalent according to compareTo(), only the first one
  specified is included. To create a copy of a SortedSet that preserves the comparator,
@@ -181,9 +179,9 @@ This method is not type-safe, as it may be called on elements that are not mutua
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `copyOf(java.util.Collection<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOf(Collection<? extends E> elements)`
 
 When multiple elements are equivalent according to compareTo(), only the first one
  specified is included. To create a copy of a SortedSet that preserves the comparator,
@@ -210,9 +208,9 @@ This method is safe to use even when elements is a synchronized or concurrent
 **Parameters:**
 - `elements` (`java.util.Collection<? extends E>`)
 
-### `copyOf(java.util.Iterator<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOf(Iterator<? extends E> elements)`
 
 When multiple elements are equivalent according to compareTo(), only the first one
  specified is included.
@@ -224,9 +222,9 @@ This method is not type-safe, as it may be called on elements that are not mutua
 **Parameters:**
 - `elements` (`java.util.Iterator<? extends E>`)
 
-### `copyOf(java.util.Comparator<? super E> comparator, java.util.Iterator<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOf(Comparator<? super E> comparator, Iterator<? extends E> elements)`
 
 When multiple elements are equivalent according to compareTo(), only the
  first one specified is included.
@@ -235,9 +233,9 @@ When multiple elements are equivalent according to compareTo(), only the
 - `comparator` (`java.util.Comparator<? super E>`)
 - `elements` (`java.util.Iterator<? extends E>`)
 
-### `copyOf(java.util.Comparator<? super E> comparator, java.lang.Iterable<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOf(Comparator<? super E> comparator, Iterable<? extends E> elements)`
 
 When multiple elements are equivalent according to compare(), only the
  first one specified is included. This method iterates over elements at most once.
@@ -251,9 +249,9 @@ Despite the method name, this method attempts to avoid actually copying the data
 - `comparator` (`java.util.Comparator<? super E>`)
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `copyOf(java.util.Comparator<? super E> comparator, java.util.Collection<? extends E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOf(Comparator<? super E> comparator, Collection<? extends E> elements)`
 
 When multiple elements are equivalent according to compareTo(), only the
  first one specified is included.
@@ -271,9 +269,9 @@ This method is safe to use even when elements is a synchronized or concurrent
 - `comparator` (`java.util.Comparator<? super E>`)
 - `elements` (`java.util.Collection<? extends E>`)
 
-### `copyOfSorted(java.util.SortedSet<E> sortedSet)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `copyOfSorted(SortedSet<E> sortedSet)`
 
 That behavior differs from #copyOf(Iterable), which always uses the
  natural ordering of the elements.
@@ -290,9 +288,9 @@ This method is safe to use even when sortedSet is a synchronized or concurrent
 **Parameters:**
 - `sortedSet` (`java.util.SortedSet<E>`)
 
-### `construct(java.util.Comparator<? super E> comparator, int n, E[] contents)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `construct(Comparator<? super E> comparator, int n, E[] contents)`
 
 If k is the size of the returned ImmutableSortedSet, then the sorted unique
  elements are in the first k positions of contents, and contents[i] ==
@@ -307,9 +305,9 @@ This method takes ownership of contents; do not modify contents after this
 - `n` (`int`)
 - `contents` (`E[]`)
 
-### `orderedBy(java.util.Comparator<E> comparator)`
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
+### `orderedBy(Comparator<E> comparator)`
 
 If the
  comparator has a more general type than the set being generated, such as creating a 
@@ -319,48 +317,48 @@ If the
 **Parameters:**
 - `comparator` (`java.util.Comparator<E>`)
 
+**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
+
 ### `reverseOrder()`
 
 **Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
 
 ### `naturalOrder()`
 
-**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
-
 The sorted sets use Ordering#natural() as the comparator. This method
  provides more type-safety than #builder, as it can be called only for classes that
  implement Comparable.
 
-### `unsafeCompare(java.lang.Object a, java.lang.Object b)`
+**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
 
-**Returns:** `int`
+### `unsafeCompare(Object a, Object b)`
 
 **Parameters:**
 - `a` (`java.lang.Object`)
 - `b` (`java.lang.Object`)
 
-### `unsafeCompare(java.util.Comparator<?> comparator, java.lang.Object a, java.lang.Object b)`
-
 **Returns:** `int`
+
+### `unsafeCompare(Comparator<?> comparator, Object a, Object b)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<?>`)
 - `a` (`java.lang.Object`)
 - `b` (`java.lang.Object`)
 
+**Returns:** `int`
+
 ### `comparator()`
 
-**Returns:** `java.util.Comparator<? super E>`
-
 Note that its behavior is not consistent with SortedSet#comparator(), which returns null to indicate natural ordering.
+
+**Returns:** `java.util.Comparator<? super E>`
 
 ### `iterator()`
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
 
 ### `headSet(E toElement)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
 This method returns a serializable ImmutableSortedSet.
 
@@ -373,17 +371,17 @@ The SortedSet#headSet documentation states that a subset of a subset throws an
 **Parameters:**
 - `toElement` (`E`)
 
-### `headSet(E toElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `headSet(E toElement, boolean inclusive)`
 
 **Parameters:**
 - `toElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `subSet(E fromElement, E toElement)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `subSet(E fromElement, E toElement)`
 
 This method returns a serializable ImmutableSortedSet.
 
@@ -398,9 +396,9 @@ The SortedSet#subSet documentation states that a subset of a subset throws an Il
 - `fromElement` (`E`)
 - `toElement` (`E`)
 
-### `subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
@@ -408,9 +406,9 @@ The SortedSet#subSet documentation states that a subset of a subset throws an Il
 - `toElement` (`E`)
 - `toInclusive` (`boolean`)
 
-### `tailSet(E fromElement)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `tailSet(E fromElement)`
 
 This method returns a serializable ImmutableSortedSet.
 
@@ -423,25 +421,25 @@ The SortedSet#tailSet documentation states that a subset of a subset throws an
 **Parameters:**
 - `fromElement` (`E`)
 
-### `tailSet(E fromElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `tailSet(E fromElement, boolean inclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `headSetImpl(E toElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `headSetImpl(E toElement, boolean inclusive)`
 
 **Parameters:**
 - `toElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `subSetImpl(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
@@ -449,41 +447,43 @@ The SortedSet#tailSet documentation states that a subset of a subset throws an
 - `toElement` (`E`)
 - `toInclusive` (`boolean`)
 
-### `tailSetImpl(E fromElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `tailSetImpl(E fromElement, boolean inclusive)`
 
 **Parameters:**
 - `fromElement` (`E`)
 - `inclusive` (`boolean`)
 
-### `lower(E e)`
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-**Returns:** `E`
+### `lower(E e)`
 
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `E`
 
 ### `floor(E e)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `E`
 
 ### `ceiling(E e)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `E`
 
 ### `higher(E e)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `e` (`E`)
+
+**Returns:** `E`
 
 ### `first()`
 
@@ -517,19 +517,19 @@ The SortedSet#tailSet documentation states that a subset of a subset throws an
 
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<E>`](./UnmodifiableIterator.md)
 
-### `indexOf(java.lang.Object target)`
-
-**Returns:** `int`
+### `indexOf(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
 
-### `readObject(java.io.ObjectInputStream unused)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `readObject(ObjectInputStream unused)`
 
 **Parameters:**
 - `unused` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 
 ### `writeReplace()`
 
@@ -537,21 +537,19 @@ The SortedSet#tailSet documentation states that a subset of a subset throws an
 
 ### `toImmutableSet()`
 
-**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`
-
 Use #toImmutableSortedSet instead. This method exists only to hide
  ImmutableSet#toImmutableSet from consumers of ImmutableSortedSet.
 
-### `builder()`
+**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`
 
-**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
+### `builder()`
 
 Use #naturalOrder, which offers better type-safety, instead. This method
  exists only to hide ImmutableSet#builder from consumers of ImmutableSortedSet.
 
-### `builderWithExpectedSize(int expectedSize)`
-
 **Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
+
+### `builderWithExpectedSize(int expectedSize)`
 
 This method exists only to hide ImmutableSet#builderWithExpectedSize
  from consumers of ImmutableSortedSet.
@@ -559,9 +557,9 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 **Parameters:**
 - `expectedSize` (`int`)
 
-### `of(E element)`
+**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+### `of(E element)`
 
 **You are attempting to create a set that may contain a non-Comparable
  element.** Proper calls will resolve to the version in ImmutableSortedSet, not this
@@ -570,9 +568,9 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 **Parameters:**
 - `element` (`E`)
 
-### `of(E e1, E e2)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2)`
 
 **You are attempting to create a set that may contain a non-Comparable
  element.** Proper calls will resolve to the version in ImmutableSortedSet, not this
@@ -582,9 +580,9 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 - `e1` (`E`)
 - `e2` (`E`)
 
-### `of(E e1, E e2, E e3)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3)`
 
 **You are attempting to create a set that may contain a non-Comparable
  element.** Proper calls will resolve to the version in ImmutableSortedSet, not this
@@ -595,9 +593,9 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 - `e2` (`E`)
 - `e3` (`E`)
 
-### `of(E e1, E e2, E e3, E e4)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3, E e4)`
 
 **You are attempting to create a set that may contain a non-Comparable
  element.** Proper calls will resolve to the version in ImmutableSortedSet, not this
@@ -609,9 +607,9 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 - `e3` (`E`)
 - `e4` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5)`
 
 **You are attempting to create a set that may contain a non-Comparable
  element.** Proper calls will resolve to the version in ImmutableSortedSet, not this
@@ -624,9 +622,9 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 - `e4` (`E`)
 - `e5` (`E`)
 
-### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] remaining)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
+
+### `of(E e1, E e2, E e3, E e4, E e5, E e6, E[] remaining)`
 
 **You are attempting to create a set that may contain a non-Comparable
  element.** Proper calls will resolve to the version in ImmutableSortedSet, not this
@@ -641,9 +639,9 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 - `e6` (`E`)
 - `remaining` (`E[]`)
 
-### `copyOf(Z[] elements)`
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSortedSet<Z>`](./ImmutableSortedSet.md)
+### `copyOf(Z[] elements)`
 
 **You are attempting to create a set that may contain non-Comparable
  elements.** Proper calls will resolve to the version in ImmutableSortedSet, not this
@@ -651,4 +649,6 @@ This method exists only to hide ImmutableSet#builderWithExpectedSize
 
 **Parameters:**
 - `elements` (`Z[]`)
+
+**Returns:** [`com.google.common.collect.ImmutableSortedSet<Z>`](./ImmutableSortedSet.md)
 

@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `process(ro.sync.exml.plugin.general.GeneralPluginContext context)`
+### `process(GeneralPluginContext context)`
 
 It receives the current context and it should
  return the processed content.

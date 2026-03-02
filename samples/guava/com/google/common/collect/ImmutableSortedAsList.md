@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableSortedSet<E> backingSet, com.google.common.collect.ImmutableList<E> backingList)`
+### `<init>(ImmutableSortedSet<E> backingSet, ImmutableList<E> backingList)`
 
 **Parameters:**
 - `backingSet` ([`com.google.common.collect.ImmutableSortedSet<E>`](./ImmutableSortedSet.md))
@@ -32,34 +32,34 @@
 
 **Returns:** `java.util.Comparator<? super E>`
 
-### `indexOf(java.lang.Object target)`
-
-**Returns:** `int`
+### `indexOf(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
 
-### `lastIndexOf(java.lang.Object target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(Object target)`
 
 **Parameters:**
 - `target` (`java.lang.Object`)
 
-### `contains(java.lang.Object target)`
+**Returns:** `int`
+
+### `contains(Object target)`
+
+**Parameters:**
+- `target` (`java.lang.Object`)
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `target` (`java.lang.Object`)
-
 ### `subListUnchecked(int fromIndex, int toIndex)`
-
-**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
 **Parameters:**
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
+
+**Returns:** [`com.google.common.collect.ImmutableList<E>`](./ImmutableList.md)
 
 ### `spliterator()`
 

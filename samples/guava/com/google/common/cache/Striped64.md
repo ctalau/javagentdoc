@@ -65,19 +65,17 @@ Updated via CAS.
 
 ### `casBase(long cmp, long val)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `cmp` (`long`)
 - `val` (`long`)
+
+**Returns:** `boolean`
 
 ### `casBusy()`
 
 **Returns:** `boolean`
 
 ### `fn(long currentValue, long newValue)`
-
-**Returns:** `long`
 
 Subclasses should open-code this update
  function for most uses, but the virtualized form is needed within retryUpdate.
@@ -86,9 +84,9 @@ Subclasses should open-code this update
 - `currentValue` (`long`): the current value (of either base or a cell)
 - `newValue` (`long`): the argument from a user update call
 
-### `retryUpdate(long x, int[] hc, boolean wasUncontended)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `retryUpdate(long x, int[] hc, boolean wasUncontended)`
 
 See above for explanation. This method suffers the usual non-modularity problems of
  optimistic retry code, relying on rechecked sets of reads.
@@ -98,17 +96,19 @@ See above for explanation. This method suffers the usual non-modularity problems
 - `hc` (`int[]`): the hash code holder
 - `wasUncontended` (`boolean`): false if CAS failed before call
 
-### `internalReset(long initialValue)`
-
 **Returns:** `void`
+
+### `internalReset(long initialValue)`
 
 **Parameters:**
 - `initialValue` (`long`)
 
-### `getUnsafe()`
+**Returns:** `void`
 
-**Returns:** `sun.misc.Unsafe`
+### `getUnsafe()`
 
 Suitable for use in a 3rd party package. Replace with a simple call
  to Unsafe.getUnsafe when integrating into a jdk.
+
+**Returns:** `sun.misc.Unsafe`
 

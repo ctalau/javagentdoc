@@ -24,7 +24,7 @@ This is also responsible for adding and removing listeners that are notified
 
 **Returns:** [`ro.sync.ecss.extensions.api.OptionsStorage`](../../../../../../ecss/extensions/api/OptionsStorage.md)
 
-### `setPopUpMenuCustomizer(ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapPopupMenuCustomizer popUpCustomizer)`
+### `setPopUpMenuCustomizer(DITAMapPopupMenuCustomizer popUpCustomizer)`
 
 **Parameters:**
 - `popUpCustomizer` ([`ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapPopupMenuCustomizer`](./DITAMapPopupMenuCustomizer.md)): the pop-up menu customizer.
@@ -35,7 +35,7 @@ This is also responsible for adding and removing listeners that are notified
 
 **Returns:** `java.lang.Object`
 
-### `addAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
+### `addAuthorAttributesDisplayFilter(AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
 The filter will be applied when editing the attributes for a topic reference.
 
@@ -44,7 +44,7 @@ The filter will be applied when editing the attributes for a topic reference.
 
 **Returns:** `void`
 
-### `removeAuthorAttributesDisplayFilter(ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter attributesDisplayFilter)`
+### `removeAuthorAttributesDisplayFilter(AuthorAttributesDisplayFilter attributesDisplayFilter)`
 
 **Parameters:**
 - `attributesDisplayFilter` ([`ro.sync.ecss.extensions.api.attributes.AuthorAttributesDisplayFilter`](../../../../../../ecss/extensions/api/attributes/AuthorAttributesDisplayFilter.md)): The AuthorAttributesDisplayFilter to be removed.
@@ -73,14 +73,14 @@ The filter will be applied when editing the attributes for a topic reference.
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.ditamap.actions.DITAMapActionsProvider`](actions/DITAMapActionsProvider.md)
 
-### `addDropHandler(ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler dropHandler)`
+### `addDropHandler(DITAMapTreeDropHandler dropHandler)`
 
 **Parameters:**
 - `dropHandler` ([`ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler`](dnd/DITAMapTreeDropHandler.md)): The newly added drop handler
 
 **Returns:** `void`
 
-### `removeDropHandler(ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler dropHandler)`
+### `removeDropHandler(DITAMapTreeDropHandler dropHandler)`
 
 **Parameters:**
 - `dropHandler` ([`ro.sync.exml.workspace.api.editor.page.ditamap.dnd.DITAMapTreeDropHandler`](dnd/DITAMapTreeDropHandler.md)): The newly added drop handler
@@ -97,7 +97,7 @@ This is equivalent to pressing F5 in the map tree.
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.ditamap.review.DITAMapReviewController`](review/DITAMapReviewController.md)
 
-### `addNodeRendererCustomizer(ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapNodeRendererCustomizer customizer)`
+### `addNodeRendererCustomizer(DITAMapNodeRendererCustomizer customizer)`
 
 The customizer can customize the icon and title which appears for each topicref
  in the DITA Maps Manager view.
@@ -108,7 +108,7 @@ The customizer can customize the icon and title which appears for each topicref
 
 **Returns:** `void`
 
-### `removeNodeRendererCustomizer(ro.sync.exml.workspace.api.editor.page.ditamap.DITAMapNodeRendererCustomizer customizer)`
+### `removeNodeRendererCustomizer(DITAMapNodeRendererCustomizer customizer)`
 
 The customizer can customize the icon and title which appears for each topicref
  in the DITA Maps Manager view.

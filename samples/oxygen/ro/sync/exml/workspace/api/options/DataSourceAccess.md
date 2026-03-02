@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `getDataSourceConnectionInfo(java.lang.String arg0)`
+### `getDataSourceConnectionInfo(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

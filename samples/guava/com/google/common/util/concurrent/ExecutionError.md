@@ -24,18 +24,18 @@ As with
 
 ### `<init>()`
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`)
 
-### `<init>(java.lang.String message, java.lang.Error cause)`
+### `<init>(String message, Error cause)`
 
 **Parameters:**
 - `message` (`java.lang.String`)
 - `cause` (`java.lang.Error`)
 
-### `<init>(java.lang.Error cause)`
+### `<init>(Error cause)`
 
 **Parameters:**
 - `cause` (`java.lang.Error`)

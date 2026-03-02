@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getImposedSortPriority(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, ro.sync.ecss.extensions.api.webapp.cc.CCItemProxy ccItem)`
+### `getImposedSortPriority(WhatElementsCanGoHereContext context, CCItemProxy ccItem)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../../../contentcompletion/xml/WhatElementsCanGoHereContext.md)): Context in which the content completion is invoked.

@@ -42,7 +42,7 @@
 
 **Returns:** `java.lang.String[]`
 
-### `checkTableColSpanIsDefined(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSpanSupport, ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `checkTableColSpanIsDefined(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSpanSupport, AuthorElement cellElement)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -51,7 +51,7 @@
 
 **Returns:** `void`
 
-### `getTableColSpec(ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSpanSupport, int colIndex)`
+### `getTableColSpec(AuthorTableCellSpanProvider tableSpanSupport, int colIndex)`
 
 I.E. for DocBook the column specification is defined by the 'colspec' element. 
  If it is missing then the column specification is not defined.
@@ -62,7 +62,7 @@ I.E. for DocBook the column specification is defined by the 'colspec' element.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.support.CALSColSpec`](../../support/CALSColSpec.md)
 
-### `updateTableColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider tableSupport, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int startCol, int endCol)`
+### `updateTableColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider tableSupport, AuthorElement cellElem, int startCol, int endCol)`
 
 The `namest` and `nameend` attributes will be set 
  according to the `startCol` and `endCol` supplied values.    
@@ -78,14 +78,14 @@ The `namest` and `nameend` attributes will be set
 
 **Returns:** `void`
 
-### `getTableCellSpanProvider(ro.sync.ecss.extensions.api.node.AuthorElement tgroupElement)`
+### `getTableCellSpanProvider(AuthorElement tgroupElement)`
 
 **Parameters:**
 - `tgroupElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../../api/node/AuthorElement.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider`](../../../../api/AuthorTableCellSpanProvider.md)
 
-### `updateTableRowSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement cellElem, int rowSpan)`
+### `updateTableRowSpan(AuthorAccess authorAccess, AuthorElement cellElem, int rowSpan)`
 
 If the supplied value for the row span is less than or equal to 1 then the 
  attribute will be removed.
@@ -97,7 +97,7 @@ If the supplied value for the row span is less than or equal to 1 then the
 
 **Returns:** `void`
 
-### `updateTableColumnNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int colsNumber)`
+### `updateTableColumnNumber(AuthorAccess authorAccess, AuthorElement tableElement, int colsNumber)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -106,7 +106,7 @@ If the supplied value for the row span is less than or equal to 1 then the
 
 **Returns:** `void`
 
-### `updateTableRowNumber(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int rowsNumber)`
+### `updateTableRowNumber(AuthorAccess authorAccess, AuthorElement tableElement, int rowsNumber)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -131,21 +131,21 @@ If the supplied value for the row span is less than or equal to 1 then the
 
 **Returns:** `java.lang.String[]`
 
-### `getTableElementForDeletion(ro.sync.ecss.extensions.api.node.AuthorNode element)`
+### `getTableElementForDeletion(AuthorNode element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md)
 
-### `isActuallyTableAndNotTgroup(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isActuallyTableAndNotTgroup(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../../../api/node/AuthorNode.md)): the node for which we perform the check.
 
 **Returns:** `boolean`
 
-### `limitRowSpan(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] rowFragments)`
+### `limitRowSpan(AuthorDocumentFragment[] rowFragments)`
 
 Each fragment has inside it a single table row. 
  For example if we have 3 rows and 
@@ -156,7 +156,7 @@ Each fragment has inside it a single table row.
 
 **Returns:** `void`
 
-### `limitRowSpanInRowDocumentFragment(ro.sync.ecss.extensions.api.node.AuthorDocumentFragment fragment, int maxRowSpanValue)`
+### `limitRowSpanInRowDocumentFragment(AuthorDocumentFragment fragment, int maxRowSpanValue)`
 
 **Parameters:**
 - `fragment` ([`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../../../api/node/AuthorDocumentFragment.md)): Fragment that contains the row to be limited.
@@ -164,7 +164,7 @@ Each fragment has inside it a single table row.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorDocumentFragment`](../../../../api/node/AuthorDocumentFragment.md)
 
-### `limitRowSpanInRowCells(ro.sync.ecss.extensions.api.node.AuthorParentNode rowNode, int maxRowSpanValue)`
+### `limitRowSpanInRowCells(AuthorParentNode rowNode, int maxRowSpanValue)`
 
 **Parameters:**
 - `rowNode` ([`ro.sync.ecss.extensions.api.node.AuthorParentNode`](../../../../api/node/AuthorParentNode.md)): The row node to be limited.

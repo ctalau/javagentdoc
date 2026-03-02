@@ -18,7 +18,7 @@ For example when a user
 
 ## Methods
 
-### `editProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `editProperties(AuthorNode authorNode, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): Author node to edit the properties for.
@@ -26,7 +26,7 @@ For example when a user
 
 **Returns:** `void`
 
-### `canEditProperties(ro.sync.ecss.extensions.api.node.AuthorNode authorNode)`
+### `canEditProperties(AuthorNode authorNode)`
 
 **Parameters:**
 - `authorNode` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): Author node to edit the properties for.

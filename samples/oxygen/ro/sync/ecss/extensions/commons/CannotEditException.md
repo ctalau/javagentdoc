@@ -10,12 +10,12 @@
 
 ## Constructors
 
-### `<init>(java.lang.String message)`
+### `<init>(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message.
 
-### `<init>(java.lang.String message, java.lang.Throwable cause)`
+### `<init>(String message, Throwable cause)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The message.

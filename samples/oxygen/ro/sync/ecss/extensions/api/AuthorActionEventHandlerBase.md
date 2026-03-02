@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `getContentCompletionActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int caretOffset)`
+### `getContentCompletionActions(AuthorAccess authorAccess, int caretOffset)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md)): Access to the Author API.

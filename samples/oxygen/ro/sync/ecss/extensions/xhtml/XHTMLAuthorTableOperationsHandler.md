@@ -44,35 +44,35 @@
 
 ## Methods
 
-### `handleInsertColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments tablePasteColumnArgs)`
+### `handleInsertColumn(AuthorTableInsertColumnArguments tablePasteColumnArgs)`
 
 **Parameters:**
 - `tablePasteColumnArgs` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments`](../api/table/operations/AuthorTableInsertColumnArguments.md))
 
 **Returns:** `boolean`
 
-### `handleDeleteColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments arguments)`
+### `handleDeleteColumn(AuthorTableDeleteColumnArguments arguments)`
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments`](../api/table/operations/AuthorTableDeleteColumnArguments.md))
 
 **Returns:** `boolean`
 
-### `handleDeleteRow(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments arguments)`
+### `handleDeleteRow(AuthorTableDeleteRowArguments arguments)`
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments`](../api/table/operations/AuthorTableDeleteRowArguments.md))
 
 **Returns:** `boolean`
 
-### `handleDeleteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments arguments)`
+### `handleDeleteRows(AuthorTableDeleteRowsArguments arguments)`
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments`](../api/table/operations/AuthorTableDeleteRowsArguments.md))
 
 **Returns:** `boolean`
 
-### `getTableElementContainingOffset(ro.sync.ecss.extensions.api.AuthorAccess access, int offset)`
+### `getTableElementContainingOffset(AuthorAccess access, int offset)`
 
 **Parameters:**
 - `access` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../api/AuthorAccess.md))

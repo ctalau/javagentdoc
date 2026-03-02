@@ -91,7 +91,7 @@ Can be null if no parent line box.
 
 ## Constructors
 
-### `<init>(ro.sync.exml.view.graphics.Graphics g, int currentBoxHeight, ro.sync.exml.view.graphics.Point origin, int relativeX, int textYPadding, int length, int startOffset, int endOffset, int baseLine, int fontAscent, int fontSize, ro.sync.exml.view.graphics.Point parentLineBoxOrigin, int parentLineBoxWidth, int parentLineBoxHeight, int viewEndOffset)`
+### `<init>(Graphics g, int currentBoxHeight, Point origin, int relativeX, int textYPadding, int length, int startOffset, int endOffset, int baseLine, int fontAscent, int fontSize, Point parentLineBoxOrigin, int parentLineBoxWidth, int parentLineBoxHeight, int viewEndOffset)`
 
 **Parameters:**
 - `g` (`ro.sync.exml.view.graphics.Graphics`): The graphics

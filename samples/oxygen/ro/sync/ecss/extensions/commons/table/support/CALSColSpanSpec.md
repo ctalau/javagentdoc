@@ -24,7 +24,7 @@ DocBook or DITA tables).
 
 ## Constructors
 
-### `<init>(java.lang.String spanName, java.lang.String namest, java.lang.String nameend)`
+### `<init>(String spanName, String namest, String nameend)`
 
 **Parameters:**
 - `spanName` (`java.lang.String`): The name of the span element.

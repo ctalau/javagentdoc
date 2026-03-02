@@ -35,32 +35,32 @@
 
 ## Methods
 
-### `addListener(java.lang.Runnable listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Runnable listener, Executor executor)`
 
 **Parameters:**
 - `listener` (`java.lang.Runnable`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `cancel(boolean mayInterruptIfRunning)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `cancel(boolean mayInterruptIfRunning)`
 
 **Parameters:**
 - `mayInterruptIfRunning` (`boolean`)
+
+**Returns:** `boolean`
 
 ### `get()`
 
 **Returns:** `V`
 
-### `get(long timeout, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `V`
+### `get(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `V`
 
 ### `isCancelled()`
 

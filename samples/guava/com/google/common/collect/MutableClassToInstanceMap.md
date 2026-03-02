@@ -28,7 +28,7 @@ See the Guava User Guide article on [
 
 ## Constructors
 
-### `<init>(java.util.Map<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B> delegate)`
+### `<init>(Map<Class<? extends @NonNull B>,B> delegate)`
 
 **Parameters:**
 - `delegate` (`java.util.Map<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`)
@@ -39,9 +39,7 @@ See the Guava User Guide article on [
 
 **Returns:** [`com.google.common.collect.MutableClassToInstanceMap<B>`](./MutableClassToInstanceMap.md)
 
-### `create(java.util.Map<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B> backingMap)`
-
-**Returns:** [`com.google.common.collect.MutableClassToInstanceMap<B>`](./MutableClassToInstanceMap.md)
+### `create(Map<Class<? extends @NonNull B>,B> backingMap)`
 
 The caller surrenders control of the backing map, and thus should not allow any
  direct references to it to remain accessible.
@@ -49,67 +47,69 @@ The caller surrenders control of the backing map, and thus should not allow any
 **Parameters:**
 - `backingMap` (`java.util.Map<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`)
 
+**Returns:** [`com.google.common.collect.MutableClassToInstanceMap<B>`](./MutableClassToInstanceMap.md)
+
 ### `delegate()`
 
 **Returns:** `java.util.Map<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`
 
-### `checkedEntry(java.util.Map.Entry<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B> entry)`
-
-**Returns:** `java.util.Map.Entry<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`
+### `checkedEntry(Map.Entry<Class<? extends @NonNull B>,B> entry)`
 
 **Parameters:**
 - `entry` (`java.util.Map.Entry<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`)
+
+**Returns:** `java.util.Map.Entry<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>`
 
 ### `entrySet()`
 
 **Returns:** `java.util.Set<java.util.Map.Entry<java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,B>>`
 
-### `put(java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B> key, B value)`
-
-**Returns:** `B`
+### `put(Class<? extends @NonNull B> key, B value)`
 
 **Parameters:**
 - `key` (`java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>`)
 - `value` (`B`)
 
-### `putAll(java.util.Map<? extends java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B> map)`
+**Returns:** `B`
 
-**Returns:** `void`
+### `putAll(Map<? extends Class<? extends @NonNull B>,? extends B> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<? extends java.lang.Class<? extends @org.checkerframework.checker.nullness.qual.NonNull B>,? extends B>`)
 
-### `putInstance(java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T> type, T value)`
+**Returns:** `void`
 
-**Returns:** `T`
+### `putInstance(Class<@NonNull T> type, T value)`
 
 **Parameters:**
 - `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>`)
 - `value` (`T`)
 
-### `getInstance(java.lang.Class<T> type)`
-
 **Returns:** `T`
+
+### `getInstance(Class<T> type)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 
-### `cast(java.lang.Class<T> type, java.lang.Object value)`
-
 **Returns:** `T`
+
+### `cast(Class<T> type, Object value)`
 
 **Parameters:**
 - `type` (`java.lang.Class<T>`)
 - `value` (`java.lang.Object`)
 
+**Returns:** `T`
+
 ### `writeReplace()`
 
 **Returns:** `java.lang.Object`
 
-### `readObject(java.io.ObjectInputStream stream)`
-
-**Returns:** `void`
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

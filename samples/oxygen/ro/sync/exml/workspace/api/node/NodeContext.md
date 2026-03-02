@@ -39,14 +39,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getAttributeValue(java.lang.String attrQName)`
+### `getAttributeValue(String attrQName)`
 
 **Parameters:**
 - `attrQName` (`java.lang.String`): The qualified attribute name.
 
 **Returns:** `java.lang.String`
 
-### `getAttributeNamespace(java.lang.String attrQName)`
+### `getAttributeNamespace(String attrQName)`
 
 **Parameters:**
 - `attrQName` (`java.lang.String`): The attribute qualified name.

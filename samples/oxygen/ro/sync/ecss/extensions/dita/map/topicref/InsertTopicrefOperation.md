@@ -33,7 +33,7 @@ Can be a topic
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))
@@ -41,7 +41,7 @@ Can be a topic
 
 **Returns:** `void`
 
-### `getTopicUrlFromArgs(ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `getTopicUrlFromArgs(ArgumentsMap args)`
 
 **Parameters:**
 - `args` ([`ro.sync.ecss.extensions.api.ArgumentsMap`](../../../api/ArgumentsMap.md)): The arguments.

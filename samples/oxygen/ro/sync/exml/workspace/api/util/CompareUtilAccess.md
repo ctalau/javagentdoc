@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `threeWayAutoMerge(java.lang.String ancestor, java.lang.String left, java.lang.String right, ro.sync.merge.MergeConflictResolutionMethods conflictResolutionMethod)`
+### `threeWayAutoMerge(String ancestor, String left, String right, MergeConflictResolutionMethods conflictResolutionMethod)`
 
 **Parameters:**
 - `ancestor` (`java.lang.String`): The original file string which has been modified into left and right.

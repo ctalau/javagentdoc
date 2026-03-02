@@ -25,7 +25,7 @@ It's a wrapper around AbstractMapBasedMultimap that converts the returned collec
 
 ## Constructors
 
-### `<init>(java.util.Map<K,java.util.Collection<V>> map)`
+### `<init>(Map<K,Collection<V>> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<K,java.util.Collection<V>>`): place to store the mapping from each key to its corresponding values
@@ -40,24 +40,22 @@ It's a wrapper around AbstractMapBasedMultimap that converts the returned collec
 
 **Returns:** `java.util.Set<V>`
 
-### `unmodifiableCollectionSubclass(java.util.Collection<E> collection)`
-
-**Returns:** `java.util.Collection<E>`
+### `unmodifiableCollectionSubclass(Collection<E> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<E>`)
 
-### `wrapCollection(K key, java.util.Collection<V> collection)`
+**Returns:** `java.util.Collection<E>`
 
-**Returns:** `java.util.Collection<V>`
+### `wrapCollection(K key, Collection<V> collection)`
 
 **Parameters:**
 - `key` (`K`)
 - `collection` (`java.util.Collection<V>`)
 
-### `get(K key)`
+**Returns:** `java.util.Collection<V>`
 
-**Returns:** `java.util.Set<V>`
+### `get(K key)`
 
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the Collection specified in the Multimap interface.
@@ -65,16 +63,16 @@ Because a SetMultimap has unique values for a given key, this method returns a
 **Parameters:**
 - `key` (`K`)
 
-### `entries()`
+**Returns:** `java.util.Set<V>`
 
-**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
+### `entries()`
 
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the Collection specified in the Multimap interface.
 
-### `removeAll(java.lang.Object key)`
+**Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-**Returns:** `java.util.Set<V>`
+### `removeAll(Object key)`
 
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the Collection specified in the Multimap interface.
@@ -82,9 +80,9 @@ Because a SetMultimap has unique values for a given key, this method returns a
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `java.util.Set<V>`
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 Because a SetMultimap has unique values for a given key, this method returns a
  Set, instead of the Collection specified in the Multimap interface.
@@ -96,28 +94,30 @@ Any duplicates in values will be stored in the multimap once.
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `asMap()`
+**Returns:** `java.util.Set<V>`
 
-**Returns:** `java.util.Map<K,java.util.Collection<V>>`
+### `asMap()`
 
 Though the method signature doesn't say so explicitly, the returned map has Set
  values.
 
-### `put(K key, V value)`
+**Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-**Returns:** `boolean`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`): key to store in the multimap
 - `value` (`V`): value to store in the multimap
 
-### `equals(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `equals(Object object)`
 
 Two SetMultimap instances are equal if, for each key, they contain the same values.
  Equality does not depend on the ordering of keys or values.
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 

@@ -22,7 +22,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.xhtml.ECXHTMLTableCustomizerInvoker`](./ECXHTMLTableCustomizerInvoker.md)
 
-### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess arg0, int arg1, int arg2, int arg3)`
+### `showCustomizeTableDialog(AuthorAccess arg0, int arg1, int arg2, int arg3)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))

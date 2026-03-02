@@ -14,7 +14,7 @@ It is used on standalone implementation.
 
 ## Methods
 
-### `customizeIDElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo autoIDElementsInfo, java.lang.String listMessage)`
+### `customizeIDElements(AuthorAccess authorAccess, GenerateIDElementsInfo autoIDElementsInfo, String listMessage)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to author functionality.
@@ -23,7 +23,7 @@ It is used on standalone implementation.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
 
-### `customizeIDElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo autoIDElementsInfo, java.lang.String listMessage, java.lang.String helpPageID)`
+### `customizeIDElements(AuthorAccess authorAccess, GenerateIDElementsInfo autoIDElementsInfo, String listMessage, String helpPageID)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to author functionality.
@@ -33,7 +33,7 @@ It is used on standalone implementation.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo`](./GenerateIDElementsInfo.md)
 
-### `customizeIDElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.commons.id.GenerateIDElementsInfo autoIDElementsInfo, java.lang.String listMessage, java.lang.String helpPageID, boolean isDocBook)`
+### `customizeIDElements(AuthorAccess authorAccess, GenerateIDElementsInfo autoIDElementsInfo, String listMessage, String helpPageID, boolean isDocBook)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to author functionality.

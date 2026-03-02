@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `generateID(ro.sync.ecss.extensions.api.AuthorAccess arg0, java.lang.String arg1)`
+### `generateID(AuthorAccess arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](./AuthorAccess.md))

@@ -33,7 +33,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.util.concurrent.ListenableFuture<? extends V> inputFuture, java.lang.Class<X> exceptionType, F fallback)`
+### `<init>(ListenableFuture<? extends V> inputFuture, Class<X> exceptionType, F fallback)`
 
 **Parameters:**
 - `inputFuture` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md))
@@ -42,9 +42,7 @@
 
 ## Methods
 
-### `create(com.google.common.util.concurrent.ListenableFuture<? extends V> input, java.lang.Class<X> exceptionType, com.google.common.base.Function<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+### `create(ListenableFuture<? extends V> input, Class<X> exceptionType, Function<? super X,? extends V> fallback, Executor executor)`
 
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md))
@@ -52,15 +50,17 @@
 - `fallback` ([`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md))
 - `executor` (`java.util.concurrent.Executor`)
 
-### `create(com.google.common.util.concurrent.ListenableFuture<? extends V> input, java.lang.Class<X> exceptionType, com.google.common.util.concurrent.AsyncFunction<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+
+### `create(ListenableFuture<? extends V> input, Class<X> exceptionType, AsyncFunction<? super X,? extends V> fallback, Executor executor)`
 
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md))
 - `exceptionType` (`java.lang.Class<X>`)
 - `fallback` ([`com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>`](./AsyncFunction.md))
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
 ### `run()`
 
@@ -72,18 +72,18 @@
 
 ### `doFallback(F fallback, X throwable)`
 
-**Returns:** `T`
-
 **Parameters:**
 - `fallback` (`F`)
 - `throwable` (`X`)
 
-### `setResult(T result)`
+**Returns:** `T`
 
-**Returns:** `void`
+### `setResult(T result)`
 
 **Parameters:**
 - `result` (`T`)
+
+**Returns:** `void`
 
 ### `afterDone()`
 

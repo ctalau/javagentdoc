@@ -15,7 +15,7 @@ It should be implemented when the author extension being developed offers
 
 ## Methods
 
-### `handleInsertColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertColumnArguments arguments)`
+### `handleInsertColumn(AuthorTableInsertColumnArguments arguments)`
 
 This method is called when pasting or dropping content for which the 
  SelectionInterpretationMode#TABLE_COLUMN interpretation mode was imposed.
@@ -43,7 +43,7 @@ This method is called when pasting or dropping content for which the
 
 **Returns:** `boolean`
 
-### `handleDeleteColumn(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteColumnArguments arguments)`
+### `handleDeleteColumn(AuthorTableDeleteColumnArguments arguments)`
 
 This method is called when deleting content  (by drag and drop or cut operations)  
  for which the SelectionInterpretationMode#TABLE_COLUMN interpretation mode was imposed.
@@ -69,7 +69,7 @@ This method is called when deleting content  (by drag and drop or cut operations
 
 **Returns:** `boolean`
 
-### `handleDeleteRow(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowArguments arguments)`
+### `handleDeleteRow(AuthorTableDeleteRowArguments arguments)`
 
 This method is called when deleting content (by drag and drop or cut operations) 
  for which the SelectionInterpretationMode#TABLE_ROW interpretation mode was imposed.
@@ -95,7 +95,7 @@ This method is called when deleting content (by drag and drop or cut operations)
 
 **Returns:** `boolean`
 
-### `handleDeleteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableDeleteRowsArguments arguments)`
+### `handleDeleteRows(AuthorTableDeleteRowsArguments arguments)`
 
 All the rows that intersects the given content intervals will be deleted.
  
@@ -123,7 +123,7 @@ All the rows that intersects the given content intervals will be deleted.
 
 **Returns:** `boolean`
 
-### `getTableElementContainingOffset(ro.sync.ecss.extensions.api.AuthorAccess access, int offset)`
+### `getTableElementContainingOffset(AuthorAccess access, int offset)`
 
 This method can be used to obtain the closest table that contains the given 
  offset.
@@ -134,7 +134,7 @@ This method can be used to obtain the closest table that contains the given
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)
 
-### `getColumnSpecification(ro.sync.ecss.extensions.api.AuthorAccess access, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, int columnIndex)`
+### `getColumnSpecification(AuthorAccess access, AuthorElement tableElement, int columnIndex)`
 
 This information is requested when a column is copied or dragged and 
  it can be used when the column must be inserted in the document (on paste or
@@ -148,7 +148,7 @@ This information is requested when a column is copied or dragged and
 
 **Returns:** [`ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation`](./TableColumnSpecificationInformation.md)
 
-### `handleRemoveInvalidColNamesFromTableCells(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement tableElement, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> cells)`
+### `handleRemoveInvalidColNamesFromTableCells(AuthorAccess authorAccess, AuthorElement tableElement, List<AuthorElement> cells)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The author access.
@@ -157,7 +157,7 @@ This information is requested when a column is copied or dragged and
 
 **Returns:** `void`
 
-### `handleAttributeChange(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement currentElement, java.lang.String attributeName, ro.sync.ecss.extensions.api.node.AttrValue newValue)`
+### `handleAttributeChange(AuthorAccess authorAccess, AuthorElement currentElement, String attributeName, AttrValue newValue)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../AuthorAccess.md)): The Author Access.
@@ -167,7 +167,7 @@ This information is requested when a column is copied or dragged and
 
 **Returns:** `boolean`
 
-### `handlePasteRows(ro.sync.ecss.extensions.api.table.operations.AuthorTableInsertRowArguments arguments)`
+### `handlePasteRows(AuthorTableInsertRowArguments arguments)`
 
 This method is called when pasting or dropping content for which the 
  SelectionInterpretationMode#TABLE_ROW interpretation mode was imposed.
@@ -195,7 +195,7 @@ This method is called when pasting or dropping content for which the
 
 **Returns:** `boolean`
 
-### `handleCreateTable(ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments arguments)`
+### `handleCreateTable(AuthorTableArguments arguments)`
 
 **Parameters:**
 - `arguments` ([`ro.sync.ecss.extensions.api.table.operations.AuthorTableArguments`](./AuthorTableArguments.md)): The arguments for copied cells like: 

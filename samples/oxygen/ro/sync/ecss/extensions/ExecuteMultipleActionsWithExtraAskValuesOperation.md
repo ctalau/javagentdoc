@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args, java.util.List<java.lang.String> asksValues)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args, List<String> asksValues)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](api/AuthorAccess.md)): The Author access.
@@ -19,7 +19,7 @@
 
 **Returns:** `void`
 
-### `getActions(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.util.Map arguments)`
+### `getActions(AuthorAccess authorAccess, Map arguments)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](api/AuthorAccess.md)): Author access.

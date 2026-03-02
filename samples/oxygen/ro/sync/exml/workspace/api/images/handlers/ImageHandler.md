@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `getImage(ro.sync.exml.workspace.api.images.handlers.providers.ImageContentProvider contentProvider, ro.sync.exml.workspace.api.images.handlers.ImageRenderingContext renderingContext)`
+### `getImage(ImageContentProvider contentProvider, ImageRenderingContext renderingContext)`
 
 **Parameters:**
 - `contentProvider` ([`ro.sync.exml.workspace.api.images.handlers.providers.ImageContentProvider`](providers/ImageContentProvider.md)): Provides access to the image contents. 
@@ -22,7 +22,7 @@
 
 **Returns:** `java.awt.Image`
 
-### `canHandleFileType(java.lang.String extension)`
+### `canHandleFileType(String extension)`
 
 **Parameters:**
 - `extension` (`java.lang.String`): The extension of the file, or the type of the XML content to be rendered.
@@ -31,7 +31,7 @@
 
 **Returns:** `boolean`
 
-### `getImageLayoutInformation(ro.sync.exml.workspace.api.images.handlers.providers.ImageContentProvider contentProvider, ro.sync.exml.workspace.api.images.handlers.ImageRenderingContext renderingContext)`
+### `getImageLayoutInformation(ImageContentProvider contentProvider, ImageRenderingContext renderingContext)`
 
 Ideally the handler should compute it as fast as possible, without loading the entire image in memory.
 

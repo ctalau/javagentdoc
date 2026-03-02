@@ -8,14 +8,14 @@
 
 ## Methods
 
-### `getAllAttributes(ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `getAllAttributes(AuthorElement element)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)): The author element.
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `getPossibleCIValues(ro.sync.ecss.extensions.api.node.AuthorElement element, ro.sync.contentcompletion.xml.CIAttribute attribute)`
+### `getPossibleCIValues(AuthorElement element, CIAttribute attribute)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../node/AuthorElement.md)): The current element.

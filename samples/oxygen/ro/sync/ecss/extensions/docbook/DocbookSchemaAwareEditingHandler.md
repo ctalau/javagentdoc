@@ -107,14 +107,14 @@ Handles typing and paste events inside itemizedlist, orderlist (a
 
 ## Constructors
 
-### `<init>(java.lang.String documentNamespace)`
+### `<init>(String documentNamespace)`
 
 **Parameters:**
 - `documentNamespace` (`java.lang.String`): The document namespace, for different versions of Docbook.
 
 ## Methods
 
-### `handleTyping(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTyping(int offset, char ch, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -123,7 +123,7 @@ Handles typing and paste events inside itemizedlist, orderlist (a
 
 **Returns:** `boolean`
 
-### `handleTypingFallback(int offset, char ch, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleTypingFallback(int offset, char ch, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -132,7 +132,7 @@ Handles typing and paste events inside itemizedlist, orderlist (a
 
 **Returns:** `boolean`
 
-### `handlePasteFragment(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, int actionId, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handlePasteFragment(int offset, AuthorDocumentFragment[] fragmentsToInsert, int actionId, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`)
@@ -142,7 +142,7 @@ Handles typing and paste events inside itemizedlist, orderlist (a
 
 **Returns:** `boolean`
 
-### `handleInsertionEvent(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `handleInsertionEvent(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the insertion event occurred.
@@ -151,14 +151,14 @@ Handles typing and paste events inside itemizedlist, orderlist (a
 
 **Returns:** `boolean`
 
-### `isHTMLTable(ro.sync.ecss.extensions.api.node.AuthorNode node)`
+### `isHTMLTable(AuthorNode node)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md)): The author node.
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInSect(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInSect(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 The solution is to insert the `fragmentsToInsert` into a 'title' element if the sect element is empty or
  into a 'para' element if the sect already contains a 'title' or 'info' element.
@@ -171,7 +171,7 @@ The solution is to insert the `fragmentsToInsert` into a 'title' element if the 
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInEmptySect(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInEmptySect(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 **Parameters:**
 - `offset` (`int`): Offset where the insertion event occurred.
@@ -181,14 +181,14 @@ The solution is to insert the `fragmentsToInsert` into a 'title' element if the 
 
 **Returns:** `boolean`
 
-### `getInfoElementChildOfSect(java.lang.String sectElementName)`
+### `getInfoElementChildOfSect(String sectElementName)`
 
 **Parameters:**
 - `sectElementName` (`java.lang.String`): The sect element name.
 
 **Returns:** `java.lang.String`
 
-### `handleInvalidInsertionEventInLists(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInLists(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 The fallback is to insert 
  the `fragmentsToInsert` into a 'listitem/para' structure if is possible.
@@ -201,7 +201,7 @@ The fallback is to insert
 
 **Returns:** `boolean`
 
-### `pushContextElement(ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context, java.lang.String elementName)`
+### `pushContextElement(WhatElementsCanGoHereContext context, String elementName)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext`](../../../contentcompletion/xml/WhatElementsCanGoHereContext.md))
@@ -209,7 +209,7 @@ The fallback is to insert
 
 **Returns:** `void`
 
-### `isElementWithNameAndNamespace(ro.sync.ecss.extensions.api.node.AuthorNode node, java.lang.String elementLocalName)`
+### `isElementWithNameAndNamespace(AuthorNode node, String elementLocalName)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../api/node/AuthorNode.md))
@@ -217,7 +217,7 @@ The fallback is to insert
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventSurroundingInPara(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventSurroundingInPara(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 For example 'important'.
  The fallback is to insert the `fragmentsToInsert` into a 'para' element if is possible.
@@ -230,7 +230,7 @@ For example 'important'.
 
 **Returns:** `boolean`
 
-### `handleInvalidInsertionEventInTable(int offset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] fragmentsToInsert, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorSchemaManager authorSchemaManager)`
+### `handleInvalidInsertionEventInTable(int offset, AuthorDocumentFragment[] fragmentsToInsert, AuthorAccess authorAccess, AuthorSchemaManager authorSchemaManager)`
 
 A row element will
  be inserted (either 'row' or 'tr') with a new cell (either 'entry' or 'td') in which the fragments will be inserted.
@@ -243,7 +243,7 @@ A row element will
 
 **Returns:** `boolean`
 
-### `changeElementsToMoveUpDown(java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode> selectedElements)`
+### `changeElementsToMoveUpDown(List<AuthorNode> selectedElements)`
 
 **Parameters:**
 - `selectedElements` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorNode>`)
@@ -254,7 +254,7 @@ A row element will
 
 **Returns:** `ro.sync.ecss.extensions.api.AuthorSchemaAwareEditingHandlerAdapter.WrapInAncestorsOptions`
 
-### `getPreferredElement(ro.sync.ecss.extensions.api.AuthorDocumentController ctrl, int offset)`
+### `getPreferredElement(AuthorDocumentController ctrl, int offset)`
 
 **Parameters:**
 - `ctrl` ([`ro.sync.ecss.extensions.api.AuthorDocumentController`](../api/AuthorDocumentController.md))

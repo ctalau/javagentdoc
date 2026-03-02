@@ -47,7 +47,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 ## Methods
 
-### `detectIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, int offset)`
+### `detectIDType(String systemID, Context context, String attrName, String attrNs, String attributeValue, int offset)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -59,14 +59,14 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.api.link.IDTypeIdentifier>`
 
-### `getClosestTopicID(ro.sync.contentcompletion.xml.Context context)`
+### `getClosestTopicID(Context context)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md)): The context.
 
 **Returns:** `ro.sync.ecss.extensions.dita.id.DITAIDTypeRecognizer.ClosestTopicIDDetails`
 
-### `isMapElement(ro.sync.contentcompletion.xml.Context context, ro.sync.contentcompletion.xml.ContextElement contextElement)`
+### `isMapElement(Context context, ContextElement contextElement)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md)): The context.
@@ -74,7 +74,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `boolean`
 
-### `isTopicElement(ro.sync.contentcompletion.xml.Context context, ro.sync.contentcompletion.xml.ContextElement contextElement)`
+### `isTopicElement(Context context, ContextElement contextElement)`
 
 **Parameters:**
 - `context` ([`ro.sync.contentcompletion.xml.Context`](../../../../contentcompletion/xml/Context.md)): The context.
@@ -82,7 +82,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `boolean`
 
-### `locateIDType(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attrNs, java.lang.String attributeValue, ro.sync.ecss.extensions.api.link.IDTypeIdentifier idIdentifier, short mode)`
+### `locateIDType(String systemID, Context context, String attrName, String attrNs, String attributeValue, IDTypeIdentifier idIdentifier, short mode)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`)
@@ -95,7 +95,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `int[]`
 
-### `locateReference(java.lang.String systemID, java.lang.String attrName, java.lang.String attributeValue, ro.sync.ecss.extensions.dita.id.DITAIDTypeIdentifier ditaID)`
+### `locateReference(String systemID, String attrName, String attributeValue, DITAIDTypeIdentifier ditaID)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): Base URL of current file.
@@ -105,7 +105,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `int[]`
 
-### `locateIndirectReference(java.lang.String systemID, java.lang.String attributeValue, ro.sync.ecss.extensions.dita.id.DITAIDTypeIdentifier ditaID)`
+### `locateIndirectReference(String systemID, String attributeValue, DITAIDTypeIdentifier ditaID)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): Base URL.
@@ -114,7 +114,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `int[]`
 
-### `locateDirectReference(java.lang.String systemID, java.lang.String attributeValue, ro.sync.ecss.extensions.dita.id.DITAIDTypeIdentifier ditaID)`
+### `locateDirectReference(String systemID, String attributeValue, DITAIDTypeIdentifier ditaID)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): Base URL of the document
@@ -123,7 +123,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `int[]`
 
-### `locateDeclaration(java.lang.String systemID, ro.sync.contentcompletion.xml.Context context, java.lang.String attrName, java.lang.String attributeValue, ro.sync.ecss.extensions.dita.id.DITAIDTypeIdentifier ditaID, ro.sync.contentcompletion.xml.ContextElement parentElement)`
+### `locateDeclaration(String systemID, Context context, String attrName, String attributeValue, DITAIDTypeIdentifier ditaID, ContextElement parentElement)`
 
 **Parameters:**
 - `systemID` (`java.lang.String`): Base URL of current file.
@@ -135,7 +135,7 @@ In this framework the IDs are declared in attributes with name 'id'. The referen
 
 **Returns:** `int[]`
 
-### `getKeyRefTarget(java.lang.String keyRefValue, java.lang.String baseSystemID)`
+### `getKeyRefTarget(String keyRefValue, String baseSystemID)`
 
 **Parameters:**
 - `keyRefValue` (`java.lang.String`)

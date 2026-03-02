@@ -26,7 +26,7 @@ It is used on standalone implementation.
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.xhtml.SAXHTMLTableCustomizerInvoker`](./SAXHTMLTableCustomizerInvoker.md)
 
-### `showCustomizeTableDialog(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
+### `showCustomizeTableDialog(AuthorAccess authorAccess, int predefinedRowsCount, int predefinedColumnsCount, int defaultTableModel)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))

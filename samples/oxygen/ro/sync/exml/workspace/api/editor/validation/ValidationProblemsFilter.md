@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `filterValidationProblems(ro.sync.exml.workspace.api.editor.validation.ValidationProblems validationProblems)`
+### `filterValidationProblems(ValidationProblems validationProblems)`
 
 **Parameters:**
 - `validationProblems` ([`ro.sync.exml.workspace.api.editor.validation.ValidationProblems`](./ValidationProblems.md)): The problems found by Oxygen.

@@ -46,13 +46,12 @@ public final class SemanticDocTreeVisitor {
             }
         }
 
-        // Extract body text and collect inline links
+        // Extract summary + body text and collect inline links.
         List<SemanticDocumentation.LinkDoc> links = new ArrayList<>();
         TextExtractor textExtractor = new TextExtractor(links, docTrees, docTreePath);
-        StringBuilder bodyText = new StringBuilder();
-        for (DocTree tree : docTree.getBody()) {
-            bodyText.append(extractText(tree, links, docTrees, docTreePath, textExtractor));
-        }
+        String firstSentenceText = extractText(docTree.getFirstSentence(), links, docTrees, docTreePath, textExtractor).trim();
+        String bodyDetailsText = extractText(docTree.getBody(), links, docTrees, docTreePath, textExtractor).trim();
+        String bodyText = mergeSummaryAndBody(firstSentenceText, bodyDetailsText);
 
         // Parse block tags
         List<SemanticDocumentation.ParamDoc> params = new ArrayList<>();
@@ -146,7 +145,7 @@ public final class SemanticDocTreeVisitor {
         }
 
         return new SemanticDocumentation(
-                bodyText.toString().trim(),
+                bodyText,
                 params,
                 typeParams,
                 returnDoc,
@@ -158,6 +157,16 @@ public final class SemanticDocTreeVisitor {
                 sees,
                 links
         );
+    }
+
+    private static String mergeSummaryAndBody(String summary, String body) {
+        if (summary == null || summary.isBlank()) {
+            return body == null ? "" : body.trim();
+        }
+        if (body == null || body.isBlank()) {
+            return summary.trim();
+        }
+        return summary.trim() + "\n\n" + body.trim();
     }
 
     /**

@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `filterAttributeValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> attributeValues, ro.sync.contentcompletion.xml.WhatPossibleValuesHasAttributeContext context)`
+### `filterAttributeValues(List<CIValue> attributeValues, WhatPossibleValuesHasAttributeContext context)`
 
 **Parameters:**
 - `attributeValues` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -22,7 +22,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `filterAttributes(java.util.List<ro.sync.contentcompletion.xml.CIAttribute> attributes, ro.sync.contentcompletion.xml.WhatAttributesCanGoHereContext context)`
+### `filterAttributes(List<CIAttribute> attributes, WhatAttributesCanGoHereContext context)`
 
 **Parameters:**
 - `attributes` (`java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`)
@@ -30,7 +30,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIAttribute>`
 
-### `filterElementValues(java.util.List<ro.sync.contentcompletion.xml.CIValue> elementValues, ro.sync.contentcompletion.xml.Context context)`
+### `filterElementValues(List<CIValue> elementValues, Context context)`
 
 **Parameters:**
 - `elementValues` (`java.util.List<ro.sync.contentcompletion.xml.CIValue>`)
@@ -38,7 +38,7 @@
 
 **Returns:** `java.util.List<ro.sync.contentcompletion.xml.CIValue>`
 
-### `filterElements(java.util.List<ro.sync.contentcompletion.xml.CIElement> elements, ro.sync.contentcompletion.xml.WhatElementsCanGoHereContext context)`
+### `filterElements(List<CIElement> elements, WhatElementsCanGoHereContext context)`
 
 **Parameters:**
 - `elements` (`java.util.List<ro.sync.contentcompletion.xml.CIElement>`)

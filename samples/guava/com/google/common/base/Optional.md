@@ -86,14 +86,12 @@ See the Guava User Guide article on [using
 
 ### `absent()`
 
-**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
-
 **Comparison to java.util.Optional:** this method is equivalent to Java 8's
  Optional.empty.
 
-### `of(T reference)`
-
 **Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
+
+### `of(T reference)`
 
 To have 
  null treated as #absent, use #fromNullable instead.
@@ -104,9 +102,9 @@ To have
 **Parameters:**
 - `reference` (`T`)
 
-### `fromNullable(T nullableReference)`
-
 **Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
+
+### `fromNullable(T nullableReference)`
 
 **Comparison to java.util.Optional:** this method is equivalent to Java 8's
  Optional.ofNullable.
@@ -114,16 +112,16 @@ To have
 **Parameters:**
 - `nullableReference` (`T`)
 
-### `fromJavaUtil(java.util.Optional<T> javaUtilOptional)`
-
 **Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
+
+### `fromJavaUtil(Optional<T> javaUtilOptional)`
 
 **Parameters:**
 - `javaUtilOptional` (`java.util.Optional<T>`)
 
-### `toJavaUtil(com.google.common.base.Optional<T> googleOptional)`
+**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
 
-**Returns:** `java.util.Optional<T>`
+### `toJavaUtil(Optional<T> googleOptional)`
 
 If googleOptional is known to be non-null, use googleOptional.toJavaUtil()
  instead.
@@ -136,23 +134,23 @@ Unfortunately, the method reference Optional::toJavaUtil will not work, because 
 **Parameters:**
 - `googleOptional` ([`com.google.common.base.Optional<T>`](./Optional.md))
 
-### `toJavaUtil()`
-
 **Returns:** `java.util.Optional<T>`
+
+### `toJavaUtil()`
 
 Unfortunately, the method reference Optional::toJavaUtil will not work, because it
  could refer to either the static or instance version of this method. Write out the lambda
  expression o -> o.toJavaUtil() instead.
 
-### `isPresent()`
+**Returns:** `java.util.Optional<T>`
 
-**Returns:** `boolean`
+### `isPresent()`
 
 **Comparison to java.util.Optional:** no differences.
 
-### `get()`
+**Returns:** `boolean`
 
-**Returns:** `T`
+### `get()`
 
 If the instance might be absent, use
  #or(Object) or #orNull instead.
@@ -161,9 +159,9 @@ If the instance might be absent, use
 **Comparison to java.util.Optional:** when the value is absent, this method
  throws IllegalStateException, whereas the Java 8 counterpart throws NoSuchElementException.
 
-### `or(T defaultValue)`
-
 **Returns:** `T`
+
+### `or(T defaultValue)`
 
 If no default
  value should be required because the instance is known to be present, use #get()
@@ -216,9 +214,9 @@ As a workaround, it is always safe to cast an Optional<? extends T> to
 **Parameters:**
 - `defaultValue` (`T`)
 
-### `or(com.google.common.base.Optional<? extends T> secondChoice)`
+**Returns:** `T`
 
-**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
+### `or(Optional<? extends T> secondChoice)`
 
 **Comparison to java.util.Optional:** this method has no equivalent in Java 8's
  Optional class; write thisOptional.isPresent() ? thisOptional : secondChoice
@@ -227,9 +225,9 @@ As a workaround, it is always safe to cast an Optional<? extends T> to
 **Parameters:**
 - `secondChoice` ([`com.google.common.base.Optional<? extends T>`](./Optional.md))
 
-### `or(com.google.common.base.Supplier<? extends T> supplier)`
+**Returns:** [`com.google.common.base.Optional<T>`](./Optional.md)
 
-**Returns:** `T`
+### `or(Supplier<? extends T> supplier)`
 
 **Comparison to java.util.Optional:** this method is similar to Java 8's 
  Optional.orElseGet, except when supplier returns null. In this case this
@@ -238,9 +236,9 @@ As a workaround, it is always safe to cast an Optional<? extends T> to
 **Parameters:**
 - `supplier` ([`com.google.common.base.Supplier<? extends T>`](./Supplier.md))
 
-### `orNull()`
-
 **Returns:** `T`
+
+### `orNull()`
 
 If the instance is
  known to be present, use #get() instead.
@@ -249,9 +247,9 @@ If the instance is
 **Comparison to java.util.Optional:** this method is equivalent to Java 8's
  Optional.orElse(null).
 
-### `asSet()`
+**Returns:** `T`
 
-**Returns:** `java.util.Set<T>`
+### `asSet()`
 
 **Comparison to java.util.Optional:** this method has no equivalent in Java 8's
  Optional class. However, this common usage:
@@ -281,9 +279,9 @@ If the instance is
  
 **Java 9 users:** some use cases can be written with calls to optional.stream().
 
-### `transform(com.google.common.base.Function<? super T,V> function)`
+**Returns:** `java.util.Set<T>`
 
-**Returns:** [`com.google.common.base.Optional<V>`](./Optional.md)
+### `transform(Function<? super T,V> function)`
 
 **Comparison to java.util.Optional:** this method is similar to Java 8's 
  Optional.map, except when function returns null. In this case this method
@@ -292,9 +290,9 @@ If the instance is
 **Parameters:**
 - `function` ([`com.google.common.base.Function<? super T,V>`](./Function.md))
 
-### `equals(java.lang.Object object)`
+**Returns:** [`com.google.common.base.Optional<V>`](./Optional.md)
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 Note that Optional instances of differing parameterized types can be equal.
 
@@ -304,23 +302,23 @@ Note that Optional instances of differing parameterized types can be equal.
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 **Comparison to java.util.Optional:** this class leaves the specific choice of
  hash code unspecified, unlike the Java 8 equivalent.
 
-### `toString()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `toString()`
 
 **Comparison to java.util.Optional:** this class leaves the specific string
  representation unspecified, unlike the Java 8 equivalent.
 
-### `presentInstances(java.lang.Iterable<? extends com.google.common.base.Optional<? extends T>> optionals)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.Iterable<T>`
+### `presentInstances(Iterable<? extends Optional<? extends T>> optionals)`
 
 Iterators are unmodifiable and are
  evaluated lazily.
@@ -335,4 +333,6 @@ Iterators are unmodifiable and are
 
 **Parameters:**
 - `optionals` (`java.lang.Iterable<? extends com.google.common.base.Optional<? extends T>>`)
+
+**Returns:** `java.lang.Iterable<T>`
 

@@ -18,23 +18,23 @@
 
 ### `newStrongInterner()`
 
-**Returns:** [`com.google.common.collect.Interner<E>`](./Interner.md)
-
 If this retention is
  acceptable, this implementation may perform better than #newWeakInterner.
 
-### `newWeakInterner()`
-
 **Returns:** [`com.google.common.collect.Interner<E>`](./Interner.md)
+
+### `newWeakInterner()`
 
 This most
  likely does not perform as well as #newStrongInterner, but is the best alternative when
  the memory usage of that implementation is unacceptable.
 
-### `asFunction(com.google.common.collect.Interner<E> interner)`
+**Returns:** [`com.google.common.collect.Interner<E>`](./Interner.md)
 
-**Returns:** [`com.google.common.base.Function<E,E>`](../base/Function.md)
+### `asFunction(Interner<E> interner)`
 
 **Parameters:**
 - `interner` ([`com.google.common.collect.Interner<E>`](./Interner.md))
+
+**Returns:** [`com.google.common.base.Function<E,E>`](../base/Function.md)
 

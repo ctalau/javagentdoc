@@ -72,8 +72,6 @@ When subclassing, you may want to override
 
 ### `whitespace()`
 
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
-
 This is not the same definition used by other Java APIs. (See a [comparison of several definitions of "whitespace"](https://goo.gl/Y6SLWx).)
 
  
@@ -83,12 +81,14 @@ All Unicode White_Space characters are on the BMP and thus supported by this API
 **Note:** as the Unicode definition evolves, we will modify this matcher to keep it up to
  date.
 
-### `breakingWhitespace()`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `breakingWhitespace()`
 
 See #whitespace() for a
  discussion of that term.
+
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 ### `ascii()`
 
@@ -96,24 +96,24 @@ See #whitespace() for a
 
 ### `digit()`
 
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
-
 If
  you only care to match ASCII digits, you can use inRange('0', '9').
 
-### `javaDigit()`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `javaDigit()`
 
 If you only care to match ASCII digits, you can use inRange('0',
  '9').
 
-### `javaLetter()`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `javaLetter()`
 
 If you only care to match letters of the Latin
  alphabet, you can use inRange('a', 'z').or(inRange('A', 'Z')).
+
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 ### `javaLetterOrDigit()`
 
@@ -129,19 +129,17 @@ If you only care to match letters of the Latin
 
 ### `javaIsoControl()`
 
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
-
 All ISO control codes are on the BMP and thus supported by this API.
+
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 ### `invisible()`
 
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
-
 See also the Unicode Default_Ignorable_Code_Point property (available via ICU).
 
-### `singleWidth()`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `singleWidth()`
 
 When in doubt, this matcher
  errs on the side of returning false (that is, it tends to assume a character is
@@ -154,43 +152,43 @@ When in doubt, this matcher
  
 See also [UAX #11 East Asian Width](http://www.unicode.org/reports/tr11/).
 
-### `is(char match)`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `is(char match)`
 
 **Parameters:**
 - `match` (`char`)
 
-### `isNot(char match)`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `isNot(char match)`
 
 To negate another CharMatcher, use #negate().
 
 **Parameters:**
 - `match` (`char`)
 
-### `anyOf(java.lang.CharSequence sequence)`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `anyOf(CharSequence sequence)`
 
 Returns a bogus matcher if the sequence contains supplementary characters.
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `noneOf(java.lang.CharSequence sequence)`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `noneOf(CharSequence sequence)`
 
 Returns a bogus matcher if the sequence contains supplementary characters.
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
+
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 ### `inRange(char startInclusive, char endInclusive)`
-
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 For example, to match any lowercase letter of the English alphabet, use 
  CharMatcher.inRange('a', 'z').
@@ -199,41 +197,41 @@ For example, to match any lowercase letter of the English alphabet, use
 - `startInclusive` (`char`)
 - `endInclusive` (`char`)
 
-### `forPredicate(com.google.common.base.Predicate<? super java.lang.Character> predicate)`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `forPredicate(Predicate<? super Character> predicate)`
 
 **Parameters:**
 - `predicate` ([`com.google.common.base.Predicate<? super java.lang.Character>`](./Predicate.md))
 
-### `matches(char c)`
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
-**Returns:** `boolean`
+### `matches(char c)`
 
 **Parameters:**
 - `c` (`char`)
+
+**Returns:** `boolean`
 
 ### `negate()`
 
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
-### `and(com.google.common.base.CharMatcher other)`
-
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+### `and(CharMatcher other)`
 
 **Parameters:**
 - `other` ([`com.google.common.base.CharMatcher`](./CharMatcher.md))
 
-### `or(com.google.common.base.CharMatcher other)`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `or(CharMatcher other)`
 
 **Parameters:**
 - `other` ([`com.google.common.base.CharMatcher`](./CharMatcher.md))
+
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 ### `precomputed()`
-
-**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
 Precomputation takes time and is likely to be
  worthwhile only if the precomputed matcher is queried many thousands of times.
@@ -243,9 +241,9 @@ This method has no effect (returns this) when called in GWT: it's unclear whethe
  precomputed matcher is faster, but it certainly consumes more memory, which doesn't seem like a
  worthwhile tradeoff in a browser.
 
-### `precomputedInternal()`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `precomputedInternal()`
 
 This implementation tries to be smart in a number of ways. It recognizes cases where the
  negation is cheaper to precompute than the matcher itself; it tries to build small hash tables
@@ -253,33 +251,33 @@ This implementation tries to be smart in a number of ways. It recognizes cases w
  constructs an eight-kilobyte bit array and queries that. In many situations this produces a
  matcher which is faster to query than the original.
 
-### `precomputedPositive(int totalCharacters, java.util.BitSet table, java.lang.String description)`
-
 **Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
+
+### `precomputedPositive(int totalCharacters, BitSet table, String description)`
 
 **Parameters:**
 - `totalCharacters` (`int`)
 - `table` (`java.util.BitSet`)
 - `description` (`java.lang.String`)
 
-### `isSmall(int totalCharacters, int tableLength)`
+**Returns:** [`com.google.common.base.CharMatcher`](./CharMatcher.md)
 
-**Returns:** `boolean`
+### `isSmall(int totalCharacters, int tableLength)`
 
 **Parameters:**
 - `totalCharacters` (`int`)
 - `tableLength` (`int`)
 
-### `setBits(java.util.BitSet table)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `setBits(BitSet table)`
 
 **Parameters:**
 - `table` (`java.util.BitSet`)
 
-### `matchesAnyOf(java.lang.CharSequence sequence)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `matchesAnyOf(CharSequence sequence)`
 
 Equivalent to !matchesNoneOf(sequence).
 
@@ -290,9 +288,9 @@ The default implementation iterates over the sequence, invoking #matches for eac
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to examine, possibly empty
 
-### `matchesAllOf(java.lang.CharSequence sequence)`
-
 **Returns:** `boolean`
+
+### `matchesAllOf(CharSequence sequence)`
 
 The default implementation iterates over the sequence, invoking #matches for each
  character, until this returns false or the end is reached.
@@ -300,9 +298,9 @@ The default implementation iterates over the sequence, invoking #matches for eac
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to examine, possibly empty
 
-### `matchesNoneOf(java.lang.CharSequence sequence)`
-
 **Returns:** `boolean`
+
+### `matchesNoneOf(CharSequence sequence)`
 
 Equivalent to
  !matchesAnyOf(sequence).
@@ -314,18 +312,18 @@ The default implementation iterates over the sequence, invoking #matches for eac
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to examine, possibly empty
 
-### `indexIn(java.lang.CharSequence sequence)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `indexIn(CharSequence sequence)`
 
 The default implementation iterates over the sequence in forward order calling #matches for each character.
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to examine from the beginning
 
-### `indexIn(java.lang.CharSequence sequence, int start)`
-
 **Returns:** `int`
+
+### `indexIn(CharSequence sequence, int start)`
 
 The default implementation iterates over the sequence in forward order, beginning at 
  start, calling #matches for each character.
@@ -333,29 +331,29 @@ The default implementation iterates over the sequence in forward order, beginnin
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to examine
 - `start` (`int`): the first index to examine; must be nonnegative and no greater than 
-     sequence.length()
-
-### `lastIndexIn(java.lang.CharSequence sequence)`
+       sequence.length()
 
 **Returns:** `int`
+
+### `lastIndexIn(CharSequence sequence)`
 
 The default implementation iterates over the sequence in reverse order calling #matches for each character.
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to examine from the end
 
-### `countIn(java.lang.CharSequence sequence)`
-
 **Returns:** `int`
+
+### `countIn(CharSequence sequence)`
 
 Counts 2 per supplementary character, such as for #whitespace().#negate().
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `removeFrom(java.lang.CharSequence sequence)`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `removeFrom(CharSequence sequence)`
 
 For
  example:
@@ -374,9 +372,9 @@ For
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `retainFrom(java.lang.CharSequence sequence)`
-
 **Returns:** `java.lang.String`
+
+### `retainFrom(CharSequence sequence)`
 
 For
  example:
@@ -395,9 +393,9 @@ For
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `replaceFrom(java.lang.CharSequence sequence, char replacement)`
-
 **Returns:** `java.lang.String`
+
+### `replaceFrom(CharSequence sequence, char replacement)`
 
 For example:
 
@@ -420,11 +418,11 @@ The default implementation uses #indexIn(CharSequence) to find the first matchin
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to replace matching characters in
 - `replacement` (`char`): the character to append to the result string in place of each matching
-     character in sequence
-
-### `replaceFrom(java.lang.CharSequence sequence, java.lang.CharSequence replacement)`
+       character in sequence
 
 **Returns:** `java.lang.String`
+
+### `replaceFrom(CharSequence sequence, CharSequence replacement)`
 
 For example:
 
@@ -446,11 +444,11 @@ For example:
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to replace matching characters in
 - `replacement` (`java.lang.CharSequence`): the characters to append to the result string in place of each matching
-     character in sequence
-
-### `trimFrom(java.lang.CharSequence sequence)`
+       character in sequence
 
 **Returns:** `java.lang.String`
+
+### `trimFrom(CharSequence sequence)`
 
 For example:
 
@@ -482,9 +480,9 @@ Note that:
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `trimLeadingFrom(java.lang.CharSequence sequence)`
-
 **Returns:** `java.lang.String`
+
+### `trimLeadingFrom(CharSequence sequence)`
 
 For example:
 
@@ -502,9 +500,9 @@ For example:
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `trimTrailingFrom(java.lang.CharSequence sequence)`
-
 **Returns:** `java.lang.String`
+
+### `trimTrailingFrom(CharSequence sequence)`
 
 For example:
 
@@ -522,9 +520,9 @@ For example:
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 
-### `collapseFrom(java.lang.CharSequence sequence, char replacement)`
-
 **Returns:** `java.lang.String`
+
+### `collapseFrom(CharSequence sequence, char replacement)`
 
 For example:
 
@@ -547,19 +545,19 @@ The default implementation uses #indexIn(CharSequence) to find the first matchin
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`): the character sequence to replace matching groups of characters in
 - `replacement` (`char`): the character to append to the result string in place of each group of
-     matching characters in sequence
-
-### `trimAndCollapseFrom(java.lang.CharSequence sequence, char replacement)`
+       matching characters in sequence
 
 **Returns:** `java.lang.String`
+
+### `trimAndCollapseFrom(CharSequence sequence, char replacement)`
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
 - `replacement` (`char`)
 
-### `finishCollapseFrom(java.lang.CharSequence sequence, int start, int end, char replacement, java.lang.StringBuilder builder, boolean inMatchingGroup)`
-
 **Returns:** `java.lang.String`
+
+### `finishCollapseFrom(CharSequence sequence, int start, int end, char replacement, StringBuilder builder, boolean inMatchingGroup)`
 
 **Parameters:**
 - `sequence` (`java.lang.CharSequence`)
@@ -569,12 +567,14 @@ The default implementation uses #indexIn(CharSequence) to find the first matchin
 - `builder` (`java.lang.StringBuilder`)
 - `inMatchingGroup` (`boolean`)
 
-### `apply(java.lang.Character character)`
+**Returns:** `java.lang.String`
 
-**Returns:** `boolean`
+### `apply(Character character)`
 
 **Parameters:**
 - `character` (`java.lang.Character`)
+
+**Returns:** `boolean`
 
 ### `toString()`
 
@@ -582,16 +582,16 @@ The default implementation uses #indexIn(CharSequence) to find the first matchin
 
 ### `showCharacter(char c)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `c` (`char`)
 
-### `isEither(char c1, char c2)`
+**Returns:** `java.lang.String`
 
-**Returns:** `com.google.common.base.CharMatcher.IsEither`
+### `isEither(char c1, char c2)`
 
 **Parameters:**
 - `c1` (`char`)
 - `c2` (`char`)
+
+**Returns:** `com.google.common.base.CharMatcher.IsEither`
 

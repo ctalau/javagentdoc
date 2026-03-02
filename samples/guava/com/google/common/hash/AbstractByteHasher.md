@@ -22,96 +22,96 @@
 
 ### `update(byte b)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `b` (`byte`)
 
-### `update(byte[] b)`
-
 **Returns:** `void`
+
+### `update(byte[] b)`
 
 **Parameters:**
 - `b` (`byte[]`)
 
-### `update(byte[] b, int off, int len)`
-
 **Returns:** `void`
+
+### `update(byte[] b, int off, int len)`
 
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `update(java.nio.ByteBuffer b)`
-
 **Returns:** `void`
+
+### `update(ByteBuffer b)`
 
 **Parameters:**
 - `b` (`java.nio.ByteBuffer`)
 
-### `update(int bytes)`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+### `update(int bytes)`
 
 **Parameters:**
 - `bytes` (`int`)
 
-### `putByte(byte b)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putByte(byte b)`
 
 **Parameters:**
 - `b` (`byte`)
 
-### `putBytes(byte[] bytes)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(byte[] bytes)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `putBytes(byte[] bytes, int off, int len)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(byte[] bytes, int off, int len)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `putBytes(java.nio.ByteBuffer bytes)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(ByteBuffer bytes)`
 
 **Parameters:**
 - `bytes` (`java.nio.ByteBuffer`)
 
-### `putShort(short s)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putShort(short s)`
 
 **Parameters:**
 - `s` (`short`)
 
-### `putInt(int i)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putInt(int i)`
 
 **Parameters:**
 - `i` (`int`)
 
-### `putLong(long l)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putLong(long l)`
 
 **Parameters:**
 - `l` (`long`)
 
-### `putChar(char c)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putChar(char c)`
 
 **Parameters:**
 - `c` (`char`)
+
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 

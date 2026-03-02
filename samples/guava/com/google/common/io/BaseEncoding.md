@@ -140,23 +140,21 @@ All instances of this class are immutable, so they may be stored safely as stati
 
 ### `encode(byte[] bytes)`
 
-**Returns:** `java.lang.String`
-
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `encode(byte[] bytes, int off, int len)`
-
 **Returns:** `java.lang.String`
+
+### `encode(byte[] bytes, int off, int len)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `encodingStream(java.io.Writer writer)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.io.OutputStream`
+### `encodingStream(Writer writer)`
 
 When the returned OutputStream is closed, so is the backing 
  Writer.
@@ -164,31 +162,31 @@ When the returned OutputStream is closed, so is the backing
 **Parameters:**
 - `writer` (`java.io.Writer`)
 
-### `encodingSink(com.google.common.io.CharSink encodedSink)`
+**Returns:** `java.io.OutputStream`
 
-**Returns:** [`com.google.common.io.ByteSink`](./ByteSink.md)
+### `encodingSink(CharSink encodedSink)`
 
 **Parameters:**
 - `encodedSink` ([`com.google.common.io.CharSink`](./CharSink.md))
 
-### `extract(byte[] result, int length)`
+**Returns:** [`com.google.common.io.ByteSink`](./ByteSink.md)
 
-**Returns:** `byte[]`
+### `extract(byte[] result, int length)`
 
 **Parameters:**
 - `result` (`byte[]`)
 - `length` (`int`)
 
-### `canDecode(java.lang.CharSequence chars)`
+**Returns:** `byte[]`
+
+### `canDecode(CharSequence chars)`
+
+**Parameters:**
+- `chars` (`java.lang.CharSequence`)
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `chars` (`java.lang.CharSequence`)
-
-### `decode(java.lang.CharSequence chars)`
-
-**Returns:** `byte[]`
+### `decode(CharSequence chars)`
 
 This is the
  inverse operation to #encode(byte[]).
@@ -196,9 +194,9 @@ This is the
 **Parameters:**
 - `chars` (`java.lang.CharSequence`)
 
-### `decodeChecked(java.lang.CharSequence chars)`
-
 **Returns:** `byte[]`
+
+### `decodeChecked(CharSequence chars)`
 
 This is the
  inverse operation to #encode(byte[]).
@@ -206,32 +204,32 @@ This is the
 **Parameters:**
 - `chars` (`java.lang.CharSequence`)
 
-### `decodingStream(java.io.Reader reader)`
+**Returns:** `byte[]`
 
-**Returns:** `java.io.InputStream`
+### `decodingStream(Reader reader)`
 
 The returned stream throws a DecodingException upon decoding-specific errors.
 
 **Parameters:**
 - `reader` (`java.io.Reader`)
 
-### `decodingSource(com.google.common.io.CharSource encodedSource)`
+**Returns:** `java.io.InputStream`
 
-**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+### `decodingSource(CharSource encodedSource)`
 
 **Parameters:**
 - `encodedSource` ([`com.google.common.io.CharSource`](./CharSource.md))
 
-### `maxEncodedSize(int bytes)`
+**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
-**Returns:** `int`
+### `maxEncodedSize(int bytes)`
 
 **Parameters:**
 - `bytes` (`int`)
 
-### `encodeTo(java.lang.Appendable target, byte[] bytes, int off, int len)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `encodeTo(Appendable target, byte[] bytes, int off, int len)`
 
 **Parameters:**
 - `target` (`java.lang.Appendable`)
@@ -239,27 +237,29 @@ The returned stream throws a DecodingException upon decoding-specific errors.
 - `off` (`int`)
 - `len` (`int`)
 
-### `maxDecodedSize(int chars)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `maxDecodedSize(int chars)`
 
 **Parameters:**
 - `chars` (`int`)
 
-### `decodeTo(byte[] target, java.lang.CharSequence chars)`
-
 **Returns:** `int`
+
+### `decodeTo(byte[] target, CharSequence chars)`
 
 **Parameters:**
 - `target` (`byte[]`)
 - `chars` (`java.lang.CharSequence`)
 
-### `trimTrailingPadding(java.lang.CharSequence chars)`
+**Returns:** `int`
 
-**Returns:** `java.lang.CharSequence`
+### `trimTrailingPadding(CharSequence chars)`
 
 **Parameters:**
 - `chars` (`java.lang.CharSequence`)
+
+**Returns:** `java.lang.CharSequence`
 
 ### `omitPadding()`
 
@@ -267,14 +267,12 @@ The returned stream throws a DecodingException upon decoding-specific errors.
 
 ### `withPadChar(char padChar)`
 
-**Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
-
 **Parameters:**
 - `padChar` (`char`)
 
-### `withSeparator(java.lang.String separator, int n)`
-
 **Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
+
+### `withSeparator(String separator, int n)`
 
 Any occurrences of any characters that occur in the separator
  are skipped over in decoding.
@@ -283,25 +281,25 @@ Any occurrences of any characters that occur in the separator
 - `separator` (`java.lang.String`)
 - `n` (`int`)
 
-### `upperCase()`
-
 **Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
 
+### `upperCase()`
+
 Padding and separator characters remain in their original case.
+
+**Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
 
 ### `lowerCase()`
 
-**Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
-
 Padding and separator characters remain in their original case.
+
+**Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
 
 ### `ignoreCase()`
 
 **Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
 
 ### `base64()`
-
-**Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
 
 (This is the same as the base 64 encoding from [RFC 3548](http://tools.ietf.org/html/rfc3548#section-3).)
 
@@ -312,9 +310,9 @@ The character '=' is used for padding, but can be omitted or replaced.
 No line feeds are added by default, as per [RFC 4648 section 3.1](http://tools.ietf.org/html/rfc4648#section-3.1), Line Feeds in
  Encoded Data. Line feeds may be added using #withSeparator(String, int).
 
-### `base64Url()`
-
 **Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
+
+### `base64Url()`
 
 The character '=' is used for padding, but can be omitted or replaced.
 
@@ -322,9 +320,9 @@ The character '=' is used for padding, but can be omitted or replaced.
 No line feeds are added by default, as per [RFC 4648 section 3.1](http://tools.ietf.org/html/rfc4648#section-3.1), Line Feeds in
  Encoded Data. Line feeds may be added using #withSeparator(String, int).
 
-### `base32()`
-
 **Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
+
+### `base32()`
 
 (This is the same as the base 32 encoding from [RFC 3548](http://tools.ietf.org/html/rfc3548#section-5).)
 
@@ -335,9 +333,9 @@ The character '=' is used for padding, but can be omitted or replaced.
 No line feeds are added by default, as per [RFC 4648 section 3.1](http://tools.ietf.org/html/rfc4648#section-3.1), Line Feeds in
  Encoded Data. Line feeds may be added using #withSeparator(String, int).
 
-### `base32Hex()`
-
 **Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
+
+### `base32Hex()`
 
 There is no corresponding encoding in RFC 3548.
 
@@ -348,9 +346,9 @@ The character '=' is used for padding, but can be omitted or replaced.
 No line feeds are added by default, as per [RFC 4648 section 3.1](http://tools.ietf.org/html/rfc4648#section-3.1), Line Feeds in
  Encoded Data. Line feeds may be added using #withSeparator(String, int).
 
-### `base16()`
-
 **Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
+
+### `base16()`
 
 (This is the same as the base 16 encoding from [RFC 3548](http://tools.ietf.org/html/rfc3548#section-6).) This is commonly known as
  "hexadecimal" format.
@@ -363,29 +361,31 @@ No padding is necessary in base 16, so #withPadChar(char) and #omitPadding()
 No line feeds are added by default, as per [RFC 4648 section 3.1](http://tools.ietf.org/html/rfc4648#section-3.1), Line Feeds in
  Encoded Data. Line feeds may be added using #withSeparator(String, int).
 
-### `ignoringReader(java.io.Reader delegate, java.lang.String toIgnore)`
+**Returns:** [`com.google.common.io.BaseEncoding`](./BaseEncoding.md)
 
-**Returns:** `java.io.Reader`
+### `ignoringReader(Reader delegate, String toIgnore)`
 
 **Parameters:**
 - `delegate` (`java.io.Reader`)
 - `toIgnore` (`java.lang.String`)
 
-### `separatingAppendable(java.lang.Appendable delegate, java.lang.String separator, int afterEveryChars)`
+**Returns:** `java.io.Reader`
 
-**Returns:** `java.lang.Appendable`
+### `separatingAppendable(Appendable delegate, String separator, int afterEveryChars)`
 
 **Parameters:**
 - `delegate` (`java.lang.Appendable`)
 - `separator` (`java.lang.String`)
 - `afterEveryChars` (`int`)
 
-### `separatingWriter(java.io.Writer delegate, java.lang.String separator, int afterEveryChars)`
+**Returns:** `java.lang.Appendable`
 
-**Returns:** `java.io.Writer`
+### `separatingWriter(Writer delegate, String separator, int afterEveryChars)`
 
 **Parameters:**
 - `delegate` (`java.io.Writer`)
 - `separator` (`java.lang.String`)
 - `afterEveryChars` (`int`)
+
+**Returns:** `java.io.Writer`
 

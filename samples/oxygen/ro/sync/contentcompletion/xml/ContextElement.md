@@ -38,7 +38,7 @@
 
 **Returns:** `ro.sync.outline.xml.Attribute[]`
 
-### `setAttributes(ro.sync.outline.xml.Attribute[] arg0)`
+### `setAttributes(Attribute[] arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.outline.xml.Attribute[]`)
@@ -49,7 +49,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setNamespace(java.lang.String arg0)`
+### `setNamespace(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -60,7 +60,7 @@
 
 **Returns:** `ro.sync.xml.ProxyNamespaceMapping`
 
-### `setPnm(ro.sync.xml.ProxyNamespaceMapping arg0)`
+### `setPnm(ProxyNamespaceMapping arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.xml.ProxyNamespaceMapping`)
@@ -71,7 +71,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setQName(java.lang.String arg0)`
+### `setQName(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -82,7 +82,7 @@
 
 **Returns:** `java.lang.String`
 
-### `setType(java.lang.String arg0)`
+### `setType(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -101,7 +101,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)

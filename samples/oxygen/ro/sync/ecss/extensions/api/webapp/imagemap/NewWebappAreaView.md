@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(int originalLayer, ro.sync.exml.view.graphics.Shape shape)`
+### `<init>(int originalLayer, Shape shape)`
 
 **Parameters:**
 - `originalLayer` (`int`): The original layer or -1 if the shape was not in the original image map.

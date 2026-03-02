@@ -234,7 +234,7 @@ This filter will be used to filter CSS styles
 
 ## Methods
 
-### `getExtensions(java.lang.String key)`
+### `getExtensions(String key)`
 
 Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION.
 
@@ -247,7 +247,7 @@ Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION
 
 **Returns:** `java.util.List<ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription>`
 
-### `addExtension(ro.sync.exml.plugin.PluginDescriptor.PluginExtensionDescription descr)`
+### `addExtension(PluginDescriptor.PluginExtensionDescription descr)`
 
 Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION.
 
@@ -256,7 +256,7 @@ Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION
 
 **Returns:** `void`
 
-### `addContextInstance(java.lang.Object contextInstance)`
+### `addContextInstance(Object contextInstance)`
 
 **Parameters:**
 - `contextInstance` (`java.lang.Object`): a context instance.
@@ -271,7 +271,7 @@ Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION
 
 **Returns:** `java.lang.String`
 
-### `setDescription(java.lang.String description)`
+### `setDescription(String description)`
 
 **Parameters:**
 - `description` (`java.lang.String`): The description of the plugin.
@@ -282,14 +282,14 @@ Available extensions for the moment are: SELECTION_PROCESSOR & GENERAL_EXTENSION
 
 **Returns:** `java.lang.String`
 
-### `setName(java.lang.String name)`
+### `setName(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`): The name of the plugin.
 
 **Returns:** `void`
 
-### `setID(java.lang.String id)`
+### `setID(String id)`
 
 Empty string is treated as no ID.
 
@@ -306,7 +306,7 @@ Empty string is treated as no ID.
 
 **Returns:** `java.lang.String`
 
-### `setVendor(java.lang.String vendor)`
+### `setVendor(String vendor)`
 
 **Parameters:**
 - `vendor` (`java.lang.String`): The vendor of the plugin.
@@ -317,7 +317,7 @@ Empty string is treated as no ID.
 
 **Returns:** `java.lang.String`
 
-### `setVersion(java.lang.String version)`
+### `setVersion(String version)`
 
 **Parameters:**
 - `version` (`java.lang.String`): The version of the plugin.
@@ -352,7 +352,7 @@ Empty string is treated as no ID.
 
 **Returns:** `java.io.File`
 
-### `setBaseDir(java.io.File baseDir)`
+### `setBaseDir(File baseDir)`
 
 **Parameters:**
 - `baseDir` (`java.io.File`): The base dir of the plugin.
@@ -363,14 +363,14 @@ Empty string is treated as no ID.
 
 **Returns:** `java.lang.String`
 
-### `setConfigUrlPath(java.lang.String configUrlPath)`
+### `setConfigUrlPath(String configUrlPath)`
 
 **Parameters:**
 - `configUrlPath` (`java.lang.String`): The configUrl to set.
 
 **Returns:** `void`
 
-### `addPluginContributedView(ro.sync.exml.plugin.PluginContributedView viewInfo)`
+### `addPluginContributedView(PluginContributedView viewInfo)`
 
 **Parameters:**
 - `viewInfo` ([`ro.sync.exml.plugin.PluginContributedView`](./PluginContributedView.md)): Information about the view
@@ -381,7 +381,7 @@ Empty string is treated as no ID.
 
 **Returns:** `java.util.List<ro.sync.exml.plugin.PluginContributedView>`
 
-### `addPluginContributedToolbar(ro.sync.exml.plugin.PluginContributedToolbar toolbarInfo)`
+### `addPluginContributedToolbar(PluginContributedToolbar toolbarInfo)`
 
 **Parameters:**
 - `toolbarInfo` ([`ro.sync.exml.plugin.PluginContributedToolbar`](./PluginContributedToolbar.md)): Information about the new toolbar.
@@ -411,7 +411,7 @@ Empty string is treated as no ID.
 
 **Returns:** `java.lang.String`
 
-### `setLicense(java.lang.String license)`
+### `setLicense(String license)`
 
 **Parameters:**
 - `license` (`java.lang.String`): The license to set.

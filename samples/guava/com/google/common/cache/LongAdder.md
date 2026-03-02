@@ -44,18 +44,18 @@ This class extends Number, but does *not* define methods such as
 
 ### `fn(long v, long x)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `v` (`long`)
 - `x` (`long`)
 
-### `add(long x)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `add(long x)`
 
 **Parameters:**
 - `x` (`long`): the value to add
+
+**Returns:** `void`
 
 ### `increment()`
 
@@ -67,29 +67,29 @@ This class extends Number, but does *not* define methods such as
 
 ### `sum()`
 
-**Returns:** `long`
-
 The returned value is *NOT* an atomic snapshot; invocation in
  the absence of concurrent updates returns an accurate result, but concurrent updates that occur
  while the sum is being calculated might not be incorporated.
 
-### `reset()`
+**Returns:** `long`
 
-**Returns:** `void`
+### `reset()`
 
 This method may be a useful alternative to
  creating a new adder, but is only effective if there are no concurrent updates. Because this
  method is intrinsically racy, it should only be used when it is known that no threads are
  concurrently updating.
 
-### `sumThenReset()`
+**Returns:** `void`
 
-**Returns:** `long`
+### `sumThenReset()`
 
 This method may apply for
  example during quiescent points between multithreaded computations. If there are updates
  concurrent with this method, the returned value is *not* guaranteed to be the final
  value occurring before the reset.
+
+**Returns:** `long`
 
 ### `toString()`
 
@@ -111,17 +111,17 @@ This method may apply for
 
 **Returns:** `double`
 
-### `writeObject(java.io.ObjectOutputStream s)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream s)`
 
 **Parameters:**
 - `s` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream s)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream s)`
 
 **Parameters:**
 - `s` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

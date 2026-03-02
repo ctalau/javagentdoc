@@ -48,8 +48,6 @@ For details on the behavior of the escapers in this class, see sections [2.2](ht
 
 ### `xmlContentEscaper()`
 
-**Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
-
 See section [2.4](http://www.w3.org/TR/2008/REC-xml-20081126/#syntax) of the XML specification.
 
  
@@ -73,9 +71,9 @@ This escaper does not escape non-ASCII characters to their numeric character ref
 This escaper does not treat surrogate pairs specially and does not perform Unicode
  validation on its input.
 
-### `xmlAttributeEscaper()`
-
 **Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
+
+### `xmlAttributeEscaper()`
 
 See section [3.3.3](http://www.w3.org/TR/2008/REC-xml-20081126/#AVNormalize) of the XML
  specification.
@@ -96,4 +94,6 @@ This escaper does not escape non-ASCII characters to their numeric character ref
  
 This escaper does not treat surrogate pairs specially and does not perform Unicode
  validation on its input.
+
+**Returns:** [`com.google.common.escape.Escaper`](../escape/Escaper.md)
 

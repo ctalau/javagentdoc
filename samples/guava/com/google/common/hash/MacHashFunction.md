@@ -32,7 +32,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String algorithmName, java.security.Key key, java.lang.String toString)`
+### `<init>(String algorithmName, Key key, String toString)`
 
 **Parameters:**
 - `algorithmName` (`java.lang.String`)
@@ -45,20 +45,20 @@
 
 **Returns:** `int`
 
-### `supportsClone(javax.crypto.Mac mac)`
-
-**Returns:** `boolean`
+### `supportsClone(Mac mac)`
 
 **Parameters:**
 - `mac` (`javax.crypto.Mac`)
 
-### `getMac(java.lang.String algorithmName, java.security.Key key)`
+**Returns:** `boolean`
 
-**Returns:** `javax.crypto.Mac`
+### `getMac(String algorithmName, Key key)`
 
 **Parameters:**
 - `algorithmName` (`java.lang.String`)
 - `key` (`java.security.Key`)
+
+**Returns:** `javax.crypto.Mac`
 
 ### `newHasher()`
 

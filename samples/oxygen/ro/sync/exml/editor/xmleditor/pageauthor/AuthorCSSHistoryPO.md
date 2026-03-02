@@ -26,14 +26,14 @@
 
 ## Methods
 
-### `proposeSelection(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0)`
+### `proposeSelection(List<CSSGroup> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`)
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`
 
-### `rememberSelection(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0, java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg1)`
+### `rememberSelection(List<CSSGroup> arg0, List<CSSGroup> arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`)
@@ -41,7 +41,7 @@
 
 **Returns:** `void`
 
-### `serialize(java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup> arg0)`
+### `serialize(List<CSSGroup> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.exml.workspace.api.editor.page.author.css.CSSGroup>`)

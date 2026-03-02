@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getCacheKey(ro.sync.ecss.extensions.api.node.AuthorNode nodeWithReference)`
+### `getCacheKey(AuthorNode nodeWithReference)`
 
 **Parameters:**
 - `nodeWithReference` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](node/AuthorNode.md)): The node.

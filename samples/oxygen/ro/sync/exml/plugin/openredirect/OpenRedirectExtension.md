@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `redirect(java.net.URL url)`
+### `redirect(URL url)`
 
 For example if you want to open a certain XML file from a ZIP archive, when the callback is received for the archive URL
  you can return two OpenRedirectInformation objects (one with the URL of the archive and the content type of the archive browser

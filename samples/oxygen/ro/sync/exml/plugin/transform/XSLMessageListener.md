@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `message(ro.sync.document.DocumentPositionedInfo message)`
+### `message(DocumentPositionedInfo message)`
 
 **Parameters:**
 - `message` ([`ro.sync.document.DocumentPositionedInfo`](../../../document/DocumentPositionedInfo.md)): The message containing inside an xsl:message or xsl:assert.

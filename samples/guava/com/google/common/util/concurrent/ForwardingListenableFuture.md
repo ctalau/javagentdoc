@@ -31,11 +31,11 @@ Most subclasses can just use SimpleForwardingListenableFuture.
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md)
 
-### `addListener(java.lang.Runnable listener, java.util.concurrent.Executor exec)`
-
-**Returns:** `void`
+### `addListener(Runnable listener, Executor exec)`
 
 **Parameters:**
 - `listener` (`java.lang.Runnable`)
 - `exec` (`java.util.concurrent.Executor`)
+
+**Returns:** `void`
 

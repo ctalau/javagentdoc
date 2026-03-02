@@ -62,7 +62,7 @@
 
 ## Constructors
 
-### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.lang.String arg2, java.lang.String arg3)`
+### `<init>(Shell arg0, AuthorResourceBundle arg1, String arg2, String arg3)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
@@ -70,7 +70,7 @@
 - `arg2` (`java.lang.String`)
 - `arg3` (`java.lang.String`)
 
-### `<init>(org.eclipse.swt.widgets.Shell arg0, ro.sync.ecss.extensions.api.AuthorResourceBundle arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4)`
+### `<init>(Shell arg0, AuthorResourceBundle arg1, String arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
@@ -81,21 +81,21 @@
 
 ## Methods
 
-### `createDialogArea(org.eclipse.swt.widgets.Composite arg0)`
+### `createDialogArea(Composite arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
 
 **Returns:** `org.eclipse.swt.widgets.Control`
 
-### `configureShell(org.eclipse.swt.widgets.Shell arg0)`
+### `configureShell(Shell arg0)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Shell`)
 
 **Returns:** `void`
 
-### `getSortInformation(java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg0, boolean arg1, boolean arg2)`
+### `getSortInformation(List<CriterionInformation> arg0, boolean arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation>`)
@@ -108,7 +108,7 @@
 
 **Returns:** `void`
 
-### `createSection(org.eclipse.swt.widgets.Composite arg0, java.lang.String arg1)`
+### `createSection(Composite arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`org.eclipse.swt.widgets.Composite`)
@@ -120,7 +120,7 @@
 
 **Returns:** `boolean`
 
-### `selectionChanged(java.lang.String arg0, java.lang.String arg1)`
+### `selectionChanged(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

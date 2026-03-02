@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(org.xml.sax.XMLReader xmlReader, java.lang.Object grammarCache)`
+### `<init>(XMLReader xmlReader, Object grammarCache)`
 
 **Parameters:**
 - `xmlReader` (`org.xml.sax.XMLReader`): The XML Reader

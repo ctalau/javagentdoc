@@ -262,36 +262,34 @@ See the Guava User Guide article on [caching](https://github.com/google/guava/wi
 
 ### `newBuilder()`
 
-**Returns:** [`com.google.common.cache.CacheBuilder<java.lang.Object,java.lang.Object>`](./CacheBuilder.md)
-
 Note that while this return type is CacheBuilder<Object, Object>, type parameters on
  the #build methods allow you to create a cache of any key and value type desired.
 
-### `from(com.google.common.cache.CacheBuilderSpec spec)`
-
 **Returns:** [`com.google.common.cache.CacheBuilder<java.lang.Object,java.lang.Object>`](./CacheBuilder.md)
+
+### `from(CacheBuilderSpec spec)`
 
 **Parameters:**
 - `spec` ([`com.google.common.cache.CacheBuilderSpec`](./CacheBuilderSpec.md))
 
-### `from(java.lang.String spec)`
-
 **Returns:** [`com.google.common.cache.CacheBuilder<java.lang.Object,java.lang.Object>`](./CacheBuilder.md)
+
+### `from(String spec)`
 
 This is especially useful for command-line configuration of a CacheBuilder.
 
 **Parameters:**
 - `spec` (`java.lang.String`): a String in the format specified by CacheBuilderSpec
 
-### `lenientParsing()`
+**Returns:** [`com.google.common.cache.CacheBuilder<java.lang.Object,java.lang.Object>`](./CacheBuilder.md)
 
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+### `lenientParsing()`
 
 Useful for tests and spec parsing.
 
-### `keyEquivalence(com.google.common.base.Equivalence<java.lang.Object> equivalence)`
-
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `keyEquivalence(Equivalence<Object> equivalence)`
 
 By default, the cache uses Equivalence#identity to determine key equality when
  #weakKeys is specified, and Equivalence#equals() otherwise.
@@ -299,13 +297,13 @@ By default, the cache uses Equivalence#identity to determine key equality when
 **Parameters:**
 - `equivalence` ([`com.google.common.base.Equivalence<java.lang.Object>`](../base/Equivalence.md))
 
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
 ### `getKeyEquivalence()`
 
 **Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](../base/Equivalence.md)
 
-### `valueEquivalence(com.google.common.base.Equivalence<java.lang.Object> equivalence)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+### `valueEquivalence(Equivalence<Object> equivalence)`
 
 By default, the cache uses Equivalence#identity to determine value equality when
  #weakValues or #softValues is specified, and Equivalence#equals()
@@ -314,13 +312,13 @@ By default, the cache uses Equivalence#identity to determine value equality when
 **Parameters:**
 - `equivalence` ([`com.google.common.base.Equivalence<java.lang.Object>`](../base/Equivalence.md))
 
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
 ### `getValueEquivalence()`
 
 **Returns:** [`com.google.common.base.Equivalence<java.lang.Object>`](../base/Equivalence.md)
 
 ### `initialCapacity(int initialCapacity)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 For example, if the initial capacity
  is 60, and the concurrency level is 8, then eight segments are created, each
@@ -331,13 +329,13 @@ For example, if the initial capacity
 **Parameters:**
 - `initialCapacity` (`int`)
 
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
 ### `getInitialCapacity()`
 
 **Returns:** `int`
 
 ### `concurrencyLevel(int concurrencyLevel)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 Used as a hint for internal sizing. The
  table is internally partitioned to try to permit the indicated number of concurrent updates
@@ -371,13 +369,13 @@ Note that future implementations may abandon segment locking in favor of more ad
 **Parameters:**
 - `concurrencyLevel` (`int`)
 
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
 ### `getConcurrencyLevel()`
 
 **Returns:** `int`
 
 ### `maximumSize(long maximumSize)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 Note that the cache **may evict an entry before this limit is exceeded**. For example, in
  the current implementation, when concurrencyLevel is greater than 1, each
@@ -398,9 +396,9 @@ This feature cannot be used in conjunction with #maximumWeight.
 **Parameters:**
 - `maximumSize` (`long`): the maximum size of the cache
 
-### `maximumWeight(long maximumWeight)`
-
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `maximumWeight(long maximumWeight)`
 
 Weight is determined using the
  Weigher specified with #weigher, and use of this method requires a
@@ -430,9 +428,9 @@ This feature cannot be used in conjunction with #maximumSize.
 **Parameters:**
 - `maximumWeight` (`long`): the maximum total weight of entries the cache may contain
 
-### `weigher(com.google.common.cache.Weigher<? super K1,? super V1> weigher)`
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
-**Returns:** [`com.google.common.cache.CacheBuilder<K1,V1>`](./CacheBuilder.md)
+### `weigher(Weigher<? super K1,? super V1> weigher)`
 
 Entry weight is taken into
  consideration by #maximumWeight(long) when determining which entries to evict, and use
@@ -462,6 +460,8 @@ When the weight of an entry is zero it will not be considered for size-based evi
 **Parameters:**
 - `weigher` ([`com.google.common.cache.Weigher<? super K1,? super V1>`](./Weigher.md)): the weigher to use in calculating the weight of cache entries
 
+**Returns:** [`com.google.common.cache.CacheBuilder<K1,V1>`](./CacheBuilder.md)
+
 ### `getMaximumWeight()`
 
 **Returns:** `long`
@@ -471,8 +471,6 @@ When the weight of an entry is zero it will not be considered for size-based evi
 **Returns:** [`com.google.common.cache.Weigher<K1,V1>`](./Weigher.md)
 
 ### `weakKeys()`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 **Warning:** when this method is used, the resulting cache will use identity (==)
  comparison to determine equality of keys. Its Cache#asMap view will therefore
@@ -484,20 +482,20 @@ Entries with keys that have been garbage collected may be counted in Cache#size,
  will never be visible to read or write operations; such entries are cleaned up as part of the
  routine maintenance described in the class javadoc.
 
-### `setKeyStrength(com.google.common.cache.LocalCache.Strength strength)`
-
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `setKeyStrength(LocalCache.Strength strength)`
 
 **Parameters:**
 - `strength` (`com.google.common.cache.LocalCache.Strength`)
+
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 ### `getKeyStrength()`
 
 **Returns:** `com.google.common.cache.LocalCache.Strength`
 
 ### `weakValues()`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 Weak values will be garbage collected once they are weakly reachable. This makes them a poor
  candidate for caching; consider #softValues instead.
@@ -511,9 +509,9 @@ Entries with values that have been garbage collected may be counted in Cache#siz
  but will never be visible to read or write operations; such entries are cleaned up as part of
  the routine maintenance described in the class javadoc.
 
-### `softValues()`
-
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `softValues()`
 
 Softly-referenced objects will be
  garbage-collected in a *globally* least-recently-used manner, in response to memory
@@ -532,20 +530,20 @@ Entries with values that have been garbage collected may be counted in Cache#siz
  but will never be visible to read or write operations; such entries are cleaned up as part of
  the routine maintenance described in the class javadoc.
 
-### `setValueStrength(com.google.common.cache.LocalCache.Strength strength)`
-
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `setValueStrength(LocalCache.Strength strength)`
 
 **Parameters:**
 - `strength` (`com.google.common.cache.LocalCache.Strength`)
+
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 ### `getValueStrength()`
 
 **Returns:** `com.google.common.cache.LocalCache.Strength`
 
-### `expireAfterWrite(java.time.Duration duration)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+### `expireAfterWrite(Duration duration)`
 
 When duration is zero, this method hands off to maximumSize(0), ignoring any otherwise-specified maximum size or weight. This can be
  useful in testing, or to disable caching temporarily without a code change.
@@ -557,11 +555,11 @@ Expired entries may be counted in Cache#size, but will never be visible to read 
 
 **Parameters:**
 - `duration` (`java.time.Duration`): the length of time after an entry is created that it should be automatically
-     removed
-
-### `expireAfterWrite(long duration, java.util.concurrent.TimeUnit unit)`
+       removed
 
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `expireAfterWrite(long duration, TimeUnit unit)`
 
 When duration is zero, this method hands off to maximumSize(0), ignoring any otherwise-specified maximum size or weight. This can be
  useful in testing, or to disable caching temporarily without a code change.
@@ -577,16 +575,16 @@ If you can represent the duration as a java.time.Duration (which should be prefe
 
 **Parameters:**
 - `duration` (`long`): the length of time after an entry is created that it should be automatically
-     removed
+       removed
 - `unit` (`java.util.concurrent.TimeUnit`): the unit that duration is expressed in
+
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 ### `getExpireAfterWriteNanos()`
 
 **Returns:** `long`
 
-### `expireAfterAccess(java.time.Duration duration)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+### `expireAfterAccess(Duration duration)`
 
 Access time is reset by all cache read and write operations (including 
  Cache.asMap().get(Object) and Cache.asMap().put(K, V)), but not by 
@@ -605,11 +603,11 @@ Expired entries may be counted in Cache#size, but will never be visible to read 
 
 **Parameters:**
 - `duration` (`java.time.Duration`): the length of time after an entry is last accessed that it should be
-     automatically removed
-
-### `expireAfterAccess(long duration, java.util.concurrent.TimeUnit unit)`
+       automatically removed
 
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `expireAfterAccess(long duration, TimeUnit unit)`
 
 Access time is reset by all cache read and write operations (including 
  Cache.asMap().get(Object) and Cache.asMap().put(K, V)), but not by 
@@ -632,16 +630,16 @@ If you can represent the duration as a java.time.Duration (which should be prefe
 
 **Parameters:**
 - `duration` (`long`): the length of time after an entry is last accessed that it should be
-     automatically removed
+       automatically removed
 - `unit` (`java.util.concurrent.TimeUnit`): the unit that duration is expressed in
+
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 ### `getExpireAfterAccessNanos()`
 
 **Returns:** `long`
 
-### `refreshAfterWrite(java.time.Duration duration)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+### `refreshAfterWrite(Duration duration)`
 
 The semantics
  of refreshes are specified in LoadingCache#refresh, and are performed by calling CacheLoader#reload.
@@ -663,11 +661,11 @@ Currently automatic refreshes are performed when the first stale request for an 
 
 **Parameters:**
 - `duration` (`java.time.Duration`): the length of time after an entry is created that it should be considered
-     stale, and thus eligible for refresh
-
-### `refreshAfterWrite(long duration, java.util.concurrent.TimeUnit unit)`
+       stale, and thus eligible for refresh
 
 **Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+
+### `refreshAfterWrite(long duration, TimeUnit unit)`
 
 The semantics
  of refreshes are specified in LoadingCache#refresh, and are performed by calling CacheLoader#reload.
@@ -693,16 +691,16 @@ If you can represent the duration as a java.time.Duration (which should be prefe
 
 **Parameters:**
 - `duration` (`long`): the length of time after an entry is created that it should be considered
-     stale, and thus eligible for refresh
+       stale, and thus eligible for refresh
 - `unit` (`java.util.concurrent.TimeUnit`): the unit that duration is expressed in
+
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 ### `getRefreshNanos()`
 
 **Returns:** `long`
 
-### `ticker(com.google.common.base.Ticker ticker)`
-
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
+### `ticker(Ticker ticker)`
 
 By default, System#nanoTime is used.
 
@@ -713,16 +711,16 @@ The primary intent of this method is to facilitate testing of caches with a fake
 **Parameters:**
 - `ticker` ([`com.google.common.base.Ticker`](../base/Ticker.md))
 
-### `getTicker(boolean recordsTime)`
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
-**Returns:** [`com.google.common.base.Ticker`](../base/Ticker.md)
+### `getTicker(boolean recordsTime)`
 
 **Parameters:**
 - `recordsTime` (`boolean`)
 
-### `removalListener(com.google.common.cache.RemovalListener<? super K1,? super V1> listener)`
+**Returns:** [`com.google.common.base.Ticker`](../base/Ticker.md)
 
-**Returns:** [`com.google.common.cache.CacheBuilder<K1,V1>`](./CacheBuilder.md)
+### `removalListener(RemovalListener<? super K1,? super V1> listener)`
 
 Each cache created by this builder will invoke this listener
  as part of the routine maintenance described in the class documentation above.
@@ -743,18 +741,20 @@ Each cache created by this builder will invoke this listener
 **Parameters:**
 - `listener` ([`com.google.common.cache.RemovalListener<? super K1,? super V1>`](./RemovalListener.md))
 
+**Returns:** [`com.google.common.cache.CacheBuilder<K1,V1>`](./CacheBuilder.md)
+
 ### `getRemovalListener()`
 
 **Returns:** [`com.google.common.cache.RemovalListener<K1,V1>`](./RemovalListener.md)
 
 ### `recordStats()`
 
-**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
-
 Without this
  Cache#stats will return zero for all statistics. Note that recording stats requires
  bookkeeping to be performed with each operation, and thus imposes a performance penalty on
  cache operation.
+
+**Returns:** [`com.google.common.cache.CacheBuilder<K,V>`](./CacheBuilder.md)
 
 ### `isRecordingStats()`
 
@@ -764,9 +764,7 @@ Without this
 
 **Returns:** [`com.google.common.base.Supplier<? extends com.google.common.cache.AbstractCache.StatsCounter>`](../base/Supplier.md)
 
-### `build(com.google.common.cache.CacheLoader<? super K1,V1> loader)`
-
-**Returns:** [`com.google.common.cache.LoadingCache<K1,V1>`](./LoadingCache.md)
+### `build(CacheLoader<? super K1,V1> loader)`
 
 If another thread is currently
  loading the value for this key, simply waits for that thread to finish and returns its loaded
@@ -779,9 +777,9 @@ This method does not alter the state of this CacheBuilder instance, so it can be
 **Parameters:**
 - `loader` ([`com.google.common.cache.CacheLoader<? super K1,V1>`](./CacheLoader.md)): the cache loader used to obtain new values
 
-### `build()`
+**Returns:** [`com.google.common.cache.LoadingCache<K1,V1>`](./LoadingCache.md)
 
-**Returns:** [`com.google.common.cache.Cache<K1,V1>`](./Cache.md)
+### `build()`
 
 Consider #build(CacheLoader) instead, if it is feasible to implement a 
  CacheLoader.
@@ -789,6 +787,8 @@ Consider #build(CacheLoader) instead, if it is feasible to implement a
  
 This method does not alter the state of this CacheBuilder instance, so it can be
  invoked again to create multiple independent caches.
+
+**Returns:** [`com.google.common.cache.Cache<K1,V1>`](./Cache.md)
 
 ### `checkNonLoadingCache()`
 
@@ -800,14 +800,12 @@ This method does not alter the state of this CacheBuilder instance, so it can be
 
 ### `toString()`
 
-**Returns:** `java.lang.String`
-
 The exact form of the returned
  string is not specified.
 
-### `toNanosSaturated(java.time.Duration duration)`
+**Returns:** `java.lang.String`
 
-**Returns:** `long`
+### `toNanosSaturated(Duration duration)`
 
 Instead of throwing ArithmeticException, this method silently saturates to either
  Long#MAX_VALUE or Long#MIN_VALUE. This behavior can be useful when decomposing
@@ -815,4 +813,6 @@ Instead of throwing ArithmeticException, this method silently saturates to eithe
 
 **Parameters:**
 - `duration` (`java.time.Duration`)
+
+**Returns:** `long`
 

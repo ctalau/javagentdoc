@@ -18,7 +18,7 @@
 
 **Returns:** [`ro.sync.exml.plugin.transform.XSLMessageListener`](./XSLMessageListener.md)
 
-### `getProperty(java.lang.String key)`
+### `getProperty(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`): the key.

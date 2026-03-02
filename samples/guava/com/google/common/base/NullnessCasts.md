@@ -14,8 +14,6 @@
 
 ### `uncheckedCastNullableTToT(T t)`
 
-**Returns:** `T`
-
 This method is intended to help with usages of type parameters that have parametric nullness. If a type parameter instead ranges over only non-null
  types (or if the type is a non-variable type, like String), then code should almost
  never use this method, preferring instead to call requireNonNull so as to benefit from
@@ -43,4 +41,6 @@ Why *not* just add SuppressWarnings? The problem is that this method is
 
 **Parameters:**
 - `t` (`T`)
+
+**Returns:** `T`
 

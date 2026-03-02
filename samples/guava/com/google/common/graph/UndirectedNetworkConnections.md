@@ -15,7 +15,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<E,N> incidentEdgeMap)`
+### `<init>(Map<E,N> incidentEdgeMap)`
 
 **Parameters:**
 - `incidentEdgeMap` (`java.util.Map<E,N>`)
@@ -26,12 +26,12 @@
 
 **Returns:** [`com.google.common.graph.UndirectedNetworkConnections<N,E>`](./UndirectedNetworkConnections.md)
 
-### `ofImmutable(java.util.Map<E,N> incidentEdges)`
-
-**Returns:** [`com.google.common.graph.UndirectedNetworkConnections<N,E>`](./UndirectedNetworkConnections.md)
+### `ofImmutable(Map<E,N> incidentEdges)`
 
 **Parameters:**
 - `incidentEdges` (`java.util.Map<E,N>`)
+
+**Returns:** [`com.google.common.graph.UndirectedNetworkConnections<N,E>`](./UndirectedNetworkConnections.md)
 
 ### `adjacentNodes()`
 
@@ -39,8 +39,8 @@
 
 ### `edgesConnecting(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 

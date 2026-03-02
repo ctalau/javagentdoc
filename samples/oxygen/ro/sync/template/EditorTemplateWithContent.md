@@ -10,14 +10,14 @@
 
 ## Methods
 
-### `getContentInfo(java.lang.String saveLocation)`
+### `getContentInfo(String saveLocation)`
 
 **Parameters:**
 - `saveLocation` (`java.lang.String`): The location where the new template will be saved.
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(java.lang.String saveLocation, boolean interactive)`
+### `getContentInfo(String saveLocation, boolean interactive)`
 
 **Parameters:**
 - `saveLocation` (`java.lang.String`): The location where the content will be saved.
@@ -25,7 +25,7 @@
 
 **Returns:** [`ro.sync.template.TemplateContentInfo`](./TemplateContentInfo.md)
 
-### `getContentInfo(java.lang.String saveLocation, boolean expandEditorVariables, boolean interactive)`
+### `getContentInfo(String saveLocation, boolean expandEditorVariables, boolean interactive)`
 
 **Parameters:**
 - `saveLocation` (`java.lang.String`): The location where the content will be saved.

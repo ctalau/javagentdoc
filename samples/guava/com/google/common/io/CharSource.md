@@ -53,9 +53,7 @@ Any ByteSource containing text encoded with a specific character
 
 ## Methods
 
-### `asByteSource(java.nio.charset.Charset charset)`
-
-**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+### `asByteSource(Charset charset)`
 
 If ByteSource#asCharSource is called on the returned source with the same charset,
  the default implementation of this method will ensure that the original CharSource is
@@ -65,9 +63,9 @@ If ByteSource#asCharSource is called on the returned source with the same charse
 **Parameters:**
 - `charset` (`java.nio.charset.Charset`)
 
-### `openStream()`
+**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
-**Returns:** `java.io.Reader`
+### `openStream()`
 
 This method returns a new, independent
  reader each time it is called.
@@ -75,9 +73,9 @@ This method returns a new, independent
  
 The caller is responsible for ensuring that the returned reader is closed.
 
-### `openBufferedStream()`
+**Returns:** `java.io.Reader`
 
-**Returns:** `java.io.BufferedReader`
+### `openBufferedStream()`
 
 This method returns a new,
  independent reader each time it is called.
@@ -85,9 +83,9 @@ This method returns a new,
  
 The caller is responsible for ensuring that the returned reader is closed.
 
-### `lines()`
+**Returns:** `java.io.BufferedReader`
 
-**Returns:** `java.util.stream.Stream<java.lang.String>`
+### `lines()`
 
 This method
  returns a new, independent stream each time it is called.
@@ -118,9 +116,9 @@ The caller is responsible for ensuring that the returned stream is closed. For e
  
 ```
 
-### `lengthIfKnown()`
+**Returns:** `java.util.stream.Stream<java.lang.String>`
 
-**Returns:** [`com.google.common.base.Optional<java.lang.Long>`](../base/Optional.md)
+### `lengthIfKnown()`
 
 The default implementation returns Optional#absent. Some sources, such as a 
  CharSequence, may return a non-absent value. Note that in such cases, it is *possible*
@@ -131,9 +129,9 @@ The default implementation returns Optional#absent. Some sources, such as a
 Additionally, for mutable sources such as StringBuilders, a subsequent read may
  return a different number of chars if the contents are changed.
 
-### `length()`
+**Returns:** [`com.google.common.base.Optional<java.lang.Long>`](../base/Optional.md)
 
-**Returns:** `long`
+### `length()`
 
 To avoid a potentially expensive operation, see #lengthIfKnown.
 
@@ -151,36 +149,36 @@ Note that for sources that implement #lengthIfKnown to provide a more efficient
 In either case, for mutable sources such as files, a subsequent read may return a different
  number of chars if the contents are changed.
 
-### `countBySkipping(java.io.Reader reader)`
-
 **Returns:** `long`
+
+### `countBySkipping(Reader reader)`
 
 **Parameters:**
 - `reader` (`java.io.Reader`)
 
-### `copyTo(java.lang.Appendable appendable)`
-
 **Returns:** `long`
+
+### `copyTo(Appendable appendable)`
 
 Does not close appendable if it is Closeable.
 
 **Parameters:**
 - `appendable` (`java.lang.Appendable`)
 
-### `copyTo(com.google.common.io.CharSink sink)`
-
 **Returns:** `long`
+
+### `copyTo(CharSink sink)`
 
 **Parameters:**
 - `sink` ([`com.google.common.io.CharSink`](./CharSink.md))
+
+**Returns:** `long`
 
 ### `read()`
 
 **Returns:** `java.lang.String`
 
 ### `readFirstLine()`
-
-**Returns:** `java.lang.String`
 
 Returns null if this source is empty.
 
@@ -190,9 +188,9 @@ Like BufferedReader#readLine(), this method considers a line to be a sequence of
  \n. If the source's content does not end in a line termination sequence, it is treated as if
  it does.
 
-### `readLines()`
+**Returns:** `java.lang.String`
 
-**Returns:** [`com.google.common.collect.ImmutableList<java.lang.String>`](../collect/ImmutableList.md)
+### `readLines()`
 
 The returned list will be empty if
  this source is empty.
@@ -203,9 +201,9 @@ Like BufferedReader#readLine(), this method considers a line to be a sequence of
  \n. If the source's content does not end in a line termination sequence, it is treated as if
  it does.
 
-### `readLines(com.google.common.io.LineProcessor<T> processor)`
+**Returns:** [`com.google.common.collect.ImmutableList<java.lang.String>`](../collect/ImmutableList.md)
 
-**Returns:** `T`
+### `readLines(LineProcessor<T> processor)`
 
 Stops when all lines have been processed or the processor returns
  false and returns the result produced by the processor.
@@ -219,9 +217,9 @@ Like BufferedReader#readLine(), this method considers a line to be a sequence of
 **Parameters:**
 - `processor` ([`com.google.common.io.LineProcessor<T>`](./LineProcessor.md))
 
-### `forEachLine(java.util.function.Consumer<? super java.lang.String> action)`
+**Returns:** `T`
 
-**Returns:** `void`
+### `forEachLine(Consumer<? super String> action)`
 
 Like BufferedReader#readLine(), this method considers a line to be a sequence of
  text that is terminated by (but does not include) one of \r\n, \r or 
@@ -231,9 +229,9 @@ Like BufferedReader#readLine(), this method considers a line to be a sequence of
 **Parameters:**
 - `action` (`java.util.function.Consumer<? super java.lang.String>`)
 
-### `isEmpty()`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `isEmpty()`
 
 The default implementation first checks #lengthIfKnown, returning true if it's known to be zero and false if it's known to be
  non-zero. If the length is not known, it falls back to opening a stream and checking for EOF.
@@ -243,9 +241,9 @@ Note that, in cases where lengthIfKnown returns zero, it is *possible* that
  chars are actually available for reading. This means that a source may return true from
  isEmpty() despite having readable content.
 
-### `concat(java.lang.Iterable<? extends com.google.common.io.CharSource> sources)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+### `concat(Iterable<? extends CharSource> sources)`
 
 Streams returned from
  the source will contain the concatenated data from the streams of the underlying sources.
@@ -257,9 +255,9 @@ Only one underlying stream will be open at a time. Closing the concatenated stre
 **Parameters:**
 - `sources` (`java.lang.Iterable<? extends com.google.common.io.CharSource>`): the sources to concatenate
 
-### `concat(java.util.Iterator<? extends com.google.common.io.CharSource> sources)`
-
 **Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+
+### `concat(Iterator<? extends CharSource> sources)`
 
 Streams returned from
  the source will contain the concatenated data from the streams of the underlying sources.
@@ -278,9 +276,9 @@ Note: The input Iterator will be copied to an ImmutableList when this method
 **Parameters:**
 - `sources` (`java.util.Iterator<? extends com.google.common.io.CharSource>`): the sources to concatenate
 
-### `concat(com.google.common.io.CharSource[] sources)`
-
 **Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+
+### `concat(CharSource[] sources)`
 
 Streams returned from
  the source will contain the concatenated data from the streams of the underlying sources.
@@ -292,9 +290,9 @@ Only one underlying stream will be open at a time. Closing the concatenated stre
 **Parameters:**
 - `sources` ([`com.google.common.io.CharSource[]`](./CharSource.md)): the sources to concatenate
 
-### `wrap(java.lang.CharSequence charSequence)`
-
 **Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+
+### `wrap(CharSequence charSequence)`
 
 The behavior of the
  returned CharSource and any Reader instances created by it is unspecified if
@@ -302,6 +300,8 @@ The behavior of the
 
 **Parameters:**
 - `charSequence` (`java.lang.CharSequence`)
+
+**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
 
 ### `empty()`
 

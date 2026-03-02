@@ -34,25 +34,25 @@ The methods implemented in this class should not be overridden unless the subcla
 
 ### `edgeValue(N nodeU, N nodeV)`
 
-**Returns:** `java.util.Optional<V>`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeValue(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `java.util.Optional<V>`
+
+### `edgeValue(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 
-### `equals(java.lang.Object obj)`
+**Returns:** `java.util.Optional<V>`
 
-**Returns:** `boolean`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -62,10 +62,10 @@ The methods implemented in this class should not be overridden unless the subcla
 
 **Returns:** `java.lang.String`
 
-### `edgeValueMap(com.google.common.graph.ValueGraph<N,V> graph)`
-
-**Returns:** `java.util.Map<com.google.common.graph.EndpointPair<N>,V>`
+### `edgeValueMap(ValueGraph<N,V> graph)`
 
 **Parameters:**
 - `graph` ([`com.google.common.graph.ValueGraph<N,V>`](./ValueGraph.md))
+
+**Returns:** `java.util.Map<com.google.common.graph.EndpointPair<N>,V>`
 

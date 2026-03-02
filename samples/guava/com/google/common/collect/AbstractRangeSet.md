@@ -20,81 +20,81 @@
 
 ### `contains(C value)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `value` (`C`)
+
+**Returns:** `boolean`
 
 ### `rangeContaining(C value)`
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
-
 **Parameters:**
 - `value` (`C`)
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `isEmpty()`
 
 **Returns:** `boolean`
 
-### `add(com.google.common.collect.Range<C> range)`
-
-**Returns:** `void`
+### `add(Range<C> range)`
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `remove(com.google.common.collect.Range<C> range)`
-
 **Returns:** `void`
+
+### `remove(Range<C> range)`
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
+
+**Returns:** `void`
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `enclosesAll(com.google.common.collect.RangeSet<C> other)`
+### `enclosesAll(RangeSet<C> other)`
+
+**Parameters:**
+- `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
 
 **Returns:** `boolean`
 
+### `addAll(RangeSet<C> other)`
+
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
-
-### `addAll(com.google.common.collect.RangeSet<C> other)`
 
 **Returns:** `void`
 
+### `removeAll(RangeSet<C> other)`
+
 **Parameters:**
 - `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
-
-### `removeAll(com.google.common.collect.RangeSet<C> other)`
 
 **Returns:** `void`
 
-**Parameters:**
-- `other` ([`com.google.common.collect.RangeSet<C>`](./RangeSet.md))
-
-### `intersects(com.google.common.collect.Range<C> otherRange)`
-
-**Returns:** `boolean`
+### `intersects(Range<C> otherRange)`
 
 **Parameters:**
 - `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `encloses(com.google.common.collect.Range<C> otherRange)`
-
 **Returns:** `boolean`
+
+### `encloses(Range<C> otherRange)`
 
 **Parameters:**
 - `otherRange` ([`com.google.common.collect.Range<C>`](./Range.md))
 
-### `equals(java.lang.Object obj)`
-
 **Returns:** `boolean`
+
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

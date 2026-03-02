@@ -8,14 +8,14 @@
 
 ## Methods
 
-### `unlock(java.net.URL resource)`
+### `unlock(URL resource)`
 
 **Parameters:**
 - `resource` (`java.net.URL`): The URL to unlock
 
 **Returns:** `void`
 
-### `updateLock(java.net.URL resource, int timeoutSeconds)`
+### `updateLock(URL resource, int timeoutSeconds)`
 
 This will get called at the beginning to lock the resource and after that periodically.
 

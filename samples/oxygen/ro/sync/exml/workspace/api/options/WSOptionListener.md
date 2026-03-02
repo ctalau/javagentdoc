@@ -17,7 +17,7 @@ The listener will be notified about the value changes
 
 ## Constructors
 
-### `<init>(java.lang.String key)`
+### `<init>(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key of the option whose value modification
@@ -30,7 +30,7 @@ IMPORTANT, this default constructor is mostly intended to facilitate creating su
 
 ## Methods
 
-### `optionValueChanged(ro.sync.exml.workspace.api.options.WSOptionChangedEvent event)`
+### `optionValueChanged(WSOptionChangedEvent event)`
 
 **Parameters:**
 - `event` ([`ro.sync.exml.workspace.api.options.WSOptionChangedEvent`](./WSOptionChangedEvent.md)): An WSOptionChangedEvent which indicates that the value 
@@ -38,7 +38,7 @@ IMPORTANT, this default constructor is mostly intended to facilitate creating su
 
 **Returns:** `void`
 
-### `setKey(java.lang.String key)`
+### `setKey(String key)`
 
 The key must be set before the listener is added.
 

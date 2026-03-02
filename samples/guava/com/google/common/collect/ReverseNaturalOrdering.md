@@ -26,13 +26,13 @@
 
 ## Methods
 
-### `compare(java.lang.Comparable<?> left, java.lang.Comparable<?> right)`
-
-**Returns:** `int`
+### `compare(Comparable<?> left, Comparable<?> right)`
 
 **Parameters:**
 - `left` (`java.lang.Comparable<?>`)
 - `right` (`java.lang.Comparable<?>`)
+
+**Returns:** `int`
 
 ### `reverse()`
 
@@ -40,47 +40,45 @@
 
 ### `min(E a, E b)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `a` (`E`)
 - `b` (`E`)
+
+**Returns:** `E`
 
 ### `min(E a, E b, E c, E[] rest)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `a` (`E`)
 - `b` (`E`)
 - `c` (`E`)
 - `rest` (`E[]`)
 
-### `min(java.util.Iterator<E> iterator)`
-
 **Returns:** `E`
+
+### `min(Iterator<E> iterator)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<E>`)
 
-### `min(java.lang.Iterable<E> iterable)`
-
 **Returns:** `E`
+
+### `min(Iterable<E> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`)
+
+**Returns:** `E`
 
 ### `max(E a, E b)`
 
-**Returns:** `E`
-
 **Parameters:**
 - `a` (`E`)
 - `b` (`E`)
 
-### `max(E a, E b, E c, E[] rest)`
-
 **Returns:** `E`
+
+### `max(E a, E b, E c, E[] rest)`
 
 **Parameters:**
 - `a` (`E`)
@@ -88,19 +86,21 @@
 - `c` (`E`)
 - `rest` (`E[]`)
 
-### `max(java.util.Iterator<E> iterator)`
-
 **Returns:** `E`
+
+### `max(Iterator<E> iterator)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<E>`)
 
-### `max(java.lang.Iterable<E> iterable)`
-
 **Returns:** `E`
+
+### `max(Iterable<E> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<E>`)
+
+**Returns:** `E`
 
 ### `readResolve()`
 

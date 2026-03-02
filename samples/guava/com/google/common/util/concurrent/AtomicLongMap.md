@@ -48,7 +48,7 @@ Instances of this class are serializable if the keys are serializable.
 
 ## Constructors
 
-### `<init>(java.util.concurrent.ConcurrentHashMap<K,java.lang.Long> map)`
+### `<init>(ConcurrentHashMap<K,Long> map)`
 
 **Parameters:**
 - `map` (`java.util.concurrent.ConcurrentHashMap<K,java.lang.Long>`)
@@ -59,67 +59,65 @@ Instances of this class are serializable if the keys are serializable.
 
 **Returns:** [`com.google.common.util.concurrent.AtomicLongMap<K>`](./AtomicLongMap.md)
 
-### `create(java.util.Map<? extends K,? extends java.lang.Long> m)`
-
-**Returns:** [`com.google.common.util.concurrent.AtomicLongMap<K>`](./AtomicLongMap.md)
+### `create(Map<? extends K,? extends Long> m)`
 
 **Parameters:**
 - `m` (`java.util.Map<? extends K,? extends java.lang.Long>`)
 
-### `get(K key)`
+**Returns:** [`com.google.common.util.concurrent.AtomicLongMap<K>`](./AtomicLongMap.md)
 
-**Returns:** `long`
+### `get(K key)`
 
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `long`
 
 ### `incrementAndGet(K key)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `long`
 
 ### `decrementAndGet(K key)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `long`
 
 ### `addAndGet(K key, long delta)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `key` (`K`)
 - `delta` (`long`)
+
+**Returns:** `long`
 
 ### `getAndIncrement(K key)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `long`
 
 ### `getAndDecrement(K key)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `key` (`K`)
 
-### `getAndAdd(K key, long delta)`
-
 **Returns:** `long`
+
+### `getAndAdd(K key, long delta)`
 
 **Parameters:**
 - `key` (`K`)
 - `delta` (`long`)
 
-### `updateAndGet(K key, java.util.function.LongUnaryOperator updaterFunction)`
-
 **Returns:** `long`
+
+### `updateAndGet(K key, LongUnaryOperator updaterFunction)`
 
 If there is not currently a value associated with key, the
  function is applied to 0L.
@@ -128,9 +126,9 @@ If there is not currently a value associated with key, the
 - `key` (`K`)
 - `updaterFunction` (`java.util.function.LongUnaryOperator`)
 
-### `getAndUpdate(K key, java.util.function.LongUnaryOperator updaterFunction)`
-
 **Returns:** `long`
+
+### `getAndUpdate(K key, LongUnaryOperator updaterFunction)`
 
 If there is not currently a value associated with key, the
  function is applied to 0L.
@@ -139,9 +137,9 @@ If there is not currently a value associated with key, the
 - `key` (`K`)
 - `updaterFunction` (`java.util.function.LongUnaryOperator`)
 
-### `accumulateAndGet(K key, long x, java.util.function.LongBinaryOperator accumulatorFunction)`
-
 **Returns:** `long`
+
+### `accumulateAndGet(K key, long x, LongBinaryOperator accumulatorFunction)`
 
 The previous value associated with
  key (or zero, if there is none) is passed as the first argument to 
@@ -152,9 +150,9 @@ The previous value associated with
 - `x` (`long`)
 - `accumulatorFunction` (`java.util.function.LongBinaryOperator`)
 
-### `getAndAccumulate(K key, long x, java.util.function.LongBinaryOperator accumulatorFunction)`
-
 **Returns:** `long`
+
+### `getAndAccumulate(K key, long x, LongBinaryOperator accumulatorFunction)`
 
 The previous value associated with
  key (or zero, if there is none) is passed as the first argument to 
@@ -164,18 +162,18 @@ The previous value associated with
 - `key` (`K`)
 - `x` (`long`)
 - `accumulatorFunction` (`java.util.function.LongBinaryOperator`)
+
+**Returns:** `long`
 
 ### `put(K key, long newValue)`
-
-**Returns:** `long`
 
 **Parameters:**
 - `key` (`K`)
 - `newValue` (`long`)
 
-### `putAll(java.util.Map<? extends K,? extends java.lang.Long> m)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `putAll(Map<? extends K,? extends Long> m)`
 
 The effect of this call is
  equivalent to that of calling put(k, v) on this map once for each mapping from key
@@ -185,9 +183,9 @@ The effect of this call is
 **Parameters:**
 - `m` (`java.util.Map<? extends K,? extends java.lang.Long>`)
 
-### `remove(K key)`
+**Returns:** `void`
 
-**Returns:** `long`
+### `remove(K key)`
 
 If key is not in the map,
  this method has no effect and returns zero.
@@ -195,33 +193,35 @@ If key is not in the map,
 **Parameters:**
 - `key` (`K`)
 
-### `remove(K key, long value)`
+**Returns:** `long`
 
-**Returns:** `boolean`
+### `remove(K key, long value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`long`)
 
-### `removeIfZero(K key)`
-
 **Returns:** `boolean`
+
+### `removeIfZero(K key)`
 
 **Parameters:**
 - `key` (`K`)
 
-### `removeAllZeros()`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `removeAllZeros()`
 
 This method is not atomic: the map may be visible in intermediate states, where some of the
  zero values have been removed and others have not.
 
+**Returns:** `void`
+
 ### `sum()`
 
-**Returns:** `long`
-
 This method is not atomic: the sum may or may not include other concurrent operations.
+
+**Returns:** `long`
 
 ### `asMap()`
 
@@ -231,19 +231,19 @@ This method is not atomic: the sum may or may not include other concurrent opera
 
 **Returns:** `java.util.Map<K,java.lang.Long>`
 
-### `containsKey(java.lang.Object key)`
-
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `size()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `size()`
 
 If the map contains more than 
  Integer.MAX_VALUE elements, returns Integer.MAX_VALUE.
+
+**Returns:** `int`
 
 ### `isEmpty()`
 
@@ -251,21 +251,19 @@ If the map contains more than
 
 ### `clear()`
 
-**Returns:** `void`
-
 The map will be empty after this call returns.
 
  
 This method is not atomic: the map may not be empty after returning if there were concurrent
  writes.
 
+**Returns:** `void`
+
 ### `toString()`
 
 **Returns:** `java.lang.String`
 
 ### `putIfAbsent(K key, long newValue)`
-
-**Returns:** `long`
 
 Returns the previous value associated with 
  key, or zero if there was no mapping for key.
@@ -274,9 +272,9 @@ Returns the previous value associated with
 - `key` (`K`)
 - `newValue` (`long`)
 
-### `replace(K key, long expectedOldValue, long newValue)`
+**Returns:** `long`
 
-**Returns:** `boolean`
+### `replace(K key, long expectedOldValue, long newValue)`
 
 If expectedOldValue is zero, this method will succeed if (key, zero) is
  currently in the map, or if key is not in the map at all.
@@ -285,4 +283,6 @@ If expectedOldValue is zero, this method will succeed if (key, zero) is
 - `key` (`K`)
 - `expectedOldValue` (`long`)
 - `newValue` (`long`)
+
+**Returns:** `boolean`
 

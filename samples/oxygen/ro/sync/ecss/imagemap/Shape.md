@@ -20,7 +20,7 @@
 
 **Returns:** [`ro.sync.ecss.imagemap.Shape[]`](./Shape.md)
 
-### `valueOf(java.lang.String arg0)`
+### `valueOf(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

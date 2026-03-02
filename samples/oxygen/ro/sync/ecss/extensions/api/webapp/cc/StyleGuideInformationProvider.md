@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `getStyleGuideInformation(java.lang.String arg0)`
+### `getStyleGuideInformation(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

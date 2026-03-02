@@ -33,66 +33,66 @@ The cache is shared across all
 
 ## Constructors
 
-### `<init>(com.google.common.eventbus.EventBus bus)`
+### `<init>(EventBus bus)`
 
 **Parameters:**
 - `bus` ([`com.google.common.eventbus.EventBus`](./EventBus.md))
 
 ## Methods
 
-### `register(java.lang.Object listener)`
-
-**Returns:** `void`
+### `register(Object listener)`
 
 **Parameters:**
 - `listener` (`java.lang.Object`)
 
-### `unregister(java.lang.Object listener)`
-
 **Returns:** `void`
+
+### `unregister(Object listener)`
 
 **Parameters:**
 - `listener` (`java.lang.Object`)
 
-### `getSubscribersForTesting(java.lang.Class<?> eventType)`
+**Returns:** `void`
 
-**Returns:** `java.util.Set<com.google.common.eventbus.Subscriber>`
+### `getSubscribersForTesting(Class<?> eventType)`
 
 **Parameters:**
 - `eventType` (`java.lang.Class<?>`)
 
-### `getSubscribers(java.lang.Object event)`
+**Returns:** `java.util.Set<com.google.common.eventbus.Subscriber>`
 
-**Returns:** `java.util.Iterator<com.google.common.eventbus.Subscriber>`
+### `getSubscribers(Object event)`
 
 **Parameters:**
 - `event` (`java.lang.Object`)
 
-### `findAllSubscribers(java.lang.Object listener)`
+**Returns:** `java.util.Iterator<com.google.common.eventbus.Subscriber>`
 
-**Returns:** [`com.google.common.collect.Multimap<java.lang.Class<?>,com.google.common.eventbus.Subscriber>`](../collect/Multimap.md)
+### `findAllSubscribers(Object listener)`
 
 **Parameters:**
 - `listener` (`java.lang.Object`)
 
-### `getAnnotatedMethods(java.lang.Class<?> clazz)`
+**Returns:** [`com.google.common.collect.Multimap<java.lang.Class<?>,com.google.common.eventbus.Subscriber>`](../collect/Multimap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableList<java.lang.reflect.Method>`](../collect/ImmutableList.md)
-
-**Parameters:**
-- `clazz` (`java.lang.Class<?>`)
-
-### `getAnnotatedMethodsNotCached(java.lang.Class<?> clazz)`
-
-**Returns:** [`com.google.common.collect.ImmutableList<java.lang.reflect.Method>`](../collect/ImmutableList.md)
+### `getAnnotatedMethods(Class<?> clazz)`
 
 **Parameters:**
 - `clazz` (`java.lang.Class<?>`)
 
-### `flattenHierarchy(java.lang.Class<?> concreteClass)`
+**Returns:** [`com.google.common.collect.ImmutableList<java.lang.reflect.Method>`](../collect/ImmutableList.md)
 
-**Returns:** [`com.google.common.collect.ImmutableSet<java.lang.Class<?>>`](../collect/ImmutableSet.md)
+### `getAnnotatedMethodsNotCached(Class<?> clazz)`
+
+**Parameters:**
+- `clazz` (`java.lang.Class<?>`)
+
+**Returns:** [`com.google.common.collect.ImmutableList<java.lang.reflect.Method>`](../collect/ImmutableList.md)
+
+### `flattenHierarchy(Class<?> concreteClass)`
 
 **Parameters:**
 - `concreteClass` (`java.lang.Class<?>`)
+
+**Returns:** [`com.google.common.collect.ImmutableSet<java.lang.Class<?>>`](../collect/ImmutableSet.md)
 

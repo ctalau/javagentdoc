@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `selectionMarked(java.util.List<int[]> arg0, int arg1, ro.sync.ecss.extensions.api.SelectionInterpretationMode arg2, java.util.List<int[]> arg3, int arg4, ro.sync.ecss.extensions.api.SelectionInterpretationMode arg5)`
+### `selectionMarked(List<int[]> arg0, int arg1, SelectionInterpretationMode arg2, List<int[]> arg3, int arg4, SelectionInterpretationMode arg5)`
 
 **Parameters:**
 - `arg0` (`java.util.List<int[]>`)

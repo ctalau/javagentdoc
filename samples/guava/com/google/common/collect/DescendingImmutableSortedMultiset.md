@@ -20,19 +20,19 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableSortedMultiset<E> forward)`
+### `<init>(ImmutableSortedMultiset<E> forward)`
 
 **Parameters:**
 - `forward` ([`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md))
 
 ## Methods
 
-### `count(java.lang.Object element)`
-
-**Returns:** `int`
+### `count(Object element)`
 
 **Parameters:**
 - `element` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `firstEntry()`
 
@@ -52,30 +52,30 @@
 
 ### `getEntry(int index)`
 
-**Returns:** `com.google.common.collect.Multiset.Entry<E>`
-
 **Parameters:**
 - `index` (`int`)
+
+**Returns:** `com.google.common.collect.Multiset.Entry<E>`
 
 ### `descendingMultiset()`
 
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
-### `headMultiset(E upperBound, com.google.common.collect.BoundType boundType)`
-
-**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+### `headMultiset(E upperBound, BoundType boundType)`
 
 **Parameters:**
 - `upperBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 
-### `tailMultiset(E lowerBound, com.google.common.collect.BoundType boundType)`
-
 **Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
+
+### `tailMultiset(E lowerBound, BoundType boundType)`
 
 **Parameters:**
 - `lowerBound` (`E`)
 - `boundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.ImmutableSortedMultiset<E>`](./ImmutableSortedMultiset.md)
 
 ### `isPartialView()`
 

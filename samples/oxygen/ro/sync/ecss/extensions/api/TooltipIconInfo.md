@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String iconPath, java.lang.String tooltip)`
+### `<init>(String iconPath, String tooltip)`
 
 **Parameters:**
 - `iconPath` (`java.lang.String`): The path (an URI) for the custom button icon.

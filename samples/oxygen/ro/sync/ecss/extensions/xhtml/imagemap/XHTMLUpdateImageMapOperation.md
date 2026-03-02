@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -22,28 +22,28 @@
 
 **Returns:** `void`
 
-### `getImageNode(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getImageNode(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)
 
-### `getNewShapesList(java.lang.String svgText)`
+### `getNewShapesList(String svgText)`
 
 **Parameters:**
 - `svgText` (`java.lang.String`)
 
 **Returns:** `java.util.List<? extends ro.sync.ecss.extensions.commons.imagemap.operations.NewShapeDescriptor>`
 
-### `getExistingShapesList(ro.sync.ecss.extensions.api.node.AuthorElement existingImageMap)`
+### `getExistingShapesList(AuthorElement existingImageMap)`
 
 **Parameters:**
 - `existingImageMap` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../api/node/AuthorElement.md)
 
-### `getImageMapElement(ro.sync.ecss.extensions.api.node.AuthorElement currentElement)`
+### `getImageMapElement(AuthorElement currentElement)`
 
 **Parameters:**
 - `currentElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../api/node/AuthorElement.md))

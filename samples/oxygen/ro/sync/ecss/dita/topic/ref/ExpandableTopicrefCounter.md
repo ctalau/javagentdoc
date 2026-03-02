@@ -14,7 +14,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `<init>(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../extensions/api/AuthorAccess.md)): The author access.
@@ -33,7 +33,7 @@
 
 **Returns:** `long`
 
-### `createDitaMapRefResolver(ro.sync.ecss.extensions.api.ExtensionsBundle extensionsBundle)`
+### `createDitaMapRefResolver(ExtensionsBundle extensionsBundle)`
 
 **Parameters:**
 - `extensionsBundle` ([`ro.sync.ecss.extensions.api.ExtensionsBundle`](../../../extensions/api/ExtensionsBundle.md)): The extensions bundle.

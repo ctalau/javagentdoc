@@ -16,33 +16,31 @@ Many methods provided by Guava's Files class for java.io.File instances are
 
 ## Methods
 
-### `asByteSource(java.nio.file.Path path, java.nio.file.OpenOption[] options)`
+### `asByteSource(Path path, OpenOption[] options)`
+
+Any open options provided are used when opening streams to the file
+ and may affect the behavior of the returned source and the streams it provides. See StandardOpenOption for the standard options that may be provided. Providing no options is
+ equivalent to providing the READ option.
+
+**Parameters:**
+- `path` (`java.nio.file.Path`)
+- `options` (`java.nio.file.OpenOption[]`)
 
 **Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
+### `asByteSink(Path path, OpenOption[] options)`
+
 Any open options provided are used when opening streams to the file
- and may affect the behavior of the returned source and the streams it provides. See StandardOpenOption for the standard options that may be provided. Providing no options is
- equivalent to providing the READ option.
+ and may affect the behavior of the returned sink and the streams it provides. See StandardOpenOption for the standard options that may be provided. Providing no options is
+ equivalent to providing the CREATE, TRUNCATE_EXISTING and WRITE options.
 
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 - `options` (`java.nio.file.OpenOption[]`)
-
-### `asByteSink(java.nio.file.Path path, java.nio.file.OpenOption[] options)`
 
 **Returns:** [`com.google.common.io.ByteSink`](./ByteSink.md)
 
-Any open options provided are used when opening streams to the file
- and may affect the behavior of the returned sink and the streams it provides. See StandardOpenOption for the standard options that may be provided. Providing no options is
- equivalent to providing the CREATE, TRUNCATE_EXISTING and WRITE options.
-
-**Parameters:**
-- `path` (`java.nio.file.Path`)
-- `options` (`java.nio.file.OpenOption[]`)
-
-### `asCharSource(java.nio.file.Path path, java.nio.charset.Charset charset, java.nio.file.OpenOption[] options)`
-
-**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+### `asCharSource(Path path, Charset charset, OpenOption[] options)`
 
 Any open options provided are used when opening streams to the file
  and may affect the behavior of the returned source and the streams it provides. See StandardOpenOption for the standard options that may be provided. Providing no options is
@@ -53,9 +51,9 @@ Any open options provided are used when opening streams to the file
 - `charset` (`java.nio.charset.Charset`)
 - `options` (`java.nio.file.OpenOption[]`)
 
-### `asCharSink(java.nio.file.Path path, java.nio.charset.Charset charset, java.nio.file.OpenOption[] options)`
+**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
 
-**Returns:** [`com.google.common.io.CharSink`](./CharSink.md)
+### `asCharSink(Path path, Charset charset, OpenOption[] options)`
 
 Any open options provided are used when opening streams to the file
  and may affect the behavior of the returned sink and the streams it provides. See StandardOpenOption for the standard options that may be provided. Providing no options is
@@ -66,16 +64,16 @@ Any open options provided are used when opening streams to the file
 - `charset` (`java.nio.charset.Charset`)
 - `options` (`java.nio.file.OpenOption[]`)
 
-### `listFiles(java.nio.file.Path dir)`
+**Returns:** [`com.google.common.io.CharSink`](./CharSink.md)
 
-**Returns:** [`com.google.common.collect.ImmutableList<java.nio.file.Path>`](../collect/ImmutableList.md)
+### `listFiles(Path dir)`
 
 **Parameters:**
 - `dir` (`java.nio.file.Path`)
 
-### `fileTraverser()`
+**Returns:** [`com.google.common.collect.ImmutableList<java.nio.file.Path>`](../collect/ImmutableList.md)
 
-**Returns:** [`com.google.common.graph.Traverser<java.nio.file.Path>`](../graph/Traverser.md)
+### `fileTraverser()`
 
 The returned traverser
  starts from a Path and will return all files and directories it encounters.
@@ -100,54 +98,54 @@ Example: MoreFiles.fileTraverser().depthFirstPreOrder(Paths.get("/")) may return
  following paths: ["/", "/etc", "/etc/config.txt", "/etc/fonts", "/home", "/home/alice",
  ...]
 
-### `fileTreeChildren(java.nio.file.Path dir)`
+**Returns:** [`com.google.common.graph.Traverser<java.nio.file.Path>`](../graph/Traverser.md)
 
-**Returns:** `java.lang.Iterable<java.nio.file.Path>`
+### `fileTreeChildren(Path dir)`
 
 **Parameters:**
 - `dir` (`java.nio.file.Path`)
 
-### `isDirectory(java.nio.file.LinkOption[] options)`
+**Returns:** `java.lang.Iterable<java.nio.file.Path>`
 
-**Returns:** [`com.google.common.base.Predicate<java.nio.file.Path>`](../base/Predicate.md)
+### `isDirectory(LinkOption[] options)`
 
 **Parameters:**
 - `options` (`java.nio.file.LinkOption[]`)
 
-### `isDirectory(java.nio.file.SecureDirectoryStream<java.nio.file.Path> dir, java.nio.file.Path name, java.nio.file.LinkOption[] options)`
+**Returns:** [`com.google.common.base.Predicate<java.nio.file.Path>`](../base/Predicate.md)
 
-**Returns:** `boolean`
+### `isDirectory(SecureDirectoryStream<Path> dir, Path name, LinkOption[] options)`
 
 **Parameters:**
 - `dir` (`java.nio.file.SecureDirectoryStream<java.nio.file.Path>`)
 - `name` (`java.nio.file.Path`)
 - `options` (`java.nio.file.LinkOption[]`)
 
-### `isRegularFile(java.nio.file.LinkOption[] options)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.base.Predicate<java.nio.file.Path>`](../base/Predicate.md)
+### `isRegularFile(LinkOption[] options)`
 
 **Parameters:**
 - `options` (`java.nio.file.LinkOption[]`)
 
-### `equal(java.nio.file.Path path1, java.nio.file.Path path2)`
+**Returns:** [`com.google.common.base.Predicate<java.nio.file.Path>`](../base/Predicate.md)
 
-**Returns:** `boolean`
+### `equal(Path path1, Path path2)`
 
 **Parameters:**
 - `path1` (`java.nio.file.Path`)
 - `path2` (`java.nio.file.Path`)
 
-### `touch(java.nio.file.Path path)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `touch(Path path)`
 
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 
-### `createParentDirectories(java.nio.file.Path path, java.nio.file.attribute.FileAttribute<?>[] attrs)`
-
 **Returns:** `void`
+
+### `createParentDirectories(Path path, FileAttribute<?>[] attrs)`
 
 Note that if
  this operation fails, it may have succeeded in creating some (but not all) of the necessary
@@ -157,9 +155,9 @@ Note that if
 - `path` (`java.nio.file.Path`)
 - `attrs` (`java.nio.file.attribute.FileAttribute<?>[]`)
 
-### `getFileExtension(java.nio.file.Path path)`
+**Returns:** `void`
 
-**Returns:** `java.lang.String`
+### `getFileExtension(Path path)`
 
 The result does
  not include the '.'.
@@ -175,9 +173,9 @@ The result does
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 
-### `getNameWithoutExtension(java.nio.file.Path path)`
-
 **Returns:** `java.lang.String`
+
+### `getNameWithoutExtension(Path path)`
 
 This is
  similar to the basename unix command. The result does not include the '.'.
@@ -185,9 +183,9 @@ This is
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 
-### `deleteRecursively(java.nio.file.Path path, com.google.common.io.RecursiveDeleteOption[] options)`
+**Returns:** `java.lang.String`
 
-**Returns:** `void`
+### `deleteRecursively(Path path, RecursiveDeleteOption[] options)`
 
 Deletes symbolic links,
  not their targets (subject to the caveat below).
@@ -215,9 +213,9 @@ By default, this method throws InsecureRecursiveDeleteException if it can't
 - `path` (`java.nio.file.Path`)
 - `options` ([`com.google.common.io.RecursiveDeleteOption[]`](./RecursiveDeleteOption.md))
 
-### `deleteDirectoryContents(java.nio.file.Path path, com.google.common.io.RecursiveDeleteOption[] options)`
-
 **Returns:** `void`
+
+### `deleteDirectoryContents(Path path, RecursiveDeleteOption[] options)`
 
 Does not delete the directory itself. Deletes symbolic links, not their targets
  (subject to the caveat below). If path itself is a symbolic link to a directory, that
@@ -246,9 +244,9 @@ By default, this method throws InsecureRecursiveDeleteException if it can't
 - `path` (`java.nio.file.Path`)
 - `options` ([`com.google.common.io.RecursiveDeleteOption[]`](./RecursiveDeleteOption.md))
 
-### `deleteRecursivelySecure(java.nio.file.SecureDirectoryStream<java.nio.file.Path> dir, java.nio.file.Path path)`
+**Returns:** `void`
 
-**Returns:** `java.util.Collection<java.io.IOException>`
+### `deleteRecursivelySecure(SecureDirectoryStream<Path> dir, Path path)`
 
 Returns a collection of exceptions
  that occurred or null if no exceptions were thrown.
@@ -257,27 +255,27 @@ Returns a collection of exceptions
 - `dir` (`java.nio.file.SecureDirectoryStream<java.nio.file.Path>`)
 - `path` (`java.nio.file.Path`)
 
-### `deleteDirectoryContentsSecure(java.nio.file.SecureDirectoryStream<java.nio.file.Path> dir)`
-
 **Returns:** `java.util.Collection<java.io.IOException>`
+
+### `deleteDirectoryContentsSecure(SecureDirectoryStream<Path> dir)`
 
 Returns a collection of exceptions that occurred or null if no exceptions were thrown.
 
 **Parameters:**
 - `dir` (`java.nio.file.SecureDirectoryStream<java.nio.file.Path>`)
 
-### `deleteRecursivelyInsecure(java.nio.file.Path path)`
-
 **Returns:** `java.util.Collection<java.io.IOException>`
+
+### `deleteRecursivelyInsecure(Path path)`
 
 Returns a collection of exceptions that occurred or null if no exceptions were thrown.
 
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 
-### `deleteDirectoryContentsInsecure(java.nio.file.DirectoryStream<java.nio.file.Path> dir)`
-
 **Returns:** `java.util.Collection<java.io.IOException>`
+
+### `deleteDirectoryContentsInsecure(DirectoryStream<Path> dir)`
 
 Returns a collection of exceptions that occurred or null
  if no exceptions were thrown.
@@ -285,9 +283,9 @@ Returns a collection of exceptions that occurred or null
 **Parameters:**
 - `dir` (`java.nio.file.DirectoryStream<java.nio.file.Path>`)
 
-### `getParentPath(java.nio.file.Path path)`
+**Returns:** `java.util.Collection<java.io.IOException>`
 
-**Returns:** `java.nio.file.Path`
+### `getParentPath(Path path)`
 
 If the path actually has a parent
  path, this is simple. Otherwise, we need to do some trickier things. Returns null if the path
@@ -296,17 +294,17 @@ If the path actually has a parent
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 
-### `checkAllowsInsecure(java.nio.file.Path path, com.google.common.io.RecursiveDeleteOption[] options)`
+**Returns:** `java.nio.file.Path`
 
-**Returns:** `void`
+### `checkAllowsInsecure(Path path, RecursiveDeleteOption[] options)`
 
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 - `options` ([`com.google.common.io.RecursiveDeleteOption[]`](./RecursiveDeleteOption.md))
 
-### `addException(java.util.Collection<java.io.IOException> exceptions, java.io.IOException e)`
+**Returns:** `void`
 
-**Returns:** `java.util.Collection<java.io.IOException>`
+### `addException(Collection<IOException> exceptions, IOException e)`
 
 Returns
  the collection.
@@ -315,9 +313,9 @@ Returns
 - `exceptions` (`java.util.Collection<java.io.IOException>`)
 - `e` (`java.io.IOException`)
 
-### `concat(java.util.Collection<java.io.IOException> exceptions, java.util.Collection<java.io.IOException> other)`
-
 **Returns:** `java.util.Collection<java.io.IOException>`
+
+### `concat(Collection<IOException> exceptions, Collection<IOException> other)`
 
 If either collection is
  null, the other collection is returned. Otherwise, the elements of other are added to
@@ -327,9 +325,9 @@ If either collection is
 - `exceptions` (`java.util.Collection<java.io.IOException>`)
 - `other` (`java.util.Collection<java.io.IOException>`)
 
-### `throwDeleteFailed(java.nio.file.Path path, java.util.Collection<java.io.IOException> exceptions)`
+**Returns:** `java.util.Collection<java.io.IOException>`
 
-**Returns:** `void`
+### `throwDeleteFailed(Path path, Collection<IOException> exceptions)`
 
 If there is only one exception in the collection, and it is a NoSuchFileException
  thrown because path itself didn't exist, then throws that exception. Otherwise, the
@@ -339,11 +337,13 @@ If there is only one exception in the collection, and it is a NoSuchFileExceptio
 - `path` (`java.nio.file.Path`)
 - `exceptions` (`java.util.Collection<java.io.IOException>`)
 
-### `pathNotFound(java.nio.file.Path path, java.util.Collection<java.io.IOException> exceptions)`
+**Returns:** `void`
 
-**Returns:** `java.nio.file.NoSuchFileException`
+### `pathNotFound(Path path, Collection<IOException> exceptions)`
 
 **Parameters:**
 - `path` (`java.nio.file.Path`)
 - `exceptions` (`java.util.Collection<java.io.IOException>`)
+
+**Returns:** `java.nio.file.NoSuchFileException`
 

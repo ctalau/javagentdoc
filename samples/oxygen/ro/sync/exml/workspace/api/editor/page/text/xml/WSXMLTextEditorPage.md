@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `findElementsByXPath(java.lang.String xpathExpression)`
+### `findElementsByXPath(String xpathExpression)`
 
 The result of this function is an array of WSXMLTextNodeRange selected 
  by the given XPath expression.
@@ -34,7 +34,7 @@ The result of this function is an array of WSXMLTextNodeRange selected
 
 **Returns:** [`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextNodeRange[]`](./WSXMLTextNodeRange.md)
 
-### `evaluateXPath(java.lang.String xpathExpression)`
+### `evaluateXPath(String xpathExpression)`
 
 This function returns the result of the given XPath expression as an array of Object.
  

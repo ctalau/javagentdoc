@@ -17,14 +17,14 @@ The source XML is parsed and notifications will be forwarded
 
 ## Constructors
 
-### `<init>(java.lang.String link)`
+### `<init>(String link)`
 
 **Parameters:**
 - `link` (`java.lang.String`): The link to be used to identify the element.
 
 ## Methods
 
-### `startElement(java.lang.String uri, java.lang.String localName, java.lang.String qName, ro.sync.ecss.extensions.api.link.Attr[] atts)`
+### `startElement(String uri, String localName, String qName, Attr[] atts)`
 
 This method is invoked at the beginning of every element in the 
  XML document; an event will be fired for every `startElement` 
@@ -42,7 +42,7 @@ This method is invoked at the beginning of every element in the
 
 **Returns:** `boolean`
 
-### `endElement(java.lang.String uri, java.lang.String localName, java.lang.String qName)`
+### `endElement(String uri, String localName, String qName)`
 
 This method is invoked at the end of every
  element in the XML document; an event will be fired 

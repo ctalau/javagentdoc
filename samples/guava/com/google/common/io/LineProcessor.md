@@ -15,12 +15,12 @@
 
 ## Methods
 
-### `processLine(java.lang.String line)`
-
-**Returns:** `boolean`
+### `processLine(String line)`
 
 **Parameters:**
 - `line` (`java.lang.String`): the line read from the input, without delimiter
+
+**Returns:** `boolean`
 
 ### `getResult()`
 

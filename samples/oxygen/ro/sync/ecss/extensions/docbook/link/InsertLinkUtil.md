@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `chooseURLForLink(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.String title)`
+### `chooseURLForLink(AuthorAccess authorAccess, String title)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.

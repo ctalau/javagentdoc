@@ -33,7 +33,7 @@ The translation file must be located in a directory named "i18n", placed in the 
 
 ## Methods
 
-### `getMessage(java.lang.String messageKey)`
+### `getMessage(String messageKey)`
 
 As a fallback if a message is not found the key value is returned.
 
@@ -75,7 +75,7 @@ As a fallback if a message is not found the key value is returned.
 
 **Returns:** `java.lang.String`
 
-### `hasMessage(java.lang.String messageKey)`
+### `hasMessage(String messageKey)`
 
 **Parameters:**
 - `messageKey` (`java.lang.String`): The message key

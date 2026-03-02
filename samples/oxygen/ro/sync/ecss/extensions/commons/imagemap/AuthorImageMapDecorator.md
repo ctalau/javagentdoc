@@ -22,14 +22,14 @@ It paints the areas of the image map over the image.
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore imageMapCore)`
+### `<init>(EditImageMapCore imageMapCore)`
 
 **Parameters:**
 - `imageMapCore` ([`ro.sync.ecss.extensions.commons.imagemap.EditImageMapCore`](./EditImageMapCore.md)): The image map core.
 
 ## Methods
 
-### `isNodeOfInterest(ro.sync.ecss.extensions.api.node.AuthorNode node, ro.sync.ecss.imagemap.SupportedFrameworks framework)`
+### `isNodeOfInterest(AuthorNode node, SupportedFrameworks framework)`
 
 **Parameters:**
 - `node` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../../api/node/AuthorNode.md)): The current node.
@@ -37,7 +37,7 @@ It paints the areas of the image map over the image.
 
 **Returns:** `boolean`
 
-### `paint(ro.sync.exml.view.graphics.Graphics g, int x, int y, int imageWidth, int imageHeight, ro.sync.exml.view.graphics.Rectangle originalSize, ro.sync.ecss.extensions.api.node.AuthorNode element, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, boolean wasAnnotated)`
+### `paint(Graphics g, int x, int y, int imageWidth, int imageHeight, Rectangle originalSize, AuthorNode element, AuthorAccess authorAccess, boolean wasAnnotated)`
 
 **Parameters:**
 - `g` (`ro.sync.exml.view.graphics.Graphics`)

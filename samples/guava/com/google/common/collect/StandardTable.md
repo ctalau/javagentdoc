@@ -62,7 +62,7 @@ Note that this implementation is not synchronized. If multiple threads access th
 
 ## Constructors
 
-### `<init>(java.util.Map<R,java.util.Map<C,V>> backingMap, com.google.common.base.Supplier<? extends java.util.Map<C,V>> factory)`
+### `<init>(Map<R,Map<C,V>> backingMap, Supplier<? extends Map<C,V>> factory)`
 
 **Parameters:**
 - `backingMap` (`java.util.Map<R,java.util.Map<C,V>>`)
@@ -70,42 +70,42 @@ Note that this implementation is not synchronized. If multiple threads access th
 
 ## Methods
 
-### `contains(java.lang.Object rowKey, java.lang.Object columnKey)`
-
-**Returns:** `boolean`
+### `contains(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `containsColumn(java.lang.Object columnKey)`
-
 **Returns:** `boolean`
+
+### `containsColumn(Object columnKey)`
 
 **Parameters:**
 - `columnKey` (`java.lang.Object`)
 
-### `containsRow(java.lang.Object rowKey)`
-
 **Returns:** `boolean`
+
+### `containsRow(Object rowKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `get(java.lang.Object rowKey, java.lang.Object columnKey)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `get(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `isEmpty()`
 
@@ -121,56 +121,54 @@ Note that this implementation is not synchronized. If multiple threads access th
 
 ### `getOrCreate(R rowKey)`
 
-**Returns:** `java.util.Map<C,V>`
-
 **Parameters:**
 - `rowKey` (`R`)
 
-### `put(R rowKey, C columnKey, V value)`
+**Returns:** `java.util.Map<C,V>`
 
-**Returns:** `V`
+### `put(R rowKey, C columnKey, V value)`
 
 **Parameters:**
 - `rowKey` (`R`)
 - `columnKey` (`C`)
 - `value` (`V`)
 
-### `remove(java.lang.Object rowKey, java.lang.Object columnKey)`
-
 **Returns:** `V`
+
+### `remove(Object rowKey, Object columnKey)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 
-### `removeColumn(java.lang.Object column)`
+**Returns:** `V`
 
-**Returns:** `java.util.Map<R,V>`
+### `removeColumn(Object column)`
 
 **Parameters:**
 - `column` (`java.lang.Object`)
 
-### `containsMapping(java.lang.Object rowKey, java.lang.Object columnKey, java.lang.Object value)`
+**Returns:** `java.util.Map<R,V>`
+
+### `containsMapping(Object rowKey, Object columnKey, Object value)`
+
+**Parameters:**
+- `rowKey` (`java.lang.Object`)
+- `columnKey` (`java.lang.Object`)
+- `value` (`java.lang.Object`)
 
 **Returns:** `boolean`
+
+### `removeMapping(Object rowKey, Object columnKey, Object value)`
 
 **Parameters:**
 - `rowKey` (`java.lang.Object`)
 - `columnKey` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `removeMapping(java.lang.Object rowKey, java.lang.Object columnKey, java.lang.Object value)`
-
 **Returns:** `boolean`
-
-**Parameters:**
-- `rowKey` (`java.lang.Object`)
-- `columnKey` (`java.lang.Object`)
-- `value` (`java.lang.Object`)
 
 ### `cellSet()`
-
-**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
 
 The set's iterator traverses the mappings for the first row, the mappings for the second
  row, and so on.
@@ -178,6 +176,8 @@ The set's iterator traverses the mappings for the first row, the mappings for th
  
 Each cell is an immutable snapshot of a row key / column key / value mapping, taken at the
  time the cell is returned by a method call to the set or its iterator.
+
+**Returns:** `java.util.Set<com.google.common.collect.Table.Cell<R,C,V>>`
 
 ### `cellIterator()`
 
@@ -189,19 +189,19 @@ Each cell is an immutable snapshot of a row key / column key / value mapping, ta
 
 ### `row(R rowKey)`
 
-**Returns:** `java.util.Map<C,V>`
-
 **Parameters:**
 - `rowKey` (`R`)
 
-### `column(C columnKey)`
+**Returns:** `java.util.Map<C,V>`
 
-**Returns:** `java.util.Map<R,V>`
+### `column(C columnKey)`
 
 The returned map's views have iterators that don't support remove().
 
 **Parameters:**
 - `columnKey` (`C`)
+
+**Returns:** `java.util.Map<R,V>`
 
 ### `rowKeySet()`
 
@@ -209,13 +209,13 @@ The returned map's views have iterators that don't support remove().
 
 ### `columnKeySet()`
 
-**Returns:** `java.util.Set<C>`
-
 The returned set has an iterator that does not support remove().
 
  
 The set's iterator traverses the columns of the first row, the columns of the second row,
  etc., skipping any columns that have appeared previously.
+
+**Returns:** `java.util.Set<C>`
 
 ### `createColumnKeyIterator()`
 
@@ -223,10 +223,10 @@ The set's iterator traverses the columns of the first row, the columns of the se
 
 ### `values()`
 
-**Returns:** `java.util.Collection<V>`
-
 The collection's iterator traverses the values for the first row, the values for the second
  row, and so on.
+
+**Returns:** `java.util.Collection<V>`
 
 ### `rowMap()`
 

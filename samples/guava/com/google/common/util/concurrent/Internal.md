@@ -12,9 +12,7 @@
 
 ## Methods
 
-### `toNanosSaturated(java.time.Duration duration)`
-
-**Returns:** `long`
+### `toNanosSaturated(Duration duration)`
 
 Instead of throwing ArithmeticException, this method silently saturates to either
  Long#MAX_VALUE or Long#MIN_VALUE. This behavior can be useful when decomposing
@@ -22,4 +20,6 @@ Instead of throwing ArithmeticException, this method silently saturates to eithe
 
 **Parameters:**
 - `duration` (`java.time.Duration`)
+
+**Returns:** `long`
 

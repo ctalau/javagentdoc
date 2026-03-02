@@ -19,9 +19,7 @@ This may be
 
 ## Methods
 
-### `newProxy(T target, java.lang.Class<T> interfaceType, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
-**Returns:** `T`
+### `newProxy(T target, Class<T> interfaceType, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `target` (`T`)
@@ -29,39 +27,41 @@ This may be
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `callWithTimeout(java.util.concurrent.Callable<T> callable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
 **Returns:** `T`
+
+### `callWithTimeout(Callable<T> callable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<T>`)
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `callUninterruptiblyWithTimeout(java.util.concurrent.Callable<T> callable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
 **Returns:** `T`
+
+### `callUninterruptiblyWithTimeout(Callable<T> callable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<T>`)
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `runWithTimeout(java.lang.Runnable runnable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
+**Returns:** `T`
+
+### `runWithTimeout(Runnable runnable, long timeoutDuration, TimeUnit timeoutUnit)`
+
+**Parameters:**
+- `runnable` (`java.lang.Runnable`)
+- `timeoutDuration` (`long`)
+- `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
 **Returns:** `void`
+
+### `runUninterruptiblyWithTimeout(Runnable runnable, long timeoutDuration, TimeUnit timeoutUnit)`
 
 **Parameters:**
 - `runnable` (`java.lang.Runnable`)
 - `timeoutDuration` (`long`)
 - `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 
-### `runUninterruptiblyWithTimeout(java.lang.Runnable runnable, long timeoutDuration, java.util.concurrent.TimeUnit timeoutUnit)`
-
 **Returns:** `void`
-
-**Parameters:**
-- `runnable` (`java.lang.Runnable`)
-- `timeoutDuration` (`long`)
-- `timeoutUnit` (`java.util.concurrent.TimeUnit`)
 

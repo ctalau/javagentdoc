@@ -14,7 +14,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, ro.sync.ecss.component.AuthorDocumentFragmentClipboardObject[] arg2, ro.sync.ecss.component.AuthorContentMetadata arg3, ro.sync.ecss.dom.z arg4, java.util.List<int[]> arg5, ro.sync.ecss.extensions.api.SelectionInterpretationMode arg6)`
+### `<init>(String arg0, String arg1, AuthorDocumentFragmentClipboardObject[] arg2, AuthorContentMetadata arg3, z arg4, List<int[]> arg5, SelectionInterpretationMode arg6)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

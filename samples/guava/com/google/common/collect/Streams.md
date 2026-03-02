@@ -12,23 +12,21 @@
 
 ## Methods
 
-### `stream(java.lang.Iterable<T> iterable)`
-
-**Returns:** `java.util.stream.Stream<T>`
+### `stream(Iterable<T> iterable)`
 
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
 
-### `stream(java.util.Collection<T> collection)`
-
 **Returns:** `java.util.stream.Stream<T>`
+
+### `stream(Collection<T> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<T>`)
 
-### `stream(java.util.Iterator<T> iterator)`
-
 **Returns:** `java.util.stream.Stream<T>`
+
+### `stream(Iterator<T> iterator)`
 
 Do not use
  iterator directly after passing it to this method.
@@ -36,66 +34,66 @@ Do not use
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 
-### `stream(com.google.common.base.Optional<T> optional)`
-
 **Returns:** `java.util.stream.Stream<T>`
+
+### `stream(Optional<T> optional)`
 
 **Parameters:**
 - `optional` ([`com.google.common.base.Optional<T>`](../base/Optional.md))
 
-### `stream(java.util.Optional<T> optional)`
-
 **Returns:** `java.util.stream.Stream<T>`
+
+### `stream(Optional<T> optional)`
 
 **Java 9 users:** use optional.stream() instead.
 
 **Parameters:**
 - `optional` (`java.util.Optional<T>`)
 
-### `stream(java.util.OptionalInt optional)`
+**Returns:** `java.util.stream.Stream<T>`
 
-**Returns:** `java.util.stream.IntStream`
+### `stream(OptionalInt optional)`
 
 **Java 9 users:** use optional.stream() instead.
 
 **Parameters:**
 - `optional` (`java.util.OptionalInt`)
 
-### `stream(java.util.OptionalLong optional)`
+**Returns:** `java.util.stream.IntStream`
 
-**Returns:** `java.util.stream.LongStream`
+### `stream(OptionalLong optional)`
 
 **Java 9 users:** use optional.stream() instead.
 
 **Parameters:**
 - `optional` (`java.util.OptionalLong`)
 
-### `stream(java.util.OptionalDouble optional)`
+**Returns:** `java.util.stream.LongStream`
 
-**Returns:** `java.util.stream.DoubleStream`
+### `stream(OptionalDouble optional)`
 
 **Java 9 users:** use optional.stream() instead.
 
 **Parameters:**
 - `optional` (`java.util.OptionalDouble`)
 
-### `closeAll(java.util.stream.BaseStream<?,?>[] toClose)`
+**Returns:** `java.util.stream.DoubleStream`
 
-**Returns:** `void`
+### `closeAll(BaseStream<?,?>[] toClose)`
 
 **Parameters:**
 - `toClose` (`java.util.stream.BaseStream<?,?>[]`)
 
-### `sneakyThrow(java.lang.Throwable t)`
-
 **Returns:** `void`
+
+### `sneakyThrow(Throwable t)`
 
 **Parameters:**
 - `t` (`java.lang.Throwable`)
 
-### `concat(java.util.stream.Stream<? extends T>[] streams)`
+**Returns:** `void`
 
-**Returns:** `java.util.stream.Stream<T>`
+### `concat(Stream<? extends T>[] streams)`
 
 This is equivalent to Stream.of(streams).flatMap(stream -> stream), but the returned
  stream may perform better.
@@ -103,9 +101,9 @@ This is equivalent to Stream.of(streams).flatMap(stream -> stream), but the retu
 **Parameters:**
 - `streams` (`java.util.stream.Stream<? extends T>[]`)
 
-### `concat(java.util.stream.IntStream[] streams)`
+**Returns:** `java.util.stream.Stream<T>`
 
-**Returns:** `java.util.stream.IntStream`
+### `concat(IntStream[] streams)`
 
 This is equivalent to Stream.of(streams).flatMapToInt(stream -> stream), but the
  returned stream may perform better.
@@ -113,9 +111,9 @@ This is equivalent to Stream.of(streams).flatMapToInt(stream -> stream), but the
 **Parameters:**
 - `streams` (`java.util.stream.IntStream[]`)
 
-### `concat(java.util.stream.LongStream[] streams)`
+**Returns:** `java.util.stream.IntStream`
 
-**Returns:** `java.util.stream.LongStream`
+### `concat(LongStream[] streams)`
 
 This is equivalent to Stream.of(streams).flatMapToLong(stream -> stream), but the
  returned stream may perform better.
@@ -123,9 +121,9 @@ This is equivalent to Stream.of(streams).flatMapToLong(stream -> stream), but th
 **Parameters:**
 - `streams` (`java.util.stream.LongStream[]`)
 
-### `concat(java.util.stream.DoubleStream[] streams)`
+**Returns:** `java.util.stream.LongStream`
 
-**Returns:** `java.util.stream.DoubleStream`
+### `concat(DoubleStream[] streams)`
 
 This is equivalent to Stream.of(streams).flatMapToDouble(stream -> stream), but the
  returned stream may perform better.
@@ -133,9 +131,9 @@ This is equivalent to Stream.of(streams).flatMapToDouble(stream -> stream), but 
 **Parameters:**
 - `streams` (`java.util.stream.DoubleStream[]`)
 
-### `zip(java.util.stream.Stream<A> streamA, java.util.stream.Stream<B> streamB, java.util.function.BiFunction<? super A,? super B,R> function)`
+**Returns:** `java.util.stream.DoubleStream`
 
-**Returns:** `java.util.stream.Stream<R>`
+### `zip(Stream<A> streamA, Stream<B> streamB, BiFunction<? super A,? super B,R> function)`
 
 For example:
 
@@ -171,9 +169,9 @@ Note that if you are calling Stream#forEach on the resulting stream, you might w
 - `streamB` (`java.util.stream.Stream<B>`)
 - `function` (`java.util.function.BiFunction<? super A,? super B,R>`)
 
-### `forEachPair(java.util.stream.Stream<A> streamA, java.util.stream.Stream<B> streamB, java.util.function.BiConsumer<? super A,? super B> consumer)`
+**Returns:** `java.util.stream.Stream<R>`
 
-**Returns:** `void`
+### `forEachPair(Stream<A> streamA, Stream<B> streamB, BiConsumer<? super A,? super B> consumer)`
 
 If one stream is longer than the other, the extra elements are silently
  ignored. Elements passed to the consumer are guaranteed to come from the same position in their
@@ -219,9 +217,9 @@ Note that many usages of this method can be replaced with simpler calls to #zip.
 - `streamB` (`java.util.stream.Stream<B>`)
 - `consumer` (`java.util.function.BiConsumer<? super A,? super B>`)
 
-### `mapWithIndex(java.util.stream.Stream<T> stream, com.google.common.collect.Streams.FunctionWithIndex<? super T,? extends R> function)`
+**Returns:** `void`
 
-**Returns:** `java.util.stream.Stream<R>`
+### `mapWithIndex(Stream<T> stream, Streams.FunctionWithIndex<? super T,? extends R> function)`
 
 For example,
 
@@ -254,9 +252,9 @@ The order of the resulting stream is defined if and only if the order of the ori
 - `stream` (`java.util.stream.Stream<T>`)
 - `function` (`com.google.common.collect.Streams.FunctionWithIndex<? super T,? extends R>`)
 
-### `mapWithIndex(java.util.stream.IntStream stream, com.google.common.collect.Streams.IntFunctionWithIndex<R> function)`
-
 **Returns:** `java.util.stream.Stream<R>`
+
+### `mapWithIndex(IntStream stream, Streams.IntFunctionWithIndex<R> function)`
 
 For example,
 
@@ -289,9 +287,9 @@ The order of the resulting stream is defined if and only if the order of the ori
 - `stream` (`java.util.stream.IntStream`)
 - `function` (`com.google.common.collect.Streams.IntFunctionWithIndex<R>`)
 
-### `mapWithIndex(java.util.stream.LongStream stream, com.google.common.collect.Streams.LongFunctionWithIndex<R> function)`
-
 **Returns:** `java.util.stream.Stream<R>`
+
+### `mapWithIndex(LongStream stream, Streams.LongFunctionWithIndex<R> function)`
 
 For example,
 
@@ -324,9 +322,9 @@ The order of the resulting stream is defined if and only if the order of the ori
 - `stream` (`java.util.stream.LongStream`)
 - `function` (`com.google.common.collect.Streams.LongFunctionWithIndex<R>`)
 
-### `mapWithIndex(java.util.stream.DoubleStream stream, com.google.common.collect.Streams.DoubleFunctionWithIndex<R> function)`
-
 **Returns:** `java.util.stream.Stream<R>`
+
+### `mapWithIndex(DoubleStream stream, Streams.DoubleFunctionWithIndex<R> function)`
 
 For example,
 
@@ -359,9 +357,9 @@ The order of the resulting stream is defined if and only if the order of the ori
 - `stream` (`java.util.stream.DoubleStream`)
 - `function` (`com.google.common.collect.Streams.DoubleFunctionWithIndex<R>`)
 
-### `findLast(java.util.stream.Stream<T> stream)`
+**Returns:** `java.util.stream.Stream<R>`
 
-**Returns:** `java.util.Optional<T>`
+### `findLast(Stream<T> stream)`
 
 Equivalent to stream.reduce((a, b) -> b), but may perform significantly better. This
  method's runtime will be between O(log n) and O(n), performing better on [efficiently splittable](http://gee.cs.oswego.edu/dl/html/StreamParallelGuidance.html)
@@ -373,9 +371,9 @@ If the stream has nondeterministic order, this has equivalent semantics to Strea
 **Parameters:**
 - `stream` (`java.util.stream.Stream<T>`)
 
-### `findLast(java.util.stream.IntStream stream)`
+**Returns:** `java.util.Optional<T>`
 
-**Returns:** `java.util.OptionalInt`
+### `findLast(IntStream stream)`
 
 Equivalent to stream.reduce((a, b) -> b), but may perform significantly better. This
  method's runtime will be between O(log n) and O(n), performing better on [efficiently splittable](http://gee.cs.oswego.edu/dl/html/StreamParallelGuidance.html)
@@ -384,9 +382,9 @@ Equivalent to stream.reduce((a, b) -> b), but may perform significantly better. 
 **Parameters:**
 - `stream` (`java.util.stream.IntStream`)
 
-### `findLast(java.util.stream.LongStream stream)`
+**Returns:** `java.util.OptionalInt`
 
-**Returns:** `java.util.OptionalLong`
+### `findLast(LongStream stream)`
 
 Equivalent to stream.reduce((a, b) -> b), but may perform significantly better. This
  method's runtime will be between O(log n) and O(n), performing better on [efficiently splittable](http://gee.cs.oswego.edu/dl/html/StreamParallelGuidance.html)
@@ -395,9 +393,9 @@ Equivalent to stream.reduce((a, b) -> b), but may perform significantly better. 
 **Parameters:**
 - `stream` (`java.util.stream.LongStream`)
 
-### `findLast(java.util.stream.DoubleStream stream)`
+**Returns:** `java.util.OptionalLong`
 
-**Returns:** `java.util.OptionalDouble`
+### `findLast(DoubleStream stream)`
 
 Equivalent to stream.reduce((a, b) -> b), but may perform significantly better. This
  method's runtime will be between O(log n) and O(n), performing better on [efficiently splittable](http://gee.cs.oswego.edu/dl/html/StreamParallelGuidance.html)
@@ -405,4 +403,6 @@ Equivalent to stream.reduce((a, b) -> b), but may perform significantly better. 
 
 **Parameters:**
 - `stream` (`java.util.stream.DoubleStream`)
+
+**Returns:** `java.util.OptionalDouble`
 

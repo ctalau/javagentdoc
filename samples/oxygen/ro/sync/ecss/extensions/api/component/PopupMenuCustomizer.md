@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `customize(javax.swing.JPopupMenu popUp)`
+### `customize(JPopupMenu popUp)`
 
 If everything is removed then the menu will not be shown.
 

@@ -42,48 +42,46 @@
 
 ## Methods
 
-### `roundIntermediate(double x, java.math.RoundingMode mode)`
-
-**Returns:** `double`
+### `roundIntermediate(double x, RoundingMode mode)`
 
 **Parameters:**
 - `x` (`double`)
 - `mode` (`java.math.RoundingMode`)
 
-### `roundToInt(double x, java.math.RoundingMode mode)`
+**Returns:** `double`
+
+### `roundToInt(double x, RoundingMode mode)`
+
+**Parameters:**
+- `x` (`double`)
+- `mode` (`java.math.RoundingMode`)
 
 **Returns:** `int`
 
+### `roundToLong(double x, RoundingMode mode)`
+
 **Parameters:**
 - `x` (`double`)
 - `mode` (`java.math.RoundingMode`)
-
-### `roundToLong(double x, java.math.RoundingMode mode)`
 
 **Returns:** `long`
 
+### `roundToBigInteger(double x, RoundingMode mode)`
+
 **Parameters:**
 - `x` (`double`)
 - `mode` (`java.math.RoundingMode`)
-
-### `roundToBigInteger(double x, java.math.RoundingMode mode)`
 
 **Returns:** `java.math.BigInteger`
 
+### `isPowerOfTwo(double x)`
+
 **Parameters:**
 - `x` (`double`)
-- `mode` (`java.math.RoundingMode`)
-
-### `isPowerOfTwo(double x)`
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `x` (`double`)
-
 ### `log2(double x)`
-
-**Returns:** `double`
 
 Special cases:
 
@@ -104,9 +102,9 @@ If the result of this method will be immediately rounded to an int, #log2(double
 **Parameters:**
 - `x` (`double`)
 
-### `log2(double x, java.math.RoundingMode mode)`
+**Returns:** `double`
 
-**Returns:** `int`
+### `log2(double x, RoundingMode mode)`
 
 Regardless of the rounding mode, this is faster than (int) log2(x).
 
@@ -114,9 +112,9 @@ Regardless of the rounding mode, this is faster than (int) log2(x).
 - `x` (`double`)
 - `mode` (`java.math.RoundingMode`)
 
-### `isMathematicalInteger(double x)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `isMathematicalInteger(double x)`
 
 This is equivalent to, but not necessarily implemented as, the expression 
  !Double.isNaN(x) && !Double.isInfinite(x) && x == Math.rint(x).
@@ -124,18 +122,18 @@ This is equivalent to, but not necessarily implemented as, the expression
 **Parameters:**
 - `x` (`double`)
 
-### `factorial(int n)`
+**Returns:** `boolean`
 
-**Returns:** `double`
+### `factorial(int n)`
 
 The result is within 1 ulp of the true value.
 
 **Parameters:**
 - `n` (`int`)
 
-### `fuzzyEquals(double a, double b, double tolerance)`
+**Returns:** `double`
 
-**Returns:** `boolean`
+### `fuzzyEquals(double a, double b, double tolerance)`
 
 Technically speaking, this is equivalent to Math.abs(a - b) <= tolerance ||
  Double.valueOf(a).equals(Double.valueOf(b)).
@@ -166,9 +164,9 @@ This is reflexive and symmetric, but *not* transitive, so it is *not* an
 - `b` (`double`)
 - `tolerance` (`double`)
 
-### `fuzzyCompare(double a, double b, double tolerance)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `fuzzyCompare(double a, double b, double tolerance)`
 
 This method is equivalent to fuzzyEquals(a, b, tolerance) ? 0 : Double.compare(a,
  b). In particular, like Double#compare(double, double), it treats all NaN values as
@@ -182,9 +180,9 @@ This is *not* a total ordering and is *not* suitable for use in Comparable#compa
 - `b` (`double`)
 - `tolerance` (`double`)
 
-### `mean(double[] values)`
+**Returns:** `int`
 
-**Returns:** `double`
+### `mean(double[] values)`
 
 If these values are a sample drawn from a population, this is also an unbiased estimator of
  the arithmetic mean of the population.
@@ -192,9 +190,9 @@ If these values are a sample drawn from a population, this is also an unbiased e
 **Parameters:**
 - `values` (`double[]`): a nonempty series of values
 
-### `mean(int[] values)`
-
 **Returns:** `double`
+
+### `mean(int[] values)`
 
 If these values are a sample drawn from a population, this is also an unbiased estimator of
  the arithmetic mean of the population.
@@ -202,43 +200,45 @@ If these values are a sample drawn from a population, this is also an unbiased e
 **Parameters:**
 - `values` (`int[]`): a nonempty series of values
 
-### `mean(long[] values)`
-
 **Returns:** `double`
+
+### `mean(long[] values)`
 
 If these values are a sample drawn from a population, this is also an unbiased estimator of
  the arithmetic mean of the population.
 
 **Parameters:**
 - `values` (`long[]`): a nonempty series of values, which will be converted to double values
-     (this may cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
-
-### `mean(java.lang.Iterable<? extends java.lang.Number> values)`
+       (this may cause loss of precision for longs of magnitude over 2^53 (slightly over 9e15))
 
 **Returns:** `double`
+
+### `mean(Iterable<? extends Number> values)`
 
 If these values are a sample drawn from a population, this is also an unbiased estimator of
  the arithmetic mean of the population.
 
 **Parameters:**
 - `values` (`java.lang.Iterable<? extends java.lang.Number>`): a nonempty series of values, which will be converted to double values
-     (this may cause loss of precision)
-
-### `mean(java.util.Iterator<? extends java.lang.Number> values)`
+       (this may cause loss of precision)
 
 **Returns:** `double`
+
+### `mean(Iterator<? extends Number> values)`
 
 If these values are a sample drawn from a population, this is also an unbiased estimator of
  the arithmetic mean of the population.
 
 **Parameters:**
 - `values` (`java.util.Iterator<? extends java.lang.Number>`): a nonempty series of values, which will be converted to double values
-     (this may cause loss of precision)
-
-### `checkFinite(double argument)`
+       (this may cause loss of precision)
 
 **Returns:** `double`
 
+### `checkFinite(double argument)`
+
 **Parameters:**
 - `argument` (`double`)
+
+**Returns:** `double`
 

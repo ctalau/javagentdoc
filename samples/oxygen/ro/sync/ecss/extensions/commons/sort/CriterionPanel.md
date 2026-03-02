@@ -32,7 +32,7 @@
 
 ## Constructors
 
-### `<init>(java.awt.Container arg0, java.awt.GridBagConstraints arg1, java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg2, ro.sync.ecss.extensions.commons.sort.CriterionInformation arg3, ro.sync.ecss.extensions.api.AuthorResourceBundle arg4, ro.sync.ecss.extensions.commons.sort.KeysController arg5, java.util.List<ro.sync.ecss.extensions.commons.sort.CriterionInformation> arg6)`
+### `<init>(Container arg0, GridBagConstraints arg1, List<CriterionInformation> arg2, CriterionInformation arg3, AuthorResourceBundle arg4, KeysController arg5, List<CriterionInformation> arg6)`
 
 **Parameters:**
 - `arg0` (`java.awt.Container`)

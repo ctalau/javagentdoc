@@ -45,59 +45,59 @@
 
 **Returns:** `boolean`
 
-### `containsValue(java.lang.Object value)`
-
-**Returns:** `boolean`
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `containsEntry(java.lang.Object key, java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsEntry(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
 
-### `remove(java.lang.Object key, java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `remove(Object key, Object value)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `put(K key, V value)`
-
-**Returns:** `boolean`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putAll(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** `boolean`
+
+### `putAll(K key, Iterable<? extends V> values)`
 
 **Parameters:**
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `putAll(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
-
 **Returns:** `boolean`
+
+### `putAll(Multimap<? extends K,? extends V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Collection<V>`
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 **Parameters:**
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
+
+**Returns:** `java.util.Collection<V>`
 
 ### `entries()`
 
@@ -155,19 +155,19 @@
 
 **Returns:** `java.util.Map<K,java.util.Collection<V>>`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `hashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `hashCode()`
 
 The hash code of a multimap is defined as the hash code of the map view, as returned by
  Multimap#asMap.
+
+**Returns:** `int`
 
 ### `toString()`
 

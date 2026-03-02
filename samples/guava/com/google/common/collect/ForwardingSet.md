@@ -43,20 +43,18 @@ The standard methods are not guaranteed to be thread-safe, even when all of the
 
 **Returns:** `java.util.Set<E>`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `standardRemoveAll(java.util.Collection<?> collection)`
-
-**Returns:** `boolean`
+### `standardRemoveAll(Collection<?> collection)`
 
 If you override iterator or remove, you may wish to override #removeAll
  to forward to this implementation.
@@ -64,9 +62,9 @@ If you override iterator or remove, you may wish to override #removeAll
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
 
-### `standardEquals(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `standardEquals(Object object)`
 
 If
  you override either of those methods, you may wish to override #equals to forward to
@@ -75,10 +73,12 @@ If
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardHashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `standardHashCode()`
 
 If you override
  #iterator, you may wish to override #equals to forward to this implementation.
+
+**Returns:** `int`
 

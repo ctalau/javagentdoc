@@ -20,7 +20,7 @@
 
 ### `<init>()`
 
-### `<init>(java.io.File arg0, java.lang.String arg1, boolean arg2, java.lang.String arg3, java.lang.String arg4)`
+### `<init>(File arg0, String arg1, boolean arg2, String arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)

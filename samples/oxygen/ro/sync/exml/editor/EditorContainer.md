@@ -8,28 +8,28 @@
 
 ## Methods
 
-### `addChangeListener(javax.swing.event.ChangeListener arg0)`
+### `addChangeListener(ChangeListener arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.event.ChangeListener`)
 
 **Returns:** `void`
 
-### `addContainerListener(java.awt.event.ContainerListener arg0)`
+### `addContainerListener(ContainerListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.ContainerListener`)
 
 **Returns:** `void`
 
-### `addMouseListener(java.awt.event.MouseListener arg0)`
+### `addMouseListener(MouseListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.MouseListener`)
 
 **Returns:** `void`
 
-### `addTab(java.lang.String arg0, java.lang.String arg1, javax.swing.Icon arg2, javax.swing.JComponent arg3, java.lang.String arg4)`
+### `addTab(String arg0, String arg1, Icon arg2, JComponent arg3, String arg4)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -40,7 +40,7 @@
 
 **Returns:** `void`
 
-### `replaceTab(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, javax.swing.Icon arg3, javax.swing.JComponent arg4, javax.swing.JComponent arg5)`
+### `replaceTab(String arg0, String arg1, String arg2, Icon arg3, JComponent arg4, JComponent arg5)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -52,7 +52,7 @@
 
 **Returns:** `void`
 
-### `setSelectedComponent(java.awt.Component arg0, java.lang.String arg1)`
+### `setSelectedComponent(Component arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.awt.Component`)
@@ -87,7 +87,7 @@
 
 **Returns:** `void`
 
-### `setBorder(javax.swing.border.Border arg0)`
+### `setBorder(Border arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.border.Border`)
@@ -102,14 +102,14 @@
 
 **Returns:** `javax.swing.JComponent`
 
-### `remove(javax.swing.JComponent arg0)`
+### `remove(JComponent arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JComponent`)
 
 **Returns:** `void`
 
-### `setTitle(javax.swing.JComponent arg0, java.lang.String arg1, java.lang.String arg2)`
+### `setTitle(JComponent arg0, String arg1, String arg2)`
 
 **Parameters:**
 - `arg0` (`javax.swing.JComponent`)
@@ -122,21 +122,21 @@
 
 **Returns:** `void`
 
-### `removeChangeListener(javax.swing.event.ChangeListener arg0)`
+### `removeChangeListener(ChangeListener arg0)`
 
 **Parameters:**
 - `arg0` (`javax.swing.event.ChangeListener`)
 
 **Returns:** `void`
 
-### `removeMouseListener(java.awt.event.MouseListener arg0)`
+### `removeMouseListener(MouseListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.MouseListener`)
 
 **Returns:** `void`
 
-### `removeContainerListener(java.awt.event.ContainerListener arg0)`
+### `removeContainerListener(ContainerListener arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.event.ContainerListener`)
@@ -154,7 +154,7 @@
 
 **Returns:** `boolean`
 
-### `getEditorsFromTheSameGroup(ro.sync.exml.editor.dd arg0)`
+### `getEditorsFromTheSameGroup(dd arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.dd`)
@@ -173,7 +173,7 @@
 
 **Returns:** `void`
 
-### `updateIconAndTooltip(ro.sync.exml.editor.dd arg0)`
+### `updateIconAndTooltip(dd arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.editor.dd`)

@@ -25,41 +25,41 @@ This should be used in preference to ListenableFutureTask when possible for
 
 ## Constructors
 
-### `<init>(java.util.concurrent.Callable<V> callable)`
+### `<init>(Callable<V> callable)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<V>`)
 
-### `<init>(com.google.common.util.concurrent.AsyncCallable<V> callable)`
+### `<init>(AsyncCallable<V> callable)`
 
 **Parameters:**
 - `callable` ([`com.google.common.util.concurrent.AsyncCallable<V>`](./AsyncCallable.md))
 
 ## Methods
 
-### `create(com.google.common.util.concurrent.AsyncCallable<V> callable)`
-
-**Returns:** [`com.google.common.util.concurrent.TrustedListenableFutureTask<V>`](./TrustedListenableFutureTask.md)
+### `create(AsyncCallable<V> callable)`
 
 **Parameters:**
 - `callable` ([`com.google.common.util.concurrent.AsyncCallable<V>`](./AsyncCallable.md))
 
-### `create(java.util.concurrent.Callable<V> callable)`
-
 **Returns:** [`com.google.common.util.concurrent.TrustedListenableFutureTask<V>`](./TrustedListenableFutureTask.md)
+
+### `create(Callable<V> callable)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<V>`)
 
-### `create(java.lang.Runnable runnable, V result)`
-
 **Returns:** [`com.google.common.util.concurrent.TrustedListenableFutureTask<V>`](./TrustedListenableFutureTask.md)
+
+### `create(Runnable runnable, V result)`
 
 **Parameters:**
 - `runnable` (`java.lang.Runnable`): the runnable task
 - `result` (`V`): the result to return on successful completion. If you don't need a particular
-     result, consider using constructions of the form: ListenableFuture<?> f =
-     ListenableFutureTask.create(runnable, null)
+       result, consider using constructions of the form: ListenableFuture<?> f =
+       ListenableFutureTask.create(runnable, null)
+
+**Returns:** [`com.google.common.util.concurrent.TrustedListenableFutureTask<V>`](./TrustedListenableFutureTask.md)
 
 ### `run()`
 

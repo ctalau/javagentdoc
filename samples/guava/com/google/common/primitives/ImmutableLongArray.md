@@ -101,31 +101,29 @@ Disadvantages compared to ImmutableList<Long>:
 
 ### `of(long e0)`
 
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
 **Parameters:**
 - `e0` (`long`)
 
-### `of(long e0, long e1)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `of(long e0, long e1)`
 
 **Parameters:**
 - `e0` (`long`)
 - `e1` (`long`)
 
-### `of(long e0, long e1, long e2)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `of(long e0, long e1, long e2)`
 
 **Parameters:**
 - `e0` (`long`)
 - `e1` (`long`)
 - `e2` (`long`)
 
-### `of(long e0, long e1, long e2, long e3)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `of(long e0, long e1, long e2, long e3)`
 
 **Parameters:**
 - `e0` (`long`)
@@ -133,9 +131,9 @@ Disadvantages compared to ImmutableList<Long>:
 - `e2` (`long`)
 - `e3` (`long`)
 
-### `of(long e0, long e1, long e2, long e3, long e4)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `of(long e0, long e1, long e2, long e3, long e4)`
 
 **Parameters:**
 - `e0` (`long`)
@@ -144,9 +142,9 @@ Disadvantages compared to ImmutableList<Long>:
 - `e3` (`long`)
 - `e4` (`long`)
 
-### `of(long e0, long e1, long e2, long e3, long e4, long e5)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `of(long e0, long e1, long e2, long e3, long e4, long e5)`
 
 **Parameters:**
 - `e0` (`long`)
@@ -156,9 +154,9 @@ Disadvantages compared to ImmutableList<Long>:
 - `e4` (`long`)
 - `e5` (`long`)
 
-### `of(long first, long[] rest)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `of(long first, long[] rest)`
 
 The array rest must not be longer than Integer.MAX_VALUE - 1.
 
@@ -166,23 +164,23 @@ The array rest must not be longer than Integer.MAX_VALUE - 1.
 - `first` (`long`)
 - `rest` (`long[]`)
 
-### `copyOf(long[] values)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `copyOf(long[] values)`
 
 **Parameters:**
 - `values` (`long[]`)
 
-### `copyOf(java.util.Collection<java.lang.Long> values)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `copyOf(Collection<Long> values)`
 
 **Parameters:**
 - `values` (`java.util.Collection<java.lang.Long>`)
 
-### `copyOf(java.lang.Iterable<java.lang.Long> values)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `copyOf(Iterable<Long> values)`
 
 **Performance note:** this method delegates to #copyOf(Collection) if 
  values is a Collection. Otherwise it creates a #builder and uses Builder#addAll(Iterable), with all the performance implications associated with that.
@@ -190,16 +188,16 @@ The array rest must not be longer than Integer.MAX_VALUE - 1.
 **Parameters:**
 - `values` (`java.lang.Iterable<java.lang.Long>`)
 
-### `copyOf(java.util.stream.LongStream stream)`
-
 **Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
+### `copyOf(LongStream stream)`
 
 **Parameters:**
 - `stream` (`java.util.stream.LongStream`)
 
-### `builder(int initialCapacity)`
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
-**Returns:** `com.google.common.primitives.ImmutableLongArray.Builder`
+### `builder(int initialCapacity)`
 
 The returned builder is not thread-safe.
 
@@ -212,9 +210,9 @@ The returned builder is not thread-safe.
 **Parameters:**
 - `initialCapacity` (`int`)
 
-### `builder()`
-
 **Returns:** `com.google.common.primitives.ImmutableLongArray.Builder`
+
+### `builder()`
 
 The returned builder is not thread-safe.
 
@@ -222,6 +220,8 @@ The returned builder is not thread-safe.
 **Performance note:** The ImmutableLongArray that is built will very likely
  occupy more memory than necessary; to trim memory usage, build using 
  builder.build().trimmed().
+
+**Returns:** `com.google.common.primitives.ImmutableLongArray.Builder`
 
 ### `length()`
 
@@ -233,32 +233,30 @@ The returned builder is not thread-safe.
 
 ### `get(int index)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `index` (`int`)
 
-### `indexOf(long target)`
+**Returns:** `long`
 
-**Returns:** `int`
+### `indexOf(long target)`
 
 Equivalent to asList().indexOf(target).
 
 **Parameters:**
 - `target` (`long`)
 
-### `lastIndexOf(long target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(long target)`
 
 Equivalent to asList().lastIndexOf(target).
 
 **Parameters:**
 - `target` (`long`)
 
-### `contains(long target)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `contains(long target)`
 
 Equivalent to
  asList().contains(target).
@@ -266,12 +264,14 @@ Equivalent to
 **Parameters:**
 - `target` (`long`)
 
-### `forEach(java.util.function.LongConsumer consumer)`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `forEach(LongConsumer consumer)`
 
 **Parameters:**
 - `consumer` (`java.util.function.LongConsumer`)
+
+**Returns:** `void`
 
 ### `stream()`
 
@@ -283,8 +283,6 @@ Equivalent to
 
 ### `subArray(int startIndex, int endIndex)`
 
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
 **Performance note:** The returned array has the same full memory footprint as this one
  does (no actual copying is performed). To reduce memory usage, use subArray(start,
  end).trimmed().
@@ -293,25 +291,27 @@ Equivalent to
 - `startIndex` (`int`)
 - `endIndex` (`int`)
 
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
+
 ### `spliterator()`
 
 **Returns:** `java.util.Spliterator.OfLong`
 
 ### `asList()`
 
-**Returns:** `java.util.List<java.lang.Long>`
-
 The
  returned list should be used once and discarded. For any usages beyond that, pass the returned
  list to ImmutableList.copyOf
  and use that list instead.
 
-### `equals(java.lang.Object object)`
+**Returns:** `java.util.List<java.lang.Long>`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
@@ -323,12 +323,12 @@ The
 
 ### `trimmed()`
 
-**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
-
 This is logically
  a no-op, and in some circumstances this itself is returned. However, if this instance
  is a #subArray view of a larger array, this method will copy only the appropriate range
  of values, resulting in an equivalent array with a smaller memory footprint.
+
+**Returns:** [`com.google.common.primitives.ImmutableLongArray`](./ImmutableLongArray.md)
 
 ### `isPartialView()`
 

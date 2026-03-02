@@ -49,86 +49,84 @@ If you wish to avoid this, you should either prepend or append the size of each 
 
 ### `putByte(byte b)`
 
-**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
-
 **Parameters:**
 - `b` (`byte`)
 
-### `putBytes(byte[] bytes)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(byte[] bytes)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `putBytes(byte[] bytes, int off, int len)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(byte[] bytes, int off, int len)`
 
 **Parameters:**
 - `bytes` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `putBytes(java.nio.ByteBuffer bytes)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBytes(ByteBuffer bytes)`
 
 **Parameters:**
 - `bytes` (`java.nio.ByteBuffer`)
 
-### `putShort(short s)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putShort(short s)`
 
 **Parameters:**
 - `s` (`short`)
 
-### `putInt(int i)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putInt(int i)`
 
 **Parameters:**
 - `i` (`int`)
 
-### `putLong(long l)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putLong(long l)`
 
 **Parameters:**
 - `l` (`long`)
 
-### `putFloat(float f)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putFloat(float f)`
 
 **Parameters:**
 - `f` (`float`)
 
-### `putDouble(double d)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putDouble(double d)`
 
 **Parameters:**
 - `d` (`double`)
 
-### `putBoolean(boolean b)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putBoolean(boolean b)`
 
 **Parameters:**
 - `b` (`boolean`)
 
-### `putChar(char c)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putChar(char c)`
 
 **Parameters:**
 - `c` (`char`)
 
-### `putUnencodedChars(java.lang.CharSequence charSequence)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putUnencodedChars(CharSequence charSequence)`
 
 In
  other words, no character encoding is performed; the low byte and high byte of each 
@@ -144,9 +142,9 @@ In
 **Parameters:**
 - `charSequence` (`java.lang.CharSequence`)
 
-### `putString(java.lang.CharSequence charSequence, java.nio.charset.Charset charset)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putString(CharSequence charSequence, Charset charset)`
 
 **Warning:** This method, which reencodes the input before hashing it, is useful only for
  cross-language compatibility. For other use cases, prefer #putUnencodedChars, which is
@@ -157,20 +155,22 @@ In
 - `charSequence` (`java.lang.CharSequence`)
 - `charset` (`java.nio.charset.Charset`)
 
-### `putObject(T instance, com.google.common.hash.Funnel<? super T> funnel)`
-
 **Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
+
+### `putObject(T instance, Funnel<? super T> funnel)`
 
 **Parameters:**
 - `instance` (`T`)
 - `funnel` ([`com.google.common.hash.Funnel<? super T>`](./Funnel.md))
 
-### `hash()`
+**Returns:** [`com.google.common.hash.Hasher`](./Hasher.md)
 
-**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
+### `hash()`
 
 The result is
  unspecified if this method is called more than once on the same instance.
+
+**Returns:** [`com.google.common.hash.HashCode`](./HashCode.md)
 
 ### `hashCode()`
 

@@ -128,7 +128,7 @@ One of the constants:
 
 ## Constructors
 
-### `<init>(java.lang.String title, int rowsNumber, int columnsNumber, boolean generateHeader, boolean generateFooter, java.lang.String frame, int tableModel)`
+### `<init>(String title, int rowsNumber, int columnsNumber, boolean generateHeader, boolean generateFooter, String frame, int tableModel)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The table title.
@@ -143,7 +143,7 @@ One of the constants:
    TableInfo#TABLE_MODEL_DITA_SIMPLE, TableInfo#TABLE_MODEL_HTML,
    TableInfo#TABLE_MODEL_DITA_CHOICE, TableInfo#TABLE_MODEL_DITA_PROPERTIES.
 
-### `<init>(java.lang.String title, int rowsNumber, int columnsNumber, boolean generateHeader, boolean generateFooter, java.lang.String frame, int tableModel, ro.sync.ecss.extensions.commons.table.operations.TableCustomizerConstants.ColumnWidthsType columnsWidthsType, java.lang.String rowsep, java.lang.String colsep, java.lang.String align)`
+### `<init>(String title, int rowsNumber, int columnsNumber, boolean generateHeader, boolean generateFooter, String frame, int tableModel, TableCustomizerConstants.ColumnWidthsType columnsWidthsType, String rowsep, String colsep, String align)`
 
 **Parameters:**
 - `title` (`java.lang.String`): The table title.
@@ -162,7 +162,7 @@ One of the constants:
 - `colsep` (`java.lang.String`): Specifies the column separator value
 - `align` (`java.lang.String`): Specifies the alignment for the current table.
 
-### `<init>(java.util.Map<java.lang.String,java.lang.Object> fieldValues, int rows)`
+### `<init>(Map<String,Object> fieldValues, int rows)`
 
 **Parameters:**
 - `fieldValues` (`java.util.Map<java.lang.String,java.lang.Object>`): The map that contains the values for the operation 
@@ -170,7 +170,7 @@ One of the constants:
 - `rows` (`int`): If greater than 0, the enforced number of rows, used when the user converts 
    a list with that many items to a table. If 0 or negative, it is ignored.
 
-### `<init>(java.util.Map<java.lang.String,java.lang.Object> fieldValues)`
+### `<init>(Map<String,Object> fieldValues)`
 
 **Parameters:**
 - `fieldValues` (`java.util.Map<java.lang.String,java.lang.Object>`): The map that contains the values for the operation 

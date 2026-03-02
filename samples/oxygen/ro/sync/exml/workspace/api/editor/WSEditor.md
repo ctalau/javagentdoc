@@ -18,7 +18,7 @@
 
 **Returns:** `java.lang.String`
 
-### `addPageChangedListener(ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener pageChangedListener)`
+### `addPageChangedListener(WSEditorPageChangedListener pageChangedListener)`
 
 **Parameters:**
 - `pageChangedListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md)): The page changed listener.
@@ -29,7 +29,7 @@
 
 **Returns:** `void`
 
-### `removePageChangedListener(ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener pageChangedListener)`
+### `removePageChangedListener(WSEditorPageChangedListener pageChangedListener)`
 
 **Parameters:**
 - `pageChangedListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorPageChangedListener`](../listeners/WSEditorPageChangedListener.md)): The page changed listener.
@@ -40,7 +40,7 @@
 
 **Returns:** `void`
 
-### `addEditorListener(ro.sync.exml.workspace.api.listeners.WSEditorListener editorListener)`
+### `addEditorListener(WSEditorListener editorListener)`
 
 **Parameters:**
 - `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md)): The editor listener.
@@ -51,14 +51,14 @@
 
 **Returns:** [`ro.sync.exml.workspace.api.listeners.WSEditorListener[]`](../listeners/WSEditorListener.md)
 
-### `removeEditorListener(ro.sync.exml.workspace.api.listeners.WSEditorListener editorListener)`
+### `removeEditorListener(WSEditorListener editorListener)`
 
 **Parameters:**
 - `editorListener` ([`ro.sync.exml.workspace.api.listeners.WSEditorListener`](../listeners/WSEditorListener.md)): The editor listener.
 
 **Returns:** `void`
 
-### `changePage(java.lang.String pageID)`
+### `changePage(String pageID)`
 
 This does not affect editors opened in the DITA Maps Manager.
  If problems occur during the page switch or the page ID is not recognized the page will be switched to Text and the operation is aborted.
@@ -74,7 +74,7 @@ This does not affect editors opened in the DITA Maps Manager.
 
 **Returns:** `void`
 
-### `addValidationProblemsFilter(ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter validationProblemsFilter)`
+### `addValidationProblemsFilter(ValidationProblemsFilter validationProblemsFilter)`
 
 Validation can be manual or automatic.
  Automatic validation is done when modifications occur in the XML file.
@@ -84,7 +84,7 @@ Validation can be manual or automatic.
 
 **Returns:** `void`
 
-### `removeValidationProblemsFilter(ro.sync.exml.workspace.api.editor.validation.ValidationProblemsFilter validationProblemsFilter)`
+### `removeValidationProblemsFilter(ValidationProblemsFilter validationProblemsFilter)`
 
 Validation can be manual or automatic.
  Automatic validation is done when modifications occur in the XML file.

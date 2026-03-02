@@ -39,9 +39,7 @@ This acts as a stack threaded through the RunnableExecutorPair#next field.
 
 ## Methods
 
-### `add(java.lang.Runnable runnable, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `add(Runnable runnable, Executor executor)`
 
 If execution has already begun, the listener is executed immediately.
 
@@ -54,9 +52,9 @@ When selecting an executor, note that directExecutor is dangerous in some cases.
 - `runnable` (`java.lang.Runnable`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `execute()`
-
 **Returns:** `void`
+
+### `execute()`
 
 However,
  note that listeners added after this point may be executed before those previously added, and
@@ -67,11 +65,13 @@ However,
 This method is idempotent. Calling it several times in parallel is semantically equivalent
  to calling it exactly once.
 
-### `executeListener(java.lang.Runnable runnable, java.util.concurrent.Executor executor)`
-
 **Returns:** `void`
+
+### `executeListener(Runnable runnable, Executor executor)`
 
 **Parameters:**
 - `runnable` (`java.lang.Runnable`)
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** `void`
 

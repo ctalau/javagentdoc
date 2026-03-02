@@ -43,9 +43,7 @@ ByteSource provides two kinds of methods:
 
 ## Methods
 
-### `asCharSource(java.nio.charset.Charset charset)`
-
-**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
+### `asCharSource(Charset charset)`
 
 If CharSource#asByteSource is called on the returned source with the same charset,
  the default implementation of this method will ensure that the original ByteSource is
@@ -55,9 +53,9 @@ If CharSource#asByteSource is called on the returned source with the same charse
 **Parameters:**
 - `charset` (`java.nio.charset.Charset`)
 
-### `openStream()`
+**Returns:** [`com.google.common.io.CharSource`](./CharSource.md)
 
-**Returns:** `java.io.InputStream`
+### `openStream()`
 
 This method returns a new,
  independent stream each time it is called.
@@ -65,9 +63,9 @@ This method returns a new,
  
 The caller is responsible for ensuring that the returned stream is closed.
 
-### `openBufferedStream()`
-
 **Returns:** `java.io.InputStream`
+
+### `openBufferedStream()`
 
 The returned stream is
  not required to be a BufferedInputStream in order to allow implementations to simply
@@ -78,9 +76,9 @@ The returned stream is
  
 The caller is responsible for ensuring that the returned stream is closed.
 
-### `slice(long offset, long length)`
+**Returns:** `java.io.InputStream`
 
-**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+### `slice(long offset, long length)`
 
 If offset is greater than the size of this
  source, the returned source will be empty. If offset + length is greater than the size
@@ -91,9 +89,9 @@ If offset is greater than the size of this
 - `offset` (`long`)
 - `length` (`long`)
 
-### `isEmpty()`
+**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
-**Returns:** `boolean`
+### `isEmpty()`
 
 The default implementation first checks #sizeIfKnown, returning true if it's known to be zero and false if it's known to be non-zero.
  If the size is not known, it falls back to opening a stream and checking for EOF.
@@ -104,9 +102,9 @@ Note that, in cases where sizeIfKnown returns zero, it is *possible* that bytes
  despite actually having content when read.) This means that a source may return true
  from isEmpty() despite having readable content.
 
-### `sizeIfKnown()`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.base.Optional<java.lang.Long>`](../base/Optional.md)
+### `sizeIfKnown()`
 
 The default implementation returns Optional#absent. Some sources, such as a file,
  may return a non-absent value. Note that in such cases, it is *possible* that this method
@@ -117,9 +115,9 @@ The default implementation returns Optional#absent. Some sources, such as a file
 Additionally, for mutable sources such as files, a subsequent read may return a different
  number of bytes if the contents are changed.
 
-### `size()`
+**Returns:** [`com.google.common.base.Optional<java.lang.Long>`](../base/Optional.md)
 
-**Returns:** `long`
+### `size()`
 
 To avoid a potentially expensive operation, see #sizeIfKnown.
 
@@ -138,16 +136,16 @@ Note that for some sources that implement #sizeIfKnown to provide a more efficie
 In either case, for mutable sources such as files, a subsequent read may return a different
  number of bytes if the contents are changed.
 
-### `countBySkipping(java.io.InputStream in)`
-
 **Returns:** `long`
+
+### `countBySkipping(InputStream in)`
 
 **Parameters:**
 - `in` (`java.io.InputStream`)
 
-### `copyTo(java.io.OutputStream output)`
-
 **Returns:** `long`
+
+### `copyTo(OutputStream output)`
 
 Does not close
  output.
@@ -155,20 +153,20 @@ Does not close
 **Parameters:**
 - `output` (`java.io.OutputStream`)
 
-### `copyTo(com.google.common.io.ByteSink sink)`
-
 **Returns:** `long`
+
+### `copyTo(ByteSink sink)`
 
 **Parameters:**
 - `sink` ([`com.google.common.io.ByteSink`](./ByteSink.md))
+
+**Returns:** `long`
 
 ### `read()`
 
 **Returns:** `byte[]`
 
-### `read(com.google.common.io.ByteProcessor<T> processor)`
-
-**Returns:** `T`
+### `read(ByteProcessor<T> processor)`
 
 Stops when all bytes have been read or the consumer returns false.
  Returns the result produced by the processor.
@@ -176,23 +174,23 @@ Stops when all bytes have been read or the consumer returns false.
 **Parameters:**
 - `processor` ([`com.google.common.io.ByteProcessor<T>`](./ByteProcessor.md))
 
-### `hash(com.google.common.hash.HashFunction hashFunction)`
+**Returns:** `T`
 
-**Returns:** [`com.google.common.hash.HashCode`](../hash/HashCode.md)
+### `hash(HashFunction hashFunction)`
 
 **Parameters:**
 - `hashFunction` ([`com.google.common.hash.HashFunction`](../hash/HashFunction.md))
 
-### `contentEquals(com.google.common.io.ByteSource other)`
+**Returns:** [`com.google.common.hash.HashCode`](../hash/HashCode.md)
 
-**Returns:** `boolean`
+### `contentEquals(ByteSource other)`
 
 **Parameters:**
 - `other` ([`com.google.common.io.ByteSource`](./ByteSource.md))
 
-### `concat(java.lang.Iterable<? extends com.google.common.io.ByteSource> sources)`
+**Returns:** `boolean`
 
-**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+### `concat(Iterable<? extends ByteSource> sources)`
 
 Streams returned from
  the source will contain the concatenated data from the streams of the underlying sources.
@@ -204,9 +202,9 @@ Only one underlying stream will be open at a time. Closing the concatenated stre
 **Parameters:**
 - `sources` (`java.lang.Iterable<? extends com.google.common.io.ByteSource>`): the sources to concatenate
 
-### `concat(java.util.Iterator<? extends com.google.common.io.ByteSource> sources)`
-
 **Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+
+### `concat(Iterator<? extends ByteSource> sources)`
 
 Streams returned from
  the source will contain the concatenated data from the streams of the underlying sources.
@@ -225,9 +223,9 @@ Note: The input Iterator will be copied to an ImmutableList when this method
 **Parameters:**
 - `sources` (`java.util.Iterator<? extends com.google.common.io.ByteSource>`): the sources to concatenate
 
-### `concat(com.google.common.io.ByteSource[] sources)`
-
 **Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+
+### `concat(ByteSource[] sources)`
 
 Streams returned from
  the source will contain the concatenated data from the streams of the underlying sources.
@@ -239,9 +237,9 @@ Only one underlying stream will be open at a time. Closing the concatenated stre
 **Parameters:**
 - `sources` ([`com.google.common.io.ByteSource[]`](./ByteSource.md)): the sources to concatenate
 
-### `wrap(byte[] b)`
-
 **Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
+
+### `wrap(byte[] b)`
 
 To view only a specific range
  in the array, use ByteSource.wrap(b).slice(offset, length).
@@ -254,6 +252,8 @@ Note that the given byte array may be passed directly to methods on, for example
 
 **Parameters:**
 - `b` (`byte[]`)
+
+**Returns:** [`com.google.common.io.ByteSource`](./ByteSource.md)
 
 ### `empty()`
 

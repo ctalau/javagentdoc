@@ -20,14 +20,14 @@
 
 ## Methods
 
-### `getCPUrlsFromDir(java.io.File arg0)`
+### `getCPUrlsFromDir(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
 
 **Returns:** `ro.sync.exml.Oxygen._b`
 
-### `setOxygenHome(java.io.File arg0)`
+### `setOxygenHome(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -38,7 +38,7 @@
 
 **Returns:** `java.net.URL[]`
 
-### `adjustForMacOSXDistribution(java.io.File arg0)`
+### `adjustForMacOSXDistribution(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)
@@ -49,7 +49,7 @@
 
 **Returns:** `java.net.URL[]`
 
-### `main(java.lang.String[] arg0)`
+### `main(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
@@ -64,21 +64,21 @@
 
 **Returns:** `boolean`
 
-### `c(java.lang.String[] arg0)`
+### `c(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `boolean`
 
-### `register(java.lang.ClassLoader arg0)`
+### `register(ClassLoader arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.ClassLoader`)
 
 **Returns:** `void`
 
-### `secondaryMain(java.lang.String[] arg0)`
+### `secondaryMain(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
@@ -89,7 +89,7 @@
 
 **Returns:** `void`
 
-### `e(java.io.File arg0, java.io.FileFilter arg1)`
+### `e(File arg0, FileFilter arg1)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)

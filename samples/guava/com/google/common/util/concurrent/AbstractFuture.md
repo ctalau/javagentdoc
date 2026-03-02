@@ -77,9 +77,7 @@ The valid values are:
 
 ## Methods
 
-### `removeWaiter(com.google.common.util.concurrent.AbstractFuture.Waiter node)`
-
-**Returns:** `void`
+### `removeWaiter(AbstractFuture.Waiter node)`
 
 This is an O(n) operation in the common case (and O(n^2) in the worst), but we are saved
  by two things.
@@ -93,9 +91,9 @@ This is an O(n) operation in the common case (and O(n^2) in the worst), but we a
 **Parameters:**
 - `node` (`com.google.common.util.concurrent.AbstractFuture.Waiter`)
 
-### `get(long timeout, java.util.concurrent.TimeUnit unit)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `get(long timeout, TimeUnit unit)`
 
 The default AbstractFuture implementation throws InterruptedException if the
  current thread is interrupted during the call, even if the value is already available.
@@ -104,21 +102,23 @@ The default AbstractFuture implementation throws InterruptedException if the
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `get()`
-
 **Returns:** `V`
+
+### `get()`
 
 The default AbstractFuture implementation throws InterruptedException if the
  current thread is interrupted during the call, even if the value is already available.
 
-### `getDoneValue(java.lang.Object obj)`
-
 **Returns:** `V`
+
+### `getDoneValue(Object obj)`
 
 Assumes that obj is not null or a SetFuture.
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `isDone()`
 
@@ -129,8 +129,6 @@ Assumes that obj is not null or a SetFuture.
 **Returns:** `boolean`
 
 ### `cancel(boolean mayInterruptIfRunning)`
-
-**Returns:** `boolean`
 
 If a cancellation attempt succeeds on a Future that had previously been set asynchronously, then the cancellation will also be propagated to the delegate
  Future that was supplied in the setFuture call.
@@ -148,9 +146,9 @@ Beware of completing a future while holding a lock. Its listeners may do slow wo
 **Parameters:**
 - `mayInterruptIfRunning` (`boolean`)
 
-### `interruptTask()`
+**Returns:** `boolean`
 
-**Returns:** `void`
+### `interruptTask()`
 
 The
  method is invoked automatically by a successful call to cancel(true).
@@ -162,21 +160,21 @@ The default implementation does nothing.
 This method is likely to be deprecated. Prefer to override #afterDone, checking
  #wasInterrupted to decide whether to interrupt your task.
 
+**Returns:** `void`
+
 ### `wasInterrupted()`
 
 **Returns:** `boolean`
 
-### `addListener(java.lang.Runnable listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(Runnable listener, Executor executor)`
 
 **Parameters:**
 - `listener` (`java.lang.Runnable`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `set(V value)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `set(V value)`
 
 When a call to this method returns,
  the Future is guaranteed to be done **only if** the call was
@@ -192,9 +190,9 @@ Beware of completing a future while holding a lock. Its listeners may do slow wo
 **Parameters:**
 - `value` (`V`): the value to be used as the result
 
-### `setException(java.lang.Throwable throwable)`
-
 **Returns:** `boolean`
+
+### `setException(Throwable throwable)`
 
 When a call to this
  method returns, the Future is guaranteed to be done **only if**
@@ -210,9 +208,9 @@ Beware of completing a future while holding a lock. Its listeners may do slow wo
 **Parameters:**
 - `throwable` (`java.lang.Throwable`): the exception to be used as the failed result
 
-### `setFuture(com.google.common.util.concurrent.ListenableFuture<? extends V> future)`
-
 **Returns:** `boolean`
+
+### `setFuture(ListenableFuture<? extends V> future)`
 
 If the supplied future is done when this method is called and the call
  is accepted, then this future is guaranteed to have been completed with the supplied future by
@@ -239,33 +237,33 @@ Beware of completing a future while holding a lock. Its listeners may do slow wo
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md)): the future to delegate to
 
-### `getFutureValue(com.google.common.util.concurrent.ListenableFuture<?> future)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.Object`
+### `getFutureValue(ListenableFuture<?> future)`
 
 This is approximately the inverse of #getDoneValue(Object)
 
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md))
 
-### `getUninterruptibly(java.util.concurrent.Future<V> future)`
+**Returns:** `java.lang.Object`
 
-**Returns:** `V`
+### `getUninterruptibly(Future<V> future)`
 
 **Parameters:**
 - `future` (`java.util.concurrent.Future<V>`)
 
-### `complete(com.google.common.util.concurrent.AbstractFuture<?> param, boolean callInterruptTask)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `complete(AbstractFuture<?> param, boolean callInterruptTask)`
 
 **Parameters:**
 - `param` ([`com.google.common.util.concurrent.AbstractFuture<?>`](./AbstractFuture.md))
 - `callInterruptTask` (`boolean`)
 
-### `afterDone()`
-
 **Returns:** `void`
+
+### `afterDone()`
 
 If #interruptTask is also run during completion, #afterDone runs after it.
 
@@ -274,9 +272,9 @@ The default implementation of this method in AbstractFuture does nothing. This i
  intended for very lightweight cleanup work, for example, timing statistics or clearing fields.
  If your task does anything heavier consider, just using a listener with an executor.
 
-### `tryInternalFastPathGetFailure()`
+**Returns:** `void`
 
-**Returns:** `java.lang.Throwable`
+### `tryInternalFastPathGetFailure()`
 
 "Failure" means specifically "completed with an exception"; it
  does not include "was cancelled." To be explicit: If this method returns a non-null value,
@@ -296,23 +294,25 @@ This method is protected so that classes like
  com.google.common.util.concurrent.SettableFuture do not expose it to their users as an
  instance method. In the unlikely event that you need to call this method, call InternalFutures#tryInternalFastPathGetFailure(InternalFutureFailureAccess).
 
-### `maybePropagateCancellationTo(java.util.concurrent.Future<?> related)`
+**Returns:** `java.lang.Throwable`
 
-**Returns:** `void`
+### `maybePropagateCancellationTo(Future<?> related)`
 
 **Parameters:**
 - `related` (`java.util.concurrent.Future<?>`)
+
+**Returns:** `void`
 
 ### `releaseWaiters()`
 
 **Returns:** `void`
 
-### `clearListeners(com.google.common.util.concurrent.AbstractFuture.Listener onto)`
-
-**Returns:** `com.google.common.util.concurrent.AbstractFuture.Listener`
+### `clearListeners(AbstractFuture.Listener onto)`
 
 **Parameters:**
 - `onto` (`com.google.common.util.concurrent.AbstractFuture.Listener`)
+
+**Returns:** `com.google.common.util.concurrent.AbstractFuture.Listener`
 
 ### `toString()`
 
@@ -322,23 +322,21 @@ This method is protected so that classes like
 
 **Returns:** `java.lang.String`
 
-### `addPendingString(java.lang.StringBuilder builder)`
-
-**Returns:** `void`
+### `addPendingString(StringBuilder builder)`
 
 **Parameters:**
 - `builder` (`java.lang.StringBuilder`)
 
-### `addDoneString(java.lang.StringBuilder builder)`
-
 **Returns:** `void`
+
+### `addDoneString(StringBuilder builder)`
 
 **Parameters:**
 - `builder` (`java.lang.StringBuilder`)
 
-### `appendResultObject(java.lang.StringBuilder builder, java.lang.Object o)`
-
 **Returns:** `void`
+
+### `appendResultObject(StringBuilder builder, Object o)`
 
 Using a reconstruction of the default Object.toString() prevents OOMs and stack
  overflows, and helps avoid sensitive data inadvertently ending up in exception messages.
@@ -347,27 +345,29 @@ Using a reconstruction of the default Object.toString() prevents OOMs and stack
 - `builder` (`java.lang.StringBuilder`)
 - `o` (`java.lang.Object`)
 
-### `appendUserObject(java.lang.StringBuilder builder, java.lang.Object o)`
-
 **Returns:** `void`
+
+### `appendUserObject(StringBuilder builder, Object o)`
 
 **Parameters:**
 - `builder` (`java.lang.StringBuilder`)
 - `o` (`java.lang.Object`)
 
-### `executeListener(java.lang.Runnable runnable, java.util.concurrent.Executor executor)`
-
 **Returns:** `void`
+
+### `executeListener(Runnable runnable, Executor executor)`
 
 **Parameters:**
 - `runnable` (`java.lang.Runnable`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `cancellationExceptionWithCause(java.lang.String message, java.lang.Throwable cause)`
+**Returns:** `void`
 
-**Returns:** `java.util.concurrent.CancellationException`
+### `cancellationExceptionWithCause(String message, Throwable cause)`
 
 **Parameters:**
 - `message` (`java.lang.String`)
 - `cause` (`java.lang.Throwable`)
+
+**Returns:** `java.util.concurrent.CancellationException`
 

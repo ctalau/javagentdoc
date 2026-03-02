@@ -22,7 +22,7 @@
 
 ## Methods
 
-### `isTrusted(java.lang.String arg0)`
+### `isTrusted(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

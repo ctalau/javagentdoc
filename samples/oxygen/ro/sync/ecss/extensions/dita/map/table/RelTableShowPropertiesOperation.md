@@ -14,14 +14,14 @@
 
 ## Methods
 
-### `getCategoriesAndProperties(java.util.List<java.lang.Integer[]> selections)`
+### `getCategoriesAndProperties(List<Integer[]> selections)`
 
 **Parameters:**
 - `selections` (`java.util.List<java.lang.Integer[]>`)
 
 **Returns:** `java.util.List<ro.sync.ecss.extensions.commons.table.properties.TabInfo>`
 
-### `getRowsTabInformation(java.util.List<java.lang.Integer[]> selections)`
+### `getRowsTabInformation(List<Integer[]> selections)`
 
 This information will contain the properties 
  which will be edited, the rows on which those properties applies and some context 
@@ -32,7 +32,7 @@ This information will contain the properties
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.properties.TabInfo`](../../../commons/table/properties/TabInfo.md)
 
-### `computeFragmentsToMoveInsideFooter(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
+### `computeFragmentsToMoveInsideFooter(List<AuthorDocumentFragment> fragments, List<Position> offsets, TabInfo tabInfo, List<AuthorElement> nodesToModify, AuthorElement currentNode)`
 
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
@@ -43,7 +43,7 @@ This information will contain the properties
 
 **Returns:** `boolean`
 
-### `computeFragmentMoveInsideHeader(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
+### `computeFragmentMoveInsideHeader(List<AuthorDocumentFragment> fragments, List<Position> offsets, TabInfo tabInfo, List<AuthorElement> nodesToModify, AuthorElement currentNode)`
 
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)
@@ -54,7 +54,7 @@ This information will contain the properties
 
 **Returns:** `boolean`
 
-### `computeFragmentsToMoveInsideBody(java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment> fragments, java.util.List<javax.swing.text.Position> offsets, ro.sync.ecss.extensions.commons.table.properties.TabInfo tabInfo, java.util.List<ro.sync.ecss.extensions.api.node.AuthorElement> nodesToModify, ro.sync.ecss.extensions.api.node.AuthorElement currentNode)`
+### `computeFragmentsToMoveInsideBody(List<AuthorDocumentFragment> fragments, List<Position> offsets, TabInfo tabInfo, List<AuthorElement> nodesToModify, AuthorElement currentNode)`
 
 **Parameters:**
 - `fragments` (`java.util.List<ro.sync.ecss.extensions.api.node.AuthorDocumentFragment>`)

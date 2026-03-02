@@ -16,7 +16,7 @@
 
 ## Methods
 
-### `updateColspec(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Integer deletedColumnIndex)`
+### `updateColspec(AuthorAccess authorAccess, Integer deletedColumnIndex)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))
@@ -24,7 +24,7 @@
 
 **Returns:** `void`
 
-### `updateTableColSpan(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.AuthorTableCellSpanProvider spanProvider, ro.sync.ecss.extensions.api.node.AuthorElement cell, int colStartIndex, int colEndIndex)`
+### `updateTableColSpan(AuthorAccess authorAccess, AuthorTableCellSpanProvider spanProvider, AuthorElement cell, int colStartIndex, int colEndIndex)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../api/AuthorAccess.md))

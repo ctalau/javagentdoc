@@ -20,9 +20,7 @@ For interoperability between ListenableFuture and **CompletableFuture**,
 
 ## Methods
 
-### `listenInPoolThread(java.util.concurrent.Future<V> future)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+### `listenInPoolThread(Future<V> future)`
 
 **Warning:** If the input future does not already implement ListenableFuture, the
  returned future will emulate ListenableFuture#addListener by taking a thread from an
@@ -36,9 +34,9 @@ Prefer to create ListenableFuture instances with SettableFuture, MoreExecutors#l
 **Parameters:**
 - `future` (`java.util.concurrent.Future<V>`)
 
-### `listenInPoolThread(java.util.concurrent.Future<V> future, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+
+### `listenInPoolThread(Future<V> future, Executor executor)`
 
 **Warning:** If the input future does not already implement ListenableFuture, the
  returned future will emulate ListenableFuture#addListener by submitting a task to the
@@ -56,4 +54,6 @@ Prefer to create ListenableFuture instances with SettableFuture, MoreExecutors#l
 **Parameters:**
 - `future` (`java.util.concurrent.Future<V>`)
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 

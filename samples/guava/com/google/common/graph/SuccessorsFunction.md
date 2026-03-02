@@ -87,8 +87,6 @@ See the Guava User Guide for the common.graph package (["Graphs Explained"](http
 
 ### `successors(N node)`
 
-**Returns:** `java.lang.Iterable<? extends N>`
-
 This is *not* the same as "all nodes reachable from node by following outgoing
  edges". For that functionality, see Graphs#reachableNodes(Graph, Object).
 
@@ -108,4 +106,6 @@ The elements of the returned Iterable must each be:
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.lang.Iterable<? extends N>`
 

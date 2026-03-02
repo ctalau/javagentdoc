@@ -26,37 +26,35 @@ See the Guava User Guide section on [
 
 ### `emptyIterator()`
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
-
 The Iterable equivalent of this method is ImmutableSet#of().
+
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
 ### `emptyListIterator()`
 
-**Returns:** [`com.google.common.collect.UnmodifiableListIterator<T>`](./UnmodifiableListIterator.md)
-
 The Iterable equivalent of this method is ImmutableSet#of().
+
+**Returns:** [`com.google.common.collect.UnmodifiableListIterator<T>`](./UnmodifiableListIterator.md)
 
 ### `emptyModifiableIterator()`
 
 **Returns:** `java.util.Iterator<T>`
 
-### `unmodifiableIterator(java.util.Iterator<? extends T> iterator)`
-
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+### `unmodifiableIterator(Iterator<? extends T> iterator)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<? extends T>`)
 
-### `unmodifiableIterator(com.google.common.collect.UnmodifiableIterator<T> iterator)`
-
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+
+### `unmodifiableIterator(UnmodifiableIterator<T> iterator)`
 
 **Parameters:**
 - `iterator` ([`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md))
 
-### `size(java.util.Iterator<?> iterator)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
-**Returns:** `int`
+### `size(Iterator<?> iterator)`
 
 The iterator will be left
  exhausted: its hasNext() method will return false.
@@ -64,17 +62,17 @@ The iterator will be left
 **Parameters:**
 - `iterator` (`java.util.Iterator<?>`)
 
-### `contains(java.util.Iterator<?> iterator, java.lang.Object element)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `contains(Iterator<?> iterator, Object element)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<?>`)
 - `element` (`java.lang.Object`)
 
-### `removeAll(java.util.Iterator<?> removeFrom, java.util.Collection<?> elementsToRemove)`
-
 **Returns:** `boolean`
+
+### `removeAll(Iterator<?> removeFrom, Collection<?> elementsToRemove)`
 
 The
  iterator will be left exhausted: its hasNext() method will return false.
@@ -83,9 +81,9 @@ The
 - `removeFrom` (`java.util.Iterator<?>`): the iterator to (potentially) remove elements from
 - `elementsToRemove` (`java.util.Collection<?>`): the elements to remove
 
-### `removeIf(java.util.Iterator<T> removeFrom, com.google.common.base.Predicate<? super T> predicate)`
-
 **Returns:** `boolean`
+
+### `removeIf(Iterator<T> removeFrom, Predicate<? super T> predicate)`
 
 The iterator
  will be left exhausted: its hasNext() method will return false.
@@ -94,9 +92,9 @@ The iterator
 - `removeFrom` (`java.util.Iterator<T>`): the iterator to (potentially) remove elements from
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md)): a predicate that determines whether an element should be removed
 
-### `retainAll(java.util.Iterator<?> removeFrom, java.util.Collection<?> elementsToRetain)`
-
 **Returns:** `boolean`
+
+### `retainAll(Iterator<?> removeFrom, Collection<?> elementsToRetain)`
 
 The iterator will be left exhausted: its hasNext() method will return
  false.
@@ -105,9 +103,9 @@ The iterator will be left exhausted: its hasNext() method will return
 - `removeFrom` (`java.util.Iterator<?>`): the iterator to (potentially) remove elements from
 - `elementsToRetain` (`java.util.Collection<?>`): the elements to retain
 
-### `elementsEqual(java.util.Iterator<?> iterator1, java.util.Iterator<?> iterator2)`
-
 **Returns:** `boolean`
+
+### `elementsEqual(Iterator<?> iterator1, Iterator<?> iterator2)`
 
 More specifically,
  this method returns true if iterator1 and iterator2 contain the same
@@ -122,33 +120,33 @@ Note that this will modify the supplied iterators, since they will have been adv
 - `iterator1` (`java.util.Iterator<?>`)
 - `iterator2` (`java.util.Iterator<?>`)
 
-### `toString(java.util.Iterator<?> iterator)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `toString(Iterator<?> iterator)`
 
 The iterator will be left exhausted: its hasNext() method will return false.
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<?>`)
 
-### `getOnlyElement(java.util.Iterator<T> iterator)`
+**Returns:** `java.lang.String`
 
-**Returns:** `T`
+### `getOnlyElement(Iterator<T> iterator)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 
-### `getOnlyElement(java.util.Iterator<? extends T> iterator, T defaultValue)`
-
 **Returns:** `T`
+
+### `getOnlyElement(Iterator<? extends T> iterator, T defaultValue)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<? extends T>`)
 - `defaultValue` (`T`)
 
-### `toArray(java.util.Iterator<? extends T> iterator, java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T> type)`
+**Returns:** `T`
 
-**Returns:** `T[]`
+### `toArray(Iterator<? extends T> iterator, Class<@NonNull T> type)`
 
 The iterator will be left exhausted: its 
  hasNext() method will return false.
@@ -157,9 +155,9 @@ The iterator will be left exhausted: its
 - `iterator` (`java.util.Iterator<? extends T>`): the iterator to copy
 - `type` (`java.lang.Class<@org.checkerframework.checker.nullness.qual.NonNull T>`): the type of the elements
 
-### `addAll(java.util.Collection<T> addTo, java.util.Iterator<? extends T> iterator)`
+**Returns:** `T[]`
 
-**Returns:** `boolean`
+### `addAll(Collection<T> addTo, Iterator<? extends T> iterator)`
 
 The iterator will be left
  exhausted: its hasNext() method will return false.
@@ -168,9 +166,9 @@ The iterator will be left
 - `addTo` (`java.util.Collection<T>`)
 - `iterator` (`java.util.Iterator<? extends T>`)
 
-### `frequency(java.util.Iterator<?> iterator, java.lang.Object element)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `frequency(Iterator<?> iterator, Object element)`
 
 The
  iterator will be left exhausted: its hasNext() method will return false.
@@ -179,9 +177,9 @@ The
 - `iterator` (`java.util.Iterator<?>`)
 - `element` (`java.lang.Object`)
 
-### `cycle(java.lang.Iterable<T> iterable)`
+**Returns:** `int`
 
-**Returns:** `java.util.Iterator<T>`
+### `cycle(Iterable<T> iterable)`
 
 The returned iterator supports remove() if the provided iterator does. After 
  remove() is called, subsequent cycles omit the removed element, which is no longer in 
@@ -196,9 +194,9 @@ The returned iterator supports remove() if the provided iterator does. After
 **Parameters:**
 - `iterable` (`java.lang.Iterable<T>`)
 
-### `cycle(T[] elements)`
-
 **Returns:** `java.util.Iterator<T>`
+
+### `cycle(T[] elements)`
 
 The returned iterator supports remove(). After remove() is called,
  subsequent cycles omit the removed element, but elements does not change. The
@@ -213,9 +211,9 @@ The returned iterator supports remove(). After remove() is called,
 **Parameters:**
 - `elements` (`T[]`)
 
-### `consumingForArray(@org.checkerframework.checker.nullness.qual.Nullable I[] elements)`
+**Returns:** `java.util.Iterator<T>`
 
-**Returns:** `java.util.Iterator<I>`
+### `consumingForArray(@Nullable I[] elements)`
 
 This can
  avoid memory leaks when an element is no longer necessary.
@@ -231,9 +229,9 @@ This is mainly just to avoid the intermediate ArrayDeque in ConsumingQueueIterat
 **Parameters:**
 - `elements` (`@org.checkerframework.checker.nullness.qual.Nullable I[]`)
 
-### `concat(java.util.Iterator<? extends T> a, java.util.Iterator<? extends T> b)`
+**Returns:** `java.util.Iterator<I>`
 
-**Returns:** `java.util.Iterator<T>`
+### `concat(Iterator<? extends T> a, Iterator<? extends T> b)`
 
 The returned iterator iterates across the
  elements in a, followed by the elements in b. The source iterators are not
@@ -247,9 +245,9 @@ The returned iterator supports remove() when the corresponding input iterator
 - `a` (`java.util.Iterator<? extends T>`)
 - `b` (`java.util.Iterator<? extends T>`)
 
-### `concat(java.util.Iterator<? extends T> a, java.util.Iterator<? extends T> b, java.util.Iterator<? extends T> c)`
-
 **Returns:** `java.util.Iterator<T>`
+
+### `concat(Iterator<? extends T> a, Iterator<? extends T> b, Iterator<? extends T> c)`
 
 The returned iterator iterates across the
  elements in a, followed by the elements in b, followed by the elements in
@@ -264,9 +262,9 @@ The returned iterator supports remove() when the corresponding input iterator
 - `b` (`java.util.Iterator<? extends T>`)
 - `c` (`java.util.Iterator<? extends T>`)
 
-### `concat(java.util.Iterator<? extends T> a, java.util.Iterator<? extends T> b, java.util.Iterator<? extends T> c, java.util.Iterator<? extends T> d)`
-
 **Returns:** `java.util.Iterator<T>`
+
+### `concat(Iterator<? extends T> a, Iterator<? extends T> b, Iterator<? extends T> c, Iterator<? extends T> d)`
 
 The returned iterator iterates across the
  elements in a, followed by the elements in b, followed by the elements in
@@ -283,9 +281,9 @@ The returned iterator supports remove() when the corresponding input iterator
 - `c` (`java.util.Iterator<? extends T>`)
 - `d` (`java.util.Iterator<? extends T>`)
 
-### `concat(java.util.Iterator<? extends T>[] inputs)`
-
 **Returns:** `java.util.Iterator<T>`
+
+### `concat(Iterator<? extends T>[] inputs)`
 
 The returned iterator iterates across the
  elements of each iterator in inputs. The input iterators are not polled until
@@ -298,9 +296,9 @@ The returned iterator supports remove() when the corresponding input iterator
 **Parameters:**
 - `inputs` (`java.util.Iterator<? extends T>[]`)
 
-### `concat(java.util.Iterator<? extends java.util.Iterator<? extends T>> inputs)`
-
 **Returns:** `java.util.Iterator<T>`
+
+### `concat(Iterator<? extends Iterator<? extends T>> inputs)`
 
 The returned iterator iterates across the
  elements of each iterator in inputs. The input iterators are not polled until
@@ -314,16 +312,16 @@ The returned iterator supports remove() when the corresponding input iterator
 **Parameters:**
 - `inputs` (`java.util.Iterator<? extends java.util.Iterator<? extends T>>`)
 
-### `concatNoDefensiveCopy(java.util.Iterator<? extends T>[] inputs)`
-
 **Returns:** `java.util.Iterator<T>`
+
+### `concatNoDefensiveCopy(Iterator<? extends T>[] inputs)`
 
 **Parameters:**
 - `inputs` (`java.util.Iterator<? extends T>[]`)
 
-### `partition(java.util.Iterator<T> iterator, int size)`
+**Returns:** `java.util.Iterator<T>`
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.List<T>>`](./UnmodifiableIterator.md)
+### `partition(Iterator<T> iterator, int size)`
 
 For example, partitioning an iterator containing [a, b, c, d, e] with a
  partition size of 3 yields [[a, b, c], [d, e]] -- an outer iterator containing two
@@ -340,9 +338,9 @@ The returned lists implement java.util.RandomAccess.
 - `iterator` (`java.util.Iterator<T>`): the iterator to return a partitioned view of
 - `size` (`int`): the desired size of each partition (the last may be smaller)
 
-### `paddedPartition(java.util.Iterator<T> iterator, int size)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.List<T>>`](./UnmodifiableIterator.md)
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable T>>`](./UnmodifiableIterator.md)
+### `paddedPartition(Iterator<T> iterator, int size)`
 
 For example, partitioning an iterator containing [a, b,
  c, d, e] with a partition size of 3 yields [[a, b, c], [d, e, null]] -- an outer
@@ -355,42 +353,42 @@ The returned lists implement java.util.RandomAccess.
 - `iterator` (`java.util.Iterator<T>`): the iterator to return a partitioned view of
 - `size` (`int`): the desired size of each partition
 
-### `partitionImpl(java.util.Iterator<T> iterator, int size, boolean pad)`
-
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable T>>`](./UnmodifiableIterator.md)
+
+### `partitionImpl(Iterator<T> iterator, int size, boolean pad)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 - `size` (`int`)
 - `pad` (`boolean`)
 
-### `filter(java.util.Iterator<T> unfiltered, com.google.common.base.Predicate<? super T> retainIfTrue)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable T>>`](./UnmodifiableIterator.md)
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+### `filter(Iterator<T> unfiltered, Predicate<? super T> retainIfTrue)`
 
 **Parameters:**
 - `unfiltered` (`java.util.Iterator<T>`)
 - `retainIfTrue` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `filter(java.util.Iterator<?> unfiltered, java.lang.Class<T> desiredType)`
-
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+
+### `filter(Iterator<?> unfiltered, Class<T> desiredType)`
 
 **Parameters:**
 - `unfiltered` (`java.util.Iterator<?>`)
 - `desiredType` (`java.lang.Class<T>`)
 
-### `any(java.util.Iterator<T> iterator, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
-**Returns:** `boolean`
+### `any(Iterator<T> iterator, Predicate<? super T> predicate)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `all(java.util.Iterator<T> iterator, com.google.common.base.Predicate<? super T> predicate)`
-
 **Returns:** `boolean`
+
+### `all(Iterator<T> iterator, Predicate<? super T> predicate)`
 
 If iterator is empty, true is returned.
 
@@ -398,9 +396,9 @@ If iterator is empty, true is returned.
 - `iterator` (`java.util.Iterator<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `find(java.util.Iterator<T> iterator, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** `boolean`
 
-**Returns:** `T`
+### `find(Iterator<T> iterator, Predicate<? super T> predicate)`
 
 If no such element is found, the iterator
  will be left exhausted: its hasNext() method will return false. If it is
@@ -411,9 +409,9 @@ If no such element is found, the iterator
 - `iterator` (`java.util.Iterator<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `find(java.util.Iterator<? extends T> iterator, com.google.common.base.Predicate<? super T> predicate, T defaultValue)`
-
 **Returns:** `T`
+
+### `find(Iterator<? extends T> iterator, Predicate<? super T> predicate, T defaultValue)`
 
 If no such
  element is found, defaultValue will be returned from this method and the iterator will
@@ -425,9 +423,9 @@ If no such
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 - `defaultValue` (`T`)
 
-### `tryFind(java.util.Iterator<T> iterator, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** `T`
 
-**Returns:** [`com.google.common.base.Optional<T>`](../base/Optional.md)
+### `tryFind(Iterator<T> iterator, Predicate<? super T> predicate)`
 
 If no such element is found, an empty Optional will be returned from this method and the iterator will be left exhausted: its 
  hasNext() method will return false.
@@ -440,9 +438,9 @@ If no such element is found, an empty Optional will be returned from this method
 - `iterator` (`java.util.Iterator<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `indexOf(java.util.Iterator<T> iterator, com.google.common.base.Predicate<? super T> predicate)`
+**Returns:** [`com.google.common.base.Optional<T>`](../base/Optional.md)
 
-**Returns:** `int`
+### `indexOf(Iterator<T> iterator, Predicate<? super T> predicate)`
 
 More formally, returns the lowest index i such that 
  predicate.apply(Iterators.get(iterator, i)) returns true, or -1 if there is no
@@ -457,9 +455,9 @@ If -1 is returned, the iterator will be left exhausted: its hasNext() method wil
 - `iterator` (`java.util.Iterator<T>`)
 - `predicate` ([`com.google.common.base.Predicate<? super T>`](../base/Predicate.md))
 
-### `transform(java.util.Iterator<F> fromIterator, com.google.common.base.Function<? super F,? extends T> function)`
+**Returns:** `int`
 
-**Returns:** `java.util.Iterator<T>`
+### `transform(Iterator<F> fromIterator, Function<? super F,? extends T> function)`
 
 The returned iterator supports remove() if fromIterator does. After a
  successful remove() call, fromIterator no longer contains the corresponding
@@ -469,34 +467,34 @@ The returned iterator supports remove() if fromIterator does. After a
 - `fromIterator` (`java.util.Iterator<F>`)
 - `function` ([`com.google.common.base.Function<? super F,? extends T>`](../base/Function.md))
 
-### `get(java.util.Iterator<T> iterator, int position)`
+**Returns:** `java.util.Iterator<T>`
 
-**Returns:** `T`
+### `get(Iterator<T> iterator, int position)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 - `position` (`int`): position of the element to return
 
-### `get(java.util.Iterator<? extends T> iterator, int position, T defaultValue)`
-
 **Returns:** `T`
+
+### `get(Iterator<? extends T> iterator, int position, T defaultValue)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<? extends T>`)
 - `position` (`int`): position of the element to return
 - `defaultValue` (`T`): the default value to return if the iterator is empty or if position
-     is greater than the number of elements remaining in iterator
+       is greater than the number of elements remaining in iterator
+
+**Returns:** `T`
 
 ### `checkNonnegative(int position)`
-
-**Returns:** `void`
 
 **Parameters:**
 - `position` (`int`)
 
-### `getNext(java.util.Iterator<? extends T> iterator, T defaultValue)`
+**Returns:** `void`
 
-**Returns:** `T`
+### `getNext(Iterator<? extends T> iterator, T defaultValue)`
 
 The Iterables analog to this method is Iterables#getFirst.
 
@@ -504,32 +502,32 @@ The Iterables analog to this method is Iterables#getFirst.
 - `iterator` (`java.util.Iterator<? extends T>`)
 - `defaultValue` (`T`): the default value to return if the iterator is empty
 
-### `getLast(java.util.Iterator<T> iterator)`
-
 **Returns:** `T`
+
+### `getLast(Iterator<T> iterator)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 
-### `getLast(java.util.Iterator<? extends T> iterator, T defaultValue)`
-
 **Returns:** `T`
+
+### `getLast(Iterator<? extends T> iterator, T defaultValue)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<? extends T>`)
 - `defaultValue` (`T`): the default value to return if the iterator is empty
 
-### `advance(java.util.Iterator<?> iterator, int numberToAdvance)`
+**Returns:** `T`
 
-**Returns:** `int`
+### `advance(Iterator<?> iterator, int numberToAdvance)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<?>`)
 - `numberToAdvance` (`int`)
 
-### `limit(java.util.Iterator<T> iterator, int limitSize)`
+**Returns:** `int`
 
-**Returns:** `java.util.Iterator<T>`
+### `limit(Iterator<T> iterator, int limitSize)`
 
 If 
  iterator contains fewer than limitSize elements, the returned view contains all of its
@@ -539,9 +537,9 @@ If
 - `iterator` (`java.util.Iterator<T>`): the iterator to limit
 - `limitSize` (`int`): the maximum number of elements in the returned iterator
 
-### `consumingIterator(java.util.Iterator<T> iterator)`
-
 **Returns:** `java.util.Iterator<T>`
+
+### `consumingIterator(Iterator<T> iterator)`
 
 The provided iterator must support Iterator#remove() or else the returned iterator
  will fail on the first call to next. The returned Iterator is also not
@@ -550,23 +548,23 @@ The provided iterator must support Iterator#remove() or else the returned iterat
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`): the iterator to remove and return elements from
 
-### `pollNext(java.util.Iterator<T> iterator)`
+**Returns:** `java.util.Iterator<T>`
 
-**Returns:** `T`
+### `pollNext(Iterator<T> iterator)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 
-### `clear(java.util.Iterator<?> iterator)`
+**Returns:** `T`
 
-**Returns:** `void`
+### `clear(Iterator<?> iterator)`
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<?>`)
 
-### `forArray(T[] array)`
+**Returns:** `void`
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+### `forArray(T[] array)`
 
 The returned iterator is
  a view of the array; subsequent changes to the array will be reflected in the iterator.
@@ -582,9 +580,9 @@ The Iterable equivalent of this method is either Arrays#asList(Object[]),
 **Parameters:**
 - `array` (`T[]`)
 
-### `forArrayWithPosition(T[] array, int position)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
-**Returns:** [`com.google.common.collect.UnmodifiableListIterator<T>`](./UnmodifiableListIterator.md)
+### `forArrayWithPosition(T[] array, int position)`
 
 The Iterable equivalent of this method is 
  Arrays.asList(array).listIterator(position).
@@ -593,18 +591,18 @@ The Iterable equivalent of this method is
 - `array` (`T[]`)
 - `position` (`int`)
 
-### `singletonIterator(T value)`
+**Returns:** [`com.google.common.collect.UnmodifiableListIterator<T>`](./UnmodifiableListIterator.md)
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+### `singletonIterator(T value)`
 
 The Iterable equivalent of this method is Collections#singleton.
 
 **Parameters:**
 - `value` (`T`)
 
-### `forEnumeration(java.util.Enumeration<T> enumeration)`
-
 **Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+
+### `forEnumeration(Enumeration<T> enumeration)`
 
 This method has no equivalent in Iterables because viewing an Enumeration as
  an Iterable is impossible. However, the contents can be *copied* into a collection
@@ -617,9 +615,9 @@ This method has no equivalent in Iterables because viewing an Enumeration as
 **Parameters:**
 - `enumeration` (`java.util.Enumeration<T>`)
 
-### `asEnumeration(java.util.Iterator<T> iterator)`
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 
-**Returns:** `java.util.Enumeration<T>`
+### `asEnumeration(Iterator<T> iterator)`
 
 The Iterable equivalent of this method is either Collections#enumeration (if
  you have a Collection), or Iterators.asEnumeration(collection.iterator()).
@@ -627,9 +625,9 @@ The Iterable equivalent of this method is either Collections#enumeration (if
 **Parameters:**
 - `iterator` (`java.util.Iterator<T>`)
 
-### `peekingIterator(java.util.Iterator<? extends T> iterator)`
+**Returns:** `java.util.Enumeration<T>`
 
-**Returns:** [`com.google.common.collect.PeekingIterator<T>`](./PeekingIterator.md)
+### `peekingIterator(Iterator<? extends T> iterator)`
 
 Calls to the peek method with no intervening calls to next do not affect the
  iteration, and hence return the same object each time. A subsequent call to next is
@@ -669,18 +667,18 @@ There is no Iterable equivalent to this method, so use this method to wrap each
 
 **Parameters:**
 - `iterator` (`java.util.Iterator<? extends T>`): the backing iterator. The PeekingIterator assumes ownership of this
-     iterator, so users should cease making direct calls to it after calling this method.
-
-### `peekingIterator(com.google.common.collect.PeekingIterator<T> iterator)`
+       iterator, so users should cease making direct calls to it after calling this method.
 
 **Returns:** [`com.google.common.collect.PeekingIterator<T>`](./PeekingIterator.md)
+
+### `peekingIterator(PeekingIterator<T> iterator)`
 
 **Parameters:**
 - `iterator` ([`com.google.common.collect.PeekingIterator<T>`](./PeekingIterator.md))
 
-### `mergeSorted(java.lang.Iterable<? extends java.util.Iterator<? extends T>> iterators, java.util.Comparator<? super T> comparator)`
+**Returns:** [`com.google.common.collect.PeekingIterator<T>`](./PeekingIterator.md)
 
-**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
+### `mergeSorted(Iterable<? extends Iterator<? extends T>> iterators, Comparator<? super T> comparator)`
 
 Equivalent entries will not be de-duplicated.
 
@@ -695,4 +693,6 @@ For any equivalent elements across all iterators, it is undefined which element 
 **Parameters:**
 - `iterators` (`java.lang.Iterable<? extends java.util.Iterator<? extends T>>`)
 - `comparator` (`java.util.Comparator<? super T>`)
+
+**Returns:** [`com.google.common.collect.UnmodifiableIterator<T>`](./UnmodifiableIterator.md)
 

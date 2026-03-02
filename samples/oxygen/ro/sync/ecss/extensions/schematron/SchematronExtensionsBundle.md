@@ -26,7 +26,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getHelpPageID(java.lang.String currentEditorPage)`
+### `getHelpPageID(String currentEditorPage)`
 
 **Parameters:**
 - `currentEditorPage` (`java.lang.String`)

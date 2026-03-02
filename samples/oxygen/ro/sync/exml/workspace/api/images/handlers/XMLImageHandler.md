@@ -16,7 +16,7 @@ The image is either embedded in the XML content or referenced from it...
 
 ## Methods
 
-### `canHandleNamespace(java.lang.String namespace)`
+### `canHandleNamespace(String namespace)`
 
 For instance if the element is from 
  the MathML namespace, then a MathML handler would return true, and it can be used to generate an image 
@@ -27,7 +27,7 @@ For instance if the element is from
 
 **Returns:** `boolean`
 
-### `canHandleNodeContext(ro.sync.exml.workspace.api.node.NodeContext nodeContext)`
+### `canHandleNodeContext(NodeContext nodeContext)`
 
 For instance if the element is from 
  the MathML namespace, then a MathML handler would return true, and it can be used to generate an image 
@@ -38,7 +38,7 @@ For instance if the element is from
 
 **Returns:** `boolean`
 
-### `canHandle(java.lang.String rootNamespace, java.lang.String rootLocalName, org.xml.sax.Attributes rootAttributes)`
+### `canHandle(String rootNamespace, String rootLocalName, Attributes rootAttributes)`
 
 **Parameters:**
 - `rootNamespace` (`java.lang.String`): The root namespace.

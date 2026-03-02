@@ -24,7 +24,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0, java.lang.String arg1, ro.sync.exml.workspace.api.options.ConfigResource arg2, ro.sync.exml.workspace.api.options.ConfigResource arg3)`
+### `<init>(String arg0, String arg1, ConfigResource arg2, ConfigResource arg3)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -34,7 +34,7 @@
 
 ## Methods
 
-### `setTemplateProperties(ro.sync.template.ConfigResourceBasedTemplate arg0, java.util.Properties arg1)`
+### `setTemplateProperties(ConfigResourceBasedTemplate arg0, Properties arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.template.ConfigResourceBasedTemplate`](./ConfigResourceBasedTemplate.md))
@@ -42,7 +42,7 @@
 
 **Returns:** `void`
 
-### `getAndRemove(java.util.Properties arg0, java.lang.String arg1)`
+### `getAndRemove(Properties arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.util.Properties`)
@@ -58,7 +58,7 @@
 
 **Returns:** `int`
 
-### `equals(java.lang.Object arg0)`
+### `equals(Object arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.Object`)
@@ -73,7 +73,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `setOtherProperties(ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String> arg0)`
+### `setOtherProperties(SerializableLinkedHashMap<String,String> arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.options.SerializableLinkedHashMap<java.lang.String,java.lang.String>`)

@@ -31,23 +31,21 @@ See the Guava User Guide article on [BiMap](https://github.com/google/guava/wiki
 
 ## Constructors
 
-### `<init>(java.lang.Class<K> keyType)`
+### `<init>(Class<K> keyType)`
 
 **Parameters:**
 - `keyType` (`java.lang.Class<K>`)
 
 ## Methods
 
-### `create(java.lang.Class<K> keyType)`
-
-**Returns:** [`com.google.common.collect.EnumHashBiMap<K,V>`](./EnumHashBiMap.md)
+### `create(Class<K> keyType)`
 
 **Parameters:**
 - `keyType` (`java.lang.Class<K>`): the key type
 
-### `create(java.util.Map<K,? extends V> map)`
-
 **Returns:** [`com.google.common.collect.EnumHashBiMap<K,V>`](./EnumHashBiMap.md)
+
+### `create(Map<K,? extends V> map)`
 
 If the specified map is an
  EnumHashBiMap or an EnumBiMap, the new bimap has the same key type as the input
@@ -57,44 +55,46 @@ If the specified map is an
 **Parameters:**
 - `map` (`java.util.Map<K,? extends V>`): the map whose mappings are to be placed in this map
 
+**Returns:** [`com.google.common.collect.EnumHashBiMap<K,V>`](./EnumHashBiMap.md)
+
 ### `checkKey(K key)`
+
+**Parameters:**
+- `key` (`K`)
 
 **Returns:** `K`
 
-**Parameters:**
-- `key` (`K`)
-
 ### `put(K key, V value)`
-
-**Returns:** `V`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `forcePut(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
+
+**Returns:** `V`
 
 ### `keyType()`
 
 **Returns:** `java.lang.Class<K>`
 
-### `writeObject(java.io.ObjectOutputStream stream)`
-
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

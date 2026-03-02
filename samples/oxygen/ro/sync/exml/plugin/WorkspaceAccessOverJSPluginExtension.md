@@ -22,21 +22,21 @@
 
 ## Constructors
 
-### `<init>(java.util.List<java.net.URL> arg0)`
+### `<init>(List<URL> arg0)`
 
 **Parameters:**
 - `arg0` (`java.util.List<java.net.URL>`)
 
 ## Methods
 
-### `applicationStarted(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg0)`
+### `applicationStarted(StandalonePluginWorkspace arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md))
 
 **Returns:** `void`
 
-### `callFunction(ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg0, java.lang.String arg1, boolean arg2)`
+### `callFunction(StandalonePluginWorkspace arg0, String arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace`](../workspace/api/standalone/StandalonePluginWorkspace.md))

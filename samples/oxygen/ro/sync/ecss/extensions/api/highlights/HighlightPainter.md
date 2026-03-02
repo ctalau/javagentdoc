@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `paint(ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo pi)`
+### `paint(HighlightPainterInfo pi)`
 
 **Parameters:**
 - `pi` ([`ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo`](./HighlightPainterInfo.md)): Information used by highlight

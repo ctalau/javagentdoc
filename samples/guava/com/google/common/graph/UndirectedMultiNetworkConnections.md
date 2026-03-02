@@ -21,7 +21,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<E,N> incidentEdges)`
+### `<init>(Map<E,N> incidentEdges)`
 
 **Parameters:**
 - `incidentEdges` (`java.util.Map<E,N>`)
@@ -32,12 +32,12 @@
 
 **Returns:** [`com.google.common.graph.UndirectedMultiNetworkConnections<N,E>`](./UndirectedMultiNetworkConnections.md)
 
-### `ofImmutable(java.util.Map<E,N> incidentEdges)`
-
-**Returns:** [`com.google.common.graph.UndirectedMultiNetworkConnections<N,E>`](./UndirectedMultiNetworkConnections.md)
+### `ofImmutable(Map<E,N> incidentEdges)`
 
 **Parameters:**
 - `incidentEdges` (`java.util.Map<E,N>`)
+
+**Returns:** [`com.google.common.graph.UndirectedMultiNetworkConnections<N,E>`](./UndirectedMultiNetworkConnections.md)
 
 ### `adjacentNodes()`
 
@@ -49,47 +49,47 @@
 
 ### `edgesConnecting(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<E>`
 
 ### `removeInEdge(E edge, boolean isSelfLoop)`
 
-**Returns:** `N`
-
 **Parameters:**
 - `edge` (`E`)
 - `isSelfLoop` (`boolean`)
+
+**Returns:** `N`
 
 ### `removeOutEdge(E edge)`
 
-**Returns:** `N`
-
 **Parameters:**
 - `edge` (`E`)
 
-### `addInEdge(E edge, N node, boolean isSelfLoop)`
+**Returns:** `N`
 
-**Returns:** `void`
+### `addInEdge(E edge, N node, boolean isSelfLoop)`
 
 **Parameters:**
 - `edge` (`E`)
 - `node` (`N`)
 - `isSelfLoop` (`boolean`)
 
-### `addOutEdge(E edge, N node)`
-
 **Returns:** `void`
+
+### `addOutEdge(E edge, N node)`
 
 **Parameters:**
 - `edge` (`E`)
 - `node` (`N`)
 
-### `getReference(java.lang.ref.Reference<T> reference)`
+**Returns:** `void`
 
-**Returns:** `T`
+### `getReference(Reference<T> reference)`
 
 **Parameters:**
 - `reference` (`java.lang.ref.Reference<T>`)
+
+**Returns:** `T`
 

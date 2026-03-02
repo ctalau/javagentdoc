@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String cssURL, byte origin)`
+### `<init>(String cssURL, byte origin)`
 
 **Parameters:**
 - `cssURL` (`java.lang.String`): The CSS url.
@@ -41,7 +41,7 @@
 
 **Returns:** `java.lang.String`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

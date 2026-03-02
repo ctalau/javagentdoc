@@ -29,7 +29,7 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Constructors
 
-### `<init>(com.google.common.collect.ImmutableMap<K,com.google.common.collect.ImmutableList<V>> map, int size)`
+### `<init>(ImmutableMap<K,ImmutableList<V>> map, int size)`
 
 **Parameters:**
 - `map` ([`com.google.common.collect.ImmutableMap<K,com.google.common.collect.ImmutableList<V>>`](./ImmutableMap.md))
@@ -37,9 +37,7 @@ See the Guava User Guide article on [immutable collections](https://github.com/g
 
 ## Methods
 
-### `toImmutableListMultimap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends V> valueFunction)`
-
-**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableListMultimap<K,V>>`
+### `toImmutableListMultimap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends V> valueFunction)`
 
 For streams with defined encounter order (as defined in the Ordering section of the java.util.stream Javadoc), that order is preserved, but entries are [grouped by key](ImmutableMultimap.html#iteration).
 
@@ -69,9 +67,9 @@ Example:
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valueFunction` (`java.util.function.Function<? super T,? extends V>`)
 
-### `flatteningToImmutableListMultimap(java.util.function.Function<? super T,? extends K> keyFunction, java.util.function.Function<? super T,? extends java.util.stream.Stream<? extends V>> valuesFunction)`
-
 **Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableListMultimap<K,V>>`
+
+### `flatteningToImmutableListMultimap(Function<? super T,? extends K> keyFunction, Function<? super T,? extends Stream<? extends V>> valuesFunction)`
 
 Each
  input element is mapped to a key and a stream of values, each of which are put into the
@@ -110,23 +108,23 @@ Example:
 - `keyFunction` (`java.util.function.Function<? super T,? extends K>`)
 - `valuesFunction` (`java.util.function.Function<? super T,? extends java.util.stream.Stream<? extends V>>`)
 
-### `of()`
+**Returns:** `java.util.stream.Collector<T,?,com.google.common.collect.ImmutableListMultimap<K,V>>`
 
-**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+### `of()`
 
 **Performance note:** the instance returned is a singleton.
 
-### `of(K k1, V v1)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `of(K k1, V v1)`
 
 **Parameters:**
 - `k1` (`K`)
 - `v1` (`V`)
 
-### `of(K k1, V v1, K k2, V v2)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -134,9 +132,9 @@ Example:
 - `k2` (`K`)
 - `v2` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -146,9 +144,9 @@ Example:
 - `k3` (`K`)
 - `v3` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -160,9 +158,9 @@ Example:
 - `k4` (`K`)
 - `v4` (`V`)
 
-### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `of(K k1, V v1, K k2, V v2, K k3, V v3, K k4, V v4, K k5, V v5)`
 
 **Parameters:**
 - `k1` (`K`)
@@ -176,15 +174,15 @@ Example:
 - `k5` (`K`)
 - `v5` (`V`)
 
-### `builder()`
+**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
 
-**Returns:** `com.google.common.collect.ImmutableListMultimap.Builder<K,V>`
+### `builder()`
 
 The generated builder is equivalent to the builder created by the Builder constructor.
 
-### `copyOf(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
+**Returns:** `com.google.common.collect.ImmutableListMultimap.Builder<K,V>`
 
-**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+### `copyOf(Multimap<? extends K,? extends V> multimap)`
 
 The generated
  multimap's key and value orderings correspond to the iteration ordering of the 
@@ -198,9 +196,9 @@ Despite the method name, this method attempts to avoid actually copying the data
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md))
 
-### `copyOf(java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>> entries)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `copyOf(Iterable<? extends Map.Entry<? extends K,? extends V>> entries)`
 
 The returned multimap iterates
  over keys in the order they were first encountered in the input, and the values for each key
@@ -209,17 +207,17 @@ The returned multimap iterates
 **Parameters:**
 - `entries` (`java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>`)
 
-### `fromMapEntries(java.util.Collection<? extends java.util.Map.Entry<? extends K,? extends java.util.Collection<? extends V>>> mapEntries, java.util.Comparator<? super V> valueComparator)`
-
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
+
+### `fromMapEntries(Collection<? extends Map.Entry<? extends K,? extends Collection<? extends V>>> mapEntries, Comparator<? super V> valueComparator)`
 
 **Parameters:**
 - `mapEntries` (`java.util.Collection<? extends java.util.Map.Entry<? extends K,? extends java.util.Collection<? extends V>>>`)
 - `valueComparator` (`java.util.Comparator<? super V>`)
 
-### `get(K key)`
+**Returns:** [`com.google.common.collect.ImmutableListMultimap<K,V>`](./ImmutableListMultimap.md)
 
-**Returns:** [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md)
+### `get(K key)`
 
 If no mappings in the multimap have
  the provided key, an empty immutable list is returned. The values are in the same order as the
@@ -228,44 +226,46 @@ If no mappings in the multimap have
 **Parameters:**
 - `key` (`K`)
 
-### `inverse()`
+**Returns:** [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md)
 
-**Returns:** [`com.google.common.collect.ImmutableListMultimap<V,K>`](./ImmutableListMultimap.md)
+### `inverse()`
 
 Because an inverse of a list multimap can contain multiple pairs with the same key and
  value, this method returns an ImmutableListMultimap rather than the 
  ImmutableMultimap specified in the ImmutableMultimap class.
 
+**Returns:** [`com.google.common.collect.ImmutableListMultimap<V,K>`](./ImmutableListMultimap.md)
+
 ### `invert()`
 
 **Returns:** [`com.google.common.collect.ImmutableListMultimap<V,K>`](./ImmutableListMultimap.md)
 
-### `removeAll(java.lang.Object key)`
-
-**Returns:** [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md)
+### `removeAll(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `replaceValues(K key, java.lang.Iterable<? extends V> values)`
-
 **Returns:** [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md)
+
+### `replaceValues(K key, Iterable<? extends V> values)`
 
 **Parameters:**
 - `key` (`K`)
 - `values` (`java.lang.Iterable<? extends V>`)
 
-### `writeObject(java.io.ObjectOutputStream stream)`
+**Returns:** [`com.google.common.collect.ImmutableList<V>`](./ImmutableList.md)
 
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

@@ -24,7 +24,7 @@
 
 ## Methods
 
-### `urlChosen(java.net.URL selectedURL)`
+### `urlChosen(URL selectedURL)`
 
 When the customizer is used in places where a combo box for the URL is not present 
  (like in the DITA Maps Manager view) this method performs the operation on the given URL.

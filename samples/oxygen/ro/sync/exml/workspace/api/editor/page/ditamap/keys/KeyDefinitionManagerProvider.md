@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `getKeyDefinitionManager(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `getKeyDefinitionManager(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../../../../../ecss/extensions/api/AuthorAccess.md)): The author access for an opened document.

@@ -76,9 +76,7 @@ If you don't need the features of this class, you may prefer newSequentialExecut
 
 **Returns:** [`com.google.common.util.concurrent.ExecutionSequencer`](./ExecutionSequencer.md)
 
-### `submit(java.util.concurrent.Callable<T> callable, java.util.concurrent.Executor executor)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+### `submit(Callable<T> callable, Executor executor)`
 
 Cancellation does not propagate from the output future to a callable that has begun to
  execute, but if the output future is cancelled before Callable#call() is invoked,
@@ -88,9 +86,9 @@ Cancellation does not propagate from the output future to a callable that has be
 - `callable` (`java.util.concurrent.Callable<T>`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `submitAsync(com.google.common.util.concurrent.AsyncCallable<T> callable, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+
+### `submitAsync(AsyncCallable<T> callable, Executor executor)`
 
 Cancellation does not propagate from the output future to the future returned from 
  callable or a callable that has begun to execute, but if the output future is cancelled before
@@ -99,4 +97,6 @@ Cancellation does not propagate from the output future to the future returned fr
 **Parameters:**
 - `callable` ([`com.google.common.util.concurrent.AsyncCallable<T>`](./AsyncCallable.md))
 - `executor` (`java.util.concurrent.Executor`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 

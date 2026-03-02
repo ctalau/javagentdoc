@@ -56,7 +56,7 @@ This type of source means that the callback is received
 
 ## Methods
 
-### `shouldFilterAttribute(ro.sync.ecss.extensions.api.node.AuthorElement parentElement, java.lang.String attributeQName, int source)`
+### `shouldFilterAttribute(AuthorElement parentElement, String attributeQName, int source)`
 
 This method should be implemented in subclasses.
 
@@ -68,7 +68,7 @@ This method should be implemented in subclasses.
 
 **Returns:** `boolean`
 
-### `shouldFilterAttribute(ro.sync.contentcompletion.xml.CIElement parentElement, java.lang.String attributeQName, int source)`
+### `shouldFilterAttribute(CIElement parentElement, String attributeQName, int source)`
 
 This method should be implemented in subclasses.
 

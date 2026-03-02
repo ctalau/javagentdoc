@@ -21,7 +21,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Map<E,N> incidentEdgeMap)`
+### `<init>(Map<E,N> incidentEdgeMap)`
 
 **Parameters:**
 - `incidentEdgeMap` (`java.util.Map<E,N>`)
@@ -50,40 +50,40 @@
 
 ### `adjacentNode(E edge)`
 
-**Returns:** `N`
-
 **Parameters:**
 - `edge` (`E`)
+
+**Returns:** `N`
 
 ### `removeInEdge(E edge, boolean isSelfLoop)`
 
-**Returns:** `N`
-
 **Parameters:**
 - `edge` (`E`)
 - `isSelfLoop` (`boolean`)
+
+**Returns:** `N`
 
 ### `removeOutEdge(E edge)`
 
-**Returns:** `N`
-
 **Parameters:**
 - `edge` (`E`)
 
-### `addInEdge(E edge, N node, boolean isSelfLoop)`
+**Returns:** `N`
 
-**Returns:** `void`
+### `addInEdge(E edge, N node, boolean isSelfLoop)`
 
 **Parameters:**
 - `edge` (`E`)
 - `node` (`N`)
 - `isSelfLoop` (`boolean`)
 
-### `addOutEdge(E edge, N node)`
-
 **Returns:** `void`
+
+### `addOutEdge(E edge, N node)`
 
 **Parameters:**
 - `edge` (`E`)
 - `node` (`N`)
+
+**Returns:** `void`
 

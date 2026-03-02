@@ -27,7 +27,7 @@
 
 ## Constructors
 
-### `<init>(com.google.common.collect.Multimap<K,V> unfiltered, com.google.common.base.Predicate<? super K> keyPredicate)`
+### `<init>(Multimap<K,V> unfiltered, Predicate<? super K> keyPredicate)`
 
 **Parameters:**
 - `unfiltered` ([`com.google.common.collect.Multimap<K,V>`](./Multimap.md))
@@ -47,19 +47,19 @@
 
 **Returns:** `int`
 
-### `containsKey(java.lang.Object key)`
+### `containsKey(Object key)`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 **Returns:** `boolean`
 
+### `removeAll(Object key)`
+
 **Parameters:**
 - `key` (`java.lang.Object`)
-
-### `removeAll(java.lang.Object key)`
 
 **Returns:** `java.util.Collection<V>`
-
-**Parameters:**
-- `key` (`java.lang.Object`)
 
 ### `unmodifiableEmptyCollection()`
 
@@ -75,10 +75,10 @@
 
 ### `get(K key)`
 
-**Returns:** `java.util.Collection<V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Collection<V>`
 
 ### `entryIterator()`
 

@@ -32,7 +32,7 @@ It can be `null` if no information is specified for table column.
 
 ## Constructors
 
-### `<init>(int insertOffset, ro.sync.ecss.extensions.api.node.AuthorDocumentFragment[] columnFragments, boolean fragmentsWrappedInCells, ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.table.operations.TableColumnSpecificationInformation columnSpecification)`
+### `<init>(int insertOffset, AuthorDocumentFragment[] columnFragments, boolean fragmentsWrappedInCells, AuthorAccess authorAccess, TableColumnSpecificationInformation columnSpecification)`
 
 **Parameters:**
 - `insertOffset` (`int`): The offset where the column is inserted.

@@ -62,14 +62,14 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.ecss.dita.ContextKeyManagerProvider keyManagerProvider)`
+### `<init>(ContextKeyManagerProvider keyManagerProvider)`
 
 **Parameters:**
 - `keyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../dita/ContextKeyManagerProvider.md)): The key manager provider
 
 ## Methods
 
-### `acceptsURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
+### `acceptsURLs(WSXMLTextEditorPage textAccess, List<URL> urls, int source)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md))
@@ -78,7 +78,7 @@
 
 **Returns:** `boolean`
 
-### `insertURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urlList, int source)`
+### `insertURLs(WSXMLTextEditorPage textAccess, List<URL> urlList, int source)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md))
@@ -87,7 +87,7 @@
 
 **Returns:** `void`
 
-### `insertKeyInfo(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, ro.sync.ecss.dita.reference.keyref.KeyInfo key, java.net.URL originalUrlToInsert)`
+### `insertKeyInfo(WSXMLTextEditorPage textAccess, KeyInfo key, URL originalUrlToInsert)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access
@@ -96,7 +96,7 @@
 
 **Returns:** `void`
 
-### `detectKeyInfo(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.net.URL url)`
+### `detectKeyInfo(WSXMLTextEditorPage textAccess, URL url)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md))
@@ -104,7 +104,7 @@
 
 **Returns:** `ro.sync.ecss.dita.reference.keyref.KeyInfo`
 
-### `insertUrlAsReference(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.net.URL originalUrl)`
+### `insertUrlAsReference(WSXMLTextEditorPage textAccess, URL originalUrl)`
 
 If a key is found mapped to the URL, a keyref is inserted instead of a direct reference.
 
@@ -114,7 +114,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `insertAsXref(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.net.URL resourceToInsert, java.net.URL nodeBaseUrl, ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager schemaManager)`
+### `insertAsXref(WSXMLTextEditorPage textAccess, URL resourceToInsert, URL nodeBaseUrl, WSTextXMLSchemaManager schemaManager)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md))
@@ -124,7 +124,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `createAndInsertFigureWithImageHref(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.net.URL nodeBaseUrl, java.lang.String[] referenceAttributeNameAndValue)`
+### `createAndInsertFigureWithImageHref(WSXMLTextEditorPage textAccess, URL nodeBaseUrl, String[] referenceAttributeNameAndValue)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md))
@@ -133,7 +133,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `createAndInsertImageRef(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.net.URL nodeBaseUrl, ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager schemaManager, java.lang.String[] referenceAttributeNameAndValue)`
+### `createAndInsertImageRef(WSXMLTextEditorPage textAccess, URL nodeBaseUrl, WSTextXMLSchemaManager schemaManager, String[] referenceAttributeNameAndValue)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Offer access to text page API and utilities.
@@ -143,7 +143,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `createAndInsertMediaRef(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager schemaManager, java.net.URL resourceURL, java.lang.String[] referenceAttributeNameAndValue)`
+### `createAndInsertMediaRef(WSXMLTextEditorPage textAccess, WSTextXMLSchemaManager schemaManager, URL resourceURL, String[] referenceAttributeNameAndValue)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Offer access to text page API and utilities.
@@ -154,7 +154,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `createAndInsertElementInRelatedLinks(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.net.URL nodeBaseUrl, ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager schemaManager, java.lang.String[] referenceAttributeNameAndValue)`
+### `createAndInsertElementInRelatedLinks(WSXMLTextEditorPage textAccess, URL nodeBaseUrl, WSTextXMLSchemaManager schemaManager, String[] referenceAttributeNameAndValue)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Offer access to text page API and utilities.
@@ -164,7 +164,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `insertAsRelatedLink(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.lang.String fragment)`
+### `insertAsRelatedLink(WSXMLTextEditorPage textAccess, String fragment)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Text acces
@@ -172,14 +172,14 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `preferRelatedLinks(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage tp)`
+### `preferRelatedLinks(WSXMLTextEditorPage tp)`
 
 **Parameters:**
 - `tp` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page.
 
 **Returns:** `boolean`
 
-### `computeKeyReferenceFragment(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, ro.sync.ecss.dita.reference.keyref.KeyInfo key, boolean forceInsertAsVariableKeyref, boolean preferRelatedLinks, boolean isImage)`
+### `computeKeyReferenceFragment(WSXMLTextEditorPage textAccess, KeyInfo key, boolean forceInsertAsVariableKeyref, boolean preferRelatedLinks, boolean isImage)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Contains methods specific to XML editors.
@@ -190,21 +190,21 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `java.lang.String`
 
-### `createRelatedLinksSection(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess)`
+### `createRelatedLinksSection(WSXMLTextEditorPage textAccess)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Contains methods specific to XML editors.
 
 **Returns:** `void`
 
-### `createRelatedLinksSectionInternal(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess)`
+### `createRelatedLinksSectionInternal(WSXMLTextEditorPage textAccess)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Contains methods specific to XML editors.
 
 **Returns:** `void`
 
-### `computeMediaObjectFrag(ro.sync.ecss.dita.ContextKeyManagerProvider keyManagerProvider, ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, ro.sync.ecss.dita.reference.keyref.KeyInfo keyInfo)`
+### `computeMediaObjectFrag(ContextKeyManagerProvider keyManagerProvider, WSXMLTextEditorPage textAccess, KeyInfo keyInfo)`
 
 **Parameters:**
 - `keyManagerProvider` ([`ro.sync.ecss.dita.ContextKeyManagerProvider`](../../dita/ContextKeyManagerProvider.md))
@@ -213,7 +213,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `java.lang.String`
 
-### `insertContentReference(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.net.URL url)`
+### `insertContentReference(WSXMLTextEditorPage textAccess, URL url)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Access to the current document.
@@ -221,7 +221,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `void`
 
-### `computeMediaReferenceXMLToInsert(ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager schemaManager, java.util.Map<java.lang.String,java.lang.String> mediaProperties, java.lang.String mediaElementName)`
+### `computeMediaReferenceXMLToInsert(WSTextXMLSchemaManager schemaManager, Map<String,String> mediaProperties, String mediaElementName)`
 
 **Parameters:**
 - `schemaManager` ([`ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager`](../../../exml/workspace/api/editor/page/text/WSTextXMLSchemaManager.md)): Text page XML schema manager.
@@ -230,7 +230,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `java.lang.String`
 
-### `computeObjectReferenceXMLToInsert(java.util.Map<java.lang.String,java.lang.String> mediaProperties, java.lang.String mediaElementName)`
+### `computeObjectReferenceXMLToInsert(Map<String,String> mediaProperties, String mediaElementName)`
 
 **Parameters:**
 - `mediaProperties` (`java.util.Map<java.lang.String,java.lang.String>`): The properties of the media object.
@@ -238,7 +238,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `java.lang.String`
 
-### `computeVideoAndAudioReferenceXMLToInsert(ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager schemaManager, java.util.Map<java.lang.String,java.lang.String> mediaProperties, java.lang.String mediaElementName)`
+### `computeVideoAndAudioReferenceXMLToInsert(WSTextXMLSchemaManager schemaManager, Map<String,String> mediaProperties, String mediaElementName)`
 
 **Parameters:**
 - `schemaManager` ([`ro.sync.exml.workspace.api.editor.page.text.WSTextXMLSchemaManager`](../../../exml/workspace/api/editor/page/text/WSTextXMLSchemaManager.md)): Text page XML schema manager.
@@ -247,7 +247,7 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `java.lang.String`
 
-### `getMostUsedMediaElementNameToDrop(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.lang.String imposedKeyAttribute, java.lang.String mediaType)`
+### `getMostUsedMediaElementNameToDrop(WSXMLTextEditorPage textAccess, String imposedKeyAttribute, String mediaType)`
 
 **Parameters:**
 - `textAccess` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): Contains methods specific to XML editors.
@@ -257,14 +257,14 @@ If a key is found mapped to the URL, a keyref is inserted instead of a direct re
 
 **Returns:** `java.lang.String`
 
-### `removeOxyCustomQueryParams(java.net.URL url)`
+### `removeOxyCustomQueryParams(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The provided URL.
 
 **Returns:** `java.net.URL`
 
-### `isHTMLReference(java.net.URL url)`
+### `isHTMLReference(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`)

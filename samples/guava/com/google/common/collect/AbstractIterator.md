@@ -65,8 +65,6 @@ This class supports iterators that include null elements.
 
 ### `computeNext()`
 
-**Returns:** `T`
-
 **Note:** the implementation must call #endOfData() when
  there are no elements left in the iteration. Failure to do so could result in an infinite loop.
 
@@ -86,6 +84,8 @@ The implementation of this method may not invoke the hasNext, next, or
  #peek() methods on this instance; if it does, an IllegalStateException will
  result.
 
+**Returns:** `T`
+
 ### `endOfData()`
 
 **Returns:** `T`
@@ -104,8 +104,8 @@ The implementation of this method may not invoke the hasNext, next, or
 
 ### `peek()`
 
-**Returns:** `T`
-
 Implementations of AbstractIterator that wish to expose this functionality should
  implement PeekingIterator.
+
+**Returns:** `T`
 

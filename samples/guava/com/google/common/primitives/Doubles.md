@@ -33,16 +33,14 @@ All valid inputs must pass this regex, but it's semantically fine if not all inp
 
 ### `hashCode(double value)`
 
-**Returns:** `int`
-
 **Java 8 users:** use Double#hashCode(double) instead.
 
 **Parameters:**
 - `value` (`double`): a primitive double value
 
-### `compare(double a, double b)`
-
 **Returns:** `int`
+
+### `compare(double a, double b)`
 
 The sign of the value returned is the same as
  that of `((Double) a).compareTo(b)`. As with that
@@ -57,9 +55,9 @@ The sign of the value returned is the same as
 - `a` (`double`): the first double to compare
 - `b` (`double`): the second double to compare
 
-### `isFinite(double value)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `isFinite(double value)`
 
 This is equivalent to, but not
  necessarily implemented as, !(Double.isInfinite(value) || Double.isNaN(value)).
@@ -70,9 +68,9 @@ This is equivalent to, but not
 **Parameters:**
 - `value` (`double`)
 
-### `contains(double[] array, double target)`
-
 **Returns:** `boolean`
+
+### `contains(double[] array, double target)`
 
 Note
  that this always returns false when target is NaN.
@@ -81,9 +79,9 @@ Note
 - `array` (`double[]`): an array of double values, possibly empty
 - `target` (`double`): a primitive double value
 
-### `indexOf(double[] array, double target)`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `indexOf(double[] array, double target)`
 
 Note
  that this always returns -1 when target is NaN.
@@ -92,9 +90,9 @@ Note
 - `array` (`double[]`): an array of double values, possibly empty
 - `target` (`double`): a primitive double value
 
-### `indexOf(double[] array, double target, int start, int end)`
-
 **Returns:** `int`
+
+### `indexOf(double[] array, double target, int start, int end)`
 
 **Parameters:**
 - `array` (`double[]`)
@@ -102,9 +100,9 @@ Note
 - `start` (`int`)
 - `end` (`int`)
 
-### `indexOf(double[] array, double[] target)`
-
 **Returns:** `int`
+
+### `indexOf(double[] array, double[] target)`
 
 More formally, returns the lowest index i such that Arrays.copyOfRange(array,
  i, i + target.length) contains exactly the same elements as target.
@@ -116,9 +114,9 @@ Note that this always returns -1 when target contains NaN.
 - `array` (`double[]`): the array to search for the sequence target
 - `target` (`double[]`): the array to search for as a sub-sequence of array
 
-### `lastIndexOf(double[] array, double target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(double[] array, double target)`
 
 Note
  that this always returns -1 when target is NaN.
@@ -127,9 +125,9 @@ Note
 - `array` (`double[]`): an array of double values, possibly empty
 - `target` (`double`): a primitive double value
 
-### `lastIndexOf(double[] array, double target, int start, int end)`
-
 **Returns:** `int`
+
+### `lastIndexOf(double[] array, double target, int start, int end)`
 
 **Parameters:**
 - `array` (`double[]`)
@@ -137,23 +135,23 @@ Note
 - `start` (`int`)
 - `end` (`int`)
 
-### `min(double[] array)`
+**Returns:** `int`
 
-**Returns:** `double`
+### `min(double[] array)`
 
 **Parameters:**
 - `array` (`double[]`): a *nonempty* array of double values
+
+**Returns:** `double`
 
 ### `max(double[] array)`
 
-**Returns:** `double`
-
 **Parameters:**
 - `array` (`double[]`): a *nonempty* array of double values
 
-### `constrainToRange(double value, double min, double max)`
-
 **Returns:** `double`
+
+### `constrainToRange(double value, double min, double max)`
 
 If value is within the range [min..max], value is returned
  unchanged. If value is less than min, min is returned, and if 
@@ -164,9 +162,9 @@ If value is within the range [min..max], value is returned
 - `min` (`double`): the lower bound (inclusive) of the range to constrain value to
 - `max` (`double`): the upper bound (inclusive) of the range to constrain value to
 
-### `concat(double[][] arrays)`
+**Returns:** `double`
 
-**Returns:** `double[]`
+### `concat(double[][] arrays)`
 
 For example, 
  concat(new double[] {a, b}, new double[] {}, new double[] {c} returns the array {a, b,
@@ -175,13 +173,13 @@ For example,
 **Parameters:**
 - `arrays` (`double[][]`): zero or more double arrays
 
+**Returns:** `double[]`
+
 ### `stringConverter()`
 
 **Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Double>`](../base/Converter.md)
 
 ### `ensureCapacity(double[] array, int minLength, int padding)`
-
-**Returns:** `double[]`
 
 If array already has a length of at least minLength,
  it is returned directly. Otherwise, a new array of size minLength + padding is
@@ -192,9 +190,9 @@ If array already has a length of at least minLength,
 - `minLength` (`int`): the minimum length the returned array must guarantee
 - `padding` (`int`): an extra amount to "grow" the array by if growth is necessary
 
-### `join(java.lang.String separator, double[] array)`
+**Returns:** `double[]`
 
-**Returns:** `java.lang.String`
+### `join(String separator, double[] array)`
 
 For example,
  join("-", 1.0, 2.0, 3.0) returns the string "1.0-2.0-3.0".
@@ -205,12 +203,12 @@ Note that Double#toString(double) formats double differently in GWT
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`double[]`): an array of double values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<double[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(double, double)), the first pair of values that follow any
@@ -222,9 +220,9 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(double[],
  double[]).
 
-### `sortDescending(double[] array)`
+**Returns:** `java.util.Comparator<double[]>`
 
-**Returns:** `void`
+### `sortDescending(double[] array)`
 
 Note that this method uses the total order imposed by Double#compare, which treats
  all NaN values as equal and 0.0 as greater than -0.0.
@@ -232,9 +230,9 @@ Note that this method uses the total order imposed by Double#compare, which trea
 **Parameters:**
 - `array` (`double[]`)
 
-### `sortDescending(double[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(double[] array, int fromIndex, int toIndex)`
 
 Note that this method uses the total order imposed by Double#compare, which treats
  all NaN values as equal and 0.0 as greater than -0.0.
@@ -244,9 +242,9 @@ Note that this method uses the total order imposed by Double#compare, which trea
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `reverse(double[] array)`
-
 **Returns:** `void`
+
+### `reverse(double[] array)`
 
 This is equivalent to 
  Collections.reverse(Doubles.asList(array)), but is likely to be more efficient.
@@ -254,9 +252,9 @@ This is equivalent to
 **Parameters:**
 - `array` (`double[]`)
 
-### `reverse(double[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `reverse(double[] array, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.reverse(Doubles.asList(array).subList(fromIndex, toIndex)), but is likely to be
@@ -267,9 +265,9 @@ This is equivalent to
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `rotate(double[] array, int distance)`
-
 **Returns:** `void`
+
+### `rotate(double[] array, int distance)`
 
 This is equivalent to Collections.rotate(Bytes.asList(array),
  distance), but is considerably faster and avoids allocation and garbage collection.
@@ -281,9 +279,9 @@ The provided "distance" may be negative, which will rotate left.
 - `array` (`double[]`)
 - `distance` (`int`)
 
-### `rotate(double[] array, int distance, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `rotate(double[] array, int distance, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.rotate(Bytes.asList(array).subList(fromIndex, toIndex), distance), but is
@@ -298,9 +296,9 @@ The provided "distance" may be negative, which will rotate left.
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `toArray(java.util.Collection<? extends java.lang.Number> collection)`
+**Returns:** `void`
 
-**Returns:** `double[]`
+### `toArray(Collection<? extends Number> collection)`
 
 Elements are copied from the argument collection as if by collection.toArray().
  Calling this method is as thread-safe as calling that method.
@@ -308,9 +306,9 @@ Elements are copied from the argument collection as if by collection.toArray().
 **Parameters:**
 - `collection` (`java.util.Collection<? extends java.lang.Number>`): a collection of Number instances
 
-### `asList(double[] backingArray)`
+**Returns:** `double[]`
 
-**Returns:** `java.util.List<java.lang.Double>`
+### `asList(double[] backingArray)`
 
 The list supports List#set(int, Object), but any attempt to
  set a value to null will result in a NullPointerException.
@@ -333,13 +331,13 @@ The returned list is serializable.
 **Parameters:**
 - `backingArray` (`double[]`): the array to back the list
 
+**Returns:** `java.util.List<java.lang.Double>`
+
 ### `fpPattern()`
 
 **Returns:** `java.util.regex.Pattern`
 
-### `tryParse(java.lang.String string)`
-
-**Returns:** `java.lang.Double`
+### `tryParse(String string)`
 
 The ASCII character
  '-' (`'&#92;u002D'`) is recognized as the minus sign.
@@ -354,4 +352,6 @@ This implementation is likely to be faster than Double.parseDouble if many failu
 
 **Parameters:**
 - `string` (`java.lang.String`): the string representation of a double value
+
+**Returns:** `java.lang.Double`
 

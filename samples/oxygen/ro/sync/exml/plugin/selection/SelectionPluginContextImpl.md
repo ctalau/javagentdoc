@@ -28,7 +28,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0, java.awt.Frame arg1, java.net.URL arg2, ro.sync.exml.workspace.api.standalone.StandalonePluginWorkspace arg3)`
+### `<init>(String arg0, Frame arg1, URL arg2, StandalonePluginWorkspace arg3)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -38,21 +38,21 @@
 
 ## Methods
 
-### `setSelection(java.lang.String arg0)`
+### `setSelection(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setFrame(java.awt.Frame arg0)`
+### `setFrame(Frame arg0)`
 
 **Parameters:**
 - `arg0` (`java.awt.Frame`)
 
 **Returns:** `void`
 
-### `setDocumentURL(java.net.URL arg0)`
+### `setDocumentURL(URL arg0)`
 
 **Parameters:**
 - `arg0` (`java.net.URL`)

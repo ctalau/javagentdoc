@@ -16,7 +16,7 @@ For the Eclipse Plugin the dropped files are handled by the platform and this AP
 
 ## Methods
 
-### `insertURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
+### `insertURLs(WSXMLTextEditorPage textAccess, List<URL> urls, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event.
@@ -35,7 +35,7 @@ The `source` of the insertion can be a **paste** event or a
 
 **Returns:** `void`
 
-### `acceptsURLs(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, java.util.List<java.net.URL> urls, int source)`
+### `acceptsURLs(WSXMLTextEditorPage textAccess, List<URL> urls, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event. If the source is of **drag and drop** type and 
@@ -53,7 +53,7 @@ The `source` of the insertion can be a **paste** event or a
 
 **Returns:** `boolean`
 
-### `acceptsSource(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textAccess, int source)`
+### `acceptsSource(WSXMLTextEditorPage textAccess, int source)`
 
 The `source` of the insertion can be a **paste** event or a 
  **drag and drop** event. If the source is of **drag and drop** type and 
@@ -70,7 +70,7 @@ The `source` of the insertion can be a **paste** event or a
 
 **Returns:** `boolean`
 
-### `containsOnlyImages(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textPage, java.util.List<java.net.URL> urlList)`
+### `containsOnlyImages(WSXMLTextEditorPage textPage, List<URL> urlList)`
 
 **Parameters:**
 - `textPage` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.
@@ -78,7 +78,7 @@ The `source` of the insertion can be a **paste** event or a
 
 **Returns:** `boolean`
 
-### `containsOnlyBinaryResources(ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage textPage, java.util.List<java.net.URL> urlList)`
+### `containsOnlyBinaryResources(WSXMLTextEditorPage textPage, List<URL> urlList)`
 
 **Parameters:**
 - `textPage` ([`ro.sync.exml.workspace.api.editor.page.text.xml.WSXMLTextEditorPage`](../../../../exml/workspace/api/editor/page/text/xml/WSXMLTextEditorPage.md)): The text page access.

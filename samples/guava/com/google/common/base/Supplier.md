@@ -32,8 +32,8 @@ See the Guava User Guide article on [the use of Function](https://github.com/goo
 
 ### `get()`
 
-**Returns:** `T`
-
 The returned object may or may not be a new
  instance, depending on the implementation.
+
+**Returns:** `T`
 

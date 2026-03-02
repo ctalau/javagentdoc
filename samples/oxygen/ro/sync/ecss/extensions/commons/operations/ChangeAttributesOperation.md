@@ -45,7 +45,7 @@ The value of the argument is an XPath expression.
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -53,7 +53,7 @@ The value of the argument is an XPath expression.
 
 **Returns:** `void`
 
-### `detectTargetElements(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object xpathLocations)`
+### `detectTargetElements(AuthorAccess authorAccess, Object xpathLocations)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to Author functionality.
@@ -61,7 +61,7 @@ The value of the argument is an XPath expression.
 
 **Returns:** [`ro.sync.ecss.extensions.api.node.AuthorElement[]`](../../api/node/AuthorElement.md)
 
-### `detectElementAtOffset(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `detectElementAtOffset(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): Access to Author API.

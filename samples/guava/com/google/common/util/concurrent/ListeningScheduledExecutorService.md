@@ -12,43 +12,41 @@ To create an instance from an existing ScheduledExecutorService, call MoreExecut
 
 ## Methods
 
-### `schedule(java.lang.Runnable command, long delay, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+### `schedule(Runnable command, long delay, TimeUnit unit)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
 - `delay` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `schedule(java.lang.Runnable command, java.time.Duration delay)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+
+### `schedule(Runnable command, Duration delay)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
 - `delay` (`java.time.Duration`)
 
-### `schedule(java.util.concurrent.Callable<V> callable, long delay, java.util.concurrent.TimeUnit unit)`
+**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<V>`](./ListenableScheduledFuture.md)
+### `schedule(Callable<V> callable, long delay, TimeUnit unit)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<V>`)
 - `delay` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `schedule(java.util.concurrent.Callable<V> callable, java.time.Duration delay)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<V>`](./ListenableScheduledFuture.md)
+
+### `schedule(Callable<V> callable, Duration delay)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<V>`)
 - `delay` (`java.time.Duration`)
 
-### `scheduleAtFixedRate(java.lang.Runnable command, long initialDelay, long period, java.util.concurrent.TimeUnit unit)`
+**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<V>`](./ListenableScheduledFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+### `scheduleAtFixedRate(Runnable command, long initialDelay, long period, TimeUnit unit)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
@@ -56,18 +54,18 @@ To create an instance from an existing ScheduledExecutorService, call MoreExecut
 - `period` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `scheduleAtFixedRate(java.lang.Runnable command, java.time.Duration initialDelay, java.time.Duration period)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+
+### `scheduleAtFixedRate(Runnable command, Duration initialDelay, Duration period)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
 - `initialDelay` (`java.time.Duration`)
 - `period` (`java.time.Duration`)
 
-### `scheduleWithFixedDelay(java.lang.Runnable command, long initialDelay, long delay, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+
+### `scheduleWithFixedDelay(Runnable command, long initialDelay, long delay, TimeUnit unit)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
@@ -75,12 +73,14 @@ To create an instance from an existing ScheduledExecutorService, call MoreExecut
 - `delay` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `scheduleWithFixedDelay(java.lang.Runnable command, java.time.Duration initialDelay, java.time.Duration delay)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
+
+### `scheduleWithFixedDelay(Runnable command, Duration initialDelay, Duration delay)`
 
 **Parameters:**
 - `command` (`java.lang.Runnable`)
 - `initialDelay` (`java.time.Duration`)
 - `delay` (`java.time.Duration`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableScheduledFuture<?>`](./ListenableScheduledFuture.md)
 

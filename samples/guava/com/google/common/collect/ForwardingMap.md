@@ -58,52 +58,52 @@ The standard methods and the collection views they return are not guaranteed to 
 
 **Returns:** `boolean`
 
-### `remove(java.lang.Object key)`
-
-**Returns:** `V`
+### `remove(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `containsKey(java.lang.Object key)`
-
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `get(java.lang.Object key)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `put(K key, V value)`
-
 **Returns:** `V`
+
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putAll(java.util.Map<? extends K,? extends V> map)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `putAll(Map<? extends K,? extends V> map)`
 
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
+
+**Returns:** `void`
 
 ### `keySet()`
 
@@ -117,20 +117,18 @@ The standard methods and the collection views they return are not guaranteed to 
 
 **Returns:** `java.util.Set<java.util.Map.Entry<K,V>>`
 
-### `equals(java.lang.Object object)`
-
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 
 **Returns:** `int`
 
-### `standardPutAll(java.util.Map<? extends K,? extends V> map)`
-
-**Returns:** `void`
+### `standardPutAll(Map<? extends K,? extends V> map)`
 
 If you
  override #put(Object, Object), you may wish to override #putAll(Map) to forward
@@ -139,9 +137,9 @@ If you
 **Parameters:**
 - `map` (`java.util.Map<? extends K,? extends V>`)
 
-### `standardRemove(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `standardRemove(Object key)`
 
 If you override #entrySet, you may wish to override #remove to forward to this implementation.
 
@@ -152,16 +150,16 @@ Alternately, you may wish to override #remove with keySet().remove, assuming
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `standardClear()`
+**Returns:** `V`
 
-**Returns:** `void`
+### `standardClear()`
 
 In many cases, you may wish to override #clear to forward to this
  implementation.
 
-### `standardContainsKey(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `standardContainsKey(Object key)`
 
 If you override #entrySet, you may wish to
  override #containsKey to forward to this implementation.
@@ -169,25 +167,25 @@ If you override #entrySet, you may wish to
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `standardContainsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `standardContainsValue(Object value)`
 
 If you override #entrySet, you may wish to override #containsValue to forward to this implementation.
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `standardIsEmpty()`
-
 **Returns:** `boolean`
+
+### `standardIsEmpty()`
 
 If you override #entrySet, you may wish to override #isEmpty to
  forward to this implementation.
 
-### `standardEquals(java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `standardEquals(Object object)`
 
 If you override #entrySet, you may wish to override #equals to
  forward to this implementation.
@@ -195,17 +193,19 @@ If you override #entrySet, you may wish to override #equals to
 **Parameters:**
 - `object` (`java.lang.Object`)
 
-### `standardHashCode()`
+**Returns:** `boolean`
 
-**Returns:** `int`
+### `standardHashCode()`
 
 If you override #entrySet, you may wish to override #hashCode to
  forward to this implementation.
 
-### `standardToString()`
+**Returns:** `int`
 
-**Returns:** `java.lang.String`
+### `standardToString()`
 
 If you override #entrySet, you may wish to override #toString to
  forward to this implementation.
+
+**Returns:** `java.lang.String`
 

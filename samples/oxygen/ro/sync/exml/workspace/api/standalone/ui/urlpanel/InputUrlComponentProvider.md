@@ -14,7 +14,7 @@ The component can be added to Swing-based panels.
 
 **Returns:** `java.net.URL`
 
-### `setUrl(java.net.URL url)`
+### `setUrl(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The `URL` to be presented.
@@ -28,7 +28,7 @@ It will return the exact value of the combobox,
 
 **Returns:** `java.lang.String`
 
-### `setUrlText(java.lang.String newURL)`
+### `setUrlText(String newURL)`
 
 Can contain unexpanded editor variables.
 
@@ -44,7 +44,7 @@ Can contain unexpanded editor variables.
 
 **Returns:** `void`
 
-### `setUrlLabel(java.lang.String urlPresenterLabelText)`
+### `setUrlLabel(String urlPresenterLabelText)`
 
 By default the presented label is `URL`
 
@@ -58,14 +58,14 @@ By default the presented label is `URL`
 
 **Returns:** `javax.swing.JComponent`
 
-### `addChangeListener(ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener listener)`
+### `addChangeListener(InputUrlComponentChangeListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener`](./InputUrlComponentChangeListener.md)): The listener that notifies when the url is changed.
 
 **Returns:** `void`
 
-### `removeChangeListener(ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener listener)`
+### `removeChangeListener(InputUrlComponentChangeListener listener)`
 
 **Parameters:**
 - `listener` ([`ro.sync.exml.workspace.api.standalone.ui.urlpanel.InputUrlComponentChangeListener`](./InputUrlComponentChangeListener.md)): The listener that notifies when the url is changed.

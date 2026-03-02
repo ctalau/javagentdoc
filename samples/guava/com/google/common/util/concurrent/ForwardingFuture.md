@@ -32,10 +32,10 @@ Most subclasses can just use SimpleForwardingFuture.
 
 ### `cancel(boolean mayInterruptIfRunning)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `mayInterruptIfRunning` (`boolean`)
+
+**Returns:** `boolean`
 
 ### `isCancelled()`
 
@@ -49,11 +49,11 @@ Most subclasses can just use SimpleForwardingFuture.
 
 **Returns:** `V`
 
-### `get(long timeout, java.util.concurrent.TimeUnit unit)`
-
-**Returns:** `V`
+### `get(long timeout, TimeUnit unit)`
 
 **Parameters:**
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
+
+**Returns:** `V`
 

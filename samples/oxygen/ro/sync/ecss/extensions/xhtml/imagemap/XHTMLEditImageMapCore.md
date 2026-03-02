@@ -20,7 +20,7 @@
 
 ## Methods
 
-### `getNodesOfInterest(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorNode interestNode, boolean doSurroundIfMissing)`
+### `getNodesOfInterest(AuthorAccess authorAccess, AuthorNode interestNode, boolean doSurroundIfMissing)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The Author access.
@@ -34,7 +34,7 @@
 
 **Returns:** `java.lang.String`
 
-### `getSupportedFramework(java.lang.String namespaceURI)`
+### `getSupportedFramework(String namespaceURI)`
 
 **Parameters:**
 - `namespaceURI` (`java.lang.String`)

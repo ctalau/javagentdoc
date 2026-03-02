@@ -39,7 +39,7 @@
 - `singleKey` (`K`)
 - `singleValue` (`V`)
 
-### `<init>(K singleKey, V singleValue, com.google.common.collect.ImmutableBiMap<V,K> inverse)`
+### `<init>(K singleKey, V singleValue, ImmutableBiMap<V,K> inverse)`
 
 **Parameters:**
 - `singleKey` (`K`)
@@ -48,37 +48,37 @@
 
 ## Methods
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `size()`
 
 **Returns:** `int`
 
-### `forEach(java.util.function.BiConsumer<? super K,? super V> action)`
-
-**Returns:** `void`
+### `forEach(BiConsumer<? super K,? super V> action)`
 
 **Parameters:**
 - `action` (`java.util.function.BiConsumer<? super K,? super V>`)
 
-### `containsKey(java.lang.Object key)`
+**Returns:** `void`
 
-**Returns:** `boolean`
+### `containsKey(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsValue(java.lang.Object value)`
-
 **Returns:** `boolean`
+
+### `containsValue(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `isPartialView()`
 

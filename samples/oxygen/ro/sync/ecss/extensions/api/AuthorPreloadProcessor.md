@@ -10,7 +10,7 @@ It can be used to set various pseudo classes to elements before the content is p
 
 ## Methods
 
-### `documentAboutToBeLoaded(ro.sync.ecss.extensions.api.node.AuthorDocument document, ro.sync.ecss.extensions.api.AuthorPseudoClassController pseudoClassController)`
+### `documentAboutToBeLoaded(AuthorDocument document, AuthorPseudoClassController pseudoClassController)`
 
 **Parameters:**
 - `document` ([`ro.sync.ecss.extensions.api.node.AuthorDocument`](node/AuthorDocument.md)): The document.

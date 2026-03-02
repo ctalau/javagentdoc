@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setReviewerAuthorName(java.lang.String authorName)`
+### `setReviewerAuthorName(String authorName)`
 
 By default the author name specified in the Oxygen Preferences is used 
  for serialization.

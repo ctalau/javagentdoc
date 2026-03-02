@@ -14,7 +14,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String key)`
+### `<init>(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`)
@@ -25,20 +25,18 @@
 
 **Returns:** [`com.google.common.base.StandardSystemProperty[]`](./StandardSystemProperty.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.base.StandardSystemProperty`](./StandardSystemProperty.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`com.google.common.base.StandardSystemProperty`](./StandardSystemProperty.md)
 
 ### `key()`
 
 **Returns:** `java.lang.String`
 
 ### `value()`
-
-**Returns:** `java.lang.String`
 
 The value returned by this method is non-null except in rare circumstances:
 
@@ -61,6 +59,8 @@ Note that StandardSystemProperty does not provide constants for more recently ad
 
    - java.vendor.version (added in Java 11, listed as optional as of Java 13)
    - jdk.module.* (added in Java 9, optional)
+
+**Returns:** `java.lang.String`
 
 ### `toString()`
 

@@ -28,8 +28,6 @@ See the Guava User Guide article on [primitive utilities](https://github.com/goo
 
 ### `hashCode(long value)`
 
-**Returns:** `int`
-
 This method always return the value specified by Long#hashCode() in java, which
  might be different from ((Long) value).hashCode() in GWT because Long#hashCode() in GWT does not obey the JRE contract.
 
@@ -39,9 +37,9 @@ This method always return the value specified by Long#hashCode() in java, which
 **Parameters:**
 - `value` (`long`): a primitive long value
 
-### `compare(long a, long b)`
-
 **Returns:** `int`
+
+### `compare(long a, long b)`
 
 The sign of the value returned is the same as
  that of ((Long) a).compareTo(b).
@@ -54,25 +52,25 @@ The sign of the value returned is the same as
 - `a` (`long`): the first long to compare
 - `b` (`long`): the second long to compare
 
+**Returns:** `int`
+
 ### `contains(long[] array, long target)`
+
+**Parameters:**
+- `array` (`long[]`): an array of long values, possibly empty
+- `target` (`long`): a primitive long value
 
 **Returns:** `boolean`
 
-**Parameters:**
-- `array` (`long[]`): an array of long values, possibly empty
-- `target` (`long`): a primitive long value
-
 ### `indexOf(long[] array, long target)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `array` (`long[]`): an array of long values, possibly empty
 - `target` (`long`): a primitive long value
 
-### `indexOf(long[] array, long target, int start, int end)`
-
 **Returns:** `int`
+
+### `indexOf(long[] array, long target, int start, int end)`
 
 **Parameters:**
 - `array` (`long[]`)
@@ -80,9 +78,9 @@ The sign of the value returned is the same as
 - `start` (`int`)
 - `end` (`int`)
 
-### `indexOf(long[] array, long[] target)`
-
 **Returns:** `int`
+
+### `indexOf(long[] array, long[] target)`
 
 More formally, returns the lowest index i such that Arrays.copyOfRange(array,
  i, i + target.length) contains exactly the same elements as target.
@@ -91,17 +89,17 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `array` (`long[]`): the array to search for the sequence target
 - `target` (`long[]`): the array to search for as a sub-sequence of array
 
-### `lastIndexOf(long[] array, long target)`
-
 **Returns:** `int`
+
+### `lastIndexOf(long[] array, long target)`
 
 **Parameters:**
 - `array` (`long[]`): an array of long values, possibly empty
 - `target` (`long`): a primitive long value
 
-### `lastIndexOf(long[] array, long target, int start, int end)`
-
 **Returns:** `int`
+
+### `lastIndexOf(long[] array, long target, int start, int end)`
 
 **Parameters:**
 - `array` (`long[]`)
@@ -109,23 +107,23 @@ More formally, returns the lowest index i such that Arrays.copyOfRange(array,
 - `start` (`int`)
 - `end` (`int`)
 
-### `min(long[] array)`
+**Returns:** `int`
 
-**Returns:** `long`
+### `min(long[] array)`
 
 **Parameters:**
 - `array` (`long[]`): a *nonempty* array of long values
+
+**Returns:** `long`
 
 ### `max(long[] array)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `array` (`long[]`): a *nonempty* array of long values
 
-### `constrainToRange(long value, long min, long max)`
-
 **Returns:** `long`
+
+### `constrainToRange(long value, long min, long max)`
 
 If value is within the range [min..max], value is returned
  unchanged. If value is less than min, min is returned, and if 
@@ -136,9 +134,9 @@ If value is within the range [min..max], value is returned
 - `min` (`long`): the lower bound (inclusive) of the range to constrain value to
 - `max` (`long`): the upper bound (inclusive) of the range to constrain value to
 
-### `concat(long[][] arrays)`
+**Returns:** `long`
 
-**Returns:** `long[]`
+### `concat(long[][] arrays)`
 
 For example, 
  concat(new long[] {a, b}, new long[] {}, new long[] {c} returns the array {a, b, c}.
@@ -146,16 +144,16 @@ For example,
 **Parameters:**
 - `arrays` (`long[][]`): zero or more long arrays
 
-### `checkNoOverflow(long result)`
+**Returns:** `long[]`
 
-**Returns:** `int`
+### `checkNoOverflow(long result)`
 
 **Parameters:**
 - `result` (`long`)
 
-### `toByteArray(long value)`
+**Returns:** `int`
 
-**Returns:** `byte[]`
+### `toByteArray(long value)`
 
 For example, the input value 
  0x1213141516171819L would yield the byte array {0x12, 0x13, 0x14, 0x15, 0x16, 0x17,
@@ -168,9 +166,9 @@ If you need to convert and concatenate several values (possibly even of differen
 **Parameters:**
 - `value` (`long`)
 
-### `fromByteArray(byte[] bytes)`
+**Returns:** `byte[]`
 
-**Returns:** `long`
+### `fromByteArray(byte[] bytes)`
 
 For example, the
  input byte array {0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18, 0x19} would yield the
@@ -183,9 +181,9 @@ Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much 
 **Parameters:**
 - `bytes` (`byte[]`)
 
-### `fromBytes(byte b1, byte b2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8)`
-
 **Returns:** `long`
+
+### `fromBytes(byte b1, byte b2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8)`
 
 **Parameters:**
 - `b1` (`byte`)
@@ -197,9 +195,9 @@ Arguably, it's preferable to use java.nio.ByteBuffer; that library exposes much 
 - `b7` (`byte`)
 - `b8` (`byte`)
 
-### `tryParse(java.lang.String string)`
+**Returns:** `long`
 
-**Returns:** `java.lang.Long`
+### `tryParse(String string)`
 
 The ASCII character '-' (
  `'&#92;u002D'`) is recognized as the minus sign.
@@ -216,9 +214,9 @@ Note that strings prefixed with ASCII '+' are rejected, even under JDK 7, despit
 **Parameters:**
 - `string` (`java.lang.String`): the string representation of a long value
 
-### `tryParse(java.lang.String string, int radix)`
-
 **Returns:** `java.lang.Long`
+
+### `tryParse(String string, int radix)`
 
 The ASCII
  character '-' (`'&#92;u002D'`) is recognized as the minus sign.
@@ -236,9 +234,9 @@ Note that strings prefixed with ASCII '+' are rejected, even under JDK 7, despit
 - `string` (`java.lang.String`): the string representation of a long value
 - `radix` (`int`): the radix to use when parsing
 
-### `stringConverter()`
+**Returns:** `java.lang.Long`
 
-**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Long>`](../base/Converter.md)
+### `stringConverter()`
 
 The returned converter throws NumberFormatException if the input string is invalid.
 
@@ -247,9 +245,9 @@ The returned converter throws NumberFormatException if the input string is inval
  For example, the string "0123" is treated as *octal* and converted to the value
  83L.
 
-### `ensureCapacity(long[] array, int minLength, int padding)`
+**Returns:** [`com.google.common.base.Converter<java.lang.String,java.lang.Long>`](../base/Converter.md)
 
-**Returns:** `long[]`
+### `ensureCapacity(long[] array, int minLength, int padding)`
 
 If array already has a length of at least minLength,
  it is returned directly. Otherwise, a new array of size minLength + padding is
@@ -260,20 +258,20 @@ If array already has a length of at least minLength,
 - `minLength` (`int`): the minimum length the returned array must guarantee
 - `padding` (`int`): an extra amount to "grow" the array by if growth is necessary
 
-### `join(java.lang.String separator, long[] array)`
+**Returns:** `long[]`
 
-**Returns:** `java.lang.String`
+### `join(String separator, long[] array)`
 
 For example, join("-", 1L, 2L, 3L) returns the string "1-2-3".
 
 **Parameters:**
 - `separator` (`java.lang.String`): the text that should appear between consecutive values in the resulting string
-     (but not at the start or end)
+       (but not at the start or end)
 - `array` (`long[]`): an array of long values, possibly empty
 
-### `lexicographicalComparator()`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.util.Comparator<long[]>`
+### `lexicographicalComparator()`
 
 That is, it
  compares, using #compare(long, long)), the first pair of values that follow any common
@@ -285,25 +283,25 @@ The returned comparator is inconsistent with Object#equals(Object) (since arrays
  support only identity equality), but it is consistent with Arrays#equals(long[],
  long[]).
 
-### `sortDescending(long[] array)`
+**Returns:** `java.util.Comparator<long[]>`
 
-**Returns:** `void`
+### `sortDescending(long[] array)`
 
 **Parameters:**
 - `array` (`long[]`)
 
-### `sortDescending(long[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `sortDescending(long[] array, int fromIndex, int toIndex)`
 
 **Parameters:**
 - `array` (`long[]`)
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `reverse(long[] array)`
-
 **Returns:** `void`
+
+### `reverse(long[] array)`
 
 This is equivalent to 
  Collections.reverse(Longs.asList(array)), but is likely to be more efficient.
@@ -311,9 +309,9 @@ This is equivalent to
 **Parameters:**
 - `array` (`long[]`)
 
-### `reverse(long[] array, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `reverse(long[] array, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.reverse(Longs.asList(array).subList(fromIndex, toIndex)), but is likely to be more
@@ -324,9 +322,9 @@ This is equivalent to
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `rotate(long[] array, int distance)`
-
 **Returns:** `void`
+
+### `rotate(long[] array, int distance)`
 
 This is equivalent to Collections.rotate(Longs.asList(array),
  distance), but is considerably faster and avoids allocation and garbage collection.
@@ -338,9 +336,9 @@ The provided "distance" may be negative, which will rotate left.
 - `array` (`long[]`)
 - `distance` (`int`)
 
-### `rotate(long[] array, int distance, int fromIndex, int toIndex)`
-
 **Returns:** `void`
+
+### `rotate(long[] array, int distance, int fromIndex, int toIndex)`
 
 This is equivalent to 
  Collections.rotate(Longs.asList(array).subList(fromIndex, toIndex), distance), but is
@@ -355,9 +353,9 @@ The provided "distance" may be negative, which will rotate left.
 - `fromIndex` (`int`)
 - `toIndex` (`int`)
 
-### `toArray(java.util.Collection<? extends java.lang.Number> collection)`
+**Returns:** `void`
 
-**Returns:** `long[]`
+### `toArray(Collection<? extends Number> collection)`
 
 Elements are copied from the argument collection as if by collection.toArray().
  Calling this method is as thread-safe as calling that method.
@@ -365,9 +363,9 @@ Elements are copied from the argument collection as if by collection.toArray().
 **Parameters:**
 - `collection` (`java.util.Collection<? extends java.lang.Number>`): a collection of Number instances
 
-### `asList(long[] backingArray)`
+**Returns:** `long[]`
 
-**Returns:** `java.util.List<java.lang.Long>`
+### `asList(long[] backingArray)`
 
 The list supports List#set(int, Object), but any attempt to
  set a value to null will result in a NullPointerException.
@@ -386,4 +384,6 @@ The returned list is serializable.
 
 **Parameters:**
 - `backingArray` (`long[]`): the array to back the list
+
+**Returns:** `java.util.List<java.lang.Long>`
 

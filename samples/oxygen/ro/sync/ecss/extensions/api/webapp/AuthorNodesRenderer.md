@@ -10,7 +10,7 @@
 
 **Returns:** `void`
 
-### `renderNode(ro.sync.ecss.extensions.api.node.AuthorNode arg0)`
+### `renderNode(AuthorNode arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorNode`](../node/AuthorNode.md))

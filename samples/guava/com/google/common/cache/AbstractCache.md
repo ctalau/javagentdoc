@@ -24,17 +24,15 @@ To implement a cache, the programmer needs only to extend this class and provide
 
 ## Methods
 
-### `get(K key, java.util.concurrent.Callable<? extends V> valueLoader)`
-
-**Returns:** `V`
+### `get(K key, Callable<? extends V> valueLoader)`
 
 **Parameters:**
 - `key` (`K`)
 - `valueLoader` (`java.util.concurrent.Callable<? extends V>`)
 
-### `getAllPresent(java.lang.Iterable<? extends java.lang.Object> keys)`
+**Returns:** `V`
 
-**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
+### `getAllPresent(Iterable<? extends Object> keys)`
 
 This implementation of getAllPresent lacks any insight into the internal cache data
  structure, and is thus forced to return the query keys instead of the cached keys. This is only
@@ -43,20 +41,22 @@ This implementation of getAllPresent lacks any insight into the internal cache d
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
 
-### `put(K key, V value)`
+**Returns:** [`com.google.common.collect.ImmutableMap<K,V>`](../collect/ImmutableMap.md)
 
-**Returns:** `void`
+### `put(K key, V value)`
 
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `putAll(java.util.Map<? extends K,? extends V> m)`
-
 **Returns:** `void`
+
+### `putAll(Map<? extends K,? extends V> m)`
 
 **Parameters:**
 - `m` (`java.util.Map<? extends K,? extends V>`)
+
+**Returns:** `void`
 
 ### `cleanUp()`
 
@@ -66,19 +66,19 @@ This implementation of getAllPresent lacks any insight into the internal cache d
 
 **Returns:** `long`
 
-### `invalidate(java.lang.Object key)`
-
-**Returns:** `void`
+### `invalidate(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `invalidateAll(java.lang.Iterable<? extends java.lang.Object> keys)`
-
 **Returns:** `void`
+
+### `invalidateAll(Iterable<? extends Object> keys)`
 
 **Parameters:**
 - `keys` (`java.lang.Iterable<? extends java.lang.Object>`)
+
+**Returns:** `void`
 
 ### `invalidateAll()`
 

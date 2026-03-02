@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `handleError(ro.sync.exml.workspace.api.references.CollectingError error)`
+### `handleError(CollectingError error)`
 
 **Parameters:**
 - `error` ([`ro.sync.exml.workspace.api.references.CollectingError`](./CollectingError.md)): the error to be handled

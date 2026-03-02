@@ -10,7 +10,7 @@
 
 ## Methods
 
-### `open(java.net.URL url)`
+### `open(URL url)`
 
 If the URL is already opened, the editor tab which contains it will be brought to front.
 
@@ -19,7 +19,7 @@ If the URL is already opened, the editor tab which contains it will be brought t
 
 **Returns:** `boolean`
 
-### `open(java.net.URL url, java.lang.String imposedPage)`
+### `open(URL url, String imposedPage)`
 
 If the URL is already opened, the editor tab which contains it will be brought to front.
 
@@ -29,7 +29,7 @@ If the URL is already opened, the editor tab which contains it will be brought t
 
 **Returns:** `boolean`
 
-### `open(java.net.URL url, java.lang.String imposedPage, java.lang.String imposedContentType)`
+### `open(URL url, String imposedPage, String imposedContentType)`
 
 If the URL is already opened, the editor tab which contains it will be brought to front.
  The imposed content type is used only in the Oxygen standalone application, it is not used in the Author Component and Eclipse plugin applications.
@@ -58,7 +58,7 @@ If the URL is already opened, the editor tab which contains it will be brought t
 
 **Returns:** `void`
 
-### `close(java.net.URL url)`
+### `close(URL url)`
 
 If the editor has unsaved content, the user will be given the opportunity to save it.
 
@@ -73,7 +73,7 @@ If there are editors with unsaved content, the user will be given the opportunit
 
 **Returns:** `boolean`
 
-### `delete(java.net.URL url)`
+### `delete(URL url)`
 
 Currently supported protocols are:
  
@@ -95,14 +95,14 @@ Currently supported protocols are:
 
 **Returns:** `void`
 
-### `refreshInProject(java.net.URL url)`
+### `refreshInProject(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The new resource
 
 **Returns:** `void`
 
-### `createNewEditor(java.lang.String extension, java.lang.String contentType, java.lang.String content)`
+### `createNewEditor(String extension, String contentType, String content)`
 
 The editor content is not saved on disk, this method is equivalent to using the "File -> New" action.
 
@@ -114,7 +114,7 @@ The editor content is not saved on disk, this method is equivalent to using the 
 
 **Returns:** `java.net.URL`
 
-### `createNewEditor(java.net.URL saveTo, java.lang.String extension, java.lang.String contentType, java.lang.String content)`
+### `createNewEditor(URL saveTo, String extension, String contentType, String content)`
 
 The editor content is not saved on disk, this method is equivalent to using the "File -> New" action.
 
@@ -131,7 +131,7 @@ The editor content is not saved on disk, this method is equivalent to using the 
 
 **Returns:** `boolean`
 
-### `setParentFrameTitle(java.lang.String parentFrameTitle)`
+### `setParentFrameTitle(String parentFrameTitle)`
 
 This is available only in the standalone Oxygen version (not available in the Oxygen Eclipse plugin).
  If NULL, will reset to the default title.

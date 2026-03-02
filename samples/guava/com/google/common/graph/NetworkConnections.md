@@ -39,26 +39,24 @@
 
 ### `edgesConnecting(N node)`
 
-**Returns:** `java.util.Set<E>`
-
 For networks without
  parallel edges, this set cannot be of size greater than one.
 
 **Parameters:**
 - `node` (`N`)
 
-### `adjacentNode(E edge)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `N`
+### `adjacentNode(E edge)`
 
 In the directed case, edge is assumed to be an outgoing edge.
 
 **Parameters:**
 - `edge` (`E`)
 
-### `removeInEdge(E edge, boolean isSelfLoop)`
-
 **Returns:** `N`
+
+### `removeInEdge(E edge, boolean isSelfLoop)`
 
 Returns the former predecessor node.
 
@@ -69,18 +67,18 @@ In the undirected case, returns null if isSelfLoop is true.
 - `edge` (`E`)
 - `isSelfLoop` (`boolean`)
 
-### `removeOutEdge(E edge)`
-
 **Returns:** `N`
+
+### `removeOutEdge(E edge)`
 
 Returns the former successor node.
 
 **Parameters:**
 - `edge` (`E`)
 
-### `addInEdge(E edge, N node, boolean isSelfLoop)`
+**Returns:** `N`
 
-**Returns:** `void`
+### `addInEdge(E edge, N node, boolean isSelfLoop)`
 
 Implicitly adds node as a predecessor.
 
@@ -89,13 +87,15 @@ Implicitly adds node as a predecessor.
 - `node` (`N`)
 - `isSelfLoop` (`boolean`)
 
-### `addOutEdge(E edge, N node)`
-
 **Returns:** `void`
+
+### `addOutEdge(E edge, N node)`
 
 Implicitly adds node as a successor.
 
 **Parameters:**
 - `edge` (`E`)
 - `node` (`N`)
+
+**Returns:** `void`
 

@@ -15,7 +15,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.SpellSuggestionsInfo`](../SpellSuggestionsInfo.md)
 
-### `replaceWithSuggestion(int startOffset, int endOffset, java.lang.String newWord)`
+### `replaceWithSuggestion(int startOffset, int endOffset, String newWord)`
 
 **Parameters:**
 - `startOffset` (`int`): Start offset for replacement.
@@ -32,7 +32,7 @@
 
 **Returns:** `java.util.List<ro.sync.exml.workspace.api.util.TextChunkDescriptor>`
 
-### `check(java.util.List<ro.sync.exml.workspace.api.util.TextChunkDescriptor> textDescriptors)`
+### `check(List<TextChunkDescriptor> textDescriptors)`
 
 This method is thread-safe. Can be called on multiple threads and can also be called while 
  other threads are modifying the document.
@@ -46,14 +46,14 @@ This method is thread-safe. Can be called on multiple threads and can also be ca
 
 **Returns:** [`ro.sync.exml.workspace.api.spell.Dictionary`](../../../../exml/workspace/api/spell/Dictionary.md)
 
-### `setTermsDictionary(ro.sync.exml.workspace.api.spell.Dictionary apiDict)`
+### `setTermsDictionary(Dictionary apiDict)`
 
 **Parameters:**
 - `apiDict` ([`ro.sync.exml.workspace.api.spell.Dictionary`](../../../../exml/workspace/api/spell/Dictionary.md)): The terms dictionary to set.
 
 **Returns:** `void`
 
-### `setDefaultLanguage(java.lang.String lang)`
+### `setDefaultLanguage(String lang)`
 
 Examples of format: **en_US**, **fr_FR**, **de_DE**, **jp_JP**, **it_IT**, **nl_NL**
 
@@ -62,7 +62,7 @@ Examples of format: **en_US**, **fr_FR**, **de_DE**, **jp_JP**, **it_IT**, **nl_
 
 **Returns:** `void`
 
-### `setSpellcheckingEngine(java.lang.String lang, ro.sync.ecss.extensions.api.webapp.SpellcheckingEngine checker)`
+### `setSpellcheckingEngine(String lang, SpellcheckingEngine checker)`
 
 Examples of language format: **en_US**, **fr_FR**, **de_DE**, **jp_JP**, **it_IT**, **nl_NL**
 

@@ -20,8 +20,6 @@ See the Guava User Guide article on [Sets](https://github.com/google/guava/wiki/
 
 ### `immutableEnumSet(E anElement, E[] otherElements)`
 
-**Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
-
 Internally, the returned
  set will be backed by an EnumSet.
 
@@ -33,9 +31,9 @@ The iteration order of the returned set follows the enum's iteration order, not 
 - `anElement` (`E`): one of the elements the set should contain
 - `otherElements` (`E[]`): the rest of the elements the set should contain
 
-### `immutableEnumSet(java.lang.Iterable<E> elements)`
-
 **Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
+
+### `immutableEnumSet(Iterable<E> elements)`
 
 Internally, the returned
  set will be backed by an EnumSet.
@@ -47,16 +45,16 @@ The iteration order of the returned set follows the enum's iteration order, not 
 **Parameters:**
 - `elements` (`java.lang.Iterable<E>`): the elements, all of the same enum type, that the set should contain
 
-### `toImmutableEnumSet()`
+**Returns:** [`com.google.common.collect.ImmutableSet<E>`](./ImmutableSet.md)
 
-**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`
+### `toImmutableEnumSet()`
 
 Unlike ImmutableSet#toImmutableSet, the
  resulting set will iterate over elements in their enum definition order, not encounter order.
 
-### `newEnumSet(java.lang.Iterable<E> iterable, java.lang.Class<E> elementType)`
+**Returns:** `java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>`
 
-**Returns:** `java.util.EnumSet<E>`
+### `newEnumSet(Iterable<E> iterable, Class<E> elementType)`
 
 This method behaves identically to EnumSet#copyOf(Collection), but also
  accepts non-Collection iterables and empty iterables.
@@ -65,9 +63,9 @@ This method behaves identically to EnumSet#copyOf(Collection), but also
 - `iterable` (`java.lang.Iterable<E>`)
 - `elementType` (`java.lang.Class<E>`)
 
-### `newHashSet()`
+**Returns:** `java.util.EnumSet<E>`
 
-**Returns:** `java.util.HashSet<E>`
+### `newHashSet()`
 
 **Note:** if mutability is not required, use ImmutableSet#of() instead. If 
  E is an Enum type, use EnumSet#noneOf instead. Otherwise, strongly consider
@@ -78,9 +76,9 @@ This method behaves identically to EnumSet#copyOf(Collection), but also
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the HashSet constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newHashSet(E[] elements)`
-
 **Returns:** `java.util.HashSet<E>`
+
+### `newHashSet(E[] elements)`
 
 **Note:** if elements are non-null and won't be added or removed after this point, use
  ImmutableSet#of() or ImmutableSet#copyOf(Object[]) instead. If E is an
@@ -95,9 +93,9 @@ This method is just a small convenience, either for newHashSet(asList(...)), or 
 **Parameters:**
 - `elements` (`E[]`)
 
-### `newHashSet(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.HashSet<E>`
+
+### `newHashSet(Iterable<? extends E> elements)`
 
 A very thin
  convenience for creating an empty set then calling Collection#addAll or Iterables#addAll.
@@ -119,9 +117,9 @@ Overall, this method is not very useful and will likely be deprecated in the fut
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`)
 
-### `newHashSet(java.util.Iterator<? extends E> elements)`
-
 **Returns:** `java.util.HashSet<E>`
+
+### `newHashSet(Iterator<? extends E> elements)`
 
 A very thin
  convenience for creating an empty set and then calling Iterators#addAll.
@@ -139,9 +137,9 @@ Overall, this method is not very useful and will likely be deprecated in the fut
 **Parameters:**
 - `elements` (`java.util.Iterator<? extends E>`)
 
-### `newHashSetWithExpectedSize(int expectedSize)`
-
 **Returns:** `java.util.HashSet<E>`
+
+### `newHashSetWithExpectedSize(int expectedSize)`
 
 Note that this is not what HashSet#HashSet(int) does, but it
  is what most users want and expect it to do.
@@ -152,9 +150,9 @@ This behavior can't be broadly guaranteed, but has been tested with OpenJDK 1.7 
 **Parameters:**
 - `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `newConcurrentHashSet()`
+**Returns:** `java.util.HashSet<E>`
 
-**Returns:** `java.util.Set<E>`
+### `newConcurrentHashSet()`
 
 The set is backed by a ConcurrentHashMap instance, and thus carries the same concurrency guarantees.
 
@@ -162,9 +160,9 @@ The set is backed by a ConcurrentHashMap instance, and thus carries the same con
 Unlike HashSet, this class does NOT allow null to be used as an element. The
  set is serializable.
 
-### `newConcurrentHashSet(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.Set<E>`
+
+### `newConcurrentHashSet(Iterable<? extends E> elements)`
 
 The set is
  backed by a ConcurrentHashMap instance, and thus carries the same concurrency
@@ -177,9 +175,9 @@ Unlike HashSet, this class does NOT allow null to be used as an element. The
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the set should contain
 
-### `newLinkedHashSet()`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.LinkedHashSet<E>`
+### `newLinkedHashSet()`
 
 **Note:** if mutability is not required, use ImmutableSet#of() instead.
 
@@ -187,9 +185,9 @@ Unlike HashSet, this class does NOT allow null to be used as an element. The
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the LinkedHashSet constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newLinkedHashSet(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.LinkedHashSet<E>`
+
+### `newLinkedHashSet(Iterable<? extends E> elements)`
 
 **Note:** if mutability is not required and the elements are non-null, use ImmutableSet#copyOf(Iterable) instead.
 
@@ -203,9 +201,9 @@ Overall, this method is not very useful and will likely be deprecated in the fut
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the set should contain, in order
 
-### `newLinkedHashSetWithExpectedSize(int expectedSize)`
-
 **Returns:** `java.util.LinkedHashSet<E>`
+
+### `newLinkedHashSetWithExpectedSize(int expectedSize)`
 
 This behavior cannot be
  broadly guaranteed, but it is observed to be true for OpenJDK 1.7. It also can't be guaranteed
@@ -214,9 +212,9 @@ This behavior cannot be
 **Parameters:**
 - `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `newTreeSet()`
+**Returns:** `java.util.LinkedHashSet<E>`
 
-**Returns:** `java.util.TreeSet<E>`
+### `newTreeSet()`
 
 **Note:** if mutability is not required, use ImmutableSortedSet#of() instead.
 
@@ -224,9 +222,9 @@ This behavior cannot be
 **Note:** this method is now unnecessary and should be treated as deprecated. Instead,
  use the TreeSet constructor directly, taking advantage of ["diamond" syntax](http://goo.gl/iz2Wi).
 
-### `newTreeSet(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.TreeSet<E>`
+
+### `newTreeSet(Iterable<? extends E> elements)`
 
 **Note:** if mutability is not required, use ImmutableSortedSet#copyOf(Iterable)
  instead.
@@ -246,9 +244,9 @@ This method is just a small convenience for creating an empty set and then calli
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the set should contain
 
-### `newTreeSet(java.util.Comparator<? super E> comparator)`
-
 **Returns:** `java.util.TreeSet<E>`
+
+### `newTreeSet(Comparator<? super E> comparator)`
 
 **Note:** if mutability is not required, use 
  ImmutableSortedSet.orderedBy(comparator).build() instead.
@@ -262,9 +260,9 @@ This method is just a small convenience for creating an empty set and then calli
 **Parameters:**
 - `comparator` (`java.util.Comparator<? super E>`): the comparator to use to sort the set
 
-### `newIdentityHashSet()`
+**Returns:** `java.util.TreeSet<E>`
 
-**Returns:** `java.util.Set<E>`
+### `newIdentityHashSet()`
 
 It compares object
  references, instead of calling equals, to determine whether a provided object matches
@@ -272,23 +270,23 @@ It compares object
  object that equals a set member, but isn't the same instance. This behavior is similar to the
  way IdentityHashMap handles key lookups.
 
-### `newCopyOnWriteArraySet()`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.concurrent.CopyOnWriteArraySet<E>`
+### `newCopyOnWriteArraySet()`
 
 **Note:** if you need an immutable empty Set, use Collections#emptySet
  instead.
 
-### `newCopyOnWriteArraySet(java.lang.Iterable<? extends E> elements)`
-
 **Returns:** `java.util.concurrent.CopyOnWriteArraySet<E>`
+
+### `newCopyOnWriteArraySet(Iterable<? extends E> elements)`
 
 **Parameters:**
 - `elements` (`java.lang.Iterable<? extends E>`): the elements that the set should contain, in order
 
-### `complementOf(java.util.Collection<E> collection)`
+**Returns:** `java.util.concurrent.CopyOnWriteArraySet<E>`
 
-**Returns:** `java.util.EnumSet<E>`
+### `complementOf(Collection<E> collection)`
 
 If the collection is an EnumSet, this method has the same behavior as
  EnumSet#complementOf. Otherwise, the specified collection must contain at least one
@@ -297,9 +295,9 @@ If the collection is an EnumSet, this method has the same behavior as
 **Parameters:**
 - `collection` (`java.util.Collection<E>`): the collection whose complement should be stored in the enum set
 
-### `complementOf(java.util.Collection<E> collection, java.lang.Class<E> type)`
-
 **Returns:** `java.util.EnumSet<E>`
+
+### `complementOf(Collection<E> collection, Class<E> type)`
 
 This is equivalent to EnumSet#complementOf, but can act on any input
  collection, as long as the elements are of enum type.
@@ -308,17 +306,17 @@ This is equivalent to EnumSet#complementOf, but can act on any input
 - `collection` (`java.util.Collection<E>`): the collection whose complement should be stored in the EnumSet
 - `type` (`java.lang.Class<E>`): the type of the elements in the set
 
-### `makeComplementByHand(java.util.Collection<E> collection, java.lang.Class<E> type)`
-
 **Returns:** `java.util.EnumSet<E>`
+
+### `makeComplementByHand(Collection<E> collection, Class<E> type)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<E>`)
 - `type` (`java.lang.Class<E>`)
 
-### `newSetFromMap(java.util.Map<E,java.lang.Boolean> map)`
+**Returns:** `java.util.EnumSet<E>`
 
-**Returns:** `java.util.Set<E>`
+### `newSetFromMap(Map<E,Boolean> map)`
 
 The resulting set displays the same ordering,
  concurrency, and performance characteristics as the backing map. In essence, this factory
@@ -353,9 +351,9 @@ The returned set is serializable if the backing map is.
 **Parameters:**
 - `map` (`java.util.Map<E,java.lang.Boolean>`): the backing map
 
-### `union(java.util.Set<? extends E> set1, java.util.Set<? extends E> set2)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `com.google.common.collect.Sets.SetView<E>`
+### `union(Set<? extends E> set1, Set<? extends E> set2)`
 
 The returned set contains all
  elements that are contained in either backing set. Iterating over the returned set iterates
@@ -371,9 +369,9 @@ Results are undefined if set1 and set2 are sets based on different
 - `set1` (`java.util.Set<? extends E>`)
 - `set2` (`java.util.Set<? extends E>`)
 
-### `intersection(java.util.Set<E> set1, java.util.Set<?> set2)`
-
 **Returns:** `com.google.common.collect.Sets.SetView<E>`
+
+### `intersection(Set<E> set1, Set<?> set2)`
 
 The returned set contains
  all elements that are contained by both backing sets. The iteration order of the returned set
@@ -413,9 +411,9 @@ This is unfortunate, but should come up only very rarely.
 - `set1` (`java.util.Set<E>`)
 - `set2` (`java.util.Set<?>`)
 
-### `difference(java.util.Set<E> set1, java.util.Set<?> set2)`
-
 **Returns:** `com.google.common.collect.Sets.SetView<E>`
+
+### `difference(Set<E> set1, Set<?> set2)`
 
 The returned set contains
  all elements that are contained by set1 and not contained by set2. set2
@@ -431,9 +429,9 @@ Results are undefined if set1 and set2 are sets based on different
 - `set1` (`java.util.Set<E>`)
 - `set2` (`java.util.Set<?>`)
 
-### `symmetricDifference(java.util.Set<? extends E> set1, java.util.Set<? extends E> set2)`
-
 **Returns:** `com.google.common.collect.Sets.SetView<E>`
+
+### `symmetricDifference(Set<? extends E> set1, Set<? extends E> set2)`
 
 The returned set
  contains all elements that are contained in either set1 or set2 but not in
@@ -448,9 +446,9 @@ Results are undefined if set1 and set2 are sets based on different
 - `set1` (`java.util.Set<? extends E>`)
 - `set2` (`java.util.Set<? extends E>`)
 
-### `filter(java.util.Set<E> unfiltered, com.google.common.base.Predicate<? super E> predicate)`
+**Returns:** `com.google.common.collect.Sets.SetView<E>`
 
-**Returns:** `java.util.Set<E>`
+### `filter(Set<E> unfiltered, Predicate<? super E> predicate)`
 
 The returned set is a live
  view of unfiltered; changes to one affect the other.
@@ -484,9 +482,9 @@ Many of the filtered set's methods, such as size(), iterate across every element
 - `unfiltered` (`java.util.Set<E>`)
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `filter(java.util.SortedSet<E> unfiltered, com.google.common.base.Predicate<? super E> predicate)`
+**Returns:** `java.util.Set<E>`
 
-**Returns:** `java.util.SortedSet<E>`
+### `filter(SortedSet<E> unfiltered, Predicate<? super E> predicate)`
 
 The
  returned set is a live view of unfiltered; changes to one affect the other.
@@ -516,9 +514,9 @@ Many of the filtered set's methods, such as size(), iterate across every element
 - `unfiltered` (`java.util.SortedSet<E>`)
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `filter(java.util.NavigableSet<E> unfiltered, com.google.common.base.Predicate<? super E> predicate)`
+**Returns:** `java.util.SortedSet<E>`
 
-**Returns:** `java.util.NavigableSet<E>`
+### `filter(NavigableSet<E> unfiltered, Predicate<? super E> predicate)`
 
 The returned set is a live view of unfiltered; changes to one affect the other.
 
@@ -547,9 +545,9 @@ Many of the filtered set's methods, such as size(), iterate across every element
 - `unfiltered` (`java.util.NavigableSet<E>`)
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `cartesianProduct(java.util.List<? extends java.util.Set<? extends B>> sets)`
+**Returns:** `java.util.NavigableSet<E>`
 
-**Returns:** `java.util.Set<java.util.List<B>>`
+### `cartesianProduct(List<? extends Set<? extends B>> sets)`
 
 For example:
 
@@ -610,11 +608,11 @@ Note that if any input set is empty, the Cartesian product will also be empty. I
 
 **Parameters:**
 - `sets` (`java.util.List<? extends java.util.Set<? extends B>>`): the sets to choose elements from, in the order that the elements chosen from those
-     sets should appear in the resulting lists
-
-### `cartesianProduct(java.util.Set<? extends B>[] sets)`
+       sets should appear in the resulting lists
 
 **Returns:** `java.util.Set<java.util.List<B>>`
+
+### `cartesianProduct(Set<? extends B>[] sets)`
 
 For example:
 
@@ -675,11 +673,11 @@ Note that if any input set is empty, the Cartesian product will also be empty. I
 
 **Parameters:**
 - `sets` (`java.util.Set<? extends B>[]`): the sets to choose elements from, in the order that the elements chosen from those
-     sets should appear in the resulting lists
+       sets should appear in the resulting lists
 
-### `powerSet(java.util.Set<E> set)`
+**Returns:** `java.util.Set<java.util.List<B>>`
 
-**Returns:** `java.util.Set<java.util.Set<E>>`
+### `powerSet(Set<E> set)`
 
 For example, 
  powerSet(ImmutableSet.of(1, 2)) returns the set {{}, {1}, {2}, {1, 2}}.
@@ -702,9 +700,9 @@ The returned set and its constituent sets use equals to decide whether two eleme
 **Parameters:**
 - `set` (`java.util.Set<E>`): the set of elements to construct a power set from
 
-### `combinations(java.util.Set<E> set, int size)`
-
 **Returns:** `java.util.Set<java.util.Set<E>>`
+
+### `combinations(Set<E> set, int size)`
 
 For example, 
  combinations(ImmutableSet.of(1, 2, 3), 2) returns the set {{1, 2}, {1, 3}, {2, 3}}.
@@ -728,24 +726,24 @@ The returned set and its constituent sets use equals to decide whether two eleme
 - `set` (`java.util.Set<E>`): the set of elements to take combinations of
 - `size` (`int`): the number of elements per combination
 
-### `hashCodeImpl(java.util.Set<?> s)`
+**Returns:** `java.util.Set<java.util.Set<E>>`
 
-**Returns:** `int`
+### `hashCodeImpl(Set<?> s)`
 
 **Parameters:**
 - `s` (`java.util.Set<?>`)
 
-### `equalsImpl(java.util.Set<?> s, java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equalsImpl(Set<?> s, Object object)`
 
 **Parameters:**
 - `s` (`java.util.Set<?>`)
 - `object` (`java.lang.Object`)
 
-### `unmodifiableNavigableSet(java.util.NavigableSet<E> set)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.NavigableSet<E>`
+### `unmodifiableNavigableSet(NavigableSet<E> set)`
 
 This method allows modules to
  provide users with "read-only" access to internal navigable sets. Query operations on the
@@ -762,9 +760,9 @@ The returned navigable set will be serializable if the specified navigable set i
 **Parameters:**
 - `set` (`java.util.NavigableSet<E>`): the navigable set for which an unmodifiable view is to be returned
 
-### `synchronizedNavigableSet(java.util.NavigableSet<E> navigableSet)`
-
 **Returns:** `java.util.NavigableSet<E>`
+
+### `synchronizedNavigableSet(NavigableSet<E> navigableSet)`
 
 In
  order to guarantee serial access, it is critical that **all** access to the backing
@@ -826,25 +824,25 @@ The returned navigable set will be serializable if the specified navigable set i
 **Parameters:**
 - `navigableSet` (`java.util.NavigableSet<E>`): the navigable set to be "wrapped" in a synchronized navigable set.
 
-### `removeAllImpl(java.util.Set<?> set, java.util.Iterator<?> iterator)`
+**Returns:** `java.util.NavigableSet<E>`
 
-**Returns:** `boolean`
+### `removeAllImpl(Set<?> set, Iterator<?> iterator)`
 
 **Parameters:**
 - `set` (`java.util.Set<?>`)
 - `iterator` (`java.util.Iterator<?>`)
 
-### `removeAllImpl(java.util.Set<?> set, java.util.Collection<?> collection)`
-
 **Returns:** `boolean`
+
+### `removeAllImpl(Set<?> set, Collection<?> collection)`
 
 **Parameters:**
 - `set` (`java.util.Set<?>`)
 - `collection` (`java.util.Collection<?>`)
 
-### `subSet(java.util.NavigableSet<K> set, com.google.common.collect.Range<K> range)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.NavigableSet<K>`
+### `subSet(NavigableSet<K> set, Range<K> range)`
 
 This method delegates to the appropriate methods of NavigableSet (namely subSet(), tailSet(), and headSet()) to actually construct the view. Consult these methods for a full
  description of the returned view's behavior.
@@ -857,4 +855,6 @@ This method delegates to the appropriate methods of NavigableSet (namely subSet(
 **Parameters:**
 - `set` (`java.util.NavigableSet<K>`)
 - `range` ([`com.google.common.collect.Range<K>`](./Range.md))
+
+**Returns:** `java.util.NavigableSet<K>`
 

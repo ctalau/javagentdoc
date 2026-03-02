@@ -86,17 +86,17 @@ A node with "prev" pointer equal to ENDPOINT is the first node in the linked lis
 
 ### `createWithExpectedSize(int expectedSize)`
 
-**Returns:** [`com.google.common.collect.CompactLinkedHashMap<K,V>`](./CompactLinkedHashMap.md)
-
 **Parameters:**
 - `expectedSize` (`int`): the number of elements you expect to add to the returned set
 
-### `init(int expectedSize)`
+**Returns:** [`com.google.common.collect.CompactLinkedHashMap<K,V>`](./CompactLinkedHashMap.md)
 
-**Returns:** `void`
+### `init(int expectedSize)`
 
 **Parameters:**
 - `expectedSize` (`int`)
+
+**Returns:** `void`
 
 ### `allocArrays()`
 
@@ -104,10 +104,10 @@ A node with "prev" pointer equal to ENDPOINT is the first node in the linked lis
 
 ### `createHashFloodingResistantDelegate(int tableSize)`
 
-**Returns:** `java.util.Map<K,V>`
-
 **Parameters:**
 - `tableSize` (`int`)
+
+**Returns:** `java.util.Map<K,V>`
 
 ### `convertToHashFloodingResistantImplementation()`
 
@@ -115,45 +115,43 @@ A node with "prev" pointer equal to ENDPOINT is the first node in the linked lis
 
 ### `getPredecessor(int entry)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `entry` (`int`)
+
+**Returns:** `int`
 
 ### `getSuccessor(int entry)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `entry` (`int`)
+
+**Returns:** `int`
 
 ### `setSuccessor(int entry, int succ)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `entry` (`int`)
 - `succ` (`int`)
+
+**Returns:** `void`
 
 ### `setPredecessor(int entry, int pred)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `entry` (`int`)
 - `pred` (`int`)
 
-### `setSucceeds(int pred, int succ)`
-
 **Returns:** `void`
+
+### `setSucceeds(int pred, int succ)`
 
 **Parameters:**
 - `pred` (`int`)
 - `succ` (`int`)
 
-### `insertEntry(int entryIndex, K key, V value, int hash, int mask)`
-
 **Returns:** `void`
+
+### `insertEntry(int entryIndex, K key, V value, int hash, int mask)`
 
 **Parameters:**
 - `entryIndex` (`int`)
@@ -162,27 +160,29 @@ A node with "prev" pointer equal to ENDPOINT is the first node in the linked lis
 - `hash` (`int`)
 - `mask` (`int`)
 
-### `accessEntry(int index)`
-
 **Returns:** `void`
+
+### `accessEntry(int index)`
 
 **Parameters:**
 - `index` (`int`)
 
-### `moveLastEntry(int dstIndex, int mask)`
-
 **Returns:** `void`
+
+### `moveLastEntry(int dstIndex, int mask)`
 
 **Parameters:**
 - `dstIndex` (`int`)
 - `mask` (`int`)
 
-### `resizeEntries(int newCapacity)`
-
 **Returns:** `void`
+
+### `resizeEntries(int newCapacity)`
 
 **Parameters:**
 - `newCapacity` (`int`)
+
+**Returns:** `void`
 
 ### `firstEntryIndex()`
 
@@ -190,11 +190,11 @@ A node with "prev" pointer equal to ENDPOINT is the first node in the linked lis
 
 ### `adjustAfterRemove(int indexBeforeRemove, int indexRemoved)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `indexBeforeRemove` (`int`)
 - `indexRemoved` (`int`)
+
+**Returns:** `int`
 
 ### `createEntrySet()`
 
@@ -218,16 +218,16 @@ A node with "prev" pointer equal to ENDPOINT is the first node in the linked lis
 
 ### `link(int i)`
 
-**Returns:** `long`
-
 **Parameters:**
 - `i` (`int`)
 
-### `setLink(int i, long value)`
+**Returns:** `long`
 
-**Returns:** `void`
+### `setLink(int i, long value)`
 
 **Parameters:**
 - `i` (`int`)
 - `value` (`long`)
+
+**Returns:** `void`
 

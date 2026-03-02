@@ -26,10 +26,10 @@ Important: the order of the constants cannot change, and they cannot be deleted 
 
 **Returns:** [`com.google.common.hash.BloomFilterStrategies[]`](./BloomFilterStrategies.md)
 
-### `valueOf(java.lang.String name)`
-
-**Returns:** [`com.google.common.hash.BloomFilterStrategies`](./BloomFilterStrategies.md)
+### `valueOf(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
+
+**Returns:** [`com.google.common.hash.BloomFilterStrategies`](./BloomFilterStrategies.md)
 

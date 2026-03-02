@@ -40,7 +40,7 @@ This is filled on the API side.
 
 ## Methods
 
-### `getProperty(java.lang.String propertyName)`
+### `getProperty(String propertyName)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:
@@ -58,7 +58,7 @@ This is filled on the API side.
 
 **Returns:** `java.lang.Object`
 
-### `setProperty(java.lang.String propertyName, java.lang.Object propertyValue)`
+### `setProperty(String propertyName, Object propertyValue)`
 
 **Parameters:**
 - `propertyName` (`java.lang.String`): The property name. One of the following constants:

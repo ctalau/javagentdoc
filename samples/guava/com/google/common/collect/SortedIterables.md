@@ -12,18 +12,18 @@
 
 ## Methods
 
-### `hasSameComparator(java.util.Comparator<?> comparator, java.lang.Iterable<?> elements)`
-
-**Returns:** `boolean`
+### `hasSameComparator(Comparator<?> comparator, Iterable<?> elements)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<?>`)
 - `elements` (`java.lang.Iterable<?>`)
 
-### `comparator(java.util.SortedSet<E> sortedSet)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Comparator<? super E>`
+### `comparator(SortedSet<E> sortedSet)`
 
 **Parameters:**
 - `sortedSet` (`java.util.SortedSet<E>`)
+
+**Returns:** `java.util.Comparator<? super E>`
 

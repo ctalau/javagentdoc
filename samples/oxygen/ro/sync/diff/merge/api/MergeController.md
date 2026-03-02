@@ -32,7 +32,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.diff.merge.api.DiffModel arg0, ro.sync.ecss.extensions.api.AuthorDocumentController arg1, ro.sync.ecss.extensions.api.AuthorDocumentController arg2)`
+### `<init>(DiffModel arg0, AuthorDocumentController arg1, AuthorDocumentController arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.diff.merge.api.DiffModel`](./DiffModel.md))
@@ -41,7 +41,7 @@
 
 ## Methods
 
-### `copy(ro.sync.ecss.extensions.api.ContentInterval arg0, ro.sync.ecss.extensions.api.ContentInterval arg1, boolean arg2)`
+### `copy(ContentInterval arg0, ContentInterval arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.ContentInterval`](../../../ecss/extensions/api/ContentInterval.md))
@@ -50,7 +50,7 @@
 
 **Returns:** `void`
 
-### `copyPromise(ro.sync.ecss.extensions.api.ContentInterval arg0, ro.sync.ecss.extensions.api.ContentInterval arg1, boolean arg2)`
+### `copyPromise(ContentInterval arg0, ContentInterval arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.ContentInterval`](../../../ecss/extensions/api/ContentInterval.md))
@@ -59,7 +59,7 @@
 
 **Returns:** `ro.sync.diff.merge.api.MergeController._b`
 
-### `h(ro.sync.diff.merge.api.MergeController._d arg0, ro.sync.diff.merge.api.MergeController._d arg1, boolean arg2, ro.sync.diff.merge.api.DiffModel arg3)`
+### `h(MergeController._d arg0, MergeController._d arg1, boolean arg2, DiffModel arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
@@ -69,7 +69,7 @@
 
 **Returns:** `ro.sync.diff.merge.api.MergeController._b`
 
-### `q(ro.sync.diff.merge.api.MergeController._d arg0, ro.sync.diff.merge.api.MergeController._d arg1, boolean arg2, ro.sync.diff.merge.api.DiffModel arg3)`
+### `q(MergeController._d arg0, MergeController._d arg1, boolean arg2, DiffModel arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
@@ -79,7 +79,7 @@
 
 **Returns:** `void`
 
-### `j(int arg0, java.util.List<ro.sync.diff.merge.api.IntervalsPair> arg1, ro.sync.diff.merge.api.b arg2, ro.sync.diff.merge.api.IntervalsPair.Side arg3, ro.sync.diff.merge.api.DiffModel arg4)`
+### `j(int arg0, List<IntervalsPair> arg1, b arg2, IntervalsPair.Side arg3, DiffModel arg4)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -90,7 +90,7 @@
 
 **Returns:** `void`
 
-### `e(int arg0, ro.sync.diff.merge.api.DiffModel arg1, ro.sync.diff.merge.api.IntervalsPair.Side arg2)`
+### `e(int arg0, DiffModel arg1, IntervalsPair.Side arg2)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -99,7 +99,7 @@
 
 **Returns:** `java.util.List<ro.sync.diff.merge.api.IntervalsPair>`
 
-### `c(ro.sync.ecss.extensions.api.ContentInterval arg0, ro.sync.ecss.extensions.api.ContentInterval arg1)`
+### `c(ContentInterval arg0, ContentInterval arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.ContentInterval`](../../../ecss/extensions/api/ContentInterval.md))
@@ -107,7 +107,7 @@
 
 **Returns:** `boolean`
 
-### `u(ro.sync.diff.merge.api.MergeController._d arg0, ro.sync.diff.merge.api.MergeController._d arg1)`
+### `u(MergeController._d arg0, MergeController._d arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
@@ -115,31 +115,21 @@
 
 **Returns:** `boolean`
 
-### `g(ro.sync.diff.merge.api.MergeController._d arg0)`
+### `g(MergeController._d arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
 
 **Returns:** `boolean`
 
-### `l(ro.sync.diff.merge.api.MergeController._d arg0)`
+### `l(MergeController._d arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
 
 **Returns:** `boolean`
 
-### `n(ro.sync.diff.merge.api.MergeController._d arg0, ro.sync.diff.merge.api.MergeController._d arg1, java.util.List<ro.sync.diff.merge.api.IntervalsPair> arg2, ro.sync.diff.merge.api.DiffModel arg3)`
-
-**Parameters:**
-- `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
-- `arg1` (`ro.sync.diff.merge.api.MergeController._d`)
-- `arg2` (`java.util.List<ro.sync.diff.merge.api.IntervalsPair>`)
-- `arg3` ([`ro.sync.diff.merge.api.DiffModel`](./DiffModel.md))
-
-**Returns:** `ro.sync.diff.merge.api.MergeController._d[]`
-
-### `x(ro.sync.diff.merge.api.MergeController._d arg0, ro.sync.diff.merge.api.MergeController._d arg1, java.util.List<ro.sync.diff.merge.api.IntervalsPair> arg2, ro.sync.diff.merge.api.DiffModel arg3)`
+### `n(MergeController._d arg0, MergeController._d arg1, List<IntervalsPair> arg2, DiffModel arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
@@ -149,7 +139,17 @@
 
 **Returns:** `ro.sync.diff.merge.api.MergeController._d[]`
 
-### `s(ro.sync.diff.merge.api.MergeController._d arg0, ro.sync.diff.merge.api.DiffModel arg1)`
+### `x(MergeController._d arg0, MergeController._d arg1, List<IntervalsPair> arg2, DiffModel arg3)`
+
+**Parameters:**
+- `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
+- `arg1` (`ro.sync.diff.merge.api.MergeController._d`)
+- `arg2` (`java.util.List<ro.sync.diff.merge.api.IntervalsPair>`)
+- `arg3` ([`ro.sync.diff.merge.api.DiffModel`](./DiffModel.md))
+
+**Returns:** `ro.sync.diff.merge.api.MergeController._d[]`
+
+### `s(MergeController._d arg0, DiffModel arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
@@ -157,7 +157,7 @@
 
 **Returns:** `java.util.List<ro.sync.diff.merge.api.IntervalsPair>`
 
-### `b(int arg0, ro.sync.diff.merge.api.IntervalsPair.Side arg1, ro.sync.diff.merge.api.DiffModel arg2)`
+### `b(int arg0, IntervalsPair.Side arg1, DiffModel arg2)`
 
 **Parameters:**
 - `arg0` (`int`)
@@ -166,7 +166,7 @@
 
 **Returns:** `java.util.Optional<ro.sync.diff.merge.api.IntervalsPair>`
 
-### `y(ro.sync.ecss.extensions.api.ContentInterval arg0, ro.sync.ecss.extensions.api.ContentInterval arg1)`
+### `y(ContentInterval arg0, ContentInterval arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.ContentInterval`](../../../ecss/extensions/api/ContentInterval.md))
@@ -190,7 +190,7 @@
 
 **Returns:** `ro.sync.diff.merge.api.MergeController._b`
 
-### `t(ro.sync.ecss.extensions.api.node.AuthorElement arg0, ro.sync.ecss.extensions.api.node.AuthorElement arg1)`
+### `t(AuthorElement arg0, AuthorElement arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../ecss/extensions/api/node/AuthorElement.md))
@@ -198,21 +198,21 @@
 
 **Returns:** `java.util.List`
 
-### `r(ro.sync.ecss.g.cc arg0)`
+### `r(cc arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.g.cc`)
 
 **Returns:** `boolean`
 
-### `o(ro.sync.ecss.g.cc arg0)`
+### `o(cc arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.g.cc`)
 
 **Returns:** `java.util.List<ro.sync.diff.merge.api.IntervalsPair>`
 
-### `d(ro.sync.diff.merge.api.MergeController._d arg0, ro.sync.diff.merge.api.MergeController._d arg1, java.util.List<ro.sync.diff.merge.api.IntervalsPair> arg2, ro.sync.diff.merge.api.DiffModel arg3)`
+### `d(MergeController._d arg0, MergeController._d arg1, List<IntervalsPair> arg2, DiffModel arg3)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.MergeController._d`)
@@ -222,7 +222,7 @@
 
 **Returns:** `ro.sync.diff.merge.api.MergeController._d[]`
 
-### `w(java.lang.Iterable<ro.sync.diff.merge.api.IntervalsPair> arg0, ro.sync.diff.merge.api.MergeController._d arg1, boolean arg2)`
+### `w(Iterable<IntervalsPair> arg0, MergeController._d arg1, boolean arg2)`
 
 **Parameters:**
 - `arg0` (`java.lang.Iterable<ro.sync.diff.merge.api.IntervalsPair>`)
@@ -231,14 +231,14 @@
 
 **Returns:** `java.util.List<ro.sync.diff.merge.api.IntervalsPair>`
 
-### `setSourceSide(ro.sync.diff.merge.api.IntervalsPair.Side arg0)`
+### `setSourceSide(IntervalsPair.Side arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.diff.merge.api.IntervalsPair.Side`)
 
 **Returns:** `void`
 
-### `f(int arg0, int arg1, ro.sync.diff.merge.api.MergeController._d arg2)`
+### `f(int arg0, int arg1, MergeController._d arg2)`
 
 **Parameters:**
 - `arg0` (`int`)

@@ -26,13 +26,13 @@
 
 ## Methods
 
-### `compare(java.lang.Object left, java.lang.Object right)`
-
-**Returns:** `int`
+### `compare(Object left, Object right)`
 
 **Parameters:**
 - `left` (`java.lang.Object`)
 - `right` (`java.lang.Object`)
+
+**Returns:** `int`
 
 ### `readResolve()`
 

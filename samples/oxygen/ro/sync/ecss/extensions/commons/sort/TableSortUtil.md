@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `isEntirelySelected(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isEntirelySelected(AuthorAccess authorAccess, AuthorElement element)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -20,7 +20,7 @@
 
 **Returns:** `boolean`
 
-### `isIncludedInSelectionInterval(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.node.AuthorElement element)`
+### `isIncludedInSelectionInterval(AuthorAccess authorAccess, AuthorElement element)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.
@@ -28,7 +28,7 @@
 
 **Returns:** `boolean`
 
-### `isColumnOrTableSelection(ro.sync.ecss.extensions.api.AuthorAccess authorAccess)`
+### `isColumnOrTableSelection(AuthorAccess authorAccess)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access.

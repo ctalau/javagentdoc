@@ -35,8 +35,6 @@ If you do chain your operations manually, you may want to use FluentFuture.
 
 ### `immediateFuture(V value)`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
-
 The
  getters just return the value. This Future can't be canceled or timed out and its
  isDone() method always returns true.
@@ -44,16 +42,16 @@ The
 **Parameters:**
 - `value` (`V`)
 
-### `immediateVoidFuture()`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Void>`](./ListenableFuture.md)
+### `immediateVoidFuture()`
 
 This method is equivalent to 
  immediateFuture(null) except that it is restricted to produce futures of type Void.
 
-### `immediateFailedFuture(java.lang.Throwable throwable)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Void>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+### `immediateFailedFuture(Throwable throwable)`
 
 The returned Future can't be cancelled, and its isDone() method always
  returns true. Calling get() will immediately throw the provided 
@@ -62,46 +60,46 @@ The returned Future can't be cancelled, and its isDone() method always
 **Parameters:**
 - `throwable` (`java.lang.Throwable`)
 
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+
 ### `immediateCancelledFuture()`
 
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-### `submit(java.util.concurrent.Callable<O> callable, java.util.concurrent.Executor executor)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+### `submit(Callable<O> callable, Executor executor)`
 
 **Parameters:**
 - `callable` (`java.util.concurrent.Callable<O>`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `submit(java.lang.Runnable runnable, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Void>`](./ListenableFuture.md)
+### `submit(Runnable runnable, Executor executor)`
 
 **Parameters:**
 - `runnable` (`java.lang.Runnable`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `submitAsync(com.google.common.util.concurrent.AsyncCallable<O> callable, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.lang.@org.checkerframework.checker.nullness.qual.Nullable Void>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+### `submitAsync(AsyncCallable<O> callable, Executor executor)`
 
 **Parameters:**
 - `callable` ([`com.google.common.util.concurrent.AsyncCallable<O>`](./AsyncCallable.md))
 - `executor` (`java.util.concurrent.Executor`)
 
-### `scheduleAsync(com.google.common.util.concurrent.AsyncCallable<O> callable, java.time.Duration delay, java.util.concurrent.ScheduledExecutorService executorService)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+
+### `scheduleAsync(AsyncCallable<O> callable, Duration delay, ScheduledExecutorService executorService)`
 
 **Parameters:**
 - `callable` ([`com.google.common.util.concurrent.AsyncCallable<O>`](./AsyncCallable.md))
 - `delay` (`java.time.Duration`)
 - `executorService` (`java.util.concurrent.ScheduledExecutorService`)
 
-### `scheduleAsync(com.google.common.util.concurrent.AsyncCallable<O> callable, long delay, java.util.concurrent.TimeUnit timeUnit, java.util.concurrent.ScheduledExecutorService executorService)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+
+### `scheduleAsync(AsyncCallable<O> callable, long delay, TimeUnit timeUnit, ScheduledExecutorService executorService)`
 
 **Parameters:**
 - `callable` ([`com.google.common.util.concurrent.AsyncCallable<O>`](./AsyncCallable.md))
@@ -109,9 +107,9 @@ The returned Future can't be cancelled, and its isDone() method always
 - `timeUnit` (`java.util.concurrent.TimeUnit`)
 - `executorService` (`java.util.concurrent.ScheduledExecutorService`)
 
-### `catching(com.google.common.util.concurrent.ListenableFuture<? extends V> input, java.lang.Class<X> exceptionType, com.google.common.base.Function<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+### `catching(ListenableFuture<? extends V> input, Class<X> exceptionType, Function<? super X,? extends V> fallback, Executor executor)`
 
 Function#apply is not invoked until the primary input has failed, so
  if the primary input succeeds, it is never invoked. If, during the invocation of 
@@ -142,20 +140,20 @@ When selecting an executor, note that directExecutor is dangerous in some cases.
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md)): the primary input Future
 - `exceptionType` (`java.lang.Class<X>`): the exception type that triggers use of fallback. The exception
-     type is matched against the input's exception. "The input's exception" means the cause of
-     the ExecutionException thrown by input.get() or, if get() throws a
-     different kind of exception, that exception itself. To avoid hiding bugs and other
-     unrecoverable errors, callers should prefer more specific types, avoiding 
-     Throwable.class in particular.
+       type is matched against the input's exception. "The input's exception" means the cause of
+       the ExecutionException thrown by input.get() or, if get() throws a
+       different kind of exception, that exception itself. To avoid hiding bugs and other
+       unrecoverable errors, callers should prefer more specific types, avoiding 
+       Throwable.class in particular.
 - `fallback` ([`com.google.common.base.Function<? super X,? extends V>`](../../base/Function.md)): the Function to be called if input fails with the expected
-     exception type. The function's argument is the input's exception. "The input's exception"
-     means the cause of the ExecutionException thrown by input.get() or, if
-     get() throws a different kind of exception, that exception itself.
+       exception type. The function's argument is the input's exception. "The input's exception"
+       means the cause of the ExecutionException thrown by input.get() or, if
+       get() throws a different kind of exception, that exception itself.
 - `executor` (`java.util.concurrent.Executor`): the executor that runs fallback if input fails
 
-### `catchingAsync(com.google.common.util.concurrent.ListenableFuture<? extends V> input, java.lang.Class<X> exceptionType, com.google.common.util.concurrent.AsyncFunction<? super X,? extends V> fallback, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+
+### `catchingAsync(ListenableFuture<? extends V> input, Class<X> exceptionType, AsyncFunction<? super X,? extends V> fallback, Executor executor)`
 
 AsyncFunction#apply is not invoked until the primary input has
  failed, so if the primary input succeeds, it is never invoked. If, during the invocation of
@@ -211,20 +209,20 @@ When selecting an executor, note that directExecutor is dangerous in some cases.
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>`](./ListenableFuture.md)): the primary input Future
 - `exceptionType` (`java.lang.Class<X>`): the exception type that triggers use of fallback. The exception
-     type is matched against the input's exception. "The input's exception" means the cause of
-     the ExecutionException thrown by input.get() or, if get() throws a
-     different kind of exception, that exception itself. To avoid hiding bugs and other
-     unrecoverable errors, callers should prefer more specific types, avoiding 
-     Throwable.class in particular.
+       type is matched against the input's exception. "The input's exception" means the cause of
+       the ExecutionException thrown by input.get() or, if get() throws a
+       different kind of exception, that exception itself. To avoid hiding bugs and other
+       unrecoverable errors, callers should prefer more specific types, avoiding 
+       Throwable.class in particular.
 - `fallback` ([`com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>`](./AsyncFunction.md)): the AsyncFunction to be called if input fails with the expected
-     exception type. The function's argument is the input's exception. "The input's exception"
-     means the cause of the ExecutionException thrown by input.get() or, if
-     get() throws a different kind of exception, that exception itself.
+       exception type. The function's argument is the input's exception. "The input's exception"
+       means the cause of the ExecutionException thrown by input.get() or, if
+       get() throws a different kind of exception, that exception itself.
 - `executor` (`java.util.concurrent.Executor`): the executor that runs fallback if input fails
 
-### `withTimeout(com.google.common.util.concurrent.ListenableFuture<V> delegate, java.time.Duration time, java.util.concurrent.ScheduledExecutorService scheduledExecutor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+
+### `withTimeout(ListenableFuture<V> delegate, Duration time, ScheduledExecutorService scheduledExecutor)`
 
 The delegate future is interrupted and cancelled if it times out.
 
@@ -233,9 +231,9 @@ The delegate future is interrupted and cancelled if it times out.
 - `time` (`java.time.Duration`): when to time out the future
 - `scheduledExecutor` (`java.util.concurrent.ScheduledExecutorService`): The executor service to enforce the timeout.
 
-### `withTimeout(com.google.common.util.concurrent.ListenableFuture<V> delegate, long time, java.util.concurrent.TimeUnit unit, java.util.concurrent.ScheduledExecutorService scheduledExecutor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+
+### `withTimeout(ListenableFuture<V> delegate, long time, TimeUnit unit, ScheduledExecutorService scheduledExecutor)`
 
 The delegate future is interrupted and cancelled if it times out.
 
@@ -245,9 +243,9 @@ The delegate future is interrupted and cancelled if it times out.
 - `unit` (`java.util.concurrent.TimeUnit`): the time unit of the time parameter
 - `scheduledExecutor` (`java.util.concurrent.ScheduledExecutorService`): The executor service to enforce the timeout.
 
-### `transformAsync(com.google.common.util.concurrent.ListenableFuture<I> input, com.google.common.util.concurrent.AsyncFunction<? super I,? extends O> function, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+### `transformAsync(ListenableFuture<I> input, AsyncFunction<? super I,? extends O> function, Executor executor)`
 
 If the given Future fails, the returned Future fails with
  the same exception (and the function is not invoked).
@@ -282,12 +280,12 @@ The returned Future attempts to keep its cancellation state in sync with that of
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md)): The future to transform
 - `function` ([`com.google.common.util.concurrent.AsyncFunction<? super I,? extends O>`](./AsyncFunction.md)): A function to transform the result of the input future to the result of the
-     output future
+       output future
 - `executor` (`java.util.concurrent.Executor`): Executor to run the function in.
 
-### `transform(com.google.common.util.concurrent.ListenableFuture<I> input, com.google.common.base.Function<? super I,? extends O> function, java.util.concurrent.Executor executor)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
+
+### `transform(ListenableFuture<I> input, Function<? super I,? extends O> function, Executor executor)`
 
 If input fails, the returned Future fails with the same exception (and
  the function is not invoked). Example usage:
@@ -320,12 +318,12 @@ An example use of this method is to convert a serializable object returned from 
 **Parameters:**
 - `input` ([`com.google.common.util.concurrent.ListenableFuture<I>`](./ListenableFuture.md)): The future to transform
 - `function` ([`com.google.common.base.Function<? super I,? extends O>`](../../base/Function.md)): A Function to transform the results of the provided future to the results of
-     the returned future.
+       the returned future.
 - `executor` (`java.util.concurrent.Executor`): Executor to run the function in.
 
-### `lazyTransform(java.util.concurrent.Future<I> input, com.google.common.base.Function<? super I,? extends O> function)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<O>`](./ListenableFuture.md)
 
-**Returns:** `java.util.concurrent.Future<O>`
+### `lazyTransform(Future<I> input, Function<? super I,? extends O> function)`
 
 The returned Future reflects the input's cancellation state directly, and any
  attempt to cancel the returned Future is likewise passed through to the input Future.
@@ -342,11 +340,11 @@ The primary audience of this method is callers of transform who don't have a
 **Parameters:**
 - `input` (`java.util.concurrent.Future<I>`): The future to transform
 - `function` ([`com.google.common.base.Function<? super I,? extends O>`](../../base/Function.md)): A Function to transform the results of the provided future to the results of
-     the returned future.
+       the returned future.
 
-### `allAsList(com.google.common.util.concurrent.ListenableFuture<? extends V>[] futures)`
+**Returns:** `java.util.concurrent.Future<O>`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.util.List<V>>`](./ListenableFuture.md)
+### `allAsList(ListenableFuture<? extends V>[] futures)`
 
 The list of results is in the same order as the input list.
 
@@ -361,9 +359,9 @@ Canceling this future will attempt to cancel all the component futures, and if a
 **Parameters:**
 - `futures` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>[]`](./ListenableFuture.md)): futures to combine
 
-### `allAsList(java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>> futures)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.util.List<V>>`](./ListenableFuture.md)
+
+### `allAsList(Iterable<? extends ListenableFuture<? extends V>> futures)`
 
 The list of results is in the same order as the input list.
 
@@ -378,45 +376,45 @@ Canceling this future will attempt to cancel all the component futures, and if a
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>`): futures to combine
 
-### `whenAllComplete(com.google.common.util.concurrent.ListenableFuture<? extends V>[] futures)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.util.List<V>>`](./ListenableFuture.md)
 
-**Returns:** `com.google.common.util.concurrent.Futures.FutureCombiner<V>`
+### `whenAllComplete(ListenableFuture<? extends V>[] futures)`
 
 Any failures from the input futures will not be propagated to the returned future.
 
 **Parameters:**
 - `futures` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>[]`](./ListenableFuture.md))
 
-### `whenAllComplete(java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>> futures)`
-
 **Returns:** `com.google.common.util.concurrent.Futures.FutureCombiner<V>`
+
+### `whenAllComplete(Iterable<? extends ListenableFuture<? extends V>> futures)`
 
 Any failures from the input futures will not be propagated to the returned future.
 
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>`)
 
-### `whenAllSucceed(com.google.common.util.concurrent.ListenableFuture<? extends V>[] futures)`
-
 **Returns:** `com.google.common.util.concurrent.Futures.FutureCombiner<V>`
+
+### `whenAllSucceed(ListenableFuture<? extends V>[] futures)`
 
 If any input fails, the returned future fails immediately.
 
 **Parameters:**
 - `futures` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>[]`](./ListenableFuture.md))
 
-### `whenAllSucceed(java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>> futures)`
-
 **Returns:** `com.google.common.util.concurrent.Futures.FutureCombiner<V>`
+
+### `whenAllSucceed(Iterable<? extends ListenableFuture<? extends V>> futures)`
 
 If any input fails, the returned future fails immediately.
 
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>`)
 
-### `nonCancellationPropagating(com.google.common.util.concurrent.ListenableFuture<V> future)`
+**Returns:** `com.google.common.util.concurrent.Futures.FutureCombiner<V>`
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
+### `nonCancellationPropagating(ListenableFuture<V> future)`
 
 Cancelling the supplied future will also cancel the returned future, but cancelling
  the returned future will have no effect on the supplied future.
@@ -424,9 +422,9 @@ Cancelling the supplied future will also cancel the returned future, but cancell
 **Parameters:**
 - `future` ([`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md))
 
-### `successfulAsList(com.google.common.util.concurrent.ListenableFuture<? extends V>[] futures)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<V>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable V>>`](./ListenableFuture.md)
+### `successfulAsList(ListenableFuture<? extends V>[] futures)`
 
 The list of results is in the same order as the input list, and if
  any of the provided futures fails or is canceled, its corresponding position will contain
@@ -446,9 +444,9 @@ Canceling this future will attempt to cancel all the component futures.
 **Parameters:**
 - `futures` ([`com.google.common.util.concurrent.ListenableFuture<? extends V>[]`](./ListenableFuture.md)): futures to combine
 
-### `successfulAsList(java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>> futures)`
-
 **Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable V>>`](./ListenableFuture.md)
+
+### `successfulAsList(Iterable<? extends ListenableFuture<? extends V>> futures)`
 
 The list of results is in the same order as the input list, and if
  any of the provided futures fails or is canceled, its corresponding position will contain
@@ -468,9 +466,9 @@ Canceling this future will attempt to cancel all the component futures.
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>`): futures to combine
 
-### `inCompletionOrder(java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends T>> futures)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<java.util.List<@org.checkerframework.checker.nullness.qual.Nullable V>>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.collect.ImmutableList<com.google.common.util.concurrent.ListenableFuture<T>>`](../../collect/ImmutableList.md)
+### `inCompletionOrder(Iterable<? extends ListenableFuture<? extends T>> futures)`
 
 Delegate futures return the same value or throw the same exception as the
  corresponding input future returns/throws.
@@ -494,16 +492,16 @@ Cancelling a delegate future propagates to input futures once all the delegates 
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends T>>`)
 
-### `gwtCompatibleToArray(java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends T>> futures)`
+**Returns:** [`com.google.common.collect.ImmutableList<com.google.common.util.concurrent.ListenableFuture<T>>`](../../collect/ImmutableList.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<? extends T>[]`](./ListenableFuture.md)
+### `gwtCompatibleToArray(Iterable<? extends ListenableFuture<? extends T>> futures)`
 
 **Parameters:**
 - `futures` (`java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends T>>`)
 
-### `addCallback(com.google.common.util.concurrent.ListenableFuture<V> future, com.google.common.util.concurrent.FutureCallback<? super V> callback, java.util.concurrent.Executor executor)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<? extends T>[]`](./ListenableFuture.md)
 
-**Returns:** `void`
+### `addCallback(ListenableFuture<V> future, FutureCallback<? super V> callback, Executor executor)`
 
 The callback is run on executor. There is no guaranteed ordering of execution of
  callbacks, but any callback added through this method is guaranteed to be called once the
@@ -549,9 +547,9 @@ For a more general interface to attach a completion listener to a Future, see ad
 - `callback` ([`com.google.common.util.concurrent.FutureCallback<? super V>`](./FutureCallback.md)): The callback to invoke when future is completed.
 - `executor` (`java.util.concurrent.Executor`): The executor to run callback when the future completes.
 
-### `getDone(java.util.concurrent.Future<V> future)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `getDone(Future<V> future)`
 
 The benefits of this method are twofold. First, the name "getDone" suggests to readers that
  the Future is already done. Second, if buggy code calls getDone on a 
@@ -567,9 +565,9 @@ If you are looking for a method to determine whether a given Future is done, use
 **Parameters:**
 - `future` (`java.util.concurrent.Future<V>`)
 
-### `getChecked(java.util.concurrent.Future<V> future, java.lang.Class<X> exceptionClass)`
-
 **Returns:** `V`
+
+### `getChecked(Future<V> future, Class<X> exceptionClass)`
 
 This reduces boilerplate for a common use of Future in
  which it is unnecessary to programmatically distinguish between exception types or to extract
@@ -608,9 +606,9 @@ Instances of exceptionClass are created by choosing an arbitrary public construc
 - `future` (`java.util.concurrent.Future<V>`)
 - `exceptionClass` (`java.lang.Class<X>`)
 
-### `getChecked(java.util.concurrent.Future<V> future, java.lang.Class<X> exceptionClass, java.time.Duration timeout)`
-
 **Returns:** `V`
+
+### `getChecked(Future<V> future, Class<X> exceptionClass, Duration timeout)`
 
 This reduces boilerplate for a common use of
  Future in which it is unnecessary to programmatically distinguish between exception
@@ -651,9 +649,9 @@ Instances of exceptionClass are created by choosing an arbitrary public construc
 - `exceptionClass` (`java.lang.Class<X>`)
 - `timeout` (`java.time.Duration`)
 
-### `getChecked(java.util.concurrent.Future<V> future, java.lang.Class<X> exceptionClass, long timeout, java.util.concurrent.TimeUnit unit)`
-
 **Returns:** `V`
+
+### `getChecked(Future<V> future, Class<X> exceptionClass, long timeout, TimeUnit unit)`
 
 This reduces boilerplate for a common use of
  Future in which it is unnecessary to programmatically distinguish between exception
@@ -694,9 +692,9 @@ Instances of exceptionClass are created by choosing an arbitrary public construc
 - `timeout` (`long`)
 - `unit` (`java.util.concurrent.TimeUnit`)
 
-### `getUnchecked(java.util.concurrent.Future<V> future)`
-
 **Returns:** `V`
+
+### `getUnchecked(Future<V> future)`
 
 This makes Future more suitable for lightweight, fast-running
  tasks that, barring bugs in the code, will not fail. This gives it exception-handling behavior
@@ -727,10 +725,12 @@ For an uninterruptible get that preserves other exceptions, see Uninterruptibles
 **Parameters:**
 - `future` (`java.util.concurrent.Future<V>`)
 
-### `wrapAndThrowUnchecked(java.lang.Throwable cause)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `wrapAndThrowUnchecked(Throwable cause)`
 
 **Parameters:**
 - `cause` (`java.lang.Throwable`)
+
+**Returns:** `void`
 

@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `isReadOnly(java.net.URL url)`
+### `isReadOnly(URL url)`
 
 If an URL is marked as read-only Oxygen will present it with a read-only lock icon on the tab.
  The user will also be able to specify through the user interface that an opened editor over a read-only URL can be edited.
@@ -23,7 +23,7 @@ If an URL is marked as read-only Oxygen will present it with a read-only lock ic
 
 **Returns:** `boolean`
 
-### `canCheckReadOnly(java.lang.String protocol)`
+### `canCheckReadOnly(String protocol)`
 
 This call back will usually be received often, each time focus is gained by the current editor.
 

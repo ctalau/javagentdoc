@@ -20,14 +20,14 @@
 
 ## Methods
 
-### `getNodesOfInterestCriteria(java.lang.String namespace)`
+### `getNodesOfInterestCriteria(String namespace)`
 
 **Parameters:**
 - `namespace` (`java.lang.String`)
 
 **Returns:** `java.lang.String[]`
 
-### `getSupportedFramework(java.lang.String namespaceURI)`
+### `getSupportedFramework(String namespaceURI)`
 
 **Parameters:**
 - `namespaceURI` (`java.lang.String`)

@@ -54,7 +54,7 @@ It also extracts the text inside a given line interval.
 
 ## Constructors
 
-### `<init>(java.lang.String referenceSystemId, java.lang.String encoding, ro.sync.ecss.extensions.api.access.AuthorUtilAccess authorUtilAccess)`
+### `<init>(String referenceSystemId, String encoding, AuthorUtilAccess authorUtilAccess)`
 
 **Parameters:**
 - `referenceSystemId` (`java.lang.String`): The referred file system ID.
@@ -80,28 +80,28 @@ It also extracts the text inside a given line interval.
 
 **Returns:** `org.xml.sax.ErrorHandler`
 
-### `getFeature(java.lang.String name)`
+### `getFeature(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
 **Returns:** `boolean`
 
-### `getProperty(java.lang.String name)`
+### `getProperty(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
 **Returns:** `java.lang.Object`
 
-### `parse(org.xml.sax.InputSource input)`
+### `parse(InputSource input)`
 
 **Parameters:**
 - `input` (`org.xml.sax.InputSource`)
 
 **Returns:** `void`
 
-### `extractContent(org.xml.sax.InputSource input)`
+### `extractContent(InputSource input)`
 
 **Parameters:**
 - `input` (`org.xml.sax.InputSource`): The input. If it's null this will be extracted from the referenceSystemId
@@ -112,42 +112,42 @@ It also extracts the text inside a given line interval.
 
 **Returns:** `void`
 
-### `parse(java.lang.String systemId)`
+### `parse(String systemId)`
 
 **Parameters:**
 - `systemId` (`java.lang.String`)
 
 **Returns:** `void`
 
-### `setContentHandler(org.xml.sax.ContentHandler handler)`
+### `setContentHandler(ContentHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.ContentHandler`)
 
 **Returns:** `void`
 
-### `setDTDHandler(org.xml.sax.DTDHandler handler)`
+### `setDTDHandler(DTDHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.DTDHandler`)
 
 **Returns:** `void`
 
-### `setEntityResolver(org.xml.sax.EntityResolver resolver)`
+### `setEntityResolver(EntityResolver resolver)`
 
 **Parameters:**
 - `resolver` (`org.xml.sax.EntityResolver`)
 
 **Returns:** `void`
 
-### `setErrorHandler(org.xml.sax.ErrorHandler handler)`
+### `setErrorHandler(ErrorHandler handler)`
 
 **Parameters:**
 - `handler` (`org.xml.sax.ErrorHandler`)
 
 **Returns:** `void`
 
-### `setFeature(java.lang.String name, boolean value)`
+### `setFeature(String name, boolean value)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -155,7 +155,7 @@ It also extracts the text inside a given line interval.
 
 **Returns:** `void`
 
-### `setProperty(java.lang.String name, java.lang.Object value)`
+### `setProperty(String name, Object value)`
 
 **Parameters:**
 - `name` (`java.lang.String`)

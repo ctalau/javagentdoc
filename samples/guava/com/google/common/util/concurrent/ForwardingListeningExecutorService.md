@@ -28,25 +28,25 @@ Subclasses should override one or more methods to modify the behavior of the bac
 
 **Returns:** [`com.google.common.util.concurrent.ListeningExecutorService`](./ListeningExecutorService.md)
 
-### `submit(java.util.concurrent.Callable<T> task)`
-
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+### `submit(Callable<T> task)`
 
 **Parameters:**
 - `task` (`java.util.concurrent.Callable<T>`)
 
-### `submit(java.lang.Runnable task)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
+### `submit(Runnable task)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 
-### `submit(java.lang.Runnable task, T result)`
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<?>`](./ListenableFuture.md)
 
-**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
+### `submit(Runnable task, T result)`
 
 **Parameters:**
 - `task` (`java.lang.Runnable`)
 - `result` (`T`)
+
+**Returns:** [`com.google.common.util.concurrent.ListenableFuture<T>`](./ListenableFuture.md)
 

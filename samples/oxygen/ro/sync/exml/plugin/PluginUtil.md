@@ -16,21 +16,21 @@
 
 ## Methods
 
-### `isPluginInstalled(java.lang.String[] arg0)`
+### `isPluginInstalled(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** `boolean`
 
-### `getPlugin(java.lang.String[] arg0)`
+### `getPlugin(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
 
 **Returns:** [`ro.sync.exml.plugin.Plugin`](./Plugin.md)
 
-### `getPluginDescriptor(java.lang.String[] arg0)`
+### `getPluginDescriptor(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)
@@ -53,7 +53,7 @@
 
 **Returns:** `java.io.File[]`
 
-### `addPluginStylesFilters(ro.sync.ecss.extensions.api.StylesFilter arg0, ro.sync.ecss.extensions.api.AuthorAccess arg1)`
+### `addPluginStylesFilters(StylesFilter arg0, AuthorAccess arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.StylesFilter`](../../ecss/extensions/api/StylesFilter.md))
@@ -61,7 +61,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.StylesFilter`](../../ecss/extensions/api/StylesFilter.md)
 
-### `compareVersions(java.lang.String arg0, java.lang.String arg1)`
+### `compareVersions(String arg0, String arg1)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

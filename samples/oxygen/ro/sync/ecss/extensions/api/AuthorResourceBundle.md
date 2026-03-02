@@ -23,14 +23,14 @@ The translation files should all be located in a separate directory (usually nam
 
 ## Methods
 
-### `getMessage(java.lang.String key)`
+### `getMessage(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key for the desired string
 
 **Returns:** `java.lang.String`
 
-### `composeMessage(java.lang.String descriptionWithEditorVariables)`
+### `composeMessage(String descriptionWithEditorVariables)`
 
 The key contains "${i18n(key)}" editor variables which will be expanded.
 

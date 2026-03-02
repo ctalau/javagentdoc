@@ -49,24 +49,22 @@ Note that because bounded ranges over int and long values are so common, this
 
 ## Constructors
 
-### `<init>(com.google.common.collect.DiscreteDomain<C> domain)`
+### `<init>(DiscreteDomain<C> domain)`
 
 **Parameters:**
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
 ## Methods
 
-### `create(com.google.common.collect.Range<C> range, com.google.common.collect.DiscreteDomain<C> domain)`
-
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+### `create(Range<C> range, DiscreteDomain<C> domain)`
 
 **Parameters:**
 - `range` ([`com.google.common.collect.Range<C>`](./Range.md))
 - `domain` ([`com.google.common.collect.DiscreteDomain<C>`](./DiscreteDomain.md))
 
-### `closed(int lower, int upper)`
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Integer>`](./ContiguousSet.md)
+### `closed(int lower, int upper)`
 
 (These are the same values contained in 
  Range.closed(lower, upper).)
@@ -74,11 +72,11 @@ Note that because bounded ranges over int and long values are so common, this
 **Parameters:**
 - `lower` (`int`)
 - `upper` (`int`)
+
+**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Integer>`](./ContiguousSet.md)
 
 ### `closed(long lower, long upper)`
 
-**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Long>`](./ContiguousSet.md)
-
 (These are the same values contained in 
  Range.closed(lower, upper).)
 
@@ -86,9 +84,9 @@ Note that because bounded ranges over int and long values are so common, this
 - `lower` (`long`)
 - `upper` (`long`)
 
-### `closedOpen(int lower, int upper)`
+**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Long>`](./ContiguousSet.md)
 
-**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Integer>`](./ContiguousSet.md)
+### `closedOpen(int lower, int upper)`
 
 If the endpoints are equal, an empty set is returned. (These are the
  same values contained in Range.closedOpen(lower, upper).)
@@ -97,9 +95,9 @@ If the endpoints are equal, an empty set is returned. (These are the
 - `lower` (`int`)
 - `upper` (`int`)
 
-### `closedOpen(long lower, long upper)`
+**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Integer>`](./ContiguousSet.md)
 
-**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Long>`](./ContiguousSet.md)
+### `closedOpen(long lower, long upper)`
 
 If the endpoints are equal, an empty set is returned. (These are the
  same values contained in Range.closedOpen(lower, upper).)
@@ -108,65 +106,65 @@ If the endpoints are equal, an empty set is returned. (These are the
 - `lower` (`long`)
 - `upper` (`long`)
 
-### `headSet(C toElement)`
+**Returns:** [`com.google.common.collect.ContiguousSet<java.lang.Long>`](./ContiguousSet.md)
 
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+### `headSet(C toElement)`
 
 **Parameters:**
 - `toElement` (`C`)
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
 ### `headSet(C toElement, boolean inclusive)`
 
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
 **Parameters:**
 - `toElement` (`C`)
 - `inclusive` (`boolean`)
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
 ### `subSet(C fromElement, C toElement)`
 
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
 **Parameters:**
 - `fromElement` (`C`)
 - `toElement` (`C`)
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
 ### `subSet(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
 
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
 **Parameters:**
 - `fromElement` (`C`)
 - `fromInclusive` (`boolean`)
 - `toElement` (`C`)
 - `toInclusive` (`boolean`)
+
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
 ### `tailSet(C fromElement)`
 
-**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
-
 **Parameters:**
 - `fromElement` (`C`)
 
-### `tailSet(C fromElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `tailSet(C fromElement, boolean inclusive)`
 
 **Parameters:**
 - `fromElement` (`C`)
 - `inclusive` (`boolean`)
 
-### `headSetImpl(C toElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `headSetImpl(C toElement, boolean inclusive)`
 
 **Parameters:**
 - `toElement` (`C`)
 - `inclusive` (`boolean`)
 
-### `subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `subSetImpl(C fromElement, boolean fromInclusive, C toElement, boolean toInclusive)`
 
 **Parameters:**
 - `fromElement` (`C`)
@@ -174,32 +172,32 @@ If the endpoints are equal, an empty set is returned. (These are the
 - `toElement` (`C`)
 - `toInclusive` (`boolean`)
 
-### `tailSetImpl(C fromElement, boolean inclusive)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `tailSetImpl(C fromElement, boolean inclusive)`
 
 **Parameters:**
 - `fromElement` (`C`)
 - `inclusive` (`boolean`)
 
-### `intersection(com.google.common.collect.ContiguousSet<C> other)`
-
 **Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
+
+### `intersection(ContiguousSet<C> other)`
 
 This method should always be used instead of Sets#intersection for ContiguousSet instances.
 
 **Parameters:**
 - `other` ([`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md))
 
-### `range()`
+**Returns:** [`com.google.common.collect.ContiguousSet<C>`](./ContiguousSet.md)
 
-**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+### `range()`
 
 This is equivalent to range(CLOSED, CLOSED).
 
-### `range(com.google.common.collect.BoundType lowerBoundType, com.google.common.collect.BoundType upperBoundType)`
-
 **Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
+
+### `range(BoundType lowerBoundType, BoundType upperBoundType)`
 
 Note that this method will return ranges with unbounded endpoints if BoundType#OPEN
  is requested for a domain minimum or maximum. For example, if set was created from the
@@ -209,6 +207,8 @@ Note that this method will return ranges with unbounded endpoints if BoundType#O
 **Parameters:**
 - `lowerBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
 - `upperBoundType` ([`com.google.common.collect.BoundType`](./BoundType.md))
+
+**Returns:** [`com.google.common.collect.Range<C>`](./Range.md)
 
 ### `createDescendingSet()`
 
@@ -220,11 +220,11 @@ Note that this method will return ranges with unbounded endpoints if BoundType#O
 
 ### `builder()`
 
-**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
-
 ContiguousSet instances are constructed with #create. This
  method exists only to hide ImmutableSet#builder from consumers of 
  ContiguousSet.
+
+**Returns:** `com.google.common.collect.ImmutableSortedSet.Builder<E>`
 
 ### `writeReplace()`
 

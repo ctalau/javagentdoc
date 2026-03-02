@@ -22,7 +22,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.commons.table.operations.ECTableRowInsertionCustomizerInvoker`](./ECTableRowInsertionCustomizerInvoker.md)
 
-### `showCustomTableRowInsertionDialog(ro.sync.ecss.extensions.api.AuthorAccess arg0)`
+### `showCustomTableRowInsertionDialog(AuthorAccess arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../../api/AuthorAccess.md))

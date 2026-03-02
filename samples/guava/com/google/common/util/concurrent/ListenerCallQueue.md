@@ -48,17 +48,15 @@ The API of this class is designed to make it easy to achieve the following prope
 
 ## Methods
 
-### `addListener(L listener, java.util.concurrent.Executor executor)`
-
-**Returns:** `void`
+### `addListener(L listener, Executor executor)`
 
 **Parameters:**
 - `listener` (`L`)
 - `executor` (`java.util.concurrent.Executor`)
 
-### `enqueue(com.google.common.util.concurrent.ListenerCallQueue.Event<L> event)`
-
 **Returns:** `void`
+
+### `enqueue(ListenerCallQueue.Event<L> event)`
 
 The toString method of the Event itself will be used to describe the event in the
  case of an error.
@@ -66,25 +64,27 @@ The toString method of the Event itself will be used to describe the event in th
 **Parameters:**
 - `event` (`com.google.common.util.concurrent.ListenerCallQueue.Event<L>`): the callback to execute on #dispatch
 
-### `enqueue(com.google.common.util.concurrent.ListenerCallQueue.Event<L> event, java.lang.String label)`
-
 **Returns:** `void`
+
+### `enqueue(ListenerCallQueue.Event<L> event, String label)`
 
 **Parameters:**
 - `event` (`com.google.common.util.concurrent.ListenerCallQueue.Event<L>`): the callback to execute on #dispatch
 - `label` (`java.lang.String`): a description of the event to use in the case of an error
 
-### `enqueueHelper(com.google.common.util.concurrent.ListenerCallQueue.Event<L> event, java.lang.Object label)`
-
 **Returns:** `void`
+
+### `enqueueHelper(ListenerCallQueue.Event<L> event, Object label)`
 
 **Parameters:**
 - `event` (`com.google.common.util.concurrent.ListenerCallQueue.Event<L>`)
 - `label` (`java.lang.Object`)
 
-### `dispatch()`
-
 **Returns:** `void`
 
+### `dispatch()`
+
 Note: this method is idempotent and safe to call from any thread
+
+**Returns:** `void`
 

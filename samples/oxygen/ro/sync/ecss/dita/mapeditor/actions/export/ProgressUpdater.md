@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `updateProgressStatus(java.lang.String status)`
+### `updateProgressStatus(String status)`
 
 **Parameters:**
 - `status` (`java.lang.String`): The status message.

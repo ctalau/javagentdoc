@@ -105,13 +105,11 @@ Using Comparator avoids certain types of bugs, for example when you meant to wri
 
 ### `start()`
 
-**Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
-
 See example in the class documentation.
 
-### `compare(java.lang.Comparable<?> left, java.lang.Comparable<?> right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compare(Comparable<?> left, Comparable<?> right)`
 
 This method is declared to accept any 2 Comparable objects, even if they are not [mutually
  comparable](https://docs.oracle.com/javase/tutorial/collections/interfaces/order.html). If you pass objects that are not mutually comparable, this method may throw an
@@ -125,58 +123,58 @@ This method is declared to accept any 2 Comparable objects, even if they are not
 - `left` (`java.lang.Comparable<?>`)
 - `right` (`java.lang.Comparable<?>`)
 
-### `compare(T left, T right, java.util.Comparator<T> comparator)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compare(T left, T right, Comparator<T> comparator)`
 
 **Parameters:**
 - `left` (`T`)
 - `right` (`T`)
 - `comparator` (`java.util.Comparator<T>`)
 
-### `compare(int left, int right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compare(int left, int right)`
 
 **Parameters:**
 - `left` (`int`)
 - `right` (`int`)
 
-### `compare(long left, long right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compare(long left, long right)`
 
 **Parameters:**
 - `left` (`long`)
 - `right` (`long`)
 
-### `compare(float left, float right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compare(float left, float right)`
 
 **Parameters:**
 - `left` (`float`)
 - `right` (`float`)
 
-### `compare(double left, double right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compare(double left, double right)`
 
 **Parameters:**
 - `left` (`double`)
 - `right` (`double`)
 
-### `compare(java.lang.Boolean left, java.lang.Boolean right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compare(Boolean left, Boolean right)`
 
 **Parameters:**
 - `left` (`java.lang.Boolean`)
 - `right` (`java.lang.Boolean`)
 
-### `compareTrueFirst(boolean left, boolean right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compareTrueFirst(boolean left, boolean right)`
 
 Java 8+ users: you can get the equivalent from Booleans#trueFirst(). For example:
 
@@ -192,9 +190,9 @@ Java 8+ users: you can get the equivalent from Booleans#trueFirst(). For example
 - `left` (`boolean`)
 - `right` (`boolean`)
 
-### `compareFalseFirst(boolean left, boolean right)`
-
 **Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
+
+### `compareFalseFirst(boolean left, boolean right)`
 
 Java 8+ users: you can get the equivalent from Booleans#falseFirst(). For example:
 
@@ -209,6 +207,8 @@ Java 8+ users: you can get the equivalent from Booleans#falseFirst(). For exampl
 **Parameters:**
 - `left` (`boolean`)
 - `right` (`boolean`)
+
+**Returns:** [`com.google.common.collect.ComparisonChain`](./ComparisonChain.md)
 
 ### `result()`
 

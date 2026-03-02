@@ -100,7 +100,7 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.EditPropertiesHandler`](../api/EditPropertiesHandler.md)
 
-### `hasASibling(ro.sync.ecss.extensions.api.node.AuthorElement element, java.lang.String siblingName, java.lang.String[] siblingAttributes, java.lang.String siblingAttrValue)`
+### `hasASibling(AuthorElement element, String siblingName, String[] siblingAttributes, String siblingAttrValue)`
 
 **Parameters:**
 - `element` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../api/node/AuthorElement.md)): The current element.
@@ -110,7 +110,7 @@
 
 **Returns:** `boolean`
 
-### `getHelpPageID(java.lang.String currentEditorPage)`
+### `getHelpPageID(String currentEditorPage)`
 
 **Parameters:**
 - `currentEditorPage` (`java.lang.String`)

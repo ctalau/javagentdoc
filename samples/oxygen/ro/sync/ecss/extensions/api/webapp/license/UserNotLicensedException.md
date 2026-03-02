@@ -10,7 +10,7 @@
 
 ### `<init>()`
 
-### `<init>(java.lang.String arg0)`
+### `<init>(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)

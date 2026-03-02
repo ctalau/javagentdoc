@@ -20,7 +20,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType type, int index)`
+### `<init>(PseudoElementDescriptor.PsuedoElementType type, int index)`
 
 **Parameters:**
 - `type` (`ro.sync.exml.workspace.api.editor.page.author.PseudoElementDescriptor.PsuedoElementType`): The pseudo element type (before, after, marker, etc).
@@ -40,7 +40,7 @@
 
 **Returns:** `int`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)

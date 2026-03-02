@@ -12,7 +12,7 @@
 
 ## Methods
 
-### `validateNewEditorTemplate(ro.sync.exml.editor.EditorTemplate arg0, java.lang.String arg1)`
+### `validateNewEditorTemplate(EditorTemplate arg0, String arg1)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.exml.editor.EditorTemplate`](editor/EditorTemplate.md))

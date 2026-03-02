@@ -17,9 +17,7 @@
 
 ## Methods
 
-### `filter(java.util.Collection<E> unfiltered, com.google.common.base.Predicate<? super E> predicate)`
-
-**Returns:** `java.util.Collection<E>`
+### `filter(Collection<E> unfiltered, Predicate<? super E> predicate)`
 
 The returned collection is
  a live view of unfiltered; changes to one affect the other.
@@ -52,9 +50,9 @@ Many of the filtered collection's methods, such as size(), iterate across every
 - `unfiltered` (`java.util.Collection<E>`)
 - `predicate` ([`com.google.common.base.Predicate<? super E>`](../base/Predicate.md))
 
-### `safeContains(java.util.Collection<?> collection, java.lang.Object object)`
+**Returns:** `java.util.Collection<E>`
 
-**Returns:** `boolean`
+### `safeContains(Collection<?> collection, Object object)`
 
 Returns false if the contains method
  throws a ClassCastException or NullPointerException.
@@ -63,9 +61,9 @@ Returns false if the contains method
 - `collection` (`java.util.Collection<?>`)
 - `object` (`java.lang.Object`)
 
-### `safeRemove(java.util.Collection<?> collection, java.lang.Object object)`
-
 **Returns:** `boolean`
+
+### `safeRemove(Collection<?> collection, Object object)`
 
 Returns false if the remove method
  throws a ClassCastException or NullPointerException.
@@ -74,9 +72,9 @@ Returns false if the remove method
 - `collection` (`java.util.Collection<?>`)
 - `object` (`java.lang.Object`)
 
-### `transform(java.util.Collection<F> fromCollection, com.google.common.base.Function<? super F,T> function)`
+**Returns:** `boolean`
 
-**Returns:** `java.util.Collection<T>`
+### `transform(Collection<F> fromCollection, Function<? super F,T> function)`
 
 The returned collection is a live view of fromCollection; changes to one affect the
  other.
@@ -102,9 +100,9 @@ If the input Collection is known to be a List, consider Lists#transform. If only
 - `fromCollection` (`java.util.Collection<F>`)
 - `function` ([`com.google.common.base.Function<? super F,T>`](../base/Function.md))
 
-### `containsAllImpl(java.util.Collection<?> self, java.util.Collection<?> c)`
+**Returns:** `java.util.Collection<T>`
 
-**Returns:** `boolean`
+### `containsAllImpl(Collection<?> self, Collection<?> c)`
 
 This method iterates over the specified collection c, checking each element returned
  by the iterator in turn to see if it is contained in the specified collection self. If
@@ -114,23 +112,23 @@ This method iterates over the specified collection c, checking each element retu
 - `self` (`java.util.Collection<?>`): a collection which might contain all elements in c
 - `c` (`java.util.Collection<?>`): a collection whose elements might be contained by self
 
-### `toStringImpl(java.util.Collection<?> collection)`
+**Returns:** `boolean`
 
-**Returns:** `java.lang.String`
+### `toStringImpl(Collection<?> collection)`
 
 **Parameters:**
 - `collection` (`java.util.Collection<?>`)
 
-### `newStringBuilderForCollection(int size)`
+**Returns:** `java.lang.String`
 
-**Returns:** `java.lang.StringBuilder`
+### `newStringBuilderForCollection(int size)`
 
 **Parameters:**
 - `size` (`int`)
 
-### `orderedPermutations(java.lang.Iterable<E> elements)`
+**Returns:** `java.lang.StringBuilder`
 
-**Returns:** `java.util.Collection<java.util.List<E>>`
+### `orderedPermutations(Iterable<E> elements)`
 
 *Notes:* This is an implementation of the algorithm for Lexicographical Permutations
  Generation, described in Knuth's "The Art of Computer Programming", Volume 4, Chapter 7,
@@ -151,9 +149,9 @@ This method is equivalent to Collections2.orderedPermutations(list,
 **Parameters:**
 - `elements` (`java.lang.Iterable<E>`): the original iterable whose elements have to be permuted.
 
-### `orderedPermutations(java.lang.Iterable<E> elements, java.util.Comparator<? super E> comparator)`
-
 **Returns:** `java.util.Collection<java.util.List<E>>`
+
+### `orderedPermutations(Iterable<E> elements, Comparator<? super E> comparator)`
 
 Examples:
 
@@ -201,9 +199,9 @@ An empty iterable has only one permutation, which is an empty list.
 - `elements` (`java.lang.Iterable<E>`): the original iterable whose elements have to be permuted.
 - `comparator` (`java.util.Comparator<? super E>`): a comparator for the iterable's elements.
 
-### `permutations(java.util.Collection<E> elements)`
-
 **Returns:** `java.util.Collection<java.util.List<E>>`
+
+### `permutations(Collection<E> elements)`
 
 *Notes:* This is an implementation of the Plain Changes algorithm for permutations
  generation, described in Knuth's "The Art of Computer Programming", Volume 4, Chapter 7,
@@ -218,11 +216,13 @@ An empty collection has only one permutation, which is an empty list.
 **Parameters:**
 - `elements` (`java.util.Collection<E>`): the original collection whose elements have to be permuted.
 
-### `isPermutation(java.util.List<?> first, java.util.List<?> second)`
+**Returns:** `java.util.Collection<java.util.List<E>>`
 
-**Returns:** `boolean`
+### `isPermutation(List<?> first, List<?> second)`
 
 **Parameters:**
 - `first` (`java.util.List<?>`)
 - `second` (`java.util.List<?>`)
+
+**Returns:** `boolean`
 

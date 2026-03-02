@@ -46,12 +46,12 @@ The time complexity of all collection-returning accessors is O(1), since views a
 
 ## Constructors
 
-### `<init>(com.google.common.graph.AbstractGraphBuilder<? super N> builder)`
+### `<init>(AbstractGraphBuilder<? super N> builder)`
 
 **Parameters:**
 - `builder` ([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md))
 
-### `<init>(com.google.common.graph.AbstractGraphBuilder<? super N> builder, java.util.Map<N,com.google.common.graph.GraphConnections<N,V>> nodeConnections, long edgeCount)`
+### `<init>(AbstractGraphBuilder<? super N> builder, Map<N,GraphConnections<N,V>> nodeConnections, long edgeCount)`
 
 **Parameters:**
 - `builder` ([`com.google.common.graph.AbstractGraphBuilder<? super N>`](./AbstractGraphBuilder.md))
@@ -78,63 +78,63 @@ The time complexity of all collection-returning accessors is O(1), since views a
 
 ### `adjacentNodes(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `predecessors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `successors(N node)`
 
-**Returns:** `java.util.Set<N>`
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `java.util.Set<N>`
 
 ### `incidentEdges(N node)`
 
-**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
-
 **Parameters:**
 - `node` (`N`)
 
-### `hasEdgeConnecting(N nodeU, N nodeV)`
+**Returns:** `java.util.Set<com.google.common.graph.EndpointPair<N>>`
 
-**Returns:** `boolean`
+### `hasEdgeConnecting(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `hasEdgeConnecting(com.google.common.graph.EndpointPair<N> endpoints)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnecting(EndpointPair<N> endpoints)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
+
+**Returns:** `boolean`
 
 ### `edgeValueOrDefault(N nodeU, N nodeV, V defaultValue)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 - `defaultValue` (`V`)
 
-### `edgeValueOrDefault(com.google.common.graph.EndpointPair<N> endpoints, V defaultValue)`
-
 **Returns:** `V`
+
+### `edgeValueOrDefault(EndpointPair<N> endpoints, V defaultValue)`
 
 **Parameters:**
 - `endpoints` ([`com.google.common.graph.EndpointPair<N>`](./EndpointPair.md))
 - `defaultValue` (`V`)
+
+**Returns:** `V`
 
 ### `edgeCount()`
 
@@ -142,32 +142,32 @@ The time complexity of all collection-returning accessors is O(1), since views a
 
 ### `checkedConnections(N node)`
 
-**Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
-
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** [`com.google.common.graph.GraphConnections<N,V>`](./GraphConnections.md)
 
 ### `containsNode(N node)`
 
-**Returns:** `boolean`
-
 **Parameters:**
 - `node` (`N`)
 
-### `hasEdgeConnectingInternal(N nodeU, N nodeV)`
-
 **Returns:** `boolean`
+
+### `hasEdgeConnectingInternal(N nodeU, N nodeV)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 
-### `edgeValueOrDefaultInternal(N nodeU, N nodeV, V defaultValue)`
+**Returns:** `boolean`
 
-**Returns:** `V`
+### `edgeValueOrDefaultInternal(N nodeU, N nodeV, V defaultValue)`
 
 **Parameters:**
 - `nodeU` (`N`)
 - `nodeV` (`N`)
 - `defaultValue` (`V`)
+
+**Returns:** `V`
 

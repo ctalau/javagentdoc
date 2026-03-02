@@ -8,11 +8,11 @@
 
 ## Methods
 
-### `handleException(java.lang.Throwable exception, com.google.common.eventbus.SubscriberExceptionContext context)`
-
-**Returns:** `void`
+### `handleException(Throwable exception, SubscriberExceptionContext context)`
 
 **Parameters:**
 - `exception` (`java.lang.Throwable`)
 - `context` ([`com.google.common.eventbus.SubscriberExceptionContext`](./SubscriberExceptionContext.md))
+
+**Returns:** `void`
 

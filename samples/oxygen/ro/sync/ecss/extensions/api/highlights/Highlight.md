@@ -34,7 +34,7 @@ The value should be a HighlightActionsProvider
 
 **Returns:** `java.lang.Object`
 
-### `getAdditionalData(java.lang.String key)`
+### `getAdditionalData(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`): the key for which the additional data is to be retrieved.
@@ -44,7 +44,7 @@ The value should be a HighlightActionsProvider
 
 **Returns:** `java.lang.Object`
 
-### `setAdditionalData(java.lang.String key, java.lang.Object additionalData)`
+### `setAdditionalData(String key, Object additionalData)`
 
 **Parameters:**
 - `key` (`java.lang.String`): The key for which the additional data is set.

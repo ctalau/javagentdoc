@@ -73,7 +73,7 @@ It can be either
 
 ## Methods
 
-### `doOperation(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, ro.sync.ecss.extensions.api.ArgumentsMap args)`
+### `doOperation(AuthorAccess authorAccess, ArgumentsMap args)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md))
@@ -81,7 +81,7 @@ It can be either
 
 **Returns:** `void`
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object fragment, java.lang.Object xpathLocation, java.lang.Object relativeLocation, boolean goToFirstEditablePosition, java.lang.Object schemaAwareArgumentValue)`
+### `doOperationInternal(AuthorAccess authorAccess, Object fragment, Object xpathLocation, Object relativeLocation, boolean goToFirstEditablePosition, Object schemaAwareArgumentValue)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access used to access the document.
@@ -94,7 +94,7 @@ It can be either
 
 **Returns:** `void`
 
-### `doOperationInternal(ro.sync.ecss.extensions.api.AuthorAccess authorAccess, java.lang.Object fragment, java.lang.Object xpathLocation, java.lang.Object relativeLocation, boolean goToFirstEditablePosition, java.lang.Object schemaAwareArgumentValue, boolean isInsertEvenIfInvalid)`
+### `doOperationInternal(AuthorAccess authorAccess, Object fragment, Object xpathLocation, Object relativeLocation, boolean goToFirstEditablePosition, Object schemaAwareArgumentValue, boolean isInsertEvenIfInvalid)`
 
 **Parameters:**
 - `authorAccess` ([`ro.sync.ecss.extensions.api.AuthorAccess`](../../api/AuthorAccess.md)): The author access used to access the document.

@@ -14,21 +14,21 @@
 
 ## Methods
 
-### `getColSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getColSpan(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `java.lang.Integer`
 
-### `getRowSpan(ro.sync.ecss.extensions.api.node.AuthorElement cellElement)`
+### `getRowSpan(AuthorElement cellElement)`
 
 **Parameters:**
 - `cellElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
 
 **Returns:** `java.lang.Integer`
 
-### `init(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `init(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))
@@ -39,7 +39,7 @@
 
 **Returns:** `java.lang.String`
 
-### `hasColumnSpecifications(ro.sync.ecss.extensions.api.node.AuthorElement tableElement)`
+### `hasColumnSpecifications(AuthorElement tableElement)`
 
 **Parameters:**
 - `tableElement` ([`ro.sync.ecss.extensions.api.node.AuthorElement`](../../../api/node/AuthorElement.md))

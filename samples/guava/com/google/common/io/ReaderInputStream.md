@@ -55,7 +55,7 @@ When encoding it is "unflipped" (encoded bytes between 0 and position) and when
 
 ## Constructors
 
-### `<init>(java.io.Reader reader, java.nio.charset.Charset charset, int bufferSize)`
+### `<init>(Reader reader, Charset charset, int bufferSize)`
 
 Malformed input and unmappable characters will be replaced.
 
@@ -64,7 +64,7 @@ Malformed input and unmappable characters will be replaced.
 - `charset` (`java.nio.charset.Charset`): character set used for encoding chars to bytes
 - `bufferSize` (`int`): size of internal input and output buffers
 
-### `<init>(java.io.Reader reader, java.nio.charset.CharsetEncoder encoder, int bufferSize)`
+### `<init>(Reader reader, CharsetEncoder encoder, int bufferSize)`
 
 **Parameters:**
 - `reader` (`java.io.Reader`): input source
@@ -83,34 +83,32 @@ Malformed input and unmappable characters will be replaced.
 
 ### `read(byte[] b, int off, int len)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
 
-### `grow(java.nio.CharBuffer buf)`
+**Returns:** `int`
 
-**Returns:** `java.nio.CharBuffer`
+### `grow(CharBuffer buf)`
 
 **Parameters:**
 - `buf` (`java.nio.CharBuffer`)
+
+**Returns:** `java.nio.CharBuffer`
 
 ### `readMoreChars()`
 
 **Returns:** `void`
 
-### `availableCapacity(java.nio.Buffer buffer)`
-
-**Returns:** `int`
+### `availableCapacity(Buffer buffer)`
 
 **Parameters:**
 - `buffer` (`java.nio.Buffer`)
 
-### `startDraining(boolean overflow)`
+**Returns:** `int`
 
-**Returns:** `void`
+### `startDraining(boolean overflow)`
 
 If we are starting to
  drain because there was overflow, and there aren't actually any characters to drain, then the
@@ -119,12 +117,14 @@ If we are starting to
 **Parameters:**
 - `overflow` (`boolean`)
 
-### `drain(byte[] b, int off, int len)`
+**Returns:** `void`
 
-**Returns:** `int`
+### `drain(byte[] b, int off, int len)`
 
 **Parameters:**
 - `b` (`byte[]`)
 - `off` (`int`)
 - `len` (`int`)
+
+**Returns:** `int`
 

@@ -64,13 +64,13 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 
 ## Constructors
 
-### `<init>(java.util.Comparator<? super K> keyComparator, java.util.Comparator<? super V> valueComparator)`
+### `<init>(Comparator<? super K> keyComparator, Comparator<? super V> valueComparator)`
 
 **Parameters:**
 - `keyComparator` (`java.util.Comparator<? super K>`)
 - `valueComparator` (`java.util.Comparator<? super V>`)
 
-### `<init>(java.util.Comparator<? super K> keyComparator, java.util.Comparator<? super V> valueComparator, com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
+### `<init>(Comparator<? super K> keyComparator, Comparator<? super V> valueComparator, Multimap<? extends K,? extends V> multimap)`
 
 **Parameters:**
 - `keyComparator` (`java.util.Comparator<? super K>`)
@@ -83,9 +83,7 @@ See the Guava User Guide article on [Multimap](https://github.com/google/guava/w
 
 **Returns:** [`com.google.common.collect.TreeMultimap<K,V>`](./TreeMultimap.md)
 
-### `create(java.util.Comparator<? super K> keyComparator, java.util.Comparator<? super V> valueComparator)`
-
-**Returns:** [`com.google.common.collect.TreeMultimap<K,V>`](./TreeMultimap.md)
+### `create(Comparator<? super K> keyComparator, Comparator<? super V> valueComparator)`
 
 Neither comparator
  may be null; use Ordering#natural() to specify natural order.
@@ -94,12 +92,14 @@ Neither comparator
 - `keyComparator` (`java.util.Comparator<? super K>`): the comparator that determines the key ordering
 - `valueComparator` (`java.util.Comparator<? super V>`): the comparator that determines the value ordering
 
-### `create(com.google.common.collect.Multimap<? extends K,? extends V> multimap)`
-
 **Returns:** [`com.google.common.collect.TreeMultimap<K,V>`](./TreeMultimap.md)
+
+### `create(Multimap<? extends K,? extends V> multimap)`
 
 **Parameters:**
 - `multimap` ([`com.google.common.collect.Multimap<? extends K,? extends V>`](./Multimap.md)): the multimap whose contents are copied to this multimap
+
+**Returns:** [`com.google.common.collect.TreeMultimap<K,V>`](./TreeMultimap.md)
 
 ### `createAsMap()`
 
@@ -107,16 +107,16 @@ Neither comparator
 
 ### `createCollection()`
 
-**Returns:** `java.util.SortedSet<V>`
-
 Creates an empty TreeSet for a collection of values for one key.
+
+**Returns:** `java.util.SortedSet<V>`
 
 ### `createCollection(K key)`
 
-**Returns:** `java.util.Collection<V>`
-
 **Parameters:**
 - `key` (`K`)
+
+**Returns:** `java.util.Collection<V>`
 
 ### `keyComparator()`
 
@@ -128,36 +128,36 @@ Creates an empty TreeSet for a collection of values for one key.
 
 ### `get(K key)`
 
-**Returns:** `java.util.NavigableSet<V>`
-
 **Parameters:**
 - `key` (`K`)
 
-### `keySet()`
+**Returns:** `java.util.NavigableSet<V>`
 
-**Returns:** `java.util.NavigableSet<K>`
+### `keySet()`
 
 Because a TreeMultimap has unique sorted keys, this method returns a NavigableSet, instead of the java.util.Set specified in the Multimap
  interface.
 
-### `asMap()`
+**Returns:** `java.util.NavigableSet<K>`
 
-**Returns:** `java.util.NavigableMap<K,java.util.Collection<V>>`
+### `asMap()`
 
 Because a TreeMultimap has unique sorted keys, this method returns a NavigableMap, instead of the java.util.Map specified in the Multimap
  interface.
 
-### `writeObject(java.io.ObjectOutputStream stream)`
+**Returns:** `java.util.NavigableMap<K,java.util.Collection<V>>`
 
-**Returns:** `void`
+### `writeObject(ObjectOutputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectOutputStream`)
 
-### `readObject(java.io.ObjectInputStream stream)`
-
 **Returns:** `void`
+
+### `readObject(ObjectInputStream stream)`
 
 **Parameters:**
 - `stream` (`java.io.ObjectInputStream`)
+
+**Returns:** `void`
 

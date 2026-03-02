@@ -14,14 +14,14 @@ Listens on an executed process.
 
 ## Methods
 
-### `newOutputLine(java.lang.String line)`
+### `newOutputLine(String line)`
 
 **Parameters:**
 - `line` (`java.lang.String`): The output line.
 
 **Returns:** `void`
 
-### `newErrorLine(java.lang.String line)`
+### `newErrorLine(String line)`
 
 **Parameters:**
 - `line` (`java.lang.String`): The error line.
@@ -35,7 +35,7 @@ Listens on an executed process.
 
 **Returns:** `void`
 
-### `processStarted(java.lang.String processName, java.lang.String fullCommand)`
+### `processStarted(String processName, String fullCommand)`
 
 **Parameters:**
 - `processName` (`java.lang.String`): The name of process.
@@ -43,7 +43,7 @@ Listens on an executed process.
 
 **Returns:** `void`
 
-### `processAboutToStart(java.lang.String processName, java.lang.String fullCommand)`
+### `processAboutToStart(String processName, String fullCommand)`
 
 **Parameters:**
 - `processName` (`java.lang.String`): The name of process.
@@ -51,14 +51,14 @@ Listens on an executed process.
 
 **Returns:** `void`
 
-### `processStarted(java.lang.Process process)`
+### `processStarted(Process process)`
 
 **Parameters:**
 - `process` (`java.lang.Process`): The process which started
 
 **Returns:** `void`
 
-### `processCouldNotStart(java.lang.String message)`
+### `processCouldNotStart(String message)`
 
 **Parameters:**
 - `message` (`java.lang.String`): The error message.

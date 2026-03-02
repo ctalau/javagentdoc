@@ -28,26 +28,26 @@ In addition to the caching provided by
 
 ## Constructors
 
-### `<init>(java.util.Map<K,V> backingMap)`
+### `<init>(Map<K,V> backingMap)`
 
 **Parameters:**
 - `backingMap` (`java.util.Map<K,V>`)
 
 ## Methods
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `getIfCached(java.lang.Object key)`
-
 **Returns:** `V`
+
+### `getIfCached(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `clearCache()`
 
@@ -55,16 +55,16 @@ In addition to the caching provided by
 
 ### `addToCache(K key, V value)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `addToCache(com.google.common.graph.MapRetrievalCache.CacheEntry<K,V> entry)`
-
 **Returns:** `void`
+
+### `addToCache(MapRetrievalCache.CacheEntry<K,V> entry)`
 
 **Parameters:**
 - `entry` (`com.google.common.graph.MapRetrievalCache.CacheEntry<K,V>`)
+
+**Returns:** `void`
 

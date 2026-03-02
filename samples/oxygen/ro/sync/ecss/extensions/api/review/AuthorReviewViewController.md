@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `setReviewsRenderingInformationProvider(ro.sync.ecss.extensions.api.review.ReviewsRenderingInformationProvider provider)`
+### `setReviewsRenderingInformationProvider(ReviewsRenderingInformationProvider provider)`
 
 The review entries are representations of Track Changes insert and delete highlights, 
  review comment highlights and custom review highlights in Author mode.
@@ -18,14 +18,14 @@ The review entries are representations of Track Changes insert and delete highli
 
 **Returns:** `void`
 
-### `addReviewActionsProvider(ro.sync.ecss.extensions.api.review.ReviewActionsProvider actionsProvider)`
+### `addReviewActionsProvider(ReviewActionsProvider actionsProvider)`
 
 **Parameters:**
 - `actionsProvider` ([`ro.sync.ecss.extensions.api.review.ReviewActionsProvider`](./ReviewActionsProvider.md)): The review actions provider.
 
 **Returns:** `void`
 
-### `removeReviewActionsProvider(ro.sync.ecss.extensions.api.review.ReviewActionsProvider actionsProvider)`
+### `removeReviewActionsProvider(ReviewActionsProvider actionsProvider)`
 
 **Parameters:**
 - `actionsProvider` ([`ro.sync.ecss.extensions.api.review.ReviewActionsProvider`](./ReviewActionsProvider.md)): The review actions provider.

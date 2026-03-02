@@ -6,7 +6,7 @@
 
 ## Methods
 
-### `editAttributes(java.lang.String[] arg0)`
+### `editAttributes(String[] arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String[]`)

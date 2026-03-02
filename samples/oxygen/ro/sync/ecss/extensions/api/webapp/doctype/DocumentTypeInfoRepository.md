@@ -20,14 +20,14 @@
 
 **Returns:** [`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfoRepository`](./DocumentTypeInfoRepository.md)
 
-### `setInstance(ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfoRepository arg0)`
+### `setInstance(DocumentTypeInfoRepository arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.webapp.doctype.DocumentTypeInfoRepository`](./DocumentTypeInfoRepository.md))
 
 **Returns:** `void`
 
-### `getDocumentTypeInfo(java.lang.String arg0)`
+### `getDocumentTypeInfo(String arg0)`
 
 **Parameters:**
 - `arg0` (`java.lang.String`)
@@ -42,7 +42,7 @@
 
 **Returns:** `java.util.List<java.lang.String>`
 
-### `removeErrorDocumentType(java.io.File arg0)`
+### `removeErrorDocumentType(File arg0)`
 
 **Parameters:**
 - `arg0` (`java.io.File`)

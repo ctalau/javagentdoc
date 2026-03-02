@@ -35,7 +35,7 @@ This class is tailored toward use cases in common.graph. It is *NOT* a general p
 
 ## Constructors
 
-### `<init>(java.util.Map<K,V> backingMap)`
+### `<init>(Map<K,V> backingMap)`
 
 **Parameters:**
 - `backingMap` (`java.util.Map<K,V>`)
@@ -44,54 +44,54 @@ This class is tailored toward use cases in common.graph. It is *NOT* a general p
 
 ### `put(K key, V value)`
 
-**Returns:** `V`
-
 **Parameters:**
 - `key` (`K`)
 - `value` (`V`)
 
-### `remove(java.lang.Object key)`
-
 **Returns:** `V`
+
+### `remove(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `clear()`
 
 **Returns:** `void`
 
-### `get(java.lang.Object key)`
-
-**Returns:** `V`
+### `get(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `getWithoutCaching(java.lang.Object key)`
-
 **Returns:** `V`
+
+### `getWithoutCaching(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
 
-### `containsKey(java.lang.Object key)`
+**Returns:** `V`
+
+### `containsKey(Object key)`
+
+**Parameters:**
+- `key` (`java.lang.Object`)
 
 **Returns:** `boolean`
-
-**Parameters:**
-- `key` (`java.lang.Object`)
 
 ### `unmodifiableKeySet()`
 
 **Returns:** `java.util.Set<K>`
 
-### `getIfCached(java.lang.Object key)`
-
-**Returns:** `V`
+### `getIfCached(Object key)`
 
 **Parameters:**
 - `key` (`java.lang.Object`)
+
+**Returns:** `V`
 
 ### `clearCache()`
 

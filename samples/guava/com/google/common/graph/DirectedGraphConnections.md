@@ -42,7 +42,7 @@ Note: This field and #adjacentNodeValues cannot be combined into a single
 
 ## Constructors
 
-### `<init>(java.util.Map<N,java.lang.Object> adjacentNodeValues, java.util.List<com.google.common.graph.DirectedGraphConnections.NodeConnection<N>> orderedNodeConnections, int predecessorCount, int successorCount)`
+### `<init>(Map<N,Object> adjacentNodeValues, List<DirectedGraphConnections.NodeConnection<N>> orderedNodeConnections, int predecessorCount, int successorCount)`
 
 **Parameters:**
 - `adjacentNodeValues` (`java.util.Map<N,java.lang.Object>`)
@@ -52,21 +52,21 @@ Note: This field and #adjacentNodeValues cannot be combined into a single
 
 ## Methods
 
-### `of(com.google.common.graph.ElementOrder<N> incidentEdgeOrder)`
-
-**Returns:** [`com.google.common.graph.DirectedGraphConnections<N,V>`](./DirectedGraphConnections.md)
+### `of(ElementOrder<N> incidentEdgeOrder)`
 
 **Parameters:**
 - `incidentEdgeOrder` ([`com.google.common.graph.ElementOrder<N>`](./ElementOrder.md))
 
-### `ofImmutable(N thisNode, java.lang.Iterable<com.google.common.graph.EndpointPair<N>> incidentEdges, com.google.common.base.Function<N,V> successorNodeToValueFn)`
-
 **Returns:** [`com.google.common.graph.DirectedGraphConnections<N,V>`](./DirectedGraphConnections.md)
+
+### `ofImmutable(N thisNode, Iterable<EndpointPair<N>> incidentEdges, Function<N,V> successorNodeToValueFn)`
 
 **Parameters:**
 - `thisNode` (`N`)
 - `incidentEdges` (`java.lang.Iterable<com.google.common.graph.EndpointPair<N>>`)
 - `successorNodeToValueFn` ([`com.google.common.base.Function<N,V>`](../base/Function.md))
+
+**Returns:** [`com.google.common.graph.DirectedGraphConnections<N,V>`](./DirectedGraphConnections.md)
 
 ### `adjacentNodes()`
 
@@ -82,59 +82,59 @@ Note: This field and #adjacentNodeValues cannot be combined into a single
 
 ### `incidentEdgeIterator(N thisNode)`
 
-**Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
-
 **Parameters:**
 - `thisNode` (`N`)
 
-### `value(N node)`
+**Returns:** `java.util.Iterator<com.google.common.graph.EndpointPair<N>>`
 
-**Returns:** `V`
+### `value(N node)`
 
 **Parameters:**
 - `node` (`N`)
+
+**Returns:** `V`
 
 ### `removePredecessor(N node)`
 
-**Returns:** `void`
-
 **Parameters:**
 - `node` (`N`)
 
-### `removeSuccessor(java.lang.Object node)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `removeSuccessor(Object node)`
 
 **Parameters:**
 - `node` (`java.lang.Object`)
 
-### `addPredecessor(N node, V unused)`
+**Returns:** `V`
 
-**Returns:** `void`
+### `addPredecessor(N node, V unused)`
 
 **Parameters:**
 - `node` (`N`)
 - `unused` (`V`)
 
-### `addSuccessor(N node, V value)`
+**Returns:** `void`
 
-**Returns:** `V`
+### `addSuccessor(N node, V value)`
 
 **Parameters:**
 - `node` (`N`)
 - `value` (`V`)
 
-### `isPredecessor(java.lang.Object value)`
+**Returns:** `V`
+
+### `isPredecessor(Object value)`
+
+**Parameters:**
+- `value` (`java.lang.Object`)
 
 **Returns:** `boolean`
+
+### `isSuccessor(Object value)`
 
 **Parameters:**
 - `value` (`java.lang.Object`)
 
-### `isSuccessor(java.lang.Object value)`
-
 **Returns:** `boolean`
-
-**Parameters:**
-- `value` (`java.lang.Object`)
 

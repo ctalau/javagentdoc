@@ -44,7 +44,7 @@
 
 ### `<init>()`
 
-### `<init>(ro.sync.exml.view.graphics.Color arg0, int arg1, int arg2)`
+### `<init>(Color arg0, int arg1, int arg2)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
@@ -57,42 +57,42 @@
 
 **Returns:** `ro.sync.ecss.extensions.api.highlights.PrioritizableHighlightPainter.ZLayer`
 
-### `paint(ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo arg0)`
+### `paint(HighlightPainterInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo`](./HighlightPainterInfo.md))
 
 **Returns:** `void`
 
-### `getHighlightLength(ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo arg0)`
+### `getHighlightLength(HighlightPainterInfo arg0)`
 
 **Parameters:**
 - `arg0` ([`ro.sync.ecss.extensions.api.highlights.HighlightPainterInfo`](./HighlightPainterInfo.md))
 
 **Returns:** `int`
 
-### `setColor(ro.sync.exml.view.graphics.Color arg0)`
+### `setColor(Color arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
 
 **Returns:** `void`
 
-### `setTextDecoration(ro.sync.ecss.extensions.api.highlights.ColorHighlightPainter.TextDecoration arg0)`
+### `setTextDecoration(ColorHighlightPainter.TextDecoration arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.ecss.extensions.api.highlights.ColorHighlightPainter.TextDecoration`)
 
 **Returns:** `void`
 
-### `setBgColor(ro.sync.exml.view.graphics.Color arg0)`
+### `setBgColor(Color arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
 
 **Returns:** `void`
 
-### `setBgColor(ro.sync.exml.view.graphics.Color arg0, boolean arg1)`
+### `setBgColor(Color arg0, boolean arg1)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)
@@ -126,7 +126,7 @@
 
 **Returns:** `ro.sync.exml.view.graphics.Color`
 
-### `setTextForegroundColor(ro.sync.exml.view.graphics.Color arg0)`
+### `setTextForegroundColor(Color arg0)`
 
 **Parameters:**
 - `arg0` (`ro.sync.exml.view.graphics.Color`)

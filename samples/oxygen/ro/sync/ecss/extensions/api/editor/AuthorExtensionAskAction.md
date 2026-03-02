@@ -12,7 +12,7 @@ Instead it receives the ask variables expansion.
 
 ## Methods
 
-### `performActionWithValues(java.util.List<java.lang.String> askValues)`
+### `performActionWithValues(List<String> askValues)`
 
 **Parameters:**
 - `askValues` (`java.util.List<java.lang.String>`): the expanded ask values.

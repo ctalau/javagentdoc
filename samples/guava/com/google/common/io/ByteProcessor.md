@@ -17,8 +17,6 @@
 
 ### `processBytes(byte[] buf, int off, int len)`
 
-**Returns:** `boolean`
-
 The implementation
  should process the bytes from buf[off] through buf[off + len - 1] (inclusive).
 
@@ -26,6 +24,8 @@ The implementation
 - `buf` (`byte[]`): the byte array containing the data to process
 - `off` (`int`): the initial offset into the array
 - `len` (`int`): the length of data to be processed
+
+**Returns:** `boolean`
 
 ### `getResult()`
 

@@ -16,7 +16,7 @@
 
 ## Constructors
 
-### `<init>(ro.sync.ecss.extensions.api.webapp.WebappMessage webappMessage, java.lang.String contextUrl)`
+### `<init>(WebappMessage webappMessage, String contextUrl)`
 
 **Parameters:**
 - `webappMessage` ([`ro.sync.ecss.extensions.api.webapp.WebappMessage`](../WebappMessage.md)): The server message that is presented on client side

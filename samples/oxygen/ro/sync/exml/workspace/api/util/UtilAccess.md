@@ -8,7 +8,7 @@
 
 ## Methods
 
-### `makeRelative(java.net.URL baseURL, java.net.URL childURL)`
+### `makeRelative(URL baseURL, URL childURL)`
 
 The query and fragment identifier are preserved if the initial reference contains them.
  
@@ -26,7 +26,7 @@ The query and fragment identifier are preserved if the initial reference contain
 
 **Returns:** `java.lang.String`
 
-### `correctURL(java.lang.String url)`
+### `correctURL(String url)`
 
 The URL correction takes an URL like:
 
@@ -41,7 +41,7 @@ The URL correction takes an URL like:
 
 **Returns:** `java.lang.String`
 
-### `uncorrectURL(java.lang.String url)`
+### `uncorrectURL(String url)`
 
 The URL un-correction takes an URL like:
 
@@ -56,7 +56,7 @@ The URL un-correction takes an URL like:
 
 **Returns:** `java.lang.String`
 
-### `convertFileToURL(java.io.File file)`
+### `convertFileToURL(File file)`
 
 The URL correction takes a File like:
 
@@ -71,21 +71,21 @@ The URL correction takes a File like:
 
 **Returns:** `java.net.URL`
 
-### `removeUserCredentials(java.net.URL url)`
+### `removeUserCredentials(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL from which the user credentials will be removed.
 
 **Returns:** `java.net.URL`
 
-### `locateFile(java.net.URL url)`
+### `locateFile(URL url)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to be checked.
 
 **Returns:** `java.io.File`
 
-### `getExtension(java.net.URL url)`
+### `getExtension(URL url)`
 
 The extension is lower cased.
 
@@ -94,14 +94,14 @@ The extension is lower cased.
 
 **Returns:** `java.lang.String`
 
-### `getFileName(java.lang.String urlPath)`
+### `getFileName(String urlPath)`
 
 **Parameters:**
 - `urlPath` (`java.lang.String`): An URL path
 
 **Returns:** `java.lang.String`
 
-### `isSupportedImageURL(java.net.URL url)`
+### `isSupportedImageURL(URL url)`
 
 The image extension is used
 
@@ -110,7 +110,7 @@ The image extension is used
 
 **Returns:** `boolean`
 
-### `isUnhandledBinaryResourceURL(java.net.URL url)`
+### `isUnhandledBinaryResourceURL(URL url)`
 
 The resource file extension is checked against a list of binary file patterns configured in the Oxygen options.
  
@@ -121,7 +121,7 @@ The resource file extension is checked against a list of binary file patterns co
 
 **Returns:** `boolean`
 
-### `expandEditorVariables(java.lang.String pathWithEditorVariables, java.net.URL currentEditedURL)`
+### `expandEditorVariables(String pathWithEditorVariables, URL currentEditedURL)`
 
 If there's an external framework associated with the current editor, any $framework, $frameworks,
  $frameworkDir or $frameworksDir variable will be expanded in the context of 
@@ -134,7 +134,7 @@ If there's an external framework associated with the current editor, any $framew
 
 **Returns:** `java.lang.String`
 
-### `expandEditorVariables(java.lang.String pathWithEditorVariables, java.net.URL currentEditedURL, boolean expandAskEditorVariables)`
+### `expandEditorVariables(String pathWithEditorVariables, URL currentEditedURL, boolean expandAskEditorVariables)`
 
 If there's an external framework associated with the current editor, any $framework, $frameworks,
  $frameworkDir or $frameworksDir variable will be expanded in the context of 
@@ -147,7 +147,7 @@ If there's an external framework associated with the current editor, any $framew
 
 **Returns:** `java.lang.String`
 
-### `encrypt(java.lang.String toEncrypt)`
+### `encrypt(String toEncrypt)`
 
 The encryption/decryption is application-specific so a string encrypted in one Oxygen installation cannot be decrypted in another.
  You can use this method if you want to store user-specific data on disk with a moderate level of security.
@@ -157,7 +157,7 @@ The encryption/decryption is application-specific so a string encrypted in one O
 
 **Returns:** `java.lang.String`
 
-### `decrypt(java.lang.String toDecrypt)`
+### `decrypt(String toDecrypt)`
 
 The encryption/decryption is application-specific so a string encrypted in one Oxygen installation cannot be decrypted in another.
  You can use this method if you want to store user-specific data on disk with a moderate level of security.
@@ -167,7 +167,7 @@ The encryption/decryption is application-specific so a string encrypted in one O
 
 **Returns:** `java.lang.String`
 
-### `addCustomEditorVariablesResolver(ro.sync.exml.workspace.api.util.EditorVariablesResolver resolver)`
+### `addCustomEditorVariablesResolver(EditorVariablesResolver resolver)`
 
 The resolver receives a string which may or may not contain custom editor variables.
  It can either return the unmodified string or a modified version of the string in which certain editor variables have been expanded to certain values.
@@ -177,14 +177,14 @@ The resolver receives a string which may or may not contain custom editor variab
 
 **Returns:** `void`
 
-### `removeCustomEditorVariablesResolver(ro.sync.exml.workspace.api.util.EditorVariablesResolver resolver)`
+### `removeCustomEditorVariablesResolver(EditorVariablesResolver resolver)`
 
 **Parameters:**
 - `resolver` ([`ro.sync.exml.workspace.api.util.EditorVariablesResolver`](./EditorVariablesResolver.md)): The resolver to remove.
 
 **Returns:** `void`
 
-### `createReader(java.net.URL url, java.lang.String defaultEncoding)`
+### `createReader(URL url, String defaultEncoding)`
 
 **Parameters:**
 - `url` (`java.net.URL`): The URL to be opened.
@@ -194,14 +194,14 @@ The resolver receives a string which may or may not contain custom editor variab
 
 **Returns:** `java.io.Reader`
 
-### `createImage(java.lang.String imageUrl)`
+### `createImage(String imageUrl)`
 
 **Parameters:**
 - `imageUrl` (`java.lang.String`): The URL of the image for which to return the buffered image.
 
 **Returns:** `java.awt.image.BufferedImage`
 
-### `optimizeImage(java.net.URL imageUrl)`
+### `optimizeImage(URL imageUrl)`
 
 In case the image is too large it scales it down to fit a normal page.
 
@@ -210,7 +210,7 @@ In case the image is too large it scales it down to fit a normal page.
 
 **Returns:** [`ro.sync.exml.workspace.api.util.ImageHolder`](./ImageHolder.md)
 
-### `getContentType(java.lang.String systemID)`
+### `getContentType(String systemID)`
 
 The content type is detected from the file extension based on the file extension 
  associations saved in the application preferences.

@@ -26,7 +26,7 @@
 
 ## Constructors
 
-### `<init>(java.util.Comparator<T> comparator)`
+### `<init>(Comparator<T> comparator)`
 
 **Parameters:**
 - `comparator` (`java.util.Comparator<T>`)
@@ -35,18 +35,18 @@
 
 ### `compare(T a, T b)`
 
-**Returns:** `int`
-
 **Parameters:**
 - `a` (`T`)
 - `b` (`T`)
 
-### `equals(java.lang.Object object)`
+**Returns:** `int`
 
-**Returns:** `boolean`
+### `equals(Object object)`
 
 **Parameters:**
 - `object` (`java.lang.Object`)
+
+**Returns:** `boolean`
 
 ### `hashCode()`
 

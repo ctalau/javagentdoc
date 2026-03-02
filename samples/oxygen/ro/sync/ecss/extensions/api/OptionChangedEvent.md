@@ -22,7 +22,7 @@
 
 ## Constructors
 
-### `<init>(java.lang.String optionKey, java.lang.String oldValue, java.lang.String newValue)`
+### `<init>(String optionKey, String oldValue, String newValue)`
 
 This constructor is deprecated, you should use the #OptionChangedEvent(String, Object, Object) constructor instead.
 
@@ -32,7 +32,7 @@ This constructor is deprecated, you should use the #OptionChangedEvent(String, O
 - `oldValue` (`java.lang.String`): The old value of the option.
 - `newValue` (`java.lang.String`): The new value of the option.
 
-### `<init>(java.lang.String optionKey, java.lang.Object oldValue, java.lang.Object newValue)`
+### `<init>(String optionKey, Object oldValue, Object newValue)`
 
 **Parameters:**
 - `optionKey` (`java.lang.String`): The identification key of the option

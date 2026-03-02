@@ -14,7 +14,7 @@
 
 ## Methods
 
-### `renderControl(ro.sync.ecss.extensions.api.editor.AuthorInplaceContext context, java.io.Writer out)`
+### `renderControl(AuthorInplaceContext context, Writer out)`
 
 **Parameters:**
 - `context` ([`ro.sync.ecss.extensions.api.editor.AuthorInplaceContext`](../../editor/AuthorInplaceContext.md)): The context in which the form control is rendered.

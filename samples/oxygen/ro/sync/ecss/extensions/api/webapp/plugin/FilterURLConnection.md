@@ -18,7 +18,7 @@
 
 ## Constructors
 
-### `<init>(java.net.URLConnection delegateConnection)`
+### `<init>(URLConnection delegateConnection)`
 
 **Parameters:**
 - `delegateConnection` (`java.net.URLConnection`): The underlying connection.
@@ -37,7 +37,7 @@
 
 **Returns:** `void`
 
-### `addRequestProperty(java.lang.String key, java.lang.String value)`
+### `addRequestProperty(String key, String value)`
 
 **Parameters:**
 - `key` (`java.lang.String`)
@@ -45,7 +45,7 @@
 
 **Returns:** `void`
 
-### `equals(java.lang.Object obj)`
+### `equals(Object obj)`
 
 **Parameters:**
 - `obj` (`java.lang.Object`)
@@ -64,7 +64,7 @@
 
 **Returns:** `java.lang.Object`
 
-### `getContent(java.lang.Class[] classes)`
+### `getContent(Class[] classes)`
 
 **Parameters:**
 - `classes` (`java.lang.Class[]`)
@@ -110,14 +110,14 @@
 
 **Returns:** `java.lang.String`
 
-### `getHeaderField(java.lang.String name)`
+### `getHeaderField(String name)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
 
 **Returns:** `java.lang.String`
 
-### `getHeaderFieldDate(java.lang.String name, long Default)`
+### `getHeaderFieldDate(String name, long Default)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -125,7 +125,7 @@
 
 **Returns:** `long`
 
-### `getHeaderFieldInt(java.lang.String name, int Default)`
+### `getHeaderFieldInt(String name, int Default)`
 
 **Parameters:**
 - `name` (`java.lang.String`)
@@ -164,7 +164,7 @@
 
 **Returns:** `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
-### `getRequestProperty(java.lang.String key)`
+### `getRequestProperty(String key)`
 
 **Parameters:**
 - `key` (`java.lang.String`)
@@ -232,7 +232,7 @@
 
 **Returns:** `void`
 
-### `setRequestProperty(java.lang.String key, java.lang.String value)`
+### `setRequestProperty(String key, String value)`
 
 **Parameters:**
 - `key` (`java.lang.String`)
